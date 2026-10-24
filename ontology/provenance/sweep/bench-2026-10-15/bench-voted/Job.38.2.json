@@ -1,0 +1,65 @@
+{
+ "ref": "Job.38.2",
+ "referents": [
+  {
+   "slot": "w0",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Interrogative 'who' in 'who is this who obscures', addressed to the one answered in 38:1 (Job). The question asks who this person is.",
+   "category": "interrogative addressed to Job",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "Job.38.1#cl1",
+   "type": "content",
+   "dst": "cl0",
+   "action": "add",
+   "why": "The saying clause 'said' in 38:1 introduces the speech whose first clause is this question (R1).",
+   "category": "speech content",
+   "votes": 2
+  },
+  {
+   "src": "cl0",
+   "type": "describing",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The bare participle 'obscuring' right after the question clause describes its subject 'this' as it acts.",
+   "category": "participle describing subject",
+   "votes": 2
+  }
+ ],
+ "groups": [
+  {
+   "id": "Job.38.2#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "Job.38.1#cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Job.38.1#w4"
+    }
+   ],
+   "divine": true,
+   "why": "The speech opens: the LORD (sender) speaks to Job (addressee). Its saying clause is 38:1 cl1. The turn runs on through the verses that follow.",
+   "category": "speech of the LORD to Job",
+   "votes": 2
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [],
+ "voted": 3
+}

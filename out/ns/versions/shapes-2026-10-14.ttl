@@ -1,0 +1,302 @@
+# Bible Ontology -- SHACL shapes, version 1.0.0 (2026-10-14).
+# Closed-world checks for the graph: what the vocabularies at /ns/meaning, /ns/structure
+# and /ns/relation describe, checked here rather than inferred. Run with inference off.
+# (c) 2026 Doug Egge. All rights reserved.
+@prefix bom: <https://bibleontology.org/ns/meaning#> .
+@prefix bos: <https://bibleontology.org/ns/structure#> .
+@prefix bosh: <https://bibleontology.org/ns/meaning/shapes#> .
+@prefix bow: <https://bibleontology.org/ns/word#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bosh:Classification a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:classifies ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:inClass ],
+        [ sh:minCount 1 ;
+            sh:path bom:statement ],
+        [ sh:minCount 1 ;
+            sh:path bom:saidBy ],
+        [ sh:minCount 1 ;
+            sh:path bom:evidence ] ;
+    sh:targetClass bom:Classification .
+
+bosh:ContestedHasBothSides a sh:NodeShape ;
+    sh:sparql [ sh:message "A use the text itself settles (a figure with a stated tenor) is not contested." ;
+            sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE {
+                $this bom:usage bom:Contested .
+                ?f bom:figureAt $this ; bom:tenorBasis "stated" .
+            }""" ],
+        [ sh:message "A contested use needs at least two usage readings that answer differently." ;
+            sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE {
+                $this bom:usage bom:Contested .
+                FILTER NOT EXISTS {
+                    ?a bom:readsUsageOf $this ; bom:readsUsage ?ua .
+                    ?b bom:readsUsageOf $this ; bom:readsUsage ?ub .
+                    FILTER (?ua != ?ub)
+                }
+            }""" ] ;
+    sh:targetClass bow:Occurrence .
+
+bosh:FigurativeHasFigure a sh:NodeShape ;
+    sh:sparql [ sh:message "Usage is figurative (or a sign), but no FigurativeUse is at this occurrence." ;
+            sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE {
+                $this bom:usage ?u .
+                FILTER (?u IN (bom:Figurative, bom:Sign))
+                FILTER NOT EXISTS { ?f bom:figureAt $this }
+            }""" ] ;
+    sh:targetClass bow:Occurrence .
+
+bosh:FigurativeUse a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:figureAt ],
+        [ sh:class bow:Sense ;
+            sh:maxCount 1 ;
+            sh:message "A figure names its image (the vehicle) as a sense." ;
+            sh:minCount 1 ;
+            sh:path bom:vehicle ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:mode ],
+        [ sh:message "A figure says what in the text marks it." ;
+            sh:minCount 1 ;
+            sh:path bom:marker ],
+        [ sh:in ( "stated" "read" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:tenorBasis ],
+        [ sh:minCount 1 ;
+            sh:path bom:evidence ] ;
+    sh:targetClass bom:FigurativeUse .
+
+bosh:MembershipIsArgued a sh:NodeShape ;
+    sh:sparql [ sh:message "A member of Human, Deity, HeavenlyBeing or Spirit with no Classification citing why." ;
+            sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this ?c WHERE {
+                $this a ?c .
+                FILTER (?c IN (bom:Human, bom:Deity, bom:HeavenlyBeing, bom:Spirit))
+                FILTER NOT EXISTS {
+                    ?k bom:classifies $this ; bom:inClass ?c ; bom:evidence ?v .
+                }
+            }""" ] ;
+    sh:targetClass bom:Individual .
+
+bosh:Occurrence a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:message "An occurrence has exactly one lexeme." ;
+            sh:minCount 1 ;
+            sh:path bow:ofLexeme ],
+        [ sh:maxCount 1 ;
+            sh:message "An occurrence carries at most one sense (or none, where the evidence does not decide)." ;
+            sh:path bow:inSense ],
+        [ sh:in ( bom:Literal bom:Figurative bom:Unmarked bom:Sign bom:Contested ) ;
+            sh:maxCount 1 ;
+            sh:message "Usage is literal, figurative, a sign, contested, or unmarked — one of them." ;
+            sh:path bom:usage ] ;
+    sh:targetClass bow:Occurrence .
+
+bosh:OneTopClass a sh:NodeShape ;
+    sh:sparql [ sh:message "An individual carries more than one top class; keep the least disputed and move the rest to predications." ;
+            sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            SELECT $this WHERE {
+                $this a ?c1, ?c2 .
+                FILTER (?c1 != ?c2)
+                FILTER (?c1 IN (bom:PersonalBeing, bom:Group, bom:Animal,
+                    bom:Plant, bom:Artifact, bom:BodyPart, bom:Food,
+                    bom:Substance, bom:NaturalObject, bom:Place, bom:Time,
+                    bom:Event, bom:Act, bom:State, bom:Phenomenon,
+                    bom:Feeling, bom:Cognition, bom:Communication,
+                    bom:Attribute, bom:Quantity, bom:Possession,
+                    bom:Relation, bom:Shape, bom:Motive))
+                FILTER (?c2 IN (bom:PersonalBeing, bom:Group, bom:Animal,
+                    bom:Plant, bom:Artifact, bom:BodyPart, bom:Food,
+                    bom:Substance, bom:NaturalObject, bom:Place, bom:Time,
+                    bom:Event, bom:Act, bom:State, bom:Phenomenon,
+                    bom:Feeling, bom:Cognition, bom:Communication,
+                    bom:Attribute, bom:Quantity, bom:Possession,
+                    bom:Relation, bom:Shape, bom:Motive))
+            }""" ] ;
+    sh:targetClass bom:Individual .
+
+bosh:Predication a sh:NodeShape ;
+    sh:or ( [ sh:minCount 1 ;
+                sh:path bom:predicatedCategory ] [ sh:minCount 1 ;
+                sh:path bom:predicatedIdentity ] ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:predicationOf ],
+        [ sh:message "The saying is the fact: a predication names who says it." ;
+            sh:minCount 1 ;
+            sh:path bom:saidBy ],
+        [ sh:minCount 1 ;
+            sh:path bom:evidence ] ;
+    sh:targetClass bom:Predication .
+
+bosh:Reading a sh:NodeShape ;
+    sh:property [ sh:message "A reading always names its reader." ;
+            sh:minCount 1 ;
+            sh:path prov:wasAttributedTo ],
+        [ sh:minCount 1 ;
+            sh:path bom:evidence ] ;
+    sh:targetClass bom:Reading .
+
+bosh:SenseProvenance a sh:NodeShape ;
+    sh:property [ sh:message "A sense says how it was reached ('English' via a gloss)." ;
+            sh:minCount 1 ;
+            sh:path bom:derivedVia ] ;
+    sh:targetClass bow:Sense .
+
+bosh:SignIsStated a sh:NodeShape ;
+    sh:sparql [ sh:message "A sign whose meaning is not stated by the text is a reading, not a sign." ;
+            sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE {
+                $this bom:usage bom:Sign .
+                FILTER NOT EXISTS { ?f bom:figureAt $this ; bom:tenorBasis "stated" }
+            }""" ] ;
+    sh:targetClass bow:Occurrence .
+
+bosh:TenorFollowsBasis a sh:NodeShape ;
+    sh:sparql [ sh:message "A figure whose tenor is 'read' carries the tenor itself; it must be on a SymbolReading with a named reader." ;
+            sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE { $this bom:tenorBasis "read" ; bom:tenor ?t . }""" ],
+        [ sh:message "A figure whose tenor is 'stated' names it." ;
+            sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE { $this bom:tenorBasis "stated" .
+                                 FILTER NOT EXISTS { $this bom:tenor ?t } }""" ] ;
+    sh:targetClass bom:FigurativeUse .
+
+bosh:UsageReading a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:readsUsageOf ],
+        [ sh:in ( bom:Literal bom:Figurative bom:Sign ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:readsUsage ],
+        [ sh:minCount 1 ;
+            sh:path bom:readsAs ] ;
+    sh:targetClass bom:UsageReading .
+
+bos:addressee_objectShape a sh:NodeShape ;
+    sh:message "Object of addressee must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:addressee .
+
+bos:adv_objectShape a sh:NodeShape ;
+    sh:message "Object of adv must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:adv .
+
+bos:content_objectShape a sh:NodeShape ;
+    sh:message "Object of content must be one of: Clause, Imperative" ;
+    sh:or ( [ sh:class bos:Clause ] [ sh:class bos:Imperative ] ) ;
+    sh:targetObjectsOf bos:content .
+
+bos:ellipsis_objectShape a sh:NodeShape ;
+    sh:message "Object of ellipsis must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:ellipsis .
+
+bos:fulfils_objectShape a sh:NodeShape ;
+    sh:message "Object of fulfils must be one of: Clause, Imperative" ;
+    sh:or ( [ sh:class bos:Clause ] [ sh:class bos:Imperative ] ) ;
+    sh:targetObjectsOf bos:fulfils .
+
+bos:group_subject_objectShape a sh:NodeShape ;
+    sh:message "Object of group_subject must be one of: Word, Composite, Author" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Author ] ) ;
+    sh:targetObjectsOf bos:group_subject .
+
+bos:group_subject_subjectShape a sh:NodeShape ;
+    sh:message "Subject of group_subject must be one of: Parallel, AgentActs, Descriptions" ;
+    sh:or ( [ sh:class bos:Parallel ] [ sh:class bos:AgentActs ] [ sh:class bos:Descriptions ] ) ;
+    sh:targetSubjectsOf bos:group_subject .
+
+bos:io_objectShape a sh:NodeShape ;
+    sh:message "Object of io must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:io .
+
+bos:member_objectShape a sh:NodeShape ;
+    sh:message "Object of member must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:member .
+
+bos:motive_objectShape a sh:NodeShape ;
+    sh:message "Object of motive must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:motive .
+
+bos:o2_objectShape a sh:NodeShape ;
+    sh:message "Object of o2 must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:o2 .
+
+bos:o_objectShape a sh:NodeShape ;
+    sh:message "Object of o must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:o .
+
+bos:p_objectShape a sh:NodeShape ;
+    sh:message "Object of p must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:p .
+
+bos:possessor_subjectShape a sh:NodeShape ;
+    sh:message "Subject of possessor must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetSubjectsOf bos:possessor .
+
+bos:pp_objectShape a sh:NodeShape ;
+    sh:message "Object of pp must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:pp .
+
+bos:prep_object_objectShape a sh:NodeShape ;
+    sh:message "Object of prep_object must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:prep_object .
+
+bos:qualifier_subjectShape a sh:NodeShape ;
+    sh:message "Subject of qualifier must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetSubjectsOf bos:qualifier .
+
+bos:resolves_to_objectShape a sh:NodeShape ;
+    sh:message "Object of resolves_to must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:resolves_to .
+
+bos:s_objectShape a sh:NodeShape ;
+    sh:message "Object of s must be one of: Word, Author, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Author ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:s .
+
+bos:sender_objectShape a sh:NodeShape ;
+    sh:message "Object of sender must be one of: Word, Composite, Author" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Author ] ) ;
+    sh:targetObjectsOf bos:sender .
+
+bos:speaker_objectShape a sh:NodeShape ;
+    sh:message "Object of speaker must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:speaker .
+

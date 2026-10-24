@@ -1,0 +1,26 @@
+{
+ "ref": "Gen.1.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

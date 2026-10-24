@@ -1,0 +1,32 @@
+{
+ "ref": "Rom.3.1",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'What' (neuter singular) asks the question; it stands for the answer and refers to no candidate.",
+   "category": "interrogative pronoun"
+  },
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'what' (feminine singular) asks the value of circumcision; it is the question word, not a reference to benefit (w9) or circumcision (w11).",
+   "category": "interrogative pronoun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Two questions side by side joined by 'Or'.",
+   "category": "or between parallel questions"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

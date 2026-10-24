@@ -1,0 +1,919 @@
+# Bible Ontology -- meaning. Published from ontology/meaning/meaning.ttl by tools/ns_meaning.py.
+@prefix bom: <https://bibleontology.org/ns/meaning#> .
+@prefix bos: <https://bibleontology.org/ns/structure#> .
+@prefix bow: <https://bibleontology.org/ns/word#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bom:Abstract a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Abstract" ;
+    rdfs:comment "Things of the mind, of speech, of relation and measure." ;
+    rdfs:subClassOf bom:Entity .
+
+bom:Act a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Act" ;
+    rdfs:comment "A doing named as a noun: sacrifice, war, judgement." ;
+    rdfs:subClassOf bom:Occurrent ;
+    bom:lexfile "noun.act" .
+
+bom:Animal a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Animal" ;
+    rdfs:comment "Including the serpent of Genesis 3, typed by what Genesis says (identity.yaml): Rev 12:9's identification is a Predication, never a type." ;
+    rdfs:subClassOf bom:Being ;
+    bom:fromEntityType "creature" ;
+    bom:lexfile "noun.animal" .
+
+bom:Artifact a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Artifact" ;
+    rdfs:comment "Made things: sword, altar, ark, lamp, city wall." ;
+    rdfs:subClassOf bom:Thing ;
+    bom:fromEntityType "object" ;
+    bom:lexfile "noun.artifact" .
+
+bom:Attribute a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Attribute" ;
+    rdfs:comment "Holiness, righteousness, strength, height." ;
+    rdfs:subClassOf bom:Abstract ;
+    bom:lexfile "noun.attribute" .
+
+bom:Being a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Being" ;
+    rdfs:comment "Living things and those the text treats as persons." ;
+    rdfs:subClassOf bom:Entity .
+
+bom:BodyPart a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Body part" ;
+    rdfs:subClassOf bom:Thing ;
+    skos:definition "A part of a human or animal body, such as a bone, the womb or a rib." ;
+    bom:lexfile "noun.body" .
+
+bom:CardWord a rdfs:Class,
+        owl:Class ;
+    rdfs:label "card word" ;
+    rdfs:comment "A Hebrew, Aramaic or Greek word that a record holds as one of its words: the record (bom:card), the dictionary word (bom:word), the ground on which it holds it (bom:wordBasis), its strength where it has one, and whether a reader is shown it first (bom:tier)." .
+
+bom:Category a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Category" ;
+    rdfs:comment "A kind of thing a sense denotes: weapon, city, sheep, fear. Each is a SKOS concept in bom:categories, with skos:broader up to one TOP category, and each top category maps to exactly one class of layer 3 (bom:classOf)." ;
+    rdfs:subClassOf skos:Concept .
+
+bom:Classification a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Classification" ;
+    rdfs:comment "Why an individual belongs to a subclass: the verses that make the case and who in the text says so. One per membership; an individual in two subclasses has two, each argued from its own verses (Jesus Incarnate: Human from Jhn 1:14, Php 2:7, 1Ti 2:5; Deity from Col 2:9)." ;
+    rdfs:subClassOf prov:Entity .
+
+bom:Cognition a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Cognition" ;
+    rdfs:comment "Wisdom, knowledge, faith (as WordNet files it)." ;
+    rdfs:subClassOf bom:Abstract ;
+    bom:lexfile "noun.cognition" .
+
+bom:Communication a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Communication" ;
+    rdfs:comment "Word, law, name, song, letter, as things; a speech act is structure (the structure layer's Communication)." ;
+    rdfs:subClassOf bom:Abstract ;
+    bom:fromEntityType "covenant" ;
+    bom:lexfile "noun.communication" .
+
+bom:Concept a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Concept" ;
+    rdfs:comment "An idea the text names and returns to: adoption, holiness, the fear of the LORD. A SKOS concept (it is a meaning, not a thing in the story), linked to the senses that express it (skos:related) and placed under a top category. The graph's concept records land here unchanged." ;
+    rdfs:subClassOf skos:Concept ;
+    bom:fromEntityType "concept" .
+
+bom:Deity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Deity" ;
+    rdfs:comment "God, and any god the text speaks of as a god — 'Dagon their god' (1Sa 5:7) is classified so by what the text says, with its speaker (the Philistines), not endorsed. The Classification's saidBy is what separates the two." ;
+    rdfs:subClassOf bom:PersonalBeing .
+
+bom:Entity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "Anything a word can be about. Abstract: every entity is one of the classes below, or, where the text's own categorizations conflict, left a bare Entity, with the conflict visible in its predications." .
+
+bom:Event a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Event" ;
+    rdfs:comment "A happening as a thing: the flood, the exodus, a feast." ;
+    rdfs:subClassOf bom:Occurrent ;
+    bom:fromEntityType "event",
+        "observance" ;
+    bom:lexfile "noun.event noun.process" .
+
+bom:Feeling a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Feeling" ;
+    rdfs:subClassOf bom:Abstract ;
+    skos:definition "A feeling or emotion named as a thing, such as fear or love." ;
+    bom:lexfile "noun.feeling" .
+
+bom:FigurativeUse a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Figurative use" ;
+    rdfs:comment "One place the text speaks in an image." .
+
+bom:FigureMode a rdfs:Class,
+        owl:Class ;
+    rdfs:label "figure mode" ;
+    rdfs:comment "The kind of figure of speech a figurative use is: metaphor, simile, metonymy, synecdoche, personification, hyperbole, symbol in a told world, or sign-act, admitted as the text marks them." ;
+    rdfs:subClassOf skos:Concept .
+
+bom:Food a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Food and drink" ;
+    rdfs:subClassOf bom:Thing ;
+    skos:definition "Food or drink named as a thing, such as grain, almonds or a prepared dish." ;
+    bom:lexfile "noun.food" .
+
+bom:Group a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Group" ;
+    rdfs:comment "People taken as one: a tribe, a nation, a household, a congregation (ontology/schema group_kinds carries across as categories)." ;
+    rdfs:subClassOf bom:Being ;
+    bom:fromEntityType "group" ;
+    bom:lexfile "noun.group" .
+
+bom:HeavenlyBeing a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Heavenly being" ;
+    rdfs:comment "Angels, messengers from God, cherubim, seraphim, the heavenly host." ;
+    rdfs:subClassOf bom:PersonalBeing .
+
+bom:Human a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Human" ;
+    rdfs:comment "A man, woman or child of the story." ;
+    rdfs:subClassOf bom:PersonalBeing .
+
+bom:Image a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Image" ;
+    rdfs:comment "A recurring vehicle as one node: 'the sword', 'light', 'the shepherd'. It gathers its figurative uses and nothing more. Two images are not related because their tenors coincide (seed and sword are both applied to the word of God, and that does not join them)." ;
+    bom:fromEntityType "image" .
+
+bom:ImageField a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Image field" ;
+    rdfs:comment "Images used together in one passage, as one picture: shepherd, sheep, pasture, still waters, rod and staff (Psa 23). A field is found by co-occurrence inside a structure group, with the group as evidence, never by similarity of meaning." .
+
+bom:Individual a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Individual" ;
+    rdfs:comment "One referent across its mentions: Abraham, Jerusalem, Goliath's sword. Typed by one class above (the least disputed). The graph's person, place, group, creature, object and event records map onto the classes; 'being' and 'image', which make claims, become predications and figures." .
+
+bom:Motive a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Motive" ;
+    rdfs:subClassOf bom:Abstract ;
+    skos:definition "A reason or drive that moves someone to act, named as a thing." ;
+    bom:lexfile "noun.motive" .
+
+bom:NaturalObject a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Natural object" ;
+    rdfs:comment "The earth, a stone, a star, a rock." ;
+    rdfs:subClassOf bom:Thing ;
+    bom:lexfile "noun.object" .
+
+bom:Occurrent a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Occurrent" ;
+    rdfs:comment "Things that happen, and conditions that hold." ;
+    rdfs:subClassOf bom:Entity .
+
+bom:PersonalBeing a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Person or personal being" ;
+    rdfs:comment "Anyone the text treats as a person: a human, God, an angel, a spirit addressed or speaking. One class over all of them, with subclasses. WordNet files God under noun.person too." ;
+    rdfs:subClassOf bom:Being ;
+    bom:fromEntityType "being",
+        "person" ;
+    bom:lexfile "noun.person" .
+
+bom:Phenomenon a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Phenomenon" ;
+    rdfs:comment "Light, fire, wind, rain, thunder." ;
+    rdfs:subClassOf bom:Occurrent ;
+    bom:lexfile "noun.phenomenon" .
+
+bom:Place a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Place" ;
+    rdfs:comment "place_kinds (city, town, region, mountain, river, well, sacred_site ...) carry across as categories under it." ;
+    rdfs:subClassOf bom:Setting ;
+    bom:fromEntityType "place" ;
+    bom:lexfile "noun.location" .
+
+bom:Plant a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Plant" ;
+    rdfs:subClassOf bom:Being ;
+    skos:definition "A plant, such as thistles, reeds or wheat." ;
+    bom:lexfile "noun.plant" .
+
+bom:Possession a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Possession" ;
+    rdfs:comment "Inheritance, wages, silver as money." ;
+    rdfs:subClassOf bom:Abstract ;
+    bom:lexfile "noun.possession" .
+
+bom:Predication a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Predication" ;
+    rdfs:comment "Somebody in the text says X is (or is called) a Y: 'the LORD is a man of war' (Exo 15:3), 'my Lord and my God' (Jhn 20:28), 'that ancient serpent, who is called the devil' (Rev 12:9). The saying is the fact. What kind of thing X is, is answered by collecting these, the text's own categorization, every one cited, rather than by one type." ;
+    rdfs:subClassOf prov:Entity ;
+    bom:fromEntityType "assessment" .
+
+bom:QualityDimension a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Quality dimension" ;
+    rdfs:comment "What an adjective measures: goodness, purity, strength, size, age, number, colour, wisdom. WordNet does not sort adjectives by meaning (its files are only 'all' and 'pertainym'), so this scheme is the one place the recommendation builds its own list, from the corpus's adjectives by frequency." ;
+    rdfs:subClassOf skos:Concept .
+
+bom:Quantity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Quantity" ;
+    rdfs:subClassOf bom:Abstract ;
+    skos:definition "An amount or measure named as a thing." ;
+    bom:lexfile "noun.quantity" .
+
+bom:Reader a rdfs:Class,
+        owl:Class ;
+    rdfs:label "reader" ;
+    rdfs:comment "Whoever offers a reading of the text, such as a Bible's editors, a commentator or a model run; a reading always names its reader." ;
+    rdfs:subClassOf prov:Agent .
+
+bom:Reading a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Reading" ;
+    rdfs:comment "One reader's claim about the text, with the reader (prov:wasAttributedTo) and the evidence it points at. Readings may disagree, and all are kept." ;
+    rdfs:subClassOf prov:Entity .
+
+bom:Relation a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Relation" ;
+    rdfs:subClassOf bom:Abstract ;
+    skos:definition "A relation between things or events, named as a thing." ;
+    bom:lexfile "noun.relation" .
+
+bom:Saying a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Saying" ;
+    rdfs:comment "A memorable expression the text uses, recorded as a unit: 'a still small voice', 'I lay a stone in Zion', 'a ransom for many'. The entity store's `text` records (2,305) land here with their kind; those whose kind is parable, dream, vision or sign also OPEN a told world (bom:opens)." ;
+    bom:fromEntityType "text" .
+
+bom:Setting a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Setting" ;
+    rdfs:comment "Where and when." ;
+    rdfs:subClassOf bom:Entity .
+
+bom:Shape a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Shape" ;
+    rdfs:subClassOf bom:Abstract ;
+    skos:definition "The shape or form of a thing, named as a thing." ;
+    bom:lexfile "noun.shape" .
+
+bom:SituationType a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Situation type" ;
+    rdfs:comment "What kind of happening a verb sense names: WordNet's 15 verb files — motion, communication, perception, cognition, emotion, possession, contact, creation, change, consumption, competition, social, stative, body, weather. Plan 4.5 asks for 'motion, speech, perception, posture'; this is that list, complete." ;
+    rdfs:subClassOf skos:Concept .
+
+bom:Spirit a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Spirit" ;
+    rdfs:comment "A spirit the text treats as acting or speaking: an unclean spirit, a demon, a lying spirit (1Ki 22:22)." ;
+    rdfs:subClassOf bom:PersonalBeing .
+
+bom:State a rdfs:Class,
+        owl:Class ;
+    rdfs:label "State" ;
+    rdfs:comment "Peace, sickness, barrenness." ;
+    rdfs:subClassOf bom:Occurrent ;
+    bom:lexfile "noun.state" .
+
+bom:StoryWorld a rdfs:Class,
+        owl:Class ;
+    rdfs:label "story world" ;
+    rdfs:subClassOf bom:World ;
+    skos:definition "The world of the story itself, where the individuals the text narrates exist, as distinct from a told world opened by a parable, dream, vision or sign." .
+
+bom:Substance a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Substance" ;
+    rdfs:comment "Water, oil, blood, gold, clay." ;
+    rdfs:subClassOf bom:Thing ;
+    bom:lexfile "noun.substance" .
+
+bom:SymbolReading a rdfs:Class,
+        owl:Class ;
+    rdfs:label "symbol reading" ;
+    rdfs:comment "A reader supplies the meaning of an image that the text does not state; it hangs on the figurative use and is not part of the text's own use." ;
+    rdfs:subClassOf bom:Reading .
+
+bom:ThemeStamp a rdfs:Class,
+        owl:Class ;
+    rdfs:label "theme stamp" ;
+    rdfs:comment "A reader places a passage under a theme; themes are concepts in the reader's own scheme, never classes and never passed on to what the passage mentions." ;
+    rdfs:subClassOf bom:Reading .
+
+bom:Thing a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Thing" ;
+    rdfs:comment "Physical things that are not alive." ;
+    rdfs:subClassOf bom:Entity .
+
+bom:Tie a rdfs:Class,
+        owl:Class ;
+    rdfs:label "tie" ;
+    rdfs:comment "A relation between two records as the knowledge graph navigator draws it: the two records, the relation type, and the tie's strength." .
+
+bom:Tier a rdfs:Class,
+        owl:Class ;
+    rdfs:label "tier" ;
+    rdfs:comment "Whether a view shows a thing first or on request, under the filter policy." .
+
+bom:Time a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Time" ;
+    rdfs:subClassOf bom:Setting ;
+    skos:definition "A point or stretch of time, such as the middle of the night." ;
+    bom:lexfile "noun.time" .
+
+bom:Title a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Title" ;
+    rdfs:comment "A form of address or office the text applies to someone: the Almighty, Abba, captain of the guard, an apostle of Jesus Christ. A title is a category a Predication applies (form: title), so the 74 `title` records keep their names and gain their citations." ;
+    rdfs:subClassOf bom:Category ;
+    bom:fromEntityType "title" .
+
+bom:ToldWorld a rdfs:Class,
+        owl:Class ;
+    rdfs:label "told world" ;
+    rdfs:comment "Opened by a parable, dream, vision or sign-act: a Communication whose content is a told world." ;
+    rdfs:subClassOf bom:World .
+
+bom:TypologyReading a rdfs:Class,
+        owl:Class ;
+    rdfs:label "typology reading" ;
+    rdfs:comment "Deprecated, never used. Where the text itself draws a comparison between one thing and another, the graph records it as the text's own statement; parallels the text does not state are shown without a claim of intent. The address is kept so that nothing that cites it breaks." ;
+    rdfs:subClassOf bom:Reading ;
+    owl:deprecated true .
+
+bom:Usage a rdfs:Class,
+        owl:Class ;
+    rdfs:label "usage class" ;
+    skos:definition "How a word occurrence is being used: literal, figurative, a sign, contested between readers, or unmarked." .
+
+bom:UsageReading a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Usage reading" ;
+    rdfs:comment "One reader's answer to 'literal or figurative?' at one contested use, with what it reads the thing as. Several may stand on one occurrence; all are kept." ;
+    rdfs:subClassOf bom:Reading .
+
+bom:World a rdfs:Class,
+        owl:Class ;
+    rdfs:label "World" ;
+    rdfs:comment "Where a referent exists for the text. The story world, or a TOLD world: the sower of a parable, the ram and goat of Daniel 8, the beast of Revelation 13 are not individuals of the story world, and nothing about them transfers there except what the text says (the interpretation it gives)." .
+
+bow:Lexeme a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Lexeme" ;
+    rdfs:comment "A Hebrew, Aramaic or Greek dictionary word." ;
+    rdfs:subClassOf ontolex:LexicalEntry .
+
+bow:Occurrence a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Word occurrence" ;
+    rdfs:comment "One MACULA word (morpheme) at one place: the node the structure already has (the structure layer's Word), keyed by MACULA xml:id. Everything below hangs off occurrences, never off verses." ;
+    rdfs:subClassOf bos:Word .
+
+bow:Sense a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Sense" ;
+    rdfs:comment "One distinguishable use of a lexeme. Induced, not given: from the English glosses MACULA gives it (every variant kept), and later from clusters of how the word is used. A sense carries its own provenance." ;
+    rdfs:subClassOf ontolex:LexicalSense .
+
+bom:Contested a bom:Usage ;
+    rdfs:label "contested (readers divide)" ;
+    rdfs:comment "Readers divide on whether the use is literal or figurative, and the text does not settle it: 'This is My body' (Mat 26:26), the bread is his body, or a sign of it; Ezekiel's temple (Ezk 40–48), a temple to be built, or God's presence among his people. The graph decides nothing: each side is a UsageReading credited to its reader, and a view can take the graph as either reads it, both kept and neither resolved. Not the same as Unmarked (no one has claimed anything), and not used where the text itself settles it: 'He was speaking about the temple of His body' (Jhn 2:21) is a stated figure." .
+
+bom:Figurative a bom:Usage ;
+    rdfs:label "figurative" ;
+    skos:definition "A word occurrence that the text uses in an image; it applies only where a figurative use stands at that occurrence." .
+
+bom:Literal a bom:Usage ;
+    rdfs:label "literal" ;
+    skos:definition "A word occurrence taken at face value; it is applied only where something marks the use as literal, never by default." .
+
+bom:Sign a bom:Usage ;
+    rdfs:label "sign (literal and figurative at once)" ;
+    rdfs:comment "A real thing in the scene that also stands for something, where the text says so: the bow in the cloud is a bow and 'the sign of the covenant' (Gen 9:13); the stones from the Jordan are stones and 'a sign among you' (Jos 4:6). Repetition, extra attention, contrast or cultural meaning do not make a use a sign: Exodus repeats the tabernacle's boards for chapters, and they are boards. A Sign carries a FigurativeUse with tenorBasis 'stated'." .
+
+bom:Unmarked a bom:Usage ;
+    rdfs:label "unmarked" ;
+    skos:definition "A word occurrence that nothing marks as literal or figurative, which says nothing either way and describes most words." .
+
+bom:aktionsart a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "action or state" ;
+    rdfs:comment "Plan 2.7: whether a verb sense is a doing or a condition. 'stative' among the situation types is the first evidence; MACULA marks neither." ;
+    rdfs:domain bow:Sense ;
+    rdfs:range xsd:string .
+
+bom:assumedFormOf a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "was a form assumed by" ;
+    rdfs:comment "The form is the subject, the one who assumed it the object: the incarnate Jesus assumed form of Jesus (Php 2:6-8); the three men at Mamre assumed form of the LORD (Gen 18:1-2). The incarnate node carries the Human membership the text argues for; the relation says whose form it is." ;
+    rdfs:domain bom:Individual ;
+    rdfs:range bom:Individual .
+
+bom:card a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "card" ;
+    rdfs:comment "The record whose word this is." ;
+    rdfs:domain bom:CardWord .
+
+bom:cardWordShare a dqv:Metric ;
+    rdfs:label "card word share" ;
+    rdfs:comment "The share of a word's renderings in the text that render the record's name, from 0 to 1. A word at or above 0.15 is shown by default; a word a cited verse uses is shown whatever its share." ;
+    dqv:inDimension bom:salience .
+
+bom:categories a skos:ConceptScheme ;
+    rdfs:label "Categories" ;
+    rdfs:comment "Top level: WordNet's lexicographer files (26 noun, 15 verb), free, standard, and complete by construction: every WordNet sense sits in exactly one. Below it, WordNet synsets reached through English glosses, as an overlay. Proper names are typed in layer 3, not here." .
+
+bom:categoryShare a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "category share" ;
+    rdfs:comment "On a reified lexeme-category row: the share of the lexeme's usage in that category (a lemma's category is a DISTRIBUTION; verdict decided >= 60%, leaning 40-60%, split below — split is reported, never averaged away)." ;
+    rdfs:range xsd:decimal .
+
+bom:classOf a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "class of" ;
+    rdfs:comment "A TOP category -> the referent class (layer 3) its members are. One per top category." ;
+    rdfs:domain bom:Category ;
+    rdfs:range rdfs:Class .
+
+bom:classifies a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "classifies" ;
+    rdfs:domain bom:Classification ;
+    rdfs:range bom:Individual ;
+    skos:definition "From a classification to the individual that it places in a subclass." .
+
+bom:default a bom:Tier ;
+    rdfs:label "shown by default" .
+
+bom:derivedVia a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "derived via" ;
+    rdfs:comment "'English' where a fact came through an English gloss, so a reader can discount it and a query can ask for what rests on the original languages only." ;
+    rdfs:range xsd:string .
+
+bom:drawnFrom a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "is drawn from" ;
+    rdfs:comment "Image -> the tangible thing of the same word: the sword image -> the sword (a weapon: its sense, or an individual sword). Old `drawn_from`: 'The lion of 1 Peter 5:8 and the lion Daniel was shut in with are NOT ONE NODE: one is a figure, one is an animal in a den, and this edge says they share a word without saying they share' anything more." ;
+    rdfs:domain bom:Image ;
+    skos:altLabel "is used as an image (inverse)" .
+
+bom:drawsOn a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "draws on the image of" ;
+    rdfs:comment "A saying, title or predication -> the image it is built on: 'the whole armour of God' draws on the breastplate, the helmet, the shield and the sword (Eph 6:11-17). Old `draws_on` (240 edges): 'a lexical claim and nothing more' — it records that the saying is built on the word, not what the image means (that would be a Reading)." ;
+    rdfs:range bom:Image ;
+    skos:altLabel "is the image behind (inverse)" .
+
+bom:evidence a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "evidence" ;
+    rdfs:comment "The occurrences or clause (structure ids) the fact rests on. Required on every predication, figure and reading." .
+
+bom:extendedFrom a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "extended from" ;
+    rdfs:comment "Sense to the sense it grew from by a conventional figure: heart (the inner self) from heart (the organ); face (presence) from face; arm (power) from arm; flesh (the fallen self, in Paul) from flesh; way (conduct) from way; tongue and lips (speech) from the organs. Decided word by word." ;
+    rdfs:domain bow:Sense ;
+    rdfs:range bow:Sense .
+
+bom:figureAt a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "at" ;
+    rdfs:comment "The occurrence (or clause) where the image is used." ;
+    rdfs:domain bom:FigurativeUse .
+
+bom:figureKind a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "figure kind" ;
+    rdfs:comment "On an extendedFrom link: metonymy (the arm for the power it wields), metaphor (the heart for the inner self), synecdoche (flesh for the whole person)." ;
+    rdfs:range xsd:string .
+
+bom:filterPolicy a dqv:QualityPolicy ;
+    rdfs:label "filter policy" ;
+    rdfs:comment "Strongest by default, the rest on request; nothing is deleted. A card word is shown by default at a card word share of 0.15 or more, or when a verse the record cites uses it. The navigator first draws the ties around its centre whose strength is at least the centre's floor. Certainty is published with every claim and hides nothing; it lowers a tie's strength. A view chooses whether to apply the policy." .
+
+bom:form a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "form" ;
+    rdfs:comment "How the text says it: copula ('X is Y'), apposition ('David the king'), name ('called'), vocative ('O LORD'), epithet." ;
+    rdfs:domain bom:Predication ;
+    rdfs:range xsd:string .
+
+bom:fromEntityType a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "receives entity type" ;
+    rdfs:comment "On a class: which entity-store type(s) land on it. The crosswalk, as data." ;
+    rdfs:domain rdfs:Class ;
+    rdfs:range xsd:string .
+
+bom:hasCategory a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has category" ;
+    rdfs:comment "Sense -> category. Always carries provenance (bom:derivedVia 'English' when it came through a gloss)." ;
+    rdfs:domain bow:Sense ;
+    rdfs:range bom:Category .
+
+bom:inClass a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "in class" ;
+    rdfs:domain bom:Classification ;
+    rdfs:range rdfs:Class ;
+    skos:definition "From a classification to the class that the individual is placed in." .
+
+bom:inField a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "in field" ;
+    rdfs:domain bom:Image ;
+    rdfs:range bom:ImageField ;
+    skos:definition "From an image to the image field, the set of images used together in one passage, that it belongs to." .
+
+bom:inWorld a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "in world" ;
+    rdfs:domain bom:Individual ;
+    rdfs:range bom:World ;
+    skos:definition "From an individual to the world, the story or a told world, in which it exists for the text." .
+
+bom:label a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "label" ;
+    rdfs:comment "A statement's own verb, where the relation is a statement the text makes." ;
+    rdfs:domain bom:Tie ;
+    rdfs:range xsd:string .
+
+bom:legacyKind a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "entity-store kind" ;
+    rdfs:comment "The record's attrs.kind (town, city, tribe, parable ...), kept verbatim; the controlled lists in ontology/schema/relationship_types.yaml become categories under their class (place_kinds under Place, group_kinds under Group, text_kinds under Saying)." ;
+    rdfs:range xsd:string .
+
+bom:legacyType a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "entity-store type" ;
+    rdfs:comment "The type a record carried before this ontology (person, place, concept, image ...), kept verbatim on whatever it becomes here. Nothing is re-typed silently: every move is a rule with a count." ;
+    rdfs:range xsd:string .
+
+bom:lexfile a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "WordNet lexicographer file" ;
+    rdfs:domain rdfs:Class ;
+    rdfs:range xsd:string ;
+    skos:definition "The WordNet lexicographer file or files whose words a class gathers." .
+
+bom:marker a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "marked by" ;
+    rdfs:comment "What in the form shows it: 'category clash in a copular clause', 'comparative כְּ / ὡς', 'relative which-is', 'genitive of apposition', 'an explanation in a told world'. A use found by a rule that judges (the clash rule) carries bom:status 'flagged' until read." ;
+    rdfs:domain bom:FigurativeUse .
+
+bom:mentions a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "mentions" ;
+    rdfs:comment "An occurrence refers to an individual: a name, a pronoun resolved by S5 (`refers_to`), a description. The structure's refers_to becomes this where its target is an individual." ;
+    rdfs:domain bow:Occurrence ;
+    rdfs:range bom:Individual .
+
+bom:metaphor a bom:FigureMode ;
+    skos:definition "The image said to BE its tenor: 'the LORD is my shepherd'." ;
+    skos:prefLabel "metaphor" .
+
+bom:metonymy a bom:FigureMode ;
+    skos:definition "A thing named by what goes with it: 'the sword' for war." ;
+    skos:prefLabel "metonymy" .
+
+bom:mode a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "mode" ;
+    rdfs:domain bom:FigurativeUse ;
+    rdfs:range bom:FigureMode ;
+    skos:definition "The kind of figure a figurative use is, such as metaphor, simile, metonymy, personification or symbol." .
+
+bom:navigatorFloor a dqv:Metric ;
+    rdfs:label "navigator floor" ;
+    rdfs:comment "For a record as the navigator's centre, the lowest tie strength that keeps its first view to 21 records, the centre included; ties of equal strength are kept or left out together." ;
+    dqv:inDimension bom:salience .
+
+bom:navigatorTieStrength a dqv:Metric ;
+    rdfs:label "navigator tie strength" ;
+    rdfs:comment "A certainty factor (explicit 1, implied 0.8, disputed 0.6, conjectured 0.55) times the sum of 0.35 times the relation type's weight and 1.1 times log2 of one plus the verses that name both records, chapters naming both counting half." ;
+    dqv:inDimension bom:salience .
+
+bom:ofImage a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "of image" ;
+    rdfs:domain bom:FigurativeUse ;
+    rdfs:range bom:Image ;
+    skos:definition "From a figurative use to the image whose vehicle it uses." .
+
+bom:onRequest a bom:Tier ;
+    rdfs:label "shown on request" .
+
+bom:opens a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "opens" ;
+    rdfs:domain bom:Saying ;
+    rdfs:range bom:ToldWorld ;
+    skos:definition "From a saying, such as a parable, dream, vision or sign, to the told world that it opens." .
+
+bom:personification a bom:FigureMode ;
+    skos:definition "A non-person spoken of as acting or speaking as a person: 'wisdom calls aloud' (Pro 1:20)." ;
+    skos:prefLabel "personification" .
+
+bom:polarity a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "polarity" ;
+    rdfs:comment "positive | negative | neutral, of a quality sense." ;
+    rdfs:domain bow:Sense ;
+    rdfs:range xsd:string .
+
+bom:predicatedCategory a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "predicated category" ;
+    rdfs:comment "Said to be a kind of thing: 'a man', 'a prophet', 'a king'." ;
+    rdfs:domain bom:Predication ;
+    rdfs:range bom:Category .
+
+bom:predicatedIdentity a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "predicated identity" ;
+    rdfs:comment "Said to be another individual: 'who is called the devil'. NOT owl:sameAs: an identity claim made in the text is a relation to record, never a merge (identity.yaml)." ;
+    rdfs:domain bom:Predication ;
+    rdfs:range bom:Individual .
+
+bom:predicationOf a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "predication of" ;
+    rdfs:domain bom:Predication ;
+    rdfs:range bom:Individual ;
+    skos:definition "From a predication to the individual that the text says something about." .
+
+bom:prefigured a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "prefigured" ;
+    rdfs:comment "Deprecated with TypologyReading, never used." ;
+    rdfs:domain bom:TypologyReading ;
+    owl:deprecated true .
+
+bom:prefigures a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "prefigures" ;
+    rdfs:comment "Deprecated with TypologyReading, never used." ;
+    rdfs:domain bom:TypologyReading ;
+    owl:deprecated true .
+
+bom:readsAs a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "reads as" ;
+    rdfs:comment "What this reader takes it to be: 'his body', 'a sign of his body given', 'a temple to be built', 'God's presence among his people'." ;
+    rdfs:domain bom:UsageReading .
+
+bom:readsTenorOf a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "reads tenor of" ;
+    rdfs:domain bom:SymbolReading ;
+    rdfs:range bom:FigurativeUse ;
+    skos:definition "From a symbol reading to the figurative use whose tenor the reader supplies." .
+
+bom:readsUsage a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "reads usage as" ;
+    rdfs:comment "Literal, Figurative or Sign — never Contested or Unmarked." ;
+    rdfs:domain bom:UsageReading ;
+    rdfs:range bom:Usage .
+
+bom:readsUsageOf a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "reads usage of" ;
+    rdfs:domain bom:UsageReading ;
+    rdfs:range bow:Occurrence ;
+    skos:definition "From a usage reading to the word occurrence whose literal or figurative use it answers for." .
+
+bom:relation a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "relation" ;
+    rdfs:comment "The relation type, from the relation vocabulary." ;
+    rdfs:domain bom:Tie .
+
+bom:saidBy a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "said by" ;
+    rdfs:comment "Who says it: a speaker, the narrator, or the author of a writing; it applies to a predication or a classification." .
+
+bom:simile a bom:FigureMode ;
+    skos:definition "The image said to be LIKE its tenor, with a word that says so: כְּ, ὡς, ὥσπερ." ;
+    skos:prefLabel "simile" .
+
+bom:situationType a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "situation type" ;
+    rdfs:domain bow:Sense ;
+    rdfs:range bom:SituationType ;
+    skos:definition "The kind of happening a verb sense names, such as motion, communication or perception." .
+
+bom:source a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "source" ;
+    rdfs:domain bom:Tie .
+
+bom:statement a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "statement" ;
+    rdfs:comment "What the text says that makes the case, quoted short." ;
+    rdfs:domain bom:Classification ;
+    rdfs:range xsd:string .
+
+bom:status a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "status" ;
+    rdfs:comment "built | proposed | withdrawn: whether the graph has instances of the term yet." ;
+    rdfs:range xsd:string .
+
+bom:symbol a bom:FigureMode ;
+    skos:definition "A thing seen in a dream or vision that the text (or a reader) says stands for something: the ram is the kings of Media and Persia (Dan 8:20, stated)." ;
+    skos:prefLabel "symbol in a told world" .
+
+bom:target a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "target" ;
+    rdfs:domain bom:Tie .
+
+bom:tenor a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "tenor (what it is said of)" ;
+    rdfs:comment "What the image is applied to: an individual ('the LORD'), a stated meaning ('the word of God', Eph 6:17), or absent where the text does not say. On a FigurativeUse when the text states it; on a SymbolReading when a reader supplies it. Deliberately no rdfs:domain: with one, RDFS inference would turn every reader's SymbolReading into a figure of the text." .
+
+bom:tenorBasis a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "tenor basis" ;
+    rdfs:comment "stated — the text itself says what the image is (a copula, 'which is', an interpreter in a vision); read — a reader supplies it, and then the tenor is a Reading (layer 5) with its reader named." ;
+    rdfs:domain bom:FigurativeUse ;
+    rdfs:range xsd:string .
+
+bom:theme a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "theme" ;
+    rdfs:domain bom:ThemeStamp ;
+    rdfs:range skos:Concept ;
+    skos:definition "On a theme stamp, the theme, a concept in the reader's scheme, that the passage is placed under." .
+
+bom:tier a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "tier" ;
+    rdfs:comment "The tier the filter policy gives a thing from its strength." ;
+    rdfs:range bom:Tier .
+
+bom:toldBy a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "told by" ;
+    rdfs:comment "A told world -> the structure node (a Turn, a Writing's part) that tells it." ;
+    rdfs:domain bom:ToldWorld .
+
+bom:usage a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "usage" ;
+    rdfs:comment "Of an occurrence: bom:Literal, bom:Figurative, or bom:Unmarked. No default: an occurrence is Figurative only where a FigurativeUse exists, Literal only where something marks it so, and otherwise Unmarked, which is most words, and says nothing." ;
+    rdfs:domain bow:Occurrence ;
+    rdfs:range bom:Usage .
+
+bom:vehicle a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "vehicle (the image)" ;
+    rdfs:comment "What is pictured: the sense (and so its category) of the image word — sword, lamp, shepherd, rock. Richards's 'vehicle'; conceptual metaphor theory's source domain." ;
+    rdfs:domain bom:FigurativeUse ;
+    rdfs:range bow:Sense .
+
+bom:word a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "word" ;
+    rdfs:comment "The dictionary word, the lexeme." ;
+    rdfs:domain bom:CardWord ;
+    rdfs:range bow:Lexeme .
+
+bom:wordBasis a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "word basis" ;
+    rdfs:comment "Why the record holds the word: anchored (its renderings render the record's name), anchored to a record named by a phrase (no single word carries a phrase), the word a verse the record cites uses, or the same root or a word derived from one of its words." ;
+    rdfs:domain bom:CardWord ;
+    rdfs:range xsd:string .
+
+bom:wordnetSynset a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "WordNet synset" ;
+    rdfs:comment "A category's (or sense's) WordNet synset, as its IRI. An alignment, not an identity." ;
+    rdfs:domain skos:Concept .
+
+<https://bibleontology.org/ns/word> a owl:Ontology ;
+    rdfs:label "Bible Ontology — word" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    rdfs:comment "The word layer (bow:): occurrences, lexemes and senses. Defined in, and published with, the meaning ontology." ;
+    rdfs:seeAlso <https://bibleontology.org/ns/meaning> ;
+    owl:versionInfo "1.2.1" .
+
+bow:hasSense a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has sense" ;
+    rdfs:domain bow:Lexeme ;
+    rdfs:range bow:Sense ;
+    rdfs:subPropertyOf ontolex:sense ;
+    skos:definition "From a lexeme to a sense that it can carry." .
+
+bow:inSense a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "in sense" ;
+    rdfs:comment "The sense THIS occurrence carries. Chosen by the occurrence's own gloss first (MACULA glosses Psa 23:1's רֹעִי 'shepherd'; the lemma, unpointed, is mostly רֵעַ 'friend'). Absent where the evidence does not decide." ;
+    rdfs:domain bow:Occurrence ;
+    rdfs:range bow:Sense .
+
+bow:language a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "language" ;
+    rdfs:comment "hebrew | aramaic | greek" ;
+    rdfs:domain bow:Lexeme ;
+    rdfs:range xsd:string .
+
+bow:ofLexeme a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "of lexeme" ;
+    rdfs:domain bow:Occurrence ;
+    rdfs:range bow:Lexeme ;
+    skos:definition "From a word occurrence to the dictionary word, the lexeme, that it is an instance of." .
+
+bow:septuagintRendering a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "rendered in the Septuagint by" ;
+    rdfs:comment "Hebrew lexeme to the Greek lexeme MACULA aligns to it in the Septuagint, with a count: the cross-language bridge, an independent check on English glosses." ;
+    rdfs:domain bow:Lexeme ;
+    rdfs:range bow:Lexeme .
+
+<https://bibleontology.org/ns/meaning> a owl:Ontology ;
+    rdfs:label "Bible Ontology — meaning" ;
+    dcterms:created "2026-09-28"^^xsd:date ;
+    dcterms:creator "Doug Egge" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2026-10-22"^^xsd:date ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:title "Bible Ontology — meaning" ;
+    vann:preferredNamespacePrefix "bom" ;
+    vann:preferredNamespaceUri "https://bibleontology.org/ns/meaning#" ;
+    rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and nothing about the records of God, the Father, Jesus or the Holy Spirit is derived by inference: they change only by a recorded editorial decision, as the accounts give them. The policy forbids derivations, not descriptions. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred.",
+        "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest.",
+        "What a node is about: word, sense, referent, figure and reading, as five layers that share ids with the structure (https://bibleontology.org/ns/structure) and never merge with it. Senses and categories, figures and mentions are built against it; the joins between the two graphs are not yet built. The word layer's terms (bow:) are defined here and also answer at https://bibleontology.org/ns/word." ;
+    owl:imports <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/lemon/ontolex>,
+        <http://www.w3.org/ns/prov-o#> ;
+    owl:priorVersion <https://bibleontology.org/ns/meaning/2026-10-21> ;
+    owl:versionIRI <https://bibleontology.org/ns/meaning/2026-10-22> ;
+    owl:versionInfo "1.2.1" .
+
+bom:salience a dqv:Dimension ;
+    rdfs:label "salience" ;
+    rdfs:comment "How strongly the text supports showing a thing first." .
+

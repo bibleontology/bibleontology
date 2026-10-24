@@ -1,0 +1,44 @@
+{
+ "ref": "Exo.7.29",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'on you' (second masc sg) in the LORD's message addressed to Pharaoh",
+   "category": "second person inside a quoted divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "w6",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your people': second masc sg possessive in the same speech; Pharaoh's people",
+   "category": "possessive inside a quoted speech",
+   "votes": 3
+  },
+  {
+   "slot": "w11",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your officials': second masc sg possessive in the same speech",
+   "category": "possessive inside a quoted speech",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.7.28#cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "keep",
+   "why": "a plain waw between the list of places in the same speech; no cause or result",
+   "category": "plain and across verses",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [],
+ "voted": 3
+}

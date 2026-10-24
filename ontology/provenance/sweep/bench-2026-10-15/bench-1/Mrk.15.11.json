@@ -1,0 +1,40 @@
+{
+ "ref": "Mrk.15.11",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w5",
+   "divine": false,
+   "why": "'to them' (autois), masculine plural, is the crowd the release is for; ochlos is singular but collective, so the plural pronoun agrees in sense",
+   "category": "collective noun agreement"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Mrk.15.9#w2",
+   "divine": false,
+   "why": "'he might release', subjunctive with an implied subject, is Pilate: the releasing is his custom (15.6); Barabbas is the object of the release, not its doer",
+   "category": "implied subject of a purpose clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "hina with the subjunctive: the chief priests stirred the crowd so that Pilate would release Barabbas",
+   "category": "purpose after an act of persuading"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self-link",
+   "category": "self-link"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

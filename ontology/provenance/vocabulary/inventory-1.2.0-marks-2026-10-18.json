@@ -1,0 +1,27 @@
+{
+ "sheet": "docs/review/inventory-1.2.0.html",
+ "what": "Plan 8.1e part 1: everything 1.2.0 would change, as ten decisions and five questions, each with a recommendation. An override sheet: unmarked means as recommended.",
+ "by": "Doug",
+ "date": "2026-10-18",
+ "result": {
+  "decisions, all as recommended (include)": ["parents", "deferred", "status_other", "widened", "sheet", "new_types", "readings_kinds", "group_role", "claims", "shapes", "export"],
+  "questions, as recommended": {
+   "q1": "widening a range is a minor change: 1.2.0 (the committee to confirm)",
+   "q2": "the parent of sender, addressee and group_subject keeps the name group_role",
+   "q4": "no new status word for 'shown from the readings' in 1.2.0",
+   "q5": "RDF 1.2 published at Candidate Recommendation, as a stated position"
+  },
+  "to discuss": {
+   "q3": "sounds like the issue here is accuracy - what is the cost of running a job to get it right?"
+  }
+ },
+ "marks": {
+  "decision:parents": {"mark": ""}, "decision:deferred": {"mark": ""}, "decision:status_other": {"mark": ""},
+  "decision:widened": {"mark": ""}, "decision:sheet": {"mark": ""}, "decision:new_types": {"mark": ""},
+  "decision:readings_kinds": {"mark": ""}, "decision:group_role": {"mark": ""}, "decision:claims": {"mark": ""},
+  "decision:shapes": {"mark": ""}, "decision:export": {"mark": ""},
+  "question:q1": {"mark": ""}, "question:q2": {"mark": ""},
+  "question:q3": {"mark": "discuss", "note": "sounds like the issue here is accuracy - what is the cost of running a job to get it right?"},
+  "question:q4": {"mark": ""}, "question:q5": {"mark": ""}
+ }
+}

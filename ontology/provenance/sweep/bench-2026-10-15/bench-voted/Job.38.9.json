@@ -1,0 +1,76 @@
+{
+ "ref": "Job.38.9",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'I made the clouds' inside the LORD's speech: the speaker, the LORD.",
+   "category": "first person in divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its garment' (masculine singular) refers to the sea of 38:8, not offered as a candidate. The clouds are the garment, not the owner.",
+   "category": "referent outside candidate list",
+   "votes": 3
+  },
+  {
+   "slot": "w9",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its swaddling band' refers to the sea of 38:8, not offered as a candidate.",
+   "category": "referent outside candidate list",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Same link as the entry above, listed twice in the builder output. Recorded once.",
+   "category": "duplicate builder entry",
+   "votes": 2
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'And thick darkness...' is coordinated inside the 'when' clause.",
+   "category": "coordinated clause inside time clause",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Two nominal clauses joined by plain waw: the clouds are its garment, and thick darkness its swaddling band.",
+   "category": "plain and between nominal clauses",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "38:9 cl0 (and 38:8 to 38:10)",
+   "what": "A chain of when-clauses, each setting the time of the enclosing act. No temporal link type covers this."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "The 'when' of 38:9 and the sea referent of 'its'",
+   "why": "The 'when' completes the question of 38:4 across verses. The 'its' refers to the sea of 38:8, which the candidate list omits."
+  },
+  {
+   "what": "The LORD is not in this verse's candidate list.",
+   "why": "Chosen from the speech, as in 38:8."
+  }
+ ],
+ "voted": 3
+}

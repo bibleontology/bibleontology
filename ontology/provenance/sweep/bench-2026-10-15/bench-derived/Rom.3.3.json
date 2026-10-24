@@ -1,0 +1,59 @@
+{
+ "ref": "Rom.3.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove"
+  },
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

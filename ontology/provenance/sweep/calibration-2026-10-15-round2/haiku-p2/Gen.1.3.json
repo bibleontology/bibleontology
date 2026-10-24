@@ -1,0 +1,90 @@
+{
+ "ref": "Gen.1.3",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Order reversed. cl0 (he said) is the event before cl2 (it was light), so the builder direction runs backwards.",
+   "category": "narrative order reversed"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "cl1 is the speech itself, nested inside cl0. The narrative line continues from cl0, so cl1 is not the clause before cl2.",
+   "category": "then across a speech boundary"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "cl0 is the saying clause (he said God) and cl1 is what is said, the command let it be light. R1 content link, as well as the turn.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add",
+   "why": "wayyiqtol cl2 continues the narrative from cl0, the nearest narrative clause before it that is not inside a speech.",
+   "category": "narrative sequence past a speech"
+  },
+  {
+   "src": "cl1",
+   "type": "result",
+   "dst": "cl2",
+   "action": "add",
+   "why": "A command (jussive, let it be light) and what it brings about (wayyiqtol, it was light). R4: a result, not a plain then.",
+   "category": "command and its outcome"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": true,
+   "why": "God (w2) is the one speaking. Members unchanged. The part is cl1, the single command, so the content is the clause and not an imperative group.",
+   "category": "speech turn with divine sender"
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "effect",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "part=cl2 is not a role of the imperative group. cl2 is what the command brings about, so it is the effect.",
+   "category": "outcome recorded as effect, not part"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

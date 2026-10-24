@@ -1,0 +1,46 @@
+{
+ "ref": "Job.38.7",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive 'sang together' is the 'when' clause nested in cl0.",
+   "category": "temporal infinitive"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'They shouted' sits inside the 'when' clause with the stars' singing, nested in its temporal role.",
+   "category": "coordinated clause inside time clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Same link as the entry above, listed twice in the builder output. Recorded once.",
+   "category": "duplicate builder entry"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The wayyiqtol 'they shouted' continues the narrative line from the nearest preceding clause not inside a speech, the infinitive 'sang'.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The 'when' clause of 38:7 has no host clause in its verse",
+   "why": "It completes the question of 38:4 ('where were you when...') across verses 5 and 6. No link type records a time clause that continues an earlier verse's question."
+  }
+ ]
+}

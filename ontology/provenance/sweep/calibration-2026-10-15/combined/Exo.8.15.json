@@ -1,0 +1,30 @@
+{"ref": "Exo.8.15",
+ "referents": [
+  {"slot": "w8", "choice": "none", "divine": false, "why": "feminine singular 'this' in the magicians' speech points at the plague of gnats just described (Exo.8.13-14), which is not among the candidates; 'finger' (w6) is the predicate, not the referent, and the pronoun is the subject of a nominal clause", "category": "pronoun pointing at an event, no noun candidate"},
+  {"slot": "w17", "choice": "none", "divine": false, "why": "masculine plural 'them' agrees with the magicians (w3), but the clause is 'just as the LORD had said', echoing the earlier 'would not listen to Moses and Aaron' (Exo.8.11), so the sense points to Moses and Aaron; no Moses-and-Aaron composite is offered and the magicians fit only by proximity", "category": "plural object where the sensible referent is not offered as a composite"},
+  {"slot": "cl3s", "choice": "w12", "divine": false, "why": "third masculine singular, the one who would not listen; a heart does not listen, so the parser's 'heart' is wrong; the doer is the possessor Pharaoh of the clause before (w12), the same person as w5", "category": "implied subject is the possessor of the previous clause's subject"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "as", "dst": "cl4", "action": "keep", "why": "ka'asher 'just as' before a saying clause: the refusal to listen is declared the fulfilment of an earlier word of the LORD", "category": "just as an earlier saying"},
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "cl3 is a qatal clause opened by a separate-word waw, not a wayyiqtol, so it does not continue the narrative line; it is joined to cl2 by 'and', and reaching back to cl0 skips the clause it belongs to", "category": "then-link on a non-wayyiqtol clause"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is the content of the magicians' speech, inside the speech; a wayyiqtol continues the nearest clause before it that is NOT inside a speech, which is cl0", "category": "narrative line wrongly runs through a speech"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "separate-word waw joining 'his heart was hardened' and 'he would not listen'; plain and, the sense does not require a cause or result", "category": "plain and kept"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "cl0 is the saying clause and cl1 is what the magicians said, embedded in the speech", "category": "speech and its content"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "cl2 is a wayyiqtol continuing the narrative line from the last narrative clause cl0, replacing the link that ran through the speech content; in English it reads 'but', and the Hebrew carries only waw", "category": "narrative line continues past a speech"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "keep", "members": [
+    {"role": "frame", "node": "cl0"},
+    {"role": "part", "node": "cl1"},
+    {"role": "sender", "node": "w3"},
+    {"role": "addressee", "node": "w5"}],
+   "divine": false, "why": "the magicians (third masculine plural, w3) say to Pharaoh (w5) 'it is the finger of God'; the frame, content, sender and addressee all stand in the verse", "category": "speech with named sender and addressee"}
+ ],
+ "none_fit": [
+  {"where": "cl3 'just as he had said Yahweh' (as to cl4)", "what": "the 'as' link names only the comparison clause; the earlier word of the LORD it fulfils lies outside the verses given, and no link type or group kind records fulfilment of a word spoken elsewhere (fulfils covers only commands carried out)"},
+  {"where": "w17 'them'", "what": "no composite of Moses and Aaron is offered as a candidate, so the plural referent cannot be named"},
+  {"where": "w8 'this'", "what": "no candidate stands for the plague of gnats as an event; a deictic pronoun pointing at a whole happening has nothing to choose"}
+ ],
+ "cant_tell": [
+  {"what": "which earlier saying of the LORD 'just as he had said' points to", "why": "the saying (that Pharaoh would not listen) is not in the verses given; it is the same formula as Exo.8.11 and the wording points at Exo.7.4 or 7.13, but the window does not contain it"}
+ ]}

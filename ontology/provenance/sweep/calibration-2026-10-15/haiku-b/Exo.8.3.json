@@ -1,0 +1,19 @@
+{"ref": "Exo.8.3",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "'their' is third masculine plural. The secret arts (w6) are the magicians' own, so the possessor is the magicians (w4, masculine plural), not the arts themselves.", "category": "possessive pronoun inside a noun phrase"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "Third masculine plural implied subject of cl1. The subject of cl0 is the magicians (w4), the nearest agreeing referent and the doer of the same act. Frogs (w12) are feminine plural, so they cannot be the doers.", "category": "implied subject, narrative continuation"}
+ ],
+ "links": [
+  {"src": "Exo.8.2#cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "The builder wrote the source as bare cl2, which does not exist in this verse. The only clause that can precede cl0 is Exo.8.2#cl2 (the frogs covered the land). 'then' is within-verse only by its definition; across verses the continuation is the episode rung, which is not a link type.", "category": "narrative link across verses"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "cl1 is a wayyiqtol continuing the narrative line inside the verse, after the magicians' act in cl0.", "category": "narrative continuation within verse"},
+  {"src": "cl0", "type": "likewise", "dst": "Exo.8.2#cl0", "action": "add", "why": "'did thus' (ken) with a named subject, the magicians, who were not commanded. They copy a deed done after the latest command (Yahweh's command in Exo.8.1; Aaron's stretching out of the hand in Exo.8.2). Imitation, not fulfilment.", "category": "imitation of an earlier deed"},
+  {"src": "cl1", "type": "elaborates", "dst": "cl0", "action": "add", "why": "cl1 says what the 'same thing' of cl0 was: bringing frogs up onto the land of Egypt.", "category": "detail of a pro-form report"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "Exo.8.2#cl2 to cl0, across the verse boundary", "what": "Narrative continuation across verses. The 'then' type is within-verse only and points to an 'episode rung' that is not in link_types."}
+ ],
+ "cant_tell": [
+  {"what": "Which clause of Exo.8.2 the 'thus' copies: the stretching out (Exo.8.2#cl0) or the frogs coming up (Exo.8.2#cl1)", "why": "'did thus' (ken) does not name the act. The likewise link is written to Exo.8.2#cl0 as the deed begun. The relation holds either way; only the target is unsettled."}
+ ]
+}

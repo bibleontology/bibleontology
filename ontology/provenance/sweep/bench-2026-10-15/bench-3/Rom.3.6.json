@@ -1,0 +1,49 @@
+{
+ "ref": "Rom.3.6",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'May it be' (optative denial): the implied subject is an impersonal 'it', as at 3:4; no candidate.",
+   "category": "impersonal subject of a denial"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "'Certainly not! For otherwise how could God judge the world?': epei gives the reason for the denial.",
+   "category": "reason for a denial"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "'Never may it be' is an exclamation of denial, not a command, and cl1 is a question. 'part' is not a role of an imperative group.",
+   "category": "denial read as command"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "3:6 imp0 (cl0 'Certainly not!')",
+   "what": "An optative exclamation of denial is not a command; no group kind holds a bare denial. It is recorded through the because link."
+  }
+ ],
+ "cant_tell": []
+}

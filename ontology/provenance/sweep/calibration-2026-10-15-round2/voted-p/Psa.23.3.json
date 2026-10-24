@@ -1,0 +1,88 @@
+{
+ "ref": "Psa.23.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "'my soul' is first person singular in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "first person singular 'me' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "w10",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "third masculine singular possessive; 'his name' is the name of the LORD, the shepherd of verse 1",
+   "category": "possessive carried from an earlier verse",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "third masculine singular; 'he restores my soul' has the shepherd of verse 1 as subject",
+   "category": "implied subject carried from an earlier verse",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "third masculine singular; 'he guides me' has the same shepherd as subject",
+   "category": "implied subject carried from an earlier verse",
+   "votes": 3
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.3#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, subject only in the verb (third masculine singular), both acts of the shepherd LORD. The run continues from verse 2 (four clauses in all); it is recorded here per verse for review.",
+   "category": "run of acts of one agent",
+   "votes": 2
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Psa.23.3 cl1",
+   "what": "'for the sake of his name': a purpose stated as a noun phrase (lamed plus a noun), not a clause. No link type takes a noun phrase as its destination, so no purpose link is recorded."
+  },
+  {
+   "where": "cl1, 'for the sake of his name'",
+   "what": "A purpose carried by a noun phrase, not by a clause. The purpose link needs a clause or a lamed-infinitive construct."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether 'He restores my soul; He guides me in the paths of righteousness' is a parallel group",
+   "why": "the same implied subject and verb form, but the second line restates the object only as 'me' and adds a new prepositional role, so the parallel definition does not settle it"
+  }
+ ],
+ "voted": 3
+}

@@ -1,0 +1,62 @@
+{
+ "ref": "Pro.10.5",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle 'one who gathers in summer' is a relative clause inside the subject of the nominal clause 'a son who acts prudently'. The nesting stands.",
+   "category": "participle nested in subject noun phrase",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "The participle 'one who sleeps at harvest' is a relative clause inside the subject of the nominal clause 'a son who acts shamefully'. The nesting stands.",
+   "category": "participle nested in subject noun phrase",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0 and cl2",
+   "what": "two opposed 'one who ... is a son' lines with different subjects; no link type marks an antithesis, and no group kind holds two descriptions of different referents"
+  },
+  {
+   "where": "cl0 and cl2",
+   "what": "Antithetic pair of sentences (a wise son against a disgraceful son) with no connective in the data; the contrast link is for explicit but-words only."
+  },
+  {
+   "where": "Pro.10.5 cl0 and cl2",
+   "what": "Two antithetic sentences joined with no connective at all (no waw and no 'but' in the Hebrew; opens_with is null). No link type fits an unconnected antithesis, so none was added."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the relation between cl0 and cl2",
+   "why": "cl2 has no connective in the parse (opens_with is null), so the opposition the English shows with 'but' is not marked in the data. No link is added."
+  },
+  {
+   "what": "Implied subjects 'one who' of the participles 'gathers' (cl1) and 'sleeps' (cl3).",
+   "why": "Generic persons with no candidate, and the parser gives them no slot."
+  },
+  {
+   "what": "Relative 'who' of 'acts prudently' (cl0) and of 'acts shamefully' (cl2).",
+   "why": "Not listed as a slot. The sense points to the son named in the same clause (w4 in cl0, w10 in cl2), but the reader should confirm it."
+  },
+  {
+   "what": "The implied subjects of the participles in cl1 and cl3 ('one who') are not in the slot list",
+   "why": "As in Pro.10.4, each is a relative pronoun whose referent is the person the enclosing clause describes. The parser gave no slot, so none was added."
+  },
+  {
+   "what": "Whether cl0 and cl2 form a 'descriptions' group",
+   "why": "The kind needs consecutive 'the one who' clauses describing one referent. Here the two clauses describe different people (the gatherer and the sleeper), so the group is not added."
+  }
+ ],
+ "voted": 3
+}

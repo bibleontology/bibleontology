@@ -1,0 +1,49 @@
+{
+ "ref": "Psa.23.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "'my soul' is first person singular in the psalm's own voice",
+   "category": "psalm's own first person"
+  },
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "first person singular 'me' in the psalm's own voice",
+   "category": "psalm's own first person"
+  },
+  {
+   "slot": "w10",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "third masculine singular possessive; 'his name' is the name of the LORD, the shepherd of verse 1",
+   "category": "possessive carried from an earlier verse"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "third masculine singular; 'he restores my soul' has the shepherd of verse 1 as subject",
+   "category": "implied subject carried from an earlier verse"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "third masculine singular; 'he guides me' has the same shepherd as subject",
+   "category": "implied subject carried from an earlier verse"
+  }
+ ],
+ "links": [],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether 'He restores my soul; He guides me in the paths of righteousness' is a parallel group",
+   "why": "the same implied subject and verb form, but the second line restates the object only as 'me' and adds a new prepositional role, so the parallel definition does not settle it"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "ref": "Exo.8.2",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "w2",
+   "divine": false,
+   "why": "'His hand' is Aaron's, the subject of the act (third masculine singular).",
+   "category": "possessive of the subject"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "divine": false,
+   "why": "'It covered the land' is third feminine singular, and the frogs are the feminine singular subject of the verse.",
+   "category": "gender agreement with the frogs"
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.8.1#cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A then-link runs within a verse only. The narrative line here continues from the frame of the speech, a cross-verse sequence that is not a link type.",
+   "category": "cross-verse then"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "Aaron's stretching out brings about the frogs' coming up, so the relation is an outcome, not a sequence.",
+   "category": "outcome read as sequence"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Aaron stretched out his hand, and the frogs came up: what the act brings about.",
+   "category": "outcome of an act"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "A wayyiqtol with the same subject continues the narrative within the verse: came up, then covered.",
+   "category": "wayyiqtol continuation"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.8.2#g1",
+   "kind": "action-state",
+   "action": "add",
+   "members": [
+    {
+     "role": "action",
+     "node": "Exo.8.1#cl2"
+    },
+    {
+     "role": "state",
+     "node": "cl0"
+    }
+   ],
+   "divine": false,
+   "why": "A command to stretch out the hand, then the same verb reported as done by Aaron. There is no pro-form such as 'did so'. Proposed as a reading for review (R5).",
+   "category": "command then the same act reported"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Exo.8.1#cl3 to Exo.8.2#cl0",
+   "what": "A sequence across verses has no link type: then is within a verse only, and the episode rung is not in link_types."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Whether 'the frogs came up' (cl1) fulfils the command 'bring up the frogs' (Exo.8.1 cl3).",
+   "why": "Same root but qal rather than hiphil, and no 'did so' report; left unlinked."
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "ref": "Exo.8.9",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "the order is the LORD's act (cl0), then the frogs died (cl1); this link runs backward",
+   "category": "reversed then"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "what an act brings about is the earlier clause's result, not then (R4): the frogs' death is what the LORD's act brought about",
+   "category": "act and what it brings about"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the LORD did as Moses asked, and so the frogs died (R4)",
+   "category": "act and what it brings about"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0",
+   "what": "'as Moses requested' (according to the word of Moses) declares the act a fulfilment of Moses' earlier word, but the word is a prepositional phrase, not a clause; the as link needs a compared clause. The earlier word is Moses' cry in Exo.8.8 cl1"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether the death (cl1) is the result of the act (cl0) or the next event on the narrative line",
+   "why": "the wayyiqtol form does not separate the two; result chosen under R4"
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "id": "praise",
+ "overall": "ship after fixes",
+ "fixes": [
+  {
+   "row": "The nations, all the earth, the Gentiles",
+   "kind": "misfit",
+   "verses": ["Acts.13.48"],
+   "readers": ["Reformed", "Wesleyan", "Baptist / free church", "secular academic", "biblical-theological"],
+   "why": "Acts 13:48 says the Gentiles 'glorified the word of the Lord'. That is not praise of the LORD, and the verse is the one with 'appointed for eternal life'. The worker's own 'Glorified ...' row already holds it as a non-praise use of the verb. Filed a second time under the nations praising, it is a misfit (the label says who praises, and the verse names no one praised but the word), and it puts an election clause in the most-read part of a praise row without the note that the other row carries.",
+   "fix": "Remove Acts 13:48 from the nations row (keep it only in the 'Glorified ...' row, where the note says it is not praise). The row keeps Ps 66:4, 68:32, 98:4, 117:1, Rom 15:9, 15:11 and 1 Pet 2:12."
+  },
+  {
+   "row": "Glorified: the word of the Lord, those He called, oneself, what was once glorious",
+   "kind": "label",
+   "verses": ["Rom.8.30"],
+   "readers": ["Reformed", "Lutheran", "Wesleyan", "Catholic / Orthodox"],
+   "why": "Rom 8:30 says 'those He justified, He also glorified'. The label says 'those He called'. In a chain of calling, justifying and glorifying, naming the wrong link is the kind of slip a Reformed or Wesleyan reader will read as the page choosing a reading of the chain.",
+   "fix": "Relabel: 'Glorified: the word of the Lord, those He justified, oneself, what was once glorious'."
+  },
+  {
+   "row": "Glorified: the word of the Lord, those He called, oneself, what was once glorious",
+   "kind": "note",
+   "verses": ["Rom.8.30", "Acts.13.48"],
+   "readers": ["Reformed", "Wesleyan", "Lutheran", "Baptist / free church", "Catholic / Orthodox"],
+   "why": "Rom 8:30 (predestined) and Acts 13:48 (appointed) are verses where traditions part on election. They are listed only because the verb is δοξάζω, and the row is honest about that. But rule 2 asks for a plain 'takes no side' wherever such a verse is shown, and the current note does not say it. The row is honest to include (rule 4: a word's other senses must not be hidden), provided the note leads with 'not praise'.",
+   "fix": "Rewrite the note: 'None of these is praise offered to God. They are here only because the Greek verb is the same, δοξάζω, 'glorify'. Rom 8:30 and Acts 13:48 are listed for that verb alone; the page takes no side on how their other words (predestined, appointed) are read.' Keep the 2 Cor 3:10 clause."
+  },
+  {
+   "row": "The Son glorified, the Father glorified in the Son",
+   "kind": "label",
+   "verses": ["John.15.8", "John.17.4", "John.12.28", "John.17.1", "Luke.4.15"],
+   "why": "Rule 1. The label names two things only. John 15:8 has the Father glorified in the disciples' fruit; John 17:4 and 17:1 have the Son glorifying the Father; John 12:28 has the Father's name glorified; Luke 4:15 has Jesus glorified by everyone. The label fits 7.39, 12:23, 13:31-32 and 14:13 but not these.",
+   "fix": "Relabel to the text's range: 'Jesus glorified, the Father glorified, and who glorifies whom (John, Acts, Hebrews, Luke 4:15)'."
+  },
+  {
+   "row": "The Son glorified, the Father glorified in the Son",
+   "kind": "note",
+   "verses": ["John.7.39", "John.12.23", "John.13.31", "John.17.5", "John.16.14"],
+   "readers": ["Baptist / free church", "Pentecostal / Charismatic", "Catholic / Orthodox", "Reformed", "secular academic"],
+   "why": "This row of 18 sits in a hub called 'Who praises, and whom'. No verse in it is anyone praising Jesus (Luke 4:15 aside), and in John the glorifying is the hour of the cross and return. The present note says the page does not say these are 'one act', but never says the thing a reader may take away from the placement: that this is praise of the Son. The page also does not say that the Spirit's glorifying of Jesus (16:14) is or is not like the Father's. The divine persons are placed by hand, which is right; the note must say what the placement does not claim.",
+   "fix": "Revise the note: 'Here the Greek is δοξάζω, 'glorify', the glory card's verb. It is also the verb of 'they glorified God', but the page does not treat the Father and the Son glorifying one another as praise, or as the same act as a crowd glorifying God. John 16:14 is the Spirit glorifying Jesus. Where Christian traditions part on how the persons glorify one another, the page takes no side.' Optional: show 'See the glory card' with the row."
+  },
+  {
+   "row": "They glorified God, praised God, sang hymns to God",
+   "kind": "different words",
+   "verses": ["Luke.2.20", "Luke.18.43", "Matt.9.8", "Acts.16.25"],
+   "readers": ["secular academic", "Catholic / Orthodox", "biblical-theological"],
+   "why": "Rule 4. 15 of the 21 verses are δοξάζω ('glorify'); the rest are αἰνέω and ὑμνέω. One label strings the three together with no note, while the Son row beside it carries one. Luke 2:20 ('glorifying and praising God') and 18:43 are the text itself pairing the two words, which is the honest ground for the row, and the page should say so rather than let the label merge them.",
+   "fix": "Add the note: 'In most of these the Greek verb is δοξάζω, 'glorify'; a few are αἰνέω 'praise' or ὑμνέω 'sing a hymn'. They are two different words, and in Luke 2:20 and 18:43 the text sets them side by side.'"
+  },
+  {
+   "row": "Praise, sing to the name of the LORD",
+   "kind": "different words",
+   "verses": ["Rev.15.4"],
+   "readers": ["secular academic", "rabbi", "biblical-theological"],
+   "why": "Rev 15:4 is δοξάζω ('glorify Your name'), the only Greek in an otherwise Hebrew row labelled 'Praise, sing'. It is the second example a reader sees, so the label says 'praise' and the example says 'glorify' (rules 4 and 6), and a New Testament verb is given as the second voice in a row of the Psalms (rule 5).",
+   "fix": "Move Rev 15:4 to the 'Glorify God' row, or to 'Praise beside glory and the name'; leave the name row as Hebrew."
+  },
+  {
+   "row": "Who does not praise or glorify",
+   "kind": "misfit",
+   "verses": ["Rom.1.21", "Ps.115.17", "Isa.38.18"],
+   "readers": ["rabbi", "Reformed", "Wesleyan", "Pentecostal / Charismatic", "young African American believer"],
+   "why": "Two kinds of 'not' are joined: the dead who cannot (Ps 115:17, Isa 38:18, in the Psalms' own terms) and the living who knew God and would not (Rom 1:21). The label lets the second read as the same as the first, and Rom 1:21 is a verse where traditions read natural knowledge, fallenness and responsibility differently. Also, the theme's other verses (Ps 6:5, 30:9, 88:10, 'who can praise You from Sheol') are in Other words under יָדָה, so the row looks like the whole of the theme with two Old Testament verses.",
+   "fix": "Split: keep 'The dead do not praise' (Ps 115:17, Isa 38:18) with a note 'Ps 6:5, 30:9 and 88:10 say the same with the thanks word יָדָה; see Other words', and give Rom 1:21 its own row, 'Knew God and did not glorify Him as God or give thanks'."
+  },
+  {
+   "row": "Other words translated “praise”",
+   "kind": "note",
+   "verses": ["Ps.103.1", "Ps.104.1", "Ps.134.1", "Luke.1.64", "Luke.24.53", "Ps.7.17", "Ps.138.1"],
+   "readers": ["Baptist / free church", "Pentecostal / Charismatic", "Wesleyan", "rabbi", "young African American believer"],
+   "why": "A reader will take the hub as complete on praise. Three things are not said: (1) 'Bless the LORD, O my soul' (Ps 103, 104, 134, 145) is the most familiar praise call in the Psalms and is absent, with no word that it is a different word (בָּרַךְ, 'bless'). The row label 'Praise the LORD, O my soul' (Ps 146:1) will make a reader look for Ps 103 and not find it. (2) יָדָה ('give thanks') has over a hundred uses; the list shows the 24 where the Berean prints 'praise' and says nothing of the rest, so Ps 7:17 and Ps 138:1 read as if the thanks word were nearly absent. (3) Ps 138:4 is listed but prints 'give You thanks', not 'praise'.",
+   "fix": "Add a note under the Other words title: 'The Berean prints “praise” for these words in the verses shown. Most of יָדָה, the thanks word, is printed “give thanks” (e.g. Ps 7:17, 118:1); those verses are not listed here. “Bless the LORD, O my soul” (Ps 103:1, 104:1, 134:1) is בָּרַךְ, 'bless', a different word that this page does not gather under praise.' Drop Ps 138:4 from the list, or show it as a thanks verse."
+  }
+ ],
+ "worker_points": [
+  {"point": "1. Praise versus thanks (יָדָה, תּוֹדָה) set apart under Other words", "verdict": "fine", "why": "Rule 4 is kept: two Hebrew words are not equated, the 'side by side' row shows the text pairing them, and the Berean's 'praise' verses of יָדָה stay visible. A Pentecostal or free-church reader will still miss Ps 100:1 and 118 thanks verses, which the note in the Other words fix tells them about."},
+  {"point": "2. 'Bless the LORD' kept out entirely", "verdict": "fix", "why": "The omission is defensible as different words (rule 4), but a reader would be misled that the hub is complete. The worker's claim that the Berean never prints 'praise' for εὐλογέω is wrong: Luke 1:64 ('praising God') and Luke 24:53 ('praising God continually') are εὐλογέω, and so is the Berean's 'praise' in Rev 5:13. Add the note above and list Luke 1:64 and 24:53 under Other words or give 'bless' its own apart-row."},
+  {"point": "3. 'Boast in the LORD' (הִתְהַלֵּל) left out as another sense", "verdict": "fine", "why": "The Berean prints 'boast' and 'glory in' and a different sense is not praise. Lower-priority for a rabbi or academic; the 41 other-sense uses are counted in the word list, which is honest."},
+  {"point": "4. Father/Son glorifying row, with its note that the page does not treat these as one act", "verdict": "fix", "why": "Hand-placed, as rule 3 requires, and the 'takes no side' sentence is right. But the label is narrower than the verses (John 15:8, 17:4, 12:28, Luke 4:15) and the note does not say these are not praise of Jesus. See the two fixes."},
+  {"point": "5. Rom 8:30 and Acts 13:48 in the 'Glorified ...' row (election)", "verdict": "fix", "why": "Listing them there is honest, and in a praise hub it is the right place to show δοξάζω has non-praise uses. The row needs a 'takes no side' sentence, the label 'those He justified', and Acts 13:48 should not also sit in the nations row."},
+  {"point": "6. Rom 1:21 beside the dead in 'Who does not praise or glorify'", "verdict": "fix", "why": "'Cannot' and 'will not' are joined under one label. Give Rom 1:21 its own row."},
+  {"point": "7. No row for worship style (instruments, dance, raised hands)", "verdict": "fine", "why": "The rows follow what the text names, and Ps 149:3 and 150:3-5 are shown. Grouping by form of worship would invite the Catholic/Orthodox vs Baptist divide that rule 2 asks the page to stay out of."},
+  {"point": "8. Praise of a person or gods (Prov 31, Absalom, Dan 5, Judg 16)", "verdict": "fine", "why": "Honest and useful: it keeps praise of a wife or a king from being read as a different thing, and 'their gods' is not set beside the LORD. Eccl 4:2 and 2 Chr 23:12 are the Berean's renderings of the praise verbs and are marked as such."},
+  {"point": "9. Hallelujah note: יָהּ as a short form of the LORD's name", "verdict": "fine", "why": "A standard, uncontested reading and the rabbi seat would affirm it. The Psalms are heard on their own terms in this row (24 psalm verses, Ps 106:1 added, 113-117 and 135, 146-150)."},
+  {"point": "10. Heb 2:12 and Matt 21:16 (Jesus quoted)", "verdict": "fine", "why": "Heb 2:12 is Christ as the one who sings, in the first-person row beside Ps 22:22, and Matt 21:16 quotes children's praise; neither is shown as praise of Christ."},
+  {"point": "Builder gap: δοξάζω uses that are not praise (Rom 8:30, 2 Cor 3:10, Rev 18:7, 2 Thess 3:1) cannot be struck from the words", "verdict": "fine", "why": "The labelled row is honest, not misleading: it says in its note that none of these is praise. It also protects rule 4 (one sense of a word never presented as its whole). Keep it, with the note rewritten to lead with 'None of these is praise'."}
+ ],
+ "missing": [
+  {"what": "The Berean's own 'praising God' for εὐλογέω and 'Bless the LORD, O my soul': the hub says nothing of 'bless' or of the two Luke verses where the Berean prints 'praising'.", "verses": ["Luke.1.64", "Luke.24.53", "Ps.103.1", "Ps.104.1", "Ps.134.1", "Rev.5.13"]},
+  {"what": "'I praise You, Father' (ἐξομολογέω) is the Berean's 'praise' and appears in no row or Other words list because MACULA glosses it 'I fully consent'. A reader will look for it. Add by hand under Other words with the note that the Greek is the word for 'confess / acknowledge'.", "verses": ["Matt.11.25", "Luke.10.21"]},
+  {"what": "The thanks verses of the Hallel itself (Ps 118) and the Great Hallel (Ps 136): the rabbi seat hears the Hallel (Ps 113-118) as one praise unit, and Ps 118 is entirely thanks (יָדָה); with them out, Ps 113, 115, 116 and 117 are shown but 118 never appears.", "verses": ["Ps.118.1", "Ps.118.28", "Ps.136.1"]}
+ ],
+ "summary": "The hub is faithful to the text and keeps the divine persons by hand, but several labels are narrower or looser than their verses (the Son/Father row, 'those He called', Acts 13:48 in the nations row, Rev 15:4 under a Hebrew praise label) and the omission of 'bless' (where the Berean itself prints 'praising' at Luke 1:64 and 24:53), Matt 11:25 and the Hallel's thanks verses leaves a reader thinking it is complete. Nine fixes, none of them structural: relabels, two moves, and notes on the glorify rows and the Other words list; with them the panel could accept it."
+}

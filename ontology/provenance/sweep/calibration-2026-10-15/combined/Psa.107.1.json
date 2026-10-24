@@ -1,0 +1,23 @@
+{"ref": "Psa.107.1",
+ "referents": [
+  {"slot": "w9", "choice": "w2", "divine": true, "why": "third masculine singular 'his' on 'steadfast love'; the only agreeing sensible possessor is the LORD, whom the first clause names and the following kî-clauses describe ('He is good')", "category": "possessive pronoun resolved to the subject of the preceding reason clause"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "second masculine plural imperative 'give thanks'; the verse names no audience and no candidate (LORD, forever, steadfast love, the psalmist voice) can be the ones commanded; the psalmist is not addressed by his own call to others", "category": "implied addressee of an opening command with no named audience"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "the opening kî after an imperative gives the ground for the command: give thanks, for he is good", "category": "kî reason after a command"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "remove", "why": "the second kî is a parallel reason, not a reason for 'he is good'; the two kî-clauses are coordinate grounds for the same command", "category": "coordinate reason clauses read as a chain"},
+  {"src": "cl0", "type": "because", "dst": "cl2", "action": "add", "why": "the second kî-clause ('his loyal love is forever') is a second reason for the command to give thanks, parallel to cl1", "category": "coordinate reason clauses read as a chain"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change",
+   "members": [{"role": "command", "node": "cl0"}, {"role": "basis", "node": "cl1"}, {"role": "basis", "node": "cl2"}],
+   "divine": false, "why": "'part' is not a role of an imperative; the two kî-clauses are the grounds (basis) of the command", "category": "reason clauses filed under the wrong imperative role"},
+  {"id": "writing", "kind": "writing", "action": "change",
+   "members": [{"role": "part", "node": "imp0"}],
+   "divine": false, "why": "the verse has no heading or ascription, so cl0 is not a frame; the LORD is the object of thanks, not the writer, so he is not the sender; the verse's content is the commanded call with its grounds, held as imp0 (cl1 and cl2 are inside it)", "category": "wrong role assigned to a command and a named deity in a unit"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "the writer of the psalm", "why": "the verse names no writer and has no first-person voice, so the writing has no sender"},
+  {"what": "the audience called to give thanks", "why": "no audience is named in this verse and no candidate stands for the people addressed"}
+ ]}

@@ -1,0 +1,51 @@
+{"ref": "Exo.8.16",
+ "referents": [
+  {"slot": "w22", "choice": "w13", "divine": false, "why": "Third masculine singular suffix on 'say to him' in a command about standing before Pharaoh; Pharaoh (w13) is the only agreeing person in the verse and the one Moses is sent to.", "category": "pronoun resolved to the person a command is directed at"},
+  {"slot": "w28", "choice": "w25", "divine": true, "why": "First person 'my' in 'my people' sits inside the quoted message introduced by 'thus says Yahweh' (cl6); the speaker of that speech is the LORD (w25).", "category": "first person inside a quoted message"},
+  {"slot": "w31", "choice": "w25", "divine": true, "why": "First person suffix 'serve me' is inside the same quoted message, whose speaker is the LORD (w25).", "category": "first person inside a quoted message"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "Implied 'you' of an imperative in the LORD's speech to Moses (cl0); second masculine singular agrees with Moses.", "category": "implied subject of a command in the outer speech"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "Implied 'you' of the imperative 'present yourself', joined by waw to the preceding command, in the LORD's speech to Moses.", "category": "implied subject of a command in the outer speech"},
+  {"slot": "cl5s", "choice": "w4", "divine": false, "why": "Implied 'you' of the weqatal 'you will say to him', continuing the instructions the LORD gives Moses; it introduces the inner message but belongs to the outer speech.", "category": "clause that introduces a speech belongs to the speech around it"},
+  {"slot": "cl7s", "choice": "w13", "divine": false, "why": "Implied 'you' of 'let go my people' is inside the message Moses is to deliver, so it is the addressee of that message: Pharaoh, the one he is told to say it to (cl5, 'to him').", "category": "implied subject of a command in a commanded speech"},
+  {"slot": "cl8s", "choice": "w27", "divine": false, "why": "Third masculine plural 'they may serve me' refers to the people just named as the object of the release (w27, 'my people'); 'people' is a collective that takes a plural verb.", "category": "collective noun taken by a plural verb"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "cl3 is the presentative 'there!' inside the speech, not a narrative event; the narrative 'then' belongs to the wayyiqtol cl0 and does not run from a clause inside the quoted speech back to it.", "category": "narrative then wrongly applied to a clause inside a speech"},
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "Separate-word waw joining two commands at one level (rise early, and present yourself).", "category": "plain and between commands"},
+  {"src": "cl4", "type": "then", "dst": "cl5", "action": "keep", "why": "The weqatal 'you will say' continues what precedes it; Pharaoh's going out is the occasion at which Moses is to speak. The scope of the time clause over cl2 as well is left in cant_tell.", "category": "weqatal continuing a time clause"},
+  {"src": "cl7", "type": "and", "dst": "cl8", "action": "remove", "why": "Waw + yiqtol in a different person (you let go, they may serve) after a command is 'so that', not a plain 'and'; it is replaced by a purpose link.", "category": "plain and read where the person changes after a command"},
+  {"src": "cl7", "type": "purpose", "dst": "cl8", "action": "add", "why": "Command, then waw + yiqtol in a different person (second to third): what the release is for - that they may worship.", "category": "purpose after a command with change of person"},
+  {"src": "cl0", "type": "content", "dst": "imp1", "action": "add", "why": "The saying clause 'the LORD said to Moses' is followed by a run of commands joined by 'and' at one level; the content is that whole imperative group.", "category": "speech and its collection of commands"},
+  {"src": "cl5", "type": "content", "dst": "turn1", "action": "add", "why": "'You will say to him' introduces what Moses is to say, which is the quoted message framed by 'thus says Yahweh'; the commanded turn is the content.", "category": "nested speech commanded to be said"},
+  {"src": "cl6", "type": "content", "dst": "imp7", "action": "add", "why": "'Thus says Yahweh' is a saying frame and what follows (let my people go, that they may serve me) is the message; the said clause is the imperative group, embedded in the saying.", "category": "message formula and its content"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [
+    {"role": "frame", "node": "cl0"},
+    {"role": "part", "node": "imp1"},
+    {"role": "part", "node": "cl3"},
+    {"role": "part", "node": "cl4"},
+    {"role": "part", "node": "turn1"},
+    {"role": "sender", "node": "w2"},
+    {"role": "addressee", "node": "w4"}], "divine": true, "why": "The LORD speaks to Moses (cl0). The commands become one imperative group and the commanded message is the nested turn1 as a part, as nesting is to be recorded; cl3 and cl4 are the time setting inside the speech.", "category": "speech holding a command group and a nested commanded speech"},
+  {"id": "imp1", "kind": "imperative", "action": "change", "members": [
+    {"role": "command", "node": "cl1"},
+    {"role": "command", "node": "cl2"},
+    {"role": "command", "node": "cl5"}], "divine": false, "why": "Rise early, present yourself and say are commands joined by 'and' at one level, so one group with several command members; the builder had cl2 as a mere part, and the weqatal cl5 continues the chain as a further instruction.", "category": "commands joined by and at one level are one imperative group"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [
+    {"role": "frame", "node": "cl6"},
+    {"role": "part", "node": "imp7"},
+    {"role": "sender", "node": "w25"},
+    {"role": "addressee", "node": "w13"}], "divine": true, "why": "The message introduced by 'thus says Yahweh' is the LORD's, to be delivered to Pharaoh (cl5, 'to him'); the builder gave no addressee and listed cl7 and cl8 separately instead of the imperative group.", "category": "nested speech with sender and addressee supplied"},
+  {"id": "imp7", "kind": "imperative", "action": "change", "members": [
+    {"role": "command", "node": "cl7"},
+    {"role": "aim", "node": "cl8"}], "divine": false, "why": "'Let my people go' with waw + yiqtol in a different person is a purpose, so cl8 is the aim, not a plain part; it is not an effect, which is the role for waw + third-person weqatal after a command.", "category": "aim of a command after change of person"}
+ ],
+ "none_fit": [
+  {"where": "cl3 and cl4", "what": "The presentative 'there!' with a participle clause ('he is going out to the water') sets the time or occasion of the standing and the saying (when Pharaoh goes out); no link type expresses a time setting by a presentative plus participle, and no group role holds it other than a bare part of the speech."},
+  {"where": "slot list", "what": "The participle cl4 ('going out') has an implied subject (Pharaoh, w13) that the slot list does not carry; there is no slot id against which to record the choice."}
+ ],
+ "cant_tell": [
+  {"what": "Whether the time clause cl3/cl4 governs the standing before Pharaoh (cl2), only the saying (cl5), or both", "why": "One presentative and no connective; the form does not say which command it sets the time for. It reads naturally as the occasion for the meeting and the message together."},
+  {"what": "Whether the weqatal cl5 is a further command in the chain or a result of the time clause", "why": "A weqatal after imperatives is usually a sequential instruction, but it is grammatically also the continuation of the participle clause cl4; both readings are kept (the then link and membership in the command group)."}
+ ]}

@@ -1,0 +1,25 @@
+{"ref": "Exo.8.13",
+ "referents": [
+  {"slot": "w8", "choice": "w5", "divine": false, "why": "Masculine singular 'his' possessing the hand. The hand stretched out in this verse is Aaron's; cl1 names Aaron as the one who stretched out his hand.", "category": "possessive pronoun in a narrated act"},
+  {"slot": "w11", "choice": "w5", "divine": false, "why": "Masculine singular 'his' possessing the staff in the same clause as the hand. The staff belongs to the one stretching it out, Aaron.", "category": "possessive pronoun in a narrated act"},
+  {"slot": "cl0s", "choice": "Exo.8.8#c2", "divine": false, "why": "Masculine plural 'they did so' answers the command of Exo.8.12. The command was given to Moses to pass to Aaron, and the deed is carried out by Aaron. The plural therefore is the two taken together, the composite Moses and Aaron.", "category": "plural subject of a fulfilment"},
+  {"slot": "cl2s", "choice": "w5", "divine": false, "why": "Third masculine singular, implied in a wayyiqtol that continues the agent of cl1. Striking the dust is a person's act and the person in the sentence is Aaron (w5). The staff (w10) is the instrument, not the doer.", "category": "implied subject continuing a narrative agent"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "A then link runs within a verse to the next event. cl0 comes before cl4 in this verse, so cl4 is not what follows cl0. Across verses is the episode rung, not then.", "category": "backward then link"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "Wayyiqtol continues the narrative line: the stretching out follows the report that they did so.", "category": "narrative sequence"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "Wayyiqtol 'and struck' continues the same agent's acts in order.", "category": "narrative sequence"},
+  {"src": "cl2", "type": "then", "dst": "cl3", "action": "keep", "why": "Wayyiqtol: the gnats come upon man and beast after the striking, so the outcome follows the act.", "category": "narrative sequence"},
+  {"src": "cl0", "type": "fulfils", "dst": "Exo.8.12#cl3", "action": "add", "why": "'They did so' (the verb with כֵּן), not negated, with no named subject, after the command of Exo.8.12 to strike the dust. Points at the nearest preceding command clause. The builder splits that command across two imperative groups, so the clause is used.", "category": "fulfilment of an earlier command"},
+  {"src": "cl1", "type": "elaborates", "dst": "cl0", "action": "add", "why": "Repeats the fulfilled command's first verb (stretch out), so it gives the detail of what they did: Aaron stretched out his hand with the staff.", "category": "detail of a fulfilled command"},
+  {"src": "cl2", "type": "elaborates", "dst": "cl0", "action": "add", "why": "Repeats the command's second verb (strike), so it gives the detail of what they did.", "category": "detail of a fulfilled command"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl4 (all the dust turned into gnats, qatal) against Exo.8.12#cl4 (it will become gnats, weqatal)", "what": "A qatal report that a promised outcome came about, with no pro-form. fulfils needs a pro-form. result is the command-to-outcome link and is already recorded in the earlier verse. No link type says the promised outcome is reported as having happened."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl1 and cl2 form an acts group of Aaron", "why": "The acts kind needs each clause to state its subject only in its verb, but cl1 names Aaron in the clause itself. Left unbuilt rather than forced."},
+  {"what": "Whether cl0 should form an action-state group with the command in Exo.8.12, and whether the two builder imperative groups Exo.8.12#imp2 and #imp3 are right", "why": "The command is in the previous verse. One and-joined command is expected as one imperative group, but this verse cannot tell which builder group holds cl2 and cl3. The fulfilment is therefore recorded as a link to the clause, not as a group."}
+ ]
+}

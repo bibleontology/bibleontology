@@ -1,0 +1,301 @@
+{
+ "ref": "Exo.8.16",
+ "referents": [
+  {
+   "slot": "w22",
+   "choice": "w13",
+   "divine": false,
+   "why": "'say to him': the him is Pharaoh, to whom Moses is sent (cl2, before Pharaoh).",
+   "category": "object of a commanded saying",
+   "votes": 3
+  },
+  {
+   "slot": "w28",
+   "choice": "w25",
+   "divine": true,
+   "why": "in the quoted words spoken by the LORD, 'my people' is the LORD's own; first person in God's speech refers to the speaker.",
+   "category": "first person inside a divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "w31",
+   "choice": "w25",
+   "divine": true,
+   "why": "'that they may serve me' is in the LORD's quoted words; first person is the speaker, the LORD.",
+   "category": "first person inside a divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'rise early' is a command to Moses, the addressee of God's speech.",
+   "category": "implied subject of a command",
+   "votes": 3
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'present yourself before Pharaoh' is a command to Moses.",
+   "category": "implied subject of a command",
+   "votes": 3
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'you will say to him' is addressed to Moses, who is to deliver the message.",
+   "category": "implied subject of a commanded saying",
+   "votes": 3
+  },
+  {
+   "slot": "cl7s",
+   "choice": "w13",
+   "divine": false,
+   "why": "'let my people go' is said to Pharaoh, the addressee of the LORD's words; second masculine singular.",
+   "category": "implied addressee of a quoted command",
+   "votes": 3
+  },
+  {
+   "slot": "cl8s",
+   "choice": "w27",
+   "divine": false,
+   "why": "'that they may serve me' has a plural subject; the people (w27) is the collective that the command concerns and the only candidate of that sense.",
+   "category": "collective subject of a purpose clause",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl3 is inside God's speech and cl0 is its frame, which comes first; a then-link back to the frame is backward and crosses the speech boundary.",
+   "category": "then across a speech frame",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "waw joining two commands at one level; the conjunction supports it.",
+   "category": "and between commands",
+   "votes": 3
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl5",
+   "action": "keep",
+   "why": "weqatal 'you will say' continues whatever it follows, the clause about Pharaoh going out.",
+   "category": "weqatal sequence",
+   "votes": 2
+  },
+  {
+   "src": "cl7",
+   "type": "and",
+   "dst": "cl8",
+   "action": "remove",
+   "why": "an imperative followed by waw + a yiqtol in a different person is a purpose, not a plain and (rule for purpose).",
+   "category": "command and purpose",
+   "votes": 3
+  },
+  {
+   "src": "cl7",
+   "type": "purpose",
+   "dst": "cl8",
+   "action": "add",
+   "why": "'let my people go, so that they may serve me': command, then waw + yiqtol in third person plural, which looks forward to the aim.",
+   "category": "command and its aim",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "imp1",
+   "action": "add",
+   "why": "God says, and the first thing said is a collection of commands joined by waw (R1).",
+   "category": "speech content of commands",
+   "votes": 3
+  },
+  {
+   "src": "cl5",
+   "type": "content",
+   "dst": "cl6",
+   "action": "add",
+   "why": "'you will say to him' is a saying clause; what is said is the frame 'thus says the LORD' of the innermost speech (R1).",
+   "category": "speech content of a commanded saying",
+   "votes": 3
+  },
+  {
+   "src": "cl6",
+   "type": "content",
+   "dst": "imp7",
+   "action": "add",
+   "why": "'thus says the LORD' introduces a collection of commands with its aim; content points at the imperative group (R1).",
+   "category": "speech content of commands",
+   "votes": 2
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "imp1"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.16#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "God (the LORD) speaks to Moses; the commanded turn for Moses to deliver is nested as a part, and the setting clause cl3-cl4 sits in God's speech.",
+   "category": "outer speech with nested commanded turn",
+   "votes": 2
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "'rise early' and 'present yourself' are commands joined by waw at one level, one group with two command members; 'part' is not an imperative role.",
+   "category": "collection of commands",
+   "votes": 2
+  },
+  {
+   "id": "Exo.8.16#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl5"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w13"
+    }
+   ],
+   "divine": false,
+   "why": "Moses is commanded to say the LORD's words to Pharaoh, so the commanded turn is spoken by Moses (R2) and holds the quoted turn as its part.",
+   "category": "commanded turn holding the quoted words",
+   "votes": 3
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl6"
+    },
+    {
+     "role": "part",
+     "node": "imp7"
+    },
+    {
+     "role": "sender",
+     "node": "w25"
+    },
+    {
+     "role": "addressee",
+     "node": "w13"
+    }
+   ],
+   "divine": true,
+   "why": "the innermost turn is the LORD's quoted words to Pharaoh, so the sender is the LORD; the builder had no addressee and the part is the imperative group.",
+   "category": "quoted divine speech",
+   "votes": 3
+  },
+  {
+   "id": "imp7",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl7"
+    },
+    {
+     "role": "aim",
+     "node": "cl8"
+    }
+   ],
+   "divine": false,
+   "why": "'let my people go' with its aim, 'that they may serve me'; the aim is an imperative role, the builder's part is not.",
+   "category": "command with its aim",
+   "votes": 3
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl3 and cl4 (hinneh with a participle: 'when Pharaoh goes out to the water')",
+   "what": "a temporal 'when' clause setting the time of the commanded act; no link type expresses a temporal clause (when_if_though is for fronted ki only)."
+  },
+  {
+   "where": "cl4 then cl5",
+   "what": "a bare participle clause ('when Pharaoh goes out to the water') giving the time of the command that follows; no link type states a temporal setting."
+  },
+  {
+   "where": "cl3 and cl4 (hinneh 'there' plus a bare participle, 'when Pharaoh goes out to the water')",
+   "what": "A temporal clause setting the time of the command in cl2. No link type covers a when-clause that is neither a condition nor a nested role, so it is left unlinked."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether the when-clause cl3-cl4 belongs to God's speech or to Moses's commanded turn",
+   "why": "it is God's instruction about the time, so it is placed in turn0; the text does not mark which speech the setting belongs to."
+  },
+  {
+   "what": "whether the setting cl3 and cl4 belong to the LORD's words or to Moses's delivery",
+   "why": "the second person and the sequence put them in the LORD's speech to Moses, so they are parts of the outer turn; recorded because the setting could be read as Moses's own timing."
+  }
+ ],
+ "voted": 3
+}

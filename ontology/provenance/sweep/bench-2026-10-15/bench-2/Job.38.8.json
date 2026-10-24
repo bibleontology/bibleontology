@@ -1,0 +1,55 @@
+{
+ "ref": "Job.38.8",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'Who enclosed the sea' is the rhetorical question; the implied subject of 'shut off' is the one who did it, the LORD. He is named in 38:1 but is not among this verse's candidates.",
+   "category": "question word answered by God"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'when it burst forth ... it came forth': the subject of these acts is the sea (masc sing).",
+   "category": "implied subject in a temporal clause"
+  },
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'it burst forth': the sea, the same subject.",
+   "category": "pronoun for the sea"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The infinitive 'burst forth' is nested in the 'when' clause.",
+   "category": "clause nested in a temporal clause"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A self-link. A wayyiqtol continues an earlier clause of the same verse, and this is the first clause of the verse.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'when it burst forth' is the temporal clause of 'shut off the sea': the host cl0 holds it.",
+   "category": "temporal clause of the act"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

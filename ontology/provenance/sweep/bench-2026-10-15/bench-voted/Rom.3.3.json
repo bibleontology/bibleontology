@@ -1,0 +1,95 @@
+{
+ "ref": "Rom.3.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative Ti opening 'what if': it refers to nothing, and no candidate is neuter singular.",
+   "category": "interrogative word, not a referent",
+   "votes": 3
+  },
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'Some' (masculine plural) is the subject of 'disbelieved'; no masculine plural candidate is offered.",
+   "category": "subject not offered as candidate",
+   "votes": 3
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'Of them' (masculine plural) is the disbelievers, the referent of w4, which is a slot and not a candidate; no masculine plural candidate.",
+   "category": "possessive of an uncandidated subject",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed: the condition is cl1, and what it conditions is the question of cl2, not the wh-clause cl0.",
+   "category": "condition attached to wrong clause",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "No reason is stated; 'some disbelieved' is the condition, not a reason for 'what if'.",
+   "category": "no reason in text",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'What if some disbelieved? Will their unbelief nullify God's faithfulness?' The question cl2 is conditioned by cl1.",
+   "category": "conditional with question consequence",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "change",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The consequence is the question in cl2 (will their unbelief nullify God's faithfulness); cl0 is only the 'what if' frame.",
+   "category": "conditional consequence is the question",
+   "votes": 3
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "cl0 and cl1 both carry the verb 'disbelieved'",
+   "why": "The parser splits the εἰ clause into a frame carrying εἰ (cl0) and a copy of the verb (cl1). I took cl1 as the condition and cl0 as the frame; the form does not settle the split."
+  },
+  {
+   "what": "γάρ opening the verse (Τί γάρ)",
+   "why": "'For' (reason for verse 2) and 'then' (a question connective) are not separated by the form, so no link is added."
+  },
+  {
+   "what": "Verse-opening 'For what?' (gamma) joining 3:3 to 3:2",
+   "why": "'For' gives a reason, but the form does not say what this objection is the reason for; no link added."
+  }
+ ],
+ "voted": 3
+}

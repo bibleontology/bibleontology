@@ -1,0 +1,16 @@
+{"ref": "Psa.23.6",
+ "referents": [
+  {"slot": "w5", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'me' in a psalm, not inside any quoted speech; the psalm's own voice candidate.", "category": "psalm voice first person"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'my' (of life) in the psalm's own voice; the verse quotes no one.", "category": "psalm voice first person"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied first person singular subject of the weqatal 'I will return' in the psalm's own voice; the verb morphology agrees.", "category": "psalm voice first person"}
+ ],
+ "links": [
+  {"src": "Psa.23.6#cl0", "type": "then", "dst": "Psa.23.6#cl1", "action": "remove", "why": "The waw before cl1 is a separate word (וְ), not fused into the weqatal, so 'and then' is the wrong type; the sense is plain coordination of two assertions, not a sequence within a verb.", "category": "plain and mis-typed as then"},
+  {"src": "Psa.23.6#cl0", "type": "and", "dst": "Psa.23.6#cl1", "action": "add", "why": "Separate-word waw joins two assertions about the psalmist's future: goodness and mercy following him, and he returning to the house. The sense requires neither cause nor result.", "category": "separate waw coordination of two assertions"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "The implied subject of cl0's third plural 'will pursue' (not listed among the slots).", "why": "The slot list omits it. The morphology is third plural, so the candidates are the nouns 'goodness' and 'mercy' (composite c1 or w3); the composite fits the number, but the subject is an abstraction acting as a pursuer, and the candidates do not settle which reading the text intends."}
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "ref": "Exo.8.11",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w2",
+   "divine": false,
+   "why": "'his heart' is Pharaoh's own heart",
+   "category": "possessive third person"
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.8.8#c2",
+   "divine": false,
+   "why": "'them' (masculine plural object) of 'would not listen to' is Moses and Aaron, the pair named as leaving Pharaoh in Exo.8.8",
+   "category": "composite candidate, agreeing"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "'he would not listen' (third masculine singular): Pharaoh, the subject of the verse's narrative",
+   "category": "subject continues"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "saw that relief had come: the object of seeing (ki after ra'ah)",
+   "category": "object of seeing"
+  },
+  {
+   "src": "cl3",
+   "type": "as",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "just as the LORD had said: the refusal is declared the fulfilment of the LORD's earlier word, a saying being compared",
+   "category": "fulfilment of an earlier word"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl1 is the object of saw, not the next event; the then runs backward",
+   "category": "reversed then"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "separate waw with an infinitive absolute: and (he) hardened his heart follows the seeing",
+   "category": "separate waw"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "a hardened will followed by the refusal that follows is the result form (R4): the refusal is what the hardening brings about, not a plain and",
+   "category": "hardened will and its refusal"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "he hardened his heart, and so he would not listen (R4)",
+   "category": "hardened will and its refusal"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether the hardening (cl2) is the result of seeing the relief (cl0), or only the next act in sequence",
+   "why": "the and form does not decide it; R4's hardened-will example would make it a result. Kept as and"
+  },
+  {
+   "what": "the earlier word cl4 refers to (the LORD's word that Pharaoh would not listen)",
+   "why": "it is outside this passage's context, so the as link cannot be checked against its wording"
+  },
+  {
+   "what": "cl2 (infinitive absolute with waw) has an implied subject, Pharaoh, which is not in the slots list",
+   "why": "the slot list gives none for it; recorded here rather than invented"
+  }
+ ]
+}

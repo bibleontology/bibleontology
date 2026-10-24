@@ -1,0 +1,166 @@
+{"passage": "P-frogs-a", "verses": [
+{"ref": "Exo.7.26",
+"referents": [
+{"slot": "w11", "choice": "w7", "divine": false, "why": "'say to him' (3ms) is Moses's commanded speech; the one he is told to speak to is Pharaoh, the one the go-command sends him to.", "category": "pronoun inside a commanded speech"},
+{"slot": "w18", "choice": "w14", "divine": true, "why": "'my people' in the words Yahweh says ('thus he says Yahweh'); the first person of that speech is its speaker, w14.", "category": "first person inside a divine speech"},
+{"slot": "w21", "choice": "w14", "divine": true, "why": "'serve me' in the same speech; the first person is the speaker, Yahweh.", "category": "first person inside a divine speech"},
+{"slot": "cl1s", "choice": "w4", "divine": false, "why": "implied 'you' of the command 'go', spoken by Yahweh to Moses (w4), the one he speaks to in cl0.", "category": "implied subject of a command"},
+{"slot": "cl2s", "choice": "w4", "divine": false, "why": "implied 'you' of 'you will say to him' (2ms): still Moses, the one commanded.", "category": "implied subject of a command"},
+{"slot": "cl4s", "choice": "w7", "divine": false, "why": "implied 'you' of 'let my people go' inside Yahweh's message, which is addressed to Pharaoh (w7).", "category": "implied subject inside a quoted command"},
+{"slot": "cl5s", "choice": "w17", "divine": false, "why": "'that they may serve me' is third plural; the people (w17) is the collective whose going is commanded.", "category": "third person plural after a command"}
+],
+"links": [
+{"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "a clause linked to itself; the narrative frame of the speech has no second event.", "category": "self link"},
+{"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "a command followed by a weqatal continuing the same speech ('go ... and you will say to him').", "category": "command then continued command"},
+{"src": "cl4", "type": "and", "dst": "cl5", "action": "remove", "why": "waw joins a command to a third-person yiqtol; that is a purpose, not a plain and.", "category": "plain and read as purpose"},
+{"src": "cl4", "type": "purpose", "dst": "cl5", "action": "add", "why": "command then waw + yiqtol in a different person: 'let them go, so that they may worship Me'.", "category": "command then purpose"},
+{"src": "cl0", "type": "content", "dst": "imp1", "action": "add", "why": "the saying clause introduces the commands it reports (R1).", "category": "speech content link"},
+{"src": "cl2", "type": "content", "dst": "turn1", "action": "add", "why": "'say to him' introduces Moses's message, which is Yahweh's words (R1).", "category": "speech content link"},
+{"src": "cl3", "type": "content", "dst": "imp4", "action": "add", "why": "'thus he says Yahweh' introduces the imperative group of the message (R1).", "category": "speech content link"}
+],
+"groups": [
+{"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "imp1"}, {"role": "part", "node": "Exo.7.26#g1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": true, "why": "outer speech of Yahweh to Moses; its parts are the two commands and the commanded speech to Pharaoh (R2).", "category": "outer speech with commanded speech"},
+{"id": "imp1", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}, {"role": "command", "node": "cl2"}], "divine": false, "why": "two commands joined by waw at one level are one imperative group.", "category": "commands joined at one level"},
+{"id": "Exo.7.26#g1", "kind": "turn", "action": "add", "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w7"}], "divine": false, "why": "Moses's words to Pharaoh, the commanded turn; its sender is the one commanded to speak (R2).", "category": "commanded turn"},
+{"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl3"}, {"role": "part", "node": "imp4"}, {"role": "sender", "node": "w14"}, {"role": "addressee", "node": "w7"}], "divine": true, "why": "innermost turn: Yahweh's words quoted by Moses; sender is the one quoted (R2).", "category": "quoted divine speech"},
+{"id": "imp4", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl4"}, {"role": "aim", "node": "cl5"}], "divine": false, "why": "the command 'let my people go' with its aim (so that they may worship); the waw clause is an aim, not a part.", "category": "command with aim"}
+],
+"none_fit": [],
+"cant_tell": []},
+
+{"ref": "Exo.7.27",
+"referents": [
+{"slot": "w3", "choice": "Exo.7.26#w7", "divine": false, "why": "'you' (2ms) refusing, inside Yahweh's message, which is addressed to Pharaoh.", "category": "second person inside a quoted speech"},
+{"slot": "w7", "choice": "Exo.7.26#w2", "divine": true, "why": "'I' striking: the speaker of the message, Yahweh, named as the LORD in the verse before.", "category": "first person inside a divine speech"},
+{"slot": "w12", "choice": "Exo.7.26#w7", "divine": false, "why": "'your' territory: second person masculine singular, Pharaoh.", "category": "second person possessive"}
+],
+"links": [
+{"src": "cl0", "type": "purpose", "dst": "cl1", "action": "remove", "why": "'refuse ... to let them go': an infinitive completing a verb of refusing is its object, not a purpose.", "category": "infinitive after refuse read as purpose"},
+{"src": "cl0", "type": "within", "dst": "cl1", "action": "add", "why": "the infinitive is the object of refusing: a clause nested in a role of the clause.", "category": "infinitive object"},
+{"src": "cl0", "type": "if", "dst": "cl2", "action": "remove", "why": "direction reversed: the condition is cl0 and what it conditions is the next consequence clause cl2.", "category": "condition direction"},
+{"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "the waw of 'but if' introduces a condition, not a plain and.", "category": "conditional read as and"},
+{"src": "cl2", "type": "if", "dst": "cl0", "action": "add", "why": "a Hebrew condition precedes what it governs: 'behold, I strike' is the consequence of 'if you refuse'.", "category": "conditional"},
+{"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "waw joins the 'behold' clause to the striking clause; both are one consequence.", "category": "and within consequence"}
+],
+"groups": [
+{"id": "cond0", "kind": "conditional", "action": "keep", "members": [{"role": "condition", "node": "cl0"}, {"role": "consequence", "node": "cl2"}], "divine": false, "why": "the condition 'you refuse' and its consequence; cl3 is carried by the and link from cl2.", "category": "condition and consequence"}
+],
+"none_fit": [],
+"cant_tell": []},
+
+{"ref": "Exo.7.28",
+"referents": [
+{"slot": "cl1s", "choice": "w4", "divine": false, "why": "'they will go up': third common plural; the frogs (w4) are the subject of the weqatal.", "category": "third person plural subject"},
+{"slot": "cl2s", "choice": "w4", "divine": false, "why": "'they will go in': the frogs again, the subject of the continuing weqatal.", "category": "third person plural subject"},
+{"slot": "w11", "choice": "Exo.7.26#w7", "divine": false, "why": "'your palace': second person masculine singular in Yahweh's message, Pharaoh.", "category": "second person possessive"},
+{"slot": "w16", "choice": "Exo.7.26#w7", "divine": false, "why": "'your bedroom': Pharaoh's.", "category": "second person possessive"},
+{"slot": "w20", "choice": "Exo.7.26#w7", "divine": false, "why": "'your bed': Pharaoh's.", "category": "second person possessive"},
+{"slot": "w25", "choice": "Exo.7.26#w7", "divine": false, "why": "'your officials': Pharaoh's.", "category": "second person possessive"},
+{"slot": "w29", "choice": "Exo.7.26#w7", "divine": false, "why": "'your people': Pharaoh's people, in the message addressed to him.", "category": "second person possessive"},
+{"slot": "w33", "choice": "Exo.7.26#w7", "divine": false, "why": "'your ovens': Pharaoh's.", "category": "second person possessive"},
+{"slot": "w37", "choice": "Exo.7.26#w7", "divine": false, "why": "'your kneading bowls': Pharaoh's.", "category": "second person possessive"}
+],
+"links": [
+{"src": "Exo.7.27#cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "then runs within a verse only; across the verse boundary it is not used.", "category": "then across verses"},
+{"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "a weqatal continues what it follows: the Nile teems, then the frogs go up.", "category": "weqatal continuation"},
+{"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "a weqatal continues the frogs' movement into the houses.", "category": "weqatal continuation"}
+],
+"groups": [
+{"id": "Exo.7.28#g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl1"}, {"role": "agent_act", "node": "cl2"}, {"role": "group_subject", "node": "w4"}], "divine": false, "why": "two clauses in a row, both acts of the frogs, each stating its subject only in its verb; recorded as a reading for review (R5).", "category": "acts of one agent"}
+],
+"none_fit": [{"where": "Exo.7.27#cl3 to cl0, across the verse boundary", "what": "a declared act (I will strike the territory with frogs) and what it brings about (the Nile teems with frogs); result is defined only for a command and what it brings about."}],
+"cant_tell": []},
+
+{"ref": "Exo.7.29",
+"referents": [
+{"slot": "w2", "choice": "Exo.7.26#w7", "divine": false, "why": "'you' (2ms) in Yahweh's message: the one on whom the frogs will come up, Pharaoh.", "category": "second person inside a quoted speech"},
+{"slot": "w6", "choice": "Exo.7.26#w7", "divine": false, "why": "'your people': Pharaoh's people.", "category": "second person possessive"},
+{"slot": "w11", "choice": "Exo.7.26#w7", "divine": false, "why": "'your officials': Pharaoh's.", "category": "second person possessive"}
+],
+"links": [
+{"src": "Exo.7.28#cl2", "type": "and", "dst": "cl0", "action": "keep", "why": "waw (וְ) opens the yiqtol clause, adding the frogs' coming up on Pharaoh's people to the previous consequence.", "category": "and across verses"}
+],
+"groups": [],
+"none_fit": [],
+"cant_tell": []},
+
+{"ref": "Exo.8.1",
+"referents": [
+{"slot": "w11", "choice": "w7", "divine": false, "why": "'your hand': second person, the one commanded to stretch out, Aaron.", "category": "second person possessive in a quoted command"},
+{"slot": "w14", "choice": "w7", "divine": false, "why": "'your staff': Aaron's.", "category": "second person possessive in a quoted command"},
+{"slot": "cl1s", "choice": "w4", "divine": false, "why": "implied 'you' of 'say to Aaron': Yahweh commands Moses (w4) to tell Aaron. The builder's Aaron is wrong: the one told to speak is Moses.", "category": "implied subject of a command"},
+{"slot": "cl2s", "choice": "w7", "divine": false, "why": "implied 'you' of 'stretch out': the quoted command is for Aaron, the addressee of the relayed words.", "category": "implied subject inside a quoted command"},
+{"slot": "cl3s", "choice": "w7", "divine": false, "why": "implied 'you' of 'bring up the frogs': Aaron, as in the command before.", "category": "implied subject inside a quoted command"}
+],
+"links": [
+{"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "plain waw joining two commands ('stretch out ... and cause the frogs to come up') in one imperative group.", "category": "and between commands"},
+{"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "the saying clause 'he said' introduces the command 'tell Aaron' (R1).", "category": "speech content link"},
+{"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "'tell Aaron' introduces what is said: the collection of commands (R1).", "category": "speech content link"}
+],
+"groups": [
+{"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": true, "why": "outer speech of Yahweh to Moses; its part is the commanded turn Moses speaks to Aaron (R2).", "category": "outer speech with commanded speech"},
+{"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "Exo.8.1#g1"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w7"}], "divine": false, "why": "the commanded speech: Moses is the one commanded to speak, so he is the sender (R2).", "category": "commanded turn"},
+{"id": "Exo.8.1#g1", "kind": "turn", "action": "add", "members": [{"role": "part", "node": "imp2"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w7"}], "divine": true, "why": "innermost turn: Yahweh's words quoted by Moses; its sender is the one quoted (R2).", "category": "quoted divine speech"},
+{"id": "imp2", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl2"}, {"role": "command", "node": "cl3"}], "divine": false, "why": "two commands joined by waw are one imperative group with two command members.", "category": "commands joined at one level"}
+],
+"none_fit": [],
+"cant_tell": []},
+
+{"ref": "Exo.8.2",
+"referents": [
+{"slot": "w5", "choice": "w2", "divine": false, "why": "'his hand': the one who stretched out, Aaron (3ms).", "category": "third person possessive"},
+{"slot": "cl2s", "choice": "w12", "divine": false, "why": "'she covered': third feminine singular, the frogs (w12, feminine singular collective).", "category": "third person subject"}
+],
+"links": [
+{"src": "Exo.8.1#cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "then runs within a verse only; across the verse boundary it is not used.", "category": "then across verses"},
+{"src": "cl0", "type": "then", "dst": "cl1", "action": "remove", "why": "Aaron's stretching out brings about the frogs' coming up: a clause stating what an act brings about is result, not then.", "category": "act then its result read as then"},
+{"src": "cl0", "type": "result", "dst": "cl1", "action": "add", "why": "the act of stretching out the hand, and what it brings about: the frogs came up (R4).", "category": "act and its result"},
+{"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "wayyiqtol continues the narrative line: the frogs came up, then covered the land.", "category": "wayyiqtol continuation"}
+],
+"groups": [],
+"none_fit": [],
+"cant_tell": [{"what": "whether cl0 (Aaron stretched out his hand) fulfils the command Exo.8.1#cl2 (stretch out your hand)", "why": "the verb is repeated in a narrative report with a named subject, but there is no pro-form (ken or asah) as the fulfils condition requires; not linked."}]},
+
+{"ref": "Exo.8.3",
+"referents": [
+{"slot": "w7", "choice": "w4", "divine": false, "why": "'their secret arts': the magicians (w4), third plural.", "category": "third person possessive"},
+{"slot": "cl1s", "choice": "w4", "divine": false, "why": "'they brought up the frogs': the magicians, the subject of the wayyiqtol.", "category": "third person plural subject"}
+],
+"links": [
+{"src": "Exo.8.2#cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "then runs within a verse only; across the verse boundary it is not used.", "category": "then across verses"},
+{"src": "cl0", "type": "likewise", "dst": "Exo.8.2#cl0", "action": "add", "why": "'did thus' (ken) with a named subject not carrying out a command: the magicians do the same as Aaron's deed just done, after the latest command. Imitation, not fulfilment.", "category": "imitation with ken"},
+{"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "wayyiqtol continues the narrative: they did thus, then brought up the frogs.", "category": "wayyiqtol continuation"}
+],
+"groups": [],
+"none_fit": [],
+"cant_tell": []},
+
+{"ref": "Exo.8.4",
+"referents": [
+{"slot": "w18", "choice": "w2", "divine": false, "why": "'me' in Pharaoh's speech: the speaker, Pharaoh.", "category": "first person inside a quoted speech"},
+{"slot": "w22", "choice": "w2", "divine": false, "why": "'my people': Pharaoh's people, in Pharaoh's speech.", "category": "first person possessive"},
+{"slot": "cl1s", "choice": "w2", "divine": false, "why": "'he said': Pharaoh, the subject of the summoning and the speaking.", "category": "third person subject"},
+{"slot": "cl2s", "choice": "c3", "divine": false, "why": "implied 'you' (2mp) of 'pray to the LORD': the composite Moses and Aaron, the ones summoned.", "category": "implied plural subject of a command"},
+{"slot": "cl3s", "choice": "w12", "divine": true, "why": "'that he may remove': the one prayed to, the LORD (w12), named in cl2.", "category": "third person inside a prayer to God"},
+{"slot": "cl4s", "choice": "w2", "divine": false, "why": "'I will let your people go': Pharaoh's own promise in his speech.", "category": "first person in a promise"},
+{"slot": "cl5s", "choice": "w27", "divine": false, "why": "'that they may sacrifice': the people Moses and Aaron speak for, Pharaoh's 'your people' (w27).", "category": "third person plural after a promise"}
+],
+"links": [
+{"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "wayyiqtol: he summoned them, then he said.", "category": "wayyiqtol continuation"},
+{"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "reversed and circular with cl0 then cl1.", "category": "reversed narrative link"},
+{"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "'he said' introduces the commands of the prayer (R1).", "category": "speech content link"},
+{"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "'pray ... that he may remove': the jussive is the aim of the prayer, a purpose, not a plain and.", "category": "jussive of aim read as and"},
+{"src": "cl2", "type": "purpose", "dst": "cl3", "action": "add", "why": "command (2mp) then jussive in a different person: the prayer is for the frogs to be removed.", "category": "command then purpose"},
+{"src": "cl3", "type": "and", "dst": "cl4", "action": "keep", "why": "plain waw from the jussive to Pharaoh's cohortative; a cohortative after a jussive is a promise, not a purpose.", "category": "and to a promise"},
+{"src": "cl4", "type": "and", "dst": "cl5", "action": "remove", "why": "the jussive after the promise states the purpose of letting the people go.", "category": "and read as purpose"},
+{"src": "cl4", "type": "purpose", "dst": "cl5", "action": "add", "why": "'I will let your people go, that they may sacrifice': the release is for the sacrifice.", "category": "promise then purpose"}
+],
+"groups": [
+{"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "imp2"}, {"role": "part", "node": "cl4"}, {"role": "part", "node": "cl5"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "c3"}], "divine": false, "why": "Pharaoh's speech to Moses and Aaron: the prayer, then his promise and its purpose.", "category": "speech with prayer and promise"},
+{"id": "imp2", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl2"}, {"role": "aim", "node": "cl3"}], "divine": true, "why": "the command to pray, with its aim (that the LORD remove the frogs); the aim's referent is the LORD.", "category": "command with aim"},
+{"id": "imp3", "kind": "imperative", "action": "remove", "members": [], "divine": false, "why": "the jussive that he may remove is an aim, and the cohortative after it is a promise; neither is a command.", "category": "jussive or promise read as command"},
+{"id": "imp4", "kind": "imperative", "action": "remove", "members": [], "divine": false, "why": "the cohortative I will let go is a promise with a purpose, not a command; the purpose is a link.", "category": "promise read as command"}
+],
+"none_fit": [],
+"cant_tell": [{"what": "whether 'then I will let your people go' is a result of the prayer being answered (an unstated condition) or a separate promise", "why": "the text does not say the release follows from the removal of the frogs, and no link type covers an unstated condition."}]}
+]}

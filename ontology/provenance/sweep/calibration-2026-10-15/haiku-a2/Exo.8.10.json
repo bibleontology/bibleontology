@@ -1,0 +1,16 @@
+{"ref": "Exo.8.10",
+ "referents": [
+  {"slot": "w3", "choice": "w4", "divine": false, "why": "The object suffix 'them' is masculine plural and is resumed by the cognate noun 'heaps' (masculine plural, w4), which is what is piled. The repeated 'heaps heaps' (w5) restates the same referent rather than naming a second one.", "category": "object pronoun resumed by its noun"},
+  {"slot": "cl0s", "choice": "Exo.8.7#c4", "divine": false, "why": "The implied 'they' of a third masculine plural wayyiqtol. The frogs are not among the candidates, and heaping up the dead is an act of people. The nearest agreeing composite is Pharaoh with his houses, officials and people, named in the verse before. The verse does not name the doers, so this is the nearest sensible choice, not a settled one.", "category": "implied subject of a narrative verb with no named agent"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "Reversed. The piling (cl0) is the earlier event and the stench (cl1) follows it, so the 'and then' runs from cl0 to cl1, not back.", "category": "reversed narrative order"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "The wayyiqtol cl1 continues the narrative line after cl0 within the verse, its waw fused into the verb.", "category": "narrative sequence within verse"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0, 'heaps heaps' with the suffix 'them'", "what": "A noun restating a pronoun in the same clause, a distributive or intensive 'heaps upon heaps'. No link type or group kind expresses apposition or a resumptive repeat."}
+ ],
+ "cant_tell": [
+  {"what": "The referent of the implied subject of cl0", "why": "The verse names no agent. The only agreeing composite is two verses back, and the text does not say who piled the dead frogs."}
+ ]}

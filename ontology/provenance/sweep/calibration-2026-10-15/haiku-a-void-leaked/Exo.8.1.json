@@ -1,0 +1,20 @@
+{"ref": "Exo.8.1",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "Second masculine singular possessive on 'hand'. The command sits in the speech Moses is to relay to Aaron ('Tell Aaron'), so 'your' is Aaron, the masculine singular addressee of that speech.", "category": "possessive inside a commanded speech"},
+  {"slot": "w14", "choice": "w7", "divine": false, "why": "Second masculine singular possessive on 'staff', in the same quoted command addressed to Aaron. Morphology agrees with Aaron.", "category": "possessive inside a commanded speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "The clause 'say to Aaron' belongs to the outer speech the LORD addresses to Moses (w4). Its implied you is the one told to speak, Moses. The parser's w7 is the addressee of the quoted speech, not of this command.", "category": "implied subject of a command to relay"},
+  {"slot": "cl2s", "choice": "w7", "divine": false, "why": "'Stretch out' is the first command of the quoted speech, which is addressed to Aaron. Implied second masculine singular is Aaron.", "category": "implied subject inside a commanded speech"},
+  {"slot": "cl3s", "choice": "w7", "divine": false, "why": "'Bring up the frogs' is a command in the same quoted speech addressed to Aaron. Implied second masculine singular is Aaron.", "category": "implied subject inside a commanded speech"}
+ ],
+ "links": [
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "Waw joins two second-person imperatives in the same speech. No change of person, and the sense states no result or purpose, so a plain 'and' is the right reading.", "category": "plain and between commands"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "The LORD speaks; what he says is the command 'say to Aaron' (cl1). The speech clause holds the said clause as its content.", "category": "speech and what was said"},
+  {"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "Moses's telling to Aaron has as its content the run of commands, so the content is the imperative group and not its first member.", "category": "speech whose content is a command run"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": true, "why": "The LORD speaks to Moses. The commanded turn (say to Aaron) is a part of this outer turn, so the builder's direct part links to cl2 and cl3 move down into turn1. The sender is the LORD, a divine person.", "category": "speech nests a commanded turn"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "imp2"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w7"}], "divine": false, "why": "Moses is told to say to Aaron the words given him. The sender is Moses (w4), a candidate, where the builder had the slot cl1s. The addressee is Aaron. What is said is the imperative run imp2.", "category": "speech nests a command run"},
+  {"id": "imp2", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl2"}, {"role": "command", "node": "cl3"}], "divine": false, "why": "Two imperatives joined by waw in one speech make one imperative group with two command members. The builder had cl3 as a part, but it is a command.", "category": "commands joined by and"}
+ ],
+ "none_fit": [],
+ "cant_tell": []}

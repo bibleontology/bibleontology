@@ -1,0 +1,20 @@
+{
+ "ref": "Job.38.1",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

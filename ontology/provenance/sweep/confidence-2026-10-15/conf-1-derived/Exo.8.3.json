@@ -1,0 +1,37 @@
+{
+ "ref": "Exo.8.3",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "likewise",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

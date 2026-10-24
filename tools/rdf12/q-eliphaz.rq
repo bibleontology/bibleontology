@@ -1,0 +1,9 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX claim: <https://bibleontology.org/ns/claim#>
+PREFIX e:     <https://bibleontology.org/e/>
+# Who claims what about Job, through RDF 1.2 triple terms
+SELECT ?speaker ?relation ?object ?verse WHERE {
+  ?c rdf:reifies <<( e:job ?relation ?object )>> ;
+     claim:claimedBy ?speaker ;
+     claim:verse ?verse .
+} ORDER BY ?verse LIMIT 8

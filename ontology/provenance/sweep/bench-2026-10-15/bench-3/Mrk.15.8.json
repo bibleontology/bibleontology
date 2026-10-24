@@ -1,0 +1,56 @@
+{
+ "ref": "Mrk.15.8",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "w3",
+   "divine": false,
+   "why": "for them (autois) is plural; the crowd (w3) is a collective singular that takes plural agreement and is the only candidate that can receive Pilate's custom",
+   "category": "collective noun with plural pronoun"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "Mrk.15.5#w9",
+   "divine": false,
+   "why": "he did for them: the custom is Pilate's (verse 6), masculine singular; the builder's w5 (to beg) is an infinitive, not a person",
+   "category": "implied subject of habitual act"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "participle having cried out is nested in the main act of the crowd",
+   "category": "participle inside main clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "infinitive to beg is the complement of began, nested in cl0; not a purpose",
+   "category": "infinitive complement of began"
+  },
+  {
+   "src": "cl2",
+   "type": "as",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "kathos (just as) he did for them: a comparison in a prepositional role",
+   "category": "comparison clause"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self link",
+   "category": "self link"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

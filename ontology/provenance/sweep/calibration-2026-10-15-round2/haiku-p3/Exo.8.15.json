@@ -1,0 +1,119 @@
+{
+ "ref": "Exo.8.15",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "Third feminine singular 'this' in 'this is the finger of God' points at the gnat-making, which no candidate carries. The finger (w6) is the predicate, not the referent.",
+   "category": "demonstrative pointing outside the candidate list"
+  },
+  {
+   "slot": "w17",
+   "choice": "w3",
+   "divine": false,
+   "why": "'them' is third masculine plural after 'he would not listen to them': the magicians (w3), the speakers in the preceding speech.",
+   "category": "object pronoun in narrative"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w5",
+   "divine": false,
+   "why": "'he would not listen' is the act of a person; the heart (w11) hardened but does not listen. The sensible doer is Pharaoh (w5).",
+   "category": "subject of a refusal, not the heart"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "as",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "ka'asher, just as, before a saying clause: the refusal matches what the LORD had said.",
+   "category": "comparison to an earlier saying"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed: cl0 is the magicians' speech, which comes before the narrative of Pharaoh's heart.",
+   "category": "narrative link linked backwards"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "cl1 is inside the magicians' speech; the wayyiqtol continues the narrative line from the saying clause cl0, not from a clause within the speech.",
+   "category": "clause inside speech as narrative predecessor"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add",
+   "why": "wayyiqtol continues the narrative line from the nearest clause not inside a speech.",
+   "category": "narrative continuation past a speech"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "A will hardened, then the refusal that follows: the rule gives this as result, not a plain and.",
+   "category": "state with its result"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "Pharaoh's heart was hardened and so he would not listen.",
+   "category": "state with its result"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "cl0 is the magicians' saying; cl1 is what is said.",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w3"
+    },
+    {
+     "role": "addressee",
+     "node": "w5"
+    }
+   ],
+   "divine": false,
+   "why": "The magicians speak to Pharaoh; the speech is the finger of God clause.",
+   "category": "speech turn"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "the referent of the demonstrative 'this' in cl1",
+   "why": "It points at the act of producing gnats, which the candidate list does not carry. Only the feminine finger matches the morphology, and it is the predicate."
+  }
+ ]
+}

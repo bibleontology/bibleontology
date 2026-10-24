@@ -1,0 +1,214 @@
+{
+ "ref": "Exo.8.12",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "2ms possessive 'your' on the staff, inside the speech Moses delivers to Aaron, so the addressee of that speech",
+   "category": "second person inside a commanded speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "2ms implied subject of 'say to Aaron' is the one the LORD addresses in the outer speech, Moses; Aaron is the addressee of the commanded speech, not its speaker",
+   "category": "implied subject of a commanding clause"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "2ms command 'stretch out' sits in the speech Moses delivers to Aaron",
+   "category": "implied subject inside a commanded speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "2ms command 'strike', joined by waw to cl2 in the same speech to Aaron",
+   "category": "implied subject inside a commanded speech"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w15",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "3ms weqatal 'it will become gnats'; the thing struck, the dust (masc sing), is what turns into gnats",
+   "category": "implied subject from the object of the prior act"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl0 is the frame that opens the verse; nothing in the verse precedes it, and the then-link runs the wrong way",
+   "category": "then link reversed"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "confidence": "high",
+   "why": "two commands joined by waw (cl3 opens with waw), one imperative group",
+   "category": "commands joined by and"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl4",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a command and the third-person weqatal that says what it brings about is result, not then",
+   "category": "command and its outcome"
+  },
+  {
+   "src": "cl3",
+   "type": "result",
+   "dst": "cl4",
+   "action": "add",
+   "confidence": "high",
+   "why": "strike, then waw + third-person weqatal: it will become gnats is what the strike brings about; also the effect of the imperative group",
+   "category": "command and its outcome"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "high",
+   "why": "he said to Moses introduces the commanded speech 'say to Aaron'",
+   "category": "saying introduces speech"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add",
+   "confidence": "high",
+   "why": "say to Aaron introduces a collection of commands (stretch out and strike), so the content is the imperative group",
+   "category": "saying introduces commands"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the outer turn is the LORD speaking to Moses; the commanded speech is nested as a part, and the clauses of the command are parts of turn1",
+   "category": "speech nests inside speech"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "per the commanded-speech rule the words are spoken by Moses, the one commanded to speak them, to Aaron; the builder had the implied subject of the saying clause as sender",
+   "category": "commanded speech sender"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "effect",
+     "node": "cl4"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "stretch out and strike are commands joined by waw at one level, so one imperative group; the weqatal is its effect",
+   "category": "commands joined by and"
+  },
+  {
+   "id": "imp3",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "effect",
+     "node": "cl4"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "its members are absorbed into imp2",
+   "category": "duplicate command group"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,63 @@
+{
+ "ref": "Exo.8.7",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "'from you' is second masculine singular in what appears to be Moses's speech; the addressee is Pharaoh.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w9",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "'your houses': possessor is the addressee Pharaoh.",
+   "category": "possessive in addressee's speech"
+  },
+  {
+   "slot": "w13",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "'your officials': possessor is the addressee Pharaoh.",
+   "category": "possessive in addressee's speech"
+  },
+  {
+   "slot": "w17",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "'your people': possessor is the addressee Pharaoh.",
+   "category": "possessive in addressee's speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w3",
+   "divine": false,
+   "why": "third feminine plural 'they will remain only in the Nile' agrees with the frogs, the subject of cl0.",
+   "category": "feminine plural referent"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl4 is not a clause of this verse (it is the parenthetical of the verse before), and a then link is within a verse only.",
+   "category": "dangling link across verses"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0 'the frogs will depart' and cl1 'only in the Nile they will remain'",
+   "what": "a restriction on a general outcome (רַק, 'only'). There is no 'but' word, and no link type for a restriction on an outcome."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether this verse is still Moses's speech from the verse before, or a new speaker",
+   "why": "The Berean closes the quotation here. The Hebrew has no speaker marking and the verse has no frame clause of its own, so the sender of cl0 and cl1 is not settled by this verse."
+  }
+ ]
+}

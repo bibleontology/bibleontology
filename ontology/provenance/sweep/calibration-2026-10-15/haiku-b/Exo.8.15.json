@@ -1,0 +1,23 @@
+{"ref": "Exo.8.15",
+ "referents": [
+  {"slot": "w8", "choice": "none", "divine": false, "why": "'this' (feminine singular) is the subject of the nominal sentence; the thing it names is the gnat plague of Exo.8.13, which no candidate is. The only feminine singular candidate, 'finger' (w6), is the predicate, not the subject.", "category": "pronoun for an earlier thing outside the candidate types"},
+  {"slot": "w17", "choice": "w3", "divine": false, "why": "'them' is third masculine plural and is the object of 'listen': the people who had just spoken, the magicians (w3). God (w7) agrees in morphology but did not speak to Pharaoh and is not the one listened to here.", "category": "object pronoun to the speakers of the preceding speech"},
+  {"slot": "cl3s", "choice": "w5", "divine": false, "why": "'he did not listen' is third masculine singular and listening is a doer's act. The builder's heart (w11) agrees in gender and number but cannot listen. The subject is Pharaoh (w5), the one spoken to in cl0; w12 only names the owner of the heart.", "category": "subject skipped past a body part that agrees in number"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "as", "dst": "cl4", "action": "keep", "why": "ka'asher before the qatal 'he had said Yahweh' compares the act to an earlier saying; the saying is the earlier word the act is declared to fulfil.", "category": "comparison to an earlier saying"},
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "the link runs backward (cl0 precedes cl3), and cl3 is a qatal with a separate waw, so the relation is 'and', already carried by cl2-and-cl3. cl0 is the speech frame, not the nearest narrative clause.", "category": "backward narrative link on a separate-waw clause"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is inside the magicians' speech. A wayyiqtol continues the nearest clause that is not inside speech, which is the frame cl0.", "category": "narrative line continues from the speech frame, not its content"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "separate waw before the negated qatal 'and he did not listen': a plain 'and' joining two acts, not a cause or result.", "category": "plain and between two acts"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "the wayyiqtol of cl2 continues the narrative from the nearest clause not inside speech, the magicians' saying cl0. The English 'But' is not in the Hebrew.", "category": "narrative line continues past a speech"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "cl0 is the saying whose content is cl1, 'this is the finger of God'. The turn0 group carries the same embedding; this is the clause-level form of it.", "category": "speech and its content"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "w3"}, {"role": "addressee", "node": "w5"}], "divine": false, "why": "the magicians (w3) say to Pharaoh (w5) 'this is the finger of God' (cl1). The members match the clauses and candidates.", "category": "speech with sender and addressee named"}
+ ],
+ "none_fit": [
+  {"where": "w8 and cl1", "what": "the candidate list holds people, groups and nouns of this verse only. The thing 'this' names, the gnat plague of Exo.8.13, has no candidate, so the slot can only be none."},
+  {"where": "cl1", "what": "a nominal sentence that identifies one thing as the finger of God. No link type expresses identity or equation between a referent and a predicate."}
+ ],
+ "cant_tell": []
+}

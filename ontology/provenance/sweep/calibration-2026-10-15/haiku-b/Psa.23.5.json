@@ -1,0 +1,18 @@
+{"ref": "Psa.23.5",
+ "referents": [
+  {"slot": "w3", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'me' is the object of the preposition before it; inside the psalm it is the psalm's own voice (voice candidate), and no other speaker is quoted here.", "category": "first person in a psalm"},
+  {"slot": "w7", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'my' on 'enemies'; the psalm's own voice.", "category": "first person in a psalm"},
+  {"slot": "w13", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'my' on 'head'; the psalm's own voice.", "category": "first person in a psalm"},
+  {"slot": "w15", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'my' on 'cup'; the psalm's own voice.", "category": "first person in a psalm"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "Second person masculine singular implied subject of the yiqtol 'you arrange'. From verse 4 on the psalm addresses the LORD as 'you', and LORD is the masculine singular candidate, so the morphology agrees.", "category": "implied second person addressed to God"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "Second person masculine singular implied subject of the qatal 'you have anointed'. Same address to the LORD as the preceding clause.", "category": "implied second person addressed to God"}
+ ],
+ "links": [],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl1 to cl2 (cup overflows)", "what": "cl2 follows the anointing clause with no conjunction. No link type states a bare juxtaposed clause that adds a further image or result without a connective."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl2 (cup overflows) is a result of the anointing or a separate image in the same speech.", "why": "No conjunction marks the join and the Hebrew is asyndetic, so the verse does not settle the relation."},
+  {"what": "Whether verses 4 and 5 form a turn addressed to the LORD, and where that turn begins.", "why": "The shift to second person begins in verse 4, and no turn or writing group in the builder covers it. Grouping of this kind belongs to the psalm-level structure, not to this verse alone."}
+ ]}

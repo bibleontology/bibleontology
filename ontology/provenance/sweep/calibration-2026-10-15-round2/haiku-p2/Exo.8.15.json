@@ -1,0 +1,119 @@
+{
+ "ref": "Exo.8.15",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'this is the finger of God': the third feminine singular pronoun has as its referent the sign itself (the bringing forth of gnats). No candidate is an event; the feminine candidate finger is the predicate, not the subject.",
+   "category": "pronoun for an event"
+  },
+  {
+   "slot": "w17",
+   "choice": "w3",
+   "divine": false,
+   "why": "'them' is third masculine plural and refers to the magicians who spoke to Pharaoh in the clause before.",
+   "category": "object of the speech just given"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w5",
+   "divine": false,
+   "why": "'he did not listen' is third masculine singular, and the one who does the listening is Pharaoh, the one spoken to; the builder's heart cannot listen.",
+   "category": "subject that is a person not an organ"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "as",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "'just as he had said' compares the refusal with a saying: the action is declared the fulfilment of an earlier word.",
+   "category": "comparison with an earlier saying"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "a link from the later refusal back to the speech frame is backward; the refusal is not the next event after the magicians spoke.",
+   "category": "backward then link into speech frame"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "cl1 is inside the speech; a wayyiqtol continues the narrative from the nearest clause not inside a speech, which is the speech frame.",
+   "category": "then from inside speech"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add",
+   "why": "the wayyiqtol 'and the heart was hard' continues the narrative from the nearest non-speech clause before it, the magicians' saying.",
+   "category": "narrative continuation past speech"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "a will hardened, then the refusal that follows: a state brings about what follows, so the link is a result.",
+   "category": "plain and read as result"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "the hardened heart is the state, and the refusal to listen is what it brings about.",
+   "category": "state and what it brings about"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the saying clause 'the magicians said' introduces what is said, 'this is the finger of God'.",
+   "category": "speech content link"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w3"
+    },
+    {
+     "role": "addressee",
+     "node": "w5"
+    }
+   ],
+   "divine": false,
+   "why": "the magicians speak to Pharaoh; the sender and addressee are right, and the saying clause and its said clause are the parts.",
+   "category": "speech confirmed"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "the subject 'this' (slot w8) of 'this is the finger of God'",
+   "why": "it is a feminine singular pronoun with no candidate for an event; recorded as none rather than forced onto the finger, which is the predicate."
+  }
+ ]
+}

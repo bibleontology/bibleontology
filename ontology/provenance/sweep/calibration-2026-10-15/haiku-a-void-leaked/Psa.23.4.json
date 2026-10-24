@@ -1,0 +1,27 @@
+{"ref": "Psa.23.4",
+ "referents": [
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "Second masculine singular 'you' in the psalm's own voice; the speech turns from the third person of verse 1 to address the LORD named there. No other candidate is a second person.", "category": "second person address in psalm"},
+  {"slot": "w12", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First common singular 'me' in the psalm's own voice; the psalm is not quoting anyone.", "category": "first person in psalm voice"},
+  {"slot": "w14", "choice": "Psa.23.1#w3", "divine": true, "why": "Second masculine singular possessive on 'rod' (your rod): the rod belongs to the addressee of the speech, the LORD.", "category": "possessive of addressee"},
+  {"slot": "w17", "choice": "Psa.23.1#w3", "divine": true, "why": "Second masculine singular possessive on 'staff' (your staff): same addressee as the rod.", "category": "possessive of addressee"},
+  {"slot": "w18", "choice": "c13", "divine": false, "why": "Third masculine plural 'they' takes the rod and staff together as its referent, the only composite candidate that can take a plural; a single one of the two does not fit the plural.", "category": "plural pronoun for a pair of objects"},
+  {"slot": "w20", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First common singular 'me' as object of comfort, the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "cl0s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied first common singular subject of the yiqtol 'I will go'; the psalm's own voice.", "category": "implied subject in psalm voice"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied first common singular subject of the yiqtol 'I will fear'; the psalm's own voice.", "category": "implied subject in psalm voice"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "why": "cl2 opens with כִּי, 'for', and gives the reason for not fearing evil; the edge runs from what is explained to its reason.", "category": "reason clause after a claim"},
+  {"src": "cl1", "type": "conceded", "dst": "cl0", "action": "remove", "why": "'conceded' is not among the link_types; the concession is the 'though' type, added below.", "category": "builder type outside the list"},
+  {"src": "cl1", "type": "though", "dst": "cl0", "action": "add", "why": "cl0 opens with גַּם כִּי, 'even though', and cl1 is the claim that holds anyway: 'I will not fear, even though I walk through the valley'.", "category": "concession marked by even though"},
+  {"src": "cl4", "type": "elaborates", "dst": "cl2", "action": "add", "why": "After 'you are with me', the rod and staff clause and 'they comfort me' give how the LORD is with him, the detail of the earlier clause. Whether it is detail or a new assertion is recorded in cant_tell.", "category": "detail of an earlier clause"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "concession", "action": "add", "members": [{"role": "conceded", "node": "cl0"}, {"role": "holds_anyway", "node": "cl1"}, {"role": "its_ground", "node": "cl2"}], "divine": false, "why": "The even-though clause cl0, the claim that holds anyway cl1, and its ground cl2 (for you are with me) form the concession kind. builder_groups was empty.", "category": "concession with its ground"}
+ ],
+ "none_fit": [
+  {"where": "cl3 (your rod and your staff)", "what": "A fronted nominal phrase that is the subject of cl4, a left-dislocated topic before its predicate. No link type or group kind marks a topic."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl3-cl4 (rod and staff, they comfort me) is the detail of cl2 or a separate assertion", "why": "The clauses are joined by no conjunction, so the form does not decide. Recorded as elaborates above, which may be wrong."}
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "_what": "How each MACULA GREEK phrase rule is read by the clean builder (stage S1): the same kinds as tables/hebrew/heads.json, so the two languages build the same structure. MACULA marks NO heads in the Greek (surveyed 2026-09-27: 168 rules, 0 head marks), so every convention is here. Clause COMPLEXES (Conj-CL, sub-CL, that-VP, CLaCL, ClCl, aCLaCL, notCLbutCL2CL ...) need no entry: a group holding only connectives and clauses is read as a complex whatever its rule. `2Advp_h1` / `2Advp_h2` name their own head.",
+  "coord": ["NpaNp", "Conj3Np", "Conj4Np", "Conj5Np", "Conj6Np", "Conj7Np", "Conj2Pp", "Conj3Pp", "Conj4Pp",
+            "AdjpaAdjp", "Conj3Adjp", "aNpaNp", "aNpaNpaNp", "aPpaPp", "EitherOrVp", "EitherOr4Np",
+            "NpNpNp", "NpNpNpNp", "NpNpNpNpNp", "2Np", "ADVaADV", "AdvpaAdvp", "3Adjp", "Conj2VP", "2Pp",
+            "notNPbutNP", "notPPbutPP", "notADVbutADV"],
+  "head_first": {
+    "NPofNP": "of", "Np-Appos": "apposition", "NpAdjp": "attribute", "NP-CL": "relative",
+    "NpPp": "pp", "NP-Demo": "demonstrative", "NPDetAdj": "attribute", "NpNump": "number",
+    "NP-all": "quantity", "AdjpAdvp": "of", "NpAdvp": "of", "AdjpPp": "pp", "AdjpDative": "qualifier",
+    "NpPron": "apposition", "2Advp_h1": "adverb", "VerbBe": "periphrastic", "AdjpAdjp": "attribute",
+    "NP-Prep": null, "AdvAdv": "adverb"
+  },
+  "head_last": {
+    "DetNP": null, "DetAdj": null, "DetNump": null, "DetAdv": null,
+    "AdjpNp": "attribute", "All-NP": "quantity", "AdvpNp": "focus", "ofNPNP": "of",
+    "Demo-NP": "demonstrative", "NumpNP": "number", "NumpNump": "number", "NumpAdjp": "number",
+    "PronNP": "apposition", "PpNp2Np": "pp", "AdvPp": "adverb", "AdvpAdjp": "adverb",
+    "2Advp_h2": "adverb", "BeVerb": "periphrastic", "intjNP": "interjection", "CL-NP": "relative"
+  },
+  "prep": ["PrepNp"],
+  "wrap": ["Np2CL", "Intj2CL"],
+  "_greek_only": "Kept, not dropped: `periphrastic` (a form of εἰμί with a participle, BeVerb / VerbBe) and `demonstrative`; the article (DetNP) is structural like the Hebrew article."
+}

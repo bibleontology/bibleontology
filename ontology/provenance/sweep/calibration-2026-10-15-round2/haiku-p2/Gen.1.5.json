@@ -1,0 +1,59 @@
+{
+ "ref": "Gen.1.5",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "Third masculine singular on the verb of cl1 (he called night). The nearest agreeing doer of the same naming in cl0 is God (w2). Elohim takes singular agreement with a singular verb, so the plural morph on the noun does not block it.",
+   "category": "implied subject carried over from prior clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Order reversed. The calling of light and darkness (cl0, cl1) comes before the evening (cl2), so the builder direction runs backwards.",
+   "category": "narrative order reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Plain waw opens cl1 and joins the two namings. No cause or result.",
+   "category": "plain and between parallel clauses"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "wayyiqtol cl2 continues the narrative line from cl1, which is not inside a speech.",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "wayyiqtol cl3 continues the narrative line from cl2.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Gen.1.5 cl0 and cl1",
+   "what": "Name-giving: God called the light day and the darkness night. A naming is not a saying, so no content link fits, and no link type records giving a name."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "cl4, day one, an appositional summary of the evening and morning (cl2, cl3)",
+   "why": "The form does not settle whether it elaborates them or only closes the day. No link added."
+  }
+ ]
+}

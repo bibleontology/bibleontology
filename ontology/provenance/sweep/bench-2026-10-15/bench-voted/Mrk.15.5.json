@@ -1,0 +1,33 @@
+{
+ "ref": "Mrk.15.5",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive with hos te (so as to amaze) says what the reply brings about: Pilate's amazement. A result, not a plain and.",
+   "category": "result of an act",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link: a clause cannot follow itself.",
+   "category": "self link",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0, the opening de ('but') that contrasts with Pilate's question in Mrk.15.4",
+   "what": "A contrast across verses. The contrast type is mid-verse only, so this has no link type."
+  }
+ ],
+ "cant_tell": [],
+ "voted": 3
+}

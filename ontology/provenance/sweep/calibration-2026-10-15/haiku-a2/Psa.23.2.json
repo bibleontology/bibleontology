@@ -1,0 +1,13 @@
+{"ref": "Psa.23.2",
+ "referents": [
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First common singular 'me' in the psalm's own voice. The psalm does not quote anyone else here, so 'me' is the psalmist (voice candidate).", "category": "first person in psalm's own voice"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Same first common singular 'me' as w4, in the second line, in the psalm's own voice.", "category": "first person in psalm's own voice"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "Third masculine singular implied subject of 'makes me lie down'. LORD and David both agree in morphology, but the act is a shepherd's act, and verse 1 gives the shepherd's role to the LORD ('The LORD is my shepherd'). David appears only in the heading and does not act in this psalm.", "category": "implied subject carried from the preceding verse"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "Third masculine singular implied subject of 'leads me'. It is the same shepherd act as the first line, so it has the same referent, the LORD of verse 1.", "category": "implied subject carried from the preceding verse"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "Two asyndetic lines with no conjunction between them. The second repeats the first's he-acts-on-me pattern with the same implied subject, the LORD. The parallelism is carried by the group kind, not by a link.", "category": "parallel lines with a shared implied subject"}
+ ],
+ "none_fit": [],
+ "cant_tell": []}

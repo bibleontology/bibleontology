@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this graph, its vocabularies or its code, please cite it as below."
+title: "Bible Ontology"
+abstract: >-
+  A knowledge graph of what the text of the Bible says: its people, places,
+  events and claims, each relation resting on the verses that establish it and
+  credited to the voice that makes it, read from the Hebrew and Greek (MACULA)
+  and shown in the Berean Standard Bible. Published with RDF vocabularies,
+  SHACL shapes and an alignment to standard vocabularies.
+type: software
+authors:
+  - family-names: "Egge"
+    given-names: "Doug"
+url: "https://bibleontology.org"
+repository-code: "https://github.com/bibleontology/bibleontology"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+version: "1.2.1"
+date-released: "2026-10-23"
+keywords:
+  - knowledge graph
+  - ontology
+  - RDF
+  - SHACL
+  - Bible
+  - digital humanities
+references:
+  - type: dataset
+    title: "MACULA Hebrew Linguistic Datasets"
+    url: "https://github.com/Clear-Bible/macula-hebrew/"
+    authors:
+      - name: "Biblica, Inc."
+    license: CC-BY-4.0
+  - type: dataset
+    title: "MACULA Greek Linguistic Datasets"
+    url: "https://github.com/Clear-Bible/macula-greek/"
+    authors:
+      - name: "Biblica, Inc."
+    license: CC-BY-4.0

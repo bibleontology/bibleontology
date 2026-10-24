@@ -1,0 +1,32 @@
+{
+ "ref": "Rom.3.2",
+ "referents": [
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "that",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

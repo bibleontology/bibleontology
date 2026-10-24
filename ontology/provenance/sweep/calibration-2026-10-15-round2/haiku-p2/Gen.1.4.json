@@ -1,0 +1,38 @@
+{
+ "ref": "Gen.1.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "cl1 (the light was good) is what God saw. It is the object of the seeing verb, not a reason. Ki after a verb of perceiving.",
+   "category": "object clause after a verb of perceiving"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Order reversed. cl0 (he saw) comes before cl2 (he separated), so the builder direction runs backwards.",
+   "category": "narrative order reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "wayyiqtol cl2 continues the narrative line from cl0. cl1 is inside cl0's object clause, so it is not the clause before cl2.",
+   "category": "narrative sequence past an embedded clause"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "cl1 opens_with field holds a morphology code, not a conjunction",
+   "why": "Read as having no connective. The clause is the object of cl0, so the missing conjunction does not change any link."
+  }
+ ]
+}

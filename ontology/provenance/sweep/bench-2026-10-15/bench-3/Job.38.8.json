@@ -1,0 +1,60 @@
+{
+ "ref": "Job.38.8",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'It burst forth' in the infinitive: the sea, the masculine singular noun that bursts out of the womb. The womb is not the one bursting.",
+   "category": "infinitive subject in a clause"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Implied third masculine singular subject of the wayyiqtol 'he shut off', in a rhetorical question about who enclosed the sea: the LORD. Not in this verse's candidate list (see cant_tell).",
+   "category": "implied subject of narrative verb"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "Implied third masculine singular subject of 'came forth' in the when-clause: the sea that bursts forth.",
+   "category": "implied subject in a temporal clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The infinitive 'burst forth' is nested in the when-clause.",
+   "category": "infinitive nested in a clause"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot follow itself. This is a parser self-loop with no support in the form.",
+   "category": "self-link artefact"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The when-clause 'when it burst forth from the womb' sets the time of the act in cl0 ('shut off ... the sea'): a temporal role nested in the act.",
+   "category": "temporal clause nested in an act"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The candidate list for 38:8 omits the LORD (Job.38.1#w2) and Job (Job.38.1#w4), which 38:2 to 38:7 offer. The choice for cl0s is made from the speech, not from the list.",
+   "why": "The list is shorter than in earlier verses, so the choice is flagged for review."
+  }
+ ]
+}

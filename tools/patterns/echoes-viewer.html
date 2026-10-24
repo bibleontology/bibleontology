@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Echoes, NT to OT</title>
+<style>
+:root { --bg:#fbfaf7; --fg:#1d1c1a; --mute:#6b675f; --line:#e3dfd6; --card:#fff;
+        --acc:#8a4b12; --chip:#f1ebe0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#171614; --fg:#ebe7df; --mute:#a39d92; --line:#34312c; --card:#201f1c;
+  --acc:#e0a060; --chip:#2c2925; } }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:15px/1.5 Georgia, "Times New Roman", serif; }
+header { position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--line);
+         padding:10px 16px; display:flex; flex-wrap:wrap; gap:12px; align-items:center;
+         font-family:system-ui, sans-serif; font-size:13px; z-index:1; }
+header h1 { font-size:16px; margin:0 12px 0 0; }
+input[type=search] { padding:4px 8px; border:1px solid var(--line); background:var(--card);
+                     color:var(--fg); border-radius:4px; min-width:180px; }
+main { max-width:980px; margin:0 auto; padding:12px 16px 60px; }
+.v { background:var(--card); border:1px solid var(--line); border-radius:6px;
+     padding:12px 14px; margin:12px 0; }
+.ref { font-family:system-ui, sans-serif; font-weight:600; color:var(--acc); margin-right:6px; }
+.l { border-left:3px solid var(--line); margin:10px 0 0 4px; padding-left:12px; }
+.meta { font-family:system-ui, sans-serif; font-size:12px; color:var(--mute); }
+.chip { display:inline-block; background:var(--chip); border-radius:3px; padding:0 5px;
+        margin:0 3px 0 0; font-size:12px; font-family:system-ui, sans-serif; }
+.also { margin:6px 0 0 14px; font-size:14px; color:var(--mute); }
+.also .ref { color:var(--mute); }
+p.note { font-family:system-ui, sans-serif; font-size:13px; color:var(--mute); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Echoes, NT → OT</h1>
+  <label>least score <input id="min" type="range" min="5" max="30" step="0.5" value="12.5">
+    <span id="minv">12.5</span></label>
+  <input id="q" type="search" placeholder="filter: reference or words">
+  <span id="count" class="meta"></span>
+</header>
+<main>
+<p class="note">Each New Testament verse with the Old Testament verses whose rare
+nouns and verbs it shares (through every Septuagint rendering of the Hebrew). The score is the
+rarity those words carry together, scaled by how much of both verses that is; it grades how much
+is shared, not whether it is a quotation, an allusion or an echo, and says nothing of the stance
+the later verse takes (affirms, extends, fulfils, contrasts). A rare PAIR of shared words (stone
+and stumbling) counts for more than the two words apart. Graded by hand, 8 pairs a band: score
+14.5 and up about 5 of 8 real, 12.4–14.5 about 4, 10.7–12.4 about 2–3, below that about 1 — and
+some real quotations (Rev 5:10 → Exod 19:6) sit that low, among chance matches.
+Under each OT verse: where that verse is itself echoed in other OT books.
+Made by <code>tools/patterns/echoes.py</code>. Verse numbers are the BSB's.</p>
+<div id="list"></div>
+</main>
+<script>
+const DATA = /*DATA*/[];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const chips = xs => xs.map(x => `<span class="chip">${esc(x)}</span>`).join("");
+function draw() {
+  const min = +document.getElementById("min").value;
+  document.getElementById("minv").textContent = min;
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const out = [];
+  let n = 0;
+  for (const v of DATA) {
+    const ls = v.links.filter(l => l.score >= min);
+    if (!ls.length) continue;
+    if (q && !(v.ref + " " + v.text + " " + ls.map(l => l.ref + " " + l.text + " " + l.shared.join(" ")).join(" "))
+          .toLowerCase().includes(q)) continue;
+    n++;
+    if (out.length >= 400) continue;
+    out.push(`<div class="v"><span class="ref">${esc(v.ref)}</span>${esc(v.text)}` +
+      ls.map(l => `<div class="l"><span class="ref">${esc(l.ref)}</span>${esc(l.text)}
+        <div class="meta">score ${l.score} · ${chips(l.shared)}</div>` +
+        (l.also.length ? `<div class="also">also in: ` + l.also.map(a =>
+          `<div><span class="ref">${esc(a.ref)}</span>${esc(a.text)} <span class="meta">score ${a.score} · ${chips(a.shared)}</span></div>`).join("") + `</div>` : "") +
+        `</div>`).join("") + `</div>`);
+  }
+  document.getElementById("count").textContent = `${n.toLocaleString()} NT verses` + (n > 400 ? " (first 400 shown)" : "");
+  document.getElementById("list").innerHTML = out.join("");
+}
+document.getElementById("min").oninput = draw;
+document.getElementById("q").oninput = draw;
+draw();
+</script>
+</body>
+</html>

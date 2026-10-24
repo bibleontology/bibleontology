@@ -1,0 +1,204 @@
+###############################################################################
+#  SHACL shapes for the proposed meaning ontology: the checks that would run
+#  over it, as tools/ontology.py runs over kinds.json (closed world; domain
+#  and range enforced). Run against examples.ttl by tools/meaning/check.py.
+###############################################################################
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix bow:  <https://bibleontology.org/ns/word#> .
+@prefix bom:  <https://bibleontology.org/ns/meaning#> .
+@prefix bosh: <https://bibleontology.org/ns/meaning/shapes#> .
+
+bosh:Occurrence a sh:NodeShape ;
+    sh:targetClass bow:Occurrence ;
+    sh:property [ sh:path bow:ofLexeme ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "An occurrence has exactly one lexeme." ] ;
+    sh:property [ sh:path bow:inSense ; sh:maxCount 1 ;
+                  sh:message "An occurrence carries at most one sense (or none, where the evidence does not decide)." ] ;
+    sh:property [ sh:path bom:usage ; sh:maxCount 1 ;
+                  sh:in ( bom:Literal bom:Figurative bom:Unmarked bom:Sign bom:Contested ) ;
+                  sh:message "Usage is literal, figurative, a sign, contested, or unmarked — one of them." ] .
+
+# CONTESTED MEANS READERS DIVIDE — so at least two readings, answering
+# differently, each credited; and the text must not state the answer itself.
+bosh:ContestedHasBothSides a sh:NodeShape ;
+    sh:targetClass bow:Occurrence ;
+    sh:sparql [
+        sh:message "A contested use needs at least two usage readings that answer differently." ;
+        sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE {
+                $this bom:usage bom:Contested .
+                FILTER NOT EXISTS {
+                    ?a bom:readsUsageOf $this ; bom:readsUsage ?ua .
+                    ?b bom:readsUsageOf $this ; bom:readsUsage ?ub .
+                    FILTER (?ua != ?ub)
+                }
+            }""" ] ;
+    sh:sparql [
+        sh:message "A use the text itself settles (a figure with a stated tenor) is not contested." ;
+        sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE {
+                $this bom:usage bom:Contested .
+                ?f bom:figureAt $this ; bom:tenorBasis "stated" .
+            }""" ] .
+
+bosh:UsageReading a sh:NodeShape ;
+    sh:targetClass bom:UsageReading ;
+    sh:property [ sh:path bom:readsUsageOf ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bom:readsUsage ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( bom:Literal bom:Figurative bom:Sign ) ] ;
+    sh:property [ sh:path bom:readsAs ; sh:minCount 1 ] .
+
+# FIGURATIVE ONLY WITH A FIGURE: an occurrence may not be called figurative
+# unless a FigurativeUse stands at it (PRINCIPLES 18: no default).
+bosh:FigurativeHasFigure a sh:NodeShape ;
+    sh:targetClass bow:Occurrence ;
+    sh:sparql [
+        sh:message "Usage is figurative (or a sign), but no FigurativeUse is at this occurrence." ;
+        sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE {
+                $this bom:usage ?u .
+                FILTER (?u IN (bom:Figurative, bom:Sign))
+                FILTER NOT EXISTS { ?f bom:figureAt $this }
+            }""" ] .
+
+# A SIGN IS ONE THE TEXT CALLS SO: its figure's tenor must be stated.
+bosh:SignIsStated a sh:NodeShape ;
+    sh:targetClass bow:Occurrence ;
+    sh:sparql [
+        sh:message "A sign whose meaning is not stated by the text is a reading, not a sign." ;
+        sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE {
+                $this bom:usage bom:Sign .
+                FILTER NOT EXISTS { ?f bom:figureAt $this ; bom:tenorBasis "stated" }
+            }""" ] .
+
+bosh:FigurativeUse a sh:NodeShape ;
+    sh:targetClass bom:FigurativeUse ;
+    sh:property [ sh:path bom:figureAt ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bom:vehicle ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:class bow:Sense ;
+                  sh:message "A figure names its image (the vehicle) as a sense." ] ;
+    sh:property [ sh:path bom:mode ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bom:marker ; sh:minCount 1 ;
+                  sh:message "A figure says what in the text marks it." ] ;
+    sh:property [ sh:path bom:tenorBasis ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( "stated" "read" ) ] ;
+    sh:property [ sh:path bom:evidence ; sh:minCount 1 ] .
+
+# A STATED tenor must be present; a READ tenor must NOT sit on the figure —
+# it belongs to a Reading with its reader.
+bosh:TenorFollowsBasis a sh:NodeShape ;
+    sh:targetClass bom:FigurativeUse ;
+    sh:sparql [
+        sh:message "A figure whose tenor is 'read' carries the tenor itself; it must be on a SymbolReading with a named reader." ;
+        sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE { $this bom:tenorBasis "read" ; bom:tenor ?t . }""" ] ;
+    sh:sparql [
+        sh:message "A figure whose tenor is 'stated' names it." ;
+        sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this WHERE { $this bom:tenorBasis "stated" .
+                                 FILTER NOT EXISTS { $this bom:tenor ?t } }""" ] .
+
+bosh:Predication a sh:NodeShape ;
+    sh:targetClass bom:Predication ;
+    sh:property [ sh:path bom:predicationOf ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bom:saidBy ; sh:minCount 1 ;
+                  sh:message "The saying is the fact: a predication names who says it." ] ;
+    sh:property [ sh:path bom:evidence ; sh:minCount 1 ] ;
+    sh:or ( [ sh:path bom:predicatedCategory ; sh:minCount 1 ]
+            [ sh:path bom:predicatedIdentity ; sh:minCount 1 ] ) .
+
+bosh:Reading a sh:NodeShape ;
+    sh:targetClass bom:Reading ;
+    sh:property [ sh:path prov:wasAttributedTo ; sh:minCount 1 ;
+                  sh:message "A reading always names its reader." ] ;
+    sh:property [ sh:path bom:evidence ; sh:minCount 1 ] .
+
+# ONE CLASS PER INDIVIDUAL, the least disputed: two top classes on one
+# individual is a claim the text did not make in one place (PRINCIPLES 4);
+# where its predications conflict, it stays a bare Entity.
+bosh:OneTopClass a sh:NodeShape ;
+    sh:targetClass bom:Individual ;
+    sh:sparql [
+        sh:message "An individual carries more than one top class; keep the least disputed and move the rest to predications." ;
+        sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            SELECT $this WHERE {
+                $this a ?c1, ?c2 .
+                FILTER (?c1 != ?c2)
+                FILTER (?c1 IN (bom:PersonalBeing, bom:Group, bom:Animal,
+                    bom:Plant, bom:Artifact, bom:BodyPart, bom:Food,
+                    bom:Substance, bom:NaturalObject, bom:Place, bom:Time,
+                    bom:Event, bom:Act, bom:State, bom:Phenomenon,
+                    bom:Feeling, bom:Cognition, bom:Communication,
+                    bom:Attribute, bom:Quantity, bom:Possession,
+                    bom:Relation, bom:Shape, bom:Motive))
+                FILTER (?c2 IN (bom:PersonalBeing, bom:Group, bom:Animal,
+                    bom:Plant, bom:Artifact, bom:BodyPart, bom:Food,
+                    bom:Substance, bom:NaturalObject, bom:Place, bom:Time,
+                    bom:Event, bom:Act, bom:State, bom:Phenomenon,
+                    bom:Feeling, bom:Cognition, bom:Communication,
+                    bom:Attribute, bom:Quantity, bom:Possession,
+                    bom:Relation, bom:Shape, bom:Motive))
+            }""" ] .
+
+# A SUBCLASS MEMBERSHIP IS NEVER BARE. Doug, 2026-09-28: one personal-being
+# class with subclasses, and a being may belong to more than one (Jesus
+# Incarnate: Human and Deity). Each membership must rest on a
+# Classification of that individual into that class, with evidence.
+bosh:MembershipIsArgued a sh:NodeShape ;
+    sh:targetClass bom:Individual ;
+    sh:sparql [
+        sh:message "A member of Human, Deity, HeavenlyBeing or Spirit with no Classification citing why." ;
+        sh:select """
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>
+            SELECT $this ?c WHERE {
+                $this a ?c .
+                FILTER (?c IN (bom:Human, bom:Deity, bom:HeavenlyBeing, bom:Spirit))
+                FILTER NOT EXISTS {
+                    ?k bom:classifies $this ; bom:inClass ?c ; bom:evidence ?v .
+                }
+            }""" ] .
+
+bosh:Classification a sh:NodeShape ;
+    sh:targetClass bom:Classification ;
+    sh:property [ sh:path bom:classifies ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bom:inClass ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path bom:statement ; sh:minCount 1 ] ;
+    sh:property [ sh:path bom:saidBy ; sh:minCount 1 ] ;
+    sh:property [ sh:path bom:evidence ; sh:minCount 1 ] .
+
+# A SENSE REACHED THROUGH A GLOSS SAYS SO (PRINCIPLES 44a, condition 3)
+bosh:SenseProvenance a sh:NodeShape ;
+    sh:targetClass bow:Sense ;
+    sh:property [ sh:path bom:derivedVia ; sh:minCount 1 ;
+                  sh:message "A sense says how it was reached ('English' via a gloss)." ] .
+
+# THE SHOWN CARD WORDS PASS THE FILTER POLICY (plan 8.1f): run over the named
+# graph of shown card words, every word in it is shown by default, and none
+# anchored by its share falls under the cut. A planted weak word fails it
+# (tests/test_filter_exports.py).
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+bosh:ShownCardWord a sh:NodeShape ;
+    sh:targetClass bom:CardWord ;
+    sh:property [ sh:path bom:tier ; sh:hasValue bom:default ;
+                  sh:message "A shown card word is shown by default under the filter policy." ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "An anchored word under the policy's cut (0.15) is shown." ;
+        sh:prefixes [ sh:declare [ sh:prefix "bom" ; sh:namespace "https://bibleontology.org/ns/meaning#"^^xsd:anyURI ] ,
+                                 [ sh:prefix "dqv" ; sh:namespace "http://www.w3.org/ns/dqv#"^^xsd:anyURI ] ] ;
+        sh:select """SELECT $this WHERE { $this bom:wordBasis "anchored" ;
+            dqv:hasQualityMeasurement [ dqv:isMeasurementOf bom:cardWordShare ; dqv:value ?v ] .
+            FILTER (?v < 0.15) }""" ] .

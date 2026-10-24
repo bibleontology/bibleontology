@@ -1,0 +1,120 @@
+{
+ "ref": "Mrk.15.2",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Mrk.15.1#w18",
+   "divine": true
+  },
+  {
+   "slot": "w5",
+   "choice": "Mrk.15.1#w18",
+   "divine": true
+  },
+  {
+   "slot": "w14",
+   "choice": "w4",
+   "divine": false
+  },
+  {
+   "slot": "w16",
+   "choice": "w4",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w18"
+    }
+   ]
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "w18"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

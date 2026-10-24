@@ -1,0 +1,46 @@
+{
+ "ref": "Rom.3.2",
+ "referents": [
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "'They' (third plural, were entrusted) is the people of 3:1, the Jews; no candidate in this verse is a people, and the Jews are not offered as a candidate.",
+   "category": "pronoun for a people not offered as candidate"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "ὅτι after πρῶτον μέν gives the content of the first advantage, not a reason; a because link misreads the function of ὅτι.",
+   "category": "that-clause misread as reason"
+  },
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "γάρ after 'Much in every way' gives the reason for the 'much': the first advantage follows.",
+   "category": "for explaining an advantage"
+  },
+  {
+   "src": "cl1",
+   "type": "that",
+   "dst": "cl2",
+   "action": "add",
+   "why": "ὅτι gives what the first advantage consists in: 'first, that they were entrusted with the oracles'.",
+   "category": "that-clause as predicate content"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "πρῶτον μέν with no following δέ",
+   "why": "The first item of a list has no second item in this verse; the second item is not given, so the list is not closed here."
+  }
+ ]
+}

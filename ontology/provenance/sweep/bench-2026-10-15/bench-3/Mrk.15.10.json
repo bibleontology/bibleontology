@@ -1,0 +1,48 @@
+{
+ "ref": "Mrk.15.10",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "Mrk.15.9#w2",
+   "divine": false,
+   "why": "Third singular masculine 'he' who knew is Pilate, the speaker of 15:9. The in-verse candidates are envy (a noun) and chief priests (plural), neither of which can be a singular knower.",
+   "category": "third person refers to earlier referent"
+  },
+  {
+   "slot": "w6",
+   "choice": "Mrk.15.5#w2",
+   "divine": true,
+   "why": "Object of 'had handed over' is Jesus, the one delivered up. The candidate Mrk.15.5#w2 is that Jesus, masculine singular, which agrees.",
+   "category": "object is a named person"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "'He knew' takes the clause as its object: what was known, the delivering up by the chief priests.",
+   "category": "clause as object of knowing"
+  },
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self link. The reason is not inside this verse; the verse-opening 'for' (gar) gives the reason for the offer in 15:9, recorded below.",
+   "category": "self link"
+  },
+  {
+   "src": "Mrk.15.9#cl2",
+   "type": "because",
+   "dst": "cl0",
+   "action": "add",
+   "why": "Verse-opening gar is 'for', a reason word, not the Hebrew ki that the undecided type covers. Pilate's offer to release Jesus (15:9 cl2) is explained by his knowing it was envy (this verse cl0).",
+   "category": "verse-opening reason across verses"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

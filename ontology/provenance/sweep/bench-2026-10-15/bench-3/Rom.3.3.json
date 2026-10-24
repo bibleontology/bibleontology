@@ -1,0 +1,79 @@
+{
+ "ref": "Rom.3.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'What' (neuter singular) opens the question 'what if'; it refers to no candidate.",
+   "category": "interrogative pronoun"
+  },
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'Some' (masculine plural indefinite) is some of the people of 3:1-2; no candidate is a masculine plural person.",
+   "category": "indefinite with unnamed antecedent"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'Their' (third masculine plural) refers back to 'some' (w4), a slot and not a candidate; no candidate is masculine plural.",
+   "category": "pronoun pointing to an unoffered slot"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The condition cl1 ('if some disbelieved') is governed by the next clause cl2, not by the frame cl0 'What if?'.",
+   "category": "condition attached to wrong host"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "A Greek 'if' precedes what it governs: 'if some disbelieved, will their unbelief nullify God's faithfulness?' The host is cl2.",
+   "category": "condition precedes its host"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl1 is the condition, not a reason for the frame.",
+   "category": "no reason in the text"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "change",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The consequence of the condition is the question cl2, not the frame cl0.",
+   "category": "consequence of a condition"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Verse-opening 'For what?' (gamma) joining 3:3 to 3:2",
+   "why": "'For' gives a reason, but the form does not say what this objection is the reason for; no link added."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "ref": "Exo.8.7",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w3",
+   "divine": false,
+   "why": "third feminine plural 'they will remain': the frogs (w3) are the only feminine plural candidate.",
+   "category": "third person plural inside a speech"
+  },
+  {
+   "slot": "w5",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "second masculine singular 'from you' inside Moses's speech: the addressee, Pharaoh.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w9",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "masculine singular possessive 'your houses': the addressee, Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w13",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "masculine singular possessive 'your officials': the addressee, Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w17",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "masculine singular possessive 'your people': the addressee, Pharaoh.",
+   "category": "possessive of the addressee"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl4 is a clause of Exo.8.6, not of this verse. 'then' is within a verse only; across verses it is the episode rung.",
+   "category": "builder link across verses"
+  },
+  {
+   "src": "Exo.8.4#cl2",
+   "type": "result",
+   "dst": "cl0",
+   "action": "add",
+   "why": "an imperative ('pray to Yahweh', Exo.8.4) then waw plus a third-person weqatal saying what comes of it ('they will depart'): the outcome Moses promises from the prayer.",
+   "category": "outcome of a command in an earlier verse"
+  },
+  {
+   "src": "cl1",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "'they will remain only in the Nile' gives the detail of the departure: where the frogs stay.",
+   "category": "detail of a clause"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether cl0 and cl1 are parts of the turn Moses opened in Exo.8.6 (turn1)",
+   "why": "Moses's speech continues across the verse break. The turn is recorded in the verse that opens it, and no group here can take clauses from that turn."
+  },
+  {
+   "what": "whether cl0 is the effect of the imperative group that holds Exo.8.4#cl2 ('pray')",
+   "why": "the result link is added here, but group membership of Exo.8.4's imperative group is judged in the Exo.8.4 answer, not here."
+  }
+ ]
+}

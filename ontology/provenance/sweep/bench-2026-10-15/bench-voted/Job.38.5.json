@@ -1,0 +1,96 @@
+{
+ "ref": "Job.38.5",
+ "referents": [
+  {
+   "slot": "w0",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Rhetorical 'who' asking who fixed its measurements. The answer the speech expects is the LORD himself, who founded the earth in 38:4.",
+   "category": "rhetorical question, answer is the speaker",
+   "votes": 3
+  },
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its' (feminine singular) refers to the earth of 38:4. That is not a candidate: the list offers only persons and groups.",
+   "category": "referent outside candidate list",
+   "votes": 3
+  },
+  {
+   "slot": "w7",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Rhetorical 'who' of 'who stretched a measuring line': the expected answer is the LORD.",
+   "category": "rhetorical question, answer is the speaker",
+   "votes": 3
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false,
+   "why": "'It' (feminine singular) is the earth of 38:4, not offered as a candidate.",
+   "category": "referent outside candidate list",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'You know' is second masculine singular: the one addressed, Job.",
+   "category": "addressee in assertion",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Kaf after its clause ('Surely you know') gives the reason for the question, per the rule for kaf after its clause.",
+   "category": "kaf after its clause as because",
+   "votes": 2
+  },
+  {
+   "src": "cl1",
+   "type": "or",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "The 'or' joins the two questions, 'who fixed' and 'who stretched'. The exclamation 'surely you know' sits between them and is not an alternative.",
+   "category": "or joins questions across an exclamation",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The alternative is two questions side by side: who fixed its measurements, or who stretched a line across it.",
+   "category": "or between two questions",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "38:5 cl1",
+   "what": "Asseverative ki ('surely you know') has no link type: it is neither a reason nor a result."
+  },
+  {
+   "where": "38:5 w3, w10 (and 38:6, 38:9, 38:10)",
+   "what": "The candidate lists offer only persons and groups from earlier verses. Non-person nouns such as the earth of 38:4 and the sea of 38:8 are never offered, so pronouns for them have no candidate."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "The because link cl0 to cl1",
+   "why": "Kaf here may be emphatic 'surely' rather than a reason. It is kept because the rule reads kaf after its clause as because."
+  },
+  {
+   "what": "Referents of 'its' and 'it' (w3, w10)",
+   "why": "The earth of 38:4 is the antecedent, but the candidate list offers only persons and groups, so each is recorded as none."
+  }
+ ],
+ "voted": 3
+}

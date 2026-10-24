@@ -1,0 +1,41 @@
+{
+ "ref": "Exo.8.9",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "the clauses run cl0, then cl1 (the frogs died). This link reverses that order.",
+   "category": "then link reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "confidence": "medium",
+   "why": "the death of the frogs is what the LORD's act brings about, a result rather than a plain and-then (R4). Replaced by the result link below.",
+   "category": "plain and read as result"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "medium",
+   "why": "'the LORD did as Moses requested' is the act; the frogs dying is the outcome that follows from it.",
+   "category": "act then its outcome"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether 'the LORD did as Moses requested' (cl0) is a fulfilment of Moses's request",
+   "why": "The subject is named, the did-so pro-form (ken) is absent, and the request is a prayer rather than an imperative. fulfils is not forced; it is read as result instead."
+  }
+ ]
+}

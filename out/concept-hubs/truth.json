@@ -1,0 +1,2239 @@
+{
+ "id": "truth",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h571",
+   "lemma": "אֱמֶת",
+   "form": "noun",
+   "translit": "e.met",
+   "gloss": "truth: certain",
+   "lang": "Hebrew",
+   "uses": 114,
+   "other_sense": 10
+  },
+  {
+   "key": "h7187",
+   "lemma": "קְשֹׁט",
+   "form": "noun",
+   "translit": "qe.shot",
+   "gloss": "truth",
+   "lang": "Hebrew",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g225",
+   "lemma": "ἀλήθεια",
+   "form": "noun",
+   "translit": "alētheia",
+   "gloss": "truth",
+   "lang": "Greek",
+   "uses": 98,
+   "other_sense": 0
+  },
+  {
+   "key": "g227",
+   "lemma": "ἀληθής",
+   "form": "adjective",
+   "translit": "alēthēs",
+   "gloss": "true",
+   "lang": "Greek",
+   "uses": 25,
+   "other_sense": 0
+  },
+  {
+   "key": "g228",
+   "lemma": "ἀληθινός",
+   "form": "adjective",
+   "translit": "alēthinos",
+   "gloss": "true",
+   "lang": "Greek",
+   "uses": 25,
+   "other_sense": 1
+  },
+  {
+   "key": "g226",
+   "lemma": "ἀληθεύω",
+   "form": "verb",
+   "translit": "alētheuō",
+   "gloss": "be truthful",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What truth stands beside",
+  "adjective": "What is called true",
+  "verb": "Speaking the truth"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "the_spirit_of_truth",
+   "name": "the Spirit of truth",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "word_of_god",
+   "name": "the word of God",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "witness",
+   "name": "witness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "lie",
+   "name": "lie",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "love",
+   "name": "love",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "gospel",
+   "name": "gospel",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "wisdom",
+   "name": "wisdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "liberty",
+   "name": "liberty",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "worship_in_spirit_and_in_truth",
+   "name": "worship in spirit and in truth",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_spirit_of_truth",
+   "name": "the Spirit of truth",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "what_is_truth",
+   "name": "what is truth?",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "image_belt_of_truth",
+   "name": "the belt of truth",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "the_full_armor_of_god",
+   "name": "the full armor of God",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_true_light",
+   "name": "the true Light",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_true_vine",
+   "name": "the true vine",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "lead_me_in_your_truth",
+   "name": "Guide me in Your truth",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_word_was_made_flesh",
+   "name": "The Word became flesh",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "he_shall_testify_of_me",
+   "name": "He will testify about Me",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "John.14.6",
+   "ref": "John 14:6",
+   "text": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me."
+  },
+  {
+   "id": "John.8.32",
+   "ref": "John 8:32",
+   "text": "Then you will know the truth, and the truth will set you free.”"
+  },
+  {
+   "id": "John.17.17",
+   "ref": "John 17:17",
+   "text": "Sanctify them by the truth; Your word is truth."
+  },
+  {
+   "id": "John.4.24",
+   "ref": "John 4:24",
+   "text": "God is Spirit, and His worshipers must worship Him in spirit and in truth.”"
+  },
+  {
+   "id": "Ps.25.5",
+   "ref": "Psalms 25:5",
+   "text": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You."
+  },
+  {
+   "id": "Ps.85.10",
+   "ref": "Psalms 85:10",
+   "text": "Loving devotion and faithfulness have joined together; righteousness and peace have kissed."
+  },
+  {
+   "id": "Zech.8.16",
+   "ref": "Zechariah 8:16",
+   "text": "These are the things you must do: Speak truth to one another, render true and sound judgments in your gates,"
+  },
+  {
+   "id": "Eph.4.15",
+   "ref": "Ephesians 4:15",
+   "text": "Instead, speaking the truth in love, we will in all things grow up into Christ Himself, who is the head."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 215,
+   "rows": [
+    {
+     "label": "Loving devotion and faithfulness",
+     "note": "The Hebrew pair is חֶסֶד and אֱמֶת. The Berean prints the second \"faithfulness\" in some verses and \"truth\" in others; it is one Hebrew word, kept as printed. The Berean prints חֶסֶד \"loving devotion\", \"kindness\" or \"mercy\". Another Hebrew word, אֱמוּנָה, is also printed \"faithfulness\"; it is not in this hub. ἀλήθεια in the Greek rows is a different word, and each example names the word its verse uses.",
+     "doors": [],
+     "n": 29,
+     "verses": [
+      "Ps.85.10",
+      "Exod.34.6",
+      "Prov.3.3",
+      "Ps.86.15",
+      "Gen.24.27",
+      "Gen.24.49",
+      "Gen.47.29",
+      "Josh.2.14",
+      "2Sam.2.6",
+      "2Sam.15.20",
+      "1Kgs.3.6",
+      "Ps.25.10",
+      "Ps.26.3",
+      "Ps.40.10",
+      "Ps.40.11",
+      "Ps.57.3",
+      "Ps.57.10",
+      "Ps.61.7",
+      "Ps.89.14",
+      "Ps.108.4",
+      "Ps.115.1",
+      "Ps.117.2",
+      "Ps.138.2",
+      "Prov.14.22",
+      "Prov.16.6",
+      "Prov.20.28",
+      "Isa.16.5",
+      "Hos.4.1",
+      "Mic.7.20"
+     ],
+     "eg": [
+      {
+       "id": "Ps.85.10",
+       "ref": "Psalms 85:10",
+       "text": "Loving devotion and faithfulness have joined together; righteousness and peace have kissed.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Exod.34.6",
+       "ref": "Exodus 34:6",
+       "text": "Then the LORD passed in front of Moses and called out: “The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion and faithfulness,",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Prov.3.3",
+       "ref": "Proverbs 3:3",
+       "text": "Never let loving devotion or faithfulness leave you; bind them around your neck, write them on the tablet of your heart.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.86.15",
+       "ref": "Psalms 86:15",
+       "text": "But You, O Lord, are a compassionate and gracious God, slow to anger, abounding in loving devotion and faithfulness.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Truth or faithfulness beside justice, righteousness, judgment and peace",
+     "note": "Two different words: Hebrew אֱמֶת (the Berean prints it \"truth\", \"faithfulness\" or \"true\") and Greek ἀλήθεια; each example names its word.",
+     "doors": [
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "peace",
+       "name": "peace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 35,
+     "verses": [
+      "Jer.4.2",
+      "Zech.8.16",
+      "Ps.111.7",
+      "Eph.5.9",
+      "1Kgs.3.6",
+      "Rom.2.2",
+      "Neh.9.13",
+      "Esth.9.30",
+      "Ps.15.2",
+      "Ps.19.9",
+      "Ps.40.10",
+      "Ps.45.4",
+      "Ps.85.10",
+      "Ps.85.11",
+      "Ps.89.14",
+      "Ps.119.43",
+      "Ps.119.142",
+      "Ps.119.160",
+      "Prov.11.18",
+      "Isa.16.5",
+      "Isa.42.3",
+      "Isa.48.1",
+      "Isa.59.14",
+      "Isa.59.15",
+      "Isa.61.8",
+      "Ezek.18.8",
+      "Ezek.18.9",
+      "Zech.7.9",
+      "Zech.8.8",
+      "Zech.8.19",
+      "Mal.2.6",
+      "2Cor.6.7",
+      "Eph.4.24",
+      "Eph.6.14",
+      "2Thess.2.12"
+     ],
+     "eg": [
+      {
+       "id": "Jer.4.2",
+       "ref": "Jeremiah 4:2",
+       "text": "and if you can swear, ‘As surely as the LORD lives,' in truth, in justice, and in righteousness, then the nations will be blessed by Him, and in Him they will glory.”",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Zech.8.16",
+       "ref": "Zechariah 8:16",
+       "text": "These are the things you must do: Speak truth to one another, render true and sound judgments in your gates,",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.111.7",
+       "ref": "Psalms 111:7",
+       "text": "The works of His hands are truth and justice; all His precepts are trustworthy.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Eph.5.9",
+       "ref": "Ephesians 5:9",
+       "text": "for the fruit of the light consists in all goodness, righteousness, and truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The truth of the LORD, of God; the true God",
+     "note": "The text's own phrase, kept as written (\"the God of truth\", \"the faithfulness of the LORD\", \"the true God\"), with no gloss on whose or which Person.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "2Chr.15.3",
+      "Rom.1.25",
+      "Ps.31.5",
+      "Ps.117.2",
+      "Jer.10.10",
+      "Rom.3.7",
+      "Rom.15.8"
+     ],
+     "eg": [
+      {
+       "id": "2Chr.15.3",
+       "ref": "2 Chronicles 15:3",
+       "text": "For many years Israel has been without the true God, without a priest to instruct them, and without the law.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.25",
+       "ref": "Romans 1:25",
+       "text": "They exchanged the truth of God for a lie, and worshiped and served the creature rather than the Creator, who is forever worthy of praise! Amen.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Ps.31.5",
+       "ref": "Psalms 31:5",
+       "text": "Into Your hands I commit my spirit; You have redeemed me, O LORD, God of truth.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.117.2",
+       "ref": "Psalms 117:2",
+       "text": "For great is His loving devotion toward us, and the faithfulness of the LORD endures forever. Hallelujah!",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Your truth,” “Your faithfulness,” said to the LORD, to God",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Ps.25.5",
+      "Ps.40.11",
+      "Ps.71.22",
+      "Ps.86.11",
+      "Ps.86.15",
+      "Ps.115.1",
+      "Gen.32.10",
+      "Dan.9.13"
+     ],
+     "eg": [
+      {
+       "id": "Ps.25.5",
+       "ref": "Psalms 25:5",
+       "text": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.40.11",
+       "ref": "Psalms 40:11",
+       "text": "O LORD, do not withhold Your mercy from me; Your loving devotion and faithfulness will always guard me.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.71.22",
+       "ref": "Psalms 71:22",
+       "text": "So I will praise You with the harp for Your faithfulness, O my God; I will sing praise to You with the lyre, O Holy One of Israel.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.86.11",
+       "ref": "Psalms 86:11",
+       "text": "Teach me Your way, O LORD, that I may walk in Your truth. Give me an undivided heart, that I may fear Your name.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Spirit of truth; the Spirit is the truth",
+     "note": "The text's own phrases, kept as written (John 15:26 adds \"who proceeds from the Father\"); where Christian traditions part on how the Spirit relates to the Father and the Son, the page takes no side.",
+     "doors": [
+      {
+       "id": "the_spirit_of_truth",
+       "name": "the Spirit of truth",
+       "type": "title",
+       "missing": false
+      },
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "John.14.17",
+      "1John.4.6",
+      "John.15.26",
+      "John.16.13",
+      "1John.5.6"
+     ],
+     "eg": [
+      {
+       "id": "John.14.17",
+       "ref": "John 14:17",
+       "text": "the Spirit of truth. The world cannot receive Him, because it neither sees Him nor knows Him. But you do know Him, for He abides with you and will be in you.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "1John.4.6",
+       "ref": "1 John 4:6",
+       "text": "We are from God. Whoever knows God listens to us; whoever is not from God does not listen to us. That is how we know the Spirit of truth and the spirit of deception.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.15.26",
+       "ref": "John 15:26",
+       "text": "When the Advocate comes, whom I will send to you from the Father-the Spirit of truth who proceeds from the Father-He will testify about Me.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.16.13",
+       "ref": "John 16:13",
+       "text": "However, when the Spirit of truth comes, He will guide you into all truth. For He will not speak on His own, but He will speak what He hears, and He will declare to you what is to come.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Worship in spirit and in truth",
+     "note": null,
+     "doors": [
+      {
+       "id": "worship_in_spirit_and_in_truth",
+       "name": "worship in spirit and in truth",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "worship",
+       "name": "worship",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "John.4.23",
+      "John.4.24"
+     ],
+     "eg": [
+      {
+       "id": "John.4.23",
+       "ref": "John 4:23",
+       "text": "But a time is coming and has now come when the true worshipers will worship the Father in spirit and in truth, for the Father is seeking such as these to worship Him.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        },
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      },
+      {
+       "id": "John.4.24",
+       "ref": "John 4:24",
+       "text": "God is Spirit, and His worshipers must worship Him in spirit and in truth.”",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Truth said of Christ, of Jesus",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "John.1.14",
+      "John.1.17",
+      "John.14.6",
+      "John.18.37",
+      "2Cor.11.10",
+      "Eph.4.21"
+     ],
+     "eg": [
+      {
+       "id": "John.1.14",
+       "ref": "John 1:14",
+       "text": "The Word became flesh and made His dwelling among us. We have seen His glory, the glory of the one and only Son from the Father, full of grace and truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.1.17",
+       "ref": "John 1:17",
+       "text": "For the law was given through Moses; grace and truth came through Jesus Christ.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.14.6",
+       "ref": "John 14:6",
+       "text": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.18.37",
+       "ref": "John 18:37",
+       "text": "“Then You are a king!” Pilate said. “You say that I am a king,” Jesus answered. “For this reason I was born and have come into the world, to testify to the truth. Everyone who belongs to the truth listens to My voice.”",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Walk in the truth, the way and the truth",
+     "note": null,
+     "doors": [
+      {
+       "id": "walk",
+       "name": "walk",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Ps.86.11",
+      "3John.1.4",
+      "John.14.6",
+      "2Pet.2.2",
+      "1Kgs.2.4",
+      "Matt.22.16",
+      "1Kgs.3.6",
+      "2Kgs.20.3",
+      "Ps.15.2",
+      "Ps.26.3",
+      "Isa.38.3",
+      "Ezek.18.9",
+      "Mal.2.6",
+      "Mark.12.14",
+      "Luke.20.21",
+      "2John.1.4",
+      "3John.1.3"
+     ],
+     "eg": [
+      {
+       "id": "Ps.86.11",
+       "ref": "Psalms 86:11",
+       "text": "Teach me Your way, O LORD, that I may walk in Your truth. Give me an undivided heart, that I may fear Your name.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "3John.1.4",
+       "ref": "3 John 1:4",
+       "text": "I have no greater joy than to hear that my children are walking in the truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.14.6",
+       "ref": "John 14:6",
+       "text": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "2Pet.2.2",
+       "ref": "2 Peter 2:2",
+       "text": "Many will follow in their depravity, and because of them the way of truth will be defamed.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Speak the truth, tell it, do it, show faithfulness",
+     "note": null,
+     "doors": [
+      {
+       "id": "obedience",
+       "name": "obedience",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Zech.8.16",
+      "John.8.45",
+      "Gen.24.49",
+      "John.3.21",
+      "Mark.5.33",
+      "Rom.9.1",
+      "Gen.47.29",
+      "Josh.2.14",
+      "2Sam.2.6",
+      "1Kgs.22.16",
+      "2Chr.18.15",
+      "2Chr.31.20",
+      "Neh.9.33",
+      "Ps.15.2",
+      "Isa.43.9",
+      "Jer.9.5",
+      "Ezek.18.9",
+      "John.8.40",
+      "John.8.46",
+      "John.16.7",
+      "2Cor.12.6",
+      "Eph.4.25",
+      "1Tim.2.7",
+      "1John.1.6"
+     ],
+     "eg": [
+      {
+       "id": "Zech.8.16",
+       "ref": "Zechariah 8:16",
+       "text": "These are the things you must do: Speak truth to one another, render true and sound judgments in your gates,",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "John.8.45",
+       "ref": "John 8:45",
+       "text": "But because I speak the truth, you do not believe Me!",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Gen.24.49",
+       "ref": "Genesis 24:49",
+       "text": "Now if you will show kindness and faithfulness to my master, tell me; but if not, let me know, so that I may go elsewhere.”",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "John.3.21",
+       "ref": "John 3:21",
+       "text": "But whoever practices the truth comes into the Light, so that it may be seen clearly that what he has done has been accomplished in God.”",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Knowing the truth: knowledge, wisdom, instruction",
+     "note": "In the New Testament phrase \"the knowledge of the truth\" (1 Tim 2:4, 2 Tim 2:25, Heb 10:26, Titus 1:1), Christian traditions part on whom God wills to save, how one comes to it, and whether it can be lost; the page takes no side.",
+     "doors": [
+      {
+       "id": "wisdom",
+       "name": "wisdom",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "knowledge",
+       "name": "knowledge",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "John.8.32",
+      "1Tim.2.4",
+      "Prov.23.23",
+      "Rom.2.20",
+      "1Kgs.17.24",
+      "Ps.51.6",
+      "Hos.4.1",
+      "1Tim.4.3",
+      "2Tim.2.25",
+      "2Tim.3.7",
+      "Titus.1.1",
+      "Heb.10.26",
+      "2John.1.1"
+     ],
+     "eg": [
+      {
+       "id": "John.8.32",
+       "ref": "John 8:32",
+       "text": "Then you will know the truth, and the truth will set you free.”",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.2.4",
+       "ref": "1 Timothy 2:4",
+       "text": "who wants everyone to be saved and to come to the knowledge of the truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Prov.23.23",
+       "ref": "Proverbs 23:23",
+       "text": "Invest in truth and never sell it-in wisdom and instruction and understanding.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.20",
+       "ref": "Romans 2:20",
+       "text": "an instructor of the foolish, a teacher of infants, because you have in the law the embodiment of knowledge and truth-",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Truth beside faith, obedience and love",
+     "note": "In the New Testament verses, Christian traditions part on what faith is, how it is given, how God's choosing stands to it, and how it stands to obedience and love; the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "love",
+       "name": "love",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "obedience",
+       "name": "obedience",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 20,
+     "verses": [
+      "1John.3.18",
+      "Gal.5.7",
+      "2Thess.2.12",
+      "Zech.8.19",
+      "Isa.61.8",
+      "John.8.45",
+      "Rom.2.8",
+      "John.8.46",
+      "1Cor.13.6",
+      "Eph.1.13",
+      "2Thess.2.10",
+      "2Thess.2.13",
+      "1Tim.2.7",
+      "2Tim.2.18",
+      "2Tim.3.8",
+      "Titus.1.1",
+      "1Pet.1.22",
+      "2John.1.1",
+      "2John.1.3",
+      "3John.1.1"
+     ],
+     "eg": [
+      {
+       "id": "1John.3.18",
+       "ref": "1 John 3:18",
+       "text": "Little children, let us love not in word and speech, but in action and truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.7",
+       "ref": "Galatians 5:7",
+       "text": "You were running so well. Who has obstructed you from obeying the truth?",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "2Thess.2.12",
+       "ref": "2 Thessalonians 2:12",
+       "text": "in order that judgment may come upon all who have disbelieved the truth and delighted in wickedness.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Zech.8.19",
+       "ref": "Zechariah 8:19",
+       "text": "“This is what the LORD of Hosts says: The fasts of the fourth, the fifth, the seventh, and the tenth months will become times of joy and gladness, cheerful feasts for the house of Judah. Therefore you are to love both truth and peace.”",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Truth and its opposites: the lie, wickedness, deception; turning from it; truth missing",
+     "note": null,
+     "doors": [
+      {
+       "id": "lie",
+       "name": "lie",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "deceit",
+       "name": "deceit",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "error",
+       "name": "error",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 29,
+     "verses": [
+      "Isa.59.15",
+      "Prov.12.19",
+      "Eph.4.25",
+      "2Tim.4.4",
+      "Prov.11.18",
+      "John.8.44",
+      "Rom.1.18",
+      "Prov.14.25",
+      "Isa.59.14",
+      "Jer.9.5",
+      "Dan.8.12",
+      "Hos.4.1",
+      "Rom.1.25",
+      "Rom.2.8",
+      "Rom.9.1",
+      "1Cor.13.6",
+      "2Thess.2.10",
+      "2Thess.2.12",
+      "1Tim.2.7",
+      "2Tim.2.18",
+      "2Tim.3.8",
+      "Titus.1.14",
+      "Jas.3.14",
+      "Jas.5.19",
+      "1John.1.6",
+      "1John.1.8",
+      "1John.2.4",
+      "1John.2.21",
+      "1John.4.6"
+     ],
+     "eg": [
+      {
+       "id": "Isa.59.15",
+       "ref": "Isaiah 59:15",
+       "text": "Truth is missing, and whoever turns from evil becomes prey. The LORD looked and was displeased that there was no justice.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Prov.12.19",
+       "ref": "Proverbs 12:19",
+       "text": "Truthful lips endure forever, but a lying tongue lasts only a moment.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Eph.4.25",
+       "ref": "Ephesians 4:25",
+       "text": "Therefore each of you must put off falsehood and speak truthfully to his neighbor, for we are all members of one another.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.4.4",
+       "ref": "2 Timothy 4:4",
+       "text": "So they will turn their ears away from the truth and turn aside to myths.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Your word is truth”, the word of truth, the truth of the gospel",
+     "note": "In the New Testament phrases (Eph 1:13, Col 1:5, Jas 1:18, John 17:17), readers take \"the word\" of Scripture, of Christ or of the gospel; the page does not choose.",
+     "doors": [
+      {
+       "id": "word_of_god",
+       "name": "the word of God",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "gospel",
+       "name": "gospel",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Ps.119.160",
+      "John.17.17",
+      "Eph.1.13",
+      "Gal.2.5",
+      "2Sam.7.28",
+      "2Cor.6.7",
+      "1Kgs.17.24",
+      "Ps.119.43",
+      "Eccl.12.10",
+      "Jer.23.28",
+      "Dan.10.1",
+      "Gal.2.14",
+      "Col.1.5",
+      "2Tim.2.15",
+      "Jas.1.18"
+     ],
+     "eg": [
+      {
+       "id": "Ps.119.160",
+       "ref": "Psalms 119:160",
+       "text": "The entirety of Your word is truth, and all Your righteous judgments endure forever.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "John.17.17",
+       "ref": "John 17:17",
+       "text": "Sanctify them by the truth; Your word is truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.13",
+       "ref": "Ephesians 1:13",
+       "text": "And in Him, having heard and believed the word of truth-the gospel of your salvation-you were sealed with the promised Holy Spirit,",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.5",
+       "ref": "Galatians 2:5",
+       "text": "We did not give in to them for a moment, so that the truth of the gospel would remain with you.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Set free, sanctified, purified, guided by the truth",
+     "note": "Where Christian traditions part on how sanctification and purifying come about, and what part obedience has in them, the page takes no side.",
+     "doors": [
+      {
+       "id": "liberty",
+       "name": "liberty",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "holiness",
+       "name": "holiness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "John.8.32",
+      "John.17.17",
+      "John.17.19",
+      "John.16.13",
+      "1Pet.1.22"
+     ],
+     "eg": [
+      {
+       "id": "John.8.32",
+       "ref": "John 8:32",
+       "text": "Then you will know the truth, and the truth will set you free.”",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.17.17",
+       "ref": "John 17:17",
+       "text": "Sanctify them by the truth; Your word is truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.17.19",
+       "ref": "John 17:19",
+       "text": "For them I sanctify Myself, so that they too may be sanctified by the truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.16.13",
+       "ref": "John 16:13",
+       "text": "However, when the Spirit of truth comes, He will guide you into all truth. For He will not speak on His own, but He will speak what He hears, and He will declare to you what is to come.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The truth that abides in us, that we now have",
+     "note": null,
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "2John.1.2",
+      "2Pet.1.12"
+     ],
+     "eg": [
+      {
+       "id": "2John.1.2",
+       "ref": "2 John 1:2",
+       "text": "because of the truth that abides in us and will be with us forever:",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "2Pet.1.12",
+       "ref": "2 Peter 1:12",
+       "text": "Therefore I will always remind you of these things, even though you know them and are established in the truth you now have.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Truth and the law, commandments",
+     "note": "In John 1:17, Rom 2:20 and similar New Testament verses, Christian traditions part on the law and the gospel; the page takes no side.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Ps.119.142",
+      "Neh.9.13",
+      "Mal.2.6",
+      "John.1.17",
+      "2Chr.15.3",
+      "Rom.2.20",
+      "Ps.25.10",
+      "Ps.119.151",
+      "Dan.9.13",
+      "1John.2.4",
+      "2John.1.4"
+     ],
+     "eg": [
+      {
+       "id": "Ps.119.142",
+       "ref": "Psalms 119:142",
+       "text": "Your righteousness is everlasting and Your law is true.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Neh.9.13",
+       "ref": "Nehemiah 9:13",
+       "text": "You came down on Mount Sinai and spoke with them from heaven. You gave them just ordinances, true laws, and good statutes and commandments.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Mal.2.6",
+       "ref": "Malachi 2:6",
+       "text": "True instruction was in his mouth, and nothing false was found on his lips. He walked with Me in peace and uprightness, and he turned many from iniquity.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "John.1.17",
+       "ref": "John 1:17",
+       "text": "For the law was given through Moses; grace and truth came through Jesus Christ.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "In truth, truly, faithfully",
+     "note": "Hebrew בְּ or Greek ἐν / ἐπί beside the word for truth; where the Berean prints \"certainly\", \"in fact\" or \"correctly\" (Luke 22:59, Acts 4:27, Mark 12:32) it renders the same phrase.",
+     "doors": [],
+     "n": 41,
+     "verses": [
+      "Ps.145.18",
+      "Jer.4.2",
+      "3John.1.4",
+      "Acts.10.34",
+      "Josh.24.14",
+      "Matt.22.16",
+      "2Cor.6.7",
+      "Judg.9.15",
+      "Judg.9.16",
+      "Judg.9.19",
+      "1Sam.12.24",
+      "1Kgs.2.4",
+      "1Kgs.3.6",
+      "2Kgs.20.3",
+      "Ps.25.5",
+      "Ps.26.3",
+      "Ps.54.5",
+      "Ps.86.11",
+      "Ps.111.8",
+      "Isa.10.20",
+      "Isa.16.5",
+      "Isa.38.3",
+      "Isa.48.1",
+      "Isa.61.8",
+      "Jer.26.15",
+      "Jer.28.9",
+      "Jer.32.41",
+      "Zech.8.8",
+      "Mark.12.14",
+      "Mark.12.32",
+      "Luke.4.25",
+      "Luke.20.21",
+      "Luke.22.59",
+      "Acts.4.27",
+      "2Cor.7.14",
+      "Col.1.6",
+      "2John.1.1",
+      "2John.1.3",
+      "2John.1.4",
+      "3John.1.1",
+      "3John.1.3"
+     ],
+     "eg": [
+      {
+       "id": "Ps.145.18",
+       "ref": "Psalms 145:18",
+       "text": "The LORD is near to all who call on Him, to all who call out to Him in truth.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "Jer.4.2",
+       "ref": "Jeremiah 4:2",
+       "text": "and if you can swear, ‘As surely as the LORD lives,' in truth, in justice, and in righteousness, then the nations will be blessed by Him, and in Him they will glory.”",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "3John.1.4",
+       "ref": "3 John 1:4",
+       "text": "I have no greater joy than to hear that my children are walking in the truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Acts.10.34",
+       "ref": "Acts 10:34",
+       "text": "Then Peter began to speak: “I now truly understand that God does not show favoritism,",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": null,
+     "doors": [
+      {
+       "id": "image_belt_of_truth",
+       "name": "the belt of truth",
+       "type": "image",
+       "missing": false
+      },
+      {
+       "id": "what_is_truth",
+       "name": "what is truth?",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 36,
+     "verses": [
+      "Ps.43.3",
+      "1Tim.3.15",
+      "John.18.38",
+      "Dan.10.21",
+      "Gen.42.16",
+      "John.5.33",
+      "1Cor.5.8",
+      "Exod.18.21",
+      "Deut.13.14",
+      "Deut.17.4",
+      "Deut.22.20",
+      "1Kgs.10.6",
+      "2Chr.9.5",
+      "2Chr.32.1",
+      "Neh.7.2",
+      "Ps.30.9",
+      "Ps.91.4",
+      "Ps.146.6",
+      "Prov.8.7",
+      "Prov.22.21",
+      "Isa.38.18",
+      "Isa.38.19",
+      "Jer.42.5",
+      "Dan.2.47",
+      "Dan.4.37",
+      "Dan.8.26",
+      "Dan.11.2",
+      "Zech.8.3",
+      "Acts.26.25",
+      "2Cor.4.2",
+      "2Cor.13.8",
+      "Phil.1.18",
+      "1Tim.6.5",
+      "1John.3.19",
+      "3John.1.8",
+      "3John.1.12"
+     ],
+     "eg": [
+      {
+       "id": "Ps.43.3",
+       "ref": "Psalms 43:3",
+       "text": "Send out Your light and Your truth; let them lead me. Let them bring me to Your holy mountain and to the place where You dwell.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.3.15",
+       "ref": "1 Timothy 3:15",
+       "text": "in case I am delayed, so that you will know how each one must conduct himself in God's household, which is the church of the living God, the pillar and foundation of the truth.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "John.18.38",
+       "ref": "John 18:38",
+       "text": "“What is truth?” Pilate asked. And having said this, he went out again to the Jews and told them, “I find no basis for a charge against Him.",
+       "words": [
+        {
+         "key": "g225",
+         "lemma": "ἀλήθεια"
+        }
+       ]
+      },
+      {
+       "id": "Dan.10.21",
+       "ref": "Daniel 10:21",
+       "text": "But first I will tell you what is inscribed in the Book of Truth. Yet no one has the courage to support me against these, except Michael your prince.",
+       "words": [
+        {
+         "key": "h571",
+         "lemma": "אֱמֶת"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 48,
+   "rows": [
+    {
+     "label": "The true light, the true bread, the true vine, the true worshipers",
+     "note": "Two Greek words are here, ἀληθής and ἀληθινός; each example names the one its verse uses.",
+     "doors": [
+      {
+       "id": "the_true_light",
+       "name": "the true Light",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "the_true_vine",
+       "name": "the true vine",
+       "type": "title",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "John.1.9",
+      "1John.2.8",
+      "John.4.23",
+      "John.6.32",
+      "John.15.1"
+     ],
+     "eg": [
+      {
+       "id": "John.1.9",
+       "ref": "John 1:9",
+       "text": "The true Light, who gives light to everyone, was coming into the world.",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      },
+      {
+       "id": "1John.2.8",
+       "ref": "1 John 2:8",
+       "text": "Then again, I am also writing to you a new commandment, which is true in Him and also in you. For the darkness is fading and the true light is already shining.",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        },
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      },
+      {
+       "id": "John.4.23",
+       "ref": "John 4:23",
+       "text": "But a time is coming and has now come when the true worshipers will worship the Father in spirit and in truth, for the Father is seeking such as these to worship Him.",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      },
+      {
+       "id": "John.6.32",
+       "ref": "John 6:32",
+       "text": "Jesus said to them, “Truly, truly, I tell you, it was not Moses who gave you the bread from heaven, but it is My Father who gives you the true bread from heaven.",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Testimony, words, ways and judgments called true; “faithful and true”",
+     "note": "Two Greek words are printed \"true\": ἀληθής (truthful) and ἀληθινός (genuine, real); each example names its word. Testimony is called true (John 19:35) and \"not valid\" (John 5:31) as the text has it, side by side; the Berean prints the same Greek word ἀληθής \"valid\" in John 5:31-32, 8:13-14 and 8:17.",
+     "doors": [
+      {
+       "id": "witness",
+       "name": "witness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "testimony",
+       "name": "testimony",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "John.19.35",
+      "3John.1.12",
+      "Rev.15.3",
+      "Rev.19.11",
+      "John.3.33",
+      "Titus.1.13",
+      "John.4.18",
+      "John.4.37",
+      "John.5.31",
+      "John.5.32",
+      "John.8.13",
+      "John.8.14",
+      "John.8.16",
+      "John.8.17",
+      "John.10.41",
+      "John.21.24",
+      "2Pet.2.22",
+      "Rev.3.14",
+      "Rev.16.7",
+      "Rev.19.2",
+      "Rev.19.9",
+      "Rev.21.5",
+      "Rev.22.6"
+     ],
+     "eg": [
+      {
+       "id": "John.19.35",
+       "ref": "John 19:35",
+       "text": "The one who saw it has testified to this, and his testimony is true. He knows that he is telling the truth, so that you also may believe.",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        },
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      },
+      {
+       "id": "3John.1.12",
+       "ref": "3 John 1:12",
+       "text": "Demetrius has received a good testimony from everyone, and from the truth itself. We also testify for him, and you know that our testimony is true.",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        }
+       ]
+      },
+      {
+       "id": "Rev.15.3",
+       "ref": "Revelation 15:3",
+       "text": "and they sang the song of God's servant Moses and of the Lamb: “Great and wonderful are Your works, O Lord God Almighty! Just and true are Your ways, O King of the nations!",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      },
+      {
+       "id": "Rev.19.11",
+       "ref": "Revelation 19:11",
+       "text": "Then I saw heaven standing open, and there before me was a white horse. And its rider is called Faithful and True. With righteousness He judges and wages war.",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "God is true; “the only true God”, “the living and true God”",
+     "note": "Two Greek words are printed \"true\": ἀληθής (truthful, John 3:33, Rom 3:4) and ἀληθινός (genuine, real: John 17:3, 1 Thess 1:9, Rev 6:10); each example names its word.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "John.3.33",
+      "Rom.3.4",
+      "John.17.3",
+      "1Thess.1.9",
+      "Rev.6.10"
+     ],
+     "eg": [
+      {
+       "id": "John.3.33",
+       "ref": "John 3:33",
+       "text": "Whoever accepts His testimony has certified that God is truthful.",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.4",
+       "ref": "Romans 3:4",
+       "text": "Certainly not! Let God be true and every man a liar. As it is written: “So that You may be proved right when You speak and victorious when You judge.”",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        }
+       ]
+      },
+      {
+       "id": "John.17.3",
+       "ref": "John 17:3",
+       "text": "Now this is eternal life, that they may know You, the only true God, and Jesus Christ, whom You have sent.",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.1.9",
+       "ref": "1 Thessalonians 1:9",
+       "text": "For they themselves report what kind of welcome you gave us, and how you turned to God from idols to serve the living and true God",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“He who sent Me is true”",
+     "note": "Jesus' own words, kept as written.",
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "John.7.28",
+      "John.8.26"
+     ],
+     "eg": [
+      {
+       "id": "John.7.28",
+       "ref": "John 7:28",
+       "text": "Then Jesus, still teaching in the temple courts, cried out, “You know Me, and you know where I am from. I have not come of My own accord, but He who sent Me is true. You do not know Him,",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      },
+      {
+       "id": "John.8.26",
+       "ref": "John 8:26",
+       "text": "“I have much to say about you and much to judge. But the One who sent Me is truthful, and what I have heard from Him, I tell the world.”",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Him who is true”, “the true God”",
+     "note": "The text says “He is the true God”; readers take “He” of the Father or of Jesus Christ, and the page does not choose.",
+     "doors": [],
+     "n": 1,
+     "verses": [
+      "1John.5.20"
+     ],
+     "eg": [
+      {
+       "id": "1John.5.20",
+       "ref": "1 John 5:20",
+       "text": "And we know that the Son of God has come and has given us understanding, so that we may know Him who is true; and we are in Him who is true-in His Son Jesus Christ. He is the true God and eternal life.",
+       "words": [
+        {
+         "key": "g228",
+         "lemma": "ἀληθινός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: true",
+     "note": null,
+     "doors": [],
+     "n": 13,
+     "verses": [
+      "Phil.4.8",
+      "Acts.12.9",
+      "2Cor.6.8",
+      "Matt.22.16",
+      "Mark.12.14",
+      "Luke.16.11",
+      "John.6.55",
+      "John.7.18",
+      "Heb.8.2",
+      "Heb.9.24",
+      "1Pet.5.12",
+      "1John.2.27",
+      "Rev.3.7"
+     ],
+     "eg": [
+      {
+       "id": "Phil.4.8",
+       "ref": "Philippians 4:8",
+       "text": "Finally, brothers, whatever is true, whatever is honorable, whatever is right, whatever is pure, whatever is lovely, whatever is admirable-if anything is excellent or praiseworthy-think on these things.",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        }
+       ]
+      },
+      {
+       "id": "Acts.12.9",
+       "ref": "Acts 12:9",
+       "text": "So Peter followed him out, but he was unaware that what the angel was doing was real. He thought he was only seeing a vision.",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.6.8",
+       "ref": "2 Corinthians 6:8",
+       "text": "through glory and dishonor, slander and praise; viewed as imposters, yet genuine;",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        }
+       ]
+      },
+      {
+       "id": "Matt.22.16",
+       "ref": "Matthew 22:16",
+       "text": "They sent their disciples to Him along with the Herodians. “Teacher,” they said, “we know that You are honest and that You teach the way of God in accordance with the truth. You seek favor from no one, because You pay no attention to external appearance.",
+       "words": [
+        {
+         "key": "g227",
+         "lemma": "ἀληθής"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 2,
+   "rows": [
+    {
+     "label": "Speaking the truth",
+     "note": null,
+     "doors": [
+      {
+       "id": "lie",
+       "name": "lie",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Eph.4.15",
+      "Gal.4.16"
+     ],
+     "eg": [
+      {
+       "id": "Eph.4.15",
+       "ref": "Ephesians 4:15",
+       "text": "Instead, speaking the truth in love, we will in all things grow up into Christ Himself, who is the head.",
+       "words": [
+        {
+         "key": "g226",
+         "lemma": "ἀληθεύω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.4.16",
+       "ref": "Galatians 4:16",
+       "text": "Have I now become your enemy by telling you the truth?",
+       "words": [
+        {
+         "key": "g226",
+         "lemma": "ἀληθεύω"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “true” and “truly”",
+  "words": [
+   {
+    "key": "g230",
+    "lemma": "ἀληθῶς",
+    "translit": "alēthōs",
+    "gloss": "truly",
+    "lang": "Greek",
+    "n": 17,
+    "verses": [
+     "Matt.14.33",
+     "1Thess.2.13",
+     "Matt.27.54",
+     "Mark.14.70",
+     "Mark.15.39",
+     "Luke.9.27",
+     "Luke.12.44",
+     "Luke.21.3",
+     "John.1.47",
+     "John.4.42",
+     "John.6.14",
+     "John.7.26",
+     "John.7.40",
+     "John.8.31",
+     "John.17.8",
+     "Acts.12.11",
+     "1John.2.5"
+    ],
+    "eg": [
+     {
+      "id": "Matt.14.33",
+      "ref": "Matthew 14:33",
+      "text": "Then those who were in the boat worshiped Him, saying, “Truly You are the Son of God!”"
+     },
+     {
+      "id": "1Thess.2.13",
+      "ref": "1 Thessalonians 2:13",
+      "text": "And we continually thank God because, when you received the word of God that you heard from us, you accepted it not as the word of men, but as it truly is, the word of God, which is also now at work in you who believe."
+     }
+    ]
+   },
+   {
+    "key": "g3689",
+    "lemma": "ὄντως",
+    "translit": "ontōs",
+    "gloss": "really",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "Mark.11.32",
+     "1Tim.5.3",
+     "1Tim.5.16"
+    ],
+    "eg": [
+     {
+      "id": "Mark.11.32",
+      "ref": "Mark 11:32",
+      "text": "But if we say, ‘From men'...” they were afraid of the people, for they all held that John truly was a prophet."
+     },
+     {
+      "id": "1Tim.5.3",
+      "ref": "1 Timothy 5:3",
+      "text": "Honor the widows who are truly widows."
+     }
+    ]
+   },
+   {
+    "key": "g1103",
+    "lemma": "γνήσιος",
+    "translit": "gnēsios",
+    "gloss": "genuine",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "Phil.4.3",
+     "1Tim.1.2",
+     "Titus.1.4"
+    ],
+    "eg": [
+     {
+      "id": "Phil.4.3",
+      "ref": "Philippians 4:3",
+      "text": "Yes, and I ask you, my true yokefellow, to help these women who have contended at my side for the gospel, along with Clement and the rest of my fellow workers, whose names are in the Book of Life."
+     },
+     {
+      "id": "1Tim.1.2",
+      "ref": "1 Timothy 1:2",
+      "text": "To Timothy, my true child in the faith: Grace, mercy, and peace from God the Father and Christ Jesus our Lord."
+     }
+    ]
+   },
+   {
+    "key": "h6656",
+    "lemma": "צְדָא",
+    "translit": "tse.da",
+    "gloss": "intended",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.3.14"
+    ],
+    "eg": [
+     {
+      "id": "Dan.3.14",
+      "ref": "Daniel 3:14",
+      "text": "and Nebuchadnezzar said to them, “Shadrach, Meshach, and Abednego, is it true that you do not serve my gods or worship the golden statue I have set up?"
+     }
+    ]
+   },
+   {
+    "key": "h3321",
+    "lemma": "יְצַב",
+    "translit": "ye.tsav",
+    "gloss": "to know",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.7.19"
+    ],
+    "eg": [
+     {
+      "id": "Dan.7.19",
+      "ref": "Daniel 7:19",
+      "text": "Then I wanted to know the true meaning of the fourth beast, which was different from all the others-extremely terrifying-devouring and crushing with iron teeth and bronze claws, then trampling underfoot whatever was left."
+     }
+    ]
+   },
+   {
+    "key": "h546",
+    "lemma": "אׇמְנָה",
+    "translit": "om.nah",
+    "gloss": "truly",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Josh.7.20"
+    ],
+    "eg": [
+     {
+      "id": "Josh.7.20",
+      "ref": "Joshua 7:20",
+      "text": "“It is true,” Achan replied, “I have sinned against the LORD, the God of Israel. This is what I did:"
+     }
+    ]
+   }
+  ]
+ }
+}

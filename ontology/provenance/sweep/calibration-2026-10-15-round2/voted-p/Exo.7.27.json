@@ -1,0 +1,119 @@
+{
+ "ref": "Exo.7.27",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'you' in the LORD's message (cl0 participle 'refusing you'), addressed to Pharaoh",
+   "category": "second person inside a quoted divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "w7",
+   "choice": "Exo.7.26#w2",
+   "divine": true,
+   "why": "'I am about to strike' in the LORD's quoted words; the speaker is the LORD",
+   "category": "first person inside a quoted divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "w12",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your territory' in the quoted speech addressed to Pharaoh; the possessor is Pharaoh",
+   "category": "possessive inside a quoted speech",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "the infinitive 'let them go' completes 'refusing', a verb whose infinitive is its complement, not a purpose",
+   "category": "infinitive complement read as purpose",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the infinitive is the object of 'refusing', a clause nested in a role of cl0",
+   "category": "infinitive complement",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "the if link runs the wrong way: the condition is cl0 and what it conditions is cl2",
+   "category": "condition direction reversed",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl0",
+   "action": "add",
+   "why": "'if you refuse ... here!': the host is cl2 (the next clause that is not an infinitive complement) and the condition is cl0",
+   "category": "condition",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "the conditional relation is carried by the if link; the waw is not a separate link here",
+   "category": "duplicate of condition",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "'here! I am about to strike': the waw joins the apodosis to its consequence, a plain and",
+   "category": "consequence",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond0",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl0"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The if-clause and the clause it conditions; the consequence is cl2, the host of the apodosis.",
+   "category": "conditional group",
+   "votes": 2
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl2 (hinneh, 'here!')",
+   "what": "The exclamation that opens the consequence after a condition has no link type or group role; it is recorded as the host of the conditional's consequence."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether the conditional is a part of the LORD's quoted turn (Exo.7.26 turn1), which R3 requires",
+   "why": "that turn is in the earlier verse; this answer does not edit it, so the turn-level placement is left for the passage"
+  }
+ ],
+ "voted": 3
+}

@@ -1,0 +1,30 @@
+{
+ "ref": "Pro.10.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle clause 'one who works a palm of slackness' is a relative clause inside the subject noun phrase of the predicate 'poor'. It is not a bare participle after a finite clause, so 'describing' does not apply. The nesting stands.",
+   "category": "participle nested in subject noun phrase"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Plain waw setting the diligent hand against the slack one: contrast by sense, not cause, result or purpose. The 'and' link stands.",
+   "category": "waw in antithetic proverb pair"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0 -and-> cl2",
+   "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"
+  }
+ ],
+ "cant_tell": []
+}

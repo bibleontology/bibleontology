@@ -1,0 +1,17 @@
+{"ref": "Psa.23.6",
+ "referents": [
+  {"slot": "w5", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'me' (morph agrees) in the psalm's own voice; the psalm quotes no other speaker in this verse, so the voice candidate applies.", "category": "first person in the psalm's own voice"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'my' (morph agrees) modifying 'life' in the psalm's own voice; no quoted speech intervenes.", "category": "first person in the psalm's own voice"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied first person singular subject of the weqatal 'I will dwell' (morph agrees), in the psalm's own voice.", "category": "first person in the psalm's own voice"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "cl1 is a weqatal whose waw is fused into the verb form, so the link is 'and then' (continuation of the same assertion), not a plain 'and'. The sense is a second line of the same statement, not a cause, result or purpose.", "category": "weqatal continuation"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0, opening אַךְ 'surely'", "what": "Emphatic particle 'surely' that marks the first clause as a firm assertion. No link type records emphasis, so it is left unrecorded rather than forced onto a relation."}
+ ],
+ "cant_tell": [
+  {"what": "The implied third person subject of the yiqtol 'will pursue' in cl0 (verb is third masculine plural). It has no slot in this verse.", "why": "The nearest plural candidates are the goodness and mercy pair, which are abstract nouns, and the verse does not state who pursues. No referent is chosen."}
+ ]
+}

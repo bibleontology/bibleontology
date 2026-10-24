@@ -1,0 +1,95 @@
+{
+ "ref": "Rom.3.7",
+ "referents": [
+  {
+   "slot": "w14",
+   "choice": "w5",
+   "divine": true,
+   "why": "'Of Him' (third masculine singular) of 'glory': God, the only masculine singular candidate that fits, w5.",
+   "category": "possessive of God's glory",
+   "votes": 3
+  },
+  {
+   "slot": "w15",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'why' (ti): refers to nothing; no neuter singular candidate.",
+   "category": "interrogative word",
+   "votes": 3
+  },
+  {
+   "slot": "w17",
+   "choice": "none",
+   "divine": false,
+   "why": "'Also I' (first singular) is the objector's I inside the imagined speech; no first-person candidate.",
+   "category": "first person inside objection",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed: the protasis cl1 is the condition of cl0, 'why am I still judged'.",
+   "category": "condition attached to wrong clause",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'If my lie accentuates God's truthfulness, why am I still judged?' cl0 is conditioned by cl1.",
+   "category": "conditional question",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The relation is conditional, not a plain and; the kai in cl0 ('also I') does not link these clauses.",
+   "category": "conditional read as and",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl0"
+    }
+   ],
+   "divine": false,
+   "why": "Protasis cl1, consequence cl0.",
+   "category": "conditional question",
+   "votes": 3
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "the speaker of the objection ('I')",
+   "why": "The imagined objector is not a candidate; the 'I' is the voice of the diatribe's objection, not a person in the passage."
+  },
+  {
+   "what": "δέ opening the verse (Εἰ δέ)",
+   "why": "A verse-opening 'but' has no host in its verse, so no contrast link is drawn."
+  },
+  {
+   "what": "Verse-opening de ('However, if ...') joined to 3:6",
+   "why": "Mid-verse only; a verse-opening 'but' has no host in its own verse."
+  }
+ ],
+ "voted": 3
+}

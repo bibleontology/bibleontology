@@ -1,0 +1,124 @@
+# Card: the sons of Israel (id children_of_israel, group)
+
+Description (site voice): The whole covenant nation descended from Jacob/Israel, as a single people prior to and spanning the divided kingdom.
+
+Key verses quoted on the card: Exod 1:1, Josh 12:1, Deut 6:4, Mark 12:29
+
+Words shown: יִשְׂרָאֵל (2227), בֵּן (3647), Ἰσραήλ (66), υἱός (343), יִשְׂרָאֵל (7), בַּר (10), υἱοθεσία (5)
+
+Relations:
+- Peoples & groups (70)
+    - was led by | God | Deut 6:10, Deut 6:12, Deut 6:21
+    - has with them | God | Deut 6:15
+    - was led by | Moses | Exod 14:21, Exod 14:31, Exod 15:22, Heb 3:16
+    - was led by | Ezra | Ezra 10:5
+    - was fought by | the Amalekites | Exod 17:8
+    - was fought by | the Ammonites | Judg 11:4
+    - was fought by | the Amorites | Josh 24:11
+    - was fought by | the Canaanite | Josh 24:11
+    - conquered | the Amorites | Num 21:24, Num 21:25
+    - conquered | the Canaanite | Judg 1:28
+    - conquered | the Moabites | Judg 3:30
+    - descends from | Jacob | Exod 1:1
+    - made war on | the Midianites | Num 31:7
+    - was led by | David | 2Sam 5:3
+    - was led by | Deborah | Judg 4:4
+    - was fought by | the Egyptians | Exod 14:23
+    - was led by | Gideon | Judg 8:22
+    - was fought by | the Girgashites | Josh 24:11
+    - was fought by | the Hittites | Josh 24:11
+    - was fought by | the Hivites | Josh 24:11
+    - was fought by | the Jebusites | Josh 24:11
+    - was led by | Joshua | Deut 34:9
+    - was fought by | the Midianites | Judg 6:2
+    - was fought by | the Moabites | Judg 3:12
+    - was fought by | Perizzites | Josh 24:11
+    - was conquered by | the Philistines | Judg 13:1
+    - was fought by | the Philistines | 1Sam 4:1
+    - was led by | Samson | Judg 15:20
+    - was led by | Shamgar | Judg 3:31
+    - conquered | the king of Achshaph | Josh 12:7, Josh 12:20, Josh 12:1
+    - conquered | the king of Adullam | Josh 12:7, Josh 12:15, Josh 12:1
+    - conquered | the king of Aphek | Josh 12:7, Josh 12:18, Josh 12:1
+    - conquered | the king of Arad | Josh 12:7, Josh 12:14, Josh 12:1
+    - conquered | the king of Bethel | Josh 12:7, Josh 12:16, Josh 12:1
+    - conquered | the king of Debir | Josh 12:7, Josh 12:13, Josh 12:1
+    - conquered | the king of Dor | Josh 12:7, Josh 12:23, Josh 12:1
+    - conquered | the king of Eglon | Josh 12:7, Josh 12:12, Josh 12:1
+    - conquered | the king of Geder | Josh 12:7, Josh 12:13, Josh 12:1
+    - conquered | the king of Gezer | Josh 12:7, Josh 12:12, Josh 12:1
+    - conquered | the king of Hazor | Josh 12:7, Josh 12:19, Josh 12:1
+    - conquered | the king of Hebron | Josh 12:7, Josh 12:10, Josh 12:1
+    - conquered | the king of Hepher | Josh 12:7, Josh 12:17, Josh 12:1
+    - conquered | the king of Hormah | Josh 12:7, Josh 12:14, Josh 12:1
+    - conquered | the king of Jarmuth | Josh 12:7, Josh 12:11, Josh 12:1
+    - conquered | the king of Jericho | Josh 12:7, Josh 12:9, Josh 12:1
+    - conquered | the king of Jerusalem | Josh 12:7, Josh 12:10, Josh 12:1
+    - conquered | the king of Jokneam | Josh 12:7, Josh 12:22, Josh 12:1
+    - conquered | the king of Kedesh | Josh 12:7, Josh 12:22, Josh 12:1
+    - conquered | the king of Lachish | Josh 12:7, Josh 12:11, Josh 12:1
+    - conquered | the king of Lasharon | Josh 12:7, Josh 12:18, Josh 12:1
+    - conquered | the king of Libnah | Josh 12:7, Josh 12:15, Josh 12:1
+    - conquered | the king of Madon | Josh 12:7, Josh 12:19, Josh 12:1
+    - conquered | the king of Makkedah | Josh 12:7, Josh 12:16, Josh 12:1
+    - conquered | the king of Megiddo | Josh 12:7, Josh 12:21, Josh 12:1
+    - conquered | the king of Shimron-meron | Josh 12:7, Josh 12:20, Josh 12:1
+    - conquered | the king of Taanach | Josh 12:7, Josh 12:21, Josh 12:1
+    - conquered | the king of Tappuah | Josh 12:7, Josh 12:17, Josh 12:1
+    - conquered | the king of Tirzah | Josh 12:7, Josh 12:24, Josh 12:1
+    - was led by | Abdon | Judg 12:13
+    - was led by | Eli | 1Sam 4:18
+    - was led by | Elon | Judg 12:11
+    - was led by | Ibzan | Judg 12:8
+    - was led by | Jair | Judg 10:3
+    - was led by | Jephthah | Judg 12:7
+    - was led by | Othniel | Judg 3:10
+    - was led by | Samuel | 1Sam 7:15
+    - was led by | Tola | Judg 10:2
+    - was fought by | the tribe of Benjamin | Judg 20:14
+    - conquered | the tribe of Benjamin | Judg 20:35, Judg 20:48
+    - made war on | the tribe of Benjamin | Judg 20:20
+- Observances (7)
+    - kept | abstinence from the tendon which is at the socket of the hip | Gen 32:32
+    - kept | the day of atonement | Lev 23:27, Lev 23:2
+    - kept | the feast of tabernacles | Lev 23:34, Lev 23:2
+    - kept | the feast of unleavened bread | Lev 23:6, Lev 23:2
+    - kept | the passover | Lev 23:5, Lev 23:2, Num 9:5, Exod 12:28
+    - kept | the sabbath | Lev 23:3, Lev 23:2
+    - kept | the Jubilee | Lev 25:10
+- Things (5)
+    - carried | Joseph's bones | Gen 50:25
+    - is signified by | bones | Ezek 37:11, Ezek 37:4
+    - carried | manna | John 6:49, Exod 16:35, Exod 16:15
+    - made | the tabernacle | Exod 39:32, Exod 39:42
+    - is signified by | vine | Isa 5:7, Ps 80:8, Hos 10:1, Jer 2:21
+- Conflict (4)
+    - was attacked by | Pharaoh | Exod 14:8, Exod 14:9
+    - was persecuted by | Pharaoh | Exod 5:7, Exod 5:8
+    - was judged by | Pharaoh | Exod 12:31, Exod 12:33
+    - accused | Moses | Num 14:2, Num 16:3
+- Encounters & speech (4)
+    - took | cattle | Gen 46:6
+    - took | goods | Gen 46:6
+    - took | property | Gen 47:27
+    - pleaded with | Aaron | Exod 32:1
+- Places (3)
+    - lived at | Goshen | Gen 47:27
+    - went to | Egypt | Gen 46:6
+    - went to | Red sea | Heb 11:29, Exod 14:22
+- Prophetic & priestly (3)
+    - had the Spirit come upon them | God | Gen 50:25
+    - was blessed by | Aaron | Lev 9:22, Lev 9:23
+    - was blessed by | Moses | Deut 33:1, Deut 33:29
+- Covenants (1)
+    - is party to | the covenant at Sinai | Exod 24:7, Exod 24:8
+- In someone's words (1)
+    - was judged by | the tribe of Dan | Gen 49:16 | words of Jacob
+- Concepts (1)
+    - is spoken of in | Jacob at Gen 48:20 | Gen 48:20 | words of Jacob
+- Service & authority (1)
+    - was charged by | Joseph | Gen 50:25
+- Images & figures (1)
+    - is drawn on by | Hear, O Israel: The LORD our God, the LORD is One. | Deut 6:4, Mark 12:29
+- Verdicts (1)
+    - did | evil in the sight of the Lord | Judg 2:11, Judg 3:7, Judg 4:1, Judg 6:1

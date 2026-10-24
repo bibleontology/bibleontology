@@ -1,0 +1,24 @@
+{"ref": "Exo.7.27",
+ "referents": [
+  {"slot": "w3", "choice": "Exo.7.26#w7", "divine": false, "why": "Second masculine singular in cl0 (refusing), inside the LORD's quoted speech to Pharaoh begun in Exo.7.26. Pharaoh is the masculine singular addressee there; Moses is sent to him and is not the one refusing.", "category": "implied addressee inside a quoted divine speech"},
+  {"slot": "w7", "choice": "Exo.7.26#w2", "divine": true, "why": "First common singular in cl3 ('I am about to strike'), inside the speech introduced by 'thus says the LORD' in Exo.7.26. The speaker of that speech is the LORD.", "category": "first person inside a quoted divine speech"},
+  {"slot": "w12", "choice": "Exo.7.26#w7", "divine": false, "why": "Second masculine singular possessive on territory (w11). The territory is the country of the one addressed, which is Pharaoh, so the whole country is Egypt.", "category": "possessive of the addressee"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "remove", "why": "The infinitive 'to let them go' is the object of 'you refuse' (masculine participle of refusing), not a purpose. Nothing here is a command followed by a jussive or yiqtol in another person.", "category": "infinitive complement read as purpose"},
+  {"src": "cl0", "type": "if", "dst": "cl2", "action": "remove", "why": "The direction is reversed. The refusal (cl0) is the condition, and the clause it conditions is cl2. The corrected link is written below as cl2 if cl0.", "category": "conditional direction reversed"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "The waw on the opener of cl2 is the conditional marker of 'and if', not a plain coordinating 'and' between the refusal and the plague. The if link carries that relation.", "category": "conditional waw read as plain and"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "The waw on the striking clause joins the presentative 'here' (cl2) to the clause it introduces, 'here I am about to strike'. It is coordinating and the sense supports it.", "category": "presentative joined to its clause"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "add", "why": "'You refuse [to let them go]': the infinitive clause fills the object role of the verb of refusing, as MACULA nests it. This is the nesting that the purpose link wrongly stood in for.", "category": "infinitive complement as object"},
+  {"src": "cl2", "type": "if", "dst": "cl0", "action": "add", "why": "A Hebrew condition precedes what it governs. The 'and if' marker opens cl2, and cl1 is an infinitive complement, so the host is cl2 and the condition is cl0. The apodosis is carried by cl3 through the and link above.", "category": "condition preceding its consequence"}
+ ],
+ "groups": [
+  {"id": "cond0", "kind": "conditional", "action": "keep", "members": [{"role": "condition", "node": "cl0"}, {"role": "consequence", "node": "cl2"}], "divine": false, "why": "The condition is the refusal in cl0. The consequence is cl2, the host named by the if rule. The plague itself is cl3, joined to cl2 by waw, so the group is kept with its members unchanged.", "category": "conditional with presentative as consequence"}
+ ],
+ "none_fit": [
+  {"where": "cl2 (presentative 'here' with the if marker)", "what": "A bare presentative that only opens the consequence carried by cl3. The schema has no role for an opener that is a clause in the parse but adds no content of its own."}
+ ],
+ "cant_tell": [
+  {"what": "Whether the LORD's speech begun at Exo.7.26#turn1 continues through this verse", "why": "The BSB closes the quotation after 'worship Me' in 8:1, but the Hebrew continues the LORD's words with the waw of 'and if' and no change of speaker. No group in this verse records the extent of the speech, and turn1 is not changed here."}
+ ]
+}

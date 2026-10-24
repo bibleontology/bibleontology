@@ -1,0 +1,166 @@
+{
+ "ref": "Exo.8.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "'your hand': second person, the one commanded to stretch out, Aaron.",
+   "category": "second person possessive in a quoted command"
+  },
+  {
+   "slot": "w14",
+   "choice": "w7",
+   "divine": false,
+   "why": "'your staff': Aaron's.",
+   "category": "second person possessive in a quoted command"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "implied 'you' of 'say to Aaron': Yahweh commands Moses (w4) to tell Aaron. The builder's Aaron is wrong: the one told to speak is Moses.",
+   "category": "implied subject of a command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "divine": false,
+   "why": "implied 'you' of 'stretch out': the quoted command is for Aaron, the addressee of the relayed words.",
+   "category": "implied subject inside a quoted command"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "divine": false,
+   "why": "implied 'you' of 'bring up the frogs': Aaron, as in the command before.",
+   "category": "implied subject inside a quoted command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "plain waw joining two commands ('stretch out ... and cause the frogs to come up') in one imperative group.",
+   "category": "and between commands"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the saying clause 'he said' introduces the command 'tell Aaron' (R1).",
+   "category": "speech content link"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add",
+   "why": "'tell Aaron' introduces what is said: the collection of commands (R1).",
+   "category": "speech content link"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "outer speech of Yahweh to Moses; its part is the commanded turn Moses speaks to Aaron (R2).",
+   "category": "outer speech with commanded speech"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.1#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": false,
+   "why": "the commanded speech: Moses is the one commanded to speak, so he is the sender (R2).",
+   "category": "commanded turn"
+  },
+  {
+   "id": "Exo.8.1#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": true,
+   "why": "innermost turn: Yahweh's words quoted by Moses; its sender is the one quoted (R2).",
+   "category": "quoted divine speech"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    }
+   ],
+   "divine": false,
+   "why": "two commands joined by waw are one imperative group with two command members.",
+   "category": "commands joined at one level"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

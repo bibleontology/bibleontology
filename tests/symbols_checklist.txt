@@ -1,0 +1,212 @@
+# One hundred symbols a reader expects to find, with the conventional reading
+# in parentheses. Supplied as a test, not a worklist: the point is to run it
+# against the graph later and score both directions.
+#
+# Format: <n>\t<symbol>\t<conventional reading>\t<primary search word>
+#
+# The parenthesised readings are NOT targets. Many of them are things the graph
+# must decline, and the scoring below says which.
+#
+# ---------------------------------------------------------------------------
+# HOW TO SCORE IT
+#
+# Every item falls into one of three classes, and each has a different right
+# answer. A run that treats the list as 100 things to capture has failed before
+# it starts.
+#
+#   A. The text states the key.  Bronze serpent (John 3:14), manna (John
+#      6:32-35), vine (John 15:1), Hagar (Gal 4:24). Expected: a `signifies`
+#      edge. Missing one is a RECALL failure.
+#
+#   B. The text states a comparison, not an identity.  The Spirit descends
+#      "like a dove" (Matt 3:16); hope is "as an anchor of the soul" (Heb
+#      6:19); "all flesh is as grass" (1Pet 1:24). Expected: `likened_to` with
+#      the ground where the verse gives one. Recording these as `signifies`
+#      is a PRECISION failure -- it upgrades a simile into a meaning.
+#
+#   C. The reading is traditional and the text does not supply it.  The fish
+#      as a confession is post-biblical; menorah and shekinah are not KJV words
+#      at all; "capstone" is the head stone of the corner. Expected: NOTHING,
+#      or at most a lexical link. Producing a key here is the worst failure of
+#      the three, because it is the graph inventing meaning and it will look
+#      right to a reader who already believes it.
+#
+# So the run reports two numbers, and the second matters more:
+#   recall    -- class A items with the key the text supplies
+#   restraint -- class B and C items the graph did NOT overstate
+#
+# Classify each item by reading its verses before scoring, not after. Deciding
+# the class once the graph's answer is visible is how a test stops testing.
+#
+# ---------------------------------------------------------------------------
+# BASELINE, 18 August 2026, before any work against this list
+#
+#   entity with an imagery edge     6   circumcision, lamb, manna, vine, lion
+#   entity, no imagery edge         4   ark of the covenant, passover, tabernacle, rivers
+#   in the text, no entity         90
+#
+# Tier 0 is the bottleneck, exactly as the roadmap predicted: ninety of these
+# are words in the corpus that the graph has no node for, so there is nothing
+# for a key to attach to.
+
+1	Rainbow	covenant	bow
+2	Circumcision	covenant	circumcision
+3	Ark of the Covenant	covenant	ark
+4	Signet ring	authority	signet
+5	Sceptre	rule	sceptre
+6	Throne	glory	throne
+7	Name/Seal of God	identity	seal
+8	Alpha and Omega	eternity	Alpha
+9	Keys of the Kingdom	authority	keys
+10	Covenant blood	ratification	blood
+11	Dove	Holy Spirit	dove
+12	Wind	Spirit	wind
+13	Fire	Spirit/presence	fire
+14	Cloud and pillar of fire	guidance	pillar
+15	Light	truth/presence	light
+16	Burning bush	presence	bush
+17	Glory	presence	glory
+18	Oil/anointing	Spirit/empowering	anointed
+19	Menorah	illumination	candlestick
+20	Incense	prayer	incense
+21	Lamb	Christ's sacrifice	lamb
+22	Passover lamb	deliverance	passover
+23	Blood	atonement	blood
+24	Bronze serpent	healing	serpent
+25	Scapegoat	sin-bearing	scapegoat
+26	Altar	sacrifice	altar
+27	Cross	atonement	cross
+28	Manna	provision	manna
+29	Bread	nourishment/Christ	bread
+30	Living water	Spirit/eternal life	water
+31	Vine and branches	abiding	vine
+32	Seed	faith/Word	seed
+33	Tree of Life	life	tree
+34	Fig tree	judgment/fruitfulness	fig
+35	Harvest	judgment	harvest
+36	Wheat and tares	separation	tares
+37	Mustard seed	small beginnings	mustard
+38	Olive tree	Israel/grafting	olive
+39	Shepherd	care	shepherd
+40	Grass	human frailty	grass
+41	Temple/tabernacle	God dwelling	tabernacle
+42	Holy of Holies	presence	holiest
+43	Priesthood	mediation	priest
+44	Showbread	provision	shewbread
+45	Veil	separation	vail
+46	Sacrifice altar	atonement	altar
+47	Trumpets	God speaking	trumpet
+48	Lifting hands	prayer	hands
+49	Sackcloth and ashes	repentance	sackcloth
+50	Washing	cleansing/baptism	wash
+51	Sword	judgment/Word	sword
+52	Arrows	judgment	arrows
+53	Beasts	kingdoms	beast
+54	Locusts	judgment	locusts
+55	Dry bones	spiritual death	bones
+56	Rock	stability	rock
+57	Capstone	pre-eminence	corner
+58	Throne room imagery	majesty	throne
+59	Scales	justice	balances
+60	Iron rod	rule	rod
+61	Serpent	Satan/subtlety	serpent
+62	Lamb	Christ	lamb
+63	Dove	Spirit	dove
+64	Lion	strength/Christ	lion
+65	Eagle	renewal	eagle
+66	Fish	confession	fish
+67	Donkey	peaceful kingship	ass
+68	Horse	war/judgment	horse
+69	Dragon	evil	dragon
+70	Shepherd's flock	people of God	flock
+71	Jar	destruction	bottle
+72	Potter's clay	sovereignty	potter
+73	Lampstand	witness	candlestick
+74	Anchor	hope	anchor
+75	Crown	victory	crown
+76	Garments	righteousness/shame	garment
+77	Sandals	readiness	shoes
+78	Yoke	burden/discipleship	yoke
+79	Cup	suffering/blessing	cup
+80	Scroll/book	revelation	book
+81	Stars	angels/ministers	stars
+82	Sun	glory	sun
+83	Moon	change	moon
+84	Sea	chaos	sea
+85	Mountains	meeting with God	mountain
+86	Rivers	life/blessing	river
+87	Storm	majesty	storm
+88	Thunder	God's voice	thunder
+89	Earthquake	intervention	earthquake
+90	Wilderness	testing	wilderness
+91	Leaven	sin/influence	leaven
+92	Blindness	ignorance	blind
+93	Thirst	spiritual need	thirst
+94	Slavery	bondage	bondage
+95	Adoption	new identity	adoption
+96	Marriage	Christ and church	marriage
+97	Body	interdependence	body
+98	Heart	inner life	heart
+99	Eyes	perception	eyes
+100	Path/way	life direction	path
+#
+# ---------------------------------------------------------------------------
+# FLAGGED SEPARATELY: father and son
+#
+# Added on the owner's nomination, and they do not belong in the hundred above
+# because they fail differently and harder. Every other item is a noun that is
+# sometimes literal and sometimes figurative. These two are **the vocabulary
+# the graph's own core is built out of**: `father_of` is its commonest relation
+# type, 757 edges, and "father" runs 970 verses while "son" runs 1,799.
+#
+# The senses the corpus actually uses, all of them at once:
+#
+#   biological      "Abraham begat Isaac"                    -- `father_of`
+#   originator      "the father of such as dwell in tents"   Gen 4:20
+#   ancestor        "Abraham is our father"                  John 8:39
+#   adoptive/moral  "ye are of your father the devil"        John 8:44
+#   of a promise    "the father of all them that believe"    Rom 4:11
+#   office          "a father to Pharaoh, and lord"          Gen 45:8
+#   the deity       "one is your Father, which is in heaven" Matt 23:9
+#
+# And John 8:39-44 runs three of those senses in six verses, deliberately, as
+# the argument: Abraham is their father, and he is not, and the devil is.
+#
+# What makes it a test rather than a task: the graph cannot distinguish these
+# by the word, and `father_of` quietly asserts the biological sense on every
+# edge that uses it. Gen 4:20 and Rom 4:11 are almost certainly *wrong* if any
+# extractor recorded them as `father_of`, and nothing in the validator can see
+# it -- both cite real verses naming both parties.
+#
+# **Score it by auditing the 757 existing edges**, not by adding more. The
+# question is how many already mean something other than biological descent.
+#
+# ---------------------------------------------------------------------------
+# RUN, 18 August 2026. The audit is done and the framing above was wrong in
+# one important way.
+#
+# **`father_of` is a relation, not an entity, and so is every sense of the
+# word.** X is father *of* Y, always -- including in the similes, where "as a
+# father pitieth his children" (Ps 103:13) compares two *relations* and not a
+# thing. 80% of the 1,126 occurrences sit in an explicit relational frame and
+# the rest imply one. So the seven senses are seven relation types, never seven
+# records, and nothing here needs an entity at all.
+#
+# That also draws the line against the images already minted: `father` is
+# definitionally relational -- you cannot be one without a child -- where
+# `shepherd` names a person doing a job and `grass` names a thing. Three
+# classes, and only the third belongs in the image type.
+#
+# **Precision: clean. 757 edges, zero misuse.** The one hit was a false
+# positive of the detector -- "Lamech is the father of Jubal" citing Gen 4:21,
+# which is biological, and merely happens to sit in a verse that also calls
+# Jubal the father of harpists.
+#
+# **Recall: the other senses are absent entirely**, which is the real finding
+# and is the Nehemiah 3 problem again. Jabal, Jubal and Tubal-cain carried only
+# kinship edges: the graph knew whose sons they were and not the one thing
+# Genesis names them for. Nothing cited Romans 4 at all.
+#
+# Fixed the way that finding is always fixed -- the record says why the man is
+# named -- and *not* with a new relation type. Two verses do not earn one by
+# this project's own measured standard, where `warned` got in at 26.

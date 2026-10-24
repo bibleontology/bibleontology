@@ -1,0 +1,157 @@
+{
+ "ref": "Rom.3.5",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'Of us' (first plural) in 'our unrighteousness' is Paul and his readers; no first-plural candidate.",
+   "category": "first person plural not offered",
+   "votes": 3
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'what' in 'what shall we say': refers to nothing; no neuter singular candidate.",
+   "category": "interrogative word",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'We' in 'what shall we say' is Paul and his readers; no first-plural candidate.",
+   "category": "first person plural not offered",
+   "votes": 3
+  },
+  {
+   "slot": "cl4s",
+   "choice": "none",
+   "divine": false,
+   "why": "'I speak' (first singular) is the writer's own remark about how he speaks; no first-person candidate.",
+   "category": "writer's own voice not offered",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed: the protasis cl1 is the condition, and the question cl0 is what it conditions.",
+   "category": "condition attached to wrong clause",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'What shall we say, if our unrighteousness highlights God's righteousness?' cl0 is conditioned by cl1.",
+   "category": "conditional question",
+   "votes": 3
+  },
+  {
+   "src": "cl3",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The participle 'inflicting the wrath' describes God in the objection; it is not a conjunct of 'what shall we say'.",
+   "category": "participle read as conjunct",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "add",
+   "why": "The articular participle (the one inflicting wrath) is a relative-like clause nested in the noun phrase 'God'.",
+   "category": "relative participle in noun phrase",
+   "votes": 2
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'What shall we say?' introduces the objection that follows: is God unjust to inflict wrath?",
+   "category": "saying introduces objection",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl0"
+    }
+   ],
+   "divine": false,
+   "why": "The protasis is cl1 and the question it conditions is cl0.",
+   "category": "conditional question",
+   "votes": 3
+  },
+  {
+   "id": "Rom.3.5#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "'What shall we say' introduces the objection, which is its part (ruling R1). No sender or addressee is a candidate.",
+   "category": "speech introduces objection",
+   "votes": 2
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl4 'According to man I speak'",
+   "what": "A remark on the manner of the writer's own speaking ('in human terms'); no link type records a qualification of one's own saying."
+  },
+  {
+   "where": "cl4 (κατὰ ἄνθρωπον λέγω, 'I speak in human terms')",
+   "what": "A parenthetical disclaimer about the manner of the argument; no link type relates a comment on one's own argument. Left unlinked."
+  },
+  {
+   "where": "3:5 cl4 'According to man I speak'",
+   "what": "A parenthetical qualifier of the writer's own speech; no link type records it, so it is left unlinked."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "δέ opening the verse (Εἰ δέ)",
+   "why": "A verse-opening 'but' has no host in its own verse, so no contrast with 3:4 is drawn."
+  },
+  {
+   "what": "turn for 'what shall we say' (cl0)",
+   "why": "A turn needs a sender from the candidates; the speaker 'we' is not offered, so no turn is built."
+  },
+  {
+   "what": "Sender of the turn (the 'we' of 'what shall we say?')",
+   "why": "The 'we' is the diatribe's speaker and is not offered as a candidate; the turn has no sender."
+  },
+  {
+   "what": "Verse-opening de ('But if ...') joined to 3:4",
+   "why": "Contrast with a verse-opening 'but' has no host in its own verse; no link added."
+  }
+ ],
+ "voted": 3
+}

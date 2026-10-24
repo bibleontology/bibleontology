@@ -1,0 +1,217 @@
+{
+ "ref": "Exo.8.4",
+ "referents": [
+  {
+   "slot": "w18",
+   "choice": "w2",
+   "divine": false,
+   "why": "'me' (first person common sg) inside Pharaoh's speech: the speaker is Pharaoh",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "w22",
+   "choice": "w2",
+   "divine": false,
+   "why": "'my people' in Pharaoh's speech: the speaker is Pharaoh",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": false,
+   "why": "implied subject of 'he said': Pharaoh, named as the one who summoned in cl0",
+   "category": "third person with a named antecedent"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "c3",
+   "divine": false,
+   "why": "second masc plural 'pray': the addressees, Moses and Aaron together (composite)",
+   "category": "plural addressee of a command"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w12",
+   "divine": true,
+   "why": "the jussive 'that he may remove the frogs' has as its subject the one prayed to: the LORD",
+   "category": "implied subject of a request"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w2",
+   "divine": false,
+   "why": "first person 'I will let go': the speaker, Pharaoh",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w27",
+   "divine": false,
+   "why": "third plural 'that they may sacrifice': the people Pharaoh will let go (w27, the people of cl4)",
+   "category": "third plural with collective antecedent"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "the builder reversed the narrative line; the earlier event is the summoning (cl0), then the saying (cl1)",
+   "category": "narrative sequence reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add",
+   "why": "a wayyiqtol continues the narrative line: he summoned them, then he said",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'he said' introduces Pharaoh's words, whose first clause is the command 'pray to Yahweh'",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "a third-person jussive after a second-person command gives the aim of the praying, not a plain and",
+   "category": "command joined to purpose"
+  },
+  {
+   "src": "cl2",
+   "type": "purpose",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'pray ... that he may remove the frogs': the aim of the request",
+   "category": "command joined to purpose"
+  },
+  {
+   "src": "cl3",
+   "type": "and",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "'then I will let go': the promise follows the request by waw; a cohortative after a jussive is a promise, not a purpose",
+   "category": "promise after request"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "the cohortative is followed by a third-person jussive giving what the release is for: so that",
+   "category": "release joined to purpose"
+  },
+  {
+   "src": "cl4",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "add",
+   "why": "the letting go is for the people to sacrifice to the LORD",
+   "category": "release for a purpose"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "c3"
+    }
+   ],
+   "divine": false,
+   "why": "Pharaoh speaks to Moses and Aaron; the request and the promise are its parts, and the sender is Pharaoh, not the cl1 slot",
+   "category": "speech"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "aim",
+     "node": "cl3"
+    }
+   ],
+   "divine": false,
+   "why": "'pray to Yahweh' is the command and 'that he may remove the frogs' its aim",
+   "category": "command with aim"
+  },
+  {
+   "id": "imp3",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "cl3 is a third-person jussive, the aim of praying, not a command to the addressee; the group is not an imperative",
+   "category": "jussive read as command"
+  },
+  {
+   "id": "imp4",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    }
+   ],
+   "divine": false,
+   "why": "cl4 is a cohortative promise, not a command; cl5 is its purpose",
+   "category": "promise read as command"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl4 'I will let the people go'",
+   "what": "a promise (cohortative) has no group kind; it is kept as a part of the turn"
+  }
+ ],
+ "cant_tell": []
+}

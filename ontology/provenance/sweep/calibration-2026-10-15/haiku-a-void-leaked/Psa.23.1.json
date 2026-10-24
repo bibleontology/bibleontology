@@ -1,0 +1,11 @@
+{"ref": "Psa.23.1",
+ "referents": [
+  {"slot": "w5", "choice": "psalmist", "divine": false, "why": "First person common singular 'my' (of my shepherd) in a psalm with no quoted speech, so it is the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "cl2s", "choice": "psalmist", "divine": false, "why": "First person common singular subject of the yiqtol 'not I shall lack'; the psalm's own voice, with no quoted speech.", "category": "first person in psalm voice"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "writing", "kind": "writing", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "sender", "node": "w2"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "cl2"}], "divine": false, "why": "The heading names David as the writer; the heading clause is the frame and the two verse clauses are its parts.", "category": "psalm heading as writing frame"}
+ ],
+ "none_fit": [],
+ "cant_tell": []}

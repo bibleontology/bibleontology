@@ -1,0 +1,71 @@
+{
+ "ref": "Exo.7.29",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'on you' is singular second masculine: the addressee of the LORD's message, Pharaoh. The composite c1 is plural and does not fit the morphology.",
+   "category": "object pronoun of the addressee"
+  },
+  {
+   "slot": "w6",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your people' is the addressee's, Pharaoh's.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w11",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your officials' is the addressee's, Pharaoh's.",
+   "category": "possessive of the addressee"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a bare id naming a clause of the previous verse; a link into an earlier verse needs its full id.",
+   "category": "bare id into earlier verse"
+  },
+  {
+   "src": "Exo.7.28#cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "add",
+   "confidence": "medium",
+   "why": "the verse opens with a plain waw joining the frogs' next action to the one before; no cause or result is stated.",
+   "category": "plain and across verse break"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.7.26#turn1",
+   "kind": "turn",
+   "action": "extend",
+   "members": [
+    {
+     "role": "part",
+     "node": "Exo.7.29#cl0"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the LORD's quoted message ends in this verse.",
+   "category": "speech continued across verses"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

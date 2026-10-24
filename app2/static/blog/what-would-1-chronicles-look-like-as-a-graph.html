@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Would 1 Chronicles Look Like as a Graph? · Bible Ontology</title>
+<meta name="description" content="I didn&#x27;t set out to build a website. I was just reading my Bible.">
+<link rel="stylesheet" href="/vendor/fonts-2026-10-01/fonts.css">
+<style>
+:root{--paper:#F3F5F8;--surface:#FFFFFF;--ink:#141F2C;--muted:#5C6A7B;--rule:#D9E0E8;--ochre:#A96A1E;--slate:#356A8C}
+@media (prefers-color-scheme: dark){:root{--paper:#0F151D;--surface:#18202B;--ink:#E7ECF2;--muted:#93A2B3;--rule:#2A3542;--ochre:#DFA759;--slate:#79AECD}}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Spectral,Georgia,serif;font-size:18px;line-height:1.7}
+header{border-bottom:1px solid var(--rule);background:var(--surface)}
+header .in{max-width:44rem;margin:0 auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.brand{font-weight:600;color:var(--ink);text-decoration:none}.brand span{color:var(--ochre)}
+nav a{color:var(--slate);font-size:15px;margin-left:14px}
+main{max-width:44rem;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:2rem;line-height:1.2;margin:.4em 0 .1em}
+.date{color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:13px;margin:0 0 1.6em}
+h2{font-size:1.3rem;margin:1.8em 0 .4em}
+a{color:var(--slate)}
+blockquote{margin:1.2em 0;padding:.2em 1.2em;border-left:3px solid var(--ochre);color:var(--ink);font-style:italic}
+blockquote b{font-style:italic}
+ul{padding-left:1.3em}li{margin:.3em 0}
+.posts{list-style:none;padding:0}.posts li{margin:1.4em 0}.posts a{font-size:1.25rem;font-weight:600}
+footer{max-width:44rem;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:14px}
+.reply{margin-top:3em;padding:1em 1.2em;background:var(--surface);border:1px solid var(--rule);border-radius:8px}
+.reply h2{margin-top:0}.reply p{font-size:16px;color:var(--muted);margin:.3em 0 .8em}
+.reply textarea{width:100%;box-sizing:border-box;min-height:8em;font:inherit;font-size:16px;padding:.6em;
+  border:1px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink)}
+.reply button{margin-top:.6em;font:600 15px system-ui,sans-serif;padding:.5em 1.2em;border:0;border-radius:999px;
+  background:var(--slate);color:var(--surface);cursor:pointer}
+.reply .hp{position:absolute;left:-9999px}
+#rmsg{font:14px system-ui,sans-serif;color:var(--muted);margin-left:.8em}
+</style></head><body>
+<header><div class="in"><a class="brand" href="/">Bible <span>Ontology</span></a>
+<nav><a href="/blog/">Blog</a><a href="/faq">FAQ</a><a href="/about">About</a></nav></div></header>
+<main><article><h1>What Would 1 Chronicles Look Like as a Graph?</h1><p class='date'>October 5, 2026</p><p>I didn't set out to build a website. I was just reading my Bible.</p>
+<p>Since the beginning of 2026, I'd been working through <a href="https://bibleproject.com">BibleProject.com</a>'s read-through-the-Bible-in-a-year plan called "One Story that Leads to Jesus," and their videos and podcasts had already changed the way I read the Scriptures. Tim Mackie in particular showed me things I had read past for years: the repetition, the way one passage points back to another, how carefully the whole thing is put together. The idea that really stuck with me was that the biblical authors weren't in a hurry. They wrote for people who would read slowly and keep coming back, and they expected those readers to notice things.</p>
+<p>Then I got to 1 Chronicles.</p>
+<h2>The roster that started it</h2>
+<p>Like most people, I suspect, I had always skimmed the genealogies. The pages of names were mind-numbing to read or even listen to, or so I thought. But on the morning of August 8, 2026, a BibleProject explainer video helped me think about them differently. Those lists aren't filler! They tell Israel who they are by telling them where they come from.</p>
+<p>And I had the kind of thought an engineer has: <i>what would this look like as a graph?</i></p>
+<p>I've spent my career as an IT architect and engineer, and I see structure everywhere: relationships, dependencies, what connects to what. So my first question about that roster wasn't "what does this mean?" It was "how does this connect?"</p>
+<p>And that evening, I started building to find out. The first version was simple: people and the lines between them. Connecting people was the first problem to solve. It turned out to be harder than it looked.</p>
+<h2>Is this the same person?</h2>
+<p>One of the first problems I hit taught me more than any other.</p>
+<p>Matthew's genealogy says "Salmon was the father of Boaz by Rahab" (Matthew 1:5). Hebrews talks about "the prostitute Rahab," who welcomed the spies at Jericho (Hebrews 11:31). I had always assumed they were the same woman, and a lot of people do. Many traditions hold that they are.</p>
+<p>But the Greek spells the two names differently: Matthew has <i>Rhachab</i> (Ῥαχάβ), and Hebrews and James have <i>Rhaab</i> (Ῥαάβ). And no verse says they are the same person.</p>
+<p>So what should a graph do with that? This is where I learned something I hadn't expected. There is no neutral choice. If I join them, I've made a claim. If I keep them apart without comment, I've made a claim too. A graph can't just "hold" data; every line it draws, or doesn't draw, says something.</p>
+<p>So the site does the only honest thing I could find. It keeps two cards, one for each Rahab, and each one says plainly that the text doesn't identify her with the other and that some readers hold that they are the same woman. The text leaves it open, so the site leaves it open.</p>
+<p>That one decision turned into the rules the whole project runs on:</p>
+<ul><li><b>Show what Scripture says.</b></li><li><b>Stop where Scripture stops.</b></li><li><b>Let readers weigh the connections for themselves.</b></li></ul>
+<h2>I'm not a theologian</h2>
+<p>I love the Bible, but I'm not a theologian, and I'm not going to settle questions that scholars and whole traditions have been working through for centuries. That isn't my place. What I can do is build and use what I know to help ordinary readers like me see what is actually in the text.  After all, one thing I do know is that I am not afraid to let the Bible speak for itself.  It has been scrutinized for centuries and all I wanted to do is show what is there to people like me who do not naturally see its inherent brilliance when we read it.</p>
+<p>So the site works hard not to take sides. When it describes an event or explains a connection in its own words, that description is checked the way readers from many different Christian traditions would take it, and a scholar too. If any of them couldn't accept it, it doesn't go on the site, although the blog is the one place where I may take more liberty in expressing my personal views.</p>
+<h2>What we miss</h2>
+<p>The people who wrote the Bible lived in a world of repetition, echo, and allusion. They built on each other's words across centuries, and they expected their readers to live with the text long enough to catch it. Most of us don't have that background or those years, so a lot of it goes right past us.</p>
+<p>The site tries to put some of it where you can see it. A few examples:</p>
+<p><b>A story told again.</b> Read Jesus calming the storm (Matthew 8:23–27) next to Jonah's storm (Jonah 1):</p>
+<ul><li>"Suddenly a violent storm came up on the sea," and in Jonah, "such a violent storm arose."</li><li>"But Jesus was sleeping," and Jonah "fell into a deep sleep."</li><li>The disciples "went and woke Him," and the captain says to Jonah, "How can you sleep? Get up."</li><li>"It was perfectly calm," and "the raging sea grew calm."</li><li>"The men were amazed," and "the men feared the LORD greatly."</li></ul>
+<p>The site puts those steps side by side, and it also shows where the two stories differ: in Jonah the sea only calms after the sailors throw Jonah overboard, while in Matthew, Jesus "rebuked the winds and the sea." And it says plainly that this is <i>not</i> a claim that one story was told with the other in mind. It shows you the pattern and lets you think about it. There are 117 pairs like that so far.</p>
+<p><b>Words taken up.</b> After supper Jesus took the cup and said, "This cup is the new covenant in My blood" (1 Corinthians 11:25). In the whole Old Testament, the words "new covenant" show up in exactly one place: "Behold, the days are coming, declares the LORD, when I will make a new covenant with the house of Israel and with the house of Judah" (Jeremiah 31:31). The site puts those two verses in front of you together.</p>
+<p><b>The original underneath.</b> Everything on the site is read first from the Hebrew and Greek, not from any one English translation, and each word opens up to the original and a lexicon entry. That's why the Rahab question could even be asked.</p>
+<p>All told, that's 31,102 verses, about 400,000 words of Hebrew, Aramaic and Greek, and about 7800 cards for people, places, events and ideas.  Every connection points back to the verse it comes from. If a connection is a plain fact of the text, such as the same word or the same name, it's shown as a fact. If it's a judgement call, like a story told again, it's labelled as a reading, it says who made it, and it shows the evidence. Then you decide.</p>
+<h2>It's about what the text is saying</h2>
+<p>Somewhere along the way the goal changed, and two discoveries changed it.</p>
+<p>The first was a number.  At one point I stopped and measured what I had built.  About three-quarters of the connections in the graph said nothing more than "this word appears in this verse."  That's not understanding. That's a concordance with extra steps.  It looked impressive, and it was mostly empty.</p>
+<p>The second was Job 38.  The Lord answers Job out of the whirlwind, one speech, and my graph had it chopped into 42 pieces along the verse numbers.  But nobody reads it that way.  Verse numbers were added centuries later to help us find our place. They aren't how the text thinks.  The real units are a speech, a conversation, an argument, a scene, and until you group the text into those, you can't really ask what it's saying.</p>
+<p>So I stopped asking only how everything connects. The question now is the one that matters: what is this passage <i>saying</i>?  Who's speaking, to whom, about what, and what does it rest on? Grouping, putting the text back into the units it was written in, is what makes the difference between a fancy search tool and something that actually helps. The site isn't all the way there, and it may never be finished. But that's the direction.</p>
+<h2>How it was built</h2>
+<p>I designed it, and I've made the calls about what goes in and what stays out.  But I want to be upfront about the tools. My main tool has been <b>Claude Code</b>, from Anthropic, for the design, the code, and the analysis. Other AI tools did particular jobs, and the About page lists each one and what it did.  Whatever a tool produced was only a starting point. Everything on the site has to rest on the text, and every connection cites its verse, so you can check it for yourself.</p>
+<p>In future posts I'll get into what's underneath: the modelling problems, the decisions, and the wrong turns, of which there have been plenty.</p>
+<h2>Thank you</h2>
+<p>None of this would exist without people who gave their work away so that others could build on it.</p>
+<p><b>MACULA</b>, the <a href="https://github.com/Clear-Bible/macula-hebrew/">MACULA Hebrew</a> and <a href="https://github.com/Clear-Bible/macula-greek/">MACULA Greek</a> Linguistic Datasets from Clear Bible at <b>Biblica</b>. Every word, clause, and sentence of the original languages is analysed there, and everything on the site starts from that. Without it, this would be a concordance of English words.</p>
+<p><b>The Berean Bible Translation Committee</b> and its partners, for the Berean Standard Bible, which they gave to the public domain. It's the English every verse is shown in, and its editors' headings, notes and cross-references are some of the best connections on the site.</p>
+<p><b>STEP Bible</b> and the scholars of <b>Tyndale House, Cambridge</b>, for the lexicon entry behind every word, and for the index of proper names that tells the site which James a verse is talking about.</p>
+<p>And <b>James Strong</b>, whose numbering of every Hebrew and Greek word is now more than 130 years old and still lets all of these sources talk to each other.</p>
+<p>There are others, and they're all named on the <a href="/about">About page</a>.</p>
+<h2>Come take a look</h2>
+<p>If you want to go deeper in Scripture, whether you're getting ready to teach, studying on your own, or just curious how it all fits together, I hope this helps.</p>
+<p>Start with a chapter you're already reading and see what connects to it. Or open a person: <a href="/e/rahab">Rahab</a> is a good place to start. Or browse <a href="/explore/told-again">the stories told again</a>.</p>
+<p>And please tell me what you find. It isn't perfect, and on some of these questions there isn't one right answer. If something is wrong or missing, use the <b>"Something wrong or missing?"</b> link in the menu. I read every note.  And if you came with a real question and the site didn't help you answer it, I especially want to hear that.  That's how it gets better.</p>
+<h2>Why I'm building it</h2>
+<p>One verse has been with me through all of this:</p>
+<blockquote><p>Do not be conformed to this world, but be <b>transformed</b> by the <b>renewing of your mind</b>. Then you will be able to <i>test and approve</i> what is the good, pleasing, and perfect will of God. (Romans 12:2)</p></blockquote>
+<p>I'm on that journey myself. Bit by bit, my prayer is that God transforms me through His word and makes me a little bit more like Him.  I built this for me first, and I hope it helps anyone else on the same road.</p>
+<p>It isn't a shortcut. Renewal takes time, and no website replaces reading, prayer, or the work of the Spirit. But I always go back to the second half of that verse: <i>test and approve</i>. That's what I want this tool to help facilitate. It won't tell you what to think. It puts the text's own connections in front of you, shows you why each one is there, and leaves the testing to you.</p>
+<h2>With gratitude</h2>
+<p>I am so thankful to so many people who have helped me along the way to prepare for this opportunity. Still, one person stands out, and that is my wonderful wife, Maggie, who continually inspires me with her passion for God's Word and has patiently supported me as I have worked on this site, morning and night, for the past 2 months.  I will also take this time to thank the Father, Son, and Holy Spirit for blessing me with this opportunity to use my talents in this way.</p>
+<h2>A blessing</h2>
+<p>In future posts, I will focus more on the site content, but for this first post I will close with a personal message to everyone who visits this site, quoting from one of my favorite passages in the Bible:</p>
+<blockquote><p>For this reason I bow my knees before the Father, from whom every family in heaven and on earth derives its name.</p><p>I ask that out of the riches of His glory He may strengthen you with power through His Spirit in your inner being, so that Christ may dwell in your hearts through faith. Then you, being rooted and grounded in love, will have power, together with all the saints, to comprehend the length and width and height and depth of the love of Christ, and to know this love that surpasses knowledge, that you may be filled with all the fullness of God.</p><p>Now to Him who is able to do immeasurably more than all we ask or imagine, according to His power that is at work within us, to Him be the glory in the church and in Christ Jesus throughout all generations, forever and ever. Amen. (Ephesians 3:14–21)</p></blockquote>
+<p>Doug Egge</p></article>
+<section class="reply"><h2>Reply to the author</h2>
+<p>This goes to Doug alone. Nothing you write here is published. If you would like an answer, say how to reach you.</p>
+<textarea id="rtext" maxlength="1000" aria-label="Your reply"></textarea>
+<input class="hp" id="rweb" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button id="rsend" type="button">Send</button><span id="rmsg"></span></section>
+<script>
+(function(){
+  var b=document.getElementById('rsend'),m=document.getElementById('rmsg'),t=document.getElementById('rtext');
+  b.addEventListener('click',function(){
+    var text=t.value.trim(); if(!text){m.textContent='Write something first.';return;}
+    b.disabled=true; m.textContent='Sending…';
+    fetch('/api/feedback',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({text:text,page:location.pathname,title:'Reply to the author: '+document.title,
+        website:document.getElementById('rweb').value,
+        device:matchMedia('(max-width: 767px)').matches?'mobile':'desktop'})})
+    .then(function(r){ if(r.ok){m.textContent='Thank you, sent.';t.value='';return;}
+      return r.json().then(function(j){m.textContent=j.error?j.error.charAt(0).toUpperCase()+j.error.slice(1)+'.':'It could not be sent; try again later.';b.disabled=false;}); })
+    .catch(function(){m.textContent='It could not be sent; try again later.';b.disabled=false;});
+  });
+})();
+</script>
+</main>
+<footer>Bible Ontology · <a href="/">Open the site</a></footer>
+</body></html>

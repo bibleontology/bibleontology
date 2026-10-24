@@ -1,0 +1,13 @@
+{"ref": "Psa.23.2",
+ "referents": [
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular ('me') in the psalm's own voice; the psalm quotes no one, so the speaker is the psalmist voice candidate.", "category": "first person in the psalm's own voice"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Same first person singular 'me' as in the first line, in the same psalm voice; there is no change of speaker.", "category": "first person in the psalm's own voice"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied third masculine singular subject of 'makes me lie down'. Two candidates agree in morphology: David (Psa.23.1#w2) and the LORD (Psa.23.1#w3). Making the speaker lie down in pastures is the shepherd's act, and verse 1 names the LORD as shepherd, so the LORD is the doer.", "category": "implied subject of a shepherd act in a psalm"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied third masculine singular subject of 'leads me', the second line of the same pair. It has the same referent as the first line's subject, the LORD, as the shepherd of verse 1.", "category": "implied subject of a shepherd act in a psalm"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "Two poetic lines of the same structure (verb, 'me', a locative phrase). The second restates the first without a stated subject, and the subject is the same LORD, so the pair reads as one subject with two acts.", "category": "poetic parallel line with shared subject"}
+ ],
+ "none_fit": [],
+ "cant_tell": []}

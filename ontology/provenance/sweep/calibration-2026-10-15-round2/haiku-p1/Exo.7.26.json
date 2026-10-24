@@ -1,0 +1,235 @@
+{
+ "ref": "Exo.7.26",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "'say to him' (weqatal, third masc sg) follows 'go to Pharaoh'; the one addressed is Pharaoh",
+   "category": "pronoun inside a commanded speech"
+  },
+  {
+   "slot": "w18",
+   "choice": "w14",
+   "divine": true,
+   "why": "'my people' in the LORD's own words (cl3 'thus he says Yahweh'); the first person is the speaker, the LORD",
+   "category": "first person inside a quoted divine speech"
+  },
+  {
+   "slot": "w21",
+   "choice": "w14",
+   "divine": true,
+   "why": "'me' in cl5, inside the LORD's quoted words; the speaker is the LORD",
+   "category": "first person inside a quoted divine speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "implied subject of the command 'go' (second masc sg), which the LORD gives to Moses in cl0",
+   "category": "implied subject of a command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "implied subject of 'you will say' (weqatal, second masc sg); Moses is told to say it",
+   "category": "implied subject of a command"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w7",
+   "divine": false,
+   "why": "the imperative 'let go' sits inside the message Moses delivers to Pharaoh; its implied you is Pharaoh, the one addressed",
+   "category": "implied subject inside a commanded speech"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w17",
+   "divine": false,
+   "why": "third plural 'they may serve me' with the collective 'people' (w17), the people the LORD is releasing",
+   "category": "third plural with collective antecedent"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self-link; a clause cannot be the next event after itself",
+   "category": "self link"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "the waw is fused into the weqatal, so 'and then': the second command follows the first",
+   "category": "command sequence"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "the waw joins a command to a change of person (third plural yiqtol), which the rules read as so that",
+   "category": "command joined to purpose"
+  },
+  {
+   "src": "cl4",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "add",
+   "why": "'let go ... that they may serve me': a third-person yiqtol after a second-person command gives its aim",
+   "category": "command joined to purpose"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "imp1",
+   "action": "add",
+   "why": "cl0 is the saying that introduces what the LORD said to Moses: the commands to go and speak",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'you will say to him' introduces the message, whose saying clause is cl3",
+   "category": "speech content"
+  },
+  {
+   "src": "cl3",
+   "type": "content",
+   "dst": "imp4",
+   "action": "add",
+   "why": "'thus he says Yahweh' introduces a collection of commands (let go; that they may serve me)",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "imp1"
+    },
+    {
+     "role": "part",
+     "node": "Exo.7.26#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "the LORD speaks to Moses; the commanded speech to Pharaoh is a part of it, so the turn holds it as a part instead of cl1 and cl2 directly",
+   "category": "speech nesting"
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "'go to Pharaoh' is the command; 'you will say' is the frame of the commanded turn, not a command member here",
+   "category": "command group"
+  },
+  {
+   "id": "Exo.7.26#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": false,
+   "why": "Moses is commanded to say the message to Pharaoh; the commanded turn is spoken by Moses and holds the quoted LORD's words as its part (R2)",
+   "category": "commanded speech"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "imp4"
+    },
+    {
+     "role": "sender",
+     "node": "w14"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": true,
+   "why": "the innermost quoted turn: the LORD speaks to Pharaoh; the commands in cl4 and cl5 are its part; addressee added",
+   "category": "quoted message"
+  },
+  {
+   "id": "imp4",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl4"
+    },
+    {
+     "role": "aim",
+     "node": "cl5"
+    }
+   ],
+   "divine": false,
+   "why": "'let go' is the command and 'that they may serve me' its aim; the builder used part, which is not a role of this kind",
+   "category": "command with aim"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl2 'you will say to him'",
+   "what": "a command whose object is a speech; the imperative kind has no role for that, so it is recorded as the frame of the commanded turn"
+  }
+ ],
+ "cant_tell": []
+}

@@ -1,0 +1,18 @@
+{"ref": "Gen.1.3",
+ "referents": [],
+ "links": [
+  {"src": "cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "The reads template for then is 'src, and then dst', so this edge reads 'it was light, and then he said', which reverses the narrative order. The wayyiqtol cl2 continues from cl0, so the corrected edge is cl0 then cl2.", "category": "narrative link direction reversed"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is the jussive inside God's speech. A wayyiqtol continues the narrative line from the nearest clause before it that is not inside a speech, and for cl2 that is cl0, the frame. The speech words are not the predecessor of the narrative event.", "category": "narrative line skips speech"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "cl2 is a wayyiqtol ('and there was light') and the nearest prior clause not inside a speech is cl0. The and is fused into the verb, so the link is 'and then', within the verse. The link from the earlier verse's last clause is not drawn, since across verses is the episode rung.", "category": "narrative continuation after speech frame"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "cl0 is the saying clause (God said) and cl1 is what was said (let there be light). The said clause is embedded in the speaking.", "category": "speech with embedded said clause"},
+  {"src": "cl1", "type": "result", "dst": "cl2", "action": "add", "why": "A command and what it brings about: the command let there be light, and the outcome, and there was light. The outcome is a wayyiqtol, not the weqatal the type names, but the sense requires the outcome reading. The fulfils type is not used, since it needs a so pro-form (ken), which the verse lacks.", "category": "command and its outcome"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "w2"}], "divine": true, "why": "The sender is God (candidate w2, elohim, masculine plural with a singular verb). The frame is the saying clause cl0 and the part is the speech cl1. No addressee is named, so none is set.", "category": "divine speech turn"},
+  {"id": "imp1", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}, {"role": "effect", "node": "cl2"}], "divine": false, "why": "The builder's part role is not a member role of the imperative kind, so it is changed to effect. cl2 is what the command brings about. It is a wayyiqtol rather than the weqatal the role's example names, but the sense makes it the effect.", "category": "command with its effect"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "Whether cl2 is a fulfilment report (fulfils) of the command, rather than only its outcome (result)", "why": "fulfils needs a so pro-form (ken) after the command, and the verse has none. It is recorded as result, and the reader should judge whether a fulfilment reading is also wanted."},
+  {"what": "The addressee of God's speech", "why": "The verse names no one God speaks to, so the turn has no addressee member."}
+ ]}

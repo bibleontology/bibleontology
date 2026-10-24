@@ -1,0 +1,41 @@
+{
+ "ref": "Mrk.15.7",
+ "referents": [
+  {
+   "slot": "w9",
+   "choice": "w8",
+   "divine": false,
+   "why": "who (hoitines, masculine plural) is a relative pronoun; its antecedent is the rebels (w8), masculine plural; Barabbas is singular and cannot be who",
+   "category": "relative pronoun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "called Barabbas is a participial attribute nested in the subject noun phrase",
+   "category": "participle inside noun phrase"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self link",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "why": "relative clause who had committed murder is nested in the phrase with the rebels inside cl0",
+   "category": "relative clause in noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

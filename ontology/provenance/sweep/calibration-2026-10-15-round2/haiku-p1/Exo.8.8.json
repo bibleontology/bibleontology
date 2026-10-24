@@ -1,0 +1,46 @@
+{
+ "ref": "Exo.8.8",
+ "referents": [
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "divine": true,
+   "why": "qatal 'he had appointed for Pharaoh' in the relative clause on the frogs: the one who sent the frogs against Pharaoh is the LORD. Moses and Pharaoh are also masculine singular, but the act is God's",
+   "category": "agent of an earlier act"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "the order is going out (cl0), then crying out (cl1); this link runs backward",
+   "category": "reversed then"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "wayyiqtol: they went out, and then Moses cried out, on the narrative line",
+   "category": "narrative then"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "why": "the relative clause 'which he had appointed for Pharaoh' sits inside the object of cl1, 'the matter of the frogs'; it fills the role of the noun it modifies",
+   "category": "relative clause inside a noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether Moses' cry (cl1) is the carrying out of Pharaoh's command 'pray to the LORD' (Exo.8.4 cl2)",
+   "why": "the verb differs (cry out, not pray) and the report has no asah plus ken pro-form, which the fulfils form is defined by; the fit is plausible but the form does not settle it"
+  }
+ ]
+}

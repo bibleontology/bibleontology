@@ -1,0 +1,40 @@
+{
+ "ref": "Exo.8.7",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Exo.8.5#w4",
+   "divine": false
+  },
+  {
+   "slot": "w9",
+   "choice": "Exo.8.5#w4",
+   "divine": false
+  },
+  {
+   "slot": "w13",
+   "choice": "Exo.8.5#w4",
+   "divine": false
+  },
+  {
+   "slot": "w17",
+   "choice": "Exo.8.5#w4",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w3",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

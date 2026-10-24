@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Constellations</title>
+<!-- Claude, 2026-09-27. The first viewer was adequate but not the
+     insightful graphical view that was hoped for. Serve with
+     `python -m http.server 8004 --directory tools/wordgraph` and open
+     /wordpage.html. Data: wordpage-data.json (export_wordpage.py). -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+:root {
+  --bg: #f7f5f0; --panel: #fffdf8; --ink: #1f1d1a; --muted: #6b665d;
+  --line: #ddd7cb; --accent: #8a5a1f;
+  --ctx: #1f7a73; --lxx: #b07a12; --roles: #6d4aa3; --cross: #b8325a;
+  --assert: #3d6fa3; --direct: #b4502e; --question: #6d4aa3; --nonfin: #8f8a80;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171614; --panel: #1f1d1a; --ink: #ece7dd; --muted: #a39d92;
+    --line: #37332d; --accent: #d9a45a;
+    --ctx: #4fbfb5; --lxx: #e2b04a; --roles: #a88be0; --cross: #ef7a9d;
+    --assert: #7aa7d8; --direct: #e0845f; --question: #a88be0; --nonfin: #8f8a80;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+  padding: 14px 20px; border-bottom: 1px solid var(--line); }
+header h1 { font-size: 18px; margin: 0; font-weight: 600; letter-spacing: .01em; }
+header h1 span { color: var(--muted); font-weight: 400; }
+.search { position: relative; flex: 1; min-width: 220px; max-width: 420px; }
+.search input { width: 100%; padding: 8px 12px; border: 1px solid var(--line);
+  border-radius: 8px; background: var(--panel); color: var(--ink); font-size: 15px; }
+.results { position: absolute; top: 40px; left: 0; right: 0; z-index: 5;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+  max-height: 320px; overflow: auto; display: none; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.results div { padding: 6px 12px; cursor: pointer; display: flex; justify-content: space-between; gap: 10px; }
+.results div:hover, .results div.on { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.heb { font-family: "SBL Hebrew", "Ezra SIL", "Times New Roman", serif; direction: rtl; }
+.grk { font-family: "SBL Greek", "Gentium Plus", "Times New Roman", serif; direction: ltr; }
+.lang { font-size: 11px; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px;
+  color: var(--muted); margin-left: 6px; vertical-align: middle; }
+.books.nt { margin-top: 10px; }
+.muted { color: var(--muted); }
+button.back { border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  border-radius: 8px; padding: 7px 12px; cursor: pointer; }
+main { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
+  gap: 16px; padding: 16px 20px; }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; padding: 12px 16px; } }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+#graph { min-height: 520px; position: relative; padding: 0; overflow: hidden; }
+#graph svg { width: 100%; height: 520px; display: block; }
+.legend { font-size: 12px; display: flex; gap: 12px; flex-wrap: wrap;
+  padding: 8px 12px; border-top: 1px solid var(--line); }
+.legend label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+.sw { width: 18px; height: 3px; border-radius: 2px; display: inline-block; }
+.title { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.title .heb, .title .grk { font-size: 34px; }
+.title .gl { font-size: 20px; }
+h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+  margin: 16px 0 6px; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; cursor: pointer;
+  font-size: 13px; background: transparent; color: var(--ink); }
+.chip:hover { border-color: var(--accent); }
+.chip small { color: var(--muted); margin-left: 4px; }
+.rel { display: grid; grid-template-columns: 92px 1fr; gap: 6px 10px; align-items: start; }
+.rel b { font-weight: 600; font-size: 13px; padding-top: 3px; }
+.bars div { display: grid; grid-template-columns: 1fr 120px 36px; gap: 8px; align-items: center; font-size: 13px; }
+.bar { height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
+.bar i { display: block; height: 100%; }
+.force { display: flex; height: 16px; border-radius: 6px; overflow: hidden; margin: 4px 0; }
+.force i { display: block; height: 100%; }
+.fkey { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; }
+.books { display: grid; grid-template-columns: repeat(39, 1fr); gap: 2px; margin-top: 4px; }
+.books i { height: 26px; border-radius: 3px; display: block; }
+.bookkey { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); }
+.lower { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .lower { grid-template-columns: 1fr; } }
+.note { font-size: 12px; color: var(--muted); }
+#tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--bg);
+  font-size: 12px; padding: 4px 8px; border-radius: 6px; opacity: 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Word constellations <span>· Hebrew Bible and New Testament</span></h1>
+  <div class="search">
+    <input id="q" placeholder="Search a Hebrew or Greek word, or an English gloss…" autocomplete="off">
+    <div class="results" id="res"></div>
+  </div>
+  <button class="back" id="back" title="Back to the previous word">← Back</button>
+</header>
+<main>
+  <section class="card" id="graph">
+    <svg id="svg"></svg>
+    <div class="legend" id="legend"></div>
+  </section>
+  <section class="card" id="side"></section>
+  <div class="lower">
+    <section class="card" id="sept"></section>
+    <section class="card" id="bsb"></section>
+    <section class="card" id="where"></section>
+  </div>
+</main>
+<div id="tip"></div>
+<script>
+const EV = {
+  cross:   {label: "across the languages (Hebrew · Aramaic · Greek)", color: "var(--cross)", auc: "36/39"},
+  all:     {label: "all evidence together", color: "var(--ink)", auc: "0.99"},
+  context: {label: "shares clauses with (in its own language)", color: "var(--ctx)", auc: "0.99 · Greek 0.92"},
+  lxx:     {label: "alike in the Septuagint", color: "var(--lxx)", auc: "0.99 · Greek 0.98"},
+  roles:   {label: "plays the same part", color: "var(--roles)", auc: "0.86"},
+};
+const REL = {does: "does", is: "is", undergoes: "is done to it", is_said_of: "is said of"};
+const FORCE = {assertion: "--assert", directive: "--direct", question: "--question", nonfinite: "--nonfin"};
+let DATA, BY = {}, LABEL = {}, hist = [], shown = {cross: true, all: true, context: true, lxx: true, roles: true};
+const LANG = {H: "Hebrew", A: "Aramaic", G: "Greek"};
+const scriptOf = id => (id || "").startsWith("lex:G:") ? "grk" : "heb";
+const langOf = id => ({H: "Hebrew", A: "Aramaic", G: "Greek"})[(id || "").split(":")[1]] || "";
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+fetch("wordpage-data.json").then(r => r.json()).then(d => {
+  DATA = d; LABEL = d.labels;
+  d.words.forEach(w => BY[w.id] = w);
+  const start = new URLSearchParams(location.hash.slice(1)).get("w");
+  show(BY[start] ? start : (d.words.find(w => w.gloss === "steadfast love") || d.words[0]).id, false);
+});
+
+function label(id) { const l = LABEL[id] || ["?", "", 0]; return {lemma: l[0], gloss: l[1], count: l[2]}; }
+
+function show(id, push = true) {
+  const w = BY[id]; if (!w) return;
+  if (push && hist[hist.length - 1] !== id) hist.push(id);
+  if (!push && !hist.length) hist.push(id);
+  history.replaceState(null, "", "#w=" + encodeURIComponent(id));
+  drawGraph(w); drawSide(w); drawLower(w);
+}
+$("#back").onclick = () => { if (hist.length > 1) { hist.pop(); show(hist[hist.length - 1], false); } };
+
+// ---------------- the constellation ----------------
+function drawGraph(w) {
+  const svg = d3.select("#svg"); svg.selectAll("*").remove();
+  const box = $("#svg").getBoundingClientRect(), W = box.width, H = 520;
+  const nodes = [{id: w.id, center: true, ...label(w.id)}], links = [], seen = {[w.id]: 0};
+  for (const ev of Object.keys(EV)) {
+    if (!shown[ev]) continue;
+    for (const [m, s] of (w.near[ev] || [])) {
+      if (!(m in seen)) { seen[m] = nodes.length; nodes.push({id: m, ...label(m), ev: new Set()}); }
+      nodes[seen[m]].ev?.add(ev);
+      links.push({source: w.id, target: m, ev, s});
+    }
+  }
+  const r = d => d.center ? 34 : 6 + Math.min(16, Math.log2(1 + d.count) * 1.6);
+  const sim = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(l => 90 + (1 - l.s) * 130).strength(.6))
+    .force("charge", d3.forceManyBody().strength(-260))
+    .force("center", d3.forceCenter(W / 2, H / 2))
+    .force("collide", d3.forceCollide(d => r(d) + 22));
+  const g = svg.append("g");
+  const zoom = d3.zoom().scaleExtent([.3, 3]).on("zoom", e => g.attr("transform", e.transform));
+  svg.call(zoom);
+  // FIT TO THE FRAME: labels sit above each node, so the box is padded
+  const fit = () => {
+    const xs = nodes.map(d => d.x), ys = nodes.map(d => d.y);
+    const x0 = Math.min(...xs) - 60, x1 = Math.max(...xs) + 60;
+    const y0 = Math.min(...ys) - 50, y1 = Math.max(...ys) + 40;
+    const k = Math.min(1.4, W / (x1 - x0), H / (y1 - y0));
+    svg.call(zoom.transform,
+      d3.zoomIdentity.translate(W / 2 - k * (x0 + x1) / 2, H / 2 - k * (y0 + y1) / 2).scale(k));
+  };
+  const link = g.selectAll("line").data(links).join("line")
+    .attr("stroke", l => EV[l.ev].color).attr("stroke-opacity", .75)
+    .attr("stroke-width", l => 1 + l.s * 6);
+  const node = g.selectAll("g.n").data(nodes).join("g").attr("class", "n")
+    .style("cursor", d => d.center ? "default" : "pointer")
+    .on("click", (e, d) => { if (!d.center && BY[d.id]) show(d.id); })
+    .on("mousemove", (e, d) => tip(e, `${d.gloss} · ${d.count.toLocaleString()} occurrences` +
+        (d.ev ? " · " + [...d.ev].map(x => EV[x].label).join("; ") : "")))
+    .on("mouseleave", () => $("#tip").style.opacity = 0)
+    .call(d3.drag().on("start", (e, d) => { if (!e.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on("drag", (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on("end", (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = d.fy = null; }));
+  node.append("circle").attr("r", r)
+    .attr("fill", d => d.center ? css("--accent") : css("--panel"))
+    .attr("stroke", d => d.center ? css("--accent") : (d.ev && d.ev.size > 1 ? css("--ink") : EV[[...d.ev][0]].color))
+    .attr("stroke-width", d => d.ev && d.ev.size > 1 ? 3 : 2)
+    .attr("opacity", d => BY[d.id] || d.center ? 1 : .55);
+  node.append("text").attr("class", d => scriptOf(d.id)).attr("text-anchor", "middle")
+    .attr("dy", d => d.center ? 6 : -r(d) - 16).attr("font-size", d => d.center ? 20 : 15)
+    .attr("fill", d => d.center ? css("--panel") : css("--ink")).text(d => d.lemma);
+  node.append("text").attr("text-anchor", "middle").attr("dy", d => d.center ? r(d) + 18 : -r(d) - 3)
+    .attr("font-size", 12).attr("fill", css("--muted"))
+    .text(d => d.gloss + (!d.center && langOf(d.id) !== langOf(w.id) ? " · " + langOf(d.id) : ""));
+  const place = () => {
+    link.attr("x1", l => l.source.x).attr("y1", l => l.source.y).attr("x2", l => l.target.x).attr("y2", l => l.target.y);
+    node.attr("transform", d => `translate(${d.x},${d.y})`);
+  };
+  // the layout is computed AT ONCE, not animated: an animation pauses when
+  // the page is not in view, and left the graph unlaid (2026-09-27)
+  sim.stop();
+  sim.tick(300);
+  place();
+  fit();
+  sim.on("tick", place);            // dragging a node restarts it
+  $("#legend").innerHTML = Object.entries(EV).map(([k, v]) =>
+    `<label><input type="checkbox" ${shown[k] ? "checked" : ""} data-ev="${k}">
+     <span class="sw" style="background:${v.color}"></span>${v.label}
+     <span class="muted">(tested ${v.auc})</span></label>`).join("") +
+    `<span class="muted">· a dark ring = found by more than one kind of evidence</span>`;
+  $("#legend").querySelectorAll("input").forEach(i => i.onchange = () => { shown[i.dataset.ev] = i.checked; drawGraph(w); });
+}
+function tip(e, t) { const el = $("#tip"); el.textContent = t; el.style.left = e.clientX + 12 + "px"; el.style.top = e.clientY + 12 + "px"; el.style.opacity = .95; }
+
+// ---------------- the portrait ----------------
+function chip(id, n) {
+  const l = label(id), live = !!BY[id];
+  return `<button class="chip" ${live ? `data-go="${esc(id)}"` : "disabled"} title="${esc(l.lemma)}">
+    ${esc(l.gloss || l.lemma)}${n ? `<small>${n}</small>` : ""}</button>`;
+}
+function drawSide(w) {
+  const lang = LANG[w.lang] || w.lang;
+  let h = `<div class="title"><span class="${scriptOf(w.id)}">${esc(w.lemma)}</span><span class="gl">${esc(w.gloss)}</span></div>
+    <div class="muted">${w.count.toLocaleString()} occurrences · ${lang}${w.strong ? " · Strong's " + esc(w.strong) : ""}</div>`;
+  const rels = Object.keys(REL).filter(k => w.portrait[k]);
+  h += `<h3>What the text says about it</h3>`;
+  h += rels.length ? `<div class="rel">` + rels.map(k =>
+      `<b>${REL[k]}</b><div class="chips">${w.portrait[k].map(([p, n]) => chip(p, n)).join("")}</div>`).join("") + `</div>`
+    : `<div class="note">${w.lang === "G" ? "Greek structure is not built yet (plan Step 3), so the text's roles cannot be read for Greek words. Its links across the languages are in the graph."
+       : "Too few clauses give it a subject, object or predicate role to say."}</div>`;
+  h += `<div class="note" style="margin-top:6px">From the structure graph's roles over the whole Hebrew Bible; a pronoun counts for the one it refers to. Numbers are clauses.</div>`;
+  const f = w.force, tot = Object.values(f).reduce((a, b) => a + b, 0);
+  if (tot) {
+    h += `<h3>How it is spoken</h3><div class="force">` + Object.keys(FORCE).map(k =>
+      f[k] ? `<i style="width:${100 * f[k] / tot}%;background:var(${FORCE[k]})" title="${k}: ${f[k]}"></i>` : "").join("") +
+      `</div><div class="fkey">` + Object.keys(FORCE).map(k =>
+      `<span><span class="sw" style="background:var(${FORCE[k]})"></span> ${k} ${Math.round(100 * (f[k] || 0) / tot)}%</span>`).join("") + `</div>`;
+  }
+  $("#side").innerHTML = h;
+  $("#side").querySelectorAll("[data-go]").forEach(b => b.onclick = () => show(b.dataset.go));
+}
+
+// ---------------- the lower panels ----------------
+function bars(title, rows, color, note) {
+  const max = Math.max(1, ...rows.map(r => r[r.length - 1]));
+  return `<h3 style="margin-top:0">${title}</h3><div class="bars">` + rows.map(r =>
+    `<div><span>${r.slice(0, -1).map(esc).join(" <span class='muted'>") + (r.length > 2 ? "</span>" : "")}</span>
+     <span class="bar"><i style="width:${100 * r[r.length - 1] / max}%;background:${color}"></i></span>
+     <span class="muted">${r[r.length - 1]}</span></div>`).join("") + `</div><div class="note" style="margin-top:8px">${note}</div>`;
+}
+function drawLower(w) {
+  $("#sept").innerHTML = w.sept.length ? bars("Septuagint renderings", w.sept, "var(--lxx)",
+    "The Greek the ancient translators chose (MACULA's alignment, CC BY 4.0).")
+    : `<h3 style="margin-top:0">Septuagint renderings</h3><div class="note">No aligned Greek for this word.</div>`;
+  $("#bsb").innerHTML = w.bsb.length ? bars("BSB renderings", w.bsb, "var(--accent)",
+    "The English the Berean editors tagged to its Strong's number (public domain).")
+    : `<h3 style="margin-top:0">BSB renderings</h3><div class="note">No tagged BSB English for this word.</div>`;
+  const max = Math.max(1, ...w.books);
+  const cell = (n, i) => `<i title="${DATA.books[i]}: ${n}" style="background:${n ? `color-mix(in srgb, var(--accent) ${15 + 85 * Math.sqrt(n / max)}%, transparent)` : "var(--line)"}"></i>`;
+  const ot = w.books.slice(0, 39), nt = w.books.slice(39);
+  $("#where").innerHTML = `<h3 style="margin-top:0">Where it occurs</h3><div class="books">` +
+    ot.map((n, i) => cell(n, i)).join("") +
+    `</div><div class="bookkey"><span>Genesis</span><span>Psalms</span><span>Malachi</span></div>
+     <div class="books nt" style="grid-template-columns:repeat(27,1fr)">` + nt.map((n, i) => cell(n, i + 39)).join("") +
+    `</div><div class="bookkey"><span>Matthew</span><span>Romans</span><span>Revelation</span></div>
+     <div class="note" style="margin-top:8px">The Hebrew Bible (39 books) and the New Testament (27); hover for counts.</div>`;
+}
+
+// ---------------- search ----------------
+const strip = s => (s || "").normalize("NFD").replace(/[֑-ׇ̀-ͯ]/g, "").toLowerCase();
+let pick = [], at = 0;
+$("#q").oninput = () => {
+  const q = strip($("#q").value.trim());
+  if (!q) { $("#res").style.display = "none"; return; }
+  pick = DATA.words.filter(w => strip(w.lemma).includes(q) || (w.gloss || "").toLowerCase().includes(q)).slice(0, 30);
+  at = 0; renderRes();
+};
+$("#q").onkeydown = e => {
+  if (e.key === "ArrowDown") { at = Math.min(pick.length - 1, at + 1); renderRes(); e.preventDefault(); }
+  if (e.key === "ArrowUp") { at = Math.max(0, at - 1); renderRes(); e.preventDefault(); }
+  if (e.key === "Enter" && pick[at]) choose(pick[at].id);
+  if (e.key === "Escape") $("#res").style.display = "none";
+};
+function renderRes() {
+  $("#res").innerHTML = pick.map((w, i) => `<div class="${i === at ? "on" : ""}" data-id="${esc(w.id)}">
+    <span><span class="${scriptOf(w.id)}">${esc(w.lemma)}</span> ${esc(w.gloss)}<span class="lang">${LANG[w.lang] || ""}</span></span><span class="muted">${w.count.toLocaleString()}</span></div>`).join("")
+    || `<div class="muted">No word matches.</div>`;
+  $("#res").style.display = "block";
+  $("#res").querySelectorAll("[data-id]").forEach(d => d.onclick = () => choose(d.dataset.id));
+}
+function choose(id) { $("#res").style.display = "none"; $("#q").value = ""; show(id); }
+document.addEventListener("click", e => { if (!e.target.closest(".search")) $("#res").style.display = "none"; });
+</script>
+</body>
+</html>

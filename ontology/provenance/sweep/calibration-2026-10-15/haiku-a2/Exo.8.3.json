@@ -1,0 +1,18 @@
+{"ref": "Exo.8.3",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "The possessive 'their' is masculine plural and modifies 'secret arts' (w6). The only agreeing masculine plural in this verse is the magicians (w4), and the enchantments are theirs.", "category": "possessive in a noun phrase"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "Implied third masculine plural subject of the wayyiqtol 'brought up'. Frogs (w12) are feminine and cannot be the doers. The subject is the same magicians as in cl0.", "category": "implied subject carried over within the verse"}
+ ],
+ "links": [
+  {"src": "cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "The builder's cl2 is the last clause of the previous verse (Exo.8.2#cl2, it covered the land of Egypt), not a clause of this verse. The then type is within a verse only; across verses is the episode rung, which link_types does not supply.", "category": "then across a verse boundary"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "The second clause is a wayyiqtol with fused waw that continues the narrative line of the first within the verse.", "category": "narrative continuation within a verse"},
+  {"src": "cl0", "type": "likewise", "dst": "Exo.8.2#cl0", "action": "add", "why": "The magicians did thus (ken) as Aaron had just stretched out his hand (8:2). Their subject is named (the magicians, w4) and they were not commanded to do it, so this is imitation, not fulfilment. Aaron's own act carried out the command of 8:1.", "category": "imitation of an uncommanded deed"},
+  {"src": "cl1", "type": "elaborates", "dst": "cl0", "action": "add", "why": "The clause gives the content of what the magicians did as cl0 reports it: they brought the frogs up onto the land of Egypt.", "category": "detail of an imitated deed"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl1"}, {"role": "group_subject", "node": "w4"}], "divine": false, "why": "Two clauses in a row are acts of one agent, the magicians. Each states its subject only in its verb, and both point to w4.", "category": "consecutive acts of one agent"}
+ ],
+ "none_fit": [
+  {"where": "cl0 and Exo.8.2#cl2", "what": "Narrative continuation across a verse boundary (the episode rung). link_types allows then only within a verse, so the builder's cross-verse link has no permitted type."}
+ ],
+ "cant_tell": []}

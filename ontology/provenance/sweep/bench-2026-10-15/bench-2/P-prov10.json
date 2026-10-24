@@ -1,0 +1,94 @@
+{"passage": "B-prov10", "verses": [
+{"ref": "Pro.10.1",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "Possessive 'his' on 'mother' (masc sg). The mother in view is the mother of the foolish son of this same clause, so the possessor is that son (w7, masc sg, modified by 'foolish' w8), not the wise son of the first clause (w2).", "category": "possessive pronoun in the clause's own subject"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "Plain waw opening cl2. The English 'but' gives an antithesis, but the contrast link is reserved for explicit but-words (אוּלָם, אֶפֶס כִּי), so a bare waw stays 'and'.", "category": "plain and read as opposition"}
+ ],
+ "groups": [
+  {"id": "Pro.10.1#g1", "kind": "writing", "action": "add", "members": [{"role": "frame", "node": "cl0"}, {"role": "sender", "node": "w1"}], "divine": false, "why": "The heading 'the proverbs of Solomon' is the frame of the collection and names its writer (Solomon, w1). Part is left empty: the proverbs run beyond this verse and no single verse holds them.", "category": "book heading naming its writer"}
+ ],
+ "none_fit": [
+  {"where": "cl1 and cl2", "what": "Antithetic couplet: the second line opposes the first, carried only by a plain waw. No link type covers antithesis without an explicit but-word."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Pro.10.2",
+ "referents": [],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw opening cl1 (righteousness delivers). The English 'but' is an opposition the waw does not carry as a contrast link, so it stays 'and'.", "category": "plain and read as opposition"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 and cl1", "what": "Antithetic couplet (gain from wickedness against deliverance by righteousness) joined by a waw; no link type for antithesis without an explicit but-word."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Pro.10.3",
+ "referents": [
+  {"slot": "cl1s", "choice": "w2", "divine": true, "why": "Third masculine singular 'he rejects' in the second line of the same sentence. The subject of the first line is the LORD (w2, masc sg), the nearest agreeing sensible doer of a rejecting act. The parser's guess agrees.", "category": "implied subject carried across a waw line"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw opening cl1 (וְ). The opposition is the sense, not the connective, so it stays 'and'.", "category": "plain and read as opposition"}
+ ],
+ "groups": [
+  {"id": "Pro.10.3#g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "w2"}], "divine": true, "why": "Two lines with one subject, the LORD. The second restates the first's roles (the LORD's act toward a desire of the righteous or the wicked) and states no subject of its own. This is the parallel kind's case.", "category": "two lines with one subject"}
+ ],
+ "none_fit": [
+  {"where": "cl0 and cl1", "what": "Antithetic couplet (the righteous not left hungry against the wicked's craving rejected) joined by a waw; no link type for antithesis without an explicit but-word."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Pro.10.4",
+ "referents": [],
+ "links": [
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The participial clause 'one who works a slack hand' is the subject of cl0's predicate 'is poor', so it sits inside cl0.", "category": "participial subject inside a predicate"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "keep", "why": "Plain waw opening cl2, which the English renders 'but'. The opposition is recorded as a waw, not a contrast link.", "category": "plain and read as opposition"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 and cl2", "what": "Antithetic couplet (the slack hand against the diligent hand) joined by a waw; no link type for antithesis without an explicit but-word."}
+ ],
+ "cant_tell": [
+  {"what": "Implied subject 'one who' of the participle 'works' (cl1), which is also the subject of cl0's 'is poor'.", "why": "A generic person with no candidate that names it, and the parser gives it no slot, so there is no referent to choose."}
+ ]
+},
+{"ref": "Pro.10.5",
+ "referents": [],
+ "links": [
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The participial clause 'one who gathers in summer' is the subject of cl0's predicate, so it sits inside cl0.", "category": "participial subject inside a predicate"},
+  {"src": "cl2", "type": "within", "dst": "cl3", "action": "keep", "why": "Same pattern in the second sentence: 'one who sleeps at harvest' is the subject of cl2's predicate.", "category": "participial subject inside a predicate"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 and cl2", "what": "Antithetic pair of sentences (a wise son against a disgraceful son) with no connective in the data; the contrast link is for explicit but-words only."}
+ ],
+ "cant_tell": [
+  {"what": "Implied subjects 'one who' of the participles 'gathers' (cl1) and 'sleeps' (cl3).", "why": "Generic persons with no candidate, and the parser gives them no slot."},
+  {"what": "Relative 'who' of 'acts prudently' (cl0) and of 'acts shamefully' (cl2).", "why": "Not listed as a slot. The sense points to the son named in the same clause (w4 in cl0, w10 in cl2), but the reader should confirm it."}
+ ]
+},
+{"ref": "Pro.10.6",
+ "referents": [],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw opening cl1. The English 'but' gives an antithesis the waw does not carry as a contrast link, so it stays 'and'.", "category": "plain and read as opposition"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 and cl1", "what": "Antithesis between blessings on the righteous and the wicked mouth's concealed violence, carried by a waw; no link type for it without an explicit but-word."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Pro.10.7",
+ "referents": [],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw opening cl1. The antithesis is by sense only, so the waw stays 'and'.", "category": "plain and read as opposition"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 and cl1", "what": "Antithesis between the memory of the righteous and the name of the wicked, carried by a waw; no link type for it without an explicit but-word."}
+ ],
+ "cant_tell": []
+}
+]}

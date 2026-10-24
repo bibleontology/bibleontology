@@ -1,0 +1,54 @@
+{
+ "ref": "Mrk.15.1",
+ "referents": [
+  {
+   "slot": "cl3s",
+   "choice": "w4",
+   "divine": false,
+   "why": "Masculine plural agrees with the chief priests, who are the subject of the main verb cl0 in the same sentence (they formed the counsel, bound Jesus, led him away). cl3 carries the same subject on by a separate kai, so 'they' is the same doers.",
+   "category": "implied subject carried on through a coordinated verb"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle 'having formed a counsel' is nested in the main clause as a dependent participle.",
+   "category": "participle nested in main clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The participle 'having bound Jesus' is nested in the main clause in the same way.",
+   "category": "participle nested in main clause"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "'then' is for a waw fused into the verb (wayyiqtol). Here the join is the separate word kai, which is 'and'.",
+   "category": "separate-word and given as and then"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl3",
+   "action": "add",
+   "why": "A separate kai joins two finite verbs of the same agent: they led him away, and handed him over.",
+   "category": "separate-word and"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether 'they' in cl3 is the chief priests alone or the whole body named in the verse (elders, scribes, Council).",
+   "why": "The verse names the chief priests as the subject of the main verb and the others only as companions; the text does not say which of them handed Jesus over. Chose the chief priests as the grammatical subject of cl0."
+  }
+ ]
+}

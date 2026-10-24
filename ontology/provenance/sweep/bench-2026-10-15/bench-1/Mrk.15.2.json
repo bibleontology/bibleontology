@@ -1,0 +1,156 @@
+{
+ "ref": "Mrk.15.2",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "'Him' is the object of 'questioned', masculine singular. Jesus is the one Pilate questions and the addressee of Pilate's speech.",
+   "category": "object pronoun, addressee of speech"
+  },
+  {
+   "slot": "w5",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "'You' inside Pilate's question is second person, so it is the addressee of that speech: Jesus.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w14",
+   "choice": "w4",
+   "divine": false,
+   "why": "'to him' (autoi) is dative singular masculine: the one Jesus answers, which is Pilate.",
+   "category": "dative addressee of a reply"
+  },
+  {
+   "slot": "w16",
+   "choice": "w4",
+   "divine": false,
+   "why": "'You' in Jesus's reply is second person inside his speech, so it is the addressee of that speech: Pilate, whose words he returns.",
+   "category": "second person inside a speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "The participle answering is nested in the reply clause, as the grammar nests it.",
+   "category": "participle nested in reply"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "What Jesus says is nested in the reply clause; kept, with the content link added below, per the rule that both apply.",
+   "category": "speech nested in speaking"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reverses the order: the answering comes after the questioning, not before it. The reply is the next turn, carried by the turn structure.",
+   "category": "link runs backward in narrative"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Kai joins the questioning to the question Pilate puts.",
+   "category": "separate-word and joining saying to its speech"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "De marks a change of speaker in a dialogue; it does not join two acts. A reply to a question is not a waw relation.",
+   "category": "speaker change read as and"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Pilate's questioning is a saying clause and what he says is his question. Per R1 added alongside the turn.",
+   "category": "saying clause to its speech"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add",
+   "why": "Jesus says, and what he says is 'You have said so'. Per R1 added alongside the turn and the within link.",
+   "category": "saying clause to its speech"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "Mrk.15.1#w18"
+    }
+   ],
+   "divine": true,
+   "why": "Pilate is the sender of the question. The addressee was missing; Jesus is the one questioned.",
+   "category": "turn missing its addressee"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "Mrk.15.1#w18"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "The reply is Jesus's. The builder's sender w12 is not a candidate in this verse. Addressee is Pilate.",
+   "category": "turn sender corrected"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "the reply (cl2) to the question (cl1)",
+   "what": "A reply to a question by the other party. No link type says answers, so the question-and-reply pair is carried only by the two turns."
+  }
+ ],
+ "cant_tell": []
+}

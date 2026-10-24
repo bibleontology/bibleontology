@@ -1,0 +1,299 @@
+{
+ "ref": "Exo.8.16",
+ "referents": [
+  {
+   "slot": "w22",
+   "choice": "w13",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'say to him' in the commanded speech: the one spoken to is Pharaoh",
+   "category": "addressee of a commanded speech"
+  },
+  {
+   "slot": "w28",
+   "choice": "w25",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "1cs 'my people' inside the quoted message thus says the LORD: the speaker of that message is the LORD",
+   "category": "first person inside a quoted message"
+  },
+  {
+   "slot": "w31",
+   "choice": "w25",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "1cs 'me' inside the quoted message: the LORD is the speaker",
+   "category": "first person inside a quoted message"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "2ms command 'rise early' is addressed by the LORD to Moses",
+   "category": "implied subject of a command to Moses"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "2ms command 'present yourself' is addressed by the LORD to Moses, joined by waw to cl1",
+   "category": "implied subject of a command to Moses"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "2ms 'you will say to him' is the command to Moses to speak; the one commanded to speak the words is Moses",
+   "category": "commanded speaker"
+  },
+  {
+   "slot": "cl7s",
+   "choice": "w13",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "2ms 'let go my people' is the message the LORD gives, addressed to Pharaoh",
+   "category": "implied addressee of a quoted command"
+  },
+  {
+   "slot": "cl8s",
+   "choice": "w27",
+   "confidence": "medium",
+   "divine": false,
+   "rhetorical": false,
+   "why": "3mp 'that they may serve me' refers to the people; a collective noun taking a plural verb, with the people as the referent",
+   "category": "plural for a collective noun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl0 is the first clause of the verse; there is no earlier clause within the verse for a then-link to come from, and this one runs backward",
+   "category": "then link reversed"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "confidence": "high",
+   "why": "two commands joined by waw, one imperative group",
+   "category": "commands joined by and"
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl5",
+   "action": "keep",
+   "confidence": "medium",
+   "why": "a weqatal continues whatever it follows; the when-clause is the nearest clause before it, though it is a setting and not the main line",
+   "category": "weqatal continues its predecessor"
+  },
+  {
+   "src": "cl7",
+   "type": "and",
+   "dst": "cl8",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a command then waw and a yiqtol in a different person gives a purpose, not a plain and",
+   "category": "command and its purpose"
+  },
+  {
+   "src": "cl7",
+   "type": "purpose",
+   "dst": "cl8",
+   "action": "add",
+   "confidence": "high",
+   "why": "let my people go, so that they may serve me: the yiqtol in the third person after a second-person command",
+   "category": "command and its purpose"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "imp1",
+   "action": "add",
+   "confidence": "medium",
+   "why": "he said to Moses introduces a collection of commands (rise early, present yourself); the speech that follows is the commanded turn",
+   "category": "saying introduces commands"
+  },
+  {
+   "src": "cl5",
+   "type": "content",
+   "dst": "cl6",
+   "action": "add",
+   "confidence": "high",
+   "why": "you will say to him introduces the message thus says the LORD",
+   "category": "commanded saying introduces the message"
+  },
+  {
+   "src": "cl6",
+   "type": "content",
+   "dst": "imp7",
+   "action": "add",
+   "confidence": "high",
+   "why": "thus says the LORD introduces a command with its purpose, the imperative group",
+   "category": "saying introduces commands"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.16#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the outer turn is the LORD speaking to Moses; the commanded turn to Pharaoh is nested as a part, so the cl5 clause moves into it",
+   "category": "speech nests inside speech"
+  },
+  {
+   "id": "Exo.8.16#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl5"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w13"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "Moses is commanded to say the message to Pharaoh; the message quoting the LORD is its innermost part, so Moses is the sender of this turn",
+   "category": "commanded speech sender"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl6"
+    },
+    {
+     "role": "part",
+     "node": "cl7"
+    },
+    {
+     "role": "part",
+     "node": "cl8"
+    },
+    {
+     "role": "sender",
+     "node": "w25"
+    },
+    {
+     "role": "addressee",
+     "node": "w13"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the innermost turn is the message thus says the LORD, so its sender is the LORD and it is addressed to Pharaoh; it is now a part of the commanded turn",
+   "category": "message quoting another"
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "rise early and present yourself are commands joined by waw at one level, so both are command members",
+   "category": "commands joined by and"
+  },
+  {
+   "id": "imp7",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl7"
+    },
+    {
+     "role": "aim",
+     "node": "cl8"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "let my people go is the command; so that they may serve me is its aim",
+   "category": "command with its aim"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl3 and cl4 (there, he is going out to the water)",
+   "what": "a when-setting made with hinneh and a participle; no link type marks the temporal setting of a command"
+  }
+ ],
+ "cant_tell": []
+}

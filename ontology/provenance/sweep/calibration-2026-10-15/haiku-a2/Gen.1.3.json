@@ -1,0 +1,17 @@
+{"ref": "Gen.1.3",
+ "referents": [],
+ "links": [
+  {"src": "cl2", "type": "then", "dst": "cl0", "action": "keep", "why": "cl2 is a waw-fused wayyiqtol, a narrative continuation. The nearest preceding clause that is not inside a speech is cl0, the saying.", "category": "narrative and-then after a speech"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is inside God's speech, so it is not on the narrative line. The wayyiqtol cl2 continues from cl0, which the kept link already records.", "category": "narrative and-then wrongly drawn from inside a speech"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "cl0 is the saying (wayyiqtol of say, subject God) and cl1 is what was said, embedded in the speech.", "category": "speech and its embedded content"},
+  {"src": "cl2", "type": "fulfils", "dst": "cl1", "action": "add", "why": "cl1 is a command (jussive of be: let it be light). cl2 reports it carried out by repeating the same verb in narrative (there was light), unnegated. The rule's pro-form (ken) is absent, so this rests on the repeated verb; see cant_tell.", "category": "fulfilment of an earlier command by repeated verb"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "w2"}], "divine": true, "why": "cl0 is the saying, cl1 is what is said, and the sender is God (w2, the subject of the saying verb). No addressee is stated.", "category": "speech with a named divine sender"},
+  {"id": "imp1", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}], "divine": false, "why": "The builder gave cl2 the role part, which the imperative kind does not have. Only cl1 is a command here. cl2 is not the effect, since effect is for a third-person weqatal and cl2 is a wayyiqtol. cl2 moves to an action-state group.", "category": "builder role not in group kind"},
+  {"id": "g1", "kind": "action-state", "action": "add", "members": [{"role": "action", "node": "cl1"}, {"role": "state", "node": "cl2"}], "divine": false, "why": "A command followed by the same act reported as having happened: let there be light, then there was light.", "category": "command then report of its fulfilment"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "Whether cl2 fulfils cl1 under the fulfilment rule, which asks for a so pro-form (asah or hayah plus ken) that this verse lacks.", "why": "The verb repeats the command's verb and the sense is plainly that the word was carried out, but the stated form is absent. The fulfils link is added on the repeated verb and is flagged for review."}
+ ]}

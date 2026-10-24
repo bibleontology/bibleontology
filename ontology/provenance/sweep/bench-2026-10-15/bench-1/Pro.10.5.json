@@ -1,0 +1,35 @@
+{
+ "ref": "Pro.10.5",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle 'one who gathers in summer' is a relative clause inside the subject of the nominal clause 'a son who acts prudently'. The nesting stands.",
+   "category": "participle nested in subject noun phrase"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "The participle 'one who sleeps at harvest' is a relative clause inside the subject of the nominal clause 'a son who acts shamefully'. The nesting stands.",
+   "category": "participle nested in subject noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0 and cl2",
+   "what": "two opposed 'one who ... is a son' lines with different subjects; no link type marks an antithesis, and no group kind holds two descriptions of different referents"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the relation between cl0 and cl2",
+   "why": "cl2 has no connective in the parse (opens_with is null), so the opposition the English shows with 'but' is not marked in the data. No link is added."
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{"ref": "Exo.8.10",
+ "referents": [
+  {"slot": "w3", "choice": "none", "divine": false, "why": "The object suffix of 'they piled them' (masculine plural) refers to the dead frogs of Exo.8.9 (the frogs died), which are what is piled. None of the masculine plural candidates fits: the heaps (w4, w5) are what the piling produces, not what is piled, and the people and composites are not piled.", "category": "object of the act, no candidate for the thing acted on"},
+  {"slot": "cl0s", "choice": "cant_tell", "divine": false, "why": "The implied masculine plural subject of the wayyiqtol 'they piled' has no named antecedent in the verse, so the text does not say who did the piling. The nearest masculine plural candidate is Moses and Aaron (Exo.8.8#c2), who are not sensible doers of gathering dead frogs. The composite that includes the people (Exo.8.5#c11) also carries Pharaoh, so it does not settle the impersonal 'they'.", "category": "impersonal third plural with no antecedent"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "Built backwards. The wayyiqtol 'it stank' (cl1) comes after the piling (cl0); a wayyiqtol continues from the nearest earlier clause, so the only supported direction is cl0 then cl1.", "category": "then link runs backwards"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "The waw fused into the wayyiqtol 'it stank' continues the narrative line from the piling to the stench, within the verse.", "category": "plain narrative succession"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "the implied subject of cl0 ('they piled')", "why": "The text does not name the agent of the piling, and no single candidate is the people alone; see referents."},
+  {"what": "the referent of 'them' (w3), the frogs", "why": "The frogs died in Exo.8.9 and are the object here, but they are not on the candidate list, which holds only people, groups and this verse's nouns."}
+ ]
+}

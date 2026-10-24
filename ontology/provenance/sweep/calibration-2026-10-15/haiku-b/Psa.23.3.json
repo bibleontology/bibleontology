@@ -1,0 +1,16 @@
+{"ref": "Psa.23.3",
+ "referents": [
+  {"slot": "w1", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person common singular 'my' with soul. The psalm is in its own voice here and quotes no one, so the voice candidate fits.", "category": "first person in psalm voice"},
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person common singular 'me', object of guides, in the same psalm voice as the first line.", "category": "first person in psalm voice"},
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "Third masculine singular possessive on name's. The name is the name of the one who restores and guides, the LORD named in verse 1. David is only the heading's author and is not the agent of these acts.", "category": "possessive pronoun of a divine name"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied third masculine singular subject of the yiqtol restores. The LORD of verse 1 is the sensible doer of restoring the soul; David, though masculine singular, is not.", "category": "implied subject, third person in psalm"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied third masculine singular subject of the yiqtol guides. Same referent as the first line's subject, carried across the semicolon.", "category": "implied subject, third person in psalm"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "Two lines split by a semicolon, both yiqtol third masculine singular with no conjunction. The second restates the first's roles (subject, verb, object: soul, then me) with the same subject, the LORD. The acts kind was considered; parallel fits the restated roles more closely.", "category": "poetic couplet with shared subject"}
+ ],
+ "none_fit": [
+  {"where": "cl1", "what": "for the sake of His name (lema'an shemo) gives the purpose of the guiding, but it is a nominal phrase, not a clause. The purpose link is clause-to-clause, so no link is made."}
+ ],
+ "cant_tell": []}

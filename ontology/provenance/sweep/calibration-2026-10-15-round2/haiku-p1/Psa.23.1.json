@@ -1,0 +1,50 @@
+{
+ "ref": "Psa.23.1",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "'my shepherd' is first person singular in the psalm's own voice; the psalm does not quote anyone here, so the voice candidate is the referent",
+   "category": "psalm's own first person"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "'I shall not want' is first person singular in the psalm's own voice",
+   "category": "psalm's own first person"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "writing",
+   "kind": "writing",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "the heading 'a Psalm of David' names David as writer, so he is the sender; the heading is the frame and the two clauses are its parts",
+   "category": "psalm heading as writing frame"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

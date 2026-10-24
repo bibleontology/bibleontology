@@ -1,0 +1,53 @@
+{
+ "ref": "Pro.10.3",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "Third masculine singular subject of the second line. The first line's subject is the LORD (w2) and the second line continues the same act of the same person. w3 (person) and w6 (craving) are the objects of the verbs, and Pro.10.1#w1 Solomon is outside the scene. The parser's referent is correct.",
+   "category": "implied subject carried across a parallel line"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Bare waw joins two lines with the same subject, the LORD. No 'but' word in the Hebrew; not a cause or purpose.",
+   "category": "plain and between lines with one subject"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Pro.10.3#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w2"
+    }
+   ],
+   "divine": true,
+   "why": "The second line restates the object and verb of the first ('the craving of the wicked' for 'the appetite of the righteous') without its subject, because the subject is the same LORD. This is the parallel kind's condition.",
+   "category": "parallel lines with one subject"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Pro.10.3 cl0 -and-> cl1",
+   "what": "Contrast marked only by a bare waw; the English 'but' has no link type in the Hebrew here."
+  }
+ ],
+ "cant_tell": []
+}

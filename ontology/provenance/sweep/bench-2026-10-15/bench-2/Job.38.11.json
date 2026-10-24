@@ -1,0 +1,121 @@
+{
+ "ref": "Job.38.11",
+ "referents": [
+  {
+   "slot": "w14",
+   "choice": "none",
+   "divine": false,
+   "why": "'your proud waves': the second person of the LORD's speech is the sea, which is not among the candidates.",
+   "category": "addressee outside the candidates"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'I declared': the first person, the LORD. The builder's self-reference is replaced.",
+   "category": "implied first person in the speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false,
+   "why": "'you may come this far': the addressee of this speech is the sea, not a candidate.",
+   "category": "addressee outside the candidates"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "'but no farther': the same addressee, the sea, not a candidate.",
+   "category": "addressee outside the candidates"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "'here someone will set your waves': a third masc sing with no masculine singular candidate that is a sensible doer; the waves are plural, and the form is impersonal.",
+   "category": "impersonal third person"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'I declared: you may come this far ...' The saying clause has its said clause as content (R1); the turn holds the parts.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Wrong direction and wrong relation. The speech is inside the saying, not after it.",
+   "category": "speech inside a saying"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'you may come this far, and not add': a plain and between two clauses.",
+   "category": "coordinated clauses"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "'but no farther; here ...': the waw joins the next clause; not a result or purpose.",
+   "category": "coordinated clauses"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    }
+   ],
+   "divine": true,
+   "why": "The sender was a slot id; the LORD declares. The addressee (the sea) is not a candidate and is left open, recorded in cant_tell.",
+   "category": "turn sender as candidate"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The addressee of the speech, the sea to which 'you' refers",
+   "why": "The sea is not among the candidates, so the turn's addressee cannot be filled."
+  },
+  {
+   "what": "Whether this speech is nested in the LORD's speech turn Job.38.1#g1",
+   "why": "The nesting is not linked from this verse."
+  },
+  {
+   "what": "The subject of 'here someone will set'",
+   "why": "The third masc sing is impersonal, and no masc sing candidate is a sensible doer."
+  }
+ ]
+}

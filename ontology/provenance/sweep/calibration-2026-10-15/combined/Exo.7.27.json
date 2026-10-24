@@ -1,0 +1,23 @@
+{"ref": "Exo.7.27",
+ "referents": [
+  {"slot": "w3", "choice": "Exo.7.26#w7", "divine": false, "why": "Second person masculine singular inside the speech Moses is told to say to Pharaoh ('go to Pharaoh and say to him'); the 'you' of that speech is its addressee, Pharaoh.", "category": "second person inside a commanded speech"},
+  {"slot": "w7", "choice": "Exo.7.26#w2", "divine": true, "why": "First person singular inside the speech introduced by 'thus says Yahweh'; the 'I' of that speech is its speaker, the LORD, whom Moses is to quote.", "category": "first person inside a messenger-formula speech"},
+  {"slot": "w12", "choice": "Exo.7.26#w7", "divine": false, "why": "Second person masculine singular suffix on 'territory'; same speech, so the addressee, Pharaoh. The host noun w11 is the possessed thing, not the referent.", "category": "second person inside a commanded speech"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "remove", "why": "The infinitive 'to let go' completes the main verb 'refuse' (a verb of refusing); it is what is refused, not an aim of the refusing.", "category": "infinitive complement read as purpose"},
+  {"src": "cl0", "type": "if", "dst": "cl2", "action": "keep", "why": "The conditional is real: the אִם clause 'you refuse' is the condition and the 'behold, I am striking' clause is what it conditions; the host is the next clause after the condition that is not an infinitive complement.", "category": "if clause and its host"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "The waw in וְאִם opens the verse, joining it to the speech before; there is no separate-word waw between cl0 and cl2, and the pair is already linked as condition and consequence by 'if'.", "category": "conjunction of the conditional read as a plain and"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "No conjunction stands between the particle הִנֵּה and its participle; the waw is on the particle, before cl2. cl2 and cl3 are one clause the parser split, so the participle is the particle's predicate, not a second 'and' clause.", "category": "presentative particle split from its predicate"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "add", "why": "The infinitive clause 'to let (them) go' is the complement filling the object role of the participle 'refusing'.", "category": "infinitive complement of a verb of refusing"}
+ ],
+ "groups": [
+  {"id": "cond0", "kind": "conditional", "action": "change", "members": [{"role": "condition", "node": "cl0"}, {"role": "consequence", "node": "cl2"}, {"role": "consequence", "node": "cl3"}], "divine": false, "why": "The if-clause is cl0 (cl1 sits inside it). The consequence is 'behold, I am about to strike ...': the particle הִנֵּה (cl2) is the head of a presentative clause whose predicate is the participle (cl3), so the consequence is both together, not cl2 alone, which is only the particle.", "category": "consequence split across a particle and its predicate"}
+ ],
+ "none_fit": [
+  {"where": "cl2 and cl3", "what": "The presentative particle הִנֵּה ('behold') and the participle that is its predicate are one clause that the parser split in two; no link type joins a particle clause to its predicate (and is wrong, within is for role-nesting)."},
+  {"where": "the verse as a whole and Exo.7.26#turn1", "what": "This verse plainly continues the speech Moses is to say to Pharaoh (the LORD's message begun in 8:1), but the turn group of the earlier verse cannot be given a further part from here, and a new turn here would have no saying clause as frame. The continuation of one speech across a verse boundary has no form among the group kinds."}
+ ],
+ "cant_tell": [
+  {"what": "The direction of the builder's if link (cl0 -if-> cl2)", "why": "link_types says the condition is the destination and the conditioned clause is the source, which would give cl2 -if-> cl0; the builder writes it the other way. Kept as built because the pairing is right and the conditional group carries the roles explicitly."}
+ ]}

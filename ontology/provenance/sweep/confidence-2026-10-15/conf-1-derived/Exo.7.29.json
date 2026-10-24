@@ -1,0 +1,49 @@
+{
+ "ref": "Exo.7.29",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w6",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w11",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.7.28#cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "part",
+     "node": "cl0"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

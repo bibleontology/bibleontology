@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pattern candidates</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#1f1d1a;--mut:#6b665e;--line:#e4dfd6;--acc:#7a4b1e;--chip:#f1ece3}
+@media (prefers-color-scheme:dark){:root{--bg:#1a1916;--fg:#ece8e1;--mut:#a39d93;--line:#34312b;--acc:#e0a867;--chip:#2a2723}}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,sans-serif}
+header{padding:16px;border-bottom:1px solid var(--line)}
+h1{font-size:18px;margin:0 0 4px}
+.note{color:var(--mut);font-size:12.5px;max-width:980px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg)}
+.bar label{font-size:12.5px;color:var(--mut)} input,select{font:inherit;padding:3px 6px;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:4px}
+input[type=number]{width:64px}
+table{border-collapse:collapse;width:100%}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{font-size:12px;color:var(--mut);cursor:pointer;white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.p{font-weight:600}.k{font-size:11px;color:var(--mut)}
+.ex{font-size:12px;color:var(--mut)} .ex b{color:var(--acc);font-weight:600}
+.chip{display:inline-block;background:var(--chip);border-radius:9px;padding:0 6px;margin:1px;font-size:11px}
+.wrap{overflow-x:auto}
+</style></head><body>
+<header><h1>Pattern candidates — discrete events</h1>
+<div class="note">A deterministic mining pass (tools/patterns/mine.py): every clause with a verb described by its verb (exact, or its kind of action) and its roles (a named record or exact noun, a kind, or open); every combination counted; kept where it recurs (≥4 clauses, ≥2 books) more often than chance (lift). <b>Candidates, not findings</b> — sort and filter by your own criteria. <b>support</b> clauses matched · <b>books</b> distinct books · <b>lift</b> × chance · <b>concrete</b> exact parts · [brackets] are kinds.</div></header>
+<div class="bar">
+<label>show <select id="kind"><option value="=repeat">repeats (no formulas, no references)</option><option value="">all</option><option>event</option><option>link</option><option>chain</option><option value="=reference">references: the NT restates the OT</option><option value="=formula">formulas</option></select></label>
+<label>testaments <select id="test"><option value="">any</option><option>OT</option><option>NT</option><option>OT+NT</option></select></label>
+<label>min support <input id="sup" type="number" value="4" min="1"></label>
+<label>min books <input id="bk" type="number" value="2" min="1"></label>
+<label>min lift <input id="lf" type="number" value="1.5" step="0.5"></label>
+<label>min fixed <input id="cc" type="number" value="0" min="0"></label>
+<label>mode <select id="md"><option value="">any</option><option>narrated</option><option>reported</option><option>projected</option><option>command</option><option>question</option><option>negated</option><option>conditional</option></select></label>
+<label>contains <input id="q" placeholder="word or name"></label>
+<span id="cnt" class="k"></span></div>
+<div class="wrap"><table><thead><tr>
+<th data-k="pattern">pattern</th><th data-k="score">score</th><th data-k="support">support</th><th data-k="books">books</th><th data-k="lift">lift</th><th data-k="fixed">fixed</th><th data-k="distance">dist</th><th data-k="interest">interest</th><th>modes</th><th>examples</th></tr></thead>
+<tbody id="tb"></tbody></table></div>
+<script>
+const D=/*DATA*/[];
+let sortK='score',dir=-1;
+const $=id=>document.getElementById(id);
+function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function draw(){
+ const k=$('kind').value,t=$('test').value,s=+$('sup').value,b=+$('bk').value,l=+$('lf').value,c=+$('cc').value,m=$('md').value,q=$('q').value.toLowerCase();
+ const kindOk=r=>!k?true:k=='=repeat'?!/^(formula|reference)/.test(r.kind):k[0]=='='?r.kind.startsWith(k.slice(1)):r.family==k;
+ const rows=D.filter(r=>kindOk(r)&&(!t||r.testaments==t)&&r.support>=s&&r.books>=b&&(r.lift==null||r.lift>=l)&&r.fixed>=c&&(!m||(r.modes[m]||0)>0)&&(!q||r.pattern.toLowerCase().includes(q)||r.examples.some(e=>e.text.toLowerCase().includes(q))));
+ rows.sort((x,y)=>(typeof x[sortK]=='string'?x[sortK].localeCompare(y[sortK]):x[sortK]-y[sortK])*dir);
+ $('cnt').textContent=rows.length.toLocaleString()+' of '+D.length.toLocaleString();
+ $('tb').innerHTML=rows.slice(0,600).map(r=>`<tr><td><div class="p">${esc(r.pattern)}</div><div class="k">${r.kind} · ${r.testaments} · ${r.book_list.join(', ')}</div></td><td class="n">${r.score}</td><td class="n">${r.support}</td><td class="n">${r.books}</td><td class="n">${r.lift}</td><td class="n">${r.fixed}</td><td class="n">${r.distance}</td><td class="n">${r.interest}</td><td>${Object.entries(r.modes).map(([a,n])=>`<span class="chip">${a} ${n}</span>`).join('')}</td><td class="ex">${r.examples.map(e=>`<div><b>${esc(e.ref)}</b> ${esc(e.text)}</div>`).join('')}</td></tr>`).join('');
+}
+document.querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;dir=(sortK==k)?-dir:-1;sortK=k;draw()});
+['kind','test','sup','bk','lf','cc','md','q'].forEach(id=>$(id).oninput=draw);
+draw();
+</script></body></html>

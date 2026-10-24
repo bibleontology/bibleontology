@@ -1,0 +1,98 @@
+{
+ "ref": "Exo.7.27",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'you' (2ms) refusing, inside Yahweh's message, which is addressed to Pharaoh.",
+   "category": "second person inside a quoted speech"
+  },
+  {
+   "slot": "w7",
+   "choice": "Exo.7.26#w2",
+   "divine": true,
+   "why": "'I' striking: the speaker of the message, Yahweh, named as the LORD in the verse before.",
+   "category": "first person inside a divine speech"
+  },
+  {
+   "slot": "w12",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your' territory: second person masculine singular, Pharaoh.",
+   "category": "second person possessive"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "'refuse ... to let them go': an infinitive completing a verb of refusing is its object, not a purpose.",
+   "category": "infinitive after refuse read as purpose"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the infinitive is the object of refusing: a clause nested in a role of the clause.",
+   "category": "infinitive object"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "direction reversed: the condition is cl0 and what it conditions is the next consequence clause cl2.",
+   "category": "condition direction"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "the waw of 'but if' introduces a condition, not a plain and.",
+   "category": "conditional read as and"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl0",
+   "action": "add",
+   "why": "a Hebrew condition precedes what it governs: 'behold, I strike' is the consequence of 'if you refuse'.",
+   "category": "conditional"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "waw joins the 'behold' clause to the striking clause; both are one consequence.",
+   "category": "and within consequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond0",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl0"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "the condition 'you refuse' and its consequence; cl3 is carried by the and link from cl2.",
+   "category": "condition and consequence"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

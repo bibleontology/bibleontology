@@ -1,0 +1,41 @@
+{"ref": "Exo.8.6",
+ "referents": [
+  {"slot": "cl0s", "choice": "Exo.8.5#w4", "divine": false, "why": "Third masc sing of the wayyiqtol that opens Pharaoh's one-word answer 'to tomorrow'. Moses has just asked 'to when?' in Exo.8.5 cl2, and the answerer is the party he asked, Pharaoh.", "category": "answer to a question in the preceding speech"},
+  {"slot": "cl2s", "choice": "Exo.8.5#w2", "divine": false, "why": "Masc sing wayyiqtol, opening with waw, that begins Moses's reply 'according to your word'. Moses is the one who asked the question, and the reply continues his speech to Pharaoh.", "category": "reply by the other party in an exchange"},
+  {"slot": "w8", "choice": "Exo.8.5#w4", "divine": false, "why": "Second masc sing possessive 'your word' in Moses's reply. The word meant is Pharaoh's 'tomorrow', so the addressee of Moses's speech is the referent.", "category": "second person inside a reply, the addressee's own word"},
+  {"slot": "w16", "choice": "none", "divine": false, "why": "First plural 'our' in Moses's speech, 'the LORD our God', is inclusive: Moses with the people of Israel. No candidate denotes that group. The builder's cl2s is Moses alone, which the plural morphology rejects.", "category": "first plural inclusive in a speech"},
+  {"slot": "cl4s", "choice": "Exo.8.5#w4", "divine": false, "why": "Implied second masc sing subject of 'you may know' in Moses's speech. Moses is speaking to Pharaoh, so the addressee is Pharaoh.", "category": "implied second person in a purpose clause of a speech"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "that", "dst": "cl5", "action": "keep", "why": "'You may know that there is not like the LORD our God': the clause after the verb of knowing is what is known, so the object relation holds.", "category": "object clause after a verb of knowing"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "'Then' runs forward along the narrative line, from an earlier event to a later one. cl0 comes before cl4 in the verse, and cl4 is inside Moses's speech, not a narrative event. The waw here is not a sequence.", "category": "backward then link into a frame clause"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "A wayyiqtol continues the narrative line from the nearest clause that is not inside a speech. cl1 is the content of Pharaoh's speech, so the line runs from the frame cl0, not from cl1.", "category": "then link starting inside a speech"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "The waw of cl2 is fused into the wayyiqtol, so the relation is 'and then'. Moses's reply follows Pharaoh's frame clause on the narrative line.", "category": "fused waw continues the narrative line"},
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "keep", "why": "'According to your word, let it be', then lemaan with a second-person yiqtol: the reply is for the sake of Pharaoh's coming to know. This is the command-then-yiqtol-in-another-person form.", "category": "so-that purpose after a wish"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change",
+   "members": [
+    {"role": "frame", "node": "cl0"},
+    {"role": "part", "node": "cl1"},
+    {"role": "sender", "node": "Exo.8.5#w4"},
+    {"role": "addressee", "node": "Exo.8.5#w2"}
+   ],
+   "divine": false, "why": "Pharaoh's answer to Moses's question in Exo.8.5. The builder gave the slot cl0s as sender; the sender is the candidate Pharaoh. The addressee is Moses, who asked the question, and the parser did not state it.", "category": "sender as candidate; addressee taken from the question answered"},
+  {"id": "turn1", "kind": "turn", "action": "change",
+   "members": [
+    {"role": "frame", "node": "cl2"},
+    {"role": "part", "node": "cl3"},
+    {"role": "part", "node": "cl4"},
+    {"role": "sender", "node": "Exo.8.5#w2"},
+    {"role": "addressee", "node": "Exo.8.5#w4"}
+   ],
+   "divine": false, "why": "Moses's reply to Pharaoh, whose word it answers and to whom 'you' refers. The builder's sender slot cl2s is replaced by the candidate Moses, and the addressee is added.", "category": "reply turn with addressee inherited from the speech answered"}
+ ],
+ "none_fit": [
+  {"where": "between turn0 and turn1", "what": "A reply relation: Moses's turn answers Pharaoh's 'tomorrow'. No link type says one turn answers another; the exchange is carried only by turn order and the then link."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl3 is a command (an imperative group) or a bare wish", "why": "The parse gives no verb for cl3, only 'according to your word'. The verb is likely the jussive of 'let be', which the parse dropped. The purpose link stands, but an imperative group would need a command the lists cannot confirm, so none is added."}
+ ]
+}

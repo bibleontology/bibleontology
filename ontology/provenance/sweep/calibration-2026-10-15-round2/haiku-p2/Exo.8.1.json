@@ -1,0 +1,171 @@
+{
+ "ref": "Exo.8.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "'Your hand' is Aaron's: the quoted command is addressed to Aaron.",
+   "category": "possessive of quoted addressee"
+  },
+  {
+   "slot": "w14",
+   "choice": "w7",
+   "divine": false,
+   "why": "'Your staff' is Aaron's, as in the quoted command.",
+   "category": "possessive of quoted addressee"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'Say to Aaron' is the LORD's command to Moses, so the implied you is Moses, the one commanded. The builder's Aaron is the one spoken to, not the one commanded.",
+   "category": "implied subject of a command to the speaker"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "divine": false,
+   "why": "'Stretch out your hand' is in the quoted words, spoken to Aaron.",
+   "category": "implied you of a quoted command"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "divine": false,
+   "why": "'Bring up the frogs' is the same quoted command, spoken to Aaron.",
+   "category": "implied you of a quoted command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "Two commands joined by a waw at one level, same person; the imperative group holds both.",
+   "category": "commands joined by and"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The LORD's saying introduces the telling 'say to Aaron'.",
+   "category": "speech content, outer level"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add",
+   "why": "'Tell Aaron' introduces the quoted commands, a collection of commands.",
+   "category": "speech content, nested"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "The LORD speaks to Moses; the commanded speech Moses gives to Aaron is nested as turn1.",
+   "category": "outer speech"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.1#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": false,
+   "why": "Moses is commanded to tell Aaron, so the words he speaks are his (R2), addressed to Aaron, with the quoted LORD message as its part.",
+   "category": "commanded speech nested in speech"
+  },
+  {
+   "id": "Exo.8.1#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": true,
+   "why": "The innermost quoted message is the LORD's and is addressed to Aaron (R2: a message quoting someone else is an innermost turn whose sender is the one quoted).",
+   "category": "innermost quoted turn"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    }
+   ],
+   "divine": false,
+   "why": "Stretch out and bring up are commands joined by and at one level: one imperative group with two command members.",
+   "category": "commands joined by and"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "turn1 and Exo.8.1#g1",
+   "what": "A relayed message has two turns sharing one saying clause (cl1). Nothing in link_types or group_kinds says a turn carries a message that a messenger was told to deliver, beyond the frame reused."
+  }
+ ],
+ "cant_tell": []
+}

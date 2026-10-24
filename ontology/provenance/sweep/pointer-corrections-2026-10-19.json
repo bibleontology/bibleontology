@@ -1,0 +1,1845 @@
+{
+ "ruling": "Doug, 2026-10-19, on docs/review/divine-ends-2026-10-19.html: all three decisions marked as recommended (release the words no seat objected to in two passes; correct the objected pointers in the sweep; the open ones stay held)",
+ "what": "pointers the panel of eleven objected to: the wrong link is removed; a corrected link only where two judges named the same referent and it was found nearby (ontology/provenance/meaning/pointer-corrections-2026-10-19.jsonl.gz)",
+ "corrections": [
+  {
+   "src": "1Ch.10.14#cl1s",
+   "ref": "1Ch.10.14",
+   "wrong": "1Ch.10.14#w4",
+   "dst": "1Ch.10.13#w2",
+   "how": "two judges named \"Saul\"; found as \"Saul\" in 1Ch.10.13",
+   "objections": [
+    "'He failed to inquire' is Saul; the LORD is the one inquired of",
+    "'he failed to inquire' is Saul; the LORD is the later subject",
+    "'he' here is Saul; the chain wrongly points to the LORD"
+   ]
+  },
+  {
+   "src": "1Ch.10.14#cl2s",
+   "ref": "1Ch.10.14",
+   "wrong": "1Ch.10.14#w4",
+   "dst": "1Ch.10.13#w2",
+   "how": "two judges named \"Saul\"; found as \"Saul\" in 1Ch.10.13",
+   "objections": [
+    "'He failed to inquire' is Saul; the LORD is a separate subject.",
+    "'he failed to inquire' is Saul, not the LORD",
+    "'he' who failed to inquire is Saul; LORD acts in next clause"
+   ]
+  },
+  {
+   "src": "1Ch.2.3#cl3s",
+   "ref": "1Ch.2.3",
+   "wrong": "1Ch.2.3#w24",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'him' here is Judah or Er, not the LORD",
+    "'him' refers to Judah or Er; the LORD is the subject"
+   ]
+  },
+  {
+   "src": "1Ch.21.26#cl3s",
+   "ref": "1Ch.21.26",
+   "wrong": "1Ch.21.26#w6",
+   "dst": "1Ch.21.26#w3",
+   "how": "two judges named \"David\"; found as \"David\" in 1Ch.21.26",
+   "objections": [
+    "'He' is David offering sacrifice; God answers him from heaven.",
+    "'He' is David, who built the altar and called; the LORD answers him.",
+    "'He' is David, who built the altar; the LORD is the one who answers."
+   ]
+  },
+  {
+   "src": "1Jn.5.16#cl3s",
+   "ref": "1Jn.5.16",
+   "wrong": "1Jn.5.11#w10",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'he should ask God': 'he' is the believer who sees the brother, not God.",
+    "'he' is the believer interceding; God is addressed, not the subject.",
+    "'he' is the believer praying for his brother, not God."
+   ]
+  },
+  {
+   "src": "1Ki.13.9#cl0s",
+   "ref": "1Ki.13.9",
+   "wrong": "1Ki.13.9#w7",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "No 'he' in the verse; speaker 'I' is the man of God, the LORD is only the source of the command.",
+    "The 'he' is unclear; the speaker is the prophet citing the LORD's word."
+   ]
+  },
+  {
+   "src": "1Ki.15.5#cl3s",
+   "ref": "1Ki.15.5",
+   "wrong": "1Ki.15.5#w8",
+   "dst": "1Ki.15.5#w2",
+   "how": "two judges named \"David\"; found as \"David\" in 1Ki.15.5",
+   "objections": [
+    "'his life' and the one who did right is David, not the LORD",
+    "A 'he' in this verse could be David, the main subject, not the LORD.",
+    "David is the subject; the LORD is the one who commanded"
+   ]
+  },
+  {
+   "src": "1Sa.28.13#w9",
+   "ref": "1Sa.28.13",
+   "wrong": "1Sa.28.13#w18",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "Elohim here means a spirit-being, the ghost of Samuel, not the LORD.",
+    "Elohim means a divine-like being from the dead; Samuel, not God.",
+    "Points to the apparition rising from the earth, not God."
+   ]
+  },
+  {
+   "src": "1Sa.4.3#cl5s",
+   "ref": "1Sa.4.3",
+   "wrong": "1Sa.4.3#w15",
+   "dst": null,
+   "how": "two judges named \"the ark of the covenant of the LORD\"; 4 words could be it in 1Sa.4.3, none chosen",
+   "objections": [
+    "Ambiguous whether ark or the LORD is meant as savior.",
+    "Hebrew 'it/He may save us' leaves ark or LORD open.",
+    "Subject of 'save us' is ambiguous: the ark or the LORD."
+   ]
+  },
+  {
+   "src": "2Ch.15.2#cl9s",
+   "ref": "2Ch.15.2",
+   "wrong": "2Ch.15.2#w17",
+   "dst": null,
+   "how": "two judges named \"Azariah son of Oded\"; 2 words could be it in 2Ch.15.1, none chosen",
+   "objections": [
+    "Azariah son of Oded (15:1) goes out to Asa; the LORD is spoken of",
+    "Chain wrong: the one going out is the prophet Azariah",
+    "Opening 'he went out to meet Asa' is Azariah the prophet, not the LORD"
+   ]
+  },
+  {
+   "src": "2Ch.28.9#cl6s",
+   "ref": "2Ch.28.9",
+   "wrong": "2Ch.28.9#w26",
+   "dst": null,
+   "how": "two judges named \"a prophet of the LORD named Oded\"; 4 words could be it in 2Ch.28.9, none chosen",
+   "objections": [
+    "'he went out to meet the army' is the prophet Oded, not the LORD",
+    "'he went out... he said' is Oded the prophet, not the LORD",
+    "'he' is Oded the prophet speaking; the LORD is only the one he speaks about"
+   ]
+  },
+  {
+   "src": "2Ch.32.24#cl4s",
+   "ref": "2Ch.32.24",
+   "wrong": "2Ch.32.24#w13",
+   "dst": "2Ch.32.24#w6",
+   "how": "two judges named \"Hezekiah\"; found as \"Hezekiah\" in 2Ch.32.24",
+   "objections": [
+    "'he prayed' and 'spoke to him' refer to Hezekiah, not the LORD",
+    "'he' is Hezekiah in the prayer clause; only 'gave' has the LORD as subject",
+    "Hezekiah is the one praying; the LORD is the one addressed"
+   ]
+  },
+  {
+   "src": "2Ch.33.13#cl2s",
+   "ref": "2Ch.33.13",
+   "wrong": "2Ch.33.13#w23",
+   "dst": "2Ch.33.13#w21",
+   "how": "two judges named \"Manasseh\"; found as \"Manasseh\" in 2Ch.33.13",
+   "objections": [
+    "'he prayed' is Manasseh; only 'brought him back' is the LORD",
+    "'he prayed' is Manasseh; only capitalized 'He' later is the LORD",
+    "lowercase 'he' who prayed is Manasseh, not the LORD"
+   ]
+  },
+  {
+   "src": "2Ch.33.13#cl3s",
+   "ref": "2Ch.33.13",
+   "wrong": "2Ch.33.13#w23",
+   "dst": "2Ch.33.13#w21",
+   "how": "two judges named \"Manasseh\"; found as \"Manasseh\" in 2Ch.33.13",
+   "objections": [
+    "'he prayed' is Manasseh; only the capitalized 'He' is the LORD",
+    "'when he prayed' is Manasseh, not the LORD",
+    "lowercase 'he' prayed to Him: Manasseh is the subject"
+   ]
+  },
+  {
+   "src": "2Co.5.10#cl3s",
+   "ref": "2Co.5.10",
+   "wrong": "2Co.5.10#w9",
+   "dst": null,
+   "how": "two judges named \"each one\"; not found among the nearby words",
+   "objections": [
+    "'Each one' is the referent; Christ is the seat's occupant.",
+    "'Each one' receives his due; chain to Christ is wrong.",
+    "'Each one' receives recompense; Christ is the judge, not the 'he'."
+   ]
+  },
+  {
+   "src": "2Jn.1.10#w13",
+   "ref": "2Jn.1.10",
+   "wrong": "2Jn.1.9#w10",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'Anyone who comes' is the antecedent; 'of Christ' is a genitive in the previous verse.",
+    "'Him' is 'anyone' in this verse; the chain to Christ is wrong.",
+    "'Him' is the false teacher who comes, not Christ."
+   ]
+  },
+  {
+   "src": "Act.1.4#cl4s",
+   "ref": "Act.1.4",
+   "wrong": "Act.1.1#w16",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'You' is the apostles addressed by Jesus, not Jesus.",
+    "'You' is the audience; Jesus is the speaker.",
+    "'You' is the disciples Jesus is speaking to."
+   ]
+  },
+  {
+   "src": "Act.6.14#cl3s",
+   "ref": "Act.6.14",
+   "wrong": "Act.6.14#w5",
+   "dst": null,
+   "how": "two judges named \"Stephen\"; not found among the nearby words",
+   "objections": [
+    "'him' is Stephen being accused in Acts 6; Jesus is named after",
+    "'him' is Stephen being accused; Jesus is named after",
+    "'him' is Stephen the accused; Jesus is named as the subject of the saying"
+   ]
+  },
+  {
+   "src": "Amo.1.2#cl2s",
+   "ref": "Amo.1.2",
+   "wrong": "Amo.1.2#w2",
+   "dst": "Amo.1.1#w1",
+   "how": "two judges named \"Amos\"; found as \"Amos\" in Amo.1.1",
+   "objections": [
+    "'He said' introduces Amos speaking; the LORD is named in the third person.",
+    "'He said' is Amos speaking; the LORD is named in third person",
+    "'He said' is Amos the prophet speaking about the LORD"
+   ]
+  },
+  {
+   "src": "Amo.6.10#w2",
+   "ref": "Amo.6.10",
+   "wrong": "Amo.6.10#w38",
+   "dst": null,
+   "how": "two judges named \"the name of the LORD\"; 2 words could be it in Amo.6.10, none chosen",
+   "objections": [
+    "'It' is not the LORD; the relative speaks of the name or the house",
+    "'It' refers to the name or the house, not the LORD",
+    "'it' is the name of the LORD, not the LORD himself"
+   ]
+  },
+  {
+   "src": "Col.2.18#cl3s",
+   "ref": "Col.2.18",
+   "wrong": "Col.2.17#w9",
+   "dst": null,
+   "how": "two judges named \"anyone who delights in false humility and the worship of angels\"; 3 words could be it in Col.2.18, none chosen",
+   "objections": [
+    "'he who has seen' refers to the puffed-up person, not Christ.",
+    "'he' is the false teacher ('anyone'), not Christ.",
+    "'he' is the false teacher disqualifying you, not Christ"
+   ]
+  },
+  {
+   "src": "Col.3.25#cl2s",
+   "ref": "Col.3.25",
+   "wrong": "Col.3.24#w11",
+   "dst": null,
+   "how": "two judges named \"Whoever does wrong\"; not found among the nearby words",
+   "objections": [
+    "'he' is the one doing wrong, not Christ",
+    "'he' is the one who does wrong",
+    "'he' is the wrongdoer ('whoever does wrong'), not Christ"
+   ]
+  },
+  {
+   "src": "Deu.13.3#w20",
+   "ref": "Deu.13.3",
+   "wrong": "Deu.13.3#w15",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'them' is the other gods, the very opposite of the LORD",
+    "'them' is the rival gods; the verse forbids worshipping them",
+    "'them' means the foreign gods, forbidden to worship; not the LORD"
+   ]
+  },
+  {
+   "src": "Deu.15.2#cl4s",
+   "ref": "Deu.15.2",
+   "wrong": "Deu.15.2#w29",
+   "dst": null,
+   "how": "two judges named \"Every creditor\"; 2 words could be it in Deu.15.2, none chosen",
+   "objections": [
+    "'He' is the creditor (ba'al masheh yado), not God",
+    "'He' is the creditor in the remission law",
+    "'He' is the creditor who lent to his neighbor"
+   ]
+  },
+  {
+   "src": "Deu.15.22#w4",
+   "ref": "Deu.15.22",
+   "wrong": "Deu.15.21#w16",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'Eat it' refers to the defective animal; the LORD is not eaten",
+    "'it' is the animal of verse 21, not the LORD",
+    "'it' is the animal with a defect"
+   ]
+  },
+  {
+   "src": "Deu.2.30#cl3s",
+   "ref": "Deu.2.30",
+   "wrong": "Deu.2.30#w12",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'his spirit' and the first 'he' refer to Sihon, not the LORD",
+    "Sihon's 'he' versus the LORD in 'that He might deliver'; word ambiguous",
+    "which 'he' is meant is unclear; Sihon and God both present"
+   ]
+  },
+  {
+   "src": "Deu.29.13#w7",
+   "ref": "Deu.29.13",
+   "wrong": "Deu.29.11#w5",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "Moses is the speaker addressing Israel; 'I' reads as Moses, not the LORD",
+    "Moses is the speaker in this address; 'I' is Moses, not the LORD",
+    "Moses mediates the LORD's covenant; the speaker 'I' is Moses"
+   ]
+  },
+  {
+   "src": "Deu.3.28#w20",
+   "ref": "Deu.3.28",
+   "wrong": "Deu.3.26#w2",
+   "dst": "Deu.3.28#w3",
+   "how": "two judges named \"Joshua\"; found as \"Joshua\" in Deu.3.28",
+   "objections": [
+    "'commission Joshua... for he will cross over' - Joshua is the referent",
+    "'he will cross over' is Joshua, not the LORD",
+    "'he will cross over' refers to Joshua, not the LORD"
+   ]
+  },
+  {
+   "src": "Deu.30.17#w17",
+   "ref": "Deu.30.17",
+   "wrong": "Deu.30.17#w13",
+   "dst": null,
+   "how": "two judges named \"other gods\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "'them' is the idols one would worship, not the LORD",
+    "'them' is the other gods (elohim acherim), never the LORD",
+    "'them' is the other gods being worshiped, not God"
+   ]
+  },
+  {
+   "src": "Deu.4.10#w33",
+   "ref": "Deu.4.10",
+   "wrong": "Deu.4.10#w12",
+   "dst": null,
+   "how": "two judges named \"Moses\"; not found among the nearby words",
+   "objections": [
+    "\"Me\" is Moses, not the LORD.",
+    "\"Me\" is Moses, reporting what the LORD said to him.",
+    "\"Me\" is Moses, the addressee of the LORD."
+   ]
+  },
+  {
+   "src": "Deu.5.9#w7",
+   "ref": "Deu.5.9",
+   "wrong": "Deu.5.7#w4",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'Them' is the idols and other gods; God is the speaker.",
+    "'Them' means the other gods/idols, not God.",
+    "'Them' refers to the other gods and images forbidden."
+   ]
+  },
+  {
+   "src": "Deu.8.19#w16",
+   "ref": "Deu.8.19",
+   "wrong": "Deu.8.19#w12",
+   "dst": null,
+   "how": "two judges named \"other gods\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "'Other gods' are the forbidden objects of worship, not the LORD",
+    "'them' are the idols the people would worship, not the LORD",
+    "'them' are the other gods; pointing to the LORD would be idolatrous"
+   ]
+  },
+  {
+   "src": "Exo.15.25#cl4s",
+   "ref": "Exo.15.25",
+   "wrong": "Exo.15.25#w7",
+   "dst": "Exo.15.24#w5",
+   "how": "two judges named \"Moses\"; found as \"Moses\" in Exo.15.24",
+   "objections": [
+    "'when he cast it' is Moses, who threw the log",
+    "Hebrew subject of 'cast' is Moses, not the LORD",
+    "Moses is the subject of casting; the LORD showed him the log"
+   ]
+  },
+  {
+   "src": "Exo.15.25#cl5s",
+   "ref": "Exo.15.25",
+   "wrong": "Exo.15.25#w7",
+   "dst": "Exo.15.24#w5",
+   "how": "two judges named \"Moses\"; found as \"Moses\" in Exo.15.24",
+   "objections": [
+    "'when he cast it' is Moses, not the LORD",
+    "lowercase 'he cast it' is Moses; only 'He tested' is the LORD"
+   ]
+  },
+  {
+   "src": "Exo.16.29#w10",
+   "ref": "Exo.16.29",
+   "wrong": "Exo.16.29#w2",
+   "dst": null,
+   "how": "two judges named \"everyone\"; not found among the nearby words",
+   "objections": [
+    "\"he\" in \"stay where he is\" is each Israelite, not God",
+    "\"where he is\" means each person, not the LORD",
+    "Verse has two 'he's: 'He will give' is the LORD, 'where he is' is each person."
+   ]
+  },
+  {
+   "src": "Ezk.13.22#w9",
+   "ref": "Ezk.13.22",
+   "wrong": "Ezk.13.21#w26",
+   "dst": null,
+   "how": "two judges named \"the wicked\"; not found among the nearby words",
+   "objections": [
+    "'Him' is the wicked person turning from his own way, not God.",
+    "'him' is the wicked person whose life is saved, not God",
+    "Hebrew 'save his life' refers to the wicked man, not the LORD"
+   ]
+  },
+  {
+   "src": "Ezk.13.22#w25",
+   "ref": "Ezk.13.22",
+   "wrong": "Ezk.13.21#w26",
+   "dst": null,
+   "how": "two judges named \"the wicked\"; not found among the nearby words",
+   "objections": [
+    "'his evil way' belongs to the wicked person, not the LORD",
+    "'his evil ways' belongs to the wicked person, not the LORD",
+    "'turn from his evil way' idiom refers to the wicked person"
+   ]
+  },
+  {
+   "src": "Ezk.17.9#cl4s",
+   "ref": "Ezk.17.9",
+   "wrong": "Ezk.17.9#cl3s",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "Parable's uprooting agent is unspecified; chain through 'he' looks circular.",
+    "Pulling-up subject is impersonal or unstated; the text does not name God as agent.",
+    "Subject of uprooting is open; may be Babylon's king rather than God."
+   ]
+  },
+  {
+   "src": "Ezk.21.32#w18",
+   "ref": "Ezk.21.32",
+   "wrong": "Ezk.21.31#w4",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'Him to whom it belongs' is a third party, likely Nebuchadnezzar, not the speaking God",
+    "'Him to whom it belongs' read as a Davidic king, not God",
+    "Echoes Gen 49:10; the coming royal figure, distinct from the speaker"
+   ]
+  },
+  {
+   "src": "Ezk.33.27#w31",
+   "ref": "Ezk.33.27",
+   "wrong": "Ezk.33.27#w8",
+   "dst": "Ezk.33.27#w26",
+   "how": "two judges named \"those in the open field\"; found as \"open field\" in Ezk.33.27",
+   "objections": [
+    "'Him' is the person in the open field, not God.",
+    "Hebrew 'him' refers to the one in the field given to beasts.",
+    "No 'him' appears in the verse; the speaker is 'I', the Lord GOD."
+   ]
+  },
+  {
+   "src": "Ezk.33.27#w34",
+   "ref": "Ezk.33.27",
+   "wrong": "Ezk.33.27#w8",
+   "dst": "Ezk.33.27#w26",
+   "how": "two judges named \"those in the open field\"; found as \"open field\" in Ezk.33.27",
+   "objections": [
+    "'Him' is the person in the open field, not God.",
+    "God is the speaker giving 'him' to beasts; chain is wrong.",
+    "Object of 'I will give' is the field-dweller, not the LORD."
+   ]
+  },
+  {
+   "src": "Ezk.40.3#cl0s",
+   "ref": "Ezk.40.3",
+   "wrong": "Ezk.40.1#w37",
+   "dst": null,
+   "how": "two judges named \"a man whose appearance was like bronze\"; 5 words could be it in Ezk.40.3, none chosen",
+   "objections": [
+    "'He was standing in the gateway... his hand' is the bronze-like man, not the LORD.",
+    "First 'He took me' is the LORD's hand; later 'he' is the guide.",
+    "Guide figure is distinct from the LORD; the verse's 'he' shifts."
+   ]
+  },
+  {
+   "src": "Ezk.48.14#cl2s",
+   "ref": "Ezk.48.14",
+   "wrong": "Ezk.48.14#cl1s",
+   "dst": "Ezk.48.13#w2",
+   "how": "two judges named \"the Levites\"; found as \"Levites\" in Ezk.48.13",
+   "objections": [
+    "'holy to the LORD' states possession; no pronoun in the Hebrew",
+    "the LORD is the one to whom it is holy, not the actor",
+    "the one who must not sell is the priest or holder, not the LORD"
+   ]
+  },
+  {
+   "src": "Ezk.8.3#cl0s",
+   "ref": "Ezk.8.3",
+   "wrong": "Ezk.8.1#w35",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' is the man-like fiery figure of v.2, not the Lord GOD directly.",
+    "'He' is the man-like figure of 8:2, not named as the Lord GOD.",
+    "Figure of v.2 is a glory-likeness; whether it is God himself is open."
+   ]
+  },
+  {
+   "src": "Ezk.8.3#cl1s",
+   "ref": "Ezk.8.3",
+   "wrong": "Ezk.8.1#w35",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' is the fire-like man-figure of 8:2, not stated as the LORD.",
+    "'He' is the man-like figure of Ezk 8.2, not named GOD of 8.1",
+    "Figure of 8.2 is a theophanic appearance; whether it is God himself is open"
+   ]
+  },
+  {
+   "src": "Gal.4.5#cl0s",
+   "ref": "Gal.4.5",
+   "wrong": "Gal.4.4#w9",
+   "dst": null,
+   "how": "two judges named \"His Son\"; not found among the nearby words",
+   "objections": [
+    "Purpose clause fits the Son's redeeming; sender or Son is open",
+    "The one who redeems is the Son, born under the law.",
+    "The redeemer is the Son born under law; subject could be Christ"
+   ]
+  },
+  {
+   "src": "Gal.6.3#cl0s",
+   "ref": "Gal.6.3",
+   "wrong": "Gal.6.2#w10",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'anyone thinks he' refers to a hypothetical person, not Jesus",
+    "'anyone' is a generic person; 'law of Christ' is no antecedent",
+    "'anyone' is the antecedent; 'of Christ' only modifies 'law'"
+   ]
+  },
+  {
+   "src": "Gal.6.7#cl2s",
+   "ref": "Gal.6.7",
+   "wrong": "Gal.6.2#w10",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'a man sows... he will reap'; chain to Christ is wrong",
+    "'he' is the man who sows and reaps, not Christ",
+    "'he' is the man who sows, not Christ"
+   ]
+  },
+  {
+   "src": "Gen.24.35#cl2s",
+   "ref": "Gen.24.35",
+   "wrong": "Gen.24.35#w1",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'he has become rich' refers to the master (Abraham), not the LORD",
+    "'he has become rich' refers to the master (Abraham); only 'He has given' is the LORD",
+    "this verse has two different 'he's; the one who became rich is the master"
+   ]
+  },
+  {
+   "src": "Gen.24.40#cl3s",
+   "ref": "Gen.24.40",
+   "wrong": "Gen.24.40#w4",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' is Abraham reported by the servant",
+    "'He' is Abraham, quoted by his servant",
+    "'He' is Abraham; the LORD is named within Abraham's words"
+   ]
+  },
+  {
+   "src": "Gen.35.10#cl4s",
+   "ref": "Gen.35.10",
+   "wrong": "Gen.35.10#w4",
+   "dst": null,
+   "how": "two judges named \"Jacob\"; 2 words could be it in Gen.35.10, none chosen",
+   "objections": [
+    "'He' (to whom God spoke, named) is Jacob, not God.",
+    "'Him' and 'he' refer to Jacob, the one renamed.",
+    "Jacob is renamed Israel; God is the speaker."
+   ]
+  },
+  {
+   "src": "Hos.14.9#cl3s",
+   "ref": "Hos.14.9",
+   "wrong": "Hos.14.3#w7",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "14.9 is the prophet's closing comment; the 'I' of 14.8 is the LORD, not shown.",
+    "No 'I' appears in the shown verse; the chain runs to the people's prayer in 14.3.",
+    "No 'I' in this verse; chain runs back to 'You' in 14.3, an addressee."
+   ]
+  },
+  {
+   "src": "Isa.11.12#cl2s",
+   "ref": "Isa.11.12",
+   "wrong": "Isa.11.9#w16",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' follows the Root of Jesse (11:10), not the LORD of 11:9",
+    "Chain skips 11:10-11; the Messiah-king or the LORD is open",
+    "Nearest antecedent is the root of Jesse, the banner in 11:10"
+   ]
+  },
+  {
+   "src": "Isa.25.11#cl3s",
+   "ref": "Isa.25.11",
+   "wrong": "Isa.25.10#w3",
+   "dst": "Isa.25.10#w11",
+   "how": "two judges named \"Moab\"; found as \"Moab\" in Isa.25.10",
+   "objections": [
+    "'He' spreading hands like a swimmer may be Moab, not the LORD",
+    "Commentators divide on whether the LORD or Moab spreads the hands.",
+    "Moab is the nearer antecedent; the LORD as subject is a contested reading."
+   ]
+  },
+  {
+   "src": "Isa.29.22#cl2s",
+   "ref": "Isa.29.22",
+   "wrong": "Isa.29.22#w4",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'he' here is Jacob, the one no longer ashamed",
+    "'he' is Jacob; the chain to LORD is wrong",
+    "'his face' and 'he' refer to Jacob, not the LORD"
+   ]
+  },
+  {
+   "src": "Isa.41.2#cl2s",
+   "ref": "Isa.41.2",
+   "wrong": "Isa.41.4#w10",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' with his sword could be the conqueror, not the LORD.",
+    "'he' with sword and bow is the one from the east (Abraham/Cyrus), not God",
+    "Subject of 'turns them to dust' may be the one from the east; Rashi reads Abraham."
+   ]
+  },
+  {
+   "src": "Isa.41.28#w13",
+   "ref": "Isa.41.28",
+   "wrong": "Isa.41.23#w8",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'them' are the false gods, not the true God",
+    "'them' are the false gods; God is the one speaking",
+    "'them' are the false gods; chain wrongly equates them with God"
+   ]
+  },
+  {
+   "src": "Isa.48.7#cl6s",
+   "ref": "Isa.48.7",
+   "wrong": "Isa.48.1#w18",
+   "dst": null,
+   "how": "two judges named \"the house of Jacob\"; not found among the nearby words",
+   "objections": [
+    "'I already knew them' is the people's hypothetical claim, not God speaking",
+    "'I' is the hypothetical Israelite's boast, not God speaking.",
+    "'I' voices Israel's imagined excuse; God is the one addressing."
+   ]
+  },
+  {
+   "src": "Jas.1.12#cl4s",
+   "ref": "Jas.1.12",
+   "wrong": "Jas.1.5#w15",
+   "dst": null,
+   "how": "two judges named \"the man who perseveres under trial\"; 2 words could be it in Jas.1.12, none chosen",
+   "objections": [
+    "'he' is the believer who perseveres; chain to God is wrong",
+    "'he' is the blessed man enduring trial; God is the giver",
+    "'he' is the enduring man; God is the one who promised"
+   ]
+  },
+  {
+   "src": "Jdg.7.2#w13",
+   "ref": "Jdg.7.2",
+   "wrong": "Jdg.7.2#w2",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'saved me' is the boasting Israelite speaker, not the LORD",
+    "lowercase 'me' in 'saved me' is Israel's imagined boast, not God",
+    "the quoted boast's 'me' is Israel; only capital 'Me' is God"
+   ]
+  },
+  {
+   "src": "Jer.15.12#cl0s",
+   "ref": "Jer.15.12",
+   "wrong": "Jer.15.11#w1",
+   "dst": null,
+   "how": "two judges named \"anyone\"; not found among the nearby words",
+   "objections": [
+    "Hebrew asks whether iron can break iron; the LORD is not the subject.",
+    "Proverbial question; no clear divine subject.",
+    "Rhetorical question about iron; 'anyone' is not the LORD."
+   ]
+  },
+  {
+   "src": "Jer.2.20#cl0s",
+   "ref": "Jer.2.20",
+   "wrong": "Jer.2.19#w32",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'I will not serve!' is Israel's defiant speech, not God's",
+    "'I will not serve' is Israel's quoted speech, not God's.",
+    "Israel is the quoted speaker rebelling against God"
+   ]
+  },
+  {
+   "src": "Jer.2.20#cl1s",
+   "ref": "Jer.2.20",
+   "wrong": "Jer.2.19#w32",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'I will not serve' is Israel's own saying, not God's",
+    "'I will not serve' is spoken by the people, not God.",
+    "'I' in the quotation is rebellious Israel"
+   ]
+  },
+  {
+   "src": "Jer.20.17#cl1s",
+   "ref": "Jer.20.17",
+   "wrong": "Jer.20.16#w11",
+   "dst": null,
+   "how": "two judges named \"the man who brought my father the news\"; 2 words could be it in Jer.20.17, none chosen",
+   "objections": [
+    "'He' is 'that man' of vv.15-16, who brought news of the birth, not the LORD.",
+    "'He' more naturally the man of vv.15-16 who brought the news.",
+    "Commentators divide between the messenger and God as the one who did not kill him."
+   ]
+  },
+  {
+   "src": "Jer.30.5#cl1s",
+   "ref": "Jer.30.5",
+   "wrong": "Jer.30.5#w3",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'We have heard' is the people's voice; the LORD does not speak as 'we'.",
+    "'We' is the people hearing terror, not the LORD.",
+    "'We' is the people hearing the cry, not God."
+   ]
+  },
+  {
+   "src": "Jer.42.12#cl1s",
+   "ref": "Jer.42.12",
+   "wrong": "Jer.42.11#w17",
+   "dst": null,
+   "how": "two judges named \"the king of Babylon\"; 2 words could be it in Jer.42.11, none chosen",
+   "objections": [
+    "'he will have compassion' most naturally refers to the king of Babylon, not the LORD",
+    "'he' most naturally the king of Babylon (v.11), not the LORD",
+    "God grants compassion so that the king of Babylon will show compassion"
+   ]
+  },
+  {
+   "src": "Jer.42.12#cl2s",
+   "ref": "Jer.42.12",
+   "wrong": "Jer.42.11#w17",
+   "dst": null,
+   "how": "two judges named \"the king of Babylon\"; 2 words could be it in Jer.42.11, none chosen",
+   "objections": [
+    "'he' could be the king of Babylon, whose heart God moves",
+    "'he' is most naturally the king of Babylon from v.11",
+    "'he' is the king of Babylon, whom the LORD makes compassionate"
+   ]
+  },
+  {
+   "src": "Jer.9.7#cl1s",
+   "ref": "Jer.9.7",
+   "wrong": "Jer.9.6#w4",
+   "dst": null,
+   "how": "two judges named \"a man\"; not found among the nearby words",
+   "objections": [
+    "'he' is 'a man' speaking peace to his neighbor, not the LORD.",
+    "'he' is the deceitful man speaking peace, not God",
+    "'he' is the deceitful neighbor-betrayer, not the LORD"
+   ]
+  },
+  {
+   "src": "Jer.9.7#cl2s",
+   "ref": "Jer.9.7",
+   "wrong": "Jer.9.6#w4",
+   "dst": null,
+   "how": "two judges named \"a man\"; not found among the nearby words",
+   "objections": [
+    "'a man speaks peace to his neighbor' is the antecedent",
+    "'he' is the deceitful man; the LORD speaks in verse 6",
+    "'he' is the deceiving man, not the LORD"
+   ]
+  },
+  {
+   "src": "Jer.9.7#cl3s",
+   "ref": "Jer.9.7",
+   "wrong": "Jer.9.7#cl2s",
+   "dst": null,
+   "how": "two judges named \"a man\"; not found among the nearby words",
+   "objections": [
+    "'a man speaks peace' makes 'he' the man, not God",
+    "'he' is the deceitful man in the verse, not God",
+    "'he' is the deceitful man of the verse, not God"
+   ]
+  },
+  {
+   "src": "Jhn.1.48#cl1s",
+   "ref": "Jhn.1.48",
+   "wrong": "Jhn.1.48#w7",
+   "dst": "Jhn.1.48#w2",
+   "how": "two judges named \"Nathanael\"; found as \"Nathanael\" in Jhn.1.48",
+   "objections": [
+    "'Before Philip called you' addresses Nathanael; Jesus is the speaker.",
+    "'I saw you' is Jesus speaking to Nathanael; the chain is wrong",
+    "'You' here is the one addressed, Nathanael, not Jesus."
+   ]
+  },
+  {
+   "src": "Jhn.11.9#cl4s",
+   "ref": "Jhn.11.9",
+   "wrong": "Jhn.11.9#w1",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' is generic 'anyone who walks in daytime', not Jesus.",
+    "'anyone who walks', a general saying, not Jesus",
+    "'anyone' in a light/dark image; Jesus is the light"
+   ]
+  },
+  {
+   "src": "Jhn.13.8#cl1s",
+   "ref": "Jhn.13.8",
+   "wrong": "Jhn.13.8#w13",
+   "dst": "Jhn.13.8#w2",
+   "how": "two judges named \"Peter\"; found as \"Peter\" in Jhn.13.8",
+   "objections": [
+    "'I wash you': the 'you' is Peter, not Jesus.",
+    "In the story, 'you' is Peter.",
+    "Jesus addresses Peter with 'you'."
+   ]
+  },
+  {
+   "src": "Jhn.14.9#cl7s",
+   "ref": "Jhn.14.9",
+   "wrong": "Jhn.14.9#w3",
+   "dst": "Jhn.14.9#w13",
+   "how": "two judges named \"Philip\"; found as \"Philip\" in Jhn.14.9",
+   "objections": [
+    "'you' is Philip, addressed by Jesus, not Jesus himself",
+    "'you' is Philip, the addressee; Jesus is the speaker",
+    "'you' is Philip, the addressee; chain wrongly points to speaker"
+   ]
+  },
+  {
+   "src": "Jhn.3.17#cl1s",
+   "ref": "Jhn.3.17",
+   "wrong": "Jhn.3.17#w4",
+   "dst": null,
+   "how": "two judges named \"His Son\"; not found among the nearby words",
+   "objections": [
+    "'Him' is the Son in the sentence",
+    "'Him' is the Son, distinct person from God the Father",
+    "'Him' is the Son, not the Father who sent"
+   ]
+  },
+  {
+   "src": "Jhn.4.47#cl5s",
+   "ref": "Jhn.4.47",
+   "wrong": "Jhn.4.47#w3",
+   "dst": null,
+   "how": "two judges named \"the royal official\"; not found among the nearby words",
+   "objections": [
+    "'He heard that Jesus had come' cannot be Jesus",
+    "'He heard' is the royal official; Jesus is 'Him' later",
+    "'He' is the nobleman whose son was dying"
+   ]
+  },
+  {
+   "src": "Jhn.5.22#cl1s",
+   "ref": "Jhn.5.22",
+   "wrong": "Jhn.5.19#w3",
+   "dst": null,
+   "how": "two judges named \"the Father\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "'He' is the Father who assigned judgment to the Son",
+    "'He' refers to the Father, not Jesus",
+    "Father assigns all judgment to the Son"
+   ]
+  },
+  {
+   "src": "Jhn.5.38#w13",
+   "ref": "Jhn.5.38",
+   "wrong": "Jhn.5.19#w3",
+   "dst": null,
+   "how": "two judges named \"the Father\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "'Him' refers to the Father who sent Jesus",
+    "'His' and 'He sent' are the Father; Jesus is the One sent",
+    "'the One He sent' is Jesus; the sender is the Father"
+   ]
+  },
+  {
+   "src": "Jhn.6.44#w13",
+   "ref": "Jhn.6.44",
+   "wrong": "Jhn.6.43#w1",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'No one can come to Me... draws him': him is the comer",
+    "'him' grammatically is the person who comes, not the speaker",
+    "'him' is anyone who comes to Jesus, not Jesus"
+   ]
+  },
+  {
+   "src": "Jhn.6.44#w16",
+   "ref": "Jhn.6.44",
+   "wrong": "Jhn.6.43#w1",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'him' is the one drawn by the Father, not Jesus",
+    "'him' is the one drawn to Christ, not Christ",
+    "'him' is the one drawn to the Son, not Jesus"
+   ]
+  },
+  {
+   "src": "Jhn.6.54#w15",
+   "ref": "Jhn.6.54",
+   "wrong": "Jhn.6.53#w4",
+   "dst": null,
+   "how": "two judges named \"Whoever eats My flesh and drinks My blood\"; 2 words could be it in Jhn.6.54, none chosen",
+   "objections": [
+    "'him' is 'whoever eats'; Jesus is the one raising",
+    "'him' is the believer who eats; Jesus is the speaker",
+    "'him' is the communicant who eats; Jesus raises him"
+   ]
+  },
+  {
+   "src": "Job.34.20#cl3s",
+   "ref": "Job.34.20",
+   "wrong": "Job.34.12#w6",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'They' are human beings who die, not God.",
+    "'They' are people and the mighty; chain to Almighty is wrong.",
+    "'They' are people who die; it does not point to God."
+   ]
+  },
+  {
+   "src": "Lev.1.17#cl0s",
+   "ref": "Lev.1.17",
+   "wrong": "Lev.1.17#w31",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He shall tear it open' is the offerer, not the LORD.",
+    "'He' is the offerer tearing the bird; the LORD receives the offering.",
+    "'He' is the offerer; the LORD is the recipient."
+   ]
+  },
+  {
+   "src": "Lev.14.13#cl1s",
+   "ref": "Lev.14.13",
+   "wrong": "Lev.14.12#w27",
+   "dst": "Lev.14.13#w29",
+   "how": "two judges named \"the priest\"; found as \"priest\" in Lev.14.13",
+   "objections": [
+    "'he' is the priest officiating at the offering",
+    "'he' is the priest slaughtering the lamb, not the LORD",
+    "'he' is the priest who slaughters the lamb, not the LORD"
+   ]
+  },
+  {
+   "src": "Lev.27.33#w10",
+   "ref": "Lev.27.33",
+   "wrong": "Lev.27.32#w17",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'it' is the animal being inspected, not God",
+    "'it' is the animal being tithed; the owner is 'he'.",
+    "'it' is the animal in the tithe, not God."
+   ]
+  },
+  {
+   "src": "Lev.27.33#w15",
+   "ref": "Lev.27.33",
+   "wrong": "Lev.27.32#w17",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'it' is the animal (behemah); not God",
+    "'it' is the animal being given, not God",
+    "'it' is the animal being substituted"
+   ]
+  },
+  {
+   "src": "Lev.4.24#cl2s",
+   "ref": "Lev.4.24",
+   "wrong": "Lev.4.24#w21",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' is the leader who sinned (Lev 4:22), not the LORD",
+    "'He' is the offerer; the LORD is only where it is slaughtered",
+    "'He' is the ruler offering the sacrifice, not the LORD"
+   ]
+  },
+  {
+   "src": "Lev.7.25#cl2s",
+   "ref": "Lev.7.25",
+   "wrong": "Lev.7.25#w13",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'he' is the Israelite who eats, not the LORD",
+    "'he' is the eater cut off from his people",
+    "'he' is the offender who eats, not the LORD"
+   ]
+  },
+  {
+   "src": "Lev.8.33#cl2s",
+   "ref": "Lev.8.33",
+   "wrong": "Lev.8.29#w12",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "Moses performs the ordination; the unstated subject of 'ordain' may be Moses, not the LORD.",
+    "Moses speaks and ordains Aaron here; the LORD is only the commander",
+    "Verse is Moses speaking; the 'he' ordaining could be Moses rather than the LORD."
+   ]
+  },
+  {
+   "src": "Luk.13.6#cl0s",
+   "ref": "Luk.13.6",
+   "wrong": "Luk.10.37#w13",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'he' is the man in the parable, not Jesus",
+    "'he' is the man who owned the fig tree",
+    "'he' is the man who owned the fig tree in the parable, not Jesus"
+   ]
+  },
+  {
+   "src": "Luk.18.40#cl4s",
+   "ref": "Luk.18.40",
+   "wrong": "Luk.18.40#w3",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' coming near is the man; Jesus is the one asking",
+    "'He' is the man brought, not Jesus.",
+    "'He' who came near is the man brought to Jesus"
+   ]
+  },
+  {
+   "src": "Luk.4.5#cl0s",
+   "ref": "Luk.4.5",
+   "wrong": "Luk.4.4#w5",
+   "dst": null,
+   "how": "two judges named \"the devil\"; not found among the nearby words",
+   "objections": [
+    "In Luke 4:5 the devil is the subject; 'he' as actor is not Jesus.",
+    "The devil acts in the temptation scene; Jesus is the one led.",
+    "The devil is the actor in 4:5; Jesus is the object."
+   ]
+  },
+  {
+   "src": "Luk.5.36#cl0s",
+   "ref": "Luk.5.36",
+   "wrong": "Luk.5.34#w2",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'If he does' refers to anyone who tears cloth, not Jesus",
+    "'he' is anyone mending a garment in the parable, not Jesus",
+    "'he' is the generic 'no one' in the parable, not Jesus"
+   ]
+  },
+  {
+   "src": "Luk.6.8#w1",
+   "ref": "Luk.6.8",
+   "wrong": "Luk.6.3#w6",
+   "dst": null,
+   "how": "two judges named \"the man with the withered hand\"; 2 words could be it in Luk.6.8, none chosen",
+   "objections": [
+    "'He got up and stood there' refers to the man commanded to rise",
+    "'So he got up' is the man with the withered hand, not Jesus",
+    "'he got up and stood' refers to the healed man, not Jesus"
+   ]
+  },
+  {
+   "src": "Luk.7.15#cl3s",
+   "ref": "Luk.7.15",
+   "wrong": "Luk.7.9#w4",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "In 7.15 'he'/'him' is the dead man; Jesus is the giver.",
+    "Narrative 'he' sat up and spoke is the dead man.",
+    "The pronoun is the raised young man, not Jesus."
+   ]
+  },
+  {
+   "src": "Luk.7.3#cl3s",
+   "ref": "Luk.7.3",
+   "wrong": "Luk.7.3#w4",
+   "dst": "Luk.7.2#w1",
+   "how": "two judges named \"the centurion\"; found as \"Of a centurion\" in Luk.7.2",
+   "objections": [
+    "'He' is the centurion who heard about Jesus",
+    "'He' is the centurion who sent the elders",
+    "'He' is the centurion, not Jesus"
+   ]
+  },
+  {
+   "src": "Luk.9.48#cl1s",
+   "ref": "Luk.9.48",
+   "wrong": "Luk.9.47#w2",
+   "dst": null,
+   "how": "two judges named \"whoever is the least among all of you\"; 3 words could be it in Luk.9.48, none chosen",
+   "objections": [
+    "\"he is the greatest\" refers to whoever is least, not Jesus",
+    "\"he\" is the humble disciple, the least among you, not Jesus",
+    "\"he\" is the least one who becomes greatest, not Jesus"
+   ]
+  },
+  {
+   "src": "Mal.1.12#w4",
+   "ref": "Mal.1.12",
+   "wrong": "Mal.1.11#w34",
+   "dst": null,
+   "how": "two judges named \"My name\"; 6 words could be it in Mal.1.11, none chosen",
+   "objections": [
+    "'it' is 'My name' (Mal.1.11), not the LORD himself.",
+    "'it' most naturally points to the LORD's name (v.11) or the table, not the LORD himself",
+    "'it' points to the name of the LORD, not a person."
+   ]
+  },
+  {
+   "src": "Mal.1.2#cl3s",
+   "ref": "Mal.1.2",
+   "wrong": "Mal.1.2#w4",
+   "dst": "Mal.1.1#w4",
+   "how": "two judges named \"Israel\"; found as \"Israel\" in Mal.1.1",
+   "objections": [
+    "'I have loved you' addresses Israel; only the capitalized 'You' is God.",
+    "'I have loved you': 'you' is Israel, addressed by the LORD, not the LORD.",
+    "'You' is Israel, the people addressed; the LORD is the speaker."
+   ]
+  },
+  {
+   "src": "Mal.1.7#w11",
+   "ref": "Mal.1.7",
+   "wrong": "Mal.1.6#w22",
+   "dst": null,
+   "how": "two judges named \"you priests who despise My name\"; 2 words could be it in Mal.1.7, none chosen",
+   "objections": [
+    "'But you ask' addresses the priests; God is the 'You' defiled.",
+    "'You ask' is the priests speaking back; only capital 'You' is God.",
+    "'you ask' addresses the priests; only 'defiled You' means the LORD"
+   ]
+  },
+  {
+   "src": "Mal.2.16#cl0s",
+   "ref": "Mal.2.16",
+   "wrong": "Mal.2.16#w4",
+   "dst": "Mal.2.15#w23",
+   "how": "two judges named \"He who divorces his wife\"; found as \"wife\" in Mal.2.15",
+   "objections": [
+    "\"He who divorces\" is the husband, not the LORD",
+    "'He who divorces his wife' is the man, not the LORD.",
+    "'He' is the one who divorces his wife."
+   ]
+  },
+  {
+   "src": "Mal.3.18#cl2s",
+   "ref": "Mal.3.18",
+   "wrong": "Mal.3.17#w2",
+   "dst": null,
+   "how": "two judges named \"those who serve God\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "In 3.18 the one serving God is a person, not God; chain doubtful.",
+    "The 'he' in 3.18 is the servant of God, not God."
+   ]
+  },
+  {
+   "src": "Mal.3.8#w14",
+   "ref": "Mal.3.8",
+   "wrong": "Mal.3.7#w20",
+   "dst": "Mal.3.8#w5",
+   "how": "two judges named \"you descendants of Jacob\"; found as \"you\" in Mal.3.8",
+   "objections": [
+    "'you' is Israel accused; God is the 'Me' and 'You' of the verse",
+    "lowercase 'you' here is the people addressed, not God, who is speaking"
+   ]
+  },
+  {
+   "src": "Mat.12.7#cl3s",
+   "ref": "Mat.12.7",
+   "wrong": "Mat.12.4#w6",
+   "dst": null,
+   "how": "two judges named \"God\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "'I' is God speaking in the Hosea quote; chain via 'house of God' is wrong.",
+    "Chain runs via 'house of God'; the 'I' is God in the quoted Hosea line.",
+    "Referent is the LORD of Hosea 6:6, quoted by Jesus, not the chain's noun."
+   ]
+  },
+  {
+   "src": "Mat.16.25#cl0s",
+   "ref": "Mat.16.25",
+   "wrong": "Mat.16.24#w2",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'Anyone' who wants to follow; not Jesus.",
+    "'He' is anyone who follows Jesus, not Jesus himself.",
+    "'He' is the generic disciple, not Jesus."
+   ]
+  },
+  {
+   "src": "Mat.27.18#w6",
+   "ref": "Mat.27.18",
+   "wrong": "Mat.27.17#w13",
+   "dst": "Mat.27.17#w6",
+   "how": "two judges named \"Pilate\"; found as \"Pilate\" in Mat.27.17",
+   "objections": [
+    "'him' in 'handed Jesus over to him' is Pilate, not Jesus",
+    "'him' is Pilate in the narrative, not Jesus",
+    "'him' is Pilate, not Jesus"
+   ]
+  },
+  {
+   "src": "Mat.27.43#cl2s",
+   "ref": "Mat.27.43",
+   "wrong": "Mat.27.43#w3",
+   "dst": null,
+   "how": "two judges named \"Jesus\"; not found among the nearby words",
+   "objections": [
+    "'He said I am the Son of God' refers to Jesus, not God.",
+    "'He said' points to Jesus; chain to God is wrong.",
+    "'He trusts in God' refers to Jesus, the mocked one"
+   ]
+  },
+  {
+   "src": "Mat.27.47#w10",
+   "ref": "Mat.27.47",
+   "wrong": "Mat.27.46#w7",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "\"this\" refers to the cry, not a person; chain to Jesus is misplaced",
+    "'this' is the cry; the bystanders' 'He' is the one pointing to Jesus.",
+    "'this' means the cry heard, not Jesus; 'He' is the person."
+   ]
+  },
+  {
+   "src": "Mat.9.13#cl3s",
+   "ref": "Mat.9.13",
+   "wrong": "Mat.6.30#w14",
+   "dst": null,
+   "how": "two judges named \"Jesus\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "'I have not come' is Jesus speaking, not the Father.",
+    "'I' is Christ speaking; the Father of 6:30 is a different referent.",
+    "'I' is Christ the speaker, distinct from the Father in 6:30."
+   ]
+  },
+  {
+   "src": "Mrk.10.30#cl0s",
+   "ref": "Mrk.10.30",
+   "wrong": "Mrk.10.29#w2",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'he' is the one who left home, not Jesus",
+    "subject is the disciple who sacrificed; Jesus is the speaker",
+    "the grammatical subject is 'no one who has left'; Jesus is the speaker"
+   ]
+  },
+  {
+   "src": "Mrk.11.23#cl9s",
+   "ref": "Mrk.11.23",
+   "wrong": "Mrk.11.22#w3",
+   "dst": null,
+   "how": "two judges named \"anyone who says to this mountain\"; 2 words could be it in Mrk.11.23, none chosen",
+   "objections": [
+    "'anyone' is the antecedent, so 'he' is not Jesus",
+    "'he' is 'anyone' who has faith, not Jesus",
+    "'he' is 'anyone' who says to the mountain, not Jesus"
+   ]
+  },
+  {
+   "src": "Mrk.14.11#w12",
+   "ref": "Mrk.14.11",
+   "wrong": "Mrk.14.6#w2",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'give him money' is Judas receiving it, not Jesus",
+    "In the story, the chief priests pay Judas, not Jesus",
+    "Judas is the one promised money; Jesus is the one betrayed"
+   ]
+  },
+  {
+   "src": "Mrk.14.44#w9",
+   "ref": "Mrk.14.44",
+   "wrong": "Mrk.14.30#w4",
+   "dst": null,
+   "how": "two judges named \"The One I kiss\"; not found among the nearby words",
+   "objections": [
+    "'Whomever' is the betrayer's generic signal; Jesus is identified only by context, not the word."
+   ]
+  },
+  {
+   "src": "Mrk.14.51#w4",
+   "ref": "Mrk.14.51",
+   "wrong": "Mrk.14.48#w3",
+   "dst": "Mrk.14.51#w1",
+   "how": "two judges named \"One young man who had been following Jesus\"; found as \"young man\" in Mrk.14.51",
+   "objections": [
+    "'They caught hold of him' refers to the young man, not Jesus",
+    "English 'caught hold of him' is the young man; 'following him' would be Jesus",
+    "In the narrative, 'him' being seized is the young man"
+   ]
+  },
+  {
+   "src": "Mrk.4.30#cl2s",
+   "ref": "Mrk.4.30",
+   "wrong": "Mrk.4.30#cl0s",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'we' includes the listeners Jesus addresses, not only the speaker.",
+    "'we' is inclusive: Jesus plus his hearers, not Jesus alone",
+    "'we' is inclusive: Jesus with his hearers, not Jesus alone."
+   ]
+  },
+  {
+   "src": "Mrk.4.30#cl3s",
+   "ref": "Mrk.4.30",
+   "wrong": "Mrk.4.30#cl0s",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "\"we\" includes Jesus plus his hearers, not Jesus alone",
+    "'we' is Jesus together with his hearers, not Jesus alone",
+    "inclusive 'we' of speaker and audience, not a single person"
+   ]
+  },
+  {
+   "src": "Mrk.5.10#cl1s",
+   "ref": "Mrk.5.10",
+   "wrong": "Mrk.5.7#w9",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' begged Jesus; subject is the unclean spirit, not Jesus.",
+    "'He' is the demon pleading with Jesus, not Jesus.",
+    "'He' is the demon who begged Jesus, not Jesus."
+   ]
+  },
+  {
+   "src": "Mrk.5.9#cl0s",
+   "ref": "Mrk.5.9",
+   "wrong": "Mrk.5.7#w9",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He replied' is the demon-possessed man/Legion, not Jesus.",
+    "'He replied' is the possessed man/Legion, not Jesus.",
+    "'he replied, My name is Legion' is the demoniac, not Jesus"
+   ]
+  },
+  {
+   "src": "Mrk.8.22#w10",
+   "ref": "Mrk.8.22",
+   "wrong": "Mrk.8.27#w3",
+   "dst": null,
+   "how": "two judges named \"a blind man\"; not found among the nearby words",
+   "objections": [
+    "'him' to be touched is the blind man, not Jesus",
+    "'him' to be touched is the blind man; chain jumps to 8:27",
+    "'touch him' refers to the blind man, not Jesus; chain is wrong"
+   ]
+  },
+  {
+   "src": "Mrk.8.22#cl3s",
+   "ref": "Mrk.8.22",
+   "wrong": "Mrk.8.27#w3",
+   "dst": null,
+   "how": "two judges named \"a blind man\"; not found among the nearby words",
+   "objections": [
+    "'He' could be the blind man or Jesus; the chain is doubtful.",
+    "In 8.22 'him' is the blind man; chain runs from later verse 8.27."
+   ]
+  },
+  {
+   "src": "Mrk.8.25#cl0s",
+   "ref": "Mrk.8.25",
+   "wrong": "Mrk.8.27#w3",
+   "dst": null,
+   "how": "two judges named \"the blind man\"; not found among the nearby words",
+   "objections": [
+    "'he opened them' is the healed man, not Jesus",
+    "'he opened them, his sight restored' is the healed man, not Jesus",
+    "'he opened' the eyes refers to the blind man"
+   ]
+  },
+  {
+   "src": "Mrk.9.21#cl0s",
+   "ref": "Mrk.9.21",
+   "wrong": "Mrk.9.23#w2",
+   "dst": null,
+   "how": "two judges named \"the boy's father\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "'he said' is the boy's father answering Jesus, not Jesus",
+    "'he said' is the boy's father answering; not Jesus",
+    "'he' is the father; Jesus is the one asking"
+   ]
+  },
+  {
+   "src": "Mrk.9.35#cl0s",
+   "ref": "Mrk.9.35",
+   "wrong": "Mrk.9.27#w2",
+   "dst": "Mrk.9.35#w9",
+   "how": "two judges named \"anyone who wants to be first\"; found as \"anyone\" in Mrk.9.35",
+   "objections": [
+    "'he must be last' refers to 'anyone', not Jesus",
+    "'he' is the would-be first one, not Jesus",
+    "'he' means 'anyone who wants to be first', not Jesus"
+   ]
+  },
+  {
+   "src": "Mrk.9.41#cl4s",
+   "ref": "Mrk.9.41",
+   "wrong": "Mrk.9.41#w10",
+   "dst": null,
+   "how": "two judges named \"anyone who gives you even a cup of water\"; 4 words could be it in Mrk.9.41, none chosen",
+   "objections": [
+    "'He' is the giver of water; the reward is his.",
+    "'He' is the one who gives the cup, not Jesus.",
+    "'He' means anyone who gives the cup; chain to Christ is wrong."
+   ]
+  },
+  {
+   "src": "Num.11.18#w18",
+   "ref": "Num.11.18",
+   "wrong": "Num.11.18#w30",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'Who' is the people's rhetorical question, not a reference to the LORD.",
+    "'who' is the people's rhetorical question, not a reference to the LORD",
+    "The people's complaint asks 'who' generally; it does not name God."
+   ]
+  },
+  {
+   "src": "Num.15.9#cl0s",
+   "ref": "Num.15.9",
+   "wrong": "Num.15.8#w14",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'he' is the worshiper presenting the offering, not the LORD",
+    "Offerer presents the grain offering to the LORD; God is not the actor.",
+    "The offerer is subject of the verb; the LORD receives the offering."
+   ]
+  },
+  {
+   "src": "Num.16.5#cl6s",
+   "ref": "Num.16.5",
+   "wrong": "Num.16.5#w14",
+   "dst": "Num.16.4#w2",
+   "how": "two judges named \"Moses\"; found as \"Moses\" in Num.16.4",
+   "objections": [
+    "'he said to Korah' is Moses speaking, not the LORD",
+    "'he' is Moses; the LORD is in the quoted words",
+    "Moses is the one speaking, not God"
+   ]
+  },
+  {
+   "src": "Num.6.13#cl1s",
+   "ref": "Num.6.13",
+   "wrong": "Num.6.12#w3",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' is the Nazirite whose time is complete, not the LORD.",
+    "'He' is the Nazirite; the chain to the LORD is wrong.",
+    "'he' is the Nazirite completing his vow, not the LORD"
+   ]
+  },
+  {
+   "src": "Num.6.9#cl1s",
+   "ref": "Num.6.9",
+   "wrong": "Num.6.8#w7",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He' is the Nazirite who is defiled, not the LORD.",
+    "'he' is the Nazirite shaving his head, not the LORD",
+    "'he' is the Nazirite under the vow, not God"
+   ]
+  },
+  {
+   "src": "Pro.18.22#cl1s",
+   "ref": "Pro.18.22",
+   "wrong": "Pro.18.22#w8",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He who finds a wife' is the husband, not God.",
+    "'he' is the finder of a wife; the LORD is only the giver of favor",
+    "'he' is the man who finds a wife, not the LORD"
+   ]
+  },
+  {
+   "src": "Pro.18.22#cl2s",
+   "ref": "Pro.18.22",
+   "wrong": "Pro.18.22#w8",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'He who finds a wife' is any man; the LORD only gives favor",
+    "'He who finds a wife' is the man; the LORD is the giver.",
+    "'He' is the man finding a wife, not the LORD"
+   ]
+  },
+  {
+   "src": "Psa.13.4#cl1s",
+   "ref": "Psa.13.4",
+   "wrong": "Psa.13.4#w4",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "No 'you' in this verse; 'him' is the psalmist, not the LORD.",
+    "No 'you' in this verse; 'him' there is the psalmist, not God.",
+    "The enemy's 'him' is the psalmist; chain to LORD does not fit."
+   ]
+  },
+  {
+   "src": "Psa.13.4#cl3s",
+   "ref": "Psa.13.4",
+   "wrong": "Psa.13.4#w4",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "No 'you' in verse; 'him' is the psalmist as the enemy speaks of him.",
+    "The enemy's 'him' is David; the LORD is not addressed here.",
+    "The word is not clearly God; the verse speaks of the psalmist."
+   ]
+  },
+  {
+   "src": "Psa.14.7#w0",
+   "ref": "Psa.14.7",
+   "wrong": "Psa.14.7#w8",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'Oh that' is a wish particle, not a pronoun pointing to anyone.",
+    "'Oh that' is an optative particle, not a word pointing to a person",
+    "The Hebrew wish-particle refers to no one; the LORD is a separate word"
+   ]
+  },
+  {
+   "src": "Psa.17.13#w8",
+   "ref": "Psa.17.13",
+   "wrong": "Psa.17.13#w2",
+   "dst": null,
+   "how": "two judges named \"the wicked\"; not found among the nearby words",
+   "objections": [
+    "'Confront him' refers to the wicked enemy, not the LORD.",
+    "'Him' is the singular wicked one; the LORD is the one addressed",
+    "'Him' is the wicked adversary of verse 12, not the LORD addressed"
+   ]
+  },
+  {
+   "src": "Psa.2.11#cl0s",
+   "ref": "Psa.2.11",
+   "wrong": "Psa.2.11#w2",
+   "dst": null,
+   "how": "two judges named \"the kings and judges of the earth\"; 2 words could be it in Psa.2.10, none chosen",
+   "objections": [
+    "'you' addresses the kings and rulers, not the LORD",
+    "'you' addresses the kings; the LORD is the one served",
+    "'you' is the earthly rulers being warned"
+   ]
+  },
+  {
+   "src": "Psa.2.7#w10",
+   "ref": "Psa.2.7",
+   "wrong": "Psa.2.7#w3",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'I' is the Anointed King quoting the LORD's decree",
+    "'I' is the Anointed King; the LORD is the one who spoke",
+    "'I' is the Anointed One, addressed by the LORD"
+   ]
+  },
+  {
+   "src": "Psa.21.10#cl0s",
+   "ref": "Psa.21.10",
+   "wrong": "Psa.21.8#w5",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'You' in vv.9-12 may address the king, since the LORD is in third person",
+    "'You' is the king; the LORD appears in third person in the same verse",
+    "Addressee shifts between king and LORD; royal-messianic reading holds it open"
+   ]
+  },
+  {
+   "src": "Psa.21.11#cl0s",
+   "ref": "Psa.21.11",
+   "wrong": "Psa.21.10#w9",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "Addressee could be the king or God; the psalm reads both ways.",
+    "Psalm 21:8-12 is often read as addressed to the king, not God.",
+    "Shift between 'You' and 'the LORD' suggests the king is addressed."
+   ]
+  },
+  {
+   "src": "Psa.32.10#w12",
+   "ref": "Psa.32.10",
+   "wrong": "Psa.32.10#w9",
+   "dst": null,
+   "how": "two judges named \"him who trusts in the LORD\"; it is a divine person's word, so held for Doug",
+   "objections": [
+    "'him' is the believer surrounded by loving devotion, not God",
+    "'him' is the believer who trusts, not the LORD",
+    "'him' is the one trusting the LORD"
+   ]
+  },
+  {
+   "src": "Psa.35.3#cl0s",
+   "ref": "Psa.35.3",
+   "wrong": "Psa.35.1#w2",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'your salvation' addresses David's soul; chain to LORD is wrong.",
+    "'your' belongs to the psalmist's soul; the LORD is the speaker 'I'.",
+    "The addressee is 'my soul'; God is the one speaking, not addressed."
+   ]
+  },
+  {
+   "src": "Psa.68.31#cl2s",
+   "ref": "Psa.68.31",
+   "wrong": "Psa.68.21#w9",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "Verse has no 'he'; its imperatives are addressed to God, and the chain runs from verse 21.",
+    "Verse is an imperative addressed to God; no 'he', and the chain runs to distant 68:21."
+   ]
+  },
+  {
+   "src": "Psa.69.24#cl2s",
+   "ref": "Psa.69.24",
+   "wrong": "Psa.69.17#w2",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "Hebrew verse numbering differs; the 'you' belongs to the next verse",
+    "Shown verse text has no 'you'; Hebrew versification differs, so the check is unclear.",
+    "no 'you' appears in the verse text shown; the chain does not fit it"
+   ]
+  },
+  {
+   "src": "Psa.7.3#cl0s",
+   "ref": "Psa.7.3",
+   "wrong": "Psa.7.2#w0",
+   "dst": "Psa.7.3#w5",
+   "how": "two judges named \"my pursuers\"; found as \"my\" in Psa.7.3",
+   "objections": [
+    "'he' (lest he tear) is the enemy pursuer, not the LORD",
+    "Context makes the enemy the one tearing; chain to LORD is wrong",
+    "Hebrew 'lest he tear' is the pursuer/enemy, not the LORD"
+   ]
+  },
+  {
+   "src": "Psa.71.3#w12",
+   "ref": "Psa.71.3",
+   "wrong": "Psa.71.3#cl2s",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'me' is the first-person speaker; chain wrongly equates it with God",
+    "'me' is the one praying, not God",
+    "'me' is the praying psalmist, addressed to God"
+   ]
+  },
+  {
+   "src": "Rev.10.7#cl3s",
+   "ref": "Rev.10.7",
+   "wrong": "Rev.10.7#w17",
+   "dst": "Rev.10.7#w8",
+   "how": "two judges named \"the seventh angel\"; found as \"angel\" in Rev.10.7",
+   "objections": [
+    "\"he begins to sound his trumpet\" is the seventh angel, not God",
+    "'when he begins to sound his trumpet' refers to the angel",
+    "lowercase 'he' who sounds the trumpet is the seventh angel, not God"
+   ]
+  },
+  {
+   "src": "Rev.12.6#cl1s",
+   "ref": "Rev.12.6",
+   "wrong": "Rev.12.6#w14",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "Greek 'they may nourish her' is an impersonal plural, not God as subject.",
+    "Greek 'they may nourish her' is an impersonal plural, not clearly God; 'he' absent",
+    "Unstated nourishing subject is open; God prepared the place, but nourishers are unspecified."
+   ]
+  },
+  {
+   "src": "Rom.11.2#cl1s",
+   "ref": "Rom.11.2",
+   "wrong": "Rom.11.2#w3",
+   "dst": "Rom.11.2#w13",
+   "how": "two judges named \"Elijah\"; found as \"Elijah\" in Rom.11.2",
+   "objections": [
+    "'he appealed to God' — the subject is Elijah, not God",
+    "'he' is Elijah, appealing to God against Israel",
+    "'he' is Elijah, appealing to God, not God"
+   ]
+  },
+  {
+   "src": "Rom.15.9#cl2s",
+   "ref": "Rom.15.9",
+   "wrong": "Rom.15.8#w2",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'I' is the psalmist in the original; Paul applies it to Christ",
+    "Original speaker is the psalmist; Paul reads it as Christ",
+    "Quoted psalm speaker is David; Paul's reading it as Christ is interpretive."
+   ]
+  },
+  {
+   "src": "Rom.8.29#cl1s",
+   "ref": "Rom.8.29",
+   "wrong": "Rom.6.23#w10",
+   "dst": null,
+   "how": "two judges named \"His Son\"; not found among the nearby words",
+   "objections": [
+    "\"He would be the firstborn\" refers to the Son, not God; the clause is ambiguous",
+    "'firstborn among many brothers' is Christ, the Son just named",
+    "Second \"He\" (firstborn) is the Son; chain to God fits only the predestining clause"
+   ]
+  },
+  {
+   "src": "Rom.9.20#cl5s",
+   "ref": "Rom.9.20",
+   "wrong": "Rom.9.20#w9",
+   "dst": "Rom.9.20#w1",
+   "how": "two judges named \"O man\"; found as \"man\" in Rom.9.20",
+   "objections": [
+    "'Who are you, O man' addresses the man, not God",
+    "'who are you, O man' is the human; only the quoted 'You' is God.",
+    "'you' addresses the human objector, not God"
+   ]
+  },
+  {
+   "src": "Rut.2.20#cl2s",
+   "ref": "Rut.2.20",
+   "wrong": "Rut.2.20#w9",
+   "dst": "Rut.2.19#w38",
+   "how": "two judges named \"Boaz\"; found as \"Boaz\" in Rut.2.19",
+   "objections": [
+    "'He' is Boaz, the kinsman-redeemer; the LORD does the blessing.",
+    "'He' is Boaz, the kinsman-redeemer; the LORD is the one blessing.",
+    "'He' is Boaz, the near relative; the chain to LORD is wrong."
+   ]
+  },
+  {
+   "src": "Rut.4.14#cl2s",
+   "ref": "Rut.4.14",
+   "wrong": "Rut.4.14#w7",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'his name' in Ruth 4:14 is often read as the child, not the LORD",
+    "'his name' means the kinsman-redeemer (the child), not the LORD",
+    "'his' is the child/redeemer, whose name becomes famous"
+   ]
+  },
+  {
+   "src": "Zec.2.12#w8",
+   "ref": "Zec.2.12",
+   "wrong": "Zec.2.12#w3",
+   "dst": null,
+   "how": "no agreed referent",
+   "objections": [
+    "'Me' is the prophet sent by the LORD of Hosts, not the LORD himself",
+    "One LORD sends another: the Angel of the LORD figure is in view.",
+    "Sent One is read as the divine Messiah or Angel of the LORD, not simply the LORD"
+   ]
+  }
+ ]
+}

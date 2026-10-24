@@ -1,0 +1,65 @@
+{
+ "ref": "Job.38.9",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'I made' inside the LORD's speech: the LORD. Not in this verse's candidate list (see cant_tell).",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its garment' (third masculine singular): the sea of 38:8, the owner of the clouds as garment. The sea is not offered as a candidate.",
+   "category": "pronoun for a non-person from an earlier verse"
+  },
+  {
+   "slot": "w9",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its swaddling band' (third masculine singular): the sea, as w5.",
+   "category": "pronoun for a non-person from an earlier verse"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive 'made the clouds' is nested in the when-clause. The builder lists this link twice; it is kept once.",
+   "category": "infinitive nested in temporal clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The second item 'thick darkness its swaddling band' lies inside the same temporal span.",
+   "category": "second item inside temporal clause"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "A separate waw joins two parallel acts of the one LORD: the clouds as garment, the darkness as swaddling band.",
+   "category": "plain and between parallel items"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "38:9 cl0 (and 38:8 to 38:10)",
+   "what": "A chain of when-clauses, each setting the time of the enclosing act. No temporal link type covers this."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "The LORD is not in this verse's candidate list.",
+   "why": "Chosen from the speech, as in 38:8."
+  }
+ ]
+}

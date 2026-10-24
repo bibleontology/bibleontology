@@ -1,0 +1,10 @@
+PREFIX bom: <https://bibleontology.org/ns/meaning#>
+PREFIX dqv: <http://www.w3.org/ns/dqv#>
+# The card words a reader is shown by default: the policy's tier, nothing else.
+# Run over out/export/card-words.trig's default graph, it gives exactly the
+# named graph <https://bibleontology.org/graph/shown-card-words>, each word's strength measurement with it.
+CONSTRUCT { ?cw ?p ?o . ?m ?mp ?mo }
+WHERE {
+  ?cw a bom:CardWord ; bom:tier bom:default ; ?p ?o .
+  OPTIONAL { ?cw dqv:hasQualityMeasurement ?m . ?m ?mp ?mo }
+}

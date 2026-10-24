@@ -1,0 +1,164 @@
+{
+  "_what": "Function words for the clean builder (stages S2 and S3). Data, not code. Keys are consonants only (points and accents removed).",
+  "force_by_verb_type": {
+    "imperative": "directive",
+    "jussive": "directive",
+    "cohortative": "directive",
+    "infinitive construct": "nonfinite",
+    "infinitive absolute": "nonfinite",
+    "_default": "assertion"
+  },
+  "question_types": [
+    "interrogative"
+  ],
+  "question_lemmas": [
+    "מי",
+    "מה",
+    "איך",
+    "איכה",
+    "איה",
+    "אן",
+    "מדוע",
+    "אי",
+    "למה"
+  ],
+  "negative_types": [
+    "negative"
+  ],
+  "connectives": {
+    "כי": {
+      "mid": "because",
+      "verse_initial": {
+        "undecided": [
+          "because",
+          "when_if_though"
+        ]
+      }
+    },
+    "אם": {
+      "any": "if",
+      "forward": true
+    },
+    "פן": {
+      "any": "lest"
+    },
+    "למען": {
+      "any": "purpose"
+    },
+    "כי אם": {
+      "any": "but_rather"
+    },
+    "אולם": {
+      "any": "contrast"
+    },
+    "אפס כי": {
+      "any": "contrast"
+    },
+    "גם כי": {
+      "any": "though"
+    },
+    "או": {
+      "any": "or"
+    },
+    "ו": {
+      "fused": "then",
+      "any": "and"
+    },
+    "הן": {
+      "any": "if",
+      "forward": true
+    },
+    "להן": {
+      "any": "contrast",
+      "after_negative": "but_rather"
+    },
+    "ברם": {
+      "any": "contrast",
+      "after_negative": "but_rather"
+    },
+    "לכן כן": {
+      "any": "therefore"
+    },
+    "לכן": {
+      "any": "therefore"
+    },
+    "על כן": {
+      "any": "therefore"
+    },
+    "כי על כן": {
+      "any": "because"
+    },
+    "עקב כי": {
+      "any": "because"
+    },
+    "כ ל קבל דנה": {
+      "any": "therefore"
+    },
+    "ב אדין": {
+      "any": "then"
+    },
+    "אדין": {
+      "any": "then"
+    },
+    "באדין": {
+      "any": "then"
+    }
+  },
+  "_phrases": "Keys with spaces are MACULA's connective phrases (class cjp), keyed by every word including a preposition, so עַל־כֵּן 'therefore' is not read as a lone כֵּן 'so'. A phrase with no key of its own falls back to its last word that has one (וְגַם, וְעַתָּה -> the waw's 'and'). וְעַתָּה is left 'and': MACULA glosses it 'therefore' 144 times and 'now' 125, and the form does not decide which.",
+  "speech_verbs": [
+    "אמר",
+    "דבר",
+    "צוה",
+    "קרא",
+    "ענה",
+    "שאל",
+    "נגד",
+    "שבע",
+    "מלל",
+    "חוה"
+  ],
+  "perceive_verbs": [
+    "ידע",
+    "ראה",
+    "שמע",
+    "אמר",
+    "זכר",
+    "נגד",
+    "בין",
+    "שבע",
+    "חזה"
+  ],
+  "addressee_preps": [
+    "אל",
+    "ל"
+  ],
+  "heading_words": [
+    "מזמור",
+    "שיר",
+    "משכיל",
+    "מכתם",
+    "תפלה",
+    "תהלה",
+    "שגיון",
+    "נצח"
+  ],
+  "_speech": "speech_verbs frame a speech turn (S4); after perceive_verbs a כִּי is 'that' (content), not 'because' (S3). Lists from the old builder, where each was checked against the corpus's own lemma spellings.",
+  "within_by_prep": {
+    "ל": "purpose",
+    "למען": "purpose",
+    "בעבור": "purpose",
+    "לבעבור": "purpose",
+    "כ": "as",
+    "עד": "until_limit",
+    "כדי": "when_if_though",
+    "כל קבל די": "because",
+    "מן די": "when_if_though"
+  },
+  "_notes": "fused: a waw on a wayyiqtol or weqatal is inside the verb ('and then'). verse_initial: a כִּי that opens a verse is 'for' OR 'when' by form, so the link is written as undecided with both candidates (2026-09-27: marked undecided). within_by_prep: a clause nested under a preposition takes the relation the preposition carries; the rest stay 'within'.",
+  "sequence_adverbs": [],
+  "that_after_perceive": [
+    "כי",
+    "די"
+  ],
+  "_aramaic": "The Aramaic of Daniel, Ezra and Jer 10:11 is in MACULA's Hebrew files and read with this table (2026-09-27). Its verb forms share the Hebrew names (qatal, yiqtol, participle), its negatives and questions the same marks. Its own words land on the shared kinds: הֵן 'if', לָהֵן and בְּרַם 'but', כְּדִי 'when', כָּל־קֳבֵל דִּי 'because', דִּי 'that' after a verb of perceiving, and the narrative's אֱדַיִן / בֵּאדַיִן 'then' as the same `then` the Hebrew wayyiqtol carries."
+}

@@ -1,0 +1,25 @@
+{"ref": "Psa.23.4",
+ "referents": [
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "Second person masculine singular in direct address; the psalm shifts from third-person LORD in 23:1-3 to address here, so the addressee is the LORD, the same masculine singular named in verse 1.", "category": "second person address to God within a psalm"},
+  {"slot": "w12", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person common singular object in the psalm's own speech; no other speaker is quoted here.", "category": "psalm's own voice"},
+  {"slot": "w14", "choice": "Psa.23.1#w3", "divine": true, "why": "Second person masculine singular possessive on rod; the rod belongs to the addressee of the speech, the LORD.", "category": "possessive second person in address to God"},
+  {"slot": "w17", "choice": "Psa.23.1#w3", "divine": true, "why": "Second person masculine singular possessive on staff; same addressee as the rod, the LORD.", "category": "possessive second person in address to God"},
+  {"slot": "w18", "choice": "c13", "divine": false, "why": "Third person masculine plural subject of a plural act (comfort). No single candidate is plural; the composite of rod and staff is the pair that comforts, and the masculine plural is the default for a mixed pair.", "category": "plural pronoun for a composite of two objects"},
+  {"slot": "w20", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person common singular object in the psalm's own speech.", "category": "psalm's own voice"},
+  {"slot": "cl0s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied first person common singular subject of the yiqtol verb, in the psalm's own voice.", "category": "psalm's own voice"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied first person common singular subject of the negated yiqtol, in the psalm's own voice.", "category": "psalm's own voice"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "why": "The clause opens with ki (for, because) after its main clause; the reason is cl2, and the edge runs from the explained clause to its reason, as the builder has it.", "category": "reason clause after its main clause"},
+  {"src": "cl1", "type": "conceded", "dst": "cl0", "action": "remove", "why": "The builder type conceded is not in link_types. The relation is the explicit concession gam ki, which the list names as the though type, so this link is replaced by the add below.", "category": "builder type outside the list"},
+  {"src": "cl1", "type": "though", "dst": "cl0", "action": "add", "why": "Gam ki (even though) opens cl0 and qualifies the claim of cl1: I will not fear, even though I walk through the valley. It is explicit, not the verse-initial ki case, and it attaches forward to cl1.", "category": "explicit concession opening a clause"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "concession", "action": "add", "members": [{"role": "conceded", "node": "cl0"}, {"role": "holds_anyway", "node": "cl1"}, {"role": "its_ground", "node": "cl2"}], "divine": false, "why": "The obstacle is cl0, the claim that holds anyway is cl1, and its ground is cl2, the ki clause. The group kind names exactly these three roles.", "category": "concession with its ground"}
+ ],
+ "none_fit": [
+  {"where": "cl3 and cl4", "what": "cl3 is a verbless noun phrase (your rod and your staff) that is the topic of cl4, and cl4's subject 'they' takes it up. No link type or group kind says that a nominal clause supplies the subject of the following clause (a left-dislocated topic)."}
+ ],
+ "cant_tell": [
+  {"what": "How cl3 and cl4 attach to the reason. They follow cl2 with no conjunction, after a semicolon. The text may give a second ground under the same ki (the rod and staff as a further reason for not fearing), or a separate asyncetic line. The form does not decide, so no link or group is added for them here.", "why": "There is no conjunction at cl3. A because link from cl4 to cl1 would assert a reading that the form does not settle."}
+ ]}

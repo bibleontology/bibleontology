@@ -1,0 +1,166 @@
+{
+ "ref": "Job.38.11",
+ "referents": [
+  {
+   "slot": "w14",
+   "choice": "none",
+   "divine": false,
+   "why": "'Your waves' (second masculine singular): the addressee of the decree is the sea, personified. It is not a candidate.",
+   "category": "addressee outside candidate list",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'I declared': the speaker, the LORD.",
+   "category": "first person in divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false,
+   "why": "Second person 'you may come': the addressee of the decree is the sea, not a candidate.",
+   "category": "addressee outside candidate list",
+   "votes": 3
+  },
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "Second person 'you will not add': the same addressee as cl1, the sea, not a candidate.",
+   "category": "addressee outside candidate list",
+   "votes": 3
+  },
+  {
+   "slot": "cl3s",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "Third person 'someone will fix': an indefinite subject. The grammar names no agent, though the context suggests the LORD.",
+   "category": "indefinite third person",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The 'then' runs from the speech to the saying, which reverses it. The saying's content is the speech.",
+   "category": "reversed link",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'I declared' introduces what is said. The content link goes to the first said clause (R1).",
+   "category": "speech content",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'You may come this far' and 'not you will add': the English 'but no farther' is a plain waw in the Hebrew.",
+   "category": "plain and between decrees",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "The waw joins what the boundary brings about, so it is not a plain and.",
+   "category": "and that is a result",
+   "votes": 2
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "R4: the stopping of the proud waves is what the boundary brings about, so it is the earlier clause's result.",
+   "category": "result of a boundary",
+   "votes": 2
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    }
+   ],
+   "divine": true,
+   "why": "The sender is the LORD. The builder gave a slot id (cl0s), which is not a candidate. No addressee is recorded because the sea is not a candidate.",
+   "category": "speaker corrected",
+   "votes": 3
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "38:11 cl1 and cl2",
+   "what": "'But no farther' contrast by waw and negation. The contrast type needs the connective 'ulam' (but), which is absent here."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Addressee of the turn (the sea, personified)",
+   "why": "It is not a candidate, so no addressee member is recorded."
+  },
+  {
+   "what": "Agent of 'someone will fix' (cl3s)",
+   "why": "An indefinite third person. The text names no agent."
+  },
+  {
+   "what": "The addressee of the speech, the sea to which 'you' refers",
+   "why": "The sea is not among the candidates, so the turn's addressee cannot be filled."
+  },
+  {
+   "what": "Whether this speech is nested in the LORD's speech turn Job.38.1#g1",
+   "why": "The nesting is not linked from this verse."
+  },
+  {
+   "what": "The subject of 'here someone will set'",
+   "why": "The third masc sing is impersonal, and no masc sing candidate is a sensible doer."
+  },
+  {
+   "what": "Who sets the limit in cl3 ('here someone will fix').",
+   "why": "The verb is impersonal and no agent is named."
+  },
+  {
+   "what": "The addressee of the declaration ('you'), the sea.",
+   "why": "Not offered as a candidate."
+  },
+  {
+   "what": "The LORD is not in this verse's candidate list.",
+   "why": "Chosen from the speech, as in 38:8."
+  }
+ ],
+ "voted": 3
+}

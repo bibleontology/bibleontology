@@ -1,0 +1,134 @@
+{
+ "ref": "Job.38.11",
+ "referents": [
+  {
+   "slot": "w14",
+   "choice": "none",
+   "divine": false,
+   "why": "'Your waves' (second person): the one addressed is the sea, which the speech commands. The sea is not offered as a candidate.",
+   "category": "address to a non-person"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Implied first person subject of 'I said': the LORD. Not in this verse's candidate list.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false,
+   "why": "Implied second person 'you may come': the sea, addressed in the speech; not a candidate.",
+   "category": "address to a non-person"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "Implied second person 'you will add': the same addressee, the sea.",
+   "category": "address to a non-person"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "Impersonal third masculine singular 'here someone will fix': the text names no agent for the stopping.",
+   "category": "impersonal verb with no agent"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The words are the content of 'I said', not an event after it; this link reverses the speech. Replaced by a content link.",
+   "category": "reversed speech link"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'I said' introduces the speech; the said clause is cl1 ('you may come this far').",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The waw joins 'you may come this far' to 'you will not add': the sense is 'but no farther', a contrast marked by waw and negation.",
+   "category": "waw with negation read as but"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "A waw joining a clause to what the limit brings about is a result, not a plain and.",
+   "category": "result read as plain and"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'You shall not go further, and so here your proud waves must stop': the stopping is what the limit brings about.",
+   "category": "limit brings about outcome"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    }
+   ],
+   "divine": true,
+   "why": "The builder's sender 'cl0s' is a slot; the speaker is the LORD. The addressee, the sea, is not a candidate, so none is given.",
+   "category": "speaker of a declaration"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "38:11 cl1 and cl2",
+   "what": "'But no farther' contrast by waw and negation. The contrast type needs the connective 'ulam' (but), which is absent here."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Who sets the limit in cl3 ('here someone will fix').",
+   "why": "The verb is impersonal and no agent is named."
+  },
+  {
+   "what": "The addressee of the declaration ('you'), the sea.",
+   "why": "Not offered as a candidate."
+  },
+  {
+   "what": "The LORD is not in this verse's candidate list.",
+   "why": "Chosen from the speech, as in 38:8."
+  }
+ ]
+}

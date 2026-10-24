@@ -1,0 +1,23 @@
+{"ref": "Exo.7.27",
+ "referents": [
+  {"slot": "w3", "choice": "Exo.7.26#w7", "divine": false, "why": "Second masculine singular inside the LORD's quoted message of Exo.7.26 (go to Pharaoh and tell him); the addressee of that speech is Pharaoh, so the 'you' who refuses is Pharaoh.", "category": "addressee of a quoted command"},
+  {"slot": "w7", "choice": "Exo.7.26#w2", "divine": true, "why": "First common singular in the speech introduced by 'thus he says Yahweh' in Exo.7.26, so 'I' is the speaker of that speech, the LORD.", "category": "first person of quoted divine speech"},
+  {"slot": "w12", "choice": "Exo.7.26#w7", "divine": false, "why": "Second masculine singular possessive suffix on 'territory', so the owner is the addressee of the speech, Pharaoh.", "category": "possessive of addressee"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "remove", "why": "The infinitive completes the verb 'refuse' as its object; refuse is excluded from purpose, so this is not a 'so that'.", "category": "infinitive completing a verb of refusing read as purpose"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "add", "why": "The infinitive 'let them go' is the object of 'you are refusing', a clause nested in a role of cl0.", "category": "infinitive object of a verb"},
+  {"src": "cl0", "type": "if", "dst": "cl2", "action": "remove", "why": "Direction is reversed: an if-link runs from the consequence to its condition. The condition is cl0 ('if you refuse') and the consequence is cl2; the builder's own group cond0 says the same.", "category": "conditional link reversed"},
+  {"src": "cl2", "type": "if", "dst": "cl0", "action": "add", "why": "The Hebrew conditional precedes what it governs and opens the refusal clause cl0. The host is the next clause that is not an infinitive complement, cl2, which cond0 already names as consequence.", "category": "conditional with condition preceding its host"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "The waw belongs to the conditional particle 'and if', which the if-link already carries; it is not a separate coordinating and between the refusal and the strike.", "category": "conditional particle read as plain and"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "A plain waw on cl3 joins the hinneh particle to its participle; 'here I am, striking' supports the join, and it is not a cause, result or purpose.", "category": "hinneh clause joined to its participle"}
+ ],
+ "groups": [
+  {"id": "cond0", "kind": "conditional", "action": "keep", "members": [{"role": "condition", "node": "cl0"}, {"role": "consequence", "node": "cl2"}], "divine": false, "why": "The condition is the refusal in cl0 and the consequence is the strike introduced by the hinneh clause cl2; the members agree with the if-link now added.", "category": "condition and consequence grouping"}
+ ],
+ "none_fit": [
+  {"where": "cl2 -and-> cl3", "what": "A hinneh particle with its participle is one predication split across two clauses; no link type or group kind states that."}
+ ],
+ "cant_tell": [
+  {"what": "Whether this verse's clauses are part of the quoted speech turn Exo.7.26#turn1", "why": "The quotation begun in 8:1 continues here, but a turn group in this verse would need a saying clause as its frame and this verse has none. The builder's existing turn group is left unchanged."}
+ ]}

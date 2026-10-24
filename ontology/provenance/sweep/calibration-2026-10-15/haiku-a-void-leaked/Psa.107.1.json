@@ -1,0 +1,19 @@
+{"ref": "Psa.107.1",
+ "referents": [
+  {"slot": "w9", "choice": "w2", "divine": true, "why": "The suffix on steadfast love is third masculine singular. LORD is masculine singular and is the one declared good in cl1 and thanked in cl0, so his covenant loyalty is the LORD's. No other candidate agrees in person and number.", "category": "possessive suffix of a divine attribute"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "The imperative 'give thanks' is second person plural, addressed to a plural audience (the congregation invited to worship). No candidate is a plural group of addressees: the psalmist voice is singular, and the other candidates are nouns or the act itself, which agree in neither person nor number.", "category": "implied plural addressee of a call to worship"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "The ki (כִּי) after the command gives the reason for the thanks: give thanks because He is good. The conjunction and the sense both support it.", "category": "reason after a command"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "why": "The second ki grounds the goodness in enduring loyalty: he is good in that his covenant loyalty endures forever. The connective supports a reason, and the sense fits.", "category": "reason stated by second ki"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl0"}, {"role": "basis", "node": "cl1"}], "divine": false, "why": "The clause after the command is its reason, which the imperative kind names basis. The builder labelled it part, which is not a member role of this kind.", "category": "reason clause mislabelled in imperative group"},
+  {"id": "writing", "kind": "writing", "action": "change", "members": [{"role": "part", "node": "imp0"}], "divine": false, "why": "The content of the psalm in this verse is the call and its reason, held as the imperative group imp0. The sender w2 is removed: the LORD is spoken of, not the writer, and the verse names no writer; the voice is not a named sender. The frame is removed too, because verse 1 is the psalm's text, not a heading.", "category": "writing unit with wrong sender and frame"}
+ ],
+ "none_fit": [
+  {"where": "cl0s", "what": "A plural addressee of a call to worship (the congregation) has no candidate kind; candidates are singular persons or non-persons."}
+ ],
+ "cant_tell": [
+  {"what": "The subject of cl1 ('He is good') is an elided copula subject that is not listed among the slots.", "why": "The context makes it the LORD, but the slot list carries no slot for it, so no referent is recorded here."}
+ ]}

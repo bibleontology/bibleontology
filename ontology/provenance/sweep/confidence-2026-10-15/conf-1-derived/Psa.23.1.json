@@ -1,0 +1,43 @@
+{
+ "ref": "Psa.23.1",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "psalmist",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "psalmist",
+   "divine": false
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "writing",
+   "kind": "writing",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

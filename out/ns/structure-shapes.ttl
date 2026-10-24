@@ -1,0 +1,123 @@
+# Bible Ontology -- the structure's shapes, version 1.2.1 (2026-10-22). Merged into /ns/shapes.
+# (c) 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org).
+# Licence: https://creativecommons.org/licenses/by/4.0/
+
+@prefix bos: <https://bibleontology.org/ns/structure#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+bos:addressee_objectShape a sh:NodeShape ;
+    sh:message "Object of addressee must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:addressee .
+
+bos:adv_objectShape a sh:NodeShape ;
+    sh:message "Object of adv must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:adv .
+
+bos:content_objectShape a sh:NodeShape ;
+    sh:message "Object of content must be one of: Clause, Imperative" ;
+    sh:or ( [ sh:class bos:Clause ] [ sh:class bos:Imperative ] ) ;
+    sh:targetObjectsOf bos:content .
+
+bos:ellipsis_objectShape a sh:NodeShape ;
+    sh:message "Object of ellipsis must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:ellipsis .
+
+bos:fulfils_objectShape a sh:NodeShape ;
+    sh:message "Object of fulfils must be one of: Clause, Imperative" ;
+    sh:or ( [ sh:class bos:Clause ] [ sh:class bos:Imperative ] ) ;
+    sh:targetObjectsOf bos:fulfils .
+
+bos:group_subject_objectShape a sh:NodeShape ;
+    sh:message "Object of group_subject must be one of: Word, Composite, Author" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Author ] ) ;
+    sh:targetObjectsOf bos:group_subject .
+
+bos:group_subject_subjectShape a sh:NodeShape ;
+    sh:message "Subject of group_subject must be one of: Parallel, AgentActs, Descriptions" ;
+    sh:or ( [ sh:class bos:Parallel ] [ sh:class bos:AgentActs ] [ sh:class bos:Descriptions ] ) ;
+    sh:targetSubjectsOf bos:group_subject .
+
+bos:io_objectShape a sh:NodeShape ;
+    sh:message "Object of io must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:io .
+
+bos:member_objectShape a sh:NodeShape ;
+    sh:message "Object of member must be one of: Word, Composite, Clause" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Clause ] ) ;
+    sh:targetObjectsOf bos:member .
+
+bos:motive_objectShape a sh:NodeShape ;
+    sh:message "Object of motive must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:motive .
+
+bos:o2_objectShape a sh:NodeShape ;
+    sh:message "Object of o2 must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:o2 .
+
+bos:o_objectShape a sh:NodeShape ;
+    sh:message "Object of o must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:o .
+
+bos:p_objectShape a sh:NodeShape ;
+    sh:message "Object of p must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:p .
+
+bos:possessor_subjectShape a sh:NodeShape ;
+    sh:message "Subject of possessor must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetSubjectsOf bos:possessor .
+
+bos:pp_objectShape a sh:NodeShape ;
+    sh:message "Object of pp must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:pp .
+
+bos:prep_object_objectShape a sh:NodeShape ;
+    sh:message "Object of prep_object must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:prep_object .
+
+bos:qualifier_objectShape a sh:NodeShape ;
+    sh:message "Object of qualifier must be one of: Word, Composite, Clause" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Clause ] ) ;
+    sh:targetObjectsOf bos:qualifier .
+
+bos:qualifier_subjectShape a sh:NodeShape ;
+    sh:message "Subject of qualifier must be one of: Word, Composite, Clause" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Clause ] ) ;
+    sh:targetSubjectsOf bos:qualifier .
+
+bos:resolves_to_objectShape a sh:NodeShape ;
+    sh:message "Object of resolves_to must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:resolves_to .
+
+bos:s_objectShape a sh:NodeShape ;
+    sh:message "Object of s must be one of: Word, Author, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Author ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:s .
+
+bos:sender_objectShape a sh:NodeShape ;
+    sh:message "Object of sender must be one of: Word, Composite, Author" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Author ] ) ;
+    sh:targetObjectsOf bos:sender .
+
+bos:speaker_objectShape a sh:NodeShape ;
+    sh:message "Object of speaker must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:speaker .
+
+bos:v_objectShape a sh:NodeShape ;
+    sh:message "Object of v must be one of: Verb, Composite, Word" ;
+    sh:or ( [ sh:class bos:Verb ] [ sh:class bos:Composite ] [ sh:class bos:Word ] ) ;
+    sh:targetObjectsOf bos:v .
+

@@ -1,0 +1,35 @@
+{
+ "ref": "Pro.10.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participial clause 'one who works a slack hand' is the subject of cl0's predicate 'is poor', so it sits inside cl0.",
+   "category": "participial subject inside a predicate"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Plain waw opening cl2, which the English renders 'but'. The opposition is recorded as a waw, not a contrast link.",
+   "category": "plain and read as opposition"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0 and cl2",
+   "what": "Antithetic couplet (the slack hand against the diligent hand) joined by a waw; no link type for antithesis without an explicit but-word."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Implied subject 'one who' of the participle 'works' (cl1), which is also the subject of cl0's 'is poor'.",
+   "why": "A generic person with no candidate that names it, and the parser gives it no slot, so there is no referent to choose."
+  }
+ ]
+}

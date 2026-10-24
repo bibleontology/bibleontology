@@ -1,0 +1,41 @@
+{
+ "ref": "Mrk.15.7",
+ "referents": [
+  {
+   "slot": "w9",
+   "choice": "w8",
+   "divine": false,
+   "why": "'who' (hoitines), masculine plural relative, agrees with 'rebels' (stasiastai) in the noun phrase it modifies.",
+   "category": "relative pronoun to its noun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link: the clause cannot be joined to itself.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The phrase 'called Barabbas' is nested in the noun phrase naming the man.",
+   "category": "naming phrase nested in clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The relative clause 'who had committed murder' is nested in the noun phrase 'the rebels' inside cl0's prepositional phrase.",
+   "category": "relative clause inside noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

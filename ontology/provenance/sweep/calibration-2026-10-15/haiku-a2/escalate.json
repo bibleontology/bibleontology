@@ -1,0 +1,787 @@
+{
+ "Exo.7.26": {
+  "disagree": [
+   {
+    "link": "cl2 content cl3",
+    "a": null,
+    "b": "add"
+   },
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "w7"
+     ],
+     [
+      "frame",
+      "cl2"
+     ],
+     [
+      "part",
+      "turn1"
+     ],
+     [
+      "sender",
+      "w4"
+     ]
+    ],
+    "only_in": "b"
+   },
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "w4"
+     ],
+     [
+      "frame",
+      "cl0"
+     ],
+     [
+      "part",
+      "g1"
+     ],
+     [
+      "part",
+      "imp1"
+     ],
+     [
+      "sender",
+      "w2"
+     ]
+    ],
+    "only_in": "b"
+   },
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "w4"
+     ],
+     [
+      "frame",
+      "cl0"
+     ],
+     [
+      "part",
+      "imp1"
+     ],
+     [
+      "part",
+      "turn1"
+     ],
+     [
+      "sender",
+      "w2"
+     ]
+    ],
+    "only_in": "a"
+   }
+  ],
+  "cant_tell": []
+ },
+ "Exo.7.27": {
+  "disagree": [
+   {
+    "link": "cl2 and cl3",
+    "a": "remove",
+    "b": "keep"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "Whether the consequence is cl2 alone or cl2 together with cl3",
+    "why": "The parser split the behold particle from its participle into two clauses. The next-clause rule puts the if host and the conditional group's consequence at cl2, but cl3 carries the predicate, and the text does not say which the parser should treat as the consequence."
+   },
+   {
+    "what": "Whether this verse's clauses are part of the quoted speech turn Exo.7.26#turn1",
+    "why": "The quotation begun in 8:1 continues here, but a turn group in this verse would need a saying clause as its frame and this verse has none. The builder's existing turn group is left unchanged."
+   }
+  ]
+ },
+ "Exo.8.1": {
+  "disagree": [],
+  "cant_tell": [
+   {
+    "what": "Whether cl3 (bring up the frogs) is the effect of the imperative group imp2, that is, what the stretching is meant to bring about.",
+    "why": "This verse has no weqatal after the commands, so the effect is not stated here. It may be stated, or only implied, in a later verse."
+   }
+  ]
+ },
+ "Exo.8.10": {
+  "disagree": [
+   {
+    "referent": "cl0s",
+    "a": "c4",
+    "b": "none"
+   },
+   {
+    "referent": "w3",
+    "a": "w4",
+    "b": "none"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "The referent of the implied subject of cl0",
+    "why": "The verse names no agent. The only agreeing composite is two verses back, and the text does not say who piled the dead frogs."
+   }
+  ]
+ },
+ "Exo.8.12": {
+  "disagree": [
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "w7"
+     ],
+     [
+      "frame",
+      "cl1"
+     ],
+     [
+      "part",
+      "imp2"
+     ],
+     [
+      "sender",
+      "w4"
+     ]
+    ],
+    "only_in": "b"
+   },
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "w4"
+     ],
+     [
+      "frame",
+      "cl0"
+     ],
+     [
+      "part",
+      "cl1"
+     ],
+     [
+      "part",
+      "turn1"
+     ],
+     [
+      "sender",
+      "w2"
+     ]
+    ],
+    "only_in": "a"
+   },
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "w4"
+     ],
+     [
+      "frame",
+      "cl0"
+     ],
+     [
+      "part",
+      "turn1"
+     ],
+     [
+      "sender",
+      "w2"
+     ]
+    ],
+    "only_in": "b"
+   },
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "w7"
+     ],
+     [
+      "part",
+      "imp2"
+     ],
+     [
+      "sender",
+      "w4"
+     ]
+    ],
+    "only_in": "a"
+   }
+  ],
+  "cant_tell": []
+ },
+ "Exo.8.13": {
+  "disagree": [
+   {
+    "link": "cl4 elaborates cl0",
+    "a": null,
+    "b": "add"
+   },
+   {
+    "link": "cl4 elaborates cl3",
+    "a": "add",
+    "b": null
+   },
+   {
+    "link": "cl4 fulfils cl4",
+    "a": null,
+    "b": "add"
+   },
+   {
+    "group": "action-state",
+    "members": [
+     [
+      "action",
+      "cl2"
+     ],
+     [
+      "state",
+      "cl1"
+     ]
+    ],
+    "only_in": "a"
+   },
+   {
+    "group": "action-state",
+    "members": [
+     [
+      "action",
+      "cl3"
+     ],
+     [
+      "state",
+      "cl2"
+     ]
+    ],
+    "only_in": "a"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "Whether Moses is included in the plural they of cl0s",
+    "why": "The clauses that follow have Aaron alone as doer, but the report is plural. The composite is chosen on the morphology and the command chain; the text does not say whether Moses joined in."
+   },
+   {
+    "what": "The members of the imperative groups Exo.8.12#imp2 and imp3",
+    "why": "The earlier verse lists them by id without members, so it cannot be confirmed which command clauses they hold. The fulfils links point at the clauses themselves."
+   },
+   {
+    "what": "whether the plural 'they' (cl0s) is Moses and Aaron together or Aaron alone",
+    "why": "a 3mp can be a composite; only Aaron acts in cl1 and cl2, while Moses carried the command to him; the composite was chosen because the chain was addressed to both"
+   },
+   {
+    "what": "the imperative groups imp2 and imp3 of Exo.8.12",
+    "why": "cl2 and cl3 of Exo.8.12 are joined by 'and' at one level, so by the group rule they are one imperative group with effect cl4; the builder splits them. That belongs to the Exo.8.12 run and is not changed here; the fulfils links point at cl2 and cl3 directly"
+   },
+   {
+    "what": "whether the command 'say to Aaron' (Exo.8.12 cl1) is fulfilled",
+    "why": "no clause here repeats 'say'; only cl0's 'they did so' could cover it, and the text does not show the relay"
+   }
+  ]
+ },
+ "Exo.8.14": {
+  "disagree": [
+   {
+    "link": "cl0 and cl2",
+    "a": "remove",
+    "b": "keep"
+   },
+   {
+    "group": "acts",
+    "members": [
+     [
+      "agent_act",
+      "cl0"
+     ],
+     [
+      "agent_act",
+      "cl2"
+     ],
+     [
+      "group_subject",
+      "w4"
+     ]
+    ],
+    "only_in": "a"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "the clause that the builder link source 'cl4' refers to",
+    "why": "this verse's clauses are cl0 to cl3, and cl4 is a local id from another verse, probably Exo.8.13#cl4; I was not to open other files, so I cannot confirm it"
+   },
+   {
+    "what": "Which deed the 'so' of cl0 copies: Aaron's striking of the dust (Exo.8.13#cl2) or the gnats' coming (Exo.8.13#cl3).",
+    "why": "The pro-form is not specified further. The magicians' stated aim (cl1, to bring forth the gnats) matches the outcome in cl3, but the method they take up is the striking in cl2. The form does not settle it, so the likewise link points at cl2 and this is left open."
+   }
+  ]
+ },
+ "Exo.8.15": {
+  "disagree": [],
+  "cant_tell": [
+   {
+    "what": "the earlier word of the LORD that 'just as he had said Yahweh' fulfils",
+    "why": "The saying is not among the verses given. cl4 is kept as the comparison, but its source lies outside the window."
+   }
+  ]
+ },
+ "Exo.8.16": {
+  "disagree": [
+   {
+    "link": "cl6 content imp7",
+    "a": "add",
+    "b": null
+   },
+   {
+    "group": "imperative",
+    "members": [
+     [
+      "command",
+      "cl7"
+     ],
+     [
+      "effect",
+      "cl8"
+     ]
+    ],
+    "only_in": "a"
+   },
+   {
+    "group": "imperative",
+    "members": [
+     [
+      "aim",
+      "cl8"
+     ],
+     [
+      "command",
+      "cl7"
+     ]
+    ],
+    "only_in": "b"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "The scope of the time clause cl3 and cl4: does it set the time for the standing before Pharaoh (cl2), or only for the saying (cl5)?",
+    "why": "The text has one presentative and no connective, so the form does not settle which command it governs. The then link from cl4 to cl5 is kept on the reading that the saying follows the going out."
+   },
+   {
+    "what": "Unlisted slot: the implied subject of cl4 (the participle 'going out', 'he')",
+    "why": "The text fixes it as Pharaoh, the one Moses is to stand before, but the slot list does not carry this subject, so there is no slot id against which to record a choice. Flagged so the slot list can be checked."
+   }
+  ]
+ },
+ "Exo.8.3": {
+  "disagree": [
+   {
+    "link": "Exo.8.2#cl2 then cl0",
+    "a": null,
+    "b": "remove"
+   },
+   {
+    "link": "cl2 then cl0",
+    "a": "remove",
+    "b": null
+   },
+   {
+    "group": "acts",
+    "members": [
+     [
+      "agent_act",
+      "cl0"
+     ],
+     [
+      "agent_act",
+      "cl1"
+     ],
+     [
+      "group_subject",
+      "w4"
+     ]
+    ],
+    "only_in": "a"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "Which clause of Exo.8.2 the 'thus' copies: the stretching out (Exo.8.2#cl0) or the frogs coming up (Exo.8.2#cl1)",
+    "why": "'did thus' (ken) does not name the act. The likewise link is written to Exo.8.2#cl0 as the deed begun. The relation holds either way; only the target is unsettled."
+   }
+  ]
+ },
+ "Exo.8.4": {
+  "disagree": [
+   {
+    "group": "imperative",
+    "members": [
+     [
+      "aim",
+      "cl3"
+     ],
+     [
+      "command",
+      "cl2"
+     ]
+    ],
+    "only_in": "a"
+   },
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "c3"
+     ],
+     [
+      "frame",
+      "cl1"
+     ],
+     [
+      "part",
+      "cl5"
+     ],
+     [
+      "part",
+      "imp2"
+     ],
+     [
+      "sender",
+      "w2"
+     ]
+    ],
+    "only_in": "b"
+   },
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "c3"
+     ],
+     [
+      "frame",
+      "cl1"
+     ],
+     [
+      "part",
+      "cl4"
+     ],
+     [
+      "part",
+      "cl5"
+     ],
+     [
+      "part",
+      "imp2"
+     ],
+     [
+      "sender",
+      "w2"
+     ]
+    ],
+    "only_in": "a"
+   },
+   {
+    "group": "imperative",
+    "members": [
+     [
+      "aim",
+      "cl3"
+     ],
+     [
+      "command",
+      "cl2"
+     ],
+     [
+      "effect",
+      "cl4"
+     ]
+    ],
+    "only_in": "b"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "Whether cl4 (I will let the people go) is conditional on the removal in cl3, as in 'if he removes the frogs, then I will let them go'.",
+    "why": "The waw is plain and the Hebrew marks no condition. The 'if' link would need the form to carry the condition, and it does not, so the plain 'and' is kept."
+   },
+   {
+    "what": "Whether the purpose link applies from cl4 to cl5 when the first clause is a cohortative rather than a command.",
+    "why": "The purpose type's text names a command as the first term. The sense (release for the sacrifice) is plain, so purpose is added, but the type's wording does not cover a cohortative first term."
+   }
+  ]
+ },
+ "Exo.8.6": {
+  "disagree": [
+   {
+    "link": "cl3 as cl1",
+    "a": null,
+    "b": "add"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "Whether cl3 is a command (an imperative group) or a bare wish",
+    "why": "The parse gives no verb for cl3, only 'according to your word'. The verb is likely the jussive of 'let be', which the parse dropped. The purpose link stands, but an imperative group would need a command the lists cannot confirm, so none is added."
+   },
+   {
+    "what": "cl3 has no verb: the optative 'may it be' is elided, so the wish is a bare prepositional phrase",
+    "why": "The purpose link cl3 to cl4 and the as-link to cl1 are kept on sense. Lemaan with a yiqtol after a wish reads as purpose, but the purpose type is written for a command followed by waw and a jussive."
+   }
+  ]
+ },
+ "Exo.8.7": {
+  "disagree": [
+   {
+    "group": "turn",
+    "members": [
+     [
+      "addressee",
+      "w4"
+     ],
+     [
+      "part",
+      "cl0"
+     ],
+     [
+      "part",
+      "cl1"
+     ],
+     [
+      "sender",
+      "w2"
+     ]
+    ],
+    "only_in": "b"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "Whether cl0 and cl1 are parts of Exo.8.6#turn1 (Moses's reply, which this verse continues and closes)",
+    "why": "The members of that group are not in the input and no group is listed for this verse, so its membership cannot be confirmed or changed here. Left as built."
+   },
+   {
+    "what": "Whether cl0 is the effect member of the imperative group Exo.8.4#imp2",
+    "why": "The brief gives that group's id but not its members, so the group is not changed here. The result link above records the relation."
+   },
+   {
+    "what": "Whether the speech begun at Exo.8.6#turn1 runs on into this verse",
+    "why": "There is no frame clause here and no quotation boundary in the brief. g1 is a new turn for these clauses until that is settled."
+   }
+  ]
+ },
+ "Gen.1.3": {
+  "disagree": [
+   {
+    "link": "cl0 then cl2",
+    "a": null,
+    "b": "add"
+   },
+   {
+    "link": "cl1 result cl2",
+    "a": null,
+    "b": "add"
+   },
+   {
+    "link": "cl2 fulfils cl1",
+    "a": "add",
+    "b": null
+   },
+   {
+    "link": "cl2 then cl0",
+    "a": "keep",
+    "b": "remove"
+   },
+   {
+    "group": "imperative",
+    "members": [
+     [
+      "command",
+      "cl1"
+     ],
+     [
+      "effect",
+      "cl2"
+     ]
+    ],
+    "only_in": "b"
+   },
+   {
+    "group": "imperative",
+    "members": [
+     [
+      "command",
+      "cl1"
+     ]
+    ],
+    "only_in": "a"
+   },
+   {
+    "group": "action-state",
+    "members": [
+     [
+      "action",
+      "cl1"
+     ],
+     [
+      "state",
+      "cl2"
+     ]
+    ],
+    "only_in": "a"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "Whether cl2 fulfils cl1 under the fulfilment rule, which asks for a so pro-form (asah or hayah plus ken) that this verse lacks.",
+    "why": "The verb repeats the command's verb and the sense is plainly that the word was carried out, but the stated form is absent. The fulfils link is added on the repeated verb and is flagged for review."
+   },
+   {
+    "what": "Whether cl2 is a fulfilment report (fulfils) of the command, rather than only its outcome (result)",
+    "why": "fulfils needs a so pro-form (ken) after the command, and the verse has none. It is recorded as result, and the reader should judge whether a fulfilment reading is also wanted."
+   },
+   {
+    "what": "The addressee of God's speech",
+    "why": "The verse names no one God speaks to, so the turn has no addressee member."
+   }
+  ]
+ },
+ "Psa.107.1": {
+  "disagree": [
+   {
+    "referent": "cl0s",
+    "a": "none",
+    "b": "cant_tell"
+   },
+   {
+    "group": "writing",
+    "members": [
+     [
+      "frame",
+      "cl0"
+     ],
+     [
+      "part",
+      "cl1"
+     ],
+     [
+      "part",
+      "cl2"
+     ]
+    ],
+    "only_in": "b"
+   },
+   {
+    "group": "writing",
+    "members": [
+     [
+      "part",
+      "cl2"
+     ],
+     [
+      "part",
+      "imp0"
+     ]
+    ],
+    "only_in": "a"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "the audience addressed by the command",
+    "why": "the verse names no audience, and no candidate stands for the people being told to give thanks"
+   },
+   {
+    "what": "Whether cl0, the opening command, is the writing's frame (its heading)",
+    "why": "The verse has no heading or ascription. The frame is kept as the builder set it, but the verse does not confirm it."
+   },
+   {
+    "what": "The writer of the psalm",
+    "why": "The verse does not name one, so the writing has no sender. The psalmist voice is the psalm's own speech, not a named writer."
+   },
+   {
+    "what": "The addressee of the command 'give thanks' (cl0s)",
+    "why": "Second masculine plural; no candidate in this verse fits, and the verse does not name an audience."
+   }
+  ]
+ },
+ "Psa.23.4": {
+  "disagree": [
+   {
+    "link": "cl4 elaborates cl2",
+    "a": null,
+    "b": "add"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "How cl3 and cl4 attach to the reason. They follow cl2 with no conjunction, after a semicolon. The text may give a second ground under the same ki (the rod and staff as a further reason for not fearing), or a separate asyncetic line. The form does not decide, so no link or group is added for them here.",
+    "why": "There is no conjunction at cl3. A because link from cl4 to cl1 would assert a reading that the form does not settle."
+   },
+   {
+    "what": "Whether cl3 and cl4 (rod and staff, they comfort me) explain cl2 (you are with me) or stand as a separate statement",
+    "why": "The semicolon and the lack of any connective leave it open; the elaborates link above takes the reading that the rod and staff show how the LORD is present."
+   }
+  ]
+ },
+ "Psa.23.5": {
+  "disagree": [
+   {
+    "group": "acts",
+    "members": [
+     [
+      "agent_act",
+      "cl0"
+     ],
+     [
+      "agent_act",
+      "cl1"
+     ],
+     [
+      "group_subject",
+      "w3"
+     ]
+    ],
+    "only_in": "a"
+   }
+  ],
+  "cant_tell": [
+   {
+    "what": "Whether cl2 (cup overflows) is a result of the anointing or a separate image in the same speech.",
+    "why": "No conjunction marks the join and the Hebrew is asyndetic, so the verse does not settle the relation."
+   },
+   {
+    "what": "Whether verses 4 and 5 form a turn addressed to the LORD, and where that turn begins.",
+    "why": "The shift to second person begins in verse 4, and no turn or writing group in the builder covers it. Grouping of this kind belongs to the psalm-level structure, not to this verse alone."
+   }
+  ]
+ },
+ "Psa.23.6": {
+  "disagree": [],
+  "cant_tell": [
+   {
+    "what": "The implied third-plural subject of cl0 ('they will pursue me') has no entry in the slots list, so it is not decided as a slot here.",
+    "why": "On the sense it is goodness and mercy (candidate c1, the only plural composite that fits the masculine plural verb), but the slots list did not include it, so no referent is recorded for it in referents."
+   },
+   {
+    "what": "The implied third person subject of the yiqtol 'will pursue' in cl0 (verb is third masculine plural). It has no slot in this verse.",
+    "why": "The nearest plural candidates are the goodness and mercy pair, which are abstract nouns, and the verse does not state who pursues. No referent is chosen."
+   }
+  ]
+ }
+}

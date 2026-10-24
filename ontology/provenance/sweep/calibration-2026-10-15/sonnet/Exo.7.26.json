@@ -1,0 +1,38 @@
+{"ref": "Exo.7.26",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "third masculine singular suffix on 'say to him'; the command just before is 'go to Pharaoh', so the one Moses is to speak to is Pharaoh", "category": "pronoun picks up the destination of a preceding command"},
+  {"slot": "w18", "choice": "w14", "divine": true, "why": "first person singular 'my' inside the messenger speech opened by 'thus says Yahweh'; the speaker of that speech is the LORD (w14), not Moses", "category": "first person inside a relayed speech"},
+  {"slot": "w21", "choice": "w14", "divine": true, "why": "first person singular 'me' in the same relayed speech; the purpose is that they serve the one whose speech this is, the LORD", "category": "first person inside a relayed speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "second masculine singular imperative 'go' in the LORD's speech to Moses (cl0 addressee)", "category": "implied subject of a command in the outer speech"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "second masculine singular weqatal 'you will say' continues the command to Moses in the outer speech; the clause introduces the inner speech but belongs to the outer one", "category": "implied subject of a command that introduces a commanded speech"},
+  {"slot": "cl4s", "choice": "w7", "divine": false, "why": "second masculine singular imperative 'let go' sits inside the speech Moses is to say; its addressee is Pharaoh, whom Moses is sent to (cl1, cl2 'to him'), not Moses", "category": "implied subject of a command inside a commanded speech"},
+  {"slot": "cl5s", "choice": "w17", "divine": false, "why": "third masculine plural 'they may serve' after 'let my people go'; the plural agrees with the collective 'people' and the sense is that the people serve", "category": "implied subject of a purpose clause referring to the object of the command"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "a clause linked to itself; the opening wayyiqtol has no earlier clause in this verse to continue (the previous verse is the episode rung, not a within-verse then)", "category": "self-link on a verse-opening wayyiqtol"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "weqatal 'and you will say' follows 'go' and continues it as the next step of the same errand, same second person", "category": "weqatal continuing a command"},
+  {"src": "cl4", "type": "and", "dst": "cl5", "action": "remove", "why": "waw + yiqtol in a different person (you to they) after a command is a purpose, not a plain 'and'", "category": "plain and read where a change of person gives purpose"},
+  {"src": "cl4", "type": "purpose", "dst": "cl5", "action": "add", "why": "command 'let my people go', then waw + yiqtol third plural 'that they may serve me': a different person, so what the release is for", "category": "command then waw plus yiqtol in a different person"},
+  {"src": "cl0", "type": "content", "dst": "imp1", "action": "add", "why": "'he said' and what was said: the run of commands 'go ... and you will say' joined by and at one level, so the content is the whole imperative group", "category": "speech clause and its commanded content"},
+  {"src": "cl2", "type": "content", "dst": "turn1", "action": "add", "why": "'you will say to him' and what Moses is to say, 'thus says Yahweh ...'; the content is the whole inner turn (frame cl3 with its message), not its frame clause cl3 alone, so I point at the group rather than at cl3", "category": "command to speak and the embedded speech it introduces"},
+  {"src": "cl3", "type": "content", "dst": "imp4", "action": "add", "why": "'thus says Yahweh' is the messenger formula; what the LORD says is the command 'let my people go' with its purpose, held as one imperative group", "category": "messenger formula and the message it carries"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change",
+   "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "imp1"}, {"role": "part", "node": "g1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}],
+   "divine": true, "why": "the LORD speaks to Moses; the parts are the commands (imp1) and the turn Moses is commanded to give (g1), replacing the bare clause parts cl1 and cl2 so the nesting shows", "category": "outer turn holding a commanded turn"},
+  {"id": "imp1", "kind": "imperative", "action": "change",
+   "members": [{"role": "command", "node": "cl1"}, {"role": "command", "node": "cl2"}],
+   "divine": false, "why": "'go' and 'and you will say' are commands at one level to the same person; cl2 is second person, so it is a second command, not an effect (an effect would be a third-person weqatal)", "category": "commands joined by and, second weqatal is a command not an effect"},
+  {"id": "g1", "kind": "turn", "action": "add",
+   "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w7"}],
+   "divine": false, "why": "Moses is told to say something to Pharaoh: this turn is the commanded one, framed by 'you will say to him', whose part is what is to be said (turn1)", "category": "commanded turn between a sender and a third party"},
+  {"id": "turn1", "kind": "turn", "action": "change",
+   "members": [{"role": "frame", "node": "cl3"}, {"role": "part", "node": "imp4"}, {"role": "sender", "node": "w14"}, {"role": "addressee", "node": "w7"}],
+   "divine": true, "why": "'thus says Yahweh' frames the message; the speech is the LORD's word, delivered to Pharaoh through Moses; the bare parts cl4 and cl5 are replaced by their imperative group, and the addressee Pharaoh is added", "category": "relayed speech with the original sender and the final addressee"},
+  {"id": "imp4", "kind": "imperative", "action": "change",
+   "members": [{"role": "command", "node": "cl4"}, {"role": "aim", "node": "cl5"}],
+   "divine": false, "why": "'let my people go' is the command; 'that they may serve me' is waw + yiqtol in a different person, an aim, not a second command", "category": "command with an aim in a different person"}
+ ],
+ "none_fit": [],
+ "cant_tell": []}

@@ -1,0 +1,125 @@
+{
+ "ref": "Job.38.11",
+ "referents": [
+  {
+   "slot": "w14",
+   "choice": "none",
+   "divine": false,
+   "why": "'Your waves' (second masculine singular): the addressee of the decree is the sea, personified. It is not a candidate.",
+   "category": "addressee outside candidate list"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'I declared': the speaker, the LORD.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false,
+   "why": "Second person 'you may come': the addressee of the decree is the sea, not a candidate.",
+   "category": "addressee outside candidate list"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "Second person 'you will not add': the same addressee as cl1, the sea, not a candidate.",
+   "category": "addressee outside candidate list"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "Third person 'someone will fix': an indefinite subject. The grammar names no agent, though the context suggests the LORD.",
+   "category": "indefinite third person"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The 'then' runs from the speech to the saying, which reverses it. The saying's content is the speech.",
+   "category": "reversed link"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'I declared' introduces what is said. The content link goes to the first said clause (R1).",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'You may come this far' and 'not you will add': the English 'but no farther' is a plain waw in the Hebrew.",
+   "category": "plain and between decrees"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "The waw joins what the boundary brings about, so it is not a plain and.",
+   "category": "and that is a result"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "R4: the stopping of the proud waves is what the boundary brings about, so it is the earlier clause's result.",
+   "category": "result of a boundary"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    }
+   ],
+   "divine": true,
+   "why": "The sender is the LORD. The builder gave a slot id (cl0s), which is not a candidate. No addressee is recorded because the sea is not a candidate.",
+   "category": "speaker corrected"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Addressee of the turn (the sea, personified)",
+   "why": "It is not a candidate, so no addressee member is recorded."
+  },
+  {
+   "what": "Agent of 'someone will fix' (cl3s)",
+   "why": "An indefinite third person. The text names no agent."
+  }
+ ]
+}

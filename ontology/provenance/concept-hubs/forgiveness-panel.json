@@ -1,0 +1,153 @@
+{
+  "id": "forgiveness",
+  "overall": "ship after fixes",
+  "fixes": [
+    {
+      "row": "Other words translated “forgive” (כִּפֶּר, כָּסָה, נָקָה, ἀπολύω, χαρίζομαι)",
+      "kind": "different words",
+      "verses": ["2Chr.30.18", "Deut.21.8", "Ezek.16.63", "Isa.22.14", "Jer.18.23", "Ps.65.3", "Ps.79.9", "Joel.3.21", "Prov.17.9"],
+      "readers": ["rabbi", "Reformed", "Lutheran", "secular academic scholar", "biblical-theological"],
+      "why": "The section is titled 'translated forgive' and the gloss rule matched the lexicon's gloss, not the Berean's English. Read in the Berean, the shown examples for כִּפֶּר (2 Chr 30:18 'provide atonement', Deut 21:8 'atoned for') do not say forgive; of the eight כִּפֶּר verses only Ps 78:38 says 'forgave' (Ps 65:3 and 79:9 say 'atone', Ezek 16:63 'make atonement', Isa 22:14 'atoned for', Jer 18:23 'wipe out'). Joel 3:21 reads 'avenge' and Prov 17:9 'conceals an offense' -- neither says forgive. So the title tells a reader these words are rendered forgive, and the page's own examples show they are not (rule 6), and a rabbi sees atonement quietly listed as a rendering of forgive after the hub took care to keep the two apart in Lev 4-6 (rule 4).",
+      "fix": "Retitle to 'Other words near forgiveness' (or 'Other words the lexicon glosses “forgive”'). For כִּפֶּר add a note: 'make atonement', a different word from סָלַח; the Berean renders these verses 'atone', 'atoned for', 'wipe out' and, in Ps 78:38 only, 'forgave'; the page does not make the words one. Change its examples to Ps 78:38 and Ps 79:9 (or Ps 65:3) so the shown verses are the ones near the label. Drop Joel 3:21 (Berean 'avenge') and Prov 17:9 (a proverb on not repeating an offense), or give each a note that the Berean does not say forgive and translations differ."
+    },
+    {
+      "row": "Other words translated “forgive” -- χαρίζομαι and ἀπολύω; row “Our forgiving, and our Father's”",
+      "kind": "note",
+      "verses": ["Eph.4.32", "Col.3.13", "Col.2.13", "2Cor.2.10", "Luke.6.37"],
+      "readers": ["Reformed", "Wesleyan", "Baptist / free church", "young African American believer", "biblical-theological"],
+      "why": "The pointer to χαρίζομαι for Eph 4:32 and Col 3:13 sits only inside the long note of 'People forgiving people'. The strongest statements of exactly what 'Our forgiving, and our Father's' sets out -- Eph 4:32 'just as in Christ God forgave you', Col 3:13 'Forgive as the Lord forgave you', Luke 6:37 'Forgive, and you will be forgiven' -- are in other words, and that row has no pointer. And when the reader follows the pointer, the two shown examples of χαρίζομαι are Luke 7:42 and 2 Cor 12:13, not the verses the note named. The note is true; it just leaves a reader of that row thinking the letters have nothing to add.",
+      "fix": "Add one sentence to the note of 'Our forgiving, and our Father's': 'Eph 4:32 and Col 3:13 (χαρίζομαι) and Luke 6:37 (ἀπολύω) say the same of our forgiving, in different Greek words; they are under “Other words” below.' In the others section make the examples of χαρίζομαι Eph 4:32, Col 3:13, Col 2:13, 2 Cor 2:10, and show Luke 6:37 with its own word marked as different. Keep them out of the rows themselves: the different-words rule is right."
+    },
+    {
+      "row": "Forgiveness, repentance, turning and confessing; noun rows Repentance and forgiveness / Baptism and forgiveness / Believing, faith and forgiveness",
+      "kind": "note",
+      "verses": ["Acts.2.38", "Luke.24.47", "Acts.10.43", "Acts.26.18", "Mark.2.5", "Jas.5.15"],
+      "readers": ["Baptist / free church", "Lutheran", "Reformed", "Catholic and Eastern Orthodox", "Wesleyan"],
+      "why": "The notes say the repentance row is set 'beside the baptism and faith rows, not before them'. That is not what the page shows: the repentance row is listed above the faith row in the verb form, and above both baptism and faith in the noun form, and the baptism row is in a different section from the verb repentance row. A reader who reads the sentence and then the order will take the order as a ranking (repentance, then baptism, then faith), the very thing the note disclaims, and a Baptist or Reformed reader will see faith last and smallest (2 verses). The order does follow Acts 2:38 and Luke 24:47, but the note does not say that.",
+      "fix": "Replace the sentences about 'not before them' with: 'The rows are in the order of the phrases in Acts 2:38 (repent, be baptized) and carry no ranking.' Optionally reorder the noun form by first verse in canonical order within the three rows (Mark 1:4 baptism/repentance, Luke 24:47, Acts 5:31, Acts 10:43) so it cannot be read as priority. Keep the same no-side sentence on all three."
+    },
+    {
+      "row": "Baptism and forgiveness",
+      "kind": "note",
+      "verses": ["Mark.1.4", "Luke.3.3", "Acts.2.38"],
+      "readers": ["Catholic and Eastern Orthodox", "Lutheran", "Baptist / free church", "Reformed"],
+      "why": "Two of the three verses are John the Baptist's baptism and one is Peter's at Pentecost; the row puts them under one label and the note does not say so, so a reader may take all three as the same baptism. Acts 22:16 ('be baptized, and wash your sins away'), where traditions part most sharply with Acts 2:38, has no forgiveness word and is not here; a Catholic, Lutheran or Orthodox reader (and a Church of Christ reader) will look for it and find a row of three, while a Baptist reader will be glad of the restraint. The page should neither add it as if it said 'forgive' nor leave the reader to wonder why it is absent.",
+      "fix": "Add to the note: 'Mark 1:4 and Luke 3:3 are the baptism John preached; Acts 2:38 is Peter's, at Pentecost.' Add: 'Verses that join baptism and the washing away of sins without a word for forgiveness (Acts 22:16) are on the baptism page.' Confirm Acts 22:16 is on the baptism card before the sentence ships."
+    },
+    {
+      "row": "Will not forgive, was not forgiven",
+      "kind": "note",
+      "verses": ["John.20.23", "Isa.2.9", "Matt.6.15", "Jer.5.7"],
+      "readers": ["Catholic and Eastern Orthodox", "Reformed", "Baptist / free church", "Lutheran"],
+      "why": "Eight of the ten verses are the LORD refusing (Josh 24:19, Deut 29:20, 2 Kgs 24:4 ...). John 20:23 'if you withhold forgiveness ... it is withheld' is spoken to the disciples and is the verse the 'Who can forgive sins' row sets with no-side note; here, under a bare label and with no note, a Reformed or Baptist reader sees it filed as God's refusal and a Catholic reader sees the other half of the sentence cut from its first half. Isa 2:9 is a plea, 'do not forgive them!', not a statement that He will not. The row has no note at all.",
+      "fix": "Add a note: 'Most are the LORD's refusal. Matt 6:15 sets it beside our not forgiving. Isa 2:9 is a plea that He not forgive. John 20:23 is said to the disciples and is set with Mark 2:7 in “Who can forgive sins”, where the page takes no side.' (Keep John 20:23 in the row: the verse does say 'withheld'.)"
+    },
+    {
+      "row": "Every other use (verb)",
+      "kind": "note",
+      "verses": ["Num.30.5", "Num.30.8", "Num.30.12", "Ps.25.18", "Isa.33.24"],
+      "readers": ["rabbi", "secular academic scholar", "biblical-theological"],
+      "why": "Three of the five verses, and two of the four shown, are Num 30, where the Berean says the LORD 'will absolve her' of a vow her father or husband has annulled. The Hebrew verb is the one used of forgiving sin, so the verses belong, but nothing tells the reader that it is a vow, not a sin, which the rabbi seat will want said plainly (it is the verse behind a long Jewish tradition on vows). Ps 25:18 shows 'take away all my sins', not the word forgive, under a forgiveness label with no reason given. The shown examples lead with the odd cases and not Isa 33:24, the plain one.",
+      "fix": "Add a note: 'Numbers 30:5, 8, 12: the LORD “will absolve her” of a vow her father or husband has annulled -- the same Hebrew verb as in the rows above, a vow and not a sin. Psalm 25:18: the Berean reads “take away all my sins”; the Hebrew verb is the one the lexicon glosses forgive.' Lead the examples with Isa 33:24."
+    },
+    {
+      "row": "Sinning unintentionally, in ignorance: forgiven",
+      "kind": "note",
+      "verses": ["Num.15.25", "Num.15.26", "Num.15.28", "Lev.5.18", "Lev.6.7"],
+      "readers": ["rabbi", "Reformed", "Wesleyan", "Baptist / free church"],
+      "why": "The label says forgiven for unintentional sin, and the page gives no context. The text beside it supplies some: Num 15:30-31 speaks of the one who sins 'with a high hand' (no forgiveness word, so not in the hub), and Lev 6:2-7 (in the Atonement row above) is forgiveness for wrongs done knowingly -- deceit, robbery, a false oath. Without a word, a reader can infer that only unintentional sin is forgiven, which neither the verses nor the page says, and the rabbi seat will object to missing context the text itself supplies.",
+      "fix": "Add a note: 'These four verses say the sin was in ignorance or unintentional. Lev 6:2-7, in the row above, has the same words of wrongs done knowingly; Numbers 15:30-31 speaks of one who sins defiantly, with no word for forgiveness. The page does not say what the text leaves unsaid.'"
+    },
+    {
+      "row": "“Your sins are forgiven”; “Blessed are they whose sins are forgiven”",
+      "kind": "OT framing",
+      "verses": ["Ps.32.1", "Rom.4.7", "Mark.2.5", "Luke.7.48"],
+      "readers": ["rabbi", "biblical-theological", "secular academic scholar"],
+      "why": "The label and the shown order open with Jesus's saying and put Psalm 32:1 third, followed at once by the quotation of it in Romans 4:7, as though the psalm were there to confirm the Gospels. The psalm's verb is the Hebrew נָשָׂא (and 'covered'), spoken of 'Of David. A Maskil', and stands on its own long before; the merge was fair, but the order hears the New Testament first. The label also reads 'sins are forgiven' for the psalm where the Hebrew says transgression is lifted -- the Berean's word, so not wrong.",
+      "fix": "Put the Psalm's words first in the label: '“Blessed are they whose sins are forgiven”; “Your sins are forgiven”', and the examples Ps 32:1, Mark 2:5, Luke 7:48, Rom 4:7. In the note, name the psalm first ('the blessing of Psalm 32:1, quoted in Romans 4:7; and the saying of Jesus to the paralytic ...')."
+    },
+    {
+      "row": "With the LORD there is forgiveness (noun form)",
+      "kind": "OT framing",
+      "verses": ["Ps.130.4", "Dan.9.9", "Neh.9.17"],
+      "readers": ["rabbi", "biblical-theological", "young African American believer"],
+      "why": "In the noun form the Hebrew row is the 7th of 8: six Greek rows (ἄφεσις) come first, so the section 'What the text says of forgiveness' opens with Mark 1:4 and Acts and puts the Hebrew nouns after the apostolic preaching. These are the earliest verses on the noun forgiveness and are not about repentance or baptism, so they are the ones that frame the rest. Rule 5 asks that the Hebrew Scriptures be heard on their own terms first; the verb form does this (the LORD's forgiving is row 1), the noun form does not.",
+      "fix": "Move 'With the LORD there is forgiveness' to the first row of the noun form, and fold 'Forgiveness of sins, of trespasses' after it. Keep the note about Dan 9:9 and Neh 9:17."
+    },
+    {
+      "row": "Every other use (noun)",
+      "kind": "note",
+      "verses": ["Mark.3.29"],
+      "readers": ["Catholic and Eastern Orthodox", "Reformed", "Baptist / free church", "Pentecostal / Charismatic"],
+      "why": "Mark 3:29 ('will never be forgiven; he is guilty of eternal sin') is the hardest verse of the hub and stands alone, with no note, under 'Every other use'. Its parallels are in the verb row 'Blasphemy against the Holy Spirit' with its careful note; here a reader meets the most severe wording without any of that. The verb row's note does mention it, but a reader of the noun section does not see that row.",
+      "fix": "Either add the note 'See “Blasphemy against the Holy Spirit” in the verb form: Mark 3:28 and Matt 12:31-32, Luke 12:10 stand with this verse; what the blasphemy is, readers take differently and the page takes no side.' or label the row 'Eternal sin: blasphemy against the Holy Spirit'. Prefer the note."
+    }
+  ],
+  "worker_points": [
+    {
+      "point": "1. Who can forgive sins (Mark 2:7, 2:10, John 20:23 and the rest)",
+      "verdict": "fine",
+      "why": "The verses are shown verbatim, the label is Mark 2:7's own question, John 20:23 is in the examples among the others, and the note says the page takes no side and puts none first. A Catholic or Orthodox reader finds John 20:23 given its full text, and a Reformed or Baptist reader finds nothing saying it means priestly absolution. Keep the row as it is. 'Puts none first' is slightly loose (Mark 2:7 is first); 'ranks none above another' would be exact. The one problem is John 20:23's second appearance under 'Will not forgive', fixed above."
+    },
+    {
+      "point": "2. Repentance, baptism, faith -- rows, notes and order (Acts 2:38, Mark 1:4, Luke 3:3, Acts 10:43, 26:18)",
+      "verdict": "fix",
+      "why": "Three separate rows with the same no-side note is the right structure, and Acts 2:38 sitting in the repentance, baptism and 'in His name' rows is true to the verse. The order does read as a sequence; the note denies it in words the order contradicts. Also John's baptism and Peter's share a label without being told apart, and Acts 22:16 is absent with no explanation (see fixes 3 and 4 and missing)."
+    },
+    {
+      "point": "3. Conditionality (Matt 6:12, 6:14-15, Mark 11:25, Matt 18:35; repentance row note)",
+      "verdict": "fine",
+      "why": "The repentance row note names verses that carry no repentance (Luke 23:34, Luke 5:20, Ps 25:11), which keeps the row from reading as 'forgiveness requires repentance', and 'Our forgiving, and our Father's' is a plain statement of the verses' own phrases. The only change is wording: 'or ours on theirs repenting (Luke 17:3-4)' sends the reader to a verse that is not in that row. Say 'whether our forgiving depends on the other's repenting is Luke 17:3-4, in the row above.' Not a tilt."
+    },
+    {
+      "point": "4. Forgiveness and sacrifice (Lev 4-6, Num 15, Heb 9:22, Matt 26:28, Eph 1:7, Heb 10:18)",
+      "verdict": "fine",
+      "why": "The rabbi seat accepts the labelling: 'Atonement made, and he will be forgiven' is the Hebrew (כִּפֶּר ... וְנִסְלַח), the note names both words and says the page does not make them one, and the priest-and-offering description of the atonement is what the verses say. The same hub shows the LORD forgiving at prayer and repentance (Num 14:20, 1 Kgs 8, Isa 55:7, Ps 130:4, Dan 9:9) with no offering named, so the Hebrew is not reduced to sacrifice. Heb 9:22 stands in a New Testament row as the claim of Hebrews and is not set as the Hebrew's. The only problem is the others section title, which blurs the two words again (fix 1)."
+    },
+    {
+      "point": "5. Blasphemy against the Holy Spirit",
+      "verdict": "fine",
+      "why": "The four verses are set with Mark 3:28 'all sins and blasphemies' and the word against the Son of Man, and the note says readers differ and the page takes no side. Nothing is softened. Only Mark 3:29 in the noun form needs its pointer (fix 10)."
+    },
+    {
+      "point": "6. Divine persons by hand (row 1, row 2, 'in His name' row)",
+      "verdict": "fine",
+      "why": "Row 1 holds only verses where the verse names the LORD, God or the Father, and Acts 8:22 is rightly left out. Row 2 and its note keep 1 John 1:9 'He' open between the Father and Christ. The 'in His name / through Him / in Him' row should stay: the note says only Acts 2:38 and 13:38 name Jesus in the verse and cites the passages that name Him for the rest, and no row says that Jesus is God. 'The LORD, God, the Father' as a label might be read as an equation of three names; it is not, since each verse names one of them, and a Jewish reader can see the Hebrew verses first."
+    },
+    {
+      "point": "7. χαρίζομαι and the 'people forgiving people' rows (Eph 4:32, Col 3:13)",
+      "verdict": "fix",
+      "why": "Keeping χαρίζομαι out of the rows is right: it is a different word (grace, graciously give) and Eph 4:32's 'just as in Christ God forgave you' is the verse a Reformed or Wesleyan reader would want first, so the pointer must be easy to find. Today it is buried in a long note in one row, and the other row ('Our forgiving, and our Father's') has none, and the section it points to shows other verses. See fix 2."
+    },
+    {
+      "point": "8. Hebrew סָלַח is never said of a person (45 of 45)",
+      "verdict": "fine",
+      "why": "Checked against the verses shown: the LORD is the subject, or the verb is passive (Lev 4-6, 19:22, Num 15, Isa 33:24), including Num 30 where 'the LORD will absolve her'. The claim as the note words it is the true one, and people asked to forgive in the Hebrew do use נָשָׂא (Gen 50:17, Exod 10:17, 1 Sam 15:25, 25:28). The rabbi seat accepts it as stated and values it."
+    },
+    {
+      "point": "9. Verses where the Berean says something other than forgive (Ps 25:18, Num 30:5/8/12, Prov 17:9, Joel 3:21)",
+      "verdict": "fix",
+      "why": "Ps 25:18 and Num 30 are kept in the rows by the lexicon's gloss, which is honest if the reader is told; today the row has no note (fix 6). Prov 17:9 and Joel 3:21 are shown in a section titled 'translated forgive' though the Berean does not say forgive in either (fix 1); they should go or carry a note."
+    },
+    {
+      "point": "10. Not included on purpose (Ps 51, Isa 1:18, Mic 7, Rom 4 as a whole, Acts 22:16, Lev 25 release)",
+      "verdict": "fine",
+      "why": "The rule that a verse needs the word is the right one and keeps the hub from asserting a link the text does not make. The omissions are felt by two readers though: the Hebrew imagery of sin taken away, and Acts 22:16 (see missing). A pointer, not a row, is enough."
+    }
+  ],
+  "missing": [
+    {
+      "what": "Acts 22:16 ('be baptized, and wash your sins away') has no forgiveness word, so it is not in the hub, and the baptism row does not say it is elsewhere. Add a one-line pointer to the baptism page in that row's note, not a verse in the row.",
+      "verses": ["Acts.22.16"]
+    },
+    {
+      "what": "The Hebrew Scriptures' other speech of sin taken away -- 'blot out', 'cast into the depths of the sea', 'as far as the east is from the west', 'wash me' -- has no forgiveness word and is not here, so the Hebrew side of the hub is narrow (passive priestly formulas, prayer, and the LORD's character). A pointer sentence in the first Hebrew row or the noun 'With the LORD there is forgiveness' row to the sin and mercy pages would give the rabbi seat the context the text supplies without a verse that does not say forgive.",
+      "verses": ["Isa.43.25", "Ps.103.12", "Mic.7.19", "Ps.51.1"]
+    },
+    {
+      "what": "The one verse where the Greek noun for forgiveness (ἄφεσις) is used in another sense, Luke 4:18 ('liberty to the captives', 'set free the oppressed'), is counted in the words table as 'other sense' but never shown. Rule 4 asks that one sense of a word not be taken as its whole; show the verse once with its word marked as the same noun in a different sense (no row), so a reader attentive to justice sees the link the text makes in one noun without the page drawing it.",
+      "verses": ["Luke.4.18"]
+    }
+  ],
+  "summary": "The hub is true to the text, keeps the contested rows side by side with no verdict, handles the divine persons by hand, and keeps atonement and forgiveness as two Hebrew words in Leviticus; the sacrificial labels are acceptable to the rabbi seat and John 20:23 is fairly placed. It ships after ten fixes, chiefly the 'translated forgive' section whose examples do not say forgive, the 'not before them' order sentences that the order contradicts, John 20:23 and Isa 2:9 under 'Will not forgive' with no note, a missing pointer to Eph 4:32, Col 3:13 and Luke 6:37 from the Father-and-our-forgiving row, and the Hebrew noun row coming last."
+}

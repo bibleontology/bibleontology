@@ -1,0 +1,18 @@
+{"ref": "Exo.8.3",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "'their' (הֶם, masculine plural) is the possessor of 'secret arts' (לָט) in the means phrase of cl0; the only masculine plural person in the verse is the magicians, and the arts are theirs.", "category": "possessive pronoun in a means phrase"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "implied masculine plural subject of cl1, a wayyiqtol continuing cl0 with no speech between; cl0 names the magicians as its subject, so they are the same agent.", "category": "implied subject continuing the same agent"}
+ ],
+ "links": [
+  {"src": "Exo.8.2#cl2", "type": "then", "dst": "cl0", "action": "keep", "why": "The builder wrote 'cl2' with no verse. This verse has no cl2, so it is read as Exo.8.2#cl2 (the frogs covered the land, Exodus 8:6). A wayyiqtol continues the narrative line from the nearest preceding narrative clause, and no speech intervenes.", "category": "wayyiqtol continuation across verses"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "wayyiqtol: the second act of the same agent follows the first on the narrative line; the waw is fused into the verb.", "category": "wayyiqtol continuation within verse"},
+  {"src": "cl0", "type": "likewise", "dst": "Exo.8.2#cl0", "action": "add", "why": "ויעשו כן with a named subject (the magicians) doing what Aaron has just done (stretched out his hand over the waters). They were not commanded to do it, so this is imitation, not fulfilment.", "category": "same deed by another agent"},
+  {"src": "cl1", "type": "elaborates", "dst": "cl0", "action": "add", "why": "cl1 states what the 'thus' of cl0 stands for: bringing the frogs up onto the land of Egypt. It is the detail of the earlier act, not a new event.", "category": "detail of a did-so clause"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl1"}, {"role": "group_subject", "node": "w4"}], "divine": false, "why": "cl0 and cl1 are consecutive acts of one agent, the magicians, each stating its subject only in its verb. The group subject is w4.", "category": "consecutive acts of one agent"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "Which deed 'thus' (כֵּן) in cl0 refers to: Aaron's stretching out of his hand (Exo.8.2#cl0), or the frogs coming up (Exo.8.2#cl1).", "why": "The verb has only the pro-form, with no object. The likewise link is set to Aaron's stretch-out as the deed just done. The text does not settle whether the magicians copied the act or its result."}
+ ]}

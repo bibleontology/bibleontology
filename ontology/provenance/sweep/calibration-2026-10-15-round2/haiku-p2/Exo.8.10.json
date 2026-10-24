@@ -1,0 +1,53 @@
+{
+ "ref": "Exo.8.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'them' (third masculine plural) is the dead frogs of Exo.8.9. The frogs are not among the candidates; the heaps are what they were piled into, not what was piled.",
+   "category": "object is an earlier thing not offered as a candidate"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "The piling is done by the people of Egypt, who are not named. No candidate is a group of doers; the masculine plural candidates (heaps, houses) cannot pile.",
+   "category": "implied subject is an unnamed people"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "The stench is what the piled dead frogs bring about. R4 gives an act and then what it becomes as result, not as then.",
+   "category": "plain then read as result"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The stench is the outcome of the piling of the dead frogs: an act, then what it brings about.",
+   "category": "act then its outcome"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reverses the order: cl0 comes first in the text.",
+   "category": "then runs backward"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "candidates for slot w3",
+   "what": "earlier non-person nouns (the frogs of Exo.8.9) are not offered as candidates, so a pronoun for them has no candidate to choose."
+  }
+ ],
+ "cant_tell": []
+}

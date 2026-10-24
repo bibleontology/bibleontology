@@ -1,0 +1,2147 @@
+{
+ "id": "hope",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "g1680",
+   "lemma": "ἐλπίς",
+   "form": "noun",
+   "translit": "elpis",
+   "gloss": "hope",
+   "lang": "Greek",
+   "uses": 48,
+   "other_sense": 0
+  },
+  {
+   "key": "g1679",
+   "lemma": "ἐλπίζω",
+   "form": "verb",
+   "translit": "elpizō",
+   "gloss": "to hope/expect",
+   "lang": "Greek",
+   "uses": 31,
+   "other_sense": 0
+  },
+  {
+   "key": "h8615",
+   "lemma": "תִּקְוָה",
+   "form": "noun",
+   "translit": "tiqwāh",
+   "gloss": "hope",
+   "lang": "Hebrew",
+   "uses": 31,
+   "other_sense": 2
+  },
+  {
+   "key": "h4723",
+   "lemma": "מִקְוֶה",
+   "form": "noun",
+   "translit": "miqwēh",
+   "gloss": "hope",
+   "lang": "Hebrew",
+   "uses": 5,
+   "other_sense": 3
+  },
+  {
+   "key": "h8431",
+   "lemma": "תּוֹחֶלֶת",
+   "form": "noun",
+   "translit": "to.che.let",
+   "gloss": "hope",
+   "lang": "Hebrew",
+   "uses": 6,
+   "other_sense": 0
+  },
+  {
+   "key": "h4007",
+   "lemma": "מַבָּט",
+   "form": "noun",
+   "translit": "mab.bat",
+   "gloss": "expectation",
+   "lang": "Hebrew",
+   "uses": 3,
+   "other_sense": 0
+  },
+  {
+   "key": "h7664",
+   "lemma": "שֵׂבֶר",
+   "form": "noun",
+   "translit": "se.ver",
+   "gloss": "hope",
+   "lang": "Hebrew",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "h3176",
+   "lemma": "יָחַל",
+   "form": "verb",
+   "translit": "ya.chal",
+   "gloss": "to wait: hope",
+   "lang": "Hebrew",
+   "uses": 23,
+   "other_sense": 19
+  },
+  {
+   "key": "h6960",
+   "lemma": "קָוָה",
+   "form": "verb",
+   "translit": "qawwēh",
+   "gloss": "wait for",
+   "lang": "Hebrew",
+   "uses": 17,
+   "other_sense": 28
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of hope",
+  "verb": "Hoping, and in whom"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "love",
+   "name": "love",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "holy_ghost",
+   "name": "the Holy Spirit",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "salvation",
+   "name": "salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_resurrection",
+   "name": "the resurrection",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "hope_of_eternal_life",
+   "name": "the hope of eternal life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "image_anchor",
+   "name": "anchor",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "children_of_israel",
+   "name": "the sons of Israel",
+   "type": "group",
+   "missing": false
+  },
+  {
+   "id": "patience",
+   "name": "patience",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "trust",
+   "name": "trust",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "faith_hope_charity_these_three",
+   "name": "these three remain: faith, hope, and love",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "hope_of_eternal_life",
+   "name": "the hope of eternal life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "heirs_according_to_the_hope_of_eternal_life",
+   "name": "heirs with the hope of eternal life",
+   "type": "assessment",
+   "missing": false
+  },
+  {
+   "id": "having_hope_of_eternal_life",
+   "name": "having hope of eternal life",
+   "type": "assessment",
+   "missing": false
+  },
+  {
+   "id": "tribulation_works_patience",
+   "name": "suffering produces perseverance",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "hope_that_is_seen_is_not_hope",
+   "name": "hope that is seen is no hope at all",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "faith_is_the_assurance_of_what_we_hope_for",
+   "name": "faith is the assurance of what we hope for",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "job_5_16_speech",
+   "name": "the poor have hope",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "job_11_18_speech",
+   "name": "Zophar's promise: secure because of hope",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "job_11_20_speech",
+   "name": "Zophar's warning: eyes of the wicked fail",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "1Cor.13.13",
+   "ref": "1 Corinthians 13:13",
+   "text": "And now these three remain: faith, hope, and love; but the greatest of these is love."
+  },
+  {
+   "id": "Heb.6.19",
+   "ref": "Hebrews 6:19",
+   "text": "We have this hope as an anchor for the soul, firm and secure. It enters the inner sanctuary behind the curtain,"
+  },
+  {
+   "id": "1Pet.1.3",
+   "ref": "1 Peter 1:3",
+   "text": "Blessed be the God and Father of our Lord Jesus Christ! By His great mercy He has given us new birth into a living hope through the resurrection of Jesus Christ from the dead,"
+  },
+  {
+   "id": "Rom.5.5",
+   "ref": "Romans 5:5",
+   "text": "And hope does not disappoint us, because God has poured out His love into our hearts through the Holy Spirit, whom He has given us."
+  },
+  {
+   "id": "Rom.8.24",
+   "ref": "Romans 8:24",
+   "text": "For in this hope we were saved; but hope that is seen is no hope at all. Who hopes for what he can already see?"
+  },
+  {
+   "id": "Heb.11.1",
+   "ref": "Hebrews 11:1",
+   "text": "Now faith is the assurance of what we hope for and the certainty of what we do not see."
+  },
+  {
+   "id": "Jer.29.11",
+   "ref": "Jeremiah 29:11",
+   "text": "For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, to give you a future and a hope."
+  },
+  {
+   "id": "Ps.42.5",
+   "ref": "Psalms 42:5",
+   "text": "Why are you downcast, O my soul? Why the unease within me? Put your hope in God, for I will yet praise Him for the salvation of His presence."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 93,
+   "rows": [
+    {
+     "label": "Hope with faith and love",
+     "note": null,
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "love",
+       "name": "love",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "faith_hope_charity_these_three",
+       "name": "these three remain: faith, hope, and love",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "1Cor.13.13",
+      "1Thess.1.3",
+      "Rom.5.5",
+      "1Pet.1.21",
+      "Rom.4.18",
+      "Rom.5.2",
+      "Rom.15.13",
+      "2Cor.10.15",
+      "Gal.5.5",
+      "Col.1.23",
+      "1Thess.5.8",
+      "2Thess.2.16"
+     ],
+     "eg": [
+      {
+       "id": "1Cor.13.13",
+       "ref": "1 Corinthians 13:13",
+       "text": "And now these three remain: faith, hope, and love; but the greatest of these is love.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.1.3",
+       "ref": "1 Thessalonians 1:3",
+       "text": "and continually recalling before our God and Father your work of faith, your labor of love, and your enduring hope in our Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.5",
+       "ref": "Romans 5:5",
+       "text": "And hope does not disappoint us, because God has poured out His love into our hearts through the Holy Spirit, whom He has given us.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.1.21",
+       "ref": "1 Peter 1:21",
+       "text": "Through Him you believe in God, who raised Him from the dead and glorified Him; and so your faith and hope are in God.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Holy Spirit named with hope",
+     "note": null,
+     "doors": [
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Rom.15.13",
+      "Rom.5.5",
+      "Gal.5.5"
+     ],
+     "eg": [
+      {
+       "id": "Rom.15.13",
+       "ref": "Romans 15:13",
+       "text": "Now may the God of hope fill you with all joy and peace as you believe in Him, so that you may overflow with hope by the power of the Holy Spirit.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.5",
+       "ref": "Romans 5:5",
+       "text": "And hope does not disappoint us, because God has poured out His love into our hearts through the Holy Spirit, whom He has given us.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.5",
+       "ref": "Galatians 5:5",
+       "text": "But by faith we eagerly await through the Spirit the hope of righteousness.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Christ named with hope",
+     "note": "The verses where the text itself names Christ beside hope. How it relates them -- Christ as the hope, its ground, the one in whom it is set -- is in the verses, and the page does not choose.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "1Tim.1.1",
+      "1Thess.1.3",
+      "Col.1.27",
+      "1Pet.1.3",
+      "Titus.2.13",
+      "Phil.1.20",
+      "Heb.3.6",
+      "1Pet.3.15",
+      "1Thess.2.19",
+      "Eph.2.12"
+     ],
+     "eg": [
+      {
+       "id": "1Tim.1.1",
+       "ref": "1 Timothy 1:1",
+       "text": "Paul, an apostle of Christ Jesus by the command of God our Savior and of Christ Jesus our hope,",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.1.3",
+       "ref": "1 Thessalonians 1:3",
+       "text": "and continually recalling before our God and Father your work of faith, your labor of love, and your enduring hope in our Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.27",
+       "ref": "Colossians 1:27",
+       "text": "To them God has chosen to make known among the Gentiles the glorious riches of this mystery, which is Christ in you, the hope of glory.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.1.3",
+       "ref": "1 Peter 1:3",
+       "text": "Blessed be the God and Father of our Lord Jesus Christ! By His great mercy He has given us new birth into a living hope through the resurrection of Jesus Christ from the dead,",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD, God and hope",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Ps.71.5",
+      "Ps.146.5",
+      "Jer.17.13",
+      "Ps.62.5",
+      "Ps.39.7",
+      "Jer.50.7",
+      "Lam.3.18",
+      "Job.6.8",
+      "Jer.14.8"
+     ],
+     "eg": [
+      {
+       "id": "Ps.71.5",
+       "ref": "Psalms 71:5",
+       "text": "For You are my hope, O Lord GOD, my confidence from my youth.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.146.5",
+       "ref": "Psalms 146:5",
+       "text": "Blessed is he whose help is the God of Jacob, whose hope is in the LORD his God,",
+       "words": [
+        {
+         "key": "h7664",
+         "lemma": "שֵׂבֶר"
+        }
+       ]
+      },
+      {
+       "id": "Jer.17.13",
+       "ref": "Jeremiah 17:13",
+       "text": "O LORD, the hope of Israel, all who abandon You will be put to shame. All who turn away will be written in the dust, for they have abandoned the LORD, the fountain of living water.",
+       "words": [
+        {
+         "key": "h4723",
+         "lemma": "מִקְוֶה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.62.5",
+       "ref": "Psalms 62:5",
+       "text": "Rest in God alone, O my soul, for my hope comes from Him.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "God and hope",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Rom.15.13",
+      "Acts.24.15",
+      "1Pet.1.21",
+      "Rom.5.2",
+      "Acts.26.6",
+      "Titus.1.2",
+      "Heb.6.18",
+      "Heb.7.19",
+      "2Thess.2.16"
+     ],
+     "eg": [
+      {
+       "id": "Rom.15.13",
+       "ref": "Romans 15:13",
+       "text": "Now may the God of hope fill you with all joy and peace as you believe in Him, so that you may overflow with hope by the power of the Holy Spirit.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Acts.24.15",
+       "ref": "Acts 24:15",
+       "text": "and I have the same hope in God that they themselves cherish, that there will be a resurrection of both the righteous and the wicked.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.1.21",
+       "ref": "1 Peter 1:21",
+       "text": "Through Him you believe in God, who raised Him from the dead and glorified Him; and so your faith and hope are in God.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.2",
+       "ref": "Romans 5:2",
+       "text": "through whom we have gained access by faith into this grace in which we stand. And we rejoice in the hope of the glory of God.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope and Israel",
+     "note": "Jer 14:8 and 17:13 call the LORD the hope of Israel (Hebrew מִקְוֶה); Acts 28:20 and 26:7 are Paul's Greek (ἐλπίς); Ezra 10:2 and Ezek 37:11 use תִּקְוָה. These are different words, set side by side as written; the page does not say whether they are one hope. Whether the hope of Israel and the hope of the gospel are one or two, the page takes no side.",
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Jer.14.8",
+      "Jer.17.13",
+      "Acts.28.20",
+      "Ezek.37.11",
+      "Ezra.10.2",
+      "Acts.26.7"
+     ],
+     "eg": [
+      {
+       "id": "Jer.14.8",
+       "ref": "Jeremiah 14:8",
+       "text": "O Hope of Israel, its Savior in times of distress, why are You like a stranger in the land, like a traveler who stays but a night?",
+       "words": [
+        {
+         "key": "h4723",
+         "lemma": "מִקְוֶה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.17.13",
+       "ref": "Jeremiah 17:13",
+       "text": "O LORD, the hope of Israel, all who abandon You will be put to shame. All who turn away will be written in the dust, for they have abandoned the LORD, the fountain of living water.",
+       "words": [
+        {
+         "key": "h4723",
+         "lemma": "מִקְוֶה"
+        }
+       ]
+      },
+      {
+       "id": "Acts.28.20",
+       "ref": "Acts 28:20",
+       "text": "So for this reason I have called to see you and speak with you. It is because of the hope of Israel that I am bound with this chain.”",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.37.11",
+       "ref": "Ezekiel 37:11",
+       "text": "Then He said to me, “Son of man, these bones are the whole house of Israel. Look, they are saying, ‘Our bones are dried up, and our hope has perished; we are cut off.'",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The hope of glory",
+     "note": "The text's phrases, kept as written: 'the hope of glory' (Col 1:27), 'the hope of the glory of God' (Rom 5:2).",
+     "doors": [
+      {
+       "id": "glory",
+       "name": "glory",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Rom.5.2",
+      "Col.1.27"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.2",
+       "ref": "Romans 5:2",
+       "text": "through whom we have gained access by faith into this grace in which we stand. And we rejoice in the hope of the glory of God.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.27",
+       "ref": "Colossians 1:27",
+       "text": "To them God has chosen to make known among the Gentiles the glorious riches of this mystery, which is Christ in you, the hope of glory.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The hope of the gospel, the calling, righteousness, salvation, eternal life; hope and being saved, the Savior",
+     "note": "Each phrase kept as written. Where readers part on whose hope it is -- the church's, Israel's, or both -- or on what 'the hope of righteousness' (Gal 5:5) is, the page takes no side.",
+     "doors": [
+      {
+       "id": "gospel",
+       "name": "gospel",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "eternal_life",
+       "name": "eternal life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "hope_of_eternal_life",
+       "name": "the hope of eternal life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Col.1.23",
+      "1Thess.5.8",
+      "Titus.3.7",
+      "Rom.8.24",
+      "Gal.5.5",
+      "Eph.1.18",
+      "Eph.4.4",
+      "1Tim.1.1",
+      "Titus.1.2",
+      "Titus.2.13"
+     ],
+     "eg": [
+      {
+       "id": "Col.1.23",
+       "ref": "Colossians 1:23",
+       "text": "if indeed you continue in your faith, established and firm, not moved from the hope of the gospel you heard, which has been proclaimed to every creature under heaven, and of which I, Paul, have become a servant.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.5.8",
+       "ref": "1 Thessalonians 5:8",
+       "text": "But since we belong to the day, let us be sober, putting on the breastplate of faith and love, and the helmet of our hope of salvation.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Titus.3.7",
+       "ref": "Titus 3:7",
+       "text": "so that, having been justified by His grace, we would become heirs with the hope of eternal life.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.24",
+       "ref": "Romans 8:24",
+       "text": "For in this hope we were saved; but hope that is seen is no hope at all. Who hopes for what he can already see?",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope and the resurrection",
+     "note": "Acts 23:6 and 24:15 name the resurrection of the dead, 1 Pet 1:3 the resurrection of Jesus Christ; the page does not say which is meant to be the hope.",
+     "doors": [
+      {
+       "id": "the_resurrection",
+       "name": "the resurrection",
+       "type": "title",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Acts.23.6",
+      "1Pet.1.3",
+      "Acts.24.15"
+     ],
+     "eg": [
+      {
+       "id": "Acts.23.6",
+       "ref": "Acts 23:6",
+       "text": "Then Paul, knowing that some of them were Sadducees and the others Pharisees, called out in the Sanhedrin, “Brothers, I am a Pharisee, the son of a Pharisee. It is because of my hope in the resurrection of the dead that I am on trial.”",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.1.3",
+       "ref": "1 Peter 1:3",
+       "text": "Blessed be the God and Father of our Lord Jesus Christ! By His great mercy He has given us new birth into a living hope through the resurrection of Jesus Christ from the dead,",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Acts.24.15",
+       "ref": "Acts 24:15",
+       "text": "and I have the same hope in God that they themselves cherish, that there will be a resurrection of both the righteous and the wicked.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope, the promise and the word",
+     "note": null,
+     "doors": [
+      {
+       "id": "word_of_god",
+       "name": "the word of God",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Ps.119.116",
+      "Acts.26.6",
+      "Rom.15.4",
+      "Eph.2.12",
+      "Col.1.5",
+      "Titus.1.2",
+      "Heb.10.23"
+     ],
+     "eg": [
+      {
+       "id": "Ps.119.116",
+       "ref": "Psalms 119:116",
+       "text": "Sustain me as You promised, that I may live; let me not be ashamed of my hope.",
+       "words": [
+        {
+         "key": "h7664",
+         "lemma": "שֵׂבֶר"
+        }
+       ]
+      },
+      {
+       "id": "Acts.26.6",
+       "ref": "Acts 26:6",
+       "text": "And now I stand on trial because of my hope in the promise that God made to our fathers,",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.4",
+       "ref": "Romans 15:4",
+       "text": "For everything that was written in the past was written for our instruction, so that through endurance and the encouragement of the Scriptures, we might have hope.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.12",
+       "ref": "Ephesians 2:12",
+       "text": "remember that at that time you were separate from Christ, alienated from the commonwealth of Israel, and strangers to the covenants of the promise, without hope and without God in the world.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope with endurance, suffering, comfort, joy and peace",
+     "note": null,
+     "doors": [
+      {
+       "id": "patience",
+       "name": "patience",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "suffering",
+       "name": "suffering",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "comfort",
+       "name": "comfort",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "joy",
+       "name": "joy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "peace",
+       "name": "peace",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "tribulation_works_patience",
+       "name": "suffering produces perseverance",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Rom.5.4",
+      "Rom.12.12",
+      "Rom.15.4",
+      "Rom.15.13",
+      "Prov.10.28",
+      "Acts.2.26",
+      "2Cor.1.7",
+      "1Thess.1.3",
+      "1Thess.2.19",
+      "2Thess.2.16",
+      "Heb.6.18"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.4",
+       "ref": "Romans 5:4",
+       "text": "perseverance, character; and character, hope.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.12.12",
+       "ref": "Romans 12:12",
+       "text": "Be joyful in hope, patient in affliction, persistent in prayer.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.4",
+       "ref": "Romans 15:4",
+       "text": "For everything that was written in the past was written for our instruction, so that through endurance and the encouragement of the Scriptures, we might have hope.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.13",
+       "ref": "Romans 15:13",
+       "text": "Now may the God of hope fill you with all joy and peace as you believe in Him, so that you may overflow with hope by the power of the Holy Spirit.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope with confidence and boldness, held fast, and shame",
+     "note": "Rom 5:5, hope that does not put to shame; Isa 20:5, those who made Cush their hope are ashamed; Jer 17:13, those who abandon the LORD, the hope of Israel, are put to shame. Set side by side as written.",
+     "doors": [
+      {
+       "id": "confidence",
+       "name": "confidence",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "trust",
+       "name": "trust",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Heb.3.6",
+      "Rom.5.5",
+      "Phil.1.20",
+      "Isa.20.5",
+      "Job.4.6",
+      "Job.11.18",
+      "Ps.71.5",
+      "Ps.119.116",
+      "Jer.17.13",
+      "2Cor.3.12",
+      "Heb.6.11",
+      "Heb.6.18",
+      "Heb.10.23"
+     ],
+     "eg": [
+      {
+       "id": "Heb.3.6",
+       "ref": "Hebrews 3:6",
+       "text": "But Christ is faithful as the Son over God's house. And we are His house, if we hold firmly to our confidence and the hope of which we boast.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.5",
+       "ref": "Romans 5:5",
+       "text": "And hope does not disappoint us, because God has poured out His love into our hearts through the Holy Spirit, whom He has given us.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Phil.1.20",
+       "ref": "Philippians 1:20",
+       "text": "I eagerly expect and hope that I will in no way be ashamed, but will have complete boldness so that now as always Christ will be exalted in my body, whether by life or by death.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Isa.20.5",
+       "ref": "Isaiah 20:5",
+       "text": "Those who made Cush their hope and Egypt their boast will be dismayed and ashamed.",
+       "words": [
+        {
+         "key": "h4007",
+         "lemma": "מַבָּט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "There is hope; hope and a future",
+     "note": "Jer 29:11 and 31:17 are the LORD's word to the exiles of Judah (see 29:1, 29:10) and to Israel; Proverbs speaks of the one who finds wisdom.",
+     "doors": [],
+     "n": 10,
+     "verses": [
+      "Job.14.7",
+      "Jer.31.17",
+      "Jer.29.11",
+      "Prov.24.14",
+      "Ruth.1.12",
+      "Ezra.10.2",
+      "Job.11.18",
+      "Prov.19.18",
+      "Prov.23.18",
+      "Lam.3.29"
+     ],
+     "eg": [
+      {
+       "id": "Job.14.7",
+       "ref": "Job 14:7",
+       "text": "For there is hope for a tree: If it is cut down, it will sprout again, and its tender shoots will not fail.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.31.17",
+       "ref": "Jeremiah 31:17",
+       "text": "So there is hope for your future, declares the LORD, and your children will return to their own land.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.29.11",
+       "ref": "Jeremiah 29:11",
+       "text": "For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, to give you a future and a hope.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.24.14",
+       "ref": "Proverbs 24:14",
+       "text": "Know therefore that wisdom is sweet to your soul. If you find it, there is a future for you, and your hope will never be cut off.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The hope of the righteous, the wicked, the godless, the poor and needy",
+     "note": "Several of the Job verses (5:16, 8:13, 11:20) are spoken by Job's friends, of whom the LORD says at Job 42:7 that they have not spoken rightly of Him; Proverbs and the Psalms speak in their own voice.",
+     "doors": [
+      {
+       "id": "the_righteous",
+       "name": "the righteous",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_wicked",
+       "name": "the wicked",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_poor",
+       "name": "the poor",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Prov.10.28",
+      "Prov.11.23",
+      "Prov.11.7",
+      "Job.27.8",
+      "Job.5.16",
+      "Job.8.13",
+      "Job.11.20",
+      "Ps.9.18"
+     ],
+     "eg": [
+      {
+       "id": "Prov.10.28",
+       "ref": "Proverbs 10:28",
+       "text": "The hope of the righteous is joy, but the expectations of the wicked will perish.",
+       "words": [
+        {
+         "key": "h8431",
+         "lemma": "תּוֹחֶלֶת"
+        },
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.11.23",
+       "ref": "Proverbs 11:23",
+       "text": "The desire of the righteous leads only to good, but the hope of the wicked brings wrath.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.11.7",
+       "ref": "Proverbs 11:7",
+       "text": "When the wicked man dies, his hope perishes, and the hope of his strength vanishes.",
+       "words": [
+        {
+         "key": "h8431",
+         "lemma": "תּוֹחֶלֶת"
+        },
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      },
+      {
+       "id": "Job.27.8",
+       "ref": "Job 27:8",
+       "text": "For what is the hope of the godless when he is cut off, when God takes away his life?",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope lost, perished, uprooted, withered; without hope",
+     "note": "Most of these are what someone in distress says, not what the text concludes: the LORD answers the exiles' words in Ezek 37:12-14.",
+     "doors": [],
+     "n": 14,
+     "verses": [
+      "Job.14.19",
+      "Lam.3.18",
+      "Zech.9.5",
+      "Eph.2.12",
+      "1Chr.29.15",
+      "Acts.27.20",
+      "Job.7.6",
+      "Job.8.13",
+      "Job.19.10",
+      "Prov.10.28",
+      "Prov.11.7",
+      "Ezek.19.5",
+      "Ezek.37.11",
+      "1Thess.4.13"
+     ],
+     "eg": [
+      {
+       "id": "Job.14.19",
+       "ref": "Job 14:19",
+       "text": "as water wears away the stones and torrents wash away the soil, so You destroy a man's hope.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      },
+      {
+       "id": "Lam.3.18",
+       "ref": "Lamentations 3:18",
+       "text": "So I say, “My strength has perished, along with my hope from the LORD.”",
+       "words": [
+        {
+         "key": "h8431",
+         "lemma": "תּוֹחֶלֶת"
+        }
+       ]
+      },
+      {
+       "id": "Zech.9.5",
+       "ref": "Zechariah 9:5",
+       "text": "Ashkelon will see and fear; Gaza will writhe in agony, as will Ekron, for her hope will wither. There will cease to be a king in Gaza, and Ashkelon will be uninhabited.",
+       "words": [
+        {
+         "key": "h4007",
+         "lemma": "מַבָּט"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.12",
+       "ref": "Ephesians 2:12",
+       "text": "remember that at that time you were separate from Christ, alienated from the commonwealth of Israel, and strangers to the covenants of the promise, without hope and without God in the world.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": null,
+     "doors": [],
+     "n": 12,
+     "verses": [
+      "Acts.16.19",
+      "1Cor.9.10",
+      "1John.3.3",
+      "Hos.2.15",
+      "Job.17.15",
+      "Rom.8.20",
+      "Job.41.9",
+      "Prov.13.12",
+      "Prov.26.12",
+      "Prov.29.20",
+      "Isa.20.6",
+      "Zech.9.12"
+     ],
+     "eg": [
+      {
+       "id": "Acts.16.19",
+       "ref": "Acts 16:19",
+       "text": "When the girl's owners saw that their hope of making money was gone, they seized Paul and Silas and dragged them before the authorities in the marketplace.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.9.10",
+       "ref": "1 Corinthians 9:10",
+       "text": "Isn't He actually speaking on our behalf? Indeed, this was written for us, because when the plowman plows and the thresher threshes, they should also expect to share in the harvest.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "1John.3.3",
+       "ref": "1 John 3:3",
+       "text": "And everyone who has this hope in Him purifies himself, just as Christ is pure.",
+       "words": [
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Hos.2.15",
+       "ref": "Hosea 2:15",
+       "text": "There I will give back her vineyards and make the Valley of Achor into a gateway of hope. There she will respond as she did in the days of her youth, as in the day she came up out of Egypt.",
+       "words": [
+        {
+         "key": "h8615",
+         "lemma": "תִּקְוָה"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 70,
+   "rows": [
+    {
+     "label": "Hope in the LORD, in God",
+     "note": "The Hebrew verbs yachal (יָחַל) and qavah (קָוָה) are also rendered \"wait\" in about forty-seven verses (for example Ps 27:14, Ps 25:3, Isa 40:31, Mic 7:7); those are not listed here, only where the verse renders them hope or expect.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Ps.130.7",
+      "Ps.131.3",
+      "Jer.14.22",
+      "Ps.130.5",
+      "Lam.3.24",
+      "Ps.33.22",
+      "Ps.33.18",
+      "Ps.147.11",
+      "Ps.37.9",
+      "Ps.31.24",
+      "Ps.69.6",
+      "Isa.49.23",
+      "Ps.42.5",
+      "Ps.42.11",
+      "Ps.43.5"
+     ],
+     "eg": [
+      {
+       "id": "Ps.130.7",
+       "ref": "Psalms 130:7",
+       "text": "O Israel, put your hope in the LORD, for with the LORD is loving devotion, and with Him is redemption in abundance.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.131.3",
+       "ref": "Psalms 131:3",
+       "text": "O Israel, put your hope in the LORD, both now and forevermore.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "Jer.14.22",
+       "ref": "Jeremiah 14:22",
+       "text": "Can the worthless idols of the nations bring rain? Do the skies alone send showers? Is this not by You, O LORD our God? So we put our hope in You, for You have done all these things.",
+       "words": [
+        {
+         "key": "h6960",
+         "lemma": "קָוָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.130.5",
+       "ref": "Psalms 130:5",
+       "text": "I wait for the LORD; my soul does wait, and in His word I put my hope.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        },
+        {
+         "key": "h6960",
+         "lemma": "קָוָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Set hope on God",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "1Tim.4.10",
+      "1Tim.5.5",
+      "1Tim.6.17",
+      "1Pet.3.5"
+     ],
+     "eg": [
+      {
+       "id": "1Tim.4.10",
+       "ref": "1 Timothy 4:10",
+       "text": "To this end we labor and strive, because we have set our hope on the living God, who is the Savior of everyone, and especially of those who believe.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.5.5",
+       "ref": "1 Timothy 5:5",
+       "text": "The widow who is truly in need and left all alone puts her hope in God and continues night and day in her petitions and prayers.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.6.17",
+       "ref": "1 Timothy 6:17",
+       "text": "Instruct those who are rich in the present age not to be conceited and not to put their hope in the uncertainty of wealth, but in God, who richly provides all things for us to enjoy.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.3.5",
+       "ref": "1 Peter 3:5",
+       "text": "For this is how the holy women of the past adorned themselves. They put their hope in God and were submissive to their husbands,",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Christ named with hope",
+     "note": "The verses where the text itself names Christ beside the verb; the page does not decide how the hope relates to him.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "1Cor.15.19",
+      "Phil.2.19",
+      "1Pet.1.13"
+     ],
+     "eg": [
+      {
+       "id": "1Cor.15.19",
+       "ref": "1 Corinthians 15:19",
+       "text": "If our hope in Christ is for this life alone, we are to be pitied more than all men.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "Phil.2.19",
+       "ref": "Philippians 2:19",
+       "text": "Now I hope in the Lord Jesus to send Timothy to you soon, that I also may be cheered when I learn how you are doing.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.1.13",
+       "ref": "1 Peter 1:13",
+       "text": "Therefore prepare your minds for action. Be sober-minded. Set your hope fully on the grace to be given you at the revelation of Jesus Christ.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope in the word, the judgments",
+     "note": null,
+     "doors": [
+      {
+       "id": "word_of_god",
+       "name": "the word of God",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Ps.119.114",
+      "Ps.130.5",
+      "Ps.119.43",
+      "Ps.119.147",
+      "Ps.119.49",
+      "Ps.119.74"
+     ],
+     "eg": [
+      {
+       "id": "Ps.119.114",
+       "ref": "Psalms 119:114",
+       "text": "You are my hiding place and my shield; I put my hope in Your word.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.130.5",
+       "ref": "Psalms 130:5",
+       "text": "I wait for the LORD; my soul does wait, and in His word I put my hope.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        },
+        {
+         "key": "h6960",
+         "lemma": "קָוָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.43",
+       "ref": "Psalms 119:43",
+       "text": "Never take Your word of truth from my mouth, for I hope in Your judgments.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.147",
+       "ref": "Psalms 119:147",
+       "text": "I rise before dawn and cry for help; in Your word I have put my hope.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope and Israel",
+     "note": "Israel is called to hope in the LORD (Ps 130:7, 131:3); Ps 69:6 is a prayer to the God of Israel; Luke 24:21 and Acts 26:7 are the disciples' and Paul's words about Israel's hope. Whether the hope of Israel and the hope of the gospel are one or two, the page takes no side.",
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Ps.130.7",
+      "Ps.131.3",
+      "Luke.24.21",
+      "Acts.26.7",
+      "Ps.69.6"
+     ],
+     "eg": [
+      {
+       "id": "Ps.130.7",
+       "ref": "Psalms 130:7",
+       "text": "O Israel, put your hope in the LORD, for with the LORD is loving devotion, and with Him is redemption in abundance.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.131.3",
+       "ref": "Psalms 131:3",
+       "text": "O Israel, put your hope in the LORD, both now and forevermore.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "Luke.24.21",
+       "ref": "Luke 24:21",
+       "text": "But we were hoping He was the One who would redeem Israel. And besides all this, it is the third day since these things took place.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.26.7",
+       "ref": "Acts 26:7",
+       "text": "the promise our twelve tribes are hoping to see fulfilled as they earnestly serve God day and night. It is because of this hope, O king, that I am accused by the Jews.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The nations, the islands will put their hope",
+     "note": "Matthew 12:21 quotes Isaiah 42:4; Romans 15:12 quotes Isaiah 11:10, where the Hebrew word is \"seek\". Who the nations hope in is in the verses; the page takes no side.",
+     "doors": [],
+     "n": 4,
+     "verses": [
+      "Isa.42.4",
+      "Isa.51.5",
+      "Matt.12.21",
+      "Rom.15.12"
+     ],
+     "eg": [
+      {
+       "id": "Isa.42.4",
+       "ref": "Isaiah 42:4",
+       "text": "He will not grow weak or discouraged before He has established justice on the earth. In His law the islands will put their hope.”",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "Isa.51.5",
+       "ref": "Isaiah 51:5",
+       "text": "My righteousness draws near, My salvation is on the way, and My arms will bring justice to the nations. The islands will look for Me and wait in hope for My arm.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        },
+        {
+         "key": "h6960",
+         "lemma": "קָוָה"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.21",
+       "ref": "Matthew 12:21",
+       "text": "In His name the nations will put their hope.”",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.12",
+       "ref": "Romans 15:12",
+       "text": "And once more, Isaiah says: “The Root of Jesse will appear, One who will arise to rule over the Gentiles; in Him the Gentiles will put their hope.”",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hope for what is not yet seen",
+     "note": null,
+     "doors": [
+      {
+       "id": "hope_that_is_seen_is_not_hope",
+       "name": "hope that is seen is no hope at all",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "faith_is_the_assurance_of_what_we_hope_for",
+       "name": "faith is the assurance of what we hope for",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Rom.8.24",
+      "Rom.8.25",
+      "Heb.11.1"
+     ],
+     "eg": [
+      {
+       "id": "Rom.8.24",
+       "ref": "Romans 8:24",
+       "text": "For in this hope we were saved; but hope that is seen is no hope at all. Who hopes for what he can already see?",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        },
+        {
+         "key": "g1680",
+         "lemma": "ἐλπίς"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.25",
+       "ref": "Romans 8:25",
+       "text": "But if we hope for what we do not yet see, we wait for it patiently.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.1",
+       "ref": "Hebrews 11:1",
+       "text": "Now faith is the assurance of what we hope for and the certainty of what we do not see.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hoped for one thing, and another came",
+     "note": "In Isa 5:4 it is the LORD who expected sweet grapes; the others are the people's words.",
+     "doors": [],
+     "n": 6,
+     "verses": [
+      "Job.30.26",
+      "Isa.59.9",
+      "Isa.59.11",
+      "Jer.8.15",
+      "Jer.14.19",
+      "Isa.5.4"
+     ],
+     "eg": [
+      {
+       "id": "Job.30.26",
+       "ref": "Job 30:26",
+       "text": "But when I hoped for good, evil came; when I looked for light, darkness fell.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        },
+        {
+         "key": "h6960",
+         "lemma": "קָוָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.59.9",
+       "ref": "Isaiah 59:9",
+       "text": "Therefore justice is far from us, and righteousness does not reach us. We hope for light, but there is darkness; for brightness, but we walk in gloom.",
+       "words": [
+        {
+         "key": "h6960",
+         "lemma": "קָוָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.59.11",
+       "ref": "Isaiah 59:11",
+       "text": "We all growl like bears and moan like doves. We hope for justice, but find none, for salvation, but it is far from us.",
+       "words": [
+        {
+         "key": "h6960",
+         "lemma": "קָוָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.8.15",
+       "ref": "Jeremiah 8:15",
+       "text": "We hoped for peace, but no good has come, for a time of healing, but there was only terror.",
+       "words": [
+        {
+         "key": "h6960",
+         "lemma": "קָוָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hoping to come, to see, to send, to speak; hoping you will understand",
+     "note": null,
+     "doors": [],
+     "n": 11,
+     "verses": [
+      "Rom.15.24",
+      "1Cor.16.7",
+      "2Cor.1.13",
+      "Phil.2.23",
+      "Luke.23.8",
+      "2Cor.5.11",
+      "2Cor.13.6",
+      "Phil.2.19",
+      "1Tim.3.14",
+      "2John.1.12",
+      "3John.1.14"
+     ],
+     "eg": [
+      {
+       "id": "Rom.15.24",
+       "ref": "Romans 15:24",
+       "text": "I hope to see you on my way to Spain. And after I have enjoyed your company for a while, you can equip me for my journey.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.16.7",
+       "ref": "1 Corinthians 16:7",
+       "text": "For I do not want to see you now only in passing; I hope to spend some time with you, if the Lord permits.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.1.13",
+       "ref": "2 Corinthians 1:13",
+       "text": "For we do not write you anything that is beyond your ability to read and understand. And I hope that you will understand us completely,",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "Phil.2.23",
+       "ref": "Philippians 2:23",
+       "text": "So I hope to send him as soon as I see what happens with me.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": null,
+     "doors": [],
+     "n": 18,
+     "verses": [
+      "Job.13.15",
+      "Lam.3.21",
+      "1Cor.13.7",
+      "Luke.6.34",
+      "Job.6.11",
+      "Job.6.19",
+      "Ps.56.6",
+      "Ps.71.14",
+      "Ps.119.81",
+      "Isa.5.2",
+      "Isa.8.17",
+      "Isa.64.3",
+      "Jer.13.16",
+      "John.5.45",
+      "Acts.24.26",
+      "2Cor.1.10",
+      "2Cor.8.5",
+      "Phlm.1.22"
+     ],
+     "eg": [
+      {
+       "id": "Job.13.15",
+       "ref": "Job 13:15",
+       "text": "Though He slay me, I will hope in Him. I will still defend my ways to His face.",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "Lam.3.21",
+       "ref": "Lamentations 3:21",
+       "text": "Yet I call this to mind, and therefore I have hope:",
+       "words": [
+        {
+         "key": "h3176",
+         "lemma": "יָחַל"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.13.7",
+       "ref": "1 Corinthians 13:7",
+       "text": "It bears all things, believes all things, hopes all things, endures all things.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.6.34",
+       "ref": "Luke 6:34",
+       "text": "And if you lend to those from whom you expect repayment, what credit is that to you? Even sinners lend to sinners, expecting to be repaid in full.",
+       "words": [
+        {
+         "key": "g1679",
+         "lemma": "ἐλπίζω"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “hope”",
+  "words": [
+   {
+    "key": "h7663",
+    "lemma": "שָׂבַר",
+    "translit": "śōḇēr",
+    "gloss": null,
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Esth.9.1",
+     "Ps.119.166",
+     "Isa.38.18"
+    ],
+    "eg": [
+     {
+      "id": "Esth.9.1",
+      "ref": "Esther 9:1",
+      "text": "On the thirteenth day of the twelfth month, the month of Adar, the king's command and edict were to be executed. On this day the enemies of the Jews had hoped to overpower them, but their plan was overturned and the Jews overpowered those who hated them."
+     },
+     {
+      "id": "Ps.119.166",
+      "ref": "Psalms 119:166",
+      "text": "I wait for Your salvation, O LORD, and I carry out Your commandments."
+     }
+    ]
+   },
+   {
+    "key": "h986",
+    "lemma": "בִּטָּחוֹן",
+    "translit": "bit.ta.chon",
+    "gloss": "trust",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Eccl.9.4"
+    ],
+    "eg": [
+     {
+      "id": "Eccl.9.4",
+      "ref": "Ecclesiastes 9:4",
+      "text": "There is hope, however, for anyone who is among the living; for even a live dog is better than a dead lion."
+     }
+    ]
+   }
+  ]
+ }
+}

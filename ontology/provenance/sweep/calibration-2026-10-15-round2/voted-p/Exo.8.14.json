@@ -1,0 +1,81 @@
+{
+ "ref": "Exo.8.14",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'their secret arts' belongs to the magicians, who are the doers of cl0; masculine plural agrees.",
+   "category": "possessive of the acting group",
+   "votes": 3
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'they were not able' is third common plural, the same doers as cl0, the magicians.",
+   "category": "implied subject of a failed attempt",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "lamed + infinitive construct saying what the act was done to achieve: to bring forth the gnats.",
+   "category": "infinitive purpose",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "the attempt, with a purpose, followed by 'and' + a negated verb of ability is the attempt's failed_result, which replaces the plain and.",
+   "category": "attempt and failure",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "failed_result",
+   "dst": "cl2",
+   "action": "add",
+   "why": "an attempt with a purpose, then 'and' + a negated verb of being able: the attempt's outcome failed.",
+   "category": "failed attempt",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "wayyiqtol continuing the narrative line after the failure.",
+   "category": "narrative sequence",
+   "votes": 3
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "this verse has only cl0 to cl3; cl4 is a clause of an earlier verse, and a then-link across verses is not a link type here.",
+   "category": "then across verses",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "likewise",
+   "dst": "Exo.8.13#cl2",
+   "action": "add",
+   "why": "'did thus' (ken) with a named subject, the magicians, who were not commanded: imitation of the deed just done after the latest command, the striking of the dust (not fulfilment).",
+   "category": "imitation of an uncommanded deed",
+   "votes": 2
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [],
+ "voted": 3
+}

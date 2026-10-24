@@ -1,0 +1,48 @@
+{
+ "ref": "Mrk.15.10",
+ "referents": [
+  {
+   "slot": "w6",
+   "choice": "Mrk.15.5#w2",
+   "divine": true,
+   "why": "'Him' (auton), masculine singular object of 'handed over', is Jesus, the one delivered up; Jesus is offered as a candidate",
+   "category": "object pronoun resolved to named person in an earlier verse"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Mrk.15.9#w2",
+   "divine": false,
+   "why": "'he' (implied subject of 'was aware', third singular) is Pilate, who asked the question that this verse explains",
+   "category": "implied subject carried from the verse before"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "'he was aware that' ... handed Jesus over: the clause is the object of knowing (hoti after a verb of knowing)",
+   "category": "clause as object of a verb of knowing"
+  },
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self-link; the reason is not inside this clause",
+   "category": "self-link"
+  },
+  {
+   "src": "Mrk.15.9#cl0",
+   "type": "because",
+   "dst": "cl0",
+   "action": "add",
+   "why": "the verse-opening gar is 'for': this verse gives the reason for Pilate's question in 15.9 ('he asked, because he knew it was envy'); the explained clause is the earlier one, so the edge runs from it to this reason",
+   "category": "verse-opening for explains the verse before"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,152 @@
+{
+ "ref": "Mrk.15.2",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "him (auton, masculine singular) is the object of Pilate's questioning, Jesus; Pilate is the speaker",
+   "category": "object pronoun in narrated act"
+  },
+  {
+   "slot": "w5",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "You (Su) in Pilate's question is second person, addressed to Jesus as addressee of that speech",
+   "category": "second person inside speech"
+  },
+  {
+   "slot": "w14",
+   "choice": "w4",
+   "divine": false,
+   "why": "to him (auto) in the reply: Jesus answers Pilate, the addressee of the reply",
+   "category": "addressee of a reply"
+  },
+  {
+   "slot": "w16",
+   "choice": "w4",
+   "divine": false,
+   "why": "You have said so is Jesus' reply to Pilate; second person singular, so Pilate is the addressee",
+   "category": "second person inside speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "Pilate's question is what he said; the asking verb takes it as content (R1), not a separate and",
+   "category": "speech content read as and"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "questioned him: the question Are you the King of the Jews is what is said (R1)",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "the reply follows the question in the dialogue sequence",
+   "category": "dialogue sequence"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "participle answering to him is nested in the reply verb",
+   "category": "participle inside saying clause"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl4",
+   "action": "remove",
+   "why": "the words said are the content of the reply (R1), not a grammatical nesting",
+   "category": "speech content read as within"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add",
+   "why": "Jesus says You have said so: the saying clause has its said clause as content (R1)",
+   "category": "speech content"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "reversed: the reply comes after the question, not before it",
+   "category": "reversed sequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "Mrk.15.1#w18"
+    }
+   ],
+   "divine": true,
+   "why": "Pilate's question: frame is the asking, part the question, sender Pilate; addressee Jesus added",
+   "category": "turn with addressee"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "Mrk.15.1#w18"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "Jesus' reply: builder's sender w12 is not a candidate here; the speaker is Jesus, addressee Pilate. cl3 (answering to him) describes the reply rather than saying it, so it is no longer a part",
+   "category": "turn sender corrected"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether answering to him (cl3) belongs to the turn",
+   "why": "a turn has one frame, and the participle describes the act of replying rather than being said; left outside the turn as a within clause for review"
+  }
+ ]
+}

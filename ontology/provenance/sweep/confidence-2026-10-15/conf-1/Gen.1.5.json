@@ -1,0 +1,64 @@
+{
+ "ref": "Gen.1.5",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "Third masculine singular qatal with the subject unstated. It is the same actor as cl0 (God called the light day); Elohim takes a singular verb; the BSB gives He.",
+   "category": "implied subject carried over from the clause before"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "Plain waw joining two parallel namings by the same agent (the light, the darkness). No cause or sequence is stated.",
+   "category": "plain and between parallel clauses"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "Direction reversed, and not the nearest preceding narrative clause: wayyiqtol cl2 follows cl1, so the line runs cl0, cl1, cl2.",
+   "category": "narrative then with reversed direction"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "confidence": "high",
+   "why": "wayyiqtol cl2 (and there was evening) continues the narrative line from cl1, the nearest preceding clause not inside a speech.",
+   "category": "narrative then"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "confidence": "high",
+   "why": "wayyiqtol cl3 (and there was morning) continues from cl2 (and there was evening).",
+   "category": "narrative then"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Gen.1.5 cl0 and cl1",
+   "what": "Naming: called the light day and called the darkness night give a name as the object. No link type records naming a thing by a word."
+  },
+  {
+   "where": "Gen.1.5 cl4",
+   "what": "Identifying apposition: 'the first day' names the evening and morning of cl2 and cl3 together. No link type covers an identifying apposition over two clauses."
+  }
+ ],
+ "cant_tell": []
+}

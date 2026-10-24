@@ -1,0 +1,157 @@
+{
+ "ref": "Exo.8.4",
+ "referents": [
+  {
+   "slot": "w18",
+   "choice": "w2",
+   "divine": false
+  },
+  {
+   "slot": "w22",
+   "choice": "w2",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "c3",
+   "divine": false
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w12",
+   "divine": true
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w2",
+   "divine": false
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w27",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "purpose",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "and",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl4",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "c3"
+    }
+   ]
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "aim",
+     "node": "cl3"
+    }
+   ]
+  },
+  {
+   "id": "imp3",
+   "kind": "imperative",
+   "action": "remove",
+   "members": []
+  },
+  {
+   "id": "imp4",
+   "kind": "imperative",
+   "action": "remove",
+   "members": []
+  }
+ ],
+ "derived": []
+}

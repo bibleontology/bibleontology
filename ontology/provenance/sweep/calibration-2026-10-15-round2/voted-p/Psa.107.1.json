@@ -1,0 +1,95 @@
+{
+ "ref": "Psa.107.1",
+ "referents": [
+  {
+   "slot": "w9",
+   "choice": "w2",
+   "divine": true,
+   "why": "The possessive on 'loving devotion' (חַסְדּוֹ) is third masculine singular and names whose devotion it is. The only masculine singular candidate that is the one thanked and called good in cl1 is the LORD (w2). w7 is a time phrase and w8 is the noun the possessive modifies, so neither can be the owner.",
+   "category": "possessive resolved to the one thanked",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "The command 'give thanks' has an implied plural second person, the audience of the psalm. No candidate is a plural addressee: w2 is the one thanked and the psalmist is the speaking voice, not the one addressed.",
+   "category": "implied subject of a command to an unnamed audience",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The conjunction כִּי after the imperative of thanks gives the reason for thanking, so the command is explained by what follows.",
+   "category": "reason after a command",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The second 'for' gives the ground of the claim that He is good: his loving devotion endures forever. The semicolon joins it as its reason, not as a separate assertion.",
+   "category": "reason inside a predicate pair",
+   "votes": 2
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "basis",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "The builder gave cl1 the role 'part', which the imperative kind does not have. The clause introduced by 'for' is the basis given for the command; the command is cl0.",
+   "category": "member role outside the group kind",
+   "votes": 2
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl0s, the audience of 'give thanks'",
+   "what": "No link or group type records a psalm's address to its audience, the hearers a command is spoken to."
+  },
+  {
+   "where": "writing group, sender role",
+   "what": "The psalm's own voice is a candidate (voice), but the writing kind takes sender only where the text names the writer. A psalm whose verse names no writer has an unnamed voice with no slot to record it."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Who the plural 'you' of verse 1 is",
+   "why": "The audience is not named in this verse and no candidate is a plural addressee."
+  },
+  {
+   "what": "Who wrote the psalm",
+   "why": "No writer is named in the verse; the psalmist appears only as the speaking voice."
+  },
+  {
+   "what": "The audience of the command 'give thanks' (cl0s)",
+   "why": "The imperative is plural and the verse does not say who is called to give thanks; the passage gives no wider context to settle it."
+  },
+  {
+   "what": "The writer (sender) of the psalm",
+   "why": "The verse does not name the writer, and its voice is not marked by any first-person form."
+  },
+  {
+   "what": "audience of the command 'give thanks' (slot cl0s)",
+   "why": "The plural addressee is not named in the verse or before, and no candidate is a group the psalm addresses; the answer depends on the psalm's setting, which the text does not give."
+  }
+ ],
+ "voted": 3
+}

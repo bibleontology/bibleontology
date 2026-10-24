@@ -1,0 +1,135 @@
+{
+ "ref": "Exo.8.15",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'this is the finger of God': the demonstrative refers to the gnats just produced, which is not among the candidates. The feminine pronoun agrees with the predicate 'finger' (copula use), so the finger is not its referent.",
+   "category": "demonstrative whose referent is not a candidate",
+   "votes": 2
+  },
+  {
+   "slot": "w17",
+   "choice": "w3",
+   "divine": false,
+   "why": "'he did not listen to them': the them are the magicians who had spoken; masculine plural agrees.",
+   "category": "object of a speech verb",
+   "votes": 3
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w5",
+   "divine": false,
+   "why": "the one who does not listen is a person, Pharaoh; the heart (w11) is what was hardened, not the listener. The act decides, so the builder's heart is replaced.",
+   "category": "implied subject of a refusal",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl0 is the magicians' speech frame and comes before cl2 and cl3; the refusal is not a sequence after the frame.",
+   "category": "then across a speech frame",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "a will hardened, then the refusal that follows: a state brings about what follows, so the link is a result.",
+   "category": "plain and read as result",
+   "votes": 2
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "cl1 is inside the magicians' speech; the narrative line continues from the speech frame cl0, which is the nearest clause not inside a speech.",
+   "category": "then from inside a speech",
+   "votes": 3
+  },
+  {
+   "src": "cl3",
+   "type": "as",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "ka'asher 'just as' before a clause nested in cl3's prepositional role: as the LORD had said.",
+   "category": "comparison to an earlier word",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the magicians say; what is said is the clause 'this is the finger of God' (R1).",
+   "category": "speech content",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add",
+   "why": "wayehezaq continues the narrative line after the speech frame, which is the nearest clause before it not inside a speech.",
+   "category": "narrative sequence after a speech",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "the hardened heart is the state, and the refusal to listen is what it brings about.",
+   "category": "state and what it brings about",
+   "votes": 2
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w3"
+    },
+    {
+     "role": "addressee",
+     "node": "w5"
+    }
+   ],
+   "divine": false,
+   "why": "the magicians speak to Pharaoh; cl1 is the part said.",
+   "category": "speech of magicians to Pharaoh",
+   "votes": 3
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "the subject 'this' (slot w8) of 'this is the finger of God'",
+   "why": "it is a feminine singular pronoun with no candidate for an event; recorded as none rather than forced onto the finger, which is the predicate."
+  },
+  {
+   "what": "the referent of the demonstrative 'this' in cl1",
+   "why": "It points at the act of producing gnats, which the candidate list does not carry. Only the feminine finger matches the morphology, and it is the predicate."
+  }
+ ],
+ "voted": 3
+}

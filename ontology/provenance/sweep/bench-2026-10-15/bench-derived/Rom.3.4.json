@@ -1,0 +1,136 @@
+{
+ "ref": "Rom.3.4",
+ "referents": [
+  {
+   "slot": "w19",
+   "choice": "w5",
+   "divine": true
+  },
+  {
+   "slot": "w25",
+   "choice": "w5",
+   "divine": true
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w5",
+   "divine": true
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w5",
+   "divine": true
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "as",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "add"
+  },
+  {
+   "src": "cl5",
+   "type": "within",
+   "dst": "cl6",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "remove"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "remove"
+  },
+  {
+   "src": "cl5",
+   "type": "when_if_though",
+   "dst": "cl6",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ]
+  },
+  {
+   "id": "g1",
+   "kind": "writing",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

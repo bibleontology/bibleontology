@@ -1,0 +1,68 @@
+{
+ "ref": "Job.38.9",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'I made the clouds' inside the LORD's speech: the speaker, the LORD.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its garment' (masculine singular) refers to the sea of 38:8, not offered as a candidate. The clouds are the garment, not the owner.",
+   "category": "referent outside candidate list"
+  },
+  {
+   "slot": "w9",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its swaddling band' refers to the sea of 38:8, not offered as a candidate.",
+   "category": "referent outside candidate list"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive 'made' is the 'when' clause that sets the time of cl0.",
+   "category": "temporal infinitive"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'And thick darkness...' is coordinated inside the 'when' clause.",
+   "category": "coordinated clause inside time clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Same link as the entry above, listed twice in the builder output. Recorded once.",
+   "category": "duplicate builder entry"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Two nominal clauses joined by plain waw: the clouds are its garment, and thick darkness its swaddling band.",
+   "category": "plain and between nominal clauses"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The 'when' of 38:9 and the sea referent of 'its'",
+   "why": "The 'when' completes the question of 38:4 across verses. The 'its' refers to the sea of 38:8, which the candidate list omits."
+  }
+ ]
+}

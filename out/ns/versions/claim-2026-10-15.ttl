@@ -1,0 +1,106 @@
+###############################################################################
+#  The claim vocabulary (plan 8.1a; OWL evaluation Phase 1, docs/review/
+#  OWL-EVALUATION.md section 3). Doug, 2026-10-14, approving P-2026-10-14-1:
+#  records and verses addressed by the site's own pages, one voice per
+#  speaker.
+#
+#  Every relation the graph records is a CLAIM: what it relates, the verses it
+#  rests on, how certain, and whose claim it is. The claim is the unit; the
+#  plain triple (subject, relation, object) is stated only inside the named
+#  graph of the voice that says it -- the narrator's, a speaker's, a reader's
+#  -- so a tool that loads only the narrator gets only what the text itself
+#  states, and a character's claim (Eliphaz on Job, the serpent on God) is
+#  never read as the narrator's. Written by Claude to Doug's decisions; the
+#  wording here is AI-drafted.
+###############################################################################
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix claim:   <https://bibleontology.org/ns/claim#> .
+
+<https://bibleontology.org/ns/claim>
+    a owl:Ontology ;
+    rdfs:label "Bible Ontology — claims" ;
+    dcterms:title "Bible Ontology — claims" ;
+    dcterms:creator "Doug Egge" ;
+    dcterms:created "2026-10-14"^^xsd:date ;
+    dcterms:rights "© 2026 Doug Egge. All rights reserved." ;
+    owl:versionInfo "1.1.0" ;
+    owl:versionIRI <https://bibleontology.org/ns/claim/2026-10-15> ;
+    dcterms:modified "2026-10-15"^^xsd:date ;
+    <http://purl.org/vocab/vann/preferredNamespacePrefix> "claim" ;
+    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://bibleontology.org/ns/claim#" ;
+    rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and no rule of any kind concerning God, the Father, Jesus or the Holy Spirit. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred." ;
+    rdfs:comment "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
+    rdfs:comment "How the graph's relations are published: each as a claim that carries the verses it rests on, its certainty, and whose claim it is. The plain triple is stated only inside the named graph of the voice that says it, so the narrator's statements and a character's claims are never mixed. Relation types are at https://bibleontology.org/ns/relation; records are the site's own pages, https://bibleontology.org/e/<id>, and verses https://bibleontology.org/p/<Book>.<chapter>.<verse>." ;
+    rdfs:seeAlso <https://bibleontology.org/ns/relation>, <https://bibleontology.org/ns/meaning> .
+
+claim:Claim a owl:Class ;
+    rdfs:label "claim" ;
+    skos:definition "One relation the graph records: what it relates, the verses it rests on, how certain it is, and whose claim it is. The claim is published in every case; its plain triple is stated only in the graph of its voice." .
+
+claim:Voice a owl:Class ;
+    rdfs:label "voice" ;
+    skos:definition "A named graph holding the plain triples one voice states: the narrator's (what the text itself states), one speaker's in the text, or one reader's." .
+
+claim:subject a owl:ObjectProperty ;
+    rdfs:label "subject" ; rdfs:domain claim:Claim ;
+    skos:definition "The record the claim is about, as the relation reads: the subject of '<subject> <relation> <object>'." .
+
+claim:relation a owl:ObjectProperty ;
+    rdfs:label "relation" ; rdfs:domain claim:Claim ;
+    skos:definition "The relation type, from https://bibleontology.org/ns/relation." .
+
+claim:object a owl:ObjectProperty ;
+    rdfs:label "object" ; rdfs:domain claim:Claim ;
+    skos:definition "The record the relation points to." .
+
+claim:verse a owl:ObjectProperty ;
+    rdfs:label "verse" ; rdfs:domain claim:Claim ;
+    skos:definition "A verse the claim rests on, as the site's page for it. Every claim has at least one." .
+
+claim:certainty a owl:ObjectProperty ;
+    rdfs:label "certainty" ; rdfs:domain claim:Claim ; rdfs:range claim:Certainty ;
+    skos:definition "How firmly the verses support the claim, on the graph's four-step scale." .
+
+claim:claimedBy a owl:ObjectProperty ;
+    rdfs:label "claimed by" ; rdfs:domain claim:Claim ;
+    skos:definition "The person or being in the text whose claim this is, where it is not the narrator's: a speaker's assertion, accusation or misquotation, recorded as theirs and never as the text's own." .
+
+claim:readBy a owl:DatatypeProperty ;
+    rdfs:label "read by" ; rdfs:domain claim:Claim ;
+    skos:definition "Where the claim is a reading rather than the text's statement, the reader it is credited to." .
+
+claim:voice a owl:ObjectProperty ;
+    rdfs:label "voice" ; rdfs:domain claim:Claim ; rdfs:range claim:Voice ;
+    skos:definition "The named graph in which the claim's plain triple is stated." .
+
+claim:voiceOf a owl:ObjectProperty ;
+    rdfs:label "voice of" ; rdfs:domain claim:Voice ;
+    skos:definition "Whose voice a graph is: the narrator, a record in the text, or a reader." .
+
+claim:Certainty a owl:Class ; rdfs:subClassOf skos:Concept ;
+    rdfs:label "certainty" ;
+    skos:definition "A step on the graph's certainty scale." .
+claim:certaintyScale a skos:ConceptScheme ; rdfs:label "certainty" .
+
+claim:explicit a claim:Certainty ; skos:inScheme claim:certaintyScale ;
+    skos:prefLabel "explicit" ;
+    skos:definition "The verse states the relationship in so many words." .
+claim:implied a claim:Certainty ; skos:inScheme claim:certaintyScale ;
+    skos:prefLabel "implied" ;
+    skos:definition "The verse entails it without stating it (two men called sons of the same father are therefore brothers), or it follows from an adjacent verse." .
+claim:conjectured a claim:Certainty ; skos:inScheme claim:certaintyScale ;
+    skos:prefLabel "conjectured" ;
+    skos:definition "Neither stated nor entailed, but the most reasonable reading of the text, with what makes it likely and what would overturn it." .
+claim:disputed a claim:Certainty ; skos:inScheme claim:certaintyScale ;
+    skos:prefLabel "disputed" ;
+    skos:definition "Reasonable readings differ, or parallel passages disagree; the evidence pulls two ways." .
+
+claim:narrator a claim:Voice ;
+    rdfs:label "the narrator" ;
+    skos:definition "The voice of the text itself: what it states, outside any character's speech. Load only this graph to get only what the text states." .

@@ -1,0 +1,59 @@
+# The claim export's checks (plan 8.1a): closed-world, run with inference off.
+# Every claim relates exactly one subject to one object by one relation type,
+# rests on at least one verse, carries one step of the certainty scale and
+# names the voice its triple is stated in.
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix claim: <https://bibleontology.org/ns/claim#> .
+@prefix csh:   <https://bibleontology.org/ns/claim/shapes#> .
+
+csh:ClaimShape a sh:NodeShape ;
+    sh:targetClass claim:Claim ;
+    sh:property [ sh:path claim:subject ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:message "A claim has exactly one subject." ] ;
+    sh:property [ sh:path claim:relation ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:pattern "^https://bibleontology.org/ns/(relation#|claim#says$)" ;
+                  sh:message "A claim has exactly one relation, from /ns/relation, or claim:says for a reporting speaker's claim." ] ;
+    sh:property [ sh:path claim:object ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:message "A claim has exactly one object." ] ;
+    sh:property [ sh:path claim:verse ; sh:minCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:pattern "^https://bibleontology.org/p/[0-9A-Za-z]+\\.[0-9]+\\.[0-9]+$" ;
+                  sh:message "A claim rests on at least one verse, each the site's page for it." ] ;
+    sh:property [ sh:path claim:certainty ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( claim:explicit claim:implied claim:conjectured claim:disputed ) ;
+                  sh:message "A claim carries one step of the certainty scale." ] ;
+    sh:property [ sh:path claim:voice ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:message "A claim names the voice its triple is stated in." ] ;
+    sh:property [ sh:path claim:readBy ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+# A VERB STATEMENT (plan 2.17 step 3; the committee's ontology expert, second
+# sitting: these rules were checked only in a test, while /ns/shapes is the
+# public claim of how the graph is checked). A claim that carries a verb label
+# is a verb statement: its force and its family come from their declared
+# schemes, its negation is a boolean, its verb is a word page, and its clause is
+# addressed with the verse pages' book codes. Whether a statement is asserted
+# (only one made outright) is a rule over the voice graphs, checked by
+# tests/test_statements.py.
+csh:StatementShape a sh:NodeShape ;
+    sh:targetSubjectsOf claim:verbLabel ;
+    sh:property [ sh:path claim:modality ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:in ( claim:modality_stated claim:modality_nonfinite claim:modality_commanded
+                          claim:modality_commanded_or_wished claim:modality_promised claim:modality_foretold
+                          claim:modality_urged claim:modality_wished claim:modality_asked ) ;
+                  sh:message "A verb statement carries one force from the modalities scheme." ] ;
+    sh:property [ sh:path claim:family ; sh:maxCount 1 ;
+                  sh:in ( claim:family_verb_body claim:family_verb_change claim:family_verb_cognition
+                          claim:family_verb_communication claim:family_verb_competition claim:family_verb_consumption
+                          claim:family_verb_contact claim:family_verb_creation claim:family_verb_emotion
+                          claim:family_verb_motion claim:family_verb_perception claim:family_verb_possession
+                          claim:family_verb_social claim:family_verb_stative claim:family_verb_weather ) ;
+                  sh:message "A verb statement's family, where it has one, is from the verb families scheme." ] ;
+    sh:property [ sh:path claim:negated ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ;
+                  sh:message "A verb statement says whether its clause is negated." ] ;
+    sh:property [ sh:path claim:verb ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:pattern "^https://bibleontology.org/word/[hg][0-9]+$" ;
+                  sh:message "A verb statement's verb is a word page." ] ;
+    sh:property [ sh:path claim:clause ; sh:nodeKind sh:IRI ;
+                  sh:pattern "^https://bibleontology.org/structure/(Gen|Exod|Lev|Num|Deut|Josh|Judg|Ruth|1Sam|2Sam|1Kgs|2Kgs|1Chr|2Chr|Ezra|Neh|Esth|Job|Ps|Prov|Eccl|Song|Isa|Jer|Lam|Ezek|Dan|Hos|Joel|Amos|Obad|Jonah|Mic|Nah|Hab|Zeph|Hag|Zech|Mal|Matt|Mark|Luke|John|Acts|Rom|1Cor|2Cor|Gal|Eph|Phil|Col|1Thess|2Thess|1Tim|2Tim|Titus|Phlm|Heb|Jas|1Pet|2Pet|1John|2John|3John|Jude|Rev)\\.[0-9]+\\.[0-9]+#[a-z]+[0-9]+$" ;
+                  sh:message "A clause is addressed by its verse, in the verse pages' book codes, and its id within the verse." ] .

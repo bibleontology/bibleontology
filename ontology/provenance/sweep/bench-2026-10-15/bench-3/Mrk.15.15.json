@@ -1,0 +1,115 @@
+{
+ "ref": "Mrk.15.15",
+ "referents": [
+  {
+   "slot": "w10",
+   "choice": "w5",
+   "divine": false,
+   "why": "Dative 'to them' is the crowd Pilate wants to satisfy and to whom Barabbas is released. Crowd is in this verse's candidates, and the plural pronoun agrees with the collective.",
+   "category": "collective noun with plural pronoun"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "Subject of 'delivered' and 'had ... flogged' is Pilate, the subject of 'released' in the same verse. The builder's null is filled.",
+   "category": "subject carried across clauses"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w16",
+   "divine": true,
+   "why": "The passive subjunctive 'might be crucified' has as its subject the one crucified, Jesus (w16). It is not Pilate, so the builder's cl3s is wrong.",
+   "category": "passive subject is the patient"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The participle 'wishing' takes the infinitive 'to satisfy' as its complement, a verb of wanting.",
+   "category": "complement of a verb of wanting"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The wishing participle is nested in the release clause as an adjunct.",
+   "category": "participle nested in finite clause"
+  },
+  {
+   "src": "cl3",
+   "type": "within",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "The flogging participle is a prior act of Pilate that stands as its own event ('had Jesus flogged'), so it is nested, not describing.",
+   "category": "participle of a prior act"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "keep",
+   "why": "Greek hina with the subjunctive: the handing over is for the crucifixion. This is what the act is for.",
+   "category": "purpose clause after an act"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The infinitive cl2 is nested inside cl1 inside cl0. A nested clause does not link forward to its own host as 'and then'.",
+   "category": "nested clause linked to its host"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "The connective is de (kai), adversative, not a fused waw. 'And then' is not supported by the form; the relation the text carries is contrast, added below.",
+   "category": "connective is not a fused waw"
+  },
+  {
+   "src": "cl0",
+   "type": "contrast",
+   "dst": "cl3",
+   "action": "add",
+   "why": "Mid-verse adversative de: 'But he had Jesus flogged' sets Pilate's release of Barabbas against his handing over of Jesus. The host is cl0.",
+   "category": "adversative but mid-verse"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Mrk.15.15#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl3"
+    },
+    {
+     "role": "group_subject",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "Proposed reading for review. Pilate's acts in a row: released Barabbas (cl0), had Jesus flogged and handed him over (cl3). Each states its subject only in the verb, and all resolve to Pilate.",
+   "category": "one agent's acts in a row (reading)"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.15 cl4, 'having flogged [him]'",
+   "what": "The implied object of the participle, Jesus, is not in the slot list."
+  }
+ ],
+ "cant_tell": []
+}

@@ -1,0 +1,183 @@
+{
+ "ref": "Rom.3.4",
+ "referents": [
+  {
+   "slot": "w19",
+   "choice": "w5",
+   "divine": true,
+   "why": "'Your words' (second singular genitive) inside the quotation: the psalm's addressee, God.",
+   "category": "second person inside quoted words"
+  },
+  {
+   "slot": "w25",
+   "choice": "w5",
+   "divine": true,
+   "why": "'You' as object of 'judged' inside the quotation: God is the one judged in the psalm.",
+   "category": "second person inside quoted words"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'Never may it be' (optative): the implied subject is an impersonal 'it', the conclusion rejected in 3:3; no candidate.",
+   "category": "impersonal subject of a denial"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "'It has been written' (passive): the implied subject is the scripture, not a person; the builder's 'man' (w9) is wrong.",
+   "category": "impersonal passive of a quotation formula"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w5",
+   "divine": true,
+   "why": "'You may be justified' inside the quotation: the second person addressed in the psalm is God.",
+   "category": "second person inside quoted words"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w5",
+   "divine": true,
+   "why": "'You will prevail' inside the quotation: the addressee of the psalm, God.",
+   "category": "second person inside quoted words"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "remove",
+   "why": "The act of writing is not for the purpose; the 'so that' belongs to the quoted words. Replaced by a content link.",
+   "category": "purpose attached to the writing formula"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "Same as the link to cl4: the writing formula has no purpose of its own.",
+   "category": "purpose attached to the writing formula"
+  },
+  {
+   "src": "cl5",
+   "type": "when_if_though",
+   "dst": "cl6",
+   "action": "remove",
+   "why": "The fronted-ki type is for a Hebrew ki clause; here the infinitive in en-plus-dative is a temporal adjunct ('when you are judged').",
+   "category": "wrong link type for infinitive adjunct"
+  },
+  {
+   "src": "cl5",
+   "type": "within",
+   "dst": "cl6",
+   "action": "add",
+   "why": "The infinitive clause sits in the prepositional adjunct of cl5 as its time ('when you are judged').",
+   "category": "clause nested in prepositional adjunct"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "'Certainly not!' is an exclamation followed by a counter-jussive; the de is not a plain 'and' that joins the two, and no link type records a rebuttal.",
+   "category": "rebuttal with no link type"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'Let God be true and every man [be] a liar': the two jussives are joined by de/kai.",
+   "category": "commands joined by and"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "There is no 'and' between the clause and 'just as it is written' (kathaper), which is a comparison.",
+   "category": "comparison read as and"
+  },
+  {
+   "src": "cl2",
+   "type": "as",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'Just as it is written' declares the claim to be in accordance with the earlier written word.",
+   "category": "comparison with a saying"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "keep",
+   "why": "'You may be justified ... and will prevail': kai joins the two in the quotation.",
+   "category": "and within quoted words"
+  },
+  {
+   "src": "cl3",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add",
+   "why": "'It has been written' is a saying clause; the quoted words cl4 are what is said (R1).",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "'Let God be true, and every man [be] a liar' is one jussive collection with the verb elided in the second member. The builder's command=cl0 is an exclamation of denial, and 'part' is not a role of an imperative group.",
+   "category": "two commands joined by and"
+  },
+  {
+   "id": "Rom.3.4#g1",
+   "kind": "writing",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    }
+   ],
+   "divine": false,
+   "why": "A quotation of scripture introduced by 'as it is written': the formula is the frame, the quoted words are the parts. The writer is not named, so no sender.",
+   "category": "quotation of scripture as a writing"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "3:4 cl0 and cl1 ('Certainly not!' then 'let God be true')",
+   "what": "A denial followed by a counter-jussive, joined by de; no link type records a rebuttal."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "'So that you may be justified' (hopos, cl4) inside the quotation",
+   "why": "Its purpose is an act (the man's lie) in this verse, but the form does not say which act it is for; no purpose link added."
+  }
+ ]
+}

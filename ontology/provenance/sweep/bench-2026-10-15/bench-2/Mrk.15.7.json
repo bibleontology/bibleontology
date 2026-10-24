@@ -1,0 +1,41 @@
+{
+ "ref": "Mrk.15.7",
+ "referents": [
+  {
+   "slot": "w9",
+   "choice": "w8",
+   "divine": false,
+   "why": "'who' is masculine plural (hoitines), so it refers to the masculine plural 'rebels' (w8), not to the singular Barabbas.",
+   "category": "relative pronoun with plural agreement"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "'the one called Barabbas' is a participial description nested in the noun phrase of cl0.",
+   "category": "participle describing a noun"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link: a clause cannot be joined by and to itself.",
+   "category": "self-link"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The relative clause 'who had committed murder' is nested in the noun phrase 'the rebels' inside cl0.",
+   "category": "relative clause inside noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

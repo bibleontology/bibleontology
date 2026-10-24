@@ -1,0 +1,125 @@
+{
+ "ref": "Exo.7.28",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'they will go up': third common plural; the frogs (w4) are the subject of the weqatal.",
+   "category": "third person plural subject"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'they will go in': the frogs again, the subject of the continuing weqatal.",
+   "category": "third person plural subject"
+  },
+  {
+   "slot": "w11",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your palace': second person masculine singular in Yahweh's message, Pharaoh.",
+   "category": "second person possessive"
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your bedroom': Pharaoh's.",
+   "category": "second person possessive"
+  },
+  {
+   "slot": "w20",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your bed': Pharaoh's.",
+   "category": "second person possessive"
+  },
+  {
+   "slot": "w25",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your officials': Pharaoh's.",
+   "category": "second person possessive"
+  },
+  {
+   "slot": "w29",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your people': Pharaoh's people, in the message addressed to him.",
+   "category": "second person possessive"
+  },
+  {
+   "slot": "w33",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your ovens': Pharaoh's.",
+   "category": "second person possessive"
+  },
+  {
+   "slot": "w37",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your kneading bowls': Pharaoh's.",
+   "category": "second person possessive"
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.7.27#cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then runs within a verse only; across the verse boundary it is not used.",
+   "category": "then across verses"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "a weqatal continues what it follows: the Nile teems, then the frogs go up.",
+   "category": "weqatal continuation"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "a weqatal continues the frogs' movement into the houses.",
+   "category": "weqatal continuation"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.7.28#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl2"
+    },
+    {
+     "role": "group_subject",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "two clauses in a row, both acts of the frogs, each stating its subject only in its verb; recorded as a reading for review (R5).",
+   "category": "acts of one agent"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Exo.7.27#cl3 to cl0, across the verse boundary",
+   "what": "a declared act (I will strike the territory with frogs) and what it brings about (the Nile teems with frogs); result is defined only for a command and what it brings about."
+  }
+ ],
+ "cant_tell": []
+}

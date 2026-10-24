@@ -1,0 +1,33 @@
+{
+ "ref": "Gen.1.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "'He saw that the light was good': cl1 is what was seen, the object of the verb of perceiving.",
+   "category": "object clause after perception"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Direction reversed. The then-link runs from the earlier clause (cl0, saw) to the later (cl2, separated).",
+   "category": "reversed then-link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The wayyiqtol 'and he separated' continues the narrative from the seeing clause cl0.",
+   "category": "narrative wayyiqtol"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

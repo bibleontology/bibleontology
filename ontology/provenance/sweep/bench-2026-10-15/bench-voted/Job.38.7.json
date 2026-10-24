@@ -1,0 +1,59 @@
+{
+ "ref": "Job.38.7",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Same link as the entry above, listed twice in the builder output. Recorded once.",
+   "category": "duplicate builder entry",
+   "votes": 2
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'They shouted' sits inside the 'when' clause with the stars' singing, nested in its temporal role.",
+   "category": "coordinated clause inside time clause",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The wayyiqtol 'they shouted' continues the narrative line from the nearest preceding clause not inside a speech, the infinitive 'sang'.",
+   "category": "narrative sequence",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "38:7 cl1 then cl2",
+   "what": "Simultaneity (the stars sang while the sons shouted): no link type says 'at the same time'. The form gives 'and then'."
+  },
+  {
+   "where": "38:7 cl0",
+   "what": "A time setting for the acts of 38:4 to 38:6 (when the foundations were laid): no cross-verse temporal link type."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "The 'when' clause of 38:7 has no host clause in its verse",
+   "why": "It completes the question of 38:4 ('where were you when...') across verses 5 and 6. No link type records a time clause that continues an earlier verse's question."
+  },
+  {
+   "what": "The host of the 'while' clause (cl0) is not given",
+   "why": "It could attach to 38:6 'laid its cornerstone' or to 38:4 'when I laid the foundations'; the form does not settle it, so no cross-verse link is added."
+  },
+  {
+   "what": "The implied subject 'they' of cl2 ('they shouted', third masculine plural) has no slot.",
+   "why": "The text makes it 'all the sons of God' (w7 to w9), which has no composite candidate, so no choice can be recorded for it."
+  }
+ ],
+ "voted": 3
+}

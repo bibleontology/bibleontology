@@ -1,0 +1,85 @@
+{
+ "ref": "Mrk.15.12",
+ "referents": [
+  {
+   "slot": "w6",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w10",
+   "choice": "w13",
+   "divine": true
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w2",
+   "divine": false
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

@@ -1,0 +1,28 @@
+{"ref": "Exo.8.1",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "'your' (2ms) in 'Stretch out your hand' is inside the commanded speech Moses is to say to Aaron; the addressee of that speech is Aaron.", "category": "second person inside a commanded (nested) speech"},
+  {"slot": "w14", "choice": "w7", "divine": false, "why": "'your staff' (2ms) is in the same inner speech to Aaron, so it is Aaron's staff.", "category": "second person inside a commanded (nested) speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "'Tell Aaron' is a command inside the LORD's speech, whose addressee is Moses (cl0 'said ... to Moses'); the implied 'you' is Moses, not Aaron, who is the one being told. The builder's Aaron is wrong. cl1 belongs to the outer speech, not to the one it introduces.", "category": "implied subject of a speech-introducing command in an outer speech"},
+  {"slot": "cl2s", "choice": "w7", "divine": false, "why": "The imperative 'stretch out' is part of what Moses is told to say to Aaron; the command's implied 'you' is the addressee of that inner speech, Aaron.", "category": "implied subject inside a commanded speech"},
+  {"slot": "cl3s", "choice": "w7", "divine": false, "why": "'cause the frogs to come up' is a second command joined by waw in the same inner speech; same addressee, Aaron.", "category": "implied subject inside a commanded speech"}
+ ],
+ "links": [
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "Separate-word waw joining two commands to the same person; no change of person, so not 'so that' and not a result (no weqatal). The two are co-members of one imperative group.", "category": "plain and between commands at one level"},
+  {"src": "cl0", "type": "content", "dst": "turn1", "action": "add", "why": "The LORD's saying (cl0) has as its content the whole embedded turn beginning 'Tell Aaron', not its first clause alone.", "category": "speech clause and what was said"},
+  {"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "'Tell Aaron' has as its content the whole run of commands joined by 'and' (the imperative group), not just the first command.", "category": "speech clause and a run of commands as content"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change",
+   "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}],
+   "divine": true, "why": "The outer turn is the LORD speaking to Moses; what is said is the inner turn (tell Aaron...), a nested turn, not cl1, cl2, cl3 as flat parts.", "category": "nested speech: outer turn holds inner turn as its part"},
+  {"id": "turn1", "kind": "turn", "action": "change",
+   "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "imp2"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w7"}],
+   "divine": false, "why": "Moses is commanded to tell Aaron; the sender of the inner turn is Moses (the implied 'you' of cl1), the addressee Aaron, and what is said is the imperative group imp2. The builder gave cl1s (a slot, resolved wrongly to Aaron) as sender.", "category": "nested speech: sender of the commanded turn"},
+  {"id": "imp2", "kind": "imperative", "action": "change",
+   "members": [{"role": "command", "node": "cl2"}, {"role": "command", "node": "cl3"}],
+   "divine": false, "why": "Two commands joined by 'and' at one level are one imperative group with two command members. cl3 is an imperative, not a waw + third-person weqatal, so it is a command in its own right and not the group's effect; the frogs coming up is what the stretching is for, but the text does not mark it as an effect or aim in this verse.", "category": "commands joined by and form one imperative group"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "Whether the frogs coming up (cl3) is the stated aim or effect of the stretching (cl2).", "why": "cl3 is a second imperative joined by plain waw, with no weqatal or jussive to mark an effect or purpose; the reading as aim is natural from sense but not marked by the form, so it is kept as a command."}
+ ]}

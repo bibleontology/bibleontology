@@ -1,0 +1,208 @@
+{
+ "ref": "Exo.8.12",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "'your staff' is second person masculine singular, and the staff is Aaron's: Aaron is the addressee of the inner speech (stretch out, strike).",
+   "category": "possessive inside commanded speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'tell Aaron' is a command given to Moses by the LORD, so its implied you is Moses; Aaron is the one told, not the one addressed by the command.",
+   "category": "implied subject of outer command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "divine": false,
+   "why": "'stretch out your staff' is a command inside the quoted message, addressed to Aaron (second person masculine singular).",
+   "category": "implied subject inside commanded speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "divine": false,
+   "why": "'strike' is a further command in the same quoted message, so its implied you is Aaron.",
+   "category": "implied subject inside commanded speech"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w15",
+   "divine": false,
+   "why": "the third masculine singular weqatal 'it will become gnats' takes the dust (masculine singular) as subject: the dust that the command told Aaron to strike is what becomes gnats.",
+   "category": "implied subject from the act before"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the saying clause 'the LORD said to Moses' introduces what is said, 'Tell Aaron...'.",
+   "category": "speech content link"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add",
+   "why": "'tell Aaron' introduces the quoted words, which are a run of commands joined by 'and': the content is the imperative group.",
+   "category": "speech content link to command group"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "a link from a later clause back to the opening speech clause is backward; the strike command sits inside the speech and is not the next event after its opening.",
+   "category": "backward then link into speech frame"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "two commands joined by waw at one level, same person, so plain 'and' and not 'so that'.",
+   "category": "commands joined by and"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl4",
+   "action": "remove",
+   "why": "a command followed by a third-person weqatal saying what it brings about is a result, not a plain next event.",
+   "category": "plain and read as result"
+  },
+  {
+   "src": "cl3",
+   "type": "result",
+   "dst": "cl4",
+   "action": "add",
+   "why": "the strike command, then the weqatal saying what will come of it (the dust becomes gnats); the same clause is also the effect of the imperative group.",
+   "category": "command and its outcome"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "the LORD speaks to Moses; what Moses is told to say is a nested turn, so the commands are not direct parts of this turn.",
+   "category": "outer speech with nested turn"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.12#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": false,
+   "why": "Moses is commanded to tell Aaron, so the commanded words are spoken by Moses (the one commanded to speak them) to Aaron.",
+   "category": "commanded speech sender"
+  },
+  {
+   "id": "Exo.8.12#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": true,
+   "why": "the quoted message is the LORD's words delivered by Moses; the innermost turn's sender is the one quoted.",
+   "category": "quoted message as innermost turn"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "effect",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "stretch out and strike are commands joined by 'and' at one level: one imperative group, with the weqatal as its effect.",
+   "category": "commands joined by and as one group"
+  },
+  {
+   "id": "imp3",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "the strike command belongs to the single collection imp2; a second group for it duplicates the first.",
+   "category": "duplicate command group"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

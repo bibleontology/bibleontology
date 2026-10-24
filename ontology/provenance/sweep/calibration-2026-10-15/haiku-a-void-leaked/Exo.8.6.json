@@ -1,0 +1,27 @@
+{"ref": "Exo.8.6",
+ "referents": [
+  {"slot": "w8", "choice": "Exo.8.5#w4", "divine": false, "why": "2ms suffix on 'word' in cl3 ('as your word'), inside Moses's turn1, which is spoken to Pharaoh (Exo.8.5#w4). The word meant is Pharaoh's 'Tomorrow' in cl1. Masculine singular agrees.", "category": "second person inside a speech"},
+  {"slot": "w16", "choice": "none", "divine": false, "why": "1cp 'our' in 'the LORD our God' is the speaker's community, Israel. No candidate names Israel. The builder's cl2s (Moses alone, singular) cannot carry a first-person plural, so the builder referent is rejected.", "category": "first-person plural with no candidate group"},
+  {"slot": "cl0s", "choice": "Exo.8.5#w4", "divine": false, "why": "3ms implied subject of wayyiqtol cl0. Moses has just spoken to Pharaoh (Exo.8.5), and the one who answers 'Tomorrow' is Pharaoh. Masculine singular agrees.", "category": "implied subject of a reply"},
+  {"slot": "cl2s", "choice": "Exo.8.5#w2", "divine": false, "why": "3ms implied subject of wayyiqtol cl2, 'Moses replied'. Pharaoh has just spoken to Moses in cl0, and Moses answers. Masculine singular agrees.", "category": "implied subject of a reply"},
+  {"slot": "cl4s", "choice": "Exo.8.5#w4", "divine": false, "why": "2ms implied subject of yiqtol cl4 ('you may know'). Inside Moses's speech the addressee is Pharaoh.", "category": "second person inside a speech"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "that", "dst": "cl5", "action": "keep", "why": "Object clause of 'you may know': the clause is what is known (ki after yada), not a reason.", "category": "object clause after a verb of knowing"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "cl0 is the verse's first clause, so a narrative 'and then' cannot run from cl4 back to it. The then link runs forward to the next clause on the narrative line.", "category": "narrative link running backwards"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is inside Pharaoh's speech. A wayyiqtol continues the nearest clause before it that is not inside a speech, which is cl0. Replaced by cl0 then cl2.", "category": "narrative link from inside a speech"},
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "keep", "why": "lemaan with yiqtol ('you may know') states what the assent is for.", "category": "purpose marked by lemaan"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "wayyiqtol cl2 continues the narrative line from the frame cl0, the nearest preceding clause outside a speech.", "category": "narrative continuation across a speech"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "Exo.8.5#w4"}, {"role": "addressee", "node": "Exo.8.5#w2"}], "divine": false, "why": "Pharaoh's answer 'Tomorrow'. Sender changed from slot cl0s to its referent, Pharaoh. Addressee added: Moses, who asked the question in Exo.8.5.", "category": "speech with addressee left implicit"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "cl3"}, {"role": "part", "node": "cl4"}, {"role": "sender", "node": "Exo.8.5#w2"}, {"role": "addressee", "node": "Exo.8.5#w4"}], "divine": false, "why": "Moses's reply: 'as your word' and the purpose clause 'so that you may know'. Sender changed from slot cl2s to Moses. Addressee added: Pharaoh.", "category": "speech with addressee left implicit"}
+ ],
+ "none_fit": [
+  {"where": "cl1 'Tomorrow' answers Exo.8.5#cl2 'to when?'", "what": "A reply to a question has no link type."},
+  {"where": "cl3 'as your word' against cl1 'tomorrow'", "what": "Moses's assent to Pharaoh's stated word is a reply to a proposal, and no link type carries assent or acceptance. 'as' (just as) compares an action to a saying, which this is not."}
+ ],
+ "cant_tell": [
+  {"what": "What the purpose clause cl4 is for: Moses's assent (cl3), or the removal of the frogs by his prayer", "why": "The verse names the knowing but not the act it is for. The purpose link to cl3 is kept as the nearest act; the removal is not stated in this verse."}
+ ]
+}

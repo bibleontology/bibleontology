@@ -1,0 +1,60 @@
+{
+ "ref": "Psa.23.2",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular object 'me' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w9",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular object 'me' in the second line, same voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular subject of the shepherding acts (makes me lie down). The LORD named as shepherd in verse 1 is the agreeing referent whose act this is; David is also masculine singular but does not fit the shepherd act.",
+   "category": "third person shepherd act refers to LORD"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Same shepherding subject in the parallel line (he leads me).",
+   "category": "third person shepherd act refers to LORD"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.2#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "divine": true,
+   "why": "Two semicolon-joined lines; the second restates the first's roles with the same subject, carried by the verb.",
+   "category": "poetic parallel lines of one subject"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

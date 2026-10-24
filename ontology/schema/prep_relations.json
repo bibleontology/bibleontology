@@ -1,0 +1,59 @@
+{
+ "_what": "What a prepositional phrase adds to its clause (plan 2.13): six families, each with its types. A rule or a judge names the most specific level it is sure of; where it knows the family but not the type, it names the family, which is less wrong than a guess and more useful than none. In RDF each type is a sub-property of its family. Status: ruled by Doug, 2026-10-17, from his marks on docs/review/prep-phrases-2026-10-17.html and four decisions that day; the definitions are drafts until they enter a vocabulary release.",
+ "_rulings": [
+  "Two levels, families over types (Doug, 2026-10-17: 'Families + types').",
+  "'in the name of' is authority: by whose authority an act is done (Doug, 1 Samuel 17:45: 'in the name is a common phrase and I view it as authority - you can make this my call which I will stand behind').",
+  "Authority is split from dominion: acting by someone's authority is a footing for an act (grounds); ruling over someone is a relation between persons (toward someone). Doug, 2026-10-17: 'Split'.",
+  "Isaiah 53:5 'upon him' is target, not recipient: nothing is handed over, said or shown to him; it falls on him (Doug, 2026-10-17: 'Target').",
+  "Sphere is allowed, always as a reading, never by rule, and defined only grammatically, never as union (Doug, 2026-10-17: 'Allowed, always a reading').",
+  "John 1:1 πρὸς τὸν θεόν is accompaniment or presence, not direction: with a verb of being and a person, there is no movement (Doug: 'With God being a being, direction does not fit').",
+  "New names from Doug's marks: basis (Proverbs 3:5), target (Acts 1:8), circumstance (Revelation 1:9 'in the tribulation'), sphere (Revelation 1:9 'in Jesus').",
+  "basis is renamed rests_on: the structure vocabulary's basis is the reason given for a command, a different meaning, and two meanings cannot share an address (Doug, 2026-10-17: 'rename basis to rests_on').",
+  "purpose and means are each ONE term at both levels, the clause link and the prepositional type, so one query finds the aim, or the means, between clauses and inside a clause (Doug, 2026-10-17: 'share purpose like means').",
+  "composed_of is added for what a thing is made of: Matthew 3:4 'a garment of camel's hair' could be named only at the family level, since no type said material (Doug, 2026-10-18: 'composed_of would be more intuitive if it exists'; approved as P-2026-10-18-9).",
+  "according_to is added under grounds for the standard something is in keeping with: the 210 κατά 'according to' phrases had been scattered over eight answers, and Ephesians 1:5 and 1:7 came back 'the footing is clear but the type is' not (Doug, 2026-10-18: 'name it according_to under grounds'; approved as P-2026-10-18-10)."
+ ],
+ "families": {
+  "setting": {"means": "where, when, or in what conditions the action takes place",
+   "types": {
+    "place": "where something is or happens (in the house, on the mountain, among the people)",
+    "presence": "before someone, in a person's presence (stood before the LORD)",
+    "time": "when, or for how long (in the morning, after three days)",
+    "circumstance": "the situation or condition in which something happens (in the tribulation, in distress)",
+    "sphere": "the domain within which something is said to be or be true (in Christ, in the Spirit); always a reading, never by rule, defined only grammatically"}},
+  "movement": {"means": "the path of a motion",
+   "types": {
+    "direction": "toward or into a place, as the goal of a movement (went to Egypt)",
+    "source": "from, out of: where something comes from or is separated from (from Judah)",
+    "extent": "as far as, up to: a limit in space or amount (as far as Dan)"}},
+  "toward_someone": {"means": "the person or thing affected",
+   "types": {
+    "recipient": "the one to whom something is handed over, said or shown (said to him, gave to them)",
+    "beneficiary": "for whose sake or good something is done (for you)",
+    "target": "the one upon whom something comes or falls, with nothing handed over (the Spirit comes upon you; the punishment was upon him)",
+    "opposition": "against: a hostile target (fought against Israel)",
+    "dominion": "over: rule or charge over someone (king over Israel)"}},
+  "grounds": {"means": "why, or on what footing",
+   "types": {
+    "cause": "because of what (because of their sin)",
+    "purpose": "the aim of the act (for an offering)",
+    "rests_on": "what something rests or relies on, not physically (lean not on your own understanding; trust in)",
+    "authority": "by whose authority an act is done (in the name of the LORD)",
+    "according_to": "the standard or norm something is in keeping with (according to the law, according to His will, according to their deeds)"}},
+  "how": {"means": "how the act is done, by what or with whom",
+   "types": {
+    "manner": "how it is done (with all your heart, in righteousness)",
+    "means": "the thing used, or the means by which it is done (with a sword, through him)",
+    "agent": "by whom, with a passive verb (spoken by the prophet)",
+    "accompaniment": "together with someone (went with him; the Word was with God)"}},
+  "between_things": {"means": "how one thing relates to another, mostly on a noun",
+   "types": {
+    "possession": "belonging to (the field belonging to Boaz)",
+    "partitive": "some of, one of (one of the mountains)",
+    "reference": "about, concerning (spoke about him)",
+    "comparison": "like, as, than (like a lion, better than)",
+    "between": "between (between the waters)",
+    "without": "without, apart from",
+    "composed_of": "what something is made of (a garment of camel's hair; an altar of earth)"}}
+ }
+}

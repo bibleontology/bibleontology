@@ -1,0 +1,103 @@
+{"passage": "P-psa23", "verses": [
+{"ref": "Psa.23.1",
+ "referents": [
+  {"slot": "w5", "choice": "psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "my shepherd is the psalm's own voice; the psalm quotes no one else, so my is the psalmist", "category": "first person in a psalm"},
+  {"slot": "cl2s", "choice": "psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "I shall not lack is first common singular in the psalm's own voice", "category": "first person in a psalm"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "writing", "kind": "writing", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "sender", "node": "w2"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "cl2"}], "confidence": "high", "divine": false, "why": "The superscription names David as writer; the two lines are the psalm's text.", "category": "superscription as writing frame"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "whether I shall not lack answers The LORD is my shepherd as a couplet, or follows from it", "why": "no connective; the second line does not restate the first's roles, so neither parallel nor because is plain from the form"}
+ ]
+},
+{"ref": "Psa.23.2",
+ "referents": [
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "me in the psalm's own voice, first common singular", "category": "first person in a psalm"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "me in the psalm's own voice, first common singular", "category": "first person in a psalm"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "third masculine singular; the one who makes the sheep lie down is the shepherd, the LORD of verse 1; David wrote the psalm but does not act in it", "category": "implied subject of a shepherd's act"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "third masculine singular; the one who leads to the waters is the shepherd, the LORD of verse 1", "category": "implied subject of a shepherd's act"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "Psa.23.2#g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "confidence": "medium", "divine": true, "why": "Two lines with the same subject; the second restates the first's roles (he, me, a place of rest) without the subject; a couplet under R6.", "category": "couplet with shared subject"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Psa.23.3",
+ "referents": [
+  {"slot": "w1", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "my soul in the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "me in the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w10", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "his name, third masculine singular; the name is the LORD's, the one who guides in verse 3", "category": "possessor of a divine name"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "he restores, third masculine singular; the shepherd, the LORD of verse 1", "category": "implied subject of a shepherd's act"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "he guides, third masculine singular; the shepherd, the LORD of verse 1", "category": "implied subject of a shepherd's act"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "Psa.23.3#g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "confidence": "medium", "divine": true, "why": "Two lines with the same subject he; the second restates the first's roles (restores my soul, guides me) as in verse 2.", "category": "couplet with shared subject"}
+ ],
+ "none_fit": [
+  {"where": "Psa.23.3 cl1", "what": "purpose given as a noun phrase (for the sake of his name), not a clause; the purpose link takes clauses only"}
+ ],
+ "cant_tell": []
+},
+{"ref": "Psa.23.4",
+ "referents": [
+  {"slot": "w10", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "you, second masculine singular, addressed in direct speech to the LORD of verse 1", "category": "second person addressed to God"},
+  {"slot": "w12", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "me, the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w14", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "your rod, second masculine singular, the same addressee as you are with me", "category": "second person addressed to God"},
+  {"slot": "w17", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "your staff, second masculine singular, the same addressee", "category": "second person addressed to God"},
+  {"slot": "w18", "choice": "c13", "confidence": "high", "divine": false, "rhetorical": false, "why": "they, third masculine plural, refers to the composite rod and staff; masculine plural wins over the feminine staff, and no other masculine plural candidate is present", "category": "pronoun for a composite of two objects"},
+  {"slot": "w20", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "me, the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "cl0s", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "I will go, first common singular in the psalm's voice", "category": "first person in a psalm"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "I will fear, first common singular in the psalm's voice", "category": "first person in a psalm"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "though", "dst": "cl0", "action": "keep", "confidence": "high", "why": "The builder's conceded link is the even-though concession gam ki: the fear holds though the walk is through the valley of death.", "category": "concession opened by gam ki"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "confidence": "high", "why": "Mid-verse ki after the claim gives its reason: I will fear no evil because you are with me.", "category": "reason after a claim"}
+ ],
+ "groups": [
+  {"id": "Psa.23.4#g1", "kind": "concession", "action": "add", "members": [{"role": "conceded", "node": "cl0"}, {"role": "holds_anyway", "node": "cl1"}, {"role": "its_ground", "node": "cl2"}], "confidence": "high", "divine": false, "why": "Gam ki concession: the valley is the obstacle, no fear is the claim that holds anyway, you are with me is its ground. The two builder links are its parts.", "category": "concession with ground"}
+ ],
+ "none_fit": [
+  {"where": "Psa.23.4 cl3 then cl4", "what": "a verbless topic (your rod and your staff) followed by its comment (they comfort me); no link type for topic and comment"}
+ ],
+ "cant_tell": [
+  {"what": "whether the shift to you in verse 4 is a speech addressed to the LORD (a turn) or the same voice's direct address", "why": "the form marks no speech frame; the psalm's writing group already holds the voice"}
+ ]
+},
+{"ref": "Psa.23.5",
+ "referents": [
+  {"slot": "w3", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "me, the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w7", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "my enemies, the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "you, second masculine singular, the same addressee as verse 4", "category": "second person addressed to God"},
+  {"slot": "w13", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "my head, the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w15", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "my cup, the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "confidence": "high", "divine": true, "rhetorical": false, "why": "you have anointed, second masculine singular, the same addressee", "category": "second person addressed to God"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "Psa.23.5#g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "confidence": "medium", "divine": true, "why": "Two consecutive acts of one agent, each with its subject only in the verb (second masculine singular); the cup clause is a state and is left out. Recorded as a reading for review.", "category": "consecutive acts of one agent"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "whether my cup overflows is the result of the anointing in the clause before it", "why": "only a semicolon with no connective; the result link needs the text to say so"}
+ ]
+},
+{"ref": "Psa.23.6",
+ "referents": [
+  {"slot": "w5", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "me, the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "my life, the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "confidence": "high", "divine": false, "rhetorical": false, "why": "I will return, first common singular in the psalm's voice", "category": "first person in a psalm"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "confidence": "high", "why": "The weqatal of cl1 continues the yiqtol of cl0 as the next event within the verse; the builder link is kept.", "category": "weqatal continuation"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}
+]}

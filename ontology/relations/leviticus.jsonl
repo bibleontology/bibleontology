@@ -1,0 +1,5 @@
+{"certainty": "implied", "dst": "nadab", "note": "'Aaron’s sons Nadab and Abihu' -- named together as his sons", "refs": ["Lev 10:1"], "source": "leviticus", "src": "abihu", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "shelomith_daughter_of_dibri", "refs": ["Lev 24:11"], "source": "leviticus", "src": "dibri", "type": "father_of"}
+{"certainty": "explicit", "dst": "dan_tribe", "refs": ["Lev 24:11"], "source": "leviticus", "src": "shelomith_daughter_of_dibri", "type": "member_of"}
+{"certainty": "explicit", "dst": "son_of_shelomith", "note": "'His mother's name was Shelomith daughter of Dibri, of the tribe of Dan' (Lev 24:11).", "refs": ["Lev 24:10", "Lev 24:11"], "source": "leviticus,leviticus-priesthood", "src": "shelomith_daughter_of_dibri", "type": "mother_of"}
+{"certainty": "explicit", "dst": "aaron", "note": "'Mishael and Elzaphan, sons of Aaron’s uncle Uzziel'", "refs": ["Lev 10:4"], "source": "leviticus", "src": "uzziel", "type": "uncle_of"}

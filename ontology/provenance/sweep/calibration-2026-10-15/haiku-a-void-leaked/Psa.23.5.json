@@ -1,0 +1,18 @@
+{"ref": "Psa.23.5",
+ "referents": [
+  {"slot": "w3", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'me' in the psalm's own voice; the psalm does not quote another speaker here, so the psalmist voice candidate is the referent.", "category": "first person in psalm voice"},
+  {"slot": "w7", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'my' (enemies) in the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "w13", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'my' (head) in the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "w15", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular 'my' (cup) in the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied second person masculine singular subject of the yiqtol 'you arrange'. The psalm has turned from speaking about the LORD (23:1-3) to addressing him directly (23:4 'You are with me'), so the addressee is the LORD named in 23:1.", "category": "implied second person addressed to God"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied second person masculine singular subject of the qatal clause 'you have anointed'. Same addressee as the preceding clause, the LORD of 23:1.", "category": "implied second person addressed to God"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "Two clauses in a row, both acts of one agent (the 'you' addressed to the LORD), each stating its subject only in its verb. The group_subject is the LORD of 23:1.", "category": "two acts of one addressed agent"}
+ ],
+ "none_fit": [
+  {"where": "cl0 and cl1, the shift of address from third person to second", "what": "A change of addressee from speaking about God to speaking to him within one psalm. No link_type or group_kind marks a shift of address."}
+ ],
+ "cant_tell": []
+}

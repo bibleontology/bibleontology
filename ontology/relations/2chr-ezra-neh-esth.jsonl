@@ -1,0 +1,124 @@
+{"certainty": "explicit", "dst": "ezra", "note": "Full patrilineal chain given in Ezra 7:1-5 via Seraiah, Azariah, Hilkiah, Shallum, Zadok, Ahitub, Amariah, Azariah, Meraioth, Zerahiah, Uzzi, Bukki, Abishua, Phinehas, Eleazar.", "refs": ["Ezra 7:1", "Ezra 7:5"], "source": "2chr-ezra-neh-esth", "src": "aaron", "type": "ancestor_of"}
+{"certainty": "explicit", "dst": "hadassah", "refs": ["Esth 2:15"], "source": "2chr-ezra-neh-esth", "src": "abihail_father_of_esther", "type": "father_of"}
+{"certainty": "implied", "dst": "jair_father_of_mordecai", "note": "Esth 2:15 calls Abihail 'the uncle of Mordecai'; Esth 2:5 names Mordecai's father as Jair, making Abihail and Jair brothers.", "refs": ["Esth 2:15", "Esth 2:5"], "source": "2chr-ezra-neh-esth", "src": "abihail_father_of_esther", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "rehoboam", "refs": ["2Chr 11:18"], "source": "2chr-ezra-neh-esth", "src": "abihail_wife_of_rehoboam", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "hezekiah", "refs": ["2Chr 29:1", "2Kgs 18:2"], "source": "2chr-ezra-neh-esth,kings", "src": "abijah_daughter_of_zechariah", "type": "mother_of"}
+{"certainty": "explicit", "dst": "maachah_daughter_of_absalom", "note": "2Chr 11:20 calls her 'the daughter of Absalom'; 2Chr 13:2 names her father as Uriel of Gibeah, so Absalom is likely her grandfather (via Uriel's wife Tamar, Absalom's only recorded child), and 'daughter of' is used for a more distant ancestor per Hebrew idiom.", "refs": ["2Chr 11:20"], "source": "2chr-ezra-neh-esth", "src": "absalom_son_of_david", "type": "ancestor_of"}
+{"certainty": "explicit", "dst": "jehoshaphat", "refs": ["2Chr 18:1", "2Chr 18:3", "1Kgs 22:2", "1Kgs 22:4", "1Kgs 22:41"], "source": "2chr-ezra-neh-esth,kings", "src": "ahab", "type": "ally_of"}
+{"certainty": "implied", "dst": "athaliah", "note": "2Chr 21:6 says Jehoram of Judah took 'a daughter of Ahab' to wife; 2Chr 22:2 names Ahaziah's mother, Jehoram's wife, as Athaliah, identifying her as this wife.", "refs": ["2Chr 21:6", "2Chr 22:2", "2Kgs 8:18"], "source": "2chr-ezra-neh-esth,kings", "src": "ahab", "type": "father_of"}
+{"certainty": "explicit", "dst": "jehoram_king_of_israel", "refs": ["2Chr 22:5", "2Kgs 3:1"], "source": "2chr-ezra-neh-esth,kings", "src": "ahab", "type": "father_of"}
+{"certainty": "explicit", "dst": "haman", "refs": ["Esth 3:1"], "source": "2chr-ezra-neh-esth", "src": "ahasuerus", "type": "appointed"}
+{"certainty": "explicit", "dst": "haman", "note": "The king ordered Haman hanged ('Hang him on it'); carried out by his servants, not the king personally.", "refs": ["Esth 7:9", "Esth 7:10"], "source": "2chr-ezra-neh-esth", "src": "ahasuerus", "type": "killed"}
+{"certainty": "explicit", "dst": "hadassah", "refs": ["Esth 2:17"], "source": "2chr-ezra-neh-esth", "src": "ahasuerus", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "vashti", "refs": ["Esth 1:9", "Esth 1:19"], "source": "2chr-ezra-neh-esth", "src": "ahasuerus", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "jehoram_king_of_israel", "refs": ["2Chr 22:5"], "source": "2chr-ezra-neh-esth", "src": "ahaziah", "type": "ally_of"}
+{"certainty": "explicit", "dst": "jehoshabeath", "refs": ["2Chr 22:11", "2Kgs 11:2"], "source": "2chr-ezra-neh-esth,kings", "src": "ahaziah", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "jehoshaphat", "refs": ["2Chr 20:35", "2Chr 20:36"], "source": "2chr-ezra-neh-esth", "src": "ahaziah_king_of_israel", "type": "ally_of"}
+{"certainty": "explicit", "dst": "isaiah", "refs": ["2Chr 26:22", "Isa 1:1"], "source": "2chr-ezra-neh-esth,prophets-wisdom", "src": "amoz", "type": "father_of"}
+{"certainty": "explicit", "dst": "ezra", "note": "Royal commission empowering Ezra to teach the law and appoint judges and magistrates.", "refs": ["Ezra 7:12", "Ezra 7:25"], "source": "2chr-ezra-neh-esth", "src": "artaxerxes", "type": "appointed"}
+{"certainty": "implied", "dst": "nehemiah_son_of_hachaliah", "note": "Nehemiah narrates in the first person ('I was appointed... governor'); he is named as narrator in Neh 1:1, and Artaxerxes is named in this verse.", "refs": ["Neh 5:14"], "source": "2chr-ezra-neh-esth", "src": "artaxerxes", "type": "appointed"}
+{"certainty": "explicit", "dst": "ahaziah", "refs": ["2Chr 22:2", "2Kgs 8:26", "2Kgs 11:1"], "source": "2chr-ezra-neh-esth,kings", "src": "athaliah", "type": "mother_of"}
+{"certainty": "implied", "dst": "jehoram_king_of_judah", "note": "2Chr 21:6 says he took 'a daughter of Ahab' to wife, identified as Athaliah by 2Chr 22:2.", "refs": ["2Chr 21:6", "2Kgs 8:18"], "source": "2chr-ezra-neh-esth,kings", "src": "athaliah", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "jehoshaphat", "refs": ["2Chr 20:31", "1Kgs 22:42"], "source": "2chr-ezra-neh-esth,kings", "src": "azubah", "type": "mother_of"}
+{"certainty": "explicit", "dst": "ahasuerus", "refs": ["Esth 2:21"], "source": "2chr-ezra-neh-esth", "src": "bigthan", "type": "conspired_against"}
+{"certainty": "explicit", "dst": "zerubbabel", "refs": ["Ezra 5:14"], "source": "2chr-ezra-neh-esth", "src": "cyrus", "type": "appointed", "held": "inside quoted speech (the Berean's quotation marks), speaker not on record"}
+{"certainty": "explicit", "dst": "jerimoth", "refs": ["2Chr 11:18"], "source": "2chr-ezra-neh-esth", "src": "david", "type": "father_of"}
+{"certainty": "explicit", "dst": "eliezer_son_of_dodavah", "refs": ["2Chr 20:37"], "source": "2chr-ezra-neh-esth", "src": "dodavah", "type": "father_of"}
+{"certainty": "explicit", "dst": "abihail_wife_of_rehoboam", "refs": ["2Chr 11:18"], "source": "2chr-ezra-neh-esth", "src": "eliab_son_of_jesse", "type": "father_of"}
+{"certainty": "explicit", "dst": "tobiah", "note": "Eliashib prepared Tobiah a chamber in the temple courts; Nehemiah expelled him (13:4-9).", "refs": ["Neh 13:4", "Neh 13:7"], "source": "2chr-ezra-neh-esth", "src": "eliashib", "type": "ally_of"}
+{"certainty": "explicit", "dst": "joiada_son_of_eliashib", "refs": ["Neh 12:10"], "source": "2chr-ezra-neh-esth", "src": "eliashib", "type": "father_of"}
+{"certainty": "explicit", "dst": "jehoshaphat", "refs": ["2Chr 20:37"], "source": "2chr-ezra-neh-esth", "src": "eliezer_son_of_dodavah", "type": "prophet_to"}
+{"certainty": "explicit", "dst": "nehemiah_son_of_hachaliah", "refs": ["Neh 1:1", "Neh 10:1"], "source": "2chr-ezra-neh-esth,neh10-covenant", "src": "hachaliah", "type": "father_of"}
+{"certainty": "explicit", "dst": "mordecai", "note": "Esther appointed Mordecai over the estate of Haman.", "refs": ["Esth 8:2"], "source": "2chr-ezra-neh-esth", "src": "hadassah", "type": "appointed"}
+{"certainty": "explicit", "dst": "mordecai", "refs": ["Esth 3:5", "Esth 3:6"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "conspired_against"}
+{"certainty": "explicit", "dst": "adalia", "refs": ["Esth 9:8", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "aridai", "refs": ["Esth 9:9", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "aridatha", "refs": ["Esth 9:8", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "arisai", "refs": ["Esth 9:9", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "aspatha", "refs": ["Esth 9:7", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "dalphon", "refs": ["Esth 9:7", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "parmashta", "refs": ["Esth 9:9", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "parshandatha", "refs": ["Esth 9:7", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "poratha", "refs": ["Esth 9:8", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "vajezatha", "refs": ["Esth 9:9", "Esth 9:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "father_of"}
+{"certainty": "explicit", "dst": "zeresh", "refs": ["Esth 5:10"], "source": "2chr-ezra-neh-esth", "src": "haman", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "haman", "refs": ["Esth 3:1"], "source": "2chr-ezra-neh-esth", "src": "hammedatha", "type": "father_of"}
+{"certainty": "explicit", "dst": "nehemiah_son_of_hachaliah", "refs": ["Neh 1:2", "Neh 7:2"], "source": "2chr-ezra-neh-esth", "src": "hanani_brother_of_nehemiah", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "jehu_son_of_hanani", "refs": ["2Chr 19:2"], "source": "2chr-ezra-neh-esth", "src": "hanani_the_seer", "type": "father_of"}
+{"certainty": "explicit", "dst": "asa", "refs": ["2Chr 16:7"], "source": "2chr-ezra-neh-esth", "src": "hanani_the_seer", "type": "prophet_to"}
+{"certainty": "explicit", "dst": "isaiah", "note": "They prayed and cried to heaven together against Sennacherib's threat.", "refs": ["2Chr 32:20"], "source": "2chr-ezra-neh-esth", "src": "hezekiah", "type": "companion_of"}
+{"certainty": "explicit", "dst": "shallum_husband_of_huldah", "refs": ["2Chr 34:22", "2Kgs 22:14"], "source": "2chr-ezra-neh-esth,kings", "src": "huldah", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "micaiah_son_of_imla", "refs": ["2Chr 18:7"], "source": "2chr-ezra-neh-esth", "src": "imla", "type": "father_of"}
+{"certainty": "explicit", "dst": "mordecai", "refs": ["Esth 2:5"], "source": "2chr-ezra-neh-esth", "src": "jair_father_of_mordecai", "type": "father_of"}
+{"certainty": "explicit", "dst": "uzziah", "refs": ["2Chr 26:3", "2Kgs 15:1", "2Kgs 15:2"], "source": "2chr-ezra-neh-esth,kings", "src": "jecoliah", "type": "mother_of"}
+{"certainty": "explicit", "dst": "amaziah", "refs": ["2Chr 25:1", "2Kgs 14:2"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoaddan", "type": "mother_of"}
+{"certainty": "explicit", "dst": "joash_king_of_israel", "refs": ["2Chr 25:17", "2Kgs 13:9"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoahaz_son_of_jehu", "type": "father_of"}
+{"certainty": "explicit", "dst": "jehoiakim", "refs": ["2Chr 36:4"], "source": "2chr-ezra-neh-esth", "src": "jehoahaz_son_of_josiah", "type": "sibling_of"}
+{"certainty": "disputed", "dst": "zedekiah", "note": "2Chr 36:10 (KJV) calls Zedekiah 'his [Jehoiachin's] brother'; 2Kgs 24:17 identifies Zedekiah as Josiah's son (so Jehoiachin's uncle), suggesting 'brother' here is used more broadly for kinsman.", "refs": ["2Chr 36:10"], "source": "2chr-ezra-neh-esth", "src": "jehoiachin", "type": "sibling_of"}
+{"certainty": "implied", "dst": "joash_king_of_judah", "note": "2Chr 23:11 anoints 'the king's son'/'him' without repeating the name; Joash is named as this son in 2Chr 22:11.", "refs": ["2Chr 23:11", "2Kgs 11:12"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoiada", "type": "anointed"}
+{"certainty": "explicit", "dst": "athaliah", "refs": ["2Chr 23:11", "2Chr 23:20", "2Chr 23:21"], "source": "2chr-ezra-neh-esth", "src": "jehoiada", "type": "deposed"}
+{"certainty": "explicit", "dst": "zechariah_son_of_jehoiada", "refs": ["2Chr 24:20"], "source": "2chr-ezra-neh-esth", "src": "jehoiada", "type": "father_of"}
+{"certainty": "explicit", "dst": "athaliah", "note": "Jehoiada ordered her execution by the captains; carried out by soldiers, not by Jehoiada personally.; Ordered her execution; carried out by the guard.", "refs": ["2Chr 23:14", "2Chr 23:15", "2Kgs 11:15", "2Kgs 11:16", "2Kgs 11:20"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoiada", "type": "killed"}
+{"certainty": "explicit", "dst": "jehoshabeath", "refs": ["2Chr 22:11"], "source": "2chr-ezra-neh-esth", "src": "jehoiada", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "jehoiachin", "refs": ["2Chr 36:8", "2Kgs 24:6"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoiakim", "type": "father_of"}
+{"certainty": "explicit", "dst": "jehoshabeath", "refs": ["2Chr 22:11", "2Kgs 11:2"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoram_king_of_judah", "type": "father_of"}
+{"certainty": "explicit", "dst": "azariah_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "jehiel_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "michael_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "shephatiah_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "zechariah_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "joash_king_of_judah", "note": "Hid and sheltered Joash from Athaliah's purge.", "refs": ["2Chr 22:11", "2Chr 22:12", "2Kgs 11:2", "2Kgs 11:3"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoshabeath", "type": "adoptive_parent_of"}
+{"certainty": "explicit", "dst": "azariah_son_of_jehoshaphat", "refs": ["2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoshaphat", "type": "father_of"}
+{"certainty": "explicit", "dst": "jehiel_son_of_jehoshaphat", "refs": ["2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoshaphat", "type": "father_of"}
+{"certainty": "explicit", "dst": "michael_son_of_jehoshaphat", "refs": ["2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoshaphat", "type": "father_of"}
+{"certainty": "explicit", "dst": "shephatiah_son_of_jehoshaphat", "refs": ["2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoshaphat", "type": "father_of"}
+{"certainty": "explicit", "dst": "zechariah_son_of_jehoshaphat", "refs": ["2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoshaphat", "type": "father_of"}
+{"certainty": "explicit", "dst": "joash_king_of_judah", "refs": ["2Chr 24:25", "2Chr 24:26"], "source": "2chr-ezra-neh-esth", "src": "jehozabad_son_of_shimrith", "type": "conspired_against"}
+{"certainty": "explicit", "dst": "joash_king_of_judah", "refs": ["2Chr 24:25", "2Chr 24:26", "2Kgs 12:20", "2Kgs 12:21"], "source": "2chr-ezra-neh-esth,kings", "src": "jehozabad_son_of_shimrith", "type": "killed"}
+{"certainty": "explicit", "dst": "jehoshaphat", "refs": ["2Chr 19:2"], "source": "2chr-ezra-neh-esth", "src": "jehu_son_of_hanani", "type": "prophet_to"}
+{"certainty": "explicit", "dst": "jehoahaz_son_of_jehu", "refs": ["2Chr 25:17", "2Kgs 10:35"], "source": "2chr-ezra-neh-esth,kings", "src": "jehu_son_of_nimshi", "type": "father_of"}
+{"certainty": "explicit", "dst": "ahaziah", "refs": ["2Chr 22:8", "2Chr 22:9", "2Kgs 9:27"], "source": "2chr-ezra-neh-esth,kings", "src": "jehu_son_of_nimshi", "type": "killed"}
+{"certainty": "explicit", "dst": "mahalath_wife_of_rehoboam", "refs": ["2Chr 11:18"], "source": "2chr-ezra-neh-esth", "src": "jerimoth", "type": "father_of"}
+{"certainty": "explicit", "dst": "jotham_king_of_judah", "refs": ["2Chr 27:1", "2Kgs 15:33"], "source": "2chr-ezra-neh-esth,kings", "src": "jerushah", "type": "mother_of"}
+{"certainty": "explicit", "dst": "joiakim", "refs": ["Neh 12:10"], "source": "2chr-ezra-neh-esth", "src": "jeshua_son_of_jozadak", "type": "father_of"}
+{"certainty": "explicit", "dst": "amaziah", "refs": ["2Chr 25:21", "2Chr 25:22", "2Chr 25:23", "2Kgs 14:11", "2Kgs 14:12", "2Kgs 14:13"], "source": "2chr-ezra-neh-esth,kings", "src": "joash_king_of_israel", "type": "attacked"}
+{"certainty": "explicit", "dst": "zechariah_son_of_jehoiada", "note": "Joash ordered the stoning ('by order of the king'); carried out by others.", "refs": ["2Chr 24:20", "2Chr 24:21", "2Chr 24:22"], "source": "2chr-ezra-neh-esth", "src": "joash_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "jonathan_son_of_joiada", "refs": ["Neh 12:11"], "source": "2chr-ezra-neh-esth", "src": "joiada_son_of_eliashib", "type": "father_of"}
+{"certainty": "explicit", "dst": "eliashib", "refs": ["Neh 12:10"], "source": "2chr-ezra-neh-esth", "src": "joiakim", "type": "father_of"}
+{"certainty": "explicit", "dst": "jaddua", "refs": ["Neh 12:11"], "source": "2chr-ezra-neh-esth", "src": "jonathan_son_of_joiada", "type": "father_of"}
+{"certainty": "explicit", "dst": "jehoahaz_son_of_josiah", "refs": ["2Chr 36:1", "2Kgs 23:30", "2Kgs 23:31"], "source": "2chr-ezra-neh-esth,kings", "src": "josiah", "type": "father_of"}
+{"certainty": "explicit", "dst": "jeshua_son_of_jozadak", "refs": ["Ezra 3:2"], "source": "2chr-ezra-neh-esth", "src": "jozadak", "type": "father_of"}
+{"certainty": "explicit", "dst": "shimei_ancestor_of_mordecai", "refs": ["Esth 2:5"], "source": "2chr-ezra-neh-esth", "src": "kish_ancestor_of_mordecai", "type": "father_of"}
+{"certainty": "explicit", "dst": "abijah", "refs": ["2Chr 11:22", "1Kgs 15:2"], "source": "2chr-ezra-neh-esth,kings", "src": "maachah_daughter_of_absalom", "type": "mother_of"}
+{"certainty": "disputed", "dst": "asa", "note": "2Chr 15:16 literally calls her 'the mother of Asa the king,' but she is elsewhere the mother of Asa's father Abijah (2Chr 11:22); many read 15:16 as 'grandmother,' with Maacah retained as queen mother into Asa's reign.; Text calls Maacah 'his mother' for both Abijah and Asa; commonly read as Asa's grandmother/queen mother rather than birth mother (cf. 1Kgs 15:13).", "refs": ["2Chr 15:16", "1Kgs 15:10"], "source": "2chr-ezra-neh-esth,kings", "src": "maachah_daughter_of_absalom", "type": "mother_of"}
+{"certainty": "explicit", "dst": "rehoboam", "refs": ["2Chr 11:21"], "source": "2chr-ezra-neh-esth", "src": "maachah_daughter_of_absalom", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "rehoboam", "refs": ["2Chr 11:18"], "source": "2chr-ezra-neh-esth", "src": "mahalath_wife_of_rehoboam", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "ahab", "refs": ["2Chr 18:16", "2Chr 18:22", "1Kgs 22:15-28"], "source": "2chr-ezra-neh-esth,kings", "src": "micaiah_son_of_imla", "type": "prophet_to"}
+{"certainty": "explicit", "dst": "hadassah", "note": "She is also called Hadassah in this same verse.", "refs": ["Esth 2:7"], "source": "2chr-ezra-neh-esth", "src": "mordecai", "type": "adoptive_parent_of"}
+{"certainty": "explicit", "dst": "rehoboam", "refs": ["2Chr 12:13", "1Kgs 14:21"], "source": "2chr-ezra-neh-esth,kings", "src": "naamah_the_ammonitess", "type": "mother_of"}
+{"certainty": "explicit", "dst": "zedekiah", "refs": ["2Chr 36:10", "2Kgs 24:17"], "source": "2chr-ezra-neh-esth,kings", "src": "nebuchadnezzar", "type": "appointed"}
+{"certainty": "explicit", "dst": "jehoiachin", "refs": ["2Chr 36:10", "2Kgs 24:15", "2Kgs 25:27"], "source": "2chr-ezra-neh-esth,kings", "src": "nebuchadnezzar", "type": "imprisoned"}
+{"certainty": "explicit", "dst": "jehoiakim", "refs": ["2Chr 36:6"], "source": "2chr-ezra-neh-esth", "src": "nebuchadnezzar", "type": "imprisoned"}
+{"certainty": "explicit", "dst": "jehoiakim", "refs": ["2Chr 36:4", "2Kgs 23:34"], "source": "2chr-ezra-neh-esth,kings", "src": "necho", "type": "appointed"}
+{"certainty": "explicit", "dst": "jehoahaz_son_of_josiah", "refs": ["2Chr 36:4"], "source": "2chr-ezra-neh-esth", "src": "necho", "type": "imprisoned"}
+{"certainty": "explicit", "dst": "josiah", "note": "Josiah died of wounds from battle against Neco's forces at Megiddo; Neco had warned him not to interfere (2Chr 35:21).", "refs": ["2Chr 35:22", "2Chr 35:23", "2Chr 35:24", "2Kgs 23:29"], "source": "2chr-ezra-neh-esth,kings", "src": "necho", "type": "killed"}
+{"certainty": "implied", "dst": "hanani_brother_of_nehemiah", "note": "Nehemiah narrates in the first person ('I gave my brother Hanani... charge'); he is named as narrator in Neh 1:1.", "refs": ["Neh 7:2"], "source": "2chr-ezra-neh-esth", "src": "nehemiah_son_of_hachaliah", "type": "appointed"}
+{"certainty": "implied", "dst": "hananiah_ruler_of_the_palace", "note": "Nehemiah narrates in the first person ('I gave... charge over Jerusalem'); he is named as narrator in Neh 1:1.", "refs": ["Neh 7:2"], "source": "2chr-ezra-neh-esth", "src": "nehemiah_son_of_hachaliah", "type": "appointed"}
+{"certainty": "explicit", "dst": "athaliah", "note": "Omri was Ahab's father; 'the daughter of Omri' uses the Hebrew idiom for a more distant female descendant.; Called 'daughter of Omri king of Israel' by the Hebrew idiom of descent; she is Omri's granddaughter through Ahab.", "refs": ["2Chr 22:2", "2Kgs 8:26"], "source": "2chr-ezra-neh-esth,kings", "src": "omri", "type": "ancestor_of"}
+{"certainty": "implied", "dst": "nehemiah_son_of_hachaliah", "note": "Nehemiah narrates these events in the first person ('they conspired... to fight against Jerusalem'; 'Sanballat... heard that I had rebuilt the wall'); he is named as narrator in Neh 1:1.", "refs": ["Neh 4:7", "Neh 4:8", "Neh 6:1", "Neh 6:2"], "source": "2chr-ezra-neh-esth", "src": "sanballat", "type": "conspired_against"}
+{"certainty": "explicit", "dst": "hezekiah", "note": "besieged the cities of Judah and sent Rabshakeh with an army against Hezekiah in Jerusalem", "refs": ["2Chr 32:1", "2Chr 32:2", "2Kgs 18:13", "Isa 36:1-2"], "source": "2chr-ezra-neh-esth,kings,prophets-wisdom", "src": "sennacherib", "type": "attacked"}
+{"certainty": "explicit", "dst": "ezra", "refs": ["Ezra 7:1"], "source": "2chr-ezra-neh-esth", "src": "seraiah_father_of_ezra", "type": "father_of"}
+{"certainty": "explicit", "dst": "zerubbabel", "note": "matches Matthew's genealogy (Matt 1:12)", "refs": ["Ezra 3:2", "Luke 3:27", "Matt 1:12", "Hag 1:1"], "source": "2chr-ezra-neh-esth,mark-luke-john,matt,prophets-wisdom", "src": "shealtiel", "type": "father_of"}
+{"certainty": "explicit", "dst": "azubah", "refs": ["2Chr 20:31"], "source": "2chr-ezra-neh-esth", "src": "shilhi", "type": "father_of"}
+{"certainty": "explicit", "dst": "zabad_son_of_shimeath", "refs": ["2Chr 24:26"], "source": "2chr-ezra-neh-esth", "src": "shimeath_ammonitess", "type": "mother_of"}
+{"certainty": "explicit", "dst": "jair_father_of_mordecai", "refs": ["Esth 2:5"], "source": "2chr-ezra-neh-esth", "src": "shimei_ancestor_of_mordecai", "type": "father_of"}
+{"certainty": "explicit", "dst": "jehozabad_son_of_shimrith", "refs": ["2Chr 24:26"], "source": "2chr-ezra-neh-esth", "src": "shimrith_moabitess", "type": "mother_of"}
+{"certainty": "explicit", "dst": "ahasuerus", "refs": ["Esth 2:21"], "source": "2chr-ezra-neh-esth", "src": "teresh", "type": "conspired_against"}
+{"certainty": "implied", "dst": "nehemiah_son_of_hachaliah", "note": "Nehemiah narrates these events in the first person; he is named as narrator in Neh 1:1.", "refs": ["Neh 4:7", "Neh 4:8", "Neh 6:1", "Neh 6:2"], "source": "2chr-ezra-neh-esth", "src": "tobiah", "type": "conspired_against"}
+{"certainty": "explicit", "dst": "johanan_son_of_tobiah", "refs": ["Neh 6:18"], "source": "2chr-ezra-neh-esth", "src": "tobiah", "type": "father_of"}
+{"certainty": "explicit", "dst": "maachah_daughter_of_absalom", "refs": ["2Chr 13:2"], "source": "2chr-ezra-neh-esth", "src": "uriel_of_gibeah", "type": "father_of"}
+{"certainty": "explicit", "dst": "joash_king_of_judah", "refs": ["2Chr 24:25", "2Chr 24:26"], "source": "2chr-ezra-neh-esth", "src": "zabad_son_of_shimeath", "type": "conspired_against"}
+{"certainty": "explicit", "dst": "joash_king_of_judah", "refs": ["2Chr 24:25", "2Chr 24:26"], "source": "2chr-ezra-neh-esth", "src": "zabad_son_of_shimeath", "type": "killed"}
+{"certainty": "explicit", "dst": "jerushah", "refs": ["2Chr 27:1"], "source": "2chr-ezra-neh-esth", "src": "zadok_father_of_jerushah", "type": "father_of"}
+{"certainty": "explicit", "dst": "abijah_daughter_of_zechariah", "refs": ["2Chr 29:1"], "source": "2chr-ezra-neh-esth", "src": "zechariah_father_of_abijah", "type": "father_of"}
+{"certainty": "explicit", "dst": "joash_king_of_judah", "refs": ["2Chr 24:1", "2Kgs 12:1"], "source": "2chr-ezra-neh-esth,kings", "src": "zibiah", "type": "mother_of"}

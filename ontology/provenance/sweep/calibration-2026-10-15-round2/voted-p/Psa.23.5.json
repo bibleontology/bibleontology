@@ -1,0 +1,95 @@
+{
+ "ref": "Psa.23.5",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'me' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "w7",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'my enemies' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "w13",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'my head' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "w15",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'my cup' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "second masculine singular 'you prepare'; the one addressed is the LORD, the shepherd of verse 1",
+   "category": "second person in address to God",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "second masculine singular 'you anoint'; the one addressed is the LORD",
+   "category": "second person in address to God",
+   "votes": 3
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.5#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, each with its subject only in the verb (second masculine singular), both acts of the LORD addressed. The cup clause is a state and stands outside the run.",
+   "category": "run of acts of one agent",
+   "votes": 2
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether 'You prepare a table ...; You anoint my head ...' is a parallel group",
+   "why": "the same implied subject, but the second clause does not restate the first's roles (table before foes against head with oil)"
+  },
+  {
+   "what": "Whether 'my cup overflows' is what the anointing brings about (a result) or a further image of abundance",
+   "why": "The clause follows after a semicolon with no conjunction and no verb of result, so no result link is recorded."
+  },
+  {
+   "what": "whether 'my cup overflows' (cl2) is a result of the anointing in cl1",
+   "why": "No conjunction joins them. The image is set beside the anointing with no stated consequence, and the result link needs the act's effect to be stated."
+  }
+ ],
+ "voted": 3
+}

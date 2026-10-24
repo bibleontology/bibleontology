@@ -1,0 +1,88 @@
+{
+ "ref": "Psa.23.4",
+ "referents": [
+  {
+   "slot": "w10",
+   "choice": "Psa.23.1#w3",
+   "divine": true
+  },
+  {
+   "slot": "w12",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "w14",
+   "choice": "Psa.23.1#w3",
+   "divine": true
+  },
+  {
+   "slot": "w17",
+   "choice": "Psa.23.1#w3",
+   "divine": true
+  },
+  {
+   "slot": "w18",
+   "choice": "c13",
+   "divine": false
+  },
+  {
+   "slot": "w20",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "though",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "conceded",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "g1",
+   "kind": "concession",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "conceded",
+     "node": "cl0"
+    },
+    {
+     "role": "holds_anyway",
+     "node": "cl1"
+    },
+    {
+     "role": "its_ground",
+     "node": "cl2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

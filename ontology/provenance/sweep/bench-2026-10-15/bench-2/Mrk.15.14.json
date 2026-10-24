@@ -1,0 +1,155 @@
+{
+ "ref": "Mrk.15.14",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'To them' (autois) after 'was saying': the crowd, plural. No plural candidate is offered.",
+   "category": "plural addressee not among candidates"
+  },
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'What evil' as object of 'did He commit'. Names no referent.",
+   "category": "interrogative pronoun, not a referent"
+  },
+  {
+   "slot": "w14",
+   "choice": "none",
+   "divine": false,
+   "why": "'Him' (auton), object of 'Crucify': Jesus. Not among the candidates. This verse has an empty before window, so Jesus named in Mrk.15.5 and Mrk.15.12 is not offered.",
+   "category": "object not among candidates"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false,
+   "why": "Implied 'he' of 'did He commit': Jesus, the one accused. Not among the candidates (see w14).",
+   "category": "implied subject not among candidates"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "Implied 'you' of the command 'Crucify Him' is the one the crowd speaks to: Pilate, the questioner in this verse.",
+   "category": "implied addressee of a command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The question is the object of 'was saying'. Grammar nesting kept beside the content link.",
+   "category": "saying with its speech"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "R1: 'was saying' introduces the question.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "The command is the object of 'shouted'. Grammar nesting kept beside the content link.",
+   "category": "shout with its command"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "R1: 'shouted' introduces what is said, the command.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "The connective is Greek de ('but'), and cl2 sets the crowd's shout against Pilate's question. 'And then' does not carry that opposition.",
+   "category": "opposed reply"
+  },
+  {
+   "src": "cl0",
+   "type": "contrast",
+   "dst": "cl2",
+   "action": "add",
+   "why": "BSB 'But they shouted all the louder': the text says 'but' before cl2, contrasting the shout with Pilate's question.",
+   "category": "contrast between question and shout"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "Frame cl0; part is the question cl1; sender is Pilate. The builder's addressee w4 is the crowd, which is not a candidate, so it is omitted.",
+   "category": "question turn with addressee not in candidates"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "addressee",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "Frame cl2; part the command cl3; addressee Pilate (cl3s). The builder's sender w10 is not a candidate here. The reply is spoken by the crowd (R2, alternation), which is not a candidate, so the sender is omitted.",
+   "category": "reply turn with sender not in candidates"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "subject 'they' of cl2 (the crowd shouting) and the crowd as addressee of Pilate's question (w4)",
+   "why": "The crowd is not a candidate, and the subject of cl2 has no slot."
+  },
+  {
+   "what": "Jesus as referent of w14 and cl1s",
+   "why": "The before window is empty for this verse, so Jesus, named in Mrk.15.5 and Mrk.15.12, is not a candidate."
+  }
+ ]
+}

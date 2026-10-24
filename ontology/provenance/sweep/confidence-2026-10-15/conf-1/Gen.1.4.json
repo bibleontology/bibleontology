@@ -1,0 +1,36 @@
+{
+ "ref": "Gen.1.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "saw that the light was good: the clause is what was seen, the object of the verb, not a reason for it.",
+   "category": "object clause of seeing"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "Direction reversed: the separating (cl2) comes after the seeing (cl0), not before it.",
+   "category": "narrative then with reversed direction"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "confidence": "high",
+   "why": "wayyiqtol cl2 continues the narrative from the seeing in cl0. cl1 is embedded as cl0's object and is not on the line.",
+   "category": "narrative then"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

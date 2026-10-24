@@ -1,0 +1,17 @@
+{"ref": "Psa.23.5",
+ "referents": [
+  {"slot": "w3", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First singular 'me' (lifnai, 'before me') in the psalm's own voice; the verse quotes no one, and 23:4 'with me' is the same voice.", "category": "first person in psalm voice"},
+  {"slot": "w7", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First singular 'my' on the enemies (tsorerai); the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "w13", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First singular 'my' on the head; the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "w15", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First singular 'my' on the cup; the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied second masculine singular subject of the yiqtol 'you arrange'. The psalm speaks to God from 23:4 ('you are with me') and the LORD is the shepherd of 23:1. David also agrees in morphology, but he is not the one the psalm addresses.", "category": "implied you addressed to God"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied second masculine singular subject of the qatal 'you have refreshed', the same addressee as the clause before. The only sensible addressee is the LORD, as for cl0s.", "category": "implied you addressed to God"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "Two consecutive clauses, each with its subject carried only in the verb (you arrange; you have refreshed), are acts of one addressed agent. The subject is the LORD, so the group is flagged.", "category": "acts of one addressed agent"}
+ ],
+ "none_fit": [
+  {"where": "cl1 and cl2", "what": "Two images set side by side with no connective: the anointing of the head, then 'my cup overflows' as a nominal clause with its own subject. No link type marks bare juxtaposition, and 'parallel' needs the same subject in both lines."}
+ ],
+ "cant_tell": []}

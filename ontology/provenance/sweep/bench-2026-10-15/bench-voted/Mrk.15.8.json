@@ -1,0 +1,63 @@
+{
+ "ref": "Mrk.15.8",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "w3",
+   "divine": false,
+   "why": "'for them' (autois), plural: the crowd, a collective noun that takes plural pronouns. It is the only candidate that can be the people asking.",
+   "category": "plural pronoun for a collective",
+   "votes": 3
+  },
+  {
+   "slot": "cl3s",
+   "choice": "Mrk.15.5#w9",
+   "divine": false,
+   "why": "'he did for them' (as usual) is Pilate's custom. The builder's w5 is 'to beg', an infinitive, not a person.",
+   "category": "implied subject; builder pointed at an infinitive",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link: a clause cannot follow itself.",
+   "category": "self link",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle having gone up is nested in the leading clause.",
+   "category": "antecedent participle nested in main clause",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The infinitive is the object of 'began': an infinitive completing the main verb, nested by the grammar.",
+   "category": "infinitive completing main verb",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "as",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "Kathos, 'just as he always did': the asking is compared to the custom, a clause nested in the prepositional role.",
+   "category": "comparison clause",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [],
+ "voted": 3
+}

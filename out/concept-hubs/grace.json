@@ -1,0 +1,2447 @@
+{
+ "id": "grace",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "g5485",
+   "lemma": "χάρις",
+   "form": "noun",
+   "translit": "charis",
+   "gloss": "grace",
+   "lang": "Greek",
+   "uses": 131,
+   "other_sense": 16
+  },
+  {
+   "key": "g5487",
+   "lemma": "χαριτόω",
+   "form": "verb",
+   "translit": "charitoō",
+   "gloss": "to favor",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g5483",
+   "lemma": "χαρίζομαι",
+   "form": "verb",
+   "translit": "charizō",
+   "gloss": "to give grace",
+   "lang": "Greek",
+   "uses": 14,
+   "other_sense": 5
+  },
+  {
+   "key": "h2580",
+   "lemma": "חֵן",
+   "form": "noun",
+   "translit": "chen",
+   "gloss": "favor",
+   "lang": "Hebrew",
+   "uses": 66,
+   "other_sense": 1
+  },
+  {
+   "key": "h2587",
+   "lemma": "חַנּוּן",
+   "form": "adjective",
+   "translit": "chan.nun",
+   "gloss": "gracious",
+   "lang": "Hebrew",
+   "uses": 13,
+   "other_sense": 0
+  },
+  {
+   "key": "h2603",
+   "lemma": "חָנַן",
+   "form": "verb",
+   "translit": "ḥônēn",
+   "gloss": "gracious",
+   "lang": "Hebrew",
+   "uses": 70,
+   "other_sense": 2
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of grace",
+  "verb": "Who is gracious to whom",
+  "adjective": "Called “gracious”"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "mercy",
+   "name": "mercy",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "favor",
+   "name": "favor",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "salvation",
+   "name": "salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "justification",
+   "name": "justification",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "peace",
+   "name": "peace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "gift",
+   "name": "gift",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "humility",
+   "name": "humility",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "kindness",
+   "name": "kindness",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "grace_of_god",
+   "name": "grace of God",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "by_grace_you_have_been_saved",
+   "name": "it is by grace you have been saved through faith",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r42",
+   "name": "By grace you have been saved",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r53",
+   "name": "You have fallen away from grace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "god_resists_the_proud",
+   "name": "God opposes the proud",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "my_grace_is_sufficient",
+   "name": "my grace is sufficient for you",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_god_of_all_grace",
+   "name": "the God of all grace",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "grace_and_peace_from_god_our_father",
+   "name": "Grace and peace to you from God our Father",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "titus_3_15_benediction",
+   "name": "Paul's benediction of grace",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "justified_by_grace",
+   "name": "justified by grace",
+   "type": "assessment",
+   "missing": false
+  },
+  {
+   "id": "pattern_find_grace",
+   "name": "Seeking Grace in My Lord's Sight",
+   "type": "pattern",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.6.8",
+   "ref": "Genesis 6:8",
+   "text": "Noah, however, found favor in the eyes of the LORD."
+  },
+  {
+   "id": "Exod.34.6",
+   "ref": "Exodus 34:6",
+   "text": "Then the LORD passed in front of Moses and called out: “The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion and faithfulness,"
+  },
+  {
+   "id": "Num.6.25",
+   "ref": "Numbers 6:25",
+   "text": "may the LORD cause His face to shine upon you and be gracious to you;"
+  },
+  {
+   "id": "Eph.2.8",
+   "ref": "Ephesians 2:8",
+   "text": "For it is by grace you have been saved through faith, and this not from yourselves; it is the gift of God,"
+  },
+  {
+   "id": "2Cor.12.9",
+   "ref": "2 Corinthians 12:9",
+   "text": "But He said to me, “My grace is sufficient for you, for My power is perfected in weakness.” Therefore I will boast all the more gladly in my weaknesses, so that the power of Christ may rest on me."
+  },
+  {
+   "id": "John.1.17",
+   "ref": "John 1:17",
+   "text": "For the law was given through Moses; grace and truth came through Jesus Christ."
+  },
+  {
+   "id": "Rom.11.6",
+   "ref": "Romans 11:6",
+   "text": "And if it is by grace, then it is no longer by works. Otherwise, grace would no longer be grace."
+  },
+  {
+   "id": "Titus.2.11",
+   "ref": "Titus 2:11",
+   "text": "For the grace of God has appeared, bringing salvation to everyone."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 223,
+   "rows": [
+    {
+     "label": "Find favor, find grace; favor given",
+     "note": null,
+     "doors": [
+      {
+       "id": "favor",
+       "name": "favor",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "pattern_find_grace",
+       "name": "Seeking Grace in My Lord's Sight",
+       "type": "pattern",
+       "missing": false
+      }
+     ],
+     "n": 51,
+     "verses": [
+      "Gen.6.8",
+      "Ruth.2.2",
+      "Luke.1.30",
+      "Gen.39.21",
+      "Heb.4.16",
+      "Gen.18.3",
+      "Gen.19.19",
+      "Gen.30.27",
+      "Gen.32.5",
+      "Gen.33.8",
+      "Gen.33.10",
+      "Gen.33.15",
+      "Gen.39.4",
+      "Gen.47.25",
+      "Gen.47.29",
+      "Gen.50.4",
+      "Exod.3.21",
+      "Exod.11.3",
+      "Exod.12.36",
+      "Exod.33.12",
+      "Exod.33.13",
+      "Exod.33.16",
+      "Exod.33.17",
+      "Exod.34.9",
+      "Num.11.11",
+      "Num.11.15",
+      "Num.32.5",
+      "Judg.6.17",
+      "Ruth.2.10",
+      "Ruth.2.13",
+      "1Sam.1.18",
+      "1Sam.20.3",
+      "1Sam.20.29",
+      "1Sam.25.8",
+      "1Sam.27.5",
+      "2Sam.14.22",
+      "2Sam.15.25",
+      "2Sam.16.4",
+      "1Kgs.11.19",
+      "Esth.2.15",
+      "Esth.2.17",
+      "Esth.5.2",
+      "Esth.5.8",
+      "Esth.7.3",
+      "Esth.8.5",
+      "Ps.84.11",
+      "Prov.3.4",
+      "Prov.3.34",
+      "Prov.28.23",
+      "Jer.31.2",
+      "Acts.7.46"
+     ],
+     "eg": [
+      {
+       "id": "Gen.6.8",
+       "ref": "Genesis 6:8",
+       "text": "Noah, however, found favor in the eyes of the LORD.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      },
+      {
+       "id": "Ruth.2.2",
+       "ref": "Ruth 2:2",
+       "text": "And Ruth the Moabitess said to Naomi, “Please let me go into the fields and glean heads of grain after someone in whose sight I may find favor.” “Go ahead, my daughter,” Naomi replied.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.30",
+       "ref": "Luke 1:30",
+       "text": "So the angel told her, “Do not be afraid, Mary, for you have found favor with God.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Gen.39.21",
+       "ref": "Genesis 39:21",
+       "text": "the LORD was with him and extended kindness to him, granting him favor in the eyes of the prison warden.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace given",
+     "note": "The text says grace is given. Most of these verses speak of grace given to Paul or to believers for a work or a gift (Rom 12:3-6, 1 Cor 3:10, Eph 3:2-8, Gal 2:9). How and when grace is received -- through baptism and the sacraments, before and apart from any act of ours, whether it can be resisted or lost -- is where Christian traditions part, and the page takes no side and has no row on it.",
+     "doors": [
+      {
+       "id": "gift",
+       "name": "gift",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Rom.12.6",
+      "1Cor.3.10",
+      "Eph.4.7",
+      "1Cor.1.4",
+      "Rom.12.3",
+      "Rom.15.15",
+      "2Cor.8.1",
+      "Gal.2.9",
+      "Eph.3.2",
+      "Eph.3.7",
+      "Eph.3.8",
+      "2Tim.1.9",
+      "Jas.4.6",
+      "1Pet.5.5"
+     ],
+     "eg": [
+      {
+       "id": "Rom.12.6",
+       "ref": "Romans 12:6",
+       "text": "We have different gifts according to the grace given us. If one's gift is prophecy, let him use it in proportion to his faith;",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.3.10",
+       "ref": "1 Corinthians 3:10",
+       "text": "By the grace God has given me, I laid a foundation as an expert builder, and someone else is building on it. But each one must be careful how he builds.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Eph.4.7",
+       "ref": "Ephesians 4:7",
+       "text": "Now to each one of us grace has been given according to the measure of the gift of Christ.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.4",
+       "ref": "1 Corinthians 1:4",
+       "text": "I always thank my God for you because of the grace He has given you in Christ Jesus.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The grace of God",
+     "note": "The text's own phrase; the Berean sometimes prints it “God's grace” or “the grace God has given”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "grace_of_god",
+       "name": "grace of God",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "Titus.2.11",
+      "Acts.20.24",
+      "1Cor.15.10",
+      "Heb.12.15",
+      "Luke.2.40",
+      "Rom.5.15",
+      "Acts.11.23",
+      "Acts.13.43",
+      "Acts.14.26",
+      "1Cor.1.4",
+      "1Cor.3.10",
+      "2Cor.1.12",
+      "2Cor.6.1",
+      "2Cor.8.1",
+      "2Cor.9.14",
+      "Gal.2.21",
+      "Eph.3.2",
+      "Eph.3.7",
+      "Col.1.6",
+      "2Thess.1.12",
+      "Heb.2.9",
+      "1Pet.4.10",
+      "1Pet.5.12"
+     ],
+     "eg": [
+      {
+       "id": "Titus.2.11",
+       "ref": "Titus 2:11",
+       "text": "For the grace of God has appeared, bringing salvation to everyone.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.20.24",
+       "ref": "Acts 20:24",
+       "text": "But I consider my life of no value to me, if only I may finish my course and complete the ministry I have received from the Lord Jesus-the ministry of testifying to the good news of God's grace.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.10",
+       "ref": "1 Corinthians 15:10",
+       "text": "But by the grace of God I am what I am, and His grace to me was not in vain. No, I worked harder than all of them-yet not I, but the grace of God that was with me.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.15",
+       "ref": "Hebrews 12:15",
+       "text": "See to it that no one falls short of the grace of God, and that no root of bitterness springs up to cause trouble and defile many.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The grace of the Lord Jesus, grace in Christ Jesus",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "John.1.17",
+      "Acts.15.11",
+      "Rom.5.15",
+      "1Cor.1.4",
+      "2Cor.8.9",
+      "Gal.1.6",
+      "1Tim.1.14",
+      "2Tim.1.9",
+      "2Tim.2.1",
+      "2Thess.1.12",
+      "2Pet.3.18"
+     ],
+     "eg": [
+      {
+       "id": "John.1.17",
+       "ref": "John 1:17",
+       "text": "For the law was given through Moses; grace and truth came through Jesus Christ.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.15.11",
+       "ref": "Acts 15:11",
+       "text": "On the contrary, we believe it is through the grace of the Lord Jesus that we are saved, just as they are.”",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.15",
+       "ref": "Romans 5:15",
+       "text": "But the gift is not like the trespass. For if the many died by the trespass of the one man, how much more did God's grace and the gift that came by the grace of the one man, Jesus Christ, abound to the many!",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.4",
+       "ref": "1 Corinthians 1:4",
+       "text": "I always thank my God for you because of the grace He has given you in Christ Jesus.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A spirit of grace (Zechariah); the Spirit of grace (Hebrews)",
+     "note": "The Berean prints Zechariah's “spirit” in lower case and Hebrews' “Spirit” in capital; the page does not say they are the same.",
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "Zech.12.10",
+      "Heb.10.29"
+     ],
+     "eg": [
+      {
+       "id": "Zech.12.10",
+       "ref": "Zechariah 12:10",
+       "text": "Then I will pour out on the house of David and on the people of Jerusalem a spirit of grace and prayer, and they will look on Me, the One they have pierced. They will mourn for Him as one mourns for an only child, and grieve bitterly for Him as one grieves for a firstborn son.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.29",
+       "ref": "Hebrews 10:29",
+       "text": "How much more severely do you think one deserves to be punished who has trampled on the Son of God, profaned the blood of the covenant that sanctified him, and insulted the Spirit of grace?",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace beside truth, kindness, mercy and steadfast love",
+     "note": "Different words: חֵן and χάρις (grace, favor), חֶסֶד (steadfast love), רַחֲמִים and ἔλεος (mercy). The page sets them side by side as the text does and does not say that one is another.",
+     "doors": [
+      {
+       "id": "truth",
+       "name": "truth",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "kindness",
+       "name": "kindness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "John.1.17",
+      "Eph.2.7",
+      "Heb.4.16",
+      "Gen.39.21",
+      "Gen.19.19",
+      "John.1.14",
+      "Gen.47.29",
+      "Esth.2.17",
+      "Col.1.6"
+     ],
+     "eg": [
+      {
+       "id": "John.1.17",
+       "ref": "John 1:17",
+       "text": "For the law was given through Moses; grace and truth came through Jesus Christ.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.7",
+       "ref": "Ephesians 2:7",
+       "text": "in order that in the coming ages He might display the surpassing riches of His grace, demonstrated by His kindness to us in Christ Jesus.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Heb.4.16",
+       "ref": "Hebrews 4:16",
+       "text": "Let us then approach the throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Gen.39.21",
+       "ref": "Genesis 39:21",
+       "text": "the LORD was with him and extended kindness to him, granting him favor in the eyes of the prison warden.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace and faith",
+     "note": "Set beside the rows on works and the law; a verse that names both stands in both. Some of these verses name faith and grace in one sentence without saying how they relate. Where Christian traditions part on how faith, works and grace stand to one another, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Eph.2.8",
+      "Rom.4.16",
+      "Rom.5.2",
+      "Acts.18.27",
+      "Acts.15.11",
+      "Rom.1.5",
+      "Rom.12.3",
+      "Rom.12.6",
+      "2Cor.8.7",
+      "1Tim.1.14"
+     ],
+     "eg": [
+      {
+       "id": "Eph.2.8",
+       "ref": "Ephesians 2:8",
+       "text": "For it is by grace you have been saved through faith, and this not from yourselves; it is the gift of God,",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.16",
+       "ref": "Romans 4:16",
+       "text": "Therefore, the promise comes by faith, so that it may rest on grace and may be guaranteed to all Abraham's offspring-not only to those who are of the law, but also to those who are of the faith of Abraham. He is the father of us all.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.2",
+       "ref": "Romans 5:2",
+       "text": "through whom we have gained access by faith into this grace in which we stand. And we rejoice in the hope of the glory of God.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.18.27",
+       "ref": "Acts 18:27",
+       "text": "When Apollos resolved to cross over to Achaia, the brothers encouraged him and wrote to the disciples there to welcome him. On his arrival, he was a great help to those who by grace had believed.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace and works",
+     "note": "Some of these verses set grace and works against each other; others speak of work done by grace or for it. In Rom 4:4 the Berean prints the Greek word for grace as “gift”, and Eph 2:8 is here because its sentence runs on into 2:9, “not from works”. Where Christian traditions part on how works and grace stand to one another, the page takes no side.",
+     "doors": [
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Rom.11.6",
+      "2Tim.1.9",
+      "2Cor.9.8",
+      "Acts.14.26",
+      "Rom.4.4",
+      "Eph.2.8"
+     ],
+     "eg": [
+      {
+       "id": "Rom.11.6",
+       "ref": "Romans 11:6",
+       "text": "And if it is by grace, then it is no longer by works. Otherwise, grace would no longer be grace.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.1.9",
+       "ref": "2 Timothy 1:9",
+       "text": "He has saved us and called us to a holy calling, not because of our works, but by His own purpose and by the grace He granted us in Christ Jesus before time began.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.9.8",
+       "ref": "2 Corinthians 9:8",
+       "text": "And God is able to make all grace abound to you, so that in all things, at all times, having all that you need, you will abound in every good work.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.14.26",
+       "ref": "Acts 14:26",
+       "text": "From Attalia they sailed to Antioch, where they had been commended to the grace of God for the work they had just completed.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace and the law",
+     "note": "These are the apostles' words about the law. The Hebrew Scriptures speak of the LORD's grace in their own rows (Exod 34:6, Num 6:25, Ps 103:8). Where Christian traditions part on how the law and grace stand to one another, the page takes no side.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Rom.6.14",
+      "Gal.2.21",
+      "John.1.17",
+      "Rom.5.20",
+      "Rom.4.16",
+      "Rom.6.15",
+      "Gal.5.4"
+     ],
+     "eg": [
+      {
+       "id": "Rom.6.14",
+       "ref": "Romans 6:14",
+       "text": "For sin shall not be your master, because you are not under law, but under grace.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.21",
+       "ref": "Galatians 2:21",
+       "text": "I do not set aside the grace of God. For if righteousness comes through the law, then Christ died for nothing.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "John.1.17",
+       "ref": "John 1:17",
+       "text": "For the law was given through Moses; grace and truth came through Jesus Christ.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.20",
+       "ref": "Romans 5:20",
+       "text": "The law came in so that the trespass would increase; but where sin increased, grace increased all the more,",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace and sin, trespass",
+     "note": "The Berean prints “trespass” for a different Greek word from “sin”; the row sets them together as the verses do.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Rom.5.20",
+      "Rom.6.1",
+      "Eph.2.5",
+      "Jude.1.4",
+      "Rom.5.15",
+      "Rom.5.17",
+      "Rom.5.21",
+      "Rom.6.14",
+      "Rom.6.15",
+      "Eph.1.7"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.20",
+       "ref": "Romans 5:20",
+       "text": "The law came in so that the trespass would increase; but where sin increased, grace increased all the more,",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.1",
+       "ref": "Romans 6:1",
+       "text": "What then shall we say? Shall we continue in sin so that grace may increase?",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.5",
+       "ref": "Ephesians 2:5",
+       "text": "made us alive with Christ even when we were dead in our trespasses. It is by grace you have been saved!",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Jude.1.4",
+       "ref": "Jude 1:4",
+       "text": "For certain men have crept in among you unnoticed-ungodly ones who were designated long ago for condemnation. They turn the grace of our God into a license for immorality, and they deny our only Master and Lord, Jesus Christ.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace, being justified, righteousness",
+     "note": "Where Christian traditions part on what it is to be justified, the page takes no side. The Berean prints justified and righteousness for two Greek words of one root; the page sets them together because the verses do.",
+     "doors": [
+      {
+       "id": "justification",
+       "name": "justification",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Rom.3.24",
+      "Titus.3.7",
+      "Gal.5.4",
+      "Rom.5.21",
+      "Rom.5.17",
+      "Gal.2.21"
+     ],
+     "eg": [
+      {
+       "id": "Rom.3.24",
+       "ref": "Romans 3:24",
+       "text": "and are justified freely by His grace through the redemption that is in Christ Jesus.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Titus.3.7",
+       "ref": "Titus 3:7",
+       "text": "so that, having been justified by His grace, we would become heirs with the hope of eternal life.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.4",
+       "ref": "Galatians 5:4",
+       "text": "You who are trying to be justified by the law have been severed from Christ; you have fallen away from grace.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.21",
+       "ref": "Romans 5:21",
+       "text": "so that, just as sin reigned in death, so also grace might reign through righteousness to bring eternal life through Jesus Christ our Lord.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace and being saved, redeemed, forgiven",
+     "note": null,
+     "doors": [
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "redemption",
+       "name": "redemption",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Eph.2.8",
+      "Eph.2.5",
+      "Acts.15.11",
+      "Eph.1.7",
+      "Rom.3.24",
+      "2Tim.1.9",
+      "Titus.2.11",
+      "1Pet.1.10"
+     ],
+     "eg": [
+      {
+       "id": "Eph.2.8",
+       "ref": "Ephesians 2:8",
+       "text": "For it is by grace you have been saved through faith, and this not from yourselves; it is the gift of God,",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.5",
+       "ref": "Ephesians 2:5",
+       "text": "made us alive with Christ even when we were dead in our trespasses. It is by grace you have been saved!",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.15.11",
+       "ref": "Acts 15:11",
+       "text": "On the contrary, we believe it is through the grace of the Lord Jesus that we are saved, just as they are.”",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.7",
+       "ref": "Ephesians 1:7",
+       "text": "In Him we have redemption through His blood, the forgiveness of our trespasses, according to the riches of His grace",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace and being called, chosen",
+     "note": "Where Christian traditions part on calling, choosing and what it rests on, the page takes no side.",
+     "doors": [],
+     "n": 5,
+     "verses": [
+      "Gal.1.15",
+      "2Tim.1.9",
+      "Rom.11.5",
+      "1Pet.5.10",
+      "Gal.1.6"
+     ],
+     "eg": [
+      {
+       "id": "Gal.1.15",
+       "ref": "Galatians 1:15",
+       "text": "But when God, who set me apart from my mother's womb and called me by His grace, was pleased",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.1.9",
+       "ref": "2 Timothy 1:9",
+       "text": "He has saved us and called us to a holy calling, not because of our works, but by His own purpose and by the grace He granted us in Christ Jesus before time began.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.11.5",
+       "ref": "Romans 11:5",
+       "text": "In the same way, at the present time there is a remnant chosen by grace.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.5.10",
+       "ref": "1 Peter 5:10",
+       "text": "And after you have suffered for a little while, the God of all grace, who has called you to His eternal glory in Christ, will Himself restore you, secure you, strengthen you, and establish you.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Stand, continue, grow, be strengthened in grace; grace received in vain, or not in vain; fallen away from it, fallen short of it",
+     "note": "The text speaks of standing and growing in grace, and of falling short of it or receiving it in vain. Where Christian traditions part on whether grace can be resisted or lost, the page takes no side.",
+     "doors": [],
+     "n": 10,
+     "verses": [
+      "Rom.5.2",
+      "1Pet.5.12",
+      "Gal.5.4",
+      "Heb.12.15",
+      "Acts.13.43",
+      "Heb.13.9",
+      "2Tim.2.1",
+      "2Pet.3.18",
+      "2Cor.6.1",
+      "1Cor.15.10"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.2",
+       "ref": "Romans 5:2",
+       "text": "through whom we have gained access by faith into this grace in which we stand. And we rejoice in the hope of the glory of God.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.5.12",
+       "ref": "1 Peter 5:12",
+       "text": "Through Silvanus, whom I regard as a faithful brother, I have written to you briefly, encouraging you and testifying that this is the true grace of God. Stand firm in it.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.4",
+       "ref": "Galatians 5:4",
+       "text": "You who are trying to be justified by the law have been severed from Christ; you have fallen away from grace.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.15",
+       "ref": "Hebrews 12:15",
+       "text": "See to it that no one falls short of the grace of God, and that no root of bitterness springs up to cause trouble and defile many.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Full of grace; the word of His grace; grace to the humble; grace and glory",
+     "note": "Jas 4:6 and 1 Pet 5:5 quote Prov 3:34.",
+     "doors": [
+      {
+       "id": "glory",
+       "name": "glory",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "humility",
+       "name": "humility",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "god_resists_the_proud",
+       "name": "God opposes the proud",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "gospel",
+       "name": "gospel",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "John.1.14",
+      "Prov.3.34",
+      "Ps.84.11",
+      "Acts.20.32",
+      "John.1.16",
+      "Luke.2.40",
+      "Acts.4.33",
+      "Acts.6.8",
+      "Acts.14.3",
+      "Acts.20.24",
+      "1Pet.5.5",
+      "Jas.4.6",
+      "Eph.1.6",
+      "1Pet.5.10",
+      "2Cor.4.15",
+      "2Pet.3.18",
+      "Heb.2.9",
+      "Rom.5.2"
+     ],
+     "eg": [
+      {
+       "id": "John.1.14",
+       "ref": "John 1:14",
+       "text": "The Word became flesh and made His dwelling among us. We have seen His glory, the glory of the one and only Son from the Father, full of grace and truth.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Prov.3.34",
+       "ref": "Proverbs 3:34",
+       "text": "He mocks the mockers, but gives grace to the humble.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      },
+      {
+       "id": "Ps.84.11",
+       "ref": "Psalms 84:11",
+       "text": "For the LORD God is a sun and a shield; the LORD gives grace and glory; He withholds no good thing from those who walk with integrity.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      },
+      {
+       "id": "Acts.20.32",
+       "ref": "Acts 20:32",
+       "text": "And now I commit you to God and to the word of His grace, which can build you up and give you an inheritance among all who are sanctified.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Grace in weakness and need; “Has God forgotten to be gracious?”",
+     "note": "In Ezra 9:8 the Berean prints the Hebrew תְּחִנָּה as “grace”, and in Ps 77:9 the infinitive of the verb חָנַן, “to be gracious”; these two are not words of the hub's rows, so they are placed here by hand.",
+     "doors": [
+      {
+       "id": "my_grace_is_sufficient",
+       "name": "my grace is sufficient for you",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "the_god_of_all_grace",
+       "name": "the God of all grace",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "2Cor.12.9",
+      "Heb.4.16",
+      "1Pet.5.10",
+      "Ezra.9.8",
+      "2Cor.9.8",
+      "Ps.77.9"
+     ],
+     "eg": [
+      {
+       "id": "2Cor.12.9",
+       "ref": "2 Corinthians 12:9",
+       "text": "But He said to me, “My grace is sufficient for you, for My power is perfected in weakness.” Therefore I will boast all the more gladly in my weaknesses, so that the power of Christ may rest on me.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Heb.4.16",
+       "ref": "Hebrews 4:16",
+       "text": "Let us then approach the throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.5.10",
+       "ref": "1 Peter 5:10",
+       "text": "And after you have suffered for a little while, the God of all grace, who has called you to His eternal glory in Christ, will Himself restore you, secure you, strengthen you, and establish you.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Ezra.9.8",
+       "ref": "Ezra 9:8",
+       "text": "But now, for a brief moment, grace has come from the LORD our God to preserve for us a remnant and to give us a stake in His holy place. Even in our bondage, our God has given us new life and light to our eyes.",
+       "words": []
+      }
+     ]
+    },
+    {
+     "label": "Gracious lips and words; grace as charm, a garland, an adornment",
+     "note": "The Berean renders the Hebrew חֵן as grace, adornment, graceful, charm and, in Nahum, “seductive”.",
+     "doors": [],
+     "n": 15,
+     "verses": [
+      "Ps.45.2",
+      "Prov.22.11",
+      "Eccl.10.12",
+      "Luke.4.22",
+      "Col.4.6",
+      "Eph.4.29",
+      "Prov.1.9",
+      "Prov.3.22",
+      "Prov.4.9",
+      "Prov.5.19",
+      "Prov.17.8",
+      "Prov.31.30",
+      "Nah.3.4",
+      "Prov.11.16",
+      "Prov.26.25"
+     ],
+     "eg": [
+      {
+       "id": "Ps.45.2",
+       "ref": "Psalms 45:2",
+       "text": "You are the most handsome of men; grace has anointed your lips; therefore God has blessed you forever.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      },
+      {
+       "id": "Prov.22.11",
+       "ref": "Proverbs 22:11",
+       "text": "He who loves a pure heart and gracious lips will have the king for a friend.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.10.12",
+       "ref": "Ecclesiastes 10:12",
+       "text": "The words of a wise man's mouth are gracious, but the lips of a fool consume him.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      },
+      {
+       "id": "Luke.4.22",
+       "ref": "Luke 4:22",
+       "text": "All spoke well of Him and marveled at the gracious words that came from His lips. “Isn't this the son of Joseph?” they asked.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Favor and grace between people: favor with God and man, a favor done, asked or withheld, the gift for the saints",
+     "note": "The Berean renders the Greek χάρις here as “privilege” (2 Cor 8:4), “act of grace”, “grace of giving”, “gracious offering” and “gift” (1 Cor 16:3).",
+     "doors": [
+      {
+       "id": "favor",
+       "name": "favor",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "gift",
+       "name": "gift",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Luke.2.52",
+      "Acts.2.47",
+      "Acts.7.10",
+      "Gen.34.11",
+      "Acts.24.27",
+      "Acts.25.3",
+      "Acts.25.9",
+      "2Cor.8.4",
+      "2Cor.8.6",
+      "2Cor.8.7",
+      "2Cor.8.19",
+      "1Cor.16.3",
+      "Ps.109.12"
+     ],
+     "eg": [
+      {
+       "id": "Luke.2.52",
+       "ref": "Luke 2:52",
+       "text": "And Jesus grew in wisdom and stature, and in favor with God and man.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.2.47",
+       "ref": "Acts 2:47",
+       "text": "praising God and enjoying the favor of all the people. And the Lord added to their number daily those who were being saved.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.7.10",
+       "ref": "Acts 7:10",
+       "text": "and rescued him from all his troubles. He granted Joseph favor and wisdom in the sight of Pharaoh king of Egypt, who appointed him ruler over Egypt and all his household.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Gen.34.11",
+       "ref": "Genesis 34:11",
+       "text": "Then Shechem said to Dinah's father and brothers, “Grant me this favor, and I will give you whatever you ask.",
+       "words": [
+        {
+         "key": "h2580",
+         "lemma": "חֵן"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The same Greek words in other senses: thanks, credit, what is commendable, released, handed over, restored, sight given",
+     "note": "The word is χάρις again; the Berean renders it thanks, thankfulness, gratitude (Rom 6:17, 7:25 and others), credit (Luke 6:32-34) and commendable (1 Pet 2:19-20). The verb χαρίζομαι is printed released (Acts 3:14), hand over (Acts 25:11, 25:16), gave sight (Luke 7:21) and restored (Phlm 22). Other senses of the words, not counted as grace in the rows above.",
+     "doors": [],
+     "n": 22,
+     "verses": [
+      "Rom.6.17",
+      "Rom.7.25",
+      "1Cor.15.57",
+      "2Cor.2.14",
+      "2Cor.8.16",
+      "2Cor.9.15",
+      "1Tim.1.12",
+      "2Tim.1.3",
+      "Luke.17.9",
+      "1Cor.10.30",
+      "Col.3.16",
+      "Heb.12.28",
+      "Luke.6.32",
+      "Luke.6.33",
+      "Luke.6.34",
+      "1Pet.2.19",
+      "1Pet.2.20",
+      "Acts.3.14",
+      "Acts.25.11",
+      "Acts.25.16",
+      "Phlm.1.22",
+      "Luke.7.21"
+     ],
+     "eg": [
+      {
+       "id": "Rom.6.17",
+       "ref": "Romans 6:17",
+       "text": "But thanks be to God that, though you once were slaves to sin, you wholeheartedly obeyed the form of teaching to which you were committed.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.25",
+       "ref": "Romans 7:25",
+       "text": "Thanks be to God, through Jesus Christ our Lord! So then, with my mind I serve the law of God, but with my flesh I serve the law of sin.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.57",
+       "ref": "1 Corinthians 15:57",
+       "text": "But thanks be to God, who gives us the victory through our Lord Jesus Christ!",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.2.14",
+       "ref": "2 Corinthians 2:14",
+       "text": "But thanks be to God, who always leads us triumphantly as captives in Christ and through us spreads everywhere the fragrance of the knowledge of Him.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The letters' greeting and closing: “Grace and peace to you”, “Grace be with you”",
+     "note": "The opening greeting (grace and peace, or grace, mercy and peace) and the closing blessing of the letters (Eph 6:24 reads “Grace to all who love our Lord Jesus Christ”), set apart from the rows that say what grace does.",
+     "doors": [
+      {
+       "id": "peace",
+       "name": "peace",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "grace_and_peace_from_god_our_father",
+       "name": "Grace and peace to you from God our Father",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "titus_3_15_benediction",
+       "name": "Paul's benediction of grace",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 32,
+     "verses": [
+      "1Cor.1.3",
+      "1Tim.1.2",
+      "1Cor.16.23",
+      "Rev.22.21",
+      "1Pet.1.2",
+      "1Thess.1.1",
+      "2Cor.1.2",
+      "2John.1.3",
+      "2Pet.1.2",
+      "2Thess.1.2",
+      "2Tim.1.2",
+      "Col.1.2",
+      "Eph.1.2",
+      "Gal.1.3",
+      "Phlm.1.3",
+      "Phil.1.2",
+      "Rev.1.4",
+      "Rom.1.7",
+      "Titus.1.4",
+      "Rom.16.20",
+      "2Cor.13.14",
+      "Gal.6.18",
+      "Eph.6.24",
+      "Phil.4.23",
+      "Col.4.18",
+      "1Thess.5.28",
+      "2Thess.3.18",
+      "1Tim.6.21",
+      "2Tim.4.22",
+      "Titus.3.15",
+      "Phlm.1.25",
+      "Heb.13.25"
+     ],
+     "eg": [
+      {
+       "id": "1Cor.1.3",
+       "ref": "1 Corinthians 1:3",
+       "text": "Grace and peace to you from God our Father and the Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.1.2",
+       "ref": "1 Timothy 1:2",
+       "text": "To Timothy, my true child in the faith: Grace, mercy, and peace from God the Father and Christ Jesus our Lord.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.16.23",
+       "ref": "1 Corinthians 16:23",
+       "text": "The grace of the Lord Jesus be with you.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      },
+      {
+       "id": "Rev.22.21",
+       "ref": "Revelation 22:21",
+       "text": "The grace of the Lord Jesus be with all the saints. Amen.",
+       "words": [
+        {
+         "key": "g5485",
+         "lemma": "χάρις"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 12,
+    "verses": [
+     "1Pet.1.13",
+     "1Pet.3.7",
+     "1Sam.16.22",
+     "2Cor.1.15",
+     "2Thess.2.16",
+     "Acts.15.40",
+     "Deut.24.1",
+     "Eccl.9.11",
+     "Phil.1.7",
+     "Prov.13.15",
+     "Prov.22.1",
+     "Zech.4.7"
+    ]
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 85,
+   "rows": [
+    {
+     "label": "God, the LORD, is gracious: “Be gracious to me”, “May He be gracious”, “has been gracious”",
+     "note": "The Berean prints this Hebrew verb as “be gracious” and “show favor”, and in many of these verses as “have mercy” or “be merciful” (Exod 33:19, Ps 6:2, 51:1); the Hebrew word is the same, חָנַן. Mercy in the sense of רַחֲמִים is another word, not counted here. A few verses say only “He” or “You” (Isa 30:19, Ps 102:13, Ps 41:10); the verse before names the LORD or, in Ps 41:10, the verse itself does.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 35,
+     "verses": [
+      "Ps.4.1",
+      "Num.6.25",
+      "Gen.33.5",
+      "2Kgs.13.23",
+      "Gen.33.11",
+      "Gen.43.29",
+      "Exod.33.19",
+      "2Sam.12.22",
+      "Job.33.24",
+      "Ps.6.2",
+      "Ps.9.13",
+      "Ps.25.16",
+      "Ps.26.11",
+      "Ps.27.7",
+      "Ps.30.10",
+      "Ps.31.9",
+      "Ps.41.4",
+      "Ps.41.10",
+      "Ps.51.1",
+      "Ps.56.1",
+      "Ps.57.1",
+      "Ps.67.1",
+      "Ps.86.3",
+      "Ps.86.16",
+      "Ps.102.13",
+      "Ps.119.29",
+      "Ps.119.58",
+      "Ps.119.132",
+      "Ps.123.2",
+      "Ps.123.3",
+      "Isa.30.18",
+      "Isa.30.19",
+      "Isa.33.2",
+      "Amos.5.15",
+      "Mal.1.9"
+     ],
+     "eg": [
+      {
+       "id": "Ps.4.1",
+       "ref": "Psalms 4:1",
+       "text": "For the choirmaster. With stringed instruments. A Psalm of David. Answer me when I call, O God of my righteousness! You have relieved my distress; show me grace and hear my prayer.",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "Num.6.25",
+       "ref": "Numbers 6:25",
+       "text": "may the LORD cause His face to shine upon you and be gracious to you;",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "Gen.33.5",
+       "ref": "Genesis 33:5",
+       "text": "When Esau looked up and saw the women and children, he asked, “Who are these with you?” Jacob answered, “These are the children God has graciously given your servant.”",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.13.23",
+       "ref": "2 Kings 13:23",
+       "text": "But the LORD was gracious to Israel and had compassion on them, and He turned toward them because of His covenant with Abraham, Isaac, and Jacob. And to this day, the LORD has been unwilling to destroy them or cast them from His presence.",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Seek favor, plead",
+     "note": "The same Hebrew verb as “be gracious”, in the reflexive stem: to seek someone's favor. The Berean renders it plead, implore, make supplication and “beg for mercy”; MACULA glosses it “seek favor”.",
+     "doors": [],
+     "n": 17,
+     "verses": [
+      "Deut.3.23",
+      "1Kgs.8.33",
+      "1Kgs.8.47",
+      "1Kgs.8.59",
+      "1Kgs.9.3",
+      "2Chr.6.24",
+      "2Chr.6.37",
+      "2Kgs.1.13",
+      "Esth.4.8",
+      "Esth.8.3",
+      "Job.8.5",
+      "Job.9.15",
+      "Job.19.16",
+      "Ps.30.8",
+      "Ps.142.1",
+      "Gen.42.21",
+      "Hos.12.4"
+     ],
+     "eg": [
+      {
+       "id": "Deut.3.23",
+       "ref": "Deuteronomy 3:23",
+       "text": "At that time I also pleaded with the LORD:",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.33",
+       "ref": "1 Kings 8:33",
+       "text": "When Your people Israel are defeated before an enemy because they have sinned against You, and they return to You and confess Your name, praying and pleading with You in this temple,",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.47",
+       "ref": "1 Kings 8:47",
+       "text": "and when they come to their senses in the land to which they were taken, and they repent and plead with You in the land of their captors, saying, ‘We have sinned and done wrong; we have acted wickedly,'",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.59",
+       "ref": "1 Kings 8:59",
+       "text": "And may these words with which I have made my petition before the LORD be near to the LORD our God day and night, so that He may uphold the cause of His servant and of His people Israel as each day requires,",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Greek verbs of grace: forgave, granted, freely given; the angel's word to Mary (Luke 1:28)",
+     "note": "The Greek is χαρίζομαι, the verb of χάρις (to give freely, graciously, as a favor), and χαριτόω (Luke 1:28, Eph 1:6); the Berean renders them forgive, grant and freely give. The usual verb of forgiving, ἀφίημι, is a different word and is not counted in this hub. Luke 1:28 is a form of χαριτόω (κεχαριτωμένη, a perfect participle); the Berean prints “you who are highly favored”. Traditions read the form differently, and the page does not choose.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "gift",
+       "name": "gift",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Eph.4.32",
+      "Rom.8.32",
+      "Luke.1.28",
+      "Acts.27.24",
+      "Luke.7.42",
+      "Luke.7.43",
+      "2Cor.2.7",
+      "2Cor.2.10",
+      "2Cor.12.13",
+      "Col.2.13",
+      "Col.3.13",
+      "1Cor.2.12",
+      "Gal.3.18",
+      "Phil.1.29",
+      "Phil.2.9",
+      "Eph.1.6"
+     ],
+     "eg": [
+      {
+       "id": "Eph.4.32",
+       "ref": "Ephesians 4:32",
+       "text": "Be kind and tenderhearted to one another, forgiving each other just as in Christ God forgave you.",
+       "words": [
+        {
+         "key": "g5483",
+         "lemma": "χαρίζομαι"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.32",
+       "ref": "Romans 8:32",
+       "text": "He who did not spare His own Son but gave Him up for us all, how will He not also, along with Him, freely give us all things?",
+       "words": [
+        {
+         "key": "g5483",
+         "lemma": "χαρίζομαι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.28",
+       "ref": "Luke 1:28",
+       "text": "The angel appeared to her and said, “Greetings, you who are highly favored! The Lord is with you.”",
+       "words": [
+        {
+         "key": "g5487",
+         "lemma": "χαριτόω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.27.24",
+       "ref": "Acts 27:24",
+       "text": "and said, ‘Do not be afraid, Paul; you must stand before Caesar. And look, God has granted you the lives of all who sail with you.'",
+       "words": [
+        {
+         "key": "g5483",
+         "lemma": "χαρίζομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Favor, kindness and pity shown or withheld: to the poor, between people, to the wicked, withheld in judgment or war",
+     "note": null,
+     "doors": [],
+     "n": 17,
+     "verses": [
+      "Prov.14.21",
+      "Isa.26.10",
+      "Lam.4.16",
+      "Prov.19.17",
+      "Deut.7.2",
+      "Deut.28.50",
+      "Judg.21.22",
+      "Job.19.21",
+      "Ps.37.21",
+      "Ps.37.26",
+      "Ps.59.5",
+      "Ps.102.14",
+      "Ps.112.5",
+      "Prov.14.31",
+      "Prov.21.10",
+      "Prov.28.8",
+      "Isa.27.11"
+     ],
+     "eg": [
+      {
+       "id": "Prov.14.21",
+       "ref": "Proverbs 14:21",
+       "text": "He who despises his neighbor sins, but blessed is he who shows kindness to the poor.",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "Isa.26.10",
+       "ref": "Isaiah 26:10",
+       "text": "Though grace is shown to the wicked man, he does not learn righteousness. In the land of righteousness he acts unjustly and fails to see the majesty of the LORD.",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "Lam.4.16",
+       "ref": "Lamentations 4:16",
+       "text": "The presence of the LORD has scattered them; He regards them no more. The priests are shown no honor; the elders find no favor.",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      },
+      {
+       "id": "Prov.19.17",
+       "ref": "Proverbs 19:17",
+       "text": "Kindness to the poor is a loan to the LORD, and He will repay the lender.",
+       "words": [
+        {
+         "key": "h2603",
+         "lemma": "חָנַן"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 13,
+   "rows": [
+    {
+     "label": "Gracious and compassionate; called “gracious”",
+     "note": "The Berean renders the Hebrew חַנּוּן “compassionate” in Exod 22:27, where the Hebrew has the LORD say “for I am gracious”; Ps 112:4 says it of the upright.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Exod.34.6",
+      "Ps.103.8",
+      "Joel.2.13",
+      "Jonah.4.2",
+      "Exod.22.27",
+      "2Chr.30.9",
+      "Neh.9.17",
+      "Neh.9.31",
+      "Ps.86.15",
+      "Ps.111.4",
+      "Ps.112.4",
+      "Ps.116.5",
+      "Ps.145.8"
+     ],
+     "eg": [
+      {
+       "id": "Exod.34.6",
+       "ref": "Exodus 34:6",
+       "text": "Then the LORD passed in front of Moses and called out: “The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion and faithfulness,",
+       "words": [
+        {
+         "key": "h2587",
+         "lemma": "חַנּוּן"
+        }
+       ]
+      },
+      {
+       "id": "Ps.103.8",
+       "ref": "Psalms 103:8",
+       "text": "The LORD is compassionate and gracious, slow to anger, abounding in loving devotion.",
+       "words": [
+        {
+         "key": "h2587",
+         "lemma": "חַנּוּן"
+        }
+       ]
+      },
+      {
+       "id": "Joel.2.13",
+       "ref": "Joel 2:13",
+       "text": "So rend your hearts and not your garments, and return to the LORD your God. For He is gracious and compassionate, slow to anger, abounding in loving devotion. And He relents from sending disaster.",
+       "words": [
+        {
+         "key": "h2587",
+         "lemma": "חַנּוּן"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.4.2",
+       "ref": "Jonah 4:2",
+       "text": "So he prayed to the LORD, saying, “O LORD, is this not what I said while I was still in my own country? This is why I was so quick to flee toward Tarshish. I knew that You are a gracious and compassionate God, slow to anger, abounding in loving devotion-One who relents from sending disaster.",
+       "words": [
+        {
+         "key": "h2587",
+         "lemma": "חַנּוּן"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “grace” or “favor”",
+  "words": [
+   {
+    "key": "h7522",
+    "lemma": "רָצוֹן",
+    "translit": "ra.tson",
+    "gloss": "acceptance",
+    "lang": "Hebrew",
+    "n": 18,
+    "verses": [
+     "Deut.33.16",
+     "Deut.33.23",
+     "Ps.5.12",
+     "Ps.30.5",
+     "Ps.30.7",
+     "Ps.89.17",
+     "Ps.106.4",
+     "Prov.8.35",
+     "Prov.11.27",
+     "Prov.12.2",
+     "Prov.14.35",
+     "Prov.16.15",
+     "Prov.18.22",
+     "Prov.19.12",
+     "Isa.49.8",
+     "Isa.60.10",
+     "Isa.61.2",
+     "Mal.2.13"
+    ],
+    "eg": [
+     {
+      "id": "Deut.33.16",
+      "ref": "Deuteronomy 33:16",
+      "text": "with the choice gifts of the land and everything in it, and with the favor of Him who dwelt in the burning bush. May these rest on the head of Joseph and crown the brow of the prince of his brothers."
+     },
+     {
+      "id": "Deut.33.23",
+      "ref": "Deuteronomy 33:23",
+      "text": "Concerning Naphtali he said: “Naphtali is abounding with favor, full of the blessing of the LORD; he shall take possession of the sea and the south.”"
+     }
+    ]
+   },
+   {
+    "key": "h6440",
+    "lemma": "פָּנֶה",
+    "translit": "pa.neh",
+    "gloss": "face: kindness",
+    "lang": "Hebrew",
+    "n": 17,
+    "verses": [
+     "1Sam.13.12",
+     "Mal.1.9",
+     "2Chr.33.12",
+     "Exod.32.11",
+     "Gen.19.21",
+     "Gen.32.20",
+     "1Kgs.13.6",
+     "2Kgs.13.4",
+     "Job.11.19",
+     "Ps.45.12",
+     "Ps.119.58",
+     "Prov.29.26",
+     "Jer.26.19",
+     "Dan.9.13",
+     "Zech.7.2",
+     "Zech.8.21",
+     "Zech.8.22"
+    ],
+    "note": "The Hebrew word is “face” (to seek the face of someone); the Berean prints it “favor” in these verses and not in others.",
+    "eg": [
+     {
+      "id": "1Sam.13.12",
+      "ref": "1 Samuel 13:12",
+      "text": "I thought, ‘Now the Philistines will descend upon me at Gilgal, and I have not sought the favor of the LORD.' So I felt compelled to offer the burnt offering.”"
+     },
+     {
+      "id": "Mal.1.9",
+      "ref": "Malachi 1:9",
+      "text": "“But ask now for God's favor. Will He be gracious? Since this has come from your hands, will He show you favor?” asks the LORD of Hosts."
+     }
+    ]
+   },
+   {
+    "key": "h2896",
+    "lemma": "טוֹב",
+    "translit": "ṭôḇ",
+    "gloss": "good",
+    "lang": "Hebrew",
+    "n": 9,
+    "verses": [
+     "Gen.40.16",
+     "1Kgs.22.13",
+     "2Chr.18.12",
+     "Ezra.7.9",
+     "Ezra.8.18",
+     "Ezra.8.22",
+     "Neh.2.8",
+     "Neh.2.18",
+     "Zech.1.13"
+    ],
+    "eg": [
+     {
+      "id": "Gen.40.16",
+      "ref": "Genesis 40:16",
+      "text": "When the chief baker saw that the interpretation was favorable, he said to Joseph, “I too had a dream: There were three baskets of white bread on my head."
+     },
+     {
+      "id": "1Kgs.22.13",
+      "ref": "1 Kings 22:13",
+      "text": "Then the messenger who had gone to call Micaiah instructed him, “Behold now, with one accord the words of the prophets are favorable to the king. So please let your words be like theirs, and speak favorably.”"
+     }
+    ]
+   },
+   {
+    "key": "h7521",
+    "lemma": "רָצָה",
+    "translit": "ra.tsah",
+    "gloss": "to accept",
+    "lang": "Hebrew",
+    "n": 4,
+    "verses": [
+     "Gen.33.10",
+     "Job.20.10",
+     "Ps.77.7",
+     "Ps.85.1"
+    ],
+    "eg": [
+     {
+      "id": "Gen.33.10",
+      "ref": "Genesis 33:10",
+      "text": "But Jacob insisted, “No, please! If I have found favor in your sight, then receive this gift from my hand. For indeed, I have seen your face, and it is like seeing the face of God, since you have received me favorably."
+     },
+     {
+      "id": "Job.20.10",
+      "ref": "Job 20:10",
+      "text": "His sons will seek the favor of the poor, for his own hands must return his wealth."
+     }
+    ]
+   },
+   {
+    "key": "h5278",
+    "lemma": "נֹעַם",
+    "translit": "no.am",
+    "gloss": "pleasantness",
+    "lang": "Hebrew",
+    "n": 4,
+    "verses": [
+     "Ps.90.17",
+     "Prov.15.26",
+     "Zech.11.7",
+     "Zech.11.10"
+    ],
+    "note": "The Hebrew word means “pleasantness”; the Berean prints “favor” in Ps 90:17, “pleasant” in Prov 15:26, and in Zech 11 names a staff “Favor”.",
+    "eg": [
+     {
+      "id": "Ps.90.17",
+      "ref": "Psalms 90:17",
+      "text": "May the favor of the Lord our God rest upon us; establish for us the work of our hands-yes, establish the work of our hands!"
+     },
+     {
+      "id": "Prov.15.26",
+      "ref": "Proverbs 15:26",
+      "text": "The LORD detests the thoughts of the wicked, but the words of the pure are pleasant to Him."
+     }
+    ]
+   },
+   {
+    "key": "h2617",
+    "lemma": "חֶסֶד",
+    "translit": "ḥeseḏ",
+    "gloss": "steadfast love",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Esth.2.9",
+     "Isa.63.7",
+     "Dan.1.9"
+    ],
+    "eg": [
+     {
+      "id": "Esth.2.9",
+      "ref": "Esther 2:9",
+      "text": "And the young woman pleased him and obtained his favor, so he quickly provided her with beauty treatments and the special diet. He assigned to her seven select maidservants from the palace and transferred her with them to the best place in the harem."
+     },
+     {
+      "id": "Isa.63.7",
+      "ref": "Isaiah 63:7",
+      "text": "I will make known the LORD's loving devotion and His praiseworthy acts, because of all that the LORD has done for us-the many good things for the house of Israel according to His great compassion and loving devotion."
+     }
+    ]
+   },
+   {
+    "key": "h2594",
+    "lemma": "חֲנִינָה",
+    "translit": "cha.ni.nah",
+    "gloss": "favor",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Jer.16.13"
+    ],
+    "eg": [
+     {
+      "id": "Jer.16.13",
+      "ref": "Jeremiah 16:13",
+      "text": "So I will cast you out of this land into a land that neither you nor your fathers have known. There you will serve other gods day and night, for I will show you no favor.'"
+     }
+    ]
+   },
+   {
+    "key": "h2433",
+    "lemma": "חִין",
+    "translit": "chin",
+    "gloss": "beauty",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Job.41.12"
+    ],
+    "eg": [
+     {
+      "id": "Job.41.12",
+      "ref": "Job 41:12",
+      "text": "I cannot keep silent about his limbs, his power and graceful form."
+     }
+    ]
+   }
+  ]
+ }
+}

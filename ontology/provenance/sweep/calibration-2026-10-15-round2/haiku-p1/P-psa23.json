@@ -1,0 +1,96 @@
+{"passage": "P-psa23", "verses": [
+{"ref": "Psa.23.1",
+ "referents": [
+  {"slot": "w5", "choice": "psalmist", "divine": false, "why": "'my shepherd' is first person singular in the psalm's own voice; the psalm does not quote anyone here, so the voice candidate is the referent", "category": "psalm's own first person"},
+  {"slot": "cl2s", "choice": "psalmist", "divine": false, "why": "'I shall not want' is first person singular in the psalm's own voice", "category": "psalm's own first person"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "writing", "kind": "writing", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "sender", "node": "w2"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "cl2"}], "divine": false, "why": "the heading 'a Psalm of David' names David as writer, so he is the sender; the heading is the frame and the two clauses are its parts", "category": "psalm heading as writing frame"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Psa.23.2",
+ "referents": [
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular 'me' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular 'me' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "third masculine singular; the subject of 'he makes me lie down' is the shepherd named in verse 1, the LORD", "category": "implied subject carried from an earlier verse"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "third masculine singular; 'he leads me' continues the same shepherd as verse 1", "category": "implied subject carried from an earlier verse"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "Psa.23.2#g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "two lines with the same implied subject, the LORD, and the same frame (he, me, a verb, a place); the second restates the first's roles without an overt subject", "category": "parallel lines with a shared implied subject"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Psa.23.3",
+ "referents": [
+  {"slot": "w1", "choice": "Psa.23.1#psalmist", "divine": false, "why": "'my soul' is first person singular in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular 'me' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "third masculine singular possessive; 'his name' is the name of the LORD, the shepherd of verse 1", "category": "possessive carried from an earlier verse"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "third masculine singular; 'he restores my soul' has the shepherd of verse 1 as subject", "category": "implied subject carried from an earlier verse"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "third masculine singular; 'he guides me' has the same shepherd as subject", "category": "implied subject carried from an earlier verse"}
+ ],
+ "links": [],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "whether 'He restores my soul; He guides me in the paths of righteousness' is a parallel group", "why": "the same implied subject and verb form, but the second line restates the object only as 'me' and adds a new prepositional role, so the parallel definition does not settle it"}
+ ]
+},
+{"ref": "Psa.23.4",
+ "referents": [
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "second masculine singular inside the psalmist's address; 'you are with me' turns from speaking of the LORD to speaking to him", "category": "second person in address to God"},
+  {"slot": "w12", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular 'me' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "w14", "choice": "Psa.23.1#w3", "divine": true, "why": "second masculine singular possessive, addressed to the one the psalmist speaks to", "category": "second person in address to God"},
+  {"slot": "w17", "choice": "Psa.23.1#w3", "divine": true, "why": "second masculine singular possessive, addressed to the one the psalmist speaks to", "category": "second person in address to God"},
+  {"slot": "w18", "choice": "c13", "divine": false, "why": "third masculine plural 'they' for the composite rod and staff, named together; the masculine plural is the default for a masculine-plus-feminine pair", "category": "plural pronoun for a composite"},
+  {"slot": "w20", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular 'me' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "cl0s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular 'I will go', the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular 'I will fear', the psalm's own voice", "category": "psalm's own first person"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "conceded", "dst": "cl0", "action": "remove", "why": "'conceded' is not a link type; the same relation is 'though', added below", "category": "builder label not in link types"},
+  {"src": "cl1", "type": "though", "dst": "cl0", "action": "add", "why": "gam ki ('even though') opens cl0 and precedes the claim it qualifies, 'I will fear no evil'; the concession is the destination and the claim the source", "category": "concession with gam ki"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "why": "ki after the main clause gives the reason: 'for you are with me'", "category": "reason after main clause"}
+ ],
+ "groups": [
+  {"id": "Psa.23.4#g1", "kind": "concession", "action": "add", "members": [{"role": "conceded", "node": "cl0"}, {"role": "holds_anyway", "node": "cl1"}, {"role": "its_ground", "node": "cl2"}], "divine": false, "why": "the concession gam ki: the obstacle (walking through the valley), the claim that holds anyway (fearing no evil), and its ground (you are with me)", "category": "concession with ground"}
+ ],
+ "none_fit": [
+  {"where": "cl3 before cl4", "what": "a verbless clause ('your rod and your staff') names the subject of the next clause ('they comfort me'); no link type or group kind records a topic that the next clause predicates"}
+ ],
+ "cant_tell": []
+},
+{"ref": "Psa.23.5",
+ "referents": [
+  {"slot": "w3", "choice": "psalmist", "divine": false, "why": "first person singular 'me' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "w7", "choice": "psalmist", "divine": false, "why": "first person singular 'my enemies' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "w13", "choice": "psalmist", "divine": false, "why": "first person singular 'my head' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "w15", "choice": "psalmist", "divine": false, "why": "first person singular 'my cup' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "second masculine singular 'you prepare'; the one addressed is the LORD, the shepherd of verse 1", "category": "second person in address to God"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "second masculine singular 'you anoint'; the one addressed is the LORD", "category": "second person in address to God"}
+ ],
+ "links": [],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "whether 'You prepare a table ...; You anoint my head ...' is a parallel group", "why": "the same implied subject, but the second clause does not restate the first's roles (table before foes against head with oil)"}
+ ]
+},
+{"ref": "Psa.23.6",
+ "referents": [
+  {"slot": "w5", "choice": "psalmist", "divine": false, "why": "first person singular 'me' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "w9", "choice": "psalmist", "divine": false, "why": "first person singular 'my life' in the psalm's own voice", "category": "psalm's own first person"},
+  {"slot": "cl1s", "choice": "psalmist", "divine": false, "why": "first person singular 'I will dwell', the psalm's own voice", "category": "psalm's own first person"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "the weqatal of cl1 carries a fused waw and continues the clause before it: 'goodness and mercy will follow ... and I will dwell'", "category": "weqatal continues the line"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}
+]}

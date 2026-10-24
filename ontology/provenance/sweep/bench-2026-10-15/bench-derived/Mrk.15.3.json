@@ -1,0 +1,20 @@
+{
+ "ref": "Mrk.15.3",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Mrk.15.1#w18",
+   "divine": true
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

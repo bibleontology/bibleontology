@@ -1,0 +1,67 @@
+{
+ "ref": "Psa.119.105",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "First common singular 'my' on 'feet' (w2) is the psalm's own speaker. No voice candidate is offered in this verse's candidate list, and no listed noun or the LORD is the speaker, so no candidate fits.",
+   "category": "first person of the psalm's own voice"
+  },
+  {
+   "slot": "w5",
+   "choice": "Psa.119.89#w0",
+   "divine": true,
+   "why": "Second person masculine singular 'your' on 'word' (w4): the psalm addresses God throughout. The only addressee candidate with masculine singular morphology is LORD (Psa.119.89#w0), and 'your word' fits God's word.",
+   "category": "second person addressed to God"
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false,
+   "why": "First common singular 'my' on 'path' (w9) is the psalm's own speaker, as w3. No voice candidate is offered, so no candidate fits.",
+   "category": "first person of the psalm's own voice"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The waw (וְ) on the second clause joins a second predicate about the same subject, 'your word'. It is a plain 'and' joining parallel lines, not a cause, result or purpose, and the sense does not require more.",
+   "category": "plain and joining parallel predicates"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Psa.119.105#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "The second line 'a light to my path' restates the first, 'a lamp to my feet', without its own subject; the subject is 'your word' (w4) for both. The builder recorded no groups for this verse.",
+   "category": "two lines with one subject"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "w3 and w10 (my feet, my path)",
+   "what": "The psalm's own voice has no candidate in this verse's list. The voice candidate the rules name is not offered, so the first person cannot be resolved to a candidate id."
+  }
+ ],
+ "cant_tell": []
+}

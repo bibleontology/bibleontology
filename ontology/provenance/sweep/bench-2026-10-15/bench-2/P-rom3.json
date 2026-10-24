@@ -1,0 +1,176 @@
+{"passage": "B-rom3", "verses": [
+{"ref": "Rom.3.1",
+ "referents": [
+  {"slot": "w1", "choice": "none", "divine": false, "why": "Interrogative 'What' (Τί) opening the first question; it asks for the advantage and refers to no candidate.", "category": "interrogative word, not a referent"},
+  {"slot": "w7", "choice": "none", "divine": false, "why": "Interrogative 'what' (τίς) is the predicate question word of the second question; the subject is 'the benefit' itself, so no candidate is referred to.", "category": "interrogative word, not a referent"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "or", "dst": "cl1", "action": "keep", "why": "ἢ ('or') joins two parallel questions; the second is an alternative to the first.", "category": "parallel questions joined by or"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "οὖν ('then') in cl1", "why": "It points back to the argument of chapter 2, which is not in this passage, so no clause here can be its host."}
+ ]
+},
+{"ref": "Rom.3.2",
+ "referents": [
+  {"slot": "cl2s", "choice": "none", "divine": false, "why": "'They' (third plural, were entrusted) is the people of 3:1, the Jews; no candidate in this verse is a people, and the Jews are not offered as a candidate.", "category": "pronoun for a people not offered as candidate"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "remove", "why": "ὅτι after πρῶτον μέν gives the content of the first advantage, not a reason; a because link misreads the function of ὅτι.", "category": "that-clause misread as reason"},
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "γάρ after 'Much in every way' gives the reason for the 'much': the first advantage follows.", "category": "for explaining an advantage"},
+  {"src": "cl1", "type": "that", "dst": "cl2", "action": "add", "why": "ὅτι gives what the first advantage consists in: 'first, that they were entrusted with the oracles'.", "category": "that-clause as predicate content"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "πρῶτον μέν with no following δέ", "why": "The first item of a list has no second item in this verse; the second item is not given, so the list is not closed here."}
+ ]
+},
+{"ref": "Rom.3.3",
+ "referents": [
+  {"slot": "w1", "choice": "none", "divine": false, "why": "Interrogative 'What' (Τί γάρ) opening the question frame; no referent.", "category": "interrogative word, not a referent"},
+  {"slot": "w4", "choice": "none", "divine": false, "why": "'Some' (τινες) is an indefinite group of people not named in this verse; no candidate is a person.", "category": "indefinite group not offered as candidate"},
+  {"slot": "w8", "choice": "none", "divine": false, "why": "'Of them' (αὐτῶν) is the possessor of 'unbelief' and refers to the same unnamed 'some'; no candidate fits.", "category": "possessor not offered as candidate"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "if", "dst": "cl0", "action": "remove", "why": "The condition is cl1 ('some disbelieved'); it conditions the question about nullifying (cl2), not the frame cl0. Direction is reversed.", "category": "condition attached to frame"},
+  {"src": "cl1", "type": "because", "dst": "cl0", "action": "remove", "why": "No reason is stated; the εἰ clause conditions the consequence and gives no ground for the frame.", "category": "condition misread as reason"},
+  {"src": "cl2", "type": "if", "dst": "cl1", "action": "add", "why": "εἰ precedes the clause it governs: 'will their unbelief nullify (cl2), if some disbelieved (cl1)'.", "category": "condition before its consequence"}
+ ],
+ "groups": [
+  {"id": "cond1", "kind": "conditional", "action": "change", "members": [{"role": "condition", "node": "cl1"}, {"role": "consequence", "node": "cl2"}], "divine": false, "why": "The condition is the εἰ clause cl1 and the consequence is the question about nullifying (cl2); cl0 is the 'What' frame and sits outside the conditional.", "category": "condition and consequence across the question"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "cl0 and cl1 both carry the verb 'disbelieved'", "why": "The parser splits the εἰ clause into a frame carrying εἰ (cl0) and a copy of the verb (cl1). I took cl1 as the condition and cl0 as the frame; the form does not settle the split."},
+  {"what": "γάρ opening the verse (Τί γάρ)", "why": "'For' (reason for verse 2) and 'then' (a question connective) are not separated by the form, so no link is added."}
+ ]
+},
+{"ref": "Rom.3.4",
+ "referents": [
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "'Never may it be' (Μὴ γένοιτο) is an optative with an impersonal subject; no candidate fits.", "category": "impersonal optative subject"},
+  {"slot": "cl3s", "choice": "none", "divine": false, "why": "'It has been written' is a passive with no agent; the scripture is the subject. The builder's 'man' is wrong: it is not the one who wrote.", "category": "passive citation with no agent"},
+  {"slot": "cl4s", "choice": "w5", "divine": true, "why": "The quoted 'you' (second singular, may be justified) addresses God, the addressee of the psalm quoted; w5 is God.", "category": "addressee of quoted psalm"},
+  {"slot": "cl5s", "choice": "w5", "divine": true, "why": "The second quoted verb (will prevail) has the same second-person subject, God, as cl4.", "category": "addressee of quoted psalm"},
+  {"slot": "w19", "choice": "w5", "divine": true, "why": "'Of You' (σου) is the possessor of 'words'; the words are God's, so the referent is God.", "category": "possessor is God in quotation"},
+  {"slot": "w25", "choice": "w5", "divine": true, "why": "The accusative 'you' (σε) is the subject of the infinitive 'being judged' in the quotation, and it is God.", "category": "addressee of quoted psalm"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "remove", "why": "The purpose sits in the quoted words, not in the citation frame 'it has been written'; the frame is the saying and gets a content link instead.", "category": "purpose attached to citation frame"},
+  {"src": "cl5", "type": "when_if_though", "dst": "cl6", "action": "remove", "why": "This is a Hebrew fronted כִּי link. Here ἐν τῷ + infinitive is a temporal ('when being judged'), which the within link carries.", "category": "Hebrew link used for Greek temporal"},
+  {"src": "cl3", "type": "purpose", "dst": "cl5", "action": "remove", "why": "The second quoted verb falls under the same ὅπως as cl4, joined by καί; its purpose comes through cl4, not from the frame.", "category": "purpose attached to citation frame"},
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "remove", "why": "δέ after a rejection is a correction ('rather'), not a plain 'and'.", "category": "correction read as plain and"},
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "Two jussives, 'let God be true' and 'let every man be a liar' (verb elided), joined by δέ: one run of commands.", "category": "commands joined by and"},
+  {"src": "cl4", "type": "and", "dst": "cl5", "action": "keep", "why": "καί joins two subjunctives under one ὅπως: 'be justified and prevail'.", "category": "two verbs under one clause joined by and"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "The frame 'as it is written' (καθάπερ) is a comparison, not a plain 'and'; it is a separate sentence of citation.", "category": "comparison read as plain and"},
+  {"src": "cl0", "type": "but_rather", "dst": "cl1", "action": "add", "why": "A negative exclamation then δέ with a correcting jussive: 'Never may it be; rather let God be true'.", "category": "negative then correction"},
+  {"src": "cl2", "type": "as", "dst": "cl3", "action": "add", "why": "καθάπερ ('just as') compares the statement of 'every man a liar' with what is written; the compared clause is a saying.", "category": "comparison to a written saying"},
+  {"src": "cl3", "type": "content", "dst": "cl4", "action": "add", "why": "The citation clause (it has been written) introduces what is quoted, so content links it to the quoted clause (R1).", "category": "citation content"},
+  {"src": "cl1", "type": "purpose", "dst": "cl4", "action": "add", "why": "ὅπως ('so that') gives the aim of God's being true: a third-person command followed by a second-person subjunctive, as the rule for a purpose after a command.", "category": "purpose after command, different person"},
+  {"src": "cl5", "type": "within", "dst": "cl6", "action": "add", "why": "The infinitive phrase ἐν τῷ κρίνεσθαι σε sits in a prepositional role of cl5 (temporal 'when'); within carries that role.", "category": "temporal clause nested in verb phrase"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}, {"role": "command", "node": "cl2"}], "divine": false, "why": "Only the two jussives joined by δέ form one imperative group; 'Never may it be' is a rejection formula, not a command, and 'part' is not a role of this kind.", "category": "commands joined by and"},
+  {"id": "Rom.3.4#g1", "kind": "writing", "action": "add", "members": [{"role": "frame", "node": "cl3"}, {"role": "part", "node": "cl4"}, {"role": "part", "node": "cl5"}], "divine": false, "why": "The quoted psalm as a unit: the citation formula is its frame and the quoted words are its parts. No writer is named, so there is no sender.", "category": "quoted psalm as unit"}
+ ],
+ "none_fit": [
+  {"where": "cl0 (Μὴ γένοιτο, 'Certainly not!')", "what": "A rejection of the claim in 3:3; no link type records a disavowal of the preceding question."},
+  {"where": "cl5 to cl6 (ἐν τῷ κρίνεσθαι, 'when being judged')", "what": "A temporal 'when' clause has no link type of its own; recorded as within, with the temporal role stated in why."}
+ ],
+ "cant_tell": [
+  {"what": "the purpose reading of cl1 to cl4", "why": "Whether the quoted ὅπως clause states God's aim in being true, or only the psalm's own purpose, is a reading; I added the link because the form allows it, and it is open to review."}
+ ]
+},
+{"ref": "Rom.3.5",
+ "referents": [
+  {"slot": "w4", "choice": "none", "divine": false, "why": "'Of us' (ἡμῶν) is the writer with his readers; no first-person candidate is offered.", "category": "first person of the writer not offered as candidate"},
+  {"slot": "w8", "choice": "none", "divine": false, "why": "Interrogative 'what' (τί) in 'what shall we say'; no referent.", "category": "interrogative word, not a referent"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "'We' (ἐροῦμεν, shall say) is the writer with his readers; no candidate fits. The builder's w0 is not a candidate.", "category": "first person of the writer not offered as candidate"},
+  {"slot": "cl4s", "choice": "none", "divine": false, "why": "'I speak' (λέγω) is the writer, not offered as a candidate.", "category": "first person of the writer not offered as candidate"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "if", "dst": "cl0", "action": "remove", "why": "Direction is reversed: the question 'what shall we say?' is what the condition conditions, so the link runs from cl0 to cl1.", "category": "condition direction reversed"},
+  {"src": "cl3", "type": "and", "dst": "cl0", "action": "remove", "why": "The participle is not joined by 'and' to the question; it describes God in cl2.", "category": "participle read as plain and"},
+  {"src": "cl0", "type": "if", "dst": "cl1", "action": "add", "why": "The question (consequent) is conditioned by the if-clause cl1, 'our unrighteousness shows God's righteousness'.", "category": "condition before its consequence"},
+  {"src": "cl2", "type": "describing", "dst": "cl3", "action": "add", "why": "ὁ ἐπιφέρων τὴν ὀργήν is a bare participle with no conjunction, agreeing with ὁ θεός of cl2; it describes God as the one who inflicts wrath.", "category": "participle describing its subject"},
+  {"src": "cl0", "type": "content", "dst": "cl2", "action": "add", "why": "'What shall we say?' (ἐροῦμεν) introduces the proposition 'God is unjust?' (cl2), which is its content (R1).", "category": "saying with its content"}
+ ],
+ "groups": [
+  {"id": "cond1", "kind": "conditional", "action": "keep", "members": [{"role": "condition", "node": "cl1"}, {"role": "consequence", "node": "cl0"}], "divine": false, "why": "The condition is cl1 and the consequence the question in cl0; the builder's grouping is right, only the link direction was wrong.", "category": "condition and consequence"}
+ ],
+ "none_fit": [
+  {"where": "cl4 (κατὰ ἄνθρωπον λέγω, 'I speak in human terms')", "what": "A parenthetical disclaimer about the manner of the argument; no link type relates a comment on one's own argument. Left unlinked."}
+ ],
+ "cant_tell": [
+  {"what": "δέ opening the verse (Εἰ δέ)", "why": "A verse-opening 'but' has no host in its own verse, so no contrast with 3:4 is drawn."},
+  {"what": "turn for 'what shall we say' (cl0)", "why": "A turn needs a sender from the candidates; the speaker 'we' is not offered, so no turn is built."}
+ ]
+},
+{"ref": "Rom.3.6",
+ "referents": [
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "'Never may it be' (Μὴ γένοιτο) is an optative with an impersonal subject; no candidate fits.", "category": "impersonal optative subject"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "ἐπεί ('otherwise, since') gives the reason for the rejection: how would God judge the world, if not?", "category": "reason for rejection"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "remove", "members": [{"role": "command", "node": "cl0"}, {"role": "part", "node": "cl1"}], "divine": false, "why": "'Never may it be' is a rejection formula, not a command, and it is not joined by 'and' to a command. The because link carries the reason; 'part' is not a role of this kind.", "category": "rejection formula read as command"}
+ ],
+ "none_fit": [
+  {"where": "cl0 (Μὴ γένοιτο, 'Certainly not!')", "what": "A rejection formula; no link type records a disavowal. Left as an unlinked exclamation, with its because link to cl1."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Rom.3.7",
+ "referents": [
+  {"slot": "w14", "choice": "w5", "divine": true, "why": "'Of Him' (αὐτοῦ) is the possessor of 'glory'; the glory is God's, so the referent is God.", "category": "possessor is God"},
+  {"slot": "w15", "choice": "none", "divine": false, "why": "Interrogative 'why' (τί) in the consequent question; no referent.", "category": "interrogative word, not a referent"},
+  {"slot": "w17", "choice": "none", "divine": false, "why": "'Also I' (κἀγώ) is the imagined objector speaking in the diatribe; no candidate is the objector.", "category": "voice of imagined objector not offered"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "if", "dst": "cl0", "action": "remove", "why": "Direction reversed: the consequent question cl0 is what the condition cl1 governs, so the link runs from cl0 to cl1.", "category": "condition direction reversed"},
+  {"src": "cl1", "type": "and", "dst": "cl0", "action": "remove", "why": "The καί in cl0 is 'also' inside κἀγώ, not a conjunction joining the two clauses; the εἰ governs the consequence.", "category": "also read as and between clauses"},
+  {"src": "cl0", "type": "if", "dst": "cl1", "action": "add", "why": "The question 'why am I still judged as a sinner?' is conditioned by 'if the truth of God abounded in my lie'.", "category": "condition before its consequence"}
+ ],
+ "groups": [
+  {"id": "cond1", "kind": "conditional", "action": "keep", "members": [{"role": "condition", "node": "cl1"}, {"role": "consequence", "node": "cl0"}], "divine": false, "why": "The condition is cl1 and the consequence is cl0; the grouping is right, only the link direction was wrong.", "category": "condition and consequence"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "the speaker of the objection ('I')", "why": "The imagined objector is not a candidate; the 'I' is the voice of the diatribe's objection, not a person in the passage."},
+  {"what": "δέ opening the verse (Εἰ δέ)", "why": "A verse-opening 'but' has no host in its verse, so no contrast link is drawn."}
+ ]
+},
+{"ref": "Rom.3.8",
+ "referents": [
+  {"slot": "w7", "choice": "none", "divine": false, "why": "'Some' (τινες) is an indefinite group not named as a candidate in this verse.", "category": "indefinite group not offered as candidate"},
+  {"slot": "w8", "choice": "none", "divine": false, "why": "'Us' (ἡμᾶς), the object of 'to say', is the writer's group, the people slandered; no candidate fits. The builder's 'some' is wrong, since the 'us' is the accused, not the accusers.", "category": "first person group not offered as candidate"},
+  {"slot": "w18", "choice": "none", "divine": false, "why": "'Their' (ὧν) refers back to the slanderers ('some'), who are not a candidate.", "category": "relative genitive refers to uncandidated group"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "'We are slandered' (βλασφημούμεθα): the writer's group; no candidate fits.", "category": "first person group not offered as candidate"},
+  {"slot": "cl3s", "choice": "none", "divine": false, "why": "Hortatory 'let us do' inside the slogan: the 'we' of the accused; no candidate fits.", "category": "first person group not offered as candidate"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl0", "action": "remove", "why": "A clause cannot join itself; this is a parser error.", "category": "self-link error"},
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "καί ... καθώς: 'and as' joins two comparisons of the same report.", "category": "two comparisons joined by and"},
+  {"src": "cl1", "type": "within", "dst": "cl2", "action": "remove", "why": "Superseded: the infinitive is the object of 'affirm', a saying, so the content link carries it (R1).", "category": "saying read as nesting"},
+  {"src": "cl1", "type": "content", "dst": "cl2", "action": "add", "why": "φασίν ('affirm') introduces what is said, 'that we say'; it is the saying clause and its content (R1).", "category": "saying with its content"},
+  {"src": "cl1", "type": "within", "dst": "cl5", "action": "remove", "why": "ὧν ('of whom') opens a new sentence after a question mark; it is Paul's verdict on the slanderers, not a relative clause inside cl1.", "category": "verdict across sentence break"},
+  {"src": "cl2", "type": "that", "dst": "cl3", "action": "remove", "why": "Superseded: 'to say' (λέγειν) is a saying, so its content link to the slogan is the R1 link.", "category": "saying read as complement"},
+  {"src": "cl2", "type": "content", "dst": "cl3", "action": "add", "why": "λέγειν introduces the slogan 'Let us do evil that good may come', its content; nested speech takes its own content link (R1).", "category": "nested saying with its content"},
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "keep", "why": "ἵνα ('so that') gives the aim of doing evil: that good may come.", "category": "aim of a command"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "cl2"}], "divine": false, "why": "cl5 is Paul's verdict, not part of the slander, so it leaves the turn. The sender 'some' is not a candidate, so the sender is omitted.", "category": "verdict outside the speech"},
+  {"id": "Rom.3.8#g1", "kind": "imperative", "action": "add", "members": [{"role": "command", "node": "cl3"}, {"role": "aim", "node": "cl4"}], "divine": false, "why": "The hortatory 'let us do evil' with its aim 'that good may come': one command with what qualifies it. Content for cl2 goes to the clause cl3, since it is one command.", "category": "command with its aim"}
+ ],
+ "none_fit": [
+  {"where": "cl5 (ὧν τὸ κρίμα ἔνδικόν ἐστιν, 'their condemnation is just')", "what": "A verdict on the slanderers after a sentence break, with a relative genitive back-referring; no link type for a verdict on a group named earlier."},
+  {"where": "cl0 (καί μή καθώς βλασφημούμεθα)", "what": "A καθώς ('as') clause hangs from an elided main clause ('why not say'); no host clause is in the verse for an 'as' link."}
+ ],
+ "cant_tell": [
+  {"what": "the inner turn 'we say' (cl2) and its sender", "why": "The sender 'we' is not a candidate, so the nested turn is not built; the content links carry the speech."}
+ ]
+}
+]}

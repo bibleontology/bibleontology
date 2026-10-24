@@ -1,0 +1,69 @@
+{
+ "ref": "Psa.23.2",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "me in the psalm's own voice, first common singular",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w9",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "me in the psalm's own voice, first common singular",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "third masculine singular; the one who makes the sheep lie down is the shepherd, the LORD of verse 1; David wrote the psalm but does not act in it",
+   "category": "implied subject of a shepherd's act"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "third masculine singular; the one who leads to the waters is the shepherd, the LORD of verse 1",
+   "category": "implied subject of a shepherd's act"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.2#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "confidence": "medium",
+   "divine": true,
+   "why": "Two lines with the same subject; the second restates the first's roles (he, me, a place of rest) without the subject; a couplet under R6.",
+   "category": "couplet with shared subject"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

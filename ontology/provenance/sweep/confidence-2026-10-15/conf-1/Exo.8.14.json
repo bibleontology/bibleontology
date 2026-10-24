@@ -1,0 +1,82 @@
+{
+ "ref": "Exo.8.14",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "3mp possessive 'their secret arts' belongs to the magicians named in this verse",
+   "category": "possessive for the named subject"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "3 common plural 'they were not able' is the magicians who made the attempt",
+   "category": "subject of the failed attempt"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl4 is not a clause of this verse; a then-link runs only within a verse, and this one runs backward",
+   "category": "then link across verses"
+  },
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "lamed plus infinitive construct saying what the attempt was done to achieve: to bring forth the gnats",
+   "category": "infinitive of purpose"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "confidence": "high",
+   "why": "an attempt with a purpose, then waw and a negated verb of being able, is the attempt's failed result, not a plain and",
+   "category": "attempt that failed"
+  },
+  {
+   "src": "cl0",
+   "type": "failed_result",
+   "dst": "cl2",
+   "action": "add",
+   "confidence": "high",
+   "why": "the magicians tried to produce gnats and it failed: they were not able",
+   "category": "attempt that failed"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "confidence": "high",
+   "why": "wayyiqtol continues the narrative line after the negated clause",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl0",
+   "type": "likewise",
+   "dst": "Exo.8.13#cl2",
+   "action": "add",
+   "confidence": "medium",
+   "why": "the magicians did thus, with a named subject, the same deed as the striking of the dust just done by Aaron after the latest command; imitation, not fulfilment",
+   "category": "uncommanded deed copying an earlier one"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

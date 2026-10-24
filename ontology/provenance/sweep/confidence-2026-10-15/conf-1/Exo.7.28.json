@@ -1,0 +1,142 @@
+{
+ "ref": "Exo.7.28",
+ "referents": [
+  {
+   "slot": "w37",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your kneading bowls': the addressee of the LORD's message is Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w11",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your palace': the addressee of the LORD's message is Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your bedroom': the addressee of the LORD's message is Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w20",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your bed': the addressee of the LORD's message is Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w25",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your officials': the addressee of the LORD's message is Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w29",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your people': the addressee of the LORD's message is Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w33",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your ovens': the addressee of the LORD's message is Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'they will go up' is third common plural, and the frogs (feminine plural) are the subject; w4 is the frogs.",
+   "category": "implied subject continuing the previous clause"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'they will go in' again has the frogs as subject, the nearest agreeing plural.",
+   "category": "implied subject continuing the previous clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a bare id naming a clause of the previous verse; 'then' does not cross verses.",
+   "category": "cross-verse then, bare id"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "a weqatal continues what it follows: the frogs swarm and then go up.",
+   "category": "weqatal continuing a clause"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "confidence": "high",
+   "why": "a weqatal continues the clause before it.",
+   "category": "weqatal continuing a clause"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.7.26#turn1",
+   "kind": "turn",
+   "action": "extend",
+   "members": [
+    {
+     "role": "part",
+     "node": "Exo.7.28#cl0"
+    },
+    {
+     "role": "part",
+     "node": "Exo.7.28#cl1"
+    },
+    {
+     "role": "part",
+     "node": "Exo.7.28#cl2"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the LORD's quoted message continues; these are its clauses.",
+   "category": "speech continued across verses"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

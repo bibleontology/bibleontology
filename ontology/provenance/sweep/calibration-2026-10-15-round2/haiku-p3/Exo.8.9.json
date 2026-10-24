@@ -1,0 +1,38 @@
+{
+ "ref": "Exo.8.9",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl0 (the LORD did as Moses requested) is the earlier clause; cl1 (the frogs died) follows it. This link runs backward.",
+   "category": "reversed then link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "the death of the frogs is what the act brings about, which R4 records as result rather than then. The result link is added below.",
+   "category": "then where result fits"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the LORD's act, and the frogs dying as its outcome.",
+   "category": "outcome of an act"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether 'did as Moses requested' (cl0) fulfils Moses's request (Exo.8.8#cl1)",
+   "why": "the wording is 'according to the word of Moses', not asah plus ken, so the pro-form that the fulfilment rule needs is absent. The 'as' type treats a comparison to a saying as fulfilment, but here the saying is a noun phrase, not a clause."
+  }
+ ]
+}

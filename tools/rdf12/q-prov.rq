@@ -1,0 +1,8 @@
+PREFIX prov:  <http://www.w3.org/ns/prov#>
+PREFIX claim: <https://bibleontology.org/ns/claim#>
+PREFIX e:     <https://bibleontology.org/e/>
+# PROV, with no reasoner (plan 8.1e, P-2026-10-18-18): to whom are the claims
+# about Job attributed? Speakers and readers both answer, as plain PROV.
+SELECT ?agent (COUNT(?c) AS ?claims) WHERE {
+  ?c claim:subject e:job ; prov:wasAttributedTo ?agent .
+} GROUP BY ?agent ORDER BY DESC(?claims)

@@ -1,0 +1,182 @@
+{
+ "ref": "Exo.8.13",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "w5",
+   "divine": false,
+   "why": "'his hand' in the clause 'Aaron stretched out his hand' is Aaron's; masculine singular agrees and Aaron is the doer of the act.",
+   "category": "possessive of the acting person"
+  },
+  {
+   "slot": "w11",
+   "choice": "w5",
+   "divine": false,
+   "why": "'his staff' is Aaron's, the staff he stretches out; same doer.",
+   "category": "possessive of the acting person"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Exo.8.8#c2",
+   "divine": false,
+   "why": "'they did so' is plural and fulfils the command chain, which was addressed to Moses (to tell) and Aaron (to act); the composite Moses and Aaron is the only plural candidate that fits.",
+   "category": "plural they fulfilling a command chain"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w5",
+   "divine": false,
+   "why": "'he struck the dust' continues Aaron's acts in cl1 with no change of subject; the implied subject is Aaron.",
+   "category": "implied subject of a series of acts"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "fulfils",
+   "dst": "Exo.8.12#imp2",
+   "action": "add",
+   "why": "a narrative 'did so' with no named subject after the command collection fulfils the whole collection (R4).",
+   "category": "summary report fulfils command collection"
+  },
+  {
+   "src": "cl1",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl2",
+   "action": "add",
+   "why": "cl1 repeats the verb of the command 'stretch out' and so fulfils it.",
+   "category": "member-by-member fulfilment"
+  },
+  {
+   "src": "cl1",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "cl1 gives the detail of the summary report cl0.",
+   "category": "detail of a summary report"
+  },
+  {
+   "src": "cl2",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl3",
+   "action": "add",
+   "why": "cl2 repeats the verb of the command 'strike' and so fulfils it.",
+   "category": "member-by-member fulfilment"
+  },
+  {
+   "src": "cl2",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "cl2 gives the detail of the summary report cl0.",
+   "category": "detail of a summary report"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "the striking of the dust brings about the gnats on man and beast (R4: the acts before the effect clause).",
+   "category": "act and what it brings about"
+  },
+  {
+   "src": "cl3",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl4",
+   "action": "add",
+   "why": "cl3 repeats the verb of the command's effect (hayah) and so fulfils the effect (R4).",
+   "category": "fulfilment of the effect"
+  },
+  {
+   "src": "cl3",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "cl3 gives the detail of the summary report cl0.",
+   "category": "detail of a summary report"
+  },
+  {
+   "src": "cl4",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl4",
+   "action": "add",
+   "why": "cl4 restates the effect ('became gnats throughout the land of Egypt') in the command's own words.",
+   "category": "fulfilment of the effect"
+  },
+  {
+   "src": "cl4",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "cl4 gives the detail of the summary report cl0.",
+   "category": "detail of a summary report"
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl4 is the last clause of the verse and cl0 the first; a then-link from the later clause back to the earlier one is backward and is replaced by the fulfils and elaborates links.",
+   "category": "backward then link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "wayyiqtol continuing the narrative line within the verse.",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "wayyiqtol continuing the narrative line within the verse.",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "wayyiqtol continuing the narrative line within the verse.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.8.13#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl2"
+    },
+    {
+     "role": "group_subject",
+     "node": "w5"
+    }
+   ],
+   "divine": false,
+   "why": "two clauses in a row that are acts of Aaron, the second stating its subject only in its verb; recorded as a reading for review (R5).",
+   "category": "consecutive acts of one agent"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether cl3 or cl4 is the fulfilment of the command's effect, or both",
+   "why": "both repeat the verb hayah of the effect; both are recorded as fulfilling it, and the split between the gnats on man and beast (result of the striking) and the all-dust summary is not settled by the text."
+  },
+  {
+   "what": "the gender of cl3's verb",
+   "why": "the gloss gives a feminine singular verb while the gnats are masculine; no slot depends on it, since the subject is named as the gnats."
+  }
+ ]
+}

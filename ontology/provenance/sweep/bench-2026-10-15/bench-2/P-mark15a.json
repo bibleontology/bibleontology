@@ -1,0 +1,109 @@
+{"passage": "B-mark15a", "verses": [
+{"ref":"Mrk.15.1",
+ "referents":[{"slot":"cl3s","choice":"w4","divine":false,"why":"Masculine plural agrees with the chief priests, who are the subject of the main verb cl0 in the same sentence (they formed the counsel, bound Jesus, led him away). cl3 carries the same subject on by a separate kai, so 'they' is the same doers.","category":"implied subject carried on through a coordinated verb"}],
+ "links":[
+  {"src":"cl0","type":"within","dst":"cl1","action":"keep","why":"The participle 'having formed a counsel' is nested in the main clause as a dependent participle.","category":"participle nested in main clause"},
+  {"src":"cl0","type":"within","dst":"cl2","action":"keep","why":"The participle 'having bound Jesus' is nested in the main clause in the same way.","category":"participle nested in main clause"},
+  {"src":"cl0","type":"then","dst":"cl3","action":"remove","why":"'then' is for a waw fused into the verb (wayyiqtol). Here the join is the separate word kai, which is 'and'.","category":"separate-word and given as and then"},
+  {"src":"cl0","type":"and","dst":"cl3","action":"add","why":"A separate kai joins two finite verbs of the same agent: they led him away, and handed him over.","category":"separate-word and"}],
+ "groups":[],
+ "none_fit":[],
+ "cant_tell":[{"what":"Whether 'they' in cl3 is the chief priests alone or the whole body named in the verse (elders, scribes, Council).","why":"The verse names the chief priests as the subject of the main verb and the others only as companions; the text does not say which of them handed Jesus over. Chose the chief priests as the grammatical subject of cl0."}]},
+
+{"ref":"Mrk.15.2",
+ "referents":[
+  {"slot":"w2","choice":"Mrk.15.1#w18","divine":true,"why":"'Him' is the object of 'questioned' in cl0. Pilate questions Jesus, the masculine singular candidate who is the person in the scene.","category":"object of a question"},
+  {"slot":"w5","choice":"Mrk.15.1#w18","divine":true,"why":"'You' inside Pilate's question is second person in someone's speech, so it is the addressee of that speech: Jesus.","category":"second person inside a quoted question"},
+  {"slot":"w14","choice":"w4","divine":false,"why":"'to him' is the addressee of the participle 'answering'. The one answered is Pilate, the questioner, masculine singular.","category":"addressee of an answer"},
+  {"slot":"w16","choice":"w4","divine":false,"why":"'You' in Jesus's reply is second person inside his speech, so it is the addressee of that speech: Pilate.","category":"second person inside a reply"}],
+ "links":[
+  {"src":"cl0","type":"and","dst":"cl1","action":"remove","why":"The question is what Pilate asked, the content of his questioning, not a separate event joined by and.","category":"speech content read as a plain and"},
+  {"src":"cl0","type":"content","dst":"cl1","action":"add","why":"cl0 is the clause of asking and cl1 is what was asked (Are you the King of the Jews?). Speech-content ruling R1.","category":"speech content"},
+  {"src":"cl1","type":"and","dst":"cl2","action":"keep","why":"The separate-word connective before the reply ties the reply to the question it answers; it is not a cause or result.","category":"reply after question"},
+  {"src":"cl2","type":"within","dst":"cl3","action":"keep","why":"The participle 'answering to him' is nested in the reply clause.","category":"participle nested in saying clause"},
+  {"src":"cl2","type":"within","dst":"cl4","action":"keep","why":"'You have said' is the object of 'he says' and is nested in it.","category":"said clause nested in saying clause"},
+  {"src":"cl2","type":"content","dst":"cl4","action":"add","why":"cl2 is the saying clause and cl4 is what Jesus said. Speech-content ruling R1 adds the content link as well as the nesting.","category":"speech content"},
+  {"src":"cl3","type":"then","dst":"cl0","action":"remove","why":"Backwards: the reply comes after the question, not before it, and cl3 is a participle inside the reply, not a narrative event.","category":"narrative link runs backwards"},
+  {"src":"cl0","type":"and","dst":"cl2","action":"add","why":"The narrative line: after Pilate questioned him (cl0), Jesus answered (cl2). The connective is separate, so and, not then.","category":"narrative line to the reply"}],
+ "groups":[
+  {"id":"turn0","kind":"turn","action":"change","members":[{"role":"frame","node":"cl0"},{"role":"part","node":"cl1"},{"role":"sender","node":"w4"},{"role":"addressee","node":"Mrk.15.1#w18"}],"divine":true,"why":"Pilate is the sender of the question and it is addressed to Jesus, so the addressee is added. Divine flag set because Jesus is the addressee.","category":"addressee of a question"},
+  {"id":"turn1","kind":"turn","action":"change","members":[{"role":"frame","node":"cl2"},{"role":"part","node":"cl4"},{"role":"sender","node":"Mrk.15.1#w18"},{"role":"addressee","node":"w4"}],"divine":true,"why":"The builder's sender w12 is not a candidate in this verse. The reply is Jesus's own speech (R2), so the sender is Jesus and the addressee is Pilate. The part is only what is said, cl4. The participle cl3 frames the reply and stays nested in cl2 by the within link, so it is removed from the parts.","category":"sender and addressee of a reply"}],
+ "none_fit":[{"where":"cl2 (the reply) against cl0 and cl1 (the question)","what":"A reply that answers a question; no link type marks an answer to a question."}],
+ "cant_tell":[]},
+
+{"ref":"Mrk.15.3",
+ "referents":[{"slot":"w2","choice":"Mrk.15.1#w18","divine":true,"why":"'Him' is the object of the accusing in cl0, so it is the accused, Jesus. The builder's choice w4 is the accuser (the chief priests) and is the subject, not the object.","category":"object of accusing"}],
+ "links":[
+  {"src":"cl2","type":"and","dst":"cl0","action":"remove","why":"This verse has no clause cl2. The builder's id belongs to the clause of the previous verse and needs its full id.","category":"link to a clause in another verse without its full id"},
+  {"src":"Mrk.15.2#cl2","type":"and","dst":"cl0","action":"add","why":"The opening kai joins this verse to Jesus's reply in the verse before, the last clause on the narrative line. Full id used because it points into an earlier verse.","category":"cross-verse and"}],
+ "groups":[],
+ "none_fit":[],
+ "cant_tell":[]},
+
+{"ref":"Mrk.15.4",
+ "referents":[
+  {"slot":"w5","choice":"Mrk.15.1#w18","divine":true,"why":"'Him' is the object of 'questioned' in cl0: Pilate questions Jesus.","category":"object of a question"},
+  {"slot":"w11","choice":"none","divine":false,"why":"'how many things' is the object of 'testify against': the charges. The candidates are people (Jesus, Pilate, the composite c8). No candidate is a charge, so none fits.","category":"object that is a thing, not a person"},
+  {"slot":"w12","choice":"Mrk.15.1#w18","divine":true,"why":"'You' inside Pilate's speech is the addressee of that speech: Jesus.","category":"second person inside a speech"},
+  {"slot":"cl2s","choice":"Mrk.15.1#w18","divine":true,"why":"The implied 'you' of 'Not answer You nothing' is second person singular inside Pilate's speech, so it is the addressee: Jesus.","category":"implied second person inside a speech"},
+  {"slot":"cl3s","choice":"Mrk.15.1#c8","divine":false,"why":"The third plural 'they' are the accusers who bring the charges. The chief priests of Mrk.15.1 are not in the candidate list; the composite c8, the Council bodies named in Mrk.15.1, is the nearest plural accuser listed.","category":"third plural accusers"}],
+ "links":[
+  {"src":"cl2","type":"within","dst":"cl3","action":"remove","why":"cl3 is a second sentence of the speech ('Look how many charges...'), not nested in 'Have you no answer?'. Both belong to the speech through content links.","category":"sentence wrongly nested in a sentence"},
+  {"src":"cl1","type":"within","dst":"cl2","action":"keep","why":"The speech is the object of the participle 'saying', nested in it.","category":"speech nested in participle of saying"},
+  {"src":"cl0","type":"within","dst":"cl1","action":"keep","why":"The participle 'saying' is nested in the main clause and describes how he questioned.","category":"participle nested in main clause"},
+  {"src":"cl0","type":"then","dst":"cl0","action":"remove","why":"A clause cannot be the next event after itself, and no later narrative event follows in this verse.","category":"self-link"},
+  {"src":"Mrk.15.3#cl0","type":"and","dst":"cl0","action":"add","why":"The opening de joins this to the chief priests' accusing in the verse before. Across verses the then type is not used; the separate connective is and, with the full id.","category":"cross-verse and"},
+  {"src":"cl1","type":"content","dst":"cl2","action":"add","why":"'saying' introduces what Pilate said: 'Have you no answer?'. Speech-content ruling R1.","category":"speech content"},
+  {"src":"cl1","type":"content","dst":"cl3","action":"add","why":"'saying' also introduces the second sentence of the same speech.","category":"speech content"}],
+ "groups":[
+  {"id":"turn0","kind":"turn","action":"change","members":[{"role":"frame","node":"cl1"},{"role":"part","node":"cl2"},{"role":"part","node":"cl3"},{"role":"sender","node":"w2"},{"role":"addressee","node":"Mrk.15.1#w18"}],"divine":true,"why":"The builder's frame was cl0, the main verb, and its part was cl1, the participle 'saying' itself. The clause that introduces the speech is cl1, and what is said is cl2 and cl3, so the frame moves to cl1 and the parts are the two sentences. cl0 stays outside the turn. Sender is Pilate (w2); addressee is Jesus, so the group is divine.","category":"speech frame and parts"}],
+ "none_fit":[
+  {"where":"cl0, 'again' (palin)","what":"Repetition of Pilate's earlier questioning (Mrk.15.2#cl0). No link type marks 'again'."},
+  {"where":"cl3, 'See how many...' (ide)","what":"An exclamation of notice ('look'), not a command to anyone; no group kind for a bare exclamation."}],
+ "cant_tell":[{"what":"Who 'they' in cl3 are: the accusers of Mrk.15.3, who are not in the candidate list.","why":"The chief priests are named in Mrk.15.1 but are not offered as a candidate here, and c8 is the only plural accuser listed. Chose c8 for now."}]},
+
+{"ref":"Mrk.15.5",
+ "referents":[],
+ "links":[
+  {"src":"cl0","type":"result","dst":"cl1","action":"keep","why":"The infinitive clause with hoste (so as to) states what the silence brings about, Pilate's amazement. That is a result, not a plain and.","category":"result of an act"},
+  {"src":"cl0","type":"then","dst":"cl0","action":"remove","why":"Self-link: no later event in this verse follows the clause itself.","category":"self-link"}],
+ "groups":[],
+ "none_fit":[{"where":"cl0, the opening de ('but') that contrasts with Pilate's question in Mrk.15.4","what":"A contrast across verses. The contrast type is mid-verse only, so this has no link type."}],
+ "cant_tell":[]},
+
+{"ref":"Mrk.15.6",
+ "referents":[
+  {"slot":"w4","choice":"none","divine":false,"why":"'to them' is the people, the crowd. The crowd is first named in Mrk.15.8, not in an earlier verse or in this one, so no candidate fits.","category":"people not yet named"},
+  {"slot":"w7","choice":"w6","divine":false,"why":"'whom' is the relative pronoun of the prisoner: masculine singular, matching the one prisoner (w6) in this verse.","category":"relative pronoun with its antecedent"},
+  {"slot":"cl0s","choice":"Mrk.15.5#w9","divine":false,"why":"'he used to release' has Pilate as subject, the one the custom belongs to. Pilate is named in Mrk.15.5.","category":"implied subject of a custom"},
+  {"slot":"cl1s","choice":"none","divine":false,"why":"'they requested' is the same people as 'to them': the crowd, which is not a candidate here.","category":"people not yet named"}],
+ "links":[
+  {"src":"cl0","type":"then","dst":"cl0","action":"remove","why":"Self-link: a clause is not the next event after itself.","category":"self-link"},
+  {"src":"cl0","type":"within","dst":"cl1","action":"add","why":"The relative clause 'whom they requested' is nested in the noun phrase 'one prisoner' inside cl0.","category":"relative clause inside noun phrase"}],
+ "groups":[],
+ "none_fit":[{"where":"cl0, the opening de ('Now')","what":"A background aside about Pilate's custom before the next event. The only cross-verse link is and, which does not mark background."}],
+ "cant_tell":[{"what":"Who the people are in this verse.","why":"The Greek gives only pronouns for them. The crowd is named only in Mrk.15.8, so both pronouns are left as none."}]},
+
+{"ref":"Mrk.15.7",
+ "referents":[{"slot":"w9","choice":"w8","divine":false,"why":"'who' is masculine plural (hoitines), so it refers to the masculine plural 'rebels' (w8), not to the singular Barabbas.","category":"relative pronoun with plural agreement"}],
+ "links":[
+  {"src":"cl0","type":"within","dst":"cl1","action":"keep","why":"'the one called Barabbas' is a participial description nested in the noun phrase of cl0.","category":"participle describing a noun"},
+  {"src":"cl0","type":"and","dst":"cl0","action":"remove","why":"Self-link: a clause cannot be joined by and to itself.","category":"self-link"},
+  {"src":"cl0","type":"within","dst":"cl2","action":"add","why":"The relative clause 'who had committed murder' is nested in the noun phrase 'the rebels' inside cl0.","category":"relative clause inside noun phrase"}],
+ "groups":[],
+ "none_fit":[],
+ "cant_tell":[]},
+
+{"ref":"Mrk.15.8",
+ "referents":[
+  {"slot":"w8","choice":"w3","divine":false,"why":"'for them' is a plural dative: the people who receive the custom. The crowd (w3) is singular in form but collective, so plural agreement is by sense.","category":"collective noun with plural pronoun"},
+  {"slot":"cl3s","choice":"Mrk.15.5#w9","divine":false,"why":"'he did' is the doer of the custom: Pilate, whose custom it was (Mrk.15.6). The builder's w5 is not a candidate here.","category":"implied subject of a custom"}],
+ "links":[
+  {"src":"cl0","type":"within","dst":"cl1","action":"keep","why":"The participle 'having gone up' is nested in the main clause, describing the crowd's movement.","category":"participle nested in main clause"},
+  {"src":"cl0","type":"within","dst":"cl2","action":"keep","why":"The infinitive 'to ask' completes 'began', so it is the object of the verb, not a purpose.","category":"infinitive object of began"},
+  {"src":"cl2","type":"as","dst":"cl3","action":"keep","why":"Kathos (just as) introduces a clause comparing the request with Pilate's usual practice; the clause is nested in the infinitive's manner.","category":"comparison clause"},
+  {"src":"cl0","type":"and","dst":"cl0","action":"remove","why":"Self-link: a clause cannot be joined by and to itself.","category":"self-link"}],
+ "groups":[],
+ "none_fit":[],
+ "cant_tell":[]}
+]}

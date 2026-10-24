@@ -1,0 +1,25 @@
+{
+ "ref": "Rom.3.1",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

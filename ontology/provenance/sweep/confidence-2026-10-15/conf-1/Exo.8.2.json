@@ -1,0 +1,78 @@
+{
+ "ref": "Exo.8.2",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'his hand' belongs to the subject of the verb, Aaron.",
+   "category": "possessive of the clause's subject"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "third feminine singular 'covered' takes the feminine singular frogs (w12) as subject.",
+   "category": "implied subject with feminine agreement"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a bare id naming a clause of the previous verse; 'then' does not cross verses.",
+   "category": "cross-verse then, bare id"
+  },
+  {
+   "src": "cl0",
+   "type": "fulfils",
+   "dst": "Exo.8.1#cl2",
+   "action": "add",
+   "confidence": "medium",
+   "why": "Aaron stretches out his hand, repeating the verb of the earlier command 'stretch out your hand' as a report that it was carried out. The text has no pro-form, so medium.",
+   "category": "report that a command was carried out"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "confidence": "high",
+   "why": "the frogs' coming up is what the stretching out brings about, so the link is a result, not a plain 'and then'.",
+   "category": "act and its result"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "medium",
+   "why": "the stretching out of the hand brings about the frogs' coming up.",
+   "category": "act and its result"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "confidence": "high",
+   "why": "a wayyiqtol continues the narrative line: the frogs came up and covered the land.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether the frogs' coming up (cl1) fulfils the earlier command to bring them up (Exo.8.1 cl3)",
+   "why": "its verb repeats the command's root, but the report is not a pro-form summary, so the rule for a clause repeating a command's verb does not clearly apply here."
+  }
+ ]
+}

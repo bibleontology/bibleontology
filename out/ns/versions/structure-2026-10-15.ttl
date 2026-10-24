@@ -1,0 +1,1026 @@
+@prefix bos: <https://bibleontology.org/ns/structure#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bos:Action a owl:Class ;
+    rdfs:label "Action (a content that is a doing)" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Content ;
+    skos:definition "A content whose predicate is something done: 'me lie down in green pastures' (Psa 23:2), 'the frogs go up' (Exo 8:2). A TYPE — what the content is, wherever it stands." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "proposed" .
+
+bos:ActionEffect a owl:Class ;
+    rdfs:label "Action effect" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Content ;
+    owl:deprecated true ;
+    skos:definition "Proposed 2026-09-25 as a kind of Content: the effect of a causative that is itself an action ('he makes me LIE DOWN', Psa 23:2)." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "withdrawn" .
+
+bos:Address a owl:Class ;
+    rdfs:label "Address (a turn to 'you')" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Communication ;
+    skos:definition "A run of clauses marked second person — verbs, pronouns, suffixes — outside any quoted speech, inside a Writing: the writer turning to address someone. Nested in the Writing as one of its parts; sender the writer. Built for the Psalms." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:CauseEffect a owl:Class ;
+    rdfs:label "Cause and effect" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    owl:deprecated true ;
+    skos:definition "The first name for Gen 1:3's pair. Withdrawn because the text does not say the light came BECAUSE of the command; that is a reading." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "withdrawn" .
+
+bos:Context a owl:Class ;
+    rdfs:label "Context-setting clause and its scope" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "A clause that sets the context in which following clauses are read — 'the LORD is my shepherd' for Psalm 23:1-4 — and the span it governs. 'I shall not want' is read in its light (because the LORD is my shepherd, I lack nothing), though nothing connects them in the Hebrew." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "proposed" .
+
+bos:Directive a owl:Class ;
+    rdfs:label "Directive" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Clause ;
+    skos:definition "A clause said with directive force — it tells someone to do or be something: an imperative, a jussive ('let there be light'), a cohortative ('let us'), a Greek imperative or hortatory subjunctive. The head of an Imperative group is one." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Episode a owl:Class ;
+    rdfs:label "Episode" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "A run of clauses one rung above the sentence. Hypothesis: וַיְהִי + a time phrase opens one (27.9% open a Berean section against 11.5% for other wayyiqtol). A signal, not a rule." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "proposed" .
+
+bos:HeadQualifier a owl:Class ;
+    rdfs:label "Head and qualifier" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "A noun phrase as its head plus what qualifies it: 'the houses OF your officials'. MACULA marks it NPofNP 54,333 times; we flatten it to one node." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "proposed" .
+
+bos:Illustration a owl:Class ;
+    rdfs:label "Illustration (a symbolic assertion)" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Assertion ;
+    skos:definition "An assertion made through an image rather than concretely: 'the LORD is my shepherd'. A specialization of assertion — the claim is true, but by likeness: the LORD is not a shepherd, and says more by being called one." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "proposed" .
+
+bos:ImperativeBasis a owl:Class ;
+    rdfs:label "Imperative, and its basis" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    owl:deprecated true ;
+    skos:definition "A command and the reason the text gives for it, as its own class." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "withdrawn" .
+
+bos:ImperativeWarning a owl:Class ;
+    rdfs:label "Imperative, and the consequence of refusing it" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    owl:deprecated true ;
+    skos:definition "A command, then a condition whose protasis is that same command REFUSED — the command's own verb under 'refuse' (מָאֵן) or 'not' — and whose apodosis is what will follow. The group keeps the imperative's force: a warning attached to a command is still a command, as a basis is." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "withdrawn" .
+
+bos:NestedCommand a owl:Class ;
+    rdfs:label "State nested in its command" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    owl:deprecated true ;
+    skos:definition "'There was light' drawn as a child of 'let there be light'." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "withdrawn" .
+
+bos:Psalmist a owl:Class ;
+    rdfs:label "Psalmist" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Author ;
+    skos:definition "The Author of a psalm. One per psalm, headed or not. The psalm's 'I' and 'my', outside any quoted speech, point to the psalmist; the psalmist resolves to the heading's name at the Writing level." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Question a owl:Class ;
+    rdfs:label "Question" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Clause ;
+    skos:definition "A clause said with interrogative force: it asks. Marked in the Hebrew by an interrogative word (מִי 'who', מָה 'what / why', אֵיךְ 'how', אַיֵּה 'where', לָמָּה / מַדּוּעַ 'why') or the prefixed interrogative הֲ. Derived from form in the clean builder's stage S2 (docs/BUILDER-DESIGN.md). Before it, the graph had no question force at all: every one of 2,213 interrogatives stood in a clause marked assertion (invariants baseline, 2026-09-27)." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "proposed" .
+
+bos:State a owl:Class ;
+    rdfs:label "State (a content that is a condition)" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Content ;
+    skos:definition "A TYPE; in the effect role of `causes` it is what was called a state effect. Sibling of Action." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "proposed" .
+
+bos:StateEffect a owl:Class ;
+    rdfs:label "State effect" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Content ;
+    owl:deprecated true ;
+    skos:definition "Proposed 2026-09-25 beside ActionEffect: the effect of a causative that is a condition." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "withdrawn" .
+
+bos:Turn a owl:Class ;
+    rdfs:label "Speech turn" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Communication ;
+    skos:definition "A communication by speech, however many verses it runs. Open at the end of a verse that holds a speech and does not end on a narrative wayyiqtol outside it; continued by each following verse that does not open with a narrative wayyiqtol. TURNS NEST: the outermost is opened by a narrated saying that sits inside no speech; each saying inside its speech opens the next turn in, which is a `part` of the one around it. Each turn has a mode (performed / commanded) and, where the text gives them, a sender and an addressee. Continuing verses are parts of the innermost turn." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:action a owl:ObjectProperty ;
+    rdfs:label "action" ;
+    rdfs:domain bos:ActionState ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:addressee a owl:ObjectProperty ;
+    rdfs:label "addressee" ;
+    rdfs:domain bos:Communication ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "To whom: the saying's `pp: to`. Left empty where the text does not say." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is addressed to {dst}" ;
+    bos:status "built" .
+
+bos:adv a owl:ObjectProperty ;
+    rdfs:label "adverbial" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:agent_act a owl:ObjectProperty ;
+    rdfs:label "act" ;
+    rdfs:domain bos:AgentActs ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:aim a owl:ObjectProperty ;
+    rdfs:label "aim" ;
+    rdfs:domain bos:Imperative ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, so that {dst}" ;
+    bos:status "built" .
+
+bos:and a owl:ObjectProperty ;
+    rdfs:label "and" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A separate-word waw. Where the waw is fused into the verb (wayyiqtol, weqatal) the relation is 'and then' instead. Where it joins a command to a change of person, it is 'so that'." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, and {dst}" ;
+    bos:status "built" .
+
+bos:as a owl:ObjectProperty ;
+    rdfs:label "just as" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A comparison: כְּ (כַּאֲשֶׁר 'just as') before a clause nested in this one's prepositional role. Where the compared clause is a SAYING — 'he would not listen to them, JUST AS THE LORD HAD SAID' (Exo 8:15, BSB 8:19) — the edge carries `as_said`: the text declares the action the fulfilment of an earlier word. Which earlier word is not yet linked." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, just as {dst}" ;
+    bos:status "built" .
+
+bos:asserts a owl:ObjectProperty ;
+    rdfs:label "asserts" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Content ;
+    skos:definition "A clause says a content, with a force. The force is on this edge, not on the content, so one content can be commanded in one clause and reported in the next." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} asserts {dst}, with force {force}" ;
+    bos:status "built" .
+
+bos:aux a owl:ObjectProperty ;
+    rdfs:label "auxiliary" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Word ;
+    bos:layer "Language" ;
+    bos:status "built" .
+
+bos:basis a owl:ObjectProperty ;
+    rdfs:label "basis" ;
+    rdfs:domain bos:Imperative ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, because {dst}" ;
+    bos:status "built" .
+
+bos:because a owl:ObjectProperty ;
+    rdfs:label "because" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "The text states a reason (כִּי, יַעַן, עֵקֶב). The edge runs from what is explained to its reason." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} because {dst}" ;
+    bos:status "built" .
+
+bos:but_rather a owl:ObjectProperty ;
+    rdfs:label "but rather / except" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "CORRECTION: כִּי אִם after a negative clause — 'not X but Y', and its exception sense, 'none ... except'. 'This one will not be your heir, but one who comes from your own body' (Gen 15:4); 'he must not eat ... unless he has bathed' (Lev 22:6); 'the Lord GOD does nothing without revealing his plan' (Amo 3:7). Read before as 'because' (כִּי alone), which reversed it." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "not {src}, but rather / except {dst}" ;
+    bos:status "built" .
+
+bos:causes a owl:ObjectProperty ;
+    rdfs:label "causes" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Content ;
+    skos:definition "A causative verb (Hebrew hiphil) holds two events: the causing, and the event caused. The outer content keeps the causer and the verb; the INNER content has the object of the causing as its subject, with the places and manner — 'he makes [me lie down in green pastures]'. Only where the root also occurs in the plain stem (qal), so a hiphil-only verb ('strike', 'save') is not split." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} causes {dst}" ;
+    bos:status "built" .
+
+bos:clause_link a owl:ObjectProperty ;
+    rdfs:label "clause to clause" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "How one clause stands to another. Rule 45: a connective attaches to the nearest candidate, and the other candidate is kept on the edge as alt_host." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:command a owl:ObjectProperty ;
+    rdfs:label "command" ;
+    rdfs:domain bos:Imperative ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} is the command of {src}" ;
+    bos:status "built" .
+
+bos:conceded a owl:ObjectProperty ;
+    rdfs:label "even though" ;
+    rdfs:domain bos:Concession ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:condition a owl:ObjectProperty ;
+    rdfs:label "condition" ;
+    rdfs:domain bos:Conditional ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:consequence a owl:ObjectProperty ;
+    rdfs:label "consequence" ;
+    rdfs:domain bos:Conditional ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:content a owl:ObjectProperty ;
+    rdfs:label "says" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "A speech clause and what was said. The said clause is embedded: it is inside the speaking, not next on the narrative line." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} says: {dst}" ;
+    bos:status "built" .
+
+bos:contrast a owl:ObjectProperty ;
+    rdfs:label "but / however" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "The text says 'but': אוּלָם or אֶפֶס כִּי before a clause — words that are a clause connective and nothing else. 'but let us fight them in the plain' (1Ki 20:23), 'however, the city was formerly named Luz' (Gen 28:19). NOT רַק / אַךְ / אֲבָל: MACULA reads them mostly as focus on a phrase ('ONLY the high places'), and at clause level they are 'but', 'only' or 'surely' — Psa 23:6 opens with אַךְ, 'SURELY goodness'. Whether a contrast is also a concession is a reading. Mid-verse only, as every backward link: a verse-opening 'but' has no host in its verse." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, but {dst}" ;
+    bos:status "built" .
+
+bos:described_as a owl:ObjectProperty ;
+    rdfs:label "who" ;
+    rdfs:domain bos:Descriptions ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:describing a owl:ObjectProperty ;
+    rdfs:label "describing" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A bare participle clause — no subject, no conjunction, not substantival — right after a finite clause, agreeing with that clause's subject: it describes that subject as it acts, or who it is, and does not stand as its own assertion. 'all of it wails, GOING DOWN IN WEEPING' (Isa 15:3); 'they ate the feast, SACRIFICING peace offerings' (2Ch 30:22); 'hear this, O leaders, who LOATHE justice' (Mic 3:9)." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, {dst} (describing its subject)" ;
+    bos:status "built" .
+
+bos:effect a owl:ObjectProperty ;
+    rdfs:label "effect" ;
+    rdfs:domain bos:Imperative ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "What the commanded act brings about: an imperative, then waw + a third-person weqatal. 'Stretch out your staff and strike the dust of the earth, AND IT WILL BECOME gnats' (Exo 8:12, BSB 8:16). The cause is the whole run of commands joined by 'and' before it, so they are all the group's commands. Distinct from `aim` (waw + jussive: what is intended) and from the proposed `promise` (what obeying earns). The same ROLE name as the effect in `causes` — one role, two relations (types and roles kept apart)." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, and so {dst}" ;
+    bos:status "built" .
+
+bos:elaborates a owl:ObjectProperty ;
+    rdfs:label "elaborates" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A clause giving the detail of an earlier one. Built where it is structural: after 'they did so', the narrative clauses that repeat a fulfilled command's VERB are the detail of what was done — 'Aaron stretched out his hand with his staff and struck the dust' (Exo 8:13) elaborates 'this they did', and each fulfils its own command (stretch out, strike, 8:12)." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is the detail of {dst}" ;
+    bos:status "built" .
+
+bos:ellipsis a owl:ObjectProperty ;
+    rdfs:label "ellipsis" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    bos:layer "Language" ;
+    bos:status "built" .
+
+bos:failed_result a owl:ObjectProperty ;
+    rdfs:label "and so — failed" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A specialization of `result`: the outcome of an attempt, where the outcome is that the attempt's purpose was NOT achieved. 'The magicians did so by their secret arts TO BRING FORTH the gnats, AND NOT THEY COULD' (Exo 8:14, BSB 8:18). Marked by an attempt that has a `purpose`, then 'and' + negated יָכֹל 'be able'. A pattern asking for results matches it (PRINCIPLES 47); one asking for failure asks for it alone." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, and it failed: {dst}" ;
+    bos:status "built" .
+
+bos:flat a owl:ObjectProperty ;
+    rdfs:label "flat layer" ;
+    rdfs:domain bos:Word ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Word ;
+    owl:deprecated true ;
+    skos:definition "The layer before clauses existed: an edge from subject to object labelled with the verb, plus `references`, `possessed_by`, `apposition`, `adjunct` and `of`. The verb as a label is why mood had nowhere to live, and its 'nearest agreeing clause subject' makes Pharaoh remove the frogs (Exo 8:4) and Moses bring them (Exo 8:8). Everything it says, the clause layer says better or should. Queue item 9." ;
+    bos:layer "Words" ;
+    bos:status "superseded" .
+
+bos:frame a owl:ObjectProperty ;
+    rdfs:label "the saying" ;
+    rdfs:domain bos:Communication ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is said in {dst}" ;
+    bos:status "built" .
+
+bos:fulfils a owl:ObjectProperty ;
+    rdfs:label "fulfils" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "A report that a command was carried out, where the text SAYS so with a pro-form: a narrative 'they did so' (עָשָׂה + כֵּן) or 'and it was so' (הָיָה + כֵּן), not negated, with no named subject, after a command. Points at the nearest preceding command in the book (not a cohortative), or at its collection. Its 'so' refers to that command unit, and its implicit 'they' to the ones the command chain was addressed to (walked up through `content`): Exo 8:13 'they did so' → Moses and Aaron, the collection 'stretch out your staff and strike the dust'. Plan 1.19. THEN, MEMBER BY MEMBER: the narrative clauses after the formula that repeat a command's verb fulfil THAT command and elaborate the formula ('Aaron stretched out ... struck'); one that repeats the command's EFFECT verb fulfils the effect ('the gnats were on man and beast' ← 'it will become gnats'), and is the `result` of the acts before it — the command's cause and effect, carried into the report. An action-state pair whose state is now a known fulfilment is removed: matched by lemma alone, it had joined the LORD's saying to Aaron's acts." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} fulfils {dst}" ;
+    bos:status "built" .
+
+bos:group_subject a owl:ObjectProperty ;
+    rdfs:label "subject of the collection" ;
+    rdfs:domain bos:Group ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} is the subject of every line of {src}" ;
+    bos:status "built" .
+
+bos:holds_anyway a owl:ObjectProperty ;
+    rdfs:label "still" ;
+    rdfs:domain bos:Concession ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:if a owl:ObjectProperty ;
+    rdfs:label "if" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "The condition is the destination and what it conditions is the source. A Hebrew condition precedes what it governs, so the host is the NEXT clause that is not an infinitive complement; the clause before is kept as alt_host." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, if {dst}" ;
+    bos:status "built" .
+
+bos:imperative_qualifier a owl:ObjectProperty ;
+    rdfs:label "qualifier of a command" ;
+    rdfs:domain bos:Imperative ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "The extension point of Imperative: each qualifier type is a member relation, and a new one is added here rather than as a new class." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:io a owl:ObjectProperty ;
+    rdfs:label "indirect object" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:its_ground a owl:ObjectProperty ;
+    rdfs:label "because" ;
+    rdfs:domain bos:Concession ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:layer a owl:AnnotationProperty ;
+    rdfs:label "the layer a term belongs to" .
+
+bos:lest a owl:ObjectProperty ;
+    rdfs:label "lest" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, lest {dst}" ;
+    bos:status "built" .
+
+bos:likewise a owl:ObjectProperty ;
+    rdfs:label "did likewise" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "Someone else doing the same as a deed just done, where the text says so with כֵּן 'so, thus': 'the magicians did so by their secret arts' (Exo 8:14, BSB 8:18) → Aaron's deed (8:13). A narrative 'did so' with a NAMED subject that is not doing what it was commanded — imitation, not fulfilment. Linked only to a deed done after the latest command, so a named person carrying out a request is not read as copying. it probably also belongs a level higher.'" ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} does the same as {dst}" ;
+    bos:status "built" .
+
+bos:line a owl:ObjectProperty ;
+    rdfs:label "line" ;
+    rdfs:domain bos:Parallel ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:member a owl:ObjectProperty ;
+    rdfs:label "member" ;
+    rdfs:domain bos:Composite ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "One of the words in a coordination — or, in a minted composite, one of the participants it gathers (Exo 8:13: Moses, Aaron)." ;
+    bos:layer "Words" ;
+    bos:status "built" .
+
+bos:member_of_group a owl:ObjectProperty ;
+    rdfs:label "group member" ;
+    rdfs:domain bos:Group ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A group's members, each with its position (`order`). The member's role in the group is the edge's name." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:motive a owl:ObjectProperty ;
+    rdfs:label "for the sake of" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "What an act is done FOR: its motive, marked by the text with לְמַעַן before a noun — 'he guides me in paths of righteousness FOR THE SAKE OF his name' (Psa 23:3), 'for the sake of the fifty' (Gen 18:24). A reading ('motivation') enters as a kind only where the text marks it; לְמַעַן is that mark. Before a CLAUSE the same word is 'so that', a purpose, and is not this." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is done for the sake of {dst}" ;
+    bos:status "built" .
+
+bos:neg a owl:ObjectProperty ;
+    rdfs:label "negation" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Word ;
+    skos:definition "The negative of a clause — לֹא 'not', אַל 'do not', אַיִן 'there is no'; Greek οὐ, μή and kin. Part of the content KEY by lemma, so 'I lack' and 'I do not lack' are different contents, and the content carries `polarity: negative`." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is negated by {dst}" ;
+    bos:status "built" .
+
+bos:next a owl:ObjectProperty ;
+    rdfs:label "next (text order)" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "The ORDERED CHAIN: each clause to the one after it in text order, across verse boundaries, within a book. An ordering, not a relation of meaning — flagged `order_link`, never `clause_link`, so no rule follows it as a relation and no clause counts as joined because of it. What a pronoun walks back up to find its referent." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} comes after {src}" ;
+    bos:status "built" .
+
+bos:o a owl:ObjectProperty ;
+    rdfs:label "object" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} is the object of {src}" ;
+    bos:status "built" .
+
+bos:o2 a owl:ObjectProperty ;
+    rdfs:label "second object" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:or a owl:ObjectProperty ;
+    rdfs:label "or" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, or {dst}" ;
+    bos:status "built" .
+
+bos:p a owl:ObjectProperty ;
+    rdfs:label "predicate" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "The predicate of a verbless clause: 'your word is A LAMP'." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} says its subject is {dst}" ;
+    bos:status "built" .
+
+bos:part a owl:ObjectProperty ;
+    rdfs:label "part of the communication" ;
+    rdfs:domain bos:Communication ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "What a communication contains: a nested communication (the speech inside it), or the highest unit of a continuing verse — a grouping (if/then, imperative with qualifiers, parallel pair) where a root clause heads one, otherwise the clause." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} is part of {src}" ;
+    bos:status "built" .
+
+bos:participant a owl:ObjectProperty ;
+    rdfs:label "participant" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "The roles MACULA assigns inside a clause. The content is the hub; each role is an edge from it." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:possessor a owl:ObjectProperty ;
+    rdfs:label "whose" ;
+    rdfs:domain bos:Unit ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "Whose a noun is, where a possessive suffix says and the referent can be named. Three rules: (1) in a psalm's own voice, outside quoted speech, a first-person singular 'my' is the PSALMIST's — the voice, not David directly (622). (2) Inside a psalm's address, 'your' is the addressee's (568). (3) A third-person 'his' / 'their' is its OWN CLAUSE'S SUBJECT, where that subject is known and agrees — 'Abraham fell on his face', 'for his name's sake' (Psa 23:3) → the LORD — except for a noun inside the subject's own phrase ('his choicest young men'); held otherwise (1,927 resolved, 12 of 16 in a corpus sample). WRONG TURN kept: the subject pronoun's rule applied to possessives (any one agreeing referent in the leading text) was 3 of 16 — 'their eyes' → heart, 'their brothers' → instruments: a possessive's candidates include every thing, and animacy is meaning's." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is {dst}'s" ;
+    bos:status "built" .
+
+bos:pp a owl:ObjectProperty ;
+    rdfs:label "prepositional" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "A participant through a preposition, which is kept: 'TO the LORD' and 'BEFORE the LORD' are different relations." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is {prep_gloss} {dst}" ;
+    bos:status "built" .
+
+bos:prep_object a owl:ObjectProperty ;
+    rdfs:label "object" ;
+    rdfs:domain bos:Word ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "In a VERBLESS clause whose predicate is a prepositional phrase, the preposition does the verb's work and is the predicate node; this links it to its object. 'you [are] WITH me' (Psa 23:4): you ← is (no verb) → with (עִמָּד) → me. With a verb, the preposition stays on its role's edge ('leads me BESIDE waters'): there the verb is the claim." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} {dst}" ;
+    bos:status "built" .
+
+bos:purpose a owl:ObjectProperty ;
+    rdfs:label "so that" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "What an action is FOR. Two forms. (1) A command, then waw + jussive / cohortative / yiqtol in a DIFFERENT person. Looks forward, where 'because' looks back. A cohortative after a jussive is excluded: that is a promise. Not where the infinitive is the main verb's COMPLEMENT — after be able, do again, begin, finish, be willing, refuse, seek, know how, cease, hurry ('if you refuse to let them go', Exo 7:27) — nor after a speech or intention verb, where it is what was said ('Solomon purposed to build'); nor after הָיָה / נָתַן, which the form does not settle; nor the quotative לֵאמֹר. 2,180 built. MEASURED blind by two DeepSeek runs agreeing case for case: 10 of 16 before the speech exclusion, 10 of 13 of that sample after; the rest explain HOW rather than what for ('dealt wondrously') — meaning, not form." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, so that {dst}" ;
+    bos:status "built" .
+
+bos:qualifier a owl:ObjectProperty ;
+    rdfs:label "qualifier" ;
+    rdfs:domain bos:Unit ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Word ;
+    skos:definition "HEAD AND QUALIFIER inside a phrase: each dependent MACULA attaches to a head, typed by how (`rel`) — of (NPofNP: pastures OF grass), attribute (NpAdjp: a CLEAN heart), prep (NpPp: waters OF rest), quantity (QuanNP: ALL the earth), number (SEVEN years). Walked down from each role's head, recursively, so the head stays what the clause is about and everything else qualifies it. The content key stays the heads." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is qualified by {dst}" ;
+    bos:status "built" .
+
+bos:reads a owl:AnnotationProperty ;
+    rdfs:label "how a relation reads as a sentence" .
+
+bos:refers_to a owl:ObjectProperty ;
+    rdfs:label "refers to" ;
+    rdfs:domain bos:Word ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "Who (or what) a pronoun or pro-form is: 'he' (Psa 23:2) is the LORD (23:1). Predicates, headings, pronouns and the psalm's voice are not referents; a divine name is singular AND masculine, since its verbs are (left without a gender it agreed with 'she': Pro 9:2 'she has prepared her meat', Wisdom, → the LORD; 49 feminine pronouns → a divine name before, 14 after, all rule 2's; 2026-09-26); a resolved pronoun's referent stays in the leading text. A PLURAL 'they' is held (see known_fault). (2) In a psalm's own voice, an implicit 'you' inside an address is that address's addressee: God by default, or a vocative beside the clause ('Bless the LORD, O my soul', Psa 103:1). An EXPLICIT 'you' (אַתָּה, a pronoun word) is resolved the same way — 'YOU are with me' (Psa 23:4) was left out because the rule read only the 'you' a verb carries (2026-09-26). A FEMININE 'you' or 'your' is not given a divine addressee — 'why are you downcast, O my soul' (Psa 42:12) addresses the soul — and is held (12 + 14; 2 feminine → divine remain, Psa 16:2 and 137:8). Known fault, found by the acts-of-one-agent sample: the God default misfires in calls to worship (105:1 'give thanks to the LORD'), in oracles (2:9 'you will break them'), and where a new vocative takes over (103:22) — P-2026-09-26-21. (3) WITHDRAWN 2026-09-25: 'so' in a fulfilment was a pronoun pointing at the command. (4) And its implicit 'they' is the ones that command chain was addressed to, walked up through `content` — 'they did so' (Exo 8:13) → Moses and Aaron, a minted composite. Rules 3 and 4 resolve by STRUCTURE, not by candidates, so they apply to plurals. (5) A clause that fulfils one command of a collection has, as its implicit subject, that command's actor: 'he struck' (Exo 8:13) fulfils 'strike', whose actor is Aaron — held by rule 1 (Aaron, Moses and the LORD all agree), resolved by the fulfilment. 10 resolved, 9 right — the miss is Psa 22:15, where the heart itself is the subject ('my heart ... it melted'). (6) The implicit subject of a command's EFFECT that agrees with the command's object is that object: 'strike the dust ... and it will become gnats' (Exo 8:12) → the dust; 4 in the corpus, 4 right. He weighed the pray-er as a second referent and set it above the structure graph, since the text does not state it." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is {dst}" ;
+    bos:status "built" .
+
+bos:resolves_to a owl:ObjectProperty ;
+    rdfs:label "resolves to" ;
+    rdfs:domain bos:Author ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "Who fills a voice, as the highest level states it — the psalm's heading. Held lightly: whoever prays the psalm takes up the voice." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} is, at the top, {dst}" ;
+    bos:status "built" .
+
+bos:result a owl:ObjectProperty ;
+    rdfs:label "and so" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A command and what it brings about: an imperative, then waw + a third-person weqatal (Exo 8:12, 'strike the dust ... and it will become gnats'). The clause-to-clause link; in the Imperative group the same clause is the `effect`. Was read as a plain 'and'." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, and so {dst}" ;
+    bos:status "built" .
+
+bos:s a owl:ObjectProperty ;
+    rdfs:label "subject" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} is the subject of {src}" ;
+    bos:status "built" .
+
+bos:sender a owl:ObjectProperty ;
+    rdfs:label "sender" ;
+    rdfs:domain bos:Communication ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "Who communicates it: the saying's stated subject, or the speaker inferred for it; for a commanded speech in the second person, the addressee of the enclosing communication ('and YOU shall say to him' — Moses)." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} communicates {src}" ;
+    bos:status "built" .
+
+bos:sequence a owl:ObjectProperty ;
+    rdfs:label "and then" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "The next event where the 'and' is inside the verb. A wayyiqtol continues the narrative line — the nearest clause before it that is not inside a speech; a weqatal continues whatever it follows. Within a verse only: across verses is the episode rung." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, and then {dst}" ;
+    bos:status "built" .
+
+bos:speaker a owl:ObjectProperty ;
+    rdfs:label "speaker" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Unit ;
+    skos:definition "Who says a speech clause that names no speaker. Always inferred, by alternation between the last two to take a turn, with embedded speech excluded; declines when fewer than two have spoken." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} speaks {src}" ;
+    bos:status "built" .
+
+bos:state a owl:ObjectProperty ;
+    rdfs:label "state" ;
+    rdfs:domain bos:ActionState ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:status a owl:AnnotationProperty ;
+    rdfs:label "built, proposed, withdrawn or superseded, as the term stands" .
+
+bos:tail a owl:ObjectProperty ;
+    rdfs:label "tail" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Word ;
+    bos:layer "Language" ;
+    bos:status "built" .
+
+bos:that a owl:ObjectProperty ;
+    rdfs:label "that" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "The clause is WHAT is known, seen, heard or said: the object of the verb, not a reason for it. כִּי after יָדַע, רָאָה, שָׁמַע, אָמַר, זָכַר, נָגַד, בִּין, שָׁבַע." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} — that {dst}" ;
+    bos:status "built" .
+
+bos:therefore a owl:ObjectProperty ;
+    rdfs:label "therefore" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}; therefore {dst}" ;
+    bos:status "built" .
+
+bos:though a owl:ObjectProperty ;
+    rdfs:label "even though" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "Concession: גַּם כִּי. Like a condition, it precedes what it qualifies and attaches forward." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, even though {dst}" ;
+    bos:status "built" .
+
+bos:topic a owl:ObjectProperty ;
+    rdfs:label "topic" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Word ;
+    skos:definition "Greek: a constituent fronted as what the clause is about." ;
+    bos:layer "Language" ;
+    bos:status "built" .
+
+bos:undecided a owl:ObjectProperty ;
+    rdfs:label "undecided" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A connective the text carries whose relation the FORM does not decide. The link is written with its candidate relations listed, instead of the builder guessing or leaving the word unlinked. First case: the verse-opening כִּי, 'for' (the reason for what precedes) or 'when' (the setting of what follows). The candidates come from the function-word lexicon (PRINCIPLES 41: an explicit uncertain category is cheaper than a forced decision)." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} — undecided ({candidates}) — {dst}" ;
+    bos:status "proposed" .
+
+bos:unless a owl:ObjectProperty ;
+    rdfs:label "unless" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, unless {dst}" ;
+    bos:status "built" .
+
+bos:until_limit a owl:ObjectProperty ;
+    rdfs:label "until" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "עַד before a clause: the inner clause is a LIMIT in time on the clause it sits in, not a place inside it. 'they became slaves to him and his sons UNTIL the kingdom of Persia reigned' (2Ch 36:20). Was a bare `within`." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, until {dst}" ;
+    bos:status "built" .
+
+bos:v a owl:ObjectProperty ;
+    rdfs:label "verb" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Verb ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "the predicate of {src} is {dst}" ;
+    bos:status "built" .
+
+bos:vc a owl:ObjectProperty ;
+    rdfs:label "copula" ;
+    rdfs:domain bos:Content ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Word ;
+    skos:definition "Greek: the linking verb of a copular clause." ;
+    bos:layer "Language" ;
+    bos:status "built" .
+
+bos:voice a owl:ObjectProperty ;
+    rdfs:label "voice" ;
+    rdfs:domain bos:Writing ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Author ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} is the voice of {src}" ;
+    bos:status "built" .
+
+bos:warning a owl:ObjectProperty ;
+    rdfs:label "warning" ;
+    rdfs:domain bos:Imperative ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Conditional ;
+    skos:definition "The if/then whose condition refuses the command's own verb. 16 in the Hebrew Bible by the draft rule (a floor); frogs, flies and locusts in the plague cycle." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src} — and if refused, {dst}" ;
+    bos:status "proposed" .
+
+bos:when_if_though a owl:ObjectProperty ;
+    rdfs:label "when / if / though" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A FRONTED כִּי: a כִּי clause that comes before the clause it governs, which it sets — 'when', 'if' or 'though'; the Hebrew does not say which, so the link does not. It attaches forward, as a condition does. Fronted means: in MACULA's (flat) unit, no clause stands directly before the כִּי ('and' may: וְכִי opens a new sentence) and a clause follows the כִּי clause directly. MID-VERSE ONLY: a כִּי that opens a verse is usually 'FOR ...', the reason for the verse before, and the form does not separate it from a fronted 'though' — built for both, a sample of 12 was 3 right; those (≈298) stay unlinked and are counted (`fronted_ki_verse_initial_held`). Jer 38:15 'even if I give you advice, you will not listen'; Jer 14:12's second, 'and (though) they offer, I will not accept'. A כִּי AFTER its main clause stays `because` (or `that` after a verb of perceiving). Not 'setting': the superseded flat layer has an edge of that name (Deu 11:26 'I am setting before you')." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{src}, when / if / though {dst}" ;
+    bos:status "built" .
+
+bos:within a owl:ObjectProperty ;
+    rdfs:label "inside" ;
+    rdfs:domain bos:Clause ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:range bos:Clause ;
+    skos:definition "A clause nested in another clause's role, as MACULA nests it; the edge carries the role (and preposition) it fills. 'You refuse [to let them go]' — the infinitive clause is the object of refusing. Relative clauses inside a noun phrase land here too; which kind of inside it is, the role says." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:reads "{dst} sits inside {src}" ;
+    bos:status "built" .
+
+bos:AgentActs a owl:Class ;
+    rdfs:label "Acts of one agent" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "Clauses in a row that are the acts of one agent: joined by no word, none a narrative 'and then' (wayyiqtol), each stating its subject only in its verb, and every one of those subjects resolved to the SAME referent. The agent sits on the group (`group_subject`), as a Parallel's subject does; the acts are its members (`agent_act`), in order. A run crosses verses within a chapter. Psalm 23:2-3: 'he makes me lie down / he leads me / he restores my soul / he guides me' — four acts of the LORD." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Assertion a owl:Class ;
+    rdfs:label "Assertion" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Clause ;
+    skos:definition "A clause said with assertive force — it states that something is, was or will be so — as against a directive ('let my people go') or a wish. Derived from the clause's form through the language layer (see `forces`): a wayyiqtol, qatal, yiqtol, weqatal, a predicating participle, a Greek indicative, or a verbless clause asserts. The parent of Illustration." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Composite a owl:Class ;
+    rdfs:label "Coordinated words" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Unit ;
+    skos:definition "Words joined by 'and' and taken as one participant: 'the heavens and the earth', 'Moses and Aaron'. The only noun-phrase grouping built so far; each member hangs off it by `member`. Also MINTED where the text refers to a group it never names together: the doers of a fulfilled command ('they did so', Exo 8:13 → Moses and Aaron, the addressees down the command chain), marked `minted_for`." ;
+    bos:layer "Words" ;
+    bos:status "built" .
+
+bos:Descriptions a owl:Class ;
+    rdfs:label "Descriptions of one referent" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "Consecutive 'the one who ...' clauses (participles used as nouns, each folded out of its '[he is] ...' frame) describing one referent, across verses within a chapter: Psa 103:3-5 'who forgives all your iniquity, who heals all your diseases, who redeems your life from the pit, who crowns you ..., who satisfies you with good'. The group's subject is the common referent (the first description's unstated 'he'); each description keeps its own subject node." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Parallel a owl:Class ;
+    rdfs:label "Parallel lines" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "Two lines where the second states the first's roles minus the subject, because it is the same subject. The subject sits on the group AND is carried to each line: both readings are true." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Verb a owl:Class ;
+    rdfs:label "Verb" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Unit ;
+    skos:definition "The predicate of a clause as a node, carrying its form (mood, stem, person) so it can be pointed at." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Writing a owl:Class ;
+    rdfs:label "Writing (scroll, psalm, letter)" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Communication ;
+    skos:definition "The outermost communication: the book, psalm or letter as a unit, from its writer to its readers. Every speech with no enclosing speech is a part of it, and narration is its own voice. The SENDER is set only where the text states one — 'Paul, an apostle ... to the church of God in Corinth' (1 Cor 1:1-2), a psalm's heading — and left open where it does not: the text of Exodus names no writer, so the graph names none." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:ActionState a owl:Class ;
+    rdfs:label "Action, then state" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "A command, then the same act reported as having happened. The order is the content: reversed, it would be an act followed by a command to do it." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Author a owl:Class ;
+    rdfs:label "Author (the voice of a writing)" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Unit ;
+    skos:definition "The authoring voice of a Writing — the role, as distinct from the person who fills it. The writing's own 'I' and 'my' point here; the voice resolves to a named person only at the highest level, the Writing, where the text itself names one (`resolves_to`): a psalm's heading, a letter's greeting ('Paul, an apostle'). Never by tradition. Abstract: each author voice is one of the specializations below; built for psalms so far." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Concession a owl:Class ;
+    rdfs:label "Concession: the obstacle, what holds anyway, and why" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "Where the text marks a concession (גַּם כִּי, 'even though'): the conceded clause (the obstacle), the claim that holds anyway, and — where a כִּי gives it — that claim's ground. Where the held claim is NEGATED, the response the obstacle would have brought is named by the text and denied, and the group carries it as `denied`: Psa 23:4 'even though I walk through the valley of deep darkness, I will NOT FEAR harm, for you are with me' → conceded, holds anyway, its ground; denied 'fear'. That this is an overridden motivation is the reading over the group (meaning graph). The mirror of `failed_result`: there an act's aim does not come; here a circumstance's expected outcome does not, and the text says why." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Conditional a owl:Class ;
+    rdfs:label "Condition, then consequence" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "An 'if' clause and the clause it conditions, as one node: 1 = the condition, 2 = the consequence. The group keeps the consequence's force — it is the clause that asserts or commands; the condition only says when." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Imperative a owl:Class ;
+    rdfs:label "Imperative, and what qualifies it" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "A saying's `content` points at the group, not at its first command. A group may have no qualifier: a collection alone is one. One class, extended by qualifier types rather than specialized into a class per combination — a command often carries several at once. The group keeps the command's force: qualified, it is still a command." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Communication a owl:Class ;
+    rdfs:label "Communication unit" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Group ;
+    skos:definition "Someone communicating something to someone: a SENDER, an ADDRESSEE, what is communicated (its parts), a MEDIUM (speech or writing) and a MODE (performed — it happens in the text; commanded — a directive to communicate, which may be fulfilled later or not at all). Communications NEST: every one except the outermost is a part of an enclosing communication, and the chain rolls all the way up to the writer of the scroll, the psalm or the letter. Abstract: every communication is one of the specializations below." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Word a owl:Class ;
+    rdfs:label "Word occurrence" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Unit ;
+    skos:definition "One word at one place in one verse. No identity across verses is claimed; 'the LORD' in Gen 2:4 and in Exo 8:6 are two nodes until a later pass merges them with evidence." ;
+    bos:layer "Words" ;
+    bos:status "built" .
+
+bos:Group a owl:Class ;
+    rdfs:label "Ordered pair" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Unit ;
+    skos:definition "Two units taken together, in an order that matters, with one of them the head. A group keeps its head's force. Abstract: every group is one of the specializations below." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Content a owl:Class ;
+    rdfs:label "Content" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Unit ;
+    skos:definition "What a clause says, without the force: a predicate and its participants. Two clauses that say the same thing with different force share a content KEY." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Unit a owl:Class ;
+    rdfs:label "Unit" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    skos:definition "Anything the graph holds a node for. Abstract: nothing is a bare Unit." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+bos:Clause a owl:Class ;
+    rdfs:label "Clause" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/structure> ;
+    rdfs:subClassOf bos:Unit ;
+    skos:definition "One act of saying something: a content, said with a force. The unit the rest of the structure groups." ;
+    bos:layer "Upper (language-independent)" ;
+    bos:status "built" .
+
+<https://bibleontology.org/ns/structure> a owl:Ontology ;
+    rdfs:label "Bible Ontology — structure" ;
+    dcterms:created "2026-10-11"^^xsd:date ;
+    dcterms:creator "Doug Egge" ;
+    dcterms:modified "2026-10-15"^^xsd:date ;
+    dcterms:rights "© 2026 Doug Egge. All rights reserved." ;
+    dcterms:title "Bible Ontology — structure" ;
+    vann:preferredNamespacePrefix "bos" ;
+    vann:preferredNamespaceUri "https://bibleontology.org/ns/structure#" ;
+    rdfs:comment "How the text is built: clauses, what they assert and with what force, and how they group into turns, scenes and larger units. Shares ids with the meaning layer (https://bibleontology.org/ns/meaning) and never merges with it; the relations between records are at https://bibleontology.org/ns/relation. Where a relation joins one of several kinds, its domain or range here is the kind they all are, and the shapes at https://bibleontology.org/ns/shapes list which ones.",
+        "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and no rule of any kind concerning God, the Father, Jesus or the Holy Spirit. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred.",
+        "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
+    owl:priorVersion <https://bibleontology.org/ns/structure/2026-10-14> ;
+    owl:versionIRI <https://bibleontology.org/ns/structure/2026-10-15> ;
+    owl:versionInfo "1.1.0" .
+

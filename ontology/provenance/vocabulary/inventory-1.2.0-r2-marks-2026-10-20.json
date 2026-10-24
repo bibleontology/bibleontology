@@ -1,0 +1,32 @@
+{
+ "_what": "Doug's marks on the refreshed 1.2.0 inventory (docs/review/inventory-1.2.0.html, built by tools/vocab_inventory.py at commit 7f864e07), pasted in chat 2026-10-20 with 'good with recs'. Every item unmarked = as recommended.",
+ "sheet": "inventory-1.2.0-r2",
+ "marks": {
+  "decision:states": {"mark": "", "note": ""},
+  "decision:verb_terms": {"mark": "", "note": ""},
+  "decision:filter": {"mark": "", "note": ""},
+  "decision:owl": {"mark": "", "note": ""},
+  "decision:domrange": {"mark": "", "note": ""},
+  "decision:export-r2": {"mark": "", "note": ""},
+  "question:g1": {"mark": "", "note": ""},
+  "question:g2": {"mark": "", "note": ""},
+  "question:g4": {"mark": "", "note": ""},
+  "question:g5": {"mark": "", "note": ""},
+  "question:g6": {"mark": "", "note": ""},
+  "question:time": {"mark": "", "note": ""}
+ },
+ "rulings": {
+  "states": "the relation type included, with its definition as drafted (ontology/schema/relation_definitions.json)",
+  "verb_terms": "the 40 claim terms included",
+  "filter": "the 16 filter terms included (plan 8.1f)",
+  "owl": "/ns/meaning published with OWL typing",
+  "domrange": "30 domains and 31 ranges where a relation's kinds are one class",
+  "export-r2": "prov:wasGeneratedBy, one range for says, the export's own assertion rule",
+  "g1": "add spoke_to (person, being or group to the same), 'spoke to' / 'was spoken to by'; the narrator's statement, the turn its evidence",
+  "g2": "add claim:modality_foretold",
+  "g4": "widen claim:evidencedBy's definition to a clause, a phrase in it, or a speech turn; no new term",
+  "g5": "the site's book codes for clause addresses (structure/John.3.16#cl0), the pattern stated in claim:clause's definition, before 1.2.0",
+  "g6": "a described statement's label is the verb's plain form; only an asserted one is in the past tense",
+  "time": "two judges (Haiku, Sonnet where they differ) read the time of the held statements; a past or present is released as stated, the rest become described claims with their force (P-2026-10-20-1)"
+ }
+}

@@ -1,0 +1,50 @@
+- Gen.9.18: The sons of Noah who came out of the ark were Shem, Ham, and Japheth. And Ham was the father of Canaan.
+- Gen.9.20: Now Noah, a man of the soil, proceeded to plant a vineyard.
+- Gen.9.21: But when he drank some of its wine, he became drunk and uncovered himself inside his tent.
+- Gen.9.22: And Ham, the father of Canaan, saw his father's nakedness and told his two brothers outside.
+- Gen.9.23: Then Shem and Japheth took a garment and placed it across their shoulders, and walking backward, they covered their father's nakedness. Their faces were turned away so that they did not see their father's nakedness.
+- Gen.9.24: When Noah awoke from his drunkenness and learned what his youngest son had done to him,
+- Gen.9.25: he said, “Cursed be Canaan! A servant of servants shall he be to his brothers.”
+- Gen.9.26: He also declared: “Blessed be the LORD, the God of Shem! May Canaan be the servant of Shem.
+- Gen.9.27: May God expand the territory of Japheth; may he dwell in the tents of Shem, and may Canaan be his servant.”
+- Gen.10.6: The sons of Ham: Cush, Mizraim, Put, and Canaan.
+- Num.12.1: Then Miriam and Aaron criticized Moses because of the Cushite woman he had married, for he had taken a Cushite wife.
+- Num.12.8: I speak with him face to face, clearly and not in riddles; he sees the form of the LORD. Why then were you unafraid to speak against My servant Moses?”
+- Num.12.9: So the anger of the LORD burned against them, and He departed.
+- Num.12.10: As the cloud lifted from above the Tent, suddenly Miriam became leprous, white as snow. Aaron turned toward her, saw that she was leprous,
+- Jer.13.23: Can the Ethiopian change his skin, or the leopard his spots? Neither are you able to do good-you who are accustomed to doing evil.
+- Jer.38.7: Now Ebed-melech the Cushite, a court official in the royal palace, heard that Jeremiah had been put into the cistern. While the king was sitting at the Gate of Benjamin,
+- Jer.39.16: “Go and tell Ebed-melech the Cushite that this is what the LORD of Hosts, the God of Israel, says: ‘I am about to fulfill My words against this city for harm and not for good, and on that day they will be fulfilled before your eyes.
+- Jer.39.18: For I will surely rescue you so that you do not fall by the sword. Because you have trusted in Me, you will escape with your life like a spoil of war, declares the LORD.'”
+- Ps.68.31: Envoys will arrive from Egypt; Cush will stretch out her hands to God.
+- Isa.18.2: which sends couriers by sea, in papyrus vessels on the waters. Go, swift messengers, to a people tall and smooth-skinned, to a people widely feared, to a powerful nation of strange speech, whose land is divided by rivers.
+- Amos.9.7: “Are you not like the Cushites to Me, O children of Israel?” declares the LORD. “Did I not bring Israel up from the land of Egypt, the Philistines from Caphtor, and the Arameans from Kir?
+- Zeph.3.10: From beyond the rivers of Cush My worshipers, My scattered people, will bring Me an offering.
+- Acts.8.27: So he started out, and on his way he met an Ethiopian eunuch, a court official in charge of the entire treasury of Candace, queen of the Ethiopians. He had gone to Jerusalem to worship,
+- Acts.8.36: As they traveled along the road and came to some water, the eunuch said, “Look, here is water! What is there to prevent me from being baptized?”
+- Acts.8.38: And he gave orders to stop the chariot. Then both Philip and the eunuch went down into the water, and Philip baptized him.
+- Acts.8.39: When they came up out of the water, the Spirit of the Lord carried Philip away, and the eunuch saw him no more, but went on his way rejoicing.
+- Exod.21.2: If you buy a Hebrew servant, he is to serve you for six years. But in the seventh year, he shall go free without paying anything.
+- Exod.21.16: Whoever kidnaps another man must be put to death, whether he sells him or the man is found in his possession.
+- Exod.21.20: If a man strikes his manservant or maidservant with a rod, and the servant dies by his hand, he shall surely be punished.
+- Exod.21.26: If a man strikes and blinds the eye of his manservant or maidservant, he must let the servant go free as compensation for the eye.
+- Lev.25.39: If a countryman among you becomes destitute and sells himself to you, then you must not force him into slave labor.
+- Lev.25.42: Because the Israelites are My servants, whom I brought out of the land of Egypt, they are not to be sold as slaves.
+- Lev.25.44: Your menservants and maidservants shall come from the nations around you, from whom you may purchase them.
+- Deut.15.12: If a fellow Hebrew, a man or a woman, is sold to you and serves you six years, then in the seventh year you must set him free.
+- Deut.15.15: Remember that you were slaves in the land of Egypt, and the LORD your God redeemed you; that is why I am giving you this command today.
+- Deut.23.15: Do not return a slave to his master if he has taken refuge with you.
+- Deut.23.16: Let him live among you wherever he chooses, in the town of his pleasing. Do not oppress him.
+- Deut.24.7: If a man is caught kidnapping one of his Israelite brothers, whether he treats him as a slave or sells him, the kidnapper must die. So you must purge the evil from among you.
+- Job.31.13: If I have rejected the cause of my manservant or maidservant when they made a complaint against me,
+- Job.31.15: Did not He who made me in the womb also make them? Did not the same One form us in the womb?
+- Eph.6.5: Slaves, obey your earthly masters with respect and fear and sincerity of heart, just as you would obey Christ.
+- Eph.6.9: And masters, do the same for your slaves. Give up your use of threats, because you know that He who is both their Master and yours is in heaven, and there is no favoritism with Him.
+- Col.4.1: Masters, supply your slaves with what is right and fair, since you know that you also have a Master in heaven.
+- Phlm.1.16: no longer as a slave, but better than a slave, as a beloved brother. He is especially beloved to me, but even more so to you, both in person and in the Lord.
+- 1Cor.7.21: Were you a slave when you were called? Do not let it concern you-but if you can gain your freedom, take the opportunity.
+- Gal.3.28: There is neither Jew nor Greek, slave nor free, male nor female, for you are all one in Christ Jesus.
+- 1Tim.1.10: for the sexually immoral, for homosexuals, for slave traders and liars and perjurers, and for anyone else who is averse to sound teaching
+- Rev.18.13: of cinnamon, spice, incense, myrrh, and frankincense; of wine, olive oil, fine flour, and wheat; of cattle, sheep, horses, and carriages; of bodies and souls of slaves.
+- Titus.2.9: Slaves are to submit to their own masters in everything, to be well-pleasing, not argumentative,
+- Exod.20.2: “I am the LORD your God, who brought you out of the land of Egypt, out of the house of slavery.

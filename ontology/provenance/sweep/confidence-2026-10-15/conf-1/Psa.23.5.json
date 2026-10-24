@@ -1,0 +1,92 @@
+{
+ "ref": "Psa.23.5",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "me, the psalm's own voice",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w7",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "my enemies, the psalm's own voice",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "you, second masculine singular, the same addressee as verse 4",
+   "category": "second person addressed to God"
+  },
+  {
+   "slot": "w13",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "my head, the psalm's own voice",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w15",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "my cup, the psalm's own voice",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "you have anointed, second masculine singular, the same addressee",
+   "category": "second person addressed to God"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.5#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "confidence": "medium",
+   "divine": true,
+   "why": "Two consecutive acts of one agent, each with its subject only in the verb (second masculine singular); the cup clause is a state and is left out. Recorded as a reading for review.",
+   "category": "consecutive acts of one agent"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether my cup overflows is the result of the anointing in the clause before it",
+   "why": "only a semicolon with no connective; the result link needs the text to say so"
+  }
+ ]
+}

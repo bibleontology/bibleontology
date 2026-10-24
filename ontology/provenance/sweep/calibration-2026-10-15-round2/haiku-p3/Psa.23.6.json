@@ -1,0 +1,39 @@
+{
+ "ref": "Psa.23.6",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular object 'follow me' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w9",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular 'my life' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular 'I will dwell', the psalm's own voice.",
+   "category": "first person in a psalm"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The weqatal (and I will dwell) continues the line it follows, with the waw fused into the verb, so the relation is 'and then'.",
+   "category": "weqatal continues the line"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

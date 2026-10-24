@@ -1,0 +1,15 @@
+PREFIX bom: <https://bibleontology.org/ns/meaning#>
+PREFIX dqv: <http://www.w3.org/ns/dqv#>
+# The navigator's first view around ?centre (bind it, e.g. <https://bibleontology.org/e/david>):
+# every tie touching the centre whose strength is at least the centre's floor,
+# the floor being the policy's rule (ontology/schema/salience.json) applied to
+# that centre: the lowest strength that keeps the drawing to its rank of records.
+# Two records joined by several relations are drawn as one line, the strongest;
+# the records are the same either way (David: 85 ties, 20 records around him,
+# 21 drawn, floor 5.413942, equal to the navigator's own, 2026-10-19).
+SELECT ?tie ?other ?strength WHERE {
+  ?centre dqv:hasQualityMeasurement [ dqv:isMeasurementOf bom:navigatorFloor ; dqv:value ?floor ] .
+  { ?tie bom:source ?centre ; bom:target ?other } UNION { ?tie bom:target ?centre ; bom:source ?other }
+  ?tie dqv:hasQualityMeasurement [ dqv:isMeasurementOf bom:navigatorTieStrength ; dqv:value ?strength ] .
+  FILTER (?strength >= ?floor)
+} ORDER BY DESC(?strength)

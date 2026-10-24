@@ -1,0 +1,20 @@
+{
+ "ref": "Pro.10.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

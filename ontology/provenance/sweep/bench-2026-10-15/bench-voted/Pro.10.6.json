@@ -1,0 +1,32 @@
+{
+ "ref": "Pro.10.6",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Plain waw setting the mouth of the wicked against the blessings of the righteous: contrast by sense, not cause, result or purpose. The 'and' link stands.",
+   "category": "waw in antithetic proverb pair",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0 -and-> cl1",
+   "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"
+  },
+  {
+   "where": "cl0 and cl1",
+   "what": "Antithesis between blessings on the righteous and the wicked mouth's concealed violence, carried by a waw; no link type for it without an explicit but-word."
+  },
+  {
+   "where": "Pro.10.6 cl0 -and-> cl1",
+   "what": "Contrast marked only by a bare waw; no link type covers an unmarked antithesis."
+  }
+ ],
+ "cant_tell": [],
+ "voted": 3
+}

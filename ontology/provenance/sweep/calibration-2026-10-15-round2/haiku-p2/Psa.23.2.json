@@ -1,0 +1,65 @@
+{
+ "ref": "Psa.23.2",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person 'me' in the psalm's own voice; the psalm quotes no one.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w9",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person 'me' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular implied by the yiqtol 'makes me lie down'; the shepherd of verse 1 is the one who makes his sheep lie down. David is masculine singular too but is not the one who acts here.",
+   "category": "implied third person in a psalm"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular implied by the yiqtol 'leads me'; the same shepherd as verse 1.",
+   "category": "implied third person in a psalm"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.2#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, each with its subject only in the verb (third masculine singular), both acts of the LORD as shepherd; recorded as a reading for review.",
+   "category": "run of acts of one agent"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether the paired lines 'he makes me lie down' and 'he leads me' are parallel lines (kind parallel) or a run of acts",
+   "why": "Both shapes fit; only the acts reading is recorded, as the rules ask for acts groups as readings."
+  }
+ ]
+}

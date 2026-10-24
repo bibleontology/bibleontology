@@ -1,0 +1,83 @@
+{
+ "ref": "Psa.23.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "my soul in the psalm's own voice",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "me in the psalm's own voice",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w10",
+   "choice": "Psa.23.1#w3",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "his name, third masculine singular; the name is the LORD's, the one who guides in verse 3",
+   "category": "possessor of a divine name"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "he restores, third masculine singular; the shepherd, the LORD of verse 1",
+   "category": "implied subject of a shepherd's act"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "he guides, third masculine singular; the shepherd, the LORD of verse 1",
+   "category": "implied subject of a shepherd's act"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.3#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "confidence": "medium",
+   "divine": true,
+   "why": "Two lines with the same subject he; the second restates the first's roles (restores my soul, guides me) as in verse 2.",
+   "category": "couplet with shared subject"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Psa.23.3 cl1",
+   "what": "purpose given as a noun phrase (for the sake of his name), not a clause; the purpose link takes clauses only"
+  }
+ ],
+ "cant_tell": []
+}

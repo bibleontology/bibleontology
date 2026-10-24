@@ -1,0 +1,212 @@
+{
+  "cards": [
+    {
+      "id": "ham",
+      "verdict": "change",
+      "description": {
+        "proposed": "One of the three sons of Noah who came out of the ark (Gen 9:18). Genesis 9:22 says that Ham, the father of Canaan, saw his father's nakedness and told his two brothers; Noah's curse in 9:25 is spoken over Canaan, and Ham is not named in it.",
+        "why": "The card is silent on the one passage readers come to Ham for, so the reader supplies the rest. Every clause is in the text: Gen 9:18 (verses.md), 9:22 (Ham saw and told), 9:25 ('Cursed be Canaan!'; Ham is not named in the verse). It does not say what Ham's act was, why Canaan is named, or who 'his youngest son' in 9:24 is: the text does not say, and the card must not fill the gap either way. It states nothing of later history."
+      },
+      "quote_first": ["Gen 9:18", "Gen 9:22", "Gen 9:24", "Gen 9:25", "Gen 10:6"],
+      "relations": {
+        "missing": [
+          {"relation": "Ham | saw | his father's nakedness (Noah)", "verses": ["Gen 9:22"]},
+          {"relation": "Ham | told | his two brothers (Shem and Japheth)", "verses": ["Gen 9:22"]},
+          {"relation": "Ham | is the father of | Canaan, who is named in Noah's curse (a link to the Canaan card, stated as the text states it: 'Cursed be Canaan')", "verses": ["Gen 9:22", "Gen 9:25"]},
+          {"relation": "Ham | his name is used for a land (from memory: 'the land of Ham', Ps 105:23, 105:27, 106:22; not in verses.md, optional)", "verses": ["Ps 105:23", "Ps 106:22"]}
+        ],
+        "misleading": []
+      },
+      "objections": [
+        "No seat is likely to object to the proposed description: each clause is in the verse. The eleventh seat would object to the card staying empty, since a reader would arrive expecting the curse to be Ham's. Any added sentence that says why Ham or Canaan is named, or that explains Gen 9:24, would be a reading, and the Reformed, Baptist and academic seats would each want it marked as one."
+      ]
+    },
+    {
+      "id": "canaan",
+      "verdict": "change",
+      "description": {
+        "proposed": "A son of Ham (Gen 9:18; 10:6) and the father of the Canaanite peoples (Gen 10:15-18). In Genesis 9:25-27 Noah says, “Cursed be Canaan! A servant of servants shall he be to his brothers,” and that Canaan be the servant of Shem and of Japheth.",
+        "why": "The card has the curse only as three 'served' relations. The description puts Noah's words where the reader sees them, in the Berean wording (9:25 'servant of servants'; 9:26 'May Canaan be the servant of Shem'; 9:27 'may Canaan be his servant'). Gen 10:15-18 is cited from memory, not verses.md: it lists the peoples descended from Canaan. The description does not say what Canaan did (the text does not), and does not say the curse passes to descendants (the text does not)."
+      },
+      "quote_first": ["Gen 9:25", "Gen 9:26", "Gen 9:27", "Gen 9:18", "Gen 10:6", "Gen 10:15"],
+      "relations": {
+        "missing": [
+          {"relation": "Canaan | is the son of | Ham (add Gen 10:6, the list of Ham's sons, to the verses already cited)", "verses": ["Gen 10:6"]},
+          {"relation": "Canaan | is named in the blessing of Shem and Japheth, whose servant he is wished to be (so the card shows the whole of Noah's speech, not only the curse)", "verses": ["Gen 9:26", "Gen 9:27"]},
+          {"relation": "Canaan | is the father of Sidon (his firstborn), Heth and the other peoples (add the Gen 10:15-18 list, from memory, to 1 Chr 1:13)", "verses": ["Gen 10:15", "Gen 10:18"]}
+        ],
+        "misleading": [
+          {"relation": "served | his brothers | Gen 9:25 | words of Noah", "why": "'served' is a past, completed action. The verse is Noah's pronouncement of what shall be ('A servant of servants shall he be'). Nothing here says Canaan did serve. Also 'his brothers' is the text's phrase: the card should not resolve who they are, and a reader may take them for Shem and Japheth, who are named in the next two verses as the ones he is wished to serve.", "fix": "'is told he will be a servant to | his brothers | words of Noah' (the BSB word is 'servant', not 'slave')."},
+          {"relation": "served | Shem | Gen 9:26", "why": "Same fault, and the mood differs: 9:26 is a wish ('May Canaan be the servant of Shem'), not a statement that it happened.", "fix": "'is wished to be the servant of | Shem | words of Noah'."},
+          {"relation": "served | Japheth | Gen 9:27", "why": "Same: 'may Canaan be his servant' is a wish, not an event.", "fix": "'is wished to be the servant of | Japheth | words of Noah'."}
+        ]
+      },
+      "objections": [
+        "Eleventh seat: the card as it stands (a bare 'served' beside 'was cursed by Noah') says more than the verses do; once the three relations say 'shall be' and 'may be', she can accept it. She would also object to any tie from this card to the 'slaves' concept card in the site's voice: the verses say 'servant' (the same Hebrew word as elsewhere, עֶבֶד), and the text does not say 'slavery' here. A tie by the shared Hebrew word is allowed only if it is shown as that and nothing more.",
+        "No other seat objects once the tense is corrected; Reformed and Baptist seats would reject any added explanation of the curse's grounds."
+      ]
+    },
+    {
+      "id": "canaanites",
+      "verdict": "change",
+      "description": {
+        "proposed": "The peoples descended from Canaan (Gen 10:18), who lived in the land when Abram came to it (Gen 12:6) and who fought Israel there (Josh 24:11). When Israel grew strong, it did not drive them all out (Judg 1:28).",
+        "why": "The current line, 'before and during Israel's conquest of it', takes a word the text does not use ('conquest') and implies the Canaanites were overcome; Judg 1:28 (from memory, not in verses.md: Israel 'pressed the Canaanites into forced labor but did not drive them out completely') says the opposite of complete conquest. Gen 10:18, 12:6, Josh 24:11 and Judg 1:28 are all cited from memory; check against the Berean text before use."
+      },
+      "quote_first": ["Gen 10:18", "Gen 12:6", "Judg 1:28", "Josh 24:11", "Deut 7:1-2", "Matt 15:22"],
+      "relations": {
+        "missing": [
+          {"relation": "the Sons of Israel | were commanded concerning | the Canaanite (and the other nations): to drive them out / devote them to destruction (from memory; the hard verses stay: Deut 7:1-2, Deut 20:17)", "verses": ["Deut 7:1-2", "Deut 20:17"]},
+          {"relation": "the sons of Israel | put to forced labor | the Canaanite (from memory, same chapter as Judg 1:28; also Josh 16:10, 17:13)", "verses": ["Judg 1:28", "Josh 16:10", "Josh 17:13"]},
+          {"relation": "Abraham, then Isaac | were told not to take a wife for their son from | the daughters of the Canaanites (from memory)", "verses": ["Gen 24:3", "Gen 28:1"]},
+          {"relation": "the Canaanite | a Canaanite woman came to Jesus, calling for her daughter, who was healed (the one New Testament use, Χαναναῖος; from memory)", "verses": ["Matt 15:22", "Matt 15:28"]},
+          {"relation": "the Canaanite | were given as the land's occupants in the promise to Abraham (Gen 15:21 is on the card; add Exod 3:8, from memory)", "verses": ["Gen 15:21", "Exod 3:8"]}
+        ],
+        "misleading": [
+          {"relation": "was conquered by | the sons of Israel | Judg 1:28", "why": "Judg 1:28 (from memory) says Israel put the Canaanites to forced labor and did not drive them out completely. 'Conquered' is not the verse's word and says more than it does; it hides the forced labor and the 'not driven out'.", "fix": "'were put to forced labor by, and not all driven out by | the sons of Israel | Judg 1:28' (two relations if the graph needs one fact each)."},
+          {"relation": "made war on | the sons of Israel | Josh 24:11", "why": "True as far as it goes (Josh 24:11, from memory, lists them among those who fought against Israel), but shown alone beside 'was conquered by' it makes the Canaanites the aggressor and gives the reader nothing of what Israel was commanded to do to them or did.", "fix": "Keep it, and add the commands and the forced labor as separate relations so the card holds both directions."},
+          {"relation": "descends from | Canaan | Gen 10:18", "why": "Not misleading as a relation, but beside the Ham/Canaan cards it should not be read as carrying Gen 9:25 down to the peoples: that verse names Canaan only. The card adds nothing here, and must not.", "fix": "None; leave the relation as it is and add nothing that links Gen 9:25 to this group."}
+        ]
+      },
+      "objections": [
+        "Eleventh seat: could not accept 'conquered' beside the unamended description, because it reads as justification for a people's subjection, and the text says less. She would equally object to a card that shows only Israel's wars or only its commands and omits the 'did not drive them out' of Judg 1:28 and the Canaanite woman of Matt 15:22.",
+        "Rabbi and Reformed/Baptist seats: the Deut 7 / Deut 20 commands must stay on the card; a card that hid them would be softening. The academic seat would want the card to say 'the text says' and not 'the conquest happened'."
+      ]
+    },
+    {
+      "id": "cush",
+      "verdict": "keep",
+      "description": {
+        "proposed": "(none needed; keep as it is)",
+        "why": "The card is Ham's son and his sons (Gen 10:6-8; 1 Chr 1:8-10). It states only what those verses state. A reader expecting the Cushites' cards will find the people and the land on the Cush place card (id ethiopia); a description here would only repeat it."
+      },
+      "quote_first": ["Gen 10:6", "Gen 10:7", "Gen 10:8"],
+      "relations": {
+        "missing": [
+          {"relation": "Cush | is a name also used for the land (cross-link to the Cush place card, as a shared name only, not a claim of which came first)", "verses": ["Gen 10:6", "Gen 2:13"]}
+        ],
+        "misleading": []
+      },
+      "objections": []
+    },
+    {
+      "id": "ethiopia",
+      "verdict": "change",
+      "description": {
+        "proposed": "Cush: the land of that name, which the Gihon is said to wind through (Gen 2:13) and from beyond whose rivers worshipers will bring an offering to the LORD (Zeph 3:10); of which it is said, “Cush will stretch out her hands to God” (Ps 68:31). Its people are called Cushites. The Berean text sometimes renders the Hebrew as “Ethiopian,” as in Jeremiah 13:23.",
+        "why": "The card has one fact (the Gihon). Ps 68:31 and Zeph 3:10 are in verses.md, Gen 2:13 is from memory (the Gihon 'winds through the whole land of Cush'). 'Ethiopian' is a rendering word in the Berean text, not a claim about a later country; the Hebrew in Jer 13:23 (כּוּשִׁי) is a Cushite. The Greek of Acts 8:27 is a different word, Αἰθίοψ, also rendered 'Ethiopian': the description does not say the two are the same land, because Acts does not say so. It uses no race, colour or continent."
+      },
+      "quote_first": ["Gen 2:13", "Ps 68:31", "Zeph 3:10", "Amos 9:7", "Jer 38:7", "Num 12:1"],
+      "relations": {
+        "missing": [
+          {"relation": "Cush | people called Cushites | Moses's Cushite wife; Miriam and Aaron criticized Moses because of her (Num 12:1). The LORD's anger burned against them (12:9) after He asked why they were unafraid to speak against His servant Moses (12:8): say both facts as the text gives them, and do not say the anger was 'because of' the wife.", "verses": ["Num 12:1", "Num 12:8", "Num 12:9"]},
+          {"relation": "Cush | people called Cushites | Ebed-melech the Cushite, a court official in the royal palace, who heard Jeremiah was in the cistern (Jer 38:7); the LORD says to him 'you have trusted in Me', and that he will escape with his life (Jer 39:16-18)", "verses": ["Jer 38:7", "Jer 39:16", "Jer 39:18"]},
+          {"relation": "Cush | is said to | stretch out her hands to God", "verses": ["Ps 68:31"]},
+          {"relation": "Cush | worshipers from beyond its rivers | will bring the LORD an offering", "verses": ["Zeph 3:10"]},
+          {"relation": "the LORD | asks Israel | 'Are you not like the Cushites to Me, O children of Israel?' and goes on to the Exodus, the Philistines from Caphtor, the Arameans from Kir", "verses": ["Amos 9:7"]},
+          {"relation": "Jeremiah 13:23 | uses the Cushite's skin as a comparison | 'Can the Ethiopian change his skin, or the leopard his spots? Neither are you able to do good, you who are accustomed to doing evil.' Show the whole verse so the point the verse itself makes (Judah's habit of evil) stays with the image.", "verses": ["Jer 13:23"]},
+          {"relation": "Cush | a people 'tall and smooth-skinned', widely feared, beyond the rivers of Cush (Isa 18:1-2; verse 1 from memory; the BSB's 'smooth-skinned' is a contested rendering, so mark it)", "verses": ["Isa 18:1", "Isa 18:2"]},
+          {"relation": "Cush | is named as the far edge of a realm (from memory: 'from India to Cush', Esth 1:1)", "verses": ["Esth 1:1"]}
+        ],
+        "misleading": [
+          {"relation": "contains | Gihon | Gen 2:13", "why": "Not wrong (the verse has the Gihon winding through the whole land of Cush) but, as the card's only relation, it makes the place a river-geography entry and leaves out that the text names Cushite people, a Cushite court official the LORD promises to rescue, and Cush at worship.", "fix": "Keep, and add the relations above."}
+        ]
+      },
+      "objections": [
+        "Eleventh seat: could not accept the card as it is, with a place the text speaks of often shown with one geographic fact and no people. She would reject any wording that gives the Cushites a colour or continent, or that treats Jer 13:23 as a statement about people: it should be quoted whole and not glossed. If Isa 18:2 is shown, 'smooth-skinned' has to be marked as the Berean wording of a hard Hebrew phrase.",
+        "Secular academic and Reformed seats: no objection to the shared-name note; both would object to joining Acts 8:27 to this place in the site's voice without saying that the Greek word is different. A link by the shared word 'Ethiopian' is a reader's link and must be marked as one."
+      ]
+    },
+    {
+      "id": "event_philip_and_the_ethiopian_eunuch",
+      "verdict": "change",
+      "description": {
+        "proposed": "Philip meets an Ethiopian eunuch on the road: a court official in charge of the entire treasury of Candace, queen of the Ethiopians, who had gone to Jerusalem to worship (Acts 8:27). He asks what prevents him from being baptized, and Philip baptizes him (Acts 8:36-38). Afterward the Spirit of the Lord carries Philip away, and the eunuch goes on his way rejoicing (Acts 8:39).",
+        "why": "The current line is the site's process note (what was checked against what), not a description of the event. Every clause above is in Acts 8:27, 36, 38 and 39 (verses.md). The reading of Isaiah that opens the exchange (Acts 8:28-35) is not in verses.md and is left out here; it can be added from the Berean text. 'Proselyte' and 'God-fearer' are not in these verses and are not used."
+      },
+      "quote_first": ["Acts 8:27", "Acts 8:36", "Acts 8:38", "Acts 8:39"],
+      "relations": {
+        "missing": [
+          {"relation": "an Ethiopian eunuch | is | a court official in charge of the entire treasury of Candace, queen of the Ethiopians", "verses": ["Acts 8:27"]},
+          {"relation": "the eunuch | had gone to Jerusalem to | worship", "verses": ["Acts 8:27"]},
+          {"relation": "Philip | baptized | the eunuch (both went down into the water)", "verses": ["Acts 8:38"]},
+          {"relation": "the Spirit of the Lord | carried away | Philip; the eunuch went on his way rejoicing", "verses": ["Acts 8:39"]},
+          {"relation": "Candace | is the queen of | the Ethiopians whose treasury he oversaw", "verses": ["Acts 8:27"]}
+        ],
+        "misleading": [
+          {"relation": "is a core concept of the major theme | Church (major theme) | Acts 8:38", "why": "Acts 8:38 narrates a baptism of one man; the verse does not use the church or a gathering. The link rests on a reading of baptism as entry into the church, which the Baptist, Reformed, Pentecostal and Catholic seats read differently.", "fix": "Link the verse to baptism if that node exists; remove the Church link or mark it as a reading."}
+        ]
+      },
+      "objections": [
+        "Eleventh seat: could not accept a card whose only text is a process note; the first words she reads about the Ethiopian official must be what the text says of him, including that he went to Jerusalem to worship.",
+        "Baptist, Reformed, Lutheran, Catholic/Orthodox and Pentecostal seats: no objection to the proposed text, which says only that he asked and was baptized; each would object to the Church link as written. Any tie from Ps 68:31 / Zeph 3:10 to this event is a reader's reading, to be marked as such and not put in the site's voice."
+      ]
+    },
+    {
+      "id": "bondmen",
+      "verdict": "change",
+      "description": {
+        "proposed": "The text speaks of people who serve a master: bought or sold, released or kept, to be treated rightly or wronged. The Hebrew עֶבֶד, in 713 verses, is rendered “servant” 657 times, “slave” 67, “officials” 23 and “slavery” 13; so “servant” in these verses may name a slave, a king's officer, or someone who serves the LORD (Exod 21:2; Num 12:8). Israel is told to remember that it was a slave in Egypt (Deut 15:15).",
+        "why": "The current line is one verse, Deut 6:21, made into a definition: 'We were slaves of Pharaoh in Egypt.' That is true of the text but it is Israel's story only, and the single relation reinforces it. The counts are from counts.txt (336+321 'servant', 35+32 'slave'; occurrences, not verses: the card's '800' and the 713 verses both need labelling). The Greek δοῦλος (118 verses) is glossed 'servant' more often than 'slave' (counts.txt) and should be shown beside the Hebrew. The description names no modern category, and the sentence 'bought or sold ... kept' is held to what Lev 25:44, Exod 21:2, Deut 15:12, 15:15 say. Exod 21:21 and Lev 25:45-46 are not in verses.md and are cited from memory."
+      },
+      "quote_first": ["Exod 21:2", "Lev 25:44", "Exod 21:20", "Deut 23:15", "Eph 6:5", "Phlm 1:16"],
+      "relations": {
+        "missing": [
+          {"relation": "Hebrew servant | goes free in the seventh year | Exod 21:2; Deut 15:12", "verses": ["Exod 21:2", "Deut 15:12"]},
+          {"relation": "a destitute countryman | is not to be forced into slave labor; Israelites are not to be sold as slaves, since they are the LORD's servants brought out of Egypt", "verses": ["Lev 25:39", "Lev 25:42"]},
+          {"relation": "menservants and maidservants | may be bought from the nations around you", "verses": ["Lev 25:44"]},
+          {"relation": "a man who strikes his manservant or maidservant | if the servant dies by his hand, he shall surely be punished (21:20); the next verse on the servant who survives a day or two is cited from memory, Exod 21:21, and stays on the card", "verses": ["Exod 21:20", "Exod 21:21"]},
+          {"relation": "a man who strikes his servant's eye | must let the servant go free as compensation for the eye", "verses": ["Exod 21:26"]},
+          {"relation": "a slave who has taken refuge | is not to be returned to his master; may live where he chooses; is not to be oppressed", "verses": ["Deut 23:15", "Deut 23:16"]},
+          {"relation": "kidnapping | one who kidnaps a man, whether he sells him or holds him, is put to death; so one who kidnaps an Israelite brother and treats him as a slave or sells him", "verses": ["Exod 21:16", "Deut 24:7"]},
+          {"relation": "Israel was a slave | remember that you were slaves in the land of Egypt, and the LORD redeemed you; the LORD brought you out of the 'house of slavery'", "verses": ["Deut 15:15", "Deut 6:21", "Exod 20:2"]},
+          {"relation": "Job | asks whether he rejected the cause of his manservant or maidservant; 'Did not He who made me in the womb also make them?'", "verses": ["Job 31:13", "Job 31:15"]},
+          {"relation": "slaves | are told to obey earthly masters 'as you would obey Christ'; masters are to do the same for their slaves, give up threats, knowing their Master is in heaven and there is no favoritism with Him", "verses": ["Eph 6:5", "Eph 6:9"]},
+          {"relation": "masters | are to supply their slaves with what is right and fair, since they have a Master in heaven", "verses": ["Col 4:1"]},
+          {"relation": "Onesimus | no longer as a slave, but better than a slave, as a beloved brother (Paul to Philemon; the name Onesimus is from memory, v. 10)", "verses": ["Phlm 1:16"]},
+          {"relation": "a slave when called | 'if you can gain your freedom, take the opportunity' (Berean wording; the Greek is elliptical and translations differ, so mark it)", "verses": ["1 Cor 7:21"]},
+          {"relation": "slave and free | all are one in Christ Jesus (the verse states unity; do not state it as abolition)", "verses": ["Gal 3:28"]},
+          {"relation": "slave traders | are named among those the law is for (the Berean word 'slave traders')", "verses": ["1 Tim 1:10"]},
+          {"relation": "bodies and souls of slaves | listed among the cargo Babylon's merchants no longer sell", "verses": ["Rev 18:13"]},
+          {"relation": "the command to slaves, Titus 2:9 | link to the Titus 2:9 card", "verses": ["Titus 2:9"]}
+        ],
+        "misleading": [
+          {"relation": "is spoken of in | “We were slaves of Pharaoh in Egypt ...” | Deut 6:21", "why": "As the card's only relation it makes the concept Israel's remembered slavery and nothing more; the same text also regulates slaves, protects some, and addresses them and their masters. It is also a quotation used as a node name.", "fix": "Keep as one of many; add the Israel-in-Egypt link under its own heading and the relations above."},
+          {"relation": "Words shown: עֶבֶד (800)", "why": "The same word is one concept only by its lemma: it names a slave, an official ('officials' 23) and the 'servant of the LORD'. One word and one count under a heading 'slaves' tells a reader every use is slavery. 800 is occurrences and 713 is verses; a reader will not know.", "fix": "Show the renderings (servant 657, slave 67, officials 23, slavery 13) and add Greek δοῦλος (118 verses, glossed 'servant' more often than 'slave'); label counts as occurrences or verses."}
+        ]
+      },
+      "objections": [
+        "Eleventh seat: could not accept the card as it is; one line from the Exodus story as the whole of 'slaves' leaves out the passages she (and the text) expect to see, and a reader finds the hard verses in the relations or not at all. She would reject any version that kept only the releases and protections, or only the commands to slaves: both are in the text.",
+        "Baptist/free church and Reformed seats: would reject any removal or softening of Eph 6:5, Titus 2:9 or Lev 25:44; the proposed card keeps them. Rabbi: no objection to Exod 21 / Lev 25 / Deut 15 as written; would object to the Christian texts being used to explain the Hebrew ones. Academic seat: wants the 'servant/slave/officer' range shown, as the description does.",
+        "No seat can accept Gal 3:28 or Phlm 1:16 put in the site's voice as 'abolishing' anything: the verses do not say it."
+      ]
+    },
+    {
+      "id": "titus_2_9_command",
+      "verdict": "change",
+      "description": {
+        "proposed": "“Slaves are to submit to their own masters in everything, to be well-pleasing, not argumentative” (Titus 2:9), in a letter that begins with Paul (Titus 1:1).",
+        "why": "The current line is the verse cut off before its end (the BSB verse ends 'argumentative,' and goes on in 2:10, from memory) with no verse reference, so a reader cannot find or weigh it. The proposed line keeps every word of the instruction and adds only the reference and the sender. Titus 1:1 is cited from memory: it opens 'Paul, a servant of God' (the same Greek word, δοῦλος, rendered 'servant' there). Nothing is softened."
+      },
+      "quote_first": ["Titus 2:9", "Eph 6:5", "Eph 6:9", "Col 4:1", "Phlm 1:16", "Titus 1:1"],
+      "relations": {
+        "missing": [
+          {"relation": "speaks of | slaves (link to the 'slaves' concept card)", "verses": ["Titus 2:9"]},
+          {"relation": "is paired in Ephesians with | the instruction to masters: 'do the same for your slaves, give up your use of threats' (Eph 6:9), and in Colossians 'supply your slaves with what is right and fair' (Col 4:1). Titus 2:9 itself has no such instruction in its verse; state that as the text has it and add only what the text supplies elsewhere.", "verses": ["Eph 6:5", "Eph 6:9", "Col 4:1"]},
+          {"relation": "Paul | calls himself a servant (δοῦλος) of God in the same letter's opening", "verses": ["Titus 1:1"]},
+          {"relation": "Philemon 16 | Paul writes of a slave 'no longer as a slave, but better than a slave, as a beloved brother'", "verses": ["Phlm 1:16"]}
+        ],
+        "misleading": [
+          {"relation": "speaks of | servants | Titus 2:9", "why": "The verse's word is 'Slaves' (δοῦλοι in the Greek, 'Slaves' in the BSB). The relation points to a 'servants' node, which is a different card from the 'slaves' concept, so the same word is split across two cards and the reader loses the link to the Law passages.", "fix": "Point to the 'slaves' (bondmen) concept; keep 'servants' for places where the BSB's word is 'servant'."},
+          {"relation": "speaks of | answering again | Titus 2:9", "why": "'Answering again' is the wording of an older English translation, not the Berean ('argumentative'). It is a visible trace of the translation the site is removing, and it is not what a reader of the BSB sees in the verse.", "fix": "Relabel in the Berean sense, e.g. 'arguing back' or 'being argumentative'."},
+          {"relation": "speaks of | obedience | Titus 2:9", "why": "Not wrong in meaning, but the verse says 'submit', not 'obey'; Eph 6:5 says 'obey'. The two words differ in the text.", "fix": "Label 'submission' for Titus 2:9 and 'obedience' for Eph 6:5."}
+        ]
+      },
+      "objections": [
+        "Eleventh seat: could not accept the verse standing alone as an unqualified command with no reference and no companion verses; the text itself, in Eph 6:9 and Col 4:1, gives commands to masters. She would object equally to any version that dropped or softened it, since the text is hard and should stay hard.",
+        "Baptist, Reformed, Lutheran and Pentecostal seats: no objection to the verse or to the related passages; they would object to any gloss that explains the command away, or presents it as a statement about the ethics of the institution, which the site does not take. Rabbi: defers."
+      ]
+    }
+  ],
+  "summary": "The Ham, Canaan and Cush place cards are all nearly empty on exactly what readers come for (Gen 9:22 and 9:25, who is named in the curse, and the Cushites of Num 12, Jer 38-39, Acts 8), and the Canaan 'served' relations, the Canaanites 'was conquered by' relation and the bare 'slaves' concept (one Deut 6:21 line, no hard verses, no Hebrew/Greek range) say more or less than the text does. The fixes add only what the verses say, keep the hard verses (Exod 21:20-21, Lev 25:44-46, Eph 6:5, Titus 2:9) beside the protections, and cite from memory, where verses.md lacks them, Gen 2:13, 10:15-18, 12:6, Judg 1:28, Josh 24:11, Deut 7:1-2, Exod 21:21, Titus 1:1 and Matt 15:22."
+}

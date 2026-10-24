@@ -1,0 +1,28 @@
+{
+ "ref": "Mrk.15.3",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "'Him' (autou) is the one accused, the object of 'accuse'. The builder's w4 is the accusers, the subject of the verb, not the object.",
+   "category": "object pronoun mistaken for subject",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "This verse has no clause cl2. The verse-opening kai has no host inside the verse; a link across the verse boundary is the episode level, not a clause link.",
+   "category": "link to a clause outside the verse",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [],
+ "voted": 3
+}

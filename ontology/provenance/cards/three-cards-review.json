@@ -1,0 +1,107 @@
+{"cards": [
+  {
+    "id": "pharisees",
+    "verdict": "change",
+    "description": {
+      "proposed": "A party within Israel, to which Nicodemus, Gamaliel and Paul belonged. In the Gospels Pharisees question and dispute with Jesus, he pronounces woes on them, and in Matthew and Mark the Pharisees go out and plot how to kill him; Luke also shows Pharisees inviting him to eat and warning him about Herod, and in Acts some Pharisees are believers and some defend Paul.",
+      "why": "The old line was true but one-sided and named a party only by its conflict and a legal label. It left out what the verses plainly state: Nicodemus 'of the Pharisees' (John 3:1; 7:50; 19:39), Gamaliel honored by all the people (Acts 5:34), Pharisees who invite Jesus to a meal (Luke 7:36; 14:1) and warn him of Herod (Luke 13:31), 'believers from the party of the Pharisees' (Acts 15:5), Pharisee scribes who say 'We find nothing wrong with this man' (Acts 23:9), and Paul's own 'I am a Pharisee' (Acts 23:6; Phil 3:5). Nothing hard is softened: the woes (Matt 23:13; Luke 11:42) and the plot to kill (Matt 12:14; Mark 3:6) stay, stated in the text's own terms rather than as 'repeatedly plots'. 'Jewish religious-legal party' is replaced by 'a party within Israel' because Acts 15:5 and 23:9 call it a party and Phil 3:5 / Acts 5:34 supply the law connection. Matt 23:2-3 ('practice and observe everything they tell you') is the text's own balance inside the sharpest chapter. 'Most often' or 'mostly' is deliberately not used because the proportion was not counted; the order of the sentence carries the weight."
+    },
+    "quote_first": ["Acts 23:6", "John 3:1", "Acts 5:34", "Matt 23:2-3", "Matt 23:13", "Matt 12:14"],
+    "relations": {
+      "missing": [
+        {"relation": "Nicodemus, a Pharisee who is a leader of the Jews, came to Jesus (John 3:1), spoke up in the council when Jesus was discussed (John 7:50) and brought myrrh and aloes (John 19:39); adds to the existing 'counted among its members | Nicodemus' relation", "verses": ["John 7:50", "John 19:39"]},
+        {"relation": "invited Jesus to eat (a Pharisee; a leading Pharisee)", "verses": ["Luke 7:36", "Luke 14:1"]},
+        {"relation": "included believers: believers from the party of the Pharisees", "verses": ["Acts 15:5"]},
+        {"relation": "some Pharisee scribes defended Paul in the Sanhedrin ('We find nothing wrong with this man')", "verses": ["Acts 23:9", "Acts 23:6"]},
+        {"relation": "Jesus on their teaching: 'practice and observe everything they tell you', then the woes", "verses": ["Matt 23:2", "Matt 23:3", "Matt 23:13", "Luke 11:42"]},
+        {"relation": "convened the Sanhedrin with the chief priests (their stated fear: the Romans would take 'our place and our nation')", "verses": ["John 11:47", "John 11:48"]},
+        {"relation": "Paul: 'as to the law, a Pharisee'", "verses": ["Phil 3:5"]}
+      ],
+      "misleading": [
+        {"relation": "warned | Jesus | Luke 13:31, Luke 13:32", "why": "Only verse 31 is the warning ('some Pharisees came ... Herod wants to kill You'); verse 32 is Jesus's answer. Without 'some' the relation reads as the whole party.", "fix": "Cite Luke 13:31 for the warning; show 13:32 as Jesus's reply; keep 'some Pharisees'."},
+        {"relation": "accused | Jesus | Matt 9:11, Matt 9:12, Mark 2:24, Mark 2:25", "why": "Matt 9:12 and Mark 2:25 are Jesus's replies, and Matt 9:11 is a question put to the disciples ('Why does your Teacher eat with tax collectors and sinners?'), not an accusation of Jesus himself.", "fix": "Split: 'questioned his table fellowship' (Matt 9:11) and 'accused his disciples of unlawful Sabbath conduct' (Mark 2:24); put the replies under 'was answered by'."},
+        {"relation": "conspired against | Jesus | Matt 12:14, Mark 3:6, Matt 22:15, Matt 22:16", "why": "Two different plots are merged: Matt 12:14 and Mark 3:6 say they plotted how to kill Jesus (Mark: with the Herodians); Matt 22:15 says they plotted how to trap him in his words. Matt 22:16 is the question that follows.", "fix": "Two relations: 'plotted to kill' (Matt 12:14; Mark 3:6, noting the Herodians) and 'plotted to trap in his words' (Matt 22:15-16)."},
+        {"relation": "told | the Pharisees at Mark 2:16 ; told | the Pharisees at Mark 2:24 ; asserts | the Pharisees at Mark 2:16 / 2:24", "why": "The 'Language' and 'Encounters' entries point at opaque nodes ('the Pharisees at Mark 2:16') that a reader cannot place; Mark 2:16 reads 'scribes of the Pharisees' and 2:24 is a question, not an assertion.", "fix": "Show the verse text itself in place of the node name and label them 'asked' with the speaker as written."},
+        {"relation": "is drawn on by | You snakes! You brood of vipers! | Matt 23:33, Matt 23:2, Matt 3:7", "why": "Matt 23:2 is not the figure; the speakers differ (Jesus in 23:33, John the Baptist in 3:7, the latter to 'Pharisees and Sadducees'). Left bare it reads as the site's own label.", "fix": "Cite 23:33 and 3:7 only, name the speaker on each, and keep the verse (it is a hard verse and stays)."}
+      ]
+    },
+    "objections": [
+      "Baptist / free church: might ask that the plot to kill be stated with the same weight as the believers; the proposal keeps the plot as an unsoftened clause and does not use 'some' for Matt 12:14 / Mark 3:6, where the text says 'the Pharisees'. No seat could not accept it on this."
+    ]
+  },
+  {
+    "id": "chief_priests",
+    "verdict": "change",
+    "description": {
+      "proposed": "The leading priests in Jerusalem, the same Greek word that is used of the high priest. In the Gospels the chief priests, with the elders and others, plan to arrest and kill Jesus, bring accusations against him before Pilate and stir up the crowd, and plan to kill Lazarus as well; John 11:47-48 gives the fear they state, that the Romans will take away 'our place and our nation'. In Acts the high priest and his associates arrest the apostles and chief priests bring charges against Paul, and also in Acts 'a great number of priests became obedient to the faith'; Hebrews calls Jesus himself a high priest.",
+      "why": "The old line was accurate on what the Gospels report but said 'temple priestly leadership' without saying who, claimed 'persecutes the apostles and Paul' without a verse on the card, and omitted two things the text itself supplies: the motive they state in John 11:47-48 (stated as their words, not endorsed) and Acts 6:7, where priests (not specifically chief priests) become obedient to the faith. It also omitted that ἀρχιερεύς, the Greek behind this card (119 verses), is used 17 times in Hebrews of Jesus as high priest (e.g. Heb 4:14); a reader who meets 'chief priest' there must not think it is the same group. 'The leading priests' replaces 'the whole' sense of 'Temple priestly leadership'; the cited scenes name only some: Matt 26:3 chief priests and elders, Mark 14:53 'all the chief priests', Mark 15:1 the whole Sanhedrin. Nothing is softened: kill, accuse, stir up, Lazarus all remain. The Gospels are attributed ('In the Gospels') so the site does not narrate their charges as its own verdict. Acts 5:17-18, 25:2 and 26:10 support the Acts clause; Acts 6:7 is carefully kept to 'priests' because that is the word in the verse."
+    },
+    "quote_first": ["Matt 26:3-4", "Mark 11:18", "John 11:47-48", "Mark 15:3", "Acts 6:7", "Heb 4:14"],
+    "relations": {
+      "missing": [
+        {"relation": "convened the Sanhedrin with the Pharisees; their stated fear of Rome ('take away both our place and our nation')", "verses": ["John 11:47", "John 11:48"]},
+        {"relation": "stirred up the crowd to ask for Barabbas", "verses": ["Mark 15:11"]},
+        {"relation": "a great number of priests became obedient to the faith (priests, not specifically chief priests)", "verses": ["Acts 6:7"]},
+        {"relation": "Caiaphas, the high priest: 'it is better for you that one man die'; John adds that as high priest that year he prophesied Jesus would die for the nation", "verses": ["John 11:49-52", "John 18:13-14"]},
+        {"relation": "said the silver was 'blood money' and could not go into the treasury", "verses": ["Matt 27:6"]},
+        {"relation": "the high priest and his associates arrested the apostles", "verses": ["Acts 5:17-18"]},
+        {"relation": "brought charges against Paul; gave Paul authority to imprison believers", "verses": ["Acts 25:2", "Acts 26:10", "Acts 9:14"]},
+        {"relation": "a different use of the word: Jesus as great high priest (Hebrews, 17 verses)", "verses": ["Heb 4:14", "Heb 5:1", "Heb 7:26"]}
+      ],
+      "misleading": [
+        {"relation": "was rebuked by | Jesus | Mark 11:15, Mark 11:17", "why": "In Mark 11:15-17 Jesus overturns tables and speaks to those buying and selling; the chief priests are not named until verse 18, when they hear it. The relation puts a rebuke on them that the verses do not show.", "fix": "Remove, or restate as 'heard Jesus's action and teaching in the temple and looked for a way to destroy him' (Mark 11:18)."},
+        {"relation": "conspired against | Jesus | Mark 11:18, Mark 11:15, Matt 26:3-4, Matt 27:1", "why": "Mark 11:15 is Jesus's action, not a conspiracy. Mark 11:18 also states their reason in the text ('they feared Him, because the whole crowd was amazed at His teaching').", "fix": "Cite Mark 11:18, Matt 26:3-4, Matt 27:1; show the stated reason from Mark 11:18."},
+        {"relation": "accused | Jesus | Mark 11:27, Mark 11:28, Mark 15:3, Matt 27:12", "why": "Mark 11:27-28 is a question about his authority ('By what authority...'), not an accusation; 15:3 and Matt 27:12 are the accusations before Pilate.", "fix": "Two relations: 'questioned his authority' (Mark 11:27-28) and 'accused' (Mark 15:3; Matt 27:12)."},
+        {"relation": "conspired against | Lazarus | John 12:10, John 12:11", "why": "Accurate, but the verse gives the reason ('many of the Jews were going over and believing in Jesus') and it is dropped, leaving only the plot.", "fix": "Keep, and show John 12:11 as the stated reason."}
+      ]
+    },
+    "objections": [
+      "Rabbi: might ask that 'the Jews' not be read into this group; the card says only 'chief priests' and 'priests' as the verses do. Not an objection to the proposal.",
+      "Secular scholar: 'In the Gospels' leaves open that the site does not assert these events; this is the intended reading and no seat is blocked."
+    ]
+  },
+  {
+    "id": "children_of_israel",
+    "verdict": "change",
+    "description": {
+      "proposed": "The Bible presents them as the people descended from Jacob, who is renamed Israel (Gen 32:28): brought out of the house of slavery in Egypt, loved by the Lord not for their numbers (Deut 7:7-8), and called 'a kingdom of priests and a holy nation' (Exod 19:6). The Hebrew Bible records them receiving the covenant at Sinai, conquering and being conquered, and doing 'evil in the sight of the Lord'; the New Testament says of the people of Israel that theirs are the adoption, the covenants, the law and the promises (Rom 9:4-5).",
+      "why": "The old line ('the whole covenant nation ... as a single people prior to and spanning the divided kingdom') claims more than the verses: the text itself uses 'Israel' for the people as a whole and also for the northern kingdom after the split (1 Kings 12:16-20), so 'single people ... spanning the divided kingdom' is a reading, not a statement. The card's own relations also open on conquest and battle (50 of 70 'Peoples & groups' rows are wars or defeated kings, 29 of them the single list of Josh 12) with no sign of why the text says Israel is distinct at all. What the text supplies and the card omitted: the renaming (Gen 32:28), the Lord's stated reason (Deut 7:7-8, love and his oath, not size), Exod 19:6, and Paul's list (Rom 9:4-5). Nothing hard is dropped: conquest, defeat and 'evil in the sight of the Lord' stay in the description and the relations. Rom 11:26 is quoted by the card, not interpreted, so no tradition's reading of 'all Israel' is chosen. 'The whole covenant nation' is removed because the verses name different bodies at different times."
+    },
+    "quote_first": ["Exod 1:1", "Gen 32:28", "Exod 19:6", "Deut 7:7-8", "Deut 6:4", "Rom 9:4-5"],
+    "relations": {
+      "missing": [
+        {"relation": "was redeemed from slavery by | God (for love and the oath, not for numbers)", "verses": ["Deut 7:7", "Deut 7:8"]},
+        {"relation": "was called | a kingdom of priests and a holy nation", "verses": ["Exod 19:6"]},
+        {"relation": "was renamed from Jacob to Israel", "verses": ["Gen 32:28"]},
+        {"relation": "included others: a mixed multitude went up with them; one law for the native and the stranger", "verses": ["Exod 12:38", "Exod 12:49"]},
+        {"relation": "Rahab lived among them", "verses": ["Josh 6:25"]},
+        {"relation": "to be restored; the Servant also a light for the nations", "verses": ["Isa 49:6"]},
+        {"relation": "Paul: 'all Israel will be saved' (quoted, not interpreted)", "verses": ["Rom 11:26"]},
+        {"relation": "Paul: theirs are the adoption, glory, covenants, law, worship, promises, patriarchs, and the human descent of Christ", "verses": ["Rom 9:4", "Rom 9:5"]},
+        {"relation": "the LORD raised up judges who saved them (set beside the 'evil in the sight of the Lord' verdicts)", "verses": ["Judg 2:16"]}
+      ],
+      "misleading": [
+        {"relation": "kept | the day of atonement / feast of tabernacles / unleavened bread / passover / sabbath / Jubilee | Lev 23, Lev 25:10 (and Num 9:5, Exod 12:28)", "why": "Lev 23 and 25:10 are commands to keep them, not a record that they did; Num 9:5 and Exod 12:28 do record keeping the passover.", "fix": "Use 'was commanded to keep' for Lev 23 / 25:10 and 'kept' only for Exod 12:28 and Num 9:5."},
+        {"relation": "pleaded with | Aaron | Exod 32:1", "why": "'Pleaded' softens it: the people gathered to Aaron and said 'make us gods who will go before us'.", "fix": "'demanded gods of Aaron'."},
+        {"relation": "had the Spirit come upon them | God | Gen 50:25", "why": "Gen 50:25 is Joseph's oath that God will visit them; it does not mention the Spirit.", "fix": "Remove, or restate as 'was told by Joseph that God would visit them' (Gen 50:24-25)."},
+        {"relation": "carried | manna | John 6:49, Exod 16:35, Exod 16:15", "why": "The verses say they ate manna, not carried it.", "fix": "'ate manna'."},
+        {"relation": "carried | Joseph's bones | Gen 50:25", "why": "Gen 50:25 is the oath to carry them; Exod 13:19 records Moses taking them.", "fix": "Cite Exod 13:19 for the act; Gen 50:25 for the oath."},
+        {"relation": "took | cattle, goods, property | Gen 46:6, Gen 47:27", "why": "Gen 47:27 says they 'acquired property' in Goshen; 'took' reads as seizure.", "fix": "'acquired'."},
+        {"relation": "is signified by | bones | Ezek 37:11, Ezek 37:4", "why": "Cites only the despairing 'dry bones' and omits the promise in the same vision (Ezek 37:12-14, 'I will open your graves').", "fix": "Add Ezek 37:12-14."},
+        {"relation": "conquered | the king of X (about 29 rows) | Josh 12:7-24, Josh 12:1", "why": "True of the text but one list becomes 29 rows and crowds out the card (50 of 70 Peoples rows are war).", "fix": "Collapse into one 'conquered the kings of Josh 12:7-24' relation, with the individual kings reachable by 'more'."},
+        {"relation": "was led by | Gideon | Judg 8:22", "why": "In 8:22-23 Gideon declines to rule over them ('The LORD will rule over you').", "fix": "Cite Judg 6-8 for his deliverance, and show Judg 8:23 beside it."}
+      ]
+    },
+    "objections": [
+      "Reformed, Lutheran, Wesleyan, Baptist, Pentecostal and Catholic/Orthodox seats differ on who 'Israel' means in Rom 9-11; the card quotes Rom 9:4-5 and leaves 11:26 as an unexplained quotation, which all can accept.",
+      "Secular scholar: 'the Bible presents them as' rather than 'they were' keeps the card from asserting the origin story as the site's own claim; if dropped, this seat would object."
+    ]
+  }
+],
+"eleventh_seat_asks": [
+  {"card_or_topic": "Ham (and the curse on Canaan, Gen 9:20-27)", "why": "The curse falls on Canaan, not Ham (Gen 9:25), and the passage has been used to justify slavery of Africans; the card must say plainly what the text says and shows (Gen 10:6, the sons of Ham include Cush) without softening or hurt."},
+  {"card_or_topic": "Cush / the Cushites (Ethiopians), with Moses's Cushite wife (Num 12:1) and the Ethiopian eunuch (Acts 8:26-39)", "why": "These are the Bible's own black African people and persons shown in faith, including Num 12:1-10 and Acts 8, where the text takes their side; the seat can judge whether the card shows them with dignity and without US framing."},
+  {"card_or_topic": "Slavery (a passage card: Exod 21, Deut 15:12-18, Eph 6:5-9, Philemon)", "why": "The text both regulates slavery and frees from it (the Exodus, Deut 7:8; Philemon 16), and readers meet it with strong feeling; the card has to show all of it exactly, which this seat is best placed to guard."}
+],
+"summary": "All three cards change: each is made to state who the group is and what the text shows of them beyond conflict (Nicodemus, Gamaliel and the Acts Pharisees; Acts 6:7 and Hebrews for the priests; election and the Sinai covenant for Israel), while every hard verse stays. Several relations claim more than their verses (Mark 11:15-17 rebuke, 'pleaded', 'kept' for Lev 23 commands, 'carried manna') and are corrected."
+}

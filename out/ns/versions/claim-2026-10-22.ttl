@@ -1,0 +1,215 @@
+###############################################################################
+#  The claim vocabulary (plan 8.1a; OWL evaluation Phase 1, docs/review/
+#  OWL-EVALUATION.md section 3). Doug, 2026-10-14, approving P-2026-10-14-1:
+#  records and verses addressed by the site's own pages, one voice per
+#  speaker.
+#
+#  Every relation the graph records is a CLAIM: what it relates, the verses it
+#  rests on, how certain, and whose claim it is. The claim is the unit, and
+#  whose claim it is -- the narrator's, a speaker's, a reader's -- decides
+#  where, and its force whether, its plain triple (subject, relation, object)
+#  is stated (a promise, command, question or negated clause never is): in the RDF 1.1
+#  export, only inside the named graph of that voice; in the RDF 1.2 export,
+#  only the narrator's, in the default graph, every other claim existing only
+#  as the triple term it reifies. Either way a tool that takes only the
+#  narrator gets only what the text itself states, and a character's claim
+#  (Eliphaz on Job, the serpent on God) is never read as the narrator's.
+#  The narrator's claims are only what the text states or entails (explicit or
+#  implied): a conjecture, a disputed claim, and the graph's own groupings
+#  (themes, patterns, story links, the text's divisions) are the editors',
+#  described and never stated (plan 8.3f, 2026-10-22, after the simulated
+#  Reddit critics found them asserted as the narrator's). (2026-10-20: this said "named graph" of both files; the RDF 1.2 file has had
+#  none since the RDF4J measurement of 2026-10-14.) Written by Claude to Doug's
+#  decisions; the wording here is AI-drafted.
+###############################################################################
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix claim:   <https://bibleontology.org/ns/claim#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix bow:     <https://bibleontology.org/ns/word#> .
+
+<https://bibleontology.org/ns/claim>
+    a owl:Ontology ;
+    rdfs:label "Bible Ontology — claims" ;
+    dcterms:title "Bible Ontology — claims" ;
+    dcterms:creator "Doug Egge" ;
+    dcterms:created "2026-10-14"^^xsd:date ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "1.2.1" ;
+    owl:versionIRI <https://bibleontology.org/ns/claim/2026-10-22> ;
+    owl:priorVersion <https://bibleontology.org/ns/claim/2026-10-21> ;
+    dcterms:modified "2026-10-22"^^xsd:date ;
+    <http://purl.org/vocab/vann/preferredNamespacePrefix> "claim" ;
+    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://bibleontology.org/ns/claim#" ;
+    rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and nothing about the records of God, the Father, Jesus or the Holy Spirit is derived by inference: they change only by a recorded editorial decision, as the accounts give them. The policy forbids derivations, not descriptions. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred." ;
+    rdfs:comment "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
+    rdfs:comment "How the graph's relations are published: each as a claim that carries the verses it rests on, its certainty, and whose claim it is. The narrator's statements and a character's claims are never mixed: in the RDF 1.1 export a claim's plain triple is stated only inside the named graph of its voice; in the RDF 1.2 export only the narrator's triples are stated, and every other claim is described by the triple term it reifies, never stated. The narrator's claims are only what the text states or entails (claim:explicit, claim:implied); a conjectured or disputed claim, and the graph's own groupings (themes, patterns, story links, the text's divisions, what a passage speaks of), are credited to the editors' voice and described, never stated. Relation types are at https://bibleontology.org/ns/relation; records are the site's own pages, https://bibleontology.org/e/<id>, and verses https://bibleontology.org/p/<Book>.<chapter>.<verse>." ;
+    rdfs:seeAlso <https://bibleontology.org/ns/relation>, <https://bibleontology.org/ns/meaning>, <http://www.w3.org/ns/prov#> .
+
+claim:Claim a owl:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "claim" ;
+    skos:definition "One relation the graph records: what it relates, the verses it rests on, how certain it is, and whose claim it is. The claim is published in every case; its plain triple is stated only in the graph of its voice (RDF 1.1 export) or only if its voice is the narrator's (RDF 1.2 export), and in either file only where it is a statement made outright (claim:modality) and stated or entailed (claim:certainty): a promise, command, question or negated clause, and a conjectured or disputed claim, is described in both and stated in neither." .
+
+claim:Voice a owl:Class ;
+    rdfs:label "voice" ;
+    skos:definition "Whose claims a set of claims is: the narrator's (what the text itself states), one speaker's in the text, or one reader's. In the RDF 1.1 export a voice is also the named graph holding the plain triples it states; in the RDF 1.2 export only the narrator's triples are stated, in the default graph." .
+
+claim:subject a owl:ObjectProperty ;
+    rdfs:label "subject" ; rdfs:domain claim:Claim ;
+    skos:definition "The record the claim is about, as the relation reads: the subject of '<subject> <relation> <object>'." .
+
+claim:relation a owl:ObjectProperty ;
+    rdfs:label "relation" ; rdfs:domain claim:Claim ;
+    skos:definition "The relation type, from https://bibleontology.org/ns/relation." .
+
+claim:object a owl:ObjectProperty ;
+    rdfs:label "object" ; rdfs:domain claim:Claim ;
+    skos:definition "The record the relation points to." .
+
+claim:verse a owl:ObjectProperty ;
+    rdfs:label "verse" ; rdfs:domain claim:Claim ;
+    skos:definition "A verse the claim rests on, as the site's page for it. Every claim has at least one." .
+
+claim:certainty a owl:ObjectProperty ;
+    rdfs:label "certainty" ; rdfs:domain claim:Claim ; rdfs:range claim:Certainty ;
+    skos:definition "How firmly the verses support the claim, on the graph's four-step scale." .
+
+claim:claimedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf prov:wasAttributedTo ;
+    rdfs:comment "Aligned with PROV (2026-10-18, from a reply on r/semanticweb): a PROV-aware tool reads who in the text says a claim as its attribution. Under RDFS this types every speaker as a prov:Agent, divine persons included. That is a description, not a derivation: the text attributes the words, and the reasoning policy above forbids deriving anything about the divine persons, not describing who speaks (settled at the 1.2.0 review)." ;
+    rdfs:label "claimed by" ; rdfs:domain claim:Claim ;
+    skos:definition "The person or being in the text whose claim this is, where it is not the narrator's: a speaker's assertion, accusation or misquotation, recorded as theirs and never as the text's own." .
+
+claim:readBy a owl:DatatypeProperty ;
+    rdfs:label "read by" ; rdfs:domain claim:Claim ;
+    skos:definition "Where the claim is a reading rather than the text's statement, the reader it is credited to, as a name. Kept beside claim:reader, which gives the same reader as an agent." .
+
+claim:reader a owl:ObjectProperty ;
+    rdfs:subPropertyOf prov:wasAttributedTo ;
+    rdfs:label "reader" ; rdfs:domain claim:Claim ; rdfs:range prov:Agent ;
+    skos:definition "Where the claim is a reading, the reader it is credited to, as an agent (a person, a tradition, or an automated analysis), so a PROV-aware tool finds who made the reading. The same reader's name is claim:readBy." .
+
+claim:voice a owl:ObjectProperty ;
+    rdfs:label "voice" ; rdfs:domain claim:Claim ; rdfs:range claim:Voice ;
+    skos:definition "Whose claim this is: the narrator, a speaker in the text, or a reader. In the RDF 1.1 export, the named graph in which the claim's plain triple would be stated; in the RDF 1.2 export the triple is stated only when the voice is the narrator. In both, only a statement made outright is stated (claim:modality)." .
+
+claim:voiceOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf prov:wasAttributedTo ;
+    rdfs:label "voice of" ; rdfs:domain claim:Voice ;
+    skos:definition "Whose voice this is: the narrator, a record in the text, or a reader." .
+
+claim:reportedBy a owl:ObjectProperty ;
+    rdfs:label "reported by" ; rdfs:domain claim:Voice ;
+    skos:definition "For a voice whose words another speaker gives (speech within speech): the speaker who reports them. A prophet's 'This is what the LORD says', or 'Yet you say ...' (Job 22:13). The words are neither speaker's alone, so their claim is in this voice, not in either speaker's (in the RDF 1.1 export, their triple is stated in this voice's graph)." .
+
+claim:says a owl:ObjectProperty ;
+    rdfs:label "says" ;
+    rdfs:range claim:Claim ;
+    skos:definition "Used only as the relation of a reporting speaker's claim: that a person in the text says another claim. Its object is the reported CLAIM, which itself reifies its own triple, so each speaker's part is described and neither is stated (Jeremiah 32:7: Jeremiah's claim is that the LORD says the inner claim). The same in both export files." .
+
+claim:Certainty a owl:Class ; rdfs:subClassOf skos:Concept ;
+    rdfs:label "certainty" ;
+    skos:definition "A step on the graph's certainty scale." .
+claim:certaintyScale a skos:ConceptScheme ; rdfs:label "certainty" .
+
+claim:explicit a claim:Certainty ; skos:inScheme claim:certaintyScale ;
+    skos:prefLabel "explicit" ;
+    skos:definition "The verse states the relationship in so many words." .
+claim:implied a claim:Certainty ; skos:inScheme claim:certaintyScale ;
+    skos:prefLabel "implied" ;
+    skos:definition "The verse entails it without stating it (two men called sons of the same father are therefore brothers), or it follows from an adjacent verse." .
+claim:conjectured a claim:Certainty ; skos:inScheme claim:certaintyScale ;
+    skos:prefLabel "conjectured" ;
+    skos:definition "Neither stated nor entailed, but the most reasonable reading of the text, with what makes it likely and what would overturn it." .
+claim:disputed a claim:Certainty ; skos:inScheme claim:certaintyScale ;
+    skos:prefLabel "disputed" ;
+    skos:definition "Reasonable readings differ, or parallel passages disagree; the evidence pulls two ways." .
+
+claim:narrator a claim:Voice ;
+    rdfs:label "the narrator" ;
+    skos:definition "The voice of the text itself: what it states or entails, outside any character's speech; never a conjecture, and never the graph's own groupings, which are the editors' (https://bibleontology.org/voice/reader/editors). Its triples are the only ones stated in the RDF 1.2 export (the default graph); in the RDF 1.1 export, load only this graph to get only what the text states." .
+
+# ---- A STATEMENT A CLAUSE MAKES (verb statements) --------------------------
+# A claim whose relation is bor:states is a statement lifted from one clause of
+# the text: its verb, the verb's grammar there, the force it is said with, and
+# the kind of act it names. claim:modality records whether the text makes it
+# outright (stated, or a non-finite clause reporting an event: "when Ahab saw
+# Elijah") or as a command, promise, question or wish. No verb statement's
+# triple is stated, in any export or voice (plan 8.3f; 2026-10-22): bor:states
+# carries no verb, so different sentences with the same subject and object
+# would share one triple. Each is described by its claim, verb and all.
+
+claim:verbLabel a owl:DatatypeProperty ; rdfs:label "verb label" ; rdfs:domain claim:Claim ;
+    skos:definition "The verb as the Berean Standard Bible renders it in the verse, in the past tense." .
+claim:verb a owl:ObjectProperty ; rdfs:label "verb" ; rdfs:domain claim:Claim ; rdfs:range bow:Lexeme ;
+    skos:definition "The Hebrew, Aramaic or Greek dictionary word of the statement's verb (a page at https://bibleontology.org/word/<key>)." .
+claim:stem a owl:DatatypeProperty ; rdfs:label "stem" ; rdfs:domain claim:Claim ;
+    skos:definition "The Hebrew verb's stem (binyan) in the clause: qal, niphal, piel and the rest." .
+claim:mood a owl:DatatypeProperty ; rdfs:label "mood" ; rdfs:domain claim:Claim ;
+    skos:definition "The verb's form in the clause: for Hebrew qatal, yiqtol, wayyiqtol, imperative and the rest; for Greek indicative, imperative, subjunctive, optative and the rest." .
+claim:person a owl:DatatypeProperty ; rdfs:label "person" ; rdfs:domain claim:Claim ;
+    skos:definition "The verb's grammatical person: first, second or third." .
+claim:grammaticalVoice a owl:DatatypeProperty ; rdfs:label "grammatical voice" ; rdfs:domain claim:Claim ;
+    skos:definition "The verb's grammatical voice: active, middle or passive. Not claim:voice, which is who says the claim." .
+claim:negated a owl:DatatypeProperty ; rdfs:label "negated" ; rdfs:domain claim:Claim ; rdfs:range xsd:boolean ;
+    skos:definition "Whether the clause is negated. A negated statement is never stated as made outright." .
+claim:clause a owl:ObjectProperty ; rdfs:label "clause" ; rdfs:domain claim:Claim ;
+    skos:definition "The clause of the text the statement was lifted from, in the structure layer. A part of the structure is addressed by its verse, with the same book codes as the verse pages, and its id within the verse: https://bibleontology.org/structure/John.3.16#cl0 is the first clause of John 3:16, as https://bibleontology.org/p/John.3.16 is the verse." .
+claim:evidencedBy a owl:ObjectProperty ; rdfs:label "evidenced by" ; rdfs:domain claim:Claim ;
+    skos:definition "A part of the text's structure that states the same thing as the claim: a clause, a phrase within one, or a speech turn, addressed as for claim:clause. A relation recorded by hand stays as recorded and the part of the text is its evidence; a relation type recorded by hand is never derived from a verb family." .
+
+claim:Modality a owl:Class ; rdfs:subClassOf skos:Concept ; rdfs:label "modality" ;
+    skos:definition "The force a statement is made with." .
+claim:modalities a skos:ConceptScheme ; rdfs:label "modalities" .
+claim:modality a owl:ObjectProperty ; rdfs:label "modality" ; rdfs:domain claim:Claim ; rdfs:range claim:Modality ;
+    skos:definition "The force the statement is made with: made outright (stated, or a non-finite clause reporting an event), or a command, promise, question or wish. A verb statement's triple is never stated whatever its force, since bor:states carries no verb; for other relations, only a statement made outright is stated." .
+claim:modalityFrom a owl:DatatypeProperty ; rdfs:label "modality from" ; rdfs:domain claim:Claim ;
+    skos:definition "Where the modality comes from: the verb's form, or a reading where the form does not mark it (a command in the form of a future)." .
+claim:modality_stated a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "stated" ;
+    skos:definition "A plain statement." .
+claim:modality_commanded a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "commanded" ;
+    skos:definition "A command: an imperative, or a Greek subjunctive used as one." .
+claim:modality_promised a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "promised" ;
+    skos:definition "A first-person resolve or promise: the Hebrew cohortative ('I will multiply you'), or a speaker's own future that a reading finds to be one ('I will put enmity', Gen 3:15)." .
+claim:modality_foretold a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "foretold" ;
+    skos:definition "Said of the future, not as the speaker's own undertaking: a prediction ('you will deny Me three times', John 13:38). Described, never stated; that it came to pass is a statement of its own where the text makes one." .
+claim:modality_urged a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "urged" ;
+    skos:definition "A first-person exhortation: the Greek subjunctive of 'let us'." .
+claim:modality_wished a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "wished" ;
+    skos:definition "A wish: the Greek optative." .
+claim:modality_commanded_or_wished a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "commanded or wished" ;
+    skos:definition "The Hebrew jussive, which the form alone does not settle between a command and a wish." .
+claim:modality_asked a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "asked" ;
+    skos:definition "A question." .
+claim:modality_nonfinite a claim:Modality ; skos:inScheme claim:modalities ; skos:prefLabel "nonfinite" ;
+    skos:definition "An infinitive or participle clause, which can report a real event ('when Ahab saw Elijah')." .
+
+claim:VerbFamily a owl:Class ; rdfs:subClassOf skos:Concept ; rdfs:label "verb family" ;
+    skos:definition "The broad kind of act a verb names, from WordNet's fifteen verb classes, drawn through the English and marked so." .
+claim:verbFamilies a skos:ConceptScheme ; rdfs:label "verb families" .
+claim:family a owl:ObjectProperty ; rdfs:label "family" ; rdfs:domain claim:Claim ; rdfs:range claim:VerbFamily ;
+    skos:definition "The kind of act the statement's verb names. A relation type recorded by hand is evidenced by a statement, never placed under a family." .
+claim:familyFrom a owl:DatatypeProperty ; rdfs:label "family from" ; rdfs:domain claim:Claim ;
+    skos:definition "How the family was found." .
+claim:family_verb_emotion a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "feeling" .
+claim:family_verb_possession a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "giving and taking" .
+claim:family_verb_contact a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "touching and striking" .
+claim:family_verb_motion a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "moving" .
+claim:family_verb_communication a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "speaking" .
+claim:family_verb_creation a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "making" .
+claim:family_verb_perception a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "seeing and hearing" .
+claim:family_verb_social a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "acting toward others" .
+claim:family_verb_cognition a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "knowing and thinking" .
+claim:family_verb_change a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "changing" .
+claim:family_verb_body a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "the body" .
+claim:family_verb_competition a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "fighting" .
+claim:family_verb_consumption a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "eating and drinking" .
+claim:family_verb_stative a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "being" .
+claim:family_verb_weather a claim:VerbFamily ; skos:inScheme claim:verbFamilies ; skos:prefLabel "weather" .

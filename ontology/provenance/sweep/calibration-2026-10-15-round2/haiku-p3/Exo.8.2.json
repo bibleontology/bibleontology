@@ -1,0 +1,61 @@
+{
+ "ref": "Exo.8.2",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "w2",
+   "divine": false,
+   "why": "'his hand': the one who stretched out, Aaron (3ms).",
+   "category": "third person possessive"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "divine": false,
+   "why": "'she covered': third feminine singular, the frogs (w12, feminine singular collective).",
+   "category": "third person subject"
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.8.1#cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then runs within a verse only; across the verse boundary it is not used.",
+   "category": "then across verses"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "Aaron's stretching out brings about the frogs' coming up: a clause stating what an act brings about is result, not then.",
+   "category": "act then its result read as then"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the act of stretching out the hand, and what it brings about: the frogs came up (R4).",
+   "category": "act and its result"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "wayyiqtol continues the narrative line: the frogs came up, then covered the land.",
+   "category": "wayyiqtol continuation"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether cl0 (Aaron stretched out his hand) fulfils the command Exo.8.1#cl2 (stretch out your hand)",
+   "why": "the verb is repeated in a narrative report with a named subject, but there is no pro-form (ken or asah) as the fulfils condition requires; not linked."
+  }
+ ]
+}

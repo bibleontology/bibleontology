@@ -1,0 +1,111 @@
+{
+ "ref": "Rom.3.5",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'Of us' (ἡμῶν) is the writer with his readers; no first-person candidate is offered.",
+   "category": "first person of the writer not offered as candidate"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'what' (τί) in 'what shall we say'; no referent.",
+   "category": "interrogative word, not a referent"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'We' (ἐροῦμεν, shall say) is the writer with his readers; no candidate fits. The builder's w0 is not a candidate.",
+   "category": "first person of the writer not offered as candidate"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "none",
+   "divine": false,
+   "why": "'I speak' (λέγω) is the writer, not offered as a candidate.",
+   "category": "first person of the writer not offered as candidate"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Direction is reversed: the question 'what shall we say?' is what the condition conditions, so the link runs from cl0 to cl1.",
+   "category": "condition direction reversed"
+  },
+  {
+   "src": "cl3",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The participle is not joined by 'and' to the question; it describes God in cl2.",
+   "category": "participle read as plain and"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The question (consequent) is conditioned by the if-clause cl1, 'our unrighteousness shows God's righteousness'.",
+   "category": "condition before its consequence"
+  },
+  {
+   "src": "cl2",
+   "type": "describing",
+   "dst": "cl3",
+   "action": "add",
+   "why": "ὁ ἐπιφέρων τὴν ὀργήν is a bare participle with no conjunction, agreeing with ὁ θεός of cl2; it describes God as the one who inflicts wrath.",
+   "category": "participle describing its subject"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'What shall we say?' (ἐροῦμεν) introduces the proposition 'God is unjust?' (cl2), which is its content (R1).",
+   "category": "saying with its content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl0"
+    }
+   ],
+   "divine": false,
+   "why": "The condition is cl1 and the consequence the question in cl0; the builder's grouping is right, only the link direction was wrong.",
+   "category": "condition and consequence"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl4 (κατὰ ἄνθρωπον λέγω, 'I speak in human terms')",
+   "what": "A parenthetical disclaimer about the manner of the argument; no link type relates a comment on one's own argument. Left unlinked."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "δέ opening the verse (Εἰ δέ)",
+   "why": "A verse-opening 'but' has no host in its own verse, so no contrast with 3:4 is drawn."
+  },
+  {
+   "what": "turn for 'what shall we say' (cl0)",
+   "why": "A turn needs a sender from the candidates; the speaker 'we' is not offered, so no turn is built."
+  }
+ ]
+}

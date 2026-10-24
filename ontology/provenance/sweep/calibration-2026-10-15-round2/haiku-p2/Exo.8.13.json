@@ -1,0 +1,126 @@
+{
+ "ref": "Exo.8.13",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "w5",
+   "divine": false,
+   "why": "'his hand' is third masculine singular; the one who stretches out the hand is Aaron, named in the clause.",
+   "category": "possessive of the acting person"
+  },
+  {
+   "slot": "w11",
+   "choice": "w5",
+   "divine": false,
+   "why": "'his staff' is third masculine singular, Aaron's staff.",
+   "category": "possessive of the acting person"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Exo.8.8#c2",
+   "divine": false,
+   "why": "'they did so' is a plural report of the command chain, which was addressed to Moses (to tell) and Aaron (to act); a plural can refer only to the two together, so the composite Moses and Aaron.",
+   "category": "plural pro-form after command chain"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w5",
+   "divine": false,
+   "why": "'he struck' continues the subject named in the preceding clause, Aaron.",
+   "category": "same agent continuing"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "a link from the closing clause back to the opening report is backward; the dust becoming gnats is the result of the striking, not the next event after the report.",
+   "category": "backward then link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "a wayyiqtol continues the narrative line from the report.",
+   "category": "narrative continuation"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "a wayyiqtol continues the narrative line.",
+   "category": "narrative continuation"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "a wayyiqtol continues the narrative line after the strike.",
+   "category": "narrative continuation"
+  },
+  {
+   "src": "cl0",
+   "type": "fulfils",
+   "dst": "Exo.8.12#imp2",
+   "action": "add",
+   "why": "'did so' is a narrative report with no named subject after a command chain; it fulfils the whole collection of commands, so it points at the imperative group.",
+   "category": "summary report fulfils command collection"
+  },
+  {
+   "src": "cl1",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl2",
+   "action": "add",
+   "why": "the clause repeats the verb of the command 'stretch out', so it fulfils that command.",
+   "category": "member by member fulfilment"
+  },
+  {
+   "src": "cl1",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "after the summary report, a narrative clause that fulfils one command gives the detail of the report.",
+   "category": "detail of summary report"
+  },
+  {
+   "src": "cl2",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl3",
+   "action": "add",
+   "why": "the clause repeats the verb 'strike' of the command, so it fulfils that command.",
+   "category": "member by member fulfilment"
+  },
+  {
+   "src": "cl2",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "the striking is the detail of the summary report.",
+   "category": "detail of summary report"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl4",
+   "action": "add",
+   "why": "an act done to something (striking the dust), then what that thing becomes (it was gnats).",
+   "category": "act and what it brings about"
+  },
+  {
+   "src": "cl4",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl4",
+   "action": "add",
+   "why": "the clause repeats the verb of the command's effect (become), so it fulfils the effect and is the result of the acts before it.",
+   "category": "fulfilment of command effect"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

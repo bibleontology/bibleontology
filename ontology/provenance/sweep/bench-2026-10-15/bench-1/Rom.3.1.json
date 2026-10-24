@@ -1,0 +1,32 @@
+{
+ "ref": "Rom.3.1",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative Ti (neuter singular) opening the question about the advantage; it refers to nothing, and no candidate is neuter singular.",
+   "category": "interrogative word, not a referent"
+  },
+  {
+   "slot": "w7",
+   "choice": "w9",
+   "divine": false,
+   "why": "Feminine singular interrogative agreeing with ophelia (benefit, w9), the noun it modifies: what is the benefit.",
+   "category": "interrogative agreeing with its noun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Two questions side by side asking the same thing, joined by e (or): an alternative.",
+   "category": "alternative questions side by side"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

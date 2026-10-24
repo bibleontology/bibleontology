@@ -1,0 +1,96 @@
+# systemd unit for the explorer.
+#
+# The store loads in 0.2 seconds, which is what makes this simple: a restart
+# is effectively free, so there is no need for graceful reloads, worker pools
+# or a process manager with opinions. Stop it, start it, it is back.
+#
+# Install to /etc/systemd/system/bibleontology.service
+
+[Unit]
+Description=Bible Ontology Explorer
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bibleont
+Group=bibleont
+WorkingDirectory=/srv/bibleontology
+
+# Feedback and invites live outside the code, on a path that survives every
+# deploy. The invite file's presence is also what switches the gate on, so
+# this variable is doing two jobs and both of them matter.
+Environment=BIBLEONT_FEEDBACK=/srv/bibleontology-data
+Environment=PYTHONUNBUFFERED=1
+
+# TWO MEMORY POOLS, NOT ONE PER THREAD (2026-10-14: two arenas, set
+# after measuring). The server answers each request on its own thread, and glibc gives
+# threads their own malloc arenas -- up to 8 per core, 16 here -- each of
+# which keeps what it once held and rarely hands it back. /ops sat at
+# 2,973 MB of the 3G below while the same data, fully warmed on the laptop,
+# levelled near 2.5 GB. Two arenas trade a little lock contention, which a
+# site of this size does not feel, for memory that is reused instead of
+# stranded. Measured after: 2026-10-14 (night).
+Environment=MALLOC_ARENA_MAX=2
+
+# Bound to loopback: the only way in is through Caddy, which holds the
+# certificate. A server listening on 0.0.0.0 would also answer on the bare
+# IP over plain http, which would serve the site with no TLS to anyone who
+# scanned the address -- and scanning the address is the first thing anyone
+# does.
+#
+# app2 is the site from 2026-10 (docs/LAUNCH.md): app2 was to become the new app1,
+# so that it could slide in safely. app/ stays
+# in the tree as the way back: point this line at app/server.py, restore
+# MemoryMax=1G, daemon-reload, restart. No --dev here: without it the working
+# pages (/plan, /ontology, /passage, /tree, /suite) are 404.
+ExecStart=/usr/bin/python3 /srv/bibleontology/app2/server.py --port 8000
+
+Restart=always
+RestartSec=3
+
+# It reads a graph and writes notes. Nothing else should be reachable, and
+# these lines are why a mistake in the application stays inside it.
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+SystemCallArchitectures=native
+
+# NOTHING IN THE APP TALKS TO THE INTERNET. 2026-10-01: the largest risk
+# might be supply chain, answered by not allowing anything on the server to call
+# out to the internet. The app answers Caddy over loopback and needs no other
+# network at all, so every other address is denied to this service alone: a
+# compromised dependency or a poisoned push could not phone home or fetch a
+# second stage. Applied to the service, not the machine, because Caddy must
+# still reach Let's Encrypt to renew the certificate and the system must
+# still fetch security updates.
+IPAddressDeny=any
+IPAddressAllow=localhost
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+# The single writable path. ProtectSystem=strict makes everything else
+# read-only including /srv/bibleontology itself, so a compromised process
+# cannot rewrite the code it is running.
+ReadWritePaths=/srv/bibleontology-data
+
+# app1 peaked at 250MB and ran under 1G. app2 measured 4.8 GB on the laptop
+# until its representations were compacted the same day (2026-10-01,
+# docs/LAUNCH.md): 1.96 GB warmed, every answer unchanged. 3G is for the 4 GB
+# ($24) droplet, to be confirmed by measuring on the server. The 2 GB droplet
+# cannot run app2, so the droplet is resized BEFORE this unit goes in, or the
+# service is killed while loading and Restart=always loops. Still low enough
+# that a runaway takes the service down rather than the machine.
+MemoryMax=3G
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,72 @@
+{
+ "ref": "Exo.8.14",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'their secret arts' is third masculine plural; the owners of the arts are the magicians (w4).",
+   "category": "possessive in narrative"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'they were not able' is third common plural; the subject of the attempt, the magicians (w4).",
+   "category": "implied subject continuing narrative"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "This refers to a clause of the previous verse (Exo.8.13 cl4), and across verses the link is the episode rung, not then.",
+   "category": "cross-verse link written as then"
+  },
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "lamed plus infinitive construct: the act was done to bring forth the gnats.",
+   "category": "attempt with a purpose"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "An attempt with a purpose, then and plus a negated verb of being able, is the attempt's failed_result, not a plain and.",
+   "category": "attempt that failed"
+  },
+  {
+   "src": "cl0",
+   "type": "failed_result",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The magicians tried to bring forth gnats and it did not happen: 'and they were not able'.",
+   "category": "attempt that failed"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "wayyiqtol continues the narrative line: the gnats then remained on man and beast.",
+   "category": "narrative continuation"
+  },
+  {
+   "src": "cl0",
+   "type": "likewise",
+   "dst": "Exo.8.13#cl2",
+   "action": "add",
+   "why": "A named subject does 'did so' (ken) for a deed not commanded to them: bringing forth gnats by a like act, after the latest command (strike the dust). Imitation, not fulfilment.",
+   "category": "imitation of a deed just done"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

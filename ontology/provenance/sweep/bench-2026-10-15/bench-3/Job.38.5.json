@@ -1,0 +1,78 @@
+{
+ "ref": "Job.38.5",
+ "referents": [
+  {
+   "slot": "w0",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Interrogative 'who' with a third masculine singular verb 'fixed'. The rhetorical answer is the speaker, the LORD; the question is put to Job.",
+   "category": "rhetorical who answered by the speaker"
+  },
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its measurements' is feminine singular, referring to the earth of 38:4. The earth is not offered as a candidate.",
+   "category": "pronoun for a non-person from an earlier verse"
+  },
+  {
+   "slot": "w7",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Interrogative 'who' of the second question, third masculine singular 'stretched out': the same rhetorical answer as w0.",
+   "category": "rhetorical who answered by the speaker"
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false,
+   "why": "'On it' (feminine singular): the earth, as w3, not offered as a candidate.",
+   "category": "pronoun for a non-person from an earlier verse"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Second person 'you know' inside the LORD's speech: the one addressed, Job.",
+   "category": "second person in a speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "The ki before 'you know' is asseverative ('surely you know'). It gives no reason for the question, and 'because' records a reason.",
+   "category": "emphatic ki read as reason"
+  },
+  {
+   "src": "cl1",
+   "type": "or",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "The alternative to the first question is cl0 ('who fixed'), not the parenthetical 'surely you know'.",
+   "category": "or joined to the wrong clause"
+  },
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'Or who stretched a line' is the alternative to 'who fixed its measurements': two questions side by side.",
+   "category": "two questions side by side"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "38:5 cl1",
+   "what": "Asseverative ki ('surely you know') has no link type: it is neither a reason nor a result."
+  },
+  {
+   "where": "38:5 w3, w10 (and 38:6, 38:9, 38:10)",
+   "what": "The candidate lists offer only persons and groups from earlier verses. Non-person nouns such as the earth of 38:4 and the sea of 38:8 are never offered, so pronouns for them have no candidate."
+  }
+ ],
+ "cant_tell": []
+}

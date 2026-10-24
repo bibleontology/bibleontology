@@ -1,0 +1,22 @@
+{"ref": "Psa.23.4",
+ "referents": [
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "second person singular addressed to the one who is with the psalmist; the psalm shifts from speaking about the LORD (vv.1-3) to speaking to him", "category": "shift from third to second person address within a psalm"},
+  {"slot": "w12", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular suffix in a psalm is the psalm's own voice", "category": "psalm first person is the psalmist"},
+  {"slot": "w14", "choice": "Psa.23.1#w3", "divine": true, "why": "second person singular possessor of the rod, the same 'you' as in cl2", "category": "possessive of the addressed second person"},
+  {"slot": "w17", "choice": "Psa.23.1#w3", "divine": true, "why": "second person singular possessor of the staff, the same 'you' as in cl2", "category": "possessive of the addressed second person"},
+  {"slot": "w18", "choice": "c13", "divine": false, "why": "third masculine plural subject of 'comfort me' resumes the two things just named, rod and staff (composite candidate)", "category": "resumptive pronoun for a compound subject"},
+  {"slot": "w20", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular object suffix in a psalm is the psalm's own voice", "category": "psalm first person is the psalmist"},
+  {"slot": "cl0s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular yiqtol 'I will go' in the psalm's own voice", "category": "psalm first person is the psalmist"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first person singular yiqtol 'I will fear' in the psalm's own voice", "category": "psalm first person is the psalmist"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "conceded", "dst": "cl0", "action": "keep", "why": "gam ki opens cl0 as the concession ('even though I walk') and the claim 'I will fear no evil' holds anyway; concession precedes what it qualifies and attaches forward", "category": "concession fronted before its main clause"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "why": "ki after the main clause gives the reason for not fearing: 'for you are with me'", "category": "reason clause after its main clause"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "concession", "action": "add", "members": [{"role": "conceded", "node": "cl0"}, {"role": "holds_anyway", "node": "cl1"}, {"role": "its_ground", "node": "cl2"}], "divine": false, "why": "cl0 is the obstacle (gam ki, walking through the valley), cl1 the claim that holds anyway, and cl2 (ki) the stated ground of that claim", "category": "concession with its ground"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "How cl3 and cl4 (rod and staff, they comfort me) attach to cl2", "why": "no conjunction at cl3 and the semicolon leaves open whether they are a further ground under the same ki, the detail of 'you are with me', or a separate asyndetic statement; the form does not decide, so no elaborates or because link is added"}
+ ]}

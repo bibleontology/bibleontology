@@ -1,0 +1,25 @@
+{
+ "ref": "Mrk.15.3",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "him (autou) is the one accused, Jesus; the builder's w4 (chief priests) is the accuser and the subject, so the builder referent is wrong",
+   "category": "object pronoun, builder referent wrong"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl2 is not a clause of this verse (the verse has only cl0); the link is stale and points nowhere",
+   "category": "stale link to missing clause"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

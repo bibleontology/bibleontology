@@ -1,0 +1,83 @@
+{"certainty": "implied", "dst": "zacchaeus", "note": "Jesus's idiom 'a son of Abraham' affirms Jewish covenant descent, not a specific traced genealogy", "refs": ["Luke 19:9"], "source": "mark-luke-john", "src": "abraham", "type": "ancestor_of"}
+{"certainty": "explicit", "dst": "melchi_b", "refs": ["Luke 3:28"], "source": "mark-luke-john", "src": "addi", "type": "father_of"}
+{"certainty": "implied", "dst": "rufus", "note": "both called sons of Simon of Cyrene", "refs": ["Mark 15:21"], "source": "mark-luke-john", "src": "alexander", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "levi_son_of_alphaeus", "refs": ["Mark 2:14"], "source": "mark-luke-john", "src": "alphaeus", "type": "father_of"}
+{"certainty": "explicit", "dst": "mattathias_a", "refs": ["Luke 3:25"], "source": "mark-luke-john", "src": "amos_luke", "type": "father_of"}
+{"certainty": "explicit", "dst": "jesus", "note": "Jesus was brought to Annas first and questioned before being sent to Caiaphas", "refs": ["John 18:19-24"], "source": "mark-luke-john", "src": "annas", "type": "judged"}
+{"certainty": "explicit", "dst": "cainan_luke", "refs": ["Luke 3:36"], "source": "mark-luke-john", "src": "arphaxad", "type": "father_of"}
+{"certainty": "explicit", "dst": "jesus", "note": "as high priest that year, counseled the Sanhedrin that Jesus should die", "refs": ["John 11:49-53", "Matt 26:3-4"], "source": "mark-luke-john,matt", "src": "caiaphas", "type": "conspired_against"}
+{"certainty": "disputed", "dst": "salah", "note": "Genesis (Gen 11:12) and 1 Chronicles (1Chr 1:18) make Arphaxad the direct father of Shelah, with no Cainan between them; this Cainan reflects the Septuagint genealogy that Luke follows.", "refs": ["Luke 3:35-36"], "source": "mark-luke-john", "src": "cainan_luke", "type": "father_of"}
+{"certainty": "explicit", "dst": "joanna_wife_of_chuza", "refs": ["Luke 8:3"], "source": "mark-luke-john", "src": "chuza", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "mary_wife_of_cleophas", "refs": ["John 19:25"], "source": "mark-luke-john", "src": "cleophas", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "addi", "refs": ["Luke 3:28"], "source": "mark-luke-john", "src": "cosam", "type": "father_of"}
+{"certainty": "explicit", "dst": "jonan", "refs": ["Luke 3:30"], "source": "mark-luke-john", "src": "eliakim_luke", "type": "father_of"}
+{"certainty": "explicit", "dst": "jose_luke", "refs": ["Luke 3:29"], "source": "mark-luke-john", "src": "eliezer_luke", "type": "father_of"}
+{"certainty": "explicit", "dst": "john_the_baptist", "refs": ["Luke 1:13", "Luke 1:57"], "source": "mark-luke-john", "src": "elisabeth", "type": "mother_of"}
+{"certainty": "explicit", "dst": "zacharias_father_of_john_the_baptist", "refs": ["Luke 1:5"], "source": "mark-luke-john", "src": "elisabeth", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "cosam", "refs": ["Luke 3:28"], "source": "mark-luke-john", "src": "elmodam", "type": "father_of"}
+{"certainty": "explicit", "dst": "elmodam", "refs": ["Luke 3:28"], "source": "mark-luke-john", "src": "er_luke", "type": "father_of"}
+{"certainty": "explicit", "dst": "naum", "refs": ["Luke 3:25"], "source": "mark-luke-john", "src": "esli", "type": "father_of"}
+{"certainty": "disputed", "dst": "joseph_husband_of_mary", "note": "Matthew's genealogy names Jacob as Joseph's father (Matt 1:16); Luke names Heli.", "refs": ["Luke 3:23"], "source": "mark-luke-john", "src": "heli", "type": "father_of"}
+{"certainty": "explicit", "dst": "pilate", "note": "previously enemies (Luke 23:12)", "refs": ["Luke 23:12"], "source": "mark-luke-john", "src": "herod_antipas", "type": "friend_of"}
+{"certainty": "explicit", "dst": "john_the_baptist", "note": "'Herod had arrested John, bound him, and put him in prison for the sake of Herodias' (Matt 14:3).", "refs": ["Mark 6:17", "Luke 3:19-20", "Matt 14:3"], "source": "mark-luke-john,matt,matthew-loaves-and-rising", "src": "herod_antipas", "type": "imprisoned"}
+{"certainty": "explicit", "dst": "jesus", "note": "Herod questioned and mocked Jesus but returned him to Pilate without sentence (Luke 23:11,15).", "refs": ["Luke 23:7-11"], "source": "mark-luke-john", "src": "herod_antipas", "type": "judged"}
+{"certainty": "explicit", "dst": "john_the_baptist", "note": "the subject is 'the king' of the surrounding narrative (Mark 6:14-26), i.e. Herod, who orders the beheading; Herod ordered the beheading, carried out in the prison; 'and sent to have John beheaded in the prison.' (Matt 14:10), on the request the girl was instructed to make (14:8). **Matthew makes Herod the actor and Herodias the cause.**", "refs": ["Mark 6:27-28", "Matt 14:10", "Matt 14:8"], "source": "mark-luke-john,matt,matthew-loaves-and-rising", "src": "herod_antipas", "type": "killed"}
+{"certainty": "explicit", "dst": "philip_brother_of_herod_antipas", "refs": ["Luke 3:1", "Matt 14:3"], "source": "mark-luke-john,matt", "src": "herod_antipas", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "herodias", "note": "John tells Herod \"It is not lawful for you to have her\" (14:4), implying Herod had taken his brother Philip's wife Herodias as his own", "refs": ["Mark 6:17", "Matt 14:3-4"], "source": "mark-luke-john,matt", "src": "herod_antipas", "type": "spouse_of"}
+{"certainty": "explicit", "dst": "daughter_of_herodias", "note": "the girl is called 'the daughter of Herodias' who danced and then consulted 'her mother'; 'the daughter of Herodias danced before them' (Matt 14:6), and 'Prompted by her mother, she' (14:8).", "refs": ["Mark 6:22", "Mark 6:24", "Matt 14:6", "Matt 14:8"], "source": "mark-luke-john,matt,matthew-loaves-and-rising", "src": "herodias", "type": "mother_of"}
+{"certainty": "explicit", "dst": "philip_brother_of_herod_antipas", "note": "before she married Herod Antipas; 'For Herod had arrested John, bound him, and put him in prison for the sake of Herodias, his brother Philip's wife' (Matt 14:3).", "refs": ["Mark 6:17", "Matt 14:3"], "source": "mark-luke-john,matt,matthew-loaves-and-rising", "src": "herodias", "type": "spouse_of"}
+{"certainty": "implied", "dst": "daughter_of_jairus", "note": "Jairus falls at Jesus's feet and says 'my little daughter'; she is not otherwise named", "refs": ["Mark 5:22-23", "Luke 8:41-42"], "source": "mark-luke-john", "src": "jairus", "type": "father_of"}
+{"certainty": "explicit", "dst": "jesus", "note": "Paul: “James, the Lord's brother” (Gal 1:19). The text's ἀδελφός; whether these are siblings, half- or step-brothers or cousins is disputed, and the record does not decide.", "refs": ["Gal 1:19"], "source": "mark-luke-john,matt", "src": "james_brother_of_jesus", "type": "sibling_of", "ruled": "Doug, 2026-10-21 (P10): James on Gal 1:19; the others as the Nazareth crowd's claim; the note on all"}
+{"certainty": "implied", "dst": "joses_brother_of_james_the_less", "note": "both called children of the same Mary", "refs": ["Mark 15:40"], "source": "mark-luke-john", "src": "james_the_less", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "melchi_a", "refs": ["Luke 3:24"], "source": "mark-luke-john", "src": "janna", "type": "father_of"}
+{"certainty": "explicit", "dst": "lazarus", "refs": ["John 11:5", "John 11:11"], "source": "mark-luke-john", "src": "jesus", "type": "friend_of"}
+{"certainty": "explicit", "dst": "martha", "refs": ["John 11:5"], "source": "mark-luke-john", "src": "jesus", "type": "friend_of"}
+{"certainty": "explicit", "dst": "mary_of_bethany", "refs": ["John 11:5"], "source": "mark-luke-john", "src": "jesus", "type": "friend_of"}
+{"certainty": "implied", "dst": "daughter_of_jairus", "note": "the girl healed is Jairus's unnamed daughter from the surrounding narrative", "refs": ["Mark 5:41-42", "Luke 8:54-55"], "source": "mark-luke-john", "src": "jesus", "type": "healed"}
+{"certainty": "explicit", "dst": "lazarus", "note": "raised from the dead after four days in the tomb", "refs": ["John 11:43-44"], "source": "mark-luke-john", "src": "jesus", "type": "healed"}
+{"certainty": "implied", "dst": "malchus", "note": "Luke records Jesus healing the servant's severed ear without naming him; John names the servant Malchus in the parallel account of the same event", "refs": ["Luke 22:50-51", "John 18:10"], "source": "mark-luke-john", "src": "jesus", "type": "healed"}
+{"certainty": "explicit", "dst": "joses", "note": "The people of Nazareth ask, “Isn't this ... the brother of James, Joses, Judas, and Simon?” (Mark 6:3). The text's ἀδελφός; whether these are siblings, half- or step-brothers or cousins is disputed, and the record does not decide.", "refs": ["Mark 6:3", "Matt 13:55"], "source": "mark-luke-john,matt", "src": "jesus", "type": "sibling_of", "claimed_by": "the_people_in_the_nazareth_synagogue", "ruled": "Doug, 2026-10-21 (P10): James on Gal 1:19; the others as the Nazareth crowd's claim; the note on all"}
+{"certainty": "explicit", "dst": "judas_brother_of_jesus", "note": "The people of Nazareth ask, “Isn't this ... the brother of James, Joses, Judas, and Simon?” (Mark 6:3). The text's ἀδελφός; whether these are siblings, half- or step-brothers or cousins is disputed, and the record does not decide.", "refs": ["Mark 6:3", "Matt 13:55"], "source": "mark-luke-john,matt", "src": "jesus", "type": "sibling_of", "claimed_by": "the_people_in_the_nazareth_synagogue", "ruled": "Doug, 2026-10-21 (P10): James on Gal 1:19; the others as the Nazareth crowd's claim; the note on all"}
+{"certainty": "explicit", "dst": "simon_brother_of_jesus", "note": "The people of Nazareth ask, “Isn't this ... the brother of James, Joses, Judas, and Simon?” (Mark 6:3). The text's ἀδελφός; whether these are siblings, half- or step-brothers or cousins is disputed, and the record does not decide.", "refs": ["Mark 6:3", "Matt 13:55"], "source": "mark-luke-john,matt", "src": "jesus", "type": "sibling_of", "claimed_by": "the_people_in_the_nazareth_synagogue", "ruled": "Doug, 2026-10-21 (P10): James on Gal 1:19; the others as the Nazareth crowd's claim; the note on all"}
+{"certainty": "explicit", "dst": "juda_a", "refs": ["Luke 3:26-27"], "source": "mark-luke-john", "src": "joanna_luke", "type": "father_of"}
+{"certainty": "explicit", "dst": "peter", "refs": ["John 1:42", "John 21:15"], "source": "mark-luke-john", "src": "jona_father_of_peter", "type": "father_of"}
+{"certainty": "explicit", "dst": "joseph_d", "refs": ["Luke 3:30"], "source": "mark-luke-john", "src": "jonan", "type": "father_of"}
+{"certainty": "explicit", "dst": "eliezer_luke", "refs": ["Luke 3:29"], "source": "mark-luke-john", "src": "jorim", "type": "father_of"}
+{"certainty": "explicit", "dst": "er_luke", "refs": ["Luke 3:28-29"], "source": "mark-luke-john", "src": "jose_luke", "type": "father_of"}
+{"certainty": "explicit", "dst": "janna", "refs": ["Luke 3:24"], "source": "mark-luke-john", "src": "joseph_b", "type": "father_of"}
+{"certainty": "explicit", "dst": "semei", "refs": ["Luke 3:26"], "source": "mark-luke-john", "src": "joseph_c", "type": "father_of"}
+{"certainty": "explicit", "dst": "juda_b", "refs": ["Luke 3:30"], "source": "mark-luke-john", "src": "joseph_d", "type": "father_of"}
+{"certainty": "explicit", "dst": "jesus", "note": "Luke 3:23 introduces the genealogy noting Jesus was 'regarded as' the son of Joseph, marking legal/putative fatherhood, not biological descent.; Jesus's conception is through the Holy Spirit (Matt 1:18,20); Joseph, as Mary's husband, took her as his wife and named the child (1:24-25), acting as legal/adoptive father rather than biological father", "refs": ["Luke 3:23", "Matt 1:24-25"], "source": "mark-luke-john,matt", "src": "joseph_husband_of_mary", "type": "adoptive_parent_of"}
+{"certainty": "explicit", "dst": "nicodemus", "note": "joined together to take down and bury Jesus's body", "refs": ["John 19:39-40"], "source": "mark-luke-john", "src": "joseph_of_arimathaea", "type": "companion_of"}
+{"certainty": "explicit", "dst": "joseph_c", "refs": ["Luke 3:26"], "source": "mark-luke-john", "src": "juda_a", "type": "father_of"}
+{"certainty": "explicit", "dst": "simeon_luke", "refs": ["Luke 3:30"], "source": "mark-luke-john", "src": "juda_b", "type": "father_of"}
+{"certainty": "explicit", "dst": "martha", "refs": ["John 11:1-2", "John 11:19"], "source": "mark-luke-john", "src": "lazarus", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "mary_of_bethany", "refs": ["John 11:1-2"], "source": "mark-luke-john", "src": "lazarus", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "matthat_a", "refs": ["Luke 3:24"], "source": "mark-luke-john", "src": "levi_a", "type": "father_of"}
+{"certainty": "explicit", "dst": "matthat_b", "refs": ["Luke 3:29"], "source": "mark-luke-john", "src": "levi_b", "type": "father_of"}
+{"certainty": "explicit", "dst": "nagge", "refs": ["Luke 3:25-26"], "source": "mark-luke-john", "src": "maath", "type": "father_of"}
+{"certainty": "explicit", "dst": "mary_of_bethany", "refs": ["Luke 10:38-39", "John 11:1"], "source": "mark-luke-john", "src": "martha", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "james_the_less", "refs": ["Mark 15:40"], "source": "mark-luke-john", "src": "mary_mother_of_james_the_less", "type": "mother_of"}
+{"certainty": "explicit", "dst": "joses_brother_of_james_the_less", "refs": ["Mark 15:40"], "source": "mark-luke-john", "src": "mary_mother_of_james_the_less", "type": "mother_of"}
+{"certainty": "explicit", "dst": "menan", "refs": ["Luke 3:31"], "source": "mark-luke-john", "src": "mattatha", "type": "father_of"}
+{"certainty": "explicit", "dst": "joseph_b", "refs": ["Luke 3:24-25"], "source": "mark-luke-john", "src": "mattathias_a", "type": "father_of"}
+{"certainty": "explicit", "dst": "maath", "refs": ["Luke 3:26"], "source": "mark-luke-john", "src": "mattathias_b", "type": "father_of"}
+{"certainty": "explicit", "dst": "heli", "refs": ["Luke 3:23-24"], "source": "mark-luke-john", "src": "matthat_a", "type": "father_of"}
+{"certainty": "explicit", "dst": "jorim", "refs": ["Luke 3:29"], "source": "mark-luke-john", "src": "matthat_b", "type": "father_of"}
+{"certainty": "explicit", "dst": "levi_a", "refs": ["Luke 3:24"], "source": "mark-luke-john", "src": "melchi_a", "type": "father_of"}
+{"certainty": "explicit", "dst": "neri", "refs": ["Luke 3:27-28"], "source": "mark-luke-john", "src": "melchi_b", "type": "father_of"}
+{"certainty": "explicit", "dst": "eliakim_luke", "refs": ["Luke 3:30-31"], "source": "mark-luke-john", "src": "melea", "type": "father_of"}
+{"certainty": "explicit", "dst": "melea", "refs": ["Luke 3:31"], "source": "mark-luke-john", "src": "menan", "type": "father_of"}
+{"certainty": "explicit", "dst": "esli", "refs": ["Luke 3:25"], "source": "mark-luke-john", "src": "nagge", "type": "father_of"}
+{"certainty": "explicit", "dst": "mattatha", "refs": ["Luke 3:31"], "source": "mark-luke-john", "src": "nathan_son_of_david", "type": "father_of"}
+{"certainty": "explicit", "dst": "amos_luke", "refs": ["Luke 3:25"], "source": "mark-luke-john", "src": "naum", "type": "father_of"}
+{"certainty": "disputed", "dst": "shealtiel", "note": "Matthew's genealogy names Jeconiah as Shealtiel's father (Matt 1:12); Luke names Neri.", "refs": ["Luke 3:27"], "source": "mark-luke-john", "src": "neri", "type": "father_of"}
+{"certainty": "explicit", "dst": "malchus", "refs": ["John 18:10"], "source": "mark-luke-john", "src": "peter", "type": "attacked"}
+{"certainty": "explicit", "dst": "joanna_luke", "refs": ["Luke 3:27"], "source": "mark-luke-john", "src": "rhesa", "type": "father_of"}
+{"certainty": "explicit", "dst": "mattathias_b", "refs": ["Luke 3:26"], "source": "mark-luke-john", "src": "semei", "type": "father_of"}
+{"certainty": "explicit", "dst": "levi_b", "refs": ["Luke 3:29-30"], "source": "mark-luke-john", "src": "simeon_luke", "type": "father_of"}
+{"certainty": "explicit", "dst": "judas_iscariot", "refs": ["John 6:71", "John 13:26"], "source": "mark-luke-john", "src": "simon_father_of_judas_iscariot", "type": "father_of"}
+{"certainty": "explicit", "dst": "alexander", "refs": ["Mark 15:21"], "source": "mark-luke-john", "src": "simon_of_cyrene", "type": "father_of"}
+{"certainty": "explicit", "dst": "rufus", "refs": ["Mark 15:21"], "source": "mark-luke-john", "src": "simon_of_cyrene", "type": "father_of"}
+{"certainty": "explicit", "dst": "john_the_baptist", "refs": ["Luke 1:13", "Luke 1:59-63"], "source": "mark-luke-john", "src": "zacharias_father_of_john_the_baptist", "type": "father_of"}
+{"certainty": "explicit", "dst": "rhesa", "refs": ["Luke 3:27"], "source": "mark-luke-john", "src": "zerubbabel", "type": "father_of"}

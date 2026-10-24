@@ -1,0 +1,13 @@
+{"ref": "Psa.23.2",
+ "referents": [
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First-person singular 'me' in the psalm's own voice; the psalm quotes no one here, so the voice candidate fits.", "category": "first-person object in psalm voice"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Same first-person singular 'me' in the second line, in the psalm's own voice.", "category": "first-person object in psalm voice"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "Third masculine singular implied subject of the yiqtol 'makes me lie down'. The shepherd of verse 1 is the LORD, and making a flock lie down is a shepherd's act, so the nearest agreeing sensible doer is the LORD. David agrees in morphology but does not fit the act as the verse frames it.", "category": "implied subject of shepherd act"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "Third masculine singular implied subject of the yiqtol 'leads me'. The same shepherd subject carries across the parallel line.", "category": "implied subject of shepherd act"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "Two poetic lines of one verse. The second restates the first's roles (me, a place of rest) with the subject the same and unstated: the LORD of verse 1.", "category": "parallel lines with implied shared subject"}
+ ],
+ "none_fit": [],
+ "cant_tell": []}

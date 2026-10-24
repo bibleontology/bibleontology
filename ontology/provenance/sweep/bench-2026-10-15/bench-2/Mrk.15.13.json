@@ -1,0 +1,80 @@
+{
+ "ref": "Mrk.15.13",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false,
+   "why": "'Him' (auton) is the one the crowd calls to be crucified: Jesus. Jesus is not in this verse's candidate list, which offers only Pilate and Barabbas.",
+   "category": "object not among candidates"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Mrk.15.12#w2",
+   "divine": false,
+   "why": "Implied 'you' of the imperative is the one the cry is spoken to: Pilate, who asked the question in Mrk.15.12. Singular morphology fits one addressee.",
+   "category": "implied addressee of a command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The command is the object of 'cried out'. Grammar nesting kept beside the content link.",
+   "category": "cry with its speech"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "R1: 'cried out' is a clause of calling out that introduces what is said: a single command, so the said clause itself.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link.",
+   "category": "self link"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "addressee",
+     "node": "Mrk.15.12#w2"
+    }
+   ],
+   "divine": false,
+   "why": "Frame cl0; part cl1, the command. Addressee is Pilate, the one the cry is spoken to (cl1s). The sender, the crowd, is not a candidate, so it is omitted.",
+   "category": "cry turn with sender not in candidates"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "sender of the cry (the crowd, subject of cl0)",
+   "why": "The subject 'they' of cl0 has no slot, and the crowd is not a candidate."
+  },
+  {
+   "what": "Jesus as referent of 'Him' (w5)",
+   "why": "Not offered as a candidate in this verse."
+  }
+ ]
+}

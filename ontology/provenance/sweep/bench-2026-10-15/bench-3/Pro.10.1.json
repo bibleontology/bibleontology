@@ -1,0 +1,39 @@
+{
+ "ref": "Pro.10.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "Masculine singular suffix on 'mother'. Of the masculine singular candidates, the one whose mother receives the grief is the foolish son of this same line (w7). w2, the wise son, is the subject of the first line, whose father is gladdened; w5 father and w1 Solomon are not the subject of either line.",
+   "category": "possessive suffix in the second line of a couplet"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Bare waw joins the two lines of a couplet. No 'but' word and no cause, result or purpose; the antithesis is by sense only.",
+   "category": "plain and between antithetic lines"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Pro.10.1 cl1 -and-> cl2",
+   "what": "Contrast marked only by a bare waw (Hebrew vav, English 'but'). The contrast link is for the word 'but' (אוּלָם, אֶפֶס כִּי) only, so this antithesis has no link type."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Whether the couplet is a parallel group",
+   "why": "The second line restates roles with its verb elided, but its subject is a different son (wise, then foolish), so the parallel kind's condition of one shared subject does not hold. Not added."
+  },
+  {
+   "what": "A writing group for the heading cl0 ('the proverbs of Solomon')",
+   "why": "The heading opens a collection that runs beyond this verse. A writing group needs its part from later verses, so it is held rather than built from this verse alone."
+  }
+ ]
+}

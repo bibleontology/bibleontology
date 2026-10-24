@@ -1,0 +1,93 @@
+{
+ "ref": "Exo.7.28",
+ "referents": [
+  {
+   "slot": "w37",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w11",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w20",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w25",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w29",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w33",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "part",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

@@ -1,0 +1,112 @@
+# THE ALIGNMENT FILE (plan 8.1e; Doug, 2026-10-20: "go ahead with the alignment
+# file"): our terms mapped to their nearest equivalents in five standard
+# vocabularies, as SKOS mapping properties (what that commits a reasoner to is below).
+#
+#   close    skos:closeMatch    near enough to use one for the other in most queries
+#   broad    skos:broadMatch    THEIRS is broader than ours
+#   narrow   skos:narrowMatch   THEIRS is narrower than ours
+#   related  skos:relatedMatch  associated; not interchangeable (the note says how)
+#
+# What a mapping commits a reasoner to: nothing beyond typing both ends as
+# skos:Concept, which SKOS entails (Reference S19-S20, S39-S40) -- punning,
+# permitted in OWL 2. The file declares the four properties as
+# owl:AnnotationProperty, so OWL tools read them as annotations.
+#
+# A mapping says how the text presents a person, place or event; none takes a
+# view on historicity (Adam, Job, Jonah, the flood). CIDOC's E21 Person is
+# "real persons who live or are assumed to have lived".
+#
+# No skos:exactMatch, by policy: it is transitive, and none of these terms was
+# made for the same corpus. A mapping runs in the same direction as both terms:
+# where theirs reads the other way (foaf:member, Group -> Agent), it is
+# "related", and the note says so.
+#
+# Every target is in ontology/align/targets.json, checked against its
+# specification; tests/test_alignment.py fails on a target that is not, and on
+# one of ours that the vocabularies do not define. tools/ns_align.py publishes
+# this as /ns/alignment. Where no standard term fits, there is no mapping, and
+# "unmapped" below says why for the terms an outsider would look for first.
+
+prefixes:
+  bom: https://bibleontology.org/ns/meaning#
+  bos: https://bibleontology.org/ns/structure#
+  bor: https://bibleontology.org/ns/relation#
+  claim: https://bibleontology.org/ns/claim#
+  schema: https://schema.org/
+  foaf: http://xmlns.com/foaf/0.1/
+  crm: http://www.cidoc-crm.org/cidoc-crm/
+  ontolex: http://www.w3.org/ns/lemon/ontolex#
+  oa: http://www.w3.org/ns/oa#
+
+mappings:
+  # ---- who and where
+  - {ours: bom:Human, match: close, theirs: schema:Person, why: "A man, woman or child of the story; schema.org's Person includes the dead and the fictional."}
+  - {ours: bom:Human, match: close, theirs: foaf:Person, why: "FOAF's Person is any person, living, dead, real or imaginary."}
+  - {ours: bom:Human, match: close, theirs: crm:E21_Person, why: "CIDOC's real persons who live or are assumed to have lived."}
+  - {ours: bom:PersonalBeing, match: broad, theirs: foaf:Agent, why: "Anyone the text treats as a person, God and angels included; FOAF's Agent is anything that acts, so it is broader."}
+  # CIDOC's Actor is "people, either individually or in groups" who can be held responsible: God and angels are not
+  # people, so PersonalBeing does not map to it (the committee's third sitting, D5); a human does
+  - {ours: bom:Human, match: broad, theirs: crm:E39_Actor, why: "CIDOC's Actor: people, singly or in groups, able to act intentionally; E21 Person is a subclass."}
+  - {ours: bom:Group, match: close, theirs: foaf:Group, why: "People taken as one: a tribe, a nation, a household."}
+  - {ours: bom:Group, match: close, theirs: crm:E74_Group, why: "CIDOC's gatherings of people who act collectively or are seen as a unit."}
+  - {ours: bom:Place, match: close, theirs: schema:Place, why: "A city, region, mountain, river or well."}
+  - {ours: bom:Place, match: close, theirs: crm:E53_Place, why: "CIDOC's extents in space."}
+  - {ours: bom:Event, match: close, theirs: schema:Event, why: "A happening as a thing: the flood, the exodus, a feast."}
+  - {ours: bom:Event, match: close, theirs: crm:E5_Event, why: "CIDOC's changes of state in the world."}
+  - {ours: bom:Time, match: close, theirs: crm:E52_Time-Span, why: "A point or stretch of time."}
+  - {ours: bom:Artifact, match: close, theirs: crm:E22_Human-Made_Object, why: "Made things: a sword, an altar, the ark."}
+
+  # ---- family and belonging (direction checked: subject to object reads the same way)
+  - {ours: bor:father_of, match: broad, theirs: schema:children, why: "schema:children runs from a parent to a child, as father_of does; it covers mothers too, so it is broader."}
+  - {ours: bor:mother_of, match: broad, theirs: schema:children, why: "As father_of."}
+  - {ours: bor:father_of, match: broad, theirs: crm:P152i_is_parent_of, why: "CIDOC's parent to child, biological, assumed or legal; broader, as schema:children is."}
+  - {ours: bor:mother_of, match: broad, theirs: crm:P152i_is_parent_of, why: "As father_of."}
+  - {ours: bor:spouse_of, match: close, theirs: schema:spouse, why: "Two people married to each other."}
+  - {ours: bor:sibling_of, match: close, theirs: schema:sibling, why: "Two people who are siblings, full or unspecified."}
+  - {ours: bor:half_sibling_of, match: broad, theirs: schema:sibling, why: "Sharing one parent; schema:sibling does not distinguish, so it is broader."}
+  - {ours: bor:friend_of, match: broad, theirs: foaf:knows, why: "FOAF's knows is any reciprocated acquaintance; a friendship is narrower."}
+  - {ours: bor:member_of, match: narrow, theirs: schema:memberOf, why: "A person who belonged to a group. schema's memberOf is narrower: its groups are organizations, not tribes or households, and its members persons or organizations."}
+  - {ours: bor:member_of, match: related, theirs: schema:member, why: "The same membership read the other way: schema:member runs from the organization to the member."}
+  - {ours: bor:member_of, match: close, theirs: crm:P107i_is_current_or_former_member_of, why: "CIDOC's membership, read from the member's side."}
+  - {ours: bor:member_of, match: related, theirs: foaf:member, why: "The same membership read the other way: foaf:member runs from the group to the member."}
+
+  # ---- places
+  - {ours: bor:born_at, match: close, theirs: schema:birthPlace, why: "A person born at a place."}
+  - {ours: bor:died_at, match: close, theirs: schema:deathPlace, why: "A person who died at a place."}
+  - {ours: bor:located_in, match: close, theirs: schema:containedInPlace, why: "A place within a larger place."}
+  - {ours: bor:located_in, match: close, theirs: crm:P89_falls_within, why: "CIDOC's containment of one place in another."}
+  - {ours: bor:dwelt_at, match: related, theirs: schema:homeLocation, why: "A settled residence; schema's homeLocation is a contact location, not a narrated dwelling."}
+  - {ours: bor:dwelt_at, match: close, theirs: crm:P74_has_current_or_former_residence, why: "A person or group that lived at a place."}
+
+  # ---- the text and its parts
+  - {ours: bor:part_of, match: close, theirs: schema:isPartOf, why: "One unit of the text inside a larger one: a saying within a psalm."}
+  - {ours: bor:part_of, match: close, theirs: crm:P106i_forms_part_of, why: "CIDOC's part of a symbolic object."}
+  - {ours: bos:Writing, match: broad, theirs: schema:CreativeWork, why: "The book, psalm or letter as a unit; CreativeWork is any creative work, so broader."}
+  - {ours: bos:Writing, match: narrow, theirs: schema:Book, why: "A book of the Bible is a schema:Book; a psalm or a letter within one is a writing too, so Book is narrower."}
+  - {ours: bos:Writing, match: broad, theirs: crm:E33_Linguistic_Object, why: "A writing is an expression in natural language; E33 is broader."}
+  - {ours: bom:Saying, match: broad, theirs: crm:E33_Linguistic_Object, why: "A memorable expression the text uses, recorded as a unit."}
+  - {ours: bom:Saying, match: related, theirs: schema:Quotation, why: "A saying is a unit of the text's own wording; schema's Quotation is words quoted from a work (a pending term)."}
+  - {ours: bor:speaks_of, match: related, theirs: crm:P67_refers_to, why: "A statement makes a claim about the thing it names; P67 is any reference, without the claim."}
+  - {ours: bor:recounts, match: related, theirs: crm:P129_is_about, why: "A telling is an account of an event; P129 is a text's primary subject. Related, since ours joins two tellings too, not only a telling and its event."}
+
+  # ---- words and meanings
+  - {ours: bom:Concept, match: close, theirs: ontolex:LexicalConcept, why: "An idea the text names, linked to the senses that express it; both are SKOS concepts."}
+
+  # ---- claims: who says what (the nearest standard pattern is CIDOC's attribute assignment)
+  - {ours: claim:Claim, match: related, theirs: crm:E13_Attribute_Assignment, why: "E13 is the act of asserting one relation between two items; a claim is the record of one such relation with whose it is. Ours is the statement, CIDOC's the act."}
+  - {ours: claim:subject, match: related, theirs: crm:P140_assigned_attribute_to, why: "What the assertion is about."}
+  - {ours: claim:object, match: related, theirs: crm:P141_assigned, why: "What is asserted of it."}
+  - {ours: claim:relation, match: related, theirs: crm:P177_assigned_property_of_type, why: "Which relation is asserted."}
+  - {ours: claim:claimedBy, match: related, theirs: crm:P14_carried_out_by, why: "Who makes the assertion; CIDOC's actor carries out the act."}
+  - {ours: claim:Claim, match: related, theirs: schema:Claim, why: "schema.org's Claim is a factually-oriented claim, as reviewed by fact-checkers; ours is a relation the text or a speaker asserts."}
+  - {ours: bom:Reading, match: related, theirs: crm:E13_Attribute_Assignment, why: "E13 records who holds an opinion about an item, as a reading names its reader; CIDOC's is the act, ours the reading."}
+  - {ours: bom:Reading, match: related, theirs: oa:Annotation, why: "One reader's claim about the text, with the reader and its evidence; an annotation is a body about a target, with its creator."}
+
+# The terms an outsider would look for first, and why they have no mapping.
+unmapped:
+  bom:Deity: "None of the five vocabularies mapped here has a class for gods. Deity reaches foaf:Agent through PersonalBeing; CIDOC's Actor is people, so it does not."
+  bom:HeavenlyBeing: "None either; the same path through PersonalBeing to foaf:Agent."
+  bos:Word: "One word at one place in one verse. OntoLex's Word is the dictionary entry (ours is bow:Lexeme, a subclass of ontolex:LexicalEntry), not a word in a text."
+  bos:Clause: "No standard vocabulary above has a clause; it comes from MACULA's syntax trees."
+  claim:voice: "Whose claim a claim is. The standard pattern is attribution, which claim:claimedBy, claim:reader and claim:voiceOf already state as prov:wasAttributedTo."
+  bor:possibly_same_as: "A reader's view that two records may be one person. Not owl:sameAs and not schema:sameAs, which assert an identity; the reasoning policy forbids one."

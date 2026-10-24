@@ -1,0 +1,82 @@
+{
+ "ref": "Psa.119.105",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'my feet' is the psalm's own voice, which a first person in a psalm names, but no voice candidate is offered; the only person candidate is the LORD, which does not fit a first person speaker.",
+   "category": "psalm voice missing from candidates",
+   "votes": 2
+  },
+  {
+   "slot": "w5",
+   "choice": "Psa.119.89#w0",
+   "divine": true,
+   "why": "second person masculine singular; the psalm is addressed to God throughout, and the LORD (masculine singular) is the addressee the candidates offer.",
+   "category": "second person addressee of the psalm",
+   "votes": 3
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false,
+   "why": "'my path' is the psalm's own voice, as w3; no voice candidate is offered.",
+   "category": "psalm voice missing from candidates",
+   "votes": 2
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "plain waw (וְ) joining two parallel lines; the sense is neither cause, result nor purpose, so it stays a plain 'and'.",
+   "category": "plain and between parallel lines",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "Psa.119.105#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "cl1 'a light to my path' restates the roles of cl0 'a lamp to my feet' with no subject of its own; the subject, 'your word' (w4), is the same in both.",
+   "category": "two lines restating roles",
+   "votes": 3
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "slots w3 and w10 (my feet, my path)",
+   "what": "the rules name the psalm's own voice (a voice candidate) for a first person in a psalm, but this verse offers no voice candidate; recorded as none rather than forced onto the LORD."
+  },
+  {
+   "where": "w3 and w10 (my feet, my path)",
+   "what": "The psalm's own voice has no candidate in this verse's list. The voice candidate the rules name is not offered, so the first person cannot be resolved to a candidate id."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Slots w3 (my feet) and w10 (my path): the psalm's own voice",
+   "why": "The rule makes the first person the psalm's voice, but no voice candidate is listed, so the referent cannot be chosen from the candidates."
+  }
+ ],
+ "voted": 3
+}

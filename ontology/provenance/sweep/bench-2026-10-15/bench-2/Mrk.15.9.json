@@ -1,0 +1,106 @@
+{
+ "ref": "Mrk.15.9",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "Plural 'them' (autois) that Pilate answers. The plural addressed is the crowd of Mrk.15.8, but no plural candidate is offered.",
+   "category": "plural addressee not among candidates"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "Plural 'to you' inside Pilate's speech. The addressees are the crowd of Mrk.15.8, which is not a candidate.",
+   "category": "plural addressee not among candidates"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "Plural 'you' inside Pilate's wish. The crowd again, not a candidate.",
+   "category": "plural addressee not among candidates"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "First singular inside Pilate's speech (cl2 'wish', cl3 'I should release'). The speaker of the quoted words is Pilate.",
+   "category": "first person inside a speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "Subjunctive 'I should release' is the object of the verb of wishing. Grammar nesting; not a verb of knowing or saying, so not 'that'.",
+   "category": "object clause of a verb of wishing"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Participle 'saying' is a manner role of the main verb 'answered'.",
+   "category": "participle of the main verb"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The participle governs the speech it introduces. Grammar nesting kept beside the content link.",
+   "category": "saying participle with its speech"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "R1: the saying participle introduces what is said (cl2).",
+   "category": "speech content"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link; a clause is not 'and then' itself.",
+   "category": "self link"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "Frame is the answering clause cl0. Part was cl1, the participle 'saying', which carries no content; what is said is cl2 (R1). Sender is Pilate (R2). The addressee is the crowd, which is not a candidate, so no addressee member is given.",
+   "category": "speech turn with addressee not in candidates"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "addressee of Pilate's turn (w4, w8, cl2s)",
+   "why": "The crowd named in Mrk.15.8 is the plural addressee but is not in the candidate list."
+  }
+ ]
+}

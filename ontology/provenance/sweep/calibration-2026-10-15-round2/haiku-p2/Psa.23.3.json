@@ -1,0 +1,72 @@
+{
+ "ref": "Psa.23.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person possessive 'my soul' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person 'me' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w10",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular possessive on 'name'; the one whose name is at stake and who guides is the LORD of verse 1. David is not an agent in this clause.",
+   "category": "possessive of the divine name"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular implied by the yiqtol 'restores'; the shepherd of verse 1 restores.",
+   "category": "implied third person in a psalm"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular implied by the yiqtol 'guides'; the same shepherd.",
+   "category": "implied third person in a psalm"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.3#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, subject only in the verb (third masculine singular), both acts of the shepherd LORD. The run continues from verse 2 (four clauses in all); it is recorded here per verse for review.",
+   "category": "run of acts of one agent"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Psa.23.3 cl1",
+   "what": "'for the sake of his name': a purpose stated as a noun phrase (lamed plus a noun), not a clause. No link type takes a noun phrase as its destination, so no purpose link is recorded."
+  }
+ ],
+ "cant_tell": []
+}

@@ -1,0 +1,17 @@
+{"ref": "Psa.119.105",
+ "referents": [
+  {"slot": "w3", "choice": "none", "divine": false, "why": "First common singular 'my' possessing 'feet'. The psalm's own voice is the rule here, but no voice candidate is in the list, so no candidate fits.", "category": "psalm voice with no voice candidate"},
+  {"slot": "w5", "choice": "none", "divine": false, "why": "Second masculine singular 'your' possessing 'word': the psalm addressing God. No candidate names God, so none fits.", "category": "addressee of the psalm with no candidate"},
+  {"slot": "w10", "choice": "none", "divine": false, "why": "First common singular 'my' possessing 'path': same psalm voice as w3, with no voice candidate.", "category": "psalm voice with no voice candidate"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw (וְ) joining two parallel nominal clauses, a lamp to my feet and a light to my path; the sense is addition of a second image, not cause, result or purpose.", "category": "plain and joining parallel clauses"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "w4"}], "divine": false, "why": "Two lines, the second restating the first's roles (lamp to light, feet to path) without its own subject; the shared subject is 'your word' (w4).", "category": "parallel lines sharing one subject"}
+ ],
+ "none_fit": [
+  {"where": "slots w3 and w10 (the psalm's own 'my')", "what": "The psalm voice candidate the rules expect is not in the candidates list"},
+  {"where": "slot w5 (your)", "what": "The addressee of the psalm, God, is not among the candidates"}
+ ],
+ "cant_tell": []}

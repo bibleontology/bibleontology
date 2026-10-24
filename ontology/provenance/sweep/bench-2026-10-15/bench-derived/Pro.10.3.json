@@ -1,0 +1,41 @@
+{
+ "ref": "Pro.10.3",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [
+  {
+   "id": "g1",
+   "kind": "parallel",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

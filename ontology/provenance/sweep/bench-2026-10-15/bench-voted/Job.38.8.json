@@ -1,0 +1,71 @@
+{
+ "ref": "Job.38.8",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Implied 'he' of the wayyiqtol 'he shut off the sea': the one who does the act is the LORD, speaker of the speech. Named in 38:1 and not repeated in this verse's candidate list.",
+   "category": "implied subject of divine act",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'It came forth from the womb': the subject is the sea, the masculine singular candidate w4.",
+   "category": "implied subject of narrative clause",
+   "votes": 3
+  },
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'It burst forth' in the infinitive: the sea, the masculine singular candidate w4.",
+   "category": "pronoun in infinitive clause",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The infinitive 'burst forth' sits inside the yiqtol 'when' clause, nested in its temporal role.",
+   "category": "temporal infinitive",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot be then-linked to itself. 'Then' runs within a verse only, and cl0 has no within-verse predecessor: its waw continues the question series of 38:4-7.",
+   "category": "self-link",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The 'when' clause (infinitive inside the yiqtol) sets the time of the shutting, so it is nested in cl0's temporal role.",
+   "category": "temporal clause of an act",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The waw of 38:8 cl0 and the question series of 38:4-7",
+   "why": "A cross-verse relation. 'Then' is within-verse only (episode rung), so it is not recorded here."
+  },
+  {
+   "what": "The candidate list for 38:8 omits the LORD (Job.38.1#w2) and Job (Job.38.1#w4), which 38:2 to 38:7 offer. The choice for cl0s is made from the speech, not from the list.",
+   "why": "The list is shorter than in earlier verses, so the choice is flagged for review."
+  }
+ ],
+ "voted": 3
+}

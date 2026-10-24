@@ -1,0 +1,145 @@
+{
+ "_note": "What is measurable about each translation file, plus the source URL carried over from data/raw/*.json, which the flattening step to data/bible/ had dropped. Retrieval date and licence were never recorded anywhere and stay null; a null source means none was recorded, never a guess. Fingerprints distinguish EDITIONS of the same translation, which is what was missing when Doug's World English Bible rendered the divine name differently from ours.",
+ "files": {
+  "verses.jsonl": {
+   "declared": {
+    "translation": "KJV"
+   },
+   "source_url": null,
+   "retrieved": null,
+   "licence": null,
+   "_unknown": "retrieved and licence were never recorded. source_url is carried over from data/raw/*.json where that file records one; null means none was recorded, never a guess.",
+   "sha256": "ecbba79f270938f8fb63fccda8b97d7cc84247c9b7557acf94809887da7ddca2",
+   "bytes": 5353491,
+   "verses": 31102,
+   "books": 66,
+   "fingerprints": {
+    "spelling": "british",
+    "american_hits": 0,
+    "british_hits": 671,
+    "divine_name": {
+     "LORD": 6,
+     "Lord": 7719,
+     "Yahweh": 0,
+     "Jehovah": 6,
+     "GOD": 2
+    },
+    "name_distinct": false,
+    "speech_marked_verses": 0,
+    "speech_marked_share": 0.0
+   }
+  },
+  "verses.bsb.jsonl": {
+   "declared": {
+    "translation": "BSB"
+   },
+   "source_url": "https://bereanbible.com/bsb.txt",
+   "retrieved": null,
+   "licence": null,
+   "_unknown": "retrieved and licence were never recorded. source_url is carried over from data/raw/*.json where that file records one; null means none was recorded, never a guess.",
+   "sha256": "ea4f8c68a0c4d1e25c5937f696f4dff551ff47b345fe38e7b226bf909a35c814",
+   "bytes": 5081211,
+   "verses": 31102,
+   "books": 66,
+   "fingerprints": {
+    "spelling": "american",
+    "american_hits": 715,
+    "british_hits": 0,
+    "divine_name": {
+     "LORD": 6490,
+     "Lord": 1106,
+     "Yahweh": 0,
+     "Jehovah": 0,
+     "GOD": 316
+    },
+    "name_distinct": true,
+    "speech_marked_verses": 5496,
+    "speech_marked_share": 17.7
+   }
+  },
+  "verses.web.jsonl": {
+   "declared": {
+    "translation": "WEB"
+   },
+   "source_url": "https://ebible.org/Scriptures/engwebp_vpl.zip",
+   "retrieved": null,
+   "licence": null,
+   "_unknown": "retrieved and licence were never recorded. source_url is carried over from data/raw/*.json where that file records one; null means none was recorded, never a guess.",
+   "sha256": "ccdd740e7fb5c33f23d9a2c2d3dbcec9cc4b9423ae1794d0a7fbb98a59e918f2",
+   "bytes": 5226536,
+   "verses": 31102,
+   "books": 66,
+   "fingerprints": {
+    "spelling": "american",
+    "american_hits": 724,
+    "british_hits": 0,
+    "divine_name": {
+     "LORD": 6576,
+     "Lord": 1139,
+     "Yahweh": 0,
+     "Jehovah": 0,
+     "GOD": 314
+    },
+    "name_distinct": true,
+    "speech_marked_verses": 7008,
+    "speech_marked_share": 22.5
+   }
+  },
+  "verses.asv.jsonl": {
+   "declared": {
+    "translation": "ASV"
+   },
+   "source_url": null,
+   "retrieved": null,
+   "licence": null,
+   "_unknown": "retrieved and licence were never recorded. source_url is carried over from data/raw/*.json where that file records one; null means none was recorded, never a guess.",
+   "sha256": "44d9e6f6712fa84ce71f3d897ffe50421e74f0b65fdd9fa8684527e4c4b9f057",
+   "bytes": 5356139,
+   "verses": 31102,
+   "books": 66,
+   "fingerprints": {
+    "spelling": "mixed/unknown",
+    "american_hits": 646,
+    "british_hits": 41,
+    "divine_name": {
+     "LORD": 1,
+     "Lord": 1118,
+     "Yahweh": 0,
+     "Jehovah": 6885,
+     "GOD": 2
+    },
+    "name_distinct": true,
+    "speech_marked_verses": 0,
+    "speech_marked_share": 0.0
+   }
+  },
+  "verses.ylt.jsonl": {
+   "declared": {
+    "translation": "YLT"
+   },
+   "source_url": "https://ebible.org/Scriptures/engylt_vpl.zip",
+   "retrieved": null,
+   "licence": null,
+   "_unknown": "retrieved and licence were never recorded. source_url is carried over from data/raw/*.json where that file records one; null means none was recorded, never a guess.",
+   "sha256": "f7694ecb6688fa0a9a6a1abe53ea41423dbbfb56e15e2dd2657aba99af51de5d",
+   "bytes": 5368217,
+   "verses": 31102,
+   "books": 66,
+   "fingerprints": {
+    "spelling": "british",
+    "american_hits": 0,
+    "british_hits": 854,
+    "divine_name": {
+     "LORD": 0,
+     "Lord": 1055,
+     "Yahweh": 0,
+     "Jehovah": 6831,
+     "GOD": 0
+    },
+    "name_distinct": true,
+    "speech_marked_verses": 0,
+    "speech_marked_share": 0.0
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{"ref": "Exo.7.27",
+ "referents": [
+  {"slot": "w3", "choice": "Exo.7.26#w7", "divine": false, "why": "Second person masculine singular inside God's speech that Moses is to deliver to Pharaoh. The addressee of that speech is Pharaoh, the only masculine singular candidate it addresses.", "category": "second person inside a commanded speech"},
+  {"slot": "w7", "choice": "Exo.7.26#w2", "divine": true, "why": "First person common singular 'I' inside the speech introduced by 'thus says the LORD' (Exo.7.26 cl3), so the speaker is the LORD.", "category": "first person inside a quoted divine speech"},
+  {"slot": "w12", "choice": "Exo.7.26#w7", "divine": false, "why": "Second person masculine singular possessive on 'territory' (w11). The addressee of the speech is Pharaoh, so the territory is Pharaoh's country.", "category": "possessive second person inside a divine speech"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "remove", "why": "The infinitive completes the verb of refusing ('refusing to let them go'). It says what is refused, not what the refusal is for, and the purpose type excludes infinitives after verbs of refusal.", "category": "infinitive completes a verb of refusal"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "add", "why": "The infinitive is the object of the participle 'refusing', so it sits inside that clause in the object role.", "category": "infinitive as object of a verb"},
+  {"src": "cl0", "type": "if", "dst": "cl2", "action": "remove", "why": "Direction is reversed. The condition is cl0 ('if you refuse'), and the if link runs from what is conditioned to its condition.", "category": "conditional link direction"},
+  {"src": "cl2", "type": "if", "dst": "cl0", "action": "add", "why": "cl0, opened by 'and if', is the condition. The host is the next clause that is not an infinitive complement, which is cl2.", "category": "conditional link direction"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "The waw of 'and if' is part of the conditional particle, which the if link already carries. A second and link would count it twice.", "category": "conditional particle counted twice"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "The presentative 'behold' and the participle 'I am about to strike' form one apodosis. The waw before the participle is the consequence joint, already carried by the if link, not a connection between two events.", "category": "presentative split from its predicate"}
+ ],
+ "groups": [
+  {"id": "cond0", "kind": "conditional", "action": "keep", "members": [{"role": "condition", "node": "cl0"}, {"role": "consequence", "node": "cl2"}], "divine": false, "why": "The condition is cl0 ('if you refuse to let them go'). The consequence opens at cl2 with the behold clause; its predicate cl3 is not a separate member because the group has one consequence role.", "category": "conditional with split apodosis"}
+ ],
+ "none_fit": [
+  {"where": "cl2 and cl3", "what": "The presentative 'behold' (hinneh) that introduces the consequence has no link type of its own. The parser gave it a clause of its own, though the text joins it to the participle that follows."}
+ ],
+ "cant_tell": [
+  {"what": "Whether the consequence is cl2 alone or cl2 together with cl3", "why": "The parser split the behold particle from its participle into two clauses. The next-clause rule puts the if host and the conditional group's consequence at cl2, but cl3 carries the predicate, and the text does not say which the parser should treat as the consequence."}
+ ]}

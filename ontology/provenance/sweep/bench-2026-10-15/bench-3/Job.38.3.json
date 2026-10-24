@@ -1,0 +1,134 @@
+{
+ "ref": "Job.38.3",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'Your loins': the possessive of the command's addressee, the one told to gird up, who is Job.",
+   "category": "possessive in a command"
+  },
+  {
+   "slot": "w8",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Object of 'I will ask', second person, inside the LORD's speech: the one addressed, Job.",
+   "category": "object pronoun addressing the hearer"
+  },
+  {
+   "slot": "w11",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'make known to me' inside the LORD's speech: the speaker, the LORD. The builder's 'cl1s' is a slot id, not a candidate.",
+   "category": "first person inside divine speech"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Implied second person subject of the imperative 'gird up': the one the command is spoken to, Job.",
+   "category": "implied you of a command"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Implied first person subject of 'I will ask you': the LORD speaking. The builder's 'cl1s' is a slot id, not a candidate.",
+   "category": "first person inside divine speech"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Implied second person subject of the imperative 'make known to me': Job, the one commanded to speak.",
+   "category": "implied you of a command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "A waw joining a command to a change of person (gird up / I will ask) is 'so that' by the link rule, not a plain 'and'.",
+   "category": "command joined to change of person"
+  },
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Command, then waw + yiqtol in a different person: the questioning is what the girding is for.",
+   "category": "command then purpose"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "A waw joining an imperative to a change of person (first person 'I will ask' to second person 'make known') is 'so that' by the link rule.",
+   "category": "command joined to change of person"
+  },
+  {
+   "src": "cl1",
+   "type": "purpose",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The answer is what the questioning is for, the same rule as the first link of this verse.",
+   "category": "command joined to change of person"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "aim",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "The builder put cl1 as 'part', which is not an imperative member role. cl1 is what the command is for, so it is 'aim'.",
+   "category": "group member role corrected"
+  },
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Job.38.1#w4"
+    }
+   ],
+   "divine": true,
+   "why": "The builder's sender 'cl1s' is a slot. The speaker of 'I will question you' is the LORD. Addressee added: Job.",
+   "category": "speaker and addressee of a turn"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether 'you shall inform Me' (cl2) is the purpose of the questioning or a second demand in the same speech.",
+   "why": "Both readings fit the waw. The purpose type is chosen because the link rule gives it for a command after a change of person; the form does not settle the sense."
+  }
+ ]
+}

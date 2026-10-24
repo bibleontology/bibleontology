@@ -1,0 +1,53 @@
+{
+ "ref": "Pro.10.3",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "The third person masculine singular 'he' agrees with w2, the LORD, the subject of the first line; the second line keeps the same subject by parallelism. The feminine craving cannot be the subject of a masculine verb.",
+   "category": "implied subject carried by parallelism"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Waw opening the second line sets the contrast 'but He denies'. Contrast by sense, not cause, result or purpose; the 'and' link stands.",
+   "category": "waw in antithetic proverb pair"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Pro.10.3#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w2"
+    }
+   ],
+   "divine": true,
+   "why": "Two lines with the same subject, the LORD, the second restating the roles of the first: the righteous are not left hungry; the craving of the wicked is refused. The group subject is the LORD, so it is flagged divine.",
+   "category": "same subject restated across two lines"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl0 -and-> cl1",
+   "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word"
+  }
+ ],
+ "cant_tell": []
+}

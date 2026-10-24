@@ -1,0 +1,200 @@
+{
+  "id": "grace",
+  "overall": "ship after fixes",
+  "fixes": [
+    {
+      "row": "Stand, continue, grow, be strengthened in grace; in vain, fallen away from, fallen short of it",
+      "kind": "tilt",
+      "verses": ["Rom.5.2", "1Pet.5.12", "Acts.13.43", "Heb.13.9", "Gal.5.4", "Heb.12.15"],
+      "readers": ["Wesleyan", "Reformed", "Baptist / free church", "Catholic and Eastern Orthodox"],
+      "why": "This is the eternal-security row. The four examples a reader sees first (Rom 5:2, 1 Pet 5:12, Acts 13:43, Heb 13:9) are all the 'stand' half; the 'fallen away / fallen short' half (Gal 5:4, Heb 12:15, 2 Cor 6:1) is hidden behind 'more'. Its door is also one-sided: theme_deliverance_r53 is named 'You have fallen away from grace', so a reader following the row's card lands on the 'fall' half only. A Wesleyan sees the first screen as the Calvinist half; a Reformed or Baptist reader sees the door as the Arminian half. Merging the two halves into one row is acceptable (no longer drawn as two opposed camps) only if the first screen and the door show both.",
+      "fix": "Set eg to Rom.5.2, 1Pet.5.12, Gal.5.4, Heb.12.15 (two of each, alternating). Replace the single door theme_deliverance_r53 with neutral doors that cover both halves, or drop it from this row; do not leave 'You have fallen away from grace' as the row's only door."
+    },
+    {
+      "row": "Stand, continue, grow, be strengthened in grace; in vain, fallen away from, fallen short of it",
+      "kind": "label",
+      "verses": ["1Cor.15.10", "2Cor.6.1"],
+      "readers": ["Reformed", "Baptist / free church", "Wesleyan", "secular academic scholar of the Bible"],
+      "why": "The label says 'in vain', but 1 Cor 15:10 says 'His grace to me was not in vain', the opposite. A label must say only what its verses say (rule 1), and the 'Both sides as the text has them' note frames the row as two sides of a dispute, which is itself a stance. 2 Cor 6:1 is a warning ('do not receive God's grace in vain'), not a statement that grace was lost.",
+      "fix": "Relabel: 'Stand, continue, grow, be strengthened in grace; grace received in vain, or not in vain; fallen away from it, fallen short of it'. Replace the note's first sentence with: 'The text speaks of standing and growing in grace, and of falling short of it or receiving it in vain.' Keep the second sentence (the page takes no side on whether grace can be resisted or lost)."
+    },
+    {
+      "row": "Grace given",
+      "kind": "misfit",
+      "verses": ["Acts.7.10"],
+      "readers": ["Lutheran", "Catholic and Eastern Orthodox", "Wesleyan", "Reformed"],
+      "why": "Acts 7:10 is the fourth example. It says God 'granted Joseph favor and wisdom in the sight of Pharaoh', which is favor with a king, not grace in the sense the note about baptism, sacraments and resisting grace is about. The note sits directly over it and the pairing looks careless. The verse is already in 'Favor and grace between people'.",
+      "fix": "Remove Acts.7.10 from 'Grace given' (keep it in 'Favor and grace between people'). Make the fourth example 1Cor.1.4 or Rom.15.15."
+    },
+    {
+      "row": "Grace given",
+      "kind": "note",
+      "verses": ["Rom.12.3", "Rom.12.6", "1Cor.3.10", "Eph.3.2", "Eph.3.7", "Eph.3.8", "Gal.2.9", "Rom.15.15"],
+      "readers": ["Lutheran", "Reformed", "Catholic and Eastern Orthodox", "Pentecostal / Charismatic"],
+      "why": "Eight of the 14 remaining verses are grace given to Paul or to believers for a task or a gift (a ministry, building, preaching to the Gentiles, 'different gifts according to the grace given us'). The note speaks only of how grace is received for salvation. A reader who takes the row as 'how grace is conveyed' is misled in the other direction from what the verses say.",
+      "fix": "Add to the note: 'Most of these verses speak of grace given to Paul or to believers for a work or a gift (Rom 12:3-6, 1 Cor 3:10, Eph 3:2-8, Gal 2:9).' Keep the existing sentence that the page takes no side."
+    },
+    {
+      "row": "Grace and works",
+      "kind": "note",
+      "verses": ["Rom.11.6", "2Tim.1.9", "2Cor.9.8", "Acts.14.26", "Eph.2.8"],
+      "readers": ["Lutheran", "Reformed", "Catholic and Eastern Orthodox", "Wesleyan", "Baptist / free church"],
+      "why": "This is the most contested pairing in the hub and the only one of the faith/works/law trio with no note of its own (the note is parked on the faith row). Verses that set grace against works (Rom 11:6, 2 Tim 1:9) stand with verses where grace and good work go together (2 Cor 9:8, Acts 14:26). With no note, a reader can read the row as a verdict in either direction.",
+      "fix": "Add a note: 'Some of these verses set grace and works against each other; others speak of work done by grace or for it. Where Christian traditions part on how works and grace stand to one another, the page takes no side.'"
+    },
+    {
+      "row": "Grace and works",
+      "kind": "label",
+      "verses": ["Rom.4.4", "Eph.2.8"],
+      "readers": ["Lutheran", "Reformed", "secular academic scholar of the Bible"],
+      "why": "Rom 4:4 is the fourth example, but the Berean's English has neither 'grace' nor 'works' in it ('wages of the worker are not credited as a gift'). Rule 6 fails for that example. Eph 2:8 is in the row only because 2:9 follows; its own verse has no 'works'.",
+      "fix": "Make the examples Rom.11.6, 2Tim.1.9, 2Cor.9.8, Acts.14.26. Leave Rom 4:4 in the row but add a short note that the Berean prints the Greek word for grace as 'gift' there; say the same of Eph 2:8 (the sentence continues into 2:9)."
+    },
+    {
+      "row": "Grace and the law",
+      "kind": "OT framing",
+      "verses": ["John.1.17", "Rom.6.14", "Rom.6.15", "Gal.2.21", "Gal.5.4", "Rom.4.16", "Rom.5.20"],
+      "readers": ["rabbi", "biblical-theological (literary)", "secular academic scholar of the Bible", "Lutheran", "Reformed"],
+      "why": "Seven New Testament verses, no note, under a label that reads 'law versus grace'. Set that way the page itself suggests the Hebrew Scriptures' law is graceless. The text supplies the other half: the same Scriptures call the LORD gracious (Exod 34:6), say 'the LORD be gracious to you' in the priestly blessing (Num 6:25), and Rom 4:16 itself rests grace on Abraham. How the law and grace stand to one another is also where Lutheran, Reformed and other readings part.",
+      "fix": "Add a note: 'These are the apostles' words about the law. The Hebrew Scriptures speak of the LORD's grace in their own rows (Exod 34:6, Num 6:25, Ps 103:8). Where Christian traditions part on how the law and grace stand to one another, the page takes no side.'"
+    },
+    {
+      "row": "Grace and sin",
+      "kind": "different words",
+      "verses": ["Rom.5.15", "Rom.5.17", "Eph.1.7", "Eph.2.5"],
+      "readers": ["secular academic scholar of the Bible", "biblical-theological (literary)"],
+      "why": "The label says 'sin' but the row's rule takes three Greek words (hamartia, anomia, paraptoma). In Rom 5:15, 5:17, Eph 1:7 and Eph 2:5 the Berean prints 'trespass(es)', and the fourth example (Eph 2:5) shows 'trespasses', not 'sin'. A row should not equate different words silently.",
+      "fix": "Relabel 'Grace and sin, trespass' and add: 'The Berean prints trespass for a different Greek word from sin; the row sets them together as the verses do.' Move Jude 4 here (see the bucket row)."
+    },
+    {
+      "row": "Grace and being justified",
+      "kind": "label",
+      "verses": ["Rom.5.21", "Rom.5.17", "Gal.2.21"],
+      "readers": ["Lutheran", "Reformed", "Catholic and Eastern Orthodox", "Wesleyan"],
+      "why": "Only Rom 3:24, Titus 3:7 and Gal 5:4 say 'justified'. Rom 5:21 (the third example), Rom 5:17 and Gal 2:21 say 'righteousness'. Justify and righteousness share a Greek root, but they are different English words and different Greek words, and which one the verse means is the very point on which these traditions part.",
+      "fix": "Relabel 'Grace, being justified, righteousness'. Extend the note: 'The Berean prints justified and righteousness for two Greek words of one root; the page sets them together because the verses do.' Make the third example Gal.5.4."
+    },
+    {
+      "row": "Grace and faith",
+      "kind": "note",
+      "verses": ["2Cor.8.7", "Rom.12.3", "Rom.12.6", "Rom.1.5", "1Tim.1.14"],
+      "readers": ["Lutheran", "Reformed", "secular academic scholar of the Bible"],
+      "why": "Five of the ten verses only have 'faith' and 'grace' in the same sentence (a list of Corinthian virtues, 'the measure of faith', 'the obedience that comes from faith'); they are not about how grace and faith relate. The note says the rows are set 'as the text has them', which implies they all speak to that.",
+      "fix": "Add to the note: 'Some of these verses name faith and grace in one sentence without saying how they relate.' Drop 'as the text has them'."
+    },
+    {
+      "row": "Full of grace; the word of His grace; grace to the humble; grace and glory; grace turned into a license",
+      "kind": "misfit",
+      "verses": ["Prov.11.16", "2Cor.8.19", "Jude.1.4"],
+      "readers": ["biblical-theological (literary)", "secular academic scholar of the Bible", "Wesleyan", "Reformed"],
+      "why": "Three verses are in the wrong part of a five-part bucket. Prov 11:16 'A gracious woman attains honor' is a person's charm (Hebrew חֵן), not grace and glory (honor is not glory); it belongs with the gracious-lips and charm row. 2 Cor 8:19 'gracious offering' is the collection and belongs with 'Favor and grace between people', where the other 2 Cor 8 verses are. Jude 4 ('turn the grace of our God into a license for immorality') is the pairing grace-and-sin that Rom 6:1 and 6:15 raise; as the fifth item of a bucket it is lost.",
+      "fix": "Move Prov.11.16 to 'Gracious lips and words; grace as charm'; move 2Cor.8.19 to 'Favor and grace between people'; move Jude.1.4 to 'Grace and sin, trespass'."
+    },
+    {
+      "row": "Full of grace; the word of His grace; grace to the humble; grace and glory; grace turned into a license",
+      "kind": "OT framing",
+      "verses": ["Prov.3.34", "Ps.84.11", "Jas.4.6", "1Pet.5.5", "John.1.14", "John.1.16", "Luke.2.40", "Acts.4.33"],
+      "readers": ["rabbi", "biblical-theological (literary)", "secular academic scholar of the Bible"],
+      "why": "The row opens with 'Full of grace' and its first four examples are all John/Luke/Acts, so the two Hebrew verses (Prov 3:34, Ps 84:11) sit under a label whose recognizable parts are New Testament phrases. The least coherent row of the 24 (21 verses, five claims). The first four examples show only the first of the five parts of the label (rule 6, in spirit).",
+      "fix": "Keep the merge if the count matters, but (a) reorder so each part leads with its earliest verse: Prov 3:34 before 1 Pet 5:5 and Jas 4:6, Ps 84:11 before the New Testament 'grace and glory' verses; (b) set eg to John.1.14, Prov.3.34, Ps.84.11, Acts.20.32 so the label's parts are visible; (c) add a note 'Jas 4:6 and 1 Pet 5:5 quote Prov 3:34.' If a count of 24 is not binding, the clean fix is to split into 'Full of grace; the word of His grace' and 'Grace to the humble; grace and glory'."
+    },
+    {
+      "row": "The Greek verbs of grace: forgave, granted, freely given, highly favored, gave, released, handed over",
+      "kind": "misfit",
+      "verses": ["Acts.3.14", "Acts.25.11", "Acts.25.16", "Phlm.1.22", "Luke.7.21"],
+      "readers": ["secular academic scholar of the Bible", "biblical-theological (literary)", "Catholic and Eastern Orthodox"],
+      "why": "The hub treats the other senses of the noun carefully (the 'thanks, credit' row, marked as the same Greek word). Here five verses (a murderer released, hand me over to them, restored to you, gave sight to the blind) sit under 'The Greek verbs of grace'. A reader sees Acts 25:11 'hand me over' as a statement about grace. Rule 4: one sense of a word is not its whole; the same discipline should cut both ways.",
+      "fix": "Move Acts.3.14, Acts.25.11, Acts.25.16, Phlm.1.22 and Luke.7.21 to the 'same Greek word as thanks, credit...' row and relabel that row 'The same Greek words in other senses: thanks, credit, what is commendable, released, handed over, restored'. Relabel this row 'The Greek verbs of grace: forgave, granted, freely given, highly favored'."
+    },
+    {
+      "row": "The LORD gracious: “Be gracious to me”, “May He be gracious”, “has been gracious”",
+      "kind": "label",
+      "verses": ["Exod.33.19", "Ps.4.1", "Gen.33.5", "Ps.51.1", "Ps.6.2", "Ps.9.13", "Ps.26.11", "Ps.27.7", "Ps.31.9", "Ps.56.1", "Ps.57.1", "Ps.86.3", "Ps.123.3"],
+      "readers": ["rabbi", "Reformed", "secular academic scholar of the Bible"],
+      "why": "(1) The fourth example, Exod 33:19, reads 'I will have mercy on whom I have mercy': the Berean prints 'mercy' for this Hebrew verb in 15 of the 35 verses (Exod 33:19, Ps 6:2, 9:13, 26:11, 27:7, 30:10, 31:9, 51:1, 56:1, 57:1, 86:3, 86:16, 119:132, 123:2, 123:3). The label says 'gracious', so the first-screen example does not show it (rule 6) and the reader sees 'mercy' under 'gracious' with no explanation, which suggests the page equates two different Hebrew words (חנן and רחם, which the mercy hub treats apart). (2) The label says 'The LORD' but eight of the verses say 'God' (Ps 4:1, 51:1, 56:1, 57:1, 67:1; Gen 33:5, 33:11, 43:29), a different Hebrew name; a rabbi will notice.",
+      "fix": "Relabel 'God or the LORD gracious: “Be gracious to me”, “May He be gracious”, “has been gracious”'. Add to the note: 'The Berean prints this Hebrew verb as “be gracious”, “show favor” and also as “have mercy” or “be merciful” (Ps 6:2, 51:1, Exod 33:19); mercy in the sense of רחם is another word, not counted here.' Replace Exod.33.19 in eg with 2Kgs.13.23 or Isa.30.18."
+    },
+    {
+      "row": "Favor, kindness and pity shown or withheld: to the poor, between people, to the wicked",
+      "kind": "misfit",
+      "verses": ["Ps.59.5", "Prov.26.25", "Job.33.24", "Ps.112.5", "Deut.7.2"],
+      "readers": ["secular academic scholar of the Bible", "young African American believer", "rabbi"],
+      "why": "Ps 59:5 ('show no mercy to the wicked traitors') is in the first verb row, 'The LORD gracious', where it says the opposite of the label; it belongs here with the other 'withheld' verses (Deut 7:2, Isa 27:11, Lam 4:16). In this row, Prov 26:25 ('When he speaks graciously, do not believe him') is about gracious speech, not favor shown, and belongs with the speech/charm row; Job 33:24 ('to be gracious to him') has God as the one gracious and belongs with the first verb row. The third example, Deut 7:2, is the command about the nations and is not 'to the wicked', 'to the poor' or 'between people'; and Ps 112:5 (the second example) shows 'generous', not favor, kindness or pity.",
+      "fix": "Move Ps.59.5 into this row (out of 'The LORD gracious'); move Job.33.24 into 'God or the LORD gracious'; move Prov.26.25 to 'Gracious lips and words'. Relabel '...shown or withheld: to the poor, between people, withheld in judgment or war'. Set eg to Prov.14.21, Isa.26.10, Lam.4.16, Prov.19.17."
+    },
+    {
+      "row": "Favor and grace between people: favor with God and man, a favor done or asked, the gift for the saints",
+      "kind": "misfit",
+      "verses": ["Ps.109.12"],
+      "readers": ["rabbi", "secular academic scholar of the Bible", "young African American believer"],
+      "why": "Ps 109:12 ('no one to favor his fatherless children') is in an imprecation. It is favor withheld, not 'a favor done or asked', and it is the only verb-form verse in a noun row. It is also an OT verse in a row whose later parts (the collection for the saints) are New Testament only. The worker says it is only there because the frames have no entry.",
+      "fix": "Move Ps.109.12 to 'Favor, kindness and pity shown or withheld' (needs the builder gap closed, or an `add` that places a verse the frames never saw). If that cannot be done now, leave it out of the rows and in More with the note 'favor withheld'."
+    },
+    {
+      "row": "The letters' greeting and closing: “Grace and peace to you”, “Grace be with you”",
+      "kind": "label",
+      "verses": ["1Cor.1.3", "1Pet.1.2", "1Thess.1.1", "1Tim.1.2", "Rev.22.21", "Eph.6.24"],
+      "readers": ["biblical-theological (literary)", "secular academic scholar of the Bible"],
+      "why": "All four examples are the opening greeting; the closing half of the label (17 of 32 verses are closings) has no example on the first screen. A reader who sees only openings reads this as 'the greeting row'. The reviewers' brief asks that every example show its label.",
+      "fix": "Set eg to 1Cor.1.3, 1Tim.1.2, 1Cor.16.23, Rev.22.21 (two greetings, two closings)."
+    },
+    {
+      "row": "A spirit of grace",
+      "kind": "label",
+      "verses": ["Zech.12.10", "Heb.10.29"],
+      "readers": ["rabbi", "Pentecostal / Charismatic", "Reformed"],
+      "why": "The label is 'A spirit of grace', Zechariah's words. Heb 10:29 says 'the Spirit of grace' (capital, with the article), so the label does not say what that verse says. The note already says the page does not say they are the same, but the label itself reads as if one phrase is shared.",
+      "fix": "Relabel 'A spirit of grace (Zechariah); the Spirit of grace (Hebrews)'. Keep Zech 12:10 first and keep the existing note."
+    },
+    {
+      "row": "Grace beside truth, kindness, mercy and steadfast love",
+      "kind": "label",
+      "verses": ["Esth.2.17", "Gen.19.19", "Gen.39.21"],
+      "readers": ["rabbi", "secular academic scholar of the Bible"],
+      "why": "The fourth example, Esth 2:17, reads 'she found grace and favor in his sight'. The Hebrew behind 'favor' is חֶסֶד, but the Berean's English shows no kindness, mercy, truth or steadfast love, so the example does not show the label (rule 6).",
+      "fix": "Replace Esth.2.17 in eg with Gen.39.21 ('extended kindness to him, granting him favor') or Gen.19.19 ('found favor ... shown me great kindness')."
+    },
+    {
+      "row": "Other words translated “grace” or “favor” (others: פָּנֶה, נֹעַם)",
+      "kind": "label",
+      "verses": ["1Kgs.13.6", "Prov.15.26"],
+      "readers": ["rabbi", "secular academic scholar of the Bible"],
+      "why": "The first example for פָּנֶה, 1 Kgs 13:6, reads 'Intercede with the LORD ... that my hand may be restored', with no favor or grace in the English; the first example for נֹעַם, Prov 15:26, reads 'pleasant to Him'. The section's title promises words 'translated grace or favor'.",
+      "fix": "Make the examples for פָּנֶה 1Sam.13.12 and Ps.119.58 (or Mal.1.9); for נֹעַם Ps.90.17 first."
+    }
+  ],
+  "worker_points": [
+    {"point": "1. 'Grace given' (15): is the note enough, or should the row not exist?", "verdict": "fix", "why": "Keep the row; its note must also say most of the verses are grace given for a work or a gift (Paul's ministry), and Acts 7:10 (favor with Pharaoh) has to leave it. As written the note over-reads the verses toward salvation."},
+    {"point": "2. Faith / works / law / sin / justified / saved / called pairing rows, side by side.", "verdict": "fix", "why": "The side-by-side structure is the right way to hold a contested point. But only the faith, justified and called rows carry a note: works and law (the two most contested pairs) have none, the law row needs the Hebrew context, the sin and justified labels equate different words, and the works example Rom 4:4 shows neither word."},
+    {"point": "3. 'In vain, fallen away from' beside 'Stand, continue ...' -- now one row (eternal security); check 1 Cor 15:10.", "verdict": "fix", "why": "One row is acceptable and arguably fairer than two opposed rows, but the first screen shows only the 'stand' half, the only door is the 'fallen away' one, the note says 'both sides', and 1 Cor 15:10 ('not in vain') sits under 'in vain'. See the two fixes."},
+    {"point": "4. 'Grace and being justified' (6), Gal 2:21 and 5:4.", "verdict": "fix", "why": "Gal 2:21 and 5:4 are right to stay (the verses set 'righteousness through the law' and 'justified by the law' next to grace). Rom 5:17, 5:21 and Gal 2:21 say 'righteousness', not 'justified'; relabel."},
+    {"point": "5. The Jesus row and the Spirit row by pick; 2 Cor 13:14 in closings with no gloss.", "verdict": "fine", "why": "By hand, each verse names the person, and the note on the Spirit row is careful. 2 Cor 13:14 with no gloss is right. Only the Spirit row label needs the Hebrews wording."},
+    {"point": "6. 'The grace of God' (23) by a rule on the next word (@divine, adjacent).", "verdict": "fine", "why": "The row matches the text's own phrase and does not merge or relabel any divine person; the live righteousness hub does the same. Rule 3 concerns identities, not a written phrase. Only wording: the note 'kept as written' is true to the Greek, not to every English line (1 Cor 1:4, 3:10, 2 Cor 8:1, 9:14 print 'the grace God has given')."},
+    {"point": "7. Hebrew rows by hand; labels without 'O LORD'; 'He will be gracious' separate.", "verdict": "fix", "why": "The rule-5 check passes: the Hebrew חֵן, חַנּוּן and חָנַן verses are heard in their own rows (Find favor, Gracious lips, Be gracious, Seek favor, Gracious and compassionate), not under New Testament headings, and the Greek rows are only Greek. The label 'The LORD' where the verse says 'God', the 'mercy' wording in 15 of 35 verses, and Exod 33:19 as an example need the fixes above."},
+    {"point": "8. 'Seek favor, plead' (17): the original arbitrating over the Berean.", "verdict": "fine", "why": "The note says the Berean and MACULA differ and names both; every example shows plead/implore/petition/sought favor. A reader who wants only the Berean's word is told why they are together."},
+    {"point": "9. 'Forgave, forgive' (χαρίζομαι) touches the forgiveness hub.", "verdict": "fine", "why": "The note says the usual verb of forgiving is another word and is not counted. Only the non-grace senses (released, handed over, restored, gave sight) need to leave the row."},
+    {"point": "10. Different words named apart (חֶסֶד, רַחֲמִים, ἔλεος); the greeting 'grace, mercy and peace' kept out of the pairing rows.", "verdict": "fine", "why": "The note states the page does not say one word is another. The row's fourth example (Esth 2:17) needs replacing. חֲנִינָה in 'Other words' is the same root as חָנַן; a short 'same root' mark is welcome but not required."},
+    {"point": "11. χάρις as 'thanks' and 'credit' in marked rows at the foot.", "verdict": "fine", "why": "Rule 4 (one sense is never presented as the whole) is kept, the row is marked as the same Greek word and placed last. Keep it. Apply the same standard to the verb row (see fix)."},
+    {"point": "12. 'Grace as charm' hard verses (Prov 17:8, Nah 3:4).", "verdict": "fine", "why": "Both are honest and the note names the Berean's words ('seductive', 'bribe is a charm'). Nothing in the row is culturally insensitive. Add Prov 11:16 to it."},
+    {"point": "13. Jude 4, one verse, kept for what it says.", "verdict": "fix", "why": "It belongs in 'Grace and sin, trespass' beside Rom 6:1 and 6:15, which pose the same question."},
+    {"point": "14. Greeting vs the rest: two formula rows last, with notes.", "verdict": "fine", "why": "One merged 32-verse row is acceptable; only the examples must show both halves."},
+    {"point": "15. 2 Cor 12:9 left in More; a row for it would be one verse.", "verdict": "fix", "why": "2 Cor 12:9 is one of the hub's own key verses (own_words) and a standard verse for people in weakness or suffering, yet it appears only under More. See missing: a 'grace in need and in weakness' row of four verses solves it."},
+    {"point": "Ps 109:12 gap: no verb row can reach it.", "verdict": "fix", "why": "It is a withheld-favor verse sitting in a 'favor done or asked' noun row. It must move to the withheld-favor verb row, or the builder be given a fallback."},
+    {"point": "The Hos 12:4/12:5 versification; sense_keep for the hithpael and Acts 25:11, 25:16.", "verdict": "fine", "why": "Hos 12:4 now shows 'sought His favor' and the rule path catches it. Acts 25:11 and 25:16 are kept, but they move to the other-senses row (see fix)."}
+  ],
+  "missing": [
+    {
+      "what": "Grace in need and in weakness: a row for the verses where grace helps or sustains (2 Cor 12:9 'My grace is sufficient', Heb 4:16 'grace to help in time of need', 1 Pet 5:10 'the God of all grace ... will restore you', 2 Cor 9:8). 2 Cor 12:9 is an own_words key verse yet only in More; the hub's own door 'my_grace_is_sufficient' has nowhere to land. A believer in suffering would go looking for exactly this.",
+      "verses": ["2Cor.12.9", "Heb.4.16", "1Pet.5.10", "2Cor.9.8"]
+    },
+    {
+      "what": "Hebrew verses of the same root that the Berean prints as 'grace' or 'gracious' but no row holds: Ps 77:9 (Has God forgotten to be gracious?) and Ezra 9:8 ('for a brief moment, grace has come from the LORD our God'). Neither appears in any row, in More or in 'Other words'. The Hebrew חנן/תחנה family is where the Hebrew Scriptures speak of grace on their own terms; a rabbi will notice the absence of Ezra 9:8.",
+      "verses": ["Ps.77.9", "Ezra.9.8"]
+    },
+    {
+      "what": "Luke 1:28 appears only as 'highly favored' in the Greek-verbs row. A Catholic or Orthodox reader will look for what the Greek word is (a perfect participle of χαριτόω, 'one who has been favored/graced'). The note names χαριτόω; adding the form to the note, with no tradition's rendering, would serve them without taking a side.",
+      "verses": ["Luke.1.28"]
+    }
+  ],
+  "summary": "The grace hub keeps the contested points side by side and the Hebrew Scriptures are heard in their own rows, but it needs about 20 repairs before it goes live: the stand/fall merged row shows one half first and has a one-sided door, 'works' and 'law' carry no note (law needs the Hebrew context), several labels equate different words (sin/trespass, justified/righteousness, gracious/mercy, LORD/God), and a handful of verses sit in the wrong row (Acts 7:10, Prov 11:16, Ps 59:5, Ps 109:12, Jude 4, the non-grace senses of the Greek verb). Nothing needs to be removed from the hub for doctrine, and none of the fixes takes a side."
+}

@@ -1,0 +1,260 @@
+{
+ "ref": "Exo.7.26",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'him' is the addressee of 'go to Pharaoh and tell him'; Pharaoh is the only masculine singular person the command names.",
+   "category": "pronoun of an addressee named in the same command"
+  },
+  {
+   "slot": "w18",
+   "choice": "w14",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "'my people' sits inside the LORD's quoted message (turn1, frame cl3), so the speaker is the LORD.",
+   "category": "first person inside a quoted divine speech"
+  },
+  {
+   "slot": "w21",
+   "choice": "w14",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "'me' in 'that they may serve me' is the speaker of the quoted message, the LORD.",
+   "category": "first person inside a quoted divine speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "the imperative 'go' is addressed to Moses, whom the LORD speaks to in cl0.",
+   "category": "implied subject of a command to the speech's addressee"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'you will say to him' is the second command of the same collection, addressed to Moses.",
+   "category": "implied subject of a command to the speech's addressee"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'let my people go' is the LORD's message delivered to Pharaoh (cl2 'say to him'); the implied 'you' is Pharaoh, masculine singular.",
+   "category": "implied subject inside a commanded speech"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w17",
+   "confidence": "medium",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'they may serve' takes plural agreement with the collective 'people' (w17), the only candidate; the noun is masculine singular in form, so the agreement is ad sensum.",
+   "category": "collective noun with plural agreement"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a clause cannot be 'and then' itself; the builder link is a self-loop.",
+   "category": "self-link"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "confidence": "medium",
+   "why": "a weqatal after an imperative continues it ('go, and you will say'); the waw is fused into the verb, so 'then'.",
+   "category": "weqatal continuing a command"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a command followed by a yiqtol in a different person is a purpose, not a plain 'and'.",
+   "category": "command with purpose clause"
+  },
+  {
+   "src": "cl4",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "add",
+   "confidence": "high",
+   "why": "'let them go, that they may serve me': the release is for the worship.",
+   "category": "command with purpose clause"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "imp1",
+   "action": "add",
+   "confidence": "high",
+   "why": "the LORD says to Moses a run of commands joined by 'and'; the content is the whole imperative group.",
+   "category": "speech content as command collection"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "confidence": "high",
+   "why": "'you will say to him' introduces the message, which begins with 'thus he says Yahweh'.",
+   "category": "nested speech content"
+  },
+  {
+   "src": "cl3",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add",
+   "confidence": "high",
+   "why": "the quotative 'thus he says' introduces the single command 'let my people go'.",
+   "category": "nested speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "imp1"
+    },
+    {
+     "role": "part",
+     "node": "Exo.7.26#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the LORD speaks to Moses; the outer turn holds the commands and the commanded turn of Moses as parts. The builder listed the commands as direct parts.",
+   "category": "outer turn with commanded turn as part"
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "'go' and 'say to him' are two commands joined by one waw, one collection; 'part' is not a role of an imperative group.",
+   "category": "commands joined by and"
+  },
+  {
+   "id": "Exo.7.26#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "confidence": "medium",
+   "divine": false,
+   "why": "the commanded words are spoken by Moses to Pharaoh, and they quote the LORD, so they form a turn whose part is the innermost quoted turn.",
+   "category": "commanded speech as nested turn"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "imp4"
+    },
+    {
+     "role": "sender",
+     "node": "w14"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the quoted message of the LORD to Pharaoh, whose part is the one command with its aim.",
+   "category": "quoted message as innermost turn"
+  },
+  {
+   "id": "imp4",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl4"
+    },
+    {
+     "role": "aim",
+     "node": "cl5"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "'let go' with 'that they may serve me' is a command with its aim; 'part' is not an imperative role.",
+   "category": "command with aim"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

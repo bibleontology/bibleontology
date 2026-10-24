@@ -1,0 +1,4683 @@
+{
+ "_source": "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/; MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/; © Biblica, Inc., CC BY 4.0",
+ "_note": "Verb classes proposed from context plus MACULA gloss. UNNAMED on purpose: naming a class is a ruling.",
+ "threshold": 0.22,
+ "gloss_weight": 3.0,
+ "clusters": [
+  {
+   "id": 0,
+   "verbs": [
+    "λέγω",
+    "γίνομαι",
+    "ὁράω",
+    "ποιέω",
+    "ἔρχομαι",
+    "ἀκούω",
+    "δίδωμι",
+    "ἐξέρχομαι",
+    "ἀποκρίνομαι",
+    "λαλέω",
+    "ἀποστέλλω",
+    "βάλλω",
+    "ἀνοίγω",
+    "ἐπερωτάω",
+    "ἐγγίζω",
+    "ἐρωτάω"
+   ],
+   "glosses": [
+    "He gave",
+    "We saw",
+    "answered",
+    "are come",
+    "he did",
+    "it came to pass",
+    "sent forth",
+    "spoke",
+    "they appealed",
+    "they asked",
+    "they cast",
+    "they drew near",
+    "they said",
+    "was heard",
+    "went out",
+    "were opened"
+   ],
+   "events": 3137,
+   "name": null
+  },
+  {
+   "id": 1,
+   "verbs": [
+    "אָמַר",
+    "הָיָה",
+    "בּוֹא",
+    "הלך",
+    "נָתַן",
+    "עָשָׂה",
+    "לָקַח",
+    "רָאָה",
+    "שָׁלַח",
+    "קָרָא",
+    "יָצָא",
+    "דָבַר",
+    "עָלָה",
+    "קוּם",
+    "עָנָה",
+    "נָשָׂא"
+   ],
+   "glosses": [
+    "brought",
+    "brought forth",
+    "called",
+    "floated",
+    "lifted",
+    "made",
+    "mistreated",
+    "offered",
+    "placed",
+    "rose up",
+    "said",
+    "saw",
+    "sent ~ out",
+    "spoke",
+    "there was",
+    "took"
+   ],
+   "events": 8677,
+   "name": null
+  },
+  {
+   "id": 2,
+   "verbs": [
+    "φθάνω",
+    "גָּנַב",
+    "καταλαμβάνω",
+    "πιάζω",
+    "πλανάω",
+    "פָּתָה",
+    "ἁρπάζω",
+    "κλέπτω",
+    "νικάω",
+    "ἐξαπατάω"
+   ],
+   "glosses": [
+    "carried away",
+    "deceived",
+    "enticed",
+    "has come",
+    "overcame",
+    "seized",
+    "stole",
+    "they have gone astray"
+   ],
+   "events": 64,
+   "name": null
+  },
+  {
+   "id": 3,
+   "verbs": [
+    "קָרַע",
+    "ἀποκτείνω",
+    "ταράσσω",
+    "נָתַץ",
+    "σχίζω",
+    "κατασκάπτω",
+    "φονεύω",
+    "ὑπολείπω",
+    "σείω",
+    "עוּר"
+   ],
+   "glosses": [
+    "have been left",
+    "he was troubled",
+    "razed",
+    "stirred up",
+    "they have torn down",
+    "they killed",
+    "tore",
+    "was stirred",
+    "was torn",
+    "you murdered"
+   ],
+   "events": 123,
+   "name": null
+  },
+  {
+   "id": 4,
+   "verbs": [
+    "μερίζω",
+    "חָלַק",
+    "פָּרַץ",
+    "διαμερίζω",
+    "חָצָה",
+    "פָּצַר",
+    "לָחַץ"
+   ],
+   "glosses": [
+    "divided",
+    "he is divided",
+    "increased",
+    "pressed",
+    "they divided",
+    "urged"
+   ],
+   "events": 55,
+   "name": "divided"
+  },
+  {
+   "id": 5,
+   "verbs": [
+    "נוּחַ",
+    "παύω",
+    "חָדַל",
+    "καταπαύω",
+    "שָׁבַת",
+    "שָׁלֵם",
+    "שָׁקַט"
+   ],
+   "glosses": [
+    "He left off",
+    "came to rest",
+    "had peace",
+    "made peace",
+    "rested",
+    "stopped",
+    "they stopped"
+   ],
+   "events": 55,
+   "name": null
+  },
+  {
+   "id": 6,
+   "verbs": [
+    "אָכַל",
+    "שָׁתָה",
+    "πορνεύω",
+    "πλουτέω",
+    "ἐρημόω",
+    "שָׁכַר",
+    "μεθύσκω"
+   ],
+   "glosses": [
+    "ate",
+    "became drunk",
+    "committed sexual immorality",
+    "drank",
+    "has been brought to desolation",
+    "have been made drunk",
+    "you have been enriched"
+   ],
+   "events": 204,
+   "name": "been"
+  },
+  {
+   "id": 7,
+   "verbs": [
+    "מָהַר",
+    "רוּץ",
+    "בָּהַל",
+    "שָׁאַב",
+    "נָתַךְ",
+    "עָרָה",
+    "שָׁמֵם"
+   ],
+   "glosses": [
+    "dismayed",
+    "drew",
+    "emptied",
+    "emptied out",
+    "hurried",
+    "laid waste",
+    "ran"
+   ],
+   "events": 85,
+   "name": null
+  },
+  {
+   "id": 8,
+   "verbs": [
+    "ἐντέλλομαι",
+    "παραγγέλλω",
+    "προστάσσω",
+    "διαστέλλω",
+    "ἐπιτάσσω",
+    "κατηχέω"
+   ],
+   "glosses": [
+    "He instructed",
+    "had commanded",
+    "he commanded",
+    "instructed",
+    "you were instructed"
+   ],
+   "events": 62,
+   "name": "instructed / commanded"
+  },
+  {
+   "id": 9,
+   "verbs": [
+    "ἀπέρχομαι",
+    "ὑποστρέφω",
+    "μένω",
+    "ἐνοικέω",
+    "ἀνέρχομαι",
+    "ἐπιμένω"
+   ],
+   "glosses": [
+    "Went up",
+    "dwelt",
+    "it would have remained",
+    "returned",
+    "we remained",
+    "went out"
+   ],
+   "events": 122,
+   "name": null
+  },
+  {
+   "id": 10,
+   "verbs": [
+    "οἰκοδομέω",
+    "φυτεύω",
+    "ἀποδημέω",
+    "περιτίθημι",
+    "ἐκδίδωμι",
+    "ὀρύσσω"
+   ],
+   "glosses": [
+    "built",
+    "dug",
+    "has planted",
+    "placed around",
+    "rented out",
+    "traveled abroad"
+   ],
+   "events": 52,
+   "name": null
+  },
+  {
+   "id": 11,
+   "verbs": [
+    "נָצַל",
+    "ἐξαποστέλλω",
+    "ῥύομαι",
+    "בָּזַז",
+    "חָלַץ",
+    "ἐξαιρέω"
+   ],
+   "glosses": [
+    "has delivered",
+    "plundered",
+    "rescued",
+    "taken away",
+    "ἐξαποστέλλω"
+   ],
+   "events": 68,
+   "name": null
+  },
+  {
+   "id": 12,
+   "verbs": [
+    "πίπτω",
+    "κράζω",
+    "δοκέω",
+    "ἀνακράζω",
+    "ἐξανατέλλω"
+   ],
+   "glosses": [
+    "he cried out",
+    "it fell",
+    "it sprang up",
+    "they cried out",
+    "they thought"
+   ],
+   "events": 105,
+   "name": "cried"
+  },
+  {
+   "id": 13,
+   "verbs": [
+    "שָׁאַל",
+    "בָּקַשׁ",
+    "חָפַשׂ",
+    "ζητέω",
+    "דָּרַשׁ"
+   ],
+   "glosses": [
+    "asked",
+    "searched",
+    "sought"
+   ],
+   "events": 95,
+   "name": null
+  },
+  {
+   "id": 14,
+   "verbs": [
+    "κρύπτω",
+    "סָתַר",
+    "חָבָא",
+    "ζυμόω",
+    "טָמַן"
+   ],
+   "glosses": [
+    "You did hide",
+    "hid",
+    "was leavened"
+   ],
+   "events": 50,
+   "name": null
+  },
+  {
+   "id": 15,
+   "verbs": [
+    "καταβαίνω",
+    "שָׂרַף",
+    "προσπίπτω",
+    "רָצַץ",
+    "כָּתַת"
+   ],
+   "glosses": [
+    "beat",
+    "beat ~ down",
+    "burned",
+    "came down",
+    "struggled together"
+   ],
+   "events": 64,
+   "name": "beat"
+  },
+  {
+   "id": 16,
+   "verbs": [
+    "מוּת",
+    "קָבַר",
+    "κρίνω",
+    "שָׁפַט",
+    "ἐκδικέω"
+   ],
+   "glosses": [
+    "He has avenged",
+    "You have judged",
+    "buried",
+    "died",
+    "he would judge"
+   ],
+   "events": 343,
+   "name": null
+  },
+  {
+   "id": 17,
+   "verbs": [
+    "ὑπαντάω",
+    "פָּגַע",
+    "συναντάω",
+    "זָנַב",
+    "פָּגַשׁ"
+   ],
+   "glosses": [
+    "attacked",
+    "came",
+    "met"
+   ],
+   "events": 28,
+   "name": null
+  },
+  {
+   "id": 18,
+   "verbs": [
+    "θεάομαι",
+    "ἐπιπίπτω",
+    "אָתָה",
+    "ἐπεῖδον"
+   ],
+   "glosses": [
+    "He looked upon [me]",
+    "came",
+    "fell",
+    "has been seen"
+   ],
+   "events": 32,
+   "name": null
+  },
+  {
+   "id": 19,
+   "verbs": [
+    "ἀνατέλλω",
+    "ἐφίστημι",
+    "λάμπω",
+    "ἐκπίπτω"
+   ],
+   "glosses": [
+    "fell",
+    "has dawned",
+    "shone",
+    "stood by"
+   ],
+   "events": 30,
+   "name": null
+  },
+  {
+   "id": 20,
+   "verbs": [
+    "ξηραίνω",
+    "φωνέω",
+    "יָבֵשׁ",
+    "ἀκμάζω"
+   ],
+   "glosses": [
+    "called",
+    "have fully ripened",
+    "were dried up",
+    "withered"
+   ],
+   "events": 48,
+   "name": null
+  },
+  {
+   "id": 21,
+   "verbs": [
+    "παρίστημι",
+    "יָצַב",
+    "ἀνάγω",
+    "συνέρχομαι"
+   ],
+   "glosses": [
+    "He presented",
+    "came together",
+    "stood",
+    "was led up"
+   ],
+   "events": 51,
+   "name": null
+  },
+  {
+   "id": 22,
+   "verbs": [
+    "ἐκλέγω",
+    "בָּחַר",
+    "ἀναλαμβάνω",
+    "συνεγείρω"
+   ],
+   "glosses": [
+    "He chose",
+    "He raised [us] up together",
+    "chose",
+    "was taken up"
+   ],
+   "events": 85,
+   "name": "chose"
+  },
+  {
+   "id": 23,
+   "verbs": [
+    "ἐσθίω",
+    "χορτάζω",
+    "שָׂבֵעַ",
+    "συνεσθίω"
+   ],
+   "glosses": [
+    "did eat with",
+    "satisfied",
+    "they ate",
+    "were satisfied"
+   ],
+   "events": 60,
+   "name": "satisfied"
+  },
+  {
+   "id": 24,
+   "verbs": [
+    "גָּרַשׁ",
+    "תָּעָה",
+    "ἀστοχέω",
+    "נָדַח"
+   ],
+   "glosses": [
+    "drove ~ out",
+    "have gone astray",
+    "led ~ astray",
+    "wandered"
+   ],
+   "events": 43,
+   "name": "astray"
+  },
+  {
+   "id": 25,
+   "verbs": [
+    "זָבַח",
+    "יָצַק",
+    "נָצַב",
+    "נָסַךְ"
+   ],
+   "glosses": [
+    "offered",
+    "poured",
+    "poured out",
+    "set"
+   ],
+   "events": 63,
+   "name": "poured"
+  },
+  {
+   "id": 26,
+   "verbs": [
+    "εὐδοκέω",
+    "θέλω",
+    "αἱρετίζω"
+   ],
+   "glosses": [
+    "I have chosen",
+    "I was well pleased",
+    "they desired"
+   ],
+   "events": 76,
+   "name": null
+  },
+  {
+   "id": 27,
+   "verbs": [
+    "αὐλέω",
+    "θρηνέω",
+    "κλαίω"
+   ],
+   "glosses": [
+    "We piped",
+    "he wept",
+    "we sang a dirge"
+   ],
+   "events": 18,
+   "name": null
+  },
+  {
+   "id": 28,
+   "verbs": [
+    "σπείρω",
+    "διασκορπίζω",
+    "παρατίθημι"
+   ],
+   "glosses": [
+    "did you sow",
+    "put He before",
+    "you did scatter"
+   ],
+   "events": 51,
+   "name": null
+  },
+  {
+   "id": 29,
+   "verbs": [
+    "σῴζω",
+    "διασῴζω",
+    "κολοβόω"
+   ],
+   "glosses": [
+    "had been shortened",
+    "was cured",
+    "were cured"
+   ],
+   "events": 27,
+   "name": "cured"
+  },
+  {
+   "id": 30,
+   "verbs": [
+    "ἀπαγγέλλω",
+    "ἀναγγέλλω",
+    "διηγέομαι"
+   ],
+   "glosses": [
+    "They declared",
+    "related",
+    "they related"
+   ],
+   "events": 39,
+   "name": "related"
+  },
+  {
+   "id": 31,
+   "verbs": [
+    "שָׁכַח",
+    "ἐπιλανθάνομαι",
+    "κατανοέω"
+   ],
+   "glosses": [
+    "forgot",
+    "he considered",
+    "they forgot"
+   ],
+   "events": 18,
+   "name": "forgot"
+  },
+  {
+   "id": 32,
+   "verbs": [
+    "בָּלַע",
+    "ἀναιρέω",
+    "καταπίνω"
+   ],
+   "glosses": [
+    "Has been swallowed up",
+    "he put to death",
+    "swallowed up"
+   ],
+   "events": 29,
+   "name": "swallowed"
+  },
+  {
+   "id": 33,
+   "verbs": [
+    "ἀποδοκιμάζω",
+    "ἀναγινώσκω",
+    "καταρτίζω"
+   ],
+   "glosses": [
+    "You have prepared for yourself",
+    "rejected",
+    "you have read"
+   ],
+   "events": 41,
+   "name": null
+  },
+  {
+   "id": 34,
+   "verbs": [
+    "ἀγαπάω",
+    "μισέω",
+    "שָׂנֵא"
+   ],
+   "glosses": [
+    "They hated",
+    "hated",
+    "loved"
+   ],
+   "events": 66,
+   "name": "hated"
+  },
+  {
+   "id": 35,
+   "verbs": [
+    "παραγίνομαι",
+    "ἐπιβάλλω",
+    "ἐπιβαίνω"
+   ],
+   "glosses": [
+    "I arrived",
+    "arrived",
+    "they laid"
+   ],
+   "events": 30,
+   "name": "arrived"
+  },
+  {
+   "id": 36,
+   "verbs": [
+    "παραδίδωμι",
+    "προσφέρω",
+    "στρέφω"
+   ],
+   "glosses": [
+    "had been delivered up",
+    "he returned",
+    "they offered"
+   ],
+   "events": 121,
+   "name": null
+  },
+  {
+   "id": 37,
+   "verbs": [
+    "ἀπόλλυμι",
+    "ἐκχέω",
+    "πορεύομαι"
+   ],
+   "glosses": [
+    "He poured out",
+    "he destroyed",
+    "they went away"
+   ],
+   "events": 65,
+   "name": null
+  },
+  {
+   "id": 38,
+   "verbs": [
+    "יָעַץ",
+    "προστίθημι",
+    "προσανατίθημι"
+   ],
+   "glosses": [
+    "I consulted",
+    "added",
+    "consulted"
+   ],
+   "events": 25,
+   "name": "consulted"
+  },
+  {
+   "id": 39,
+   "verbs": [
+    "ἐργάζομαι",
+    "ἐπιτυγχάνω",
+    "πωρόω"
+   ],
+   "glosses": [
+    "has hardened",
+    "it has obtained",
+    "traded"
+   ],
+   "events": 24,
+   "name": null
+  },
+  {
+   "id": 40,
+   "verbs": [
+    "ἐγκαταλείπω",
+    "ὁμοιόω",
+    "σαβαχθάνι"
+   ],
+   "glosses": [
+    "Has become like",
+    "have you forsaken",
+    "sabachthani"
+   ],
+   "events": 29,
+   "name": null
+  },
+  {
+   "id": 41,
+   "verbs": [
+    "ἀποκαλύπτω",
+    "ἀγαλλιάω",
+    "גִּיל"
+   ],
+   "glosses": [
+    "did reveal",
+    "rejoices"
+   ],
+   "events": 33,
+   "name": null
+  },
+  {
+   "id": 42,
+   "verbs": [
+    "רָגַז",
+    "גָּעַשׁ",
+    "רָעַשׁ"
+   ],
+   "glosses": [
+    "quaked",
+    "shook"
+   ],
+   "events": 21,
+   "name": null
+  },
+  {
+   "id": 43,
+   "verbs": [
+    "דָּמַם",
+    "חָרֵשׁ",
+    "ἡσυχάζω"
+   ],
+   "glosses": [
+    "kept quiet",
+    "silent",
+    "they were silent"
+   ],
+   "events": 13,
+   "name": "silent"
+  },
+  {
+   "id": 44,
+   "verbs": [
+    "יָלַד",
+    "חָיָה",
+    "הָרָה"
+   ],
+   "glosses": [
+    "conceived",
+    "gave birth to",
+    "lived"
+   ],
+   "events": 225,
+   "name": null
+  },
+  {
+   "id": 45,
+   "verbs": [
+    "מָרָה",
+    "מָרַד",
+    "פָּשַׁע"
+   ],
+   "glosses": [
+    "in rebellion",
+    "rebelled",
+    "rebelled against"
+   ],
+   "events": 26,
+   "name": "rebelled"
+  },
+  {
+   "id": 46,
+   "verbs": [
+    "נָכָה",
+    "רָדַף",
+    "נָשַׂג"
+   ],
+   "glosses": [
+    "defeated",
+    "overtook",
+    "went in pursuit"
+   ],
+   "events": 271,
+   "name": null
+  },
+  {
+   "id": 47,
+   "verbs": [
+    "קָצַץ",
+    "ἀποκόπτω",
+    "ἀφαιρέω"
+   ],
+   "glosses": [
+    "cut off"
+   ],
+   "events": 14,
+   "name": null
+  },
+  {
+   "id": 48,
+   "verbs": [
+    "ἐμπαίζω",
+    "ἐνδύω",
+    "ἐκδύω"
+   ],
+   "glosses": [
+    "he had been outwitted",
+    "they put on",
+    "they took off"
+   ],
+   "events": 19,
+   "name": null
+  },
+  {
+   "id": 49,
+   "verbs": [
+    "βασιλεύω",
+    "προενάρχομαι"
+   ],
+   "glosses": [
+    "he had begun",
+    "reigned"
+   ],
+   "events": 23,
+   "name": null
+  },
+  {
+   "id": 50,
+   "verbs": [
+    "עָזַר",
+    "βοηθέω"
+   ],
+   "glosses": [
+    "I helped",
+    "aid"
+   ],
+   "events": 10,
+   "name": null
+  },
+  {
+   "id": 51,
+   "verbs": [
+    "βρέχω",
+    "מָטַר"
+   ],
+   "glosses": [
+    "rained",
+    "she wet"
+   ],
+   "events": 8,
+   "name": null
+  },
+  {
+   "id": 52,
+   "verbs": [
+    "γνωρίζω",
+    "προγράφω"
+   ],
+   "glosses": [
+    "has made known",
+    "was written in the past"
+   ],
+   "events": 26,
+   "name": null
+  },
+  {
+   "id": 53,
+   "verbs": [
+    "κρατέω",
+    "δέω"
+   ],
+   "glosses": [
+    "He took hold of",
+    "he bound"
+   ],
+   "events": 25,
+   "name": null
+  },
+  {
+   "id": 54,
+   "verbs": [
+    "δείκνυμι",
+    "ἐνδείκνυμι"
+   ],
+   "glosses": [
+    "did",
+    "he showed"
+   ],
+   "events": 12,
+   "name": null
+  },
+  {
+   "id": 55,
+   "verbs": [
+    "περιβάλλω",
+    "διακονέω"
+   ],
+   "glosses": [
+    "did minister",
+    "was adorned"
+   ],
+   "events": 17,
+   "name": null
+  },
+  {
+   "id": 56,
+   "verbs": [
+    "συντάσσω",
+    "διατάσσω"
+   ],
+   "glosses": [
+    "He directed",
+    "commanded"
+   ],
+   "events": 19,
+   "name": null
+  },
+  {
+   "id": 57,
+   "verbs": [
+    "μιμνῄσκω",
+    "εἰσακούω"
+   ],
+   "glosses": [
+    "has been heard",
+    "remembered"
+   ],
+   "events": 28,
+   "name": null
+  },
+  {
+   "id": 58,
+   "verbs": [
+    "εὐαγγελίζω",
+    "κηρύσσω"
+   ],
+   "glosses": [
+    "he proclaimed the good news",
+    "they preached"
+   ],
+   "events": 29,
+   "name": null
+  },
+  {
+   "id": 59,
+   "verbs": [
+    "ζάω",
+    "ἀναζάω"
+   ],
+   "glosses": [
+    "is alive again"
+   ],
+   "events": 20,
+   "name": null
+  },
+  {
+   "id": 60,
+   "verbs": [
+    "θάπτω",
+    "τελευτάω"
+   ],
+   "glosses": [
+    "buried",
+    "has died"
+   ],
+   "events": 17,
+   "name": null
+  },
+  {
+   "id": 61,
+   "verbs": [
+    "θεραπεύω",
+    "ἰάομαι"
+   ],
+   "glosses": [
+    "He healed",
+    "was healed"
+   ],
+   "events": 32,
+   "name": "healed"
+  },
+  {
+   "id": 62,
+   "verbs": [
+    "ἀπολαμβάνω",
+    "θύω"
+   ],
+   "glosses": [
+    "has killed",
+    "he has received"
+   ],
+   "events": 10,
+   "name": null
+  },
+  {
+   "id": 63,
+   "verbs": [
+    "ἀρνέομαι",
+    "καθίστημι"
+   ],
+   "glosses": [
+    "has set",
+    "he denied"
+   ],
+   "events": 31,
+   "name": null
+  },
+  {
+   "id": 64,
+   "verbs": [
+    "κατακρίνω",
+    "רָשַׁע"
+   ],
+   "glosses": [
+    "He was condemned",
+    "condemned"
+   ],
+   "events": 17,
+   "name": "condemned"
+  },
+  {
+   "id": 65,
+   "verbs": [
+    "κλάω",
+    "גָּדַע"
+   ],
+   "glosses": [
+    "He broke [them]",
+    "cut down"
+   ],
+   "events": 14,
+   "name": null
+  },
+  {
+   "id": 66,
+   "verbs": [
+    "κοιμάομαι",
+    "יָשֵׁן"
+   ],
+   "glosses": [
+    "he fell asleep",
+    "slept"
+   ],
+   "events": 17,
+   "name": null
+  },
+  {
+   "id": 67,
+   "verbs": [
+    "κολλάω",
+    "μνημονεύω"
+   ],
+   "glosses": [
+    "he joined himself",
+    "made mention"
+   ],
+   "events": 10,
+   "name": null
+  },
+  {
+   "id": 68,
+   "verbs": [
+    "κοπιάω",
+    "τρέχω"
+   ],
+   "glosses": [
+    "they ran",
+    "toiled"
+   ],
+   "events": 18,
+   "name": null
+  },
+  {
+   "id": 69,
+   "verbs": [
+    "μελετάω",
+    "φρυάσσω"
+   ],
+   "glosses": [
+    "did devise",
+    "did rage"
+   ],
+   "events": 8,
+   "name": null
+  },
+  {
+   "id": 70,
+   "verbs": [
+    "νίπτω",
+    "רָחַץ"
+   ],
+   "glosses": [
+    "washed"
+   ],
+   "events": 17,
+   "name": null
+  },
+  {
+   "id": 71,
+   "verbs": [
+    "φέρω",
+    "νομίζω"
+   ],
+   "glosses": [
+    "they thought",
+    "was brought"
+   ],
+   "events": 18,
+   "name": null
+  },
+  {
+   "id": 72,
+   "verbs": [
+    "περισσεύω",
+    "πλεονάζω"
+   ],
+   "glosses": [
+    "abounded",
+    "were over and above"
+   ],
+   "events": 13,
+   "name": null
+  },
+  {
+   "id": 73,
+   "verbs": [
+    "περιτέμνω",
+    "מוּל"
+   ],
+   "glosses": [
+    "circumcised"
+   ],
+   "events": 9,
+   "name": null
+  },
+  {
+   "id": 74,
+   "verbs": [
+    "πιστεύω",
+    "φανερόω"
+   ],
+   "glosses": [
+    "He appeared",
+    "you have believed"
+   ],
+   "events": 127,
+   "name": null
+  },
+  {
+   "id": 75,
+   "verbs": [
+    "שָׁקָה",
+    "ποτίζω"
+   ],
+   "glosses": [
+    "made ~ drink",
+    "you gave to drink"
+   ],
+   "events": 28,
+   "name": "drink"
+  },
+  {
+   "id": 76,
+   "verbs": [
+    "προορίζω",
+    "προγινώσκω"
+   ],
+   "glosses": [
+    "He foreknew",
+    "had determined beforehand"
+   ],
+   "events": 15,
+   "name": null
+  },
+  {
+   "id": 77,
+   "verbs": [
+    "προλέγω",
+    "προετοιμάζω"
+   ],
+   "glosses": [
+    "He prepared beforehand",
+    "spoke beforehand"
+   ],
+   "events": 17,
+   "name": "beforehand"
+  },
+  {
+   "id": 78,
+   "verbs": [
+    "ὀνομάζω",
+    "προσφωνέω"
+   ],
+   "glosses": [
+    "He called to [Him]",
+    "He named"
+   ],
+   "events": 14,
+   "name": null
+  },
+  {
+   "id": 79,
+   "verbs": [
+    "חָבַר",
+    "συζεύγνυμι"
+   ],
+   "glosses": [
+    "joined",
+    "united together"
+   ],
+   "events": 9,
+   "name": null
+  },
+  {
+   "id": 80,
+   "verbs": [
+    "συνάγω",
+    "ἀπάγω"
+   ],
+   "glosses": [
+    "led [Him] away",
+    "were gathered together"
+   ],
+   "events": 39,
+   "name": null
+  },
+  {
+   "id": 81,
+   "verbs": [
+    "ἀγοράζω",
+    "σφάζω"
+   ],
+   "glosses": [
+    "bought",
+    "slew"
+   ],
+   "events": 20,
+   "name": null
+  },
+  {
+   "id": 82,
+   "verbs": [
+    "τηρέω",
+    "ὁρίζω"
+   ],
+   "glosses": [
+    "determined",
+    "they kept"
+   ],
+   "events": 14,
+   "name": null
+  },
+  {
+   "id": 83,
+   "verbs": [
+    "ἀνίστημι",
+    "φαίνω"
+   ],
+   "glosses": [
+    "appeared",
+    "has risen up"
+   ],
+   "events": 47,
+   "name": null
+  },
+  {
+   "id": 84,
+   "verbs": [
+    "φείδομαι",
+    "חָמַל"
+   ],
+   "glosses": [
+    "felt sorry",
+    "spared"
+   ],
+   "events": 14,
+   "name": null
+  },
+  {
+   "id": 85,
+   "verbs": [
+    "שָׂמַח",
+    "χαίρω"
+   ],
+   "glosses": [
+    "gladly",
+    "they rejoiced [with]"
+   ],
+   "events": 40,
+   "name": null
+  },
+  {
+   "id": 86,
+   "verbs": [
+    "מָשַׁח",
+    "χρίω"
+   ],
+   "glosses": [
+    "He has anointed",
+    "anointed"
+   ],
+   "events": 26,
+   "name": "anointed"
+  },
+  {
+   "id": 87,
+   "verbs": [
+    "אָבַד",
+    "שָׁמַד"
+   ],
+   "glosses": [
+    "destroyed",
+    "perished"
+   ],
+   "events": 25,
+   "name": null
+  },
+  {
+   "id": 88,
+   "verbs": [
+    "אָבַל",
+    "סָפַד"
+   ],
+   "glosses": [
+    "lamented",
+    "mourned"
+   ],
+   "events": 18,
+   "name": null
+  },
+  {
+   "id": 89,
+   "verbs": [
+    "אָסַף",
+    "קָבַץ"
+   ],
+   "glosses": [
+    "gathered"
+   ],
+   "events": 99,
+   "name": null
+  },
+  {
+   "id": 90,
+   "verbs": [
+    "הָלַל",
+    "אָשַׁר"
+   ],
+   "glosses": [
+    "commended",
+    "praised"
+   ],
+   "events": 14,
+   "name": null
+  },
+  {
+   "id": 91,
+   "verbs": [
+    "גָּוַע",
+    "ἐκπνέω"
+   ],
+   "glosses": [
+    "breathed His last",
+    "perished"
+   ],
+   "events": 14,
+   "name": null
+  },
+  {
+   "id": 92,
+   "verbs": [
+    "גָּמַל",
+    "צוּץ"
+   ],
+   "glosses": [
+    "he blossomed",
+    "weaned"
+   ],
+   "events": 10,
+   "name": null
+  },
+  {
+   "id": 93,
+   "verbs": [
+    "זָעַק",
+    "צָעַק"
+   ],
+   "glosses": [
+    "cried out"
+   ],
+   "events": 62,
+   "name": null
+  },
+  {
+   "id": 94,
+   "verbs": [
+    "ἁμαρτάνω",
+    "חָטָא"
+   ],
+   "glosses": [
+    "I sinned",
+    "purified"
+   ],
+   "events": 43,
+   "name": null
+  },
+  {
+   "id": 95,
+   "verbs": [
+    "חָנָה",
+    "נָסַע"
+   ],
+   "glosses": [
+    "camped",
+    "journeyed on"
+   ],
+   "events": 176,
+   "name": null
+  },
+  {
+   "id": 96,
+   "verbs": [
+    "חָרַד",
+    "נוּעַ"
+   ],
+   "glosses": [
+    "trembled"
+   ],
+   "events": 18,
+   "name": null
+  },
+  {
+   "id": 97,
+   "verbs": [
+    "שָׁחַט",
+    "טָבַל"
+   ],
+   "glosses": [
+    "dipped",
+    "slaughtered"
+   ],
+   "events": 36,
+   "name": null
+  },
+  {
+   "id": 98,
+   "verbs": [
+    "פָּרַשׂ",
+    "כָּרַע"
+   ],
+   "glosses": [
+    "bowed",
+    "spread out"
+   ],
+   "events": 24,
+   "name": null
+  },
+  {
+   "id": 99,
+   "verbs": [
+    "לָכַד",
+    "לָחַם"
+   ],
+   "glosses": [
+    "captured",
+    "fought"
+   ],
+   "events": 96,
+   "name": null
+  },
+  {
+   "id": 100,
+   "verbs": [
+    "מָאֵן",
+    "קָשָׁה"
+   ],
+   "glosses": [
+    "refused",
+    "was difficult"
+   ],
+   "events": 26,
+   "name": null
+  },
+  {
+   "id": 101,
+   "verbs": [
+    "צָלַח",
+    "מָסַס"
+   ],
+   "glosses": [
+    "melted",
+    "rushed"
+   ],
+   "events": 11,
+   "name": null
+  },
+  {
+   "id": 102,
+   "verbs": [
+    "קָרַב",
+    "נָגַשׁ"
+   ],
+   "glosses": [
+    "came near",
+    "drew near"
+   ],
+   "events": 113,
+   "name": "near"
+  },
+  {
+   "id": 103,
+   "verbs": [
+    "נָהַג",
+    "נָחָה"
+   ],
+   "glosses": [
+    "drove away",
+    "left"
+   ],
+   "events": 21,
+   "name": null
+  },
+  {
+   "id": 104,
+   "verbs": [
+    "קָוָה",
+    "נָטַע"
+   ],
+   "glosses": [
+    "planted",
+    "wait"
+   ],
+   "events": 15,
+   "name": null
+  },
+  {
+   "id": 105,
+   "verbs": [
+    "ἀπολύω",
+    "נָתַר"
+   ],
+   "glosses": [
+    "makes",
+    "released"
+   ],
+   "events": 18,
+   "name": null
+  },
+  {
+   "id": 106,
+   "verbs": [
+    "רָגַם",
+    "סָקַל"
+   ],
+   "glosses": [
+    "stoned"
+   ],
+   "events": 11,
+   "name": null
+  },
+  {
+   "id": 107,
+   "verbs": [
+    "ἀκολουθέω",
+    "ἀναχωρέω"
+   ],
+   "glosses": [
+    "they followed",
+    "they withdrew"
+   ],
+   "events": 42,
+   "name": null
+  },
+  {
+   "id": 108,
+   "verbs": [
+    "ἐμμένω",
+    "ἀμελέω"
+   ],
+   "glosses": [
+    "He stayed",
+    "disregarded"
+   ],
+   "events": 9,
+   "name": null
+  },
+  {
+   "id": 109,
+   "verbs": [
+    "ὁρμάω",
+    "ἀποπνίγω"
+   ],
+   "glosses": [
+    "choked",
+    "rushed"
+   ],
+   "events": 10,
+   "name": null
+  },
+  {
+   "id": 110,
+   "verbs": [
+    "ὀρχέομαι",
+    "ἀρέσκω"
+   ],
+   "glosses": [
+    "pleased",
+    "you did dance"
+   ],
+   "events": 13,
+   "name": null
+  },
+  {
+   "id": 111,
+   "verbs": [
+    "ἐάω",
+    "ἐπιτρέπω"
+   ],
+   "glosses": [
+    "allowed",
+    "have allowed"
+   ],
+   "events": 21,
+   "name": "allowed"
+  },
+  {
+   "id": 112,
+   "verbs": [
+    "ἐκκλάω",
+    "ἐγκεντρίζω"
+   ],
+   "glosses": [
+    "were broken off",
+    "were grafted in"
+   ],
+   "events": 9,
+   "name": null
+  }
+ ],
+ "together": [
+  {
+   "a": 1,
+   "b": 16,
+   "chapters": 123
+  },
+  {
+   "a": 1,
+   "b": 46,
+   "chapters": 117
+  },
+  {
+   "a": 1,
+   "b": 89,
+   "chapters": 72
+  },
+  {
+   "a": 1,
+   "b": 44,
+   "chapters": 66
+  },
+  {
+   "a": 1,
+   "b": 6,
+   "chapters": 65
+  },
+  {
+   "a": 1,
+   "b": 102,
+   "chapters": 65
+  },
+  {
+   "a": 0,
+   "b": 9,
+   "chapters": 61
+  },
+  {
+   "a": 1,
+   "b": 13,
+   "chapters": 60
+  },
+  {
+   "a": 1,
+   "b": 95,
+   "chapters": 58
+  },
+  {
+   "a": 16,
+   "b": 46,
+   "chapters": 57
+  },
+  {
+   "a": 1,
+   "b": 25,
+   "chapters": 51
+  },
+  {
+   "a": 1,
+   "b": 99,
+   "chapters": 51
+  },
+  {
+   "a": 0,
+   "b": 12,
+   "chapters": 46
+  },
+  {
+   "a": 1,
+   "b": 7,
+   "chapters": 45
+  },
+  {
+   "a": 1,
+   "b": 93,
+   "chapters": 44
+  },
+  {
+   "a": 0,
+   "b": 74,
+   "chapters": 37
+  },
+  {
+   "a": 0,
+   "b": 36,
+   "chapters": 35
+  },
+  {
+   "a": 16,
+   "b": 89,
+   "chapters": 34
+  },
+  {
+   "a": 1,
+   "b": 3,
+   "chapters": 33
+  },
+  {
+   "a": 46,
+   "b": 99,
+   "chapters": 33
+  },
+  {
+   "a": 0,
+   "b": 3,
+   "chapters": 32
+  },
+  {
+   "a": 1,
+   "b": 5,
+   "chapters": 31
+  },
+  {
+   "a": 16,
+   "b": 44,
+   "chapters": 31
+  },
+  {
+   "a": 0,
+   "b": 37,
+   "chapters": 30
+  },
+  {
+   "a": 0,
+   "b": 8,
+   "chapters": 28
+  },
+  {
+   "a": 1,
+   "b": 4,
+   "chapters": 27
+  },
+  {
+   "a": 46,
+   "b": 89,
+   "chapters": 27
+  },
+  {
+   "a": 46,
+   "b": 95,
+   "chapters": 27
+  },
+  {
+   "a": 13,
+   "b": 46,
+   "chapters": 26
+  },
+  {
+   "a": 0,
+   "b": 26,
+   "chapters": 25
+  },
+  {
+   "a": 0,
+   "b": 107,
+   "chapters": 23
+  },
+  {
+   "a": 1,
+   "b": 11,
+   "chapters": 23
+  },
+  {
+   "a": 1,
+   "b": 15,
+   "chapters": 23
+  },
+  {
+   "a": 16,
+   "b": 99,
+   "chapters": 23
+  },
+  {
+   "a": 0,
+   "b": 30,
+   "chapters": 22
+  },
+  {
+   "a": 0,
+   "b": 83,
+   "chapters": 22
+  },
+  {
+   "a": 6,
+   "b": 16,
+   "chapters": 22
+  },
+  {
+   "a": 46,
+   "b": 93,
+   "chapters": 22
+  },
+  {
+   "a": 0,
+   "b": 61,
+   "chapters": 21
+  },
+  {
+   "a": 16,
+   "b": 95,
+   "chapters": 21
+  },
+  {
+   "a": 0,
+   "b": 2,
+   "chapters": 20
+  },
+  {
+   "a": 1,
+   "b": 24,
+   "chapters": 20
+  },
+  {
+   "a": 0,
+   "b": 15,
+   "chapters": 19
+  },
+  {
+   "a": 1,
+   "b": 97,
+   "chapters": 19
+  },
+  {
+   "a": 1,
+   "b": 98,
+   "chapters": 19
+  },
+  {
+   "a": 1,
+   "b": 100,
+   "chapters": 19
+  },
+  {
+   "a": 9,
+   "b": 12,
+   "chapters": 19
+  },
+  {
+   "a": 13,
+   "b": 16,
+   "chapters": 19
+  },
+  {
+   "a": 0,
+   "b": 20,
+   "chapters": 18
+  },
+  {
+   "a": 0,
+   "b": 23,
+   "chapters": 18
+  },
+  {
+   "a": 0,
+   "b": 80,
+   "chapters": 18
+  },
+  {
+   "a": 1,
+   "b": 85,
+   "chapters": 18
+  },
+  {
+   "a": 16,
+   "b": 102,
+   "chapters": 18
+  },
+  {
+   "a": 25,
+   "b": 46,
+   "chapters": 18
+  },
+  {
+   "a": 0,
+   "b": 22,
+   "chapters": 17
+  },
+  {
+   "a": 0,
+   "b": 35,
+   "chapters": 17
+  },
+  {
+   "a": 1,
+   "b": 14,
+   "chapters": 17
+  },
+  {
+   "a": 1,
+   "b": 45,
+   "chapters": 17
+  },
+  {
+   "a": 7,
+   "b": 46,
+   "chapters": 17
+  },
+  {
+   "a": 46,
+   "b": 102,
+   "chapters": 17
+  },
+  {
+   "a": 89,
+   "b": 99,
+   "chapters": 17
+  },
+  {
+   "a": 0,
+   "b": 11,
+   "chapters": 16
+  },
+  {
+   "a": 0,
+   "b": 21,
+   "chapters": 16
+  },
+  {
+   "a": 3,
+   "b": 46,
+   "chapters": 16
+  },
+  {
+   "a": 6,
+   "b": 102,
+   "chapters": 16
+  },
+  {
+   "a": 9,
+   "b": 36,
+   "chapters": 16
+  },
+  {
+   "a": 13,
+   "b": 89,
+   "chapters": 16
+  },
+  {
+   "a": 1,
+   "b": 22,
+   "chapters": 15
+  },
+  {
+   "a": 1,
+   "b": 88,
+   "chapters": 15
+  },
+  {
+   "a": 15,
+   "b": 46,
+   "chapters": 15
+  },
+  {
+   "a": 16,
+   "b": 25,
+   "chapters": 15
+  },
+  {
+   "a": 16,
+   "b": 93,
+   "chapters": 15
+  },
+  {
+   "a": 89,
+   "b": 93,
+   "chapters": 15
+  },
+  {
+   "a": 89,
+   "b": 102,
+   "chapters": 15
+  },
+  {
+   "a": 0,
+   "b": 34,
+   "chapters": 14
+  },
+  {
+   "a": 0,
+   "b": 105,
+   "chapters": 14
+  },
+  {
+   "a": 1,
+   "b": 87,
+   "chapters": 14
+  },
+  {
+   "a": 6,
+   "b": 46,
+   "chapters": 14
+  },
+  {
+   "a": 7,
+   "b": 89,
+   "chapters": 14
+  },
+  {
+   "a": 8,
+   "b": 9,
+   "chapters": 14
+  },
+  {
+   "a": 9,
+   "b": 74,
+   "chapters": 14
+  },
+  {
+   "a": 9,
+   "b": 107,
+   "chapters": 14
+  },
+  {
+   "a": 13,
+   "b": 102,
+   "chapters": 14
+  },
+  {
+   "a": 15,
+   "b": 16,
+   "chapters": 14
+  },
+  {
+   "a": 44,
+   "b": 46,
+   "chapters": 14
+  },
+  {
+   "a": 93,
+   "b": 95,
+   "chapters": 14
+  },
+  {
+   "a": 0,
+   "b": 18,
+   "chapters": 13
+  },
+  {
+   "a": 0,
+   "b": 58,
+   "chapters": 13
+  },
+  {
+   "a": 0,
+   "b": 85,
+   "chapters": 13
+  },
+  {
+   "a": 1,
+   "b": 75,
+   "chapters": 13
+  },
+  {
+   "a": 1,
+   "b": 96,
+   "chapters": 13
+  },
+  {
+   "a": 1,
+   "b": 103,
+   "chapters": 13
+  },
+  {
+   "a": 3,
+   "b": 16,
+   "chapters": 13
+  },
+  {
+   "a": 6,
+   "b": 89,
+   "chapters": 13
+  },
+  {
+   "a": 7,
+   "b": 102,
+   "chapters": 13
+  },
+  {
+   "a": 9,
+   "b": 37,
+   "chapters": 13
+  },
+  {
+   "a": 25,
+   "b": 89,
+   "chapters": 13
+  },
+  {
+   "a": 25,
+   "b": 102,
+   "chapters": 13
+  },
+  {
+   "a": 89,
+   "b": 95,
+   "chapters": 13
+  },
+  {
+   "a": 95,
+   "b": 99,
+   "chapters": 13
+  },
+  {
+   "a": 0,
+   "b": 10,
+   "chapters": 12
+  },
+  {
+   "a": 0,
+   "b": 33,
+   "chapters": 12
+  },
+  {
+   "a": 0,
+   "b": 53,
+   "chapters": 12
+  },
+  {
+   "a": 0,
+   "b": 63,
+   "chapters": 12
+  },
+  {
+   "a": 1,
+   "b": 21,
+   "chapters": 12
+  },
+  {
+   "a": 1,
+   "b": 86,
+   "chapters": 12
+  },
+  {
+   "a": 3,
+   "b": 9,
+   "chapters": 12
+  },
+  {
+   "a": 5,
+   "b": 16,
+   "chapters": 12
+  },
+  {
+   "a": 6,
+   "b": 25,
+   "chapters": 12
+  },
+  {
+   "a": 6,
+   "b": 44,
+   "chapters": 12
+  },
+  {
+   "a": 13,
+   "b": 99,
+   "chapters": 12
+  },
+  {
+   "a": 93,
+   "b": 99,
+   "chapters": 12
+  },
+  {
+   "a": 0,
+   "b": 19,
+   "chapters": 11
+  },
+  {
+   "a": 0,
+   "b": 28,
+   "chapters": 11
+  },
+  {
+   "a": 0,
+   "b": 71,
+   "chapters": 11
+  },
+  {
+   "a": 3,
+   "b": 12,
+   "chapters": 11
+  },
+  {
+   "a": 6,
+   "b": 13,
+   "chapters": 11
+  },
+  {
+   "a": 7,
+   "b": 13,
+   "chapters": 11
+  },
+  {
+   "a": 7,
+   "b": 16,
+   "chapters": 11
+  },
+  {
+   "a": 8,
+   "b": 30,
+   "chapters": 11
+  },
+  {
+   "a": 9,
+   "b": 20,
+   "chapters": 11
+  },
+  {
+   "a": 9,
+   "b": 21,
+   "chapters": 11
+  },
+  {
+   "a": 9,
+   "b": 83,
+   "chapters": 11
+  },
+  {
+   "a": 11,
+   "b": 13,
+   "chapters": 11
+  },
+  {
+   "a": 95,
+   "b": 102,
+   "chapters": 11
+  },
+  {
+   "a": 99,
+   "b": 102,
+   "chapters": 11
+  },
+  {
+   "a": 0,
+   "b": 29,
+   "chapters": 10
+  },
+  {
+   "a": 0,
+   "b": 41,
+   "chapters": 10
+  },
+  {
+   "a": 0,
+   "b": 111,
+   "chapters": 10
+  },
+  {
+   "a": 1,
+   "b": 42,
+   "chapters": 10
+  },
+  {
+   "a": 3,
+   "b": 89,
+   "chapters": 10
+  },
+  {
+   "a": 4,
+   "b": 16,
+   "chapters": 10
+  },
+  {
+   "a": 4,
+   "b": 46,
+   "chapters": 10
+  },
+  {
+   "a": 4,
+   "b": 102,
+   "chapters": 10
+  },
+  {
+   "a": 5,
+   "b": 46,
+   "chapters": 10
+  },
+  {
+   "a": 6,
+   "b": 7,
+   "chapters": 10
+  },
+  {
+   "a": 6,
+   "b": 93,
+   "chapters": 10
+  },
+  {
+   "a": 7,
+   "b": 25,
+   "chapters": 10
+  },
+  {
+   "a": 7,
+   "b": 93,
+   "chapters": 10
+  },
+  {
+   "a": 7,
+   "b": 95,
+   "chapters": 10
+  },
+  {
+   "a": 8,
+   "b": 12,
+   "chapters": 10
+  },
+  {
+   "a": 9,
+   "b": 80,
+   "chapters": 10
+  },
+  {
+   "a": 12,
+   "b": 20,
+   "chapters": 10
+  },
+  {
+   "a": 12,
+   "b": 37,
+   "chapters": 10
+  },
+  {
+   "a": 13,
+   "b": 95,
+   "chapters": 10
+  },
+  {
+   "a": 44,
+   "b": 89,
+   "chapters": 10
+  },
+  {
+   "a": 61,
+   "b": 107,
+   "chapters": 10
+  },
+  {
+   "a": 93,
+   "b": 102,
+   "chapters": 10
+  },
+  {
+   "a": 0,
+   "b": 14,
+   "chapters": 9
+  },
+  {
+   "a": 0,
+   "b": 16,
+   "chapters": 9
+  },
+  {
+   "a": 0,
+   "b": 17,
+   "chapters": 9
+  },
+  {
+   "a": 0,
+   "b": 32,
+   "chapters": 9
+  },
+  {
+   "a": 0,
+   "b": 38,
+   "chapters": 9
+  },
+  {
+   "a": 0,
+   "b": 57,
+   "chapters": 9
+  },
+  {
+   "a": 1,
+   "b": 94,
+   "chapters": 9
+  },
+  {
+   "a": 1,
+   "b": 101,
+   "chapters": 9
+  },
+  {
+   "a": 1,
+   "b": 106,
+   "chapters": 9
+  },
+  {
+   "a": 3,
+   "b": 36,
+   "chapters": 9
+  },
+  {
+   "a": 6,
+   "b": 95,
+   "chapters": 9
+  },
+  {
+   "a": 7,
+   "b": 99,
+   "chapters": 9
+  },
+  {
+   "a": 9,
+   "b": 15,
+   "chapters": 9
+  },
+  {
+   "a": 9,
+   "b": 30,
+   "chapters": 9
+  },
+  {
+   "a": 9,
+   "b": 61,
+   "chapters": 9
+  },
+  {
+   "a": 11,
+   "b": 46,
+   "chapters": 9
+  },
+  {
+   "a": 11,
+   "b": 89,
+   "chapters": 9
+  },
+  {
+   "a": 12,
+   "b": 36,
+   "chapters": 9
+  },
+  {
+   "a": 12,
+   "b": 80,
+   "chapters": 9
+  },
+  {
+   "a": 12,
+   "b": 83,
+   "chapters": 9
+  },
+  {
+   "a": 13,
+   "b": 44,
+   "chapters": 9
+  },
+  {
+   "a": 36,
+   "b": 107,
+   "chapters": 9
+  },
+  {
+   "a": 44,
+   "b": 102,
+   "chapters": 9
+  },
+  {
+   "a": 46,
+   "b": 97,
+   "chapters": 9
+  },
+  {
+   "a": 0,
+   "b": 4,
+   "chapters": 8
+  },
+  {
+   "a": 0,
+   "b": 39,
+   "chapters": 8
+  },
+  {
+   "a": 0,
+   "b": 40,
+   "chapters": 8
+  },
+  {
+   "a": 0,
+   "b": 52,
+   "chapters": 8
+  },
+  {
+   "a": 0,
+   "b": 54,
+   "chapters": 8
+  },
+  {
+   "a": 0,
+   "b": 60,
+   "chapters": 8
+  },
+  {
+   "a": 1,
+   "b": 17,
+   "chapters": 8
+  },
+  {
+   "a": 1,
+   "b": 38,
+   "chapters": 8
+  },
+  {
+   "a": 1,
+   "b": 104,
+   "chapters": 8
+  },
+  {
+   "a": 3,
+   "b": 4,
+   "chapters": 8
+  },
+  {
+   "a": 5,
+   "b": 89,
+   "chapters": 8
+  },
+  {
+   "a": 6,
+   "b": 99,
+   "chapters": 8
+  },
+  {
+   "a": 8,
+   "b": 36,
+   "chapters": 8
+  },
+  {
+   "a": 8,
+   "b": 61,
+   "chapters": 8
+  },
+  {
+   "a": 9,
+   "b": 23,
+   "chapters": 8
+  },
+  {
+   "a": 11,
+   "b": 21,
+   "chapters": 8
+  },
+  {
+   "a": 12,
+   "b": 61,
+   "chapters": 8
+  },
+  {
+   "a": 13,
+   "b": 25,
+   "chapters": 8
+  },
+  {
+   "a": 13,
+   "b": 93,
+   "chapters": 8
+  },
+  {
+   "a": 16,
+   "b": 88,
+   "chapters": 8
+  },
+  {
+   "a": 20,
+   "b": 80,
+   "chapters": 8
+  },
+  {
+   "a": 24,
+   "b": 46,
+   "chapters": 8
+  },
+  {
+   "a": 25,
+   "b": 95,
+   "chapters": 8
+  },
+  {
+   "a": 36,
+   "b": 37,
+   "chapters": 8
+  },
+  {
+   "a": 36,
+   "b": 61,
+   "chapters": 8
+  },
+  {
+   "a": 36,
+   "b": 74,
+   "chapters": 8
+  },
+  {
+   "a": 46,
+   "b": 87,
+   "chapters": 8
+  },
+  {
+   "a": 0,
+   "b": 5,
+   "chapters": 7
+  },
+  {
+   "a": 0,
+   "b": 56,
+   "chapters": 7
+  },
+  {
+   "a": 0,
+   "b": 68,
+   "chapters": 7
+  },
+  {
+   "a": 0,
+   "b": 81,
+   "chapters": 7
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "chapters": 7
+  },
+  {
+   "a": 1,
+   "b": 23,
+   "chapters": 7
+  },
+  {
+   "a": 1,
+   "b": 70,
+   "chapters": 7
+  },
+  {
+   "a": 1,
+   "b": 90,
+   "chapters": 7
+  },
+  {
+   "a": 3,
+   "b": 11,
+   "chapters": 7
+  },
+  {
+   "a": 3,
+   "b": 13,
+   "chapters": 7
+  },
+  {
+   "a": 3,
+   "b": 15,
+   "chapters": 7
+  },
+  {
+   "a": 3,
+   "b": 102,
+   "chapters": 7
+  },
+  {
+   "a": 4,
+   "b": 6,
+   "chapters": 7
+  },
+  {
+   "a": 5,
+   "b": 15,
+   "chapters": 7
+  },
+  {
+   "a": 6,
+   "b": 11,
+   "chapters": 7
+  },
+  {
+   "a": 6,
+   "b": 97,
+   "chapters": 7
+  },
+  {
+   "a": 7,
+   "b": 21,
+   "chapters": 7
+  },
+  {
+   "a": 8,
+   "b": 37,
+   "chapters": 7
+  },
+  {
+   "a": 8,
+   "b": 83,
+   "chapters": 7
+  },
+  {
+   "a": 9,
+   "b": 26,
+   "chapters": 7
+  },
+  {
+   "a": 9,
+   "b": 35,
+   "chapters": 7
+  },
+  {
+   "a": 9,
+   "b": 54,
+   "chapters": 7
+  },
+  {
+   "a": 9,
+   "b": 57,
+   "chapters": 7
+  },
+  {
+   "a": 9,
+   "b": 111,
+   "chapters": 7
+  },
+  {
+   "a": 11,
+   "b": 74,
+   "chapters": 7
+  },
+  {
+   "a": 12,
+   "b": 23,
+   "chapters": 7
+  },
+  {
+   "a": 12,
+   "b": 30,
+   "chapters": 7
+  },
+  {
+   "a": 12,
+   "b": 35,
+   "chapters": 7
+  },
+  {
+   "a": 12,
+   "b": 107,
+   "chapters": 7
+  },
+  {
+   "a": 15,
+   "b": 89,
+   "chapters": 7
+  },
+  {
+   "a": 15,
+   "b": 95,
+   "chapters": 7
+  },
+  {
+   "a": 16,
+   "b": 24,
+   "chapters": 7
+  },
+  {
+   "a": 16,
+   "b": 45,
+   "chapters": 7
+  },
+  {
+   "a": 16,
+   "b": 97,
+   "chapters": 7
+  },
+  {
+   "a": 16,
+   "b": 98,
+   "chapters": 7
+  },
+  {
+   "a": 21,
+   "b": 46,
+   "chapters": 7
+  },
+  {
+   "a": 26,
+   "b": 36,
+   "chapters": 7
+  },
+  {
+   "a": 30,
+   "b": 61,
+   "chapters": 7
+  },
+  {
+   "a": 30,
+   "b": 83,
+   "chapters": 7
+  },
+  {
+   "a": 35,
+   "b": 37,
+   "chapters": 7
+  },
+  {
+   "a": 37,
+   "b": 61,
+   "chapters": 7
+  },
+  {
+   "a": 37,
+   "b": 74,
+   "chapters": 7
+  },
+  {
+   "a": 44,
+   "b": 99,
+   "chapters": 7
+  },
+  {
+   "a": 45,
+   "b": 46,
+   "chapters": 7
+  },
+  {
+   "a": 46,
+   "b": 98,
+   "chapters": 7
+  },
+  {
+   "a": 46,
+   "b": 103,
+   "chapters": 7
+  },
+  {
+   "a": 80,
+   "b": 107,
+   "chapters": 7
+  },
+  {
+   "a": 0,
+   "b": 48,
+   "chapters": 6
+  },
+  {
+   "a": 0,
+   "b": 59,
+   "chapters": 6
+  },
+  {
+   "a": 0,
+   "b": 65,
+   "chapters": 6
+  },
+  {
+   "a": 0,
+   "b": 109,
+   "chapters": 6
+  },
+  {
+   "a": 1,
+   "b": 32,
+   "chapters": 6
+  },
+  {
+   "a": 1,
+   "b": 43,
+   "chapters": 6
+  },
+  {
+   "a": 1,
+   "b": 84,
+   "chapters": 6
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "chapters": 6
+  },
+  {
+   "a": 3,
+   "b": 26,
+   "chapters": 6
+  },
+  {
+   "a": 3,
+   "b": 74,
+   "chapters": 6
+  },
+  {
+   "a": 3,
+   "b": 80,
+   "chapters": 6
+  },
+  {
+   "a": 3,
+   "b": 105,
+   "chapters": 6
+  },
+  {
+   "a": 4,
+   "b": 25,
+   "chapters": 6
+  },
+  {
+   "a": 4,
+   "b": 89,
+   "chapters": 6
+  },
+  {
+   "a": 6,
+   "b": 75,
+   "chapters": 6
+  },
+  {
+   "a": 8,
+   "b": 21,
+   "chapters": 6
+  },
+  {
+   "a": 8,
+   "b": 105,
+   "chapters": 6
+  },
+  {
+   "a": 9,
+   "b": 11,
+   "chapters": 6
+  },
+  {
+   "a": 9,
+   "b": 17,
+   "chapters": 6
+  },
+  {
+   "a": 9,
+   "b": 18,
+   "chapters": 6
+  },
+  {
+   "a": 11,
+   "b": 38,
+   "chapters": 6
+  },
+  {
+   "a": 11,
+   "b": 99,
+   "chapters": 6
+  },
+  {
+   "a": 12,
+   "b": 18,
+   "chapters": 6
+  },
+  {
+   "a": 12,
+   "b": 26,
+   "chapters": 6
+  },
+  {
+   "a": 12,
+   "b": 53,
+   "chapters": 6
+  },
+  {
+   "a": 12,
+   "b": 74,
+   "chapters": 6
+  },
+  {
+   "a": 12,
+   "b": 105,
+   "chapters": 6
+  },
+  {
+   "a": 14,
+   "b": 16,
+   "chapters": 6
+  },
+  {
+   "a": 14,
+   "b": 46,
+   "chapters": 6
+  },
+  {
+   "a": 15,
+   "b": 102,
+   "chapters": 6
+  },
+  {
+   "a": 22,
+   "b": 95,
+   "chapters": 6
+  },
+  {
+   "a": 23,
+   "b": 30,
+   "chapters": 6
+  },
+  {
+   "a": 23,
+   "b": 61,
+   "chapters": 6
+  },
+  {
+   "a": 23,
+   "b": 107,
+   "chapters": 6
+  },
+  {
+   "a": 25,
+   "b": 93,
+   "chapters": 6
+  },
+  {
+   "a": 25,
+   "b": 99,
+   "chapters": 6
+  },
+  {
+   "a": 29,
+   "b": 36,
+   "chapters": 6
+  },
+  {
+   "a": 30,
+   "b": 105,
+   "chapters": 6
+  },
+  {
+   "a": 36,
+   "b": 80,
+   "chapters": 6
+  },
+  {
+   "a": 36,
+   "b": 83,
+   "chapters": 6
+  },
+  {
+   "a": 44,
+   "b": 95,
+   "chapters": 6
+  },
+  {
+   "a": 46,
+   "b": 85,
+   "chapters": 6
+  },
+  {
+   "a": 80,
+   "b": 105,
+   "chapters": 6
+  },
+  {
+   "a": 85,
+   "b": 89,
+   "chapters": 6
+  },
+  {
+   "a": 89,
+   "b": 97,
+   "chapters": 6
+  },
+  {
+   "a": 97,
+   "b": 102,
+   "chapters": 6
+  },
+  {
+   "a": 0,
+   "b": 27,
+   "chapters": 5
+  },
+  {
+   "a": 0,
+   "b": 47,
+   "chapters": 5
+  },
+  {
+   "a": 0,
+   "b": 49,
+   "chapters": 5
+  },
+  {
+   "a": 0,
+   "b": 64,
+   "chapters": 5
+  },
+  {
+   "a": 0,
+   "b": 82,
+   "chapters": 5
+  },
+  {
+   "a": 0,
+   "b": 110,
+   "chapters": 5
+  },
+  {
+   "a": 1,
+   "b": 20,
+   "chapters": 5
+  },
+  {
+   "a": 1,
+   "b": 31,
+   "chapters": 5
+  },
+  {
+   "a": 1,
+   "b": 47,
+   "chapters": 5
+  },
+  {
+   "a": 1,
+   "b": 50,
+   "chapters": 5
+  },
+  {
+   "a": 1,
+   "b": 66,
+   "chapters": 5
+  },
+  {
+   "a": 1,
+   "b": 91,
+   "chapters": 5
+  },
+  {
+   "a": 2,
+   "b": 16,
+   "chapters": 5
+  },
+  {
+   "a": 2,
+   "b": 37,
+   "chapters": 5
+  },
+  {
+   "a": 2,
+   "b": 46,
+   "chapters": 5
+  },
+  {
+   "a": 3,
+   "b": 8,
+   "chapters": 5
+  },
+  {
+   "a": 3,
+   "b": 10,
+   "chapters": 5
+  },
+  {
+   "a": 3,
+   "b": 30,
+   "chapters": 5
+  },
+  {
+   "a": 3,
+   "b": 85,
+   "chapters": 5
+  },
+  {
+   "a": 3,
+   "b": 87,
+   "chapters": 5
+  },
+  {
+   "a": 3,
+   "b": 88,
+   "chapters": 5
+  },
+  {
+   "a": 3,
+   "b": 95,
+   "chapters": 5
+  },
+  {
+   "a": 3,
+   "b": 100,
+   "chapters": 5
+  },
+  {
+   "a": 4,
+   "b": 7,
+   "chapters": 5
+  },
+  {
+   "a": 4,
+   "b": 13,
+   "chapters": 5
+  },
+  {
+   "a": 4,
+   "b": 44,
+   "chapters": 5
+  },
+  {
+   "a": 4,
+   "b": 95,
+   "chapters": 5
+  },
+  {
+   "a": 4,
+   "b": 99,
+   "chapters": 5
+  },
+  {
+   "a": 6,
+   "b": 24,
+   "chapters": 5
+  },
+  {
+   "a": 8,
+   "b": 17,
+   "chapters": 5
+  },
+  {
+   "a": 8,
+   "b": 35,
+   "chapters": 5
+  },
+  {
+   "a": 8,
+   "b": 107,
+   "chapters": 5
+  },
+  {
+   "a": 9,
+   "b": 19,
+   "chapters": 5
+  },
+  {
+   "a": 9,
+   "b": 22,
+   "chapters": 5
+  },
+  {
+   "a": 9,
+   "b": 41,
+   "chapters": 5
+  },
+  {
+   "a": 9,
+   "b": 71,
+   "chapters": 5
+  },
+  {
+   "a": 9,
+   "b": 105,
+   "chapters": 5
+  },
+  {
+   "a": 11,
+   "b": 30,
+   "chapters": 5
+  },
+  {
+   "a": 11,
+   "b": 93,
+   "chapters": 5
+  },
+  {
+   "a": 11,
+   "b": 95,
+   "chapters": 5
+  },
+  {
+   "a": 11,
+   "b": 102,
+   "chapters": 5
+  },
+  {
+   "a": 12,
+   "b": 14,
+   "chapters": 5
+  },
+  {
+   "a": 13,
+   "b": 100,
+   "chapters": 5
+  },
+  {
+   "a": 15,
+   "b": 25,
+   "chapters": 5
+  },
+  {
+   "a": 15,
+   "b": 99,
+   "chapters": 5
+  },
+  {
+   "a": 16,
+   "b": 21,
+   "chapters": 5
+  },
+  {
+   "a": 16,
+   "b": 38,
+   "chapters": 5
+  },
+  {
+   "a": 16,
+   "b": 47,
+   "chapters": 5
+  },
+  {
+   "a": 16,
+   "b": 85,
+   "chapters": 5
+  },
+  {
+   "a": 16,
+   "b": 86,
+   "chapters": 5
+  },
+  {
+   "a": 16,
+   "b": 87,
+   "chapters": 5
+  },
+  {
+   "a": 16,
+   "b": 100,
+   "chapters": 5
+  },
+  {
+   "a": 16,
+   "b": 106,
+   "chapters": 5
+  },
+  {
+   "a": 17,
+   "b": 30,
+   "chapters": 5
+  },
+  {
+   "a": 19,
+   "b": 30,
+   "chapters": 5
+  },
+  {
+   "a": 20,
+   "b": 83,
+   "chapters": 5
+  },
+  {
+   "a": 20,
+   "b": 107,
+   "chapters": 5
+  },
+  {
+   "a": 21,
+   "b": 30,
+   "chapters": 5
+  },
+  {
+   "a": 21,
+   "b": 35,
+   "chapters": 5
+  },
+  {
+   "a": 21,
+   "b": 36,
+   "chapters": 5
+  },
+  {
+   "a": 21,
+   "b": 89,
+   "chapters": 5
+  },
+  {
+   "a": 22,
+   "b": 83,
+   "chapters": 5
+  },
+  {
+   "a": 22,
+   "b": 102,
+   "chapters": 5
+  },
+  {
+   "a": 23,
+   "b": 83,
+   "chapters": 5
+  },
+  {
+   "a": 25,
+   "b": 44,
+   "chapters": 5
+  },
+  {
+   "a": 25,
+   "b": 85,
+   "chapters": 5
+  },
+  {
+   "a": 25,
+   "b": 86,
+   "chapters": 5
+  },
+  {
+   "a": 26,
+   "b": 61,
+   "chapters": 5
+  },
+  {
+   "a": 30,
+   "b": 37,
+   "chapters": 5
+  },
+  {
+   "a": 32,
+   "b": 37,
+   "chapters": 5
+  },
+  {
+   "a": 36,
+   "b": 60,
+   "chapters": 5
+  },
+  {
+   "a": 37,
+   "b": 83,
+   "chapters": 5
+  },
+  {
+   "a": 37,
+   "b": 107,
+   "chapters": 5
+  },
+  {
+   "a": 38,
+   "b": 89,
+   "chapters": 5
+  },
+  {
+   "a": 44,
+   "b": 75,
+   "chapters": 5
+  },
+  {
+   "a": 46,
+   "b": 86,
+   "chapters": 5
+  },
+  {
+   "a": 46,
+   "b": 101,
+   "chapters": 5
+  },
+  {
+   "a": 83,
+   "b": 107,
+   "chapters": 5
+  },
+  {
+   "a": 89,
+   "b": 100,
+   "chapters": 5
+  },
+  {
+   "a": 100,
+   "b": 102,
+   "chapters": 5
+  },
+  {
+   "a": 0,
+   "b": 6,
+   "chapters": 4
+  },
+  {
+   "a": 0,
+   "b": 43,
+   "chapters": 4
+  },
+  {
+   "a": 0,
+   "b": 55,
+   "chapters": 4
+  },
+  {
+   "a": 0,
+   "b": 77,
+   "chapters": 4
+  },
+  {
+   "a": 0,
+   "b": 78,
+   "chapters": 4
+  },
+  {
+   "a": 0,
+   "b": 86,
+   "chapters": 4
+  },
+  {
+   "a": 0,
+   "b": 94,
+   "chapters": 4
+  },
+  {
+   "a": 1,
+   "b": 73,
+   "chapters": 4
+  },
+  {
+   "a": 1,
+   "b": 92,
+   "chapters": 4
+  },
+  {
+   "a": 2,
+   "b": 34,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 7,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 23,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 25,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 29,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 33,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 37,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 44,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 48,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 53,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 61,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 86,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 93,
+   "chapters": 4
+  },
+  {
+   "a": 3,
+   "b": 107,
+   "chapters": 4
+  },
+  {
+   "a": 4,
+   "b": 36,
+   "chapters": 4
+  },
+  {
+   "a": 4,
+   "b": 100,
+   "chapters": 4
+  },
+  {
+   "a": 5,
+   "b": 6,
+   "chapters": 4
+  },
+  {
+   "a": 5,
+   "b": 9,
+   "chapters": 4
+  }
+ ],
+ "against": [
+  {
+   "a": 0,
+   "b": 1,
+   "contrasts": 20
+  },
+  {
+   "a": 0,
+   "b": 9,
+   "contrasts": 6
+  },
+  {
+   "a": 1,
+   "b": 16,
+   "contrasts": 5
+  },
+  {
+   "a": 1,
+   "b": 9,
+   "contrasts": 4
+  },
+  {
+   "a": 0,
+   "b": 25,
+   "contrasts": 3
+  },
+  {
+   "a": 0,
+   "b": 63,
+   "contrasts": 3
+  },
+  {
+   "a": 1,
+   "b": 25,
+   "contrasts": 3
+  },
+  {
+   "a": 1,
+   "b": 63,
+   "contrasts": 3
+  },
+  {
+   "a": 0,
+   "b": 20,
+   "contrasts": 3
+  },
+  {
+   "a": 1,
+   "b": 20,
+   "contrasts": 3
+  },
+  {
+   "a": 0,
+   "b": 78,
+   "contrasts": 3
+  },
+  {
+   "a": 1,
+   "b": 78,
+   "contrasts": 3
+  },
+  {
+   "a": 0,
+   "b": 16,
+   "contrasts": 3
+  },
+  {
+   "a": 6,
+   "b": 16,
+   "contrasts": 3
+  },
+  {
+   "a": 0,
+   "b": 77,
+   "contrasts": 3
+  },
+  {
+   "a": 0,
+   "b": 3,
+   "contrasts": 3
+  },
+  {
+   "a": 0,
+   "b": 99,
+   "contrasts": 2
+  },
+  {
+   "a": 75,
+   "b": 99,
+   "contrasts": 2
+  },
+  {
+   "a": 44,
+   "b": 99,
+   "contrasts": 2
+  },
+  {
+   "a": 9,
+   "b": 37,
+   "contrasts": 2
+  },
+  {
+   "a": 9,
+   "b": 46,
+   "contrasts": 2
+  },
+  {
+   "a": 6,
+   "b": 9,
+   "contrasts": 2
+  },
+  {
+   "a": 16,
+   "b": 71,
+   "contrasts": 2
+  },
+  {
+   "a": 9,
+   "b": 71,
+   "contrasts": 2
+  },
+  {
+   "a": 0,
+   "b": 106,
+   "contrasts": 2
+  },
+  {
+   "a": 1,
+   "b": 106,
+   "contrasts": 2
+  },
+  {
+   "a": 1,
+   "b": 5,
+   "contrasts": 2
+  },
+  {
+   "a": 1,
+   "b": 44,
+   "contrasts": 2
+  },
+  {
+   "a": 0,
+   "b": 57,
+   "contrasts": 2
+  },
+  {
+   "a": 23,
+   "b": 28,
+   "contrasts": 2
+  },
+  {
+   "a": 6,
+   "b": 44,
+   "contrasts": 2
+  },
+  {
+   "a": 1,
+   "b": 77,
+   "contrasts": 2
+  },
+  {
+   "a": 0,
+   "b": 5,
+   "contrasts": 2
+  },
+  {
+   "a": 0,
+   "b": 18,
+   "contrasts": 2
+  },
+  {
+   "a": 9,
+   "b": 21,
+   "contrasts": 2
+  },
+  {
+   "a": 16,
+   "b": 75,
+   "contrasts": 2
+  },
+  {
+   "a": 3,
+   "b": 75,
+   "contrasts": 2
+  },
+  {
+   "a": 3,
+   "b": 44,
+   "contrasts": 2
+  },
+  {
+   "a": 0,
+   "b": 36,
+   "contrasts": 2
+  },
+  {
+   "a": 0,
+   "b": 62,
+   "contrasts": 2
+  },
+  {
+   "a": 0,
+   "b": 13,
+   "contrasts": 2
+  },
+  {
+   "a": 35,
+   "b": 65,
+   "contrasts": 1
+  },
+  {
+   "a": 7,
+   "b": 65,
+   "contrasts": 1
+  },
+  {
+   "a": 35,
+   "b": 47,
+   "contrasts": 1
+  },
+  {
+   "a": 7,
+   "b": 47,
+   "contrasts": 1
+  },
+  {
+   "a": 18,
+   "b": 84,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 52,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 52,
+   "contrasts": 1
+  },
+  {
+   "a": 37,
+   "b": 52,
+   "contrasts": 1
+  },
+  {
+   "a": 46,
+   "b": 52,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 27,
+   "contrasts": 1
+  },
+  {
+   "a": 27,
+   "b": 36,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 67,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 6,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 52,
+   "contrasts": 1
+  },
+  {
+   "a": 20,
+   "b": 44,
+   "contrasts": 1
+  },
+  {
+   "a": 44,
+   "b": 78,
+   "contrasts": 1
+  },
+  {
+   "a": 1,
+   "b": 57,
+   "contrasts": 1
+  },
+  {
+   "a": 23,
+   "b": 32,
+   "contrasts": 1
+  },
+  {
+   "a": 23,
+   "b": 48,
+   "contrasts": 1
+  },
+  {
+   "a": 23,
+   "b": 97,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 82,
+   "contrasts": 1
+  },
+  {
+   "a": 1,
+   "b": 82,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 43,
+   "contrasts": 1
+  },
+  {
+   "a": 1,
+   "b": 43,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 33,
+   "contrasts": 1
+  },
+  {
+   "a": 1,
+   "b": 33,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 37,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 46,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 9,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 37,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 46,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 102,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 102,
+   "contrasts": 1
+  },
+  {
+   "a": 37,
+   "b": 102,
+   "contrasts": 1
+  },
+  {
+   "a": 46,
+   "b": 102,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 15,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 15,
+   "contrasts": 1
+  },
+  {
+   "a": 15,
+   "b": 37,
+   "contrasts": 1
+  },
+  {
+   "a": 15,
+   "b": 46,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 17,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 17,
+   "contrasts": 1
+  },
+  {
+   "a": 17,
+   "b": 37,
+   "contrasts": 1
+  },
+  {
+   "a": 17,
+   "b": 46,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 18,
+   "contrasts": 1
+  },
+  {
+   "a": 18,
+   "b": 37,
+   "contrasts": 1
+  },
+  {
+   "a": 18,
+   "b": 46,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 21,
+   "contrasts": 1
+  },
+  {
+   "a": 21,
+   "b": 37,
+   "contrasts": 1
+  },
+  {
+   "a": 21,
+   "b": 46,
+   "contrasts": 1
+  },
+  {
+   "a": 4,
+   "b": 84,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 16,
+   "b": 44,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 44,
+   "contrasts": 1
+  },
+  {
+   "a": 4,
+   "b": 23,
+   "contrasts": 1
+  },
+  {
+   "a": 16,
+   "b": 19,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 19,
+   "contrasts": 1
+  },
+  {
+   "a": 16,
+   "b": 21,
+   "contrasts": 1
+  },
+  {
+   "a": 4,
+   "b": 16,
+   "contrasts": 1
+  },
+  {
+   "a": 4,
+   "b": 9,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 88,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 88,
+   "contrasts": 1
+  },
+  {
+   "a": 37,
+   "b": 88,
+   "contrasts": 1
+  },
+  {
+   "a": 46,
+   "b": 88,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 32,
+   "contrasts": 1
+  },
+  {
+   "a": 32,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 32,
+   "b": 44,
+   "contrasts": 1
+  },
+  {
+   "a": 36,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 36,
+   "b": 44,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 6,
+   "contrasts": 1
+  },
+  {
+   "a": 6,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 48,
+   "contrasts": 1
+  },
+  {
+   "a": 48,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 44,
+   "b": 48,
+   "contrasts": 1
+  },
+  {
+   "a": 18,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 18,
+   "b": 44,
+   "contrasts": 1
+  },
+  {
+   "a": 57,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 44,
+   "b": 57,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 29,
+   "contrasts": 1
+  },
+  {
+   "a": 29,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 29,
+   "b": 44,
+   "contrasts": 1
+  },
+  {
+   "a": 4,
+   "b": 100,
+   "contrasts": 1
+  },
+  {
+   "a": 3,
+   "b": 9,
+   "contrasts": 1
+  },
+  {
+   "a": 3,
+   "b": 37,
+   "contrasts": 1
+  },
+  {
+   "a": 3,
+   "b": 46,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 62,
+   "contrasts": 1
+  },
+  {
+   "a": 37,
+   "b": 62,
+   "contrasts": 1
+  },
+  {
+   "a": 46,
+   "b": 62,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 24,
+   "contrasts": 1
+  },
+  {
+   "a": 2,
+   "b": 9,
+   "contrasts": 1
+  },
+  {
+   "a": 16,
+   "b": 67,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 16,
+   "contrasts": 1
+  },
+  {
+   "a": 16,
+   "b": 52,
+   "contrasts": 1
+  },
+  {
+   "a": 1,
+   "b": 60,
+   "contrasts": 1
+  },
+  {
+   "a": 60,
+   "b": 67,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 60,
+   "contrasts": 1
+  },
+  {
+   "a": 6,
+   "b": 60,
+   "contrasts": 1
+  },
+  {
+   "a": 60,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 52,
+   "b": 60,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 11,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 11,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 36,
+   "contrasts": 1
+  },
+  {
+   "a": 11,
+   "b": 102,
+   "contrasts": 1
+  },
+  {
+   "a": 36,
+   "b": 102,
+   "contrasts": 1
+  },
+  {
+   "a": 11,
+   "b": 15,
+   "contrasts": 1
+  },
+  {
+   "a": 15,
+   "b": 36,
+   "contrasts": 1
+  },
+  {
+   "a": 11,
+   "b": 17,
+   "contrasts": 1
+  },
+  {
+   "a": 17,
+   "b": 36,
+   "contrasts": 1
+  },
+  {
+   "a": 11,
+   "b": 18,
+   "contrasts": 1
+  },
+  {
+   "a": 18,
+   "b": 36,
+   "contrasts": 1
+  },
+  {
+   "a": 11,
+   "b": 21,
+   "contrasts": 1
+  },
+  {
+   "a": 21,
+   "b": 36,
+   "contrasts": 1
+  },
+  {
+   "a": 62,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 44,
+   "b": 62,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 8,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 56,
+   "contrasts": 1
+  },
+  {
+   "a": 2,
+   "b": 8,
+   "contrasts": 1
+  },
+  {
+   "a": 2,
+   "b": 56,
+   "contrasts": 1
+  },
+  {
+   "a": 7,
+   "b": 9,
+   "contrasts": 1
+  },
+  {
+   "a": 7,
+   "b": 36,
+   "contrasts": 1
+  },
+  {
+   "a": 57,
+   "b": 112,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 1,
+   "b": 75,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 44,
+   "contrasts": 1
+  },
+  {
+   "a": 37,
+   "b": 40,
+   "contrasts": 1
+  },
+  {
+   "a": 40,
+   "b": 87,
+   "contrasts": 1
+  },
+  {
+   "a": 11,
+   "b": 57,
+   "contrasts": 1
+  },
+  {
+   "a": 36,
+   "b": 57,
+   "contrasts": 1
+  },
+  {
+   "a": 13,
+   "b": 57,
+   "contrasts": 1
+  },
+  {
+   "a": 1,
+   "b": 112,
+   "contrasts": 1
+  },
+  {
+   "a": 67,
+   "b": 112,
+   "contrasts": 1
+  },
+  {
+   "a": 5,
+   "b": 112,
+   "contrasts": 1
+  },
+  {
+   "a": 6,
+   "b": 112,
+   "contrasts": 1
+  },
+  {
+   "a": 75,
+   "b": 112,
+   "contrasts": 1
+  },
+  {
+   "a": 52,
+   "b": 112,
+   "contrasts": 1
+  },
+  {
+   "a": 8,
+   "b": 14,
+   "contrasts": 1
+  },
+  {
+   "a": 14,
+   "b": 56,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 104,
+   "contrasts": 1
+  },
+  {
+   "a": 1,
+   "b": 104,
+   "contrasts": 1
+  },
+  {
+   "a": 35,
+   "b": 98,
+   "contrasts": 1
+  },
+  {
+   "a": 7,
+   "b": 98,
+   "contrasts": 1
+  },
+  {
+   "a": 2,
+   "b": 13,
+   "contrasts": 1
+  },
+  {
+   "a": 0,
+   "b": 31,
+   "contrasts": 1
+  },
+  {
+   "a": 9,
+   "b": 31,
+   "contrasts": 1
+  },
+  {
+   "a": 31,
+   "b": 37,
+   "contrasts": 1
+  },
+  {
+   "a": 31,
+   "b": 46,
+   "contrasts": 1
+  },
+  {
+   "a": 23,
+   "b": 24,
+   "contrasts": 1
+  },
+  {
+   "a": 75,
+   "b": 104,
+   "contrasts": 1
+  },
+  {
+   "a": 10,
+   "b": 75,
+   "contrasts": 1
+  }
+ ]
+}

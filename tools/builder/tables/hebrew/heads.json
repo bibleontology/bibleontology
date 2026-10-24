@@ -1,0 +1,21 @@
+{
+  "_what": "How each MACULA phrase rule is read by the clean builder (stage S1). Data, not code (docs/BUILDER-DESIGN.md). Each rule is one KIND: coord (every conjunct is a member of a composite), head_first / head_last (the head, with the other children as its dependents under the named relation), prep (a preposition and its object: the object is the filler, the preposition goes on the edge), wrap (one child, transparent). A rule not listed: MACULA's explicit head mark if it has one, else the first child. Surveyed 2026-09-27: 210 phrase rules; the ones below cover the great majority of groups.",
+  "coord": ["NpaNp", "Conj3Np", "Conj4Np", "Conj5Np", "Conj3Pp", "Conj4Pp", "PPandPP", "2PpaPp",
+            "AdjpaAdjp", "VPandVP", "NumpAndNump", "NumpNumpaNump", "AdvpandAdvp", "RelpandRelp",
+            "NP3NP", "NpNpNp", "NpNpNpNp", "PpPpPp", "CjpCjp"],
+  "head_first": {
+    "NPofNP": "of", "AdjpofNp": "of", "Np-Appos": "apposition", "NpAdjp": "attribute",
+    "NpRelp": "relative", "NpPp": "pp", "NpNump": "number", "NpCL": "clause",
+    "NpInf": "clause", "NpAdvp": "adverb", "AdjpPp": "pp", "AdjpAdvp": "adverb",
+    "PpAdvp": "adverb", "NumpPp": "pp", "2Pp": "pp", "NPDet": "determiner"
+  },
+  "head_last": {
+    "DetNP": null, "DetAdjp": null, "DetNump": null, "OmpNP": null, "OmpRelp": null,
+    "QuanNP": "quantity", "NumpNP": "number", "NumpNump": "number", "AdvpNp": "focus",
+    "AdjpNp": "attribute", "cjpNp": "connective", "cjpPp": "connective", "relNp": "relative",
+    "PpNump": "number", "2Np": "apposition", "AdvpPp": "adverb", "PpNp2Np": "pp"
+  },
+  "prep": ["PrepNp", "PrepCL", "PpRelp", "PpPp"],
+  "wrap": ["CL2NP", "CL2Adjp", "Relp2Np", "Nump2NP", "Pp2Cjp", "Np2Pp", "Pp2Np", "advp2np"],
+  "_null": "A null relation (the article, the object marker) makes no edge: the word is structural, and its morpheme is claimed by the head it marks."
+}

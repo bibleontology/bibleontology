@@ -1,0 +1,186 @@
+{
+ "ref": "Exo.8.12",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "'your staff' is second masculine singular; the one told to stretch out the staff is Aaron (w7).",
+   "category": "possessive inside commanded speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "The implied 'you' of 'say to Aaron' is the one the LORD speaks to, Moses (w4). Aaron is the object of the saying, not its speaker.",
+   "category": "implied subject of a saying command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "divine": false,
+   "why": "Inside the commanded speech the imperatives are addressed to Aaron; second masculine singular is Aaron.",
+   "category": "implied you inside commanded speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "divine": false,
+   "why": "Same speech; the command to strike is addressed to Aaron.",
+   "category": "implied you inside commanded speech"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w15",
+   "divine": false,
+   "why": "Third masculine singular weqatal after the strike: the thing struck, the dust (w15), is what will become gnats. The act decides, not the nearest noun.",
+   "category": "implied subject from the object acted on"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed and cross-verse: cl0 opens the verse as a wayyiqtol continuing the previous verse, and a within-verse then cannot run from the later strike back to it.",
+   "category": "verse-opening clause linked backwards"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "Two imperatives of one person joined by waw: plain and.",
+   "category": "plain and between commands"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl4",
+   "action": "remove",
+   "why": "An imperative then waw plus a third-person weqatal saying what will come of it is a result, not a then.",
+   "category": "command with its outcome"
+  },
+  {
+   "src": "cl3",
+   "type": "result",
+   "dst": "cl4",
+   "action": "add",
+   "why": "Striking the dust is the act whose outcome is the dust becoming gnats; cl4 is the effect of the imperative group.",
+   "category": "command with its outcome"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "cl0 is the LORD speaking to Moses; cl1 'Tell Aaron' is the said clause.",
+   "category": "speech content, outer level"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add",
+   "why": "cl1 is a saying whose content is a run of commands joined by and (stretch out, strike), so the content is the whole imperative group.",
+   "category": "speech content of a collection of commands"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "The LORD speaks to Moses. The commanded speech to Aaron is nested as a part, rather than its clauses being parts of the LORD's turn.",
+   "category": "nested speech"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": false,
+   "why": "Moses is the one commanded to speak, so he is the sender of the words to Aaron (R2). The builder gave the sender as the implied you of cl1, which is a slot, not a candidate.",
+   "category": "commanded speech sender"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "effect",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "Stretch out and strike are commands joined by and at one level: one imperative group, with the weqatal as its effect.",
+   "category": "commands joined by and"
+  },
+  {
+   "id": "imp3",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "Merged into imp2: commands joined by and at one level form one imperative group, and part is not a role of that kind.",
+   "category": "commands joined by and"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

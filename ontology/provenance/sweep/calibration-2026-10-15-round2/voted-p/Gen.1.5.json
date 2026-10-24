@@ -1,0 +1,81 @@
+{
+ "ref": "Gen.1.5",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "Third masculine singular implied subject of cl1 ('he called night'). In the same verse cl0 has God as the one calling, and the act of naming is God's.",
+   "category": "implied subject continuing the same agent",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed. 'And it was evening' follows the calling clauses; it does not precede cl0.",
+   "category": "reversed narrative order",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Plain waw (וְ) joining two namings by the same agent; no cause, result or purpose.",
+   "category": "plain and between clauses",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "wayyiqtol cl2 continues the narrative line from the nearest clause before it that is not inside a speech, cl1.",
+   "category": "narrative continuation",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "wayyiqtol cl3 ('and it was morning') continues the narrative line after the evening.",
+   "category": "narrative continuation",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Gen.1.5 cl0 and cl1",
+   "what": "Name-giving: God called the light day and the darkness night. A naming is not a saying, so no content link fits, and no link type records giving a name."
+  },
+  {
+   "where": "cl0, 'called the light day'",
+   "what": "A verb of naming with a noun as the name, not a clause of saying. No clause is said, so the content link does not fit."
+  },
+  {
+   "where": "cl4, 'day one'",
+   "what": "A nominal clause that sums up cl2 and cl3 as one day. No link type covers a summary label of the preceding clauses."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether cl0 and cl1 form an acts group",
+   "why": "Both are acts of God, but the subject is stated by name only in cl0. The acts pattern requires the subject to be stated only in the verb, so it is not proposed."
+  },
+  {
+   "what": "attachment of the verbless cl4 'day one'",
+   "why": "It names the day made up of the evening and the morning (cl2 and cl3 together). The form does not settle whether it elaborates cl3 alone or the pair."
+  },
+  {
+   "what": "cl4, day one, an appositional summary of the evening and morning (cl2, cl3)",
+   "why": "The form does not settle whether it elaborates them or only closes the day. No link added."
+  }
+ ],
+ "voted": 3
+}

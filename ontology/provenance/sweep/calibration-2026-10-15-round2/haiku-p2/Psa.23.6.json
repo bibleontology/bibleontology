@@ -1,0 +1,39 @@
+{
+ "ref": "Psa.23.6",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person 'me' in 'they will pursue me': the psalm's voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w9",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person possessive 'my life' in the psalm's voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "Implied first person singular subject of the weqatal 'I will dwell'; the psalm's voice.",
+   "category": "implied subject in a psalm"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The weqatal 'and I will dwell' continues the clause before it; the waw is fused into the weqatal form, so the relation is 'and then'.",
+   "category": "weqatal continuing a clause"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

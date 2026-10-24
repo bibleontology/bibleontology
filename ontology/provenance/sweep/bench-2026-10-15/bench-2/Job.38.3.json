@@ -1,0 +1,130 @@
+{
+ "ref": "Job.38.3",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'brace yourself' / 'your loins': second person of a command in the LORD's speech; the addressee is Job.",
+   "category": "second person in a command"
+  },
+  {
+   "slot": "w8",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'I will question you': second person inside the LORD's speech is the addressee, Job.",
+   "category": "second person in the speech"
+  },
+  {
+   "slot": "w11",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'make known to me': first person inside the LORD's speech is the speaker, the LORD (masc sing, named in 38:1).",
+   "category": "first person in the speech"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "The implied subject of the command 'gird up' is the one commanded, Job (second masc sing).",
+   "category": "implied you of a command"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "The implied 'I' of 'I will question you' is the LORD, the speaker. The builder's self-reference is replaced.",
+   "category": "implied first person in the speech"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "The implied subject of the command 'make known' is the one told to inform, Job.",
+   "category": "implied you of a command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "A command joined by waw to a yiqtol in a different person is 'so that' (the and type's own rule), so the plain 'and' is replaced by purpose.",
+   "category": "command then change of person"
+  },
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Brace yourself, so that I will question you: a command, then waw + yiqtol in another person looks forward (purpose form 1).",
+   "category": "command with purpose"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'I will question you, and you shall inform me': a non-command joined by waw to an imperative; not a purpose, so a plain and.",
+   "category": "coordinated clauses"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "aim",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "The imperative group's roles are command, aim and the rest; 'part' is not a role of an imperative. The 'I will question you' clause is the aim of bracing oneself.",
+   "category": "aim of a command"
+  },
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Job.38.1#w4"
+    }
+   ],
+   "divine": true,
+   "why": "The sender was a slot id; sender and addressee must be candidate ids. The LORD asks, and Job is addressed.",
+   "category": "turn sender and addressee as candidates"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The content of 'I will ask you' (the questions) begins in 38:4 and is not linked here",
+   "why": "The questions are judged with their own verses; here the turn's part is only cl2."
+  },
+  {
+   "what": "Whether turn0 is nested in the LORD's speech turn Job.38.1#g1",
+   "why": "The nesting is not linked from this verse; the outer turn's parts run to 38:38."
+  }
+ ]
+}

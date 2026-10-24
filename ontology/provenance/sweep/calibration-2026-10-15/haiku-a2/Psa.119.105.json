@@ -1,0 +1,18 @@
+{"ref": "Psa.119.105",
+ "referents": [
+  {"slot": "w3", "choice": "none", "divine": false, "why": "First person common singular 'my' modifies 'feet'. In the psalm's own voice the speaker is the referent, but the candidate list offers no voice candidate, so no candidate fits.", "category": "possessive in psalm voice with no voice candidate"},
+  {"slot": "w5", "choice": "none", "divine": false, "why": "Second person masculine singular 'your' modifies 'word'. The one addressed in the psalm is God, who is not among the candidates, so no candidate fits.", "category": "second person addressed to God, not offered"},
+  {"slot": "w10", "choice": "none", "divine": false, "why": "First person common singular 'my' modifies 'path', the same psalm-voice possessive as w3. No voice candidate is offered.", "category": "possessive in psalm voice with no voice candidate"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw (וְ) joins two parallel nominal lines, a lamp and a light. It is not a cause, result or purpose, so the separate-word 'and' stands.", "category": "plain and between parallel lines"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "w4"}], "divine": false, "why": "Two lines where the second restates the first's roles (lamp to light, feet to path) without a subject. The subject of both is the word of the first line (w4). The builder formed no group.", "category": "synonymous couplet with elided subject"}
+ ],
+ "none_fit": [
+  {"where": "w3, w10", "what": "A voice candidate for the psalmist's own 'I' and 'my' is needed; none is offered."},
+  {"where": "w5", "what": "A candidate for God as the addressee of the psalm's speech is needed; none is offered."}
+ ],
+ "cant_tell": []
+}

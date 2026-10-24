@@ -1,0 +1,90 @@
+{
+ "ref": "Exo.8.7",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "'from you' in Moses' continuing speech: the addressee, Pharaoh",
+   "category": "second person in a speech"
+  },
+  {
+   "slot": "w9",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "possessive 'your' with houses: Pharaoh",
+   "category": "possessive second person"
+  },
+  {
+   "slot": "w13",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "possessive 'your' with officials: Pharaoh",
+   "category": "possessive second person"
+  },
+  {
+   "slot": "w17",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "possessive 'your' with people: Pharaoh",
+   "category": "possessive second person"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w3",
+   "divine": false,
+   "why": "feminine plural 'they will remain' agrees with the frogs (feminine plural)",
+   "category": "third person plural, agreeing"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then is within a verse only; cl4 is the last clause of the verse before (Exo.8.6), and this verse-initial weqatal has no earlier clause in its own verse. The join across the verse boundary is the episode rung",
+   "category": "cross-verse then"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.8.7#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "part",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "Exo.8.5#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Exo.8.5#w4"
+    }
+   ],
+   "divine": false,
+   "why": "Moses' speech continues from Exo.8.6 (Exo.8.6#turn1) into this verse: the frogs' departure and remaining are what Moses says. A turn cannot span verses, so this records this verse's clauses only, with the same sender and addressee",
+   "category": "speech continued across a verse"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl0, cl1",
+   "what": "an exception marked by רַק (only): the frogs depart, and they remain only in the Nile. As in Exo.8.5, no type covers an exception with רַק; contrast takes אוּלָם or אֶפֶס כִּי"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether the departure in cl0 (weqatal) is what the prayer brings about (a promised result), or only the continuation of Moses' speech",
+   "why": "result is defined from an imperative; the prayer is not an imperative in this verse, and then does not cross verses"
+  }
+ ]
+}

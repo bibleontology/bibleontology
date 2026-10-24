@@ -1,0 +1,76 @@
+{
+ "ref": "Mrk.15.13",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false,
+   "why": "'Him' (auton), object of 'crucify': Jesus, but Jesus is not among the candidates; the two offered (Pilate, Barabbas) cannot be what is crucified here",
+   "category": "object not offered as a candidate"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Mrk.15.12#w2",
+   "divine": false,
+   "why": "the imperative 'crucify' is said to the one who can order it: the crowd cries to Pilate, who has just asked them what to do; second singular fits Pilate",
+   "category": "implied addressee of a command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "the shout is what they cried; the command is its content, not a role nested in it (R1)",
+   "category": "speech content linked as nesting"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'they cried out' is the saying clause and 'Crucify Him' is what is said (R1)",
+   "category": "speech content"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self-link",
+   "category": "self-link"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "addressee",
+     "node": "Mrk.15.12#w2"
+    }
+   ],
+   "divine": false,
+   "why": "the shouted command is the part and Pilate is the addressee; the crowd who shouted is not a candidate, so no sender is recorded",
+   "category": "turn with unresolved sender"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "the sender of 'they cried out' (the crowd) and the object 'Him' (Jesus)",
+   "why": "neither is offered as a candidate in this window: the crowd is named in 15.8 and 15.11, Jesus in 15.5, but neither is in the candidate list"
+  }
+ ]
+}

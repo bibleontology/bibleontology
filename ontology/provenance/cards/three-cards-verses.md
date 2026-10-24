@@ -1,0 +1,30 @@
+- John.3.1: Now there was a man of the Pharisees named Nicodemus, a leader of the Jews.
+- John.7.50: Nicodemus, who had gone to Jesus earlier and who himself was one of them, asked,
+- Luke.7.36: Then one of the Pharisees invited Jesus to eat with him, and He entered the Pharisee's house and reclined at the table.
+- Luke.13.31: At that very hour, some Pharisees came to Jesus and told Him, “Leave this place and get away, because Herod wants to kill You.”
+- Luke.14.1: One Sabbath, Jesus went to eat in the home of a leading Pharisee, and those in attendance were watching Him closely.
+- Acts.5.34: But a Pharisee named Gamaliel, a teacher of the law who was honored by all the people, stood up in the Sanhedrin and ordered that the men be put outside for a short time.
+- Acts.15.5: But some believers from the party of the Pharisees stood up and declared, “The Gentiles must be circumcised and required to obey the law of Moses.”
+- Acts.23.6: Then Paul, knowing that some of them were Sadducees and the others Pharisees, called out in the Sanhedrin, “Brothers, I am a Pharisee, the son of a Pharisee. It is because of my hope in the resurrection of the dead that I am on trial.”
+- Acts.23.9: A great clamor arose, and some scribes from the party of the Pharisees got up and contended sharply, “We find nothing wrong with this man. What if a spirit or an angel has spoken to him?”
+- Phil.3.5: circumcised on the eighth day, of the people of Israel, of the tribe of Benjamin; a Hebrew of Hebrews; as to the law, a Pharisee;
+- Matt.23.2: “The scribes and Pharisees sit in Moses' seat.
+- Matt.23.3: So practice and observe everything they tell you. But do not do what they do, for they do not practice what they preach.
+- Matt.23.13: Woe to you, scribes and Pharisees, you hypocrites! You shut the kingdom of heaven in men's faces. You yourselves do not enter, nor will you let in those who wish to enter.
+- Mark.12.28: Now one of the scribes had come up and heard their debate. Noticing how well Jesus had answered them, he asked Him, “Which commandment is the most important of all?”
+- John.19.39: Nicodemus, who had previously come to Jesus at night, also brought a mixture of myrrh and aloes, about seventy-five pounds.
+- John.11.47: Then the chief priests and Pharisees convened the Sanhedrin and said, “What are we to do? This man is performing many signs.
+- John.11.48: If we let Him go on like this, everyone will believe in Him, and then the Romans will come and take away both our place and our nation.”
+- John.12.10: So the chief priests made plans to kill Lazarus as well,
+- Matt.27.6: The chief priests picked up the pieces of silver and said, “It is unlawful to put this into the treasury, since it is blood money.”
+- Acts.6.7: So the word of God continued to spread. The number of disciples in Jerusalem grew rapidly, and a great number of priests became obedient to the faith.
+- Mark.3.6: At this, the Pharisees went out and began plotting with the Herodians how they might kill Jesus.
+- Matt.12.14: But the Pharisees went out and plotted how they might kill Jesus.
+- Luke.11.42: Woe to you Pharisees! For you pay tithes of mint, rue, and every herb, but you disregard justice and the love of God. You should have practiced the latter without neglecting the former.
+- Exod.19.6: And unto Me you shall be a kingdom of priests and a holy nation.' These are the words that you are to speak to the Israelites.”
+- Deut.7.7: The LORD did not set His affection on you and choose you because you were more numerous than the other peoples, for you were the fewest of all peoples.
+- Deut.7.8: But because the LORD loved you and kept the oath He swore to your fathers, He brought you out with a mighty hand and redeemed you from the house of slavery, from the hand of Pharaoh king of Egypt.
+- Isa.49.6: He says: “It is not enough for You to be My Servant, to raise up the tribes of Jacob, and to restore the protected ones of Israel. I will also make You a light for the nations, to bring My salvation to the ends of the earth.”
+- Rom.9.4: the people of Israel. Theirs is the adoption as sons; theirs the divine glory and the covenants; theirs the giving of the law, the temple worship, and the promises.
+- Rom.9.5: Theirs are the patriarchs, and from them proceeds the human descent of Christ, who is God over all, forever worthy of praise! Amen.
+- Rom.11.26: And so all Israel will be saved, as it is written: “The Deliverer will come from Zion; He will remove godlessness from Jacob.

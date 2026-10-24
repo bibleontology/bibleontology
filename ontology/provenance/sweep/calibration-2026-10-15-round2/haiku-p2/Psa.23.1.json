@@ -1,0 +1,55 @@
+{
+ "ref": "Psa.23.1",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "First person singular possessive 'my shepherd' in the psalm's own voice; the psalm quotes no one, so this is the voice candidate.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "Implied first person singular subject of the yiqtol 'I shall not want'; the psalm's voice.",
+   "category": "implied subject in a psalm"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "writing",
+   "kind": "writing",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The heading 'a psalm of David' is the frame and names David as writer; the two clauses are the psalm's text.",
+   "category": "psalm heading as writing frame"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether 'I shall not want' (cl2) is a reason for or a result of 'The LORD is my shepherd' (cl1), or simply set beside it",
+   "why": "The clauses are juxtaposed with a semicolon and no conjunction, no ki or other connective; so no because or result link is recorded."
+  }
+ ]
+}

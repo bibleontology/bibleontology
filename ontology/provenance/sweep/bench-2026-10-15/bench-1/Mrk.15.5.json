@@ -1,0 +1,25 @@
+{
+ "ref": "Mrk.15.5",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive with hos te (so as to amaze) says what the reply brings about: Pilate's amazement. A result, not a plain and.",
+   "category": "result of an act"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link: a clause cannot follow itself.",
+   "category": "self link"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,747 @@
+{
+  "_what": "The ontology of the sentence-level build: every KIND of unit and relation that tools/placeholders.py produces, declared once, with the verse that forced it into existence. Doug, 2026-09-24: 'the ontology idea was mine and I think it is key to making this happen. I want you to build it out and make it visible to me as we discover structures working though verse by verse.'",
+  "_rules": [
+    "BUILT FROM BELOW. A kind is admitted when a verse cannot be drawn without it, not written first and fitted to the text. Each entry names that verse.",
+    "CLOSED WORLD. tools/ontology.py reads the whole graph and fails on any node, edge or force value this file does not declare, and on any kind marked built that has no instances. The file cannot drift from the graph in either direction.",
+    "STATUS IS A FACT. built = the graph has instances now. proposed = on the queue in docs/BACKLOG.md, not built. superseded = built, still in the graph, due to be retired. withdrawn = tried and reversed; kept, with why, so nobody re-proposes it as the safe option. deferred = built before, by the earlier builder, and not by the clean one yet; its rule kept as code for re-entry (plan 1.27, the deferred registry), with `deferred` saying why, and whether the structure sweep supplies it meanwhile as a reading. Doug's word of 2026-10-15; applied as 'held' on 2026-10-17 and renamed the next day, since docs/HELD.md's held readings are another thing (plan 1.42).",
+    "REFS ARE MACULA'S. Hebrew verse numbers where they differ from English: Exo.8.6 here is the BSB's Exodus 8:10.",
+    "A READING IS NOT A KIND. 'Cause', 'motivation', 'execution' name what a reader infers over a structure. They enter as specializations only when the text marks them or a measured rule does.",
+    "KINDS ARE POLYMORPHIC (PRINCIPLES 47). A node's kind is the most specific the graph's current state supports, and is refined in place as layers arrive — an assertion becomes an illustration when the meaning graph sees the category clash. A pattern slot typed with a kind matches it or any specialization: tools/ontology.py `is_a` and `lineage`.",
+    "TYPES AND ROLES ARE KEPT APART. A kind says what a node IS, wherever it stands (a content that is an Action; an Author). A role says what it is IN A RELATION (the effect of `causes`; the basis or aim of a command; the voice of a Writing), and belongs on the relation. 'An action effect' is an Action in the effect role — never a kind of its own. The psalmist is a voice that RESOLVES TO David, not a subclass of David. The ontology discipline OntoClean's lesson, adopted 2026-09-25 (plan N.2) because it was free: ActionEffect had fused the two within a day of being proposed.",
+    "DOMAIN AND RANGE ARE CHECKED. Every relation's `from` and `to` — a kind or a list of kinds, matched by subsumption — is enforced on every edge. Adopted 2026-09-25 (plan N.1): declared and only drawn, they had let 7,653 second verb roles through."
+  ],
+  "passages": {
+    "_what": "The method. Doug, 2026-09-24: 'what I am hoping is that we can work though various passages to keep informing and refining the ontologies (high level and hebrew) until we feel like it is complete.' Each passage worked is logged here with what it changed. The ontology is approaching complete when new passages stop adding kinds and stop finding faults — so the log is also the measure.",
+    "worked": [
+      {
+        "from": "Exo.8.12", "to": "Exo.8.15", "name": "The gnat plague", "date": "2026-09-25",
+        "status": "ACCEPTED by Doug, 2026-09-26: 'you can close the gnats plague structure as accepted by me'. BSB 8:16-19 worked in full: the nested turns (LORD → Moses → Aaron; three levels in 8:20), the imperative collection and its effect, the fulfilment and its fulfillers, 'your staff' → Aaron, the causative, 'likewise' for the magicians, their failed result, the heart result, 'just as the LORD had said'. First shown 2026-09-25: 'I want you to show the gnat plague first as it is simpler and easier for me to completely vet and we will circle back to frogs after Psalm 23.'",
+        "english": "Exodus 8:16-19 (BSB)",
+        "shape": "first retrieval, before any fix made for it: 19 clauses; 1 marked orphan (8:13 cl4 'all the dust became gnats'); 0 speech turns.",
+        "first_draw": ["NO COMMUNICATION UNITS: turns are built only for speech that runs across verses, so 8:12's three levels (the LORD to Moses; Moses to Aaron, commanded; Aaron's act) and the magicians' 'this is the finger of God' (8:15) have none", "'in all the land of Egypt', 'all the dust of the ground': the head is 'all' and 'land' / 'dust' are lost; and two different 'all's in 8:13 cl4 collapse into ONE node, carrying both qualifiers (earth, Egypt)", "'on man and beast' (8:13, 8:14): the role points at 'man' only — the coordination (a composite, humans + animals) exists but the role takes its first member", "command and fulfilment: the action-state pairs pair the LORD's SAYING (8:12 cl0) with Aaron's acts, not the command 'stretch out your staff' with 'he stretched out'; and 'it will become gnats' (8:12) and 'all the dust became gnats' (8:13) do not share a content key (s=he pp:into=gnats vs s=all o=gnats)", "a waw before לֹא is not linked: 'and they could not' (8:14 cl2), 'and he would not listen' (8:15 cl3) join nothing before them", "a preposition governing a nested clause mints a role as well as the `within`: 'to [bring forth gnats]' gets pp: to=gnats (8:14), 'just as [the LORD had said]' gets pp: just=LORD (8:15) — plan 1.15 in role form", "'your staff' (8:12): a second-person possessive in a command is not given the command's actor (Aaron); the own-subject rule is third person only", "the implicit subject of 'it will become gnats' (8:12) is drawn 'he' — the Hebrew is masculine, the referent is the dust; English 'he' asserts animacy the text does not", "a stray `speaker` edge from BSB 8:20 (Exo.8.16 cl4) to the magicians of 8:15"],
+        "questions": ["weqatal after imperatives — 'strike the dust ... AND it will become gnats' (BSB 'that it may') — is it consequence, purpose, or just 'and'? Held as 'and'.", "'and they could not' — RST's Contrast, which the ontology has not met. The waw is plain; the contrast is a reading of attempt then failure.", "'just as the LORD had said' (8:15) — the text itself stating fulfilment (plan 1.19)."],
+        "added": ["effect — an imperative's effect as a member of the Imperative group, with the clause link `result` (Doug on BSB 8:16: 'that it may turn into swarms of gnats ... is the effect of Stretch out your staff and strike the dust'; 'we established earlier that imperatives can have effects'). 13 built corpus-wide, 9 right.", "collection — a run of commands joined by 'and' is ONE Imperative group, and the saying's content points at it ('the second level (aaron) imperative content is a collection of 2 actions'). 342 groups; 144 contents redirected.", "fulfils — 'they did so' (8:13 / BSB 8:17) fulfils the collection; 'so' refers to it; 'they' to Moses and Aaron, the addressees down the command chain ('this they did is meaningless as modelled'). 21 built, 13 of 17 checked right.", "elaborates — 'Aaron stretched out ... and struck' is the detail of 'this they did', each act fulfilling its own command; 'the gnats were' fulfils the command's effect and is the result of the acts (Doug: 'not an and - it is a reference to this they did used for cause and effect'). The Hebrew has no 'when'; the repeated verbs carry it."],
+        "corrected": ["question (a), 'strike the dust AND it will become gnats': answered by Doug — an effect, now `result` / `effect`", "first retrieval item: the content of 'tell Aaron' pointed at its first command only; now the collection", "first retrieval fault 4: the action-state pairs joined the LORD's SAYING to Aaron's acts; superseded by member-level fulfilment (8 such pairs corpus-wide)"],
+        "source": "first retrieval, read by Claude before Doug vets it; Doug vetting 2026-09-25 — BSB 8:16: 'looks good' with the effect and the collection"
+      },
+      {
+        "from": "Exo.7.26", "to": "Exo.8.11", "name": "The frog plague", "date": "2026-09-24",
+        "status": "OPEN — not signed off. Doug, 2026-09-25: 'I have not seen the frog graph land yet. - maybe we come back to it after taking on some diversity? I have plenty of examples in mind.' Everything below is best effort, to be revisited once other genres have tested the rules.",
+        "english": "Exodus 8:1-15 (BSB)",
+        "shape": "first pass: 53 clauses in 32 groups, 16 orphaned, 17 single-clause groups. After the rebuild of 2026-09-25: 25 groups, 9 orphaned, 11 single-clause groups; 2 action-state pairs, both true",
+        "added": ["that — built (כִּי after know / see / hear / say)", "purpose — built", "sequence ('and then') — built, within a verse", "Turn — built 2026-09-25: YHWH's message now spans 7:26-7:29, Moses's reply 8:6-8:7; 7 clauses joined to nothing"],
+        "corrected": ["Hebrew participle heading a clause: mapped 'not finite', is an assertion — 'I am about to strike your territory' (7:27)", "if: now attaches forward, to what it conditions (7:27)", "action-state: must be done by the one commanded; a command to speak must be answered to the same person", "orphan: now 'joined to no clause', not 'pointed at by none' — the head of a relation is not an orphan", "a second command joined by 'and' carries the first's actor (8:1)"],
+        "faults": ["STILL OPEN: speech breaks at every verse boundary (Turn); fulfilment the text states is not built (8:9, 8:11); flat layer misattributions (8:4, 8:8); 9 clauses joined to nothing, 4 of them infinitive or relative", "FIXED 2026-09-25, as found:", "action-state: 3 of 5 cross-verse pairs false", "if: attached backwards, and absent when it opens a verse (7:27)", "purpose draft rule fires on a promise (8:4)", "flat layer: Pharaoh removes the frogs (8:4), Moses brought them (8:8)", "speech breaks at every verse boundary (7:26-7:29)", "because: both in this passage are 'that' after know / see (8:6, 8:11) — 447 of 987 corpus-wide hang from such a verb", "fulfilment the text STATES is not built: 'the LORD did according to the word of Moses' (8:9), 'just as the LORD had said' (8:11)"],
+        "source": "Doug's hand grouping of 8:1-4, from a Copilot thread, 2026-09-24"
+      }
+    ]
+  },
+
+  "layers": [
+    {"id": "upper", "label": "Meaning", "what": "Language-independent: what a clause says, what force it is said with, and how clauses group. Patterns are matched here, so a Hebrew and a Greek passage can be the same shape."},
+    {"id": "language", "label": "Language", "what": "How Hebrew, Aramaic and Greek mark the upper layer: verb forms, connective words, word order. A Hebrew wayyiqtol and a Greek aorist indicative are different forms that may do the same thing."},
+    {"id": "lexical", "label": "Words", "what": "The word occurrences themselves, with lemma, Strong's number and morphology, as MACULA gives them. To become its own asset — the WORD GRAPH: every occurrence and lexeme with a stable source id, each attribute sourced, frozen and versioned, which the structure and meaning layers reference by id (docs/BACKLOG.md, 2026-09-25)."}
+  ],
+
+  "classes": [
+    {
+      "id": "Unit", "label": "Unit", "layer": "upper", "parent": null, "status": "built",
+      "definition": "Anything the graph holds a node for. Abstract: nothing is a bare Unit."
+    },
+    {
+      "id": "Word", "label": "Word occurrence", "layer": "lexical", "parent": "Unit", "status": "built",
+      "definition": "One word at one place in one verse. No identity across verses is claimed; 'the LORD' in Gen 2:4 and in Exo 8:6 are two nodes until a later pass merges them with evidence.",
+      "attrs": {"text": "this occurrence's English rendering (MACULA `english`) — not the BSB's word, which the BSB verse contains only 60% of the time where the renderings differ", "usual": "the rendering MACULA's `english` gives this Hebrew word MOST OFTEN across the Hebrew Bible (the word card's 'most often rendered'), kept on common nouns and adjectives where it says more than this occurrence's: 'resting place' where Psa 23:2 has 'quiet' (Doug, 2026-09-26: 'going with the Hebrew is preferable'). Diagrams draw 'usually: resting place / here: quiet'. Not labelled 'from Hebrew': the usual rendering is not always the literal one (פָּנִים, 'face', is most often 'presence'). 28,888."},
+      "match": {"has": "class"}
+    },
+    {
+      "id": "Composite", "label": "Coordinated words", "layer": "lexical", "parent": "Unit", "status": "built",
+      "definition": "Words joined by 'and' and taken as one participant: 'the heavens and the earth', 'Moses and Aaron'. The only noun-phrase grouping built so far; each member hangs off it by `member`. Also MINTED where the text refers to a group it never names together: the doers of a fulfilled command ('they did so', Exo 8:13 → Moses and Aaron, the addressees down the command chain), marked `minted_for`.",
+      "established": {"ref": "Gen.1.1", "note": "flat layer, before the clause layer existed"},
+      "match": {"has": "composite"}
+    },
+    {
+      "id": "Together", "label": "Referents taken together", "layer": "lexical", "parent": "Composite", "status": "built", "made_by": "readings",
+      "definition": "A minted composite made by the structure sweep: one pronoun or unstated subject that stands for several the text names apart, each hanging off it by `member`. Matthew 20:18's 'we' is Jesus and the twelve of 20:17. Always a reading.",
+      "established": {"ref": "Mat.20.18", "date": "2026-10-18", "note": "Declared by plan 1.43 (the closed world over the readings); made since the sweep's import of 2026-10-17."},
+      "match": {"eq": {"kind": "together"}}
+    },
+    {
+      "id": "Generic", "label": "Described, not named", "layer": "lexical", "parent": "Unit", "status": "built", "made_by": "readings",
+      "definition": "Someone the text describes but does not name, named by the sweep in its own words ('his armor-bearer', 'one of the priests carried off from Samaria'), so that the pronouns that stand for them have a referent. Linked to the text's own word where it names the same person or group (`refers_to`), or the group they are one of (`partitive`). Always a reading.",
+      "established": {"ref": "1Ch.10.4", "date": "2026-10-18", "note": "Declared by plan 1.43; made by the sweep's resolution pass since 2026-10-17, checked against the text's own words by plan 1.41."},
+      "match": {"eq": {"kind": "generic"}}
+    },
+    {
+      "id": "Clause", "label": "Clause", "layer": "upper", "parent": "Unit", "status": "built",
+      "definition": "One act of saying something: a content, said with a force. The unit the rest of the structure groups.",
+      "established": {"ref": "Gen.1.3", "date": "2026-09-21", "why": "'said' had nowhere to point. The verb was an edge label, so 'God said' could not take 'let there be light' as what was said."},
+      "falsified_by": "A verse whose meaning needs a unit smaller than MACULA's clause and larger than a phrase.",
+      "match": {"has": "clause"}
+    },
+    {
+      "id": "Content", "label": "Content", "layer": "upper", "parent": "Unit", "status": "built",
+      "definition": "What a clause says, without the force: a predicate and its participants. Two clauses that say the same thing with different force share a content KEY.",
+      "established": {"ref": "Psa.107.1", "date": "2026-09-21", "quote": "\"thanks to the Lord\" is the lowest level grouping"},
+      "proof": "Gen 1:3: 'let there be light' and 'there was light' have one key, s=light v=הָיָה, and differ only in force (jussive, wayyiqtol). 38% of content keys recur.",
+      "falsified_by": "Two clauses with the same key that a reader would say do not say the same thing.",
+      "match": {"has": "content"}
+    },
+    {
+      "id": "Verb", "label": "Verb", "layer": "upper", "parent": "Word", "status": "built",
+      "definition": "The predicate of a clause as a node, carrying its form (mood, stem, person) so it can be pointed at.",
+      "was": "A kind beside Word (parent Unit), when the earlier builder made a verb node of its own. In the clean builder the verb is a word node with its form on it, so a Verb is a Word; beside it, every verb was counted as a plain word and 93,080 predicates looked out of place (plan 1.42, 2026-10-17).",
+      "established": {"ref": "Psa.107.1", "date": "2026-09-21", "quote": "let's start with just \"give thanks to the lord\""},
+      "match": {"has": "verb"}
+    },
+    {
+      "id": "Group", "label": "Ordered pair", "layer": "upper", "parent": "Unit", "status": "built",
+      "definition": "Two units taken together, in an order that matters, with one of them the head. A group keeps its head's force. Abstract: every group is one of the specializations below.",
+      "established": {"ref": "Gen.1.3", "date": "2026-09-21", "quote": "order does matter with this pattern so it is more than just a pair"},
+      "also": "Doug, 2026-09-21: 'imparative modified as a basis is still an imperative by the way' — the group keeps its head's force."
+    },
+    {
+      "id": "ActionState", "label": "Action, then state", "layer": "upper", "parent": "Group", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).",
+      "definition": "A command, then the same act reported as having happened. The order is the content: reversed, it would be an act followed by a command to do it.",
+      "established": {"ref": "Gen.1.3", "date": "2026-09-21", "quote": "simplified to action and then state grouped together - a particular type of pair"},
+      "rule": "A jussive / imperative / cohortative, then a later wayyiqtol of the same lemma, within 4 verses — done by the one commanded (or, for a causative, by what the command acts on), and for a command to speak TO someone, spoken to that same someone. Where an actor is unknown the pair stands.",
+      "was": "Same lemma alone, until 2026-09-24: in the frog plague 3 of 5 cross-verse pairs were false (the magicians' 'brought up'; 'say to Aaron' paired with Pharaoh's and Moses's 'he said').",
+      "falsified_by": "A pair whose second member is not done by the one commanded.",
+      "match": {"eq": {"pair": true, "kind": ["action-state", "action_state"]}}
+    },
+    {
+      "id": "Imperative", "label": "Imperative, and what qualifies it", "layer": "upper", "parent": "Group", "status": "built",
+      "definition": "A command as a unit: the first members are the command — ONE command, or a COLLECTION of commands joined by 'and' at one speech level ('stretch out your staff AND strike the dust', Exo 8:12; Doug: 'the second level (aaron) imperative content is a collection of 2 actions') — and every further member is a QUALIFIER the text attaches to them, typed by what it does. A saying's `content` points at the group, not at its first command. A group may have no qualifier: a collection alone is one. One class, extended by qualifier types rather than specialized into a class per combination — a command often carries several at once. The group keeps the command's force: qualified, it is still a command.",
+      "established": {"ref": "Psa.107.1", "date": "2026-09-25", "quote": "it seems that there should be one imperative class with either specializations or extendibility"},
+      "extension_points": [
+        "basis — a stated reason, כִּי (built; Psa 107:1)",
+        "aim — a purpose: a command, then waw + jussive / cohortative / yiqtol in another person (built; Exo 7:26 'that they may serve me')",
+        "effect — what the commanded act brings about: a command, then waw + a third-person weqatal (built 2026-09-25; Exo 8:12 'strike the dust ... and it will become gnats'; 10 of 14)",
+        "warning — the consequence of refusing it: a condition that refuses the command's own verb (proposed; Exo 7:27)",
+        "promise — the consequence of obeying it, 'if you obey ... then' (not yet proposed: the draft rule cannot separate it from noise)"
+      ],
+      "also": "Doug, 2026-09-21: 'imparative modified as a basis is still an imperative by the way' — the principle the whole class rests on.",
+      "falsified_by": "A qualifier that changes what the command IS rather than adding to it — which would make it a different kind, not an extension.",
+      "match": {"eq": {"pair": true, "kind": "imperative"}}
+    },
+    {
+      "id": "ImperativeBasis", "label": "Imperative, and its basis", "layer": "upper", "parent": "Group", "status": "withdrawn",
+      "definition": "A command and the reason the text gives for it, as its own class.",
+      "established": {"ref": "Psa.107.1", "date": "2026-09-21", "quote": "the qualified imperative has a reason and they are grouped together by something similar to the action/state pair ... but it is not quite action/state - it is imperative/basis"},
+      "instead": "Imperative, with `basis` as one of its qualifier types (2026-09-25). As a class of its own it would have needed a sibling for every other qualifier, and a class for every combination of them."
+    },
+    {
+      "id": "Conditional", "label": "Condition, then consequence", "layer": "upper", "parent": "Group", "status": "built",
+      "definition": "An 'if' clause and the clause it conditions, as one node: 1 = the condition, 2 = the consequence. The group keeps the consequence's force — it is the clause that asserts or commands; the condition only says when.",
+      "established": {"ref": "Exo.7.27", "date": "2026-09-25", "quote": "the entry point is the if/then and the \"let them go\" is part of the refusal clause under the if condition"},
+      "was": "Only an `if` edge between the two clauses, so a speech turn could point at nothing but its loose clauses — 7:27 showed as two unrelated parts of the Lord's speech.",
+      "match": {"eq": {"pair": true, "kind": "conditional"}}
+    },
+    {
+      "id": "ImperativeWarning", "label": "Imperative, and the consequence of refusing it", "layer": "upper", "parent": "Group", "status": "withdrawn",
+      "instead": "The `warning` qualifier of Imperative (2026-09-25): the same rule, as a member type rather than a class. Everything below is kept as the record of how it was found.",
+      "definition": "A command, then a condition whose protasis is that same command REFUSED — the command's own verb under 'refuse' (מָאֵן) or 'not' — and whose apodosis is what will follow. The group keeps the imperative's force: a warning attached to a command is still a command, as a basis is.",
+      "established": {"ref": "Exo.7.27", "date": "2026-09-25", "quote": "looking at BSB 8:2 it is a continuation of the Lord's speech, but also a motivation/consequence of not following the imperative"},
+      "evidence": "STATED, not inferred: 'if you refuse TO LET THEM GO' repeats 'LET my people GO' (שָׁלַח) from 7:26 and negates it. That shared verb is what separates this from a reading. 'Motivation' is what a reader calls the effect of the pair — the reading layer; 'warning' is what the text states.",
+      "proof": "16 in the Hebrew Bible by the draft rule — a floor, since a condition introduced by כִּי אִם (Exo 9:2) is taken as a different connective. The same shape three times in the plague cycle: frogs (Exo 7:26-27), flies (8:16-17), locusts (10:3-4); also Gen 20:7 'return the man's wife ... if you do not return her, you will surely die'.",
+      "mirror": "The compliance side — 'if you obey ... then' — is the same structure with the protasis affirmative, and is where covenant blessing lives (Exo 19:5, Deu 28). The draft rule finds 47 candidates there but most are noise (Gen 15:5 'count the stars — if you are able to count them'), so it is not proposed until it can be separated.",
+      "falsified_by": "A command followed by a negated condition on its own verb whose consequence is NOT tied to the refusal — a condition that merely reuses the verb.",
+      "rule": "A held `if` edge whose protasis (with its infinitive complement) contains the lemma of a command within the previous 40 clauses of the same book, the protasis being refusal (מָאֵן) or negated. Group: 1 = the command, 2 = the consequence (the `if` source), with the condition reachable through the `if` edge."
+    },
+    {
+      "id": "Parallel", "label": "Parallel lines", "layer": "upper", "parent": "Group", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).",
+      "definition": "Two lines where the second states the first's roles minus the subject, because it is the same subject. The subject sits on the group AND is carried to each line: both readings are true.",
+      "established": {"ref": "Psa.119.105", "date": "2026-09-21", "quote": "word is the subject for the collection"},
+      "also": "Doug: 'lamp for feet and light for path do each stand on their own', and 'the verse could read \"your word is a light and lamp\" and it would still be valid' — the test that the collection is right.",
+      "falsified_by": "A second line with no subject of its own whose subject is NOT the first line's.",
+      "match": {"eq": {"pair": true, "kind": "parallel"}}
+    },
+    {
+      "id": "Descriptions", "label": "Descriptions of one referent", "layer": "upper", "parent": "Group", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).",
+      "definition": "Consecutive 'the one who ...' clauses (participles used as nouns, each folded out of its '[he is] ...' frame) describing one referent, across verses within a chapter: Psa 103:3-5 'who forgives all your iniquity, who heals all your diseases, who redeems your life from the pit, who crowns you ..., who satisfies you with good'. The group's subject is the common referent (the first description's unstated 'he'); each description keeps its own subject node.",
+      "established": {"ref": "Psa.103.3", "date": "2026-09-26", "quote": "psalm 103: 3- needs to have a subject node for each of the parts in vs 3-5 or it needs to have a collection and a common subject that applies to all - either way the subject node is missing and that was never the intent"},
+      "match": {"eq": {"pair": true, "kind": "descriptions"}}
+    },
+    {
+      "id": "Concession", "label": "Concession: the obstacle, what holds anyway, and why", "layer": "upper", "parent": "Group", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).",
+      "definition": "Where the text marks a concession (גַּם כִּי, 'even though'): the conceded clause (the obstacle), the claim that holds anyway, and — where a כִּי gives it — that claim's ground. Where the held claim is NEGATED, the response the obstacle would have brought is named by the text and denied, and the group carries it as `denied`: Psa 23:4 'even though I walk through the valley of deep darkness, I will NOT FEAR harm, for you are with me' → conceded, holds anyway, its ground; denied 'fear'. That this is an overridden motivation is the reading over the group (meaning graph). The mirror of `failed_result`: there an act's aim does not come; here a circumstance's expected outcome does not, and the text says why.",
+      "established": {"ref": "Psa.23.4", "date": "2026-09-26", "quote": "\"Even though I walk through the valley of the shadow of death\" is in effect an obstacle overcome - an overridden motivation"},
+      "also": "Built only on גַּם כִּי. A fronted כִּי is when / if / though undecided, and a negated main clause does not decide it ('if you meet anyone, do not greet him', 2Ki 4:29). גַּם alone is 'also' far more often than 'even if'.",
+      "proof": "6 built; 5 concessions (Psa 23:4, Pro 22:6, Isa 1:15, Hos 8:10, 9:16) and 1 wrong: Rut 2:21 'he ALSO told me' — גַּם כִּי there is 'also' + the saying. Denied response named in 3 (fear, depart, listen); a ground in 1 (Psa 23:4).",
+      "match": {"eq": {"pair": true, "kind": "concession"}}
+    },
+    {
+      "id": "AgentActs", "label": "Acts of one agent", "layer": "upper", "parent": "Group", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).",
+      "definition": "Clauses in a row that are the acts of one agent: joined by no word, none a narrative 'and then' (wayyiqtol), each stating its subject only in its verb, and every one of those subjects resolved to the SAME referent. The agent sits on the group (`group_subject`), as a Parallel's subject does; the acts are its members (`agent_act`), in order. A run crosses verses within a chapter. Psalm 23:2-3: 'he makes me lie down / he leads me / he restores my soul / he guides me' — four acts of the LORD.",
+      "established": {"ref": "Psa.23.2", "date": "2026-09-26", "quote": "verses 2-3 could be a collection of 4 actions of the Lord with a single subject. Structurally they fit a similar pattern surround by first person I statements"},
+      "also": "Doug chose a new group over widening Parallel ('agree - build it as a new group, acts of one agent'): Parallel's lines repeat the same roles, and these do not — lie down in pastures, lead beside waters, restore a soul, guide in paths. The first-person statements around the run are the proposed Context kind, which he set after the meaning graph.",
+      "proof": "Measured before building: 207 runs keyed on the referent's lemma (134 of 2, 42 of 3, 17 of 4, up to 11), 189 in the Psalms, where the addressee and pronoun rules reach. A glance at 10 found 3 wrong, all from the pronoun resolution beneath it (Psa 4:5's 'you' is the people, not God; 125:1's 'it' is Zion): the group's precision is the pronoun rules'.",
+      "falsified_by": "A run whose acts are one agent's but that the text divides — a clause between them, or a narrative sequence — or a run joined only because two different referents share a node.",
+      "match": {"eq": {"pair": true, "kind": ["acts", "agent_acts"]}}
+    },
+
+    {
+      "id": "Episode", "label": "Episode", "layer": "upper", "parent": "Group", "status": "proposed",
+      "definition": "A run of clauses one rung above the sentence. Hypothesis: וַיְהִי + a time phrase opens one (27.9% open a Berean section against 11.5% for other wayyiqtol). A signal, not a rule.",
+      "established": {"date": "2026-09-24", "note": "journal, 'what marks an episode?'"}
+    },
+    {
+      "id": "Communication", "label": "Communication unit", "layer": "upper", "parent": "Group", "status": "built",
+      "definition": "Someone communicating something to someone: a SENDER, an ADDRESSEE, what is communicated (its parts), a MEDIUM (speech or writing) and a MODE (performed — it happens in the text; commanded — a directive to communicate, which may be fulfilled later or not at all). Communications NEST: every one except the outermost is a part of an enclosing communication, and the chain rolls all the way up to the writer of the scroll, the psalm or the letter. Abstract: every communication is one of the specializations below.",
+      "established": {"ref": "Exo.7.26", "date": "2026-09-25", "quote": "make sure that the ontology fully supports the concept of nested speech where speech is really a form of communication that rolls all the way up to the writer of the scroll"},
+      "also": "Doug, the same day: 'speech is a communication unit - writing a scroll/psalm/letter to a church is a communication unit.' And on the frog plague: 'the real speech turn is God to Moses - the Moses speech turn is actually a directive from God which Moses does not fulfill in these verses - though it is a speech turn, regardless.'",
+      "example": "Exodus 7:26-29 (BSB 8:1-4): [the writer of Exodus -> its readers: [the LORD -> Moses, performed: [Moses -> Pharaoh, commanded: [thus says the LORD: let my people go ... if you refuse ... the frogs will come up on you]]]].",
+      "extension_points": [
+        "medium — speech (built, as Speech turn) or writing (the Writing unit, proposed); a written communication can also be nested, as a letter quoted in a narrative (Ezra 4) or 'write this in a book' (Exo 17:14)",
+        "mode — performed or commanded (built); a commanded communication's fulfilment is a later performed one, which is not yet linked",
+        "sender, addressee — edges to who the text names (built where stated or inferred by a written rule); left empty rather than guessed",
+        "reported — speech described but not quoted ('he told them all these words'); not yet a kind"
+      ],
+      "falsified_by": "A quoted speech that belongs to no sender at any level up to the writing — which would mean a communication with no source."
+    },
+    {
+      "id": "Writing", "label": "Writing (scroll, psalm, letter)", "layer": "upper", "parent": "Communication", "status": "built",
+      "built_for": "The Psalms first (2026-09-25): one Writing per psalm, minted at its first verse; `frame` to each heading clause; `sender` to the person the heading names; `part` to every top-level unit of every verse. Doug, on Psalm 23: 'the assertion that this is a psalm of David needs to inform all nodes in the scroll.' The heading also informs the psalm's own voice: a first-person singular clause outside any quoted speech, with no subject of its own, takes the writer as its inferred subject. Other books wait for re-keying by span.",
+      "match": {"eq": {"pair": true, "kind": "writing"}},
+      "definition": "The outermost communication: the book, psalm or letter as a unit, from its writer to its readers. Every speech with no enclosing speech is a part of it, and narration is its own voice. The SENDER is set only where the text states one — 'Paul, an apostle ... to the church of God in Corinth' (1 Cor 1:1-2), a psalm's heading — and left open where it does not: the text of Exodus names no writer, so the graph names none.",
+      "established": {"ref": "Psa.23.1", "date": "2026-09-25", "quote": "the assertion that this is a psalm of David needs to inform all nodes in the scroll"},
+      "rule": "One per book; per psalm in Psalms. A top-level speech turn is `part` of it.",
+      "caution": "The heading's לְדָוִד can be read 'of', 'for' or 'about' David. The sender edge carries the preposition and says it is taken as authorship, which is Doug's reading and the traditional one.",
+      "addressee": "Doug, 2026-09-25: 'each scroll has an author and potentially an addressee ... e.g. church of Corinth when we get to the NT.' A Writing's addressee is set only where the text states one — 'to the church of God in Corinth' (1 Cor 1:2), 'to Theophilus' (Luke 1:3) — as its author is. Not built: the Psalms state none, and the letters are step 3 (Greek).",
+      "why_not_built_elsewhere": "A book-level node breaks the assumption, everywhere downstream, that a node's ref is a verse — which is exactly what PRINCIPLES 46 says to remove. The psalm is small enough to be minted in its first verse, as the speech turn is; the books wait for re-keying by span (docs/BACKLOG.md)."
+    },
+    {
+      "id": "Author", "label": "Author (the voice of a writing)", "layer": "upper", "parent": "Unit", "status": "built",
+      "definition": "The authoring voice of a Writing — the role, as distinct from the person who fills it. The writing's own 'I' and 'my' point here; the voice resolves to a named person only at the highest level, the Writing, where the text itself names one (`resolves_to`): a psalm's heading, a letter's greeting ('Paul, an apostle'). Never by tradition. Abstract: each author voice is one of the specializations below; built for psalms so far.",
+      "established": {"ref": "Psa.23.1", "date": "2026-09-25", "quote": "is psalmist generic enough for the whole graph or is it a special case that we can justify establishing? ... I think it is a specialization of scroll author"},
+      "extension_points": [
+        "psalmist — the voice of a psalm (built)",
+        "narrator — the voice of a narrative book, which names no writer (not yet)",
+        "letter writer — 'Paul, an apostle ... to the church of God in Corinth' (not yet; Greek)",
+        "the Teacher — Qoheleth, who names himself in Ecclesiastes 1:1 (not yet)"
+      ]
+    },
+    {
+      "id": "Psalmist", "label": "Psalmist", "layer": "upper", "parent": "Author", "status": "built",
+      "definition": "The Author of a psalm. One per psalm, headed or not. The psalm's 'I' and 'my', outside any quoted speech, point to the psalmist; the psalmist resolves to the heading's name at the Writing level.",
+      "established": {"ref": "Psa.23.1", "date": "2026-09-25", "quote": "this is a psalm that each of us can read so \"David\" needs to be held lightly - whoever is praying this psalm can substitute themselves - I would rather say the psalmist and let it resolve in the highest level context to David"},
+      "why": "A psalm is written to be prayed. Resolving its 'I' straight to David made every reader's prayer a statement about David; resolving it to the voice keeps the text's own claim ('the LORD is my shepherd') for whoever speaks it, while the heading still says whose voice it first was.",
+      "match": {"eq": {"voice": true, "local": "psalmist"}},
+      "matched_by": "The clean builder's voice node (Psa.10.1#psalmist: `voice`, local name `psalmist`); the earlier builder's `author_kind` it was matched by is gone, and the 66 voices and the 842 'I's resolved to them looked undeclared (plan 1.42, 2026-10-17)."
+    },
+    {
+      "id": "Address", "label": "Address (a turn to 'you')", "layer": "upper", "parent": "Communication", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).",
+      "definition": "A run of clauses marked second person — verbs, pronouns, suffixes — outside any quoted speech, inside a Writing: the writer turning to address someone. Nested in the Writing as one of its parts; sender the writer. Built for the Psalms.",
+      "established": {"ref": "Psa.23.4", "date": "2026-09-25", "quote": "but then there is a flip to directly addressing God as \"you\""},
+      "open": "The ADDRESSEE is left empty: 'you' has no antecedent in the text, only an addressee, and who it is (the LORD, in Psalm 23) is a matter for the meaning graph. Parked with the context-setting bundle (docs/BACKLOG.md).",
+      "match": {"eq": {"pair": true, "kind": "address"}}
+    },
+    {
+      "id": "Assertion", "label": "Assertion", "layer": "upper", "parent": "Clause", "status": "built",
+      "definition": "A clause said with assertive force — it states that something is, was or will be so — as against a directive ('let my people go') or a wish. Derived from the clause's form through the language layer (see `forces`): a wayyiqtol, qatal, yiqtol, weqatal, a predicating participle, a Greek indicative, or a verbless clause asserts. The parent of Illustration.",
+      "established": {"ref": "Psa.23.1", "date": "2026-09-25", "quote": "the ontology still labels assertion as proposed - aren't we beyond that?"},
+      "match": {"eq": {"clause": true, "upper_force": "assertion"}},
+      "proof": "90,182 of 114,573 clauses (Hebrew 71,347, Greek 18,835) — against 9,350 directives and 15,041 non-finite or wishes. Doug: 'assertions will dominate'.",
+      "asserter": "Every assertion is made by SOMEONE: the sender of the innermost communication it sits in — the speaker, inside a speech turn; the author (narrator) outside one. Doug, 2026-09-25: 'all narratives are assertions by the scroll author or speaker.' Built for the Psalms (the psalmist); for narrative books it waits on the narrator voice (Author, extension point) and the book-level Writing."
+    },
+    {
+      "id": "Directive", "label": "Directive", "layer": "upper", "parent": "Clause", "status": "built",
+      "definition": "A clause said with directive force — it tells someone to do or be something: an imperative, a jussive ('let there be light'), a cohortative ('let us'), a Greek imperative or hortatory subjunctive. The head of an Imperative group is one.",
+      "established": {"ref": "Gen.1.3", "date": "2026-09-25", "note": "'let there be light' — the jussive that separated command from report on the first day the clause layer was built."},
+      "match": {"eq": {"clause": true, "upper_force": "directive"}}
+    },
+    {
+      "id": "Question", "label": "Question", "layer": "upper", "parent": "Clause", "status": "built",
+      "definition": "A clause said with interrogative force: it asks. Marked in the Hebrew by an interrogative word (מִי 'who', מָה 'what / why', אֵיךְ 'how', אַיֵּה 'where', לָמָּה / מַדּוּעַ 'why') or the prefixed interrogative הֲ. Derived from form in the clean builder's stage S2 (docs/BUILDER-DESIGN.md). Before it, the graph had no question force at all: every one of 2,213 interrogatives stood in a clause marked assertion (invariants baseline, 2026-09-27).",
+      "established": {"date": "2026-09-27", "quote": "question force: add it"},
+      "match": {"eq": {"clause": true, "upper_force": "question"}}
+    },
+    {
+      "id": "Illustration", "label": "Illustration (a symbolic assertion)", "layer": "upper", "parent": "Assertion", "status": "proposed",
+      "definition": "An assertion made through an image rather than concretely: 'the LORD is my shepherd'. A specialization of assertion — the claim is true, but by likeness: the LORD is not a shepherd, and says more by being called one. Doug: 'more powerful than trying to be concrete and makes up most of the psalms.'",
+      "established": {"ref": "Psa.23.1", "date": "2026-09-25", "quote": "I ready think that we can categorize \"the Lord is my Shepherd\" as a specialization of assertion which is symbolic or analogous in nature - it is not a concrete assertion - it is really an \"illustration\""},
+      "structural_base": "The X-is-Y construction with a nominal predicate — out/metaphor.jsonl.gz, 3,536 clauses, tenor and vehicle — which HOLDS Psalm 23:1 ('LORD = my shepherd'). But that layer says of itself that it 'does NOT claim every row is figurative: the man is a prophet predicates a real category and nothing structural separates it'. A sample of 16 of its rows: about 6 figurative ('you are our potter', 'the crown of the wise is their wealth'), the rest literal ('they are my people', 'two and a half cubits long').",
+      "why_not_built": "What separates an illustration from a concrete predication is a CATEGORY CLASH — the LORD is not in the category 'shepherd' — which is the meaning graph's to see. Doug's reading of Psalm 23:1 is recorded as held reading doug-043 and is the first case to test it on; it is not a rule. His hypothesis that illustration 'makes up most of the psalms' becomes measurable once it is.",
+      "extension_points": ["metaphor ('you are our potter') — the X-is-Y case, at the level of a CLAUSE", "simile ('like an earring of gold is a wise man's rebuke') — marked by 'like'/'as', and so partly structural", "the extended picture — the shepherd of Psalm 23:1-4 carried through pastures, waters, paths, rod and staff — which is the Context kind's scope", "the PARABLE — an illustration at the level of a whole COMMUNICATION: a told story that stands for something (Nathan's ewe lamb, 2 Sam 12; the vineyard, Isa 5; the parables of the Gospels). Doug, 2026-09-25: 'parables are illustrations'. The same kind at two levels — the polymorphism of PRINCIPLES 47 — so a pattern over illustrations can meet a metaphor and a parable alike."]
+    },
+    {
+      "id": "Action", "label": "Action (a content that is a doing)", "layer": "upper", "parent": "Content", "status": "proposed",
+      "definition": "A content whose predicate is something done: 'me lie down in green pastures' (Psa 23:2), 'the frogs go up' (Exo 8:2). A TYPE — what the content is, wherever it stands. 'An action effect', Doug's words for 23:2, is an Action in the effect role of `causes`: the type and the role are asked for separately, so a pattern can want either (PRINCIPLES 47).",
+      "established": {"ref": "Psa.23.2", "date": "2026-09-25", "quote": "in this case it is an action effect"},
+      "why_not_built": "Action or state is a fact about the VERB, not the clause, and nothing on the Hebrew side marks it: MACULA gives an agent frame (A0) to 'be holy' (11/11) and 'be strong' (81/82) exactly as to 'lie down' (24/24), and the stative vowel patterns miss statives like gadal. Of 3,240 causatives across 155 roots, most are motion (bring in 476, bring back 309, bring out 250, bring up 222) but states are mixed in (multiply 84, make king 45, provoke 41, strengthen 33, make good 30). The word graph (step 2) holds the fact per lemma; classifying verb types is a substep of step 5 (plan 5.5). Held readings: doug-049 (23:2, an action effect), doug-050 (23:3, a state — life replenished)."
+    },
+    {
+      "id": "State", "label": "State (a content that is a condition)", "layer": "upper", "parent": "Content", "status": "proposed",
+      "definition": "A content whose predicate is a condition rather than a doing: 'multiply', 'be strong', 'be angry', 'be king' — and, in Doug's reading of Psalm 23:3, a depleted life replenished. A TYPE; in the effect role of `causes` it is what was called a state effect. Sibling of Action.",
+      "why_not_built": "See Action: the line is lexical, and it is taken up in step 5."
+    },
+    {
+      "id": "ActionEffect", "label": "Action effect", "layer": "upper", "parent": "Content", "status": "withdrawn",
+      "definition": "Proposed 2026-09-25 as a kind of Content: the effect of a causative that is itself an action ('he makes me LIE DOWN', Psa 23:2).",
+      "withdrawn": "The same day, in the review against ontology practice (plan N.2): it FUSED a type with a role. Whether a content is an action is what it is; being an effect is its place in a `causes` relation. Fused, a pattern could not ask for 'any action' or 'any effect' without enumerating the crossings, and every new role (basis, aim, condition) would multiply the kinds. Replaced by the type Action, in the effect role of `causes`. Do not re-propose a Role+Type kind: declare the type, and let the relation carry the role."
+    },
+    {
+      "id": "StateEffect", "label": "State effect", "layer": "upper", "parent": "Content", "status": "withdrawn",
+      "definition": "Proposed 2026-09-25 beside ActionEffect: the effect of a causative that is a condition.",
+      "withdrawn": "Fused type and role, as ActionEffect. Replaced by the type State, in the effect role of `causes`."
+    },
+    {
+      "id": "Context", "label": "Context-setting clause and its scope", "layer": "upper", "parent": "Group", "status": "proposed",
+      "definition": "A clause that sets the context in which following clauses are read — 'the LORD is my shepherd' for Psalm 23:1-4 — and the span it governs. 'I shall not want' is read in its light (because the LORD is my shepherd, I lack nothing), though nothing connects them in the Hebrew.",
+      "established": {"ref": "Psa.23.1", "date": "2026-09-25", "quote": "verse 1 then presents the first challenge of context setting - I shall not want needs to be read in the context of \"the Lord is my shepherd\""},
+      "also": "Doug's anecdote: reading the KJV as a child he took it as 'the Lord is my shepherd, [whom] I shall not want' — the second clause as the object of the first. The Hebrew keeps them as sibling clauses, and so does the graph; what it cannot yet say is how the first governs the second.",
+      "why_not_built": "Its SCOPE is found by meaning, not grammar: the shepherd picture runs through v4 (pastures, waters, paths, rod and staff) and a host picture takes over in v5 (table, oil, cup) — whether 'shepherd' governs vv5-6 Doug leaves open. The pronoun chain shows who acts throughout, not which picture governs. Doug: 'mark this as something to come back to after the meaning graph is done and we are putting it all together - we can only go so far based on the base structure ontology rules.'"
+    },
+    {
+      "id": "Turn", "label": "Speech turn", "layer": "upper", "parent": "Communication", "status": "built",
+      "definition": "A communication by speech, however many verses it runs. Open at the end of a verse that holds a speech and does not end on a narrative wayyiqtol outside it; continued by each following verse that does not open with a narrative wayyiqtol. TURNS NEST: the outermost is opened by a narrated saying that sits inside no speech; each saying inside its speech opens the next turn in, which is a `part` of the one around it. Each turn has a mode (performed / commanded) and, where the text gives them, a sender and an addressee. Continuing verses are parts of the innermost turn.",
+      "nesting": "Built 2026-09-25 after Doug: 'the real speech turn is God to Moses - the Moses speech turn is actually a directive from God'. The first version kept ONE turn per verse, opened at the last saying ('thus says the LORD'), so the LORD-to-Moses turn did not exist. A first nesting build looped forever — a saying reachable from its own speech — and ran past 400s; frames already on the stack are never re-entered.",
+      "established": {"ref": "Exo.7.27", "date": "2026-09-25", "note": "The frog plague overview held YHWH's message to Pharaoh (7:26-7:29) as five unconnected groups, because every clause link stops at a verse boundary and a speech does not. Doug: 'build the speech turn across verses next'."},
+      "rule": "frame = the LAST saying in the opening verse (the innermost, so a message inside a message belongs to its own speaker); part = every clause of a continuing verse that nothing else in that verse points at.",
+      "falsified_by": "A verse opening with a non-wayyiqtol clause that is narrative background, not speech — 'Now Moses was eighty years old' after a speech — which the rule would wrongly take as the speech continuing.",
+      "proof": "Random sample of 14 turns against the Berean text: 12 right. First build 9 of 12, and its longest turns ran 150-188 verses through Proverbs and across psalms — any speech verb with a content edge could open one. Now only a narrated saying (wayyiqtol or qatal) opens a turn, a continuing verse stops at its first narrative wayyiqtol, and each psalm starts fresh.",
+      "known_fault": "The falsifier happens. Hebrew has no mark for where a quotation ends, so a verse that opens with background after a speech is taken as the speech: 'Now Laban had two daughters' (Gen 29:16), and the psalmist's own voice after quoting the wicked (Psa 73:12) — 2 of the 14 sampled. And a narrated saying INSIDE a long discourse ('the LORD said to me' within Moses's address) opens a new turn that then claims the rest of it: the longest are Deuteronomy 18:18 (170 verses), Proverbs 26:14 (122), Ecclesiastes 6:4 (116).",
+      "match": {"eq": {"pair": true, "kind": "turn"}}
+    },
+    {
+      "id": "HeadQualifier", "label": "Head and qualifier", "layer": "upper", "parent": "Group", "status": "proposed",
+      "definition": "A noun phrase as its head plus what qualifies it: 'the houses OF your officials'. MACULA marks it NPofNP 54,333 times; we flatten it to one node.",
+      "established": {"ref": "Psa.107.1", "date": "2026-09-21", "quote": "I think that psalm 107:1 is correct but the primitive nodes could be broken down further"},
+      "queue": 4
+    },
+    {
+      "id": "List", "label": "List", "layer": "upper", "parent": "Group", "status": "proposed",
+      "definition": "Items the text sets out one after another as a list, in order, with the clause that introduces them where there is one: a genealogy, the peoples of Acts 2:9-11, the names of the Twelve. A list's members are its `heading` (optional) and its `item`s. The heading, where there is one, is the group's head; a list without one is still a list. What each item is (a people group, a person) is said by the meaning layer (plan 1.41), not by the list.",
+      "established": {"ref": "Act.2.9", "date": "2026-10-16", "note": "Plan 1.35, first round: 769 of the sweep's none_fit notes were lists with nowhere to go. Doug took a group kind over entities only and over leaving lists ungrouped."}
+    },
+
+    {
+      "id": "CauseEffect", "label": "Cause and effect", "layer": "upper", "parent": "Group", "status": "withdrawn",
+      "definition": "The first name for Gen 1:3's pair. Withdrawn because the text does not say the light came BECAUSE of the command; that is a reading.",
+      "established": {"ref": "Gen.1.3", "date": "2026-09-21", "quote": "the call that and implies cause effect was inferred by me - might start as a simple pair until we get good at inferring such relationship."},
+      "instead": "ActionState. Cause is a further specialization that would attach to it, when something in the text marks it."
+    },
+    {
+      "id": "NestedCommand", "label": "State nested in its command", "layer": "upper", "parent": "Group", "status": "withdrawn",
+      "definition": "'There was light' drawn as a child of 'let there be light'.",
+      "established": {"ref": "Gen.1.3", "date": "2026-09-21", "quote": "\"there was light\" is the effect of God saying the command and not the command itself"},
+      "instead": "Siblings under an ordered pair."
+    }
+  ],
+
+  "relations": [
+    {
+      "id": "asserts", "label": "asserts", "layer": "upper", "from": "Clause", "to": "Content", "status": "built",
+      "reads": "{src} asserts {dst}, with force {force}",
+      "definition": "A clause says a content, with a force. The force is on this edge, not on the content, so one content can be commanded in one clause and reported in the next.",
+      "established": {"ref": "Gen.1.3", "date": "2026-09-21"},
+      "was": "Called `content` at first, which collided with the speech `content` edge.",
+      "attrs": {"force": "see forces"},
+      "match": {"type": ["asserts"], "flag": "clause_role"}
+    },
+
+    {"id": "participant", "label": "participant", "layer": "upper", "from": "Content", "to": "Unit", "status": "built", "abstract": true,
+     "definition": "The roles MACULA assigns inside a clause. The content is the hub; each role is an edge from it.",
+     "established": {"ref": "Gen.1.3", "date": "2026-09-21"}},
+    {"id": "v", "label": "verb", "parent": "participant", "layer": "upper", "from": "Content", "to": ["Verb", "Composite", "Word"], "status": "built", "reads": "the predicate of {src} is {dst}",
+     "widened": "Plan 1.42, 2026-10-17: a predicate may be a list of verbs, as MACULA's VPandVP gives it ('right-handed and left-handed', 1 Chronicles 12:2), 413 in the clean builder. 2026-10-18: or a word MACULA itself puts in the verb role that is not a verb, 114: a verbal adjective ('Obadiah feared the LORD', יָרֵא, 1 Kings 18:3; 'clothed', לָבוּשׁ), a 'behold' (הִנֵּה, 26: see the `presented` mark), a few nouns. The original's role is kept; such a clause has no verb form (S2).",
+     "known_fault": "A handful are MACULA's tagging, not a predicate: καί (1 Corinthians 4:11) and οὐ in the verb role. Kept as the source gives them, noted here.",
+     "match": {"type": ["v"], "flag": "clause_role"}},
+    {"id": "s", "label": "subject", "parent": "participant", "layer": "upper", "from": "Content", "to": ["Word", "Author", "Composite"], "status": "built", "reads": "{dst} is the subject of {src}",
+     "inferred_by": ["carried from the parallel line above", "addressee of the enclosing command", "same actor as the command it is joined to", "the psalmist — the psalm's own voice", "nearest agreeing referent up the ordered chain"],
+     "note": "An inferred subject is marked on the edge with the rule that inferred it. Doug, 2026-09-21: 'don't attribute until the context exists to do so'. An IMPLICIT subject is different — not inferred but stated: a finite verb with no subject word carries its subject's person, gender and number, and gets a pronoun node ('he', 'they', 'I') marked `implicit` (Psa 23:2 'HE makes me lie down'; Doug, 2026-09-25). Who that pronoun refers to is `refers_to`, proposed.",
+     "match": {"type": ["s"], "flag": "clause_role"}},
+    {"id": "o", "label": "object", "parent": "participant", "layer": "upper", "from": "Content", "to": ["Word", "Composite"], "status": "built", "reads": "{dst} is the object of {src}", "match": {"type": ["o"], "flag": "clause_role"}},
+    {"id": "o2", "label": "second object", "parent": "participant", "layer": "upper", "from": "Content", "to": ["Word", "Composite"], "status": "built", "match": {"type": ["o2"], "flag": "clause_role"}},
+    {"id": "io", "label": "indirect object", "parent": "participant", "layer": "upper", "from": "Content", "to": ["Word", "Composite"], "status": "built", "match": {"type": ["io"], "flag": "clause_role"}},
+    {"id": "p", "label": "predicate", "parent": "participant", "layer": "upper", "from": "Content", "to": ["Word", "Composite"], "status": "built", "reads": "{src} says its subject is {dst}",
+     "definition": "The predicate of a verbless clause: 'your word is A LAMP'.", "match": {"type": ["p"], "flag": "clause_role"}},
+    {"id": "pp", "label": "prepositional", "parent": "participant", "layer": "upper", "from": "Content", "to": ["Word", "Composite"], "status": "built", "reads": "{src} is {prep_gloss} {dst}",
+     "definition": "A participant through a preposition, which is kept: 'TO the LORD' and 'BEFORE the LORD' are different relations.",
+     "established": {"ref": "Psa.107.1", "date": "2026-09-21"}, "attrs": {"prep": "Hebrew / Greek preposition lemma", "prep_gloss": "its English gloss"},
+     "match": {"type": ["pp"], "flag": "clause_role"}},
+    {"id": "prep_object", "label": "object", "layer": "upper", "from": "Word", "to": ["Word", "Composite"], "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "reads": "{src} {dst}",
+     "definition": "In a VERBLESS clause whose predicate is a prepositional phrase, the preposition does the verb's work and is the predicate node; this links it to its object. 'you [are] WITH me' (Psa 23:4): you ← is (no verb) → with (עִמָּד) → me. With a verb, the preposition stays on its role's edge ('leads me BESIDE waters'): there the verb is the claim.",
+     "established": {"ref": "Psa.23.4", "date": "2026-09-26", "quote": "the Hebrew \"עִמָּד with me with me\" should be represented I think in the graph"},
+     "proof": "4,618 verbless clauses with a prepositional predicate ('[is] in', '[belongs] to', '[are] with'); before, the preposition was only a label on the predicate edge, glued to MACULA's supplied verb ('are.with').",
+     "match": {"type": ["prep_object"], "flag": "clause_role"}},
+    {"id": "motive", "label": "for the sake of", "parent": "pp", "layer": "upper", "from": "Content", "to": ["Word", "Composite"], "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "reads": "{src} is done for the sake of {dst}",
+     "definition": "What an act is done FOR: its motive, marked by the text with לְמַעַן before a noun — 'he guides me in paths of righteousness FOR THE SAKE OF his name' (Psa 23:3), 'for the sake of the fifty' (Gen 18:24). A reading ('motivation') enters as a kind only where the text marks it; לְמַעַן is that mark. Before a CLAUSE the same word is 'so that', a purpose, and is not this.",
+     "established": {"ref": "Psa.23.3", "date": "2026-09-26", "quote": "the \"for sake of\" ləmaʿan link seems to be missing - it is the motivation that links the action to the Lord's name"},
+     "attrs": {"prep": "לְמַעַן", "prep_gloss": "its English gloss"},
+     "match": {"type": ["motive"], "flag": "clause_role"}},
+    {"id": "adv", "label": "adverbial", "parent": "participant", "layer": "upper", "from": "Content", "to": ["Word", "Composite"], "status": "built", "match": {"type": ["adv"], "flag": "clause_role"}},
+    {"id": "refers_to", "label": "refers to", "layer": "upper", "from": "Word", "to": "Unit", "status": "built", "reads": "{src} is {dst}",
+     "definition": "Who (or what) a pronoun or pro-form is: 'he' (Psa 23:2) is the LORD (23:1). Four rules, all from Doug: (1) a SINGULAR third-person pronoun resolves only if EXACTLY ONE referent in the leading text — the last 12 clauses, same speech level — agrees with it in gender and number; with two or more it is held, not guessed. Predicates, headings, pronouns and the psalm's voice are not referents; a divine name is singular AND masculine, since its verbs are (left without a gender it agreed with 'she': Pro 9:2 'she has prepared her meat', Wisdom, → the LORD; 49 feminine pronouns → a divine name before, 14 after, all rule 2's; 2026-09-26); a resolved pronoun's referent stays in the leading text. A PLURAL 'they' is held (see known_fault). (2) In a psalm's own voice, an implicit 'you' inside an address is that address's addressee: God by default, or a vocative beside the clause ('Bless the LORD, O my soul', Psa 103:1). An EXPLICIT 'you' (אַתָּה, a pronoun word) is resolved the same way — 'YOU are with me' (Psa 23:4) was left out because the rule read only the 'you' a verb carries (2026-09-26). A FEMININE 'you' or 'your' is not given a divine addressee — 'why are you downcast, O my soul' (Psa 42:12) addresses the soul — and is held (12 + 14; 2 feminine → divine remain, Psa 16:2 and 137:8). Known fault, found by the acts-of-one-agent sample: the God default misfires in calls to worship (105:1 'give thanks to the LORD'), in oracles (2:9 'you will break them'), and where a new vocative takes over (103:22) — P-2026-09-26-21. (3) WITHDRAWN 2026-09-25: 'so' in a fulfilment was a pronoun pointing at the command. Doug: כֵּן 'belongs a level higher' — it is lifted out of the clause onto the `fulfils` or `likewise` link it stood for, and is no longer a word in the content. (4) And its implicit 'they' is the ones that command chain was addressed to, walked up through `content` — 'they did so' (Exo 8:13) → Moses and Aaron, a minted composite. Rules 3 and 4 resolve by STRUCTURE, not by candidates, so they apply to plurals. (5) A clause that fulfils one command of a collection has, as its implicit subject, that command's actor: 'he struck' (Exo 8:13) fulfils 'strike', whose actor is Aaron — held by rule 1 (Aaron, Moses and the LORD all agree), resolved by the fulfilment. (7) THE HEART STANDS FOR ITS OWNER: after a clause whose subject is a heart with a named or resolved owner ('Pharaoh's heart was hardened'), an implicit subject agreeing with that owner is the owner ('and he would not listen', Exo 8:15; Doug: 'is there a way for he to resolve to Pharaoh?'). 10 resolved, 9 right — the miss is Psa 22:15, where the heart itself is the subject ('my heart ... it melted'). (6) The implicit subject of a command's EFFECT that agrees with the command's object is that object: 'strike the dust ... and it will become gnats' (Exo 8:12) → the dust; 4 in the corpus, 4 right. (8) THE PSALM'S 'ME' IS THE PSALMIST: a first-person singular pronoun — object suffix 'he makes ME lie down', 'you are with ME', the 'my' suffix node, independent אֲנִי — in a clause outside any quotation and the heading refers to the psalmist, the psalm's voice, as its 'I' (subject) and 'my' (possessor) already did; the psalmist resolves to the writer at the Writing (Doug, 2026-09-26: 'resolve me to the psalmist'). He weighed the pray-er as a second referent and set it above the structure graph, since the text does not state it. LABELS: Hebrew has no 'it', so an unresolved third-person singular is drawn 'he/it' or 'she/it' (Doug, 2026-09-25: 'the subject of he looks wrong'); resolved to a named person or God it is 'he', to a thing 'it'.",
+     "established": {"ref": "Psa.23.2", "date": "2026-09-25", "quote": "if there is only one possible candidate for pronoun resolution in the leading text - you can resolve - if there is potential ambiguity - you hold off"},
+     "also": "Doug, the same day: 'a general rule of thumb can be held that second person in psalms refers to God in Psalms unless overridden. Psalms 103 first few verses is an example of overriding as the Psalmist is addressing his soul' — and 'Bless the Lord, O my soul is an imperative directed at the psalmist's soul'.",
+     "was": "A nearest-agreeing walk (CHAIN_RESOLVE, now off): perfect on Psalm 23:2-3, 6 of 17 right corpus-wide, because narrative walks past the real antecedent (Gen 38:22 'he said' → Judah for Hirah). The unique-candidate rule does not guess.",
+     "proof": "Hebrew only (Greek is step 3). Rule 1: 862 singular resolved (the 2,921 before plurals were held), 10,975 held as ambiguous, 474 with no candidate, 6,112 plurals held. Samples of 16, in order of the fixes: 5 of 9 Hebrew right (a name with no recorded number agreed with 'they': 'they obey me' → the LORD); then 8 of 16 (אֱלֹהִים is plural in form, and 5 of the 8 misses were 'they' → God); with names and divine names singular, 12 of 16. Psalm 23:2-3 and 103:1-2 all right. Rule 2: 979. Rule 3: withdrawn (was 21). Rule 4: 4 (the doers of a fulfilled command). Rule 8: 1,440; a sample of 16, 15 right and 1 lexicalised (the suffix of אֲדֹנָי, 'my Lord' in form, 'the Lord' in use — MACULA Psa 77:8), which the 'my' possessor rule already treats the same way.",
+     "known_fault": "Animacy: a candidate that cannot act is still a candidate — 'may they rejoice' → words (Psa 35:24), 'they fly' → praise (Isa 60:8), 'they flee' → baggage (Jer 46:21). Measured for plurals 2026-09-25 after the frog plague put 'that they may sacrifice' on the rivers (Exo 8:4) and 'they piled them in heaps' on the houses (8:10): a corpus sample of plural resolutions was 8 of 16 right, against 12 of 16 singular, and plurals were 2,059 of the 2,921 written — so plurals are HELD. Separating persons from things is the meaning graph's (plan 4.3).",
+     "addressee_defaults": "Who 'you' is depends on the kind of text, and a vocative overrides everywhere. Built: in a psalm's own voice, God (Doug's rule of thumb), or the vocative ('O my soul', Psa 103:1). Held readings for beyond the Psalms: Micah 6:8 addresses mortals — 'O MAN' (אָדָם), a vocative (doug-047); Isaiah 55:8-9 addresses the reader, and is 'a declaration from the Lord' (doug-048) — נְאֻם יְהוָה, 'declares the LORD', a speech formula that names its sender as 'thus says the LORD' does.",
+     "match": {"type": ["refers_to"], "flag": "none"}},
+    {"id": "partitive", "label": "one of", "layer": "upper", "from": "Word", "to": "Word", "status": "built", "made_by": "readings", "reads": "{src} is one of, or some of, {dst}",
+     "definition": "Someone the text describes without naming is one of, or some of, a group it names nearby: 'a priest' of 'the priests' (Leviticus 21:1), 'the second angel' of the seven (Revelation 16:1), 'others of the Jews' (John 10:19). Always a reading (the generic check, plan 1.41), never by rule. The same term as the prepositional relation `partitive` ('one of the mountains'), so that one query finds 'one of' inside a phrase and between a person and a group.",
+     "established": {"ref": "Lev.21.1", "date": "2026-10-18", "note": "Doug, choosing among four options for the generic check's 65 'part of' answers: 'go with partitive'. Shared with the prepositional type, as purpose and means are."},
+     "match": {"type": ["partitive"], "flag": "none"}},
+    {"id": "causes", "label": "causes", "layer": "upper", "from": "Content", "to": "Content", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "reads": "{src} causes {dst}",
+     "definition": "A causative verb (Hebrew hiphil) holds two events: the causing, and the event caused. The outer content keeps the causer and the verb; the INNER content has the object of the causing as its subject, with the places and manner — 'he makes [me lie down in green pastures]'. Only where the root also occurs in the plain stem (qal), so a hiphil-only verb ('strike', 'save') is not split.",
+     "established": {"ref": "Psa.23.2", "date": "2026-09-25", "quote": "assertion 3 needs to wrap me lying down in green pastures with \"He makes me\" - there is a layer missing"},
+     "why": "The inner content is the same KIND of content as the plain event: 'bring up the frogs' (Exo 8:1, hiphil) wraps 'the frogs go up', which is the content of 8:2's report 'the frogs went up' (qal). A command and its fulfilment meet as one content.",
+     "roles": "The outer content is the CAUSE ('he makes'), with its own predicate node 'makes'; the inner is the EFFECT ('me lying down in green pastures'), marked `role: effect`. Doug, 2026-09-25: 'in the causes node I would call \"Me lying down\" the effect.'",
+     "contrast": "At Genesis 1:3 Doug withdrew 'cause and effect' for 'let there be light / there was light': the text does not say the light came BECAUSE of the command — that was a reading, and the pair stays action-then-state. Here the causation is STATED: the hiphil is the grammar of 'cause to'. The same names, earned in one place and not the other, which is the rule 'a reading is not a kind' working as intended.",
+     "match": {"type": ["causes"], "flag": "clause_role"}},
+    {"id": "qualifier", "label": "qualifier", "layer": "upper", "from": ["Word", "Composite", "Clause"], "to": ["Word", "Composite", "Clause"], "status": "built", "reads": "{src} is qualified by {dst}",
+     "widened": "Plan 1.42, 2026-10-17: declared Word | Composite → Word, the clean builder's qualifiers also join clauses and lists, and these are what the text says: a noun qualified by a relative clause (1 Chronicles 1:12, the Casluhim 'from whom the Philistines came', 8,430 Word → Clause, mostly `relative`, `attribute`, `apposition`); a noun by a list ('sons of Benjamin and Judah', 1 Chronicles 12:17, 1,832); a list by a relative clause ('silver and gold' that he carried off, 1 Chronicles 18:11); a list in apposition to a list ('Eleazar and Ithamar', 'Nadab and Abihu', 1 Chronicles 24:1); a participle clause by a relative clause (1 Corinthians 3:11).",
+     "known_fault": "5,101 edges from a clause to its own relative word ('they came forth from there' → 'whom', 1 Chronicles 1:12): the relative particle, a function word like 'and', is made a qualifier of the clause it opens. Admitted by the widened declaration, not by right; a builder fault to fix (plan 1.42, group 5).",
+     "definition": "HEAD AND QUALIFIER inside a phrase: each dependent MACULA attaches to a head, typed by how (`rel`) — of (NPofNP: pastures OF grass), attribute (NpAdjp: a CLEAN heart), prep (NpPp: waters OF rest), quantity (QuanNP: ALL the earth), number (SEVEN years). Walked down from each role's head, recursively, so the head stays what the clause is about and everything else qualifies it. The content key stays the heads.",
+     "established": {"ref": "Psa.23.2", "date": "2026-09-25", "quote": "assertion 3 lacks green as a modifier on pastures"},
+     "also": "Doug, 2026-09-21, on Psalm 107:1: 'the primary node in the object is thanks and \"to the Lord\" is the qualifier' — the rule this builds, at the phrase level. Queue item 4 (NPofNP, 54,333 in MACULA).",
+     "match": {"type": ["qualifier"], "flag": "clause_role"}},
+    {"id": "neg", "label": "negation", "parent": "participant", "layer": "upper", "from": "Content", "to": "Word", "status": "built", "reads": "{src} is negated by {dst}",
+     "definition": "The negative of a clause — לֹא 'not', אַל 'do not', אַיִן 'there is no'; Greek οὐ, μή and kin. Part of the content KEY by lemma, so 'I lack' and 'I do not lack' are different contents, and the content carries `polarity: negative`.",
+     "established": {"ref": "Psa.23.1", "date": "2026-09-25", "quote": "looking at assertion 2 - I don't see the \"not\" or \"nothing\" represented"},
+     "was": "Dropped: MACULA gives לֹא the role `adv` on a bare word, the build made no node for it, and the role edge fell out — so 'I shall not want' was held as 'I lack', with the same content key.",
+     "match": {"type": ["neg"], "flag": "clause_role"}},
+    {"id": "vc", "label": "copula", "parent": "participant", "layer": "language", "from": "Content", "to": "Word", "status": "built", "definition": "Greek: the linking verb of a copular clause.", "match": {"type": ["vc"], "flag": "clause_role"}},
+    {"id": "topic", "label": "topic", "parent": "participant", "layer": "language", "from": "Content", "to": "Word", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "definition": "Greek: a constituent fronted as what the clause is about.", "match": {"type": ["topic"], "flag": "clause_role"}},
+    {"id": "aux", "label": "auxiliary", "parent": "participant", "layer": "language", "from": "Content", "to": "Word", "status": "built", "match": {"type": ["aux"], "flag": "clause_role"}},
+    {"id": "ellipsis", "label": "ellipsis", "parent": "participant", "layer": "language", "from": "Content", "to": ["Word", "Composite"], "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "match": {"type": ["ellipsis"], "flag": "clause_role"}},
+    {"id": "tail", "label": "tail", "parent": "participant", "layer": "language", "from": "Content", "to": "Word", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "match": {"type": ["tail"], "flag": "clause_role"}},
+
+    {
+      "id": "speaker", "label": "speaker", "layer": "upper", "from": "Clause", "to": ["Word", "Composite"], "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).",
+      "reads": "{dst} speaks {src}",
+      "definition": "Who says a speech clause that names no speaker. Always inferred, by alternation between the last two to take a turn, with embedded speech excluded; declines when fewer than two have spoken.",
+      "established": {"ref": "Exo.8.6", "date": "2026-09-21", "quote": "Pharoah spoke and moses responded with a single response - they are linked"},
+      "also": "Doug: 'naratives really need to be taken in order to have context', and 'you can still build from the ground up - just don't attribute until the context exists to do so'.",
+      "match": {"type": ["speaker"], "flag": "clause_role"}
+    },
+
+    {"id": "clause_link", "label": "clause to clause", "layer": "upper", "from": "Clause", "to": "Unit", "status": "built", "abstract": true,
+     "definition": "How one clause stands to another. Rule 45: a connective attaches to the nearest candidate, and the other candidate is kept on the edge as alt_host.",
+     "widened": "Plan 8.1b, 2026-10-18: its range is Unit, not Clause. Published as the parent (rdfs:subPropertyOf) of every clause link, its range is inherited by each of them, and `content` and `fulfils` reach a group as well as a clause (what was said is a command with what it governs). A narrower range would have a reasoner type those groups as clauses."},
+    {
+      "id": "content", "label": "says", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": ["Clause", "Imperative"], "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).",
+      "reads": "{src} says: {dst}",
+      "definition": "A speech clause and what was said. The said clause is embedded: it is inside the speaking, not next on the narrative line. Where what was said is a run of commands joined by 'and', the content is the COLLECTION — the Imperative group — not its first member: Doug, 2026-09-25, on Exo 8:12, 'the second level (aaron) imperative content is a collection of 2 actions'. WIDENED in 1.2.0 to what was said or asked when it is REPORTED rather than quoted: indirect speech and indirect questions ('examined the Scriptures every day to see if these teachings were true', Acts 17:11; 'test the spirits to see whether they are from God', 1 John 4:1). Such a link carries `indirect`. One relation for what was said or asked, quoted or reported (plan 1.35, second round, Doug 2026-10-17).",
+      "established": {"ref": "Gen.1.3", "date": "2026-09-21"},
+      "match": {"type": ["content"], "flag": "clause_link"}
+    },
+    {"id": "and", "label": "and", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, and {dst}",
+     "definition": "A separate-word waw. Where the waw is fused into the verb (wayyiqtol, weqatal) the relation is 'and then' instead. Where it joins a command to a change of person, it is 'so that'.",
+     "match": {"type": ["and"], "flag": "clause_link"}},
+    {"id": "within", "label": "inside", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{dst} sits inside {src}",
+     "definition": "A clause nested in another clause's role, as MACULA nests it; the edge carries the role (and preposition) it fills. 'You refuse [to let them go]' — the infinitive clause is the object of refusing. Relative clauses inside a noun phrase land here too; which kind of inside it is, the role says.",
+     "established": {"ref": "Exo.7.27", "date": "2026-09-25", "quote": "the \"let them go\" is part of the refusal clause under the if condition - so I don't understand why it is pulled out"},
+     "was": "Every role-bearing clause was taken as a clause in its own right and the nesting dropped, so 'to let them go' stood as a separate part of the Lord's speech.",
+     "match": {"type": ["within"], "flag": "clause_link"}},
+    {"id": "that", "label": "that", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src} — that {dst}",
+     "definition": "The clause is WHAT is known, seen, heard or said: the object of the verb, not a reason for it. כִּי after יָדַע, רָאָה, שָׁמַע, אָמַר, זָכַר, נָגַד, בִּין, שָׁבַע.",
+     "established": {"ref": "Exo.8.6", "date": "2026-09-24", "note": "'that you may know THAT there is no one like the LORD' had been built as 'know BECAUSE'. Found answering Doug's 'what in this passage are you not confident in?'"},
+     "falsified_by": "A כִּי after one of these verbs that gives the reason for knowing rather than what is known.",
+     "match": {"type": ["that"], "flag": "clause_link"}},
+    {"id": "because", "label": "because", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src} because {dst}",
+     "definition": "The text states a reason (כִּי, יַעַן, עֵקֶב). The edge runs from what is explained to its reason.",
+     "established": {"ref": "Psa.107.1", "date": "2026-09-21", "quote": "he is not good because we give thanks"},
+     "was": "Until 2026-09-24 also took every כִּי after a verb of knowing, seeing, hearing or saying — 447 of 987 edges, 45% — which are 'that'. Those are now the `that` relation. Until 2026-09-25 read כִּי only on a wrapper clause; read also as a word BESIDE its clause (Psa 23:4 'for you are with me'), `because` went from 987 to 3,091.",
+     "known_fault": "כִּי has senses the rule does not separate: 'that' after a noun ('a sign THAT he will do it', 2 Ki 20:9) or a verb of knowing it cannot see from the host ('know that I rebuilt', Ezk 36:36), asseverative 'surely' (1 Sa 20:26), concessive 'though' (Jer 10:2). A sample of 16 of the edges added on 2026-09-25: 11 right.",
+     "match": {"type": ["because"], "flag": "clause_link"}},
+    {"id": "if", "label": "if", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, if {dst}",
+     "definition": "The condition is the destination and what it conditions is the source. A Hebrew condition precedes what it governs, so the host is the NEXT clause that is not an infinitive complement; the clause before is kept as alt_host.",
+     "established": {"ref": "Exo.7.27", "date": "2026-09-24", "note": "'if you refuse to let them go, I am about to strike your territory': attached backwards like 'because' until then, and absent entirely when 'if' opened the verse."},
+     "match": {"type": ["if"], "flag": "clause_link"}},
+    {"id": "though", "label": "even though", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, even though {dst}",
+     "was": "Deferred for a day (plan 1.42): the clean builder's connective table named גַּם כִּי `conceded`, the member role inside a Concession group, so its 7 links were out of place and `though` had none. The table now says `though` (2026-10-18).",
+     "definition": "Concession: גַּם כִּי. Like a condition, it precedes what it qualifies and attaches forward.",
+     "established": {"ref": "Psa.23.4", "date": "2026-09-25", "note": "'even though I walk through the valley of the shadow of death, I will fear no evil' — unread until then: MACULA puts the conjunction as a sibling before the clause, not on a wrapper."},
+     "match": {"type": ["though"], "flag": "clause_link"}},
+    {"id": "undecided", "label": "undecided", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src} — undecided ({candidates}) — {dst}",
+     "definition": "A connective the text carries whose relation the FORM does not decide. The link is written with its candidate relations listed, instead of the builder guessing or leaving the word unlinked. First case: the verse-opening כִּי, 'for' (the reason for what precedes) or 'when' (the setting of what follows). The candidates come from the function-word lexicon (PRINCIPLES 41: an explicit uncertain category is cheaper than a forced decision).",
+     "established": {"date": "2026-09-27", "quote": "mark: undecided"},
+     "match": {"type": ["undecided"], "flag": "clause_link"}},
+    {"id": "when_if_though", "label": "when / if / though", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, when / if / though {dst}",
+     "definition": "A FRONTED כִּי: a כִּי clause that comes before the clause it governs, which it sets — 'when', 'if' or 'though'; the Hebrew does not say which, so the link does not. It attaches forward, as a condition does. Fronted means: in MACULA's (flat) unit, no clause stands directly before the כִּי ('and' may: וְכִי opens a new sentence) and a clause follows the כִּי clause directly. MID-VERSE ONLY: a כִּי that opens a verse is usually 'FOR ...', the reason for the verse before, and the form does not separate it from a fronted 'though' — built for both, a sample of 12 was 3 right; those (≈298) stay unlinked and are counted (`fronted_ki_verse_initial_held`). Jer 38:15 'even if I give you advice, you will not listen'; Jer 14:12's second, 'and (though) they offer, I will not accept'. A כִּי AFTER its main clause stays `because` (or `that` after a verb of perceiving). Not 'setting': the superseded flat layer has an edge of that name (Deu 11:26 'I am setting before you').",
+     "established": {"ref": "Jer.14.12", "date": "2026-09-26", "quote": "agree - go in that order", "note": "Step 1 of the concession work Doug approved. Before: 0 of 718 `because` edges had their reason first — fronted כִּי clauses were dropped (the first clause of a unit has nothing before it to hang on) or hung on the clause before them, across the sentence ('I will not listen THAT they offer', from the perceiving-verb rule)."},
+     "match": {"type": ["when_if_though"], "flag": "clause_link"}},
+    {"id": "until_limit", "label": "until", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, until {dst}",
+     "definition": "עַד before a clause: the inner clause is a LIMIT in time on the clause it sits in, not a place inside it. 'they became slaves to him and his sons UNTIL the kingdom of Persia reigned' (2Ch 36:20). Was a bare `within`.",
+     "established": {"ref": "2Ch.36.20", "date": "2026-09-26", "quote": "I agree that \"until\" is not \"within\", but is is a limit on slavery to Nebuchadnezzar and his sons (decedents) as stated in \"became for him and for sons his (into) slaves\""},
+     "proof": "200 built; a sample of 8 all limits ('unclean until evening', 'wrestled with him until daybreak'). Not 'until': the flat layer has an edge of that name — the build's clash check caught it on the first run.",
+     "match": {"type": ["until_limit"], "flag": "clause_link"}},
+    {"id": "describing", "label": "describing", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src}, {dst} (describing its subject)",
+     "definition": "A bare participle clause — no subject, no conjunction, not substantival — right after a finite clause, agreeing with that clause's subject: it describes that subject as it acts, or who it is, and does not stand as its own assertion. 'all of it wails, GOING DOWN IN WEEPING' (Isa 15:3); 'they ate the feast, SACRIFICING peace offerings' (2Ch 30:22); 'hear this, O leaders, who LOATHE justice' (Mic 3:9).",
+     "established": {"ref": "Isa.15.3", "date": "2026-09-26", "quote": "Agree that \"assertion - going down in (the) weeping\" should be a modifier as it does not stand on its own"},
+     "proof": "65 built; a sample of 16, 12 right. Misses: a participle carrying the main statement itself ('the Root of Jesse will be STANDING as a banner', Isa 11:10). The unrefined shape (any unlinked subjectless participle after a finite clause, 112) was 9/16 and caught 'WHOEVER eats leaven', the subject of what follows.",
+     "match": {"type": ["describing"], "flag": "clause_link"}},
+    {"id": "contrast", "label": "but / however", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, but {dst}",
+     "definition": "The text says 'but': אוּלָם or אֶפֶס כִּי before a clause — words that are a clause connective and nothing else. 'but let us fight them in the plain' (1Ki 20:23), 'however, the city was formerly named Luz' (Gen 28:19). NOT רַק / אַךְ / אֲבָל: MACULA reads them mostly as focus on a phrase ('ONLY the high places'), and at clause level they are 'but', 'only' or 'surely' — Psa 23:6 opens with אַךְ, 'SURELY goodness'. Whether a contrast is also a concession is a reading. Mid-verse only, as every backward link: a verse-opening 'but' has no host in its verse.",
+     "established": {"ref": "Psa.23.4", "date": "2026-09-26", "quote": "does \"but\" fit on the list to at least check or is that a more simple contrast?"},
+     "proof": "5 built, 5 right. Not 'but': the flat layer has an edge of that name.",
+     "match": {"type": ["contrast"], "flag": "clause_link"}},
+    {"id": "but_rather", "label": "but rather / except", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "not {src}, but rather / except {dst}",
+     "definition": "CORRECTION: כִּי אִם after a negative clause — 'not X but Y', and its exception sense, 'none ... except'. 'This one will not be your heir, but one who comes from your own body' (Gen 15:4); 'he must not eat ... unless he has bathed' (Lev 22:6); 'the Lord GOD does nothing without revealing his plan' (Amo 3:7). Read before as 'because' (כִּי alone), which reversed it.",
+     "established": {"ref": "Psa.23.4", "date": "2026-09-26", "note": "Step 2 of the concession work: the correction is the third kind English 'but' covers, beside contrast and concession."},
+     "proof": "87 built; a sample of 8, 8 right.",
+     "match": {"type": ["but_rather"], "flag": "clause_link"}},
+    {"id": "or", "label": "or", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, or {dst}", "match": {"type": ["or"], "flag": "clause_link"}},
+    {"id": "lest", "label": "lest", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, lest {dst}", "match": {"type": ["lest"], "flag": "clause_link"}},
+    {"id": "unless", "label": "unless", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src}, unless {dst}", "match": {"type": ["unless"], "flag": "clause_link"}},
+    {"id": "therefore", "label": "therefore", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}; therefore {dst}", "match": {"type": ["therefore"], "flag": "clause_link"}},
+    {"id": "fulfils", "label": "fulfils", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": ["Clause", "Imperative"], "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src} fulfils {dst}",
+     "definition": "A report that a command was carried out, where the text SAYS so with a pro-form: a narrative 'they did so' (עָשָׂה + כֵּן) or 'and it was so' (הָיָה + כֵּן), not negated, with no named subject, after a command. Points at the nearest preceding command in the book (not a cohortative), or at its collection. Its 'so' refers to that command unit, and its implicit 'they' to the ones the command chain was addressed to (walked up through `content`): Exo 8:13 'they did so' → Moses and Aaron, the collection 'stretch out your staff and strike the dust'. Plan 1.19. THEN, MEMBER BY MEMBER: the narrative clauses after the formula that repeat a command's verb fulfil THAT command and elaborate the formula ('Aaron stretched out ... struck'); one that repeats the command's EFFECT verb fulfils the effect ('the gnats were on man and beast' ← 'it will become gnats'), and is the `result` of the acts before it — the command's cause and effect, carried into the report. An action-state pair whose state is now a known fulfilment is removed: matched by lemma alone, it had joined the LORD's saying to Aaron's acts.",
+     "established": {"ref": "Exo.8.13", "date": "2026-09-25", "quote": "'this they did' is meaningless as modelled - it is the fulfillment of both imperatives and once you know that you know that 'they' is the fulfillers (Moses and Aaron) and the 'this' is command contents"},
+     "proof": "All 21 corpus cases of the formula with no named subject read: 13 of the 17 checked are fulfilments of the command found (Gen 1:7, 1:9, 1:11, 1:15, 1:24; Gen 42:20; Exo 7:10, 8:13, 14:4; Jos 9:26, 10:23; Jdg 6:20; 1Ki 20:25). Misses fulfil something that is not a command — a gift (Gen 1:30), a request (Jdg 6:38), a prophecy (2Ki 7:20) — or a reported order (Gen 42:25).",
+     "falsified_by": "A 'did so' whose nearest command is not the one done. A NAMED subject is excluded because it is often someone else doing the same — 'the magicians did so' (Exo 8:3) is imitation.",
+     "match": {"type": ["fulfils"], "flag": "clause_link"}},
+    {"id": "failed_result", "label": "and so — failed", "parent": "result", "layer": "upper", "from": "Clause", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src}, and it failed: {dst}",
+     "definition": "A specialization of `result`: the outcome of an attempt, where the outcome is that the attempt's purpose was NOT achieved. 'The magicians did so by their secret arts TO BRING FORTH the gnats, AND NOT THEY COULD' (Exo 8:14, BSB 8:18). Marked by an attempt that has a `purpose`, then 'and' + negated יָכֹל 'be able'. A pattern asking for results matches it (PRINCIPLES 47); one asking for failure asks for it alone.",
+     "established": {"ref": "Exo.8.14", "date": "2026-09-26", "quote": "The verse 18 example is also an effect - though technically is was a failed effect which is a specialization of the pattern"},
+     "match": {"type": ["failed_result"], "flag": "clause_link"}},
+    {"id": "as", "label": "just as", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, just as {dst}",
+     "definition": "A comparison: כְּ (כַּאֲשֶׁר 'just as') before a clause nested in this one's prepositional role. Where the compared clause is a SAYING — 'he would not listen to them, JUST AS THE LORD HAD SAID' (Exo 8:15, BSB 8:19) — the edge carries `as_said`: the text declares the action the fulfilment of an earlier word. Which earlier word is not yet linked.",
+     "established": {"ref": "Exo.8.15", "date": "2026-09-25", "quote": "this one seems sparse - nothing ties it to the prior - 'just as' is the hook in BSB - in original it is 'kə' 'ʾăšer'"},
+     "match": {"type": ["as"], "flag": "clause_link"}},
+    {"id": "likewise", "label": "did likewise", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src} does the same as {dst}",
+     "definition": "Someone else doing the same as a deed just done, where the text says so with כֵּן 'so, thus': 'the magicians did so by their secret arts' (Exo 8:14, BSB 8:18) → Aaron's deed (8:13). A narrative 'did so' with a NAMED subject that is not doing what it was commanded — imitation, not fulfilment. Linked only to a deed done after the latest command, so a named person carrying out a request is not read as copying. The כֵּן is lifted out of the clause's content onto this link (and onto `fulfils` likewise): Doug, 2026-09-25, 'it does make sense if it relates to what proceeded it. it probably also belongs a level higher.'",
+     "established": {"ref": "Exo.8.14", "date": "2026-09-25", "quote": "I see that the hebrew word ken translate to 'so', but also 'thus' - it does not make sense as presented but it does make sense if it relates to what proceeded it. it probably also belongs a level higher."},
+     "match": {"type": ["likewise"], "flag": "clause_link"}},
+    {"id": "elaborates", "label": "elaborates", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src} is the detail of {dst}",
+     "definition": "A clause giving the detail of an earlier one. Built where it is structural: after 'they did so', the narrative clauses that repeat a fulfilled command's VERB are the detail of what was done — 'Aaron stretched out his hand with his staff and struck the dust' (Exo 8:13) elaborates 'this they did', and each fulfils its own command (stretch out, strike, 8:12).",
+     "established": {"ref": "Exo.8.13", "date": "2026-09-25", "quote": "'and when Aaron stretched out his hand with his staff and struck the dust of the earth' is not an and - it is a reference to 'this they did' used for cause and effect - 'when' being the clue"},
+     "also": "The Hebrew has no 'when': וַיֵּט ... וַיַּךְ ... וַתְּהִי is a plain narrative chain, and 'when' is the BSB's reading of it. The structure reaches Doug's reading by its own evidence — the repeated verbs — not by the translation.",
+     "match": {"type": ["elaborates"], "flag": "clause_link"}},
+    {"id": "result", "label": "and so", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, and so {dst}",
+     "definition": "A command and what it brings about: an imperative, then waw + a third-person weqatal (Exo 8:12, 'strike the dust ... and it will become gnats'). The clause-to-clause link; in the Imperative group the same clause is the `effect`. Was read as a plain 'and'.",
+     "established": {"ref": "Exo.8.12", "date": "2026-09-25", "note": "see `effect`"},
+     "match": {"type": ["result"], "flag": "clause_link"}},
+    {"id": "purpose", "label": "so that", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, so that {dst}",
+     "definition": "What an action is FOR. Two forms. (1) A command, then waw + jussive / cohortative / yiqtol in a DIFFERENT person. Looks forward, where 'because' looks back. A cohortative after a jussive is excluded: that is a promise. (2) Since 2026-09-25: a clause nested in another's prepositional role as לְ + infinitive construct — 'the magicians did so by their secret arts TO BRING FORTH the gnats' (Exo 8:14, BSB 8:18; Doug: why is it 'within'?). Not where the infinitive is the main verb's COMPLEMENT — after be able, do again, begin, finish, be willing, refuse, seek, know how, cease, hurry ('if you refuse to let them go', Exo 7:27) — nor after a speech or intention verb, where it is what was said ('Solomon purposed to build'); nor after הָיָה / נָתַן, which the form does not settle; nor the quotative לֵאמֹר. 2,180 built. MEASURED blind by two DeepSeek runs agreeing case for case: 10 of 16 before the speech exclusion, 10 of 13 of that sample after; the rest explain HOW rather than what for ('dealt wondrously') — meaning, not form. The same term as the prepositional relation `purpose` ('for an offering'), so one query finds the aim at both levels (Doug, 2026-10-17: 'share purpose like means').",
+     "established": {"ref": "Exo.7.26", "date": "2026-09-24", "note": "Doug's hand grouping marked it '-reason->'. The person-change and the cohortative exclusion came from Pharaoh's 'that he may remove the frogs, AND I WILL let the people go' (8:4), a promise the first draft called purpose."},
+     "falsified_by": "A command followed by a different-person jussive that is a second command, not its aim.",
+     "match": {"type": ["purpose"], "flag": "clause_link"}},
+    {"id": "sequence", "label": "and then", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "built", "reads": "{src}, and then {dst}",
+     "definition": "The next event where the 'and' is inside the verb. A wayyiqtol continues the narrative line — the nearest clause before it that is not inside a speech; a weqatal continues whatever it follows. Within a verse only: across verses is the episode rung.",
+     "established": {"ref": "Exo.7.26", "date": "2026-09-24", "note": "'go to Pharaoh AND you will say to him' was an orphan; so were Moses's reply in 8:6 and 'Moses cried out to the LORD' in 8:8."},
+     "falsified_by": "A wayyiqtol that does not follow in time from the clause it is attached to.",
+     "match": {"type": ["then"], "flag": "clause_link"}},
+    {"id": "when", "label": "when", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "proposed", "reads": "when {src}, {dst}",
+     "definition": "A clause that sets the time of another: 'as He was going' (Acts 1:10), 'when the day of Pentecost came' (Acts 2:1). Whether before, during or after is left to the verb forms in the original, which the graph already holds; the link does not judge aspect. Distinct from `when_if_though`, where a fronted כִּי leaves when, if and though undecided: `when` is made only where the time reading is the text's.",
+     "established": {"ref": "Act.1.10", "date": "2026-10-16", "note": "Plan 1.35, first round: 1,106 of the sweep's none_fit notes were a time setting with no link to name it. Doug took the recommended single link over `while` + `after` (a new judgement, a new source of error) and over no link."}},
+    {"id": "comes_true", "label": "comes true", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "proposed", "reads": "{src}: so {dst} came true",
+     "definition": "An earlier word coming true: a promise, a prophecy or a scripture. Made only where the text itself says so: 'this is to fulfill what is written in their Law' (John 15:25); 'they fulfilled the words of the prophets' (Acts 13:27); or an 'as the LORD had said'. Never where only a reader sees a fulfilment the text does not state. Distinct from `fulfils`, which is a command carried out: obedience and a word coming true stay apart.",
+     "established": {"ref": "Jhn.15.25", "date": "2026-10-16", "note": "Plan 1.35, first round. Doug took a new link over widening `fulfils`."}},
+    {"id": "means", "label": "by means of", "parent": "clause_link", "layer": "upper", "from": "Clause", "to": "Clause", "status": "proposed", "reads": "{src}, by {dst}",
+     "definition": "The act by which another is done: 'by the sins they committed they provoked Him to jealous anger' (1 Kings 14:22); 'provoking Me to anger ... by burning incense to other gods' (Jeremiah 44:8). The same term as the prepositional relation `means`, so that one query finds the means at both levels, between clauses and inside a clause.",
+     "established": {"ref": "1Ki.14.22", "date": "2026-10-17", "note": "Plan 1.35, second round: 86 of the sweep's none_fit notes. Doug: the same name as the prepositional type."}},
+
+    {"id": "member_of_group", "label": "group member", "layer": "upper", "from": "Group", "to": "Unit", "status": "built", "abstract": true,
+     "definition": "A group's members, each with its position (`order`). The member's role in the group is the edge's name.",
+     "widened": "Plan 8.1b, 2026-10-18: its range is Unit, not Clause. As the parent of every member role, its range is inherited by each, and `part`, `item` and `imperative_qualifier` reach a group or a word as well as a clause. A narrower range would have a reasoner type those members as clauses."},
+    {"id": "action", "label": "action", "parent": "member_of_group", "layer": "upper", "from": "ActionState", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "match": {"type": ["action"], "flag": "clause_link"}},
+    {"id": "state", "label": "state", "parent": "member_of_group", "layer": "upper", "from": "ActionState", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "match": {"type": ["state"], "flag": "clause_link"}},
+    {"id": "command", "label": "command", "parent": "member_of_group", "layer": "upper", "from": "Imperative", "to": "Clause", "status": "built", "reads": "{dst} is the command of {src}",
+     "was": "`imperative`, the head member of the withdrawn ImperativeBasis.",
+     "match": {"type": ["command"], "flag": "clause_link"}},
+    {"id": "imperative_qualifier", "label": "qualifier of a command", "parent": "member_of_group", "layer": "upper", "from": "Imperative", "to": "Unit", "status": "built", "abstract": true,
+     "definition": "The extension point of Imperative: each qualifier type is a member relation, and a new one is added here rather than as a new class."},
+    {"id": "basis", "label": "basis", "parent": "imperative_qualifier", "layer": "upper", "from": "Imperative", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src}, because {dst}", "match": {"type": ["basis"], "flag": "clause_link"}},
+    {"id": "aim", "label": "aim", "parent": "imperative_qualifier", "layer": "upper", "from": "Imperative", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src}, so that {dst}",
+     "established": {"ref": "Exo.7.26", "date": "2026-09-25", "note": "'let my people go, that they may serve me'"},
+     "match": {"type": ["aim"], "flag": "clause_link"}},
+    {"id": "effect", "label": "effect", "parent": "imperative_qualifier", "layer": "upper", "from": "Imperative", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "reads": "{src}, and so {dst}",
+     "definition": "What the commanded act brings about: an imperative, then waw + a third-person weqatal. 'Stretch out your staff and strike the dust of the earth, AND IT WILL BECOME gnats' (Exo 8:12, BSB 8:16). The cause is the whole run of commands joined by 'and' before it, so they are all the group's commands. Distinct from `aim` (waw + jussive: what is intended) and from the proposed `promise` (what obeying earns). The same ROLE name as the effect in `causes` — one role, two relations (types and roles kept apart).",
+     "established": {"ref": "Exo.8.12", "date": "2026-09-25", "quote": "'that it may turn into swarms of gnats throughout the land of Egypt.' is the effect of 'Stretch out your staff and strike the dust of the earth' ... we established earlier that imperatives can have effects"},
+     "proof": "All 24 corpus cases of an imperative followed by a third-person weqatal read (an enumeration, the corpus being closed). Excluding speech verbs, 12 of 20 are effects. A bare וְהָיָה 'and it will be' usually opens a condition or a time (Jdg 4:20, Rut 3:13, 1Sa 3:9, 2Ki 3:15), so it counts only with a 'become into' (לְ) complement: 10 of 14 right as enumerated. BUILT: 13, 9 right — the rule works within a verse, so Jer 51:3–4 (command ending one verse, effect opening the next) is not built. Known wrong: Num 8:7, 35:2, Jer 50:5, Joel 4:11. Lost: Num 16:7, 21:8 (effects in the bare form), Jer 51:4 (across verses).",
+     "falsified_by": "A weqatal after a command that a reader would say is the next instruction, not what the act brings about — the four known wrong are that.",
+     "match": {"type": ["effect"], "flag": "clause_link"}},
+    {"id": "attached", "label": "attached to the command", "parent": "imperative_qualifier", "layer": "upper", "from": "Imperative", "to": "Clause", "status": "built", "reads": "{dst} is attached to the command {src}",
+     "definition": "A clause a connective attaches to a command, whose kind the form does not decide: whether it is the command's basis, aim, effect or warning is a further step. The clean builder makes the command group from the connective alone and records this member untyped; the earlier builder's typing rules are held for re-entry (plan 1.27), and the structure sweep types many as a reading.",
+     "established": {"ref": "1Ch.10.4", "date": "2026-10-18", "note": "Plan 1.42: the clean builder named these `part`, a speech turn's member, so 3,459 stood outside its declaration."},
+     "match": {"type": ["attached"], "flag": "clause_link"}},
+    {"id": "warning", "label": "warning", "parent": "imperative_qualifier", "layer": "upper", "from": "Imperative", "to": "Clause", "status": "built", "made_by": "readings", "reads": "{src} — and if refused, {dst}",
+     "definition": "What follows if a command is refused, or the danger it is given to avert: 'Do not go up, lest you be struck down by your enemies' (Numbers 14:42); 'Do not judge, or you will be judged' (Matthew 7:1). Usually an 'or', 'otherwise' or 'lest' clause after the command; also the if/then whose condition refuses the command's own verb (frogs, flies and locusts in the plague cycle, Exodus 7:27). Always a reading, and incomplete: only warnings two judges agree on are shown, and warnings nobody proposed have not yet been looked for.",
+     "established": {"ref": "Exo.7.27", "date": "2026-09-25", "quote": "a motivation/consequence of not following the imperative"},
+     "readings": "Built from the readings 2026-10-18 (Doug: 'go ahead and include'). The structure sweep proposed 196; held out after a sample of 10 was half right ('Hold them out'); then judged by two models (tools/sweep/warning_check.py): 86 kept where both say warning, 16 of 16 right on Claude's read of a fresh sample. Jeremiah 1:17 and 1 Samuel 9:5 are real warnings the judges split on, so they stay held. Recall (all 4,661 command groups) not yet measured.",
+     "match": {"type": ["warning"], "flag": "clause_link"}},
+    {"id": "frame", "label": "the saying", "parent": "member_of_group", "layer": "upper", "from": "Communication", "to": "Clause", "status": "built", "reads": "{src} is said in {dst}", "match": {"type": ["frame"], "flag": "clause_link"}},
+    {"id": "part", "label": "part of the communication", "parent": "member_of_group", "layer": "upper", "from": "Communication", "to": "Unit", "status": "built", "reads": "{dst} is part of {src}",
+     "definition": "What a communication contains: a nested communication (the speech inside it), or the highest unit of a continuing verse — a grouping (if/then, imperative with qualifiers, parallel pair) where a root clause heads one, otherwise the clause.",
+     "was": "Always a clause, until Doug on 7:27: 'I don't understand why it is pulled out (as part 2) under the higher level turn node'.",
+     "match": {"type": ["part"], "flag": "clause_link"}},
+    {"id": "group_role", "label": "group role", "layer": "upper", "from": "Group", "to": "Unit", "status": "built", "abstract": true,
+     "definition": "Who takes part in a group, as distinct from its ordered parts (`member_of_group`): who speaks a turn, to whom, and whom every line of a collection is about. A query for a group's roles finds them all.",
+     "established": {"ref": "Exo.7.26", "date": "2026-10-18", "note": "Plan 8.1b found sender, addressee and group_subject with no parent; approved as P-2026-10-18-15. 'participant', the first name offered, is already the parent of the clause roles MACULA assigns; Doug kept 'group_role' on the 1.2.0 inventory (2026-10-18)."}},
+    {"id": "sender", "label": "sender", "parent": "group_role", "layer": "upper", "from": "Communication", "to": ["Word", "Composite", "Author"], "status": "built", "reads": "{dst} communicates {src}",
+     "definition": "Who communicates it: the saying's stated subject, or the speaker inferred for it; for a commanded speech in the second person, the addressee of the enclosing communication ('and YOU shall say to him' — Moses).",
+     "established": {"ref": "Exo.7.26", "date": "2026-09-25"},
+     "match": {"type": ["sender"], "flag": "clause_link"}},
+    {"id": "addressee", "label": "addressee", "parent": "group_role", "layer": "upper", "from": "Communication", "to": ["Word", "Composite"], "status": "built", "reads": "{src} is addressed to {dst}",
+     "definition": "To whom: the saying's `pp: to`. Left empty where the text does not say.",
+     "established": {"ref": "Exo.7.26", "date": "2026-09-25"},
+     "match": {"type": ["addressee"], "flag": "clause_link"}},
+    {"id": "condition", "label": "condition", "parent": "member_of_group", "layer": "upper", "from": "Conditional", "to": "Clause", "status": "built", "match": {"type": ["condition"], "flag": "clause_link"}},
+    {"id": "consequence", "label": "consequence", "parent": "member_of_group", "layer": "upper", "from": "Conditional", "to": "Clause", "status": "built", "match": {"type": ["consequence"], "flag": "clause_link"}},
+    {"id": "line", "label": "line", "parent": "member_of_group", "layer": "upper", "from": "Parallel", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "match": {"type": ["line"], "flag": "clause_link"}},
+    {"id": "heading", "label": "heading", "parent": "member_of_group", "layer": "upper", "from": "List", "to": "Clause", "status": "proposed", "reads": "{dst} heads the list {src}",
+     "definition": "The clause that introduces a list, where the text has one: the opening of a genealogy, or the question in Acts 2:8 that the peoples of 2:9-11 answer. Optional."},
+    {"id": "item", "label": "item", "parent": "member_of_group", "layer": "upper", "from": "List", "to": "Unit", "status": "proposed", "reads": "{dst} is an item of the list {src}",
+     "definition": "One item of a list, with its position (`order`): a clause, or a noun phrase where the list is of names. What each item IS (a people group, a person) is said by the meaning layer's links (plan 1.41), not here."},
+    {"id": "described_as", "label": "who", "parent": "member_of_group", "layer": "upper", "from": "Descriptions", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "match": {"type": ["described_as"], "flag": "clause_link"}},
+    {"id": "conceded", "label": "even though", "parent": "member_of_group", "layer": "upper", "from": "Concession", "to": "Clause", "status": "deferred",
+     "deferred": "Built by the earlier builder (tools/placeholders.py) as a Concession group's member; the clean builder makes no Concession groups. Its 7 instances there were גַּם כִּי mis-named, now the clause link `though` (plan 1.42, 2026-10-18). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis.", "match": {"type": ["conceded"], "flag": "clause_link"}},
+    {"id": "holds_anyway", "label": "still", "parent": "member_of_group", "layer": "upper", "from": "Concession", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "match": {"type": ["holds_anyway"], "flag": "clause_link"}},
+    {"id": "its_ground", "label": "because", "parent": "member_of_group", "layer": "upper", "from": "Concession", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "match": {"type": ["its_ground"], "flag": "clause_link"}},
+    {"id": "agent_act", "label": "act", "parent": "member_of_group", "layer": "upper", "from": "AgentActs", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).", "note": "Not 'act': the superseded flat layer names edges after verbs, and 'act' (Lev 26:21) is one of them.", "match": {"type": ["agent_act"], "flag": "clause_link"}},
+    {"id": "group_subject", "label": "subject of the collection", "parent": "group_role", "layer": "upper", "from": ["Parallel", "AgentActs", "Descriptions"], "to": ["Word", "Composite", "Author"], "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27). Meanwhile the structure sweep supplies it as a reading, shown as automated analysis (plan 1.34, out/sweep-layer.jsonl.gz).",
+     "reads": "{dst} is the subject of every line of {src}",
+     "established": {"ref": "Psa.119.105", "date": "2026-09-21", "quote": "or at minimum for both parts of the collections"},
+     "match": {"type": ["s", "group_subject"], "flag": "clause_link"}},
+
+    {"id": "voice", "label": "voice", "layer": "upper", "from": "Writing", "to": "Author", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "reads": "{dst} is the voice of {src}", "match": {"type": ["voice"], "flag": "none"}},
+    {"id": "resolves_to", "label": "resolves to", "layer": "upper", "from": "Author", "to": ["Word", "Composite"], "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "reads": "{src} is, at the top, {dst}",
+     "definition": "Who fills a voice, as the highest level states it — the psalm's heading. Held lightly: whoever prays the psalm takes up the voice.",
+     "match": {"type": ["resolves_to"], "flag": "none"}},
+    {"id": "possessor", "label": "whose", "layer": "upper", "from": ["Word", "Composite"], "to": "Unit", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "reads": "{src} is {dst}'s",
+     "definition": "Whose a noun is, where a possessive suffix says and the referent can be named. Three rules: (1) in a psalm's own voice, outside quoted speech, a first-person singular 'my' is the PSALMIST's — the voice, not David directly (622). (2) Inside a psalm's address, 'your' is the addressee's (568). (3) A third-person 'his' / 'their' is its OWN CLAUSE'S SUBJECT, where that subject is known and agrees — 'Abraham fell on his face', 'for his name's sake' (Psa 23:3) → the LORD — except for a noun inside the subject's own phrase ('his choicest young men'); held otherwise (1,927 resolved, 12 of 16 in a corpus sample). WRONG TURN kept: the subject pronoun's rule applied to possessives (any one agreeing referent in the leading text) was 3 of 16 — 'their eyes' → heart, 'their brothers' → instruments: a possessive's candidates include every thing, and animacy is meaning's.",
+     "established": {"ref": "Psa.23.1", "date": "2026-09-25", "quote": "I think that David is explicitly saying the the Lord is David's shepherd and not just a shepherd generically"},
+     "match": {"type": ["possessor"], "flag": "none"}},
+    {"id": "next", "label": "next (text order)", "layer": "upper", "from": "Clause", "to": "Clause", "status": "deferred", "deferred": "Built by the earlier builder (tools/placeholders.py); the clean builder (plan 1.26) does not build it yet. Its rule, measurements and tests are kept as code for re-entry (plan 1.27).", "reads": "{dst} comes after {src}",
+     "definition": "The ORDERED CHAIN: each clause to the one after it in text order, across verse boundaries, within a book. An ordering, not a relation of meaning — flagged `order_link`, never `clause_link`, so no rule follows it as a relation and no clause counts as joined because of it. What a pronoun walks back up to find its referent.",
+     "established": {"ref": "Psa.23.2", "date": "2026-09-25", "quote": "at a minimum we need an ordered chain for pronoun resolution"},
+     "match": {"type": ["next"], "flag": "order_link"}},
+    {"id": "member", "label": "member", "layer": "lexical", "from": "Composite", "to": ["Word", "Composite", "Clause"], "status": "built",
+     "definition": "One of the words in a coordination — or, in a minted composite, one of the participants it gathers (Exo 8:13: Moses, Aaron).",
+     "widened": "Plan 1.42, 2026-10-17: a coordination's members may be clauses, a list of acts inside one role: 'carry the ark of the LORD and minister to Him' (1 Chronicles 15:2), 1,021 in the clean builder.",
+     "match": {"type": ["member"], "flag": "none"}},
+
+    {"id": "flat", "label": "flat layer", "layer": "lexical", "from": "Word", "to": "Word", "status": "withdrawn",
+     "withdrawn": "Retired with the earlier builder: the clean builder (plan 1.26, installed 2026-10-03) builds no flat layer, and the clause layer says what it said. Was 'superseded' (built, due to be retired); now retired (plan 1.42, 2026-10-17).",
+     "definition": "The layer before clauses existed: an edge from subject to object labelled with the verb, plus `references`, `possessed_by`, `apposition`, `adjunct` and `of`. The verb as a label is why mood had nowhere to live, and its 'nearest agreeing clause subject' makes Pharaoh remove the frogs (Exo 8:4) and Moses bring them (Exo 8:8). Everything it says, the clause layer says better or should. Queue item 9.",
+     "match": {"type": "*", "flag": "none"}}
+  ],
+
+  "attributes": [
+    {"id": "indirect", "label": "reported, not quoted", "on": "content", "layer": "upper", "status": "proposed",
+     "definition": "On a `content` link: what was said or asked is reported, not quoted ('examined the Scriptures every day to see if these teachings were true', Acts 17:11).",
+     "established": {"ref": "Act.17.11", "date": "2026-10-17", "note": "Plan 1.35, second round: 18 of the sweep's none_fit notes."}},
+    {"id": "presented", "label": "presented ('behold')", "on": "Clause", "layer": "upper", "status": "proposed",
+     "definition": "A mark on a clause that the text presents with a 'behold' (Hebrew הִנֵּה, Greek ἰδού): 'Behold, I have given you every seed-bearing plant' (Genesis 1:29). A mark on the clause it introduces, not a link: there is nothing for it to link to.",
+     "established": {"ref": "Gen.1.29", "date": "2026-10-17", "note": "Plan 1.35, second round: 88 of the sweep's none_fit notes; the judges kept saying no link fit because there is nothing to link."}}
+  ],
+
+  "scope": {
+    "_what": "What this vocabulary deliberately does not attempt, stated so that a gap is a decision and not an oversight. Published with the vocabulary.",
+    "excludes": [
+      "Relations inside one clause. This vocabulary links clauses, and groups of clauses; it does not relate the parts of one clause to each other ('not by all the people, but by the witnesses', Acts 10:41; a reason given as a noun; 'like a dove'). Those belong to the word level: the prepositional relations, and apposition and vocatives (plan 2.14). Doug, 2026-10-16, plan 1.35, first round."
+    ]
+  },
+
+  "mappings": {
+    "rst": {
+      "_what": "Our clause links and group roles against Rhetorical Structure Theory (Mann & Thompson 1988; the RST Discourse Treebank's Attribution), recorded 2026-09-25 (plan N.4) so a reader from that field can map ours to theirs, and so its catalogue shows relations we have not met. A mapping, not a conversion: ours stay the source. RST's NUCLEUS is our group's HEAD; its SATELLITE the qualifying member. `fit`: exact (same relation, same direction), close (see note), none (ours has no RST counterpart, or sits below or beside the discourse level). The check fails on a built clause-link or group-member relation with no entry here, and on an entry naming an undeclared relation.",
+      "relations": {
+        "purpose":     {"rst": "Purpose", "fit": "exact", "note": "Satellite = the purpose clause; nucleus = the command it serves."},
+        "if":          {"rst": "Condition", "fit": "exact", "note": "Ours runs from the conditioned to the condition, as RST's nucleus → satellite."},
+        "condition":   {"rst": "Condition (satellite)", "fit": "exact", "note": "Member role inside a Conditional group."},
+        "consequence": {"rst": "Condition (nucleus)", "fit": "exact", "note": "Member role inside a Conditional group."},
+        "though":      {"rst": "Concession", "fit": "exact"},
+        "until_limit": {"rst": "Circumstance", "fit": "close", "note": "A temporal limit; RST's Circumstance sets a frame, where 'until' bounds the clause."},
+        "describing":  {"rst": "Circumstance | Elaboration", "fit": "close", "note": "A participle describing the subject as it acts (Circumstance) or who it is (Elaboration)."},
+        "contrast":    {"rst": "Contrast", "fit": "close", "note": "RST's Contrast is multinuclear; here the second clause is linked from the first. Some are Concession — a reading."},
+        "but_rather":  {"rst": "Antithesis", "fit": "close", "note": "Not X but Y: the rejected and the affirmed. The 'except' sense is closer to RST's Otherwise/Exception, which RST does not name."},
+        "when_if_though": {"rst": "Circumstance | Condition | Concession", "fit": "close", "note": "A fronted כִּי: RST would choose one of the three by reading; the Hebrew states only that the clause sets the one after it."},
+        "unless":      {"rst": "Unless", "fit": "exact"},
+        "attached":    {"rst": "Justify | Purpose | Result | Elaboration", "fit": "none", "note": "A satellite of a command whose relation the form does not decide; RST would name it by reading. Ours records only that a connective attaches it (plan 1.42, 2026-10-18)."},
+        "undecided":   {"rst": "Evidence | Circumstance", "fit": "none", "note": "Not a relation but its candidates: the form does not decide, so the link lists them (a verse-opening כִּי, 'for' or 'when'). RST would pick one by reading; ours declines to (plan 1.42, 2026-10-17, on its being marked built)."},
+        "or":          {"rst": "Disjunction", "fit": "exact", "note": "Multinuclear; in RST's extended set."},
+        "sequence":    {"rst": "Sequence", "fit": "exact", "note": "Multinuclear. Ours is marked by the fused waw of wayyiqtol / weqatal."},
+        "lest":        {"rst": "Otherwise", "fit": "close", "note": "RST's Otherwise: realizing the nucleus prevents the satellite. 'Do this lest that' fits; a bare 'lest' after an assertion is rarer."},
+        "because":     {"rst": "Cause | Justify | Evidence", "fit": "close", "note": "RST splits a stated reason three ways by the WRITER'S INTENT — the reason for the event, for saying it, or for believing it. That is a reading; the text marks one relation (כִּי, יַעַן, עֵקֶב), so we keep one."},
+        "basis":       {"rst": "Motivation", "fit": "close", "note": "RST's Motivation: the satellite raises the hearer's desire to do the nucleus — 'give thanks to the LORD, FOR he is good' (Psa 107:1). Ours is a member role of an Imperative group."},
+        "aim":         {"rst": "Purpose", "fit": "exact", "note": "Member role of an Imperative group."},
+        "command":     {"rst": "nucleus", "fit": "exact", "note": "The head of an Imperative group."},
+        "warning":     {"rst": "Otherwise", "fit": "exact", "note": "RST's Otherwise: if the nucleus (the command) is not realized, the satellite (the warning) will be. 'Do not go up, lest you be struck down' (Num 14:42). Member role of an Imperative group (2026-10-18)."},
+        "therefore":   {"rst": "Result", "fit": "close", "note": "RST splits Volitional / Non-volitional Result by intent; as with because, we keep one."},
+        "failed_result": {"rst": "Result", "fit": "close", "note": "RST's Result, with the outcome that the purpose was not achieved; RST has no failure relation."},
+        "as":          {"rst": null, "fit": "none", "note": "Comparison is not in RST's classic set; the nearest, Elaboration or Evidence, would drop the 'just as'. Where the compared clause is a saying it asserts fulfilment of a word, which RST also lacks."},
+        "likewise":    {"rst": null, "fit": "none", "note": "One agent repeating another's deed, across verses; RST's Joint or Sequence would drop the sameness the text asserts with כֵּן."},
+        "elaborates":  {"rst": "Elaboration", "fit": "exact", "note": "The satellite gives detail of the nucleus. First met 2026-09-25, Exo 8:13: 'Aaron stretched out ... and struck' is the detail of 'this they did'."},
+        "fulfils":     {"rst": null, "fit": "none", "note": "Fulfilment of a command — across verses, by a pro-form ('they did so'). RST relates adjacent spans and has no fulfilment relation; nearest is Volitional Result, which would assert a cause the text does not state."},
+        "result":      {"rst": "Result", "fit": "close", "note": "The commanded act as the nucleus, what it brings about as the satellite. RST's Result, not split by intent."},
+        "effect":      {"rst": "Result (satellite)", "fit": "close", "note": "Member role of an Imperative group; see result."},
+        "and":         {"rst": "Joint | List", "fit": "close", "note": "Multinuclear. RST's List asks that the members be comparable, which is a reading; ours is the separate-word waw."},
+        "conceded":    {"rst": "Concession", "fit": "exact", "note": "The satellite of a Concession."},
+        "holds_anyway": {"rst": "Concession", "fit": "exact", "note": "The nucleus of a Concession."},
+        "its_ground":  {"rst": "Evidence | Justify", "fit": "close", "note": "Why the nucleus holds despite the satellite — RST has no single relation for a concession's reason."},
+        "described_as": {"rst": "Joint | Elaboration", "fit": "close", "note": "Members of a Descriptions group: a list, each elaborating the common referent."},
+        "agent_act":   {"rst": "Joint", "fit": "close", "note": "An AgentActs group's members: a multinuclear list of one agent's acts. RST's Joint does not say the agent is shared; the group's subject does."},
+        "line":        {"rst": "Joint | Restatement", "fit": "close", "note": "A Parallel group's lines. Synonymous parallelism reads as Restatement — a reading; the structure marks only the parallel."},
+        "content":     {"rst": "Attribution", "fit": "close", "note": "RST-DT's Attribution: the reporting clause and what is reported. Ours embeds the said clause in the saying."},
+        "that":        {"rst": "Attribution", "fit": "close", "note": "Know / see / hear THAT — complement clauses, which classic RST leaves below the discourse level and RST-DT treats as Attribution."},
+        "within":      {"rst": null, "fit": "none", "note": "Syntactic nesting of a clause in another's role: below the level RST relates."},
+        "causes":      {"rst": null, "fit": "none", "note": "Causation inside ONE verb (the hiphil): two events in a single word, below the level of spans."},
+        "action":      {"rst": null, "fit": "none", "note": "The command-then-report pair ('let there be light / there was light'): fulfilment, which RST does not name. Nearest is Volitional Result, which would assert a cause the text does not state (the reading withdrawn at Genesis 1:3)."},
+        "state":       {"rst": null, "fit": "none", "note": "See action."},
+        "frame":       {"rst": null, "fit": "none", "note": "Communication layer: the clause a communication is said in."},
+        "part":        {"rst": null, "fit": "none", "note": "Communication layer: what a communication contains."}
+      },
+      "not_yet_met": {
+        "_what": "RST relations with no counterpart in our graph yet — each a question to put to the next passages, not a kind to add.",
+        "Circumstance": "'When ...' — the frame an event happens in. Candidate marker: a preposition governing an infinitive clause (בְּ / כְּ + infinitive), which is exactly the 579 PP2CL wrappers of plan 1.15.",
+        "Contrast / Antithesis": "'But', 'but rather' — כִּי אִם, אֲבָל, אַךְ, ἀλλά. Unbuilt, and common.",
+        "Background": "What a reader needs to understand the nucleus. Unmarked; meaning.",
+        "Means": "'By doing X'. Candidate marker: בְּ + infinitive again, read differently.",
+        "Evaluation / Interpretation": "The writer's assessment of what was said. Unmarked; meaning.",
+        "Summary / Restatement": "Restatement shares a shape with parallelism (see line).",
+        "Solutionhood": "A problem and its answer. Unmarked.",
+        "Enablement": "Satellite makes the nucleus possible. Unmarked.",
+        "Preparation": "Text that readies the reader — a heading. Our psalm heading, the Writing's frame, may be it."
+      }
+    }
+  },
+
+  "forces": {
+    "_what": "The force of a clause, in two layers. `asserts.force` holds the LANGUAGE'S FORM (wayyiqtol, subjunctive ...); `asserts.upper` and the clause's `upper_force` hold the MEANING-LAYER force it maps to below — built 2026-09-25, so a Greek and a Hebrew clause can meet at 'assertion'. The form stays on the Verb node too. The mapping is by form, and a form is not always its force: the cautions say where.",
+    "families": {
+      "_what": "The five families of speech act (Searle), adopted 2026-09-25 as the FRAME for force (plan N.3) — because it was free and shows what is missing. A family is admitted only where the text MARKS it: a verb form, a formula, a performative verb, an interjection. Form is not act: a family is recorded beside the form-derived force, never instead of it, and the cautions say where they part. Doug: 'conform if it is free or helpful - but do not conform if we give up something meaningfully important'.",
+      "list": [
+        {"id": "assertive", "status": "built", "definition": "Commits the speaker to something being so.", "via": "the upper force 'assertion', from the verb form (and verbless clauses)."},
+        {"id": "directive", "status": "built", "definition": "Tries to get the hearer to do something.", "via": "the upper force 'directive', from imperative, jussive, cohortative, Greek imperative and hortatory subjunctive."},
+        {"id": "commissive", "status": "proposed", "definition": "Commits the SPEAKER to a future act: a promise, an oath, a vow.", "markers": "Measured 2026-09-25 in MACULA: שָׁבַע 'swear' niphal 154, hiphil 31; נָדַר 'vow' 31; ὀμνύω 26. And 'do this and live' — a command with a promise (plan 1.6).", "why_not_built": "Markers exist; which clause each governs (the oath's content) is unbuilt."},
+        {"id": "expressive", "status": "proposed", "definition": "Expresses the speaker's attitude: praise, thanks, blessing, woe, lament.", "markers": "Measured 2026-09-25: woe — הוֹי 51, אוֹי 24, οὐαί 46; blessed — בָּרוּךְ (passive participle) 77, μακάριος 50, εὐλογητός 8, and אַשְׁרֵי; thank — εὐχαριστέω 38.", "caution": "'Praise the LORD' (הַלְלוּ, piel imperative, 52) and 'give thanks' (הוֹדוּ, 18) are imperatives: DIRECTIVE by form, expressive as acts. Psalm 103:1 'bless the LORD, O my soul' is both at once. A family is recorded beside the form's force, never replacing it.", "why_not_built": "Markers exist; the psalms' expressive character (Doug: illustration 'makes up most of the psalms') is largely unmarked and needs meaning."},
+        {"id": "declaration", "status": "proposed", "definition": "An utterance that makes what it says so by saying it: naming, appointing, pronouncing ('you are my son; today I have begotten you', Psa 2:7, is a candidate).", "markers": "None measured.", "caution": "NOT the formula נְאֻם יְהוָה, 'utterance of the LORD' (376): that names WHO speaks, which is the communication layer's sender, not a force. Doug called Isaiah 55:8-9 'a declaration from the Lord' (doug-048); in this vocabulary it is an assertive whose sender the formula marks. Found by reading the definition, not the name — the kind of mismatch 'conform where free' has to watch for."}
+      ]
+    },
+    "upper": [
+      {"id": "directive", "label": "directive", "status": "built", "family": "directive", "definition": "Tells someone to do or be something: command, let, let us."},
+      {"id": "assertion", "label": "assertion", "status": "built", "family": "assertive", "definition": "States that something is, was or will be so — including a VERBLESS clause: 'the LORD is my shepherd', 'your word is a lamp'."},
+      {"id": "wish", "label": "wish", "status": "built", "family": null, "definition": "Wants something to be so without commanding it.", "family_note": "No single family: a wish may be expressive (the Greek optative, 'may it be') or near-directive (a jussive to a third party). Kept as its own until what marks the difference is measured."},
+      {"id": "nonfinite", "label": "not finite", "status": "built", "family": null, "definition": "An infinitive heading a clause, or a Greek participle: says an act without asserting it.", "family_note": "Not an act, so in no family."},
+      {"id": "none", "label": "no verb", "status": "withdrawn", "definition": "Verbless clauses as having no force.", "instead": "assertion (2026-09-25): 'the LORD is my shepherd' is verbless and plainly asserts; a force of 'none' would have kept Doug's illustration from being an assertion at all."}
+    ],
+    "hebrew": {
+      "wayyiqtol": {"upper": "assertion", "gloss": "and then — narrative past"},
+      "qatal": {"upper": "assertion", "gloss": "completed"},
+      "yiqtol": {"upper": "assertion", "gloss": "incomplete — future, habitual, or modal", "caution": "Also a prohibition after לֹא and a wish in poetry. The form is not always the force."},
+      "weqatal": {"upper": "assertion", "gloss": "and then — future or procedural"},
+      "imperative": {"upper": "directive", "gloss": "command to 'you'"},
+      "jussive": {"upper": "directive", "gloss": "let him / let it"},
+      "cohortative": {"upper": "directive", "gloss": "let me / let us"},
+      "participle active": {"upper": "assertion", "gloss": "is doing / is about to do", "caution": "Heading a clause, a participle IS the predicate: 'I am about to strike your territory' (Exo 7:27) states something imminent. First mapped 'not finite', which the frog-plague drawing showed wrong on 2026-09-24. Attributive participles do not head clauses, so they never reach this table."},
+      "participle passive": {"upper": "assertion", "gloss": "is done", "caution": "As the active participle: heading a clause, it is the predicate."},
+      "infinitive construct": {"upper": "nonfinite", "gloss": "to do"},
+      "infinitive absolute": {"upper": "nonfinite", "gloss": "doing (emphatic or as a command)", "caution": "Can stand for an imperative."},
+      "-": {"upper": "assertion", "gloss": "no verb — a verbless clause", "caution": "Most verbless clauses assert (identity, attribute, location); some are questions or exclamations, which no form marks."}
+    },
+    "greek": {
+      "indicative": {"upper": "assertion", "gloss": "states"},
+      "imperative": {"upper": "directive", "gloss": "commands"},
+      "subjunctive": {"upper": "directive", "gloss": "let us / may / so that", "caution": "Hortatory in a main clause, purpose or condition in a subordinate one. The form is not the force."},
+      "optative": {"upper": "wish", "gloss": "may it be"},
+      "infinitive": {"upper": "nonfinite", "gloss": "to do"},
+      "participle": {"upper": "nonfinite", "gloss": "doing"},
+      "-": {"upper": "assertion", "gloss": "no verb — a verbless clause", "caution": "Most verbless clauses assert (identity, attribute, location); some are questions or exclamations, which no form marks."}
+    }
+  }
+}

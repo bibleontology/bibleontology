@@ -1,0 +1,151 @@
+{
+ "ref": "Exo.8.12",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "divine": false
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "divine": false
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w15",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "result",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl4",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ]
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    }
+   ]
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "effect",
+     "node": "cl4"
+    }
+   ]
+  },
+  {
+   "id": "imp3",
+   "kind": "imperative",
+   "action": "remove",
+   "members": []
+  }
+ ],
+ "derived": [
+  [
+   "D4",
+   "turn1",
+   "w4"
+  ]
+ ]
+}

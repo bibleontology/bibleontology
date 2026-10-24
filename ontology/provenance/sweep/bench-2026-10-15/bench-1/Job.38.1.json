@@ -1,0 +1,25 @@
+{
+ "ref": "Job.38.1",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "The verb 'he said' is third masculine singular, a wayyiqtol continuing 'the LORD answered Job'. The speaker of the whole speech is the LORD (w2), the only masculine singular proper subject who acts here.",
+   "category": "implied subject of narrative verb"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Wayyiqtol with a separate waw: answered, and then said. The narrative line continues.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

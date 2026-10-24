@@ -1,0 +1,17 @@
+// Lifts the aligner scored below its confidence floor and a person accepted.
+//
+// Presence of a line here means somebody opened the verse in that translation
+// and confirmed the wording. It is not a tuning knob: lowering the floor
+// instead would admit "count it all joy" rendered as "encounter trials".
+//
+// Both entries below are the same saying and the same reason. The King James
+// says "put off thy shoes"; the two modern translations say "take off your
+// sandals", sharing almost no words with it, so the alignment has nothing to
+// hold on to and scores it low. The lift is nonetheless exactly right, and
+// exactly what a reader of those Bibles should see.
+{"id": "put_off_your_shoes_from_off_your_feet", "translation": "web", "label": "Take off your sandals", "checked": "Exod 3:5, Josh 5:15"}
+{"id": "put_off_your_shoes_from_off_your_feet", "translation": "bsb", "label": "Take off your sandals", "checked": "Exod 3:5, Josh 5:15"}
+// A confident lift that was wrong rather than absent. Young's says "cast thy
+// shoes from off thy feet"; the aligner returned five of those six words,
+// which scored above the floor and lost the verb.
+{"id": "put_off_your_shoes_from_off_your_feet", "translation": "ylt", "label": "cast thy shoes from off thy feet", "checked": "Exod 3:5"}

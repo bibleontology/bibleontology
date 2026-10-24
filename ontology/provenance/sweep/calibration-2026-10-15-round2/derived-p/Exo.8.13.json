@@ -1,0 +1,120 @@
+{
+ "ref": "Exo.8.13",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "w5",
+   "divine": false
+  },
+  {
+   "slot": "w11",
+   "choice": "w5",
+   "divine": false
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Exo.8.8#c2",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w5",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "fulfils",
+   "dst": "imp2",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "fulfils",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "fulfils",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "fulfils",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl4",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl4",
+   "type": "fulfils",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "remove"
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": [
+  [
+   "D6",
+   "cl2",
+   "then",
+   "cl3"
+  ]
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "ref": "Rom.3.8",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false,
+   "why": "'Some' (τινες) is an indefinite group not named as a candidate in this verse.",
+   "category": "indefinite group not offered as candidate"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'Us' (ἡμᾶς), the object of 'to say', is the writer's group, the people slandered; no candidate fits. The builder's 'some' is wrong, since the 'us' is the accused, not the accusers.",
+   "category": "first person group not offered as candidate"
+  },
+  {
+   "slot": "w18",
+   "choice": "none",
+   "divine": false,
+   "why": "'Their' (ὧν) refers back to the slanderers ('some'), who are not a candidate.",
+   "category": "relative genitive refers to uncandidated group"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'We are slandered' (βλασφημούμεθα): the writer's group; no candidate fits.",
+   "category": "first person group not offered as candidate"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "Hortatory 'let us do' inside the slogan: the 'we' of the accused; no candidate fits.",
+   "category": "first person group not offered as candidate"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot join itself; this is a parser error.",
+   "category": "self-link error"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "καί ... καθώς: 'and as' joins two comparisons of the same report.",
+   "category": "two comparisons joined by and"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "Superseded: the infinitive is the object of 'affirm', a saying, so the content link carries it (R1).",
+   "category": "saying read as nesting"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "φασίν ('affirm') introduces what is said, 'that we say'; it is the saying clause and its content (R1).",
+   "category": "saying with its content"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "ὧν ('of whom') opens a new sentence after a question mark; it is Paul's verdict on the slanderers, not a relative clause inside cl1.",
+   "category": "verdict across sentence break"
+  },
+  {
+   "src": "cl2",
+   "type": "that",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "Superseded: 'to say' (λέγειν) is a saying, so its content link to the slogan is the R1 link.",
+   "category": "saying read as complement"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "λέγειν introduces the slogan 'Let us do evil that good may come', its content; nested speech takes its own content link (R1).",
+   "category": "nested saying with its content"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "ἵνα ('so that') gives the aim of doing evil: that good may come.",
+   "category": "aim of a command"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "cl5 is Paul's verdict, not part of the slander, so it leaves the turn. The sender 'some' is not a candidate, so the sender is omitted.",
+   "category": "verdict outside the speech"
+  },
+  {
+   "id": "Rom.3.8#g1",
+   "kind": "imperative",
+   "action": "add",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "aim",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "The hortatory 'let us do evil' with its aim 'that good may come': one command with what qualifies it. Content for cl2 goes to the clause cl3, since it is one command.",
+   "category": "command with its aim"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl5 (ὧν τὸ κρίμα ἔνδικόν ἐστιν, 'their condemnation is just')",
+   "what": "A verdict on the slanderers after a sentence break, with a relative genitive back-referring; no link type for a verdict on a group named earlier."
+  },
+  {
+   "where": "cl0 (καί μή καθώς βλασφημούμεθα)",
+   "what": "A καθώς ('as') clause hangs from an elided main clause ('why not say'); no host clause is in the verse for an 'as' link."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the inner turn 'we say' (cl2) and its sender",
+   "why": "The sender 'we' is not a candidate, so the nested turn is not built; the content links carry the speech."
+  }
+ ]
+}

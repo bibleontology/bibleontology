@@ -1,0 +1,46 @@
+{
+ "ref": "Job.38.7",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive 'sang together' is nested in the 'while' clause.",
+   "category": "clause nested in a temporal clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'they shouted' is also inside the 'while' clause.",
+   "category": "clause nested in a temporal clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "Duplicate of the first cl0 within cl1 link in the builder list.",
+   "category": "duplicate link"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The wayyiqtol 'they shouted' follows the infinitive within the same verse: and then.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The host of the 'while' clause (cl0) is not given",
+   "why": "It could attach to 38:6 'laid its cornerstone' or to 38:4 'when I laid the foundations'; the form does not settle it, so no cross-verse link is added."
+  }
+ ]
+}

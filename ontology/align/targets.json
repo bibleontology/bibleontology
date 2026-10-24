@@ -1,0 +1,29 @@
+{
+  "_what": "Every standard term ontology/align/alignment.yaml maps to, checked against its specification: that it exists with this exact spelling, its status, and the version checked. tests/test_alignment.py fails on a mapping whose target is not here. Checked 2026-10-20 by two Claude Sonnet agents reading the specifications (schema.org pages and its JSON-LD dump; the FOAF spec; CIDOC CRM's RDFS files; the OntoLex and Web Annotation vocabularies), each also judging the mapping relation; their corrections were applied the same day (2026-10-20). Re-check before a release that changes a mapping.",
+  "sources": {
+    "schema": {"version": "30.1", "checked": "2026-10-20", "on": ["https://schema.org/<Term>", "https://schema.org/version/latest/schemaorg-current-https.jsonld"]},
+    "foaf": {"version": "0.99 (the spec at xmlns.com)", "checked": "2026-10-20", "on": ["http://xmlns.com/foaf/spec/"]},
+    "crm": {"version": "7.1.3 (the version cidoc-crm.org serves by default); identical names, domains and ranges in 7.3.2", "checked": "2026-10-20", "on": ["https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3.rdf", "https://cidoc-crm.org/rdfs/7.3.2/CIDOC_CRM_v7.3.2.rdf"]},
+    "ontolex": {"version": "W3C Community Group report, 2016", "checked": "2026-10-20", "on": ["http://www.w3.org/ns/lemon/ontolex", "https://www.w3.org/2016/05/ontolex/"]},
+    "oa": {"version": "W3C Recommendation, 2017", "checked": "2026-10-20", "on": ["https://www.w3.org/ns/oa", "https://www.w3.org/TR/annotation-vocab/"]}
+  },
+  "targets": {
+    "schema:Person": "core", "schema:Place": "core", "schema:Event": "core", "schema:children": "core",
+    "schema:spouse": "core", "schema:sibling": "core", "schema:memberOf": "core", "schema:member": "core",
+    "schema:birthPlace": "core", "schema:deathPlace": "core", "schema:containedInPlace": "core",
+    "schema:homeLocation": "core", "schema:isPartOf": "core", "schema:CreativeWork": "core", "schema:Book": "core",
+    "schema:Quotation": "pending", "schema:Claim": "core",
+    "foaf:Person": "stable", "foaf:Agent": "stable", "foaf:Group": "stable", "foaf:knows": "stable",
+    "foaf:member": "stable",
+    "crm:E21_Person": "7.1.3", "crm:E74_Group": "7.1.3", "crm:E53_Place": "7.1.3", "crm:E5_Event": "7.1.3",
+    "crm:E52_Time-Span": "7.1.3", "crm:E22_Human-Made_Object": "7.1.3", "crm:E39_Actor": "7.1.3",
+    "crm:E33_Linguistic_Object": "7.1.3", "crm:E13_Attribute_Assignment": "7.1.3",
+    "crm:P107i_is_current_or_former_member_of": "7.1.3", "crm:P89_falls_within": "7.1.3",
+    "crm:P106i_forms_part_of": "7.1.3", "crm:P67_refers_to": "7.1.3", "crm:P129_is_about": "7.1.3",
+    "crm:P140_assigned_attribute_to": "7.1.3", "crm:P141_assigned": "7.1.3",
+    "crm:P177_assigned_property_of_type": "7.1.3", "crm:P14_carried_out_by": "7.1.3",
+    "crm:P152i_is_parent_of": "7.1.3", "crm:P74_has_current_or_former_residence": "7.1.3",
+    "ontolex:LexicalConcept": "2016",
+    "oa:Annotation": "2017"
+  }
+}

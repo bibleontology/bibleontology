@@ -1,0 +1,2820 @@
+# Controlled vocabulary of person-to-person relationship types.
+#
+# Every relation in the ontology MUST use a type listed here. Adding a new type
+# is a deliberate act: add it here first, then use it. This is what keeps the
+# graph queryable as it grows.
+#
+# Fields per type:
+#   label      human-readable, reads as "<source> <label> <target>"
+#   inverse    how the edge reads from the target's side (for display/query)
+#   category   used for edge colour/grouping in the visualization
+#   symmetric  true when direction carries no meaning (stored once, in
+#              alphabetical id order; inverse must equal label)
+#   functional true when a person can have at most one such target
+#              (e.g. exactly one biological father) — the validator flags
+#              violations as likely conflations of two same-named people
+#   notes      guidance for extractors on when to use it and what not to use it for
+
+version: 1
+
+# The top level of the detail panel. A domain is the kind of thing a
+# relationship connects a person to. Only `person` is populated today; the
+# others are declared now so that place and event relationships slot into the
+# existing tree instead of forcing it to be restructured later.
+# What a place record's attrs.kind may say. Extended from the first extraction
+# pass, which found that a purchased burial cave (Machpelah) and a named
+# tent-and-altar locale (Mamre) fit nothing on the original list.
+# What a group record's attrs.kind may say. A group is a set of people the text
+# treats as one actor: it fights, is addressed, is judged, goes into exile.
+group_kinds:
+  - tribe          # the twelve, and clans within them
+  - nation         # Philistines, Moabites, Egyptians, Amalekites
+  - people         # the children of Israel, the Jews — broader than one nation
+  - congregation   # the church at Ephesus, a synagogue
+  - order          # priests, Levites, prophets, scribes
+  - faction        # Pharisees, Sadducees, Herodians
+  - household      # the house of Saul, the house of Eli — a family as an actor
+  - company        # a named band: David's mighty men, the twelve
+
+# What a text record's attrs.kind may say. A word picture and its explanation
+# is one pattern with several specializations -- a parable and a dream have the
+# same shape, a teller and an explainer and a set of identifications, and only
+# the genre differs. Declaring the kinds keeps that visible instead of leaving
+# it to the name.
+text_kinds:
+  - parable        # told to teach; Matt 13:18, 13:36 name two outright
+  - dream          # seen sleeping; Pharaoh's kine, Nebuchadnezzar's image
+  - vision         # seen waking; Daniel 7-8, Revelation
+  - sign           # written or shown; the writing on Belshazzar's wall
+  - saying         # a figure given without a narrative frame
+
+  # The two below were in use for some time before they were declared here,
+  # which is the drift this list exists to prevent -- 21 records carrying
+  # kinds the controlled vocabulary did not contain. Declared now rather than
+  # renamed, because both earn their place.
+  - abridged       # the record's name is deliberately NOT a quotation: the
+                   # saying runs longer than any usable label, or the gospels
+                   # give it differently and no single wording is the text's.
+                   # `bibleont.versions` cannot lift these into another
+                   # translation by locating the name, and should not try.
+  - description    # the corpus describing rather than saying -- what a thing
+                   # looked like, what was written on it, how it was made
+
+place_kinds:
+  - city
+  - town
+  - village
+  - region
+  - country
+  - mountain
+  - river
+  - sea            # and lakes
+  - wilderness
+  - valley
+  - plain
+  - well           # and springs, pools
+  - tomb           # burial caves and plots: Machpelah, the garden tomb
+  - sacred_site    # altars, oaks, pillars, high places — a named locale that is
+                   # not a settlement: Mamre, Peniel, Gilgal
+  - island         # Cyprus, Melita, Crete, Patmos — filed as regions before
+  - waypoint       # a stop on an itinerary with nothing else recorded of it
+  - building       # temple, palace, prison, gate
+
+# What an object record's attrs.kind may say. Declared 2026-09-28 with the
+# concept sort (ontology/concept-sort.json, docs/MEANING-ONTOLOGY.md): the
+# things that had been filed as `concept` came back with the meaning
+# ontology's classes, which are WordNet's lexicographer files.
+object_kinds:
+  - artifact        # made things: a manger, a harp, a door
+  - plant           # thistles, reeds, wheat
+  - food            # grain, a tasty dish, almonds
+  - substance       # bronze, clay, water, salt
+  - natural_object  # a stone, the moon, a river
+  - body_part       # bones, the womb, a rib
+  - possession      # a piece of silver, treasure
+
+# What a concept record's attrs.kind may say — the two kinds the sort left
+# as concepts but marked:
+concept_kinds:
+  - extended_sense  # Doug's heart case: a body or thing word whose ordinary
+                    # biblical sense is inner or abstract — heart (the inner
+                    # self), face (presence), arm (power), flesh (in Paul),
+                    # way (conduct). The meaning schema's `extendedFrom`.
+  - time            # the middle of the night
+
+domains:
+  person: { label: "People",    order: 1 }
+  place:  { label: "Places",    order: 2 }
+  event:  { label: "Events",    order: 3 }
+  group:  { label: "Peoples & groups", order: 4 }
+  # Declared with the original schema and unused until the word of God needed
+  # somewhere to live. Relabelled from "Writings" because the corpus mostly
+  # speaks it rather than writes it -- "the word of the LORD came unto" runs
+  # 261 verses -- and a domain that admitted only books would have excluded the
+  # thing this type exists to hold.
+  text:   { label: "Words & writings", order: 5 }
+  object: { label: "Things",    order: 6 }
+  observance: { label: "Observances", order: 7 }
+  creature: { label: "Creatures", order: 8 }
+  title:  { label: "Titles & imagery", order: 9 }
+  assessment: { label: "Verdicts", order: 10 }
+  covenant: { label: "Covenants", order: 11 }
+  being: { label: "Spiritual beings", order: 12 }
+  # A word the corpus uses figuratively, holding no claim beyond that. Not the
+  # thing -- there is no particular sword and no particular grass -- and never
+  # a meaning. It exists so that the figures have somewhere to land: of 230
+  # stated comparisons, 229 point at common nouns the graph had no node for,
+  # and `likened_to` sat empty for want of them.
+  #
+  # It is deliberately the emptiest type in the vocabulary, and that is the
+  # risk as well as the point: a node asserting almost nothing can absorb
+  # anything. Two guards. It is minted only where the corpus uses the word
+  # figuratively more than once, and it is kept apart from the tangible thing
+  # of the same name, joined to it by `drawn_from` rather than merged with it.
+  # The lion Daniel met and the lion Peter warns of are not one node here.
+  image:  { label: "Words used as images", order: 13 }
+  # A word the corpus makes statements *about*: faith, love, grace, fear.
+  #
+  # The corpus has no entity called love. It has "God is love" (1John 4:8) and
+  # "charity suffereth long" (1Cor 13:4) and "love is the fulfilling of the
+  # law" (Rom 13:10), and those are three verses, not one abstraction. A
+  # concept node holds none of that. **It is a place for the statements to
+  # gather, and it asserts nothing on its own** -- every claim stays on a text
+  # node with a citation, exactly as before.
+  #
+  # It exists because without it the statements are islands. Before this type
+  # the graph held 179 interpretive nodes with a median of two edges each, and
+  # 1.7% of all relations joined two of them; a reader searching "hope" found
+  # nothing at all, and one searching "love" found four unconnected rows.
+  #
+  # Two guards, borrowed from `image` because the risk is identical -- a node
+  # asserting almost nothing can absorb anything. It is minted only where the
+  # corpus predicates something about the word in more than one place, and it
+  # never carries a definition: the description says which verses speak of it
+  # and declines to say what it means.
+  concept: { label: "Concepts", order: 14 }
+  # A form rather than an occurrence: the shape several passages share. It was
+  # referenced by `instance_of` and `specializes` from the beginning and never
+  # declared here, so 14 pattern nodes existed that the validator could not
+  # check against any domain rule.
+  #
+  # Doug, 2026-09-03, choosing twin nodes over letting one node be both: *"that
+  # is what we would do in my programming days with an interface and an
+  # implementation."* The pattern is the interface -- `god_sent_flood` -- and
+  # the occurrence is the implementation -- `the_flood`, an event, pointing at
+  # it with `instance_of`. Keeping them separate is what lets a simple node be
+  # substituted for a pattern, and it is the same line that keeps `instance_of`
+  # from becoming a concordance: group by form, not by meaning.
+  pattern: { label: "Patterns", order: 15 }
+
+# Edge colours come from a validated 8-slot categorical palette, in its
+# documented slot order. Colour never carries meaning alone in the app: every
+# edge also states its relationship type in the legend and the detail panel.
+# Each category names the domain it belongs to.
+categories:
+  kinship:      { label: "Kinship", domain: person,              slot: 1, color: "#2a78d6", dark: "#3987e5" }
+  political:    { label: "Rule & succession", domain: person,    slot: 2, color: "#eb6834", dark: "#d95926" }
+  religious:    { label: "Prophetic & priestly", domain: person, slot: 3, color: "#1baf7a", dark: "#199e70" }
+  service:      { label: "Service & authority", domain: person,  slot: 4, color: "#eda100", dark: "#c98500" }
+  marital:      { label: "Marriage & union", domain: person,     slot: 5, color: "#e87ba4", dark: "#d55181" }
+  affiliation:  { label: "Association", domain: person,          slot: 6, color: "#008300", dark: "#008300" }
+  lineage:      { label: "Descent (non-parent)", domain: person, slot: 7, color: "#4a3aa7", dark: "#9085e9" }
+  antagonism:   { label: "Conflict", domain: person,             slot: 8, color: "#e34948", dark: "#e66767" }
+  # A ninth category is past the validated eight-slot categorical set, so this
+  # one does not rely on colour to be told apart: place nodes are drawn with a
+  # different shape, and geography edges only ever end at a place.
+  geography:    { label: "Places", domain: place,                slot: 9, color: "#7a6f5d", dark: "#a2937c" }
+  # A tenth category, and like geography it does not lean on colour: group
+  # nodes are drawn with their own shape and a community edge only ever ends
+  # at a group.
+  community:    { label: "Peoples & groups", domain: group,      slot: 10, color: "#5c7a8a", dark: "#7f9dad" }
+  # Eleventh and twelfth, and like the two above they do not lean on colour:
+  # object and observance nodes carry their own shapes, and an edge in either
+  # category only ever ends at one of them.
+  artifact:     { label: "Things", domain: object,               slot: 11, color: "#8a6d3b", dark: "#b08d52" }
+  observance:   { label: "Observances", domain: observance,      slot: 12, color: "#6b5b95", dark: "#8d7cb8" }
+  # Four categories were in use and never declared here, which meant the legend
+  # -- built by iterating this block -- had no row for them at all. Every
+  # covenant, verdict, appearance and figure was on the graph and absent from
+  # the control that filters it, and `VOCAB.categories[cat]?.domain` silently
+  # fell back to "person" for each. Declared now.
+  #
+  # Like slots 9 to 12 these do not lean on colour to be told apart: each ends
+  # at a node type with its own shape.
+  covenant:     { label: "Covenants", domain: covenant,          slot: 13, color: "#0f766e", dark: "#14b8a6" }
+  assessment:   { label: "Verdicts", domain: assessment,         slot: 14, color: "#9a3412", dark: "#c2410c" }
+  encounter:    { label: "Encounters & speech", domain: person,  slot: 15, color: "#7c5295", dark: "#a274c0" }
+  imagery:      { label: "Images & figures", domain: image,      slot: 16, color: "#4d7c8a", dark: "#6ea3b4" }
+  # Seventeenth, and the most carefully scoped category in the file. It holds
+  # only what the corpus states about the Father, the Son and the Spirit in
+  # relation to one another, and it is built so that the graph can carry the
+  # argument without joining it. See the two types below.
+  deity:        { label: "Father, Son & Spirit", domain: person, slot: 17, color: "#8a5fb0", dark: "#a884c9" }
+  # Eighteenth, and like every slot past the eighth it does not lean on colour:
+  # concept nodes carry their own shape and a meaning edge only ever ends at
+  # one.
+  meaning:      { label: "Concepts", domain: concept, slot: 18, color: "#b45309", dark: "#d97706" }
+  # Nineteenth: what issues from what. `issues_from` was filed under
+  # geography because it was written for the rivers of Eden, and then the
+  # corpus used it for grace, mercy and peace from Christ (Titus 1:4) -- a
+  # card listed them under "Places" (Doug, 2026-10-02, "Recategorise 'issues
+  # from'"). A source is not a place; the type's own group name says what it
+  # is. Like the slots past the eighth it does not lean on colour alone.
+  derivation:   { label: "Source and derivation", domain: concept, slot: 19, color: "#5d6d7e", dark: "#85929e" }
+  # Twentieth: one account re-enacting an earlier one (plan 6.15, re_enacts).
+  # Its own heading: filed under the undeclared `language` it read
+  # "Language · re-enacts" on the event card. Ends at an event, which has
+  # its own shape.
+  story:        { label: "Story echoes", domain: event, slot: 20, color: "#6d5a3a", dark: "#a58a5c" }
+  # Twenty-first: an event that is an occasion of a significant number (plan
+  # 6.16) -- the flood, Moses on the mountain, Elijah, Jesus in the wilderness
+  # are each an occasion of "forty days and forty nights". Its own heading so
+  # the event card says it, and the number's card lists its occasions.
+  numbers:      { label: "Significant numbers", domain: event, slot: 21, color: "#4f6d7a", dark: "#7c9aa8" }
+  # Twenty-second: two records the text keeps apart that a reader holds may be
+  # one person (plan 5.12) -- never a merge; both sides' verses shown
+  identity:     { label: "Who else this may be", domain: person, slot: 22, color: "#8a5a83", dark: "#b083a9" }
+  # Twenty-third: what a clause of the text states, lifted from the structure
+  # (plan 2.19, lift 1, 2026-10-19): "God loved the world" (John 3:16). Each
+  # row labelled by its own verb, so one category, not one per verb.
+  statement:    { label: "What the text says", domain: person, slot: 23, color: "#4a6b5d", dark: "#7fa694" }
+
+types:
+
+  # A STATEMENT A CLAUSE MAKES (plan 2.19, lift 1; plan 2.17 step 3's shape).
+  # Lifted from the clause structure where the subject and object both name
+  # records, kept where two judges said the verse states it and every end that
+  # is a card fits; only clauses the grammar marks as plain statements
+  # (commands, questions, promises, negated and passive clauses are gated).
+  # Each row carries its own verb as its label ("loved", John 3:16) and its
+  # inverse ("loved by"), the lemma, its WordNet family, and the clause. A
+  # hand-built relation saying the same thing stays the curated form, and no
+  # row is written for it.
+  states:
+    src_type: [person, being, group, concept, object, place, creature, image, title]
+    dst_type: [person, being, group, concept, object, place, creature, image, title, covenant, observance]
+    label: "states"
+    inverse: "is stated of"
+    category: statement
+    weight: 1
+    group: "What the text says"
+
+  deity_of:
+    src_type: being
+    dst_type: [person, group]
+    label: "is the God of"
+    inverse: "whose God he is called"
+    category: deity
+    weight: 5
+    group: "Whose God he is called"
+    notes: >
+      The formula "the God of Abraham, the God of Isaac, and the God of
+      Jacob" (Exod 3:6, 3:15, Matt 22:32, Mark 12:26, Acts 7:32), and
+      "the God of Israel" wherever the corpus uses it.
+
+      Added because `spoken_of_as` was carrying it and should not have been.
+      That type means the text applies the name or nature of one to another,
+      and it reads as equivalence -- `god -is spoken of as-> abraham` says,
+      to anyone looking at the graph, that Abraham is a name given to God.
+      Every other edge of that type has a deity at both ends, which is what
+      it is for; this one had a patriarch, and the label made a claim nobody
+      wrote.
+
+      It is a relationship and not an identification, which is the whole
+      distinction. Note that Jesus argues the resurrection out of the tense
+      of this very formula at Matthew 22:32 -- "God is not the God of the
+      dead, but of the living" -- so the relationship is load-bearing in the
+      corpus and deserves to be visible as one.
+
+  self_designated_as:
+    src_type: [person, being]
+    dst_type: title
+    label: "calls himself"
+    inverse: "is what he calls himself"
+    category: deity
+    weight: 6
+    group: "What he calls himself"
+    notes: >
+      A title the speaker applies to himself, as against one the text or
+      another speaker applies to him. `titled` cannot carry the difference
+      and the difference is often the entire point.
+
+      Exodus 3:14 is the case it exists for: "I AM THAT I AM" is first
+      person, and the next clause sends Moses with "I AM hath sent me unto
+      you" -- the name is given by its bearer. John 8:58 is the other:
+      "Before Abraham was, I am", said by Jesus of himself, after which
+      8:59 has them take up stones.
+
+      **Records who said it, not what follows from it.** Whether the second
+      is a claim to be the first is the oldest argument in the corpus, and
+      this type deliberately stops short of it: it says the words were
+      self-applied in both places and leaves the inference where it belongs.
+      Note also that the KJV supplies "he" at John 8:24, 13:19 and 18:5-6 --
+      "I am he" -- and does not at 8:58, which is a fact about this
+      translation that a reader weighing the two should have.
+
+  spoken_of_as:
+    src_type: [person, being]
+    dst_type: [person, being]
+    label: "is spoken of as"
+    inverse: "is a name the text gives to"
+    category: deity
+    weight: 5
+    group: "What the text says of them"
+    notes: >
+      The text applies the name or the nature of one to another. **Not "is".**
+      The whole claim the edge makes is that a particular verse says a
+      particular thing, and the note carries the words.
+
+      This is deliberately the humblest type in the vocabulary, because it
+      holds the most contested material in the corpus. "In the beginning was
+      the Word, and the Word was God" (John 1:1) is an edge; so is Thomas's
+      "My Lord and my God" (John 20:28), and the Father addressing the Son as
+      God at Hebrews 1:8. The graph records that the corpus says these things
+      and does not conclude anything from them.
+
+      Every edge points at whichever record the verse actually names -- `god`
+      where it says God, `the_father` where it says Father -- so that the
+      pattern is visible rather than asserted. Normalising them onto one node
+      would erase the distinction the corpus draws.
+
+  quoted:
+    src_type: [person, being, group, text]
+    dst_type: [person, being, group, text]
+    label: "quoted"
+    inverse: "was quoted by"
+    category: encounter
+    weight: 3
+    group: "Quotation"
+    notes: >
+      One speaker taking another's words. "I am the God of Abraham, and the
+      God of Isaac, and the God of Jacob" (Matt 22:32) is Exodus 3:6; "Love
+      your neighbor as yourself" (Matt 22:39) is Leviticus 19:18.
+
+      **The corpus quotes far more often than it attributes.** Matthew 22 has
+      four Old Testament citations and names no book for any of them, which is
+      why `bibleont.citations` exists as an analysis. This type is for the
+      cases worth holding as edges -- where the quoting is itself the act, and
+      a reader following the speaker should find the source.
+
+      Point it at the person the corpus credits, not at the book: Jesus quotes
+      Moses and David because that is how the corpus speaks of those texts.
+      Where no person is credited, the citation layer is the better home and
+      no edge belongs here.
+
+  named_with:
+    src_type: [person, being]
+    dst_type: [person, being]
+    label: "is named with"
+    inverse: "is named with"
+    symmetric: true
+    category: deity
+    weight: 5
+    group: "What the text says of them"
+    notes: >
+      The corpus names them together in one formula. "Baptizing them in the
+      name of the Father and of the Son and of the Holy Spirit" (Matt 28:19);
+      "The grace of the Lord Jesus Christ, and the love of God, and the
+      fellowship of the Holy Spirit" (2Cor 13:14).
+
+      Neither `spoken_of_as` nor `distinguished_from` fits, and that is the
+      point: **these verses are cited by both sides and do both things at
+      once.** Matthew 28:19 names three and puts them under one singular
+      "name". A type that resolved that would be the graph joining the
+      argument.
+
+      **"Formula" was too narrow, and Ephesians 3:14-19 is why.** That passage
+      names all three in a single sentence -- "the Father of our Lord Jesus
+      Christ" (v14), "his Spirit" (v16), "that Christ may dwell in your
+      hearts" (v17), "the fulness of God" (v19) -- and it is a prayer rather
+      than a set phrase. Excluding it on register would have been a rule about
+      liturgical style masquerading as a rule about evidence.
+
+      It is arguably the stronger case of the three, and the note on those
+      edges says so. The two formulas put the three in parallel and leave the
+      relation between them unstated; the prayer states one -- the Father
+      grants, by the Spirit, so that Christ may dwell. **What that implies is
+      exactly what this type still refuses to say.** Recording that the
+      sentence relates them is not deciding how, and the reader has the verse.
+
+  distinguished_from:
+    src_type: [person, being]
+    dst_type: [person, being]
+    label: "is distinguished from"
+    inverse: "is distinguished from"
+    symmetric: true
+    category: deity
+    weight: 5
+    group: "What the text says of them"
+    notes: >
+      The text sets two of them apart. "The Father is greater than I" (John
+      14:28); "No one knows about that day or hour ... nor the Son, but only
+      the Father" (Mark 13:32); "the head of Christ is God" (1Cor 11:3).
+
+      **This type exists so the graph cannot lean by omission.** Recording only
+      the verses that join them would make the graph an argument for one
+      reading, and the joining and separating statements sit between the same
+      pair on purpose: John 10:30 and John 14:28 are both edges from Jesus to
+      the Father. That pair *is* the argument as the corpus presents it.
+
+      Where a verse is read by one tradition as describing Christ incarnate and
+      by another as describing the eternal relation, the edge records the
+      statement and the note records the wording. It does not resolve which.
+
+
+  put_away:
+    src_type: [person, group]
+    dst_type: [person, group]
+    label: "sent away"
+    inverse: "was sent away by"
+    category: marital
+    weight: 4
+    group: "Sent away"
+    notes: >
+      The text's own word for the dissolution at Ezra 10:19 -- "They pledged
+      to send their wives away" (the Hebrew is "to send out", as at 10:3).
+      Kept as the text puts it rather than translated into divorce, which
+      carries later legal freight the verse does not. (Labelled "put away"
+      until 2026-10-02, the KJV's wording; the type keeps its id.)
+
+
+  # --- things said to somebody -------------------------------------------
+  # The vocabulary held relationships *between* entities and had no way to
+  # record what one said to another, which left whole chapters unreachable:
+  # Esther 4-6 is charge, fast, petition and two banquets, and none of it was
+  # expressible. So is most of what Moses and David actually do.
+  #
+  # Chosen on counts rather than on plausibility. "Pleaded with" was in the
+  # original sketch and is dropped: its 231 verses are almost all "I pray
+  # thee", a politeness formula rather than an act, and `besought` carries the
+  # real petitions. `blessed`, `cursed` and `anointed` already existed and are
+  # the same family.
+  accused:
+    src_type: [person, group]
+    dst_type: [person, group]
+    label: "accused"
+    inverse: "was accused by"
+    category: antagonism
+    weight: 3
+    group: "Accusations"
+    notes: >
+      Where the text uses the word: the Chaldeans accused the Jews (Dan 3:8),
+      the men who accused Daniel and were cast into the den themselves (Dan
+      6:24), the chief priests accusing Jesus of many things (Mark 15:3). 37
+      verses carry it. Distinct from `conspired_against`, which is a plot
+      rather than a charge laid, and from `judged`, which is the verdict and
+      not the complaint.
+
+  charged:
+    src_type: [person, being, group, title]
+    dst_type: [person, group, concept]
+    label: "charged"
+    inverse: "was charged by"
+    category: service
+    weight: 3
+    group: "Charges given"
+    notes: >
+      A binding instruction laid on someone: "Mordecai had instructed her not
+      to do so" (Esth 2:10), Abimelech warning all the people on pain of death
+      (Gen 26:11). Weaker than a command from God and stronger than a
+      request.
+
+  besought:
+    src_type: [person, group]
+    dst_type: [person, group, being]
+    label: "pleaded with"
+    inverse: "was pleaded with by"
+    category: encounter
+    weight: 2
+    group: "Petitions"
+    notes: >
+      Asking, where the text marks it as entreaty rather than conversation:
+      "Isaac prayed to the LORD on behalf of his wife" (Gen 25:21). The
+      politeness particle (Hebrew נָא, "please") is not this and is
+      deliberately excluded -- a manner of speaking, not an act. (Labelled
+      "besought" until 2026-10-02; the type keeps its id.)
+
+  rebuked:
+    src_type: [person, being, group]
+    # Beings too, and literally: "Then Jesus rebuked the demon, and it came
+    # out of the boy" (Matt 17:18). No stretching required, which is the test.
+    dst_type: [person, group, creature, being]
+    label: "rebuked"
+    inverse: "was rebuked by"
+    category: encounter
+    weight: 3
+    group: "Rebukes"
+    notes: >
+      69 verses. Peter rebuking Jesus and being rebuked in turn (Mark 8:32-33)
+      is the pattern: a reproof the narrative reports, not an inference from
+      tone.
+
+      **The epistles need a sharper form of that rule, because there the
+      rebuke is often not inferred at all.** 1 Corinthians 5 condemns a named
+      situation at length and explicitly; nothing is being read between the
+      lines. It still gets no edge, because Paul is not describing a
+      confrontation, he is conducting one, and the letter never reports how it
+      ended. Galatians 2:11 is the opposite and does get one: "When Cephas
+      came to Antioch, however, I opposed him to his face" -- two named parties, a
+      place, and a completed action, narrated after the fact by one of them.
+
+      So: **a document that performs an act is not a document that reports
+      one.** Where the letter rebukes, extract the people involved and leave
+      the congregation out of it; an edge from the writer to the recipients
+      would make every addressee a hub by volume of correspondence and assert
+      an outcome the text withholds.
+
+  warned:
+    # A group warns as readily as a person: "some Pharisees came to Jesus and
+    # told Him, 'Leave this place and get away, because Herod wants to kill
+    # You'" (Luke 13:31). A person-only source would drop the warner and keep only
+    # the warning.
+    src_type: [person, being, group]
+    dst_type: [person, group]
+    label: "warned"
+    inverse: "was warned by"
+    category: encounter
+    weight: 3
+    group: "Warnings"
+    notes: >
+      Most of them consequential: Elisha warning the king of Israel of
+      ambushes (2Kgs 6:10), the Magi and then Joseph "warned in a dream"
+      (Matt 2:12, 2:22).
+
+  told:
+    src_type: [person, being, group, concept, creature]
+    dst_type: [text, person]
+    label: "told"
+    inverse: "was told by"
+    category: encounter
+    weight: 4
+    group: "Told"
+    notes: >
+      Who gave the picture -- spoke the parable, dreamed the dream, saw the
+      vision. Distinct from who wrote it down, which the graph does not record:
+      every "I am" saying in John is Jesus speaking and John reporting, and the
+      figure belongs to the speaker.
+
+  explained:
+    src_type: [person, being, group]
+    dst_type: text
+    label: "explained"
+    inverse: "was explained by"
+    category: encounter
+    weight: 4
+    group: "Explained"
+    notes: >
+      Who gave the interpretation. Kept apart from `told` because the two are
+      often different people and the difference is the story: Pharaoh dreams
+      and Joseph interprets, Nebuchadnezzar dreams and Daniel interprets, John
+      sees and an angel explains. Where they are the same -- Jesus tells the
+      parable of the tares and explains it in the same chapter -- both edges
+      are recorded and the sameness is visible rather than assumed.
+
+  sent:
+    src_type: [person, being, group]
+    dst_type: [person, being, group, creature]
+    label: "sent"
+    inverse: "was sent by"
+    category: encounter
+    weight: 4
+    group: "Sendings"
+    notes: >
+      Who sent whom, where the text narrates it. Jacob sent messengers to Esau
+      (Gen 32:3), Ezra sent to Iddo at Casiphia (Ezra 8:17), the Father sends
+      the Comforter (John 14:26) and Jesus sends him too (John 16:7).
+
+      **This type exists because of what it lets the graph decline to say.**
+      The Spirit is named by relation to the other two throughout -- "the
+      Spirit of Christ" (Rom 8:9), "the Spirit of his Son" (Gal 4:6), "the
+      Spirit of God" -- and that genitive is unspecified in the text and
+      contested outside it. Sending is the same relationship stated as an act,
+      with named parties and a verse, and recording it gives a reader
+      everything the genitives point at while the graph says nothing about
+      what the three are to one another.
+
+  assumed_form_of:
+    # THE FORM IS THE SUBJECT AND THE ONE WHO ASSUMED IT IS THE OBJECT.
+    #
+    # Written the other way round it reads as a being permanently becoming a
+    # thing, which is exactly what Philippians 2:9-11 denies: the form is
+    # taken, and afterwards set aside. So the arrow runs from the temporary
+    # to the permanent.
+    #
+    #   the_three_men_at_mamre -assumed_form_of-> the_lord   (Gen 18:1-2)
+    #   jesus_incarnate        -assumed_form_of-> jesus      (Phil 2:6-8)
+    #
+    # Added 2026-09-01 on Doug's decision, after the supervisor refused to
+    # assert an identity between Jesus and God from Titus 2:13. It is the
+    # relation that was missing: `appeared_to` says X appeared TO Y and
+    # nothing said X appeared AS Z, so "the LORD appeared to Abraham... and
+    # saw three men standing nearby" could not be recorded as what it is.
+    #
+    # It also moves a claim out of the type system. `jesus` typed `person`
+    # beside `god` typed `being` asserts a Christology with no citation and no
+    # certainty grade; an edge can carry both.
+    src_type: [person, group, creature, object, being]
+    dst_type: [being, person]
+    label: "was a form assumed by"
+    inverse: "took the form of"
+    category: encounter
+    weight: 5
+    group: "Assumed forms"
+    notes: >
+      A form deliberately taken and later set aside, where the TEXT narrates
+      the taking. Philippians 2:6-8 is the clearest case and the reason this
+      type exists: "existing in the form of God ... taking the form of a
+      servant, being made in human likeness", followed at 2:9 by the
+      exaltation that ends the arrangement. The passage is about the
+      transition, so recording it is reporting rather than interpreting.
+
+      Expect it to be rare and expect most candidates to be inferences rather
+      than statements. The angel of the LORD in the flame (Exod 3:2-4), the man
+      who wrestles Jacob (Gen 32:24-30), the captain of the host who accepts
+      worship (Josh 5:13-15) and the fourth figure in the furnace (Dan 3:25)
+      are all readings the text permits and does not make -- mark them
+      `conjectured` and let the corpus argue them.
+
+      Melchizedek is the case to be most careful with. Hebrews 7:3 says he is
+      "like the Son of God", which is a comparison whose writer chose a word
+      that stops short of identifying him. Recording him here would have
+      the graph asserting what Hebrews declines to assert.
+
+  appeared_to:
+    # A group too, 2026-08-29: "the angels of God met him" (Gen 32:1).
+    src_type: [being, person, group]
+    dst_type: [person, group]
+    label: "appeared to"
+    inverse: "was visited by"
+    category: encounter
+    weight: 5
+    group: "Appearances"
+    notes: >
+      A visitation the text narrates: Gabriel sent to Zacharias and to Mary
+      (Luke 1:19, 1:26), to Daniel (Dan 8:16), and Jesus met on the road to
+      Damascus (Acts 9:3-5). Recorded as what the text says happened, without
+      classifying it -- vision, dream and bodily appearance are distinctions
+      the text sometimes draws and sometimes does not, and the note carries
+      the wording where it matters.
+
+
+  party_to:
+    # A being as a party, 2026-08-29. God is party to the covenant with
+    # Noah and to the covenant with Abraham -- which is the substance of
+    # Genesis 9 and 17 -- and a covenant recorded with only its human side
+    # is not the covenant. See `cursed`.
+    src_type: [person, group, being]
+    dst_type: covenant
+    label: "is party to"
+    inverse: "was made with"
+    category: covenant
+    weight: 4
+    group: "Covenant"
+    notes: >
+      Who the text says the covenant was made with, in the verse that says it.
+
+  token_of:
+    src_type: [object, observance, creature, place]
+    dst_type: covenant
+    label: "is the sign of"
+    inverse: "is signified by"
+    category: covenant
+    weight: 3
+    group: "Sign"
+    notes: >
+      The sign the text names: the rainbow in the clouds (Gen 9:13),
+      circumcision (Gen 17:11) -- "a sign of the covenant", in the text's own
+      word -- and "the blood of the covenant" splattered on the people (Exod
+      24:8). (Labelled "is the token of", the KJV's word, until 2026-10-02;
+      the type keeps its id.)
+
+  supersedes:
+    src_type: covenant
+    dst_type: covenant
+    label: "makes obsolete"
+    inverse: "was made obsolete by"
+    category: covenant
+    weight: 4
+    group: "Succession"
+    notes: >
+      Recorded only where the text says so. Heb 8:13 -- "By speaking of a new
+      covenant, He has made the first one obsolete" -- and Jer 31:32, which
+      sets the new one against "the covenant I made with their fathers". The
+      relation exists because those verses exist, not as a scheme laid over
+      the others.
+
+
+  assessed_as:
+    # A being as assessor, added 2026-08-29. The type was built for the
+    # regnal formula -- Kings and Chronicles pronouncing on a reign -- where
+    # the one assessed is a person and the assessment is the writer's.
+    #
+    # Genesis 1 is the other direction and it is the whole chapter: "And God
+    # saw the light, that it was good", six times over, ending "behold, it was
+    # very good". That is the corpus's most repeated verdict and the
+    # vocabulary could not hold it, because the assessor is not a person.
+    # A SPEECH may be assessed, added 2026-08-30. Job 42:7 is the book
+    # judging its own argument -- "ye have not spoken of me the thing that is
+    # right, as my servant Job hath" -- which is God assessing what the three
+    # friends SAID. With people-only sources the verse where Job's whole
+    # dialogue is adjudicated could not be recorded, and the graph held 109
+    # edges saying Bildad spoke verse 8:3 and nothing saying he was wrong.
+    src_type: [person, group, being, text, concept, covenant, creature, object, place]
+    dst_type: [assessment, concept, pattern]
+    label: "did"
+    inverse: "was done by"
+    category: assessment
+    weight: 4
+    group: "Verdict"
+    notes: >
+      The formula Kings and Chronicles pronounce on nearly every reign -- "did
+      evil in the sight of the LORD" (1Kgs 15:26), "did what was right in the
+      eyes of the LORD" (15:11) -- with eyes and sight used interchangeably.
+      This is the text's own classification and not a reading of it, which is
+      why the verdict is an entity a reader can stand on and see the whole
+      class from.
+
+  described_as:
+    # Split out of assessed_as, 2026-10-02 (Doug approving). assessed_as reads
+    # "did", which is right for the regnal formula and nothing else, and it
+    # had gathered ages, states, traits and verdicts about the subject:
+    # cards read "Abraham did 175 years", "Abraham did childless". Of its 463
+    # edges, 324 describe the subject ("Cain is described as a tiller of the
+    # soil", Gen 4:2; "Noah ... found favor in the eyes of the LORD", Gen
+    # 6:8) and moved here; the deeds the text evaluates stay under "did".
+    src_type: [person, group, being, text, concept, covenant, creature, object, place]
+    dst_type: [assessment, concept, pattern]
+    label: "is described as"
+    inverse: "is said of"
+    category: assessment
+    weight: 4
+    group: "Verdict"
+    notes: >
+      What the text says the subject is, or is like: an age, a state, a
+      trait, a role, or a verdict on the subject itself. Not a deed --
+      "did evil in the sight of the LORD" is assessed_as.
+
+
+  # ---- imagery --------------------------------------------------------
+  titled:
+    # A being too. John 14:26 -- "the Comforter, which is the Holy Ghost" --
+    # is the corpus naming a title and its bearer in one clause, and the
+    # bearer is not a person node. Seventeen of these edges existed and every
+    # one ran from a person, which had the effect that the most explicitly
+    # stated identification in the fourth gospel was the one the vocabulary
+    # could not hold.
+    src_type: [person, being]
+    dst_type: title
+    label: "is called"
+    inverse: "is a title of"
+    category: imagery
+    weight: 4
+    group: "Titles"
+    notes: >
+      A name the text gives, in the verse that gives it: "the Lion of the tribe
+      of Judah" (Rev 5:5), "the Lamb of God" (John 1:29), "I am the true vine"
+      (John 15:1). The title is its own entity, never the creature or object it
+      is built from -- that separation is what keeps one word from meaning both
+      Christ and the devil.
+
+  asserted_by:
+    # Who vouches for a claim -- and the reason the graph can hold a
+    # disagreement without joining it.
+    #
+    # 1Chr 21:1 says Satan provoked David to number Israel. 2Sam 24:1 says the
+    # LORD moved him. Without attribution the graph must either pick one, or
+    # assert both and appear to have found a contradiction in the world rather
+    # than recorded one between scrolls. With it, the claims are held and the
+    # graph asserts neither.
+    #
+    # It is also what Job needs. Bildad argues for thirty-five chapters that
+    # Job's children died for their sin, and the book itself overturns him:
+    # "ye have not spoken of me the thing that is right" (Job 42:7). Every one
+    # of his claims had to be recordable as HIS, or the graph would be
+    # asserting the theology the book exists to refute.
+    #
+    # Default it to the scroll when the text names no speaker. That is not a
+    # hedge -- the narrator's assertions really are the scroll's, and 2Tim 3:16
+    # is a claim about scrolls rather than about a narrator.
+    #
+    # NOT `ascribed_to`, which records a superscription ("A Psalm of David")
+    # and deliberately declines to say what that ascription means. This one is
+    # committal: this party said this.
+    src_type: [text, assessment, concept, image, title, pattern]
+    dst_type: [person, being, group, text, concept, creature]
+    label: "is asserted by"
+    inverse: "asserts"
+    category: language
+    weight: 4
+    group: "Attribution"
+
+  grounds:
+    # The reason offered for a claim, where the text gives one.
+    #
+    # Gen 18:17-19 is the clearest case in the Torah. God asks "Shall I hide
+    # from Abraham what I am about to do?" and then answers it: "For I have
+    # chosen him, so that he will command his children and his household after
+    # him to keep the way of the LORD by doing what is right and just." The second is the ground of the first, and it is the only
+    # place in the Torah where God states a reason for electing Abraham.
+    #
+    # Also Gen 18:14 -- "Is any thing too hard for the LORD?" grounding the
+    # promise of a son two verses earlier.
+    #
+    # Distinct from `draws_on`, which is allusion, and from `part_of`, which
+    # is containment. This is argument.
+    src_type: [text, assessment, concept, image, title]
+    dst_type: [text, assessment, concept, image, title]
+    label: "is the ground for"
+    inverse: "is grounded on"
+    category: language
+    weight: 4
+    group: "Argument"
+
+  conditional_on:
+    # The consequence points at its condition.
+    #
+    # "If I find in Sodom fifty righteous within the city, then I will spare
+    # all the place for their sakes" (Gen 18:26), and five more times down to
+    # ten. A bargain with no terms is not a bargain, and the intercession is
+    # six conditionals or it is nothing.
+    #
+    # The form runs through the whole corpus after Genesis: the blessings and
+    # curses of Deut 28, "if my people... shall humble themselves" (2Chr 7:14),
+    # and most prophetic warning, which is conditional by construction --
+    # Nineveh repents and the announced judgment does not fall.
+    src_type: [text, assessment, concept, image, title, covenant]
+    dst_type: [text, assessment, concept, image, title, covenant]
+    label: "is conditional on"
+    inverse: "is the condition for"
+    category: language
+    weight: 4
+    group: "Conditions"
+
+  recounts:
+    # One telling, of one event. The relation that lets two scrolls describe
+    # the same thing without being merged into one voice.
+    #
+    # 2Sam 24 and 1Chr 21 both recount the census. Where they agree the facts
+    # sit on the event itself; where they differ -- the agent, the numbers, the
+    # price, the Jebusite's name -- the claims stay on the tellings, each with
+    # its `asserted_by`. Agreement is then free and divergence is explicit,
+    # and neither scroll's version is stored as the default with the other as
+    # a footnote.
+    #
+    # The same machinery serves the synoptics, which arrive much later. It is
+    # needed at Samuel/Kings/Chronicles, which do not.
+    #
+    # Note it is NOT how a pattern relates to its members: two tellings of one
+    # event share a referent, while seventy-one kings doing evil are seventy-one
+    # referents under one `instance_of` pattern. The shared referent is exactly
+    # what separates a parallel account from a recurring motif.
+    #
+    # `passage` -> `event` added 2026-09-29, Doug's decision card on the
+    # events from Microsoft Copilot's lists: "Yes, extend recounts" -- a
+    # passage recorded as one telling of an event node (Matthew 14:13-21,
+    # Mark 6:30-44, Luke 9:10-17 and John 6:1-15 each recount the feeding of
+    # the five thousand). The purpose the relation was written for; only
+    # its endpoint types changed.
+    src_type: [text, pattern, passage]
+    dst_type: [text, pattern, observance, covenant, event]
+    label: "recounts"
+    inverse: "is recounted by"
+    category: language
+    weight: 4
+    group: "Parallel accounts"
+
+  incited:
+    # X moved Y to act. There was no relation for causation at all, and the
+    # acceptance test found it: 2Sam 24:1 and 1Chr 21:1 both turn on someone
+    # inciting David to number Israel, and the extractor reached for `led` on
+    # one side and dropped the claim entirely on the other, because `led`,
+    # `sent`, `told` and `charged` were the nearest things available and none
+    # of them carries "caused someone to act".
+    #
+    # One relation covers both because the Hebrew is one word. Both verses read
+    # `va/i.Ya.set` -- the identical form of H5496 -- and the King James renders
+    # it "moved" in Samuel and "provoked" in Chronicles. Two English words, one
+    # verb, and the accounts are far more parallel than English shows: the ONLY
+    # divergence in the pair is the subject.
+    #
+    # Which is what makes the fork clean. `god -incited-> david` beside
+    # `the_devil -incited-> david` aligns on everything except the agent, and
+    # that is the whole two-thousand-year argument, isolated.
+    #
+    # The act incited is carried by what the patient then does in the same
+    # verse, since edges here are binary. Do not fold the act into this
+    # relation.
+    src_type: [person, being, group, concept]
+    dst_type: [person, being, group]
+    label: "moved / provoked to act"
+    inverse: "was moved to act by"
+    category: encounter
+    weight: 3
+    group: "Incitement"
+
+  gave:
+    # H5414, the 6th most common verb in the Hebrew Bible, 532 occurrences,
+    # and it had no relation. Transfer of possession, and among the most
+    # theologically loaded acts in the corpus.
+    #
+    # "she took the fruit and ate it. She also GAVE some to her husband"
+    # (Gen 3:6). "The LORD GAVE, and the LORD has taken away"
+    # (Job 1:21) -- the most quoted line in the book, which produced exactly
+    # one relation before this: asserted_by.
+    src_type: [person, being, group, concept, object]
+    dst_type: [person, being, group, object, place, creature, concept, covenant, observance]
+    label: "gave"
+    inverse: "was given by"
+    category: encounter
+    weight: 3
+    group: "Giving and taking"
+
+  took:
+    # H3947, 456 occurrences, 9th most common. The counterpart of `gave` and
+    # the hinge of the fall: "she TOOK of the fruit thereof" (Gen 3:6).
+    #
+    # Also "the LORD gave, and the LORD hath TAKEN AWAY" (Job 1:21), and the
+    # losses of Job 1:14-19 -- oxen, asses, sheep, camels, servants and
+    # children -- none of which the graph could record. Job lost nothing,
+    # in a book about loss.
+    src_type: [person, being, group, concept]
+    dst_type: [person, being, group, object, place, creature, concept]
+    label: "took"
+    inverse: "was taken by"
+    category: encounter
+    weight: 3
+    group: "Giving and taking"
+
+  ate:
+    # H0398, 331 occurrences, 13th. "and did EAT" (Gen 3:6) is the act the
+    # whole of scripture afterwards refers back to, and the graph could not
+    # write it down. The fall was literally not in the document.
+    #
+    # Also the passover, the manna, the shewbread, and "take, eat" at the
+    # last supper.
+    src_type: [person, being, group, creature, object]
+    dst_type: [object, creature, concept, place, image]
+    label: "ate"
+    inverse: "was eaten by"
+    category: encounter
+    weight: 3
+    group: "Eating"
+
+  heard:
+    # H8085, 328 occurrences, 14th. Needed for the construction that runs
+    # from Sodom to the Exodus: a cry rises, God HEARS it, God comes down,
+    # God sees. "God HEARD their groaning" (Exod 2:24), "I have HEARD their
+    # cry" (Exod 3:7).
+    #
+    # Also the ordinary work of dialogue -- who heard what was said, which is
+    # most of the narrative books.
+    src_type: [person, being, group]
+    dst_type: [text, person, being, group, concept, assessment, event]
+    label: "heard"
+    inverse: "was heard by"
+    category: encounter
+    weight: 3
+    group: "Hearing"
+
+  answered:
+    # H6030, 182 occurrences, 32nd. One speech replying to another, which is
+    # the entire structure of Job: thirty-five chapters of reply and counter-
+    # reply that the graph recorded as a list of who spoke when.
+    #
+    # A speech on both sides deliberately. "Then answered Bildad the Shuhite"
+    # is Bildad answering JOB'S SPEECH, not answering Job, and the difference
+    # is the whole argument.
+    src_type: [text, person, being, group]
+    dst_type: [text, person, being, group, creature]
+    label: "answered"
+    inverse: "was answered by"
+    category: language
+    weight: 3
+    group: "Dialogue"
+
+  spoke_to:
+    # Who speaks to whom (plan 2.19 lift 3; G1, approved on the 1.2.0
+    # inventory, 2026-10-20). The narrator's statement that one spoke to
+    # another, from the structure's turns (sender, addressee), the turn as its
+    # evidence: "Isaac said to Abraham" (Gen 22:7). Not `told` (who gave a
+    # picture, its object a text) and not `answered` (speech answering
+    # speech). What was said is the turn's content, not this relation.
+    src_type: [person, being, group]
+    dst_type: [person, being, group]
+    label: "spoke to"
+    inverse: "was spoken to by"
+    category: language
+    weight: 3
+    group: "Dialogue"
+
+  named:
+    # H7121 in its naming sense, 187 occurrences, 31st. Naming is an identity
+    # act in this corpus and the graph had no way to record one.
+    #
+    # "Adam gave names to all cattle" (Gen 2:20), "Adam called his wife's name
+    # Eve" (Gen 3:20), "she called his name Cain" (Gen 4:1). Also the renamings
+    # that carry the most weight -- Abram to Abraham, Jacob to Israel, Simon
+    # to Peter -- which until now existed only as `aka` on a record, with
+    # nothing to say who did the renaming or when.
+    src_type: [person, being, group]
+    dst_type: [person, being, group, place, object, creature, concept]
+    label: "named"
+    inverse: "was named by"
+    category: language
+    weight: 3
+    group: "Naming"
+
+  destroyed:
+    # H7843 and H8045 together, 114 occurrences. Less frequent than the rest
+    # and added anyway, because what it names is the largest single absence
+    # found: the graph held twenty relations touching Sodom and Gomorrah and
+    # not one saying either was destroyed.
+    #
+    # "the LORD rained upon Sodom and upon Gomorrah brimstone and fire"
+    # (Gen 19:24); "I will DESTROY them with the earth" (Gen 6:13). The flood
+    # and Sodom are two of the three instances of the pattern this project is
+    # trying to detect, and neither had its central event recordable.
+    src_type: [person, being, group]
+    dst_type: [place, group, object, person, creature, concept]
+    label: "destroyed"
+    inverse: "was destroyed by"
+    category: antagonism
+    weight: 4
+    group: "Destruction"
+
+  issues_from:
+    # X comes out of Y -- source, not containment.
+    #
+    # Gen 2:10: "a river flowed out of Eden to water the garden, and from there
+    # it branched into four headwaters." That verse produced NOTHING,
+    # because there was no way to say it. What survived was the incidental
+    # geography of verses 13 and 14, so Gihon and Hiddekel sat in the graph
+    # attached to Ethiopia and Assyria and to nothing else -- disconnected
+    # fragments, which is how Doug spotted the hole.
+    #
+    # The rivers matter because they come from Eden. Without that they are
+    # trivia about ancient geography.
+    #
+    # NOT `part_of`, which says containment. A river is not part of Eden; it
+    # proceeds from it. The distinction runs through the corpus: the twelve
+    # tribes from Jacob, the nations from Noah's sons, the rod from the stem of
+    # Jesse, living water from the belly. `descended_from_person` covers people
+    # and nothing covered anything else.
+    src_type: [place, object, group, person, being, creature, concept, image]
+    dst_type: [place, object, group, person, being, creature, concept, image]
+    label: "issues from"
+    inverse: "gives rise to"
+    category: derivation
+    weight: 3
+    group: "Source and derivation"
+
+  ascribed_to:
+    # "A Psalm of David" (Ps 23:1). The superscription as the text gives it,
+    # and NOT a claim of authorship.
+    #
+    # The Hebrew le-David carries by David, for David, and about David, and
+    # the corpus never adjudicates between them. Recording it as `wrote` would
+    # settle a question the text leaves open, in the graph's own voice, where
+    # no caveat covers it. Recording nothing would discard an explicit line of
+    # the text. So the type says exactly what is on the page: this unit is
+    # ascribed to this person.
+    #
+    # 103 of the 150 psalms carry a superscription; 47 carry none, and those
+    # simply get no edge. Also covers "The proverbs of Solomon" (Prov 1:1),
+    # "The words of Agur" (Prov 30:1) and "The words of king Lemuel" (Prov
+    # 31:1).
+    #
+    # A reader wanting authorship can have it: the ascriptions are all here,
+    # and so is the fact that they are ascriptions.
+    src_type: text
+    dst_type: [person, group]
+    label: "is ascribed to"
+    inverse: "has ascribed to them"
+    category: language
+    weight: 4
+    group: "Ascribed to"
+    notes: >
+      The superscription as printed, never authorship. Do not add it where the
+      text does not carry one, and do not infer it from style or subject.
+
+  part_of:
+    # A saying is part of a psalm; a psalm is part of the Psalter. One relation
+    # at every level, so that grouping is a single traversal repeated rather
+    # than a special case per tier.
+    #
+    # Stored from the contained side pointing up, matching `member_of` (person
+    # -> group) and `located_in` (place -> place), which are the two
+    # containment relations the graph already had. `contains` was rejected as
+    # a type name because it is already `located_in`'s inverse label, and the
+    # same word meaning a type in one place and an inverse in another is the
+    # kind of collision that reads fine until someone queries on it.
+    # `passage` added 2026-09-02. Doug: "passage is also meaningful for what
+    # we are trying to do which is capture the communication as well as the
+    # contents." A passage is a stretch of text treated as a unit -- the
+    # grouping layer's node -- and without it here, "Mark 2:1-5 sits inside
+    # Mark 2:1-12" is not a legal statement, so 682 grouped passages across
+    # four books would merge as a flat pile of labelled verse ranges with
+    # nothing saying which contains which.
+    # `event` added 2026-09-29, Doug's decision card: "Yes, extend part_of".
+    # Gideon's fleece is part of Gideon's victory, which is part of the
+    # judges raised up: the grouping among events, read from their passages
+    # (the smaller's lie 80% inside the larger's), nearest whole only.
+    src_type: [text, title, passage, event]
+    dst_type: [text, title, passage, event]
+    label: "is part of"
+    inverse: "contains"
+    category: language
+    weight: 3
+    group: "Part of"
+    notes: >
+      Structural containment within the corpus. Transitive, so the validator
+      may drop a direct edge that a path of the same type already implies --
+      within this type only, since a `speaks_of` edge over the same pair is a
+      different claim and survives.
+
+  spoken_in:
+    # A MESSAGE AND WHERE IT IS SPOKEN. The divine messages (plan A.10's
+    # neighbours; tools/themes/messages.py) are speech forms -- "Do not fear",
+    # "Go", "I will gather you" -- and this is how that taxonomy binds to the
+    # others: the story patterns whose stages it is spoken in, the role
+    # patterns whose cells it fills, the major themes whose passages it falls
+    # in, the events it is spoken during. Doug, 2026-09-30: "coverage is good,
+    # but taxonomy linking is what binds together."
+    #
+    #   msg_do_not_fear -spoken_in-> tpl_call          (its sign stage)
+    #   msg_go -spoken_in-> tpl_call                    (its mission stage)
+    #   msg_you_are_my_servant -spoken_in-> rolepat_servant
+    #
+    # The speech acts above the messages (Doug, 2026-09-30) bind the same
+    # way -- sact_lament -spoken_in-> tpl_... -- with more shared verses
+    # asked of a common act, and none where the act is no denser in the
+    # other node's passages than across the whole text.
+    #
+    # GROUNDED BY SHARED VERSES, never by the names sounding alike: every edge
+    # cites the verses where an instance of the message stands inside the
+    # other node's passages, and exists only where there are such verses. Not
+    # `specializes` (a message is not a narrower form of a story) and not
+    # `in_theme` (it is not a core concept of the theme).
+    #
+    # TO THE INSTANCE, not the pattern (Doug, 2026-09-30: "Role Patterns are
+    # not what I would expect to see listed under a message even if the link
+    # is legit - I would expect real instance on that card"): a role row is a
+    # passage (Huldah's row of the Prophet pattern), a story's instance an
+    # event or an arc. The pattern is one step up, by the row's own edge.
+    src_type: [pattern]
+    dst_type: [pattern, concept, event, passage]
+    label: "is spoken in"
+    inverse: "has spoken in it"
+    category: language
+    weight: 2
+    group: "Spoken in"
+    notes: >
+      Grouping across taxonomies, grounded verse by verse; the count of shared
+      verses is in the note.
+
+  specializes:
+    # A NARROWER FORM OF A BROADER ONE. The pattern analogue of `part_of`, and
+    # for the same reason it gives: one relation at every level, so the
+    # hierarchy is a single traversal repeated rather than a special case per
+    # tier.
+    #
+    #   god_sent_plague -specializes-> god_sent_affliction
+    #   god_sent_affliction -specializes-> god_sent
+    #   god_sent_envoy -specializes-> god_sent
+    #
+    # DISTINCT FROM `instance_of`, and conflating them is a type error. A
+    # plague that fell on Egypt HAPPENED, so it is an instance of the form. The
+    # form itself never happened; it is narrower than another form. One edge
+    # runs occurrence -> form, the other form -> form.
+    #
+    # Doug, 2026-09-02, arriving at it from the Exodus plague escalation:
+    # "afflictions and envoys are distinct specializations of the pattern",
+    # then "god_sent_plague specializes god_sent_affliction".
+    #
+    # THE TAXONOMY IS OURS, NOT THE TEXT'S. No verse says afflictions and
+    # envoys are two kinds of sending, so an edge of this type is `implied` at
+    # best -- the same footing `pattern` already stands on. What the text does
+    # supply is Joshua 24:5, "I sent Moses and Aaron, and I afflicted the
+    # Egyptians", which uses both branches in one clause.
+    #
+    # NOT TRAVERSABLE. If this chains, a plague reaches `god_sent` in two hops
+    # and from there every envoy, which is the seed -> word_of_god -> sword
+    # failure exactly. A path may END on a specialization edge and must not
+    # pass through one.
+    label: is a narrower form of
+    src_type: [pattern]
+    dst_type: [pattern]
+    notes: >
+      Form to broader form. Never occurrence to form -- that is instance_of.
+      The taxonomy is the graph's reading rather than the text's, so mark it
+      implied unless a verse states the kinship.
+
+  instance_of:
+    # This passage is one instance of a shape that several passages share.
+    #
+    # Nine beatitudes, six "and God saw that it was good", seventy-one kings
+    # who "did evil in the sight of the LORD". Before this the graph could say
+    # two passages were the SAME node or say nothing about them at all, and
+    # neither is true of any of those sets.
+    #
+    # **The pattern is ours and the instance is the text's.** The edge says
+    # "we grouped these"; it does not say the writers intended a form, and it
+    # must not be read as a claim about composition or authorship. Where the
+    # corpus itself marks a series -- an acrostic, a numbered oracle -- that is
+    # worth a note on the pattern saying so, because then the shape is the
+    # text's and not the reader's.
+    #
+    # A pattern needs at least two instances to exist. One passage with an
+    # interesting shape is a passage.
+    src_type: [text, title, assessment, event, group, passage]
+    dst_type: [pattern, concept]
+    label: "is an instance of"
+    inverse: "occurs as"
+    category: language
+    weight: 3
+    group: "Shares a form with"
+    notes: >
+      Group by form, not by meaning. Two passages sharing a shape may be about
+      entirely different things, and saying they rhyme is not saying they
+      agree.
+
+  re_enacts:
+    # A STORY ECHO (plan 6.15, Doug, 2026-10-03: "It just happens over and over
+    # in the Gospels if you look for it"; chose a relation of its own over
+    # reusing draws_on). One account told so that it re-enacts an earlier
+    # one: Jesus forty days tested in the wilderness, answering each test
+    # from Deuteronomy's account of Israel's forty years. Not draws_on (built
+    # from as material) and not instance_of (a case of a shape we grouped):
+    # the later account itself points back to this earlier one.
+    #
+    # The GRADE is the certainty: `explicit` -- the text says so (a
+    # fulfilment formula, or the earlier account named); `implied` --
+    # anchored: a quotation that carries its source's setting (Matt 4:4
+    # quotes Deut 8:3, whose setting is the manna); `conjectured` --
+    # correspondence alone, a credited reading. The note names the hook and
+    # the slot map (Israel -> Jesus, forty years -> forty days). STANCE
+    # (affirms / extends / fulfils / contrasts) waits for 6.11 (Doug: grade
+    # now, stance later). "Jesus as the new Moses" is never a node: it is
+    # what a reader sees when these links gather.
+    src_type: [event, passage, text]
+    dst_type: [event, passage, text]
+    label: "re-enacts"
+    inverse: "is re-enacted in"
+    category: story
+    weight: 3
+    group: "Re-enacts an earlier account"
+    notes: >
+      The later account to the earlier. Graded by its evidence, and the note
+      quotes the words that ground it; a link resting on correspondence alone
+      is conjectured and says so.
+
+  takes_up:
+    # A STORY ECHO OF WORDS, NOT OF A SCENE. The Sermon on the Mount was first
+    # filed as re_enacts "Israel receives the law"; the eight-reader review
+    # (2026-10-03) found that re-enacting reads, in the site's own voice, as
+    # "a new Moses, a new Sinai" -- which the Lutheran and Reformed readers
+    # could not accept, and which the link's own note disclaimed. Doug, same
+    # day: "re-enactment might be the wrong way to frame it. Jesus clearly
+    # referenced the law continually through the Sermon on the Mount. The law
+    # was the frame for Jesus' sermon. This can be made clear without trying
+    # to interpret that Jesus was a new Moses ... all I want to do is surface
+    # the echoes while letting the users draw their own conclusions."
+    # So: one account takes up the WORDS given in an earlier one -- quoted,
+    # summarised or gathered, each pair shown on the card -- and claims
+    # nothing about who is like whom. Graded as re_enacts is.
+    src_type: [event, passage, text]
+    dst_type: [event, passage, text]
+    label: "takes up the words of"
+    inverse: "has its words taken up in"
+    category: story
+    weight: 3
+    group: "Takes up the words of an earlier account"
+    notes: >
+      The later account to the earlier whose words it quotes, summarises or
+      gathers. The pairs on the card are the evidence; no likeness between
+      persons is claimed.
+
+  same_steps_as:
+    # A STORY TOLD AGAIN, CLAIMING NO INTENT (plan 6.18). Two accounts whose
+    # steps match -- the storm, the sleeper woken, the calm (Matt 8:23-27,
+    # Jonah 1) -- each step quoted from both texts. Not re_enacts: that says
+    # the later account points back, which is a claim about intent. Doug,
+    # 2026-10-04: "as long as we make sure we disclaim that we do not know if
+    # they are intentional"; the label his choice, over "a story told again"
+    # and "runs parallel to" ("parallel" already means one event told twice).
+    # Kept only where two judges called the steps clear -- the second had to
+    # quote, word for word, the detail no one would expect by chance -- and the
+    # eight readers passed the explanation (ontology/provenance/).
+    src_type: [event, passage, text]
+    dst_type: [event, passage, text]
+    label: "has the same steps as"
+    inverse: "has the same steps as"
+    category: story
+    weight: 3
+    group: "Has the same steps as"
+    notes: >
+      The later account to the earlier. The pairs on the card are the
+      evidence, quoted from both texts; not a claim that one was told with
+      the other in mind.
+
+  possibly_same_as:
+    # TWO RECORDS, POSSIBLY ONE PERSON (plan 5.12; P-100, Doug, 2026-10-03:
+    # "I approve P-100 and other cases like this"). The text keeps them apart
+    # -- no verse joins them -- and a reader holds they may be one: Rahab of
+    # Matt 1:5 and Rahab of Jericho. "Possibly", not "likely": Doug, the same
+    # day, "possibly might be a better call". Never a merge: each record keeps
+    # its own verses, and the note gives the evidence BOTH ways. Always
+    # `conjectured`, always carrying `reading`.
+    src_type: [person]
+    dst_type: [person]
+    label: "may be the same person as"
+    inverse: "may be the same person as"
+    symmetric: true
+    category: identity
+    weight: 1
+    group: "May be the same person"
+    notes: >
+      Two records the text never joins, which a reader holds may be one person.
+      The note gives what points each way; neither record's verses are moved.
+
+  occasion_of:
+    # A SIGNIFICANT NUMBER'S OCCASION (plan 6.16, Doug, 2026-10-03: "40
+    # deserves its own significant number card because it also ties to the
+    # flood"; the card is labelled "Significant number", not "symbolic", which
+    # could be heard as "not literally forty"). The event is a time the text
+    # counts the number as a span -- the flood's forty days and forty nights
+    # -- cited to the verse that counts it. The number's card says nothing of
+    # what the number means; it lists the occasions, the phrases the text
+    # repeats and where the text itself joins one occasion to another
+    # (ontology/numbers/, tools/numbers/significant_numbers.py).
+    src_type: [event]
+    dst_type: [pattern]
+    label: "is an occasion of"
+    inverse: "has as an occasion"
+    category: numbers
+    weight: 2
+    group: "An occasion of a significant number"
+    notes: >
+      The event to the significant number its verses count as a span (forty
+      days, forty years). Cited to those verses; claims no meaning.
+
+  composed_of:
+    # Lexical, and ONLY lexical: this phrase is built from this term.
+    #
+    # "The fear of the LORD" is composed_of `fear` and composed_of `the LORD`.
+    # That is a fact about the words and it is NOT a claim that the fear of the
+    # LORD is a kind of fear -- the corpus calls it clean, a treasure, strong
+    # confidence and a fountain of life, and calls none of those things of
+    # being afraid (Ps 19:9, Isa 33:6, Prov 14:26, Prov 14:27, against
+    # 1John 4:18). The words are shared and the uses are not.
+    #
+    # Declared because the decomposer needs a way to say "these words are in
+    # this phrase" that carries no semantic weight at all. Without it a worker
+    # reaches for `speaks_of` or `draws_on` and quietly asserts a relationship
+    # of meaning that nobody checked. The whole value of this type is what it
+    # does not claim.
+    #
+    # Transitive, so the validator may reduce: if a phrase is composed_of a
+    # phrase that is composed_of a word, the direct edge to the word is
+    # redundant and should be dropped. Only within this type -- a `speaks_of`
+    # edge covering the same pair is a different claim and survives.
+    # Every kind of thing an English word can name, 2026-08-29. "Houses of
+    # clay" is composed_of `house`; "tabernacles of bribery" of `tabernacle`.
+    # Both were refused because those nodes are typed `object`, and a list
+    # that omitted `object` and `creature` was quietly asserting that a phrase
+    # cannot be built from the name of a thing you could pick up.
+    #
+    # **This type is about words, so it is the one type whose ends should not
+    # be constrained by what the words refer to at all.** The list stays
+    # explicit rather than becoming "anything" only because an empty
+    # constraint reads as an oversight, and this one is a decision.
+    # And any kind of thing on the SOURCE side, 2026-08-29 -- the same
+    # argument as the target list below, which was widened first and left
+    # this behind. "The mountains of Ararat" is composed_of "mountains"; it
+    # is typed `place` because it names one, and a rule that only
+    # abstractions can be built from words says a place-name has none in it.
+    src_type: [text, concept, image, title, person, place, being, group,
+               object, creature, observance, covenant, assessment]
+    dst_type: [text, concept, image, title, person, place, being, group,
+               object, creature, observance, covenant, assessment]
+    label: "is built from the words"
+    inverse: "appears in the phrase"
+    category: language
+    weight: 2
+    group: "Built from"
+    notes: >
+      Lexical composition only. Never use it to justify a semantic claim, and
+      never emit it alongside is_a reasoning -- if a relation of meaning seems
+      to hold, that is a question for a person, not an edge.
+
+  draws_on:
+    # A told unit draws on its images too, not only a title: "the parable of
+    # the tares of the field" (Matt 13:36) is built on tares and seed and a
+    # field, and the corpus names that parable itself.
+    # An image as source too. One figure is often built on another: "the
+    # blood of the Lamb" (Rev 12:11) is the blood figure standing on the lamb
+    # figure, and neither is the tangible thing.
+    src_type: [title, text, image]
+    # An image too, now that words have nodes. "The sword of the Spirit" is
+    # built on `sword`, which is no particular object; before this the type
+    # could reach `lion` and not `sword`, for no reason a reader could see.
+    # And a person, which Hebrews 11 makes unavoidable: twenty verses of
+    # "by faith X did Y", working sixteen named lives as its material. A
+    # chapter can be built on a person the way it is built on a figure, and
+    # `drawn_from` already runs the other way -- an image back to the person
+    # it is drawn from -- so refusing it here was an asymmetry with no
+    # reason behind it.
+    #
+    # This is not the same claim as an attribute edge. It says the text works
+    # this person's story, not that the person had faith; who is commended
+    # for what stays in the citation, where it can be read.
+    # And a text as target. A saying can be built on another saying: Romans
+    # 6's baptism figure is built on the resurrection, and refusing that left
+    # the two sitting in the graph unconnected while the chapter joins them in
+    # a single sentence.
+    # And a being, for the same reason `person` was added. "The fruit of the
+    # Spirit" (Gal 5:22) and "led by the Spirit of God" (Rom 8:14) are texts
+    # built on the Spirit exactly as Hebrews 11 is built on Abraham, and the
+    # only thing stopping the edge was that the Spirit is typed `being`. A
+    # reader cannot see that distinction and it was not doing any work.
+    # And a covenant. "The throne of David" and "the sure mercies of David"
+    # are both built on the promise at 2 Samuel 7, and the graph holds that
+    # promise as a covenant record -- so the two sayings that exist because of
+    # it could reach everything except the thing they rest on.
+    # And a title. "Render therefore unto Cesar the things which are Cesar's"
+    # is a saying built on an office, and the office is held as a `title`
+    # because several men held it -- so the one type that could not be reached
+    # was the one the saying is entirely about.
+    dst_type: [creature, object, observance, place, image, person, group, text,
+               being, covenant, title]
+    label: "draws on the image of"
+    inverse: "is the image behind"
+    # when the target is not an image (see the last paragraph of the notes)
+    plain_label: "draws on"
+    plain_inverse: "is drawn on by"
+    category: imagery
+    weight: 3
+    group: "Image behind the title"
+    notes: >
+      **A lexical claim and nothing more.** The title is built on that word;
+      Revelation never says why a lion, and this does not either. "The lion
+      symbolises Christ" would be the reading rather than the text, and is not
+      what this records.
+
+      The label is the image's. Into anything that is not an image -- a
+      person, a place, a being, another saying -- it reads "draws on" and
+      "is drawn on by" (`plain_label`, `plain_inverse`). The targets above were
+      widened one at a time and the label never was, so Matthew 1:17 "drew
+      on the image of" Babylon (the 2026-10-02 evaluation; 270 of 489 edges).
+
+  drawn_from:
+    src_type: image
+    # event (2026-09-30): the cross is drawn from the crucifixion, not only
+    # from Golgotha. Doug: "there is a natural relationship between cross and
+    # crucifixion that probably should bring ideas together"
+    dst_type: [creature, object, place, observance, person, group, event]
+    label: "is drawn from"
+    inverse: "is used as an image"
+    category: imagery
+    weight: 3
+    group: "Drawn from"
+    notes: >
+      Joins the word used as an image to the tangible thing of the same name,
+      where the graph holds one. The lion of 1 Peter 5:8 and the lion Daniel
+      was shut in with are **not one node**: one is a figure, one is an animal
+      in a den, and this edge says they share a word without saying they share
+      anything else.
+
+      That separation is the whole reason the type exists. Merging them would
+      make the graph assert that a symbol and a beast are the same entity, and
+      a reader following the edge would arrive at Revelation from Daniel with
+      nothing marking the crossing. Kept apart and linked, a search on *lion*
+      returns Daniel's den, David's kill, Samson's riddle, Judah's lion and
+      Peter's, in one list, with none of them claiming to be another.
+
+      Not every image has a tangible counterpart -- shadow, vapour and chaff
+      are words the corpus only ever uses figuratively -- and those images
+      simply carry no `drawn_from` edge.
+
+  likened_to:
+    # A being can be the tenor: "your adversary the devil, as a roaring lion,
+    # walketh about" (1Pet 5:8). Of 230 stated comparisons in the corpus this
+    # is the only one whose both halves are entities the graph holds, so the
+    # type would have stayed empty without it.
+    # A concept as the thing being compared, 2026-08-29. "Are not his days
+    # like those of a hired hand?" (Job 7:1), "my days are swifter than a weaver's
+    # shuttle" (7:6). **Abstract compared to concrete is the dominant simile
+    # of the wisdom books**, and a source list without `concept` could not
+    # record the form Job argues in almost entirely.
+    #
+    # Note what stays refused: `god -made-> orion` where orion is typed
+    # `concept`. That is not a narrow list, it is a star called an idea, and
+    # the type doing its job. Widening here is for comparisons that are right;
+    # it must not become a way to make mis-typing pass.
+    src_type: [person, group, place, object, observance, creature, being, image,
+               text, concept]
+    dst_type: [creature, object, observance, place, person, group, being, image,
+               text, concept]
+    label: "is likened to"
+    inverse: "is used as an image for"
+    category: imagery
+    weight: 2
+    group: "Likened to"
+    notes: >
+      A comparison the text marks -- "like a roaring lion" (1Pet 5:8), "like
+      chaff driven off by the wind" (Ps 1:4). The tenor is the source and the
+      image the target: "the devil is likened to a lion", never the reverse
+      (a dozen edges ran image-first until 2026-10-02, so cards read
+      "lightning is likened to Jesus"). The note carries the *ground*, the respect in
+      which, wherever the verse states it: Revelation's lion has prevailed and
+      Peter's walks about seeking whom he may devour, and with the ground
+      recorded they are visibly two figures sharing a noun.
+
+
+  # ---- things and observances ----------------------------------------
+  made:
+    # A being as maker, which the corpus's first sentence requires: "In the
+    # beginning God created" (Gen 1:1), and "out of the ground made the Lord
+    # God to grow every tree" (Gen 2:9). A person-only source could not record
+    # who made anything in the two chapters that are entirely about making.
+    # And a group or a creature as the thing made, added the same day. Gen
+    # 1:21 makes "every living creature that moveth" and 1:27 makes humankind;
+    # neither is an object, and an object-only target could not record the two
+    # things Genesis 1 says were made that were not furniture.
+    src_type: [person, group, being]
+    dst_type: [object, group, creature, concept, person, place]
+    label: "made"
+    inverse: "was made by"
+    category: artifact
+    weight: 4
+    group: "Made"
+    notes: >
+      Bezalel and the ark (Exod 37:1), Moses and the bronze snake (Num
+      21:9). Who fashioned the thing, where the text says so; commissioning is
+      `commanded_the_making_of`, because Exodus keeps them apart.
+
+  commanded_the_making_of:
+    # A being as commander, 2026-08-29. "Let the earth bring forth grass"
+    # (Gen 1:11) is the type's clearest instance in the canon and a
+    # person-only source could not hold it.
+    src_type: [person, being]
+    dst_type: object
+    label: "commanded the making of"
+    inverse: "was commanded by"
+    category: artifact
+    weight: 3
+    group: "Commissioned"
+    notes: >
+      Distinct from `made`. Exodus is careful about it: the pattern is shown
+      to Moses on the mountain (Exod 25:9, 40) and Bezalel does the work
+      (Exod 37:1).
+      Collapsing the two would credit the wrong hand.
+
+  wore:
+    src_type: [person, group]
+    dst_type: object
+    label: "wore"
+    inverse: "was worn by"
+    category: artifact
+    weight: 4
+    group: "Wore"
+    notes: >
+      Clothing the text puts on a named person. Aaron and the ephod, the
+      breastpiece of judgment and the turban (Exod 28); David wearing a linen
+      ephod (2Sam 6:14); Joshua the high priest and the clean turban (Zech
+      3:5).
+
+      `carried` was the nearest existing type and it is not the same claim.
+      Abiathar carrying the ephod to David so he can enquire (1Sam 23:9) is a
+      different act from Aaron wearing it into the holy place, and collapsing
+      the two would lose the distinction the priesthood chapters are built on
+      -- the garments are worn *to bear the names of the tribes* into the
+      presence, not transported.
+
+      Says nothing about who was entitled to wear a thing. Gideon's ephod and
+      Aaron's are both worn and the corpus judges them very differently; that
+      judgement is in the verses, not in this edge.
+
+  kept_at:
+    src_type: [object, concept, creature]
+    dst_type: place
+    label: "was kept at"
+    inverse: "held"
+    category: artifact
+    weight: 3
+    group: "Where it was kept"
+    notes: >
+      The ark at Kirjath-jearim (1Sam 7:1), in the house of Obed-edom (2Sam
+      6:11). Objects move, so this is expected to be many-valued and each
+      resting place carries its own citation.
+
+  carried:
+    src_type: [person, group]
+    dst_type: [object, concept, creature]
+    label: "carried"
+    inverse: "was carried by"
+    category: artifact
+    weight: 2
+    group: "Carried"
+    notes: The Levites and the ark (Deut 31:9, 1Chr 15:15).
+
+  signifies:
+    # An image can be keyed, and often it is the image rather than the object
+    # that the text explains: "This cup is the new testament in my blood" (1Cor
+    # 11:25) is about the cup as a figure, not about a particular vessel.
+    src_type: [object, place, creature, observance, person, group, image, concept]
+    # A covenant can be the meaning: "the women represent two covenants. One
+    # covenant is from Mount Sinai ... This is Hagar" (Gal 4:24). That verse is the
+    # only place in the corpus that calls itself an allegory, so the type has
+    # to reach it.
+    dst_type: [object, place, creature, observance, person, group, title,
+               being, covenant, text]
+    label: "signifies"
+    inverse: "is signified by"
+    category: artifact
+    weight: 4
+    group: "What the text says it stands for"
+    notes: >
+      **The text's own key, and only ever that.** "That Rock was Christ" (1Cor
+      10:4), "the field is the world" (Matt 13:38), "the seven stars are the
+      angels of the seven churches" (Rev 1:20). The graph is not deciding that
+      a rock means Christ; it is recording that Paul wrote it, with the verse
+      he wrote it in.
+
+      This is the one place the graph holds a meaning rather than a comparison,
+      which is why it is restricted to identifications the corpus states
+      outright. `likened_to` is the weaker neighbour and holds "is like",
+      leaving the meaning alone; `draws_on` is weaker still and holds only that
+      a title is built on a word. Where the text merely juxtaposes two things,
+      none of the three applies and nothing is recorded.
+
+      A key is not transitive and must not be walked as though it were. Paul
+      reads the rock at Horeb as Christ; that says nothing about every other
+      rock in the corpus, and the physical rock keeps its own verses and its
+      own place in Exodus 17 either way.
+
+  bought:
+    src_type: [person, group]
+    dst_type: [place, object, concept]
+    label: "bought"
+    inverse: "was bought by"
+    category: geography
+    weight: 4
+    group: "Bought"
+    notes: >
+      A purchase the text records with a price and usually a named seller. 60
+      verses use bought or purchase, and the land transactions among them are
+      foundational rather than incidental: Abraham buying Machpelah of Ephron
+      (Gen 23:16-17), the first ground he owned in Canaan and the tomb of four
+      generations; David buying the threshingfloor of Araunah rather than take
+      it free, "I will not offer to the LORD my God burnt offerings that cost
+      me nothing" (2Sam 24:24); Omri buying the hill
+      Samaria of Shemer and naming the city after the man he bought it from
+      (1Kgs 16:24); Jacob at Shechem (Gen 33:19), where Joseph was later buried
+      (Josh 24:32); Jeremiah buying a field in Anathoth while the Babylonians
+      besieged the city (Jer 32:9).
+
+      The seller is named in the note rather than given an edge of its own. A
+      purchase is one act, and recording it twice from both ends would double
+      every transaction to say nothing new.
+
+  built:
+    src_type: [person, group, being]
+    # An object as the thing built, 2026-08-29. "And he builded an altar"
+    # (Gen 12:7, 12:8, 13:18, 26:25, 33:20, 35:7) is one of the most repeated
+    # actions in Genesis, and an altar is an object. A place-only target made
+    # the patriarchal narrative's characteristic act unrecordable.
+    dst_type: [place, object]
+    label: "built"
+    inverse: "was built by"
+    category: geography
+    weight: 4
+    group: "Built"
+    notes: >
+      Cain and the city of Enoch (Gen 4:17), Solomon and the house of the LORD
+      (1Kgs 6:14), the sons of Hassenaah and the fish gate (Neh 3:3). Who raised
+      the structure, where the text says so. `made` is the equivalent for
+      objects, and the two are kept apart because a gate stays where it is put
+      and an ark does not.
+
+  repaired:
+    src_type: [person, group]
+    dst_type: [place, object]
+    label: "repaired"
+    inverse: "was repaired by"
+    category: geography
+    weight: 4
+    group: "Repaired"
+    notes: >
+      Kept separate from `built` because Nehemiah 3 says both, thirty-five
+      times each, and a reader who is told Hanun "built" the valley gate when
+      the verse says "repaired" has been told something the text did not say.
+      Where a verse says both of the same party and the same gate -- "the
+      valley gate repaired Hanun ... they built it" (Neh 3:13) -- both are
+      recorded, rather than one being chosen on the graph's behalf.
+
+  ruler_of:
+    src_type: person
+    # A people as well as a district. "King David appointed them over the
+    # Reubenites, the Gadites, and the half-tribe of Manasseh" (1Chr 26:32),
+    # and the corpus's own phrasing for the office generally: "you will
+    # shepherd My people Israel, and you will be ruler over them" (1Chr 11:2).
+    dst_type: [place, group]
+    label: "was ruler of"
+    inverse: "was ruled by"
+    category: political
+    weight: 3
+    group: "District"
+    notes: >
+      The district officer, not the king: "Rephaiah son of Hur, ruler of a
+      half-district of Jerusalem" (Neh 3:9). Nehemiah 3 names nine of them
+      and halves several districts between two men, which `reigned_over` cannot
+      express and should not be asked to -- it is reserved for a throne over a
+      realm.
+
+  instituted:
+    src_type: [person, being]
+    dst_type: observance
+    label: "instituted"
+    inverse: "was instituted by"
+    category: observance
+    weight: 4
+    group: "Instituted"
+    notes: >
+      Where the text names who established the practice. Much of the law is
+      given without a human institutor, and that absence is left as it stands
+      rather than filled in.
+
+  observed:
+    src_type: [person, group]
+    dst_type: observance
+    label: "kept"
+    inverse: "was kept by"
+    category: observance
+    weight: 3
+    group: "Kept"
+    notes: >
+      A named keeping: Josiah's passover (2Kgs 23:22), Hezekiah's (2Chr 30:1).
+      Not every mention -- the point is an occasion the text records.
+
+
+  # ---- kinship -------------------------------------------------------
+  father_of:
+    label: "is the father of"
+    inverse: "is the son/daughter of"
+    category: kinship
+    weight: 5
+    group: "Children (as father)"
+    functional_inverse: true   # a person has one biological father
+    notes: >
+      Biological or legally-recognized father. In Hebrew idiom "son of" can mean
+      any male ancestor (Matt 1:1, "Jesus Christ, the son of David"); use
+      ancestor_of for those. Use this only where a direct generation is meant.
+
+  mother_of:
+    label: "is the mother of"
+    inverse: "is the child of"
+    category: kinship
+    weight: 5
+    group: "Children (as mother)"
+    functional_inverse: true
+    notes: Direct maternal parent.
+
+  sibling_of:
+    label: "is a sibling of"
+    inverse: "is a sibling of"
+    category: kinship
+    weight: 5
+    group: "Siblings"
+    symmetric: true
+    notes: >
+      Full or unspecified siblings. Use half_sibling_of when the text is explicit
+      about a shared single parent (e.g. Amnon and Tamar, 2Sam 13:1-4).
+
+  half_sibling_of:
+    label: "is a half-sibling of"
+    inverse: "is a half-sibling of"
+    category: kinship
+    weight: 4.5
+    group: "Half-siblings"
+    symmetric: true
+
+  ancestor_of:
+    # A group is a legitimate descendant and the default (person only) made
+    # the table of nations unrecordable. Genesis 10 is almost entirely a
+    # patriarch standing at the head of a PEOPLE, and Gen 25:3 is explicit --
+    # "the sons of Dedan were Asshurim, and Letushim, and Leummim", where the
+    # -im is a plural and those are nations, not three men.
+    #
+    # Kept off `father_of` deliberately. Fathering a man and standing at the
+    # head of a nation are different claims, and collapsing them would make
+    # every genealogy vaguer to fix three edges. The corpus itself keeps them
+    # apart: Abraham is "a father of many nations" in a different breath from
+    # begetting Isaac.
+    src_type: [person, group]
+    dst_type: [person, group]
+    label: "is an ancestor of"
+    inverse: "is a descendant of"
+    category: lineage
+    weight: 1
+    group: "Descent"
+    notes: >
+      Multi-generation descent, or descent asserted without the intervening
+      generations being given. Genealogy chains (Matt 1, Luke 3, 1Chr 1-9)
+      produce father_of edges link-by-link; use ancestor_of for the summary
+      claims the text makes directly ("son of David, son of Abraham"), and
+      for a people descended from a named ancestor (Gen 10, Gen 25:3).
+
+  uncle_of:
+    label: "is the uncle/aunt of"
+    inverse: "is the nephew/niece of"
+    category: kinship
+    weight: 4
+    group: "Uncles & nephews"
+    notes: >
+      Recorded where the text states it: "Saul's uncle Ner" (1Sam 14:50),
+      "his mother's brother Laban" (Gen 29:10). Where both the parent and
+      the sibling are named, record those instead and let the relationship
+      follow from them. Not Mark and Barnabas: Col 4:10's ἀνεψιός is a
+      cousin, and the KJV's "sister's son" put an uncle edge in the graph
+      that the Greek does not support (moved to `cousin_of`, 2026-10-02).
+
+  cousin_of:
+    # Doug, 2026-10-02: "cousin_of addition is approved if text has explicit
+    # settings for this. Normally it would be inferred." Added for Col 4:10,
+    # whose uncle edge rested on the KJV's "sister's son".
+    src_type: person
+    dst_type: person
+    label: "is the cousin of"
+    inverse: "is the cousin of"
+    symmetric: true
+    category: kinship
+    weight: 3
+    group: "Cousins"
+    notes: >
+      Only where the text itself says cousin: "Mark the cousin of Barnabas"
+      (Col 4:10, Greek ἀνεψιός). Normally a cousin is inferred from two
+      parents who are siblings, and then it is not recorded here -- record
+      the parents and the siblings and let it follow from them.
+
+  adoptive_parent_of:
+    label: "raised / adopted"
+    inverse: "was raised by"
+    category: kinship
+    weight: 5
+    group: "Raised & adopted"
+    notes: Mordecai and Esther (Esth 2:7); Pharaoh's daughter and Moses (Exod 2:10).
+
+  # ---- marital -------------------------------------------------------
+  spouse_of:
+    label: "is married to"
+    inverse: "is married to"
+    category: marital
+    weight: 5
+    group: "Marriages"
+    symmetric: true
+
+  concubine_of:
+    label: "is a concubine of"
+    inverse: "had as concubine"
+    category: marital
+    weight: 4
+    group: "Concubinage"
+    notes: >
+      Source is the concubine, target is the man. Recorded because the text
+      distinguishes the status and it affects succession claims (2Sam 3:7).
+
+  betrothed_to:
+    label: "is betrothed to"
+    inverse: "is betrothed to"
+    category: marital
+    weight: 4
+    group: "Betrothals"
+    symmetric: true
+    notes: Joseph and Mary before marriage (Matt 1:18).
+
+  # ---- rule & succession ---------------------------------------------
+  predecessor_of:
+    label: "was succeeded by"
+    inverse: "succeeded"
+    category: political
+    weight: 2
+    group: "Succession"
+    notes: >
+      Source held an office (king, high priest, judge, governor) and target held
+      it next. Direction is always earlier -> later.
+
+  co_regent_with:
+    label: "reigned jointly with"
+    inverse: "reigned jointly with"
+    category: political
+    weight: 3
+    group: "Co-regencies"
+    symmetric: true
+
+  appointed:
+    src_type: [person, group, being]
+    dst_type: [person, group]
+    label: "appointed / installed"
+    inverse: "was appointed by"
+    category: political
+    weight: 2
+    group: "Appointments"
+    notes: >
+      Placing someone in an office or command (1Kgs 4:1-6; Acts 6:3-6).
+
+      A body as often as a man at either end. David sets the Levites
+      over the service of song (1Chr 6:31) and divides them into courses
+      (1Chr 23:6); the Levites in turn appoint the singers (1Chr 15:17).
+      An office conferred on a standing body is the same act as one
+      conferred on a person, and refusing it would drop the arrangement
+      Chronicles spends whole chapters describing.
+
+  offered:
+    src_type: [person, group]
+    dst_type: [person, creature, object]
+    label: "offered"
+    inverse: "was offered by"
+    category: religious
+    weight: 3
+    group: "Offerings"
+    notes: >
+      The text's own verb, and it is deliberately the only thing this
+      records. Genesis 22:2 has "Offer him there as a burnt offering",
+      Hebrews 11:17 "By faith Abraham, when he was tested, offered up
+      Isaac", James 2:21 "justified by what he did when he offered his son
+      Isaac on the altar" -- three books, one word, and none of them says
+      the offering was completed.
+
+      So this type carries the act and not its outcome. Whether the thing
+      offered died is a separate fact with its own citation: at Moriah the
+      angel stops him (Gen 22:12) and a ram is offered "in place of his
+      son" (22:13), and both are recorded as their own edges.
+
+  speaks_of:
+    # A verdict too. `justified by faith` is an assessment named for the
+    # concept it turns on, and it could reach that concept through nothing --
+    # the one record whose whole subject is faith had no edge to faith. The
+    # same holds for `justified by works`, which is the other half of the
+    # argument and needs to be equally reachable or the graph leans.
+    # An assessment as target too, 2026-08-29. "And God saw that it was good"
+    # is a verdict the corpus pronounces six times in one chapter, and the
+    # verses carrying it had no edge to it -- the refrain of Genesis 1 was
+    # unreachable from Genesis 1.
+    # Anything a statement can be about, 2026-08-29. Job refused 60 relations
+    # against a target list of two, and every one of them was right: Job 3:14
+    # speaks of the earth, 4:17 speaks of God, others of an image or a title.
+    # The narrow list was never a decision -- it began as `concept` and grew
+    # one type at a time as each was needed, which is how a list ends up
+    # describing the books already read rather than the relation.
+    #
+    # **The discipline of this type is its direction, not its target.** A
+    # statement points at what it is about; the subject never points back,
+    # because a concept has nothing of its own to say. That invariant is in
+    # `src_type`, and it is untouched by letting the object of a sentence be
+    # any kind of thing a sentence can be about.
+    src_type: [text, title, image, assessment]
+    dst_type: [concept, assessment, place, being, object, title, image,
+               person, group, creature, observance, covenant, text]
+    label: "speaks of"
+    inverse: "is spoken of in"
+    category: meaning
+    weight: 3
+    group: "What this says something about"
+    notes: >
+      Joins a cited statement to the word it makes a claim about. "God is
+      love" (1John 4:8) speaks of love; "now these three remain: faith, hope,
+      and love" (1Cor 13:13) speaks of all three.
+
+      **The direction matters and is the whole discipline of the type.** The
+      statement is the thing with a verse behind it; the concept is a place for
+      statements to gather. Nothing runs the other way, because a concept has
+      nothing of its own to say -- there is no edge from `love` asserting what
+      love is, and there should not be one.
+
+      That also settles how concepts relate to each other: **they do not,
+      directly.** Faith, hope and charity are joined because one verse names
+      all three and speaks of each, so the path between them runs through the
+      text that makes the claim and a reader following it arrives at the
+      evidence. An edge straight from faith to hope would assert a relation the
+      corpus states nowhere.
+
+      Not a route in from people. "Abraham believed God" is a verse about
+      Abraham, and pointing it at `faith` would turn the type into an attribute
+      system -- who had what virtue -- which is a different design and one this
+      project has not made. Where the corpus commends a person for something,
+      `draws_on` already runs from the text to the person, and the concept is
+      reached through the same text.
+
+  came_upon:
+    src_type: [being]
+    dst_type: [person, group]
+    label: "came upon"
+    inverse: "had the Spirit come upon them"
+    category: religious
+    weight: 4
+    group: "The Spirit coming upon someone"
+    notes: >
+      **The corpus's most characteristic statement about the Spirit, and until
+      this type existed the graph could not hold a single instance of it.**
+      Forty-one verses say the Spirit came upon, came mightily upon, rested
+      upon, fell upon, moved, or filled a named person or company, from Judges
+      to Acts, and none of them fit any existing type. The Spirit was in the
+      graph with nineteen edges, every one of them either an image or another
+      member of the deity, and none of them an act on a human being.
+
+      One phrase and one claim: **the verse says the Spirit came upon this
+      person.** What followed is in the citation and not in the edge. Othniel
+      judged, Gideon blew a trumpet, Samson tore a lion, Saul prophesied,
+      Bezaleel made the tabernacle furniture, Peter answered the council,
+      Stephen looked up -- and the type asserts none of it, because the corpus
+      is not consistent about what the coming produces and a type that named a
+      consequence would have to pick one.
+
+      Deliberately not in the `deity` category, which is scoped to what the
+      corpus says about the Father, the Son and the Spirit **in relation to
+      one another**. This is the Spirit and a person, and it belongs beside
+      `anointed`, which the corpus twice puts in the same sentence: "Samuel
+      took the horn of oil, and anointed him ... and the Spirit of the Lord
+      came upon David from that day forward" (1Sam 16:13).
+
+      **The type says nothing about permanence and the corpus does not
+      either.** One verse after David, Saul loses it -- "the Spirit of the
+      Lord departed from Saul" (1Sam 16:14) -- and Saul's own edge from
+      1 Samuel 10 remains true of the chapter that states it. Where the corpus
+      records a departure the note carries it; there is no separate type for
+      it, and inventing one would put a two-instance edge in the vocabulary to
+      hold what a citation already holds.
+
+  anointed:
+    src_type: [person, group]
+    dst_type: [person]
+    label: "anointed"
+    inverse: "was anointed by"
+    category: religious
+    weight: 2
+    group: "Anointings"
+    notes: >
+      Samuel anointed Saul (1Sam 10:1) and David (1Sam 16:13).
+
+      A body of people as often as a prophet, and the difference is not
+      incidental: "the men of Judah came, and there they anointed David
+      king over the house of Judah" (2Sam 2:4), "all the elders of
+      Israel ... anointed David king over Israel" (1Chr 11:3), "the
+      people of the land took Jehoahaz ... and anointed him" (2Kgs
+      23:30). Refusing a group here would record who held the horn and
+      lose who conferred the office.
+
+  deposed:
+    label: "deposed / removed from power"
+    inverse: "was deposed by"
+    category: political
+    weight: 2
+    group: "Depositions"
+
+  # ---- service & authority -------------------------------------------
+  servant_of:
+    src_type: [person, group, concept]
+    dst_type: [person, group, being]
+    label: "served"
+    inverse: "was served by"
+    category: service
+    weight: 3
+    group: "Service"
+    notes: >
+      Source serves target. Covers officials, armour-bearers, stewards and
+      slaves alike; the text rarely separates them cleanly.
+
+      A being is allowed as target because "my servant" is a title the
+      corpus gives repeatedly and in God's own voice -- "my servant
+      Abraham" (Gen 26:24), "my servant Moses" (Num 12:7), "my servant
+      David" (2Sam 3:18), "my servant Job" (Job 1:8). Refusing it would
+      drop a formula the text states outright.
+
+  commander_of:
+    label: "commanded the army of"
+    inverse: "had as army commander"
+    category: service
+    weight: 3
+    group: "Military command"
+    notes: Joab under David (2Sam 8:16); Abner under Saul (1Sam 14:50).
+
+  counselor_of:
+    label: "was counselor to"
+    inverse: "was counseled by"
+    category: service
+    weight: 3
+    group: "Counsel"
+    notes: Ahithophel to David and then Absalom (2Sam 15:12; 16:23).
+
+  # ---- prophetic & priestly ------------------------------------------
+  prophet_to:
+    src_type: person
+    # A body of people as often as a person: Ezra confronts the men who
+    # had taken strange wives (Ezra 10:10), not one of them.
+    dst_type: [person, group]
+    label: "prophesied to / confronted"
+    inverse: "was confronted by the prophet"
+    category: religious
+    weight: 2
+    group: "Prophetic confrontations"
+    notes: Nathan to David (2Sam 12:1-7); Elijah to Ahab (1Kgs 18:17-18).
+
+  mentor_of:
+    label: "was mentor / master to"
+    inverse: "was disciple of"
+    category: religious
+    weight: 4
+    group: "Disciples & mentors"
+    notes: Elijah and Elisha (1Kgs 19:19-21); Paul and Timothy (1Tim 1:2).
+
+  blessed:
+    src_type: [being, person, group]
+    dst_type: [person, group]
+    label: "blessed"
+    inverse: "was blessed by"
+    category: religious
+    weight: 2
+    group: "Blessings"
+    notes: >
+      Formal, consequential blessings (Gen 27:27-29), not casual greetings.
+
+      A being is allowed as source because most of the blessings in the
+      corpus are God's, and a type that could only carry Isaac blessing
+      Jacob would record the derivative case and refuse the original.
+
+  cursed:
+    # A being as the one who curses, 2026-08-29. The default source type is
+    # `person`, which these two never overrode -- so "cursed is the ground for
+    # thy sake" (Gen 3:17) and the curse on Cain (Gen 4:11) could not be
+    # recorded at all.
+    #
+    # **The vocabulary was written when the graph was genealogies**, and in a
+    # genealogy every actor is a person. Genesis is not that: God is its most
+    # active agent, and a list of who may act that omits him describes the
+    # books already read rather than the corpus. Eight relations were refused
+    # across `cursed`, `healed`, `killed` and `party_to` for that one reason.
+    src_type: [person, being]
+    dst_type: [person, group, place, creature, object, being]
+    label: "pronounced a curse on"
+    inverse: "was cursed by"
+    category: religious
+    weight: 2
+    group: "Curses"
+
+  baptized:
+    # A crowd is baptized far more often than a named individual is. Mark 1:5
+    # has John baptizing "all the land of Judaea, and they of Jerusalem", and
+    # the default dst of `person` refused it -- the first four errors the
+    # gospel genre produced on its first pass.
+    src_type: [person, being]
+    dst_type: [person, group]
+    label: "baptized"
+    inverse: "was baptized by"
+    category: religious
+    weight: 2
+    group: "Baptisms"
+
+  healed:
+    # "And Abraham prayed unto God: and God healed Abimelech" (Gen 20:17).
+    # See `cursed` for why the default of `person` was wrong here.
+    #
+    # And the same correction on the other side, for the same reason as
+    # `baptized`: "He healed many who were ill with various diseases"
+    # (Mark 1:34). The summary heal on a crowd is one of the commonest
+    # sentences in the gospels and had nowhere to go.
+    src_type: [person, being]
+    dst_type: [person, group]
+    label: "healed / raised"
+    inverse: "was healed by"
+    category: religious
+    weight: 2
+    group: "Healed & raised"
+    notes: >
+      Physical healing, exorcism, or raising from the dead, where the text names
+      or clearly identifies the person. Unnamed but individuated people count
+      ("the woman with the issue of blood", "the centurion's servant") — give
+      them a descriptive id and say so in the disambiguation.
+
+  ministered_to:
+    src_type: [person, group, being]
+    dst_type: [person, group]
+    label: "taught / ministered to"
+    inverse: "was taught by"
+    category: religious
+    weight: 2
+    group: "Taught & ministered to"
+    notes: >
+      A substantial personal encounter that is neither healing nor formal
+      discipleship: the woman at the well (John 4:7-26), Nicodemus (John 3:1-10),
+      Zacchaeus (Luke 19:5-9), the rich young ruler. Use mentor_of for an ongoing
+      master-disciple bond, and healed when the outcome is a cure.
+
+  # ---- association ---------------------------------------------------
+  ally_of:
+    label: "was allied with"
+    inverse: "was allied with"
+    category: affiliation
+    weight: 2
+    group: "Alliances"
+    symmetric: true
+    notes: Political or military alliance (1Kgs 22:4), not mere friendship.
+
+  friend_of:
+    label: "was a close friend of"
+    inverse: "was a close friend of"
+    category: affiliation
+    weight: 4
+    group: "Friendships"
+    symmetric: true
+    notes: David and Jonathan (1Sam 18:1-3).
+
+  companion_of:
+    label: "traveled / worked with"
+    inverse: "traveled / worked with"
+    category: affiliation
+    weight: 3
+    group: "Travel & work"
+    symmetric: true
+    notes: Paul and Barnabas (Acts 13:2); missionary and ministry partners.
+
+  # ---- conflict -------------------------------------------------------
+  persecuted:
+    src_type: [person, group]
+    dst_type: [person, group]
+    label: "persecuted / sought to kill"
+    inverse: "was persecuted by"
+    category: antagonism
+    weight: 3
+    group: "Persecution"
+    notes: >
+      The word for Saul toward David: sustained pursuit of harm by someone with
+      power over the target (1Sam 19:1-2, 23:14). For a single act of violence
+      use killed or attacked; for scheming use conspired_against.
+
+  enemy_of:
+    # Beings too: Michael contended with the devil (Jude 1:9), and the text
+    # narrates that as plainly as any human enmity.
+    # Groups too, and the text is blunt about it: Haman is "the enemy of all
+    # the Jews" (Esth 9:24), which is a claim about a people and not about the
+    # men he happened to face. Restricting this to persons left the central
+    # enmity of the book with nowhere to go.
+    src_type: [person, being, group]
+    dst_type: [person, being, group]
+    label: "was an enemy of"
+    inverse: "was an enemy of"
+    category: antagonism
+    weight: 2
+    group: "Enmities"
+    symmetric: true
+    notes: Declared or sustained hostility where neither side is clearly the aggressor.
+
+  contrary_to:
+    # Deliberately wide on both sides, because the corpus opposes things of
+    # every kind: a concept to a being (flesh and the Spirit), an image to an
+    # image (light and darkness), one verdict to another (the kings), one
+    # list to another (the fruit and the works).
+    src_type: [concept, image, text, title, assessment, being]
+    dst_type: [concept, image, text, title, assessment, being]
+    label: "is contrary to"
+    inverse: "is contrary to"
+    symmetric: true
+    category: opposition
+    weight: 5
+    group: "What the text sets against it"
+    notes: >
+      The corpus sets two things against each other. "The flesh craves what
+      is contrary to the Spirit, and the Spirit what is contrary to the flesh.
+      They are opposed to each other" (Gal 5:17). "What fellowship does light
+      have with darkness?" (2Cor 6:14). "God is light, and in Him there is no
+      darkness at all" (1John 1:5).
+
+      **The opposition must be the text's, not the reader's.** This is the
+      easiest type in the vocabulary to overuse, because almost any two things
+      can be made to look opposed by someone who wants them to be, and an edge
+      that says "contrary" carries more weight than most. Use it where the
+      corpus states the contrast -- says they are contrary, asks what one has
+      to do with the other, denies that one is in the other at all -- or where
+      it builds the contrast structurally, as the regnal formulas do by giving
+      every reign one verdict or the other and never both.
+
+      **Do not use it for tensions the corpus leaves standing.** Rom 4:3 and
+      Jas 2:24 are held apart by readers, not by the text. Marking them
+      contrary would settle by vocabulary what the corpus declines to settle,
+      and this graph's whole claim is that it does not do that.
+
+      Nor is it for people who opposed each other -- that is `enemy_of`, or
+      `rebuked`, or `conspired_against`. Paul withstood Peter to the face
+      without either becoming the other's opposite.
+
+  conspired_against:
+    # A being as source. "the devil had already put into the heart of Judas,
+    # the son of Simon Iscariot, to betray Jesus" (John 13:2), and Satan provoking David to
+    # number Israel (1Chr 21:1). The corpus attributes conspiracy to more
+    # than men, and a person-only type would drop the instigator and keep
+    # only the hand.
+    src_type: [person, group, being]
+    dst_type: [person, group]
+    label: "conspired against"
+    inverse: "was the target of a conspiracy by"
+    category: antagonism
+    weight: 2
+    group: "Conspiracies"
+
+  betrayed:
+    src_type: [person, group]
+    dst_type: [person, group]
+    label: "betrayed"
+    inverse: "was betrayed by"
+    category: antagonism
+    weight: 3
+    group: "Betrayals"
+    notes: >
+      Judas and Jesus (Matt 26:14-16, 48-49).
+
+      A body of people as often as one man, on the same reasoning as
+      prophet_to: the Ziphites carry David's hiding place to Saul twice
+      (1Sam 23:19, 26:1), and the men of Keilah would have delivered him
+      up had he stayed (1Sam 23:12).
+
+  killed:
+    # A being too, 2026-08-29. "Er, Judah's firstborn, was wicked in the
+    # sight of the LORD; and the LORD slew him" (Gen 38:7), and Onan two
+    # verses later. See `cursed`.
+    src_type: [person, group, being]
+    # Creatures too. "Your servant has killed lions and bears" (1Sam
+    # 17:36) could not be recorded while this took only people, and it is
+    # the verse David uses to argue he can face Goliath.
+    dst_type: [person, group, creature]
+    label: "killed"
+    inverse: "was killed by"
+    category: antagonism
+    weight: 3
+    group: "Killings"
+    notes: >
+      Direct responsibility, including ordering the death (2Sam 12:9, where the
+      text charges David with Uriah's death). Note the ordering in the relation's
+      note when it is indirect.
+
+  attacked:
+    src_type: [person, group, being]
+    dst_type: [person, group]
+    label: "attacked / made war on"
+    inverse: "was attacked by"
+    category: antagonism
+    weight: 2
+    group: "Attacks"
+
+  deceived:
+    # Declared explicitly because the default is `person`, and the default
+    # silently excluded the deception the whole corpus turns on: the serpent
+    # and Eve (Gen 3:13, and she says so herself -- "the serpent beguiled me,
+    # and I did eat"). The type was written from Jacob and the Gibeonites,
+    # where both parties are human, and nothing checked it against Genesis 3.
+    src_type: [person, group, being, creature]
+    dst_type: [person, group, being]
+    label: "deceived"
+    inverse: "was deceived by"
+    category: antagonism
+    weight: 2
+    group: "Deceptions"
+    notes: Jacob and Isaac (Gen 27:19); Gibeonites and Joshua (Josh 9:3-15);
+      the serpent and Eve (Gen 3:13).
+
+  cast_into:
+    src_type: [person, group]
+    dst_type: [place, object]
+    label: "was cast into"
+    inverse: "held"
+    category: antagonism
+    weight: 5
+    group: "Cast into"
+    notes: >
+      Someone put somewhere against their will and kept there: Daniel into
+      the den of lions (Dan 6:16), the three into the burning fiery furnace
+      (Dan 3:21), Joseph into the pit (Gen 37:24), Jeremiah into the dungeon
+      (Jer 38:6), Jonah into the sea (Jonah 1:15).
+
+      The source is the one who ends up inside, not the one doing the
+      throwing, because that is the fact the reader is looking for and the
+      thrower is usually a crowd the text does not name. Who ordered it is
+      recorded separately where the corpus says -- Nebuchadnezzar commands
+      the furnace heated and Darius signs the decree he then cannot undo.
+
+      `imprisoned` joins two people and is the right type for a captivity.
+      This one joins a person to the thing, because in these episodes the
+      thing is the point: the furnace is heated seven times more than it was
+      wont, and the stone on the den is sealed with the king's own signet.
+
+  imprisoned:
+    src_type: [person, group]
+    dst_type: [person, group, concept]
+    label: "imprisoned"
+    inverse: "was imprisoned by"
+    category: antagonism
+    weight: 2
+    group: "Imprisonments"
+
+  # ---- places ---------------------------------------------------------
+  # Source is a person, target is a place, except located_in which joins two
+  # places. Only record a tie the text actually makes: someone being present
+  # somewhere once is not `dwelt_at`.
+  founded:
+    src_type: person
+    dst_type: place
+    label: "founded"
+    inverse: "was founded by"
+    category: geography
+    weight: 5
+    group: "Founding"
+    notes: >
+      For the Chronicles idiom "X the father of Y" where Y is a town --
+      "Ashhur the father of Tekoa" (1Chr 2:24, 4:5), "Penuel was the father
+      of Gedor" (1Chr 4:4), "Hur ... the father of Bethlehem" (1Chr 4:4).
+      The standard reading is founder, or principal ancestor of the town's
+      inhabitants; the vocabulary translates the idiom the way it translates
+      "fathered" as father_of. **Always quote the phrase in the relation's note**, so a reader
+      sees the words the text used and can weigh the reading.
+      Not mechanically separable from genuine paternity: "Hamor the father of
+      Shechem" (Gen 34:6) is a real father and son who also names a city. Decide
+      per instance, and use father_of where the son is a person.
+
+  born_at:
+    src_type: person
+    dst_type: place
+    label: "was born at"
+    inverse: "was the birthplace of"
+    category: geography
+    weight: 4
+    group: "Birthplace"
+    notes: Jesus at Bethlehem (Luke 2:4-7); use only where the text says born, not merely present.
+
+  died_at:
+    src_type: person
+    dst_type: place
+    label: "died at"
+    inverse: "was where they died"
+    category: geography
+    weight: 4
+    group: "Died at"
+
+  buried_at:
+    src_type: person
+    dst_type: [place, object]
+    label: "was buried at"
+    inverse: "is the burial place of"
+    category: geography
+    weight: 4
+    group: "Buried at"
+    notes: Sarah in the cave of Machpelah (Gen 23:19); Jacob's burial (Gen 50:13).
+
+  dwelt_at:
+    src_type: [person, group]
+    dst_type: place
+    label: "lived at"
+    inverse: "was home to"
+    category: geography
+    weight: 3
+    group: "Dwelt at"
+    notes: >
+      A settled residence the text establishes, not a single visit. Abraham at
+      Hebron (Gen 13:18); Paul at Corinth for a year and six months (Acts 18:11).
+
+  stationed_at:
+    src_type: [being, creature]
+    dst_type: [place, object]
+    label: "was stationed at"
+    inverse: "had stationed at it"
+    category: geography
+    weight: 4
+    group: "Stationed at"
+    notes: >
+      Where the text posts a being or a creature and leaves it there. The
+      cherubim at the east of Eden with the flaming sword (Gen 3:24); the two
+      over the mercy seat, from between which God says he will speak (Exod
+      25:20-22); the cherubim Ezekiel sees at the threshold of the house (Ezek
+      10:18-19).
+
+      `dwelt_at` will not carry these, and the reason is worth stating: it
+      takes a person or a group, because a settled human residence is what it
+      was built for. A cherub is neither, and forcing it into `dwelt_at` would
+      claim the cherubim *lived* in Eden -- which is a reading of Genesis 3:24,
+      not what it says. The text says they were placed.
+
+      Placement, not residence, and not purpose. Genesis says the cherubim
+      were put there "to keep the way of the tree of life"; that clause is in
+      the citation where a reader can weigh it, and this type does not restate
+      it as a claim about what cherubim are for.
+
+  reigned_over:
+    src_type: person
+    dst_type: [place, group]
+    label: "reigned over"
+    inverse: "was reigned over by"
+    category: political
+    weight: 4
+    group: "Reign"
+    notes: >
+      The realm, not the seat. "Ahab began to reign over Israel" (1Kgs 16:29)
+      and "Ahab ruled from Samaria" are two different facts, and the text
+      states them separately -- often in the same verse. Without this the
+      reigns had nowhere to go: they were recorded as `led` against the people,
+      which is what a judge does, and left the kingdoms themselves nearly
+      unconnected. Distinct from `led`, which the text reserves for judging and
+      for leading men into battle.
+
+  ruled_from:
+    src_type: person
+    dst_type: place
+    label: "ruled from"
+    inverse: "was the seat of"
+    category: geography
+    weight: 3
+    group: "Seat of rule"
+    notes: David reigning from Hebron then Jerusalem (2Sam 5:5).
+
+  traveled_to:
+    src_type: [person, group]
+    dst_type: place
+    label: "went to"
+    inverse: "was visited by"
+    category: geography
+    weight: 1
+    group: "Travelled to"
+    notes: >
+      A journey the narrative marks. Deliberately weak: nearly everyone goes
+      nearly everywhere, and recording each move would swamp the stronger ties.
+
+  # ---- groups ---------------------------------------------------------
+  # A group is a set of people the text treats as a single actor. Record a
+  # relation to the group where that is what the text does — "Saul smote the
+  # Amalekites" is Saul against a people, not against any named person. Do not
+  # dissolve a group into its members, and do not invent membership the text
+  # does not state.
+  member_of:
+    src_type: [person, concept]
+    dst_type: group
+    label: "belonged to"
+    inverse: "counted among its members"
+    category: community
+    weight: 4
+    group: "Members"
+    notes: >
+      Only where the text places the person in the group: Saul a Benjamite
+      (1Sam 9:1), Paul a Pharisee (Acts 23:6), Barnabas a Levite (Acts 4:36).
+
+  led:
+    # Widened 2026-08-28 from person -> group. "He leads me beside quiet
+    # waters" (Ps 23:2) is the same verb doing the same work as Moses leading
+    # Israel; only the cardinality differs, and the corpus does not use a
+    # different word for it. A worker decomposing Psalm 23 could not say the
+    # central action of the psalm and raised it as a vocabulary question, which
+    # is the right outcome and also the sign the type was too narrow.
+    #
+    # `being` as a source because most individual leading in the corpus is
+    # done by the LORD rather than by a person.
+    # A group leading, 2026-08-29: the two angels lay hold on Lot's hand and
+    # bring him out of Sodom (Gen 19:16). Leading is not only an individual's
+    # act, and the corpus does not use a different word when it is not.
+    src_type: [person, being, group, concept]
+    dst_type: [person, group]
+    label: "led"
+    inverse: "was led by"
+    category: community
+    weight: 4
+    group: "Leadership"
+    notes: >
+      Moses and Israel, Joab and David's army, a judge over the people -- and
+      the LORD leading one person, which is most of the Psalms and Prophets.
+
+  present_with:
+    # The graph could not say "God is with someone", which is a large enough
+    # category that its absence was a hole rather than a gap: Immanuel, "I am
+    # with you, and I will watch over you" (Gen 28:15), "Never will I leave
+    # you, never will I forsake you" (Heb 13:5), "surely I am with you always"
+    # (Matt 28:20), and "for You are with me" (Ps 23:4), which is the hinge of that psalm.
+    #
+    # Deliberately not `companion_of`, which exists and reads as peer
+    # company -- Paul and Barnabas travelling together. Flattening presence
+    # into companionship would lose the thing every one of those verses is
+    # actually claiming.
+    #
+    # Presence asserted by the text, not inferred from God being omnipresent.
+    # If the verse does not say it, this edge does not exist.
+    # A group on the near side too, 2026-08-29. Joseph's brethren stand
+    # before him (Gen 43:15), and the presence the verse records is the whole
+    # company's rather than any one brother's.
+    src_type: [being, person, group, concept]
+    dst_type: [person, group, being, concept]
+    label: "is with"
+    inverse: "has with them"
+    category: community
+    weight: 5
+    group: "Presence"
+    notes: >
+      Only where the text states the presence. Omnipresence is a doctrine and
+      not a citation; this type records verses that say someone is with
+      someone.
+
+  descended_from_person:
+    src_type: group
+    dst_type: person
+    label: "descends from"
+    inverse: "is the ancestor of"
+    category: community
+    weight: 3
+    group: "Descent from"
+    notes: >
+      A tribe or nation to the person it is named for and traced from: the
+      children of Judah from Judah, the Moabites from Moab (Gen 19:37). This is
+      how the text itself explains a people's origin, and it is what keeps the
+      person Moab and the nation Moab distinct while joined.
+
+  fought:
+    src_type: [person, group]
+    dst_type: [person, group]
+    label: "made war on"
+    inverse: "was fought by"
+    category: community
+    weight: 3
+    group: "Warfare"
+    notes: >
+      Either side may be a person or a people, because the text puts it both
+      ways: "Saul struck down the Amalekites" (1Sam 15:7) and "So the
+      Philistines fought, and Israel was defeated" (1Sam 4:10), which names
+      no commander at all. Use
+      attacked for violence between two named individuals.
+
+  conquered:
+    src_type: [person, group]
+    dst_type: [person, group]
+    label: "conquered"
+    inverse: "was conquered by"
+    category: community
+    weight: 4
+    group: "Conquest & exile"
+    notes: >
+      Subjugation with a lasting outcome, distinct from a battle: Assyria
+      carrying Israel away (2Kgs 17:6), Babylon taking Judah (2Kgs 25:21).
+      The exile is one of the central facts of the Old Testament and names no
+      single actor on the losing side, which is why this takes groups at both
+      ends. Record the battle as fought and the outcome as conquered where the
+      text gives both.
+
+  wrote_to:
+    src_type: person
+    dst_type: group
+    label: "wrote to"
+    inverse: "received a letter from"
+    category: community
+    weight: 4
+    group: "Letters to churches"
+    notes: >
+      An epistle addressed to a congregation, cited from the salutation that
+      names it: "To the saints in Ephesus" (Eph 1:1), "To the church of God
+      in Corinth" (1Cor 1:2). The target is the CHURCH, which is
+      a group, not the town it met in — Paul wrote to people, and the place is a
+      fact about them rather than the addressee. Join the church to its town with
+      based_at. Record only what the letter's own address gives, not where
+      tradition says it was written or sent. Where a letter names no addressee —
+      Hebrews, James, 1 John — there is nothing to record.
+
+  wrote_letter_to:
+    src_type: person
+    dst_type: person
+    label: "wrote to"
+    inverse: "received a letter from"
+    category: affiliation
+    weight: 4
+    group: "Letters to individuals"
+    notes: >
+      The counterpart for letters addressed to a person rather than a
+      congregation: Paul to Timothy, Titus and Philemon, John to Gaius (3John 1).
+
+  based_at:
+    src_type: group
+    dst_type: place
+    # "Met at" was written for congregations and is wrong for the 23 of 40 that
+    # are peoples, tribes and kingdoms -- "the Assyrians met at Assyria". The
+    # label has to work for a plural subject and a singular one alike, since the
+    # sentence is built as src + label + dst, so it is a past-tense verb with no
+    # number of its own.
+    label: "centred on"
+    inverse: "was the centre of"
+    category: geography
+    weight: 4
+    group: "Where it met"
+    notes: >
+      Joins a congregation, household or tribe to the place it belongs to, so
+      that "the church at Ephesus" is a group with a location rather than a
+      synonym for the town.
+
+  located_in:
+    src_type: [place, object]
+    dst_type: place
+    label: "is in"
+    inverse: "contains"
+    category: geography
+    weight: 4
+    group: "Contained in"
+    notes: Place to place — Bethlehem in Judah, Capernaum in Galilee.
+
+  judged:
+    # A being judges as readily as a person, and in this corpus rather more
+    # often: "Because you did not trust Me ... you will not bring this
+    # assembly into the land" (Num 20:12). A person-only source
+    # would drop the sentence and keep only the sentenced.
+    src_type: [person, group, being]
+    dst_type: [person, group]
+    label: "passed judgment on"
+    inverse: "was judged by"
+    category: antagonism
+    weight: 2
+    group: "Judgments"
+    notes: Pilate and Jesus (John 19:13-16); formal legal proceedings.
+
+  aspect_of:
+    # ONE FACET OF A LARGER IDEA. Added 2026-09-29 for the major-theme map
+    # (Microsoft Copilot's, credited). Doug: "we can have nodes for concepts
+    # if the concept can be described by scripture. If there is an existing
+    # node that caries that concept, we should merge with it but only if it
+    # really has the same meaning." "Sin as Rebellion Against God" is not the
+    # node `sin` -- merging would lose what it says -- and it is not unrelated
+    # to it either; it is one side of it. Nothing in the vocabulary said that:
+    # `specializes` is pattern -> pattern (the validator enforces it), and the
+    # vocabulary has no catch-all, deliberately. Doug chose to add this and
+    # `in_theme` rather than leave the nodes unconnected.
+    #
+    # NOT `specializes`: that is a narrower FORM of a pattern, an occurrence
+    # taxonomy. NOT `part_of`: containment of texts. An aspect is a way of
+    # seeing the whole, and the whole stays one node.
+    #
+    # The taxonomy is the map's, not the text's, so an edge is `implied`, and
+    # it cites the passages that describe the aspect.
+    #
+    # `pattern` added 2026-09-30 for the speech acts (tools/themes/
+    # speech_acts.py): the act of praise is the spoken side of the concept
+    # `praise` the graph already had, and merging would lose that one is a
+    # kind of speaking found by its label and the other gathers cited
+    # statements. Grounded by the verses both hold, and made only where
+    # there are some:  sact_praise -aspect_of-> praise
+    src_type: [concept, pattern]
+    dst_type: [concept, being, observance, covenant, title, image, object,
+               place, group, person]
+    label: "is an aspect of"
+    inverse: "has as an aspect"
+    category: meaning
+    weight: 3
+    group: "Aspects"
+    notes: >
+      "God as Creator" is an aspect of God; "Spirit in Creation" of the Holy
+      Spirit; "Sacrifice as Worship" of sacrifice. Each aspect is its own node
+      because scripture describes it on its own (the passages it cites), and
+      it is joined to the idea it is a facet of rather than merged into it.
+
+  in_theme:
+    # A CORE CONCEPT OF A MAJOR THEME. Added 2026-09-29 with `aspect_of`, for
+    # the same map and the same reason. The themes (Creation through
+    # Apocalyptic) are Microsoft Copilot's, credited; each core concept is
+    # described by the passages it cites, all checked against the Berean
+    # text. `implied`: the grouping is the map's reading.
+    #
+    # `event` added 2026-09-29, Doug's decision card: "Events to themes" --
+    # link each event to the major themes its passages carry, with scripture
+    # behind each link: the theme map cites a passage of the event, or the
+    # clause tags give three or more of its verses the theme's stamps.
+    # `text` added 2026-10-07 (A.34). Doug: "having two cards is confusing".
+    # The Spiritual Warfare concept "The full armor of God" is the passage the
+    # graph already holds as a saying (Eph 6:10-18), so the two are one node,
+    # and a saying has to be able to be a theme's core concept for that.
+    src_type: [concept, observance, event, text]
+    dst_type: [concept]
+    label: "is a core concept of the major theme"
+    inverse: "has as a core concept"
+    category: meaning
+    weight: 2
+    group: "Major themes"
+    notes: >
+      "Covenant Signs" is a core concept of the major theme Covenant; "the day
+      of atonement" (an observance) of the major theme Sacrifice. The theme's
+      own page lists its concepts with their passages.
+
+# Certainty levels a relation may carry.
+certainty:
+  explicit: The verse states the relationship in so many words.
+  implied: >
+    The verse entails it without stating it (e.g. two men called sons of the same
+    father are therefore brothers), or it follows from an adjacent verse.
+  conjectured: >
+    Neither stated nor entailed, but the most reasonable reading of the text.
+    The note must carry the reasoning and name the doubt: what makes it likely,
+    and what would overturn it. Use this instead of silence when the honest
+    answer is "probably, and here is why" — an annotated best reading is more
+    useful to a reader than a gap, and more honest than an unmarked assertion.
+    Anything recorded this way should be reversible without disturbing the rest
+    of the graph.
+  disputed: >
+    Reasonable readings differ, or parallel passages disagree. Record the
+    disagreement in the relation's note. Distinct from `conjectured`: disputed
+    means the evidence pulls two ways, conjectured means it points one way
+    without settling.

@@ -1,0 +1,386 @@
+[
+ {
+  "a": "lamech_son_of_methusael",
+  "b": "lamech_the_cainite",
+  "a_name": "Lamech",
+  "b_name": "Lamech",
+  "verdict": "DUPLICATE",
+  "why": "Gen 4:18 names Lamech son of Methusael in the Cainite line and Gen 4:19-24 gives that Lamech his wives Adah and Zillah; the text introduces no second Lamech."
+ },
+ {
+  "a": "korah",
+  "b": "korah_son_of_esau",
+  "a_name": "Korah",
+  "b_name": "Korah",
+  "verdict": "CONFLATION",
+  "why": "Record 'korah' is described as the Korah of Jude 1:11 (the rebellion), but also cites 1Chr 1:35, which lists Korah among Esau's sons and parallels Gen 36:5 (korah_son_of_esau).",
+  "move_refs": "1Chr 1:35 belongs to korah_son_of_esau (Esau's son; same list as Gen 36:5, so it duplicates that record). Jude 1:11 belongs with korah_son_of_izhar (Num 16:1-3); the 'korah' record is best merged into that one once 1Chr 1:35 is moved out."
+ },
+ {
+  "a": "bashemath_daughter_of_elon",
+  "b": "bashemath_daughter_of_ishmael",
+  "a_name": "Basemath",
+  "b_name": "Basemath",
+  "verdict": "UNSURE",
+  "why": "Gen 26:34 calls Basemath the daughter of Elon the Hittite, Gen 36:3 the daughter of Ishmael and sister of Nebaioth; the text holds both and the graph must not harmonize them."
+ },
+ {
+  "a": "bavai_son_of_henadad",
+  "b": "binnui_son_of_henadad",
+  "a_name": "Binnui",
+  "b_name": "Binnui",
+  "verdict": "UNSURE",
+  "why": "Neh 3:18 and 3:24 both give Binnui son of Henadad, but most Hebrew manuscripts read Bavvai at 3:18, and Neh 3 sometimes has one man repair two sections (e.g. Meremoth 3:4, 3:21); the text does not settle it."
+ },
+ {
+  "a": "job_1_14_messenger",
+  "b": "job_1_16_messenger",
+  "a_name": "a messenger",
+  "b_name": "a messenger",
+  "verdict": "DISTINCT",
+  "why": "Job 1:16 begins 'another messenger came' while the previous was still speaking; the four messengers (1:14-15, 1:16, 1:17, 1:18-19) are distinct people."
+ },
+ {
+  "a": "job_1_14_messenger",
+  "b": "job_1_17_messenger",
+  "a_name": "a messenger",
+  "b_name": "a messenger",
+  "verdict": "DISTINCT",
+  "why": "Job 1:17 begins 'another messenger came' while the previous was still speaking; the four messengers (1:14-15, 1:16, 1:17, 1:18-19) are distinct people."
+ },
+ {
+  "a": "job_1_14_messenger",
+  "b": "job_1_18_messenger",
+  "a_name": "a messenger",
+  "b_name": "a messenger",
+  "verdict": "DISTINCT",
+  "why": "Job 1:18 begins 'another messenger came' while the previous was still speaking; the four messengers (1:14-15, 1:16, 1:17, 1:18-19) are distinct people."
+ },
+ {
+  "a": "job_1_16_messenger",
+  "b": "job_1_17_messenger",
+  "a_name": "a messenger",
+  "b_name": "a messenger",
+  "verdict": "DISTINCT",
+  "why": "Job 1:17 begins 'another messenger came' while the previous was still speaking; the four messengers (1:14-15, 1:16, 1:17, 1:18-19) are distinct people."
+ },
+ {
+  "a": "job_1_16_messenger",
+  "b": "job_1_18_messenger",
+  "a_name": "a messenger",
+  "b_name": "a messenger",
+  "verdict": "DISTINCT",
+  "why": "Job 1:18 begins 'another messenger came' while the previous was still speaking; the four messengers (1:14-15, 1:16, 1:17, 1:18-19) are distinct people."
+ },
+ {
+  "a": "job_1_17_messenger",
+  "b": "job_1_18_messenger",
+  "a_name": "a messenger",
+  "b_name": "a messenger",
+  "verdict": "DISTINCT",
+  "why": "Job 1:18 begins 'another messenger came' while the previous was still speaking; the four messengers (1:14-15, 1:16, 1:17, 1:18-19) are distinct people."
+ },
+ {
+  "a": "john_mark",
+  "b": "john_son_of_zebedee",
+  "a_name": "John",
+  "b_name": "John",
+  "verdict": "DISTINCT",
+  "why": "John called Mark (Acts 12:12, Col 4:10, cousin of Barnabas) is not John son of Zebedee, an apostle (Mark 1:19, Acts 1:13)."
+ },
+ {
+  "a": "nahor_father_of_terah",
+  "b": "nahor_son_of_serug",
+  "a_name": "Nahor",
+  "b_name": "Nahor",
+  "verdict": "DUPLICATE",
+  "why": "Gen 11:22 Serug fathers Nahor, and Gen 11:24-25 that Nahor fathers Terah; the record 'Nahor father of Terah' is the same man as Nahor son of Serug (Luke 3:34 also gives Terah as Nahor's son)."
+ },
+ {
+  "a": "job_1_14_messenger",
+  "b": "job_1_15_messenger",
+  "a_name": "a messenger",
+  "b_name": "a messenger",
+  "verdict": "DUPLICATE",
+  "why": "Job 1:14-15 is one speech: the messenger who reports the oxen and donkeys also reports the Sabeans; 1:16 then begins 'another messenger'. The 1:15 record's description ('the second messenger') is wrong; the 1:16 messenger is the second."
+ },
+ {
+  "a": "jehoahaz_son_of_jehu",
+  "b": "jehoahaz_son_of_josiah",
+  "a_name": "Jehoahaz",
+  "b_name": "Jehoahaz",
+  "verdict": "DISTINCT",
+  "why": "Jehoahaz son of Jehu (2Kgs 10:35, king of Israel) and Jehoahaz son of Josiah (2Kgs 23:30, king of Judah) are different kings a couple of centuries apart."
+ },
+ {
+  "a": "zacharias_father_of_john_the_baptist",
+  "b": "zechariah_son_of_jehoiada",
+  "a_name": "Zechariah",
+  "b_name": "Zechariah",
+  "verdict": "DISTINCT",
+  "why": "Zechariah the priest of Luke 1:5 (father of John) and Zechariah son of Jehoiada (2Chr 24:20) are about eight hundred years apart."
+ },
+ {
+  "a": "hashabiah_ezra8",
+  "b": "hashabiah_levite_neh10",
+  "a_name": "Hashabiah",
+  "b_name": "Hashabiah",
+  "verdict": "UNSURE",
+  "why": "Hashabiah the Merarite of Ezra 8:19 and the Levite Hashabiah who sealed in Neh 10:11 may be one man in the same community, but no verse links them and the name is common."
+ },
+ {
+  "a": "jozabad_of_levites_levites",
+  "b": "jozabad_son_of_jeshua_ezra8",
+  "a_name": "Jozabad",
+  "b_name": "Jozabad",
+  "verdict": "UNSURE",
+  "why": "Jozabad son of Jeshua (Ezra 8:33) and Jozabad among the Levites in Ezra 10:23 are both Levites of Ezra's time, but nothing ties them together."
+ },
+ {
+  "a": "shebaniah_levite_neh10_10",
+  "b": "shebaniah_levite_neh10_12",
+  "a_name": "Shebaniah",
+  "b_name": "Shebaniah",
+  "verdict": "DISTINCT",
+  "why": "Neh 10:10 and 10:12 list Shebaniah twice in one list of Levites; a list does not repeat a man, so two men of that name."
+ },
+ {
+  "a": "sherebiah_ezra8",
+  "b": "sherebiah_levite_neh10",
+  "a_name": "Sherebiah",
+  "b_name": "Sherebiah",
+  "verdict": "UNSURE",
+  "why": "Sherebiah of Mahli (Ezra 8:18) and Sherebiah in Neh 10:12 are plausibly the same Levite a decade or so apart, but the text never says so."
+ },
+ {
+  "a": "bani_chief_neh10",
+  "b": "bani_of_bani",
+  "a_name": "Bani",
+  "b_name": "Bani",
+  "verdict": "UNSURE",
+  "why": "Bani the people's leader (Neh 10:14) and the 'Bani' tied to Ezra 10:38 (where the Berean text reads 'descendants of Binnui', so that record rests on a variant) may be one clan head or only the same family name; Bani and Binnui interchange as clan names elsewhere (Ezra 2:10, Neh 7:15), so the text leaves it open."
+ },
+ {
+  "a": "shelemiah_of_bani_39",
+  "b": "shelemiah_of_bani_41",
+  "a_name": "Shelemiah",
+  "b_name": "Shelemiah",
+  "verdict": "DISTINCT",
+  "why": "Shelemiah appears at Ezra 10:39 and again at 10:41 in one list of Bani's descendants who had taken foreign wives; a list repeating a name names two men."
+ },
+ {
+  "a": "jeroboam_son_of_joash",
+  "b": "jeroboam_son_of_nebat",
+  "a_name": "Jeroboam",
+  "b_name": "Jeroboam",
+  "verdict": "DISTINCT",
+  "why": "Jeroboam son of Nebat (1Kgs 11:26, first king of the northern kingdom) and Jeroboam son of Jehoash (2Kgs 13:13, Amos 1:1) reigned about 150 years apart."
+ },
+ {
+  "a": "jabal",
+  "b": "jubal",
+  "a_name": "Jabal",
+  "b_name": "Jubal",
+  "verdict": "DISTINCT",
+  "why": "Jabal and Jubal are named as brothers, sons of Lamech (Gen 4:20-21); the names are alike but the sons are two."
+ },
+ {
+  "a": "shammua_son_of_david",
+  "b": "shimea",
+  "a_name": "Shammua",
+  "b_name": "Shimea",
+  "verdict": "SAME",
+  "why": "The lists of David's sons born in Jerusalem run in the same order, Shammua, Shobab, Nathan, Solomon (2Sam 5:14, 1Chr 14:4), and Shimea, Shobab, Nathan, Solomon (1Chr 3:5).",
+  "note": "A reading, not the text's statement. FOR: the parallel lists give the same four sons in the same order, 'Shammua, Shobab, Nathan, Solomon' (2Sam 5:14; 1Chr 14:4) against 'Shimea, Shobab, Nathan, and Solomon' (1Chr 3:5), with only the first name differing, and 1Chr 3:5 introduces them with the same words, 'born to him in Jerusalem'. AGAINST: the two spellings are not identical in Hebrew, and 2Sam 5:14 does not say they were Bathsheba's, as 1Chr 3:5 does.",
+  "refs": [
+   "2Sam 5:14",
+   "1Chr 14:4",
+   "1Chr 3:5"
+  ]
+ },
+ {
+  "a": "shammah_son_of_jesse",
+  "b": "shimeah_brother_of_david",
+  "a_name": "Shammah",
+  "b_name": "Shimeah",
+  "verdict": "SAME",
+  "why": "Shammah is Jesse's third son (1Sam 17:13); Shimeah is David's brother, father of Jonadab (2Sam 13:3) and of Jonathan (1Chr 20:7, where he is called Shimei).",
+  "note": "A reading, not the text's statement. FOR: Shammah is the third of Jesse's sons (1Sam 17:13) and the parallel list gives Shimea as third (1Chr 2:13); Shimeah is David's brother (2Sam 13:3), and his son Jonathan is called son of David's brother Shimei in 1Chr 20:7, so one brother's name is spelled Shammah, Shimea, Shimeah and Shimei. AGAINST: no verse says outright that Shimeah is the third son; the spellings differ in Hebrew, and David's brothers could include half-brothers.",
+  "refs": [
+   "1Sam 17:13",
+   "1Chr 2:13",
+   "2Sam 13:3",
+   "1Chr 20:7"
+  ]
+ },
+ {
+  "a": "dan",
+  "b": "dinah",
+  "a_name": "Dan",
+  "b_name": "Dinah",
+  "verdict": "DISTINCT",
+  "why": "Dan was Rachel's maid's son (Gen 30:6), Dinah was Leah's daughter (Gen 30:21); different children of Jacob."
+ },
+ {
+  "a": "shammah_son_of_jesse",
+  "b": "shimma",
+  "a_name": "Shammah",
+  "b_name": "Shimea",
+  "verdict": "SAME",
+  "why": "Jesse's sons are listed Eliab, Abinadab, then Shammah (1Sam 17:13) and Eliab, Abinadab, Shimea (1Chr 2:13); the same third place in the same order.",
+  "note": "A reading, not the text's statement. FOR: both lists of Jesse's sons run Eliab first, Abinadab second, and the third is Shammah (1Sam 17:13) or Shimea (1Chr 2:13), the same position under the same father. AGAINST: the Hebrew spellings differ, and the lists are not stated to be one list.",
+  "refs": [
+   "1Sam 17:13",
+   "1Chr 2:13"
+  ]
+ },
+ {
+  "a": "joanna_wife_of_chuza",
+  "b": "john_son_of_zebedee",
+  "a_name": "Joanna",
+  "b_name": "John",
+  "verdict": "DISTINCT",
+  "why": "Joanna wife of Chuza (Luke 8:3) is a woman who followed Jesus; John son of Zebedee is an apostle. Different people."
+ },
+ {
+  "a": "ebal",
+  "b": "obal",
+  "a_name": "Ebal",
+  "b_name": "Obal",
+  "verdict": "SAME",
+  "why": "Joktan's sons appear in the same order in Gen 10:28 (Obal, Abimael, Sheba) and 1Chr 1:22 (Ebal in the Hebrew, Obal in the Berean text); the Ebal record's cited ref 1Chr 1:20 should be 1:22.",
+  "note": "A reading, not the text's statement. FOR: Joktan's sons are listed in the same order in the two parallel genealogies, 'Obal, Abimael, Sheba' (Gen 10:28) and the same three at 1Chr 1:22, with only one vowel differing (Obal/Ebal in the Hebrew). AGAINST: the Hebrew names are spelled differently, and the Chronicler's list is not marked as a copy of Genesis.",
+  "refs": [
+   "Gen 10:28",
+   "1Chr 1:22"
+  ]
+ },
+ {
+  "a": "jesus",
+  "b": "joshua",
+  "a_name": "Jesus",
+  "b_name": "Joshua",
+  "verdict": "DISTINCT",
+  "why": "Jesus Christ (2Cor 4:5) and Joshua son of Nun (Exod 33:11) are different people; 'Jesus' is the Greek form of Joshua, so the names agree and the men do not."
+ },
+ {
+  "a": "john_mark",
+  "b": "junia",
+  "a_name": "John",
+  "b_name": "Junia",
+  "verdict": "DISTINCT",
+  "why": "John Mark (Acts 12:12) and Junia (Rom 16:7) are different people."
+ },
+ {
+  "a": "john_son_of_zebedee",
+  "b": "junia",
+  "a_name": "John",
+  "b_name": "Junia",
+  "verdict": "DISTINCT",
+  "why": "John son of Zebedee (Mark 1:19) and Junia (Rom 16:7) are different people."
+ },
+ {
+  "a": "bani_levite_neh10",
+  "b": "binnui_of_henadad_neh10",
+  "a_name": "Bani",
+  "b_name": "Binnui",
+  "verdict": "DISTINCT",
+  "why": "Binnui (Neh 10:9) and Bani (Neh 10:13) are separate entries in the same list of Levites."
+ },
+ {
+  "a": "beninu_levite_neh10",
+  "b": "binnui_of_henadad_neh10",
+  "a_name": "Beninu",
+  "b_name": "Binnui",
+  "verdict": "DISTINCT",
+  "why": "Binnui (Neh 10:9) and Beninu (Neh 10:13) are separate entries in the same list of Levites."
+ },
+ {
+  "a": "jeshaiah_of_merari_ezra8",
+  "b": "jeshua_son_of_azaniah",
+  "a_name": "Jeshaiah",
+  "b_name": "Jeshua",
+  "verdict": "DISTINCT",
+  "why": "Jeshaiah of Merari (Ezra 8:19) and Jeshua son of Azaniah (Neh 10:9) have different names and no link in the text."
+ },
+ {
+  "a": "bani_chief_neh10",
+  "b": "benaiah_of_bani",
+  "a_name": "Bani",
+  "b_name": "Benaiah",
+  "verdict": "DISTINCT",
+  "why": "Bani the leader (Neh 10:14) and Benaiah among those who took foreign wives (Ezra 10:35) have different names and no link."
+ },
+ {
+  "a": "bani_chief_neh10",
+  "b": "binnui_of_bani",
+  "a_name": "Bani",
+  "b_name": "Binnui",
+  "verdict": "UNSURE",
+  "why": "Bani (Neh 10:14) and Binnui (Ezra 10:38) are the two names the same clan carries in the parallel returnee lists (Ezra 2:10, Neh 7:15), but whether these two persons are one is not stated."
+ },
+ {
+  "a": "bani_of_bani",
+  "b": "benaiah_of_bani",
+  "a_name": "Bani",
+  "b_name": "Benaiah",
+  "verdict": "DISTINCT",
+  "why": "Bani (Ezra 10:38 record) and Benaiah (Ezra 10:35) are separate names in one list."
+ },
+ {
+  "a": "benaiah_of_bani",
+  "b": "binnui_of_bani",
+  "a_name": "Benaiah",
+  "b_name": "Binnui",
+  "verdict": "DISTINCT",
+  "why": "Benaiah (Ezra 10:35) and Binnui (Ezra 10:38) are separate names in one list."
+ },
+ {
+  "a": "shallum_of_bani",
+  "b": "shelemiah_of_bani_39",
+  "a_name": "Shallum",
+  "b_name": "Shelemiah",
+  "verdict": "DISTINCT",
+  "why": "Shallum (Ezra 10:42) and Shelemiah (Ezra 10:39) are separate names in one list."
+ },
+ {
+  "a": "shallum_of_bani",
+  "b": "shelemiah_of_bani_41",
+  "a_name": "Shallum",
+  "b_name": "Shelemiah",
+  "verdict": "DISTINCT",
+  "why": "Shallum (Ezra 10:42) and Shelemiah (Ezra 10:41) are separate names in one list."
+ },
+ {
+  "a": "hashum_chief_neh10",
+  "b": "shimei_of_hashum",
+  "a_name": "Hashum",
+  "b_name": "Shimei",
+  "verdict": "DISTINCT",
+  "why": "Hashum the leader (Neh 10:18) is the clan head; Shimei is one of his descendants who had taken a foreign wife (Ezra 10:33); different names, different roles."
+ },
+ {
+  "a": "pekah_son_of_remaliah",
+  "b": "pekahiah",
+  "a_name": "Pekah",
+  "b_name": "Pekahiah",
+  "verdict": "DISTINCT",
+  "why": "Pekahiah son of Menahem (2Kgs 15:22) was killed by Pekah son of Remaliah, who reigned in his place (2Kgs 15:25)."
+ },
+ {
+  "a": "joash_king_of_judah",
+  "b": "josiah",
+  "a_name": "Joash",
+  "b_name": "Josiah",
+  "verdict": "DISTINCT",
+  "why": "Joash (2Chr 24:1) and Josiah (2Chr 34:1) are different kings of Judah, separated by several generations (1Chr 3:11-14)."
+ },
+ {
+  "a": "joshua",
+  "b": "josiah",
+  "a_name": "Joshua",
+  "b_name": "Josiah",
+  "verdict": "DISTINCT",
+  "why": "Joshua son of Nun (Josh 1:1) and King Josiah (2Kgs 21:24, 2Chr 34:1) lived centuries apart; both are tied to a passover but are different men."
+ }
+]

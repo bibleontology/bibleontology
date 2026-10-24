@@ -1,0 +1,627 @@
+{
+ "_about": "The praise hub (plan 7.6f), built to the level of love and righteousness. A verb row by who praises (the agent) and whom (the patient) in out/frames.jsonl.gz, a noun row by the words in the noun's own verse; pick rows by hand where the text itself names the one it is about. The first row a verse matches takes it; a verse no row takes is listed under 'More'. Built by tools/concepts/hub_build.py into out/concept-hubs/praise.json. NOT SHOWN until reviewed.",
+ "id": "praise",
+ "shown": true,
+ "lead": "verb",
+ "titles": {
+  "verb": "Who praises, and whom",
+  "noun": "What the text says of praise"
+ },
+ "words": [
+  "h1984",
+  "h2167",
+  "h7623",
+  "h7624",
+  "g134",
+  "g5214",
+  "g5567",
+  "g1867",
+  "g1392",
+  "h8416",
+  "h4110",
+  "g136",
+  "g133",
+  "g1868",
+  "g239"
+ ],
+ "forms": {
+  "h1984": "verb",
+  "h7623": "verb"
+ },
+ "_forms_why": "the lexicon has no part of speech for הלל or שבח, so the builder would file them as nouns",
+ "_words_why": "The praise words, by the brief's word rule (2026-10-10). THE WORDS: הָלַל (the Hallelujah verb) with תְּהִלָּה (its noun, 'praise') and מַהֲלָל (Prov 27:21, 'a man is tested by the praise he receives', the same root); זָמַר ('sing praises') with ψάλλω and ὑμνέω, the Greek that renders it (Rom 15:9 quotes Ps 18:49, Heb 2:12 quotes Ps 22:22); שָׁבַח and its Aramaic שְׁבַח (Dan 2-5); αἰνέω with αἶνος and αἴνεσις (Luke 18:43 gave praise, Heb 13:15 a sacrifice of praise); ἔπαινος and ἐπαινέω, the Greek noun and verb the card already lists (Eph 1:6 'to the praise of His glorious grace', 1 Cor 11:2); ἁλληλουϊά (Rev 19:1-6, the Hebrew Hallelujah carried over). δοξάζω 'glorify' is in because the Greek uses it for 'they glorified God' beside αἰνέω (Luke 2:20 'glorifying and praising God'); it is the glory card's verb, so the hub says so in the rows that hold it, and its uses of the Father and the Son are in one row by hand. DIFFERENT WORDS, NOT IN THE ROWS: יָדָה (give thanks, praise, confess: 'give thanks' 50, 'praise' 22, 'confess' 13 in the Berean) and תּוֹדָה (thanksgiving, thank offering) are the thanks words, which the committee asked kept apart from praise, so only the verses where the Berean prints 'praise' are named under 'Other words translated praise' (the same Hebrew word, shown apart as love shows חֶסֶד); ἐξομολογέω (confess; 'I praise You, Father', Matt 11:25, Luke 10:21) likewise; ἀνθομολογέομαι (Luke 2:38) is a thanks word; בָּרַךְ / εὐλογέω / εὐλογητός are 'bless', a different word (Doug's brief).",
+ "sense": "praise|extol|laud|commend|sing|glorif|worthy|hallelujah",
+ "_sense_why": "Measured on the words' in-verse glosses (2026-10-10). הָלַל also means boast (11: Jer 9:23-24, Ps 34:2, 44:8, 49:6, 52:1, 97:7 ...), glory-in (7: Ps 105:3, 106:5, 1 Chr 16:10, Isa 41:16, 45:25, Jer 4:2 ...), go mad / make fools of (Isa 44:25, Job 12:17, Ps 102:8, Jer 25:16, 50:38, 51:7, Eccl 7:7), shine (Job 29:3, 31:26, Isa 13:10) and drive madly (Jer 46:9, Nah 2:4): not praise, and they fall away by themselves. The 'boast in the LORD' verses (Ps 34:2, 44:8, Jer 9:24) are the same Hebrew word in the reflexive; the Berean prints 'boast', so the page does not call them praise (flagged in the report). שָׁבַח: 'still' (Ps 65:7, 89:9) and 'holds back' (Prov 29:11) are the other שׁבח and fall away. זָמַר 'play' and 'make music' (Ps 144:9, 27:6, 33:2, 149:3) have no 'praise' in the gloss and fall away; 'sing' and 'sing praises' stay (Ps 101:1, 30:12, 66:2 are the same verb). ψάλλω 'making melody' (Eph 5:19) and ὑμνέω 'having sung a hymn' (Matt 26:30, Mark 14:26) say sing, not praise, and fall away. δοξάζω 'is honored / filled with glory / honored by men' fall away. 'Hallelujah' is added so that ἁλληλουϊά (gloss 'Hallelujah') counts.",
+ "others": {
+  "_why": "Doug, 2026-10-09 (love): the rows stand on the concept's own words; a different word the English also renders so is named apart with its verses. Here: יָדָה (the thanks word), the Aramaic ידה, נָוָה (Exod 15:2, the Berean's 'I will praise Him'), הִלּוּלִים (Lev 19:24, a praise offering). בָּרַךְ / εὐλογέω ('bless', Ps 103:1 'Bless the LORD, O my soul', Luke 1:64) are a different word and the Berean does not render them 'praise' except in a few places; they do not reach this list (the report says why).",
+  "title": "Other words translated “praise”",
+  "gloss": "\\b(praise\\w*|extol\\w*|laud\\w*)\\b",
+  "min_n": 5,
+  "min_share": 0.2,
+  "exclude": [
+   "g437",
+   "h3029"
+  ],
+  "_exclude_why": "the Berean prints thanks, not praise, at Luke 2:38 (ἀνθομολογέομαι, 'she gave thanks to God') and Dan 6:10 (the Aramaic ידה, 'gave thanks to his God'): the thanks words, not named as praise",
+  "add": {
+   "g2127": {
+    "verses": [
+     "Luke.1.64",
+     "Luke.24.53"
+    ],
+    "note": "These two are εὐλογέω, “bless”, a different word; here the Berean prints “praising”. “Bless the LORD, O my soul” (Ps 103:1, 104:1, 134:1) is בָּרַךְ, “bless”, another word that this page does not gather under praise."
+   },
+   "g1843": {
+    "verses": [
+     "Matt.11.25",
+     "Luke.10.21"
+    ],
+    "note": "The Greek is ἐξομολογέω, “acknowledge, confess” (as in Matt 3:6, “confessing their sins”); here the Berean prints “I praise You, Father”."
+   },
+   "g2129": {
+    "verses": [
+     "Rev.5.13"
+    ],
+    "note": "The Greek is εὐλογία, “blessing”; here the Berean prints “praise”. The verse names those it is said to; the page adds nothing."
+   },
+   "h3034": {
+    "verses": [
+     "Ps.118.1",
+     "Ps.118.28",
+     "Ps.136.1",
+     "Ps.138.4"
+    ],
+    "note": "The Berean prints “praise” for this word in the other verses shown, but most of its uses it prints “give thanks”, as in the four first shown here (the Hallel, Ps 118; Ps 136; Ps 138:4). It is the thanks word, and the page does not gather it under praise."
+   }
+  },
+  "_add_why": "panel 2026-10-10: Luke 1:64 and 24:53 are the Berean's 'praising' for εὐλογέω; Matt 11:25 and Luke 10:21 are 'I praise You, Father' (ἐξομολογέω, which MACULA glosses 'I fully consent'); Ps 118 and 136 are the Hallel's thanks verses; Ps 138:4 prints 'give thanks', so it is shown as a thanks verse"
+ },
+ "leads": [
+  "god",
+  "worship",
+  "glory",
+  "joy",
+  "songs",
+  "prayer",
+  "the_name_of_the_lord",
+  "levitical_singers",
+  "sacrifice",
+  "gods"
+ ],
+ "own_words": [
+  "Ps.34.1",
+  "Ps.150.6",
+  "Ps.145.3",
+  "Isa.43.21",
+  "Luke.19.37",
+  "Eph.1.12",
+  "Heb.13.15",
+  "Rev.19.5"
+ ],
+ "gather": [
+  "theme_creation_r18",
+  "theme_church_r2",
+  "theme_sin_exile_death_r24",
+  "theme_priesthood_r26",
+  "theme_sacrifice_r21",
+  "theme_apocalyptic_r22",
+  "event_davids_psalms_of_thanksgiving",
+  "sact_praise",
+  "sact_thanksgiving",
+  "event_song_of_moses"
+ ],
+ "rows": [
+  {
+   "form": "verb",
+   "label": "Hallelujah, “Praise the LORD!”",
+   "patient": [
+    "יָהּ"
+   ],
+   "stance": [
+    "command"
+   ],
+   "add": [
+    "Ps.106.1"
+   ],
+   "doors": [
+    "god"
+   ],
+   "note": "The Hebrew הַלְלוּ־יָהּ is 'praise' (a command to a company) and יָהּ, a short form of the LORD's name; the Berean prints it “Hallelujah!”.",
+   "_add_why": "Ps 106:1 is the same Hallelujah; the frame lacks the patient"
+  },
+  {
+   "form": "verb",
+   "label": "Praise, sing to the name of the LORD",
+   "patient": [
+    "שֵׁם",
+    "ὄνομα"
+   ],
+   "doors": [
+    "the_name_of_the_lord",
+    "name"
+   ],
+   "not_verses": {
+    "John.12.28": "the Son's prayer to the Father, 'glorify Your name', shown in the row about the Father and the Son",
+    "Rev.15.4": "δοξάζω, “glorify Your name”, the only Greek in a Hebrew row of praise; shown in the row of “glorify God”"
+   }
+  },
+  {
+   "form": "verb",
+   "label": "The Levites, the priests and the singers",
+   "in_verse": [
+    "לֵוִי",
+    "כֹּהֵן"
+   ],
+   "add": [
+    "2Chr.5.13"
+   ],
+   "doors": [
+    "levites",
+    "priests",
+    "levitical_singers",
+    "theme_priesthood_r26"
+   ],
+   "_add_why": "2 Chr 5:13: 'the trumpeters and singers joined together to praise and thank the LORD'; the singers are named, the frame names none"
+  },
+  {
+   "form": "verb",
+   "label": "The heavens, the angels, the sun and moon, everything that has breath",
+   "agent": [
+    "מַלְאָךְ",
+    "צָבָא",
+    "שֶׁמֶשׁ",
+    "יָרֵחַ",
+    "כּוֹכָב",
+    "שָׁמַיִם",
+    "מַיִם",
+    "יָם",
+    "רָמַשׂ",
+    "נְשָׁמָה"
+   ],
+   "in_verse": [
+    "מַלְאָךְ",
+    "צָבָא",
+    "שֶׁמֶשׁ",
+    "יָרֵחַ",
+    "כּוֹכָב",
+    "שָׁמַיִם",
+    "מַיִם",
+    "יָם",
+    "רָמַשׂ",
+    "נְשָׁמָה"
+   ],
+   "add": [
+    "Luke.2.13"
+   ],
+   "doors": [
+    "the_angels",
+    "heaven"
+   ],
+   "_why": "agent AND in_verse: the frame's agent can come from a neighbouring verse (Ps 47:6-7 took 'Jacob' from 47:4); the verse must name them itself, so Ps 150:2-5, which call on everyone in 150:6 without naming them, are left to the call row below"
+  },
+  {
+   "form": "verb",
+   "label": "The nations, all the earth, the Gentiles",
+   "agent": [
+    "גּוֹי",
+    "אֻמָּה",
+    "אֶרֶץ",
+    "מַמְלָכָה",
+    "ἔθνος",
+    "λαός"
+   ],
+   "in_verse": [
+    "גּוֹי",
+    "אֻמָּה",
+    "אֶרֶץ",
+    "מַמְלָכָה",
+    "ἔθνος",
+    "λαός"
+   ],
+   "doors": [
+    "nations",
+    "gentiles"
+   ],
+   "not_verses": {
+    "Acts.13.48": "'glorified the word of the Lord' is not praise of the LORD; the verse is in the row of the other uses of the verb, whose note says so (panel, 2026-10-10)"
+   }
+  },
+  {
+   "form": "verb",
+   "label": "His servants, His saints, those who fear Him, who dwell in His house, Israel, Zion",
+   "agent": [
+    "עֶבֶד",
+    "חָסִיד",
+    "יָרֵא",
+    "צַדִּיק",
+    "יָשָׁר",
+    "בַּיִת",
+    "סוֹד",
+    "עֵדָה",
+    "צִיּוֹן",
+    "יִשְׂרָאֵל",
+    "יַעֲקֹב",
+    "קָהָל",
+    "δοῦλος (II)",
+    "φοβέω"
+   ],
+   "in_verse": [
+    "עֶבֶד",
+    "חָסִיד",
+    "יָרֵא",
+    "צַדִּיק",
+    "יָשָׁר",
+    "בַּיִת",
+    "סוֹד",
+    "עֵדָה",
+    "צִיּוֹן",
+    "יִשְׂרָאֵל",
+    "יַעֲקֹב",
+    "קָהָל",
+    "δοῦλος (II)",
+    "φοβέω"
+   ],
+   "add": [
+    "Ps.84.4"
+   ],
+   "doors": [
+    "children_of_israel",
+    "zion"
+   ]
+  },
+  {
+   "form": "verb",
+   "label": "“I will praise,” “I will sing,” “Praise the LORD, O my soul”",
+   "agent": [
+    "דָּוִד",
+    "אֲנִי",
+    "אָנֹכִי",
+    "אֲנָה",
+    "נְבוּכַדְנֶצַּר",
+    "ἐγώ",
+    "נֶפֶשׁ",
+    "פֶּה",
+    "שָׂפָה"
+   ],
+   "add": [
+    "Ps.119.164",
+    "Ps.30.12",
+    "Ps.71.22",
+    "Ps.71.23",
+    "1Cor.14.15",
+    "Heb.2.12",
+    "Dan.4.34"
+   ],
+   "doors": [
+    "worship"
+   ],
+   "note": "Also the psalmist's own soul, mouth and lips as the ones who praise (Ps 63:3, 63:5, 146:1). The Hebrew זָמַר is 'sing praise'; where the Berean prints only 'sing', the verse says so.",
+   "not_verses": {
+    "John.8.54": "Jesus: 'If I glorify Myself', shown in the row about the Father and the Son",
+    "John.17.4": "Jesus: 'I have glorified You', shown in the row about the Father and the Son",
+    "Eccl.4.2": "the Preacher admiring the dead, shown in the row on praise given to someone other than the LORD",
+    "Eccl.8.15": "the Preacher commending enjoyment, shown in the row on praise given to someone other than the LORD",
+    "Ps.119.175": "the Berean prints 'Let me live to praise You'; the Hebrew has 'my soul' (נֶפֶשׁ)"
+   },
+   "_add_why": "by hand: each is the speaker praising in the first person; the frame names no agent or a word the rule does not read (Ps 71:22-23, Heb 2:12 where the speaker is the One who sanctifies, Dan 4:34 'Then I praised the Most High')"
+  },
+  {
+   "form": "verb",
+   "label": "Praise the LORD, sing to the LORD, praise God",
+   "patient": [
+    "יהוה",
+    "אֱלֹהִים",
+    "אֵל",
+    "אֲדֹנָי"
+   ],
+   "doors": [
+    "god"
+   ],
+   "not_verses": {
+    "Judg.16.24": "the Philistines praising their god, shown in the row on gods"
+   }
+  },
+  {
+   "form": "verb",
+   "label": "They glorified God, praised God, sang hymns to God",
+   "patient": [
+    "θεός"
+   ],
+   "stance": [
+    "report",
+    "nonfinite"
+   ],
+   "doors": [
+    "god"
+   ],
+   "not_verses": {
+    "John.13.31": "the Son of Man glorified and God glorified in Him, shown in the row about the Father and the Son",
+    "John.13.32": "God glorifying the Son, shown in the row about the Father and the Son",
+    "Rom.15.9": "'so that the Gentiles may glorify God' is a purpose, shown in the row of calls and purposes",
+    "2Cor.9.13": "'the saints will glorify God' is a purpose, shown in the row of calls and purposes",
+    "Rom.1.21": "'neither glorified Him as God', shown in the row of who does not praise"
+   },
+   "note": "In most of these the Greek verb is δοξάζω, “glorify”; a few are αἰνέω, “praise”, or ὑμνέω, “sing a hymn”. They are different words, and in Luke 2:20 and 18:43 the text sets two of them side by side."
+  },
+  {
+   "form": "verb",
+   "label": "“Glorify God,” “glorify Your name,” “that God may be glorified”",
+   "patient": [
+    "θεός",
+    "πατήρ"
+   ],
+   "stance": [
+    "command",
+    "projection"
+   ],
+   "add": [
+    "Rom.15.9",
+    "2Cor.9.13",
+    "Rev.15.4"
+   ],
+   "doors": [
+    "god",
+    "glory"
+   ],
+   "not_verses": {
+    "John.13.32": "God glorifying the Son, shown in the row about the Father and the Son",
+    "John.14.13": "the Father glorified in the Son, shown in the row about the Father and the Son",
+    "John.15.8": "'My Father is glorified', shown in the row about the Father and the Son"
+   }
+  },
+  {
+   "form": "verb",
+   "label": "Jesus glorified, the Father glorified, and who glorifies whom (John, Acts, Hebrews, Luke 4:15)",
+   "pick": [
+    "John.7.39",
+    "John.8.54",
+    "John.11.4",
+    "John.12.16",
+    "John.12.23",
+    "John.12.28",
+    "John.13.31",
+    "John.13.32",
+    "John.14.13",
+    "John.15.8",
+    "John.16.14",
+    "John.17.1",
+    "John.17.4",
+    "John.17.5",
+    "John.17.10",
+    "Acts.3.13",
+    "Heb.5.5",
+    "Luke.4.15"
+   ],
+   "doors": [
+    "jesus",
+    "the_father",
+    "glory"
+   ],
+   "note": "Here the Greek is δοξάζω, “glorify”, the glory card's verb. It is also the verb of “they glorified God”, but the page does not treat the Father and the Son glorifying one another as praise, or as the same act as a crowd glorifying God. John 16:14 is the Spirit glorifying Jesus. Where Christian traditions part on how the persons glorify one another, the page takes no side."
+  },
+  {
+   "form": "verb",
+   "label": "Praise given to someone or something other than the LORD: a king, a wife, a manager, their gods",
+   "pick": [
+    "Gen.12.15",
+    "Judg.16.24",
+    "Dan.5.4",
+    "Dan.5.23",
+    "2Sam.14.25",
+    "2Chr.23.12",
+    "Prov.12.8",
+    "Prov.27.2",
+    "Prov.28.4",
+    "Prov.31.28",
+    "Prov.31.30",
+    "Prov.31.31",
+    "Song.6.9",
+    "Eccl.4.2",
+    "Eccl.8.15",
+    "Luke.16.8",
+    "1Cor.11.2",
+    "1Cor.11.17",
+    "1Cor.11.22"
+   ],
+   "doors": [
+    "gods"
+   ],
+   "_why": "by hand: each verse says who or what is praised, and it is a person, a king, a wife, the wicked, the dead, enjoyment or a manager, not the LORD. 2 Chr 23:12: the Berean prints 'cheering the king'; the Hebrew is הלל, the praise verb"
+  },
+  {
+   "form": "verb",
+   "label": "The dead do not praise",
+   "pick": [
+    "Ps.115.17",
+    "Isa.38.18"
+   ],
+   "doors": [
+    "hell",
+    "death",
+    "theme_sin_exile_death_r24"
+   ],
+   "note": "Ps 6:5, 30:9 and 88:10 say the same with the thanks word יָדָה, which the Berean also prints “praise”; see Other words."
+  },
+  {
+   "form": "verb",
+   "label": "Knew God and did not glorify Him as God or give thanks",
+   "pick": [
+    "Rom.1.21"
+   ],
+   "doors": [
+    "god"
+   ],
+   "_why": "the panel (2026-10-10): the dead who cannot (Ps 115:17) and the living who knew God and did not (Rom 1:21) are not the same, and traditions read Rom 1 differently; the label is the verse's own words"
+  },
+  {
+   "form": "verb",
+   "label": "Glorified: the word of the Lord, those He justified, oneself, what was once glorious",
+   "pick": [
+    "Acts.13.48",
+    "2Thess.3.1",
+    "Rom.8.30",
+    "Rev.18.7",
+    "2Cor.3.10"
+   ],
+   "doors": [
+    "glory"
+   ],
+   "note": "None of these is praise offered to God. They are here only because the Greek verb is the same, δοξάζω, “glorify”. Rom 8:30 and Acts 13:48 are listed for that verb alone; the page takes no side on how their other words (“predestined”, “appointed”) are read. Here the one glorified is the word of the Lord, those He justified, oneself (Rev 18:7), or what was once glorious (2 Cor 3:10, the ministry whose glory has been surpassed).",
+   "_why": "the panel (2026-10-10) kept this row and asked for the note to lead with 'None of these is praise'. sense_drop was considered and not used: it would hide the verb's other sense from the word's count and from the reader, which rule 6 forbids; the labelled row says what these are."
+  },
+  {
+   "form": "verb",
+   "label": "“Sing to Him, sing praises, praise Him” — the call itself",
+   "stance": [
+    "command"
+   ],
+   "doors": [
+    "worship"
+   ],
+   "not_verses": {
+    "Prov.27.2": "one person praising another, shown in the row on praise given to someone other than the LORD",
+    "Ps.119.175": "'Let me live to praise You' is a wish, not a call, and stays under More",
+    "Ps.106.1": "shown in the Hallelujah row",
+    "John.12.28": "the Son's prayer, shown in the row about the Father and the Son",
+    "John.17.1": "the Son's prayer, shown in the row about the Father and the Son",
+    "John.17.5": "the Son's prayer, shown in the row about the Father and the Son"
+   }
+  },
+  {
+   "form": "noun",
+   "label": "A people, a city, a land held in praise",
+   "pick": [
+    "Deut.26.19",
+    "Isa.62.7",
+    "Zeph.3.19",
+    "Zeph.3.20",
+    "Jer.13.11",
+    "Jer.33.9",
+    "Jer.48.2",
+    "Jer.49.25",
+    "Jer.51.41",
+    "Isa.60.18",
+    "Isa.61.3",
+    "Isa.61.11",
+    "Ps.148.14"
+   ],
+   "doors": [
+    "nations"
+   ]
+  },
+  {
+   "form": "noun",
+   "label": "“He is your praise,” “You are my praise”",
+   "pick": [
+    "Deut.10.21",
+    "Jer.17.14",
+    "Ps.109.1"
+   ],
+   "doors": [
+    "god"
+   ]
+  },
+  {
+   "form": "noun",
+   "label": "Declare, proclaim, make known His praise",
+   "pick": [
+    "Ps.9.14",
+    "Ps.34.1",
+    "Ps.35.28",
+    "Ps.51.15",
+    "Ps.71.8",
+    "Ps.78.4",
+    "Ps.79.13",
+    "Ps.106.2",
+    "Ps.119.171",
+    "Ps.145.21",
+    "Isa.42.12",
+    "Isa.43.21",
+    "Isa.60.6",
+    "Isa.63.7"
+   ],
+   "doors": [
+    "worship"
+   ]
+  },
+  {
+   "form": "noun",
+   "label": "“Hallelujah!” in Revelation",
+   "in_verse": [
+    "ἁλληλουϊά"
+   ],
+   "doors": [
+    "god"
+   ],
+   "note": "The Greek ἁλληλουϊά is the Hebrew הַלְלוּ־יָהּ, 'praise the LORD', carried over."
+  },
+  {
+   "form": "noun",
+   "label": "Praise and thanks, side by side",
+   "in_verse": [
+    "יָדָה",
+    "תּוֹדָה",
+    "εὐχαριστέω",
+    "εὐχαριστία"
+   ],
+   "doors": [
+    "theme_sacrifice_r21",
+    "sact_thanksgiving"
+   ],
+   "note": "The text sets praise and thanks together; they are two words, and the page does not treat one as the other."
+  },
+  {
+   "form": "noun",
+   "label": "Praise beside glory and the name",
+   "in_verse": [
+    "כָּבוֹד",
+    "δόξα",
+    "שֵׁם",
+    "ὄνομα",
+    "הוֹד",
+    "הָדָר"
+   ],
+   "doors": [
+    "glory",
+    "the_name_of_the_lord"
+   ]
+  },
+  {
+   "form": "noun",
+   "label": "Praise in a song, a new song",
+   "in_verse": [
+    "שִׁיר",
+    "שִׁירָה",
+    "זָמִיר",
+    "מִזְמוֹר"
+   ],
+   "doors": [
+    "songs",
+    "theme_apocalyptic_r22"
+   ]
+  },
+  {
+   "form": "noun",
+   "label": "Praise from people, praise from God",
+   "pick": [
+    "Rom.2.29",
+    "Rom.13.3",
+    "1Cor.4.5",
+    "1Pet.2.14",
+    "2Cor.8.18"
+   ],
+   "doors": []
+  },
+  {
+   "form": "noun",
+   "label": "Every other use of the noun",
+   "lead": [
+    "Heb.13.15",
+    "Ps.22.3",
+    "Exod.15.11",
+    "Matt.21.16"
+   ],
+   "doors": []
+  }
+ ]
+}

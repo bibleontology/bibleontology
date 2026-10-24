@@ -1,0 +1,25 @@
+{"ref": "Exo.8.12",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "The possessive is second masculine singular, and the staff is the one Aaron is told to stretch out in cl2 (inside Moses's speech to Aaron), so the staff is Aaron's.", "category": "possessive inside a commanded speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "cl1 is a command in the LORD's speech, whose addressee is Moses (turn0). The implied you of 'say to Aaron' is therefore Moses, not Aaron.", "category": "implied subject of a command to the speech addressee"},
+  {"slot": "cl2s", "choice": "w7", "divine": false, "why": "cl2 is inside the speech Moses is told to give to Aaron (turn1, addressee Aaron), so the implied you is Aaron.", "category": "implied subject inside a commanded speech"},
+  {"slot": "cl3s", "choice": "w7", "divine": false, "why": "cl3 is a second-person imperative in the same quoted speech to Aaron, joined by waw to cl2, so the implied you is Aaron.", "category": "implied subject inside a commanded speech"},
+  {"slot": "cl4s", "choice": "w15", "divine": false, "why": "cl4 is third masculine singular and says what the dust will become. The dust struck in cl3 is the nearest agreeing candidate that can become gnats; the staff cannot.", "category": "implied subject that is the object of the prior command"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "A wayyiqtol then runs forward on the narrative line. Here it points back from a command inside the speech to the speech frame cl0, which is not its successor.", "category": "narrative then pointing back to a speech frame"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "Two second-person imperatives joined by a separate waw at one level. A plain and, not a cause, result or purpose.", "category": "plain and between commands"},
+  {"src": "cl3", "type": "then", "dst": "cl4", "action": "remove", "why": "The waw is fused into the weqatal and the clause states what the command brings about, so the link type is result, not a bare sequence.", "category": "command then weqatal outcome"},
+  {"src": "cl3", "type": "result", "dst": "cl4", "action": "add", "why": "Imperative, then waw plus third-person weqatal saying what will come of it: strike the dust, and it will become gnats. The same clause is also the effect of imp2.", "category": "command and its outcome"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "The LORD speaks; what he says is the command in cl1 that holds the nested turn. The said clause is embedded in the speaking.", "category": "speech and its embedded command"},
+  {"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "Moses's words to Aaron are the commands cl2 and cl3 joined by and, with their effect cl4. The content is the whole imperative group, not its first command.", "category": "speech content as command collection"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": true, "why": "The LORD (w2) speaks to Moses (w4). The part is the commanded turn turn1, not cl1 directly, because cl1 is the frame of turn1 (speech nesting).", "category": "speech nesting: outer turn holds commanded turn"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "imp2"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w7"}], "divine": false, "why": "Moses is told to say something to Aaron. Frame cl1 is the commanded saying, its part is the imperative group imp2, sender is Moses (w4, the cl1 you) and addressee is Aaron (w7).", "category": "speech nesting: commanded turn holds what is said"},
+  {"id": "imp2", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl2"}, {"role": "command", "node": "cl3"}, {"role": "effect", "node": "cl4"}], "divine": false, "why": "cl2 and cl3 are commands joined by and at one level, so they form one imperative group with two command members. What they bring about (weqatal cl4) is its effect. The builder's part role is not an imperative member.", "category": "commands joined by and; effect as weqatal"},
+  {"id": "imp3", "kind": "imperative", "action": "remove", "members": [], "divine": false, "why": "Its command cl3 and its effect cl4 now sit in imp2 as one imperative group with cl2.", "category": "command group split in two"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

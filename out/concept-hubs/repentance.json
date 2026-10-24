@@ -1,0 +1,2227 @@
+{
+ "id": "repentance",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "verb",
+ "words": [
+  {
+   "key": "g3340",
+   "lemma": "μετανοέω",
+   "form": "verb",
+   "translit": "metanoeō",
+   "gloss": "to repent",
+   "lang": "Greek",
+   "uses": 32,
+   "other_sense": 0
+  },
+  {
+   "key": "h7725",
+   "lemma": "שׁוּב",
+   "form": "verb",
+   "translit": "shuv",
+   "gloss": "to return: repent",
+   "lang": "Hebrew",
+   "uses": 120,
+   "other_sense": 833
+  },
+  {
+   "key": "g1994",
+   "lemma": "ἐπιστρέφω",
+   "form": "verb",
+   "translit": "epistrephō",
+   "gloss": "to turn",
+   "lang": "Greek",
+   "uses": 18,
+   "other_sense": 17
+  },
+  {
+   "key": "g3338",
+   "lemma": "μεταμέλομαι",
+   "form": "verb",
+   "translit": "metamellomai",
+   "gloss": "to repent",
+   "lang": "Greek",
+   "uses": 5,
+   "other_sense": 0
+  },
+  {
+   "key": "h5162",
+   "lemma": "נָחַם",
+   "form": "verb",
+   "translit": "na.cham",
+   "gloss": "to be sorry: relent",
+   "lang": "Hebrew",
+   "uses": 35,
+   "other_sense": 65
+  },
+  {
+   "key": "g3341",
+   "lemma": "μετάνοια",
+   "form": "noun",
+   "translit": "metanoia",
+   "gloss": "repentance",
+   "lang": "Greek",
+   "uses": 22,
+   "other_sense": 0
+  },
+  {
+   "key": "g1995",
+   "lemma": "ἐπιστροφή",
+   "form": "noun",
+   "translit": "epistrophē",
+   "gloss": "conversion",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "h7729",
+   "lemma": "שׁוּבָה",
+   "form": "noun",
+   "translit": "shu.vah",
+   "gloss": "returning",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g279",
+   "lemma": "ἀμετανόητος",
+   "form": "adjective",
+   "translit": "ametanoētos",
+   "gloss": "unrepentant",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "verb": "Who turns, who repents, and to whom",
+  "noun": "Where the word “repentance” stands",
+  "adjective": "Unrepentant"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "baptism",
+   "name": "baptism",
+   "type": "observance",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "salvation",
+   "name": "salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "grace",
+   "name": "grace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "mercy",
+   "name": "mercy",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "humility",
+   "name": "humility",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "john_the_baptist",
+   "name": "John the Baptist",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "jonah",
+   "name": "Jonah",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "nineveh",
+   "name": "Nineveh",
+   "type": "place",
+   "missing": false
+  },
+  {
+   "id": "judgment",
+   "name": "judgment",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "healing",
+   "name": "healing",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "repent_and_be_baptized",
+   "name": "repent, and be baptized",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "mark_1_15_speech",
+   "name": "Jesus at Mark 1:15",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "mark_1_4_message",
+   "name": "John the Baptist at Mark 1:4",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "mark_2_17_speech",
+   "name": "Jesus at Mark 2:17",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "image_fruit",
+   "name": "fruit",
+   "type": "image",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Isa.55.7",
+   "ref": "Isaiah 55:7",
+   "text": "Let the wicked man forsake his way and the unrighteous man his thoughts; let him return to the LORD, that He may have compassion, and to our God, for He will freely pardon."
+  },
+  {
+   "id": "Ezek.18.23",
+   "ref": "Ezekiel 18:23",
+   "text": "Do I take any pleasure in the death of the wicked? declares the Lord GOD. Wouldn't I prefer that he turn from his ways and live?"
+  },
+  {
+   "id": "Joel.2.13",
+   "ref": "Joel 2:13",
+   "text": "So rend your hearts and not your garments, and return to the LORD your God. For He is gracious and compassionate, slow to anger, abounding in loving devotion. And He relents from sending disaster."
+  },
+  {
+   "id": "Mark.1.15",
+   "ref": "Mark 1:15",
+   "text": "“The time is fulfilled,” He said, “and the kingdom of God is near. Repent and believe in the gospel!”"
+  },
+  {
+   "id": "Luke.15.7",
+   "ref": "Luke 15:7",
+   "text": "I tell you that in the same way there will be more joy in heaven over one sinner who repents than over ninety-nine righteous ones who do not need to repent."
+  },
+  {
+   "id": "Acts.2.38",
+   "ref": "Acts 2:38",
+   "text": "Peter replied, “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit."
+  },
+  {
+   "id": "2Chr.7.14",
+   "ref": "2 Chronicles 7:14",
+   "text": "and if My people who are called by My name humble themselves and pray and seek My face and turn from their wicked ways, then I will hear from heaven, forgive their sin, and heal their land."
+  },
+  {
+   "id": "2Cor.7.10",
+   "ref": "2 Corinthians 7:10",
+   "text": "Godly sorrow brings repentance that leads to salvation without regret, but worldly sorrow brings death."
+  }
+ ],
+ "forms": [
+  {
+   "form": "verb",
+   "verses": 199,
+   "rows": [
+    {
+     "label": "The call: repent, turn, return",
+     "note": "In Hebrew שׁוּב is “turn, return” in most of its 953 uses: going home, back, restoring, repaying, answering. Only its turning to God or from sin is gathered in this section; its other uses are on the word's own card.",
+     "doors": [
+      {
+       "id": "john_the_baptist",
+       "name": "John the Baptist",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 36,
+     "verses": [
+      "Ezek.33.11",
+      "Joel.2.12",
+      "Mark.1.15",
+      "Acts.3.19",
+      "Matt.3.2",
+      "Matt.4.17",
+      "Mark.6.12",
+      "Acts.2.38",
+      "Acts.8.22",
+      "Acts.17.30",
+      "Acts.26.20",
+      "Rev.2.5",
+      "Rev.2.16",
+      "Rev.3.3",
+      "Rev.3.19",
+      "2Kgs.17.13",
+      "2Chr.30.6",
+      "Isa.31.6",
+      "Isa.44.22",
+      "Isa.55.7",
+      "Jer.3.12",
+      "Jer.3.14",
+      "Jer.3.22",
+      "Jer.18.11",
+      "Jer.25.5",
+      "Jer.35.15",
+      "Ezek.14.6",
+      "Ezek.18.30",
+      "Ezek.18.32",
+      "Hos.12.6",
+      "Hos.14.1",
+      "Hos.14.2",
+      "Joel.2.13",
+      "Zech.1.3",
+      "Zech.1.4",
+      "Mal.3.7"
+     ],
+     "eg": [
+      {
+       "id": "Ezek.33.11",
+       "ref": "Ezekiel 33:11",
+       "text": "Say to them: ‘As surely as I live, declares the Lord GOD, I take no pleasure in the death of the wicked, but rather that the wicked should turn from their ways and live. Turn! Turn from your evil ways! For why should you die, O house of Israel?'",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Joel.2.12",
+       "ref": "Joel 2:12",
+       "text": "“Yet even now,” declares the LORD, “return to Me with all your heart, with fasting, weeping, and mourning.”",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Mark.1.15",
+       "ref": "Mark 1:15",
+       "text": "“The time is fulfilled,” He said, “and the kingdom of God is near. Repent and believe in the gospel!”",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.3.19",
+       "ref": "Acts 3:19",
+       "text": "Repent, then, and turn back, so that your sins may be wiped away,",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        },
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Turn to the LORD, to God",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 60,
+     "verses": [
+      "Isa.55.7",
+      "Hos.6.1",
+      "Joel.2.12",
+      "Acts.26.20",
+      "Deut.4.30",
+      "Deut.30.2",
+      "Deut.30.10",
+      "1Sam.7.3",
+      "1Kgs.8.33",
+      "1Kgs.8.48",
+      "2Chr.6.24",
+      "2Chr.6.38",
+      "2Chr.15.4",
+      "2Chr.19.4",
+      "2Chr.24.19",
+      "2Chr.30.6",
+      "2Chr.30.9",
+      "2Chr.36.13",
+      "2Kgs.23.25",
+      "Neh.1.9",
+      "Neh.9.26",
+      "Job.22.23",
+      "Ps.22.27",
+      "Ps.51.13",
+      "Isa.9.13",
+      "Isa.10.21",
+      "Isa.19.22",
+      "Isa.44.22",
+      "Jer.3.1",
+      "Jer.3.7",
+      "Jer.3.10",
+      "Jer.3.12",
+      "Jer.3.14",
+      "Jer.3.22",
+      "Jer.4.1",
+      "Jer.15.19",
+      "Jer.24.7",
+      "Jer.31.18",
+      "Hos.3.5",
+      "Hos.5.4",
+      "Hos.7.10",
+      "Hos.7.16",
+      "Hos.12.6",
+      "Hos.14.1",
+      "Hos.14.2",
+      "Joel.2.13",
+      "Amos.4.6",
+      "Amos.4.8",
+      "Amos.4.9",
+      "Amos.4.10",
+      "Amos.4.11",
+      "Mal.3.7",
+      "Zech.1.3",
+      "Lam.3.40",
+      "Lam.5.21",
+      "Luke.1.16",
+      "Acts.14.15",
+      "Acts.15.19",
+      "Acts.26.18",
+      "1Thess.1.9"
+     ],
+     "eg": [
+      {
+       "id": "Isa.55.7",
+       "ref": "Isaiah 55:7",
+       "text": "Let the wicked man forsake his way and the unrighteous man his thoughts; let him return to the LORD, that He may have compassion, and to our God, for He will freely pardon.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Hos.6.1",
+       "ref": "Hosea 6:1",
+       "text": "Come, let us return to the LORD. For He has torn us to pieces, but He will heal us; He has wounded us, but He will bind up our wounds.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Joel.2.12",
+       "ref": "Joel 2:12",
+       "text": "“Yet even now,” declares the LORD, “return to Me with all your heart, with fasting, weeping, and mourning.”",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Acts.26.20",
+       "ref": "Acts 26:20",
+       "text": "First to those in Damascus and Jerusalem, then to everyone in the region of Judea, and then to the Gentiles, I declared that they should repent and turn to God, performing deeds worthy of their repentance.",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        },
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        },
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Turned to the Lord”, to the Shepherd",
+     "note": "The text says “the Lord” and “the Shepherd and Overseer of your souls”; readers take them of the Father or of Christ, and the page does not choose.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Acts.9.35",
+      "Acts.11.21",
+      "2Cor.3.16",
+      "1Pet.2.25"
+     ],
+     "eg": [
+      {
+       "id": "Acts.9.35",
+       "ref": "Acts 9:35",
+       "text": "and all who lived in Lydda and Sharon saw him and turned to the Lord.",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.11.21",
+       "ref": "Acts 11:21",
+       "text": "The hand of the Lord was with them, and a great number of people believed and turned to the Lord.",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.3.16",
+       "ref": "2 Corinthians 3:16",
+       "text": "But whenever anyone turns to the Lord, the veil is taken away.",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.2.25",
+       "ref": "1 Peter 2:25",
+       "text": "For “you were like sheep going astray,” but now you have returned to the Shepherd and Overseer of your souls.",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Turn from wickedness, sin, idols, deeds; the repentant ones",
+     "note": null,
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "idolatry",
+       "name": "idolatry",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 53,
+     "verses": [
+      "2Chr.7.14",
+      "Ezek.18.30",
+      "Jonah.3.10",
+      "1Thess.1.9",
+      "Isa.1.27",
+      "1Kgs.8.33",
+      "1Kgs.8.35",
+      "1Kgs.8.47",
+      "1Kgs.13.33",
+      "2Kgs.17.13",
+      "2Chr.6.24",
+      "2Chr.6.26",
+      "2Chr.6.37",
+      "Neh.9.35",
+      "Job.36.10",
+      "Isa.55.7",
+      "Isa.59.20",
+      "Jer.8.6",
+      "Jer.18.8",
+      "Jer.18.11",
+      "Jer.23.14",
+      "Jer.23.22",
+      "Jer.25.5",
+      "Jer.26.3",
+      "Jer.35.15",
+      "Jer.36.3",
+      "Jer.36.7",
+      "Jer.44.5",
+      "Ezek.3.19",
+      "Ezek.13.22",
+      "Ezek.18.21",
+      "Ezek.18.23",
+      "Ezek.18.27",
+      "Ezek.18.28",
+      "Ezek.33.9",
+      "Ezek.33.11",
+      "Ezek.33.12",
+      "Ezek.33.14",
+      "Ezek.33.19",
+      "Dan.9.13",
+      "Hos.14.1",
+      "Hos.14.2",
+      "Jonah.3.8",
+      "Zech.1.4",
+      "Mal.2.6",
+      "Acts.8.22",
+      "Acts.26.18",
+      "Jas.5.20",
+      "Rev.2.21",
+      "Rev.2.22",
+      "Rev.9.20",
+      "Rev.9.21",
+      "Rev.16.11"
+     ],
+     "eg": [
+      {
+       "id": "2Chr.7.14",
+       "ref": "2 Chronicles 7:14",
+       "text": "and if My people who are called by My name humble themselves and pray and seek My face and turn from their wicked ways, then I will hear from heaven, forgive their sin, and heal their land.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.18.30",
+       "ref": "Ezekiel 18:30",
+       "text": "Therefore, O house of Israel, I will judge you, each according to his ways, declares the Lord GOD. Repent and turn from all your transgressions, so that your iniquity will not become your downfall.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.3.10",
+       "ref": "Jonah 3:10",
+       "text": "When God saw their actions-that they had turned from their evil ways-He relented from the disaster He had threatened to bring upon them.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        },
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.1.9",
+       "ref": "1 Thessalonians 1:9",
+       "text": "For they themselves report what kind of welcome you gave us, and how you turned to God from idols to serve the living and true God",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Turn, and be forgiven, healed, saved, live",
+     "note": "Set side by side with the rows on baptism and on believing, as the text has them. Whether the forgiveness follows the repenting, the baptism or both is where Christian traditions part, and the page takes no side. These rows are listed in the order of their first verse in the Bible, with other rows between them; the page does not order repentance, baptism, faith and forgiveness.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "healing",
+       "name": "healing",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 22,
+     "verses": [
+      "2Chr.7.14",
+      "Luke.17.3",
+      "Jas.5.20",
+      "Isa.19.22",
+      "Isa.55.7",
+      "Jer.3.22",
+      "Jer.36.3",
+      "Ezek.13.22",
+      "Ezek.18.21",
+      "Ezek.18.23",
+      "Ezek.18.27",
+      "Ezek.18.28",
+      "Ezek.18.32",
+      "Ezek.33.11",
+      "Ezek.33.12",
+      "Ezek.33.19",
+      "Hos.6.1",
+      "Luke.17.4",
+      "Acts.2.38",
+      "Acts.3.19",
+      "Acts.8.22",
+      "Acts.26.18"
+     ],
+     "eg": [
+      {
+       "id": "2Chr.7.14",
+       "ref": "2 Chronicles 7:14",
+       "text": "and if My people who are called by My name humble themselves and pray and seek My face and turn from their wicked ways, then I will hear from heaven, forgive their sin, and heal their land.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.3",
+       "ref": "Luke 17:3",
+       "text": "Watch yourselves. If your brother sins, rebuke him; and if he repents, forgive him.",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.20",
+       "ref": "James 5:20",
+       "text": "consider this: Whoever turns a sinner from the error of his way will save his soul from death and cover over a multitude of sins.",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      },
+      {
+       "id": "Isa.19.22",
+       "ref": "Isaiah 19:22",
+       "text": "And the LORD will strike Egypt with a plague; He will strike them but heal them. They will turn to the LORD, and He will hear their prayers and heal them.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "One sinner repents: joy in heaven; a brother repents, forgive him",
+     "note": "Luke 17:3-4 says forgive “if he repents”. Whether forgiveness waits for repenting is where readers part; verses that speak of forgiving with no mention of repenting are on the forgiveness card. The page takes no side.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Luke.15.7",
+      "Luke.15.10",
+      "Luke.17.3",
+      "Luke.17.4"
+     ],
+     "eg": [
+      {
+       "id": "Luke.15.7",
+       "ref": "Luke 15:7",
+       "text": "I tell you that in the same way there will be more joy in heaven over one sinner who repents than over ninety-nine righteous ones who do not need to repent.",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        },
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Luke.15.10",
+       "ref": "Luke 15:10",
+       "text": "In the same way, I tell you, there is joy in the presence of God's angels over one sinner who repents.”",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.3",
+       "ref": "Luke 17:3",
+       "text": "Watch yourselves. If your brother sins, rebuke him; and if he repents, forgive him.",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.4",
+       "ref": "Luke 17:4",
+       "text": "Even if he sins against you seven times in a day, and seven times returns to say, ‘I repent,' you must forgive him.”",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        },
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "They did not repent, would not return; Nineveh repented, Tyre and Sidon would have",
+     "note": null,
+     "doors": [
+      {
+       "id": "unbelief",
+       "name": "unbelief",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "nineveh",
+       "name": "Nineveh",
+       "type": "place",
+       "missing": false
+      },
+      {
+       "id": "jonah",
+       "name": "Jonah",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 35,
+     "verses": [
+      "Amos.4.6",
+      "Jer.8.5",
+      "Matt.11.20",
+      "Rev.16.9",
+      "1Kgs.13.33",
+      "2Chr.36.13",
+      "Neh.9.35",
+      "Isa.9.13",
+      "Jer.3.7",
+      "Jer.3.10",
+      "Jer.5.3",
+      "Jer.8.4",
+      "Jer.8.6",
+      "Jer.15.7",
+      "Jer.23.14",
+      "Jer.44.5",
+      "Hos.5.4",
+      "Hos.7.10",
+      "Hos.7.16",
+      "Hos.11.5",
+      "Amos.4.8",
+      "Amos.4.9",
+      "Amos.4.10",
+      "Amos.4.11",
+      "2Cor.12.21",
+      "Rev.2.21",
+      "Rev.9.20",
+      "Rev.9.21",
+      "Rev.16.11",
+      "Jonah.3.8",
+      "Jonah.3.10",
+      "Matt.12.41",
+      "Luke.11.32",
+      "Matt.11.21",
+      "Luke.10.13"
+     ],
+     "eg": [
+      {
+       "id": "Amos.4.6",
+       "ref": "Amos 4:6",
+       "text": "“I afflicted all your cities with cleanness of teeth and all your towns with lack of bread, yet you did not return to Me,” declares the LORD.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Jer.8.5",
+       "ref": "Jeremiah 8:5",
+       "text": "Why then have these people turned away? Why does Jerusalem always turn away? They cling to deceit; they refuse to return.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.11.20",
+       "ref": "Matthew 11:20",
+       "text": "Then Jesus began to denounce the cities in which most of His miracles had been performed, because they did not repent.",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.16.9",
+       "ref": "Revelation 16:9",
+       "text": "And the people were scorched by intense heat, and they cursed the name of God, who had authority over these plagues. Yet they did not repent and give Him glory.",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Repent and believe; believed and turned",
+     "note": "A verse that names both stands in this row and in the others it fits; the page puts neither first: Mark 1:15 has “repent and believe”, Acts 11:21 “believed and turned”. These rows are listed in the order of their first verse in the Bible, with other rows between them; the page does not order repentance, baptism, faith and forgiveness.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Mark.1.15",
+      "Acts.11.21",
+      "Acts.26.18"
+     ],
+     "eg": [
+      {
+       "id": "Mark.1.15",
+       "ref": "Mark 1:15",
+       "text": "“The time is fulfilled,” He said, “and the kingdom of God is near. Repent and believe in the gospel!”",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.11.21",
+       "ref": "Acts 11:21",
+       "text": "The hand of the Lord was with them, and a great number of people believed and turned to the Lord.",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.26.18",
+       "ref": "Acts 26:18",
+       "text": "to open their eyes, so that they may turn from darkness to light and from the power of Satan to God, that they may receive forgiveness of sins and an inheritance among those sanctified by faith in Me.'",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Unless you repent, if one does not repent; a righteous man turns from his righteousness",
+     "note": "Ezekiel 3:20, 18:24, 18:26 and 33:18 say a righteous man who turns from his righteousness and commits iniquity dies; Ezekiel 18 and 33 also have the wicked man's turning (the rows above). What this says of one who is righteous, and whether it can be lost, is where Christian traditions part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Luke.13.3",
+      "Ezek.3.19",
+      "Ezek.18.24",
+      "Rev.2.16",
+      "Luke.13.5",
+      "Rev.2.5",
+      "Rev.2.22",
+      "Ps.7.12",
+      "Ezek.33.9",
+      "Ezek.3.20",
+      "Ezek.18.26",
+      "Ezek.33.18"
+     ],
+     "eg": [
+      {
+       "id": "Luke.13.3",
+       "ref": "Luke 13:3",
+       "text": "No, I tell you. But unless you repent, you too will all perish.",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.3.19",
+       "ref": "Ezekiel 3:19",
+       "text": "But if you warn a wicked man and he does not turn from his wickedness and his wicked way, he will die in his iniquity, but you will have saved yourself.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.18.24",
+       "ref": "Ezekiel 18:24",
+       "text": "But if a righteous man turns from his righteousness and practices iniquity, committing the same abominations as the wicked, will he live? None of the righteous acts he did will be remembered. Because of the unfaithfulness and sin he has committed, he will die.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Rev.2.16",
+       "ref": "Revelation 2:16",
+       "text": "Therefore repent! Otherwise I will come to you shortly and wage war against them with the sword of My mouth.",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Repent and be baptized",
+     "note": "The text's own sentence (Acts 2:38), kept as written beside the rows on forgiveness and on believing. Where Christian traditions part on how repentance, baptism and forgiveness stand to one another, the page takes no side. These rows are listed in the order of their first verse in the Bible, with other rows between them; the page does not order repentance, baptism, faith and forgiveness.",
+     "doors": [
+      {
+       "id": "repent_and_be_baptized",
+       "name": "repent, and be baptized",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "baptism",
+       "name": "baptism",
+       "type": "observance",
+       "missing": false
+      }
+     ],
+     "n": 1,
+     "verses": [
+      "Acts.2.38"
+     ],
+     "eg": [
+      {
+       "id": "Acts.2.38",
+       "ref": "Acts 2:38",
+       "text": "Peter replied, “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit.",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Turning others back",
+     "note": null,
+     "doors": [],
+     "n": 11,
+     "verses": [
+      "2Chr.19.4",
+      "2Chr.24.19",
+      "Isa.49.5",
+      "Mal.2.6",
+      "Jer.23.22",
+      "Mal.4.6",
+      "Luke.1.16",
+      "Luke.1.17",
+      "Acts.26.18",
+      "Jas.5.19",
+      "Jas.5.20"
+     ],
+     "eg": [
+      {
+       "id": "2Chr.19.4",
+       "ref": "2 Chronicles 19:4",
+       "text": "Jehoshaphat lived in Jerusalem, and once again he went out among the people from Beersheba to the hill country of Ephraim and turned them back to the LORD, the God of their fathers.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.24.19",
+       "ref": "2 Chronicles 24:19",
+       "text": "Nevertheless, the LORD sent prophets to bring the people back to Him and to testify against them, but they would not listen.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Isa.49.5",
+       "ref": "Isaiah 49:5",
+       "text": "And now says the LORD, who formed Me from the womb to be His Servant, to bring Jacob back to Him, that Israel might be gathered to Him-for I am honored in the sight of the LORD, and My God is My strength-",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Mal.2.6",
+       "ref": "Malachi 2:6",
+       "text": "True instruction was in his mouth, and nothing false was found on his lips. He walked with Me in peace and uprightness, and he turned many from iniquity.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Lest they turn and be healed (hearts made callous)",
+     "note": "The text says it of this people: their hearts are made callous, “otherwise they might turn”. It does not say the turning happens. The page does not say why, and takes no side on what it implies for election and hardening, where readers part.",
+     "doors": [
+      {
+       "id": "healing",
+       "name": "healing",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Isa.6.10",
+      "Matt.13.15",
+      "Mark.4.12",
+      "Acts.28.27"
+     ],
+     "eg": [
+      {
+       "id": "Isa.6.10",
+       "ref": "Isaiah 6:10",
+       "text": "Make the hearts of this people calloused; deafen their ears and close their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn and be healed.”",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.13.15",
+       "ref": "Matthew 13:15",
+       "text": "For this people's heart has grown callous; they hardly hear with their ears, and they have closed their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn, and I would heal them.'",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      },
+      {
+       "id": "Mark.4.12",
+       "ref": "Mark 4:12",
+       "text": "so that, ‘they may be ever seeing but never perceiving, and ever hearing but never understanding; otherwise they might turn and be forgiven.'”",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.28.27",
+       "ref": "Acts 28:27",
+       "text": "For this people's heart has grown callous; they hardly hear with their ears, and they have closed their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn, and I would heal them.'",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD relents, regrets, has compassion (נָחַם)",
+     "note": "A different word and sense from a person's repenting: נָחַם of the LORD. It is not a verdict on whether God changes; the next row has the verses where He does not.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 22,
+     "verses": [
+      "Gen.6.6",
+      "Exod.32.14",
+      "Jonah.3.10",
+      "Amos.7.3",
+      "Gen.6.7",
+      "1Sam.15.11",
+      "1Sam.15.35",
+      "2Sam.24.16",
+      "1Chr.21.15",
+      "Ps.106.45",
+      "Jer.18.8",
+      "Jer.18.10",
+      "Jer.26.3",
+      "Jer.26.13",
+      "Jer.26.19",
+      "Jer.42.10",
+      "Joel.2.13",
+      "Amos.7.6",
+      "Jonah.4.2",
+      "Deut.32.36",
+      "Ps.135.14",
+      "Judg.2.18"
+     ],
+     "eg": [
+      {
+       "id": "Gen.6.6",
+       "ref": "Genesis 6:6",
+       "text": "And the LORD regretted that He had made man on the earth, and He was grieved in His heart.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Exod.32.14",
+       "ref": "Exodus 32:14",
+       "text": "So the LORD relented from the calamity He had threatened to bring on His people.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.3.10",
+       "ref": "Jonah 3:10",
+       "text": "When God saw their actions-that they had turned from their evil ways-He relented from the disaster He had threatened to bring upon them.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        },
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Amos.7.3",
+       "ref": "Amos 7:3",
+       "text": "So the LORD relented from this plan. “It will not happen,” He said.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD does not relent or change His mind",
+     "note": "Set beside the row above, as the text has them; 1 Samuel 15 has the LORD regretting (verses 11 and 35) and not changing His mind (verse 29). The page does not reconcile them.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Num.23.19",
+      "1Sam.15.29",
+      "Ps.110.4",
+      "Ezek.24.14",
+      "Zech.8.14",
+      "Jer.4.28",
+      "Heb.7.21"
+     ],
+     "eg": [
+      {
+       "id": "Num.23.19",
+       "ref": "Numbers 23:19",
+       "text": "God is not a man, that He should lie, or a son of man, that He should change His mind. Does He speak and not act? Does He promise and not fulfill?",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.15.29",
+       "ref": "1 Samuel 15:29",
+       "text": "Moreover, the Glory of Israel does not lie or change His mind, for He is not a man, that He should change His mind.”",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.110.4",
+       "ref": "Psalms 110:4",
+       "text": "The LORD has sworn and will not change His mind: “You are a priest forever in the order of Melchizedek.”",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.24.14",
+       "ref": "Ezekiel 24:14",
+       "text": "I, the LORD, have spoken; the time is coming, and I will act. I will not refrain or show pity, nor will I relent. I will judge you according to your ways and deeds,' declares the Lord GOD.”",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Turn and relent: asked of the LORD, hoped for, and done",
+     "note": "Moses asks (Exod 32:12); the king of Nineveh and the prophet say “Who knows?” (Jonah 3:9, Joel 2:14); Jer 18:8, 26:3 and Joel 2:13 say the LORD relents when a people turns, and Jonah 3:10 says He did. Two words side by side: a person's שׁוּב, turn, and the LORD's נָחַם, relent. The page does not say what the relenting is.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Exod.32.12",
+      "Jonah.3.9",
+      "Joel.2.14",
+      "Jonah.3.10",
+      "Jer.18.8",
+      "Jer.26.3",
+      "Joel.2.13"
+     ],
+     "eg": [
+      {
+       "id": "Exod.32.12",
+       "ref": "Exodus 32:12",
+       "text": "Why should the Egyptians declare, ‘He brought them out with evil intent, to kill them in the mountains and wipe them from the face of the earth'? Turn from Your fierce anger and relent from doing harm to Your people.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        },
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.3.9",
+       "ref": "Jonah 3:9",
+       "text": "Who knows? God may turn and relent; He may turn from His fierce anger, so that we will not perish.”",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        },
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Joel.2.14",
+       "ref": "Joel 2:14",
+       "text": "Who knows? He may turn and relent and leave a blessing behind Him-grain and drink offerings for the LORD your God.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        },
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.3.10",
+       "ref": "Jonah 3:10",
+       "text": "When God saw their actions-that they had turned from their evil ways-He relented from the disaster He had threatened to bring upon them.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        },
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Regret, remorse, a change of mind (נָחַם and μεταμέλομαι)",
+     "note": "Two other words than שׁוּב and μετανοέω: נָחַם said of a person, and the Greek μεταμέλομαι (regret, change one's mind). Each example names the word it stands on.",
+     "doors": [
+      {
+       "id": "grief",
+       "name": "grief",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sorrow",
+       "name": "sorrow",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Job.42.6",
+      "Jer.31.19",
+      "Jer.8.6",
+      "Matt.21.29",
+      "Matt.21.32",
+      "Matt.27.3",
+      "2Cor.7.8"
+     ],
+     "eg": [
+      {
+       "id": "Job.42.6",
+       "ref": "Job 42:6",
+       "text": "Therefore I despise myself, and I repent in dust and ashes.”",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Jer.31.19",
+       "ref": "Jeremiah 31:19",
+       "text": "After I returned, I repented; and after I was instructed, I struck my thigh in grief. I was ashamed and humiliated because I bore the disgrace of my youth.'",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        },
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Jer.8.6",
+       "ref": "Jeremiah 8:6",
+       "text": "I have listened and heard; they do not speak what is right. No one repents of his wickedness, asking, ‘What have I done?' Everyone has pursued his own course like a horse charging into battle.",
+       "words": [
+        {
+         "key": "h5162",
+         "lemma": "נָחַם"
+        },
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.21.29",
+       "ref": "Matthew 21:29",
+       "text": "‘I will not,' he replied. But later he changed his mind and went.",
+       "words": [
+        {
+         "key": "g3338",
+         "lemma": "μεταμέλομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: turn, return, repent, relent",
+     "note": "Isa 57:6 is the LORD's “Should I relent”, another sense. At Deut 30:8 the Berean's “again” is the Hebrew שׁוּב, “return and obey”.",
+     "doors": [],
+     "n": 10,
+     "verses": [
+      "Luke.16.30",
+      "Jer.34.15",
+      "Luke.22.32",
+      "Zech.1.6",
+      "Deut.30.8",
+      "Neh.9.29",
+      "Ps.78.34",
+      "Ps.119.59",
+      "Prov.1.23",
+      "Isa.57.6"
+     ],
+     "eg": [
+      {
+       "id": "Luke.16.30",
+       "ref": "Luke 16:30",
+       "text": "‘No, father Abraham,' he said, ‘but if someone is sent to them from the dead, they will repent.'",
+       "words": [
+        {
+         "key": "g3340",
+         "lemma": "μετανοέω"
+        }
+       ]
+      },
+      {
+       "id": "Jer.34.15",
+       "ref": "Jeremiah 34:15",
+       "text": "Recently you repented and did what pleased Me; each of you proclaimed freedom for his neighbor. You made a covenant before Me in the house that bears My Name.",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      },
+      {
+       "id": "Luke.22.32",
+       "ref": "Luke 22:32",
+       "text": "But I have prayed for you, Simon, that your faith will not fail. And when you have turned back, strengthen your brothers.”",
+       "words": [
+        {
+         "key": "g1994",
+         "lemma": "ἐπιστρέφω"
+        }
+       ]
+      },
+      {
+       "id": "Zech.1.6",
+       "ref": "Zechariah 1:6",
+       "text": "But did not My words and My statutes, which I commanded My servants the prophets, overtake your fathers? They repented and said, ‘Just as the LORD of Hosts purposed to do to us according to our ways and deeds, so He has done to us.'”",
+       "words": [
+        {
+         "key": "h7725",
+         "lemma": "שׁוּב"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "noun",
+   "verses": 25,
+   "rows": [
+    {
+     "label": "A baptism of repentance",
+     "note": "The text's own phrase, kept as written (Mark 1:4, Luke 3:3, Acts 13:24, 19:4), beside the rows on repentance and forgiveness, and faith. Where Christian traditions part on whether baptism, repentance or both go before forgiveness, the page takes no side. These rows are listed in the order of their first verse in the Bible, with other rows between them; the page does not order repentance, baptism, faith and forgiveness.",
+     "doors": [
+      {
+       "id": "baptism",
+       "name": "baptism",
+       "type": "observance",
+       "missing": false
+      },
+      {
+       "id": "john_the_baptist",
+       "name": "John the Baptist",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Matt.3.11",
+      "Mark.1.4",
+      "Luke.3.3",
+      "Acts.13.24",
+      "Acts.19.4"
+     ],
+     "eg": [
+      {
+       "id": "Matt.3.11",
+       "ref": "Matthew 3:11",
+       "text": "I baptize you with water for repentance, but after me will come One more powerful than I, whose sandals I am not worthy to carry. He will baptize you with the Holy Spirit and with fire.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Mark.1.4",
+       "ref": "Mark 1:4",
+       "text": "John the Baptist appeared in the wilderness, preaching a baptism of repentance for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Luke.3.3",
+       "ref": "Luke 3:3",
+       "text": "He went into all the region around the Jordan, preaching a baptism of repentance for the forgiveness of sins,",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Acts.13.24",
+       "ref": "Acts 13:24",
+       "text": "Before the arrival of Jesus, John preached a baptism of repentance to all the people of Israel.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Repentance granted; God's kindness and patience lead to it",
+     "note": "“Grant repentance” and “everyone to come to repentance” stand side by side; in Acts 5:31 the text does not say who grants (the exalted Prince and Savior, or God who exalted Him). Where traditions part on how granting and a person's turning relate, the page takes no side.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "grace",
+       "name": "grace",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Acts.5.31",
+      "Acts.11.18",
+      "2Tim.2.25",
+      "Rom.2.4",
+      "2Pet.3.9"
+     ],
+     "eg": [
+      {
+       "id": "Acts.5.31",
+       "ref": "Acts 5:31",
+       "text": "God exalted Him to His right hand as Prince and Savior, in order to grant repentance and forgiveness of sins to Israel.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Acts.11.18",
+       "ref": "Acts 11:18",
+       "text": "When they heard this, they had no further objections, and they glorified God, saying, “So then, God has granted even the Gentiles repentance unto life.”",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.2.25",
+       "ref": "2 Timothy 2:25",
+       "text": "He must gently reprove those who oppose him, in the hope that God may grant them repentance leading to a knowledge of the truth.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.4",
+       "ref": "Romans 2:4",
+       "text": "Or do you disregard the riches of His kindness, tolerance, and patience, not realizing that God's kindness leads you to repentance?",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Repentance and forgiveness of sins",
+     "note": "Set side by side with the rows on baptism and on faith. These rows are listed in the order of their first verse in the Bible, with other rows between them; the page does not order repentance, baptism, faith and forgiveness.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Mark.1.4",
+      "Luke.3.3",
+      "Luke.24.47",
+      "Acts.5.31"
+     ],
+     "eg": [
+      {
+       "id": "Mark.1.4",
+       "ref": "Mark 1:4",
+       "text": "John the Baptist appeared in the wilderness, preaching a baptism of repentance for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Luke.3.3",
+       "ref": "Luke 3:3",
+       "text": "He went into all the region around the Jordan, preaching a baptism of repentance for the forgiveness of sins,",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Luke.24.47",
+       "ref": "Luke 24:47",
+       "text": "and in His name repentance and forgiveness of sins will be proclaimed to all nations, beginning in Jerusalem.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Acts.5.31",
+       "ref": "Acts 5:31",
+       "text": "God exalted Him to His right hand as Prince and Savior, in order to grant repentance and forgiveness of sins to Israel.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Fruit and deeds in keeping with repentance; repentance from dead works",
+     "note": "The text's own phrases (“fruit in keeping with repentance”, “deeds worthy of their repentance”, “repentance from dead works”); where traditions part on how repentance, faith and works relate, the page takes no side.",
+     "doors": [
+      {
+       "id": "image_fruit",
+       "name": "fruit",
+       "type": "image",
+       "missing": false
+      },
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Matt.3.8",
+      "Heb.6.1",
+      "Luke.3.8",
+      "Acts.26.20"
+     ],
+     "eg": [
+      {
+       "id": "Matt.3.8",
+       "ref": "Matthew 3:8",
+       "text": "Produce fruit, then, in keeping with repentance.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Heb.6.1",
+       "ref": "Hebrews 6:1",
+       "text": "Therefore let us leave the elementary teachings about Christ and go on to maturity, not laying again the foundation of repentance from dead works, and of faith in God,",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Luke.3.8",
+       "ref": "Luke 3:8",
+       "text": "Produce fruit, then, in keeping with repentance. And do not begin to say to yourselves, ‘We have Abraham as our father.' For I tell you that out of these stones God can raise up children for Abraham.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Acts.26.20",
+       "ref": "Acts 26:20",
+       "text": "First to those in Damascus and Jerusalem, then to everyone in the region of Judea, and then to the Gentiles, I declared that they should repent and turn to God, performing deeds worthy of their repentance.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Repentance and faith",
+     "note": "A verse that names both stands here and in the rows it fits; the page does not put repentance before faith or after. These rows are listed in the order of their first verse in the Bible, with other rows between them; the page does not order repentance, baptism, faith and forgiveness.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Acts.19.4",
+      "Heb.6.1",
+      "Acts.20.21"
+     ],
+     "eg": [
+      {
+       "id": "Acts.19.4",
+       "ref": "Acts 19:4",
+       "text": "Paul explained: “John's baptism was a baptism of repentance. He told the people to believe in the One coming after him, that is, in Jesus.”",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Heb.6.1",
+       "ref": "Hebrews 6:1",
+       "text": "Therefore let us leave the elementary teachings about Christ and go on to maturity, not laying again the foundation of repentance from dead works, and of faith in God,",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Acts.20.21",
+       "ref": "Acts 20:21",
+       "text": "testifying to Jews and Greeks alike about repentance to God and faith in our Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Repentance, salvation and life; godly sorrow",
+     "note": null,
+     "doors": [
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sorrow",
+       "name": "sorrow",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "grief",
+       "name": "grief",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Isa.30.15",
+      "Acts.11.18",
+      "2Cor.7.9",
+      "2Cor.7.10"
+     ],
+     "eg": [
+      {
+       "id": "Isa.30.15",
+       "ref": "Isaiah 30:15",
+       "text": "For the Lord GOD, the Holy One of Israel, has said: “By repentance and rest you would be saved; your strength would lie in quiet confidence-but you were not willing.”",
+       "words": [
+        {
+         "key": "h7729",
+         "lemma": "שׁוּבָה"
+        }
+       ]
+      },
+      {
+       "id": "Acts.11.18",
+       "ref": "Acts 11:18",
+       "text": "When they heard this, they had no further objections, and they glorified God, saying, “So then, God has granted even the Gentiles repentance unto life.”",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.7.9",
+       "ref": "2 Corinthians 7:9",
+       "text": "yet now I rejoice, not because you were made sorrowful, but because your sorrow led you to repentance. For you felt the sorrow that God had intended, and so were not harmed in any way by us.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.7.10",
+       "ref": "2 Corinthians 7:10",
+       "text": "Godly sorrow brings repentance that leads to salvation without regret, but worldly sorrow brings death.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Impossible ... to be restored to repentance”; “no ground for repentance”",
+     "note": "Hebrews 6:4-6 says it is impossible to restore again to repentance those who have fallen away; Hebrews 12:17 is said of Esau, who “could find no ground for repentance”. Where Christian traditions part on whether a believer can fall away and what this verse says of it, the page takes no side.",
+     "doors": [],
+     "n": 3,
+     "verses": [
+      "Heb.6.4",
+      "Heb.6.6",
+      "Heb.12.17"
+     ],
+     "eg": [
+      {
+       "id": "Heb.6.4",
+       "ref": "Hebrews 6:4",
+       "text": "It is impossible for those who have once been enlightened, who have tasted the heavenly gift, who have shared in the Holy Spirit,",
+       "words": []
+      },
+      {
+       "id": "Heb.6.6",
+       "ref": "Hebrews 6:6",
+       "text": "and then have fallen away-to be restored to repentance, because they themselves are crucifying the Son of God all over again and subjecting Him to open shame.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.17",
+       "ref": "Hebrews 12:17",
+       "text": "For you know that afterward, when he wanted to inherit the blessing, he was rejected. He could find no ground for repentance, though he sought the blessing with tears.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: called to repentance, conversion (ἐπιστροφή)",
+     "note": "Luke 5:32 and 15:7 (sinners called to repentance, joy over one who repents) and Acts 15:3, which uses ἐπιστροφή, 'the conversion of the Gentiles'.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Luke.5.32",
+      "Luke.15.7",
+      "Acts.15.3"
+     ],
+     "eg": [
+      {
+       "id": "Luke.5.32",
+       "ref": "Luke 5:32",
+       "text": "I have not come to call the righteous, but sinners, to repentance.”",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Luke.15.7",
+       "ref": "Luke 15:7",
+       "text": "I tell you that in the same way there will be more joy in heaven over one sinner who repents than over ninety-nine righteous ones who do not need to repent.",
+       "words": [
+        {
+         "key": "g3341",
+         "lemma": "μετάνοια"
+        }
+       ]
+      },
+      {
+       "id": "Acts.15.3",
+       "ref": "Acts 15:3",
+       "text": "Sent on their way by the church, they passed through Phoenicia and Samaria, recounting the conversion of the Gentiles and bringing great joy to all the brothers.",
+       "words": [
+        {
+         "key": "g1995",
+         "lemma": "ἐπιστροφή"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 1,
+   "rows": [
+    {
+     "label": "Unrepentant",
+     "note": null,
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 1,
+     "verses": [
+      "Rom.2.5"
+     ],
+     "eg": [
+      {
+       "id": "Rom.2.5",
+       "ref": "Romans 2:5",
+       "text": "But because of your hard and unrepentant heart, you are storing up wrath against yourself for the day of wrath, when God's righteous judgment will be revealed.",
+       "words": [
+        {
+         "key": "g279",
+         "lemma": "ἀμετανόητος"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “repent”",
+  "words": []
+ }
+}

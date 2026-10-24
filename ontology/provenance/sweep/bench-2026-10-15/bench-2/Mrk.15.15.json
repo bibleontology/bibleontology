@@ -1,0 +1,84 @@
+{
+ "ref": "Mrk.15.15",
+ "referents": [
+  {
+   "slot": "w10",
+   "choice": "w5",
+   "divine": false,
+   "why": "'To them' (autois) after 'released': the crowd are the ones released to. Plural pronoun for collective ochlos, agreement by sense as in Mrk.15.11.",
+   "category": "plural pronoun for collective noun"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "Subject of 'he delivered' and of the participle 'having flogged': Pilate.",
+   "category": "implied subject of a finite clause"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w16",
+   "divine": true,
+   "why": "Subject of the purpose clause 'that he might be crucified' (hina plus subjunctive). The one flogged and handed over is Jesus. The builder's Pilate would make the one who is crucified the agent of it.",
+   "category": "subject of a purpose clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Participle 'desiring' is a role of the main verb.",
+   "category": "participle of the main verb"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Infinitive 'to satisfy' completes the participle 'desiring' (the object of wishing), not a purpose.",
+   "category": "infinitive complement of wishing"
+  },
+  {
+   "src": "cl3",
+   "type": "within",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "Participle 'having flogged' is a role of the main verb.",
+   "category": "participle of the main verb"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "keep",
+   "why": "Hina plus subjunctive, third person: what the handing over is for.",
+   "category": "purpose clause"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "Narrative sequence: the release is followed by the flogging and handing over. De kai continues the line of events.",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The infinitive is nested inside the participle, not a next event; the narrative line runs cl0 then cl3.",
+   "category": "nested clause linked as event"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "object of 'having flogged' (cl4, 'him')",
+   "why": "The implied object, Jesus, has no slot in the list."
+  }
+ ]
+}

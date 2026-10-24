@@ -1,0 +1,241 @@
+# Caddy sits in front of the Python server and does one job well: TLS.
+#
+# THE CERTIFICATE IS CLOUDFLARE'S ORIGIN CERTIFICATE (2026-10-01), not one
+# Caddy fetches. Until then Caddy obtained and renewed a Let's Encrypt
+# certificate itself -- the reason it was chosen over nginx -- but renewal
+# needs Let's Encrypt to reach this machine directly, and behind the
+# Cloudflare proxy, with ufw about to admit only Cloudflare, that path is the
+# one most likely to fail quietly (the Let's Encrypt one ends 2026-11-20). The
+# origin certificate is issued by Cloudflare for this domain and its
+# subdomains, is trusted only by Cloudflare (which is the point: nobody
+# should reach this machine any other way), lasts fifteen years, and needs
+# no renewal and no outbound call. Cloudflare's SSL/TLS mode stays Full
+# (strict), which accepts it. The files are placed by hand, never committed:
+#     /etc/caddy/certs/origin.pem   root:caddy 644
+#     /etc/caddy/certs/origin.key   root:caddy 640
+# docs/OPERATIONS.md, "The origin certificate", says how, and when it ends.
+#
+# The Python server listens on localhost only, so the sole route in is through
+# this file.
+
+# HOW LONG A CONNECTION MAY TAKE (2026-10-01, docs/LAUNCH.md: the security
+# review found that ~60 idle or slow connections could hold every thread the
+# app allows). A client gets 10 s to send its headers, 10 s for a body (there
+# never is one), 60 s for the whole response, and 2 minutes idle between
+# requests on a kept-alive connection -- a slow-loris holds nothing for long.
+{
+	servers {
+		timeouts {
+			read_header 10s
+			read_body 10s
+			write 60s
+			idle 2m
+		}
+	}
+}
+
+# ONE NAME FOR THE SITE (A.21). Every page names bibleontology.org as the
+# one to keep; www sends readers and crawlers there, permanently, address
+# kept. The same origin certificate covers both names.
+www.bibleontology.org {
+	tls /etc/caddy/certs/origin.pem /etc/caddy/certs/origin.key
+	redir https://bibleontology.org{uri} permanent
+}
+
+bibleontology.org {
+	tls /etc/caddy/certs/origin.pem /etc/caddy/certs/origin.key
+	encode zstd gzip
+
+	# The app answers GET and HEAD -- and, since reader feedback (plan A.27,
+	# 2026-10-03), one POST: /api/feedback. Anything else stops here. Bodies
+	# stay at 1 KB everywhere except that one address, which takes up to 8 KB
+	# (the app itself refuses over 4 KB: a note is at most 1,000 characters).
+	@notread {
+		not method GET HEAD
+		not {
+			method POST
+			path /api/feedback
+		}
+	}
+	respond @notread 405
+	@feedback path /api/feedback
+	request_body @feedback {
+		max_size 8KB
+	}
+	@notfeedback not path /api/feedback
+	request_body @notfeedback {
+		max_size 1KB
+	}
+
+	# CACHING IS THE APP'S JOB, NOT CADDY'S. The history, kept so the old rule
+	# is not put back:
+	#
+	# NOT CACHED (2026-10-01, the app2 deploy). This was "public, max-age=300",
+	# and Caddy sets it whatever the answer -- so the invite gate's closed
+	# door (403 on "/") was cacheable for five minutes. Someone who opened the
+	# site before clicking their invite link would follow the link, get the
+	# cookie, be redirected to "/", and could be shown the cached closed door:
+	# an invite that looks broken. While the page is gated it must be fetched
+	# every time; "no-cache" makes the browser ask again (the page is 400 KB).
+	#
+	# THEN MOVED TO THE APP (2026-10-01, the site public). Caddy's `header`
+	# sets a value whatever the answer, which is how a 403 came to be
+	# cacheable. The app now sets caching itself, on a 200 only: the page and
+	# every /api answer five minutes, vendored files a year, the closed door
+	# never (no-store). Caddy sets no Cache-Control at all.
+	# NO CACHING RULE FOR /vendor/ HERE (2026-10-01). It was "public, a year,
+	# immutable" on /vendor/*, and Caddy set it on every answer -- the invite
+	# gate's 403 included -- so Cloudflare kept a 403 for the body font and
+	# for Mermaid as if it were the file. The app now sets it, on a 200 only
+	# (app2/server.py, the static handler).
+
+	# SEARCH LET IN (plan A.21, 2026-10-03). This was
+	# `header X-Robots-Tag "noindex, nofollow"` on every answer, while the site
+	# was invite-only and then while its pages were built. Removed once every
+	# card, chapter, verse and theme had a page of its own, the sitemaps and
+	# robots.txt existed, and the security look had passed
+	# (docs/review/SECURITY-A21.md). What must stay unlisted says so itself:
+	# the app sends noindex on /api/* and /ops, and the "back in a moment"
+	# page below keeps its own.
+
+	# Cheap headers that cost nothing and close off whole categories.
+	header {
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "same-origin"
+		Strict-Transport-Security "max-age=31536000"
+		# the page needs no camera, microphone, location or payment
+		Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+		-Server
+	}
+
+	# The app reads X-Forwarded-Proto to decide whether to mark the invite
+	# cookie Secure. Setting it here is redundant -- reverse_proxy sends it
+	# by default, having terminated the TLS itself -- and Caddy says so at
+	# every reload, so it is left to the default.
+	#
+	# CRAWLERS THAT TRAIN MODELS ARE REFUSED HERE (2026-10-05). The
+	# concern with training is no attribution: a search engine or an
+	# AI search or answer fetcher cites and links the page; a training crawler
+	# takes the text into a model and nothing points back. Cloudflare's own
+	# "training blocked" policy also blocked Googlebot and Bingbot from every
+	# page (it counts them as training crawlers, and the free plan has no
+	# per-crawler switch), so Cloudflare lets all through and the line is
+	# drawn here, by the name each crawler announces. robots.txt stays open to
+	# them, so the rule they are refused by is readable. The names are
+	# tools/sitemap.py's TRAINING list (tests/test_crawlers.py keeps the two
+	# the same); FacebookBot is not facebookexternalhit (link previews), and
+	# ClaudeBot, GPTBot are not Claude-SearchBot, Claude-User, OAI-SearchBot or
+	# ChatGPT-User, which cite. A crawler that hides its name is not stopped
+	# here, nor was it by Cloudflare's policy.
+	@training {
+		header_regexp User-Agent (?i)(GPTBot|ClaudeBot|anthropic-ai|CCBot|meta-externalagent|FacebookBot|Bytespider|cohere-training-data-crawler|Diffbot|Omgilibot|PerplexityBot-Training|Amazonbot|Timpibot|TikTokSpider)
+		not path /robots.txt
+	}
+	handle @training {
+		header Cache-Control "no-store"
+		respond "This site is not for model training: see /robots.txt." 403
+	}
+
+	# ROBOTS.TXT AND THE SITEMAPS, FROM DISK (plan A.21, 2026-10-03). Written
+	# by tools/sitemap.py into deploy/www/ and served here, not by the app, so
+	# they answer while the app restarts: Google pauses crawling a whole site
+	# while its robots.txt answers 5xx, where a page's 503 only makes it come
+	# back later. Rebuilt and pushed with the rest; nothing else is served
+	# from that folder. One more exact file (2026-10-07): the IndexNow key,
+	# public by design -- Bing fetches it to confirm a submission comes from
+	# the site's owner (tools/indexnow.py). An exact name, never a pattern.
+	@seo path /robots.txt /sitemap.xml /sitemap-pages.xml /sitemap-cards.xml /sitemap-chapters.xml /sitemap-verses.xml /70f78dc8d33c4d598e6c2ca90519b6ce.txt
+	handle @seo {
+		root * /srv/bibleontology/deploy/www
+		file_server
+	}
+
+	# The app gets 30 s to start answering; a request it cannot answer in that
+	# time is cut off rather than left holding a connection on both sides.
+	handle {
+		reverse_proxy 127.0.0.1:8000 {
+			transport http {
+				dial_timeout 5s
+				response_header_timeout 30s
+			}
+		}
+	}
+
+	# WHILE THE APP IS DOWN (2026-10-01: a splash page that automatically
+	# displays during deployments). A deploy restarts the app and it takes a
+	# few minutes to load before it opens its port; until then Caddy cannot
+	# reach it (502), and a request it cannot finish in time is a 504. Either
+	# way the reader gets this page instead of an error: it reloads itself every
+	# 20 seconds, so it turns into the site the moment the app is back.
+	#
+	# It lives here, in the Caddyfile, rather than as a file on disk, so it
+	# needs nothing the caddy user might not be able to read and cannot be
+	# broken by the deploy it is covering for. It is sent as 503 with
+	# Retry-After, which Cloudflare passes through as it is, and is never
+	# cached by anyone. No script; the policy says so.
+	handle_errors {
+		@down expression `{err.status_code} in [502, 503, 504]`
+		handle @down {
+			header {
+				Content-Type "text/html; charset=utf-8"
+				Cache-Control "no-store"
+				Retry-After "20"
+				Content-Security-Policy "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'"
+				X-Robots-Tag "noindex, nofollow"
+				-Server
+			}
+			respond `<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=refresh content=20><title>Bible Ontology — back in a moment</title><style>body{font:17px/1.5 Georgia,serif;color:#1a1a19;background:#faf8f3;max-width:30em;margin:18vh auto;padding:0 16px;text-align:center}h1{font-weight:normal;font-size:1.5em;margin:0 0 .4em}p{color:#52514e;margin:.3em 0}@media(prefers-color-scheme:dark){body{color:#e8e6e1;background:#1c1b19}p{color:#a8a59c}}</style><h1>Back in a moment</h1><p>Bible Ontology is being updated.</p><p>This page will reload itself when it is ready, usually within a few minutes.</p>` 503
+		}
+	}
+
+	log {
+		output file /var/log/caddy/bibleontology.log {
+			roll_size 10MiB
+			roll_keep 5
+		}
+
+		# An invite link is `/?k=TOKEN`. The app spends that token once and
+		# redirects to a clean address, but the request Caddy logs is the
+		# one that still carries it -- and the cookie it becomes is sent on
+		# every request after. Written plainly, this file would hold a
+		# working key to the site for every reader, in five rolled copies,
+		# readable by anyone who ever gets as far as the log directory.
+		#
+		# So both are dropped before anything is written. What remains is
+		# enough to answer "is it up, is it slow, what is being asked for"
+		# and nothing that lets the answer be used to get in.
+		#
+		# Addresses are masked to the /24 for the same reason the profiles
+		# are private: nothing here needs to know which house a reader is
+		# in, and a log that cannot say cannot be made to.
+		format filter {
+			wrap console
+			fields {
+				request>uri query {
+					delete k
+				}
+				request>headers>Cookie delete
+				request>headers>Set-Cookie delete
+				request>remote_ip ip_mask {
+					ipv4 24
+					ipv6 32
+				}
+				request>client_ip ip_mask {
+					ipv4 24
+					ipv6 32
+				}
+
+				# Behind the Cloudflare proxy, remote_ip is Cloudflare and
+				# masking it protects nobody -- the reader's real address
+				# arrives in these headers instead, and would sit unmasked
+				# beside a carefully masked one. CF-IPCountry is dropped on
+				# the same reasoning: it answers a question about a reader
+				# that running this site never needs to ask.
+				request>headers>CF-Connecting-IP delete
+				request>headers>X-Forwarded-For delete
+				request>headers>True-Client-IP delete
+				request>headers>CF-IPCountry delete
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+{
+ "ref": "Exo.7.27",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'You refusing' is second person in the LORD's words to Moses, which are addressed to Pharaoh (masculine singular).",
+   "category": "addressee of quoted speech"
+  },
+  {
+   "slot": "w7",
+   "choice": "Exo.7.26#w2",
+   "divine": true,
+   "why": "'I' in the LORD's words (cl3 of the previous verse) is the LORD, the same person as the quoted speaker.",
+   "category": "first person of quoted divine speech"
+  },
+  {
+   "slot": "w12",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'your territory' is the possessive of the addressee, Pharaoh.",
+   "category": "possessive of addressee"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "'Refuse to let them go': the infinitive completes the verb of refusing as its object, and the purpose type excludes verbs of refusing.",
+   "category": "infinitive complement read as purpose"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The infinitive is nested as the object of 'refuse'.",
+   "category": "infinitive as object"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "The if-link runs from the host clause to its condition, so this direction is reversed.",
+   "category": "condition direction reversed"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl0",
+   "action": "add",
+   "why": "The condition is 'if you refuse' (cl0); its host is the next clause that is not an infinitive complement, here (cl2).",
+   "category": "fronted condition"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "This waw is the 'and' of 'and if' and is carried by the if-link; a second link duplicates it.",
+   "category": "duplicate link"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "'Here, I am about to strike': a plain waw joining the consequence, with no cause or purpose.",
+   "category": "plain and in the consequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond0",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl0"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The if-clause and the clause it conditions; the consequence is cl2, the host of the apodosis.",
+   "category": "conditional group"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl2 (hinneh, 'here!')",
+   "what": "The exclamation that opens the consequence after a condition has no link type or group role; it is recorded as the host of the conditional's consequence."
+  }
+ ],
+ "cant_tell": []
+}

@@ -1,0 +1,60 @@
+{
+ "ref": "Job.38.2",
+ "referents": [
+  {
+   "slot": "w0",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "The interrogative 'who' asks the identity of the one obscuring counsel. The rebuke is to Job, the one answered in 38:1.",
+   "category": "interrogative who in a rebuke"
+  }
+ ],
+ "links": [
+  {
+   "src": "Job.38.1#cl1",
+   "type": "content",
+   "dst": "Job.38.2#cl0",
+   "action": "add",
+   "why": "'And said' in 38:1 introduces this speech. The first said clause is the question in cl0.",
+   "category": "speech content across verses"
+  },
+  {
+   "src": "Job.38.2#cl0",
+   "type": "describing",
+   "dst": "Job.38.2#cl1",
+   "action": "add",
+   "why": "The bare participle 'making dark counsel' follows the question directly and agrees with its subject 'who'; it describes that subject as it acts.",
+   "category": "participle describing subject"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Job.38.2#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "Job.38.1#cl1"
+    },
+    {
+     "role": "part",
+     "node": "Job.38.2#cl0"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Job.38.1#w4"
+    }
+   ],
+   "divine": true,
+   "why": "The LORD's answer out of the whirlwind is one turn: frame is the saying clause in 38:1, the first part its question, sender the LORD, addressee Job. Later parts are recorded in their own verses.",
+   "category": "speech turn opened across verses"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

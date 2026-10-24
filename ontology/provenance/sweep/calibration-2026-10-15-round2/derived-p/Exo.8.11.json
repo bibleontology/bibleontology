@@ -1,0 +1,60 @@
+{
+ "ref": "Exo.8.11",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w2",
+   "divine": false
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.8.8#c2",
+   "divine": false
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "as",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

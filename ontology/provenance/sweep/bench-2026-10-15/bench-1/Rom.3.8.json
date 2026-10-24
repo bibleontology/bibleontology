@@ -1,0 +1,164 @@
+{
+ "ref": "Rom.3.8",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'We are slanderously charged' (first plural): Paul and his company; no first-plural candidate.",
+   "category": "first person plural not offered"
+  },
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false,
+   "why": "'Some' (masculine plural) who affirm the slander; the slanderers are not among the candidates (condemnation only).",
+   "category": "subject not offered as candidate"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'Us' is the accusative subject of the infinitive 'to say': the people slandered, Paul and his company; no first-plural candidate. The builder's 'some' is wrong.",
+   "category": "subject of infinitive not offered"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "'Let us do' (first plural) in the quoted slogan is the group slandered; no candidate. The builder's 'some' is wrong.",
+   "category": "first person plural inside quotation"
+  },
+  {
+   "slot": "w18",
+   "choice": "none",
+   "divine": false,
+   "why": "'Their' condemnation (masculine plural) refers to the slanderers; no masculine plural candidate, and the only candidate is the condemnation itself.",
+   "category": "possessive of uncandidated people"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "Hina: 'let us do evil so that good may come'; the good is the purpose of the evil.",
+   "category": "so that after command"
+  },
+  {
+   "src": "cl2",
+   "type": "that",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "Ruling R1: a saying clause introduces what is said, linked as content, not as that.",
+   "category": "speech content, ruling R1"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'To say' introduces the slogan 'let us do evil that good may come'.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The infinitive 'us to say' is the object of 'affirm'.",
+   "category": "infinitive complement of saying verb"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'Affirm' introduces the claim that they say this; nested speech gets its own content link (R1).",
+   "category": "nested speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "'Their condemnation is deserved' is the writer's own verdict, not nested in the slanderers' claim.",
+   "category": "separate sentence linked as nested"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot be joined to itself.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Kai joins the two comparisons: 'we are slanderously charged, and as some affirm'.",
+   "category": "parallel clauses joined by kai"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "Rom.3.8#g1"
+    }
+   ],
+   "divine": false,
+   "why": "The claim is the speech of the slanderers, and the inner turn is its part. Cl5 is the writer's own verdict and is removed from the turn. The slanderers are not a candidate, so no sender is given.",
+   "category": "turn nests the claimed speech"
+  },
+  {
+   "id": "Rom.3.8#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "The claimed speech 'us to say' has the slogan as its part (ruling R1, nested speech).",
+   "category": "nested speech"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl5 'Their condemnation is deserved'",
+   "what": "The writer's verdict on the slanderers, not a link to any clause; no link type records a verdict."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the sender of the claim in turn0",
+   "why": "the slanderers ('some') are not offered as candidates"
+  }
+ ]
+}

@@ -1,0 +1,2291 @@
+{
+ "id": "mercy",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "verb",
+ "words": [
+  {
+   "key": "h7355",
+   "lemma": "רָחַם",
+   "form": "verb",
+   "translit": "ra.cham",
+   "gloss": "to have compassion",
+   "lang": "Hebrew",
+   "uses": 41,
+   "other_sense": 2
+  },
+  {
+   "key": "h7356",
+   "lemma": "רַחֲמִים",
+   "form": "noun",
+   "translit": "raḥămiym",
+   "gloss": "compassion",
+   "lang": "Hebrew",
+   "uses": 38,
+   "other_sense": 1
+  },
+  {
+   "key": "h7349",
+   "lemma": "רַחוּם",
+   "form": "adjective",
+   "translit": "ra.chum",
+   "gloss": "compassionate",
+   "lang": "Hebrew",
+   "uses": 13,
+   "other_sense": 0
+  },
+  {
+   "key": "h7359",
+   "lemma": "רַחֲמִין",
+   "form": "noun",
+   "translit": "re.chem",
+   "gloss": "compassion",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "h7362",
+   "lemma": "רַחֲמָנִי",
+   "form": "adjective",
+   "translit": "rach.ma.ni",
+   "gloss": "compassionate",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g1653",
+   "lemma": "ἐλεέω",
+   "form": "verb",
+   "translit": "eleeō",
+   "gloss": "to have mercy",
+   "lang": "Greek",
+   "uses": 29,
+   "other_sense": 0
+  },
+  {
+   "key": "g1656",
+   "lemma": "ἔλεος",
+   "form": "noun",
+   "translit": "eleos",
+   "gloss": "mercy",
+   "lang": "Greek",
+   "uses": 26,
+   "other_sense": 0
+  },
+  {
+   "key": "g1655",
+   "lemma": "ἐλεήμων",
+   "form": "adjective",
+   "translit": "eleēmōn",
+   "gloss": "merciful",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g1652",
+   "lemma": "ἐλεεινός",
+   "form": "adjective",
+   "translit": "eleeinos",
+   "gloss": "pitiful",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 1
+  },
+  {
+   "key": "g448",
+   "lemma": "ἀνέλεος",
+   "form": "adjective",
+   "translit": "anileōs",
+   "gloss": "merciless",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g415",
+   "lemma": "ἀνελεήμων",
+   "form": "adjective",
+   "translit": "aneleēmōn",
+   "gloss": "merciless",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "verb": "Who has mercy on whom",
+  "noun": "What the text says of mercy",
+  "adjective": "Called merciful, compassionate"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "grace",
+   "name": "grace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "love",
+   "name": "love",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "justice",
+   "name": "justice",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "judgment",
+   "name": "judgment",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "neighbor",
+   "name": "neighbor",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "salvation",
+   "name": "salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "peace",
+   "name": "peace",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "blessed_are_the_merciful",
+   "name": "blessed are the merciful",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "i_desired_mercy_and_not_sacrifice",
+   "name": "I desire mercy, not sacrifice",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "his_compassions_fail_not",
+   "name": "His mercies never fail",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "what_does_the_lord_require",
+   "name": "what does the LORD require of you",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_lord_merciful_and_gracious",
+   "name": "The LORD, the LORD God, is compassionate and gracious",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "surely_goodness_and_mercy_will_follow_me_all_the_days_of_my_life",
+   "name": "Surely goodness and mercy will follow me all the days of my life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_sure_mercies_of_david",
+   "name": "My loving devotion promised to David",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "saved_by_his_mercy",
+   "name": "saved by his mercy",
+   "type": "assessment",
+   "missing": false
+  },
+  {
+   "id": "matt_5_3_12",
+   "name": "the Beatitudes",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Exod.34.6",
+   "ref": "Exodus 34:6",
+   "text": "Then the LORD passed in front of Moses and called out: “The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion and faithfulness,"
+  },
+  {
+   "id": "Ps.103.13",
+   "ref": "Psalms 103:13",
+   "text": "As a father has compassion on his children, so the LORD has compassion on those who fear Him."
+  },
+  {
+   "id": "Lam.3.22",
+   "ref": "Lamentations 3:22",
+   "text": "Because of the loving devotion of the LORD we are not consumed, for His mercies never fail."
+  },
+  {
+   "id": "Matt.5.7",
+   "ref": "Matthew 5:7",
+   "text": "Blessed are the merciful, for they will be shown mercy."
+  },
+  {
+   "id": "Matt.9.13",
+   "ref": "Matthew 9:13",
+   "text": "But go and learn what this means: ‘I desire mercy, not sacrifice.' For I have not come to call the righteous, but sinners.”"
+  },
+  {
+   "id": "Rom.9.15",
+   "ref": "Romans 9:15",
+   "text": "For He says to Moses: “I will have mercy on whom I have mercy, and I will have compassion on whom I have compassion.”"
+  },
+  {
+   "id": "Eph.2.4",
+   "ref": "Ephesians 2:4",
+   "text": "But because of His great love for us, God, who is rich in mercy,"
+  },
+  {
+   "id": "Jas.2.13",
+   "ref": "James 2:13",
+   "text": "For judgment without mercy will be shown to anyone who has not been merciful. Mercy triumphs over judgment."
+  }
+ ],
+ "forms": [
+  {
+   "form": "verb",
+   "verses": 70,
+   "rows": [
+    {
+     "label": "“Have mercy on me, on us”",
+     "note": "The cry in the Gospels, to Jesus, and from the rich man to Abraham; “my son” in Matt 17:15. The Hebrew cry of Ps 51:1, “Have mercy on me, O God”, is another word, חָנַן, set out under Other words (see Grace).",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "grace",
+       "name": "grace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Matt.9.27",
+      "Matt.15.22",
+      "Matt.17.15",
+      "Matt.20.30",
+      "Matt.20.31",
+      "Mark.10.47",
+      "Mark.10.48",
+      "Luke.16.24",
+      "Luke.17.13",
+      "Luke.18.38",
+      "Luke.18.39"
+     ],
+     "eg": [
+      {
+       "id": "Matt.9.27",
+       "ref": "Matthew 9:27",
+       "text": "As Jesus went on from there, two blind men followed Him, crying out, “Have mercy on us, Son of David!”",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.15.22",
+       "ref": "Matthew 15:22",
+       "text": "And a Canaanite woman from that region came to Him, crying out, “Lord, Son of David, have mercy on me! My daughter is miserably possessed by a demon.”",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.17.15",
+       "ref": "Matthew 17:15",
+       "text": "“Lord, have mercy on my son,” he said. “He has seizures and is suffering terribly. He often falls into the fire or into the water.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.20.30",
+       "ref": "Matthew 20:30",
+       "text": "And there were two blind men sitting beside the road. When they heard that Jesus was passing by, they cried out, “Lord, Son of David, have mercy on us!”",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD will have compassion",
+     "note": "Hos 2:23, “I will have compassion on ‘No Compassion’”, is answered in 1 Pet 2:10 (“Now you have received mercy”, below); the same name stands under “No compassion” at Hos 1:6.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Deut.13.17",
+      "Deut.30.3",
+      "2Kgs.13.23",
+      "Ps.102.13",
+      "Ps.103.13",
+      "Ps.116.5",
+      "Isa.14.1",
+      "Isa.30.18",
+      "Isa.49.13",
+      "Isa.54.8",
+      "Isa.54.10",
+      "Isa.55.7",
+      "Isa.60.10",
+      "Jer.12.15",
+      "Jer.30.18",
+      "Jer.31.20",
+      "Jer.33.26",
+      "Lam.3.32",
+      "Ezek.39.25",
+      "Hos.1.7",
+      "Hos.2.23",
+      "Hos.14.3",
+      "Mic.7.19",
+      "Zech.10.6"
+     ],
+     "eg": [
+      {
+       "id": "Deut.13.17",
+       "ref": "Deuteronomy 13:17",
+       "text": "Nothing devoted to destruction shall cling to your hands, so that the LORD will turn from His fierce anger, grant you mercy, show you compassion, and multiply you as He swore to your fathers,",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        },
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Deut.30.3",
+       "ref": "Deuteronomy 30:3",
+       "text": "then He will restore you from captivity and have compassion on you and gather you from all the nations to which the LORD your God has scattered you.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.13.23",
+       "ref": "2 Kings 13:23",
+       "text": "But the LORD was gracious to Israel and had compassion on them, and He turned toward them because of His covenant with Abraham, Isaac, and Jacob. And to this day, the LORD has been unwilling to destroy them or cast them from His presence.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.102.13",
+       "ref": "Psalms 102:13",
+       "text": "You will rise up and have compassion on Zion, for it is time to show her favor-the appointed time has come.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“I will have mercy on whom I have mercy”",
+     "note": "The text's own phrase, kept as written; Rom 9:23, “the vessels of His mercy”, continues the passage. Where Christian traditions part on how God's mercy bears on election and on human choice, the page takes no side.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Exod.33.19",
+      "Rom.9.15",
+      "Rom.9.18",
+      "Rom.9.16",
+      "Rom.9.23"
+     ],
+     "eg": [
+      {
+       "id": "Exod.33.19",
+       "ref": "Exodus 33:19",
+       "text": "“I will cause all My goodness to pass before you,” the LORD replied, “and I will proclaim My name-the LORD-in your presence. I will have mercy on whom I have mercy, and I will have compassion on whom I have compassion.”",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.15",
+       "ref": "Romans 9:15",
+       "text": "For He says to Moses: “I will have mercy on whom I have mercy, and I will have compassion on whom I have compassion.”",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.18",
+       "ref": "Romans 9:18",
+       "text": "Therefore God has mercy on whom He wants to have mercy, and He hardens whom He wants to harden.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.16",
+       "ref": "Romans 9:16",
+       "text": "So then, it does not depend on man's desire or effort, but on God's mercy.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Now you have received mercy”",
+     "note": "1 Pet 2:10, “once you had not received mercy, but now you have received mercy”, answers Hosea's “No Compassion” (Hos 1:6 and 2:23). Each verse gives its own reason, or none; the page takes no side on what mercy depends on.",
+     "doors": [],
+     "n": 6,
+     "verses": [
+      "1Pet.2.10",
+      "1Cor.7.25",
+      "2Cor.4.1",
+      "1Tim.1.13",
+      "1Tim.1.16",
+      "Phil.2.27"
+     ],
+     "eg": [
+      {
+       "id": "1Pet.2.10",
+       "ref": "1 Peter 2:10",
+       "text": "Once you were not a people, but now you are the people of God; once you had not received mercy, but now you have received mercy.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.7.25",
+       "ref": "1 Corinthians 7:25",
+       "text": "Now about virgins, I have no command from the Lord, but I give a judgment as one who by the Lord's mercy is trustworthy.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.4.1",
+       "ref": "2 Corinthians 4:1",
+       "text": "Therefore, since God in His mercy has given us this ministry, we do not lose heart.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.1.13",
+       "ref": "1 Timothy 1:13",
+       "text": "I was formerly a blasphemer, a persecutor, and a violent man; yet because I had acted in ignorance and unbelief, I was shown mercy.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Show mercy to others",
+     "note": "Luke 6:36, “Be merciful, just as your Father is merciful”, is another word (οἰκτίρμων), set out under Other words.",
+     "doors": [
+      {
+       "id": "neighbor",
+       "name": "neighbor",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Matt.5.7",
+      "Matt.18.33",
+      "Rom.12.8",
+      "Jude.1.22",
+      "Jude.1.23"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.7",
+       "ref": "Matthew 5:7",
+       "text": "Blessed are the merciful, for they will be shown mercy.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        },
+        {
+         "key": "g1655",
+         "lemma": "ἐλεήμων"
+        }
+       ]
+      },
+      {
+       "id": "Matt.18.33",
+       "ref": "Matthew 18:33",
+       "text": "Shouldn't you have had mercy on your fellow servant, just as I had on you?'",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.12.8",
+       "ref": "Romans 12:8",
+       "text": "if it is encouraging, let him encourage; if it is giving, let him give generously; if it is leading, let him lead with diligence; if it is showing mercy, let him do it cheerfully.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Jude.1.22",
+       "ref": "Jude 1:22",
+       "text": "And indeed, have mercy on those who doubt;",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Mercy through disobedience",
+     "note": "The text's own words, kept as written: where Christian traditions part on whom Rom 11:32's 'everyone' takes in, the page takes no side.",
+     "doors": [
+      {
+       "id": "gentiles",
+       "name": "the Gentiles",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Rom.11.30",
+      "Rom.11.31",
+      "Rom.11.32"
+     ],
+     "eg": [
+      {
+       "id": "Rom.11.30",
+       "ref": "Romans 11:30",
+       "text": "Just as you who formerly disobeyed God have now received mercy through their disobedience,",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.11.31",
+       "ref": "Romans 11:31",
+       "text": "so they too have now disobeyed, in order that they too may now receive mercy through the mercy shown to you.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        },
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.11.32",
+       "ref": "Romans 11:32",
+       "text": "For God has consigned everyone to disobedience so that He may have mercy on everyone.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "No compassion, no mercy, no pity",
+     "note": "Zech 1:12 is a question put to the LORD, “How long?”; the verses of this row are said of the LORD, of the enemy He raises, or asked of Him. Hos 1:6, “No Compassion”, is answered at Hos 2:23 and in 1 Pet 2:10.",
+     "doors": [],
+     "n": 10,
+     "verses": [
+      "Isa.9.17",
+      "Isa.13.18",
+      "Isa.27.11",
+      "Jer.6.23",
+      "Jer.13.14",
+      "Jer.21.7",
+      "Jer.50.42",
+      "Hos.1.6",
+      "Hos.2.4",
+      "Zech.1.12"
+     ],
+     "eg": [
+      {
+       "id": "Isa.9.17",
+       "ref": "Isaiah 9:17",
+       "text": "Therefore the Lord takes no pleasure in their young men; He has no compassion on their fatherless and widows. For every one of them is godless and wicked, and every mouth speaks folly. Despite all this, His anger is not turned away; His hand is still upraised.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.13.18",
+       "ref": "Isaiah 13:18",
+       "text": "Their bows will dash young men to pieces; they will have no mercy on the fruit of the womb; they will not look with pity on the children.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.27.11",
+       "ref": "Isaiah 27:11",
+       "text": "When its limbs are dry, they are broken off. Women come and use them for kindling; for this is a people without understanding. Therefore their Maker has no compassion on them, and their Creator shows them no favor.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Jer.6.23",
+       "ref": "Jeremiah 6:23",
+       "text": "They grasp the bow and spear; they are cruel and merciless. Their voice roars like the sea, and they ride upon horses, lined up like men in formation against you, O Daughter of Zion.”",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Isa 49:10 says only “He who has compassion”, and Mark 5:19 says “the Lord”; readers take Mark 5:19 of the Father or of Christ, and the page does not choose.",
+     "doors": [],
+     "n": 6,
+     "verses": [
+      "1Kgs.8.50",
+      "Mark.5.19",
+      "Prov.28.13",
+      "Isa.49.10",
+      "Isa.49.15",
+      "Jer.42.12"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.8.50",
+       "ref": "1 Kings 8:50",
+       "text": "May You forgive Your people who have sinned against You and all the transgressions they have committed against You, and may You grant them compassion in the eyes of their captors to show them mercy.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Mark.5.19",
+       "ref": "Mark 5:19",
+       "text": "But Jesus would not allow him. “Go home to your own people,” He said, “and tell them how much the Lord has done for you, and what mercy He has shown you.”",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        }
+       ]
+      },
+      {
+       "id": "Prov.28.13",
+       "ref": "Proverbs 28:13",
+       "text": "He who conceals his sins will not prosper, but whoever confesses and renounces them will find mercy.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.49.10",
+       "ref": "Isaiah 49:10",
+       "text": "They will not hunger or thirst, nor will scorching heat or sun beat down on them. For He who has compassion on them will guide them and lead them beside springs of water.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "noun",
+   "verses": 74,
+   "rows": [
+    {
+     "label": "Mercy and peace",
+     "note": "The openings of 1 Tim, 2 Tim, 2 John and Jude, and Gal 6:16. On who “the Israel of God” is, readers part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "peace",
+       "name": "peace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "1Tim.1.2",
+      "2John.1.3",
+      "Jude.1.2",
+      "Gal.6.16",
+      "2Tim.1.2"
+     ],
+     "eg": [
+      {
+       "id": "1Tim.1.2",
+       "ref": "1 Timothy 1:2",
+       "text": "To Timothy, my true child in the faith: Grace, mercy, and peace from God the Father and Christ Jesus our Lord.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "2John.1.3",
+       "ref": "2 John 1:3",
+       "text": "Grace, mercy, and peace from God the Father and from Jesus Christ, the Son of the Father, will be with us in truth and love.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "Jude.1.2",
+       "ref": "Jude 1:2",
+       "text": "Mercy, peace, and love be multiplied to you.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.6.16",
+       "ref": "Galatians 6:16",
+       "text": "Peace and mercy to all who walk by this rule, even to the Israel of God.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Compassion beside חֶסֶד, “loving devotion”",
+     "note": "The Hebrew חֶסֶד, which the Berean renders “loving devotion” (“favor” in Dan 1:9), stands in these verses beside the Hebrew word for compassion. They are two words, and the page sets them side by side as the verses do.",
+     "doors": [
+      {
+       "id": "love",
+       "name": "love",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Ps.25.6",
+      "Ps.40.11",
+      "Ps.51.1",
+      "Ps.69.16",
+      "Ps.103.4",
+      "Isa.63.7",
+      "Jer.16.5",
+      "Lam.3.22",
+      "Dan.1.9",
+      "Hos.2.19",
+      "Zech.7.9"
+     ],
+     "eg": [
+      {
+       "id": "Ps.25.6",
+       "ref": "Psalms 25:6",
+       "text": "Remember, O LORD, Your compassion and loving devotion, for they are from age to age.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Ps.40.11",
+       "ref": "Psalms 40:11",
+       "text": "O LORD, do not withhold Your mercy from me; Your loving devotion and faithfulness will always guard me.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Ps.51.1",
+       "ref": "Psalms 51:1",
+       "text": "For the choirmaster. A Psalm of David. When Nathan the prophet came to him after his adultery with Bathsheba. Have mercy on me, O God, according to Your loving devotion; according to Your great compassion, blot out my transgressions.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Ps.69.16",
+       "ref": "Psalms 69:16",
+       "text": "Answer me, O LORD, for Your loving devotion is good; turn to me in keeping with Your great compassion.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Beside justice, judgment and anger",
+     "note": null,
+     "doors": [
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "anger",
+       "name": "anger",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Hos.2.19",
+      "Matt.23.23",
+      "Jas.2.13",
+      "Zech.7.9",
+      "Hab.3.2",
+      "Deut.13.17",
+      "Isa.47.6",
+      "Isa.54.8",
+      "Isa.60.10",
+      "Zech.1.12",
+      "Ps.77.9"
+     ],
+     "eg": [
+      {
+       "id": "Hos.2.19",
+       "ref": "Hosea 2:19",
+       "text": "So I will betroth you to Me forever; I will betroth you in righteousness and justice, in loving devotion and compassion.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Matt.23.23",
+       "ref": "Matthew 23:23",
+       "text": "Woe to you, scribes and Pharisees, you hypocrites! You pay tithes of mint, dill, and cumin. But you have disregarded the weightier matters of the law: justice, mercy, and faithfulness. You should have practiced the latter, without neglecting the former.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.13",
+       "ref": "James 2:13",
+       "text": "For judgment without mercy will be shown to anyone who has not been merciful. Mercy triumphs over judgment.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        },
+        {
+         "key": "g448",
+         "lemma": "ἀνέλεος"
+        }
+       ]
+      },
+      {
+       "id": "Zech.7.9",
+       "ref": "Zechariah 7:9",
+       "text": "“This is what the LORD of Hosts says: ‘Administer true justice. Show loving devotion and compassion to one another.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The mercy of the LORD, of God",
+     "note": "Phrases kept as written. Where readers part on who is meant by “the Lord” in a verse that does not say, the page does not choose.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 22,
+     "verses": [
+      "2Sam.24.14",
+      "1Chr.21.13",
+      "Neh.9.19",
+      "Neh.9.27",
+      "Neh.9.31",
+      "Ps.25.6",
+      "Ps.40.11",
+      "Ps.51.1",
+      "Ps.69.16",
+      "Ps.119.156",
+      "Ps.145.9",
+      "Lam.3.22",
+      "Isa.54.7",
+      "Isa.63.7",
+      "Dan.9.9",
+      "Dan.9.18",
+      "Zech.1.16",
+      "Luke.1.58",
+      "Luke.1.78",
+      "Rom.15.9",
+      "Eph.2.4",
+      "1Pet.1.3"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.24.14",
+       "ref": "2 Samuel 24:14",
+       "text": "David answered Gad, “I am deeply distressed. Please, let us fall into the hand of the LORD, for His mercies are great; but do not let me fall into the hands of men.”",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.21.13",
+       "ref": "1 Chronicles 21:13",
+       "text": "David answered Gad, “I am deeply distressed. Please, let me fall into the hand of the LORD, for His mercies are very great; but do not let me fall into the hands of men.”",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Neh.9.19",
+       "ref": "Nehemiah 9:19",
+       "text": "You in Your great compassion did not forsake them in the wilderness. By day the pillar of cloud never turned away from guiding them on their path; and by the night the pillar of fire illuminated the way they should go.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Neh.9.27",
+       "ref": "Nehemiah 9:27",
+       "text": "So You delivered them into the hands of enemies who oppressed them, and in their time of distress they cried out to You. From heaven You heard them, and in Your great compassion You gave them deliverers who saved them from the hands of their enemies.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Our Lord Jesus Christ”, “the Lord”",
+     "note": "Jude 21 names our Lord Jesus Christ. 2 Tim 1:16 and 1:18 say “the Lord”; readers take that of the Father or of Christ, and the page does not choose.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Jude.1.21",
+      "2Tim.1.16",
+      "2Tim.1.18"
+     ],
+     "eg": [
+      {
+       "id": "Jude.1.21",
+       "ref": "Jude 1:21",
+       "text": "keep yourselves in the love of God as you await the mercy of our Lord Jesus Christ to bring you eternal life.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.1.16",
+       "ref": "2 Timothy 1:16",
+       "text": "May the Lord grant mercy to the household of Onesiphorus, because he has often refreshed me and was unashamed of my chains.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.1.18",
+       "ref": "2 Timothy 1:18",
+       "text": "May the Lord grant Onesiphorus His mercy on that day. You know very well how much he ministered to me in Ephesus.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Compassion, and forgiveness",
+     "note": "Set side by side as the text has them: where Christian traditions part on whether forgiveness waits on repentance, the page takes no side.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "1Kgs.8.50",
+      "Isa.55.7",
+      "Prov.28.13",
+      "Ps.78.38",
+      "Neh.9.17",
+      "Dan.9.9",
+      "Hos.1.6"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.8.50",
+       "ref": "1 Kings 8:50",
+       "text": "May You forgive Your people who have sinned against You and all the transgressions they have committed against You, and may You grant them compassion in the eyes of their captors to show them mercy.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        },
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Isa.55.7",
+       "ref": "Isaiah 55:7",
+       "text": "Let the wicked man forsake his way and the unrighteous man his thoughts; let him return to the LORD, that He may have compassion, and to our God, for He will freely pardon.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Prov.28.13",
+       "ref": "Proverbs 28:13",
+       "text": "He who conceals his sins will not prosper, but whoever confesses and renounces them will find mercy.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.78.38",
+       "ref": "Psalms 78:38",
+       "text": "And yet He was compassionate; He forgave their iniquity and did not destroy them. He often restrained His anger and did not unleash His full wrath.",
+       "words": [
+        {
+         "key": "h7349",
+         "lemma": "רַחוּם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Not our deeds, but His mercy",
+     "note": "The text's own words, kept as written: where Christian traditions part on mercy and works, and on what “the washing of new birth” is, the page takes no side.",
+     "doors": [
+      {
+       "id": "works_of_righteousness",
+       "name": "righteous deeds",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Dan.9.18",
+      "Titus.3.5"
+     ],
+     "eg": [
+      {
+       "id": "Dan.9.18",
+       "ref": "Daniel 9:18",
+       "text": "Incline Your ear, O my God, and hear; open Your eyes and see the desolation of the city that bears Your name. For we are not presenting our petitions before You because of our righteous acts, but because of Your great compassion.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Titus.3.5",
+       "ref": "Titus 3:5",
+       "text": "He saved us, not by the righteous deeds we had done, but according to His mercy, through the washing of new birth and renewal by the Holy Spirit.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“I desire mercy, not sacrifice”",
+     "note": "Hosea 6:6, in the Hebrew: חֶסֶד, printed “mercy” there and usually “loving devotion” (see Love). Jesus quotes it in Matthew, where the Greek word is ἔλεος. This hub's rows are built on the Greek ἔλεος and the Hebrew רחם words; Hosea's word is set out under Love.",
+     "doors": [
+      {
+       "id": "sacrifice",
+       "name": "sacrifice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "i_desired_mercy_and_not_sacrifice",
+       "name": "I desire mercy, not sacrifice",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "love",
+       "name": "love",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Matt.9.13",
+      "Matt.12.7"
+     ],
+     "eg": [
+      {
+       "id": "Matt.9.13",
+       "ref": "Matthew 9:13",
+       "text": "But go and learn what this means: ‘I desire mercy, not sacrifice.' For I have not come to call the righteous, but sinners.”",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.7",
+       "ref": "Matthew 12:7",
+       "text": "If only you had known the meaning of ‘I desire mercy, not sacrifice,' you would not have condemned the innocent.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Asking for mercy",
+     "note": null,
+     "doors": [],
+     "n": 14,
+     "verses": [
+      "Gen.43.14",
+      "1Kgs.8.50",
+      "Neh.1.11",
+      "Ps.25.6",
+      "Ps.40.11",
+      "Ps.51.1",
+      "Ps.69.16",
+      "Ps.79.8",
+      "Ps.119.77",
+      "Ps.119.156",
+      "Dan.2.18",
+      "2Tim.1.16",
+      "2Tim.1.18",
+      "Heb.4.16"
+     ],
+     "eg": [
+      {
+       "id": "Gen.43.14",
+       "ref": "Genesis 43:14",
+       "text": "May God Almighty grant you mercy before the man, that he may release your other brother along with Benjamin. As for me, if I am bereaved, I am bereaved.”",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.50",
+       "ref": "1 Kings 8:50",
+       "text": "May You forgive Your people who have sinned against You and all the transgressions they have committed against You, and may You grant them compassion in the eyes of their captors to show them mercy.",
+       "words": [
+        {
+         "key": "h7355",
+         "lemma": "רָחַם"
+        },
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Neh.1.11",
+       "ref": "Nehemiah 1:11",
+       "text": "O Lord, may Your ear be attentive to my prayer and to the prayers of Your servants who delight to revere Your name. Give Your servant success this day, I pray, and grant him mercy in the sight of this man.” (At that time I was the cupbearer to the king.)",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Ps.25.6",
+       "ref": "Psalms 25:6",
+       "text": "Remember, O LORD, Your compassion and loving devotion, for they are from age to age.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Mercy shown, and no mercy shown",
+     "note": null,
+     "doors": [
+      {
+       "id": "neighbor",
+       "name": "neighbor",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Zech.7.9",
+      "Luke.10.37",
+      "Isa.47.6",
+      "Amos.1.11",
+      "Jer.16.5",
+      "Jas.2.13"
+     ],
+     "eg": [
+      {
+       "id": "Zech.7.9",
+       "ref": "Zechariah 7:9",
+       "text": "“This is what the LORD of Hosts says: ‘Administer true justice. Show loving devotion and compassion to one another.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Luke.10.37",
+       "ref": "Luke 10:37",
+       "text": "“The one who showed him mercy,” replied the expert in the law. Then Jesus told him, “Go and do likewise.”",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "Isa.47.6",
+       "ref": "Isaiah 47:6",
+       "text": "I was angry with My people; I profaned My heritage, and I placed them under your control. You showed them no mercy; even on the elderly you laid a most heavy yoke.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Amos.1.11",
+       "ref": "Amos 1:11",
+       "text": "This is what the LORD says: “For three transgressions of Edom, even four, I will not revoke My judgment, because he pursued his brother with the sword and stifled all compassion; his anger raged continually, and his fury flamed incessantly.",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Rom 9:23 belongs with Rom 9:15-18 (the verb row “I will have mercy on whom I have mercy”) and Rom 11:31 with Rom 11:30-32; where Christian traditions part on those passages, the page takes no side.",
+     "doors": [],
+     "n": 13,
+     "verses": [
+      "1Kgs.3.26",
+      "Luke.1.50",
+      "Rom.9.23",
+      "2Chr.30.9",
+      "Neh.9.28",
+      "Ps.106.46",
+      "Prov.12.10",
+      "Isa.63.15",
+      "Jer.42.12",
+      "Luke.1.54",
+      "Luke.1.72",
+      "Rom.11.31",
+      "Jas.3.17"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.3.26",
+       "ref": "1 Kings 3:26",
+       "text": "Then the woman whose son was alive spoke to the king because she yearned with compassion for her son. “Please, my lord,” she said, “give her the living baby. Do not kill him!” But the other woman said, “He will be neither mine nor yours. Cut him in two!”",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.50",
+       "ref": "Luke 1:50",
+       "text": "His mercy extends to those who fear Him, from generation to generation.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.23",
+       "ref": "Romans 9:23",
+       "text": "What if He did this to make the riches of His glory known to the vessels of His mercy, whom He prepared in advance for glory-",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.30.9",
+       "ref": "2 Chronicles 30:9",
+       "text": "For if you return to the LORD, your brothers and sons will receive mercy in the presence of their captors and will return to this land. For the LORD your God is gracious and merciful; He will not turn His face away from you if you return to Him.”",
+       "words": [
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 19,
+   "rows": [
+    {
+     "label": "The LORD is compassionate, merciful",
+     "note": "Jas 5:11, “The Lord is full of compassion and mercy”, is other words (πολύσπλαγχνος, οἰκτίρμων), set out under Other words.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "the_lord_merciful_and_gracious",
+       "name": "The LORD, the LORD God, is compassionate and gracious",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Exod.34.6",
+      "Deut.4.31",
+      "2Chr.30.9",
+      "Neh.9.17",
+      "Neh.9.31",
+      "Ps.86.15",
+      "Ps.103.8",
+      "Ps.111.4",
+      "Ps.145.8",
+      "Joel.2.13",
+      "Jonah.4.2"
+     ],
+     "eg": [
+      {
+       "id": "Exod.34.6",
+       "ref": "Exodus 34:6",
+       "text": "Then the LORD passed in front of Moses and called out: “The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion and faithfulness,",
+       "words": [
+        {
+         "key": "h7349",
+         "lemma": "רַחוּם"
+        }
+       ]
+      },
+      {
+       "id": "Deut.4.31",
+       "ref": "Deuteronomy 4:31",
+       "text": "For the LORD your God is a merciful God; He will not abandon you or destroy you or forget the covenant with your fathers, which He swore to them by oath.",
+       "words": [
+        {
+         "key": "h7349",
+         "lemma": "רַחוּם"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.30.9",
+       "ref": "2 Chronicles 30:9",
+       "text": "For if you return to the LORD, your brothers and sons will receive mercy in the presence of their captors and will return to this land. For the LORD your God is gracious and merciful; He will not turn His face away from you if you return to Him.”",
+       "words": [
+        {
+         "key": "h7349",
+         "lemma": "רַחוּם"
+        },
+        {
+         "key": "h7356",
+         "lemma": "רַחֲמִים"
+        }
+       ]
+      },
+      {
+       "id": "Neh.9.17",
+       "ref": "Nehemiah 9:17",
+       "text": "They refused to listen and failed to remember the wonders You performed among them. They stiffened their necks and appointed a leader to return them to their bondage in Egypt. But You are a forgiving God, gracious and compassionate, slow to anger and rich in loving devotion, and You did not forsake them.",
+       "words": [
+        {
+         "key": "h7349",
+         "lemma": "רַחוּם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A merciful and faithful high priest",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 1,
+     "verses": [
+      "Heb.2.17"
+     ],
+     "eg": [
+      {
+       "id": "Heb.2.17",
+       "ref": "Hebrews 2:17",
+       "text": "For this reason He had to be made like His brothers in every way, so that He might become a merciful and faithful high priest in service to God, in order to make atonement for the sins of the people.",
+       "words": [
+        {
+         "key": "g1655",
+         "lemma": "ἐλεήμων"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The merciful, the merciless, the compassionate",
+     "note": "Ps 112:4 is read of the upright man or of the LORD; the page does not choose.",
+     "doors": [
+      {
+       "id": "blessed_are_the_merciful",
+       "name": "blessed are the merciful",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Matt.5.7",
+      "Jas.2.13",
+      "Rom.1.31",
+      "Ps.112.4",
+      "Lam.4.10"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.7",
+       "ref": "Matthew 5:7",
+       "text": "Blessed are the merciful, for they will be shown mercy.",
+       "words": [
+        {
+         "key": "g1653",
+         "lemma": "ἐλεέω"
+        },
+        {
+         "key": "g1655",
+         "lemma": "ἐλεήμων"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.13",
+       "ref": "James 2:13",
+       "text": "For judgment without mercy will be shown to anyone who has not been merciful. Mercy triumphs over judgment.",
+       "words": [
+        {
+         "key": "g1656",
+         "lemma": "ἔλεος"
+        },
+        {
+         "key": "g448",
+         "lemma": "ἀνέλεος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.31",
+       "ref": "Romans 1:31",
+       "text": "They are senseless, faithless, heartless, merciless.",
+       "words": [
+        {
+         "key": "g415",
+         "lemma": "ἀνελεήμων"
+        }
+       ]
+      },
+      {
+       "id": "Ps.112.4",
+       "ref": "Psalms 112:4",
+       "text": "Light dawns in the darkness for the upright-for the gracious, compassionate, and righteous.",
+       "words": [
+        {
+         "key": "h7349",
+         "lemma": "רַחוּם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": null,
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "Ps.78.38",
+      "1Cor.15.19"
+     ],
+     "eg": [
+      {
+       "id": "Ps.78.38",
+       "ref": "Psalms 78:38",
+       "text": "And yet He was compassionate; He forgave their iniquity and did not destroy them. He often restrained His anger and did not unleash His full wrath.",
+       "words": [
+        {
+         "key": "h7349",
+         "lemma": "רַחוּם"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.19",
+       "ref": "1 Corinthians 15:19",
+       "text": "If our hope in Christ is for this life alone, we are to be pitied more than all men.",
+       "words": [
+        {
+         "key": "g1652",
+         "lemma": "ἐλεεινός"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “mercy”, “compassion” and “pity”",
+  "words": [
+   {
+    "key": "h2550",
+    "lemma": "חָמַל",
+    "translit": "cha.mal",
+    "gloss": "to spare",
+    "lang": "Hebrew",
+    "n": 19,
+    "verses": [
+     "1Sam.23.21",
+     "2Sam.12.6",
+     "2Chr.36.15",
+     "2Chr.36.17",
+     "Job.16.13",
+     "Job.27.22",
+     "Prov.6.34",
+     "Isa.30.14",
+     "Jer.13.14",
+     "Jer.15.5",
+     "Lam.2.2",
+     "Lam.2.17",
+     "Lam.2.21",
+     "Lam.3.43",
+     "Ezek.9.5",
+     "Joel.2.18",
+     "Hab.1.17",
+     "Zech.11.5",
+     "Zech.11.6"
+    ],
+    "eg": [
+     {
+      "id": "1Sam.23.21",
+      "ref": "1 Samuel 23:21",
+      "text": "“May you be blessed by the LORD,” replied Saul, “for you have had compassion on me."
+     },
+     {
+      "id": "2Sam.12.6",
+      "ref": "2 Samuel 12:6",
+      "text": "Because he has done this thing and has shown no pity, he must pay for the lamb four times over.”"
+     }
+    ]
+   },
+   {
+    "key": "g4697",
+    "lemma": "σπλαγχνίζομαι",
+    "translit": "splagchnizō",
+    "gloss": "to pity",
+    "lang": "Greek",
+    "n": 12,
+    "verses": [
+     "Matt.9.36",
+     "Matt.14.14",
+     "Matt.15.32",
+     "Matt.18.27",
+     "Matt.20.34",
+     "Mark.1.41",
+     "Mark.6.34",
+     "Mark.8.2",
+     "Mark.9.22",
+     "Luke.7.13",
+     "Luke.10.33",
+     "Luke.15.20"
+    ],
+    "eg": [
+     {
+      "id": "Matt.9.36",
+      "ref": "Matthew 9:36",
+      "text": "When He saw the crowds, He was moved with compassion for them, because they were harassed and helpless, like sheep without a shepherd."
+     },
+     {
+      "id": "Matt.14.14",
+      "ref": "Matthew 14:14",
+      "text": "When He stepped ashore and saw a large crowd, He had compassion on them and healed their sick."
+     }
+    ]
+   },
+   {
+    "key": "h8469",
+    "lemma": "תַּחֲנוּן",
+    "translit": "ta.cha.nun",
+    "gloss": "supplication",
+    "lang": "Hebrew",
+    "n": 11,
+    "verses": [
+     "Job.41.3",
+     "Ps.28.2",
+     "Ps.28.6",
+     "Ps.31.22",
+     "Ps.86.6",
+     "Ps.116.1",
+     "Ps.130.2",
+     "Prov.18.23",
+     "Jer.3.21",
+     "Jer.31.9",
+     "Dan.9.3"
+    ],
+    "note": "תַּחֲנוּן, “supplication”: the Berean prints “cry for mercy”, “plea for mercy” in these verses. Another word, from the root of חנן (be gracious), set out here beside the rows.",
+    "eg": [
+     {
+      "id": "Job.41.3",
+      "ref": "Job 41:3",
+      "text": "Will he beg you for mercy or speak to you softly?"
+     },
+     {
+      "id": "Ps.28.2",
+      "ref": "Psalms 28:2",
+      "text": "Hear my cry for mercy when I call to You for help, when I lift up my hands toward Your holy sanctuary."
+     }
+    ]
+   },
+   {
+    "key": "h2347",
+    "lemma": "חוּס",
+    "translit": "chus",
+    "gloss": "to pity",
+    "lang": "Hebrew",
+    "n": 8,
+    "verses": [
+     "Deut.7.16",
+     "Deut.13.8",
+     "Deut.19.13",
+     "Deut.19.21",
+     "Deut.25.12",
+     "Ps.72.13",
+     "Isa.13.18",
+     "Ezek.16.5"
+    ],
+    "eg": [
+     {
+      "id": "Deut.7.16",
+      "ref": "Deuteronomy 7:16",
+      "text": "You must destroy all the peoples the LORD your God will deliver to you. Do not look on them with pity. Do not worship their gods, for that will be a snare to you."
+     },
+     {
+      "id": "Deut.13.8",
+      "ref": "Deuteronomy 13:8",
+      "text": "you must not yield to him or listen to him. Show him no pity, and do not spare him or shield him."
+     }
+    ]
+   },
+   {
+    "key": "h5162",
+    "lemma": "נָחַם",
+    "translit": "na.cham",
+    "gloss": "to be sorry: relent",
+    "lang": "Hebrew",
+    "n": 7,
+    "verses": [
+     "Deut.32.36",
+     "Judg.2.18",
+     "Judg.21.6",
+     "Judg.21.15",
+     "Ps.90.13",
+     "Ps.135.14",
+     "Jer.20.16"
+    ],
+    "eg": [
+     {
+      "id": "Deut.32.36",
+      "ref": "Deuteronomy 32:36",
+      "text": "For the LORD will vindicate His people and have compassion on His servants when He sees that their strength is gone and no one remains, slave or free."
+     },
+     {
+      "id": "Judg.2.18",
+      "ref": "Judges 2:18",
+      "text": "Whenever the LORD raised up a judge for the Israelites, He was with that judge and saved them from the hands of their enemies while the judge was still alive; for the LORD was moved to pity by their groaning under those who oppressed them and afflicted them."
+     }
+    ]
+   },
+   {
+    "key": "h2603",
+    "lemma": "חָנַן",
+    "translit": "ḥônēn",
+    "gloss": "gracious",
+    "lang": "Hebrew",
+    "n": 6,
+    "verses": [
+     "Deut.7.2",
+     "Job.9.15",
+     "Job.19.21",
+     "Ps.51.1",
+     "Ps.102.14",
+     "Prov.21.10"
+    ],
+    "eg": [
+     {
+      "id": "Deut.7.2",
+      "ref": "Deuteronomy 7:2",
+      "text": "and when the LORD your God has delivered them over to you to defeat them, then you must devote them to complete destruction. Make no treaty with them and show them no mercy."
+     },
+     {
+      "id": "Job.9.15",
+      "ref": "Job 9:15",
+      "text": "For even if I were right, I could not answer. I could only beg my Judge for mercy."
+     }
+    ]
+   },
+   {
+    "key": "g3628",
+    "lemma": "οἰκτιρμός",
+    "translit": "oiktirmos",
+    "gloss": "compassion",
+    "lang": "Greek",
+    "n": 5,
+    "verses": [
+     "Rom.12.1",
+     "2Cor.1.3",
+     "Phil.2.1",
+     "Col.3.12",
+     "Heb.10.28"
+    ],
+    "eg": [
+     {
+      "id": "Rom.12.1",
+      "ref": "Romans 12:1",
+      "text": "Therefore I urge you, brothers, on account of God's mercy, to offer your bodies as living sacrifices, holy and pleasing to God, which is your spiritual service of worship."
+     },
+     {
+      "id": "2Cor.1.3",
+      "ref": "2 Corinthians 1:3",
+      "text": "Blessed be the God and Father of our Lord Jesus Christ, the Father of compassion and the God of all comfort,"
+     }
+    ]
+   },
+   {
+    "key": "h2617",
+    "lemma": "חֶסֶד",
+    "translit": "ḥeseḏ",
+    "gloss": "steadfast love",
+    "lang": "Hebrew",
+    "n": 4,
+    "verses": [
+     "Hos.6.6",
+     "Mic.6.8",
+     "1Kgs.20.31",
+     "Ps.23.6"
+    ],
+    "note": "The Berean prints “mercy” for חֶסֶד in a few verses: here (Ps 23:6, 1 Kgs 20:31) and in Hos 6:6 and Mic 6:8, the verses people come for. Everywhere else it prints “loving devotion”. The rows of this page are built on another word; חֶסֶד is set out under Love.",
+    "eg": [
+     {
+      "id": "Hos.6.6",
+      "ref": "Hosea 6:6",
+      "text": "For I desire mercy, not sacrifice, and the knowledge of God rather than burnt offerings."
+     },
+     {
+      "id": "Mic.6.8",
+      "ref": "Micah 6:8",
+      "text": "He has shown you, O man, what is good. And what does the LORD require of you but to act justly, to love mercy, and to walk humbly with your God?"
+     }
+    ]
+   },
+   {
+    "key": "h2551",
+    "lemma": "חֻמְלָה",
+    "translit": "chem.lah",
+    "gloss": "compassion",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Gen.19.16",
+     "Isa.63.9",
+     "Ezek.16.5"
+    ],
+    "eg": [
+     {
+      "id": "Gen.19.16",
+      "ref": "Genesis 19:16",
+      "text": "But when Lot hesitated, the men grabbed his hand and the hands of his wife and his two daughters. And they led them safely out of the city, because of the LORD's compassion for them."
+     },
+     {
+      "id": "Isa.63.9",
+      "ref": "Isaiah 63:9",
+      "text": "In all their distress, He too was afflicted, and the Angel of His Presence saved them. In His love and compassion He redeemed them; He lifted them up and carried them all the days of old."
+     }
+    ]
+   },
+   {
+    "key": "h8467",
+    "lemma": "תְּחִנָּה",
+    "translit": "te.chin.nah",
+    "gloss": "supplication",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Ps.6.9",
+     "Josh.11.20"
+    ],
+    "note": "תְּחִנָּה, “supplication”: the Berean prints “cry for mercy” at Ps 6:9 and “no mercy” at Josh 11:20.",
+    "eg": [
+     {
+      "id": "Ps.6.9",
+      "ref": "Psalms 6:9",
+      "text": "The LORD has heard my cry for mercy; the LORD accepts my prayer."
+     },
+     {
+      "id": "Josh.11.20",
+      "ref": "Joshua 11:20",
+      "text": "For it was of the LORD to harden their hearts to engage Israel in battle, so that they would be set apart for destruction and would receive no mercy, being annihilated as the LORD had commanded Moses."
+     }
+    ]
+   },
+   {
+    "key": "h2604",
+    "lemma": "חֲנַן",
+    "translit": "cha.nan",
+    "gloss": "be gracious",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Dan.4.27",
+     "Dan.6.11"
+    ],
+    "eg": [
+     {
+      "id": "Dan.4.27",
+      "ref": "Daniel 4:27",
+      "text": "Therefore, may my advice be pleasing to you, O king. Break away from your sins by doing what is right, and from your iniquities by showing mercy to the oppressed. Perhaps there will be an extension of your prosperity.”"
+     },
+     {
+      "id": "Dan.6.11",
+      "ref": "Daniel 6:11",
+      "text": "Then these men went as a group and found Daniel petitioning and imploring his God."
+     }
+    ]
+   },
+   {
+    "key": "g3629",
+    "lemma": "οἰκτίρμων",
+    "translit": "oiktirmōn",
+    "gloss": "compassionate",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Luke.6.36",
+     "Jas.5.11"
+    ],
+    "eg": [
+     {
+      "id": "Luke.6.36",
+      "ref": "Luke 6:36",
+      "text": "Be merciful, just as your Father is merciful."
+     },
+     {
+      "id": "Jas.5.11",
+      "ref": "James 5:11",
+      "text": "See how blessed we consider those who have persevered. You have heard of Job's perseverance and have seen the outcome from the Lord. The Lord is full of compassion and mercy."
+     }
+    ]
+   },
+   {
+    "key": "h2623",
+    "lemma": "חָסִיד",
+    "translit": "cha.sid",
+    "gloss": "pious",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Jer.3.12"
+    ],
+    "eg": [
+     {
+      "id": "Jer.3.12",
+      "ref": "Jeremiah 3:12",
+      "text": "Go, proclaim this message toward the north: ‘Return, O faithless Israel,' declares the LORD. ‘I will no longer look on you with anger, for I am merciful,' declares the LORD. ‘I will not be angry forever."
+     }
+    ]
+   },
+   {
+    "key": "g2433",
+    "lemma": "ἱλάσκομαι",
+    "translit": "hilaskomai",
+    "gloss": "to propitiate",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.18.13"
+    ],
+    "eg": [
+     {
+      "id": "Luke.18.13",
+      "ref": "Luke 18:13",
+      "text": "But the tax collector stood at a distance, unwilling even to lift up his eyes to heaven. Instead, he beat his breast and said, ‘God, have mercy on me, a sinner!'"
+     }
+    ]
+   },
+   {
+    "key": "g2436",
+    "lemma": "ἵλεως",
+    "translit": "hileōs",
+    "gloss": "propitious/gracious",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Heb.8.12"
+    ],
+    "eg": [
+     {
+      "id": "Heb.8.12",
+      "ref": "Hebrews 8:12",
+      "text": "For I will forgive their iniquities and will remember their sins no more.”"
+     }
+    ]
+   },
+   {
+    "key": "h5150",
+    "lemma": "נִחֻמִים",
+    "translit": "ni.chum",
+    "gloss": "comfort",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Hos.11.8"
+    ],
+    "eg": [
+     {
+      "id": "Hos.11.8",
+      "ref": "Hosea 11:8",
+      "text": "How could I give you up, O Ephraim? How could I surrender you, O Israel? How could I make you like Admah? How could I treat you like Zeboiim? My heart is turned within Me; My compassion is stirred!"
+     }
+    ]
+   },
+   {
+    "key": "h5164",
+    "lemma": "נֹחַם",
+    "translit": "no.cham",
+    "gloss": "repentance",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Hos.13.14"
+    ],
+    "eg": [
+     {
+      "id": "Hos.13.14",
+      "ref": "Hosea 13:14",
+      "text": "I will ransom them from the power of Sheol; I will redeem them from Death. Where, O Death, are your plagues? Where, O Sheol, is your sting? Compassion is hidden from My eyes."
+     }
+    ]
+   },
+   {
+    "key": "g4184",
+    "lemma": "πολύσπλαγχνος",
+    "translit": "polusplagchnos",
+    "gloss": "very compassionate",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Jas.5.11"
+    ],
+    "eg": [
+     {
+      "id": "Jas.5.11",
+      "ref": "James 5:11",
+      "text": "See how blessed we consider those who have persevered. You have heard of Job's perseverance and have seen the outcome from the Lord. The Lord is full of compassion and mercy."
+     }
+    ]
+   },
+   {
+    "key": "g3627",
+    "lemma": "οἰκτίρω",
+    "translit": "oikteirō",
+    "gloss": "to have compassion",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Rom.9.15"
+    ],
+    "eg": [
+     {
+      "id": "Rom.9.15",
+      "ref": "Romans 9:15",
+      "text": "For He says to Moses: “I will have mercy on whom I have mercy, and I will have compassion on whom I have compassion.”"
+     }
+    ]
+   }
+  ]
+ }
+}

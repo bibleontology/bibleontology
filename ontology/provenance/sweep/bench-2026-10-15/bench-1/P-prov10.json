@@ -1,0 +1,95 @@
+{"passage": "B-prov10", "verses": [
+ {"ref": "Pro.10.1",
+  "referents": [
+   {"slot": "w11", "choice": "w7", "divine": false, "why": "The possessive 'his' sits in 'his mother' in the second line, which is about the foolish son; w7 is the masculine singular foolish son, and the mother is his. The wise son of the first line is not the owner of this mother.", "category": "possessive in antithetic second line"}
+  ],
+  "links": [
+   {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "Plain waw joining two opposed proverb lines. The sense is contrast ('but' in the English), not cause, result or purpose, and the contrast type takes only explicit but-words, so the 'and' link stands.", "category": "waw in antithetic proverb pair"}
+  ],
+  "groups": [
+   {"id": "Pro.10.1#g1", "kind": "writing", "action": "add", "members": [{"role": "frame", "node": "cl0"}, {"role": "sender", "node": "w1"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "cl2"}], "divine": false, "why": "The heading 'The proverbs of Solomon' is the frame; the text names Solomon as writer; the two proverb lines are what it says.", "category": "heading as writing frame"}
+  ],
+  "none_fit": [
+   {"where": "cl1 -and-> cl2", "what": "antithetic pair of lines joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"}
+  ],
+  "cant_tell": [
+   {"what": "how far the writing group extends beyond this verse", "why": "The heading governs the collection that follows; this verse alone does not show where its part ends."}
+  ]
+ },
+ {"ref": "Pro.10.2",
+  "referents": [],
+  "links": [
+   {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw setting the second line against the first (the first is a negated profit, the second a deliverance). Contrast by sense, not cause, result or purpose; the 'and' link stands.", "category": "waw in antithetic proverb pair"}
+  ],
+  "groups": [],
+  "none_fit": [
+   {"where": "cl0 -and-> cl1", "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"}
+  ],
+  "cant_tell": [
+   {"what": "subject of 'they profit' in cl0 (third plural)", "why": "No slot is listed for it. Agreement points to the treasures (w2), the masculine plural noun, but the slot list does not give it, so no referent is decided here."}
+  ]
+ },
+ {"ref": "Pro.10.3",
+  "referents": [
+   {"slot": "cl1s", "choice": "w2", "divine": true, "why": "The third person masculine singular 'he' agrees with w2, the LORD, the subject of the first line; the second line keeps the same subject by parallelism. The feminine craving cannot be the subject of a masculine verb.", "category": "implied subject carried by parallelism"}
+  ],
+  "links": [
+   {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Waw opening the second line sets the contrast 'but He denies'. Contrast by sense, not cause, result or purpose; the 'and' link stands.", "category": "waw in antithetic proverb pair"}
+  ],
+  "groups": [
+   {"id": "Pro.10.3#g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "w2"}], "divine": true, "why": "Two lines with the same subject, the LORD, the second restating the roles of the first: the righteous are not left hungry; the craving of the wicked is refused. The group subject is the LORD, so it is flagged divine.", "category": "same subject restated across two lines"}
+  ],
+  "none_fit": [
+   {"where": "cl0 -and-> cl1", "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word"}
+  ],
+  "cant_tell": []
+ },
+ {"ref": "Pro.10.4",
+  "referents": [],
+  "links": [
+   {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The participle clause 'one who works a palm of slackness' is a relative clause inside the subject noun phrase of the predicate 'poor'. It is not a bare participle after a finite clause, so 'describing' does not apply. The nesting stands.", "category": "participle nested in subject noun phrase"},
+   {"src": "cl0", "type": "and", "dst": "cl2", "action": "keep", "why": "Plain waw setting the diligent hand against the slack one: contrast by sense, not cause, result or purpose. The 'and' link stands.", "category": "waw in antithetic proverb pair"}
+  ],
+  "groups": [],
+  "none_fit": [
+   {"where": "cl0 -and-> cl2", "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"}
+  ],
+  "cant_tell": []
+ },
+ {"ref": "Pro.10.5",
+  "referents": [],
+  "links": [
+   {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The participle 'one who gathers in summer' is a relative clause inside the subject of the nominal clause 'a son who acts prudently'. The nesting stands.", "category": "participle nested in subject noun phrase"},
+   {"src": "cl2", "type": "within", "dst": "cl3", "action": "keep", "why": "The participle 'one who sleeps at harvest' is a relative clause inside the subject of the nominal clause 'a son who acts shamefully'. The nesting stands.", "category": "participle nested in subject noun phrase"}
+  ],
+  "groups": [],
+  "none_fit": [
+   {"where": "cl0 and cl2", "what": "two opposed 'one who ... is a son' lines with different subjects; no link type marks an antithesis, and no group kind holds two descriptions of different referents"}
+  ],
+  "cant_tell": [
+   {"what": "the relation between cl0 and cl2", "why": "cl2 has no connective in the parse (opens_with is null), so the opposition the English shows with 'but' is not marked in the data. No link is added."}
+  ]
+ },
+ {"ref": "Pro.10.6",
+  "referents": [],
+  "links": [
+   {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw setting the mouth of the wicked against the blessings of the righteous: contrast by sense, not cause, result or purpose. The 'and' link stands.", "category": "waw in antithetic proverb pair"}
+  ],
+  "groups": [],
+  "none_fit": [
+   {"where": "cl0 -and-> cl1", "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"}
+  ],
+  "cant_tell": []
+ },
+ {"ref": "Pro.10.7",
+  "referents": [],
+  "links": [
+   {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Plain waw setting the name of the wicked against the memory of the righteous: contrast by sense, not cause, result or purpose. The 'and' link stands.", "category": "waw in antithetic proverb pair"}
+  ],
+  "groups": [],
+  "none_fit": [
+   {"where": "cl0 -and-> cl1", "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"}
+  ],
+  "cant_tell": []
+ }
+]}

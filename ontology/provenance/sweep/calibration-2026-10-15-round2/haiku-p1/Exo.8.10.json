@@ -1,0 +1,40 @@
+{
+ "ref": "Exo.8.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'them' is the object of the piling: the dead frogs of Exo.8.9. The frogs are not among this verse's candidates, and none of the offered candidates is the frogs",
+   "category": "referent not among candidates"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "the doer of the piling (masculine plural 'they') is unnamed, most likely the Egyptians gathering the dead; no candidate is a masculine plural people, and the nearest, houses and fields, are places, not doers",
+   "category": "unnamed doer"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "the land stank after the piling (cl0), not before; the link runs backward",
+   "category": "reversed then"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "wayyiqtol: they piled them, and then the land stank, on the narrative line",
+   "category": "narrative then"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

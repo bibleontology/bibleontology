@@ -1,0 +1,369 @@
+{
+"_what": "hand-built relations a clause statement evidences: the clause is written as the claim's claim:evidencedBy (plan 2.17 step 3); tools/meaning/write_statements.py",
+"evidence": [
+{
+"src": "elhanan_son_of_jaare_oregim",
+"type": "killed",
+"dst": "lahmi",
+"ref": "1Chr 20:5",
+"clause": "1Ch.20.5#cl1"
+},
+{
+"src": "david",
+"type": "appointed",
+"dst": "solomon",
+"ref": "1Kgs 1:35",
+"clause": "1Ki.1.35#cl4"
+},
+{
+"src": "zadok_son_of_ahitub",
+"type": "anointed",
+"dst": "solomon",
+"ref": "1Kgs 1:39",
+"clause": "1Ki.1.39#cl1"
+},
+{
+"src": "baasha",
+"type": "killed",
+"dst": "nadab_king_of_israel",
+"ref": "1Kgs 15:28",
+"clause": "1Ki.15.28#cl0"
+},
+{
+"src": "zimri",
+"type": "killed",
+"dst": "elah_king_of_israel",
+"ref": "1Kgs 16:10",
+"clause": "1Ki.16.10#cl2"
+},
+{
+"src": "benaiah_son_of_jehoiada",
+"type": "killed",
+"dst": "joab",
+"ref": "1Kgs 2:34",
+"clause": "1Ki.2.34#cl2"
+},
+{
+"src": "samuel",
+"type": "anointed",
+"dst": "david",
+"ref": "1Sam 16:13",
+"clause": "1Sa.16.13#cl1"
+},
+{
+"src": "shallum_son_of_jabesh",
+"type": "killed",
+"dst": "zachariah_king_of_israel",
+"ref": "2Kgs 15:10",
+"clause": "2Ki.15.10#cl2"
+},
+{
+"src": "menahem_son_of_gadi",
+"type": "killed",
+"dst": "shallum_son_of_jabesh",
+"ref": "2Kgs 15:14",
+"clause": "2Ki.15.14#cl3"
+},
+{
+"src": "pekah_son_of_remaliah",
+"type": "killed",
+"dst": "pekahiah",
+"ref": "2Kgs 15:25",
+"clause": "2Ki.15.25#cl3"
+},
+{
+"src": "hoshea_son_of_elah",
+"type": "killed",
+"dst": "pekah_son_of_remaliah",
+"ref": "2Kgs 15:30",
+"clause": "2Ki.15.30#cl2"
+},
+{
+"src": "nebuchadnezzar",
+"type": "appointed",
+"dst": "gedaliah_son_of_ahikam",
+"ref": "2Kgs 25:22",
+"clause": "2Ki.25.22#cl3"
+},
+{
+"src": "david",
+"type": "killed",
+"dst": "uriah_hittite",
+"ref": "2Sam 12:9",
+"clause": "2Sa.12.9#cl4"
+},
+{
+"src": "absalom_son_of_david",
+"type": "appointed",
+"dst": "amasa_son_of_ithra",
+"ref": "2Sam 17:25",
+"clause": "2Sa.17.25#cl0"
+},
+{
+"src": "sibbechai",
+"type": "killed",
+"dst": "saph",
+"ref": "2Sam 21:18",
+"clause": "2Sa.21.18#cl2"
+},
+{
+"src": "moses",
+"type": "led",
+"dst": "children_of_israel",
+"ref": "Exod 15:22",
+"clause": "Exo.15.22#cl0"
+},
+{
+"src": "melchizedek",
+"type": "blessed",
+"dst": "abraham",
+"ref": "Gen 14:19",
+"clause": "Gen.14.19#cl0"
+},
+{
+"src": "sarah",
+"type": "took",
+"dst": "hagar",
+"ref": "Gen 16:3",
+"clause": "Gen.16.3#cl0"
+},
+{
+"src": "sarah",
+"type": "gave",
+"dst": "hagar",
+"ref": "Gen 16:3",
+"clause": "Gen.16.3#cl2"
+},
+{
+"src": "god",
+"type": "blessed",
+"dst": "ishmael",
+"ref": "Gen 17:20",
+"clause": "Gen.17.20#cl2"
+},
+{
+"src": "abimelech_king_of_gerar",
+"type": "took",
+"dst": "sarah",
+"ref": "Gen 20:2",
+"clause": "Gen.20.2#cl3"
+},
+{
+"src": "abraham",
+"type": "sent",
+"dst": "hagar",
+"ref": "Gen 21:14",
+"clause": "Gen.21.14#cl5"
+},
+{
+"src": "ephron",
+"type": "answered",
+"dst": "abraham",
+"ref": "Gen 23:10",
+"clause": "Gen.23.10#cl1"
+},
+{
+"src": "isaac",
+"type": "took",
+"dst": "rebekah",
+"ref": "Gen 24:67",
+"clause": "Gen.24.67#cl1"
+},
+{
+"src": "god",
+"type": "blessed",
+"dst": "isaac",
+"ref": "Gen 25:11",
+"clause": "Gen.25.11#cl1"
+},
+{
+"src": "god",
+"type": "blessed",
+"dst": "isaac",
+"ref": "Gen 26:12",
+"clause": "Gen.26.12#cl2"
+},
+{
+"src": "isaac",
+"type": "blessed",
+"dst": "jacob",
+"ref": "Gen 27:23",
+"clause": "Gen.27.23#cl2"
+},
+{
+"src": "isaac",
+"type": "blessed",
+"dst": "jacob",
+"ref": "Gen 27:27",
+"clause": "Gen.27.27#cl3"
+},
+{
+"src": "isaac",
+"type": "sent",
+"dst": "jacob",
+"ref": "Gen 28:5",
+"clause": "Gen.28.5#cl0"
+},
+{
+"src": "esau",
+"type": "took",
+"dst": "mahalath",
+"ref": "Gen 28:9",
+"clause": "Gen.28.9#cl1"
+},
+{
+"src": "laban",
+"type": "took",
+"dst": "leah",
+"ref": "Gen 29:23",
+"clause": "Gen.29.23#cl1"
+},
+{
+"src": "laban",
+"type": "gave",
+"dst": "zilpah",
+"ref": "Gen 29:24",
+"clause": "Gen.29.24#cl0"
+},
+{
+"src": "laban",
+"type": "gave",
+"dst": "bilhah",
+"ref": "Gen 29:29",
+"clause": "Gen.29.29#cl0"
+},
+{
+"src": "god",
+"type": "blessed",
+"dst": "laban",
+"ref": "Gen 30:27",
+"clause": "Gen.30.27#cl3"
+},
+{
+"src": "rachel",
+"type": "gave",
+"dst": "bilhah",
+"ref": "Gen 30:4",
+"clause": "Gen.30.4#cl0"
+},
+{
+"src": "leah",
+"type": "gave",
+"dst": "zilpah",
+"ref": "Gen 30:9",
+"clause": "Gen.30.9#cl4"
+},
+{
+"src": "shechem",
+"type": "took",
+"dst": "dinah",
+"ref": "Gen 34:2",
+"clause": "Gen.34.2#cl1"
+},
+{
+"src": "god",
+"type": "blessed",
+"dst": "jacob",
+"ref": "Gen 35:9",
+"clause": "Gen.35.9#cl2"
+},
+{
+"src": "cain",
+"type": "killed",
+"dst": "abel",
+"ref": "Gen 4:8",
+"clause": "Gen.4.8#cl4"
+},
+{
+"src": "joseph",
+"type": "answered",
+"dst": "pharaoh_of_joseph",
+"ref": "Gen 41:16",
+"clause": "Gen.41.16#cl0"
+},
+{
+"src": "joseph",
+"type": "took",
+"dst": "simeon",
+"ref": "Gen 42:24",
+"clause": "Gen.42.24#cl4"
+},
+{
+"src": "god",
+"type": "sent",
+"dst": "joseph",
+"ref": "Gen 45:5",
+"clause": "Gen.45.5#cl3"
+},
+{
+"src": "jacob",
+"type": "sent",
+"dst": "judah",
+"ref": "Gen 46:28",
+"clause": "Gen.46.28#cl0"
+},
+{
+"src": "jacob",
+"type": "blessed",
+"dst": "pharaoh_of_joseph",
+"ref": "Gen 47:10",
+"clause": "Gen.47.10#cl0"
+},
+{
+"src": "jacob",
+"type": "blessed",
+"dst": "pharaoh_of_joseph",
+"ref": "Gen 47:7",
+"clause": "Gen.47.7#cl2"
+},
+{
+"src": "abraham",
+"type": "offered",
+"dst": "isaac",
+"ref": "Heb 11:17",
+"clause": "Heb.11.17#cl0"
+},
+{
+"src": "ishmael_son_of_nethaniah",
+"type": "killed",
+"dst": "gedaliah_son_of_ahikam",
+"ref": "Jer 41:2",
+"clause": "Jer.41.2#cl3"
+},
+{
+"src": "jesus",
+"type": "spoken_of_as",
+"dst": "god",
+"ref": "John 5:18",
+"clause": "Jhn.5.18#cl3"
+},
+{
+"src": "job",
+"type": "answered",
+"dst": "god",
+"ref": "Job 40:3",
+"clause": "Job.40.3#cl0"
+},
+{
+"src": "job",
+"type": "heard",
+"dst": "god",
+"ref": "Job 42:5",
+"clause": "Job.42.5#cl0"
+},
+{
+"src": "moses",
+"type": "anointed",
+"dst": "aaron",
+"ref": "Lev 8:12",
+"clause": "Lev.8.12#cl1"
+},
+{
+"src": "judas_iscariot",
+"type": "betrayed",
+"dst": "jesus",
+"ref": "Mark 3:19",
+"clause": "Mrk.3.19#cl0"
+}
+]
+}

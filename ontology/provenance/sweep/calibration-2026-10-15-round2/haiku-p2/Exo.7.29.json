@@ -1,0 +1,39 @@
+{
+ "ref": "Exo.7.29",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'On you' is the second person, the addressee Pharaoh, in the LORD's words.",
+   "category": "addressee as object"
+  },
+  {
+   "slot": "w6",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your people' is Pharaoh's.",
+   "category": "possessive of addressee"
+  },
+  {
+   "slot": "w11",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your servants' are Pharaoh's.",
+   "category": "possessive of addressee"
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.7.28#cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "keep",
+   "why": "A plain waw continues the list of places the frogs go, now including the people and servants.",
+   "category": "plain and in a list"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

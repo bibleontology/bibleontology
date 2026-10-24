@@ -1,0 +1,161 @@
+{"passage": "B-rom3", "verses": [
+{"ref": "Rom.3.1",
+ "referents": [
+  {"slot": "w1", "choice": "none", "divine": false, "why": "Interrogative Ti (neuter singular) opening the question about the advantage; it refers to nothing, and no candidate is neuter singular.", "category": "interrogative word, not a referent"},
+  {"slot": "w7", "choice": "w9", "divine": false, "why": "Feminine singular interrogative agreeing with ophelia (benefit, w9), the noun it modifies: what is the benefit.", "category": "interrogative agreeing with its noun"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "or", "dst": "cl1", "action": "keep", "why": "Two questions side by side asking the same thing, joined by e (or): an alternative.", "category": "alternative questions side by side"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Rom.3.2",
+ "referents": [
+  {"slot": "cl2s", "choice": "none", "divine": false, "why": "'They' are the Jews named in 3:1 ('the Jew'); that people is not among the candidates (way, oracles, of God), so no candidate fits.", "category": "referent named earlier but not offered"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "Gar (for) opens cl1 and gives the reason for 'much in every way': the first advantage is that they were entrusted.", "category": "reason after a claim of degree"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "remove", "why": "The hoti clause does not give a reason for cl1; it states what the first advantage is.", "category": "that-clause read as reason"},
+  {"src": "cl1", "type": "that", "dst": "cl2", "action": "add", "why": "'First, that they were entrusted': the hoti clause states the content of the point made in cl1.", "category": "that-clause as content of a stated point"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "the referent of 'they' (cl2s)", "why": "the Jews of 3:1 are the intended people but are not offered as a candidate"}
+ ]
+},
+{"ref": "Rom.3.3",
+ "referents": [
+  {"slot": "w1", "choice": "none", "divine": false, "why": "Interrogative Ti opening 'what if': it refers to nothing, and no candidate is neuter singular.", "category": "interrogative word, not a referent"},
+  {"slot": "w4", "choice": "none", "divine": false, "why": "'Some' (masculine plural) is the subject of 'disbelieved'; no masculine plural candidate is offered.", "category": "subject not offered as candidate"},
+  {"slot": "w8", "choice": "none", "divine": false, "why": "'Of them' (masculine plural) is the disbelievers, the referent of w4, which is a slot and not a candidate; no masculine plural candidate.", "category": "possessive of an uncandidated subject"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "if", "dst": "cl0", "action": "remove", "why": "Reversed: the condition is cl1, and what it conditions is the question of cl2, not the wh-clause cl0.", "category": "condition attached to wrong clause"},
+  {"src": "cl1", "type": "because", "dst": "cl0", "action": "remove", "why": "No reason is stated; 'some disbelieved' is the condition, not a reason for 'what if'.", "category": "no reason in text"},
+  {"src": "cl2", "type": "if", "dst": "cl1", "action": "add", "why": "'What if some disbelieved? Will their unbelief nullify God's faithfulness?' The question cl2 is conditioned by cl1.", "category": "conditional with question consequence"}
+ ],
+ "groups": [
+  {"id": "cond1", "kind": "conditional", "action": "change", "members": [{"role": "condition", "node": "cl1"}, {"role": "consequence", "node": "cl2"}], "divine": false, "why": "The consequence is the question in cl2 (will their unbelief nullify God's faithfulness); cl0 is only the 'what if' frame.", "category": "conditional consequence is the question"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Rom.3.4",
+ "referents": [
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "'May it be' (optative) is impersonal; no person is its subject.", "category": "impersonal optative"},
+  {"slot": "cl3s", "choice": "none", "divine": false, "why": "'It has been written' is an impersonal passive with no named writer; the builder's 'man' is not the subject of writing.", "category": "impersonal passive"},
+  {"slot": "cl4s", "choice": "w5", "divine": true, "why": "Second singular inside the quoted words (Psalm 51:4 as quoted): the one spoken to is God, the only second-person candidate, w5.", "category": "you inside quotation addressed to God"},
+  {"slot": "cl5s", "choice": "w5", "divine": true, "why": "Same quoted 'you' in 'will prevail when judged': God.", "category": "you inside quotation addressed to God"},
+  {"slot": "w19", "choice": "w5", "divine": true, "why": "'Your words' (second singular possessive) are God's words, and the addressee of the quotation is God, w5.", "category": "possessive of quoted addressee"},
+  {"slot": "w25", "choice": "w5", "divine": true, "why": "'You' as object of 'being judged' (second singular): the one judged is God, w5.", "category": "object of quoted infinitive"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "remove", "why": "The hopos clause is the wording of the quotation, not the purpose of the writing; the saying clause introduces it as content.", "category": "quoted purpose read as purpose"},
+  {"src": "cl3", "type": "content", "dst": "cl4", "action": "add", "why": "'It has been written' introduces the quotation, which is what the writing says (ruling R1).", "category": "writing introduces quotation"},
+  {"src": "cl3", "type": "purpose", "dst": "cl5", "action": "remove", "why": "The second quoted clause is part of the quotation, not a purpose of the writing.", "category": "quoted purpose read as purpose"},
+  {"src": "cl5", "type": "when_if_though", "dst": "cl6", "action": "remove", "why": "Fronted ki is a Hebrew-only category; en tō + infinitive is a temporal adjunct, 'when you are judged'.", "category": "wrong link type for Greek adjunct"},
+  {"src": "cl5", "type": "within", "dst": "cl6", "action": "add", "why": "The infinitive phrase 'in being judged' is an adjunct nested inside the clause that governs it.", "category": "infinitive adjunct nested in clause"},
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "remove", "why": "De after 'may it not be' is adversative: 'let God be true' is said instead of the rejected claim.", "category": "adversative de read as plain and"},
+  {"src": "cl0", "type": "contrast", "dst": "cl1", "action": "add", "why": "'Never may it be; rather let God be true': the rejected claim, then the contrasting one.", "category": "adversative de"},
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "De joins two parallel imperatives: 'let God be true, and every man a liar'.", "category": "parallel imperatives"},
+  {"src": "cl4", "type": "and", "dst": "cl5", "action": "keep", "why": "Two verbs of one quoted sentence joined by kai: 'be justified and prevail'.", "category": "parallel verbs inside quotation"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "Kathaper ('just as it is written') is a comparison with a text, not a plain and.", "category": "comparison read as and"},
+  {"src": "cl2", "type": "as", "dst": "cl3", "action": "add", "why": "Kathaper ('just as') before a written text: the claim is backed by scripture. The fulfilment sense of 'as' does not apply; see none_fit.", "category": "comparison with scripture"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}, {"role": "command", "node": "cl2"}], "divine": false, "why": "The two imperatives at one level, 'let God be true' and 'let every man be a liar', are one group. The optative 'may it not be' is an exclamation, not a command, and 'part' is not an imperative member role.", "category": "commands joined at one level"},
+  {"id": "Rom.3.4#g1", "kind": "turn", "action": "add", "members": [{"role": "frame", "node": "cl3"}, {"role": "part", "node": "cl4"}, {"role": "part", "node": "cl5"}, {"role": "addressee", "node": "w5"}], "divine": true, "why": "The writing introduces a quotation addressed to God (Psalm 51:4 as quoted); the quoted clauses are its parts (ruling R1).", "category": "quotation as turn"}
+ ],
+ "none_fit": [
+  {"where": "cl2 'every man a liar, just as it is written'", "what": "Scripture cited as backing for the claim just before it. The 'as' type's fulfilment sense applies only to an earlier word, so no link type fits fully."}
+ ],
+ "cant_tell": [
+  {"what": "the writer of the quoted words (cl3s)", "why": "the passive names no writer and the passage does not name one"}
+ ]
+},
+{"ref": "Rom.3.5",
+ "referents": [
+  {"slot": "w4", "choice": "none", "divine": false, "why": "'Of us' (first plural) in 'our unrighteousness' is Paul and his readers; no first-plural candidate.", "category": "first person plural not offered"},
+  {"slot": "w8", "choice": "none", "divine": false, "why": "Interrogative 'what' in 'what shall we say': refers to nothing; no neuter singular candidate.", "category": "interrogative word"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "'We' in 'what shall we say' is Paul and his readers; no first-plural candidate.", "category": "first person plural not offered"},
+  {"slot": "cl4s", "choice": "none", "divine": false, "why": "'I speak' (first singular) is the writer's own remark about how he speaks; no first-person candidate.", "category": "writer's own voice not offered"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "if", "dst": "cl0", "action": "remove", "why": "Reversed: the protasis cl1 is the condition, and the question cl0 is what it conditions.", "category": "condition attached to wrong clause"},
+  {"src": "cl0", "type": "if", "dst": "cl1", "action": "add", "why": "'What shall we say, if our unrighteousness highlights God's righteousness?' cl0 is conditioned by cl1.", "category": "conditional question"},
+  {"src": "cl3", "type": "and", "dst": "cl0", "action": "remove", "why": "The participle 'inflicting the wrath' describes God in the objection; it is not a conjunct of 'what shall we say'.", "category": "participle read as conjunct"},
+  {"src": "cl2", "type": "within", "dst": "cl3", "action": "add", "why": "The articular participle (the one inflicting wrath) is a relative-like clause nested in the noun phrase 'God'.", "category": "relative participle in noun phrase"},
+  {"src": "cl0", "type": "content", "dst": "cl2", "action": "add", "why": "'What shall we say?' introduces the objection that follows: is God unjust to inflict wrath?", "category": "saying introduces objection"}
+ ],
+ "groups": [
+  {"id": "cond1", "kind": "conditional", "action": "keep", "members": [{"role": "condition", "node": "cl1"}, {"role": "consequence", "node": "cl0"}], "divine": false, "why": "The protasis is cl1 and the question it conditions is cl0.", "category": "conditional question"},
+  {"id": "Rom.3.5#g1", "kind": "turn", "action": "add", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl2"}], "divine": false, "why": "'What shall we say' introduces the objection, which is its part (ruling R1). No sender or addressee is a candidate.", "category": "speech introduces objection"}
+ ],
+ "none_fit": [
+  {"where": "cl4 'According to man I speak'", "what": "A remark on the manner of the writer's own speaking ('in human terms'); no link type records a qualification of one's own saying."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Rom.3.6",
+ "referents": [
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "'May it be' (optative) is impersonal; no person is its subject.", "category": "impersonal optative"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "Epei gives the reason for the rejection: otherwise how would God judge the world.", "category": "reason for a rejection"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl0"}, {"role": "basis", "node": "cl1"}], "divine": false, "why": "The reason is the basis of the rejection; 'part' is not a role of an imperative group.", "category": "group member role"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Rom.3.7",
+ "referents": [
+  {"slot": "w14", "choice": "w5", "divine": true, "why": "'Of Him' (third masculine singular) of 'glory': God, the only masculine singular candidate that fits, w5.", "category": "possessive of God's glory"},
+  {"slot": "w15", "choice": "none", "divine": false, "why": "Interrogative 'why' (ti): refers to nothing; no neuter singular candidate.", "category": "interrogative word"},
+  {"slot": "w17", "choice": "none", "divine": false, "why": "'Also I' (first singular) is the objector's I inside the imagined speech; no first-person candidate.", "category": "first person inside objection"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "if", "dst": "cl0", "action": "remove", "why": "Reversed: the protasis cl1 is the condition of cl0, 'why am I still judged'.", "category": "condition attached to wrong clause"},
+  {"src": "cl0", "type": "if", "dst": "cl1", "action": "add", "why": "'If my lie accentuates God's truthfulness, why am I still judged?' cl0 is conditioned by cl1.", "category": "conditional question"},
+  {"src": "cl1", "type": "and", "dst": "cl0", "action": "remove", "why": "The relation is conditional, not a plain and; the kai in cl0 ('also I') does not link these clauses.", "category": "conditional read as and"}
+ ],
+ "groups": [
+  {"id": "cond1", "kind": "conditional", "action": "keep", "members": [{"role": "condition", "node": "cl1"}, {"role": "consequence", "node": "cl0"}], "divine": false, "why": "Protasis cl1, consequence cl0.", "category": "conditional question"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Rom.3.8",
+ "referents": [
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "'We are slanderously charged' (first plural): Paul and his company; no first-plural candidate.", "category": "first person plural not offered"},
+  {"slot": "w7", "choice": "none", "divine": false, "why": "'Some' (masculine plural) who affirm the slander; the slanderers are not among the candidates (condemnation only).", "category": "subject not offered as candidate"},
+  {"slot": "w8", "choice": "none", "divine": false, "why": "'Us' is the accusative subject of the infinitive 'to say': the people slandered, Paul and his company; no first-plural candidate. The builder's 'some' is wrong.", "category": "subject of infinitive not offered"},
+  {"slot": "cl3s", "choice": "none", "divine": false, "why": "'Let us do' (first plural) in the quoted slogan is the group slandered; no candidate. The builder's 'some' is wrong.", "category": "first person plural inside quotation"},
+  {"slot": "w18", "choice": "none", "divine": false, "why": "'Their' condemnation (masculine plural) refers to the slanderers; no masculine plural candidate, and the only candidate is the condemnation itself.", "category": "possessive of uncandidated people"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "keep", "why": "Hina: 'let us do evil so that good may come'; the good is the purpose of the evil.", "category": "so that after command"},
+  {"src": "cl2", "type": "that", "dst": "cl3", "action": "remove", "why": "Ruling R1: a saying clause introduces what is said, linked as content, not as that.", "category": "speech content, ruling R1"},
+  {"src": "cl2", "type": "content", "dst": "cl3", "action": "add", "why": "'To say' introduces the slogan 'let us do evil that good may come'.", "category": "speech content"},
+  {"src": "cl1", "type": "within", "dst": "cl2", "action": "keep", "why": "The infinitive 'us to say' is the object of 'affirm'.", "category": "infinitive complement of saying verb"},
+  {"src": "cl1", "type": "content", "dst": "cl2", "action": "add", "why": "'Affirm' introduces the claim that they say this; nested speech gets its own content link (R1).", "category": "nested speech content"},
+  {"src": "cl1", "type": "within", "dst": "cl5", "action": "remove", "why": "'Their condemnation is deserved' is the writer's own verdict, not nested in the slanderers' claim.", "category": "separate sentence linked as nested"},
+  {"src": "cl0", "type": "and", "dst": "cl0", "action": "remove", "why": "A clause cannot be joined to itself.", "category": "self link"},
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Kai joins the two comparisons: 'we are slanderously charged, and as some affirm'.", "category": "parallel clauses joined by kai"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "cl2"}, {"role": "part", "node": "Rom.3.8#g1"}], "divine": false, "why": "The claim is the speech of the slanderers, and the inner turn is its part. Cl5 is the writer's own verdict and is removed from the turn. The slanderers are not a candidate, so no sender is given.", "category": "turn nests the claimed speech"},
+  {"id": "Rom.3.8#g1", "kind": "turn", "action": "add", "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "cl3"}, {"role": "part", "node": "cl4"}], "divine": false, "why": "The claimed speech 'us to say' has the slogan as its part (ruling R1, nested speech).", "category": "nested speech"}
+ ],
+ "none_fit": [
+  {"where": "cl5 'Their condemnation is deserved'", "what": "The writer's verdict on the slanderers, not a link to any clause; no link type records a verdict."}
+ ],
+ "cant_tell": [
+  {"what": "the sender of the claim in turn0", "why": "the slanderers ('some') are not offered as candidates"}
+ ]
+}
+]}

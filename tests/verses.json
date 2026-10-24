@@ -1,0 +1,424 @@
+{
+  "_note": "Verse-by-verse expectations for the SENTENCE-LEVEL structure. Held reading, 2026-09-21: 'I want to work with you on verse examples one at a time until I see the node structures within the sentence level always being constructed correctly - we don't move on until that happens', and then 'bake this in the verse by verse regression suite'. One entry per verse checked by hand against MACULA. Adding a verse is adding an entry; see tests/test_verse_structure.py for the notation and for the build sequence these expectations assume.",
+  "Gen.1.3": {
+    "why": "The first verse taken apart clause by clause. It is three sibling V-S clauses where the graph previously held three disconnected edges, and it is the case that exposed the whole missing layer: a verb was an edge label, so `jussive` -- the only thing separating 'let there be light' from 'there was light' -- had nowhere to live. Once content became the lowest grouping, cl1 and cl2 share a content KEY and differ only in force -- jussive against wayyiqtol -- which is what makes the action-state pair general rather than a same-lemma coincidence. And no speaker is inferred here: only God ever speaks in Genesis 1, so the alternation rule declines rather than inventing a second party.",
+    "clauses": [
+      "he.said God | wayyiqtol | אָמַר",
+      "let.it.be light | jussive | הָיָה",
+      "it.was light | wayyiqtol | הָיָה"
+    ],
+    "roles": [
+      "cl0 -asserts-> ct0",
+      "ct0 -s-> god",
+      "cl1 -asserts-> ct1",
+      "ct1 -s-> light",
+      "cl2 -asserts-> ct2",
+      "ct2 -s-> light"
+    ],
+    "links": [
+      "cl0 -content-> cl1"
+    ],
+    "pairs": [
+      "action-state | הָיָה | action=cl0 | state=cl2"
+    ],
+    "verbs": [
+      "cl0v | said | אָמַר | wayyiqtol | qal",
+      "cl1v | be | הָיָה | jussive | qal",
+      "cl2v | there was | הָיָה | wayyiqtol | qal"
+    ],
+    "contents": [
+      "ct1 | s=light v=הָיָה | jussive",
+      "ct2 | s=light v=הָיָה | wayyiqtol"
+    ],
+    "speakers": [
+      "cl0 | -"
+    ]
+  },
+  "Exo.8.6": {
+    "why": "A verbless P-PP clause -- 'there is no one like the LORD' -- where both edges hung off the same missing subject because every edge was anchored on `s` and a P-PP clause has none. The adjunct now anchors on the predicate. A reader found it by reading the card and asking why the LORD was not highlighted. The two speeches state no speaker. Pharaoh is named in 8:4 and Moses in 8:5, so a narrative window recovers the alternation -- but only after three wrong attempts, and only once EMBEDDED speech was excluded: 'Pharaoh summoned them AND SAID' is one turn across two clauses, and the `content` edge already marked it. ADDED 2026-09-24, working the whole frog plague: Moses's 'he said' CONTINUES Pharaoh's (`then`, the 'and' inside a wayyiqtol), and 'that you may know THAT there is no one like the LORD' is WHAT is known, not a reason — it was built as 'know BECAUSE', and 45% of all `because` edges had the same fault. The absent row keeps it from coming back.",
+    "roles": [],
+    "links": [
+      "cl0 -then-> cl2",
+      "cl4 -that-> cl5"
+    ],
+    "pairs": [],
+    "edges": [
+      "thereNoOne -like-> lord"
+    ],
+    "speakers": [
+      "cl0 | pharaoh",
+      "cl2 | moses"
+    ],
+    "absent": [
+      "cl4 -because-> cl5"
+    ]
+  },
+  "Psa.107.1": {
+    "why": "An imperative followed by two clauses each introduced by כִּי. The text STATES its reason -- unlike Genesis 1:3, where the cause is a reading -- and the graph held none of it, because MACULA puts the conjunction on a wrapper clause that states no roles and is skipped. Taking its first clause alone then showed two more gaps: the VERB was only an attribute, so it could not be drawn or pointed at, and the preposition was dropped -- `pp` alone cannot tell 'to the LORD' from 'before the LORD'. WHERE THE SECOND כִּי ATTACHES is not stated: the two clauses are SIBLINGS under one ClCl, not nested. Rule 45 attaches a connective to the nearest candidate, so the second reason grounds the first -- 'he is good' is the claim and 'his love endures forever' is how you would know it -- and the other candidate is kept on the edge as alt_host. DIRECTION: the edge runs from what is explained to its reason, so `X -because-> Y` reads 'X because Y'. The first version pointed the other way and the graph said God is good BECAUSE we thank him -- a reader caught it by reading the diagram back as a sentence: 'he is not good because we give thanks'.",
+    "clauses": [
+      "give.thanks to Yahweh | imperative | יָדָה",
+      "[he.is].good | - | -",
+      "[is] forever loyalty his.covenant | - | -"
+    ],
+    "roles": [
+      "cl0 -asserts-> ct0",
+      "ct0 -v-> cl0v",
+      "ct0 -pp-> lord",
+      "cl1 -asserts-> ct1",
+      "ct1 -p-> good",
+      "cl2 -asserts-> ct2",
+      "ct2 -p-> prep2",
+      "prep2 -prep_object-> forever",
+      "ct2 -s-> steadfastLove"
+    ],
+    "prep_predicate": "2026-09-26: re-pinned from 'ct2 -p-> forever'. A verbless clause whose predicate is a prepositional phrase now has the preposition as its predicate node, its object hanging off it (held reading, on Psa 23:4 'you [are] WITH me': 'should be represented I think in the graph'). Here that is לְעוֹלָם, 'to eternity' — to → forever. Same claim, one node more; flagged for review since this verse was vetted before the rule.",
+    "links": [
+      "cl0 -because-> cl1",
+      "cl1 -because-> cl2"
+    ],
+    "pairs": [],
+    "verbs": [
+      "cl0v | give thanks | יָדָה | imperative | hiphil"
+    ],
+    "preps": [
+      "ct0 -pp-> lord | to"
+    ],
+    "contents": [
+      "ct0 | pp:לְ=lord v=יָדָה | imperative"
+    ],
+    "groups": [
+      "imperative | imperative | 1=cl0 | 2=cl1"
+    ]
+  },
+  "Psa.119.105": {
+    "why": "Two verbless lines in parallel -- 'a lamp to my feet' // 'a light to my path' -- where the second states no subject because it is the same one. The test is exact: the second clause's roles must be the first's MINUS the subject, so Genesis 1:25's 'God made the animals' / 'God saw it was good' is never eligible, since both state their own. Held reading: 'word is the subject for the collection', and then 'lamp for feet and light for path do each stand on their own' -- so the subject sits on the collection AND on each line, because both readings are true. Held reading: 'the verse could read \"your word is a light and lamp\" and it would still be valid' -- which is the test that the collection is right. One subject with two predicates says the same thing as two lines, so the parallel group is a coordination written long.",
+    "clauses": [
+      "[is].a.lamp for foot my word your | - | -",
+      "a.light for pathway my | - | -"
+    ],
+    "roles": [
+      "cl0 -asserts-> ct0",
+      "ct0 -p-> lamp",
+      "ct0 -pp-> feet",
+      "ct0 -s-> word",
+      "cl1 -asserts-> ct1",
+      "ct1 -p-> light",
+      "ct1 -pp-> path",
+      "ct1 -s-> word"
+    ],
+    "preps": [
+      "ct0 -pp-> feet | for",
+      "ct1 -pp-> path | for"
+    ],
+    "groups": [
+      "parallel | - | 1=cl0 | 2=cl1"
+    ],
+    "links": [],
+    "pairs": []
+  },
+  "Exo.7.26": {
+    "why": "The frog plague's opening speech (BSB 8:1), taken with a reader's hand grouping of it from a Copilot thread: '(Go to Pharaoh) and (tell him ...)' and '(Let My people go) -reason-> (so that they may worship Me)'. Two rungs were missing. 'And you shall say to him' is a weqatal — its 'and' is inside the verb — so no connective edge was ever made and it was an orphan; it now CONTINUES the command before it (`then`). And 'that they may serve me' was a plain `and`: a command, then waw + yiqtol in a different person, is PURPOSE. The reader labelled it reason; purpose is the narrower name — it looks forward where a reason looks back.",
+    "links": [
+      "cl0 -content-> cl1",
+      "cl1 -then-> cl2",
+      "cl2 -content-> cl3",
+      "cl3 -content-> cl4",
+      "cl4 -purpose-> cl5",
+      "turn0 -part-> turn1",
+      "turn1 -part-> turn2"
+    ],
+    "roles": [
+      "ct1 -s-> moses"
+    ],
+    "groups": [
+      "imperative | imperative | 1=cl4 | 2=cl5",
+      "turn | wayyiqtol | 1=cl0 | 2=turn1"
+    ],
+    "absent": [
+      "cl4 -and-> cl5"
+    ]
+  },
+  "Exo.7.27": {
+    "why": "'If you refuse to let them go, I am about to strike your whole territory with frogs' (BSB 8:2). `if` was attached like `because`, to the clause BEFORE it — and this `if` opens its verse, so no edge was made at all and the threat it conditions was an orphan. A Hebrew condition precedes what it governs: the host is the next clause that is not an infinitive complement ('to let them go'). The edge reads 'I am about to strike ..., if you refuse'. AND IT IS STILL YHWH SPEAKING, through 7:29, which the graph held as belonging to no speech until the speech turn was built (2026-09-25). The turn is minted here, the first verse that continues it; member 1 is 7:26's 'thus says the LORD', the innermost narrated saying. CORRECTED THE SAME DAY (held reading): 'the entry point is the if/then and the \"let them go\" is part of the refusal clause under the if condition - so I don't understand why it is pulled out (as part 2) under the higher level turn node.' Both right. 'To let them go' is the object of refusing and MACULA nests it there, so it is `within` cl0, not a part of the speech; and the if/then is ONE node (condition, then consequence), which is the turn's single part for this verse. AND THE TURNS NEST (held reading, the same day): 'the real speech turn is God to Moses - the Moses speech turn is actually a directive from God which Moses does not fulfill in these verses - though it is a speech turn, regardless.' turn0 is the LORD to Moses (performed, framed by 7:26 cl0); turn1 is what Moses is told to say to Pharaoh (commanded, 7:26 cl2 'you shall say to him'), a part of turn0; turn2 is the message it carries, 'thus says the LORD' (7:26 cl3), a part of turn1 — and the if/then is a part of turn2.",
+    "links": [
+      "cl2 -if-> cl0",
+      "cl0 -within-> cl1",
+      "turn2 -part-> cnd0"
+    ],
+    "groups": [
+      "conditional | participle active | 1=cl0 | 2=cl2"
+    ],
+    "moved": "2026-09-26: the turns are now minted in 7:26, where the speech opens (held reading: nested speech within one verse, BSB 8:16/8:20, had no turns at all because turns were minted only in a verse that continued them). turn0 -part-> turn1 and turn1 -part-> turn2, and turn0's group row, are checked there; this verse checks the part it adds (the if/then).",
+    "absent": [
+      "turn2 -part-> cl1",
+      "turn2 -part-> cl2"
+    ]
+  },
+  "Psa.23.1": {
+    "why": "'A psalm of David. The LORD is my shepherd; I shall not want.' Held reading, 2026-09-25: 'the assertion that this is a psalm of David needs to inform all nodes in the scroll.' The psalm is a Writing — a communication unit, the outermost one — minted here; its heading clause is its frame and David its sender (לְדָוִד, read as authorship with a note that לְ can also be 'for' or 'about'); every top-level unit of every verse of the psalm is a part of it. The heading also informs the psalm's own voice: 'I shall not want' states no subject, and outside any quoted speech the psalm's 'I' is its writer — inferred, and saying so. REFINED THE SAME DAY (held reading), twice: 'David is explicitly saying the the Lord is David's shepherd and not just a shepherd generically' — so 'my shepherd' has a possessor — and then 'this is a psalm that each of us can read so \"David\" needs to be held lightly - whoever is praying this psalm can substitute themselves - I would rather say the psalmist and let it resolve in the highest level context to David.' So 'I' and 'my' point to THE PSALMIST, the psalm's voice; the voice resolves to David only at the Writing, through the heading. The absent rows keep the name from creeping back down.",
+    "links": [
+      "writing -frame-> cl0",
+      "writing -part-> cl1",
+      "writing -part-> cl2"
+    ],
+    "roles": [
+      "ct2 -s-> psalmist"
+    ],
+    "contents": [
+      "ct0 | p:לְ=david s=psalm | -",
+      "ct1 | p=shepherd s=lord | -",
+      "ct2 | neg=לֹא v=חָסֵר | yiqtol"
+    ],
+    "edges": [
+      "writing -voice-> psalmist",
+      "psalmist -resolves_to-> david",
+      "shepherd -possessor-> psalmist"
+    ],
+    "absent": [
+      "writing -part-> cl0",
+      "ct2 -s-> david",
+      "shepherd -possessor-> david"
+    ]
+  },
+  "Psa.23.2": {
+    "why": "'He makes me lie down in green pastures' — יַרְבִּיצֵנִי, ONE verb in the causative stem (hiphil) of 'lie down'. Held reading, 2026-09-25, three corrections to it in a row: 'assertion 3 lacks green as a modifier on pastures' (the phrase's qualifier was thrown away: pastures OF grass); 'assertion 3 needs to wrap me lying down in green pastures with \"He makes me\" - there is a layer missing' (two events: he CAUSES, and I lie down in green pastures — the object of the causing is the subject of the caused); and 'is still missing \"He makes\"' (the verb states its subject, third masculine singular, and no word says it, so the clause had none). All three are the text: the construct chain, the stem, the verb's person. Who 'he' IS — the LORD of 23:1 — is pronoun resolution, previewed, not written.",
+    "roles": [
+      "ct0 -causes-> ct0c",
+      "ct0c -s-> me",
+      "ct0c -pp-> pastures",
+      "ct0 -s-> he0",
+      "ct0 -v-> cl0vc",
+      "ct0c -v-> cl0v",
+      "pastures -qualifier-> green"
+    ],
+    "edges": [
+      "me -refers_to-> psalmist"
+    ],
+    "links": [
+      "acts1 -agent_act-> cl0",
+      "acts1 -agent_act-> cl1"
+    ],
+    "acts": "Held reading, 2026-09-26: 'verses 2-3 could be a collection of 4 actions of the Lord with a single subject', then 'build it as a new group, acts of one agent'. The group is minted here, where the run reaches two; 23:3's two clauses are its acts 3 and 4, and its subject is the LORD of 23:1.",
+    "absent": [
+      "ct0 -v-> cl0v"
+    ],
+    "me": "Held reading, 2026-09-26, looking at the diagram: 'should we show a resolution for Me - inferred as author (David) or reader/speaker of the psalm', then 'agree - resolve me to the psalmist'. 'Me' is the psalm's voice in the object's place, as 'I' and 'my' are in theirs; the voice resolves to David at the Writing, through the heading. The pray-er taking up the voice is not stated by the text and waits above the structure graph."
+  },
+  "Psa.23.3": {
+    "why": "'He restores my soul; he leads me in paths of righteousness for his name's sake.' First retrieval, 2026-09-25: 'my soul' had its possessor (the psalmist) and 'his name' had none, though the 'he' of the same clause resolved to the LORD. A third-person possessive now takes its own clause's subject where that subject is known and agrees — 12 of 16 in a corpus sample. The wider rule (any one agreeing referent in the leading text) was 3 of 16 and is recorded as a wrong turn: 'their eyes' went to 'heart'.",
+    "roles": [
+      "ct0 -s-> he0",
+      "ct1 -s-> he1",
+      "ct0 -o-> soul",
+      "paths -qualifier-> righteousness",
+      "ct1 -motive-> nameS"
+    ],
+    "edges": [
+      "he0 -refers_to-> lord",
+      "he1 -refers_to-> lord",
+      "soul -possessor-> psalmist",
+      "nameS -possessor-> lord"
+    ],
+    "absent": [
+      "ct1 -pp-> nameS"
+    ],
+    "motive": "Held reading, 2026-09-26: \"the 'for sake of' ləmaʿan link seems to be missing - it is the motivation that links the action to the Lord's name.\" לְמַעַן before a noun marks what the act is done for; the role is `motive`, a specialization of the prepositional role, the preposition kept."
+  },
+  "Psa.23.4": {
+    "why": "'Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me.' Held reading, 2026-09-26: 'in effect an obstacle overcome - an overridden motivation'. The text marks three things: the concession (גַּם כִּי), the claim that holds anyway, and its ground (כִּי). The held claim is negated, so the response the valley would bring is named and denied: 'fear'. That it is an overridden motivation is the reading over the group.",
+    "links": [
+      "cl1 -though-> cl0",
+      "cl1 -because-> cl2",
+      "conc0 -conceded-> cl0",
+      "conc0 -holds_anyway-> cl1",
+      "conc0 -its_ground-> cl2"
+    ]
+  },
+  "Psa.23.5": {
+    "why": "'You prepare a table before me in the presence of my enemies.' Held reading, 2026-09-26: \"'me' should resolve to the psalmist\". It did in the graph — לְפָנַי, 'before my face', is a 'whose' suffix on 'face' — but the diagram drew a suffix's owner only from its head's possessor, and 'face' has none.",
+    "edges": [
+      "me -refers_to-> psalmist"
+    ]
+  },
+  "Psa.23.6": {
+    "why": "'Surely goodness and mercy will follow me all the days of my life.' Held reading, 2026-09-26: 'subject should be a collection that includes both good/goodness and mercy/covenant loyalty'. MACULA wraps the subject as אַךְ + [טוֹב וְחֶסֶד]; the coordination under the focus particle was not seen, and the role took 'mercy' alone. The particle, 'surely', is the collection's focus.",
+    "roles": [
+      "ct0 -s-> goodnessandmercy",
+      "goodnessandmercy -qualifier-> surely"
+    ],
+    "edges": [
+      "goodnessandmercy -member-> goodness",
+      "goodnessandmercy -member-> mercy"
+    ],
+    "absent": [
+      "ct0 -s-> mercy"
+    ]
+  },
+  "Exo.8.7": {
+    "why": "'The frogs will depart from you and your houses ... they will remain only in the Nile' (BSB 8:11) — still Moses, answering Pharaoh in 8:6, with no 'he said' of its own. The verse opens with a weqatal, not a narrative wayyiqtol, so the speech runs on; member 1 is Moses's 'he said' in 8:6, which the speaker rule attributes to him by alternation.",
+    "links": [
+      "turn0 -part-> cl0",
+      "turn0 -part-> cl1"
+    ],
+    "moved": "2026-09-26: the turn is minted in 8:6, where Moses's answer opens; this verse checks the parts it continues with."
+  },
+  "Exo.8.1": {
+    "why": "'Say to Aaron: stretch out your hand ... AND bring up the frogs' (BSB 8:5). Three levels of speech, and the actor at each is the addressee of the level above: Moses is to say it, Aaron is to do it. Only the FIRST of Aaron's two commands was the `content` of 'say to Aaron', so only it got its actor; the second, joined by 'and', now carries the same actor — which is what later lets the magicians' 'they brought up the frogs' (8:3) be ruled out as its fulfilment. REFINED 2026-09-25 (held reading) on the gnat plague's twin verse: 'the second level (aaron) imperative content is a collection of 2 actions' — so what 'say to Aaron' says is the COLLECTION, an Imperative group of both commands, not its first member.",
+    "links": [
+      "cl0 -content-> cl1",
+      "cl1 -content-> imp3",
+      "imp3 -command-> cl2",
+      "imp3 -command-> cl3",
+      "cl2 -and-> cl3"
+    ],
+    "absent": [
+      "cl1 -content-> cl2"
+    ],
+    "roles": [
+      "ct1 -s-> moses",
+      "ct2 -s-> aaron",
+      "ct3 -s-> aaron"
+    ]
+  },
+  "Exo.8.3": {
+    "why": "'The magicians did the same by their secret arts, and brought up frogs on the land of Egypt' (BSB 8:7). Same verb as God's command to Aaron to 'bring up the frogs' (8:1), so the same-lemma rule paired them — the magicians' act recorded as the state of God's command. The report must be done by the one commanded, or for a causative by what it acts on (the frogs going up, 8:2). 'And brought up' continues 'the magicians did' with the same person, so it is theirs. No action-state pair may be minted here.",
+    "links": [
+      "cl0 -then-> cl1"
+    ],
+    "absent_pairs": [
+      "action-state"
+    ]
+  },
+  "Exo.8.4": {
+    "why": "Pharaoh: 'Pray to the LORD that he may take away the frogs ... and I will let the people go, that they may sacrifice to the LORD' (BSB 8:8). Two purposes and a PROMISE between them. The first draft of the purpose rule called all three purpose; the cohortative 'I will let go' after the jussive 'that he may remove' is 'then I will' — Pharaoh's side of a bargain. So purpose needs a change of person, and a cohortative after a jussive is excluded. The promise stays `and` until a kind exists for it.",
+    "links": [
+      "cl0 -content-> cl1",
+      "cl1 -content-> cl2",
+      "cl2 -purpose-> cl3",
+      "cl3 -and-> cl4",
+      "cl4 -purpose-> cl5"
+    ],
+    "groups": [
+      "imperative | imperative | 1=cl2 | 2=cl3"
+    ],
+    "absent": [
+      "cl3 -purpose-> cl4",
+      "they5 -refers_to-> rivers"
+    ]
+  },
+  "Exo.8.12": {
+    "why": "The gnat plague (BSB 8:16): 'Tell Aaron: stretch out your staff and strike the dust of the earth, that it may turn into gnats throughout the land of Egypt.' Held reading, 2026-09-25, twice: 'that it may turn into swarms of gnats ... is the effect of Stretch out your staff and strike the dust of the earth', and 'the second level (aaron) imperative content is a collection of 2 actions'. So what 'tell Aaron' says is ONE Imperative group — two commands and their effect — and the cause of the gnats is both commands, not 'tell Aaron' (the LORD's command to Moses, a level up). The effect's form: imperative, waw + third-person weqatal (10 of 14 across the corpus).",
+    "links": [
+      "cl0 -content-> cl1",
+      "cl1 -content-> imp3",
+      "imp3 -command-> cl2",
+      "imp3 -command-> cl3",
+      "imp3 -effect-> cl4",
+      "cl3 -result-> cl4",
+      "turn0 -part-> turn1",
+      "turn1 -part-> imp3"
+    ],
+    "groups": [
+      "turn | wayyiqtol | 1=cl0 | 2=turn1"
+    ],
+    "absent": [
+      "imp3 -command-> cl1",
+      "cl3 -and-> cl4"
+    ],
+    "edges": [
+      "he4 -refers_to-> dust",
+      "staff -possessor-> aaron"
+    ],
+    "also": "Held reading, 2026-09-25: the subject of 'it will become gnats' looked wrong as 'he'. Hebrew has no 'it' — the masculine verb says he-or-it — and the subject is the dust: the thing struck is the thing that becomes. An effect's implicit subject that agrees with its command's object resolves to it, and is drawn 'it'; unresolved third-person singulars are drawn 'he/it', never a bare 'he'."
+  },
+  "Exo.8.13": {
+    "why": "'This they did' (BSB 8:17) — וַיַּעֲשׂוּ־כֵן. Held reading, 2026-09-25: \"'this they did' is meaningless as modelled - it is the fulfillment of both imperatives and once you know that you know that 'they' is the fulfillers (Moses and Aaron) and the 'this' is command contents.\" So the clause FULFILS the collection of 8:12 (stretch out + strike); its 'so' refers to that collection; and its implicit 'they' — a plural, otherwise held — resolves by structure to the ones the command chain was addressed to: Aaron (to do it) and, up through `content`, Moses (to tell him).",
+    "roles": [
+      "ct3 -pp-> humansandanimals",
+      "ct4 -s-> dust",
+      "ct4 -pp-> land",
+      "dust -qualifier-> all",
+      "land -qualifier-> all"
+    ],
+    "links": [
+      "cl0 -fulfils-> imp3",
+      "cl1 -elaborates-> cl0",
+      "cl2 -elaborates-> cl0",
+      "cl1 -fulfils-> cl2",
+      "cl2 -fulfils-> cl3",
+      "cl3 -fulfils-> cl4",
+      "cl2 -result-> cl3"
+    ],
+    "edges": [
+      "they0 -refers_to-> doers0",
+      "doers0 -member-> moses",
+      "doers0 -member-> aaron",
+      "he2 -refers_to-> aaron"
+    ],
+    "absent": [
+      "so -refers_to-> imp3",
+      "ct0 -adv-> so",
+      "cl0 -and-> cl1",
+      "cl2 -then-> cl3",
+      "pair11_15 -state-> cl1",
+      "pair12_16 -state-> cl2",
+      "ct3 -pp-> humans",
+      "ct4 -s-> all"
+    ],
+    "also": "Then, held reading: \"'and when Aaron stretched out his hand with his staff and struck the dust of the earth' is not an and - it is a reference to 'this they did' used for cause and effect - 'when' being the clue.\" The Hebrew has no 'when' (a plain wayyiqtol chain); the structure reaches the same reading from the repeated verbs: stretched out / struck ELABORATE 'they did so' and fulfil the commands stretch out / strike (8:12 cl2, cl3 — the dst ids here are 8:12's); 'the gnats were' fulfils the command's effect (8:12 cl4) and is the RESULT of the acts. The lemma-matched action-state pairs that joined the LORD's saying to Aaron's acts are gone."
+  },
+  "Exo.8.14": {
+    "why": "'The magicians did so by their secret arts to bring forth the gnats, but they could not' (BSB 8:18). Held reading, 2026-09-25: 'I can't understand why bring forth the gnats is in a within relationship ... I don't know why gnats is repeated ... it needs to be one place or the other.' לְהוֹצִיא is לְ + infinitive: the PURPOSE of their doing (the BSB's 'tried to' folds it into the verb). And the preposition wraps the whole clause, so no separate 'to: gnats' role.",
+    "links": [
+      "cl0 -purpose-> cl1",
+      "cl0 -likewise-> cl0",
+      "cl1 -failed_result-> cl2"
+    ],
+    "absent": [
+      "cl1 -and-> cl2",
+      "cl0 -within-> cl1",
+      "ct0 -pp-> gnats",
+      "ct0 -adv-> so"
+    ],
+    "also": "Then, of כֵּן: 'it does not make sense as presented but it does make sense if it relates to what proceeded it. it probably also belongs a level higher.' The magicians' 'did so' is someone else doing the same as Aaron's deed (8:13 cl0 — the dst here), not a fulfilment: nobody commanded them. So the clause is linked `likewise`, and 'so' is lifted out of its content onto the link."
+  },
+  "Exo.8.15": {
+    "why": "'... and he would not listen to them, just as the LORD had said' (BSB 8:19). 'Just as [the LORD had said]' is a preposition wrapping a relative clause; the fake role 'just: LORD' minted from its first noun is gone (first-retrieval fault 6). Then, held reading: 'is there a way for he to resolve to Pharaoh?' — the clause before names Pharaoh's HEART, and the heart stands for its owner (9 of 10 corpus cases right). And 'just as the LORD had said ... seems sparse - nothing ties it to the prior' — כַּאֲשֶׁר is now the link `as`, flagged as a saying (which needed the verb 'speak' recognised: the speech list had misspelled it).",
+    "links": [
+      "cl3 -as-> cl4",
+      "cl2 -result-> cl3",
+      "cl0 -then-> cl2"
+    ],
+    "edges": [
+      "he3 -refers_to-> pharaohS"
+    ],
+    "absent": [
+      "cl2 -and-> cl3",
+      "ct3 -pp-> lord",
+      "cl3 -within-> cl4"
+    ]
+  },
+  "Exo.8.16": {
+    "why": "BSB 8:20: 'Then the LORD said to Moses, Get up early ... stand before Pharaoh ... and say to him: This is what the LORD says: Let My people go, so that they may worship Me.' Held reading, 2026-09-26: 'this is 3 levels of imperatives but you have the first yyōʾmer - the second yyōʾmer - and the third yyōʾmer'. Three nested turns in one verse: the LORD to Moses (performed), Moses to Pharaoh (commanded), 'thus says the LORD' (the message it carries). The chain was reached by POSITION after a link-less participle clause ('behold, he is going out to the water') broke the walk by links. And first-retrieval fault 9: the speaker rule had put the LORD on 'and YOU shall say to him' — spoken by Moses, the one commanded; corrected.",
+    "links": [
+      "turn0 -part-> turn1",
+      "turn1 -part-> turn2",
+      "turn0 -part-> imp2",
+      "turn2 -part-> imp6"
+    ],
+    "edges": [
+      "turn1 -sender-> moses",
+      "cl4 -speaker-> moses"
+    ],
+    "absent": [
+      "turn1 -sender-> lord",
+      "cl4 -speaker-> lord"
+    ]
+  },
+  "Exo.8.10": {
+    "why": "'They piled them into heaps, and the land stank' (BSB 8:14). The heapers are Egyptians the text never names, so no rule over the text can resolve 'they' — and the unique-candidate rule put it on the houses of 8:9. With the frog plague's 'that they may sacrifice' → rivers (8:4), the case that led to measuring plural resolutions corpus-wide: 8 of 16, against 12 of 16 singular. Plural 'they' is held until animacy exists (plan 4.3).",
+    "absent": [
+      "they0 -refers_to-> houses"
+    ]
+  }
+}

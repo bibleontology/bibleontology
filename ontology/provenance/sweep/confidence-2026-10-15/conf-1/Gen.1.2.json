@@ -1,0 +1,36 @@
+{
+ "ref": "Gen.1.2",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "A clause cannot be joined to itself; the builder's self-link is a parser artifact.",
+   "category": "self-link from parser"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "Plain waw joining two descriptions of the earth and the darkness; no cause, result or sequence is stated.",
+   "category": "plain and between clauses"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "confidence": "high",
+   "why": "Plain waw joining the darkness clause to the clause about the Spirit; both are descriptions, not a sequence of acts.",
+   "category": "plain and between clauses"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

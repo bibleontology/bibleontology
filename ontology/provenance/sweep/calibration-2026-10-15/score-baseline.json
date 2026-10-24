@@ -1,0 +1,295 @@
+{
+ "total": [
+  41,
+  113
+ ],
+ "per": {
+  "Gen.1.3": {
+   "in_scope": 3,
+   "ok": 1,
+   "out_of_scope": 0,
+   "missed": [
+    "links: cl0 -content-> cl1",
+    "pairs: action-state | הָיָה | action=cl0 | state=cl2"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.6": {
+   "in_scope": 5,
+   "ok": 2,
+   "out_of_scope": 1,
+   "missed": [
+    "links: cl0 -then-> cl2",
+    "speakers: cl0 | pharaoh",
+    "speakers: cl2 | moses"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Psa.107.1": {
+   "in_scope": 3,
+   "ok": 3,
+   "out_of_scope": 0,
+   "missed": [],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Psa.119.105": {
+   "in_scope": 1,
+   "ok": 0,
+   "out_of_scope": 0,
+   "missed": [
+    "groups: parallel | - | 1=cl0 | 2=cl1"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.7.26": {
+   "in_scope": 10,
+   "ok": 2,
+   "out_of_scope": 0,
+   "missed": [
+    "links: cl0 -content-> cl1",
+    "links: cl2 -content-> cl3",
+    "links: cl3 -content-> cl4",
+    "links: cl4 -purpose-> cl5",
+    "links: turn0 -part-> turn1",
+    "links: turn1 -part-> turn2",
+    "absent: cl4 -and-> cl5",
+    "groups: turn | wayyiqtol | 1=cl0 | 2=turn1"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.7.27": {
+   "in_scope": 6,
+   "ok": 3,
+   "out_of_scope": 0,
+   "missed": [
+    "links: cl2 -if-> cl0",
+    "links: cl0 -within-> cl1",
+    "links: turn2 -part-> cnd0"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Psa.23.1": {
+   "in_scope": 6,
+   "ok": 6,
+   "out_of_scope": 3,
+   "missed": [],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Psa.23.2": {
+   "in_scope": 3,
+   "ok": 0,
+   "out_of_scope": 1,
+   "missed": [
+    "links: acts1 -agent_act-> cl0",
+    "links: acts1 -agent_act-> cl1",
+    "edges: me -refers_to-> psalmist"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Psa.23.3": {
+   "in_scope": 4,
+   "ok": 0,
+   "out_of_scope": 1,
+   "missed": [
+    "edges: he0 -refers_to-> lord",
+    "edges: he1 -refers_to-> lord",
+    "edges: soul -possessor-> psalmist",
+    "edges: nameS -possessor-> lord"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Psa.23.4": {
+   "in_scope": 5,
+   "ok": 1,
+   "out_of_scope": 0,
+   "missed": [
+    "links: cl1 -though-> cl0",
+    "links: conc0 -conceded-> cl0",
+    "links: conc0 -holds_anyway-> cl1",
+    "links: conc0 -its_ground-> cl2"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Psa.23.5": {
+   "in_scope": 1,
+   "ok": 0,
+   "out_of_scope": 0,
+   "missed": [
+    "edges: me -refers_to-> psalmist"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Psa.23.6": {
+   "in_scope": 0,
+   "ok": 0,
+   "out_of_scope": 3,
+   "missed": [],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.7": {
+   "in_scope": 2,
+   "ok": 0,
+   "out_of_scope": 0,
+   "missed": [
+    "links: turn0 -part-> cl0",
+    "links: turn0 -part-> cl1"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.1": {
+   "in_scope": 6,
+   "ok": 3,
+   "out_of_scope": 0,
+   "missed": [
+    "links: cl0 -content-> cl1",
+    "links: cl1 -content-> imp3",
+    "links: imp3 -command-> cl3"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.3": {
+   "in_scope": 2,
+   "ok": 2,
+   "out_of_scope": 0,
+   "missed": [],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.4": {
+   "in_scope": 8,
+   "ok": 4,
+   "out_of_scope": 0,
+   "missed": [
+    "links: cl0 -content-> cl1",
+    "links: cl1 -content-> cl2",
+    "links: cl2 -purpose-> cl3",
+    "links: cl4 -purpose-> cl5"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.12": {
+   "in_scope": 13,
+   "ok": 5,
+   "out_of_scope": 0,
+   "missed": [
+    "links: cl0 -content-> cl1",
+    "links: cl1 -content-> imp3",
+    "links: imp3 -effect-> cl4",
+    "links: cl3 -result-> cl4",
+    "links: turn0 -part-> turn1",
+    "links: turn1 -part-> imp3",
+    "edges: he4 -refers_to-> dust",
+    "groups: turn | wayyiqtol | 1=cl0 | 2=turn1"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.13": {
+   "in_scope": 15,
+   "ok": 3,
+   "out_of_scope": 4,
+   "missed": [
+    "links: cl0 -fulfils-> imp3",
+    "links: cl1 -elaborates-> cl0",
+    "links: cl2 -elaborates-> cl0",
+    "links: cl1 -fulfils-> cl2",
+    "links: cl2 -fulfils-> cl3",
+    "links: cl3 -fulfils-> cl4",
+    "links: cl2 -result-> cl3",
+    "edges: they0 -refers_to-> doers0",
+    "edges: doers0 -member-> moses",
+    "edges: doers0 -member-> aaron",
+    "edges: he2 -refers_to-> aaron",
+    "absent: cl2 -then-> cl3"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.14": {
+   "in_scope": 5,
+   "ok": 3,
+   "out_of_scope": 2,
+   "missed": [
+    "links: cl0 -likewise-> cl0",
+    "links: cl1 -failed_result-> cl2"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.15": {
+   "in_scope": 6,
+   "ok": 2,
+   "out_of_scope": 1,
+   "missed": [
+    "links: cl2 -result-> cl3",
+    "links: cl0 -then-> cl2",
+    "edges: he3 -refers_to-> pharaohS",
+    "absent: cl2 -and-> cl3"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.16": {
+   "in_scope": 8,
+   "ok": 0,
+   "out_of_scope": 0,
+   "missed": [
+    "links: turn0 -part-> turn1",
+    "links: turn1 -part-> turn2",
+    "links: turn0 -part-> imp2",
+    "links: turn2 -part-> imp6",
+    "edges: turn1 -sender-> moses",
+    "edges: cl4 -speaker-> moses",
+    "absent: turn1 -sender-> lord",
+    "absent: cl4 -speaker-> lord"
+   ],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  },
+  "Exo.8.10": {
+   "in_scope": 1,
+   "ok": 1,
+   "out_of_scope": 0,
+   "missed": [],
+   "rejected_by_morphology": [],
+   "invalid": [],
+   "divine": []
+  }
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "ref": "Gen.1.2",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot be joined to itself. The waw of cl0 joins the next clause, cl1, which is kept below.",
+   "category": "builder self-link",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Plain waw (וְ) between two clauses describing the earth and then the darkness; no cause, result or purpose.",
+   "category": "plain and between clauses",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Plain waw (וְ) before the spirit clause, which has its own subject; the sense is additive.",
+   "category": "plain and between clauses",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [],
+ "voted": 3
+}

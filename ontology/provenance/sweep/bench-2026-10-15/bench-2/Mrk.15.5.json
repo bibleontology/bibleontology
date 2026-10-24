@@ -1,0 +1,30 @@
+{
+ "ref": "Mrk.15.5",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive clause with hoste (so as to) states what the silence brings about, Pilate's amazement. That is a result, not a plain and.",
+   "category": "result of an act"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link: no later event in this verse follows the clause itself.",
+   "category": "self-link"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0, the opening de ('but') that contrasts with Pilate's question in Mrk.15.4",
+   "what": "A contrast across verses. The contrast type is mid-verse only, so this has no link type."
+  }
+ ],
+ "cant_tell": []
+}

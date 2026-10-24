@@ -1,0 +1,2692 @@
+{
+ "id": "love",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "verb",
+ "words": [
+  {
+   "key": "h157",
+   "lemma": "אהב",
+   "form": "verb",
+   "translit": "a.hav",
+   "gloss": "to love: friend",
+   "lang": "Hebrew",
+   "uses": 186,
+   "other_sense": 14
+  },
+  {
+   "key": "h160",
+   "lemma": "אַהֲבָה",
+   "form": "noun",
+   "translit": "a.ha.vah",
+   "gloss": "love",
+   "lang": "Hebrew",
+   "uses": 31,
+   "other_sense": 0
+  },
+  {
+   "key": "g25",
+   "lemma": "ἀγαπάω",
+   "form": "verb",
+   "translit": "agapaō",
+   "gloss": "to love",
+   "lang": "Greek",
+   "uses": 110,
+   "other_sense": 0
+  },
+  {
+   "key": "g26",
+   "lemma": "ἀγάπη",
+   "form": "noun",
+   "translit": "agapē",
+   "gloss": "love",
+   "lang": "Greek",
+   "uses": 106,
+   "other_sense": 0
+  },
+  {
+   "key": "g27",
+   "lemma": "ἀγαπητός",
+   "form": "adjective",
+   "translit": "agapētos",
+   "gloss": "beloved",
+   "lang": "Greek",
+   "uses": 60,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "verb": "Who loves whom",
+  "noun": "What the text says of love",
+  "adjective": "Called “beloved”"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "commandments",
+   "name": "the commandments",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "neighbor",
+   "name": "neighbor",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_church_r34",
+   "name": "Love one another",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "enemies",
+   "name": "enemies",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "hope",
+   "name": "hope",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "fruit_of_the_spirit",
+   "name": "the fruit of the Spirit",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "image_marriage",
+   "name": "marriage",
+   "type": "image",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "love_of_god",
+   "name": "love of God toward man",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "charity",
+   "name": "love",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "god_is_love",
+   "name": "God is love",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "faith_hope_charity_these_three",
+   "name": "these three remain: faith, hope, and love",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "charity_suffers_long",
+   "name": "Love is patient",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "you_shall_love_the_lord_your_god",
+   "name": "you shall love the LORD your God",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "you_shall_love_your_neighbor_as_yourself",
+   "name": "love your neighbor as yourself",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "theme_church_r34",
+   "name": "Love one another",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_spirit_r43",
+   "name": "The fruit of the Spirit is love",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "1Cor.13.13",
+   "ref": "1 Corinthians 13:13",
+   "text": "And now these three remain: faith, hope, and love; but the greatest of these is love."
+  },
+  {
+   "id": "1John.4.8",
+   "ref": "1 John 4:8",
+   "text": "Whoever does not love does not know God, because God is love."
+  },
+  {
+   "id": "John.3.16",
+   "ref": "John 3:16",
+   "text": "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life."
+  },
+  {
+   "id": "Deut.6.5",
+   "ref": "Deuteronomy 6:5",
+   "text": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength."
+  },
+  {
+   "id": "Lev.19.18",
+   "ref": "Leviticus 19:18",
+   "text": "Do not seek revenge or bear a grudge against any of your people, but love your neighbor as yourself. I am the LORD."
+  },
+  {
+   "id": "John.13.34",
+   "ref": "John 13:34",
+   "text": "A new commandment I give you: Love one another. As I have loved you, so you also must love one another."
+  },
+  {
+   "id": "Matt.5.44",
+   "ref": "Matthew 5:44",
+   "text": "But I tell you, love your enemies and pray for those who persecute you,"
+  },
+  {
+   "id": "Rom.5.8",
+   "ref": "Romans 5:8",
+   "text": "But God proves His love for us in this: While we were still sinners, Christ died for us."
+  }
+ ],
+ "forms": [
+  {
+   "form": "verb",
+   "verses": 270,
+   "rows": [
+    {
+     "label": "The Father loves the Son",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "John.3.35",
+      "John.10.17",
+      "John.15.9",
+      "John.17.23",
+      "John.17.24",
+      "John.17.26"
+     ],
+     "eg": [
+      {
+       "id": "John.3.35",
+       "ref": "John 3:35",
+       "text": "The Father loves the Son and has placed all things in His hands.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "John.10.17",
+       "ref": "John 10:17",
+       "text": "The reason the Father loves Me is that I lay down My life in order to take it up again.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "John.15.9",
+       "ref": "John 15:9",
+       "text": "As the Father has loved Me, so have I loved you. Remain in My love.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "John.17.23",
+       "ref": "John 17:23",
+       "text": "I in them and You in Me-that they may be perfectly united, so that the world may know that You sent Me and have loved them just as You have loved Me.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD loves the world",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "world",
+       "name": "world",
+       "type": "place",
+       "missing": false
+      }
+     ],
+     "n": 1,
+     "verses": [
+      "John.3.16"
+     ],
+     "eg": [
+      {
+       "id": "John.3.16",
+       "ref": "John 3:16",
+       "text": "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD loves Israel and the fathers",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Deut.4.37",
+      "Rom.9.13",
+      "1Kgs.10.9",
+      "2Chr.9.8",
+      "Ps.47.4",
+      "Mal.1.2"
+     ],
+     "eg": [
+      {
+       "id": "Deut.4.37",
+       "ref": "Deuteronomy 4:37",
+       "text": "Because He loved your fathers, He chose their descendants after them and brought you out of Egypt by His presence and great power,",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.13",
+       "ref": "Romans 9:13",
+       "text": "So it is written: “Jacob I loved, but Esau I hated.”",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.10.9",
+       "ref": "1 Kings 10:9",
+       "text": "Blessed be the LORD your God, who has delighted in you to set you on the throne of Israel. Because of the LORD's eternal love for Israel, He has made you king to carry out justice and righteousness.”",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.9.8",
+       "ref": "2 Chronicles 9:8",
+       "text": "Blessed be the LORD your God, who has delighted in you to set you on His throne to be king for the LORD your God. Because your God loved Israel enough to establish them forever, He has made you king over them to carry out justice and righteousness.”",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD loves",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 29,
+     "verses": [
+      "Deut.7.13",
+      "John.14.23",
+      "2Cor.9.7",
+      "Deut.10.15",
+      "Deut.10.18",
+      "Deut.23.5",
+      "Ps.11.7",
+      "Ps.33.5",
+      "Ps.37.28",
+      "Ps.78.68",
+      "Ps.87.2",
+      "Ps.146.8",
+      "Prov.3.12",
+      "Prov.15.9",
+      "Isa.43.4",
+      "Isa.48.14",
+      "Jer.31.3",
+      "Hos.2.23",
+      "Hos.9.15",
+      "Hos.11.1",
+      "Hos.14.5",
+      "Mal.1.2",
+      "Mal.2.11",
+      "John.17.23",
+      "Eph.2.4",
+      "2Thess.2.16",
+      "Heb.1.9",
+      "Heb.12.6",
+      "1John.4.11"
+     ],
+     "eg": [
+      {
+       "id": "Deut.7.13",
+       "ref": "Deuteronomy 7:13",
+       "text": "He will love you and bless you and multiply you. He will bless the fruit of your womb and the produce of your land-your grain, new wine, and oil, the young of your herds and the lambs of your flocks-in the land that He swore to your fathers to give you.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "John.14.23",
+       "ref": "John 14:23",
+       "text": "Jesus replied, “If anyone loves Me, he will keep My word. My Father will love him, and We will come to him and make Our home with him.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.9.7",
+       "ref": "2 Corinthians 9:7",
+       "text": "Each one should give what he has decided in his heart to give, not out of regret or compulsion. For God loves a cheerful giver.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Deut.10.15",
+       "ref": "Deuteronomy 10:15",
+       "text": "Yet the LORD has set His affection on your fathers and loved them. And He has chosen you, their descendants after them, above all the peoples, even to this day.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus loves",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Mark.10.21",
+      "Eph.5.2",
+      "John.11.5",
+      "John.13.1",
+      "John.13.23",
+      "John.13.34",
+      "John.15.12",
+      "John.19.26",
+      "John.21.7",
+      "John.21.20",
+      "Eph.5.25",
+      "Rev.1.5"
+     ],
+     "eg": [
+      {
+       "id": "Mark.10.21",
+       "ref": "Mark 10:21",
+       "text": "Jesus looked at him, loved him, and said to him, “There is one thing you lack: Go, sell everything you own and give to the poor, and you will have treasure in heaven. Then come, follow Me.”",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Eph.5.2",
+       "ref": "Ephesians 5:2",
+       "text": "and walk in love, just as Christ loved us and gave Himself up for us as a fragrant sacrificial offering to God.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "John.11.5",
+       "ref": "John 11:5",
+       "text": "Now Jesus loved Martha and her sister and Lazarus.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "John.13.1",
+       "ref": "John 13:1",
+       "text": "It was now just before the Passover Feast, and Jesus knew that His hour had come to leave this world and return to the Father. Having loved His own who were in the world, He loved them to the very end.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Love the LORD your God",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "you_shall_love_the_lord_your_god",
+       "name": "you shall love the LORD your God",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 31,
+     "verses": [
+      "Deut.6.5",
+      "Matt.22.37",
+      "Rom.8.28",
+      "Deut.11.1",
+      "Deut.11.13",
+      "Deut.11.22",
+      "Deut.13.3",
+      "Deut.19.9",
+      "Deut.30.6",
+      "Deut.30.16",
+      "Deut.30.20",
+      "Josh.22.5",
+      "Josh.23.11",
+      "2Sam.12.24",
+      "1Kgs.3.3",
+      "2Chr.19.2",
+      "Ps.5.11",
+      "Ps.31.23",
+      "Ps.69.36",
+      "Ps.97.10",
+      "Ps.116.1",
+      "Ps.119.132",
+      "Isa.56.6",
+      "Mark.12.30",
+      "Luke.10.27",
+      "1Cor.8.3",
+      "Eph.6.24",
+      "1John.4.10",
+      "1John.4.20",
+      "1John.4.21",
+      "1John.5.2"
+     ],
+     "eg": [
+      {
+       "id": "Deut.6.5",
+       "ref": "Deuteronomy 6:5",
+       "text": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.22.37",
+       "ref": "Matthew 22:37",
+       "text": "Jesus declared, “‘Love the Lord your God with all your heart and with all your soul and with all your mind.'",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.28",
+       "ref": "Romans 8:28",
+       "text": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Deut.11.1",
+       "ref": "Deuteronomy 11:1",
+       "text": "You shall therefore love the LORD your God and always keep His charge, His statutes, His ordinances, and His commandments.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Love one another",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_church_r34",
+       "name": "Love one another",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "John.13.34",
+      "Rom.13.8",
+      "John.15.12",
+      "John.15.17",
+      "1Thess.4.9",
+      "1Pet.1.22",
+      "1John.3.11",
+      "1John.3.23",
+      "1John.4.7",
+      "1John.4.11",
+      "1John.4.12",
+      "2John.1.5"
+     ],
+     "eg": [
+      {
+       "id": "John.13.34",
+       "ref": "John 13:34",
+       "text": "A new commandment I give you: Love one another. As I have loved you, so you also must love one another.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.13.8",
+       "ref": "Romans 13:8",
+       "text": "Be indebted to no one, except to one another in love. For he who loves his neighbor has fulfilled the law.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "John.15.12",
+       "ref": "John 15:12",
+       "text": "This is My commandment, that you love one another as I have loved you.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "John.15.17",
+       "ref": "John 15:17",
+       "text": "This is My command to you: Love one another.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Love your neighbor",
+     "note": null,
+     "doors": [
+      {
+       "id": "neighbor",
+       "name": "neighbor",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "you_shall_love_your_neighbor_as_yourself",
+       "name": "love your neighbor as yourself",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Lev.19.18",
+      "Matt.5.43",
+      "Rom.13.9",
+      "Matt.19.19",
+      "Matt.22.39",
+      "Mark.12.31",
+      "Mark.12.33",
+      "Gal.5.14",
+      "Jas.2.8"
+     ],
+     "eg": [
+      {
+       "id": "Lev.19.18",
+       "ref": "Leviticus 19:18",
+       "text": "Do not seek revenge or bear a grudge against any of your people, but love your neighbor as yourself. I am the LORD.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.5.43",
+       "ref": "Matthew 5:43",
+       "text": "You have heard that it was said, ‘Love your neighbor' and ‘Hate your enemy.'",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.13.9",
+       "ref": "Romans 13:9",
+       "text": "The commandments “Do not commit adultery,” “Do not murder,” “Do not steal,” “Do not covet,” and any other commandments, are summed up in this one decree: “Love your neighbor as yourself.”",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.19.19",
+       "ref": "Matthew 19:19",
+       "text": "honor your father and mother, and love your neighbor as yourself.'”",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Love the foreigner",
+     "note": null,
+     "doors": [],
+     "n": 1,
+     "verses": [
+      "Deut.10.19"
+     ],
+     "eg": [
+      {
+       "id": "Deut.10.19",
+       "ref": "Deuteronomy 10:19",
+       "text": "So you also must love the foreigner, since you yourselves were foreigners in the land of Egypt.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Love your brother",
+     "note": null,
+     "doors": [
+      {
+       "id": "brother",
+       "name": "brother",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "1Thess.1.4",
+      "2Thess.2.13",
+      "1Pet.2.17",
+      "1John.2.10",
+      "1John.3.10",
+      "1John.3.14",
+      "1John.4.20",
+      "1John.4.21"
+     ],
+     "eg": [
+      {
+       "id": "1Thess.1.4",
+       "ref": "1 Thessalonians 1:4",
+       "text": "Brothers who are beloved by God, we know that He has chosen you,",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "2Thess.2.13",
+       "ref": "2 Thessalonians 2:13",
+       "text": "But we should always thank God for you, brothers who are loved by the Lord, because God chose you from the beginning to be saved by the sanctification of the Spirit and by faith in the truth.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.2.17",
+       "ref": "1 Peter 2:17",
+       "text": "Treat everyone with high regard: Love the brotherhood of believers, fear God, honor the king.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "1John.2.10",
+       "ref": "1 John 2:10",
+       "text": "Whoever loves his brother remains in the light, and there is no cause of stumbling in him.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Love your enemies",
+     "note": null,
+     "doors": [
+      {
+       "id": "enemies",
+       "name": "enemies",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Matt.5.44",
+      "Luke.6.27",
+      "Luke.6.35"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.44",
+       "ref": "Matthew 5:44",
+       "text": "But I tell you, love your enemies and pray for those who persecute you,",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.6.27",
+       "ref": "Luke 6:27",
+       "text": "But to those of you who will listen, I say: Love your enemies, do good to those who hate you,",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.6.35",
+       "ref": "Luke 6:35",
+       "text": "But love your enemies, do good to them, and lend to them, expecting nothing in return. Then your reward will be great, and you will be sons of the Most High; for He is kind to the ungrateful and wicked.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Husbands and wives",
+     "note": null,
+     "doors": [
+      {
+       "id": "husband",
+       "name": "husband",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "wife",
+       "name": "wife",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "image_marriage",
+       "name": "marriage",
+       "type": "image",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Exod.21.5",
+      "Eph.5.25",
+      "Eccl.9.9",
+      "Col.3.19",
+      "1Kgs.11.1",
+      "Hos.2.23",
+      "Eph.5.28",
+      "Eph.5.33"
+     ],
+     "eg": [
+      {
+       "id": "Exod.21.5",
+       "ref": "Exodus 21:5",
+       "text": "But if the servant declares, ‘I love my master and my wife and children; I do not want to go free,'",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "Eph.5.25",
+       "ref": "Ephesians 5:25",
+       "text": "Husbands, love your wives, just as Christ loved the church and gave Himself up for her",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.9.9",
+       "ref": "Ecclesiastes 9:9",
+       "text": "Enjoy life with your beloved wife all the days of the fleeting life that God has given you under the sun-all your fleeting days. For this is your portion in life and in your labor under the sun.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "Col.3.19",
+       "ref": "Colossians 3:19",
+       "text": "Husbands, love your wives and do not be harsh with them.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Love the law, wisdom and what is right",
+     "note": null,
+     "doors": [
+      {
+       "id": "wisdom",
+       "name": "wisdom",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "commandments",
+       "name": "the commandments",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Ps.45.7",
+      "2Tim.4.8",
+      "Ps.99.4",
+      "Ps.119.47",
+      "Ps.119.48",
+      "Ps.119.97",
+      "Ps.119.113",
+      "Ps.119.119",
+      "Ps.119.127",
+      "Ps.119.163",
+      "Ps.119.165",
+      "Prov.12.1",
+      "Isa.61.8",
+      "Amos.5.15",
+      "Zech.8.19"
+     ],
+     "eg": [
+      {
+       "id": "Ps.45.7",
+       "ref": "Psalms 45:7",
+       "text": "You have loved righteousness and hated wickedness; therefore God, your God, has anointed you above your companions with the oil of joy.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.4.8",
+       "ref": "2 Timothy 4:8",
+       "text": "From now on there is laid up for me the crown of righteousness, which the Lord, the righteous Judge, will award to me on that day-and not only to me, but to all who crave His appearing.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.99.4",
+       "ref": "Psalms 99:4",
+       "text": "The mighty King loves justice. You have established equity; You have exercised justice and righteousness in Jacob.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.47",
+       "ref": "Psalms 119:47",
+       "text": "I delight in Your commandments because I love them.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "What the text warns against loving",
+     "note": null,
+     "doors": [
+      {
+       "id": "world",
+       "name": "world",
+       "type": "place",
+       "missing": false
+      },
+      {
+       "id": "money",
+       "name": "money",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Ps.52.3",
+      "Luke.11.43",
+      "1John.2.15",
+      "Ps.109.17",
+      "Prov.8.36",
+      "Prov.17.19",
+      "Prov.20.13",
+      "Prov.21.17",
+      "Eccl.5.10",
+      "Isa.1.23",
+      "Mic.3.2",
+      "John.3.19",
+      "John.12.43"
+     ],
+     "eg": [
+      {
+       "id": "Ps.52.3",
+       "ref": "Psalms 52:3",
+       "text": "You love evil more than good, falsehood more than speaking truth. Selah",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.43",
+       "ref": "Luke 11:43",
+       "text": "Woe to you Pharisees! For you love the chief seats in the synagogues and the greetings in the marketplaces.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "1John.2.15",
+       "ref": "1 John 2:15",
+       "text": "Do not love the world or anything in the world. If anyone loves the world, the love of the Father is not in him.",
+       "words": [
+        {
+         "key": "g25",
+         "lemma": "ἀγαπάω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.109.17",
+       "ref": "Psalms 109:17",
+       "text": "The cursing that he loved, may it fall on him; the blessing in which he refused to delight, may it be far from him.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Parents and children",
+     "note": null,
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "Gen.25.28",
+      "Gen.37.3"
+     ],
+     "eg": [
+      {
+       "id": "Gen.25.28",
+       "ref": "Genesis 25:28",
+       "text": "Because Isaac had a taste for wild game, he loved Esau; but Rebekah loved Jacob.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      },
+      {
+       "id": "Gen.37.3",
+       "ref": "Genesis 37:3",
+       "text": "Now Israel loved Joseph more than his other sons, because Joseph had been born to him in his old age; so he made him a robe of many colors.",
+       "words": [
+        {
+         "key": "h157",
+         "lemma": "אהב"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 123,
+    "verses": [
+     "1Cor.2.9",
+     "1John.3.18",
+     "1John.4.19",
+     "1John.5.1",
+     "1Pet.1.8",
+     "1Pet.3.10",
+     "1Sam.1.5",
+     "1Sam.16.21",
+     "1Sam.18.1",
+     "1Sam.18.16",
+     "1Sam.18.20",
+     "1Sam.18.22",
+     "1Sam.18.28",
+     "1Sam.20.17",
+     "2Chr.11.21",
+     "2Chr.26.10",
+     "2Cor.11.11",
+     "2Cor.12.15",
+     "2John.1.1",
+     "2Pet.2.15",
+     "2Sam.1.23",
+     "2Sam.13.1",
+     "2Sam.13.15",
+     "2Sam.13.4",
+     "2Sam.19.6",
+     "2Tim.4.10",
+     "3John.1.1",
+     "Amos.4.5",
+     "Col.3.12",
+     "Dan.9.4",
+     "Deut.10.12",
+     "Deut.15.16",
+     "Deut.21.15",
+     "Deut.21.16",
+     "Deut.5.10",
+     "Deut.7.9",
+     "Eph.1.6",
+     "Esth.2.17",
+     "Exod.20.6",
+     "Ezek.16.37",
+     "Gal.2.20",
+     "Gen.22.2",
+     "Gen.24.67",
+     "Gen.27.14",
+     "Gen.27.4",
+     "Gen.29.18",
+     "Gen.29.30",
+     "Gen.29.32",
+     "Gen.34.3",
+     "Gen.37.4",
+     "Gen.44.20",
+     "Hos.10.11",
+     "Hos.12.7",
+     "Hos.9.1",
+     "Isa.56.10",
+     "Isa.57.8",
+     "Isa.66.10",
+     "Jas.1.12",
+     "Jas.2.5",
+     "Jer.2.25",
+     "Jer.5.31",
+     "Jer.8.2",
+     "Job.19.19",
+     "John.14.15",
+     "John.14.21",
+     "John.14.24",
+     "John.14.28",
+     "John.14.31",
+     "John.21.15",
+     "John.21.16",
+     "John.8.42",
+     "Jude.1.1",
+     "Judg.14.16",
+     "Judg.16.15",
+     "Judg.16.4",
+     "Judg.5.31",
+     "Lev.19.34",
+     "Luke.16.13",
+     "Luke.6.32",
+     "Luke.7.42",
+     "Luke.7.47",
+     "Luke.7.5",
+     "Matt.5.46",
+     "Matt.6.24",
+     "Neh.1.5",
+     "Neh.13.26",
+     "Prov.1.22",
+     "Prov.13.24",
+     "Prov.16.13",
+     "Prov.17.17",
+     "Prov.18.21",
+     "Prov.19.8",
+     "Prov.22.11",
+     "Prov.29.3",
+     "Prov.4.6",
+     "Prov.8.17",
+     "Prov.8.21",
+     "Prov.9.8",
+     "Ps.119.140",
+     "Ps.119.159",
+     "Ps.119.167",
+     "Ps.122.6",
+     "Ps.145.20",
+     "Ps.26.8",
+     "Ps.34.12",
+     "Ps.4.2",
+     "Ps.40.16",
+     "Ps.52.4",
+     "Ps.70.4",
+     "Rev.12.11",
+     "Rev.20.9",
+     "Rev.3.9",
+     "Rom.8.37",
+     "Rom.9.25",
+     "Ruth.4.15",
+     "Song.1.3",
+     "Song.1.4",
+     "Song.1.7",
+     "Song.3.1",
+     "Song.3.2",
+     "Song.3.3",
+     "Song.3.4",
+     "Zech.8.17"
+    ]
+   }
+  },
+  {
+   "form": "noun",
+   "verses": 137,
+   "rows": [
+    {
+     "label": "What the text says love is",
+     "note": null,
+     "doors": [
+      {
+       "id": "charity_suffers_long",
+       "name": "Love is patient",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "god_is_love",
+       "name": "God is love",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "1Cor.13.4",
+      "1Cor.13.7",
+      "1Cor.13.8",
+      "1Cor.13.13",
+      "1John.4.8",
+      "1John.4.16",
+      "1John.4.18",
+      "Rom.13.10",
+      "Col.3.14",
+      "1Cor.8.1"
+     ],
+     "eg": [
+      {
+       "id": "1Cor.13.4",
+       "ref": "1 Corinthians 13:4",
+       "text": "Love is patient, love is kind. It does not envy, it does not boast, it is not proud.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.13.7",
+       "ref": "1 Corinthians 13:7",
+       "text": "It bears all things, believes all things, hopes all things, endures all things.",
+       "words": []
+      },
+      {
+       "id": "1Cor.13.8",
+       "ref": "1 Corinthians 13:8",
+       "text": "Love never fails. But where there are prophecies, they will cease; where there are tongues, they will be restrained; where there is knowledge, it will be dismissed.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.13.13",
+       "ref": "1 Corinthians 13:13",
+       "text": "And now these three remain: faith, hope, and love; but the greatest of these is love.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The fruit of the Spirit",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_spirit_r43",
+       "name": "The fruit of the Spirit is love",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "fruit_of_the_spirit",
+       "name": "the fruit of the Spirit",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 1,
+     "verses": [
+      "Gal.5.22"
+     ],
+     "eg": [
+      {
+       "id": "Gal.5.22",
+       "ref": "Galatians 5:22",
+       "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Faith, hope and love",
+     "note": null,
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "hope",
+       "name": "hope",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "faith_hope_charity_these_three",
+       "name": "these three remain: faith, hope, and love",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Gal.5.6",
+      "Eph.1.15",
+      "Eph.3.17",
+      "Col.1.4",
+      "1Thess.1.3",
+      "1Thess.3.6",
+      "1Thess.5.8",
+      "2Thess.1.3",
+      "1Tim.1.5",
+      "1Tim.1.14",
+      "1Tim.2.15",
+      "1Tim.4.12",
+      "1Tim.6.11",
+      "2Tim.1.13",
+      "2Tim.2.22",
+      "2Tim.3.10",
+      "Titus.2.2",
+      "Phlm.1.5",
+      "Rev.2.19"
+     ],
+     "eg": [
+      {
+       "id": "Gal.5.6",
+       "ref": "Galatians 5:6",
+       "text": "For in Christ Jesus neither circumcision nor uncircumcision has any value. What matters is faith expressing itself through love.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.15",
+       "ref": "Ephesians 1:15",
+       "text": "For this reason, ever since I heard about your faith in the Lord Jesus and your love for all the saints,",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "Eph.3.17",
+       "ref": "Ephesians 3:17",
+       "text": "so that Christ may dwell in your hearts through faith. Then you, being rooted and grounded in love,",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.4",
+       "ref": "Colossians 1:4",
+       "text": "because we have heard about your faith in Christ Jesus and your love for all the saints-",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The love of Christ",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Rom.8.35",
+      "2Cor.5.14",
+      "Eph.3.19"
+     ],
+     "eg": [
+      {
+       "id": "Rom.8.35",
+       "ref": "Romans 8:35",
+       "text": "Who shall separate us from the love of Christ? Shall trouble or distress or persecution or famine or nakedness or danger or sword?",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.5.14",
+       "ref": "2 Corinthians 5:14",
+       "text": "For Christ's love compels us, because we are convinced that One died for all, therefore all died.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "Eph.3.19",
+       "ref": "Ephesians 3:19",
+       "text": "of the love of Christ, and to know this love that surpasses knowledge, that you may be filled with all the fullness of God.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The love of God",
+     "note": "The text's own phrase, kept as written: where readers part on whether \"the love of God\" is God's love or love for God, the page does not choose.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "love_of_god",
+       "name": "love of God toward man",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Luke.11.42",
+      "Rom.5.5",
+      "John.5.42",
+      "Rom.8.39",
+      "2Cor.13.11",
+      "2Cor.13.14",
+      "2Thess.3.5",
+      "1John.2.5",
+      "1John.2.15",
+      "1John.3.17",
+      "1John.4.9",
+      "1John.5.3",
+      "Jude.1.21"
+     ],
+     "eg": [
+      {
+       "id": "Luke.11.42",
+       "ref": "Luke 11:42",
+       "text": "Woe to you Pharisees! For you pay tithes of mint, rue, and every herb, but you disregard justice and the love of God. You should have practiced the latter without neglecting the former.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.5",
+       "ref": "Romans 5:5",
+       "text": "And hope does not disappoint us, because God has poured out His love into our hearts through the Holy Spirit, whom He has given us.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "John.5.42",
+       "ref": "John 5:42",
+       "text": "but I know you, that you do not have the love of God within you.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.39",
+       "ref": "Romans 8:39",
+       "text": "neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+       "words": [
+        {
+         "key": "g26",
+         "lemma": "ἀγάπη"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 91,
+    "verses": [
+     "1Cor.13.1",
+     "1Cor.13.2",
+     "1Cor.13.3",
+     "1Cor.14.1",
+     "1Cor.16.14",
+     "1Cor.16.24",
+     "1Cor.4.21",
+     "1John.3.1",
+     "1John.3.16",
+     "1John.4.10",
+     "1John.4.12",
+     "1John.4.17",
+     "1John.4.7",
+     "1Pet.4.8",
+     "1Pet.5.14",
+     "1Sam.18.3",
+     "1Sam.20.17",
+     "1Thess.3.12",
+     "1Thess.5.13",
+     "2Cor.2.4",
+     "2Cor.2.8",
+     "2Cor.6.6",
+     "2Cor.8.24",
+     "2Cor.8.7",
+     "2Cor.8.8",
+     "2John.1.3",
+     "2John.1.6",
+     "2Pet.1.7",
+     "2Sam.1.26",
+     "2Sam.13.15",
+     "2Thess.2.10",
+     "2Tim.1.7",
+     "3John.1.6",
+     "Col.1.13",
+     "Col.1.8",
+     "Col.2.2",
+     "Eccl.9.1",
+     "Eccl.9.6",
+     "Eph.1.4",
+     "Eph.2.4",
+     "Eph.4.15",
+     "Eph.4.16",
+     "Eph.4.2",
+     "Eph.5.2",
+     "Eph.6.23",
+     "Gal.5.13",
+     "Gen.29.20",
+     "Heb.10.24",
+     "Heb.6.10",
+     "Hos.11.4",
+     "Isa.63.9",
+     "Jer.2.2",
+     "Jer.2.33",
+     "Jer.31.3",
+     "John.13.35",
+     "John.15.10",
+     "John.15.13",
+     "John.15.9",
+     "John.17.26",
+     "Jude.1.12",
+     "Jude.1.2",
+     "Matt.24.12",
+     "Phil.1.16",
+     "Phil.1.9",
+     "Phil.2.1",
+     "Phil.2.2",
+     "Phlm.1.7",
+     "Phlm.1.9",
+     "Prov.10.12",
+     "Prov.15.17",
+     "Prov.17.9",
+     "Prov.27.5",
+     "Prov.5.19",
+     "Ps.109.4",
+     "Ps.109.5",
+     "Rev.2.4",
+     "Rom.12.9",
+     "Rom.14.15",
+     "Rom.15.30",
+     "Rom.5.8",
+     "Song.2.4",
+     "Song.2.5",
+     "Song.2.7",
+     "Song.3.10",
+     "Song.3.5",
+     "Song.5.8",
+     "Song.7.6",
+     "Song.8.4",
+     "Song.8.6",
+     "Song.8.7",
+     "Zeph.3.17"
+    ]
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 60,
+   "rows": [
+    {
+     "label": "My beloved Son",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Matt.3.17",
+      "2Pet.1.17",
+      "Matt.17.5",
+      "Mark.1.11",
+      "Mark.9.7",
+      "Mark.12.6",
+      "Luke.3.22",
+      "Luke.20.13"
+     ],
+     "eg": [
+      {
+       "id": "Matt.3.17",
+       "ref": "Matthew 3:17",
+       "text": "And a voice from heaven said, “This is My beloved Son, in whom I am well pleased!”",
+       "words": [
+        {
+         "key": "g27",
+         "lemma": "ἀγαπητός"
+        }
+       ]
+      },
+      {
+       "id": "2Pet.1.17",
+       "ref": "2 Peter 1:17",
+       "text": "For He received honor and glory from God the Father when the voice came to Him from the Majestic Glory, saying, “This is My beloved Son, in whom I am well pleased.”",
+       "words": [
+        {
+         "key": "g27",
+         "lemma": "ἀγαπητός"
+        }
+       ]
+      },
+      {
+       "id": "Matt.17.5",
+       "ref": "Matthew 17:5",
+       "text": "While Peter was still speaking, a bright cloud enveloped them, and a voice from the cloud said, “This is My beloved Son, in whom I am well pleased. Listen to Him!”",
+       "words": [
+        {
+         "key": "g27",
+         "lemma": "ἀγαπητός"
+        }
+       ]
+      },
+      {
+       "id": "Mark.1.11",
+       "ref": "Mark 1:11",
+       "text": "And a voice came from heaven: “You are My beloved Son; in You I am well pleased.”",
+       "words": [
+        {
+         "key": "g27",
+         "lemma": "ἀγαπητός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Beloved",
+     "note": null,
+     "doors": [],
+     "n": 52,
+     "verses": [
+      "Matt.12.18",
+      "Rom.1.7",
+      "Acts.15.25",
+      "Rom.11.28",
+      "Rom.12.19",
+      "Rom.16.5",
+      "Rom.16.8",
+      "Rom.16.9",
+      "Rom.16.12",
+      "1Cor.4.14",
+      "1Cor.4.17",
+      "1Cor.10.14",
+      "1Cor.15.58",
+      "2Cor.7.1",
+      "2Cor.12.19",
+      "Eph.5.1",
+      "Eph.6.21",
+      "Phil.2.12",
+      "Phil.4.1",
+      "Col.1.7",
+      "Col.4.7",
+      "Col.4.9",
+      "Col.4.14",
+      "1Thess.2.8",
+      "1Tim.6.2",
+      "2Tim.1.2",
+      "Phlm.1.1",
+      "Phlm.1.16",
+      "Heb.6.9",
+      "Jas.1.16",
+      "Jas.1.19",
+      "Jas.2.5",
+      "1Pet.2.11",
+      "1Pet.4.12",
+      "2Pet.3.1",
+      "2Pet.3.8",
+      "2Pet.3.14",
+      "2Pet.3.15",
+      "2Pet.3.17",
+      "1John.2.7",
+      "1John.3.2",
+      "1John.3.21",
+      "1John.4.1",
+      "1John.4.7",
+      "1John.4.11",
+      "3John.1.1",
+      "3John.1.2",
+      "3John.1.5",
+      "3John.1.11",
+      "Jude.1.3",
+      "Jude.1.17",
+      "Jude.1.20"
+     ],
+     "eg": [
+      {
+       "id": "Matt.12.18",
+       "ref": "Matthew 12:18",
+       "text": "“Here is My Servant, whom I have chosen, My beloved, in whom My soul delights. I will put My Spirit on Him, and He will proclaim justice to the nations.",
+       "words": [
+        {
+         "key": "g27",
+         "lemma": "ἀγαπητός"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.7",
+       "ref": "Romans 1:7",
+       "text": "To all in Rome who are loved by God and called to be saints: Grace and peace to you from God our Father and the Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g27",
+         "lemma": "ἀγαπητός"
+        }
+       ]
+      },
+      {
+       "id": "Acts.15.25",
+       "ref": "Acts 15:25",
+       "text": "So we all agreed to choose men to send to you along with our beloved Barnabas and Paul,",
+       "words": [
+        {
+         "key": "g27",
+         "lemma": "ἀγαπητός"
+        }
+       ]
+      },
+      {
+       "id": "Rom.11.28",
+       "ref": "Romans 11:28",
+       "text": "Regarding the gospel, they are enemies on your account; but regarding election, they are loved on account of the patriarchs.",
+       "words": [
+        {
+         "key": "g27",
+         "lemma": "ἀγαπητός"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “love”",
+  "words": [
+   {
+    "key": "h2617",
+    "lemma": "חֶסֶד",
+    "translit": "ḥeseḏ",
+    "gloss": "steadfast love",
+    "lang": "Hebrew",
+    "n": 168,
+    "verses": [
+     "Exod.15.13",
+     "Exod.20.6",
+     "Exod.34.6",
+     "Exod.34.7",
+     "Num.14.18",
+     "Num.14.19",
+     "Deut.5.10",
+     "2Sam.7.15",
+     "2Sam.22.51",
+     "1Kgs.3.6",
+     "1Kgs.8.23",
+     "1Chr.16.34",
+     "1Chr.16.41",
+     "1Chr.17.13",
+     "2Chr.1.8",
+     "2Chr.5.13",
+     "2Chr.6.14",
+     "2Chr.6.42",
+     "2Chr.7.3",
+     "2Chr.7.6",
+     "2Chr.20.21",
+     "Ezra.3.11",
+     "Ezra.7.28",
+     "Ezra.9.9",
+     "Neh.1.5",
+     "Neh.9.17",
+     "Neh.9.32",
+     "Neh.13.22",
+     "Job.10.12",
+     "Job.37.13",
+     "Ps.5.7",
+     "Ps.6.4",
+     "Ps.13.6",
+     "Ps.17.7",
+     "Ps.18.50",
+     "Ps.21.7",
+     "Ps.25.6",
+     "Ps.25.7",
+     "Ps.25.10",
+     "Ps.26.3",
+     "Ps.31.7",
+     "Ps.31.16",
+     "Ps.31.21",
+     "Ps.32.10",
+     "Ps.33.5",
+     "Ps.33.18",
+     "Ps.34.1",
+     "Ps.36.5",
+     "Ps.36.7",
+     "Ps.36.10",
+     "Ps.40.10",
+     "Ps.40.11",
+     "Ps.42.8",
+     "Ps.44.26",
+     "Ps.48.9",
+     "Ps.51.1",
+     "Ps.52.8",
+     "Ps.57.3",
+     "Ps.57.10",
+     "Ps.59.10",
+     "Ps.59.16",
+     "Ps.59.17",
+     "Ps.61.7",
+     "Ps.62.12",
+     "Ps.63.3",
+     "Ps.66.20",
+     "Ps.69.13",
+     "Ps.69.16",
+     "Ps.77.8",
+     "Ps.85.7",
+     "Ps.85.10",
+     "Ps.86.5",
+     "Ps.86.13",
+     "Ps.86.15",
+     "Ps.88.11",
+     "Ps.89.1",
+     "Ps.89.2",
+     "Ps.89.14",
+     "Ps.89.24",
+     "Ps.89.28",
+     "Ps.89.33",
+     "Ps.89.49",
+     "Ps.90.14",
+     "Ps.92.2",
+     "Ps.94.18",
+     "Ps.98.3",
+     "Ps.100.5",
+     "Ps.103.4",
+     "Ps.103.8",
+     "Ps.103.11",
+     "Ps.103.17",
+     "Ps.106.1",
+     "Ps.106.45",
+     "Ps.107.1",
+     "Ps.107.8",
+     "Ps.107.15",
+     "Ps.107.21",
+     "Ps.107.31",
+     "Ps.107.43",
+     "Ps.108.4",
+     "Ps.109.21",
+     "Ps.109.26",
+     "Ps.117.2",
+     "Ps.118.1",
+     "Ps.118.2",
+     "Ps.118.3",
+     "Ps.118.4",
+     "Ps.118.29",
+     "Ps.119.41",
+     "Ps.119.64",
+     "Ps.119.76",
+     "Ps.119.88",
+     "Ps.119.124",
+     "Ps.119.149",
+     "Ps.119.159",
+     "Ps.130.7",
+     "Ps.136.1",
+     "Ps.136.2",
+     "Ps.136.3",
+     "Ps.136.4",
+     "Ps.136.5",
+     "Ps.136.6",
+     "Ps.136.7",
+     "Ps.136.8",
+     "Ps.136.9",
+     "Ps.136.10",
+     "Ps.136.11",
+     "Ps.136.12",
+     "Ps.136.13",
+     "Ps.136.14",
+     "Ps.136.15",
+     "Ps.136.16",
+     "Ps.136.17",
+     "Ps.136.18",
+     "Ps.136.19",
+     "Ps.136.20",
+     "Ps.136.21",
+     "Ps.136.22",
+     "Ps.136.23",
+     "Ps.136.24",
+     "Ps.136.25",
+     "Ps.136.26",
+     "Ps.138.2",
+     "Ps.138.8",
+     "Ps.143.8",
+     "Ps.143.12",
+     "Ps.144.2",
+     "Ps.145.8",
+     "Ps.147.11",
+     "Isa.16.5",
+     "Isa.54.8",
+     "Isa.54.10",
+     "Isa.55.3",
+     "Isa.63.7",
+     "Jer.9.24",
+     "Jer.16.5",
+     "Jer.32.18",
+     "Jer.33.11",
+     "Lam.3.22",
+     "Lam.3.32",
+     "Dan.9.4",
+     "Hos.2.19",
+     "Hos.6.4",
+     "Hos.6.6",
+     "Hos.10.12",
+     "Hos.12.6",
+     "Joel.2.13",
+     "Jonah.4.2"
+    ],
+    "eg": [
+     {
+      "id": "Exod.15.13",
+      "ref": "Exodus 15:13",
+      "text": "With loving devotion You will lead the people You have redeemed; with Your strength You will guide them to Your holy dwelling."
+     },
+     {
+      "id": "Exod.20.6",
+      "ref": "Exodus 20:6",
+      "text": "but showing loving devotion to a thousand generations of those who love Me and keep My commandments."
+     }
+    ]
+   },
+   {
+    "key": "h1730",
+    "lemma": "דּוֹד",
+    "translit": "dod",
+    "gloss": "beloved: male relative",
+    "lang": "Hebrew",
+    "n": 36,
+    "verses": [
+     "Prov.7.18",
+     "Song.1.2",
+     "Song.1.4",
+     "Song.1.13",
+     "Song.1.14",
+     "Song.1.16",
+     "Song.2.3",
+     "Song.2.8",
+     "Song.2.9",
+     "Song.2.10",
+     "Song.2.16",
+     "Song.2.17",
+     "Song.4.10",
+     "Song.4.16",
+     "Song.5.1",
+     "Song.5.2",
+     "Song.5.4",
+     "Song.5.5",
+     "Song.5.6",
+     "Song.5.8",
+     "Song.5.9",
+     "Song.5.10",
+     "Song.5.16",
+     "Song.6.1",
+     "Song.6.2",
+     "Song.6.3",
+     "Song.7.9",
+     "Song.7.10",
+     "Song.7.11",
+     "Song.7.12",
+     "Song.7.13",
+     "Song.8.5",
+     "Song.8.14",
+     "Isa.5.1",
+     "Ezek.16.8",
+     "Ezek.23.17"
+    ],
+    "eg": [
+     {
+      "id": "Prov.7.18",
+      "ref": "Proverbs 7:18",
+      "text": "Come, let us take our fill of love till morning. Let us delight in loving caresses!"
+     },
+     {
+      "id": "Song.1.2",
+      "ref": "Song of Solomon 1:2",
+      "text": "Let him kiss me with the kisses of his mouth! For your love is more delightful than wine."
+     }
+    ]
+   },
+   {
+    "key": "g5368",
+    "lemma": "φιλέω",
+    "translit": "phileō",
+    "gloss": "to love",
+    "lang": "Greek",
+    "n": 18,
+    "verses": [
+     "Matt.6.5",
+     "1Cor.16.22",
+     "Matt.10.37",
+     "Matt.23.6",
+     "Luke.20.46",
+     "John.5.20",
+     "John.11.3",
+     "John.11.36",
+     "John.12.25",
+     "John.15.19",
+     "John.16.27",
+     "John.20.2",
+     "John.21.15",
+     "John.21.16",
+     "John.21.17",
+     "Titus.3.15",
+     "Rev.3.19",
+     "Rev.22.15"
+    ],
+    "eg": [
+     {
+      "id": "Matt.6.5",
+      "ref": "Matthew 6:5",
+      "text": "And when you pray, do not be like the hypocrites. For they love to pray standing in the synagogues and on the street corners to be seen by men. Truly I tell you, they already have their full reward."
+     },
+     {
+      "id": "1Cor.16.22",
+      "ref": "1 Corinthians 16:22",
+      "text": "If anyone does not love the Lord, let him be under a curse. Come, O Lord!"
+     }
+    ]
+   },
+   {
+    "key": "h3039",
+    "lemma": "יָדִיד",
+    "translit": "yəḏiyḏ",
+    "gloss": "beloved",
+    "lang": "Hebrew",
+    "n": 7,
+    "verses": [
+     "Deut.33.12",
+     "Ps.45.1",
+     "Ps.60.5",
+     "Ps.108.6",
+     "Ps.127.2",
+     "Isa.5.1",
+     "Jer.11.15"
+    ],
+    "eg": [
+     {
+      "id": "Deut.33.12",
+      "ref": "Deuteronomy 33:12",
+      "text": "Concerning Benjamin he said: “May the beloved of the LORD rest secure in Him; God shields him all day long, and upon His shoulders he rests.”"
+     },
+     {
+      "id": "Ps.45.1",
+      "ref": "Psalms 45:1",
+      "text": "For the choirmaster. To the tune of “The Lilies.” A Maskil of the sons of Korah. A love song. My heart is stirred by a noble theme as I recite my verses to the king; my tongue is the pen of a skillful writer."
+     }
+    ]
+   },
+   {
+    "key": "g5360",
+    "lemma": "φιλαδελφία",
+    "translit": "philadelphia",
+    "gloss": "brotherly love",
+    "lang": "Greek",
+    "n": 4,
+    "verses": [
+     "Rom.12.10",
+     "1Thess.4.9",
+     "Heb.13.1",
+     "1Pet.1.22"
+    ],
+    "eg": [
+     {
+      "id": "Rom.12.10",
+      "ref": "Romans 12:10",
+      "text": "Be devoted to one another in brotherly love. Outdo yourselves in honoring one another."
+     },
+     {
+      "id": "1Thess.4.9",
+      "ref": "1 Thessalonians 4:9",
+      "text": "Now about brotherly love, you do not need anyone to write to you, because you yourselves have been taught by God to love one another."
+     }
+    ]
+   },
+   {
+    "key": "g5366",
+    "lemma": "φιλάργυρος",
+    "translit": "philarguros",
+    "gloss": "money-loving",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Luke.16.14",
+     "2Tim.3.2"
+    ],
+    "eg": [
+     {
+      "id": "Luke.16.14",
+      "ref": "Luke 16:14",
+      "text": "The Pharisees, who were lovers of money, heard all of this and were scoffing at Jesus."
+     },
+     {
+      "id": "2Tim.3.2",
+      "ref": "2 Timothy 3:2",
+      "text": "For men will be lovers of themselves, lovers of money, boastful, arrogant, abusive, disobedient to their parents, ungrateful, unholy,"
+     }
+    ]
+   },
+   {
+    "key": "h158",
+    "lemma": "אַהַב",
+    "translit": "a.hav",
+    "gloss": "lover",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Prov.5.19",
+     "Hos.8.9"
+    ],
+    "eg": [
+     {
+      "id": "Prov.5.19",
+      "ref": "Proverbs 5:19",
+      "text": "A loving doe, a graceful fawn-may her breasts satisfy you always; may you be captivated by her love forever."
+     },
+     {
+      "id": "Hos.8.9",
+      "ref": "Hosea 8:9",
+      "text": "For they have gone up to Assyria like a wild donkey on its own. Ephraim has hired lovers."
+     }
+    ]
+   },
+   {
+    "key": "g5361",
+    "lemma": "φιλάδελφος",
+    "translit": "philadelphos",
+    "gloss": "loving the brothers",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "1Pet.3.8"
+    ],
+    "eg": [
+     {
+      "id": "1Pet.3.8",
+      "ref": "1 Peter 3:8",
+      "text": "Finally, all of you, be like-minded and sympathetic, love as brothers, be tenderhearted and humble."
+     }
+    ]
+   },
+   {
+    "key": "g866",
+    "lemma": "ἀφιλάργυρος",
+    "translit": "aphilarguros",
+    "gloss": "not greedy",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "1Tim.3.3"
+    ],
+    "eg": [
+     {
+      "id": "1Tim.3.3",
+      "ref": "1 Timothy 3:3",
+      "text": "not dependent on wine, not violent but gentle, peaceable, and free of the love of money."
+     }
+    ]
+   },
+   {
+    "key": "g5365",
+    "lemma": "φιλαργυρία",
+    "translit": "philarguria",
+    "gloss": "love of money",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "1Tim.6.10"
+    ],
+    "eg": [
+     {
+      "id": "1Tim.6.10",
+      "ref": "1 Timothy 6:10",
+      "text": "For the love of money is the root of all kinds of evil. By craving it, some have wandered away from the faith and pierced themselves with many sorrows."
+     }
+    ]
+   },
+   {
+    "key": "h5719",
+    "lemma": "עֲדִינוֹ",
+    "translit": "a.din",
+    "gloss": "voluptuous",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Isa.47.8"
+    ],
+    "eg": [
+     {
+      "id": "Isa.47.8",
+      "ref": "Isaiah 47:8",
+      "text": "So now hear this, O lover of luxury who sits securely, who says to herself, ‘I am, and there is none besides me. I will never be a widow or know the loss of children.'"
+     }
+    ]
+   },
+   {
+    "key": "g5367",
+    "lemma": "φίλαυτος",
+    "translit": "philautos",
+    "gloss": "selfish",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "2Tim.3.2"
+    ],
+    "eg": [
+     {
+      "id": "2Tim.3.2",
+      "ref": "2 Timothy 3:2",
+      "text": "For men will be lovers of themselves, lovers of money, boastful, arrogant, abusive, disobedient to their parents, ungrateful, unholy,"
+     }
+    ]
+   },
+   {
+    "key": "g865",
+    "lemma": "ἀφιλάγαθος",
+    "translit": "aphilagathos",
+    "gloss": "hating good",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "2Tim.3.3"
+    ],
+    "eg": [
+     {
+      "id": "2Tim.3.3",
+      "ref": "2 Timothy 3:3",
+      "text": "unloving, unforgiving, slanderous, without self-control, brutal, without love of good,"
+     }
+    ]
+   },
+   {
+    "key": "g5369",
+    "lemma": "φιλήδονος",
+    "translit": "philēdonos",
+    "gloss": "pleasure-loving",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "2Tim.3.4"
+    ],
+    "eg": [
+     {
+      "id": "2Tim.3.4",
+      "ref": "2 Timothy 3:4",
+      "text": "traitorous, reckless, conceited, lovers of pleasure rather than lovers of God,"
+     }
+    ]
+   },
+   {
+    "key": "g5377",
+    "lemma": "φιλόθεος",
+    "translit": "philotheos",
+    "gloss": "God-loving",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "2Tim.3.4"
+    ],
+    "eg": [
+     {
+      "id": "2Tim.3.4",
+      "ref": "2 Timothy 3:4",
+      "text": "traitorous, reckless, conceited, lovers of pleasure rather than lovers of God,"
+     }
+    ]
+   },
+   {
+    "key": "g5383",
+    "lemma": "φιλοπρωτεύω",
+    "translit": "philoprōteuō",
+    "gloss": "to love to be first",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "3John.1.9"
+    ],
+    "eg": [
+     {
+      "id": "3John.1.9",
+      "ref": "3 John 1:9",
+      "text": "I have written to the church about this, but Diotrephes, who loves to be first, will not accept our instruction."
+     }
+    ]
+   },
+   {
+    "key": "g5363",
+    "lemma": "φιλανθρωπία",
+    "translit": "philanthrōpia",
+    "gloss": "benevolence",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Titus.3.4"
+    ],
+    "eg": [
+     {
+      "id": "Titus.3.4",
+      "ref": "Titus 3:4",
+      "text": "But when the kindness of God our Savior and His love for mankind appeared,"
+     }
+    ]
+   },
+   {
+    "key": "h2245",
+    "lemma": "חָבַב",
+    "translit": "cha.vav",
+    "gloss": "to love",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Deut.33.3"
+    ],
+    "eg": [
+     {
+      "id": "Deut.33.3",
+      "ref": "Deuteronomy 33:3",
+      "text": "Surely You love the people; all the holy ones are in Your hand, and they sit down at Your feet; each receives Your words-"
+     }
+    ]
+   },
+   {
+    "key": "h5690",
+    "lemma": "עֲגָבִים",
+    "translit": "e.gev",
+    "gloss": "lust",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezek.33.32"
+    ],
+    "eg": [
+     {
+      "id": "Ezek.33.32",
+      "ref": "Ezekiel 33:32",
+      "text": "Indeed, you are to them like a singer of love songs with a beautiful voice, who skillfully plays an instrument. They hear your words but do not put them into practice."
+     }
+    ]
+   },
+   {
+    "key": "h3033",
+    "lemma": "יְדִדוּת",
+    "translit": "ye.di.dut",
+    "gloss": "beloved",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Jer.12.7"
+    ],
+    "eg": [
+     {
+      "id": "Jer.12.7",
+      "ref": "Jeremiah 12:7",
+      "text": "I have forsaken My house; I have abandoned My inheritance. I have given the beloved of My soul into the hands of her enemies."
+     }
+    ]
+   },
+   {
+    "key": "h159",
+    "lemma": "אֹהַב",
+    "translit": "o.hav",
+    "gloss": "beloved",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Prov.7.18"
+    ],
+    "eg": [
+     {
+      "id": "Prov.7.18",
+      "ref": "Proverbs 7:18",
+      "text": "Come, let us take our fill of love till morning. Let us delight in loving caresses!"
+     }
+    ]
+   },
+   {
+    "key": "g5358",
+    "lemma": "φιλάγαθος",
+    "translit": "philagathos",
+    "gloss": "lover of good",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Titus.1.8"
+    ],
+    "eg": [
+     {
+      "id": "Titus.1.8",
+      "ref": "Titus 1:8",
+      "text": "Instead, he must be hospitable, a lover of good, self-controlled, upright, holy, and disciplined."
+     }
+    ]
+   },
+   {
+    "key": "g5362",
+    "lemma": "φίλανδρος",
+    "translit": "philandros",
+    "gloss": "husband-loving",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Titus.2.4"
+    ],
+    "eg": [
+     {
+      "id": "Titus.2.4",
+      "ref": "Titus 2:4",
+      "text": "In this way they can train the young women to love their husbands and children,"
+     }
+    ]
+   },
+   {
+    "key": "g5388",
+    "lemma": "φιλότεκνος",
+    "translit": "philoteknos",
+    "gloss": "child loving",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Titus.2.4"
+    ],
+    "eg": [
+     {
+      "id": "Titus.2.4",
+      "ref": "Titus 2:4",
+      "text": "In this way they can train the young women to love their husbands and children,"
+     }
+    ]
+   }
+  ]
+ }
+}

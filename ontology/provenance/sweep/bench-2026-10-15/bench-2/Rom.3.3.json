@@ -1,0 +1,83 @@
+{
+ "ref": "Rom.3.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'What' (Τί γάρ) opening the question frame; no referent.",
+   "category": "interrogative word, not a referent"
+  },
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'Some' (τινες) is an indefinite group of people not named in this verse; no candidate is a person.",
+   "category": "indefinite group not offered as candidate"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'Of them' (αὐτῶν) is the possessor of 'unbelief' and refers to the same unnamed 'some'; no candidate fits.",
+   "category": "possessor not offered as candidate"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The condition is cl1 ('some disbelieved'); it conditions the question about nullifying (cl2), not the frame cl0. Direction is reversed.",
+   "category": "condition attached to frame"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "No reason is stated; the εἰ clause conditions the consequence and gives no ground for the frame.",
+   "category": "condition misread as reason"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "εἰ precedes the clause it governs: 'will their unbelief nullify (cl2), if some disbelieved (cl1)'.",
+   "category": "condition before its consequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "change",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The condition is the εἰ clause cl1 and the consequence is the question about nullifying (cl2); cl0 is the 'What' frame and sits outside the conditional.",
+   "category": "condition and consequence across the question"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "cl0 and cl1 both carry the verb 'disbelieved'",
+   "why": "The parser splits the εἰ clause into a frame carrying εἰ (cl0) and a copy of the verb (cl1). I took cl1 as the condition and cl0 as the frame; the form does not settle the split."
+  },
+  {
+   "what": "γάρ opening the verse (Τί γάρ)",
+   "why": "'For' (reason for verse 2) and 'then' (a question connective) are not separated by the form, so no link is added."
+  }
+ ]
+}

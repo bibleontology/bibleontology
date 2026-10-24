@@ -1,0 +1,59 @@
+{
+ "ref": "Exo.8.8",
+ "referents": [
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "divine": true,
+   "why": "qatal 'he had appointed for Pharaoh' in the relative clause on the frogs: the one who sent the frogs against Pharaoh is the LORD. Moses and Pharaoh are also masculine singular, but the act is God's",
+   "category": "agent of an earlier act",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "the order is going out (cl0), then crying out (cl1); this link runs backward",
+   "category": "reversed then",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "wayyiqtol: they went out, and then Moses cried out, on the narrative line",
+   "category": "narrative then",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "why": "the relative clause 'which he had appointed for Pharaoh' sits inside the object of cl1, 'the matter of the frogs'; it fills the role of the noun it modifies",
+   "category": "relative clause inside a noun phrase",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether Moses' cry (cl1) is the carrying out of Pharaoh's command 'pray to the LORD' (Exo.8.4 cl2)",
+   "why": "the verb differs (cry out, not pray) and the report has no asah plus ken pro-form, which the fulfils form is defined by; the fit is plausible but the form does not settle it"
+  },
+  {
+   "what": "whether Moses's crying out carries out Pharaoh's imperative 'pray to the LORD' (Exo.8.4 cl2) as a fulfilment",
+   "why": "fulfils needs a pro-form report (asah + ken) with no named subject. The verse gives the prayer in plain words, so it is a reading for review and is not recorded as a link."
+  },
+  {
+   "what": "whether 'Moses cried out to the LORD' (cl1) fulfils the command 'pray to Yahweh' (Exo.8.4#cl2)",
+   "why": "the fulfilment rule needs a pro-form report (asah plus ken). This report has none, so no fulfils link is added; the sense supports it."
+  }
+ ],
+ "voted": 3
+}

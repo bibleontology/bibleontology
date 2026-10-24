@@ -1,0 +1,89 @@
+{
+ "ref": "Exo.8.7",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Exo.8.5#w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular 'from you' in Moses's continuing speech: the addressee, Pharaoh.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w9",
+   "choice": "Exo.8.5#w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular possessor 'your houses': Pharaoh.",
+   "category": "second person possessor inside a speech"
+  },
+  {
+   "slot": "w13",
+   "choice": "Exo.8.5#w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular possessor 'your officials': Pharaoh.",
+   "category": "second person possessor inside a speech"
+  },
+  {
+   "slot": "w17",
+   "choice": "Exo.8.5#w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular possessor 'your people': Pharaoh.",
+   "category": "second person possessor inside a speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w3",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "feminine plural 'they will remain' agrees with frogs (w3), the subject of the departure in cl0.",
+   "category": "third person plural of a feminine noun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl4 belongs to Exo.8.6. This verse has only cl0 and cl1, and across verses the link is the episode rung, not an and-then. The speech continues as one turn (R7), so no link is needed here.",
+   "category": "link to a clause in the previous verse"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.8.6#turn1",
+   "kind": "turn",
+   "action": "extend",
+   "members": [
+    {
+     "role": "part",
+     "node": "Exo.8.7#cl0"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.7#cl1"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "This verse has no new speaker and carries on Moses's closing words, which the Berean quotation runs on into. Its clauses are parts of that turn.",
+   "category": "speech continued across verses"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "What the weqatal 'they will depart' (cl0) is the result of",
+   "why": "It follows Moses's prayer in Exo.8.5 (cl2), but no command lies between them in this speech, and a result link would reach back across verses without one. Left unlinked."
+  }
+ ]
+}

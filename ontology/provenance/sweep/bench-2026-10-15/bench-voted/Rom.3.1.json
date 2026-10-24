@@ -1,0 +1,41 @@
+{
+ "ref": "Rom.3.1",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative Ti (neuter singular) opening the question about the advantage; it refers to nothing, and no candidate is neuter singular.",
+   "category": "interrogative word, not a referent",
+   "votes": 3
+  },
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'what' (τίς) is the predicate question word of the second question; the subject is 'the benefit' itself, so no candidate is referred to.",
+   "category": "interrogative word, not a referent",
+   "votes": 2
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Two questions side by side asking the same thing, joined by e (or): an alternative.",
+   "category": "alternative questions side by side",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "οὖν ('then') in cl1",
+   "why": "It points back to the argument of chapter 2, which is not in this passage, so no clause here can be its host."
+  }
+ ],
+ "voted": 3
+}

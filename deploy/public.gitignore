@@ -1,0 +1,35 @@
+# The public repository's .gitignore (written by tools/export_public.py as
+# .gitignore in the copy). Things a working clone makes or is given that must
+# never be committed.
+
+# secrets and tokens
+.ops-token
+.env
+.env.*
+*.key
+*.pem
+*.secret
+*.token
+# (not *secret* and *token*: those would silently ignore a future tokenize.py
+# or secrets_check.py -- the simulated maintainer, 2026-10-22)
+
+# readers' notes and feedback (they stay private; see LICENSING.md)
+feedback/
+feedback-backup/
+Bible Ontology Feedback/
+
+# raw downloads: MACULA, STEP Bible, the translations (tools/fetch_*.py)
+data/raw/
+
+# the KJV, which this repository does not carry
+data/bible/verses.jsonl
+data/bible/text/
+
+# working state
+out/indexnow-sent.json
+out/.runtime-inputs-scratch/
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.pytest_cache/

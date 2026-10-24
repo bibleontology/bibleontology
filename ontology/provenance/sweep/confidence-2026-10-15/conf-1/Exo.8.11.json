@@ -1,0 +1,91 @@
+{
+ "ref": "Exo.8.11",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'his heart' is a third masculine singular possessor; the one whose heart is hardened is Pharaoh, the subject of 'he saw'.",
+   "category": "possessor in the subject's own act"
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.8.8#c2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'would not listen to them' is masculine plural: Moses and Aaron, the composite the refusal is aimed at.",
+   "category": "composite object"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "the subject of 'would not listen' is Pharaoh, the subject of the seeing and the hardening.",
+   "category": "implied subject of a narrative clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "'saw that there was relief': cl1 is what Pharaoh saw, the object of the seeing.",
+   "category": "that-clause after a verb of perceiving"
+  },
+  {
+   "src": "cl3",
+   "type": "as",
+   "dst": "cl4",
+   "action": "keep",
+   "confidence": "high",
+   "why": "ka'asher with a qatal saying: the refusal is just as the LORD had said, so the action is declared the fulfilment of an earlier word.",
+   "category": "comparison with an earlier saying"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl1 is what cl0 saw, the object of the seeing, not an event before it. cl0 begins the verse.",
+   "category": "then link reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "confidence": "medium",
+   "why": "a separate waw on the infinitive absolute: the hardening follows the seeing. The sense does not make the seeing a cause, so it stays a plain and.",
+   "category": "plain and"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a hardened will and then the refusal that follows is the R4 example of a result, not a plain and.",
+   "category": "plain and read as result"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "confidence": "high",
+   "why": "the hardening of the heart brings about the refusal to listen.",
+   "category": "state then what it brings about"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,57 @@
+{
+ "ref": "Rom.3.6",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'May it be' (optative) is impersonal; no person is its subject.",
+   "category": "impersonal optative",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Epei gives the reason for the rejection: otherwise how would God judge the world.",
+   "category": "reason for a rejection",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "'Never may it be' is a rejection formula, not a command, and it is not joined by 'and' to a command. The because link carries the reason; 'part' is not a role of this kind.",
+   "category": "rejection formula read as command",
+   "votes": 2
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl0 (Μὴ γένοιτο, 'Certainly not!')",
+   "what": "A rejection formula; no link type records a disavowal. Left as an unlinked exclamation, with its because link to cl1."
+  },
+  {
+   "where": "3:6 imp0 (cl0 'Certainly not!')",
+   "what": "An optative exclamation of denial is not a command; no group kind holds a bare denial. It is recorded through the because link."
+  }
+ ],
+ "cant_tell": [],
+ "voted": 3
+}

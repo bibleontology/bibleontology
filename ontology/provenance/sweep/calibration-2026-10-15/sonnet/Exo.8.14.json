@@ -1,0 +1,21 @@
+{"ref": "Exo.8.14",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "third masculine plural suffix on 'secret arts' (בְּלָטֵיהֶם); the arts belong to the soothsayer-priests who are the subject of cl0, the only masculine plural agent in the verse that practises them", "category": "possessive suffix on an instrument noun"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "third common plural implied subject of 'were not able'; the verb of ability completes the magicians' own attempt in cl0/cl1 (bring forth the gnats), so it is the same doers; the gnats cannot be agreeing plural doers of 'being able'", "category": "implied subject of a negated ability verb continuing the attempt"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "keep", "why": "lamed + infinitive construct 'to bring forth the gnats' states what the enchantments were done to achieve; it is not an infinitive completing the main verb", "category": "lamed infinitive stating the aim of an attempt"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "cl4 is not a clause of this verse (it is the previous verse's qatal 'all the dust became gnats', a background summary); 'then' is within a verse only, and the wayyiqtol cl0 does not narrate an event following that summary but a parallel imitation", "category": "cross-verse then link from a background clause"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "the waw before 'not they were able' is a plain 'and', but the sense is the stronger, more specific failed_result: an attempt with a purpose followed by a negated verb of being able; the plain 'and' is replaced by that link", "category": "plain and where the sense is a failed attempt"},
+  {"src": "cl0", "type": "failed_result", "dst": "cl2", "action": "add", "why": "cl0 is an attempt with a purpose (cl1), then waw + 'not they were able': the purpose was not achieved", "category": "attempt whose purpose is not achieved"},
+  {"src": "cl2", "type": "then", "dst": "cl3", "action": "remove", "why": "cl2 is a negated state, not an event, and cl3 'the gnats were on man and beast' does not happen after the failure: the gnats were already there from the previous verse, so the sense is a concurrent, resumed state, not a next event", "category": "wayyiqtol of a continuing state read as the next event"},
+  {"src": "cl0", "type": "likewise", "dst": "Exo.8.13#cl2", "action": "add", "why": "wayyiqtol 'they did thus' (ken) with a NAMED subject (the magicians) who are not carrying out a command: imitation of what Aaron did, striking the dust so gnats came; imitation, not fulfilment", "category": "rivals imitating a deed with ken"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl3 against Exo.8.13#cl3", "what": "cl3 repeats the previous verse's 'the gnats were on man and beast' word for word, as a resumption after the magicians' failure, so that it stands as the unrefuted fact; no link type states resumption by repetition or a contrast with no contrast particle"},
+  {"where": "cl0 to cl2 as one unit", "what": "the magicians' attempt and its failure are one episode (imitate, try, fail), but the 'acts' kind does not fit since cl0 names its subject in a noun and cl2 only in the verb; no group kind for an attempt-and-outcome pair"}
+ ],
+ "cant_tell": [
+  {"what": "Which deed the 'so' of cl0 copies: Aaron's striking of the dust (Exo.8.13#cl2) or the gnats' coming (Exo.8.13#cl3)", "why": "the pro-form does not say; the magicians' aim (bring forth the gnats) matches the outcome, but the method they imitate is the striking; the link points to cl2 and the choice is left open"}
+ ]}

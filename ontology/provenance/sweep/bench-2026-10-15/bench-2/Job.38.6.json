@@ -1,0 +1,46 @@
+{
+ "ref": "Job.38.6",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "'On what were its foundations set': the question word asks for a thing; no candidate fits.",
+   "category": "question word for a thing"
+  },
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'its foundations': 'its' is the earth of 38:4, not a candidate.",
+   "category": "antecedent outside the candidates"
+  },
+  {
+   "slot": "w6",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'or who laid its cornerstone': the rhetorical question is answered by the LORD.",
+   "category": "question word answered by God"
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false,
+   "why": "'its corner': 'its' is the earth, not a candidate.",
+   "category": "antecedent outside the candidates"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "'On what ... or who laid': two alternative questions side by side.",
+   "category": "alternative questions"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bibleont"
+version = "1.2.1"
+description = "A citation-backed knowledge graph of the Biblical corpus"
+requires-python = ">=3.11"
+# PyYAML is the only thing outside the standard library, and only the build
+# tools reach for it. The server runs on the stdlib alone, which is why the
+# deploy installs python3-yaml from apt rather than carrying a virtualenv.
+dependencies = ["PyYAML"]
+
+[project.optional-dependencies]
+# Only tools/shacl_check.py, which runs the ontology's SHACL shapes against a
+# passage and compares them with tools/ontology.py's own check (plan N.4).
+# tools/ontology_rdf.py writes the Turtle without them, and the server never
+# imports either. Install with:  pip install -e ".[rdf]"
+rdf = ["rdflib>=7.6", "pyshacl>=0.40"]
+# WordNet, for a few of the validator's lint checks and the lemma matcher
+# (src/bibleont/wn.py). Without it those checks are skipped, with a warning,
+# and some results differ. Also run:  python -m nltk.downloader wordnet
+wordnet = ["nltk>=3.8"]
+# The one-off tools that called models or did vector work when the graph was
+# built (tools/stamp.py, tools/bsbmodel.py, tools/themespace.py and others).
+# Neither the site, the validator nor the tests need them; each tool that
+# calls a model also needs its own API key. Undeclared until 2026-10-22.
+tools = ["numpy", "google-genai", "keyring"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

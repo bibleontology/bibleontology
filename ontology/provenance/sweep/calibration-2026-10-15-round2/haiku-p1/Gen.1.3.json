@@ -1,0 +1,95 @@
+{
+ "ref": "Gen.1.3",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "R1: 'And God said' introduces what is said, 'Let there be light'. The saying clause links to the said clause as well as the turn's frame and part.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Direction reversed. The narrative runs from the saying clause (cl0) to the clause after it (cl2); 'it was light' follows 'God said', it does not precede it.",
+   "category": "reversed narrative order"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "cl1 is inside the speech, and the narrative line does not continue from inside a speech. What came of the command is recorded as its result instead.",
+   "category": "narrative line crosses a speech"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add",
+   "why": "wayyiqtol cl2 continues the narrative line from the nearest clause before it that is not inside a speech, the saying clause cl0.",
+   "category": "narrative continuation past speech"
+  },
+  {
+   "src": "cl1",
+   "type": "result",
+   "dst": "cl2",
+   "action": "add",
+   "why": "A jussive command, then waw + wayyiqtol saying what came of it ('and it was light'). This is the effect of imp1.",
+   "category": "command and its result"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": true,
+   "why": "God is the speaker ('God said'). The turn holds the saying as frame and the commanded words as part.",
+   "category": "speech turn with named sender"
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "effect",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "'part' is not a member role of the imperative kind. cl2, 'and it was light', is what the command brings about, so it is the group's effect.",
+   "category": "command with effect"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "addressee of turn0",
+   "why": "The text names no one to whom God says 'let there be light'; the words are a jussive with no named addressee."
+  }
+ ]
+}

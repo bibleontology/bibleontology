@@ -1,0 +1,51 @@
+{
+ "ref": "Psa.119.105",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w5",
+   "choice": "Psa.119.89#w0",
+   "divine": true
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [
+  {
+   "id": "g1",
+   "kind": "parallel",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w4"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

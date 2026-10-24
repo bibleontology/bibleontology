@@ -1,0 +1,35 @@
+{
+ "ref": "Job.38.6",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w6",
+   "choice": "Job.38.1#w2",
+   "divine": true
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

@@ -1,0 +1,126 @@
+{
+ "ref": "Mrk.15.9",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'them' (autois) in 'answered them' is the crowd Pilate addresses; the crowd is not among the candidates, so no candidate fits the plural masculine pronoun",
+   "category": "addressee not offered as a candidate",
+   "votes": 3
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'to you' (humin), second plural inside Pilate's question, is the crowd he is speaking to; the crowd is not a candidate",
+   "category": "addressee not offered as a candidate",
+   "votes": 3
+  },
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "'you' (thelete, do you want), second plural in the question, is the crowd; not a candidate",
+   "category": "addressee not offered as a candidate",
+   "votes": 3
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "'I' (apolusō, I should release), first singular inside Pilate's own speech: the speaker of that speech is Pilate",
+   "category": "first person inside speech is the speaker",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "the subjunctive 'I should release' is the complement of 'you want' and sits inside the question",
+   "category": "complement clause nested in verb of wanting",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The participle governs the speech it introduces. Grammar nesting kept beside the content link.",
+   "category": "saying participle with its speech",
+   "votes": 2
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "the speech verb (participle lego, saying) introduces the question it says (R1)",
+   "category": "speech content",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "the participle 'saying' is the manner of the finite 'answered them'",
+   "category": "participle of speech within finite verb",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self-link; a clause cannot follow itself",
+   "category": "self-link",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "the part is the said question cl2, not the participle cl1 which is the speech verb inside the frame; the addressee is removed because the crowd is not a candidate",
+   "category": "turn part is the said clause",
+   "votes": 3
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.9 candidates",
+   "what": "The crowd named in 15:8 is the addressee of Pilate's speech ('them', 'you') but is not offered as a candidate, so those slots are none rather than a choice."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the crowd as addressee of Pilate's question (slots w4, w8, cl2s) and so the turn's addressee",
+   "why": "the crowd is named in Mrk.15.6 and 15.8 but is not offered as a candidate in this verse's list"
+  },
+  {
+   "what": "addressee of Pilate's turn (w4, w8, cl2s)",
+   "why": "The crowd named in Mrk.15.8 is the plural addressee but is not in the candidate list."
+  }
+ ],
+ "voted": 3
+}

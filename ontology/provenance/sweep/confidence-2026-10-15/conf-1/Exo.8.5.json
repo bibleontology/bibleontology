@@ -1,0 +1,159 @@
+{
+ "ref": "Exo.8.5",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'me' in the imperative 'honor yourself over me' is the first person of Moses, the sender of the turn.",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "w12",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular 'for you' inside Moses's speech: the addressee is Pharaoh (turn addressee w4).",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w16",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular possessor 'your officials' in Moses's speech: Pharaoh, the addressee.",
+   "category": "second person possessor inside a speech"
+  },
+  {
+   "slot": "w20",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular possessor 'your people' in Moses's speech: Pharaoh.",
+   "category": "second person possessor inside a speech"
+  },
+  {
+   "slot": "w26",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular 'from you' in Moses's speech: Pharaoh.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w30",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine singular possessor 'your houses' in Moses's speech: Pharaoh.",
+   "category": "second person possessor inside a speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "the implied subject of the imperative 'honor yourself' is the one the command is spoken to: Pharaoh.",
+   "category": "implied subject of a command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "first person singular 'I will pray' is Moses, speaking in his own turn.",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w24",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "feminine plural 'they will remain' agrees only with frogs (w24, feminine plural); the Nile is where they remain.",
+   "category": "third person plural of a feminine noun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "purpose",
+   "dst": "cl3",
+   "action": "keep",
+   "confidence": "high",
+   "why": "lamed plus infinitive construct after the yiqtol 'will I pray' gives what the praying is for, cutting off the frogs. 'Pray' is not one of the verbs that take a completing infinitive.",
+   "category": "infinitive of purpose after a request"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "high",
+   "why": "'he said' introduces Moses's speech; cl1 is the first said clause. The rest of the speech (cl2, cl4) stays in the turn as parts; the content link does not replace the turn.",
+   "category": "speech content link"
+  },
+  {
+   "src": "cl5",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "medium",
+   "why": "cl5 names no clause of this verse (its clauses are cl0 to cl4), and an and-then link does not run across verses.",
+   "category": "link to a clause outside this verse"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.8.5#turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "Moses speaks to Pharaoh; the command, the question and the exception clause are all his words, so they are parts of his turn.",
+   "category": "speech turn"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl4 (only in the River they will remain)",
+   "what": "An exception to the request ('except for those in the Nile'). No link type reads a restriction by exception: unless is the cancelling exception, and but_rather is a correction. Kept only as a part of the turn, unlinked."
+  }
+ ],
+ "cant_tell": []
+}

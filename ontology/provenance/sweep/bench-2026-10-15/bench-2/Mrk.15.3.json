@@ -1,0 +1,33 @@
+{
+ "ref": "Mrk.15.3",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "'Him' is the object of the accusing in cl0, so it is the accused, Jesus. The builder's choice w4 is the accuser (the chief priests) and is the subject, not the object.",
+   "category": "object of accusing"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "This verse has no clause cl2. The builder's id belongs to the clause of the previous verse and needs its full id.",
+   "category": "link to a clause in another verse without its full id"
+  },
+  {
+   "src": "Mrk.15.2#cl2",
+   "type": "and",
+   "dst": "cl0",
+   "action": "add",
+   "why": "The opening kai joins this verse to Jesus's reply in the verse before, the last clause on the narrative line. Full id used because it points into an earlier verse.",
+   "category": "cross-verse and"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

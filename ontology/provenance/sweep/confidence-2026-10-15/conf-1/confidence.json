@@ -1,0 +1,695 @@
+{
+ "table": {
+  "high|True": 71,
+  "silent|False": 8,
+  "silent|True": 5,
+  "medium|True": 9,
+  "nothing made|True": 10,
+  "medium|False": 2,
+  "high|False": 8
+ },
+ "decisions": {
+  "high": 184,
+  "medium": 34
+ },
+ "rows": [
+  [
+   "Gen.1.3",
+   "links: cl0 -content-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Gen.1.3",
+   "pairs: action-state | הָיָה | action=cl0 | state=cl2",
+   "silent",
+   false
+  ],
+  [
+   "Gen.1.3",
+   "speakers: cl0 | -",
+   "silent",
+   true
+  ],
+  [
+   "Exo.8.6",
+   "links: cl0 -then-> cl2",
+   "medium",
+   true
+  ],
+  [
+   "Exo.8.6",
+   "links: cl4 -that-> cl5",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.6",
+   "absent: cl4 -because-> cl5",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.6",
+   "speakers: cl0 | pharaoh",
+   "silent",
+   false
+  ],
+  [
+   "Exo.8.6",
+   "speakers: cl2 | moses",
+   "silent",
+   false
+  ],
+  [
+   "Psa.107.1",
+   "links: cl0 -because-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Psa.107.1",
+   "links: cl1 -because-> cl2",
+   "medium",
+   false
+  ],
+  [
+   "Psa.107.1",
+   "groups: imperative | imperative | 1=cl0 | 2=cl1",
+   "high",
+   false
+  ],
+  [
+   "Psa.119.105",
+   "groups: parallel | - | 1=cl0 | 2=cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "links: cl0 -content-> cl1",
+   "high",
+   false
+  ],
+  [
+   "Exo.7.26",
+   "links: cl1 -then-> cl2",
+   "medium",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "links: cl2 -content-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "links: cl3 -content-> cl4",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "links: cl4 -purpose-> cl5",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "links: turn0 -part-> turn1",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "links: turn1 -part-> turn2",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "absent: cl4 -and-> cl5",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "groups: imperative | imperative | 1=cl4 | 2=cl5",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.26",
+   "groups: turn | wayyiqtol | 1=cl0 | 2=turn1",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.27",
+   "links: cl3 -if-> cl0",
+   "silent",
+   false
+  ],
+  [
+   "Exo.7.27",
+   "links: cl0 -within-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.27",
+   "links: turn2 -part-> cnd0",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.27",
+   "absent: turn2 -part-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.7.27",
+   "absent: turn2 -part-> cl3",
+   "high",
+   false
+  ],
+  [
+   "Exo.7.27",
+   "groups: conditional | participle active | 1=cl0 | 2=cl3",
+   "high",
+   false
+  ],
+  [
+   "Psa.23.1",
+   "links: writing -frame-> cl0",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.1",
+   "links: writing -part-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.1",
+   "links: writing -part-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.1",
+   "edges: shepherd -possessor-> psalmist",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.1",
+   "absent: writing -part-> cl0",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.1",
+   "absent: shepherd -possessor-> david",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.2",
+   "links: acts1 -agent_act-> cl0",
+   "silent",
+   false
+  ],
+  [
+   "Psa.23.2",
+   "links: acts1 -agent_act-> cl1",
+   "silent",
+   false
+  ],
+  [
+   "Psa.23.2",
+   "edges: me -refers_to-> psalmist",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.3",
+   "edges: he0 -refers_to-> lord",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.3",
+   "edges: he1 -refers_to-> lord",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.3",
+   "edges: soul -possessor-> psalmist",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.3",
+   "edges: nameS -possessor-> lord",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.4",
+   "links: cl1 -though-> cl0",
+   "high",
+   false
+  ],
+  [
+   "Psa.23.4",
+   "links: cl1 -because-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.4",
+   "links: conc0 -conceded-> cl0",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.4",
+   "links: conc0 -holds_anyway-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.4",
+   "links: conc0 -its_ground-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Psa.23.5",
+   "edges: me -refers_to-> psalmist",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.7",
+   "links: turn0 -part-> cl0",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.7",
+   "links: turn0 -part-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.1",
+   "links: cl0 -content-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.1",
+   "links: cl1 -content-> imp3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.1",
+   "links: imp3 -command-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.1",
+   "links: imp3 -command-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.1",
+   "links: cl2 -and-> cl3",
+   "medium",
+   true
+  ],
+  [
+   "Exo.8.1",
+   "absent: cl1 -content-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.3",
+   "links: cl0 -then-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.3",
+   "absent_pairs: action-state",
+   "silent",
+   true
+  ],
+  [
+   "Exo.8.4",
+   "links: cl0 -content-> cl1",
+   "silent",
+   false
+  ],
+  [
+   "Exo.8.4",
+   "links: cl1 -content-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.4",
+   "links: cl2 -purpose-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.4",
+   "links: cl3 -and-> cl4",
+   "medium",
+   true
+  ],
+  [
+   "Exo.8.4",
+   "links: cl4 -purpose-> cl5",
+   "medium",
+   true
+  ],
+  [
+   "Exo.8.4",
+   "absent: cl3 -purpose-> cl4",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.4",
+   "absent: they5 -refers_to-> rivers",
+   "medium",
+   true
+  ],
+  [
+   "Exo.8.4",
+   "groups: imperative | imperative | 1=cl2 | 2=cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "links: cl0 -content-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "links: cl1 -content-> imp3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "links: imp3 -command-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "links: imp3 -command-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "links: imp3 -effect-> cl4",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "links: cl3 -result-> cl4",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "links: turn0 -part-> turn1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "links: turn1 -part-> imp3",
+   "high",
+   false
+  ],
+  [
+   "Exo.8.12",
+   "edges: he4 -refers_to-> dust",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "edges: staff -possessor-> aaron",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "absent: imp3 -command-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "absent: cl3 -and-> cl4",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.12",
+   "groups: turn | wayyiqtol | 1=cl0 | 2=turn1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "links: cl0 -fulfils-> imp3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "links: cl1 -elaborates-> cl0",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "links: cl2 -elaborates-> cl0",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "links: cl1 -fulfils-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "links: cl2 -fulfils-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "links: cl3 -fulfils-> cl4",
+   "medium",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "links: cl2 -result-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "edges: they0 -refers_to-> doers0",
+   "medium",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "edges: doers0 -member-> moses",
+   "silent",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "edges: doers0 -member-> aaron",
+   "silent",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "edges: he2 -refers_to-> aaron",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "absent: cl0 -and-> cl1",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "absent: cl2 -then-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "absent: pair11_15 -state-> cl1",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.13",
+   "absent: pair12_16 -state-> cl2",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.14",
+   "links: cl0 -purpose-> cl1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.14",
+   "links: cl0 -likewise-> cl0",
+   "medium",
+   false
+  ],
+  [
+   "Exo.8.14",
+   "links: cl1 -failed_result-> cl2",
+   "silent",
+   false
+  ],
+  [
+   "Exo.8.14",
+   "absent: cl1 -and-> cl2",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.14",
+   "absent: cl0 -within-> cl1",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.15",
+   "links: cl3 -as-> cl4",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.15",
+   "links: cl2 -result-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.15",
+   "links: cl0 -then-> cl2",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.15",
+   "edges: he3 -refers_to-> pharaohS",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.15",
+   "absent: cl2 -and-> cl3",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.15",
+   "absent: cl3 -within-> cl4",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.16",
+   "links: turn0 -part-> turn1",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.16",
+   "links: turn1 -part-> turn2",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.16",
+   "links: turn0 -part-> imp2",
+   "high",
+   false
+  ],
+  [
+   "Exo.8.16",
+   "links: turn2 -part-> imp6",
+   "high",
+   false
+  ],
+  [
+   "Exo.8.16",
+   "edges: turn1 -sender-> moses",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.16",
+   "edges: cl5 -speaker-> moses",
+   "silent",
+   true
+  ],
+  [
+   "Exo.8.16",
+   "absent: turn1 -sender-> lord",
+   "high",
+   true
+  ],
+  [
+   "Exo.8.16",
+   "absent: cl5 -speaker-> lord",
+   "nothing made",
+   true
+  ],
+  [
+   "Exo.8.10",
+   "absent: they0 -refers_to-> houses",
+   "medium",
+   true
+  ]
+ ]
+}

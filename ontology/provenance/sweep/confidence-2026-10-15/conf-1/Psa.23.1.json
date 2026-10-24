@@ -1,0 +1,60 @@
+{
+ "ref": "Psa.23.1",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "my shepherd is the psalm's own voice; the psalm quotes no one else, so my is the psalmist",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "I shall not lack is first common singular in the psalm's own voice",
+   "category": "first person in a psalm"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "writing",
+   "kind": "writing",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "The superscription names David as writer; the two lines are the psalm's text.",
+   "category": "superscription as writing frame"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether I shall not lack answers The LORD is my shepherd as a couplet, or follows from it",
+   "why": "no connective; the second line does not restate the first's roles, so neither parallel nor because is plain from the form"
+  }
+ ]
+}

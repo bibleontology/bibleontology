@@ -1,0 +1,9 @@
+PREFIX e:   <https://bibleontology.org/e/>
+PREFIX bor: <https://bibleontology.org/ns/relation#>
+PREFIX claim: <https://bibleontology.org/ns/claim#>
+# Is Eliphaz's verdict asserted anywhere? In the narrator's graph? In his own?
+SELECT ?where WHERE {
+  { e:job bor:described_as e:testified_against_by_his_own_lips . BIND("default graph" AS ?where) }
+  UNION { GRAPH claim:narrator { e:job bor:described_as e:testified_against_by_his_own_lips } BIND("narrator" AS ?where) }
+  UNION { GRAPH ?g { e:job bor:described_as e:testified_against_by_his_own_lips } FILTER(?g != claim:narrator) BIND(STR(?g) AS ?where) }
+}

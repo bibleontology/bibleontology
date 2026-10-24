@@ -1,0 +1,29 @@
+{"ref": "Exo.7.26",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "Third masculine singular object 'him' of 'you will say to him'. The person the command sends Moses to is Pharaoh (w7), the referent of 'go to Pharaoh' in the same verse.", "category": "object pronoun of a command's target"},
+  {"slot": "w18", "choice": "w14", "divine": true, "why": "'my people' sits inside the LORD's quoted speech (cl3 'thus he says the LORD'; turn1 sender w14), so the first person is the speaker, the LORD (w14).", "category": "first person inside a quoted divine speech"},
+  {"slot": "w21", "choice": "w14", "divine": true, "why": "'me' in 'that they may serve me' is inside the same quoted speech of the LORD (w14); first person common singular.", "category": "first person inside a quoted divine speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "Implied 'you' of the imperative 'go' in the LORD's speech to Moses (turn0 addressee w4). The command is spoken to Moses.", "category": "implied subject of a command to the prophet"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "Implied 'you' of the weqatal 'you will say', which continues the command to Moses; second person masculine singular; the addressee of turn0 is Moses (w4).", "category": "implied subject of a command to the prophet"},
+  {"slot": "cl4s", "choice": "w7", "divine": false, "why": "Implied 'you' of the imperative 'let go' inside the quoted speech. The words are the message Moses carries to Pharaoh (cl1 and cl2 'him'), so the command is spoken to Pharaoh (w7); second person masculine singular.", "category": "implied subject of a command inside a commanded speech"},
+  {"slot": "cl5s", "choice": "w17", "divine": false, "why": "Third masculine plural 'they' of the purpose clause 'that they may serve me'. Its antecedent is 'my people' (w17), a collective noun, which takes plural verb agreement although its lemma is singular.", "category": "plural verb for a collective antecedent"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "A clause cannot be the next event after itself; the builder link is a self-loop. Across verses 'then' is not used (the episode rung), so nothing replaces it here.", "category": "self-link"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "Imperative 'go' followed by a second person weqatal 'you will say' with fused waw: 'go and then say'. The weqatal continues the command.", "category": "command continued by a weqatal"},
+  {"src": "cl4", "type": "and", "dst": "cl5", "action": "remove", "why": "The waw joins a command to a change of person (second person imperative, third person yiqtol). The link_types rule makes this 'so that', not a plain 'and'.", "category": "waw after command changing person"},
+  {"src": "cl4", "type": "purpose", "dst": "cl5", "action": "add", "why": "'Let my people go, so that they may serve me': the yiqtol in a different person after a command states what the command is for.", "category": "purpose after a command"},
+  {"src": "cl0", "type": "content", "dst": "imp1", "action": "add", "why": "'He said the LORD to Moses' introduces the commands (go, say) that are its content. The content is the imperative group, the run of commands at one level.", "category": "speech frame over commands"},
+  {"src": "cl3", "type": "content", "dst": "imp4", "action": "add", "why": "'Thus he says the LORD' introduces the quoted command and its aim. The content is the imperative group imp4 (command plus aim), not its first command.", "category": "speech frame over commanded words"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}, {"role": "part", "node": "imp1"}, {"role": "part", "node": "turn1"}], "divine": true, "why": "Outer speech, LORD to Moses. Its parts are the commands to Moses (imp1) and the commanded turn (turn1) that Moses is to say to Pharaoh. A turn nests a commanded turn as a part. The builder listed the commands directly as parts; that is removed here.", "category": "speech nesting: commanded turn inside outer turn"},
+  {"id": "imp1", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}, {"role": "command", "node": "cl2"}], "divine": false, "why": "'Go' and 'you will say' are commands joined at one level, so one imperative group with several command members. The builder's part role does not exist for an imperative group.", "category": "commands joined at one level"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl3"}, {"role": "sender", "node": "w14"}, {"role": "addressee", "node": "w7"}, {"role": "part", "node": "imp4"}], "divine": true, "why": "The LORD's quoted speech (sender w14) to Pharaoh (addressee w7, the one the words are for). Its part is the commanded words imp4; the clauses cl4 and cl5 now sit inside imp4 rather than directly in this turn.", "category": "quoted speech nested in a commanded turn"},
+  {"id": "imp4", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl4"}, {"role": "aim", "node": "cl5"}], "divine": false, "why": "'Let my people go' with its aim 'that they may serve me'. The aim role is used, not part, which is not a role of an imperative group.", "category": "command with its aim"}
+ ],
+ "none_fit": [
+  {"where": "turn1 (the LORD's words delivered through Moses)", "what": "A speech whose speaker (the LORD) is not the one who utters it, since Moses carries it. No link type or group kind says a message is relayed by an intermediary. The sender is recorded as the LORD and the relay is not recorded."}
+ ],
+ "cant_tell": []
+}

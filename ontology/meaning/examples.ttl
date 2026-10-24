@@ -1,0 +1,356 @@
+###############################################################################
+#  Worked examples for the proposed meaning ontology (meaning.ttl).
+#  Each is a case the design has to get right; each says why.
+#  Ids are illustrative (ex:); refs are MACULA's.
+###############################################################################
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix bow:     <https://bibleontology.org/ns/word#> .
+@prefix bom:     <https://bibleontology.org/ns/meaning#> .
+@prefix wn:      <http://wordnet-rdf.princeton.edu/pwn30/> .
+@prefix ex:      <https://bibleontology.org/example/> .
+
+# --- shared categories (a slice of bom:categories) --------------------------
+
+ex:cat-artifact  a bom:Category ; skos:inScheme bom:categories ; skos:prefLabel "artifact" ;
+    bom:classOf bom:Artifact ; skos:topConceptOf bom:categories .
+ex:cat-weapon    a bom:Category ; skos:inScheme bom:categories ; skos:prefLabel "weapon" ;
+    skos:broader ex:cat-artifact ; bom:wordnetSynset wn:03601142-n .
+ex:cat-phenomenon a bom:Category ; skos:inScheme bom:categories ; skos:prefLabel "phenomenon" ;
+    bom:classOf bom:Phenomenon ; skos:topConceptOf bom:categories .
+ex:cat-person    a bom:Category ; skos:inScheme bom:categories ; skos:prefLabel "person" ;
+    bom:classOf bom:PersonalBeing ; skos:topConceptOf bom:categories .
+ex:cat-herder    a bom:Category ; skos:inScheme bom:categories ; skos:prefLabel "herder" ;
+    skos:broader ex:cat-person .
+ex:cat-man       a bom:Category ; skos:inScheme bom:categories ; skos:prefLabel "man (human)" ;
+    skos:broader ex:cat-person .
+ex:cat-god       a bom:Category ; skos:inScheme bom:categories ; skos:prefLabel "god" ;
+    skos:broader ex:cat-person .
+
+###############################################################################
+# 1. SWORD. The word never changes category; the USE does.
+#    Mat 26:51 is a sword cutting off an ear. Eph 6:17 is the same word, and
+#    the text states what it is: "the sword of the Spirit, WHICH IS the word
+#    of God". Rev 1:16's sword from the mouth is in a vision and the text
+#    does not say: any tenor there is a reader's.
+###############################################################################
+
+ex:machaira a bow:Lexeme ; rdfs:label "μάχαιρα" ; bow:language "greek" ;
+    bow:hasSense ex:machaira-sword .
+ex:machaira-sword a bow:Sense ; rdfs:label "sword" ;
+    bom:hasCategory ex:cat-weapon ; bom:derivedVia "English" .
+
+ex:occ-Mat26-51 a bow:Occurrence ; bow:ofLexeme ex:machaira ;
+    bow:inSense ex:machaira-sword ; bom:usage bom:Unmarked .
+
+ex:occ-Eph6-17 a bow:Occurrence ; bow:ofLexeme ex:machaira ;
+    bow:inSense ex:machaira-sword ; bom:usage bom:Figurative .
+
+ex:fig-Eph6-17 a bom:FigurativeUse ;
+    bom:figureAt ex:occ-Eph6-17 ;
+    bom:vehicle ex:machaira-sword ;
+    bom:tenor "the word of God (ῥῆμα θεοῦ)" ;
+    bom:tenorBasis "stated" ;
+    bom:mode bom:metaphor ;
+    bom:marker "relative which-is (ὅ ἐστιν)" ;
+    bom:ofImage ex:image-sword ;
+    bom:evidence "Eph.6.17" .
+
+ex:occ-Rev1-16 a bow:Occurrence ; bow:ofLexeme ex:rhomphaia ;
+    bom:usage bom:Figurative .
+ex:rhomphaia a bow:Lexeme ; rdfs:label "ῥομφαία" ; bow:language "greek" ;
+    bow:hasSense ex:rhomphaia-sword .
+ex:rhomphaia-sword a bow:Sense ; rdfs:label "sword" ;
+    bom:hasCategory ex:cat-weapon ; bom:derivedVia "English" .
+
+ex:fig-Rev1-16 a bom:FigurativeUse ;
+    bom:figureAt ex:occ-Rev1-16 ;
+    bom:vehicle ex:rhomphaia-sword ;
+    bom:tenorBasis "read" ;
+    bom:mode bom:symbol ;
+    bom:marker "seen in a vision (a told world)" ;
+    bom:ofImage ex:image-sword ;
+    bom:evidence "Rev.1.16" .
+
+ex:reading-Rev1-16 a bom:SymbolReading ;
+    bom:readsTenorOf ex:fig-Rev1-16 ;
+    bom:tenor "the word of God" ;
+    prov:wasAttributedTo ex:reader-example ;
+    bom:evidence "Rev.1.16", "Heb.4.12", "Eph.6.17" ;
+    rdfs:comment "A reader's link, kept as theirs. The graph does NOT infer it from Eph 6:17: symbolic relations do not chain (PRINCIPLES 17)." .
+
+ex:reader-example a bom:Reader ; rdfs:label "an example reader (illustrative)" .
+
+# TWO NODES: the sword as a weapon (the sense, and swords of the story such
+# as Goliath's) and the sword as an image. They share a word — drawnFrom —
+# and nothing else is claimed between them.
+ex:image-sword a bom:Image ; rdfs:label "the sword (as an image)" ;
+    bom:drawnFrom ex:machaira-sword .
+ex:goliaths-sword a bom:Individual, bom:Artifact ; rdfs:label "Goliath's sword" ;
+    bom:inWorld ex:story .
+ex:whole-armour a bom:Saying ; rdfs:label "the whole armour of God" ;
+    bom:drawsOn ex:image-sword ; bom:evidence "Eph.6.11", "Eph.6.17" .
+
+###############################################################################
+# 2. LIGHT. Gen 1:3 is light, and nothing marks it as anything else: its
+#    usage is UNMARKED, not 'literal' — the graph does not rule out a
+#    reading, it just does not make one. Jhn 1:4 says what light is there:
+#    "the life was the light of men" — a copula whose two sides are
+#    different kinds of thing.
+###############################################################################
+
+ex:or a bow:Lexeme ; rdfs:label "אוֹר" ; bow:language "hebrew" ; bow:hasSense ex:or-light .
+ex:or-light a bow:Sense ; rdfs:label "light" ; bom:hasCategory ex:cat-phenomenon ;
+    bom:derivedVia "English" .
+ex:phos a bow:Lexeme ; rdfs:label "φῶς" ; bow:language "greek" ; bow:hasSense ex:phos-light .
+ex:phos-light a bow:Sense ; rdfs:label "light" ; bom:hasCategory ex:cat-phenomenon ;
+    bom:derivedVia "English" .
+ex:or bow:septuagintRendering ex:phos .
+
+ex:occ-Gen1-3 a bow:Occurrence ; bow:ofLexeme ex:or ; bow:inSense ex:or-light ;
+    bom:usage bom:Unmarked .
+
+ex:occ-Jhn1-4 a bow:Occurrence ; bow:ofLexeme ex:phos ; bow:inSense ex:phos-light ;
+    bom:usage bom:Figurative .
+ex:fig-Jhn1-4 a bom:FigurativeUse ;
+    bom:figureAt ex:occ-Jhn1-4 ;
+    bom:vehicle ex:phos-light ;
+    bom:tenor "the life (ἡ ζωή)" ;
+    bom:tenorBasis "stated" ;
+    bom:mode bom:metaphor ;
+    bom:marker "category clash in a copular clause" ;
+    bom:status "flagged" ;
+    bom:ofImage ex:image-light ;
+    bom:evidence "Jhn.1.4" .
+
+ex:image-light a bom:Image ; rdfs:label "light" .
+
+###############################################################################
+# 3. SHEPHERD. "the LORD is my shepherd": a person-kind said of God. The
+#    clash rule finds it (god.n.01 and shepherd.n.01 meet only at entity);
+#    it is flagged, not built, until read (PRINCIPLES 49). With pasture,
+#    still waters, rod and staff it is one picture: an image FIELD, found by
+#    the images sitting in one structure group, never by likeness of meaning.
+###############################################################################
+
+ex:yhwh a bom:Individual, bom:PersonalBeing, bom:Deity ; rdfs:label "YHWH (the LORD)" ;
+    bom:inWorld ex:story .
+ex:cls-yhwh-deity a bom:Classification ;
+    bom:classifies ex:yhwh ; bom:inClass bom:Deity ;
+    bom:statement "'the LORD, He is God; there is no other besides Him' (Deu 4:35)" ;
+    bom:saidBy "Moses" ;
+    bom:evidence "Deu.4.35" .
+ex:story a bom:StoryWorld .
+
+ex:roeh a bow:Lexeme ; rdfs:label "רֹעֶה" ; bow:language "hebrew" ; bow:hasSense ex:roeh-shepherd .
+ex:roeh-shepherd a bow:Sense ; rdfs:label "shepherd" ; bom:hasCategory ex:cat-herder ;
+    bom:derivedVia "English" .
+ex:occ-Psa23-1 a bow:Occurrence ; bow:ofLexeme ex:roeh ; bow:inSense ex:roeh-shepherd ;
+    bom:usage bom:Figurative .
+
+ex:fig-Psa23-1 a bom:FigurativeUse ;
+    bom:figureAt ex:occ-Psa23-1 ;
+    bom:vehicle ex:roeh-shepherd ;
+    bom:tenor ex:yhwh ;
+    bom:tenorBasis "stated" ;
+    bom:mode bom:metaphor ;
+    bom:marker "category clash in a copular clause" ;
+    bom:status "flagged" ;
+    bom:ofImage ex:image-shepherd ;
+    bom:evidence "Psa.23.1" .
+
+ex:image-shepherd a bom:Image ; rdfs:label "the shepherd" ; bom:inField ex:field-Psa23 .
+ex:image-pasture  a bom:Image ; rdfs:label "green pastures" ; bom:inField ex:field-Psa23 .
+ex:image-staff    a bom:Image ; rdfs:label "rod and staff" ; bom:inField ex:field-Psa23 .
+ex:field-Psa23 a bom:ImageField ; rdfs:label "the shepherd picture" ;
+    bom:evidence "Psa.23.1-4 (one Writing, the psalmist's voice)" .
+
+###############################################################################
+# 4. THE SERPENT. Typed by what Genesis says — an animal, "more crafty than
+#    any beast of the field" (Gen 3:1). Revelation's identification is a
+#    predication with its speaker, not a type and not a merge (identity.yaml).
+###############################################################################
+
+ex:serpent a bom:Individual, bom:Animal ; rdfs:label "the serpent (Gen 3)" ;
+    bom:inWorld ex:story .
+ex:devil a bom:Individual, bom:PersonalBeing ; rdfs:label "the devil" .
+# (the devil's subclass is left unset in this example: which one the text
+#  argues for is a Classification someone must cite, not a default)
+ex:dragon a bom:Individual ; rdfs:label "the great dragon (Rev 12)" ;
+    bom:inWorld ex:vision-Rev12 .
+ex:vision-Rev12 a bom:ToldWorld ; bom:toldBy "Rev.12 (John's vision)" .
+
+ex:pred-Rev12-9 a bom:Predication ;
+    bom:predicationOf ex:dragon ;
+    bom:predicatedIdentity ex:devil ;
+    bom:saidBy "the narrator (John)" ;
+    bom:form "name: 'who is called the devil and Satan', and 'that ancient serpent'" ;
+    bom:evidence "Rev.12.9" .
+
+###############################################################################
+# 5. JESUS. Doug, 2026-09-28: one personal-being class with subclasses, and
+#    Jesus Incarnate a member of BOTH Human and Deity — "the Bible clearly
+#    makes the case that he took on a form of a human". Each membership is a
+#    Classification with its own verses; the incarnate form is linked to the
+#    Son by assumedFormOf, as the old graph did (Php 2:6-8). The text's other
+#    sayings about him stay predications, each with its speaker.
+###############################################################################
+
+ex:jesus a bom:Individual, bom:PersonalBeing, bom:Deity ;
+    rdfs:label "Jesus (the Son, the Word)" ; bom:inWorld ex:story .
+ex:cls-jesus-deity a bom:Classification ;
+    bom:classifies ex:jesus ; bom:inClass bom:Deity ;
+    bom:statement "'the Word was God' (Jhn 1:1); 'being in the form of God' (Php 2:6)" ;
+    bom:saidBy "the narrator (John); Paul" ;
+    bom:evidence "Jhn.1.1", "Php.2.6" .
+
+ex:jesus-incarnate a bom:Individual, bom:PersonalBeing, bom:Human, bom:Deity ;
+    rdfs:label "Jesus Incarnate" ; bom:inWorld ex:story ;
+    bom:assumedFormOf ex:jesus .
+ex:cls-incarnate-human a bom:Classification ;
+    bom:classifies ex:jesus-incarnate ; bom:inClass bom:Human ;
+    bom:statement "'the Word became flesh' (Jhn 1:14); 'taking the form of a servant, being made in human likeness' (Php 2:7); 'the man Christ Jesus' (1Ti 2:5)" ;
+    bom:saidBy "the narrator (John); Paul" ;
+    bom:evidence "Jhn.1.14", "Php.2.7", "1Ti.2.5" .
+ex:cls-incarnate-deity a bom:Classification ;
+    bom:classifies ex:jesus-incarnate ; bom:inClass bom:Deity ;
+    bom:statement "'in Him the whole fullness of Deity dwells bodily' (Col 2:9)" ;
+    bom:saidBy "Paul" ;
+    bom:evidence "Col.2.9" .
+ex:form-Php2 a bom:Predication ;
+    bom:predicationOf ex:jesus-incarnate ; bom:predicatedIdentity ex:jesus ;
+    bom:saidBy "Paul" ;
+    bom:form "'being in the form of God ... emptied Himself, taking the form of a servant'" ;
+    bom:evidence "Php.2.6", "Php.2.7", "Php.2.8" .
+
+ex:pred-Jhn4-29 a bom:Predication ;
+    bom:predicationOf ex:jesus ; bom:predicatedCategory ex:cat-man ;
+    bom:saidBy "the Samaritan woman" ; bom:form "'a man who told me everything I ever did'" ;
+    bom:evidence "Jhn.4.29" .
+ex:pred-Jhn20-28 a bom:Predication ;
+    bom:predicationOf ex:jesus ; bom:predicatedCategory ex:cat-god ;
+    bom:saidBy "Thomas" ; bom:form "vocative: 'my Lord and my God'" ;
+    bom:evidence "Jhn.20.28" .
+
+###############################################################################
+# 6. THE SOWER. A parable opens a TOLD world; the sower is an individual of
+#    that world, not of the story's. The text interprets its own image —
+#    "the seed is the word of God" (Luk 8:11) — so that tenor is STATED.
+###############################################################################
+
+ex:parable-sower a bom:ToldWorld ; bom:toldBy "Luk.8.5-8 (Jesus's turn)" .
+ex:sower a bom:Individual, bom:PersonalBeing ; rdfs:label "the sower" ;
+    bom:inWorld ex:parable-sower .
+
+ex:sporos a bow:Lexeme ; rdfs:label "σπόρος" ; bow:language "greek" ; bow:hasSense ex:sporos-seed .
+ex:sporos-seed a bow:Sense ; rdfs:label "seed" ; bom:derivedVia "English" .
+ex:occ-Luk8-11 a bow:Occurrence ; bow:ofLexeme ex:sporos ; bow:inSense ex:sporos-seed ;
+    bom:usage bom:Figurative .
+ex:fig-Luk8-11 a bom:FigurativeUse ;
+    bom:figureAt ex:occ-Luk8-11 ;
+    bom:vehicle ex:sporos-seed ;
+    bom:tenor "the word of God" ;
+    bom:tenorBasis "stated" ;
+    bom:mode bom:symbol ;
+    bom:marker "an explanation in a told world ('the seed is the word of God')" ;
+    bom:ofImage ex:image-seed ;
+    bom:evidence "Luk.8.11" .
+ex:image-seed a bom:Image ; rdfs:label "the seed" .
+
+###############################################################################
+# 7. THE RAINBOW — a SIGN: a real bow in the cloud, and the text says what it
+#    stands for (Gen 9:13, "it will be a sign of the covenant").
+###############################################################################
+
+ex:qeshet a bow:Lexeme ; rdfs:label "קֶשֶׁת" ; bow:language "hebrew" ; bow:hasSense ex:qeshet-bow .
+ex:qeshet-bow a bow:Sense ; rdfs:label "bow (rainbow)" ; bom:derivedVia "English" .
+ex:occ-Gen9-13 a bow:Occurrence ; bow:ofLexeme ex:qeshet ; bow:inSense ex:qeshet-bow ;
+    bom:usage bom:Sign .
+ex:fig-Gen9-13 a bom:FigurativeUse ;
+    bom:figureAt ex:occ-Gen9-13 ;
+    bom:vehicle ex:qeshet-bow ;
+    bom:tenor "the covenant between God and the earth" ;
+    bom:tenorBasis "stated" ;
+    bom:mode bom:symbol ;
+    bom:marker "'it will be a sign of the covenant' (אוֹת)" ;
+    bom:evidence "Gen.9.13" .
+
+# 8. HEART — a conventional figure: a sense of its own, extended from the organ.
+ex:lev a bow:Lexeme ; rdfs:label "לֵב" ; bow:language "hebrew" ;
+    bow:hasSense ex:lev-organ, ex:lev-inner .
+ex:lev-organ a bow:Sense ; rdfs:label "heart (the organ)" ; bom:derivedVia "English" .
+ex:lev-inner a bow:Sense ; rdfs:label "heart (the inner self: mind, will, feeling)" ;
+    bom:derivedVia "English" ;
+    bom:extendedFrom ex:lev-organ .
+
+###############################################################################
+# 9. CONTESTED — readers divide, and the graph supports either reading.
+#    Doug, 2026-09-28: "Temple is a classic case where there is debate in some
+#    forward looking passages about whether it is symbolic or literal and I
+#    would like to support either reading", and "Bread at the last supper as
+#    well - is it literally Jesus' body or symbolic of it?"
+#    Readers here are TRADITIONS OF READING, named as such; illustrative.
+###############################################################################
+
+ex:reader-real-presence a bom:Reader ;
+    rdfs:label "the real-presence reading (Catholic, Orthodox and Lutheran traditions, in their different ways)" .
+ex:reader-sign a bom:Reader ;
+    rdfs:label "the sign reading (Reformed and memorial traditions, in their different ways)" .
+ex:reader-future-temple a bom:Reader ;
+    rdfs:label "the future-temple reading (a temple yet to be built)" .
+ex:reader-presence-temple a bom:Reader ;
+    rdfs:label "the presence reading (God dwelling with his people; fulfilled in Christ and the church)" .
+
+# "This is My body" (Mat 26:26)
+ex:artos a bow:Lexeme ; rdfs:label "ἄρτος" ; bow:language "greek" ; bow:hasSense ex:artos-bread .
+ex:artos-bread a bow:Sense ; rdfs:label "bread" ; bom:derivedVia "English" .
+ex:occ-Mat26-26 a bow:Occurrence ; bow:ofLexeme ex:artos ; bow:inSense ex:artos-bread ;
+    bom:usage bom:Contested .
+ex:ur-Mat26-26-a a bom:UsageReading ;
+    bom:readsUsageOf ex:occ-Mat26-26 ; bom:readsUsage bom:Literal ;
+    bom:readsAs "his body" ;
+    prov:wasAttributedTo ex:reader-real-presence ;
+    bom:evidence "Mat.26.26", "Jhn.6.55" .
+ex:ur-Mat26-26-b a bom:UsageReading ;
+    bom:readsUsageOf ex:occ-Mat26-26 ; bom:readsUsage bom:Sign ;
+    bom:readsAs "a sign of his body given" ;
+    prov:wasAttributedTo ex:reader-sign ;
+    bom:evidence "Mat.26.26", "1Co.11.24" .
+
+# Ezekiel's temple (Ezk 40:5)
+ex:bayit a bow:Lexeme ; rdfs:label "בַּיִת" ; bow:language "hebrew" ; bow:hasSense ex:bayit-temple .
+ex:bayit-temple a bow:Sense ; rdfs:label "house (the temple)" ; bom:derivedVia "English" .
+ex:occ-Ezk40-5 a bow:Occurrence ; bow:ofLexeme ex:bayit ; bow:inSense ex:bayit-temple ;
+    bom:usage bom:Contested .
+ex:ur-Ezk40-5-a a bom:UsageReading ;
+    bom:readsUsageOf ex:occ-Ezk40-5 ; bom:readsUsage bom:Literal ;
+    bom:readsAs "a temple to be built" ;
+    prov:wasAttributedTo ex:reader-future-temple ;
+    bom:evidence "Ezk.40.5", "Ezk.43.10" .
+ex:ur-Ezk40-5-b a bom:UsageReading ;
+    bom:readsUsageOf ex:occ-Ezk40-5 ; bom:readsUsage bom:Figurative ;
+    bom:readsAs "God's presence among his people" ;
+    prov:wasAttributedTo ex:reader-presence-temple ;
+    bom:evidence "Ezk.40.5", "Ezk.48.35", "Rev.21.22" .
+
+# NOT contested: the text states it — "He was speaking about the temple of
+# His body" (Jhn 2:21).
+ex:naos a bow:Lexeme ; rdfs:label "ναός" ; bow:language "greek" ; bow:hasSense ex:naos-temple .
+ex:naos-temple a bow:Sense ; rdfs:label "temple" ; bom:derivedVia "English" .
+ex:occ-Jhn2-19 a bow:Occurrence ; bow:ofLexeme ex:naos ; bow:inSense ex:naos-temple ;
+    bom:usage bom:Figurative .
+ex:fig-Jhn2-19 a bom:FigurativeUse ;
+    bom:figureAt ex:occ-Jhn2-19 ; bom:vehicle ex:naos-temple ;
+    bom:tenor "the temple of His body" ; bom:tenorBasis "stated" ;
+    bom:mode bom:metaphor ;
+    bom:marker "the narrator's explanation: 'He was speaking about the temple of His body' (Jhn 2:21)" ;
+    bom:evidence "Jhn.2.19", "Jhn.2.21" .
+
+# NOTE what is ABSENT: no edge joins ex:image-seed and ex:image-sword,
+# although both have the tenor "the word of God". The shipped path finder
+# once produced image_seed -> word_of_god -> image_sword; no passage relates
+# the seed to the sword (PRINCIPLES 17).

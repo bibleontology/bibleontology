@@ -1,0 +1,16 @@
+{"ref": "Exo.8.10",
+ "referents": [
+  {"slot": "w3", "choice": "none", "divine": false, "why": "The object suffix 'them' (third masculine plural) is the dead frogs of the verse before. No frogs candidate is offered; w4 and w5 are the heaps, the cognate result of the piling, not the things piled; the houses/courtyards/fields composite is the place where they died, not what was piled.", "category": "pronoun whose referent is not among the candidates"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "An unspecified 'they piled up' (wayyiqtol third masculine plural with no named subject) is an impersonal plural, 'people piled them up'. No earlier agreeing referent is the evident doer, and the text does not name the agent; the Egyptians composite (Exo.8.7#c4) is a guess, not something the clause says.", "category": "impersonal plural verb with no stated agent"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "The link runs backward: cl1 is the later clause (the stench follows the piling), so cl1 cannot be the 'and then' of cl0 pointing at an earlier clause in the wrong direction. The forward link cl0 -> cl1 already carries the sequence.", "category": "backward link duplicating a forward one"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "Two wayyiqtol clauses joined by waw: the piling up and then the stench, in narrative order. A plain 'and then'; the text does not mark the stench as a stated result.", "category": "plain and kept as narrative sequence"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 relative to Exo.8.9#cl1", "what": "The piling is the sequel to the frogs dying (Exo.8.9), across a verse boundary, and the stench comes from the heaps of dead frogs. The cross-verse sequence and the cause of the stench are plain in the sense, but no link type covers 'what follows from a death in the previous verse' or 'stench because of the heaps'."}
+ ],
+ "cant_tell": [
+  {"what": "Who piled the dead frogs (the agent of cl0)", "why": "The verse names no agent; the impersonal plural 'they piled' is the text's own wording and the only agreeing composite is two verses back."}
+ ]}

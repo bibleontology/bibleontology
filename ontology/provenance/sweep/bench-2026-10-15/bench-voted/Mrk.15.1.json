@@ -1,0 +1,101 @@
+{
+ "ref": "Mrk.15.1",
+ "referents": [
+  {
+   "slot": "cl3s",
+   "choice": "w4",
+   "divine": false,
+   "why": "Third plural 'they' that bound Jesus and handed him over. The nearest agreeing referent is the chief priests, the subject of the leading clause in the same verse. Masculine plural agrees.",
+   "category": "third plural with subject in same verse",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle having formed the counsel is nested in the leading clause; the grammar nests it.",
+   "category": "antecedent participle nested in main clause",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The participle having bound Jesus is nested in the leading clause; the grammar nests it.",
+   "category": "antecedent participle nested in main clause",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "The join between the two finite verbs is the separate word kai, not a waw fused into the verb, so the relation is 'and', not 'and then'.",
+   "category": "separate-word and given as then",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl3",
+   "action": "add",
+   "why": "Kai separates two acts of one agent: they led Jesus away, and handed him over.",
+   "category": "separate-word and",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "Mrk.15.1#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl3"
+    },
+    {
+     "role": "group_subject",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "Two finite acts in a row by one agent, the chief priests. The subject is stated once, in the leading clause; both acts state it only in the verb. Proposed as a reading for review.",
+   "category": "acts of one agent in a row",
+   "votes": 2
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl1 and cl2, participles before the main verb",
+   "what": "An antecedent participle (having formed a counsel, having bound) that precedes the finite verb it modifies. Describing covers only a participle after a finite clause; no other type says first did X, then Y."
+  },
+  {
+   "where": "Mrk.15.1 cl1 and cl2",
+   "what": "anterior participles (having formed a counsel, having bound Jesus) that precede the main act; no link type for prior circumstance, so kept as within"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Whether cl3s 'they' is the chief priests alone or the whole body named (elders, scribes, Sanhedrin)",
+   "why": "The composite offered covers only part of the body; the verse names the whole group as devising the plan, and the text does not say which subset bound and delivered Jesus."
+  },
+  {
+   "what": "Whether 'they' in cl3 is the chief priests alone or the whole body named in the verse (elders, scribes, Council).",
+   "why": "The verse names the chief priests as the subject of the main verb and the others only as companions; the text does not say which of them handed Jesus over. Chose the chief priests as the grammatical subject of cl0."
+  },
+  {
+   "what": "referent of cl3s (they, who handed Jesus over)",
+   "why": "the subject is the chief priests together with elders, scribes and the Council; no candidate covers them together (c8 is elders and scribes only), so w4 is chosen as the first-named agent"
+  }
+ ],
+ "voted": 3
+}

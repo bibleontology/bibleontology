@@ -1,0 +1,33 @@
+{
+ "run": "bench-3",
+ "model": "haiku",
+ "mode": "passage",
+ "blind_check": "tool_uses exactly 2 for every run",
+ "note": "P-gen1 is round 2's haiku-p3 run",
+ "passages": {
+  "P-prov10": {
+   "tokens": 90097,
+   "verses": 7
+  },
+  "P-mark15a": {
+   "tokens": 107072,
+   "verses": 8
+  },
+  "P-mark15b": {
+   "tokens": 120773,
+   "verses": 7
+  },
+  "P-rom3": {
+   "tokens": 126873,
+   "verses": 8
+  },
+  "P-job38": {
+   "tokens": 136005,
+   "verses": 11
+  },
+  "P-gen1": {
+   "tokens": 83437,
+   "verses": 5
+  }
+ }
+}

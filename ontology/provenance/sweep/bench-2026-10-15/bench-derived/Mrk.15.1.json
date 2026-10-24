@@ -1,0 +1,59 @@
+{
+ "ref": "Mrk.15.1",
+ "referents": [
+  {
+   "slot": "cl3s",
+   "choice": "w4",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl3",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "g1",
+   "kind": "acts",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl3"
+    },
+    {
+     "role": "group_subject",
+     "node": "w4"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

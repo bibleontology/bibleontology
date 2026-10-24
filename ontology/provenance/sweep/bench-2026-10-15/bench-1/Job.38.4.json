@@ -1,0 +1,96 @@
+{
+ "ref": "Job.38.4",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'I founded the earth' inside the LORD's speech: the speaker, the LORD.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'Where were you': second person, the one addressed, Job.",
+   "category": "addressee in question"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Implied 'you' of the imperative 'tell' is the one spoken to, Job.",
+   "category": "implied subject of command"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'You know understanding': second person, the addressee, Job.",
+   "category": "addressee in question"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'Tell, if you have understanding': the condition 'you know understanding' follows the command it governs. The if-link runs from what is conditioned (src) to its condition (dst).",
+   "category": "condition after its clause"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "Job.38.4#g1"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Job.38.1#w4"
+    }
+   ],
+   "divine": true,
+   "why": "The sender is the LORD. The builder had the addressee 'you' as sender. The part is the conditional group (R3), not the bare clause.",
+   "category": "speaker corrected, condition as part"
+  },
+  {
+   "id": "Job.38.4#g1",
+   "kind": "conditional",
+   "action": "add",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl3"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "R3: 'if you have understanding' conditions 'tell me'. The condition follows the command in the Hebrew.",
+   "category": "condition inside a speech"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Job.38.4 cl2 'tell Me'",
+   "what": "A demanded answer. What is to be told is the answer to the question of cl0, not a clause in this verse, and no link type records 'answer to'."
+  }
+ ],
+ "cant_tell": []
+}

@@ -1,0 +1,30 @@
+{
+ "ref": "Job.38.1",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "Third masculine singular subject of the wayyiqtol 'and said' after 'he answered Job'. The one answering Job is the LORD (w2); Job is the object.",
+   "category": "implied subject of narrative verb"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Wayyiqtol continues the narrative line within the verse; 'and then' is the form's relation.",
+   "category": "wayyiqtol sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The speech introduced by 'and said' (cl1) has its content from 38:2 onward. Its content link and turn are recorded at 38:2, where the first said clause is judged.",
+   "why": "A link from this saying clause cannot be written forward into a later verse from here, so it is recorded once, at the first said clause."
+  }
+ ]
+}

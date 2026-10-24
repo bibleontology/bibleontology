@@ -1,0 +1,28 @@
+{
+ "sheet": "docs/review/divine-flags-2026-10-17.html",
+ "by": "Doug",
+ "date": "2026-10-17",
+ "patterns": {
+  "A": {"mark": "approve", "words": "Approve, parables held; then, shown the Luke 12:37 misreading: Release it", "count": 16979},
+  "B": {"mark": "approve", "words": "everything else looks good", "count": 2293},
+  "C": {"mark": "approve", "words": "everything else looks good", "count": 843},
+  "several": {"mark": "approve", "words": "everything else looks good", "count": 68},
+  "god": {"mark": "approve", "words": "everything else looks good", "count": 62}
+ },
+ "cases_raised": [
+  {"ref": "Luk.22.8", "his_words": "the top has gaps but the bottom looks good",
+   "finding": "the coordination node's members are Peter and the conjunction, not Peter and John: a builder fault in 1,942 of 12,201 composites", "proposal": "P-2026-10-17-4"},
+  {"ref": "Mat.20.18", "his_words": "the top uses a generic for some reason",
+   "finding": "a generic minted where 20:17 names 'the twelve'; 716 of 1,515 generics have their head word within five verses before", "proposal": "P-2026-10-17-5"},
+  {"ref": "Mrk.6.32", "his_words": "it uses apostles on top but it is really the same as the disciples",
+   "finding": "right: the link is to the text's own word; how the groups relate is record-level",
+   "ruling": "apostles and disciples were the same group until the apostles were arguably expanded to include Paul and possibly others in Acts - they probably should be kept separate but related with Act 1 being a bridge",
+   "offered": "in the Gospels the apostles are already chosen from among the disciples (Luke 6:13, Mark 3:14); Acts 1:26 and 14:14 widen the apostles"},
+  {"ref": "Luk.22.8", "slots": ["w8", "cl4s"], "his_words": "Now that you bring it to my attention, I should have raised it",
+   "finding": "rejected: the eaters are Jesus with the disciples (22:11, 22:14), not only Peter and John"},
+  {"ref": "Dan.2.20", "his_words": "the Daniel examples should resolve to God but I am not sure what right or wrong means",
+   "finding": "right: lowercase 'god' is MACULA's gloss of the Aramaic word; which God it means is record-level"}
+ ],
+ "his_summary": "there are multiple examples of each of these cases",
+ "decisions": "out/sweep/divine-decisions.json (tools/sweep/divine_hold.py): 20,243 approved, 2 rejected (Luke 22:8); 2,549 needed no ruling"
+}

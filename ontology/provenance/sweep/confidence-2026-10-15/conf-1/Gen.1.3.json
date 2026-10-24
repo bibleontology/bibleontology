@@ -1,0 +1,97 @@
+{
+ "ref": "Gen.1.3",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "Direction reversed: 'then' runs from the earlier event to the later one. The saying (cl0) comes before the light that comes to be (cl2), not after it.",
+   "category": "narrative then with reversed direction"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl1 is the jussive said inside the speech, not a clause on the narrative line. The narrative event after the saying is cl2.",
+   "category": "speech clause taken as narrative line"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add",
+   "confidence": "high",
+   "why": "wayyiqtol cl2 continues the narrative line; its nearest preceding clause not inside a speech is cl0 (he said).",
+   "category": "narrative then across a speech"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "high",
+   "why": "The saying clause (he said God) introduces the words that follow, which are the jussive. Both are also placed in turn0 as frame and part.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "result",
+   "dst": "cl2",
+   "action": "add",
+   "confidence": "high",
+   "why": "The command let there be light is followed by waw plus a wayyiqtol stating what came of it (and there was light). The same clause is the effect of imp1.",
+   "category": "command and its result"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "God is the one speaking (he said God); the jussive is what is said.",
+   "category": "speech turn by God"
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "effect",
+     "node": "cl2"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "'part' is not a member role of the imperative kind. The clause that states what the command brought about is its effect.",
+   "category": "command and its effect"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

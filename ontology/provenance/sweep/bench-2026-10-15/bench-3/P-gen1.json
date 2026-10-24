@@ -1,0 +1,34 @@
+{"passage": "P-gen1", "verses": [
+{"ref": "Gen.1.1", "referents": [], "links": [], "groups": [], "none_fit": [], "cant_tell": []},
+{"ref": "Gen.1.2", "referents": [], "links": [
+{"src": "cl0", "type": "and", "dst": "cl0", "action": "remove", "why": "A clause linked to itself. The waw joins cl0 to cl1, which is kept below.", "category": "self-link"},
+{"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Separate waw before 'darkness was over the surface of the deep'. Two clauses in sequence; no cause, result or purpose.", "category": "plain and between clauses"},
+{"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "Waw before 'the Spirit of God was hovering'. A further clause of the scene; no cause, result or purpose.", "category": "plain and between clauses"}
+], "groups": [], "none_fit": [], "cant_tell": []},
+{"ref": "Gen.1.3", "referents": [], "links": [
+{"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "cl0 is the saying 'God said'; cl1 is what is said. It is a single command, so the said clause is the target, not an imperative group (R1).", "category": "speech content"},
+{"src": "cl1", "type": "result", "dst": "cl2", "action": "add", "why": "Jussive 'let there be light', then wayyiqtol 'and there was light': the outcome of the command. The same clause is the imperative group's effect (R4, result).", "category": "command and its outcome"},
+{"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "The wayyiqtol 'and there was light' continues the narrative from the saying clause cl0, the nearest clause before it that is not inside the speech.", "category": "narrative wayyiqtol after speech"},
+{"src": "cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "Direction reversed. A then-link runs from the earlier clause to the later one, and cl0 precedes cl2.", "category": "reversed then-link"},
+{"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is inside the speech of cl0. A wayyiqtol continues the nearest clause not inside a speech, which is cl0.", "category": "then-link from inside speech"}
+], "groups": [
+{"id": "turn0", "kind": "turn", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "w2"}], "divine": true, "why": "The speaker is God (w2, the creator of the verse). The turn is the saying cl0 with what is said, cl1, as its part.", "category": "turn with divine sender"},
+{"id": "imp1", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}, {"role": "effect", "node": "cl2"}], "divine": false, "why": "'part' is not an imperative role. The clause the command brings about, 'and there was light', is its effect.", "category": "imperative with outcome as effect"}
+], "none_fit": [], "cant_tell": []},
+{"ref": "Gen.1.4", "referents": [], "links": [
+{"src": "cl0", "type": "that", "dst": "cl1", "action": "keep", "why": "'He saw that the light was good': cl1 is what was seen, the object of the verb of perceiving.", "category": "object clause after perception"},
+{"src": "cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "Direction reversed. The then-link runs from the earlier clause (cl0, saw) to the later (cl2, separated).", "category": "reversed then-link"},
+{"src": "cl0", "type": "then", "dst": "cl2", "action": "keep", "why": "The wayyiqtol 'and he separated' continues the narrative from the seeing clause cl0.", "category": "narrative wayyiqtol"}
+], "groups": [], "none_fit": [], "cant_tell": []},
+{"ref": "Gen.1.5", "referents": [
+{"slot": "cl1s", "choice": "w2", "divine": true, "why": "Third masculine singular in the qatal 'he called night'. In the same verse God is the one who names (cl0, 'God called the light day'), the nearest agreeing referent. The fronted 'darkness' is the object, not the subject.", "category": "subject of naming clause after fronted object"}
+], "links": [
+{"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "Waw before the fronted 'the darkness': a second naming in sequence; no cause, result or purpose.", "category": "plain and between clauses"},
+{"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "The wayyiqtol 'it was evening' continues from the naming clause cl1, the nearest clause before it.", "category": "narrative wayyiqtol"},
+{"src": "cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "Direction reversed. cl0 precedes cl2, and the then-link runs from the earlier clause to the later.", "category": "reversed then-link"},
+{"src": "cl2", "type": "then", "dst": "cl3", "action": "keep", "why": "The wayyiqtol 'and it was morning' continues from 'it was evening'.", "category": "narrative wayyiqtol"}
+], "groups": [], "none_fit": [
+{"where": "cl0, 'called the light day'", "what": "A verb of naming with a noun as the name, not a clause of saying. No clause is said, so the content link does not fit."},
+{"where": "cl4, 'day one'", "what": "A nominal clause that sums up cl2 and cl3 as one day. No link type covers a summary label of the preceding clauses."}
+], "cant_tell": []}
+]}

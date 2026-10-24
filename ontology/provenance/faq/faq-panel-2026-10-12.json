@@ -1,0 +1,125 @@
+{
+  "overall": "ship after fixes",
+  "fixes": [
+    {
+      "question": "Why is it called Bible Ontology?",
+      "sentence": "It does not do the philosopher's work for you. It shows what the text itself says is, and who is, and leaves the reading to you.",
+      "readers": ["secular academic scholar", "Lutheran", "Reformed", "Catholic", "Eastern Orthodox", "rabbi"],
+      "why": "'What the text says is, and who is' reads as an ontological claim (it echoes divine self-naming) and is hard to parse; a secular reader hears the text being made the arbiter of what exists, and a believing reader may hear a theological assertion in a tagline. 'Leaves the reading to you' is also not quite true: the About page says the site offers readings (themes, retellings, echoes), marked as readings.",
+      "fix": "It does not do the philosopher's work for you. It records what the text says about people, places, events and ideas, and marks anything beyond that as a reading."
+    },
+    {
+      "question": "Can I trust it?",
+      "sentence": "Do not take its word for anything; it is built so you do not have to. Every link cites the verse it rests on. How certain each link is gets marked; interpretations are labelled as readings, with their source;",
+      "readers": ["secular academic scholar", "Baptist / free church", "young African American believer"],
+      "why": "'Do not take its word for anything' reads as flip or defensive, and a believing reader may hear it as dismissing the text-handling as untrustworthy. 'Every link cites the verse' is stronger than the About page, which says anything the graph cannot ground in a verse is marked as a suggestion or a reading.",
+      "fix": "You do not have to take its word for it: it is built so you can check. Each connection carries the verse it rests on, and anything that cannot be tied to a verse is marked as a suggestion or a reading. How certain each link is gets marked; interpretations are labelled as readings, with their reader;"
+    },
+    {
+      "question": "What denomination or creed does it align with?",
+      "sentence": "None. It uses the 66 books that every Christian tradition's Bible includes, and where traditions differ it takes no side; it sets the verses side by side instead.",
+      "readers": ["Catholic", "Eastern Orthodox", "rabbi", "secular academic scholar"],
+      "why": "'Takes no side' is an absolute; the About page says it 'aims to take no position', and a sceptic who finds one slanted sentence will cite the absolute. 'Every Christian tradition's Bible includes' is true but frames Catholic and Orthodox canons as a subset and says nothing to the rabbi, whose canon is the Hebrew Bible; the About page says plainly 'the 66 of the Protestant canon'.",
+      "fix": "None. It covers 66 books, the Protestant canon (the Old Testament, or Hebrew Scriptures, and the New Testament). Where traditions differ it aims to take no side, and sets the verses side by side instead."
+    },
+    {
+      "question": "What denomination or creed does it align with?",
+      "sentence": "Its own sentences are checked by AI against how readers from eleven traditions would take them, among them Catholic, Orthodox, several Protestant traditions, a Jewish reader and a secular scholar, and it publishes only what all of them could accept.",
+      "readers": ["secular academic scholar", "Catholic", "Eastern Orthodox", "rabbi", "young African American believer"],
+      "why": "'Readers from eleven traditions' could be read as eleven real people or bodies; they are AI readings taking those viewpoints. Not every seat is a 'tradition' (a secular scholar, a young African American believer). 'All of them could accept' is the AI panel's judgment, not their agreement, and a Jewish reader or Catholic reader will object to being cited as having accepted anything. Honest framing protects the claim.",
+      "fix": "Its own sentences about what a text says are checked by AI models that read them as eleven kinds of reader would (Lutheran, Reformed, Wesleyan, Baptist, Pentecostal, Catholic, Orthodox, a biblical-theological reader, a rabbi, a young African American believer and a secular scholar). They are AI readings, not real members of those traditions, and a sentence is kept only if every one of those readings could accept it."
+    },
+    {
+      "question": "Which Bible does it use?",
+      "sentence": "Where a translation and the original differ, the original decides, and the verse is marked with an asterisk saying why.",
+      "readers": ["secular academic scholar", "Eastern Orthodox", "Catholic"],
+      "why": "Implies every difference is found and marked; the About page counts the marked verses as 'so far'. 'The original' is also ambiguous to an Orthodox or Catholic reader whose Old Testament text is the Septuagint or Vulgate; the About page names Hebrew, Aramaic or Greek.",
+      "fix": "Where a translation and the Hebrew, Aramaic or Greek differ, the original language decides; where the site has found such a difference, the verse carries an asterisk and a note saying why."
+    },
+    {
+      "question": "Which books are included?",
+      "sentence": "The 66 books of the Old and New Testaments. The deuterocanonical books (Tobit, Sirach, the Maccabees and others) are not included.",
+      "readers": ["rabbi", "Catholic", "Eastern Orthodox"],
+      "why": "For the rabbi 'Old Testament' is a Christian name for the Hebrew Scriptures and the count differs; for Catholic and Orthodox readers a flat 'not included' can sound like a ruling on their books, and the Orthodox canon holds more than the deuterocanon.",
+      "fix": "The 66 books of the Protestant canon: the 39 of the Old Testament (the Hebrew Scriptures, in the Christian order) and the 27 of the New Testament. The further books in Catholic and Orthodox Bibles (Tobit, Sirach, the Maccabees and others) are outside the site's scope; that is a limit, not a judgment on them."
+    },
+    {
+      "question": "Was it made with AI?",
+      "sentence": "Yes, under close direction, and the About page says exactly how. That is why every link cites its verses: anything the site says can be checked against the text. The site's own sentences are reviewed against the verses they cite, and by AI reading as people from eleven traditions would take them.",
+      "readers": ["secular academic scholar", "Baptist / free church", "Catholic", "rabbi"],
+      "why": "Too thin and slightly self-serving. It does not say what the AI did (it read the text and drafted most of the people, places, events, links and wording), that the checking is itself by AI, or that the panel is not real people. 'Under close direction' is an unsupported assurance; 'that is why every link cites its verses' overclaims. A sceptic asking 'is this AI slop?' needs the plain facts first.",
+      "fix": "Yes. The structure of each verse is read off the Hebrew and Greek grammar by rules. The people, places, events, links and much of the wording were read out of the text and drafted by AI models, chiefly Anthropic's Claude, and the About page names the other tools and what each did. Because AI makes mistakes, each link carries the verse it rests on so you can check it, and the site's own sentences are checked against those verses and by further AI readings. Those readings take the viewpoints of eleven kinds of reader; they are not real members of those traditions, and errors remain possible."
+    },
+    {
+      "question": "What do the dotted and dashed lines in the graph mean?",
+      "sentence": "A solid line is stated outright in the text; a dashed line is implied (siblings inferred from a shared parent, for instance); a dotted line is conjectured or disputed. A thicker line with a number on it holds several links between the same two; tap it to choose one.",
+      "readers": ["secular academic scholar", "biblical-theological"],
+      "why": "Contradicts the About page and the code: inferred siblings are drawn dotted, not dashed, and the navigator's legend says dotted means 'inferred, or less certain'. Thickness also means how much of the text gives the two together, which the answer omits.",
+      "fix": "How sure a link is. A solid line is stated outright in the text; a dashed line is implied by it; a dotted line is inferred, conjectured or disputed (two children of the same parent drawn as siblings, for instance). A thicker line means more of the text is given to the two together; a thick line with a number on it holds several links between the same two, and tapping it lets you choose one."
+    },
+    {
+      "question": "How do I use the graph?",
+      "sentence": "Open the Knowledge Graph Navigator (/graph).",
+      "readers": ["young African American believer", "Pentecostal / Charismatic"],
+      "why": "The About page says the navigator is on a larger screen; a phone reader following this answer finds nothing, which is a usability trap rather than a theological one, but the FAQ would be false for them.",
+      "fix": "On a larger screen, open the [Knowledge Graph Navigator](/graph)."
+    },
+    {
+      "question": "What principles guide how it is built? (Nothing without a verse)",
+      "sentence": "Nothing without a verse. Every person, link and claim rests on the text, cited so you can check it.",
+      "readers": ["secular academic scholar", "Baptist / free church", "biblical-theological"],
+      "why": "Overstates the About page: 'anything the graph cannot ground in a verse is marked as a suggestion or a reading', and the theme map and other drafts are labelled readings. A sceptic who finds a marked reading will say the headline was false.",
+      "fix": "Built from the text. Every connection carries the verse it rests on; anything that cannot be tied to a verse is marked as a suggestion or a reading."
+    },
+    {
+      "question": "What principles guide how it is built? (The original language decides)",
+      "sentence": "Where a translation and the Hebrew or Greek differ, the original wins, and the verse says so.",
+      "readers": ["secular academic scholar", "rabbi", "Eastern Orthodox"],
+      "why": "Omits Aramaic (Daniel, Ezra) which the About page includes; 'the verse says so' implies every difference is already marked.",
+      "fix": "The original language decides. Where a translation and the Hebrew, Aramaic or Greek differ, the original wins, and a connection that rests on one translation's wording alone is not kept."
+    },
+    {
+      "question": "What principles guide how it is built? (Record what the text says)",
+      "sentence": "Record what the text says, not what it means. Interpretation is kept apart from the record.",
+      "readers": ["secular academic scholar"],
+      "why": "The About page says only the computed floor records what a verse says; the overlay was read by models and carries relations like 'fulfils' or 'symbolises'. 'Kept apart' overstates the separation. The About wording is that readings are marked and never merged into the layers above.",
+      "fix": "Record what the text says, not what it means. Anything beyond what the words show is marked as a reading, with its reader."
+    },
+    {
+      "question": "What principles guide how it is built? (Structure, not doctrine)",
+      "sentence": "Structure, not doctrine. Grouping and organising are fine; taking a side on what Christians debate is not.",
+      "readers": ["secular academic scholar", "rabbi", "Reformed", "Wesleyan"],
+      "why": "An absolute where the About page says 'aims to take no position'. 'What Christians debate' also reads as if only Christians' questions matter, though the same discipline covers questions between Jewish and Christian readings.",
+      "fix": "Structure, not doctrine. It groups and connects what the text says, and aims to take no position where readers divide; it shows the verses each side reads and does not decide between them."
+    },
+    {
+      "question": "What principles guide how it is built? (The Hebrew Scriptures)",
+      "sentence": "The Hebrew Scriptures are heard on their own terms first, before any later reading of them.",
+      "readers": ["Lutheran", "Catholic", "Eastern Orthodox", "Reformed", "rabbi"],
+      "why": "This is a charge to two review seats, not something the About page states or a mechanism I can find in the site. 'First, before any later reading' ranks readings: Lutheran, Catholic and Orthodox readers who hear the Old Testament through Christ may take 'later reading' as demoting the New Testament's own reading of it, while the rabbi would take an unfulfilled promise of priority as a claim the site must keep. If it is not demonstrably practised it is an overstatement either way.",
+      "fix": "The Hebrew Scriptures are given their own voice. What a passage says in its own words is shown on its own, and a New Testament reading of it is shown beside it as that text's reading."
+    },
+    {
+      "question": "What principles guide how it is built? (Nothing is stated more strongly)",
+      "sentence": "Nothing is stated more strongly than the text states it. How certain each link is gets marked, and it only falls through a chain of reasoning, never rises.",
+      "readers": ["secular academic scholar"],
+      "why": "I can confirm certainty marking and a weakest-link rule in the path finder, but 'a chain of reasoning' sounds like inference machinery that the 'What's planned?' answer says does not exist yet (careful inference is a plan). It describes a plan as a present fact.",
+      "fix": "Nothing is stated more strongly than the text states it. How certain each link is gets marked, and a connection reached through several steps is shown as no more certain than its weakest step."
+    },
+    {
+      "question": "What principles guide how it is built? (Hard verses stay)",
+      "sentence": "Hard verses stay. Nothing is softened, and nothing is added.",
+      "readers": ["young African American believer", "rabbi", "secular academic scholar"],
+      "why": "'Hard verses stay' promises completeness the thin coverage does not support. 'Nothing is added' is contradicted by the site's own marked readings, notes and asterisks. The Berean text is not softened, which is the true claim.",
+      "fix": "Hard verses are not softened. A difficult passage is shown in the text's own words, with nothing added to ease it."
+    },
+    {
+      "question": "What's planned?",
+      "sentence": "Access for AI assistants (MCP). A standard connection so tools like Claude can query the graph directly and cite verses in their answers. / Questions in plain language, with your own AI key.",
+      "readers": ["secular academic scholar"],
+      "why": "In PLAN.md the MCP server (A.28) is parked, to be revisited once search traffic shows who is coming, and I found no plan item for plain-language questions with the reader's own AI key. Both read as scheduled work when they are ideas. The public repository is item 8.3 'open', not yet committed.",
+      "fix": "These are plans and ideas, not features, and this answer will say so until each one exists. A public repository is intended. A fuller formal ontology (OWL) with marked, cited inference is intended. Access for AI assistants (MCP) and plain-language questions with your own AI key are being considered, not scheduled."
+    }
+  ],
+  "summary": "The page is mostly honest and well scoped, but several absolutes ('takes no side', 'every link', 'nothing added') are stronger than the About page, the dashed example for siblings contradicts it (they are dotted), and the AI disclosure is thinner than a sceptic needs. The principles list also surfaces ten rules when the About page states four, and two of them (Hebrew Scriptures first, certainty only falls through a chain) are reviewer charges or planned inference rather than demonstrable current practice; docs/PRINCIPLES.md records that Doug is still deciding which principles go on the site, so that choice is his."
+}

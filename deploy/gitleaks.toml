@@ -1,0 +1,13 @@
+# gitleaks over the public copy (tools/export_gate.py runs it when gitleaks is
+# installed; first run 2026-10-21, the security seat's suggestion): the default
+# rules, with one allowance.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "the review sheets' browser-storage slot names"
+# `const KEY='inventory-1.2.0-r2'` in the sheets tools write (tools/vocab_inventory.py,
+# tools/sweep/divine_sheet.py) names a localStorage slot, not a credential: two
+# findings of generic-api-key on the first run, both this.
+regexTarget = "line"
+regexes = ['''const KEY='[a-z0-9][a-z0-9.\-]*';''']

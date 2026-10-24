@@ -1,0 +1,25 @@
+{
+ "ref": "Mrk.15.5",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "hoste with an infinitive (so as to amaze): the silence brings about the amazement, a result",
+   "category": "infinitive of result"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self link",
+   "category": "self link"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

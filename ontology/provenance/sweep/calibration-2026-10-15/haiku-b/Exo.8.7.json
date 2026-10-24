@@ -1,0 +1,23 @@
+{"ref": "Exo.8.7",
+ "referents": [
+  {"slot": "w5", "choice": "Exo.8.5#w4", "divine": false, "why": "Second person singular masculine. The speech is Moses' speech to Pharaoh (the Exo.8.5 frame: he said Moses to Pharaoh), so the addressee is Pharaoh, the only masculine singular addressee.", "category": "addressee of the speech"},
+  {"slot": "w9", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive second person singular masculine, in the same speech to Pharaoh; your houses are Pharaoh's houses.", "category": "addressee of the speech"},
+  {"slot": "w13", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive second person singular masculine, in the same speech to Pharaoh; your officials are Pharaoh's officials.", "category": "addressee of the speech"},
+  {"slot": "w17", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive second person singular masculine, in the same speech to Pharaoh; your people are Pharaoh's people.", "category": "addressee of the speech"},
+  {"slot": "cl1s", "choice": "w3", "divine": false, "why": "Third person feminine plural agrees with frogs (w3, feminine plural), the subject of cl0. The frogs remain only in the Nile.", "category": "third person agreeing with the subject of the prior clause"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "The builder id cl4 names no clause of this verse, which has only cl0 and cl1. Read as a clause of an earlier verse it is cross-verse, and then is within-verse only. The sense is not a next event: the departure is the outcome the prayer is to bring about, which the result link below records.", "category": "cross-verse then link"},
+  {"src": "Exo.8.4#cl2", "type": "result", "dst": "cl0", "action": "add", "why": "The command pray to Yahweh (Exo.8.4#cl2) is followed by waw and a third person weqatal, they will depart. The prayer is to bring about the frogs leaving, so cl0 is what the command brings about.", "category": "command and its outcome across verses"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "turn", "action": "add", "members": [{"role": "part", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "Exo.8.5#w2"}, {"role": "addressee", "node": "Exo.8.5#w4"}], "divine": false, "why": "Moses speaking to Pharaoh, with no frame clause in this verse; both clauses continue his speech. If the speech that begins at Exo.8.6#turn1 runs on into this verse, this group should be merged into that turn instead.", "category": "speech continued without a new frame"}
+ ],
+ "none_fit": [
+  {"where": "cl1 against cl0", "what": "A restriction: the frogs depart from them, but remain in the Nile. The text has no but or except, and the but_rather type needs a negated clause before it."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl0 is the effect member of the imperative group Exo.8.4#imp2", "why": "The brief gives that group's id but not its members, so the group is not changed here. The result link above records the relation."},
+  {"what": "Whether the speech begun at Exo.8.6#turn1 runs on into this verse", "why": "There is no frame clause here and no quotation boundary in the brief. g1 is a new turn for these clauses until that is settled."}
+ ]
+}

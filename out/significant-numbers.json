@@ -1,0 +1,1674 @@
+{
+ "_source": "tools/numbers/significant_numbers.py from ontology/numbers/",
+ "numbers": {
+  "number_forty": {
+   "id": "number_forty",
+   "name": "forty",
+   "number": 40,
+   "lead": "Forty also appears as ages, armies and measures. This card gathers the spans of forty days or forty years the text counts, the phrases that repeat, and the places where the text itself sets one forty beside another.",
+   "groups": [
+    {
+     "id": "days_nights",
+     "title": "Forty days and forty nights",
+     "note": "The phrase is used of the flood, Moses' stays on the mountain, Elijah, and (in Matthew) Jesus, and of nothing else."
+    },
+    {
+     "id": "days",
+     "title": "Forty days"
+    },
+    {
+     "id": "years",
+     "title": "Forty years"
+    }
+   ],
+   "occasions": [
+    {
+     "id": "flood",
+     "group": "days_nights",
+     "title": "The flood: the rain and the rising waters",
+     "verses": [
+      "Gen 7:4",
+      "Gen 7:12",
+      "Gen 7:17"
+     ],
+     "events": [
+      {
+       "id": "event_flood_judgment",
+       "title": "Flood judgment",
+       "refs": [
+        "Gen 7:4",
+        "Gen 7:12",
+        "Gen 7:17"
+       ]
+      }
+     ],
+     "quotes": {
+      "Gen 7:4": "For seven days from now I will send rain on the earth for forty days and forty nights, and I will wipe from the face of the earth every living thing I have made.”",
+      "Gen 7:12": "And the rain fell upon the earth for forty days and forty nights.",
+      "Gen 7:17": "For forty days the flood kept coming on the earth, and the waters rose and lifted the ark high above the earth."
+     }
+    },
+    {
+     "id": "moses_first",
+     "group": "days_nights",
+     "title": "Moses on the mountain, receiving the tablets",
+     "verses": [
+      "Exod 24:18",
+      "Deut 9:9",
+      "Deut 9:11"
+     ],
+     "events": [
+      {
+       "id": "event_israel_receives_the_law",
+       "title": "Israel receives the law",
+       "refs": [
+        "Exod 24:18",
+        "Deut 9:9",
+        "Deut 9:11"
+       ]
+      }
+     ],
+     "quotes": {
+      "Exod 24:18": "Moses entered the cloud as he went up on the mountain, and he remained on the mountain forty days and forty nights.",
+      "Deut 9:9": "When I went up on the mountain to receive the tablets of stone, the tablets of the covenant that the LORD made with you, I stayed on the mountain forty days and forty nights. I ate no bread and drank no water.",
+      "Deut 9:11": "And at the end of forty days and forty nights, the LORD gave me the two stone tablets, the tablets of the covenant."
+     }
+    },
+    {
+     "id": "moses_second",
+     "group": "days_nights",
+     "title": "Moses on the mountain again, after the golden calf",
+     "verses": [
+      "Exod 34:28",
+      "Deut 9:18",
+      "Deut 9:25",
+      "Deut 10:10"
+     ],
+     "events": [
+      {
+       "id": "event_israel_receives_the_law",
+       "title": "Israel receives the law",
+       "refs": [
+        "Exod 34:28"
+       ]
+      }
+     ],
+     "note": "Deuteronomy does not say whether the falling down before the LORD (9:18, 9:25) and the second stay on the mountain (10:10) are one forty or two; they are held together here.",
+     "quotes": {
+      "Deut 9:18": "Then I fell down before the LORD for forty days and forty nights, as I had done the first time. I did not eat bread or drink water because of all the sin you had committed in doing what was evil in the sight of the LORD and provoking Him to anger.",
+      "Deut 9:25": "So I fell down before the LORD for forty days and forty nights, because the LORD had said He would destroy you.",
+      "Deut 10:10": "I stayed on the mountain forty days and forty nights, like the first time, and that time the LORD again listened to me and agreed not to destroy you.",
+      "Exod 34:28": "So Moses was there with the LORD forty days and forty nights without eating bread or drinking water. He wrote on the tablets the words of the covenant-the Ten Commandments."
+     }
+    },
+    {
+     "id": "elijah",
+     "group": "days_nights",
+     "title": "Elijah's journey to Horeb",
+     "verses": [
+      "1Kgs 19:8"
+     ],
+     "events": [
+      {
+       "id": "event_elijah_at_horeb",
+       "title": "Elijah at Horeb",
+       "refs": [
+        "1Kgs 19:8"
+       ]
+      }
+     ],
+     "quotes": {
+      "1Kgs 19:8": "So he got up and ate and drank. And strengthened by that food, he walked forty days and forty nights until he reached Horeb, the mountain of God."
+     }
+    },
+    {
+     "id": "jesus",
+     "group": "days_nights",
+     "title": "Jesus in the wilderness",
+     "verses": [
+      "Matt 4:2",
+      "Mark 1:13",
+      "Luke 4:2"
+     ],
+     "events": [
+      {
+       "id": "event_jesus_temptation",
+       "title": "Jesus’ temptation",
+       "refs": [
+        "Matt 4:2",
+        "Mark 1:13",
+        "Luke 4:2"
+       ]
+      }
+     ],
+     "note": "Matthew has the phrase; Mark and Luke say forty days.",
+     "quotes": {
+      "Matt 4:2": "After fasting forty days and forty nights, He was hungry.",
+      "Mark 1:13": "and He was there for forty days, being tempted by Satan. He was with the wild animals, and the angels ministered to Him.",
+      "Luke 4:2": "where for forty days He was tempted by the devil. He ate nothing during those days, and when they had ended, He was hungry."
+     }
+    },
+    {
+     "id": "flood_window",
+     "group": "days",
+     "title": "After the flood: Noah waits, then opens the window",
+     "verses": [
+      "Gen 8:6"
+     ],
+     "events": [
+      {
+       "id": "event_flood_judgment",
+       "title": "Flood judgment",
+       "refs": [
+        "Gen 8:6"
+       ]
+      }
+     ],
+     "note": "These forty days follow the mountaintops' appearing (Gen 8:5); the text does not say whether they are the rain's forty.",
+     "quotes": {
+      "Gen 8:6": "After forty days Noah opened the window he had made in the ark"
+     }
+    },
+    {
+     "id": "jacob",
+     "group": "days",
+     "title": "Jacob's embalming",
+     "verses": [
+      "Gen 50:3"
+     ],
+     "events": [],
+     "quotes": {
+      "Gen 50:3": "taking the forty days required to complete the embalming. And the Egyptians mourned for him seventy days."
+     }
+    },
+    {
+     "id": "spies",
+     "group": "days",
+     "title": "The spies in Canaan",
+     "verses": [
+      "Num 13:25",
+      "Num 14:34"
+     ],
+     "events": [
+      {
+       "id": "event_twelve_spies_sent_",
+       "title": "Twelve spies sent",
+       "refs": [
+        "Num 13:25",
+        "Num 14:34"
+       ]
+      }
+     ],
+     "quotes": {
+      "Num 13:25": "After forty days the men returned from spying out the land,",
+      "Num 14:34": "In keeping with the forty days you spied out the land, you shall bear your guilt forty years-a year for each day-and you will experience My alienation."
+     }
+    },
+    {
+     "id": "goliath",
+     "group": "days",
+     "title": "Goliath's challenge",
+     "verses": [
+      "1Sam 17:16"
+     ],
+     "events": [
+      {
+       "id": "event_david_defeats_goliath",
+       "title": "David defeats Goliath",
+       "refs": [
+        "1Sam 17:16"
+       ]
+      }
+     ],
+     "quotes": {
+      "1Sam 17:16": "For forty days the Philistine came forward every morning and evening to take his stand."
+     }
+    },
+    {
+     "id": "ezekiel",
+     "group": "days",
+     "title": "Ezekiel lying on his right side",
+     "verses": [
+      "Ezek 4:6"
+     ],
+     "events": [],
+     "quotes": {
+      "Ezek 4:6": "When you have completed these days, lie down again, but on your right side, and bear the iniquity of the house of Judah. I have assigned to you 40 days, a day for each year."
+     }
+    },
+    {
+     "id": "nineveh",
+     "group": "days",
+     "title": "Jonah's warning to Nineveh",
+     "verses": [
+      "Jonah 3:4"
+     ],
+     "events": [
+      {
+       "id": "event_nineveh_repents",
+       "title": "Nineveh repents",
+       "refs": [
+        "Jonah 3:4"
+       ]
+      }
+     ],
+     "quotes": {
+      "Jonah 3:4": "On the first day of his journey, Jonah set out into the city and proclaimed, “Forty more days and Nineveh will be overturned!”"
+     }
+    },
+    {
+     "id": "risen",
+     "group": "days",
+     "title": "The risen Jesus appearing to the apostles",
+     "verses": [
+      "Acts 1:3"
+     ],
+     "events": [],
+     "quotes": {
+      "Acts 1:3": "After His suffering, He presented Himself to them with many convincing proofs that He was alive. He appeared to them over a span of forty days and spoke about the kingdom of God."
+     }
+    },
+    {
+     "id": "wilderness",
+     "group": "years",
+     "title": "Israel in the wilderness",
+     "verses": [
+      "Exod 16:35",
+      "Num 14:33",
+      "Num 14:34",
+      "Num 32:13",
+      "Deut 2:7",
+      "Deut 8:2",
+      "Deut 8:4",
+      "Deut 29:5",
+      "Josh 5:6",
+      "Neh 9:21",
+      "Ps 95:10",
+      "Amos 2:10",
+      "Amos 5:25",
+      "Acts 7:36",
+      "Acts 7:42",
+      "Acts 13:18",
+      "Heb 3:9",
+      "Heb 3:17"
+     ],
+     "events": [
+      {
+       "id": "event_manna_given",
+       "title": "Manna given",
+       "refs": [
+        "Exod 16:35"
+       ]
+      },
+      {
+       "id": "event_rebellion_at_kadesh",
+       "title": "Rebellion at Kadesh",
+       "refs": [
+        "Num 14:33",
+        "Num 14:34"
+       ]
+      }
+     ],
+     "note": "Linked only where an event's own telling counts the years: the manna eaten forty years (Exod 16:35) and the forty years pronounced at Kadesh (Num 14:33-34). The rest recount them.",
+     "quotes": {
+      "Exod 16:35": "The Israelites ate manna forty years, until they came to a land where they could settle; they ate manna until they reached the border of Canaan.",
+      "Num 14:33": "Your children will be shepherds in the wilderness for forty years, and they will suffer for your unfaithfulness until the last of your bodies lies in the wilderness.",
+      "Num 14:34": "In keeping with the forty days you spied out the land, you shall bear your guilt forty years-a year for each day-and you will experience My alienation.",
+      "Num 32:13": "The anger of the LORD burned against Israel, and He made them wander in the wilderness forty years, until the whole generation who had done evil in His sight was gone.",
+      "Deut 2:7": "Indeed, the LORD your God has blessed you in all the work of your hands. He has watched over your journey through this vast wilderness. The LORD your God has been with you these forty years, and you have lacked nothing.",
+      "Deut 8:2": "Remember that these forty years the LORD your God led you all the way in the wilderness, so that He might humble you and test you in order to know what was in your heart, whether or not you would keep His commandments.",
+      "Deut 8:4": "Your clothing did not wear out and your feet did not swell during these forty years.",
+      "Deut 29:5": "For forty years I led you in the wilderness, yet your clothes and sandals did not wear out.",
+      "Josh 5:6": "For the Israelites had wandered in the wilderness forty years, until all the nation's men of war who had come out of Egypt had died, since they did not obey the LORD. So the LORD vowed never to let them see the land He had sworn to their fathers to give us, a land flowing with milk and honey.",
+      "Neh 9:21": "For forty years You sustained them in the wilderness, so that they lacked nothing. Their clothes did not wear out and their feet did not swell.",
+      "Ps 95:10": "For forty years I was angry with that generation, and I said, “They are a people whose hearts go astray, and they have not known My ways.”",
+      "Amos 2:10": "And I brought you up from the land of Egypt and led you forty years in the wilderness, that you might take possession of the land of the Amorite.",
+      "Amos 5:25": "Did you bring Me sacrifices and offerings forty years in the wilderness, O house of Israel?",
+      "Acts 7:36": "He led them out and performed wonders and signs in the land of Egypt, at the Red Sea, and for forty years in the wilderness.",
+      "Acts 7:42": "But God turned away from them and gave them over to the worship of the host of heaven, as it is written in the book of the prophets: ‘Did you bring Me sacrifices and offerings forty years in the wilderness, O house of Israel?",
+      "Acts 13:18": "He endured their conduct for about forty years in the wilderness.",
+      "Heb 3:9": "where your fathers tested and tried Me, and for forty years saw My works.",
+      "Heb 3:17": "And with whom was God angry for forty years? Was it not with those who sinned, whose bodies fell in the wilderness?"
+     }
+    },
+    {
+     "id": "midian",
+     "group": "years",
+     "title": "Moses in Midian (in Stephen's telling)",
+     "verses": [
+      "Acts 7:30"
+     ],
+     "events": [],
+     "quotes": {
+      "Acts 7:30": "After forty years had passed, an angel appeared to Moses in the flames of a burning bush in the desert near Mount Sinai."
+     }
+    },
+    {
+     "id": "rest_othniel",
+     "group": "years",
+     "title": "Rest after Othniel",
+     "verses": [
+      "Judg 3:11"
+     ],
+     "events": [
+      {
+       "id": "event_judges_raised_up",
+       "title": "Judges raised up",
+       "refs": [
+        "Judg 3:11"
+       ]
+      }
+     ],
+     "quotes": {
+      "Judg 3:11": "So the land had rest for forty years, until Othniel son of Kenaz died."
+     }
+    },
+    {
+     "id": "rest_deborah",
+     "group": "years",
+     "title": "Rest after Deborah and Barak",
+     "verses": [
+      "Judg 5:31"
+     ],
+     "events": [
+      {
+       "id": "event_deborah_barak_defeat_sisera",
+       "title": "Deborah & Barak defeat Sisera",
+       "refs": [
+        "Judg 5:31"
+       ]
+      }
+     ],
+     "quotes": {
+      "Judg 5:31": "So may all Your enemies perish, O LORD! But may those who love You shine like the sun at its brightest.” And the land had rest for forty years."
+     }
+    },
+    {
+     "id": "rest_gideon",
+     "group": "years",
+     "title": "Rest in the days of Gideon",
+     "verses": [
+      "Judg 8:28"
+     ],
+     "events": [
+      {
+       "id": "event_gideons_victory",
+       "title": "Gideon’s victory",
+       "refs": [
+        "Judg 8:28"
+       ]
+      }
+     ],
+     "quotes": {
+      "Judg 8:28": "In this way Midian was subdued before the Israelites and did not raise its head again. So the land had rest for forty years in the days of Gideon,"
+     }
+    },
+    {
+     "id": "philistines",
+     "group": "years",
+     "title": "Under the Philistines, before Samson's birth",
+     "verses": [
+      "Judg 13:1"
+     ],
+     "events": [],
+     "quotes": {
+      "Judg 13:1": "Again the Israelites did evil in the sight of the LORD, so He delivered them into the hand of the Philistines for forty years."
+     }
+    },
+    {
+     "id": "eli",
+     "group": "years",
+     "title": "Eli judges Israel",
+     "verses": [
+      "1Sam 4:18"
+     ],
+     "events": [],
+     "quotes": {
+      "1Sam 4:18": "As soon as the ark of God was mentioned, Eli fell backward from his chair by the city gate, and being old and heavy, he broke his neck and died. And Eli had judged Israel forty years."
+     }
+    },
+    {
+     "id": "saul",
+     "group": "years",
+     "title": "Saul's rule (in Paul's telling)",
+     "verses": [
+      "Acts 13:21"
+     ],
+     "note": "1 Sam 13:1 numbers Saul's reign differently: the Hebrew there reads 'a year old ... two years', which the Berean gives as thirty and forty-two.",
+     "events": [],
+     "quotes": {
+      "Acts 13:21": "Then the people asked for a king, and God gave them Saul son of Kish, from the tribe of Benjamin, who ruled forty years."
+     }
+    },
+    {
+     "id": "david",
+     "group": "years",
+     "title": "David's reign",
+     "verses": [
+      "2Sam 5:4",
+      "1Kgs 2:11",
+      "1Chr 29:27"
+     ],
+     "events": [],
+     "quotes": {
+      "2Sam 5:4": "David was thirty years old when he became king, and he reigned forty years.",
+      "1Kgs 2:11": "The length of David's reign over Israel was forty years-seven years in Hebron and thirty-three years in Jerusalem.",
+      "1Chr 29:27": "The length of David's reign over Israel was forty years-seven years in Hebron and thirty-three years in Jerusalem."
+     }
+    },
+    {
+     "id": "solomon",
+     "group": "years",
+     "title": "Solomon's reign",
+     "verses": [
+      "1Kgs 11:42",
+      "2Chr 9:30"
+     ],
+     "events": [],
+     "quotes": {
+      "1Kgs 11:42": "Thus the time that Solomon reigned in Jerusalem over all Israel was forty years.",
+      "2Chr 9:30": "Solomon reigned in Jerusalem over all Israel forty years."
+     }
+    },
+    {
+     "id": "joash",
+     "group": "years",
+     "title": "Joash's reign",
+     "verses": [
+      "2Kgs 12:1",
+      "2Chr 24:1"
+     ],
+     "events": [],
+     "quotes": {
+      "2Kgs 12:1": "In the seventh year of Jehu, Joash became king, and he reigned in Jerusalem forty years. His mother's name was Zibiah; she was from Beersheba.",
+      "2Chr 24:1": "Joash was seven years old when he became king, and he reigned in Jerusalem forty years. His mother's name was Zibiah; she was from Beersheba."
+     }
+    },
+    {
+     "id": "egypt",
+     "group": "years",
+     "title": "Egypt left desolate (Ezekiel's prophecy)",
+     "verses": [
+      "Ezek 29:11",
+      "Ezek 29:12",
+      "Ezek 29:13"
+     ],
+     "events": [],
+     "quotes": {
+      "Ezek 29:11": "No foot of man or beast will pass through, and it will be uninhabited for forty years.",
+      "Ezek 29:12": "I will make the land of Egypt a desolation among desolate lands, and her cities will lie desolate for forty years among the ruined cities. And I will disperse the Egyptians among the nations and scatter them throughout the countries.",
+      "Ezek 29:13": "For this is what the Lord GOD says: At the end of forty years I will gather the Egyptians from the nations to which they were scattered."
+     }
+    }
+   ],
+   "phrases": [
+    {
+     "id": "days_nights",
+     "text": "forty days and forty nights",
+     "match": "forty days and forty nights|days and forty nights",
+     "verses": [
+      "Gen 7:4",
+      "Gen 7:12",
+      "Exod 24:18",
+      "Exod 34:28",
+      "Deut 9:9",
+      "Deut 9:11",
+      "Deut 9:18",
+      "Deut 9:25",
+      "Deut 10:10",
+      "1Kgs 19:8",
+      "Matt 4:2"
+     ],
+     "occasions": [
+      "flood",
+      "moses_first",
+      "moses_second",
+      "elijah",
+      "jesus"
+     ]
+    },
+    {
+     "id": "rest",
+     "text": "the land had rest for forty years",
+     "match": "land had rest for forty years",
+     "verses": [
+      "Judg 3:11",
+      "Judg 5:31",
+      "Judg 8:28"
+     ],
+     "occasions": [
+      "rest_othniel",
+      "rest_deborah",
+      "rest_gideon"
+     ]
+    }
+   ],
+   "joins": [
+    {
+     "title": "A year for each day",
+     "occasions": [
+      "spies",
+      "wilderness"
+     ],
+     "a": [
+      "Num 14:34",
+      "In keeping with the forty days you spied out the land, you shall bear your guilt forty years—a year for each day"
+     ]
+    },
+    {
+     "title": "A day for each year",
+     "occasions": [
+      "ezekiel"
+     ],
+     "a": [
+      "Ezek 4:6",
+      "I have assigned to you 40 days, a day for each year"
+     ]
+    },
+    {
+     "title": "Moses' second forty, 'as the first time'",
+     "occasions": [
+      "moses_first",
+      "moses_second"
+     ],
+     "a": [
+      "Deut 9:18",
+      "I fell down before the LORD for forty days and forty nights, as I had done the first time"
+     ],
+     "b": [
+      "Deut 10:10",
+      "I stayed on the mountain forty days and forty nights, like the first time"
+     ]
+    },
+    {
+     "title": "Three forties in Stephen's account of Moses",
+     "occasions": [
+      "midian",
+      "wilderness"
+     ],
+     "a": [
+      "Acts 7:23",
+      "When Moses was forty years old"
+     ],
+     "b": [
+      "Acts 7:30",
+      "After forty years had passed"
+     ],
+     "c": [
+      "Acts 7:36",
+      "for forty years in the wilderness"
+     ]
+    },
+    {
+     "title": "Psalm 95's forty years in Hebrews 3",
+     "occasions": [
+      "wilderness"
+     ],
+     "a": [
+      "Heb 3:17",
+      "And with whom was God angry for forty years?"
+     ],
+     "b": [
+      "Ps 95:10",
+      "For forty years I was angry with that generation"
+     ]
+    },
+    {
+     "title": "Amos's forty years quoted in Acts 7",
+     "occasions": [
+      "wilderness"
+     ],
+     "a": [
+      "Acts 7:42",
+      "as it is written in the book of the prophets: 'Did you bring Me sacrifices and offerings forty years in the wilderness'"
+     ],
+     "b": [
+      "Amos 5:25",
+      "Did you bring Me sacrifices and offerings forty years in the wilderness"
+     ]
+    }
+   ],
+   "set_aside": {
+    "ages": {
+     "why": "an age (Acts 7:23 is shown among Stephen's three forties)",
+     "verses": [
+      "Gen 25:20",
+      "Gen 26:34",
+      "Josh 14:7",
+      "2Sam 2:10",
+      "Acts 4:22",
+      "Acts 7:23"
+     ]
+    },
+    "compound": {
+     "why": "part of a larger number (forty-one, forty-five, forty-six ...)",
+     "verses": [
+      "Gen 5:13",
+      "Gen 47:28",
+      "Lev 25:8",
+      "Josh 14:10",
+      "1Kgs 14:21",
+      "1Kgs 15:10",
+      "2Kgs 14:23",
+      "2Chr 12:13",
+      "2Chr 16:13",
+      "Job 42:16",
+      "John 2:20"
+     ]
+    },
+    "measures": {
+     "why": "a measure, not a span: forty lashes (Paul's 'forty lashes minus one' is not tied by the text to Deuteronomy's limit)",
+     "verses": [
+      "Deut 25:3",
+      "2Cor 11:24"
+     ]
+    },
+    "witnesses_differ": {
+     "why": "left out: 2 Sam 15:7 counts the time to Absalom's request (the Hebrew reads forty, the Berean four, with other ancient witnesses); 2 Chr 22:2 is an age (the Hebrew reads forty-two, the Berean twenty-two)",
+     "verses": [
+      "2Sam 15:7",
+      "2Chr 22:2"
+     ]
+    },
+    "verse_boundary": {
+     "why": "the Greek's 'forty years' opens Heb 3:10; the Berean puts it at the end of 3:9, which is on the card",
+     "verses": [
+      "Heb 3:10"
+     ]
+    }
+   },
+   "counts": {
+    "verses_with_the_number": 103,
+    "other_counts": 31,
+    "occasions": 24,
+    "verses_on_occasions": 56
+   }
+  },
+  "number_twelve": {
+   "id": "number_twelve",
+   "name": "twelve",
+   "number": 12,
+   "lead": "Twelve also counts years, cities, cubits and thousands. This card gathers the sets of twelve the text counts — the tribes, things numbered for the tribes, the Twelve — and the places where the text itself sets one twelve beside another.",
+   "groups": [
+    {
+     "id": "tribes",
+     "title": "The twelve tribes and Jacob's twelve sons"
+    },
+    {
+     "id": "one_each",
+     "title": "Twelve for the tribes"
+    },
+    {
+     "id": "apostles",
+     "title": "The Twelve"
+    },
+    {
+     "id": "other",
+     "title": "Other sets the text counts as twelve",
+     "note": "Listed because the text counts them; the text does not tie these to the tribes or to the Twelve."
+    }
+   ],
+   "occasions": [
+    {
+     "id": "sons",
+     "group": "tribes",
+     "title": "Jacob's twelve sons",
+     "verses": [
+      "Gen 35:22",
+      "Gen 42:13",
+      "Gen 42:32",
+      "Acts 7:8"
+     ],
+     "events": [],
+     "quotes": {
+      "Gen 35:22": "While Israel was living in that region, Reuben went in and slept with his father's concubine Bilhah, and Israel heard about it. Jacob had twelve sons:",
+      "Gen 42:13": "But they answered, “Your servants are twelve brothers, the sons of one man in the land of Canaan. The youngest is now with our father, and one is no more.”",
+      "Gen 42:32": "We are twelve brothers, sons of one father. One is no more, and the youngest is now with our father in the land of Canaan.'",
+      "Acts 7:8": "Then God gave Abraham the covenant of circumcision, and Abraham became the father of Isaac and circumcised him on the eighth day. And Isaac became the father of Jacob, and Jacob of the twelve patriarchs."
+     }
+    },
+    {
+     "id": "tribes",
+     "group": "tribes",
+     "title": "The twelve tribes of Israel",
+     "verses": [
+      "Gen 49:28",
+      "Ezek 47:13",
+      "Acts 26:7",
+      "Jas 1:1"
+     ],
+     "note": "The text counts twelve tribes across lists that differ: Ezekiel gives Joseph two portions (47:13), and Revelation 7 names Levi and Joseph but not Dan or Ephraim.",
+     "events": [],
+     "quotes": {
+      "Gen 49:28": "These are the tribes of Israel, twelve in all, and this was what their father said to them. He blessed them, and he blessed each one with a suitable blessing.",
+      "Ezek 47:13": "This is what the Lord GOD says: “These are the boundaries by which you are to divide the land as an inheritance among the twelve tribes of Israel; Joseph shall receive two portions.",
+      "Acts 26:7": "the promise our twelve tribes are hoping to see fulfilled as they earnestly serve God day and night. It is because of this hope, O king, that I am accused by the Jews.",
+      "Jas 1:1": "James, a servant of God and of the Lord Jesus Christ, To the twelve tribes of the Dispersion: Greetings."
+     }
+    },
+    {
+     "id": "thrones",
+     "group": "tribes",
+     "title": "Thrones, judging the twelve tribes",
+     "verses": [
+      "Matt 19:28",
+      "Luke 22:30"
+     ],
+     "events": [
+      {
+       "id": "event_rich_young_ruler",
+       "title": "Rich young ruler",
+       "refs": [
+        "Matt 19:28"
+       ]
+      }
+     ],
+     "note": "Matthew has twelve thrones; Luke has thrones. Matthew says 'you who have followed Me', Luke 'you who have stood by Me' (22:28); neither says 'the Twelve' here.",
+     "quotes": {
+      "Matt 19:28": "Jesus said to them, “Truly I tell you, in the renewal of all things, when the Son of Man sits on His glorious throne, you who have followed Me will also sit on twelve thrones, judging the twelve tribes of Israel.",
+      "Luke 22:30": "so that you may eat and drink at My table in My kingdom and sit on thrones, judging the twelve tribes of Israel."
+     }
+    },
+    {
+     "id": "sealed",
+     "group": "tribes",
+     "title": "Twelve thousand sealed from each tribe",
+     "verses": [
+      "Rev 7:5",
+      "Rev 7:6",
+      "Rev 7:7",
+      "Rev 7:8"
+     ],
+     "events": [
+      {
+       "id": "event_revelation_judgments",
+       "title": "Revelation judgments",
+       "refs": [
+        "Rev 7:5",
+        "Rev 7:6",
+        "Rev 7:7",
+        "Rev 7:8"
+       ]
+      }
+     ],
+     "note": "The tribes named here are Judah, Reuben, Gad, Asher, Naphtali, Manasseh, Simeon, Levi, Issachar, Zebulun, Joseph and Benjamin; Dan and Ephraim are not named. The text counts twelve tribes across lists that differ.",
+     "quotes": {
+      "Rev 7:5": "From the tribe of Judah 12,000 were sealed, from the tribe of Reuben 12,000, from the tribe of Gad 12,000,",
+      "Rev 7:6": "from the tribe of Asher 12,000, from the tribe of Naphtali 12,000, from the tribe of Manasseh 12,000,",
+      "Rev 7:7": "from the tribe of Simeon 12,000, from the tribe of Levi 12,000, from the tribe of Issachar 12,000,",
+      "Rev 7:8": "from the tribe of Zebulun 12,000, from the tribe of Joseph 12,000, and from the tribe of Benjamin 12,000."
+     }
+    },
+    {
+     "id": "city",
+     "group": "tribes",
+     "title": "The city's twelve gates and twelve foundations",
+     "verses": [
+      "Rev 21:12",
+      "Rev 21:14",
+      "Rev 21:21"
+     ],
+     "events": [
+      {
+       "id": "event_new_creation_consummation",
+       "title": "New creation consummation",
+       "refs": [
+        "Rev 21:12",
+        "Rev 21:14",
+        "Rev 21:21"
+       ]
+      }
+     ],
+     "note": "Rev 21:14 says 'the twelve apostles of the Lamb'; the card places them with the Twelve of the Gospels. The twelve foundation stones are named one by one (21:19-20).",
+     "quotes": {
+      "Rev 21:12": "The city had a great and high wall with twelve gates inscribed with the names of the twelve tribes of Israel, and twelve angels at the gates.",
+      "Rev 21:14": "The wall of the city had twelve foundations bearing the names of the twelve apostles of the Lamb.",
+      "Rev 21:21": "And the twelve gates were twelve pearls, with each gate consisting of a single pearl. The main street of the city was pure gold, as clear as glass."
+     }
+    },
+    {
+     "id": "pillars",
+     "group": "one_each",
+     "title": "Twelve pillars at the mountain",
+     "verses": [
+      "Exod 24:4"
+     ],
+     "events": [
+      {
+       "id": "event_israel_receives_the_law",
+       "title": "Israel receives the law",
+       "refs": [
+        "Exod 24:4"
+       ]
+      }
+     ],
+     "quotes": {
+      "Exod 24:4": "And Moses wrote down all the words of the LORD. Early the next morning he got up and built an altar at the base of the mountain, along with twelve pillars for the twelve tribes of Israel."
+     }
+    },
+    {
+     "id": "breastpiece",
+     "group": "one_each",
+     "title": "The breastpiece's twelve stones",
+     "verses": [
+      "Exod 28:21",
+      "Exod 39:14"
+     ],
+     "events": [
+      {
+       "id": "event_tabernacle_instructions",
+       "title": "Tabernacle instructions",
+       "refs": [
+        "Exod 28:21"
+       ]
+      },
+      {
+       "id": "event_construction_of_the_tabernacle",
+       "title": "Construction of the tabernacle",
+       "refs": [
+        "Exod 39:14"
+       ]
+      }
+     ],
+     "quotes": {
+      "Exod 28:21": "The twelve stones are to correspond to the names of the sons of Israel, each engraved like a seal with the name of one of the twelve tribes.",
+      "Exod 39:14": "The twelve stones corresponded to the names of the sons of Israel. Each stone was engraved like a seal with the name of one of the twelve tribes."
+     }
+    },
+    {
+     "id": "leaders",
+     "group": "one_each",
+     "title": "The twelve leaders and their offerings",
+     "verses": [
+      "Num 1:44",
+      "Num 7:3",
+      "Num 7:84",
+      "Num 7:86",
+      "Num 7:87"
+     ],
+     "events": [
+      {
+       "id": "event_census_of_israel",
+       "title": "Census of Israel",
+       "refs": [
+        "Num 1:44"
+       ]
+      }
+     ],
+     "note": "Each leader brings his tribe's offering on his own day (Num 7:12-83).",
+     "quotes": {
+      "Num 1:44": "These were the men numbered by Moses and Aaron, with the assistance of the twelve leaders of Israel, each one representing his family.",
+      "Num 7:3": "They brought as their offering before the LORD six covered carts and twelve oxen-an ox from each leader and a cart from every two leaders-and presented them before the tabernacle.",
+      "Num 7:84": "So these were the offerings from the leaders of Israel for the dedication of the altar when it was anointed: twelve silver platters, twelve silver bowls, and twelve gold dishes.",
+      "Num 7:86": "The twelve gold dishes filled with incense weighed ten shekels each, according to the sanctuary shekel. The total weight of the gold dishes was a hundred and twenty shekels.",
+      "Num 7:87": "All the livestock for the burnt offering totaled twelve bulls, twelve rams, and twelve male lambs a year old-together with their grain offerings-and twelve male goats for the sin offering."
+     }
+    },
+    {
+     "id": "staffs",
+     "group": "one_each",
+     "title": "Twelve staffs",
+     "verses": [
+      "Num 17:2",
+      "Num 17:6"
+     ],
+     "events": [
+      {
+       "id": "event_aarons_budding_rod",
+       "title": "Aaron’s budding rod",
+       "refs": [
+        "Num 17:2",
+        "Num 17:6"
+       ]
+      }
+     ],
+     "quotes": {
+      "Num 17:2": "“Speak to the Israelites and take from them twelve staffs, one from the leader of each tribe. Write each man's name on his staff,",
+      "Num 17:6": "So Moses spoke to the Israelites, and each of their leaders gave him a staff-one for each of the leaders of their tribes, twelve staffs in all. And Aaron's staff was among them."
+     }
+    },
+    {
+     "id": "midian_war",
+     "group": "one_each",
+     "title": "A thousand from each tribe against Midian",
+     "verses": [
+      "Num 31:5"
+     ],
+     "events": [],
+     "quotes": {
+      "Num 31:5": "So a thousand men were recruited from each tribe of Israel-twelve thousand armed for war."
+     }
+    },
+    {
+     "id": "spies",
+     "group": "one_each",
+     "title": "Twelve men sent to spy out the land",
+     "verses": [
+      "Deut 1:23"
+     ],
+     "events": [],
+     "quotes": {
+      "Deut 1:23": "The plan seemed good to me, so I selected twelve men from among you, one from each tribe."
+     }
+    },
+    {
+     "id": "jordan",
+     "group": "one_each",
+     "title": "Twelve men and twelve stones at the Jordan",
+     "verses": [
+      "Josh 3:12",
+      "Josh 4:2",
+      "Josh 4:3",
+      "Josh 4:4",
+      "Josh 4:8",
+      "Josh 4:9",
+      "Josh 4:20"
+     ],
+     "events": [
+      {
+       "id": "event_crossing_the_jordan",
+       "title": "Crossing the Jordan",
+       "refs": [
+        "Josh 3:12",
+        "Josh 4:2",
+        "Josh 4:3",
+        "Josh 4:4",
+        "Josh 4:8",
+        "Josh 4:9",
+        "Josh 4:20"
+       ]
+      }
+     ],
+     "quotes": {
+      "Josh 3:12": "Now choose twelve men from the tribes of Israel, one from each tribe.",
+      "Josh 4:2": "“Choose twelve men from among the people, one from each tribe,",
+      "Josh 4:3": "and command them: ‘Take up for yourselves twelve stones from the middle of the Jordan where the priests were standing, carry them with you, and set them down in the place where you spend the night.'”",
+      "Josh 4:4": "So Joshua summoned the twelve men he had appointed from the Israelites, one from each tribe,",
+      "Josh 4:8": "Thus the Israelites did as Joshua had commanded them. They took up twelve stones from the middle of the Jordan, one for each tribe of Israel, just as the LORD had told Joshua; and they carried them to the camp, where they set them down.",
+      "Josh 4:9": "Joshua also set up twelve stones in the middle of the Jordan, in the place where the priests who carried the ark of the covenant stood. And the stones are there to this day.",
+      "Josh 4:20": "And there at Gilgal Joshua set up the twelve stones they had taken from the Jordan."
+     }
+    },
+    {
+     "id": "cloak",
+     "group": "one_each",
+     "title": "Ahijah's cloak torn in twelve pieces",
+     "verses": [
+      "1Kgs 11:30"
+     ],
+     "events": [
+      {
+       "id": "event_solomons_wealth_decline",
+       "title": "Solomon’s wealth & decline",
+       "refs": [
+        "1Kgs 11:30"
+       ]
+      }
+     ],
+     "note": "Ten pieces for ten tribes, and one tribe kept 'for the sake of My servant David' (1 Kgs 11:31-32); the text does not say what each piece stands for.",
+     "quotes": {
+      "1Kgs 11:30": "And Ahijah took hold of the new cloak he was wearing, tore it into twelve pieces,"
+     }
+    },
+    {
+     "id": "altar",
+     "group": "one_each",
+     "title": "Elijah's altar of twelve stones",
+     "verses": [
+      "1Kgs 18:31"
+     ],
+     "events": [
+      {
+       "id": "event_elijah_vs_baal",
+       "title": "Elijah vs Baal",
+       "refs": [
+        "1Kgs 18:31"
+       ]
+      }
+     ],
+     "quotes": {
+      "1Kgs 18:31": "And Elijah took twelve stones, one for each tribe of the sons of Jacob, to whom the word of the LORD had come and said, “Israel shall be your name.”"
+     }
+    },
+    {
+     "id": "ezra",
+     "group": "one_each",
+     "title": "Twelve goats and twelve bulls for all Israel",
+     "verses": [
+      "Ezra 6:17",
+      "Ezra 8:35"
+     ],
+     "events": [
+      {
+       "id": "event_temple_completed",
+       "title": "Temple completed",
+       "refs": [
+        "Ezra 6:17"
+       ]
+      },
+      {
+       "id": "event_ezras_return",
+       "title": "Ezra’s return",
+       "refs": [
+        "Ezra 8:35"
+       ]
+      }
+     ],
+     "quotes": {
+      "Ezra 6:17": "For the dedication of the house of God they offered a hundred bulls, two hundred rams, four hundred lambs, and a sin offering for all Israel of twelve male goats, one for each tribe of Israel.",
+      "Ezra 8:35": "Then the exiles who had returned from captivity sacrificed burnt offerings to the God of Israel: 12 bulls for all Israel, 96 rams, 77 lambs, and a sin offering of 12 male goats. All this was a burnt offering to the LORD."
+     }
+    },
+    {
+     "id": "the_twelve",
+     "group": "apostles",
+     "title": "The Twelve",
+     "verses": [
+      "Matt 10:1",
+      "Matt 10:2",
+      "Matt 10:5",
+      "Matt 11:1",
+      "Matt 20:17",
+      "Matt 26:14",
+      "Matt 26:20",
+      "Matt 26:47",
+      "Mark 3:14",
+      "Mark 3:16",
+      "Mark 4:10",
+      "Mark 6:7",
+      "Mark 9:35",
+      "Mark 10:32",
+      "Mark 11:11",
+      "Mark 14:10",
+      "Mark 14:17",
+      "Mark 14:20",
+      "Mark 14:43",
+      "Luke 6:13",
+      "Luke 8:1",
+      "Luke 9:1",
+      "Luke 9:12",
+      "Luke 18:31",
+      "Luke 22:3",
+      "Luke 22:47",
+      "John 6:67",
+      "John 6:70",
+      "John 6:71",
+      "John 20:24",
+      "Acts 6:2",
+      "1Cor 15:5"
+     ],
+     "events": [
+      {
+       "id": "event_calling_of_the_twelve",
+       "title": "Calling of the Twelve",
+       "refs": [
+        "Matt 10:1",
+        "Matt 10:2",
+        "Mark 3:14",
+        "Mark 3:16",
+        "Luke 6:13"
+       ]
+      },
+      {
+       "id": "event_mission_discourse_to_the_twelve",
+       "title": "Mission discourse to the Twelve",
+       "refs": [
+        "Matt 10:5",
+        "Mark 6:7",
+        "Luke 9:1"
+       ]
+      }
+     ],
+     "note": "Linked to the events where the Twelve are chosen and sent; elsewhere they are named as a company. After Judas, Matthias is 'added to the eleven apostles' (Acts 1:26), a verse that does not say twelve.",
+     "quotes": {
+      "Matt 10:1": "And calling His twelve disciples to Him, Jesus gave them authority over unclean spirits, so that they could drive them out and heal every disease and sickness.",
+      "Matt 10:2": "These are the names of the twelve apostles: first Simon, called Peter, and his brother Andrew; James son of Zebedee, and his brother John;",
+      "Matt 10:5": "These twelve Jesus sent out with the following instructions: “Do not go onto the road of the Gentiles or enter any town of the Samaritans.",
+      "Matt 11:1": "After Jesus had finished instructing His twelve disciples, He went on from there to teach and preach in their cities.",
+      "Matt 20:17": "As Jesus was going up to Jerusalem, He took the twelve disciples aside and said,",
+      "Matt 26:14": "Then one of the Twelve, the one called Judas Iscariot, went to the chief priests",
+      "Matt 26:20": "When evening came, Jesus was reclining with the twelve disciples.",
+      "Matt 26:47": "While Jesus was still speaking, Judas, one of the Twelve, arrived, accompanied by a large crowd armed with swords and clubs, sent from the chief priests and elders of the people.",
+      "Mark 3:14": "He appointed twelve of them, whom He designated as apostles, to accompany Him, to be sent out to preach,",
+      "Mark 3:16": "These are the twelve He appointed: Simon (whom He named Peter),",
+      "Mark 4:10": "As soon as Jesus was alone with the Twelve and those around Him, they asked Him about the parable.",
+      "Mark 6:7": "Then Jesus called the Twelve to Him and began to send them out two by two, giving them authority over unclean spirits.",
+      "Mark 9:35": "Sitting down, Jesus called the Twelve and said, “If anyone wants to be first, he must be the last of all and the servant of all.”",
+      "Mark 10:32": "As they were going up the road to Jerusalem, Jesus was walking ahead of them. The disciples were amazed, but those who followed were afraid. Again Jesus took the Twelve aside and began to tell them what was going to happen to Him:",
+      "Mark 11:11": "Then Jesus entered Jerusalem and went into the temple courts. He looked around at everything, but since it was already late, He went out to Bethany with the Twelve.",
+      "Mark 14:10": "Then Judas Iscariot, one of the Twelve, went to the chief priests to betray Jesus to them.",
+      "Mark 14:17": "When evening came, Jesus arrived with the Twelve.",
+      "Mark 14:20": "He answered, “It is one of the Twelve-the one who is dipping his hand into the bowl with Me.",
+      "Mark 14:43": "While Jesus was still speaking, Judas, one of the Twelve, arrived, accompanied by a crowd armed with swords and clubs, sent from the chief priests, scribes, and elders.",
+      "Luke 6:13": "When daylight came, He called His disciples to Him and chose twelve of them, whom He also designated as apostles:",
+      "Luke 8:1": "Soon afterward, Jesus traveled from one town and village to another, preaching and proclaiming the good news of the kingdom of God. The Twelve were with Him,",
+      "Luke 9:1": "Then Jesus called the Twelve together and gave them power and authority over all demons, and power to cure diseases.",
+      "Luke 9:12": "As the day neared its end, the Twelve came to Jesus and said, “Dismiss the crowd so they can go to the surrounding villages and countryside for lodging and provisions. For we are in a desolate place here.”",
+      "Luke 18:31": "Then Jesus took the Twelve aside and said to them, “Look, we are going up to Jerusalem, and everything the prophets have written about the Son of Man will be fulfilled.",
+      "Luke 22:3": "Then Satan entered Judas Iscariot, who was one of the Twelve.",
+      "Luke 22:47": "While He was still speaking, a crowd arrived, led by the man called Judas, one of the Twelve. He approached Jesus to kiss Him.",
+      "John 6:67": "So Jesus asked the Twelve, “Do you want to leave too?”",
+      "John 6:70": "Jesus answered them, “Have I not chosen you, the Twelve? Yet one of you is a devil!”",
+      "John 6:71": "He was speaking about Judas, the son of Simon Iscariot. For although Judas was one of the Twelve, he was later to betray Jesus.",
+      "John 20:24": "Now Thomas called Didymus, one of the Twelve, was not with the disciples when Jesus came.",
+      "Acts 6:2": "So the Twelve summoned all the disciples and said, “It is unacceptable for us to neglect the word of God in order to wait on tables.",
+      "1Cor 15:5": "and that He appeared to Cephas and then to the Twelve."
+     }
+    },
+    {
+     "id": "ishmael",
+     "group": "other",
+     "title": "Ishmael's twelve rulers",
+     "verses": [
+      "Gen 17:20",
+      "Gen 25:16"
+     ],
+     "events": [],
+     "quotes": {
+      "Gen 17:20": "As for Ishmael, I have heard you, and I will surely bless him; I will make him fruitful and multiply him greatly. He will become the father of twelve rulers, and I will make him into a great nation.",
+      "Gen 25:16": "These were the sons of Ishmael, and these were their names by their villages and encampments-twelve princes of their tribes."
+     }
+    },
+    {
+     "id": "elim",
+     "group": "other",
+     "title": "Twelve springs at Elim",
+     "verses": [
+      "Exod 15:27",
+      "Num 33:9"
+     ],
+     "events": [
+      {
+       "id": "event_bitter_water_made_sweet",
+       "title": "Bitter water made sweet",
+       "refs": [
+        "Exod 15:27"
+       ]
+      }
+     ],
+     "quotes": {
+      "Exod 15:27": "Then they came to Elim, where there were twelve springs of water and seventy palm trees, and they camped there by the waters.",
+      "Num 33:9": "They set out from Marah and came to Elim, where there were twelve springs and seventy palm trees, and they camped there."
+     }
+    },
+    {
+     "id": "loaves",
+     "group": "other",
+     "title": "Twelve loaves set before the LORD",
+     "verses": [
+      "Lev 24:5"
+     ],
+     "events": [],
+     "quotes": {
+      "Lev 24:5": "You are also to take fine flour and bake twelve loaves, using two-tenths of an ephah for each loaf,"
+     }
+    },
+    {
+     "id": "governors",
+     "group": "other",
+     "title": "Solomon's twelve governors",
+     "verses": [
+      "1Kgs 4:7"
+     ],
+     "events": [
+      {
+       "id": "event_solomons_wisdom_administration",
+       "title": "Solomon’s wisdom & administration",
+       "refs": [
+        "1Kgs 4:7"
+       ]
+      }
+     ],
+     "quotes": {
+      "1Kgs 4:7": "Solomon had twelve governors over all Israel to provide food for the king and his household. Each one would arrange provisions for one month of the year,"
+     }
+    },
+    {
+     "id": "sea",
+     "group": "other",
+     "title": "The Sea on twelve bronze oxen",
+     "verses": [
+      "1Kgs 7:25",
+      "1Kgs 7:44",
+      "2Chr 4:4",
+      "2Chr 4:15",
+      "Jer 52:20"
+     ],
+     "events": [
+      {
+       "id": "event_temple_built",
+       "title": "Temple built",
+       "refs": [
+        "1Kgs 7:25",
+        "1Kgs 7:44",
+        "2Chr 4:4",
+        "2Chr 4:15"
+       ]
+      }
+     ],
+     "quotes": {
+      "1Kgs 7:25": "The Sea stood on twelve oxen, three facing north, three facing west, three facing south, and three facing east. The Sea rested on them, with all their hindquarters toward the center.",
+      "1Kgs 7:44": "the Sea; the twelve oxen underneath the Sea;",
+      "2Chr 4:4": "The Sea stood on twelve oxen, three facing north, three facing west, three facing south, and three facing east. The Sea rested on them, with all their hindquarters toward the center.",
+      "2Chr 4:15": "the Sea; the twelve oxen underneath the Sea;",
+      "Jer 52:20": "As for the two pillars, the Sea, the twelve bronze bulls under it, and the movable stands that King Solomon had made for the house of the LORD, the weight of the bronze from all these articles was beyond measure."
+     }
+    },
+    {
+     "id": "lions",
+     "group": "other",
+     "title": "Twelve lions on Solomon's steps",
+     "verses": [
+      "1Kgs 10:20",
+      "2Chr 9:19"
+     ],
+     "events": [
+      {
+       "id": "event_solomons_wealth_decline",
+       "title": "Solomon’s wealth & decline",
+       "refs": [
+        "1Kgs 10:20",
+        "2Chr 9:19"
+       ]
+      }
+     ],
+     "quotes": {
+      "1Kgs 10:20": "Twelve lions stood on the six steps, one at either end of each step. Nothing like this had ever been made for any kingdom.",
+      "2Chr 9:19": "Twelve lions stood on the six steps, one at either end of each step. Nothing like this had ever been made for any kingdom."
+     }
+    },
+    {
+     "id": "elisha",
+     "group": "other",
+     "title": "Elisha plowing with twelve teams of oxen",
+     "verses": [
+      "1Kgs 19:19"
+     ],
+     "events": [
+      {
+       "id": "event_elijah_at_horeb",
+       "title": "Elijah at Horeb",
+       "refs": [
+        "1Kgs 19:19"
+       ]
+      }
+     ],
+     "quotes": {
+      "1Kgs 19:19": "So Elijah departed and found Elisha son of Shaphat. He was plowing with twelve teams of oxen, and he was with the twelfth team. Elijah passed by him and threw his cloak around him."
+     }
+    },
+    {
+     "id": "pieces",
+     "group": "other",
+     "title": "The Levite's concubine cut in twelve pieces",
+     "verses": [
+      "Judg 19:29"
+     ],
+     "events": [
+      {
+       "id": "event_levites_concubine_civil_war",
+       "title": "Levite’s concubine & civil war",
+       "refs": [
+        "Judg 19:29"
+       ]
+      }
+     ],
+     "note": "Sent 'throughout the territory of Israel'; the text does not say one for each tribe.",
+     "quotes": {
+      "Judg 19:29": "When he reached his house, he picked up a knife, took hold of his concubine, cut her limb by limb into twelve pieces, and sent her throughout the territory of Israel."
+     }
+    },
+    {
+     "id": "baskets",
+     "group": "other",
+     "title": "Twelve baskets left over",
+     "verses": [
+      "Matt 14:20",
+      "Mark 6:43",
+      "Mark 8:19",
+      "Luke 9:17",
+      "John 6:13"
+     ],
+     "events": [
+      {
+       "id": "event_feeding_of_the_five_thousand",
+       "title": "Feeding of the five thousand",
+       "refs": [
+        "Matt 14:20",
+        "Mark 6:43",
+        "Luke 9:17",
+        "John 6:13"
+       ]
+      }
+     ],
+     "quotes": {
+      "Matt 14:20": "They all ate and were satisfied, and the disciples picked up twelve basketfuls of broken pieces that were left over.",
+      "Mark 6:43": "and the disciples picked up twelve basketfuls of broken pieces of bread and fish.",
+      "Mark 8:19": "When I broke the five loaves for the five thousand, how many basketfuls of broken pieces did you collect?” “Twelve,” they answered.",
+      "Luke 9:17": "They all ate and were satisfied, and the disciples picked up twelve basketfuls of broken pieces that were left over.",
+      "John 6:13": "So they collected them and filled twelve baskets with the pieces of the five barley loaves left over by those who had eaten."
+     }
+    },
+    {
+     "id": "legions",
+     "group": "other",
+     "title": "More than twelve legions of angels, which Jesus says He could ask for",
+     "verses": [
+      "Matt 26:53"
+     ],
+     "events": [
+      {
+       "id": "event_jesus_arrested",
+       "title": "Jesus arrested",
+       "refs": [
+        "Matt 26:53"
+       ]
+      }
+     ],
+     "quotes": {
+      "Matt 26:53": "Are you not aware that I can call on My Father, and He will at once put at My disposal more than twelve legions of angels?"
+     }
+    },
+    {
+     "id": "stars",
+     "group": "other",
+     "title": "A crown of twelve stars",
+     "verses": [
+      "Rev 12:1"
+     ],
+     "events": [
+      {
+       "id": "event_woman_dragon_and_male_child",
+       "title": "Woman, dragon, and male child",
+       "refs": [
+        "Rev 12:1"
+       ]
+      }
+     ],
+     "quotes": {
+      "Rev 12:1": "And a great sign appeared in heaven: a woman clothed in the sun, with the moon under her feet and a crown of twelve stars on her head."
+     }
+    },
+    {
+     "id": "fruit",
+     "group": "other",
+     "title": "The tree of life's twelve kinds of fruit",
+     "verses": [
+      "Rev 22:2"
+     ],
+     "events": [],
+     "quotes": {
+      "Rev 22:2": "down the middle of the main street of the city. On either side of the river stood a tree of life, bearing twelve kinds of fruit and yielding a fresh crop for each month. And the leaves of the tree are for the healing of the nations."
+     }
+    }
+   ],
+   "phrases": [
+    {
+     "id": "one_each",
+     "text": "one from each tribe",
+     "match": "one (man |leader )?(for|from) each tribe|thousand (men )?(were recruited )?from each tribe|thousand from each tribe|one from the leader of each tribe|one staff for the head of each tribe|From each of their fathers' tribes send one man|according to the number of the tribes",
+     "note": "The text counts one from each tribe in places that do not say twelve (Num 1:4; 13:2; 34:18).",
+     "verses": [
+      "Num 1:4",
+      "Num 13:2",
+      "Num 17:2",
+      "Num 17:3",
+      "Num 31:4",
+      "Num 31:5",
+      "Num 31:6",
+      "Num 34:18",
+      "Deut 1:23",
+      "Josh 3:12",
+      "Josh 4:2",
+      "Josh 4:4",
+      "Josh 4:5",
+      "Josh 4:8",
+      "1Kgs 18:31",
+      "Ezra 6:17"
+     ],
+     "occasions": [
+      "staffs",
+      "midian_war",
+      "spies",
+      "jordan",
+      "altar",
+      "ezra"
+     ]
+    }
+   ],
+   "joins": [
+    {
+     "title": "Jacob's sons are the tribes",
+     "occasions": [
+      "sons",
+      "tribes"
+     ],
+     "a": [
+      "Gen 49:28",
+      "These are the tribes of Israel, twelve in all"
+     ]
+    },
+    {
+     "title": "Twelve pillars for the twelve tribes",
+     "occasions": [
+      "pillars"
+     ],
+     "a": [
+      "Exod 24:4",
+      "twelve pillars for the twelve tribes of Israel"
+     ]
+    },
+    {
+     "title": "Twelve stones for the names of the sons of Israel",
+     "occasions": [
+      "breastpiece"
+     ],
+     "a": [
+      "Exod 28:21",
+      "The twelve stones are to correspond to the names of the sons of Israel"
+     ]
+    },
+    {
+     "title": "One from the leader of each tribe",
+     "occasions": [
+      "staffs"
+     ],
+     "a": [
+      "Num 17:2",
+      "twelve staffs, one from the leader of each tribe"
+     ]
+    },
+    {
+     "title": "One from each tribe",
+     "occasions": [
+      "spies",
+      "jordan"
+     ],
+     "a": [
+      "Deut 1:23",
+      "I selected twelve men from among you, one from each tribe"
+     ],
+     "b": [
+      "Josh 4:8",
+      "They took up twelve stones from the middle of the Jordan, one for each tribe of Israel"
+     ]
+    },
+    {
+     "title": "One for each tribe of the sons of Jacob",
+     "occasions": [
+      "altar",
+      "ezra"
+     ],
+     "a": [
+      "1Kgs 18:31",
+      "Elijah took twelve stones, one for each tribe of the sons of Jacob"
+     ],
+     "b": [
+      "Ezra 6:17",
+      "twelve male goats, one for each tribe of Israel"
+     ]
+    },
+    {
+     "title": "Twelve pieces, and ten tribes",
+     "occasions": [
+      "cloak"
+     ],
+     "a": [
+      "1Kgs 11:30",
+      "tore it into twelve pieces"
+     ],
+     "b": [
+      "1Kgs 11:31",
+      "Take ten pieces for yourself ... I will give you ten tribes"
+     ],
+     "note": "The text gives ten pieces for ten tribes, and one tribe kept for David's line (11:32)."
+    },
+    {
+     "title": "The Twelve and the twelve tribes",
+     "occasions": [
+      "thrones",
+      "the_twelve"
+     ],
+     "a": [
+      "Matt 19:28",
+      "you who have followed Me will also sit on twelve thrones, judging the twelve tribes of Israel"
+     ],
+     "b": [
+      "Luke 22:30",
+      "sit on thrones, judging the twelve tribes of Israel"
+     ]
+    },
+    {
+     "title": "The tribes on the gates, the apostles on the foundations",
+     "occasions": [
+      "city",
+      "the_twelve"
+     ],
+     "a": [
+      "Rev 21:12",
+      "twelve gates inscribed with the names of the twelve tribes of Israel"
+     ],
+     "b": [
+      "Rev 21:14",
+      "twelve foundations bearing the names of the twelve apostles of the Lamb"
+     ],
+     "note": "'The twelve apostles of the Lamb' (21:14); the card places them with the Twelve of the Gospels."
+    },
+    {
+     "title": "From all the tribes of Israel",
+     "occasions": [
+      "sealed"
+     ],
+     "a": [
+      "Rev 7:4",
+      "144,000 from all the tribes of Israel"
+     ]
+    },
+    {
+     "title": "Ishmael's twelve, promised and counted",
+     "occasions": [
+      "ishmael"
+     ],
+     "a": [
+      "Gen 17:20",
+      "He will become the father of twelve rulers"
+     ],
+     "b": [
+      "Gen 25:16",
+      "twelve princes of their tribes"
+     ]
+    }
+   ],
+   "set_aside": {
+    "thousands": {
+     "why": "twelve thousand of an army, people or horses, or a measure of 12,000",
+     "verses": [
+      "Josh 8:25",
+      "Judg 21:10",
+      "2Sam 10:6",
+      "2Sam 17:1",
+      "1Kgs 4:26",
+      "1Kgs 10:26",
+      "2Chr 1:14",
+      "2Chr 9:25",
+      "Ps 60:1",
+      "Rev 21:16"
+     ]
+    },
+    "measures": {
+     "why": "a measure in cubits",
+     "verses": [
+      "1Kgs 7:15",
+      "Jer 52:21",
+      "Ezek 40:49",
+      "Ezek 43:16"
+     ]
+    },
+    "years": {
+     "why": "years, months, days or hours, or an age. Jairus's daughter (twelve years old) and the woman who had bled twelve years share one story (Mark 5:21-43; Luke 8:40-56); Jesus was twelve at Passover (Luke 2:42)",
+     "verses": [
+      "Gen 14:4",
+      "1Kgs 16:23",
+      "2Kgs 3:1",
+      "2Kgs 21:1",
+      "2Chr 33:1",
+      "Neh 5:14",
+      "Esth 2:12",
+      "Dan 4:29",
+      "Matt 9:20",
+      "Mark 5:25",
+      "Mark 5:42",
+      "Luke 2:42",
+      "Luke 8:42",
+      "Luke 8:43",
+      "John 11:9",
+      "Acts 24:11"
+     ]
+    },
+    "counts": {
+     "why": "a count of cities, musicians, men or animals",
+     "verses": [
+      "Num 29:17",
+      "Josh 18:24",
+      "Josh 19:15",
+      "Josh 21:7",
+      "Josh 21:40",
+      "2Sam 2:15",
+      "1Chr 6:63",
+      "1Chr 25:9",
+      "1Chr 25:10",
+      "1Chr 25:11",
+      "1Chr 25:12",
+      "1Chr 25:13",
+      "1Chr 25:14",
+      "1Chr 25:15",
+      "1Chr 25:16",
+      "1Chr 25:17",
+      "1Chr 25:18",
+      "1Chr 25:19",
+      "1Chr 25:20",
+      "1Chr 25:21",
+      "1Chr 25:22",
+      "1Chr 25:23",
+      "1Chr 25:24",
+      "1Chr 25:25",
+      "1Chr 25:26",
+      "1Chr 25:27",
+      "1Chr 25:28",
+      "1Chr 25:29",
+      "1Chr 25:30",
+      "1Chr 25:31",
+      "Ezra 8:24",
+      "Acts 19:7"
+     ]
+    }
+   },
+   "counts": {
+    "verses_with_the_number": 157,
+    "other_counts": 0,
+    "occasions": 28,
+    "verses_on_occasions": 95
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{"ref": "Exo.8.15",
+ "referents": [
+  {"slot": "w8", "choice": "none", "divine": false, "why": "The copular pronoun (הִוא, third feminine singular) agrees in gender with its predicate 'finger of God' (אֶצְבַּע, feminine), not with a referent. What 'this' points to is the gnat plague of Exo 8:13-14, which is not among the candidates. The only feminine singular candidate, w6 finger, is the predicate, so choosing it would mistake the predicate for the subject.", "category": "copular pronoun agrees with predicate, not referent"},
+  {"slot": "w17", "choice": "w3", "divine": false, "why": "Masculine plural object of 'listen to them'. The masculine plural human speakers of the verse are the magicians (w3), who are the sender of the speech in cl0; the refusal is to listen to them.", "category": "object pronoun resolves to the speaker just named"},
+  {"slot": "cl3s", "choice": "w5", "divine": false, "why": "Implied subject of the negated clause 'he did not listen'. The one who refuses to listen is Pharaoh (w5), the addressee of the magicians' speech. The builder's w11 (heart) agrees in gender and number, but a heart does not listen; the heart is the thing hardened in cl2, and its owner is the doer.", "category": "implied subject of refusal; agreement choice rejected on sense"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "as", "dst": "cl4", "action": "keep", "why": "'Just as the LORD had said' is a comparison to a saying, so this is the as_said case: the refusal is the fulfilment of the LORD's word. The saying is cl4 in this verse; the earlier word it refers to is not in this context.", "category": "comparison to an earlier saying"},
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "Runs backwards. The speech frame cl0 ('they said') opens the verse and the refusal cl3 follows it. A wayyiqtol continues the narrative line from the clause before it, and cl3 is not the clause before cl0.", "category": "narrative link reversed"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is the content of the magicians' speech, inside cl0's turn, not on the narrative line. The wayyiqtol cl2 ('the heart was strong') continues the nearest clause before it outside a speech, which is cl0.", "category": "narrative link from inside a speech"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "Separate waw (וְלֹא) before a qatal: 'and he did not listen'. A plain and joining the hardening to the refusal, not a then, since the waw is not fused into the verb.", "category": "plain and between clauses"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "The wayyiqtol cl2 (the heart was strong, hardened) follows the speech in the narrative line. Its nearest preceding clause outside a speech is the frame cl0, so the continuation runs from cl0, not from the speech content cl1.", "category": "narrative continuation from speech frame"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "w3"}, {"role": "addressee", "node": "w5"}], "divine": false, "why": "The magicians (w3) speak the words of cl1 to Pharaoh (w5), framed by cl0. The content clause is correctly the part, and the group holds without change.", "category": "speech frame and content"}
+ ],
+ "none_fit": [
+  {"where": "slot w8 ('this', הִוא)", "what": "The referent is the gnat plague of Exo 8:13-14 (the gnats), which is not among the candidates. The candidate list has no entry for the plague or the gnats; a candidate would be needed to record it."}
+ ],
+ "cant_tell": [
+  {"what": "Which earlier saying of the LORD the 'as' link in cl3 points to ('just as the LORD had said', cl4).", "why": "The saying is not in this verse, and the before list starts at Exo 8:10, so the earlier verse and its full id cannot be given from this context. The fulfilment reading is supported by the text; the target is not."}
+ ]
+}

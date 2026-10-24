@@ -1,0 +1,133 @@
+{
+ "ref": "Exo.8.15",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "none",
+   "confidence": "medium",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'this is the finger of God' points at the gnat plague; no candidate in the list names the plague, and the feminine copula agrees with the predicate, not the subject",
+   "category": "demonstrative for an event not among candidates"
+  },
+  {
+   "slot": "w17",
+   "choice": "w3",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "3mp object 'them' is the magicians who spoke to Pharaoh",
+   "category": "object of the speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w5",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "3ms 'he would not listen' is Pharaoh; the heart cannot listen, and the builder's heart is the seat of the will, not its agent",
+   "category": "subject of a refusal"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "as",
+   "dst": "cl4",
+   "action": "keep",
+   "confidence": "high",
+   "why": "ka'asher, just as, with the clause he had said nested in its prepositional role",
+   "category": "comparison to an earlier saying"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl0 is the frame that opens the verse; the then-link runs the wrong way",
+   "category": "then link reversed"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl1 is inside the magicians' speech; a wayyiqtol continues the narrative from the nearest clause outside speech, which is cl0",
+   "category": "narrative line skips speech"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add",
+   "confidence": "high",
+   "why": "wayyiqtol continues the narrative line from the frame of the speech, the nearest clause not inside a speech",
+   "category": "narrative line skips speech"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a will hardened, then the refusal that follows, is result, not a plain and",
+   "category": "hardening and its outcome"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "confidence": "high",
+   "why": "Pharaoh's heart was hardened, and so he would not listen: the refusal is what the hardening brings about",
+   "category": "hardening and its outcome"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "high",
+   "why": "they said introduces the words This is the finger of God",
+   "category": "saying introduces speech"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w3"
+    },
+    {
+     "role": "addressee",
+     "node": "w5"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "the magicians speak the words to Pharaoh; the speech is cl1",
+   "category": "speech turn"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "as the LORD had said (the compared saying in cl4)",
+   "why": "it is an earlier word of the LORD that is not in this passage, so the fulfilment cannot point to a clause here"
+  }
+ ]
+}

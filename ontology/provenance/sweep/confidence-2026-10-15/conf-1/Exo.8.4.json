@@ -1,0 +1,242 @@
+{
+ "ref": "Exo.8.4",
+ "referents": [
+  {
+   "slot": "w18",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'from me' is in Pharaoh's own words, so 'me' is the speaker, Pharaoh. The builder's cl1s is a slot, not a candidate.",
+   "category": "first person inside a speaker's own words"
+  },
+  {
+   "slot": "w22",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'my people' in Pharaoh's words is Pharaoh's own people.",
+   "category": "first person inside a speaker's own words"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'he said' has Pharaoh as its only subject; the speech begins with it.",
+   "category": "implied subject of a narrative clause"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "c3",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "second masculine plural 'pray' is addressed to Moses and Aaron, summoned together in cl0.",
+   "category": "plural address to two named people"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w12",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "'that he may remove the frogs' is the request in the prayer, and the prayer is to the LORD named in cl2.",
+   "category": "implied subject of a jussive request"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w2",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "the cohortative 'I will let go' is Pharaoh's promise in his own speech.",
+   "category": "first person inside a speaker's own words"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w27",
+   "confidence": "medium",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'they may sacrifice' is the people let go; 'people' (w27) is the only candidate for 'they', a collective noun taking plural agreement.",
+   "category": "collective noun with plural agreement"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "'then' runs forward; 'summoned' comes before 'said', so the builder link is backwards.",
+   "category": "then reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "high",
+   "why": "'summoned ... and said': the narrative line runs from the summons to the speech.",
+   "category": "then reversed"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "confidence": "high",
+   "why": "'said' introduces Pharaoh's words, whose first clause is the command 'pray to the LORD'.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "confidence": "high",
+   "why": "the jussive 'that he may remove' is in the third person against a second person command: it is the purpose of the prayer.",
+   "category": "command with purpose clause"
+  },
+  {
+   "src": "cl2",
+   "type": "purpose",
+   "dst": "cl3",
+   "action": "add",
+   "confidence": "high",
+   "why": "'pray to the LORD to take the frogs away' has the removal as its aim.",
+   "category": "command with purpose clause"
+  },
+  {
+   "src": "cl3",
+   "type": "and",
+   "dst": "cl4",
+   "action": "keep",
+   "confidence": "medium",
+   "why": "'and then I will let go' is a plain waw continuing Pharaoh's speech; a cohortative after a jussive is a promise, not a purpose.",
+   "category": "promise after request"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "remove",
+   "confidence": "medium",
+   "why": "'let the people go, that they may sacrifice' names what the release is for, so the connective is a purpose.",
+   "category": "release with purpose clause"
+  },
+  {
+   "src": "cl4",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "add",
+   "confidence": "medium",
+   "why": "the release is for the sacrifice, stated by 'that' with a jussive in a different person. The clause is a promise rather than a command, so medium.",
+   "category": "release with purpose clause"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "c3"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "Pharaoh speaks to Moses and Aaron. The builder's sender cl1s is a slot, not a candidate; the sender is Pharaoh (w2) and the addressee the pair (c3), which the builder left out.",
+   "category": "speaker and addressee of a quoted speech"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "aim",
+     "node": "cl3"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "one command, 'pray', with the jussive as its aim.",
+   "category": "command with aim"
+  },
+  {
+   "id": "imp3",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "the jussive 'that he may remove' is the aim of the prayer, not a second command; the cohortative after it is a promise.",
+   "category": "group over a non-command"
+  },
+  {
+   "id": "imp4",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    }
+   ],
+   "confidence": "medium",
+   "divine": false,
+   "why": "the cohortative 'I will let go' is Pharaoh's promise, not a command; its link to the purpose clause is recorded as a purpose link.",
+   "category": "group over a promise"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

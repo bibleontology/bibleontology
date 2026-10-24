@@ -1,0 +1,173 @@
+{
+ "ref": "Exo.8.5",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w2",
+   "divine": false,
+   "why": "'me' in Moses' own speech (the imperative 'honor yourself over me'): the speaker is Moses",
+   "category": "first person in a speech",
+   "votes": 3
+  },
+  {
+   "slot": "w12",
+   "choice": "w4",
+   "divine": false,
+   "why": "second masculine singular 'you' in Moses' speech; the one spoken to is Pharaoh",
+   "category": "second person in a speech",
+   "votes": 3
+  },
+  {
+   "slot": "w16",
+   "choice": "w4",
+   "divine": false,
+   "why": "possessive 'your' with officials: the addressee of the speech, Pharaoh",
+   "category": "possessive second person",
+   "votes": 3
+  },
+  {
+   "slot": "w20",
+   "choice": "w4",
+   "divine": false,
+   "why": "possessive 'your' with people: Pharaoh",
+   "category": "possessive second person",
+   "votes": 3
+  },
+  {
+   "slot": "w26",
+   "choice": "w4",
+   "divine": false,
+   "why": "'from you' in Moses' speech: Pharaoh",
+   "category": "second person in a speech",
+   "votes": 3
+  },
+  {
+   "slot": "w30",
+   "choice": "w4",
+   "divine": false,
+   "why": "possessive 'your' with houses: Pharaoh",
+   "category": "possessive second person",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "the implied 'you' of the imperative is the person spoken to, Pharaoh (second masculine singular)",
+   "category": "implied subject of an imperative",
+   "votes": 3
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w2",
+   "divine": false,
+   "why": "first common singular 'I will pray' in Moses' question: Moses",
+   "category": "first person in a speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w24",
+   "divine": false,
+   "why": "feminine plural 'they will remain' agrees with the frogs, the things removed from Pharaoh and left in the river",
+   "category": "third person plural, agreeing",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "purpose",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "the infinitive gives what the praying asks for; the purpose form excludes a clause of saying or asking where the infinitive is what is said, and prayer to God is such a case",
+   "category": "prayer content read as the request",
+   "votes": 2
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "what Moses prays for is what is said: the infinitive is the content of the request (R1)",
+   "category": "prayer content read as the request",
+   "votes": 2
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Moses said: the imperative clause is said content (R1)",
+   "category": "speech content",
+   "votes": 3
+  },
+  {
+   "src": "cl5",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl5 is not a clause of this verse (it has cl0 to cl4); the builder link runs from the previous verse. Then is within a verse only; the change of speaker from Pharaoh to Moses is the episode rung, not a then link",
+   "category": "cross-verse then",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "one turn of Moses to Pharaoh; sender and addressee are right",
+   "category": "speech turn",
+   "votes": 3
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl3, cl4",
+   "what": "an exception marked by רַק ('only'): the frogs are removed except those that remain in the Nile. No link type covers it: but_rather takes כִּי אִם and unless takes לוּלֵא"
+  },
+  {
+   "where": "cl4, 'only in the River they will remain', inside Moses's question",
+   "what": "a restriction on what the removal covers (the frogs removed except those that stay in the Nile). No link type carries an exception to a purpose clause: 'unless' is a condition, and 'but_rather' needs a negative clause with כִּי אִם."
+  },
+  {
+   "where": "cl4 against cl3",
+   "what": "'only in the Nile they will remain' is an exception to the removal ('except for those in the Nile'). elaborates gives its detail, but no link type states an exception to a request."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether the infinitive cl3 is the content of the prayer (as recorded) or its purpose",
+   "why": "prayer is speech to God and the purpose form excludes what is said; a reader may still take it as the purpose of praying"
+  }
+ ],
+ "voted": 3
+}

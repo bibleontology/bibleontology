@@ -1,0 +1,37 @@
+{
+ "ref": "Mrk.15.10",
+ "referents": [
+  {
+   "slot": "w6",
+   "choice": "Mrk.15.5#w2",
+   "divine": true
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Mrk.15.9#w2",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "Mrk.15.9#cl2",
+   "type": "because",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

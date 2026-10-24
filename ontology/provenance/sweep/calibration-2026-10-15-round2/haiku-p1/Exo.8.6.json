@@ -1,0 +1,176 @@
+{
+ "ref": "Exo.8.6",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "wayyiqtol 'he said' answering: Pharaoh gives the reply 'Tomorrow'",
+   "category": "speaker of a reply"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Exo.8.5#w2",
+   "divine": false,
+   "why": "wayyiqtol 'he said' answering Pharaoh: Moses replies",
+   "category": "speaker of a reply"
+  },
+  {
+   "slot": "w8",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "'your word' (second masculine singular possessive) is Pharaoh's word",
+   "category": "possessive second person in a speech"
+  },
+  {
+   "slot": "w16",
+   "choice": "none",
+   "divine": false,
+   "why": "'our God' is first person plural: Moses speaking for himself and the Israelites; no candidate is Moses with the people, and Moses alone is singular",
+   "category": "first person plural, no composite candidate"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "'you may know' (second masculine singular) inside Moses' reply: the addressee, Pharaoh",
+   "category": "second person in a speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "that",
+   "dst": "cl5",
+   "action": "keep",
+   "why": "that there is none like the LORD is what is to be known, after the verb of knowing",
+   "category": "object of knowing"
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then runs forward on the narrative line; cl4 is inside Moses' speech and comes after cl0, so the link runs the wrong way",
+   "category": "reversed then"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "cl1 is inside Pharaoh's speech, not the narrative line; the next event on the line is Moses' reply, which follows the frame cl0",
+   "category": "then from inside a speech"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "so that you may know (lemaan plus yiqtol) is what Moses' agreement is for",
+   "category": "purpose clause"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Pharaoh said: Tomorrow (R1)",
+   "category": "speech content"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add",
+   "why": "the narrative line runs from the frame cl0 to Moses' wayyiqtol reply",
+   "category": "narrative then"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "Moses said: according to your word (R1)",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add",
+   "why": "Moses said: so that you may know that there is none like the LORD (R1)",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "Exo.8.5#w4"
+    },
+    {
+     "role": "addressee",
+     "node": "Exo.8.5#w2"
+    }
+   ],
+   "divine": false,
+   "why": "the sender was the pronoun slot cl0s; a turn's sender is a candidate, so Pharaoh (Exo.8.5#w4). The addressee, Moses, was missing",
+   "category": "turn sender and addressee"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "Exo.8.5#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Exo.8.5#w4"
+    }
+   ],
+   "divine": false,
+   "why": "the sender was the pronoun slot cl2s; it is Moses (Exo.8.5#w2). The addressee, Pharaoh, was missing",
+   "category": "turn sender and addressee"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl1",
+   "what": "an answer across verses: 'Tomorrow' answers Moses' question 'when shall I pray' (Exo.8.5 cl2). No link type for an answer"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "cl3 (according to your word) has no verb: whether it is an 'as' link (a request declared fulfilled by a word) or plain agreement",
+   "why": "as takes a clause nested in a prepositional role; this is an elliptical phrase, and the speech does not say a request was carried out"
+  }
+ ]
+}

@@ -1,0 +1,208 @@
+# Things that should be true of the graph, and the point at which they should
+# become true.
+#
+# The obvious way to test a graph is to finish it and then look. That is wrong
+# here for a reason Doug named on 2026-08-29: **we should not need to wait for
+# the end of Revelation to find out that Genesis went in badly.** Most
+# expectations depend on a handful of books, and the moment those books are in
+# is the moment the expectation is due.
+#
+# So each entry names the books it waits on. A run of the suite reports three
+# groups: DUE and passing, DUE and failing, and NOT YET -- still waiting on a
+# book. Only the middle group is a problem, and it is a problem the day the
+# last book it needs lands, not months later.
+#
+# A failure is a fault in the PROCESS, not a record to hand-edit. The point of
+# knowing early is that there is still time to fix the thing that produced it.
+#
+# checks available:
+#   distinct        these ids must all exist and be different nodes
+#   one_kind        this node's `signifies` targets must all be the same type
+#   exists          this id must exist
+#   lemma_is        this node must carry this lemma (base code, suffix ignored)
+#   min_edges       this node must have at least N relations
+#   pattern_has     this pattern must have at least N instance_of edges
+
+expectations:
+
+  - name: seed is not one word
+    after: [Gen, Luke, Gal]
+    why: >
+      Four original words stand behind the English "seed" -- sperma at
+      Gal 3:16 ("thy seed, which is Christ"), sporos at Luke 8:11 ("the seed
+      is the word of God"), Hebrew zera for offspring at Gen 15:5, and kokkos
+      for the mustard grain. One node absorbed all four and was keyed to both
+      a person and a text, which is how it was found.
+    check: one_kind
+    node: image_seed
+
+  - name: the vine of Israel and the true vine
+    after: [Ps, John]
+    why: >
+      Ps 80:8 brings a vine out of Egypt and means Israel; John 15:1 says "I
+      am the true vine". Hebrew gephen and Greek ampelos, and John's "true"
+      implies he is distinguishing himself from the earlier one rather than
+      claiming to be it.
+    check: one_kind
+    node: image_vine
+
+  - name: wisdom and understanding stay apart
+    after: [Prov]
+    why: >
+      H2451 chokmah and H0998 binah, set side by side in Prov 1:2. The graph
+      held understanding as an alias of wisdom until 2026-08-29. This is a
+      regression guard on a mistake already made once.
+    check: distinct
+    nodes: [wisdom, understanding]
+
+  - name: righteousness and judgment stay apart
+    after: [Prov]
+    why: >
+      Prov 1:3 names justice, judgment and equity in one breath -- H6664
+      tsedeq, H4941 mishpat, H4339 meshar. KJV "justice" is tsedeq, which the
+      graph already holds as righteousness, so the correction is not a new
+      node but a redirection.
+    check: distinct
+    nodes: [righteousness, judgment]
+
+  - name: the fear of the LORD keeps its own node
+    after: [Prov, Ps, Job, Isa]
+    why: >
+      Thirty verses define it nine different ways and none of them is said of
+      being afraid. Held apart from `fear` on the evidence, and the node an
+      outside reader called the graph's root.
+    check: distinct
+    nodes: [the_fear_of_the_lord, fear]
+
+  - name: the fear of the LORD is well connected
+    after: [Prov, Ps, Job, Isa]
+    why: >
+      The prediction recorded on 2026-08-27, written to be falsifiable: if the
+      batch work shores that node up without anyone steering it there, the
+      farm works. It had five edges by hand on the day it was raised.
+    check: min_edges
+    node: the_fear_of_the_lord
+    n: 12
+
+  - name: Genesis knows what it is made of
+    after: [Gen]
+    why: >
+      Six verses of Genesis 1 pronounce the same verdict and the vocabulary
+      could not hold it until `assessed_as` was widened to accept a being.
+      If Genesis went in cleanly, God assessing his own work is in the graph.
+    check: min_edges
+    node: god
+    n: 55
+
+  - name: offspring is a Genesis word
+    after: [Gen]
+    why: >
+      H2233 zera runs through the whole book -- the seed of the woman, the
+      seed of Abraham, the seed as the stars. Seeded before the run precisely
+      so the worker would have somewhere to put it.
+    check: lemma_is
+    node: offspring
+    lemma: H2233
+
+  - name: the regnal formula is one pattern, not seventy-one nodes
+    after: [1Kgs, 2Kgs, 2Chr]
+    why: >
+      "Did evil in the sight of the LORD" appears in 71 verses. Those are 71
+      reigns and one form. Same words, different events -- which is the
+      narrative rule -- so they belong under a pattern rather than merged.
+    check: pattern_has
+    node: did_evil_in_the_sight_of_the_lord
+    n: 20
+
+  - name: Melchizedek survives three books
+    after: [Gen, Ps, Heb]
+    why: >
+      Named in Gen 14, invoked in Ps 110:4, and argued from for a whole
+      chapter of Hebrews. A figure carried across a thousand years by two
+      later writers, and a test of whether back-references land on the
+      existing node rather than minting new ones.
+    check: min_edges
+    node: melchizedek
+    n: 6
+
+  - name: the idols never act
+    after: [Judg, 1Kgs, 2Kgs]
+    why: >
+      Doug, 2026-08-29: "all of these are symbols of a being as opposed to a
+      being. They are always passive and never act." That is a claim about the
+      corpus and it is checkable -- Baal, Molech, Dagon, Ashtoreth and Chemosh
+      should never appear as the SOURCE of an action. It is what Carmel argues
+      by demonstration: "there was no voice, nor any that answered, nor any
+      that regarded" (1Kgs 18:26). Dagon is the nearest exception and proves
+      it -- in 1Sam 5 he falls before the ark, which is being acted upon.
+    check: passive
+    nodes: [baal_god, molech, dagon, ashtoreth, chemosh]
+
+  - name: Baal the god exists and is not a man
+    after: [Judg, 1Kgs]
+    why: >
+      Today the graph's only `baal` is Baal son of Reaia from a Reubenite
+      genealogy (1Chr 5:5) -- a parentage-only roster entry, which is one of
+      the 733 records deliberately hidden from every prompt. So the god of
+      Carmel is absent AND the name resolves to someone a reader was not
+      looking for. Two nodes, distinguished.
+    check: distinct
+    nodes: [baal, baal_god]
+
+  # --- derived from batches held out of the graph on 2026-08-31 ------------
+  # `tests/fixtures/hand-authored/` holds two batches that were written by
+  # hand rather than extracted. They were removed because the graph cannot
+  # tell a person's reading from the process's, and because the vocabulary had
+  # begun widening to admit them. What they asserted becomes an expectation
+  # the process has to earn.
+
+  - name: righteousness counted to Abraham is one claim, found not written
+    after: [Gen, Rom, Gal]
+    why: >
+      "Abraham believed God, and it was credited to him as righteousness"
+      is stated at Gen 15:6 and quoted back at Rom 4:3 and Gal 3:6 -- the
+      corpus citing itself across a testament, which is the strongest kind of
+      link available. A hand-written batch recorded it and was held out on
+      2026-08-31; if the extraction cannot reach it from three explicit
+      verses, the fault is in the process and this is where that shows.
+    check: min_edges
+    node: counted_for_righteousness
+    min: 3
+
+  - name: faith in Hebrews 11 is reachable
+    after: [Heb]
+    why: >
+      Hebrews 11 defines faith in its first verse and then spends the chapter
+      giving instances of it. A hand-written batch linked Abraham's going out
+      (Heb 11:8) to that definition and marked the link `implied`, because
+      Hebrews does not say the second is an instance of the first -- the
+      chapter is built so that it does not have to. That inference is exactly
+      what the process should be able to make or decline on its own.
+    check: exists
+    node: faith_is_the_assurance_of_what_we_hope_for
+
+  - name: Peter is not Satan
+    after: [Matt]
+    why: >
+      Doug's test for whether the extraction has understood symbolism at all:
+      "Get thee behind me, Satan" (Matt 16:23) is a rebuke, and nothing in the
+      sentence marks it as figurative. An extractor reading the copula as
+      predication produces `peter -titled-> the_devil`, which validates, cites
+      correctly, and is nonsense. The verse is a good test precisely because it
+      is unmarked -- Matt 13's parables announce themselves and this does not.
+    check: distinct
+    nodes: [peter, the_devil]
+
+  - name: the psalmist speaks, in praise and in lament alike
+    after: [Ps]
+    why: >
+      Doug, 2026-09-01: "praises don't get special treatment because I like
+      them more." Measured before the Psalms were extracted, Job carried 838
+      attributed speech nodes and the Psalms carried 3 of 83 relations, all of
+      them praise -- because Job's speeches are marked and a psalm's are not,
+      so the absence of a marker let the psalmist's claims read as the graph's
+      own. A psalm has one speaker by its form. If this check ever passes for
+      Psalm 23 and fails for Psalm 88, the extraction is encoding a preference.
+    check: min_edges
+    node: the_psalmist
+    min: 20

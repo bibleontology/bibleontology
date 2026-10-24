@@ -1,0 +1,54 @@
+{
+ "ref": "Mrk.15.6",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'to them' (autois), masculine plural: the people for whom the release was made. No candidate in this verse is the people; the crowd first appears in 15:8.",
+   "category": "recipient not among candidates"
+  },
+  {
+   "slot": "w7",
+   "choice": "w6",
+   "divine": false,
+   "why": "'whom' (hon), masculine singular relative, agrees with 'prisoner' in the noun phrase it modifies.",
+   "category": "relative pronoun to its noun"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Mrk.15.5#w9",
+   "divine": false,
+   "why": "'he used to release' has Pilate as subject; the verse names Pilate's custom. Mrk.15.5#w9 is Pilate, the masculine singular nearest.",
+   "category": "implied subject from named custom"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false,
+   "why": "'they requested': the plural requesters are the people. No candidate in this verse or the verses before is the people.",
+   "category": "requesters not among candidates"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link: a clause cannot follow itself.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The relative clause whom they requested sits inside the noun phrase 'one prisoner', the object of cl0. The within role carries it.",
+   "category": "relative clause inside noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

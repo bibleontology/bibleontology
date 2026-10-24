@@ -1,0 +1,1201 @@
+<title>Fruit of the Spirit Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one study, nine cards in one template; a sticky study bar carries the reader from card to card */
+:root{
+  --paper:#F3F5F8; --surface:#FFFFFF; --ink:#141F2C; --muted:#5C6A7B;
+  --rule:#D9E0E8; --ochre:#A96A1E; --ochre-soft:#F5EADB; --slate:#356A8C; --slate-soft:#E6EEF4;
+  --t1:#356A8C; --t2:#A96A1E; --t3:#5C6A7B;
+  --serif:Spectral, Georgia, "Times New Roman", serif; --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0F151D; --surface:#18202B; --ink:#E7ECF2; --muted:#93A2B3;
+  --rule:#2A3542; --ochre:#DFA759; --ochre-soft:#2C2317; --slate:#79AECD; --slate-soft:#152430;
+  --t1:#79AECD; --t2:#DFA759; --t3:#93A2B3; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --paper:#0F151D; --surface:#18202B; --ink:#E7ECF2; --muted:#93A2B3;
+  --rule:#2A3542; --ochre:#DFA759; --ochre-soft:#2C2317; --slate:#79AECD; --slate-soft:#152430;
+  --t1:#79AECD; --t2:#DFA759; --t3:#93A2B3; color-scheme:dark }
+body{background:var(--paper); color:var(--ink); font-family:var(--serif); font-size:17px; line-height:1.6}
+.wrap{max-width:820px; margin:0 auto; padding-inline:16px; padding-block:16px 64px}
+.banner{font-family:var(--mono); font-size:12px; color:var(--muted); border:1px dashed var(--rule); border-radius:6px; padding:8px 12px; margin:0 0 12px}
+.study{position:sticky; top:env(safe-area-inset-top, 0px); z-index:2; background:var(--paper); padding:8px 0 10px; border-bottom:1px solid var(--rule)}
+.study .t{font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 6px}
+.fruits{display:flex; flex-wrap:wrap; gap:6px}
+.fruits button{font:inherit; font-size:15px; padding:3px 11px; border-radius:14px; border:1px solid var(--rule); background:var(--surface); color:var(--ink); cursor:pointer; display:inline-flex; align-items:center; gap:6px}
+.fruits button[aria-pressed="true"]{background:var(--ink); color:var(--surface); border-color:var(--ink)}
+.dot{width:8px; height:8px; border-radius:50%; display:inline-block}
+.d1{background:var(--t1)} .d2{background:var(--t2)} .d3{background:var(--t3)}
+.legend{font-size:13px; color:var(--muted); margin:6px 0 0; display:flex; flex-wrap:wrap; gap:4px 14px}
+button:focus-visible{outline:2px solid var(--slate); outline-offset:2px}
+.kind{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ochre); margin:16px 0 0}
+h1{font-size:34px; line-height:1.15; margin:4px 0 10px; font-weight:600; text-wrap:balance}
+.lead{max-width:64ch; margin:0 0 10px}
+.h2{font-size:21px; margin:24px 0 8px}
+.eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.words{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:8px}
+.word{border:1px solid var(--rule); border-radius:8px; background:var(--surface); padding:8px 10px}
+.word.add{border-style:dashed; border-color:var(--ochre)}
+.word .l{font-size:20px} .word .tr{color:var(--ochre); font-style:italic; font-size:16px} .word .m{font-size:13px; color:var(--muted)}
+.chips{display:flex; flex-wrap:wrap; gap:6px}
+.chip{padding:3px 10px; border:1px solid var(--rule); border-radius:12px; background:var(--surface); color:var(--slate); font-size:14px}
+.chip b{color:var(--ink); font-weight:600}
+.none{font-size:14px; color:var(--muted); font-style:italic}
+.q{margin:6px 0; padding-left:10px; border-left:3px solid var(--ochre); max-width:62ch}
+.q .r{font-family:var(--mono); font-size:12px; color:var(--slate); margin-left:6px; white-space:nowrap}
+.card{border:1px solid var(--rule); border-radius:8px; background:var(--surface); padding:12px 14px; margin:0 0 10px}
+.card .n{font-size:19px; margin:0 0 4px; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:baseline}
+.card .c{font-family:var(--mono); font-size:12px; color:var(--muted)}
+.check{border:1px solid var(--rule); border-left:3px solid var(--t2); border-radius:6px; background:var(--surface); padding:10px 14px; margin:20px 0 0}
+.check ul{margin:6px 0 0; padding-left:20px} .check li{font-size:15px; margin:0 0 4px}
+.hubnote{border:1px solid var(--t1); border-radius:8px; padding:10px 14px; margin:20px 0 0; color:var(--t1); font-size:15px}
+.nav{display:flex; justify-content:space-between; gap:10px; margin:26px 0 0}
+.nav button{font:inherit; font-size:15px; padding:6px 12px; border-radius:6px; border:1px solid var(--rule); background:var(--surface); color:var(--slate); cursor:pointer}
+.nav button:disabled{opacity:.4; cursor:default}
+</style>
+
+<div class="wrap">
+  <div class="banner">A mockup for review, 2026-10-09: the nine fruit of the Spirit as one study, every card in the same template, filled by rule from the site's data. Not live.</div>
+  <div class="study">
+    <p class="t">A study · the fruit of the Spirit · Galatians 5:22–23</p>
+    <div class="fruits" id="fruits"></div>
+    <div class="legend"><span><span class="dot d1"></span> tier 1, a hub</span><span><span class="dot d2"></span> tier 2, the graph checked</span><span><span class="dot d3"></span> tier 3, the face-lift</span></div>
+  </div>
+  <main id="page"></main>
+</div>
+
+<script id="data" type="application/json">{
+ "members": [
+  "love",
+  "joy",
+  "peace",
+  "patience",
+  "kindness",
+  "goodness",
+  "faithfulness",
+  "gentleness",
+  "self-control"
+ ],
+ "cards": [
+  {
+   "id": "love",
+   "label": "love",
+   "name": "love",
+   "tier": 1,
+   "intro": [
+    "\"But the greatest of these is love\" (1 Cor 13:13): the text ranking its own terms. And of God himself, \"God is love\" (1 John 4:8).",
+    "Older English translations say \"charity\" through 1 Corinthians 13 and \"love\" elsewhere, for the same Greek word, ἀγάπη."
+   ],
+   "words": [
+    {
+     "lemma": "אהב",
+     "translit": "ʾōhēḇ",
+     "gloss": "love",
+     "lang": "Hebrew",
+     "uses": 215,
+     "pos": "verb"
+    },
+    {
+     "lemma": "ἀγαπάω",
+     "translit": null,
+     "gloss": "to love",
+     "lang": "Greek",
+     "uses": 143,
+     "pos": "verb"
+    },
+    {
+     "lemma": "ἀγάπη",
+     "translit": null,
+     "gloss": "love",
+     "lang": "Greek",
+     "uses": 116,
+     "pos": "noun"
+    },
+    {
+     "lemma": "אַהֲבָה",
+     "translit": "ʾahăḇāh",
+     "gloss": "love",
+     "lang": "Hebrew",
+     "uses": 34,
+     "pos": "noun"
+    }
+   ],
+   "forms": [
+    {
+     "form": "verb",
+     "n": 310,
+     "eg": [
+      {
+       "ref": "1 Kings 10:9",
+       "text": "Blessed be the LORD your God, who has delighted in you to set you on the throne of Israel. Because of the LORD's eternal love for Israel, He has made you king to carry out justice and righteousness.”",
+       "b": "1Kgs"
+      },
+      {
+       "ref": "John 10:17",
+       "text": "The reason the Father loves Me is that I lay down My life in order to take it up again.",
+       "b": "John"
+      },
+      {
+       "ref": "1 Corinthians 2:9",
+       "text": "Rather, as it is written: “No eye has seen, no ear has heard, no heart has imagined, what God has prepared for those who love Him.”",
+       "b": "1Cor"
+      }
+     ]
+    },
+    {
+     "form": "noun",
+     "n": 137,
+     "eg": [
+      {
+       "ref": "1 Samuel 18:3",
+       "text": "Then Jonathan made a covenant with David because he loved him as himself.",
+       "b": "1Sam"
+      },
+      {
+       "ref": "John 13:35",
+       "text": "By this everyone will know that you are My disciples, if you love one another.”",
+       "b": "John"
+      },
+      {
+       "ref": "1 Corinthians 13:1",
+       "text": "If I speak in the tongues of men and of angels, but have not love, I am only a ringing gong or a clanging cymbal.",
+       "b": "1Cor"
+      }
+     ]
+    }
+   ],
+   "themes": [
+    [
+     "Law / Wisdom",
+     ""
+    ],
+    [
+     "Law / Wisdom",
+     ""
+    ],
+    [
+     "Spirit",
+     ""
+    ],
+    [
+     "Church",
+     ""
+    ],
+    [
+     "Church",
+     ""
+    ]
+   ],
+   "own_words": [
+    {
+     "ref": "1 Corinthians 13:13",
+     "text": "And now these three remain: faith, hope, and love; but the greatest of these is love.",
+     "b": "1Cor"
+    },
+    {
+     "ref": "1 John 4:8",
+     "text": "Whoever does not love does not know God, because God is love.",
+     "b": "1John"
+    },
+    {
+     "ref": "1 Corinthians 13:4",
+     "text": "Love is patient, love is kind. It does not envy, it does not boast, it is not proud.",
+     "b": "1Cor"
+    },
+    {
+     "ref": "Romans 13:10",
+     "text": "Love does no wrong to its neighbor. Therefore love is the fulfillment of the law.",
+     "b": "Rom"
+    }
+   ],
+   "cluster": [
+    {
+     "id": "charity",
+     "name": "love"
+    }
+   ],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 1,
+    "of": 9,
+    "prev": null,
+    "next": "joy"
+   },
+   "check": [
+    "Recorded twice: another card is named “love” (charity)."
+   ]
+  },
+  {
+   "id": "joy",
+   "label": "joy",
+   "name": "joy",
+   "tier": 1,
+   "intro": [
+    "'the joy of the LORD is your strength' (Neh 8:10) — Scripture defining one of these words by another, which it rarely does.",
+    "James 1:2 puts it somewhere a reader would not: 'Consider it pure joy ... when you encounter trials of many kinds'."
+   ],
+   "words": [
+    {
+     "lemma": "שִׂמְחָה",
+     "translit": "śimḥāh",
+     "gloss": "joy",
+     "lang": "Hebrew",
+     "uses": 94,
+     "pos": "noun"
+    },
+    {
+     "lemma": "χαρά",
+     "translit": null,
+     "gloss": "joy",
+     "lang": "Greek",
+     "uses": 59,
+     "pos": "noun"
+    },
+    {
+     "lemma": "שָׂשׂוֹן",
+     "translit": "śāśôn",
+     "gloss": "joy",
+     "lang": "Hebrew",
+     "uses": 22,
+     "pos": "noun"
+    },
+    {
+     "lemma": "מָשׂוֹשׂ",
+     "translit": "məśôś",
+     "gloss": "joy",
+     "lang": "Hebrew",
+     "uses": 16,
+     "pos": "noun"
+    },
+    {
+     "lemma": "חֶדְוָה",
+     "translit": "ḥeḏwāh",
+     "gloss": "joy",
+     "lang": "Hebrew",
+     "uses": 2,
+     "pos": "noun"
+    },
+    {
+     "lemma": "גִּילָה",
+     "translit": "gîlaṯ",
+     "gloss": "joy",
+     "lang": "Hebrew",
+     "uses": 2,
+     "pos": "noun"
+    }
+   ],
+   "forms": [
+    {
+     "form": "noun",
+     "n": 171,
+     "eg": [
+      {
+       "ref": "1 Chronicles 15:16",
+       "text": "David also told the leaders of the Levites to appoint their relatives as singers to lift up their voices with joy, accompanied by musical instruments-harps, lyres, and cymbals.",
+       "b": "1Chr"
+      },
+      {
+       "ref": "Acts 12:14",
+       "text": "When she recognized Peter's voice, she was so overjoyed that she forgot to open the gate, but ran inside and announced, “Peter is standing at the gate!”",
+       "b": "Acts"
+      },
+      {
+       "ref": "1 John 1:4",
+       "text": "We write these things so that our joy may be complete.",
+       "b": "1John"
+      }
+     ]
+    }
+   ],
+   "themes": [
+    [
+     "Temple / Presence",
+     ""
+    ],
+    [
+     "Mercy & Restoration",
+     ""
+    ],
+    [
+     "Deliverance / Salvation",
+     ""
+    ],
+    [
+     "Spirit",
+     ""
+    ]
+   ],
+   "own_words": [
+    {
+     "ref": "Nehemiah 8:10",
+     "text": "Then Nehemiah told them, “Go and eat what is rich, drink what is sweet, and send out portions to those who have nothing prepared, since today is holy to our Lord. Do not grieve, for the joy of the LORD is your strength.”",
+     "b": "Neh"
+    },
+    {
+     "ref": "Psalms 16:11",
+     "text": "You have made known to me the path of life; You will fill me with joy in Your presence, with eternal pleasures at Your right hand.",
+     "b": "Ps"
+    },
+    {
+     "ref": "Galatians 5:22",
+     "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,",
+     "b": "Gal"
+    },
+    {
+     "ref": "James 1:2",
+     "text": "Consider it pure joy, my brothers, when you encounter trials of many kinds,",
+     "b": "Jas"
+    }
+   ],
+   "cluster": [],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 2,
+    "of": 9,
+    "prev": "love",
+    "next": "peace"
+   },
+   "check": [
+    "No other card shares its words."
+   ]
+  },
+  {
+   "id": "peace",
+   "label": "peace",
+   "name": "peace",
+   "tier": 1,
+   "intro": [
+    "'with your feet fitted with the readiness of the gospel of peace' (Eph 6:15) — footwear, in a list of weapons and defences.",
+    "Named in the fruit of the Spirit (Gal 5:22), and distinguished from its ordinary sense by the one who offers it: 'Peace I leave with you; My peace I give to you. I do not give to you as the world gives.' (John 14:27)."
+   ],
+   "words": [
+    {
+     "lemma": "שָׁלוֹם",
+     "translit": "šālôm",
+     "gloss": "peace",
+     "lang": "Hebrew",
+     "uses": 237,
+     "pos": "noun"
+    },
+    {
+     "lemma": "εἰρήνη",
+     "translit": null,
+     "gloss": "peace",
+     "lang": "Greek",
+     "uses": 92,
+     "pos": "noun"
+    },
+    {
+     "lemma": "שַׁלְוָה",
+     "translit": "šalwāh",
+     "gloss": "peace",
+     "lang": "Hebrew",
+     "uses": 9,
+     "pos": "noun"
+    }
+   ],
+   "forms": [
+    {
+     "form": "noun",
+     "n": 301,
+     "eg": [
+      {
+       "ref": "1 Chronicles 12:18",
+       "text": "Then the Spirit came upon Amasai, the chief of the Thirty, and he said: “We are yours, O David! We are with you, O son of Jesse! Peace, peace to you, and peace to your helpers, for your God helps you.” So David received them and made them leaders of his troops.",
+       "b": "1Chr"
+      },
+      {
+       "ref": "Acts 10:36",
+       "text": "He has sent this message to the people of Israel, proclaiming the gospel of peace through Jesus Christ, who is Lord of all.",
+       "b": "Acts"
+      },
+      {
+       "ref": "1 Corinthians 1:3",
+       "text": "Grace and peace to you from God our Father and the Lord Jesus Christ.",
+       "b": "1Cor"
+      }
+     ]
+    }
+   ],
+   "themes": [
+    [
+     "Sacrifice",
+     ""
+    ],
+    [
+     "Messiah / Christology",
+     ""
+    ],
+    [
+     "Church",
+     ""
+    ]
+   ],
+   "own_words": [
+    {
+     "ref": "Ephesians 6:15",
+     "text": "and with your feet fitted with the readiness of the gospel of peace.",
+     "b": "Eph"
+    },
+    {
+     "ref": "Galatians 5:22",
+     "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,",
+     "b": "Gal"
+    },
+    {
+     "ref": "John 14:27",
+     "text": "Peace I leave with you; My peace I give to you. I do not give to you as the world gives. Do not let your hearts be troubled; do not be afraid.",
+     "b": "John"
+    },
+    {
+     "ref": "Philippians 4:7",
+     "text": "And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
+     "b": "Phil"
+    }
+   ],
+   "cluster": [],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 3,
+    "of": 9,
+    "prev": "joy",
+    "next": "patience"
+   },
+   "check": [
+    "No other card shares its words."
+   ]
+  },
+  {
+   "id": "patience",
+   "label": "patience",
+   "name": "patience",
+   "tier": 2,
+   "intro": [
+    "**The hinge in both endurance chains** -- 'suffering produces perseverance' (Rom 5:3) and 'the testing of your faith develops perseverance' (Jas 1:3). It is what suffering is said to produce, and in both places it is a stage and not the end."
+   ],
+   "words": [
+    {
+     "lemma": "μακροθυμία",
+     "translit": null,
+     "gloss": "patience",
+     "lang": "Greek",
+     "uses": 14,
+     "pos": "noun"
+    },
+    {
+     "lemma": "μακροθυμέω",
+     "translit": "makrothumeō",
+     "gloss": "to have patience",
+     "lang": "Greek",
+     "uses": 9,
+     "pos": "verb",
+     "tier2": true
+    }
+   ],
+   "forms": [
+    {
+     "form": "noun",
+     "n": 14,
+     "eg": [
+      {
+       "ref": "1 Peter 3:20",
+       "text": "who disobeyed long ago when God waited patiently in the days of Noah while the ark was being built. In the ark a few people, only eight souls, were saved through water.",
+       "b": "1Pet"
+      },
+      {
+       "ref": "1 Timothy 1:16",
+       "text": "But for this very reason I was shown mercy, so that in me, the worst of sinners, Christ Jesus might display His perfect patience as an example to those who would believe in Him for eternal life.",
+       "b": "1Tim"
+      },
+      {
+       "ref": "2 Corinthians 6:6",
+       "text": "in purity, knowledge, patience, and kindness; in the Holy Spirit and in sincere love;",
+       "b": "2Cor"
+      }
+     ]
+    },
+    {
+     "form": "verb",
+     "n": 9,
+     "eg": [
+      {
+       "ref": "Luke 18:7",
+       "text": "Will not God bring about justice for His elect who cry out to Him day and night? Will He delay in helping them?",
+       "b": "Luke"
+      },
+      {
+       "ref": "1 Corinthians 13:4",
+       "text": "Love is patient, love is kind. It does not envy, it does not boast, it is not proud.",
+       "b": "1Cor"
+      },
+      {
+       "ref": "1 Thessalonians 5:14",
+       "text": "And we urge you, brothers, to admonish the unruly, encourage the fainthearted, help the weak, and be patient with everyone.",
+       "b": "1Thess"
+      }
+     ]
+    }
+   ],
+   "themes": [],
+   "own_words": [
+    {
+     "ref": "Romans 5:3",
+     "text": "Not only that, but we also rejoice in our sufferings, because we know that suffering produces perseverance;",
+     "b": "Rom"
+    },
+    {
+     "ref": "James 1:3",
+     "text": "because you know that the testing of your faith develops perseverance.",
+     "b": "Jas"
+    },
+    {
+     "ref": "James 1:4",
+     "text": "Allow perseverance to finish its work, so that you may be mature and complete, not lacking anything.",
+     "b": "Jas"
+    },
+    {
+     "ref": "Galatians 5:22",
+     "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,",
+     "b": "Gal"
+    }
+   ],
+   "cluster": [],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 4,
+    "of": 9,
+    "prev": "peace",
+    "next": "kindness"
+   },
+   "check": [
+    "Forms missing from the graph: μακροθυμέω (verb, 9 uses) — added here by hand; a rule from the lexicon would link them.",
+    "No theme page names it.",
+    "No other card shares its words."
+   ]
+  },
+  {
+   "id": "kindness",
+   "label": "kindness",
+   "name": "kindness",
+   "tier": 2,
+   "intro": [
+    "the kindness of God our Savior"
+   ],
+   "words": [
+    {
+     "lemma": "חֶסֶד",
+     "translit": "ḥeseḏ",
+     "gloss": "steadfast love",
+     "lang": "Hebrew",
+     "uses": 247,
+     "pos": "word"
+    },
+    {
+     "lemma": "χρηστότης",
+     "translit": null,
+     "gloss": "kindness",
+     "lang": "Greek",
+     "uses": 10,
+     "pos": "noun"
+    },
+    {
+     "lemma": "φιλανθρωπία",
+     "translit": null,
+     "gloss": "kindness",
+     "lang": "Greek",
+     "uses": 2,
+     "pos": "noun"
+    }
+   ],
+   "forms": [
+    {
+     "form": "word",
+     "n": 239,
+     "eg": [
+      {
+       "ref": "1 Chronicles 16:34",
+       "text": "Give thanks to the LORD, for He is good; His loving devotion endures forever.",
+       "b": "1Chr"
+      },
+      {
+       "ref": "1 Chronicles 16:41",
+       "text": "With them were Heman, Jeduthun, and the rest of those chosen and designated by name to give thanks to the LORD, for “His loving devotion endures forever.”",
+       "b": "1Chr"
+      },
+      {
+       "ref": "1 Chronicles 17:13",
+       "text": "I will be his Father, and he will be My son. And I will never remove My loving devotion from him as I removed it from your predecessor.",
+       "b": "1Chr"
+      }
+     ]
+    },
+    {
+     "form": "noun",
+     "n": 9,
+     "eg": [
+      {
+       "ref": "Acts 28:2",
+       "text": "The islanders showed us extraordinary kindness. They kindled a fire and welcomed all of us because it was raining and cold.",
+       "b": "Acts"
+      },
+      {
+       "ref": "2 Corinthians 6:6",
+       "text": "in purity, knowledge, patience, and kindness; in the Holy Spirit and in sincere love;",
+       "b": "2Cor"
+      },
+      {
+       "ref": "Colossians 3:12",
+       "text": "Therefore, as the elect of God, holy and beloved, clothe yourselves with hearts of compassion, kindness, humility, gentleness, and patience.",
+       "b": "Col"
+      }
+     ]
+    }
+   ],
+   "themes": [],
+   "own_words": [
+    {
+     "ref": "Genesis 21:23",
+     "text": "Now, therefore, swear to me here before God that you will not deal falsely with me or my children or descendants. Show to me and to the country in which you reside the same kindness that I have shown to you.”",
+     "b": "Gen"
+    },
+    {
+     "ref": "Titus 3:4",
+     "text": "But when the kindness of God our Savior and His love for mankind appeared,",
+     "b": "Titus"
+    }
+   ],
+   "cluster": [
+    {
+     "id": "pity",
+     "name": "kindness"
+    },
+    {
+     "id": "love_of_god",
+     "name": "love of God toward man"
+    }
+   ],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 5,
+    "of": 9,
+    "prev": "patience",
+    "next": "goodness"
+   },
+   "check": [
+    "Recorded twice: another card is named “kindness” (pity).",
+    "No theme page names it.",
+    "A Hebrew word's part of speech is not read yet (shown as “word”)."
+   ]
+  },
+  {
+   "id": "goodness",
+   "label": "goodness",
+   "name": "goodness",
+   "tier": 3,
+   "intro": [
+    "'the fruit of the Spirit is love, joy, peace, patience, kindness, goodness' (Gal 5:22). Eph 5:9 gives a near-identical triad -- 'for the fruit of the light consists in all goodness, righteousness, and truth' -- which is why that verse sits on this saying too."
+   ],
+   "words": [
+    {
+     "lemma": "טוֹב",
+     "translit": "ṭôḇ",
+     "gloss": "good",
+     "lang": "Hebrew",
+     "uses": 562,
+     "pos": "word"
+    },
+    {
+     "lemma": "ἀγαθωσύνη",
+     "translit": null,
+     "gloss": "goodness",
+     "lang": "Greek",
+     "uses": 4,
+     "pos": "noun"
+    },
+    {
+     "lemma": "טוּב",
+     "translit": "ṭûḇ",
+     "gloss": "goodness",
+     "lang": "Hebrew",
+     "uses": 32,
+     "pos": "noun"
+    }
+   ],
+   "forms": [
+    {
+     "form": "word",
+     "n": 513,
+     "eg": [
+      {
+       "ref": "1 Chronicles 13:2",
+       "text": "And he said to the whole assembly of Israel, “If it seems good to you, and if this is of the LORD our God, let us send word far and wide to the rest of our brothers in all the land of Israel, and also to the priests and Levites in their cities and pasturelands, so that they may join us.",
+       "b": "1Chr"
+      },
+      {
+       "ref": "1 Chronicles 16:34",
+       "text": "Give thanks to the LORD, for He is good; His loving devotion endures forever.",
+       "b": "1Chr"
+      },
+      {
+       "ref": "1 Chronicles 17:26",
+       "text": "And now, O LORD, You are God! And You have promised this goodness to Your servant.",
+       "b": "1Chr"
+      }
+     ]
+    },
+    {
+     "form": "noun",
+     "n": 35,
+     "eg": [
+      {
+       "ref": "2 Kings 8:9",
+       "text": "So Hazael went to meet Elisha, taking with him a gift of forty camel loads of every good thing from Damascus. And he went in and stood before him and said, “Your son Ben-hadad king of Aram has sent me to ask, ‘Will I recover from this illness?'”",
+       "b": "2Kgs"
+      },
+      {
+       "ref": "2 Thessalonians 1:11",
+       "text": "To this end, we always pray for you, that our God will count you worthy of His calling, and that He will powerfully fulfill your every good desire and work of faith,",
+       "b": "2Thess"
+      },
+      {
+       "ref": "Ephesians 5:9",
+       "text": "for the fruit of the light consists in all goodness, righteousness, and truth.",
+       "b": "Eph"
+      }
+     ]
+    }
+   ],
+   "themes": [],
+   "own_words": [
+    {
+     "ref": "Galatians 5:22",
+     "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,",
+     "b": "Gal"
+    },
+    {
+     "ref": "Galatians 5:23",
+     "text": "gentleness, and self-control. Against such things there is no law.",
+     "b": "Gal"
+    },
+    {
+     "ref": "Romans 15:14",
+     "text": "I myself am convinced, my brothers, that you yourselves are full of goodness, brimming with knowledge, and able to instruct one another.",
+     "b": "Rom"
+    },
+    {
+     "ref": "Ephesians 5:9",
+     "text": "for the fruit of the light consists in all goodness, righteousness, and truth.",
+     "b": "Eph"
+    }
+   ],
+   "cluster": [
+    {
+     "id": "good",
+     "name": "good"
+    },
+    {
+     "id": "fairness",
+     "name": "fairness"
+    }
+   ],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 6,
+    "of": 9,
+    "prev": "kindness",
+    "next": "faithfulness"
+   },
+   "check": [
+    "No theme page names it.",
+    "A Hebrew word's part of speech is not read yet (shown as “word”)."
+   ]
+  },
+  {
+   "id": "faith",
+   "label": "faithfulness",
+   "name": "faith",
+   "tier": 1,
+   "intro": [
+    "One of three named together and ranked: \"And now these three remain: faith, hope, and love; but the greatest of these is love\" (1 Cor 13:13).",
+    "In the armor of Ephesians 6 it is the shield: \"In addition to all this, take up the shield of faith, with which you can extinguish all the flaming arrows of the evil one\" (6:16) -- the only piece whose effect the passage states."
+   ],
+   "words": [
+    {
+     "lemma": "πίστις",
+     "translit": null,
+     "gloss": "faith",
+     "lang": "Greek",
+     "uses": 243,
+     "pos": "noun"
+    },
+    {
+     "lemma": "πιστεύω",
+     "translit": null,
+     "gloss": "believing",
+     "lang": "Greek",
+     "uses": 241,
+     "pos": "verb"
+    }
+   ],
+   "forms": [
+    {
+     "form": "noun",
+     "n": 227,
+     "eg": [
+      {
+       "ref": "Acts 11:24",
+       "text": "Barnabas was a good man, full of the Holy Spirit and faith, and a great number of people were brought to the Lord.",
+       "b": "Acts"
+      },
+      {
+       "ref": "1 Corinthians 12:9",
+       "text": "to another faith by the same Spirit, to another gifts of healing by that one Spirit,",
+       "b": "1Cor"
+      },
+      {
+       "ref": "1 Corinthians 13:13",
+       "text": "And now these three remain: faith, hope, and love; but the greatest of these is love.",
+       "b": "1Cor"
+      }
+     ]
+    },
+    {
+     "form": "verb",
+     "n": 217,
+     "eg": [
+      {
+       "ref": "Acts 10:43",
+       "text": "All the prophets testify about Him that everyone who believes in Him receives forgiveness of sins through His name.”",
+       "b": "Acts"
+      },
+      {
+       "ref": "1 Corinthians 1:21",
+       "text": "For since in the wisdom of God the world through its wisdom did not know Him, God was pleased through the foolishness of what was preached to save those who believe.",
+       "b": "1Cor"
+      },
+      {
+       "ref": "1 Corinthians 11:18",
+       "text": "First of all, I hear that when you come together as a church, there are divisions among you, and in part I believe it.",
+       "b": "1Cor"
+      }
+     ]
+    }
+   ],
+   "themes": [
+    [
+     "Sacrifice",
+     ""
+    ],
+    [
+     "Deliverance / Salvation",
+     ""
+    ],
+    [
+     "Deliverance / Salvation",
+     ""
+    ],
+    [
+     "Deliverance / Salvation",
+     ""
+    ]
+   ],
+   "own_words": [
+    {
+     "ref": "1 Corinthians 13:13",
+     "text": "And now these three remain: faith, hope, and love; but the greatest of these is love.",
+     "b": "1Cor"
+    },
+    {
+     "ref": "Ephesians 6:16",
+     "text": "In addition to all this, take up the shield of faith, with which you can extinguish all the flaming arrows of the evil one.",
+     "b": "Eph"
+    },
+    {
+     "ref": "Hebrews 11:1",
+     "text": "Now faith is the assurance of what we hope for and the certainty of what we do not see.",
+     "b": "Heb"
+    },
+    {
+     "ref": "Romans 5:1",
+     "text": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ,",
+     "b": "Rom"
+    }
+   ],
+   "cluster": [
+    {
+     "id": "fidelity",
+     "name": "faith"
+    }
+   ],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 7,
+    "of": 9,
+    "prev": "goodness",
+    "next": "gentleness"
+   },
+   "check": [
+    "Recorded twice: another card is named “faith” (fidelity).",
+    "The list calls it “faithfulness”; this card is named “faith”."
+   ]
+  },
+  {
+   "id": "gentleness",
+   "label": "gentleness",
+   "name": "gentleness",
+   "tier": 2,
+   "intro": [
+    "'gentleness, and self-control. Against such things there is no law.' (Gal 5:23), the eighth fruit of the Spirit. 2Sam 22:36 turns it upward: 'Your gentleness exalts me.'"
+   ],
+   "words": [
+    {
+     "lemma": "πραΰτης",
+     "translit": null,
+     "gloss": "gentleness",
+     "lang": "Greek",
+     "uses": 11,
+     "pos": "noun"
+    },
+    {
+     "lemma": "πραΰς",
+     "translit": "praus",
+     "gloss": "gentle",
+     "lang": "Greek",
+     "uses": 4,
+     "pos": "adjective",
+     "tier2": true
+    }
+   ],
+   "forms": [
+    {
+     "form": "noun",
+     "n": 11,
+     "eg": [
+      {
+       "ref": "1 Corinthians 4:21",
+       "text": "Which do you prefer? Shall I come to you with a rod, or in love and with a gentle spirit?",
+       "b": "1Cor"
+      },
+      {
+       "ref": "1 Peter 3:16",
+       "text": "keeping a clear conscience, so that those who slander you may be put to shame by your good behavior in Christ.",
+       "b": "1Pet"
+      },
+      {
+       "ref": "2 Corinthians 10:1",
+       "text": "Now by the mildness and gentleness of Christ, I appeal to you-I, Paul, who am humble when face to face with you, but bold when away.",
+       "b": "2Cor"
+      }
+     ]
+    },
+    {
+     "form": "adjective",
+     "n": 4,
+     "eg": [
+      {
+       "ref": "Matthew 11:29",
+       "text": "Take My yoke upon you and learn from Me, for I am gentle and humble in heart, and you will find rest for your souls.",
+       "b": "Matt"
+      },
+      {
+       "ref": "1 Peter 3:4",
+       "text": "but from the inner disposition of your heart, the unfading beauty of a gentle and quiet spirit, which is precious in God's sight.",
+       "b": "1Pet"
+      },
+      {
+       "ref": "Matthew 21:5",
+       "text": "“Say to the Daughter of Zion, ‘See, your King comes to you, gentle and riding on a donkey, on a colt, the foal of a donkey.'”",
+       "b": "Matt"
+      }
+     ]
+    }
+   ],
+   "themes": [],
+   "own_words": [
+    {
+     "ref": "Galatians 5:22",
+     "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,",
+     "b": "Gal"
+    },
+    {
+     "ref": "Galatians 5:23",
+     "text": "gentleness, and self-control. Against such things there is no law.",
+     "b": "Gal"
+    },
+    {
+     "ref": "2 Corinthians 10:1",
+     "text": "Now by the mildness and gentleness of Christ, I appeal to you-I, Paul, who am humble when face to face with you, but bold when away.",
+     "b": "2Cor"
+    },
+    {
+     "ref": "2 Samuel 22:36",
+     "text": "You have given me Your shield of salvation, and Your gentleness exalts me.",
+     "b": "2Sam"
+    }
+   ],
+   "cluster": [
+    {
+     "id": "meekness",
+     "name": "consideration"
+    }
+   ],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 8,
+    "of": 9,
+    "prev": "faithfulness",
+    "next": "self-control"
+   },
+   "check": [
+    "Forms missing from the graph: πραΰς (adjective, 4 uses) — added here by hand; a rule from the lexicon would link them.",
+    "No theme page names it."
+   ]
+  },
+  {
+   "id": "temperance",
+   "label": "self-control",
+   "name": "self-control",
+   "tier": 3,
+   "intro": [
+    "'gentleness, and self-control. Against such things there is no law.' (Gal 5:23). Also one of the qualities that build on each other at 2Pet 1:6."
+   ],
+   "words": [
+    {
+     "lemma": "ἐγκράτεια",
+     "translit": null,
+     "gloss": "self-control",
+     "lang": "Greek",
+     "uses": 4,
+     "pos": "noun"
+    },
+    {
+     "lemma": "ἐγκρατής",
+     "translit": "egkratēs",
+     "gloss": "self-controlled",
+     "lang": "Greek",
+     "uses": 1,
+     "pos": "adjective",
+     "tier2": true
+    }
+   ],
+   "forms": [
+    {
+     "form": "noun",
+     "n": 3,
+     "eg": [
+      {
+       "ref": "Acts 24:25",
+       "text": "As Paul expounded on righteousness, self-control, and the coming judgment, Felix became frightened and said, “You may go for now. When I find the time, I will call for you.”",
+       "b": "Acts"
+      },
+      {
+       "ref": "2 Peter 1:6",
+       "text": "and to knowledge, self-control; and to self-control, perseverance; and to perseverance, godliness;",
+       "b": "2Pet"
+      },
+      {
+       "ref": "Galatians 5:23",
+       "text": "gentleness, and self-control. Against such things there is no law.",
+       "b": "Gal"
+      }
+     ]
+    },
+    {
+     "form": "adjective",
+     "n": 1,
+     "eg": [
+      {
+       "ref": "Titus 1:8",
+       "text": "Instead, he must be hospitable, a lover of good, self-controlled, upright, holy, and disciplined.",
+       "b": "Titus"
+      }
+     ]
+    }
+   ],
+   "themes": [],
+   "own_words": [
+    {
+     "ref": "Galatians 5:22",
+     "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,",
+     "b": "Gal"
+    },
+    {
+     "ref": "Galatians 5:23",
+     "text": "gentleness, and self-control. Against such things there is no law.",
+     "b": "Gal"
+    },
+    {
+     "ref": "Acts 24:25",
+     "text": "As Paul expounded on righteousness, self-control, and the coming judgment, Felix became frightened and said, “You may go for now. When I find the time, I will call for you.”",
+     "b": "Acts"
+    },
+    {
+     "ref": "2 Peter 1:6",
+     "text": "and to knowledge, self-control; and to self-control, perseverance; and to perseverance, godliness;",
+     "b": "2Pet"
+    }
+   ],
+   "cluster": [],
+   "study": {
+    "list": "the fruit of the Spirit",
+    "passage": "Gal 5:22-23",
+    "n": 9,
+    "of": 9,
+    "prev": "gentleness",
+    "next": null
+   },
+   "check": [
+    "Forms missing from the graph: ἐγκρατής (adjective, 1 uses) — added here by hand; a rule from the lexicon would link them.",
+    "No theme page names it.",
+    "No other card shares its words."
+   ]
+  }
+ ]
+}</script>
+<script>
+(function(){
+  const S = JSON.parse(document.getElementById('data').textContent);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const TIER = {1: 'Tier 1 · a hub', 2: 'Tier 2 · the graph checked', 3: 'Tier 3 · the face-lift'};
+  const POSN = {verb: 'As a verb', noun: 'As a noun', adjective: 'As an adjective', word: 'As a word'};
+  const quote = e => `<div class="q">${esc(e.text)}<span class="r">${esc(e.ref)}</span></div>`;
+  const fr = document.getElementById('fruits');
+  fr.innerHTML = S.cards.map((c, i) => `<button type="button" id="f-${i}" data-i="${i}" aria-pressed="false"><span class="dot d${c.tier}"></span>${esc(c.label)}</button>`).join('');
+  function card(c, i){
+    let s = `<p class="kind">Concept · ${esc(TIER[c.tier])} · ${c.study.n} of ${c.study.of} in the study</p><h1>${esc(c.label === c.name ? c.name : c.label)}</h1>`;
+    s += c.intro.length ? c.intro.map(p => `<p class="lead">${esc(p)}</p>`).join('') : '<p class="lead none">No opening yet.</p>';
+    s += `<div class="h2">The words the text uses</div><div class="words">${c.words.map(w =>
+      `<div class="word${w.tier2 ? ' add' : ''}"><div class="l">${esc(w.lemma)} ${w.translit ? `<span class="tr">${esc(w.translit)}</span>` : ''}</div><div class="m">${esc(w.gloss || '')} · ${esc(w.lang)} ${esc(w.pos)} · ${w.uses} uses${w.tier2 ? ' · added in tier 2' : ''}</div></div>`).join('')}</div>`;
+    s += `<div class="h2">In the themes</div>${c.themes.length ? `<div class="chips">${c.themes.map(t => `<span class="chip"><b>${esc(t[0])}</b>${t[1] ? ' · ' + esc(t[1]) : ''}</span>`).join('')}</div>` : '<p class="none">No theme page names it yet.</p>'}`;
+    if(c.own_words.length) s += `<div class="h2">In the texts' own words</div>${c.own_words.map(quote).join('')}`;
+    c.forms.forEach(f => {
+      s += `<div class="eyebrow" style="margin-top:20px">${esc(POSN[f.form] || f.form)}</div><div class="card"><div class="n">${esc(c.label)}, ${esc(f.form === 'word' ? 'in Hebrew' : 'as ' + (f.form === 'adjective' ? 'an adjective' : 'a ' + f.form))}<span class="c">${f.n} verses</span></div>${f.eg.map(quote).join('')}</div>`;
+    });
+    if(c.cluster.length) s += `<div class="h2">Beside it</div><div class="chips">${c.cluster.map(x => `<span class="chip">${esc(x.name)}</span>`).join('')}</div>`;
+    if(c.tier === 1) s += `<div class="hubnote">A hub adds the curated reading on this same page: rows by who and what (for love, “The LORD loves”, “Love one another”, “Love your enemies”…), the cards it gathers, and quotations chosen by hand.</div>`;
+    if(c.check && c.check.length) s += `<div class="check"><div class="eyebrow">The graph check (tier 2)</div><ul>${c.check.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
+    s += `<div class="nav"><button type="button" data-go="${i - 1}" ${i ? '' : 'disabled'}>← ${esc(c.study.prev || '')}</button><button type="button" data-go="${i + 1}" ${c.study.next ? '' : 'disabled'}>${esc(c.study.next || '')} →</button></div>`;
+    return s;
+  }
+  const page = document.getElementById('page');
+  function show(i){
+    i = Math.max(0, Math.min(S.cards.length - 1, i));
+    fr.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.i === i ? 'true' : 'false'));
+    page.innerHTML = card(S.cards[i], i);
+    try{ localStorage.setItem('fruit', String(i)); }catch(e){}
+  }
+  fr.addEventListener('click', e => { const b = e.target.closest('button[data-i]'); if(b){ show(+b.dataset.i); } });
+  page.addEventListener('click', e => { const b = e.target.closest('button[data-go]'); if(b && !b.disabled){ show(+b.dataset.go); window.scrollTo({top: 0}); } });
+  let i0 = 0; try{ i0 = +(localStorage.getItem('fruit') || 0) || 0; }catch(e){}
+  show(i0);
+})();
+</script>

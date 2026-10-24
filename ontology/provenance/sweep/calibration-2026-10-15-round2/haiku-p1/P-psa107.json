@@ -1,0 +1,17 @@
+{"passage": "P-psa107", "verses": [{"ref": "Psa.107.1",
+ "referents": [
+  {"slot": "w9", "choice": "w2", "divine": true, "why": "The possessive on 'loving devotion' (חַסְדּוֹ) is third masculine singular and names whose devotion it is. The only masculine singular candidate that is the one thanked and called good in cl1 is the LORD (w2). w7 is a time phrase and w8 is the noun the possessive modifies, so neither can be the owner.", "category": "possessive resolved to the one thanked"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "The command 'give thanks' has an implied plural second person, the audience of the psalm. No candidate is a plural addressee: w2 is the one thanked and the psalmist is the speaking voice, not the one addressed.", "category": "implied subject of a command to an unnamed audience"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "The conjunction כִּי after the imperative of thanks gives the reason for thanking, so the command is explained by what follows.", "category": "reason after a command"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "remove", "why": "The second כִּי clause does not give the reason for 'He is good'. It states what that goodness consists in (his loyalty endures forever), so it is a detail of cl1, not a cause.", "category": "parallel כִּי read as reason"},
+  {"src": "cl2", "type": "elaborates", "dst": "cl1", "action": "add", "why": "cl2 gives the detail of the earlier clause: it restates the goodness of cl1 in concrete terms, with the copula implied.", "category": "restated goodness as detail"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl0"}, {"role": "basis", "node": "cl1"}, {"role": "basis", "node": "cl2"}], "divine": false, "why": "The builder gave the reason clause the role 'part', which the imperative kind does not have. Its reasons are its basis. cl2 belongs to the same basis as the detail of cl1.", "category": "member role not in group kind"},
+  {"id": "writing", "kind": "writing", "action": "change", "members": [{"role": "part", "node": "imp0"}], "divine": false, "why": "No writer is named in this verse, so sender=w2 is wrong: the LORD is the one thanked, not the writer. frame=cl0 is a command, not a heading. In this verse the psalm's content is the call to thanks as one group.", "category": "wrong sender and frame in writing group"}
+ ],
+ "none_fit": [{"where": "cl0s, the audience of 'give thanks'", "what": "No link or group type records a psalm's address to its audience, the hearers a command is spoken to."}],
+ "cant_tell": [{"what": "Who the plural 'you' of verse 1 is", "why": "The audience is not named in this verse and no candidate is a plural addressee."}, {"what": "Who wrote the psalm", "why": "No writer is named in the verse; the psalmist appears only as the speaking voice."}]
+}]}

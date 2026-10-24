@@ -1,0 +1,186 @@
+{
+ "ref": "Exo.8.12",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "'your staff' is inside the commanded words Moses is to speak to Aaron; the addressee of those words is Aaron (w7), masculine singular agrees.",
+   "category": "possessive inside a commanded speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'say to Aaron' is God's command to Moses; the implied you is the one commanded, Moses. The builder's Aaron is the addressee of the words Moses is to say, not of this command.",
+   "category": "implied subject of the outer command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "divine": false,
+   "why": "'stretch out' belongs to the words Moses is told to say to Aaron, so the implied you is Aaron.",
+   "category": "implied subject inside a commanded speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "divine": false,
+   "why": "'strike' is in the same commanded words; the implied you is Aaron.",
+   "category": "implied subject inside a commanded speech"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w15",
+   "divine": false,
+   "why": "the weqatal 'it will become gnats' is third masculine singular; the thing struck, the dust (w15), is what becomes gnats. The act decides, not the nearest noun.",
+   "category": "implied subject of a result clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl0 is the frame of God's speech and comes before the commanded clauses; cl3 is inside the speech, so a then-link back to the frame is backward and crosses the speech boundary.",
+   "category": "then across a speech frame"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "plain waw joining two commands at one level; the conjunction supports it.",
+   "category": "and between commands"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl4",
+   "action": "remove",
+   "why": "the weqatal says what the command brings about; that is the result link, not a plain sequence.",
+   "category": "command then its outcome"
+  },
+  {
+   "src": "cl3",
+   "type": "result",
+   "dst": "cl4",
+   "action": "add",
+   "why": "imperative, then waw + third-person weqatal saying what will come of it (R4).",
+   "category": "command and its outcome"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "God says, and what is said is the clause 'say to Aaron' (R1).",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add",
+   "why": "'say to Aaron' introduces a collection of commands joined by waw; content points at the imperative group (R1).",
+   "category": "speech content of commands"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "God (the LORD) speaks to Moses; the commanded turn is nested as a part (speech nests), so cl1 is the frame of turn1 rather than a separate part of God's turn.",
+   "category": "outer speech with nested commanded turn"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": false,
+   "why": "the commanded words are spoken by Moses, the one commanded to speak them, to Aaron (R2); the sender was a slot and is replaced by the candidate Moses.",
+   "category": "commanded speech sender"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "effect",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "commands joined by 'and' at one level are one imperative group with several command members; the weqatal is its effect.",
+   "category": "collection of commands with effect"
+  },
+  {
+   "id": "imp3",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl3"
+    },
+    {
+     "role": "effect",
+     "node": "cl4"
+    }
+   ],
+   "divine": false,
+   "why": "absorbed into imp2: a second imperative group for cl3 breaks the one-level collection, and 'part' is not an imperative role.",
+   "category": "duplicate imperative group"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,2406 @@
+{
+ "id": "praise",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "verb",
+ "words": [
+  {
+   "key": "h1984",
+   "lemma": "הָלַל",
+   "form": "verb",
+   "translit": "haləlû",
+   "gloss": "praise",
+   "lang": "Hebrew",
+   "uses": 99,
+   "other_sense": 41
+  },
+  {
+   "key": "h2167",
+   "lemma": "זָמַר",
+   "form": "verb",
+   "translit": "za.mar",
+   "gloss": "to sing",
+   "lang": "Hebrew",
+   "uses": 37,
+   "other_sense": 4
+  },
+  {
+   "key": "h7623",
+   "lemma": "שָׁבַח",
+   "form": "verb",
+   "translit": "hištabbēᵃḥ",
+   "gloss": null,
+   "lang": "Hebrew",
+   "uses": 6,
+   "other_sense": 5
+  },
+  {
+   "key": "h7624",
+   "lemma": "שְׁבַח",
+   "form": "verb",
+   "translit": "she.vach",
+   "gloss": "to praise",
+   "lang": "Hebrew",
+   "uses": 5,
+   "other_sense": 0
+  },
+  {
+   "key": "g134",
+   "lemma": "αἰνέω",
+   "form": "verb",
+   "translit": "aineō",
+   "gloss": "to praise",
+   "lang": "Greek",
+   "uses": 8,
+   "other_sense": 0
+  },
+  {
+   "key": "g5214",
+   "lemma": "ὑμνέω",
+   "form": "verb",
+   "translit": "humneō",
+   "gloss": "to praise",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 2
+  },
+  {
+   "key": "g5567",
+   "lemma": "ψάλλω",
+   "form": "verb",
+   "translit": "psallō",
+   "gloss": "to sing praise",
+   "lang": "Greek",
+   "uses": 3,
+   "other_sense": 1
+  },
+  {
+   "key": "g1867",
+   "lemma": "ἐπαινέω",
+   "form": "verb",
+   "translit": "epaineō",
+   "gloss": "to praise",
+   "lang": "Greek",
+   "uses": 5,
+   "other_sense": 0
+  },
+  {
+   "key": "g1392",
+   "lemma": "δοξάζω",
+   "form": "verb",
+   "translit": "doxazō",
+   "gloss": "to glorify",
+   "lang": "Greek",
+   "uses": 49,
+   "other_sense": 4
+  },
+  {
+   "key": "h8416",
+   "lemma": "תְּהִלָּה",
+   "form": "noun",
+   "translit": "te.hil.lah",
+   "gloss": "praise",
+   "lang": "Hebrew",
+   "uses": 57,
+   "other_sense": 0
+  },
+  {
+   "key": "h4110",
+   "lemma": "מַהֲלָל",
+   "form": "noun",
+   "translit": "ma.ha.lal",
+   "gloss": "praise",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g136",
+   "lemma": "αἶνος",
+   "form": "noun",
+   "translit": "ainos",
+   "gloss": "praise",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g133",
+   "lemma": "αἴνεσις",
+   "form": "noun",
+   "translit": "ainesis",
+   "gloss": "praise",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g1868",
+   "lemma": "ἔπαινος",
+   "form": "noun",
+   "translit": "epainos",
+   "gloss": "praise",
+   "lang": "Greek",
+   "uses": 11,
+   "other_sense": 0
+  },
+  {
+   "key": "g239",
+   "lemma": "ἁλληλουϊά",
+   "form": "noun",
+   "translit": "allēlouia",
+   "gloss": "hallelujah",
+   "lang": "Greek",
+   "uses": 4,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "verb": "Who praises, and whom",
+  "noun": "What the text says of praise"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "worship",
+   "name": "worship",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "glory",
+   "name": "glory",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "joy",
+   "name": "joy",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "songs",
+   "name": "songs",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "prayer",
+   "name": "prayer",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_name_of_the_lord",
+   "name": "the name of the Lord",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "levitical_singers",
+   "name": "singers",
+   "type": "group",
+   "missing": false
+  },
+  {
+   "id": "sacrifice",
+   "name": "sacrifice",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "gods",
+   "name": "gods",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "theme_creation_r18",
+   "name": "Let them praise the name of the LORD",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_church_r2",
+   "name": "I will praise You in the assembly",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sin_exile_death_r24",
+   "name": "Who can praise You from Sheol?",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_priesthood_r26",
+   "name": "To give thanks and to praise the LORD",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r21",
+   "name": "Thank offerings and the sacrifice of praise",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_apocalyptic_r22",
+   "name": "A new song",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "event_davids_psalms_of_thanksgiving",
+   "name": "David’s Psalms of Thanksgiving",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "sact_praise",
+   "name": "Speech act: Praise",
+   "type": "pattern",
+   "missing": false
+  },
+  {
+   "id": "sact_thanksgiving",
+   "name": "Speech act: Thanksgiving",
+   "type": "pattern",
+   "missing": false
+  },
+  {
+   "id": "event_song_of_moses",
+   "name": "Song of Moses",
+   "type": "event",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Ps.34.1",
+   "ref": "Psalms 34:1",
+   "text": "Of David, when he pretended to be insane before Abimelech, so that the king drove him away. I will bless the LORD at all times; His praise will always be on my lips."
+  },
+  {
+   "id": "Ps.150.6",
+   "ref": "Psalms 150:6",
+   "text": "Let everything that has breath praise the LORD! Hallelujah!"
+  },
+  {
+   "id": "Ps.145.3",
+   "ref": "Psalms 145:3",
+   "text": "Great is the LORD and greatly to be praised; His greatness is unsearchable."
+  },
+  {
+   "id": "Isa.43.21",
+   "ref": "Isaiah 43:21",
+   "text": "The people I formed for Myself will declare My praise."
+  },
+  {
+   "id": "Luke.19.37",
+   "ref": "Luke 19:37",
+   "text": "And as He approached the descent from the Mount of Olives, the whole multitude of disciples began to praise God joyfully in a loud voice for all the miracles they had seen:"
+  },
+  {
+   "id": "Eph.1.12",
+   "ref": "Ephesians 1:12",
+   "text": "in order that we, who were the first to hope in Christ, would be for the praise of His glory."
+  },
+  {
+   "id": "Heb.13.15",
+   "ref": "Hebrews 13:15",
+   "text": "Through Jesus, therefore, let us continually offer to God a sacrifice of praise, the fruit of lips that confess His name."
+  },
+  {
+   "id": "Rev.19.5",
+   "ref": "Revelation 19:5",
+   "text": "Then a voice came from the throne, saying: “Praise our God, all you who serve Him, and those who fear Him, small and great alike!”"
+  }
+ ],
+ "forms": [
+  {
+   "form": "verb",
+   "verses": 200,
+   "rows": [
+    {
+     "label": "Hallelujah, “Praise the LORD!”",
+     "note": "The Hebrew הַלְלוּ־יָהּ is 'praise' (a command to a company) and יָהּ, a short form of the LORD's name; the Berean prints it “Hallelujah!”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Ps.104.35",
+      "Ps.105.45",
+      "Ps.106.1",
+      "Ps.106.48",
+      "Ps.111.1",
+      "Ps.112.1",
+      "Ps.113.1",
+      "Ps.113.9",
+      "Ps.115.18",
+      "Ps.116.19",
+      "Ps.117.2",
+      "Ps.135.1",
+      "Ps.135.3",
+      "Ps.135.21",
+      "Ps.146.1",
+      "Ps.146.10",
+      "Ps.147.1",
+      "Ps.147.20",
+      "Ps.148.1",
+      "Ps.148.14",
+      "Ps.149.1",
+      "Ps.149.9",
+      "Ps.150.1",
+      "Ps.150.6"
+     ],
+     "eg": [
+      {
+       "id": "Ps.104.35",
+       "ref": "Psalms 104:35",
+       "text": "May sinners vanish from the earth and the wicked be no more. Bless the LORD, O my soul. Hallelujah!",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.105.45",
+       "ref": "Psalms 105:45",
+       "text": "that they might keep His statutes and obey His laws. Hallelujah!",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.106.1",
+       "ref": "Psalms 106:1",
+       "text": "Hallelujah! Give thanks to the LORD, for He is good; His loving devotion endures forever.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.106.48",
+       "ref": "Psalms 106:48",
+       "text": "Blessed be the LORD, the God of Israel, from everlasting to everlasting. Let all the people say, “Amen!” Hallelujah!",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praise, sing to the name of the LORD",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_name_of_the_lord",
+       "name": "the name of the Lord",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "name",
+       "name": "name",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "2Sam.22.50",
+      "1Chr.29.13",
+      "Ps.7.17",
+      "Ps.9.2",
+      "Ps.18.49",
+      "Ps.61.8",
+      "Ps.66.4",
+      "Ps.68.4",
+      "Ps.69.30",
+      "Ps.74.21",
+      "Ps.113.1",
+      "Ps.113.3",
+      "Ps.135.1",
+      "Ps.135.3",
+      "Ps.145.2",
+      "Ps.148.5",
+      "Ps.148.13",
+      "Ps.149.3",
+      "Joel.2.26"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.22.50",
+       "ref": "2 Samuel 22:50",
+       "text": "Therefore I will praise You, O LORD, among the nations; I will sing praises to Your name.",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.29.13",
+       "ref": "1 Chronicles 29:13",
+       "text": "Now therefore, our God, we give You thanks, and we praise Your glorious name.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.7.17",
+       "ref": "Psalms 7:17",
+       "text": "I will thank the LORD for His righteousness and sing praise to the name of the LORD Most High.",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.9.2",
+       "ref": "Psalms 9:2",
+       "text": "I will be glad and rejoice in You; I will sing praise to Your name, O Most High.",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Levites, the priests and the singers",
+     "note": null,
+     "doors": [
+      {
+       "id": "levites",
+       "name": "the Levites",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "levitical_singers",
+       "name": "singers",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "theme_priesthood_r26",
+       "name": "To give thanks and to praise the LORD",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "1Chr.16.4",
+      "2Chr.5.13",
+      "2Chr.7.6",
+      "2Chr.8.14",
+      "2Chr.20.19",
+      "2Chr.30.21",
+      "Ezra.3.10",
+      "Neh.12.24"
+     ],
+     "eg": [
+      {
+       "id": "1Chr.16.4",
+       "ref": "1 Chronicles 16:4",
+       "text": "David appointed some of the Levites to minister before the ark of the LORD, to celebrate, to give thanks, and to praise the LORD, the God of Israel.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.5.13",
+       "ref": "2 Chronicles 5:13",
+       "text": "The trumpeters and singers joined together to praise and thank the LORD with one voice. They lifted up their voices, accompanied by trumpets, cymbals, and musical instruments, in praise to the LORD: “For He is good; His loving devotion endures forever.” And the temple, the house of the LORD, was filled with a cloud",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.7.6",
+       "ref": "2 Chronicles 7:6",
+       "text": "The priests stood at their posts, as did the Levites with the musical instruments of the LORD, which King David had made for giving thanks to the LORD and with which David had offered praise, saying, “For His loving devotion endures forever.” Across from the Levites, the priests sounded trumpets, and all the Israelites were standing.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.8.14",
+       "ref": "2 Chronicles 8:14",
+       "text": "In keeping with the ordinances of his father David, Solomon appointed the divisions of the priests over their service, and the Levites for their duties to offer praise and to minister before the priests according to the daily requirement. He also appointed gatekeepers by their divisions at each gate, for this had been the command of David, the man of God.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The heavens, the angels, the sun and moon, everything that has breath",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_angels",
+       "name": "the angels",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "heaven",
+       "name": "heaven",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Ps.69.34",
+      "Luke.2.13",
+      "Ps.148.1",
+      "Ps.148.2",
+      "Ps.148.3",
+      "Ps.148.4",
+      "Ps.150.6"
+     ],
+     "eg": [
+      {
+       "id": "Ps.69.34",
+       "ref": "Psalms 69:34",
+       "text": "Let heaven and earth praise Him, the seas and everything that moves in them.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.13",
+       "ref": "Luke 2:13",
+       "text": "And suddenly there appeared with the angel a great multitude of the heavenly host, praising God and saying:",
+       "words": [
+        {
+         "key": "g134",
+         "lemma": "αἰνέω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.148.1",
+       "ref": "Psalms 148:1",
+       "text": "Hallelujah! Praise the LORD from the heavens; praise Him in the highest places.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.148.2",
+       "ref": "Psalms 148:2",
+       "text": "Praise Him, all His angels; praise Him, all His heavenly hosts.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The nations, all the earth, the Gentiles",
+     "note": null,
+     "doors": [
+      {
+       "id": "nations",
+       "name": "nations",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "gentiles",
+       "name": "the Gentiles",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Ps.66.4",
+      "Rom.15.9",
+      "Ps.68.32",
+      "Ps.98.4",
+      "Ps.117.1",
+      "Rom.15.11",
+      "1Pet.2.12"
+     ],
+     "eg": [
+      {
+       "id": "Ps.66.4",
+       "ref": "Psalms 66:4",
+       "text": "All the earth bows down to You; they sing praise to You; they sing praise to Your name.” Selah",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.9",
+       "ref": "Romans 15:9",
+       "text": "so that the Gentiles may glorify God for His mercy. As it is written: “Therefore I will praise You among the Gentiles; I will sing hymns to Your name.”",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        },
+        {
+         "key": "g5567",
+         "lemma": "ψάλλω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.68.32",
+       "ref": "Psalms 68:32",
+       "text": "Sing to God, O kingdoms of the earth; sing praises to the Lord-Selah",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.98.4",
+       "ref": "Psalms 98:4",
+       "text": "Make a joyful noise to the LORD, all the earth; break forth-let your cry ring out, and sing praises!",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "His servants, His saints, those who fear Him, who dwell in His house, Israel, Zion",
+     "note": null,
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "zion",
+       "name": "Zion",
+       "type": "place",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "1Chr.16.36",
+      "Rev.19.5",
+      "Neh.5.13",
+      "Ps.22.23",
+      "Ps.30.4",
+      "Ps.84.4",
+      "Ps.113.1",
+      "Ps.135.1",
+      "Ps.147.12"
+     ],
+     "eg": [
+      {
+       "id": "1Chr.16.36",
+       "ref": "1 Chronicles 16:36",
+       "text": "Blessed be the LORD, the God of Israel, from everlasting to everlasting.” Then all the people said, “Amen!” and “Praise the LORD!”",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Rev.19.5",
+       "ref": "Revelation 19:5",
+       "text": "Then a voice came from the throne, saying: “Praise our God, all you who serve Him, and those who fear Him, small and great alike!”",
+       "words": [
+        {
+         "key": "g134",
+         "lemma": "αἰνέω"
+        }
+       ]
+      },
+      {
+       "id": "Neh.5.13",
+       "ref": "Nehemiah 5:13",
+       "text": "I also shook out the folds of my robe and said, “May God likewise shake out of his house and possessions every man who does not keep this promise. May such a man be shaken out and have nothing!” The whole assembly said, “Amen,” and they praised the LORD. And the people did as they had promised.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Ps.22.23",
+       "ref": "Psalms 22:23",
+       "text": "You who fear the LORD, praise Him! All descendants of Jacob, honor Him! All offspring of Israel, revere Him!",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“I will praise,” “I will sing,” “Praise the LORD, O my soul”",
+     "note": "Also the psalmist's own soul, mouth and lips as the ones who praise (Ps 63:3, 63:5, 146:1). The Hebrew זָמַר is 'sing praise'; where the Berean prints only 'sing', the verse says so.",
+     "doors": [
+      {
+       "id": "worship",
+       "name": "worship",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Ps.22.22",
+      "1Cor.14.15",
+      "Ps.30.12",
+      "Ps.35.18",
+      "Ps.56.4",
+      "Ps.56.10",
+      "Ps.57.7",
+      "Ps.57.9",
+      "Ps.59.17",
+      "Ps.63.3",
+      "Ps.63.5",
+      "Ps.71.22",
+      "Ps.71.23",
+      "Ps.101.1",
+      "Ps.108.1",
+      "Ps.108.3",
+      "Ps.109.30",
+      "Ps.119.164",
+      "Ps.138.1",
+      "Ps.146.1",
+      "Dan.2.23",
+      "Dan.4.34",
+      "Dan.4.37",
+      "Heb.2.12"
+     ],
+     "eg": [
+      {
+       "id": "Ps.22.22",
+       "ref": "Psalms 22:22",
+       "text": "I will proclaim Your name to my brothers; I will praise You in the assembly.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.14.15",
+       "ref": "1 Corinthians 14:15",
+       "text": "What then shall I do? I will pray with my spirit, but I will also pray with my mind. I will sing with my spirit, but I will also sing with my mind.",
+       "words": [
+        {
+         "key": "g5567",
+         "lemma": "ψάλλω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.30.12",
+       "ref": "Psalms 30:12",
+       "text": "that my heart may sing Your praises and not be silent. O LORD my God, I will give thanks forever.",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.35.18",
+       "ref": "Psalms 35:18",
+       "text": "Then I will give You thanks in the great assembly; I will praise You among many people.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praise the LORD, sing to the LORD, praise God",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Judg.5.3",
+      "2Sam.22.4",
+      "1Chr.16.25",
+      "1Chr.23.5",
+      "1Chr.23.30",
+      "Ezra.3.11",
+      "Ps.9.11",
+      "Ps.18.3",
+      "Ps.22.26",
+      "Ps.47.6",
+      "Ps.48.1",
+      "Ps.75.9",
+      "Ps.96.4",
+      "Ps.98.5",
+      "Ps.104.33",
+      "Ps.145.3",
+      "Ps.146.2",
+      "Ps.147.1",
+      "Ps.147.7",
+      "Ps.147.12",
+      "Ps.148.7",
+      "Ps.150.1",
+      "Isa.12.5",
+      "Isa.62.9",
+      "Jer.20.13"
+     ],
+     "eg": [
+      {
+       "id": "Judg.5.3",
+       "ref": "Judges 5:3",
+       "text": "Listen, O kings! Give ear, O princes! I will sing to the LORD; I will sing praise to the LORD, the God of Israel.",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.22.4",
+       "ref": "2 Samuel 22:4",
+       "text": "I will call upon the LORD, who is worthy to be praised; so shall I be saved from my enemies.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.16.25",
+       "ref": "1 Chronicles 16:25",
+       "text": "For great is the LORD, and greatly to be praised; He is to be feared above all gods.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.23.5",
+       "ref": "1 Chronicles 23:5",
+       "text": "4,000 are to be gatekeepers, and 4,000 are to praise the LORD with the instruments I have made for giving praise.”",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "They glorified God, praised God, sang hymns to God",
+     "note": "In most of these the Greek verb is δοξάζω, “glorify”; a few are αἰνέω, “praise”, or ὑμνέω, “sing a hymn”. They are different words, and in Luke 2:20 and 18:43 the text sets two of them side by side.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 21,
+     "verses": [
+      "Matt.9.8",
+      "Gal.1.24",
+      "Matt.15.31",
+      "Mark.2.12",
+      "Luke.2.13",
+      "Luke.2.20",
+      "Luke.5.25",
+      "Luke.5.26",
+      "Luke.7.16",
+      "Luke.13.13",
+      "Luke.17.15",
+      "Luke.18.43",
+      "Luke.19.37",
+      "Luke.23.47",
+      "Acts.2.47",
+      "Acts.3.8",
+      "Acts.3.9",
+      "Acts.4.21",
+      "Acts.11.18",
+      "Acts.16.25",
+      "Acts.21.20"
+     ],
+     "eg": [
+      {
+       "id": "Matt.9.8",
+       "ref": "Matthew 9:8",
+       "text": "When the crowds saw this, they were filled with awe and glorified God, who had given such authority to men.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.1.24",
+       "ref": "Galatians 1:24",
+       "text": "And they glorified God because of me.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.15.31",
+       "ref": "Matthew 15:31",
+       "text": "The crowd was amazed when they saw the mute speaking, the crippled restored, the lame walking, and the blind seeing. And they glorified the God of Israel.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "Mark.2.12",
+       "ref": "Mark 2:12",
+       "text": "And immediately the man got up, picked up his mat, and walked out in front of them all. As a result, they were all astounded and glorified God, saying, “We have never seen anything like this!”",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Glorify God,” “glorify Your name,” “that God may be glorified”",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "glory",
+       "name": "glory",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Matt.5.16",
+      "Rom.15.6",
+      "John.21.19",
+      "Rom.15.9",
+      "1Cor.6.20",
+      "2Cor.9.13",
+      "1Pet.4.11",
+      "1Pet.4.16",
+      "Rev.15.4"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.16",
+       "ref": "Matthew 5:16",
+       "text": "In the same way, let your light shine before men, that they may see your good deeds and glorify your Father in heaven.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.6",
+       "ref": "Romans 15:6",
+       "text": "so that with one mind and one voice you may glorify the God and Father of our Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "John.21.19",
+       "ref": "John 21:19",
+       "text": "Jesus said this to indicate the kind of death by which Peter would glorify God. And after He had said this, He told him, “Follow Me.”",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.9",
+       "ref": "Romans 15:9",
+       "text": "so that the Gentiles may glorify God for His mercy. As it is written: “Therefore I will praise You among the Gentiles; I will sing hymns to Your name.”",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        },
+        {
+         "key": "g5567",
+         "lemma": "ψάλλω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus glorified, the Father glorified, and who glorifies whom (John, Acts, Hebrews, Luke 4:15)",
+     "note": "Here the Greek is δοξάζω, “glorify”, the glory card's verb. It is also the verb of “they glorified God”, but the page does not treat the Father and the Son glorifying one another as praise, or as the same act as a crowd glorifying God. John 16:14 is the Spirit glorifying Jesus. Where Christian traditions part on how the persons glorify one another, the page takes no side.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "the_father",
+       "name": "the Father",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "glory",
+       "name": "glory",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "John.7.39",
+      "John.8.54",
+      "John.11.4",
+      "John.12.16",
+      "John.12.23",
+      "John.12.28",
+      "John.13.31",
+      "John.13.32",
+      "John.14.13",
+      "John.15.8",
+      "John.16.14",
+      "John.17.1",
+      "John.17.4",
+      "John.17.5",
+      "John.17.10",
+      "Acts.3.13",
+      "Heb.5.5",
+      "Luke.4.15"
+     ],
+     "eg": [
+      {
+       "id": "John.7.39",
+       "ref": "John 7:39",
+       "text": "He was speaking about the Spirit, whom those who believed in Him were later to receive. For the Spirit had not yet been given, because Jesus had not yet been glorified.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "John.8.54",
+       "ref": "John 8:54",
+       "text": "Jesus answered, “If I glorify Myself, My glory means nothing. The One who glorifies Me is My Father, of whom you say, ‘He is our God.'",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "John.11.4",
+       "ref": "John 11:4",
+       "text": "When Jesus heard this, He said, “This sickness will not end in death. No, it is for the glory of God, so that the Son of God may be glorified through it.”",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "John.12.16",
+       "ref": "John 12:16",
+       "text": "At first His disciples did not understand these things, but after Jesus was glorified they remembered what had been done to Him, and they realized that these very things had also been written about Him.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praise given to someone or something other than the LORD: a king, a wife, a manager, their gods",
+     "note": null,
+     "doors": [
+      {
+       "id": "gods",
+       "name": "gods",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Gen.12.15",
+      "Judg.16.24",
+      "Dan.5.4",
+      "Dan.5.23",
+      "2Sam.14.25",
+      "2Chr.23.12",
+      "Prov.12.8",
+      "Prov.27.2",
+      "Prov.28.4",
+      "Prov.31.28",
+      "Prov.31.30",
+      "Prov.31.31",
+      "Song.6.9",
+      "Eccl.4.2",
+      "Eccl.8.15",
+      "Luke.16.8",
+      "1Cor.11.2",
+      "1Cor.11.17",
+      "1Cor.11.22"
+     ],
+     "eg": [
+      {
+       "id": "Gen.12.15",
+       "ref": "Genesis 12:15",
+       "text": "When Pharaoh's officials saw Sarai, they commended her to him, and she was taken into the palace of Pharaoh.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Judg.16.24",
+       "ref": "Judges 16:24",
+       "text": "And when the people saw him, they praised their god, saying: “Our god has delivered into our hands our enemy who destroyed our land and multiplied our dead.”",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Dan.5.4",
+       "ref": "Daniel 5:4",
+       "text": "As they drank the wine, they praised their gods of gold and silver, bronze and iron, wood and stone.",
+       "words": [
+        {
+         "key": "h7624",
+         "lemma": "שְׁבַח"
+        }
+       ]
+      },
+      {
+       "id": "Dan.5.23",
+       "ref": "Daniel 5:23",
+       "text": "Instead, you have exalted yourself against the Lord of heaven. The vessels from His house were brought to you, and as you drank wine from them with your nobles, wives, and concubines, you praised your gods of silver and gold, bronze and iron, wood and stone, which cannot see or hear or understand. But you have failed to glorify the God who holds in His hand your very breath and all your ways.",
+       "words": [
+        {
+         "key": "h7624",
+         "lemma": "שְׁבַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The dead do not praise",
+     "note": "Ps 6:5, 30:9 and 88:10 say the same with the thanks word יָדָה, which the Berean also prints “praise”; see Other words.",
+     "doors": [
+      {
+       "id": "hell",
+       "name": "Sheol",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sin_exile_death_r24",
+       "name": "Who can praise You from Sheol?",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Ps.115.17",
+      "Isa.38.18"
+     ],
+     "eg": [
+      {
+       "id": "Ps.115.17",
+       "ref": "Psalms 115:17",
+       "text": "It is not the dead who praise the LORD, nor any who descend into silence.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      },
+      {
+       "id": "Isa.38.18",
+       "ref": "Isaiah 38:18",
+       "text": "For Sheol cannot thank You; Death cannot praise You. Those who descend to the Pit cannot hope for Your faithfulness.",
+       "words": [
+        {
+         "key": "h1984",
+         "lemma": "הָלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Knew God and did not glorify Him as God or give thanks",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 1,
+     "verses": [
+      "Rom.1.21"
+     ],
+     "eg": [
+      {
+       "id": "Rom.1.21",
+       "ref": "Romans 1:21",
+       "text": "For although they knew God, they neither glorified Him as God nor gave thanks to Him, but they became futile in their thinking and darkened in their foolish hearts.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Glorified: the word of the Lord, those He justified, oneself, what was once glorious",
+     "note": "None of these is praise offered to God. They are here only because the Greek verb is the same, δοξάζω, “glorify”. Rom 8:30 and Acts 13:48 are listed for that verb alone; the page takes no side on how their other words (“predestined”, “appointed”) are read. Here the one glorified is the word of the Lord, those He justified, oneself (Rev 18:7), or what was once glorious (2 Cor 3:10, the ministry whose glory has been surpassed).",
+     "doors": [
+      {
+       "id": "glory",
+       "name": "glory",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Acts.13.48",
+      "2Thess.3.1",
+      "Rom.8.30",
+      "Rev.18.7",
+      "2Cor.3.10"
+     ],
+     "eg": [
+      {
+       "id": "Acts.13.48",
+       "ref": "Acts 13:48",
+       "text": "When the Gentiles heard this, they rejoiced and glorified the word of the Lord, and all who were appointed for eternal life believed.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "2Thess.3.1",
+       "ref": "2 Thessalonians 3:1",
+       "text": "Finally, brothers, pray for us, that the word of the Lord may spread quickly and be held in honor, just as it was with you.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.30",
+       "ref": "Romans 8:30",
+       "text": "And those He predestined, He also called; those He called, He also justified; those He justified, He also glorified.",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.18.7",
+       "ref": "Revelation 18:7",
+       "text": "As much as she has glorified herself and lived in luxury, give her the same measure of torment and grief. In her heart she says, ‘I sit as queen; I am not a widow and will never see grief.'",
+       "words": [
+        {
+         "key": "g1392",
+         "lemma": "δοξάζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Sing to Him, sing praises, praise Him” — the call itself",
+     "note": null,
+     "doors": [
+      {
+       "id": "worship",
+       "name": "worship",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "1Chr.16.9",
+      "Jas.5.13",
+      "Ps.47.6",
+      "Ps.47.7",
+      "Ps.66.2",
+      "Ps.105.2",
+      "Ps.150.1",
+      "Ps.150.2",
+      "Ps.150.3",
+      "Ps.150.4",
+      "Ps.150.5"
+     ],
+     "eg": [
+      {
+       "id": "1Chr.16.9",
+       "ref": "1 Chronicles 16:9",
+       "text": "Sing to Him, sing praises to Him; tell of all His wonders.",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.13",
+       "ref": "James 5:13",
+       "text": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+       "words": [
+        {
+         "key": "g5567",
+         "lemma": "ψάλλω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.47.6",
+       "ref": "Psalms 47:6",
+       "text": "Sing praises to God, sing praises; sing praises to our King, sing praises!",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.47.7",
+       "ref": "Psalms 47:7",
+       "text": "For God is King of all the earth; sing to Him a psalm of praise.",
+       "words": [
+        {
+         "key": "h2167",
+         "lemma": "זָמַר"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 7,
+    "verses": [
+     "1Chr.25.3",
+     "Isa.64.11",
+     "Ps.102.18",
+     "Ps.107.32",
+     "Ps.119.175",
+     "Ps.145.4",
+     "Ps.21.13"
+    ]
+   }
+  },
+  {
+   "form": "noun",
+   "verses": 76,
+   "rows": [
+    {
+     "label": "A people, a city, a land held in praise",
+     "note": null,
+     "doors": [
+      {
+       "id": "nations",
+       "name": "nations",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Deut.26.19",
+      "Isa.62.7",
+      "Zeph.3.19",
+      "Zeph.3.20",
+      "Jer.13.11",
+      "Jer.33.9",
+      "Jer.48.2",
+      "Jer.49.25",
+      "Jer.51.41",
+      "Isa.60.18",
+      "Isa.61.3",
+      "Isa.61.11",
+      "Ps.148.14"
+     ],
+     "eg": [
+      {
+       "id": "Deut.26.19",
+       "ref": "Deuteronomy 26:19",
+       "text": "that He will set you high in praise and name and honor above all the nations He has made, and that you will be a holy people to the LORD your God, as He has promised.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.62.7",
+       "ref": "Isaiah 62:7",
+       "text": "nor give Him any rest until He establishes Jerusalem and makes her the praise of the earth.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Zeph.3.19",
+       "ref": "Zephaniah 3:19",
+       "text": "Behold, at that time, I will deal with all who afflict you. I will save the lame and gather the scattered; and I will appoint praise and fame for the disgraced throughout the earth.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Zeph.3.20",
+       "ref": "Zephaniah 3:20",
+       "text": "At that time I will bring you in; yes, at that time I will gather you. For I will give you fame and praise among all the peoples of the earth when I restore your captives before your very eyes,” says the LORD.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“He is your praise,” “You are my praise”",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Deut.10.21",
+      "Jer.17.14",
+      "Ps.109.1"
+     ],
+     "eg": [
+      {
+       "id": "Deut.10.21",
+       "ref": "Deuteronomy 10:21",
+       "text": "He is your praise and He is your God, who has done for you these great and awesome wonders that your eyes have seen.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.17.14",
+       "ref": "Jeremiah 17:14",
+       "text": "Heal me, O LORD, and I will be healed; save me, and I will be saved, for You are my praise.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.109.1",
+       "ref": "Psalms 109:1",
+       "text": "For the choirmaster. A Psalm of David. O God of my praise, be not silent.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Declare, proclaim, make known His praise",
+     "note": null,
+     "doors": [
+      {
+       "id": "worship",
+       "name": "worship",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Ps.9.14",
+      "Ps.34.1",
+      "Ps.35.28",
+      "Ps.51.15",
+      "Ps.71.8",
+      "Ps.78.4",
+      "Ps.79.13",
+      "Ps.106.2",
+      "Ps.119.171",
+      "Ps.145.21",
+      "Isa.42.12",
+      "Isa.43.21",
+      "Isa.60.6",
+      "Isa.63.7"
+     ],
+     "eg": [
+      {
+       "id": "Ps.9.14",
+       "ref": "Psalms 9:14",
+       "text": "that I may declare all Your praises-that within the gates of Daughter Zion I may rejoice in Your salvation.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.34.1",
+       "ref": "Psalms 34:1",
+       "text": "Of David, when he pretended to be insane before Abimelech, so that the king drove him away. I will bless the LORD at all times; His praise will always be on my lips.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.35.28",
+       "ref": "Psalms 35:28",
+       "text": "Then my tongue will proclaim Your righteousness and Your praises all day long.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.51.15",
+       "ref": "Psalms 51:15",
+       "text": "O Lord, open my lips, and my mouth will declare Your praise.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Hallelujah!” in Revelation",
+     "note": "The Greek ἁλληλουϊά is the Hebrew הַלְלוּ־יָהּ, 'praise the LORD', carried over.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Rev.19.1",
+      "Rev.19.3",
+      "Rev.19.4",
+      "Rev.19.6"
+     ],
+     "eg": [
+      {
+       "id": "Rev.19.1",
+       "ref": "Revelation 19:1",
+       "text": "After this I heard a sound like the roar of a great multitude in heaven, shouting: “Hallelujah! Salvation and glory and power belong to our God!",
+       "words": [
+        {
+         "key": "g239",
+         "lemma": "ἁλληλουϊά"
+        }
+       ]
+      },
+      {
+       "id": "Rev.19.3",
+       "ref": "Revelation 19:3",
+       "text": "And a second time they called out: “Hallelujah! Her smoke rises forever and ever.”",
+       "words": [
+        {
+         "key": "g239",
+         "lemma": "ἁλληλουϊά"
+        }
+       ]
+      },
+      {
+       "id": "Rev.19.4",
+       "ref": "Revelation 19:4",
+       "text": "And the twenty-four elders and the four living creatures fell down and worshiped God who sits on the throne, saying: “Amen, Hallelujah!”",
+       "words": [
+        {
+         "key": "g239",
+         "lemma": "ἁλληλουϊά"
+        }
+       ]
+      },
+      {
+       "id": "Rev.19.6",
+       "ref": "Revelation 19:6",
+       "text": "And I heard a sound like the roar of a great multitude, like the rushing of many waters, and like a mighty rumbling of thunder, crying out: “Hallelujah! For the Lord our God the Almighty reigns.",
+       "words": [
+        {
+         "key": "g239",
+         "lemma": "ἁλληλουϊά"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praise and thanks, side by side",
+     "note": "The text sets praise and thanks together; they are two words, and the page does not treat one as the other.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r21",
+       "name": "Thank offerings and the sacrifice of praise",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sact_thanksgiving",
+       "name": "Speech act: Thanksgiving",
+       "type": "pattern",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "1Chr.16.35",
+      "Neh.12.46",
+      "Ps.100.4",
+      "Ps.106.47"
+     ],
+     "eg": [
+      {
+       "id": "1Chr.16.35",
+       "ref": "1 Chronicles 16:35",
+       "text": "Then cry out: ‘Save us, O God of our salvation; gather and deliver us from the nations, that we may give thanks to Your holy name, that we may glory in Your praise.'",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Neh.12.46",
+       "ref": "Nehemiah 12:46",
+       "text": "For long ago, in the days of David and Asaph, there were directors for the singers and for the songs of praise and thanksgiving to God.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.100.4",
+       "ref": "Psalms 100:4",
+       "text": "Enter His gates with thanksgiving and His courts with praise; give thanks to Him and bless His name.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.106.47",
+       "ref": "Psalms 106:47",
+       "text": "Save us, O LORD our God, and gather us from the nations, that we may give thanks to Your holy name, that we may glory in Your praise.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praise beside glory and the name",
+     "note": null,
+     "doors": [
+      {
+       "id": "glory",
+       "name": "glory",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_name_of_the_lord",
+       "name": "the name of the Lord",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Neh.9.5",
+      "Eph.1.6",
+      "Ps.48.10",
+      "Ps.66.2",
+      "Ps.102.21",
+      "Ps.145.1",
+      "Isa.42.8",
+      "Isa.48.9",
+      "Hab.3.3",
+      "Eph.1.12",
+      "Eph.1.14",
+      "Phil.1.11",
+      "Heb.13.15",
+      "1Pet.1.7"
+     ],
+     "eg": [
+      {
+       "id": "Neh.9.5",
+       "ref": "Nehemiah 9:5",
+       "text": "Then the Levites-Jeshua, Kadmiel, Bani, Hashabneiah, Sherebiah, Hodiah, Shebaniah, and Pethahiah-said, “Stand up and bless the LORD your God from everlasting to everlasting: Blessed be Your glorious name, and may it be exalted above all blessing and praise.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.6",
+       "ref": "Ephesians 1:6",
+       "text": "to the praise of His glorious grace, which He has freely given us in the Beloved One.",
+       "words": [
+        {
+         "key": "g1868",
+         "lemma": "ἔπαινος"
+        }
+       ]
+      },
+      {
+       "id": "Ps.48.10",
+       "ref": "Psalms 48:10",
+       "text": "Your name, O God, like Your praise, reaches to the ends of the earth; Your right hand is full of righteousness.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.66.2",
+       "ref": "Psalms 66:2",
+       "text": "Sing the glory of His name; make His praise glorious.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praise in a song, a new song",
+     "note": null,
+     "doors": [
+      {
+       "id": "songs",
+       "name": "songs",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_apocalyptic_r22",
+       "name": "A new song",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Ps.40.3",
+      "Ps.65.1",
+      "Ps.106.12",
+      "Ps.149.1",
+      "Isa.42.10"
+     ],
+     "eg": [
+      {
+       "id": "Ps.40.3",
+       "ref": "Psalms 40:3",
+       "text": "He put a new song in my mouth, a hymn of praise to our God. Many will see and fear and put their trust in the LORD.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.65.1",
+       "ref": "Psalms 65:1",
+       "text": "For the choirmaster. A Psalm of David. A song. Praise awaits You, O God, in Zion; to You our vows will be fulfilled.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.106.12",
+       "ref": "Psalms 106:12",
+       "text": "Then they believed His promises and sang His praise.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.149.1",
+       "ref": "Psalms 149:1",
+       "text": "Hallelujah! Sing to the LORD a new song-His praise in the assembly of the godly.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praise from people, praise from God",
+     "note": null,
+     "doors": [],
+     "n": 5,
+     "verses": [
+      "Rom.2.29",
+      "Rom.13.3",
+      "1Cor.4.5",
+      "1Pet.2.14",
+      "2Cor.8.18"
+     ],
+     "eg": [
+      {
+       "id": "Rom.2.29",
+       "ref": "Romans 2:29",
+       "text": "No, a man is a Jew because he is one inwardly, and circumcision is a matter of the heart, by the Spirit, not by the written code. Such a man's praise does not come from men, but from God.",
+       "words": [
+        {
+         "key": "g1868",
+         "lemma": "ἔπαινος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.13.3",
+       "ref": "Romans 13:3",
+       "text": "For rulers are not a terror to good conduct, but to bad. Do you want to be unafraid of the one in authority? Then do what is right, and you will have his approval.",
+       "words": [
+        {
+         "key": "g1868",
+         "lemma": "ἔπαινος"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.4.5",
+       "ref": "1 Corinthians 4:5",
+       "text": "Therefore judge nothing before the appointed time; wait until the Lord comes. He will bring to light what is hidden in darkness and will expose the motives of men's hearts. At that time each will receive his praise from God.",
+       "words": [
+        {
+         "key": "g1868",
+         "lemma": "ἔπαινος"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.2.14",
+       "ref": "1 Peter 2:14",
+       "text": "or to governors as those sent by him to punish those who do wrong and to praise those who do right.",
+       "words": [
+        {
+         "key": "g1868",
+         "lemma": "ἔπαινος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use of the noun",
+     "note": null,
+     "doors": [],
+     "n": 14,
+     "verses": [
+      "Ps.22.3",
+      "Exod.15.11",
+      "Matt.21.16",
+      "Phil.4.8",
+      "2Chr.20.22",
+      "Ps.22.25",
+      "Ps.33.1",
+      "Ps.66.8",
+      "Ps.71.6",
+      "Ps.71.14",
+      "Ps.111.10",
+      "Ps.147.1",
+      "Prov.27.21",
+      "Luke.18.43"
+     ],
+     "eg": [
+      {
+       "id": "Ps.22.3",
+       "ref": "Psalms 22:3",
+       "text": "Yet You are holy, enthroned on the praises of Israel.",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Exod.15.11",
+       "ref": "Exodus 15:11",
+       "text": "Who among the gods is like You, O LORD? Who is like You-majestic in holiness, revered with praises, performing wonders?",
+       "words": [
+        {
+         "key": "h8416",
+         "lemma": "תְּהִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Matt.21.16",
+       "ref": "Matthew 21:16",
+       "text": "“Do You hear what these children are saying?” they asked. “Yes,” Jesus answered. “Have you never read: ‘From the mouths of children and infants You have ordained praise'?”",
+       "words": [
+        {
+         "key": "g136",
+         "lemma": "αἶνος"
+        }
+       ]
+      },
+      {
+       "id": "Phil.4.8",
+       "ref": "Philippians 4:8",
+       "text": "Finally, brothers, whatever is true, whatever is honorable, whatever is right, whatever is pure, whatever is lovely, whatever is admirable-if anything is excellent or praiseworthy-think on these things.",
+       "words": [
+        {
+         "key": "g1868",
+         "lemma": "ἔπαινος"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “praise”",
+  "words": [
+   {
+    "key": "h3034",
+    "lemma": "יָדָה",
+    "translit": "ya.dah",
+    "gloss": "to give thanks",
+    "lang": "Hebrew",
+    "n": 27,
+    "verses": [
+     "Ps.118.1",
+     "Ps.118.28",
+     "Ps.136.1",
+     "Ps.138.4",
+     "Gen.29.35",
+     "Gen.49.8",
+     "2Sam.22.50",
+     "Ps.6.5",
+     "Ps.30.9",
+     "Ps.33.2",
+     "Ps.42.5",
+     "Ps.42.11",
+     "Ps.43.4",
+     "Ps.43.5",
+     "Ps.45.17",
+     "Ps.49.18",
+     "Ps.52.9",
+     "Ps.67.3",
+     "Ps.67.5",
+     "Ps.71.22",
+     "Ps.76.10",
+     "Ps.88.10",
+     "Ps.89.5",
+     "Ps.99.3",
+     "Ps.119.7",
+     "Ps.139.14",
+     "Isa.25.1"
+    ],
+    "note": "The Berean prints “praise” for this word in the other verses shown, but most of its uses it prints “give thanks”, as in the four first shown here (the Hallel, Ps 118; Ps 136; Ps 138:4). It is the thanks word, and the page does not gather it under praise.",
+    "eg": [
+     {
+      "id": "Ps.118.1",
+      "ref": "Psalms 118:1",
+      "text": "Give thanks to the LORD, for He is good; His loving devotion endures forever."
+     },
+     {
+      "id": "Ps.118.28",
+      "ref": "Psalms 118:28",
+      "text": "You are my God, and I will give You thanks. You are my God, and I will exalt You."
+     }
+    ]
+   },
+   {
+    "key": "h7318",
+    "lemma": "רֹומַם",
+    "translit": "ro.mam",
+    "gloss": "extolling",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Ps.66.17",
+     "Ps.149.6"
+    ],
+    "eg": [
+     {
+      "id": "Ps.66.17",
+      "ref": "Psalms 66:17",
+      "text": "I cried out to Him with my mouth and praised Him with my tongue."
+     },
+     {
+      "id": "Ps.149.6",
+      "ref": "Psalms 149:6",
+      "text": "May the high praises of God be in their mouths, and a double-edged sword in their hands,"
+     }
+    ]
+   },
+   {
+    "key": "g2127",
+    "lemma": "εὐλογέω",
+    "translit": "eulogeō",
+    "gloss": "to praise/bless",
+    "lang": "Greek",
+    "verses": [
+     "Luke.1.64",
+     "Luke.24.53"
+    ],
+    "n": 2,
+    "note": "These two are εὐλογέω, “bless”, a different word; here the Berean prints “praising”. “Bless the LORD, O my soul” (Ps 103:1, 104:1, 134:1) is בָּרַךְ, “bless”, another word that this page does not gather under praise.",
+    "eg": [
+     {
+      "id": "Luke.1.64",
+      "ref": "Luke 1:64",
+      "text": "Immediately Zechariah's mouth was opened and his tongue was released, and he began to speak, praising God."
+     },
+     {
+      "id": "Luke.24.53",
+      "ref": "Luke 24:53",
+      "text": "praising God continually in the temple."
+     }
+    ]
+   },
+   {
+    "key": "g1843",
+    "lemma": "ἐξομολογέω",
+    "translit": "exomologeomai",
+    "gloss": "to agree",
+    "lang": "Greek",
+    "verses": [
+     "Matt.11.25",
+     "Luke.10.21"
+    ],
+    "n": 2,
+    "note": "The Greek is ἐξομολογέω, “acknowledge, confess” (as in Matt 3:6, “confessing their sins”); here the Berean prints “I praise You, Father”.",
+    "eg": [
+     {
+      "id": "Matt.11.25",
+      "ref": "Matthew 11:25",
+      "text": "At that time Jesus declared, “I praise You, Father, Lord of heaven and earth, because You have hidden these things from the wise and learned, and revealed them to little children."
+     },
+     {
+      "id": "Luke.10.21",
+      "ref": "Luke 10:21",
+      "text": "At that time Jesus rejoiced in the Holy Spirit and declared, “I praise You, Father, Lord of heaven and earth, because You have hidden these things from the wise and learned, and revealed them to little children. Yes, Father, for this was well-pleasing in Your sight."
+     }
+    ]
+   },
+   {
+    "key": "h5115",
+    "lemma": "נָוָה",
+    "translit": "yinweh",
+    "gloss": null,
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Exod.15.2"
+    ],
+    "eg": [
+     {
+      "id": "Exod.15.2",
+      "ref": "Exodus 15:2",
+      "text": "The LORD is my strength and my song, and He has become my salvation. He is my God, and I will praise Him, my father's God, and I will exalt Him."
+     }
+    ]
+   },
+   {
+    "key": "h5108",
+    "lemma": "נִיב",
+    "translit": "**niyḇ",
+    "gloss": "praise",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Isa.57.19"
+    ],
+    "eg": [
+     {
+      "id": "Isa.57.19",
+      "ref": "Isaiah 57:19",
+      "text": "bringing praise to their lips. Peace, peace to those far and near,” says the LORD, “and I will heal them.”"
+     }
+    ]
+   },
+   {
+    "key": "h1974",
+    "lemma": "הִלּוּלִים",
+    "translit": "hil.lul",
+    "gloss": "praise",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Lev.19.24"
+    ],
+    "eg": [
+     {
+      "id": "Lev.19.24",
+      "ref": "Leviticus 19:24",
+      "text": "In the fourth year all its fruit must be consecrated as a praise offering to the LORD."
+     }
+    ]
+   },
+   {
+    "key": "h7679",
+    "lemma": "שָׂגָא",
+    "translit": "sa.ga",
+    "gloss": "to grow great",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Job.36.24"
+    ],
+    "eg": [
+     {
+      "id": "Job.36.24",
+      "ref": "Job 36:24",
+      "text": "Remember to magnify His work, which men have praised in song."
+     }
+    ]
+   },
+   {
+    "key": "g2129",
+    "lemma": "εὐλογία",
+    "translit": "eulogia",
+    "gloss": "praise",
+    "lang": "Greek",
+    "verses": [
+     "Rev.5.13"
+    ],
+    "n": 1,
+    "note": "The Greek is εὐλογία, “blessing”; here the Berean prints “praise”. The verse names those it is said to; the page adds nothing.",
+    "eg": [
+     {
+      "id": "Rev.5.13",
+      "ref": "Revelation 5:13",
+      "text": "And I heard every creature in heaven and on earth and under the earth and in the sea, and all that is in them, saying: “To Him who sits on the throne and to the Lamb be praise and honor and glory and power forever and ever!”"
+     }
+    ]
+   }
+  ]
+ }
+}

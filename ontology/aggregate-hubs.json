@@ -1,0 +1,1421 @@
+{
+ "_note": "Plan A.34 (Doug, 2026-10-07): an aggregate card is a hub. Every member opens its node -- a figure opens the whole symbol in the verse's words, which is the gateway to what the passage says it is (Doug: \"breastplate of righteousness is a gateway to righteousness\"): the concept, image, object or title the graph already holds where it is the same thing, a new one ('make') where none exists (Doug, 2026-10-07: \"there should be concept or image nodes for all the members\"; \"those should be consolidated as well\"); every move is a verb the passage gives and opens its verse. Labels are the Berean's words, with the text's capitals. ontology/interest-taxonomy.json (Microsoft Copilot's, 2026-09-13) keeps its ids, lists and shapes unchanged; this file is what the card shows instead. An existing node is reused only where that card is the same thing in the same sense, judged against the original (the Greek decides between translations: Gal 5:22's 'kindness' is chresotes, which the KJV called 'gentleness'). 'changed' says what the taxonomy listed that the passage does not hold, and why. A list with no graph card gets one ('make_card'): one card per list. tools/aggregate_nodes.py writes the made nodes and the list-to-member links.",
+ "_reader": "Claude Opus 5.5, reading each passage in the Berean and the original, 2026-10-07",
+ "armor_of_god": {
+  "label": "the full armor of God",
+  "card": "the_full_armor_of_god",
+  "passage": "Eph 6:10-18",
+  "members": [
+   {
+    "label": "the belt of truth",
+    "ref": "Eph 6:14",
+    "card": "image_belt_of_truth",
+    "make": {
+     "type": "image",
+     "name": "the belt of truth"
+    },
+    "links": [
+     {
+      "type": "draws_on",
+      "dst": "image_girdle"
+     },
+     {
+      "type": "speaks_of",
+      "dst": "truth"
+     }
+    ]
+   },
+   {
+    "label": "the breastplate of righteousness",
+    "ref": "Eph 6:14",
+    "card": "image_breastplate_of_righteousness",
+    "make": {
+     "type": "image",
+     "name": "the breastplate of righteousness",
+     "refs": [
+      "Isa 59:17"
+     ]
+    },
+    "links": [
+     {
+      "type": "draws_on",
+      "dst": "image_breastplate"
+     },
+     {
+      "type": "speaks_of",
+      "dst": "righteousness"
+     }
+    ]
+   },
+   {
+    "label": "feet fitted with the readiness of the gospel of peace",
+    "ref": "Eph 6:15",
+    "card": "image_readiness_of_the_gospel_of_peace",
+    "make": {
+     "type": "image",
+     "name": "the readiness of the gospel of peace"
+    },
+    "links": [
+     {
+      "type": "draws_on",
+      "dst": "image_shoe"
+     },
+     {
+      "type": "speaks_of",
+      "dst": "gospel"
+     },
+     {
+      "type": "speaks_of",
+      "dst": "peace"
+     }
+    ]
+   },
+   {
+    "label": "the shield of faith",
+    "ref": "Eph 6:16",
+    "card": "image_shield_of_faith",
+    "make": {
+     "type": "image",
+     "name": "the shield of faith"
+    },
+    "links": [
+     {
+      "type": "draws_on",
+      "dst": "image_shield"
+     },
+     {
+      "type": "speaks_of",
+      "dst": "faith"
+     }
+    ]
+   },
+   {
+    "label": "the helmet of salvation",
+    "ref": "Eph 6:17",
+    "card": "image_helmet_of_salvation",
+    "make": {
+     "type": "image",
+     "name": "the helmet of salvation",
+     "refs": [
+      "Isa 59:17"
+     ]
+    },
+    "links": [
+     {
+      "type": "draws_on",
+      "dst": "image_helmet"
+     },
+     {
+      "type": "speaks_of",
+      "dst": "salvation"
+     }
+    ]
+   },
+   {
+    "label": "the sword of the Spirit",
+    "ref": "Eph 6:17",
+    "card": "image_sword_of_the_spirit",
+    "make": {
+     "type": "image",
+     "name": "the sword of the Spirit"
+    },
+    "links": [
+     {
+      "type": "draws_on",
+      "dst": "image_sword"
+     },
+     {
+      "type": "signifies",
+      "dst": "word_of_god"
+     }
+    ]
+   }
+  ],
+  "moves": [
+   {
+    "words": "be strong",
+    "ref": "Eph 6:10"
+   },
+   {
+    "words": "put on",
+    "ref": "Eph 6:11"
+   },
+   {
+    "words": "make your stand",
+    "ref": "Eph 6:11"
+   },
+   {
+    "words": "take up",
+    "ref": "Eph 6:13"
+   },
+   {
+    "words": "stand your ground",
+    "ref": "Eph 6:13"
+   },
+   {
+    "words": "stand firm",
+    "ref": "Eph 6:14"
+   },
+   {
+    "words": "extinguish",
+    "ref": "Eph 6:16"
+   },
+   {
+    "words": "take",
+    "ref": "Eph 6:17"
+   },
+   {
+    "words": "pray",
+    "ref": "Eph 6:18"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'stand > resist > advance'",
+    "why": "Ephesians 6 gives no advance: its verbs are put on, take up, stand, extinguish, take, pray."
+   },
+   {
+    "what": "each piece opens the whole symbol, which opens what it stands for",
+    "why": "Doug, 2026-10-07: \"What is most important in the belt of truth is not the belt, but the truth\", then \"it is the whole symbol - which would be the 'breastplate of righteousness', but breastplate of righteousness is a gateway to righteousness.\" Each piece is an image of its own, drawn on the general image and joined to what the verse says it is; the sword 'which is the word of God' (6:17) signifies it."
+   }
+  ]
+ },
+ "fruit_of_the_spirit": {
+  "label": "the fruit of the Spirit",
+  "card": "fruit_of_the_spirit",
+  "passage": "Gal 5:22-23",
+  "members": [
+   {
+    "label": "love",
+    "ref": "Gal 5:22",
+    "card": "love"
+   },
+   {
+    "label": "joy",
+    "ref": "Gal 5:22",
+    "card": "joy"
+   },
+   {
+    "label": "peace",
+    "ref": "Gal 5:22",
+    "card": "peace"
+   },
+   {
+    "label": "patience",
+    "ref": "Gal 5:22",
+    "card": "patience"
+   },
+   {
+    "label": "kindness",
+    "ref": "Gal 5:22",
+    "card": "kindness"
+   },
+   {
+    "label": "goodness",
+    "ref": "Gal 5:22",
+    "card": "goodness"
+   },
+   {
+    "label": "faithfulness",
+    "ref": "Gal 5:22",
+    "card": "faith"
+   },
+   {
+    "label": "gentleness",
+    "ref": "Gal 5:23",
+    "card": "gentleness"
+   },
+   {
+    "label": "self-control",
+    "ref": "Gal 5:23",
+    "card": "temperance"
+   }
+  ],
+  "moves": [
+   {
+    "words": "walk by the Spirit",
+    "ref": "Gal 5:16"
+   },
+   {
+    "words": "led by the Spirit",
+    "ref": "Gal 5:18"
+   },
+   {
+    "words": "crucified the flesh",
+    "ref": "Gal 5:24"
+   },
+   {
+    "words": "walk in step with the Spirit",
+    "ref": "Gal 5:25"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'Spirit > transformation > character'",
+    "why": "a summary, not the passage's verbs."
+   }
+  ]
+ },
+ "beatitudes": {
+  "label": "the Beatitudes",
+  "card": "matt_5_3_12",
+  "passage": "Matt 5:3-12",
+  "members": [
+   {
+    "label": "the poor in spirit",
+    "ref": "Matt 5:3",
+    "card": "poor_in_spirit",
+    "make": {
+     "type": "concept",
+     "name": "poor in spirit"
+    }
+   },
+   {
+    "label": "those who mourn",
+    "ref": "Matt 5:4",
+    "card": "mourning"
+   },
+   {
+    "label": "the meek",
+    "ref": "Matt 5:5",
+    "card": "gentleness"
+   },
+   {
+    "label": "those who hunger and thirst for righteousness",
+    "ref": "Matt 5:6",
+    "card": "righteousness"
+   },
+   {
+    "label": "the merciful",
+    "ref": "Matt 5:7",
+    "card": "mercy"
+   },
+   {
+    "label": "the pure in heart",
+    "ref": "Matt 5:8",
+    "card": "pure"
+   },
+   {
+    "label": "the peacemakers",
+    "ref": "Matt 5:9",
+    "card": "peacemakers",
+    "make": {
+     "type": "concept",
+     "name": "peacemakers"
+    }
+   },
+   {
+    "label": "those who are persecuted because of righteousness",
+    "ref": "Matt 5:10",
+    "card": "persecution",
+    "make": {
+     "type": "concept",
+     "name": "persecution",
+     "refs": [
+      "Matt 5:11"
+     ]
+    }
+   },
+   {
+    "label": "you when people insult you",
+    "ref": "Matt 5:11",
+    "card": "persecution"
+   }
+  ],
+  "moves": [
+   {
+    "words": "rejoice and be glad",
+    "ref": "Matt 5:12"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'reversal > reward > kingdom identity'",
+    "why": "a summary, not the passage's verbs."
+   },
+   {
+    "what": "'the meek' opens gentleness, not humility",
+    "why": "the Greek of Matt 5:5 (praeis) is the word of Gal 5:23's 'gentleness' (prautes), not humility (the A.34 review)."
+   }
+  ],
+  "make_card": {
+   "type": "text",
+   "name": "the Beatitudes",
+   "kind": "abridged",
+   "refs": [
+    "Matt 5:3",
+    "Matt 5:4",
+    "Matt 5:5",
+    "Matt 5:6",
+    "Matt 5:7",
+    "Matt 5:8",
+    "Matt 5:9",
+    "Matt 5:10",
+    "Matt 5:11",
+    "Matt 5:12"
+   ],
+   "desc": "'Blessed are the poor in spirit, for theirs is the kingdom of heaven' (Matt 5:3), and further sayings in the same form follow it (Matt 5:4-11), at the opening of the Sermon on the Mount."
+  },
+  "uncounted": "traditions count the Beatitudes as eight or as nine"
+ },
+ "gifts_of_the_spirit": {
+  "label": "spiritual gifts",
+  "card": "gifts_of_the_spirit",
+  "passage": "1Cor 12:4-11; 1Cor 12:28; Rom 12:6-8; Eph 4:11",
+  "members": [
+   {
+    "label": "the message of wisdom",
+    "ref": "1Cor 12:8",
+    "card": "wisdom"
+   },
+   {
+    "label": "the message of knowledge",
+    "ref": "1Cor 12:8",
+    "card": "knowledge"
+   },
+   {
+    "label": "faith",
+    "ref": "1Cor 12:9",
+    "card": "faith"
+   },
+   {
+    "label": "gifts of healing",
+    "ref": "1Cor 12:9",
+    "card": "healing"
+   },
+   {
+    "label": "the working of miracles",
+    "ref": "1Cor 12:10",
+    "card": "miracles",
+    "make": {
+     "type": "concept",
+     "name": "miracles",
+     "refs": [
+      "1Cor 12:28",
+      "1Cor 12:29"
+     ]
+    }
+   },
+   {
+    "label": "prophecy",
+    "ref": "1Cor 12:10",
+    "card": "prophecy",
+    "make": {
+     "type": "concept",
+     "name": "prophecy",
+     "refs": [
+      "Rom 12:6"
+     ]
+    }
+   },
+   {
+    "label": "distinguishing between spirits",
+    "ref": "1Cor 12:10",
+    "card": "distinguishing_between_spirits",
+    "make": {
+     "type": "concept",
+     "name": "distinguishing between spirits"
+    }
+   },
+   {
+    "label": "speaking in various tongues",
+    "ref": "1Cor 12:10",
+    "card": "tongues",
+    "make": {
+     "type": "concept",
+     "name": "tongues",
+     "refs": [
+      "1Cor 12:28",
+      "1Cor 12:30"
+     ]
+    }
+   },
+   {
+    "label": "the interpretation of tongues",
+    "ref": "1Cor 12:10",
+    "card": "interpretation_of_tongues",
+    "make": {
+     "type": "concept",
+     "name": "the interpretation of tongues"
+    }
+   },
+   {
+    "label": "apostles",
+    "ref": "1Cor 12:28",
+    "card": "apostles",
+    "make": {
+     "type": "title",
+     "name": "apostles"
+    }
+   },
+   {
+    "label": "helping",
+    "ref": "1Cor 12:28",
+    "card": "helping",
+    "make": {
+     "type": "concept",
+     "name": "helping"
+    }
+   },
+   {
+    "label": "administration",
+    "ref": "1Cor 12:28",
+    "card": "administration",
+    "make": {
+     "type": "concept",
+     "name": "administration"
+    }
+   },
+   {
+    "label": "serving",
+    "ref": "Rom 12:7",
+    "card": "service"
+   },
+   {
+    "label": "teaching",
+    "ref": "Rom 12:7",
+    "card": "teach"
+   },
+   {
+    "label": "encouraging",
+    "ref": "Rom 12:8",
+    "card": "encouraging",
+    "make": {
+     "type": "concept",
+     "name": "encouraging"
+    }
+   },
+   {
+    "label": "giving",
+    "ref": "Rom 12:8",
+    "card": "giving",
+    "make": {
+     "type": "concept",
+     "name": "giving"
+    }
+   },
+   {
+    "label": "leading",
+    "ref": "Rom 12:8",
+    "card": "leading",
+    "make": {
+     "type": "concept",
+     "name": "leading"
+    }
+   },
+   {
+    "label": "showing mercy",
+    "ref": "Rom 12:8",
+    "card": "mercy"
+   },
+   {
+    "label": "evangelists",
+    "ref": "Eph 4:11",
+    "card": "evangelists",
+    "make": {
+     "type": "title",
+     "name": "evangelists"
+    }
+   },
+   {
+    "label": "pastors and teachers",
+    "ref": "Eph 4:11",
+    "card": "pastors",
+    "make": {
+     "type": "title",
+     "name": "pastors"
+    }
+   }
+  ],
+  "moves": [
+   {
+    "words": "is given for the common good",
+    "ref": "1Cor 12:7"
+   },
+   {
+    "words": "apportions them to each one",
+    "ref": "1Cor 12:11"
+   },
+   {
+    "words": "eagerly desire the greater gifts",
+    "ref": "1Cor 12:31"
+   },
+   {
+    "words": "to equip the saints",
+    "ref": "Eph 4:12"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'diversity > unity > edification'",
+    "why": "a summary, not the passages' verbs."
+   },
+   {
+    "what": "'exhortation', 'leadership', 'mercy gift', 'apostleship', 'shepherding'",
+    "why": "another translation's words, given here in the Berean's: encouraging, leading, showing mercy, apostles, pastors and teachers. Helping, administration, serving, giving and evangelists are in the same lists and were missing."
+   },
+   {
+    "what": "'apostles' and 'the interpretation of tongues' have nodes of their own",
+    "why": "the graph's 'an apostle of Jesus Christ' is a letter's self-designation, and its 'interpretation' is of dreams (Gen 40); neither is what 1 Cor 12 lists (the A.34 review)."
+   }
+  ],
+  "note": "Each passage names its own giver: 1 Corinthians 12 'the same Spirit' (12:4) and 'God has appointed' (12:28); Romans 12 'according to the grace given us' (12:6); Ephesians 4 'it was He who gave' (4:11)."
+ },
+ "works_of_the_flesh": {
+  "label": "the acts of the flesh",
+  "card": "works_of_the_flesh",
+  "passage": "Gal 5:19-21",
+  "members": [
+   {
+    "label": "sexual immorality",
+    "ref": "Gal 5:19",
+    "card": "sexual_immorality",
+    "make": {
+     "type": "concept",
+     "name": "sexual immorality"
+    }
+   },
+   {
+    "label": "impurity",
+    "ref": "Gal 5:19",
+    "card": "impurity",
+    "make": {
+     "type": "concept",
+     "name": "impurity"
+    }
+   },
+   {
+    "label": "debauchery",
+    "ref": "Gal 5:19",
+    "card": "debauchery",
+    "make": {
+     "type": "concept",
+     "name": "debauchery"
+    }
+   },
+   {
+    "label": "idolatry",
+    "ref": "Gal 5:20",
+    "card": "idolatry",
+    "make": {
+     "type": "concept",
+     "name": "idolatry",
+     "refs": [
+      "Exod 20:4"
+     ]
+    }
+   },
+   {
+    "label": "sorcery",
+    "ref": "Gal 5:20",
+    "card": "sorcery",
+    "make": {
+     "type": "concept",
+     "name": "sorcery"
+    }
+   },
+   {
+    "label": "hatred",
+    "ref": "Gal 5:20",
+    "card": "hatred"
+   },
+   {
+    "label": "discord",
+    "ref": "Gal 5:20",
+    "card": "discord",
+    "make": {
+     "type": "concept",
+     "name": "discord"
+    }
+   },
+   {
+    "label": "jealousy",
+    "ref": "Gal 5:20",
+    "card": "jealousy",
+    "make": {
+     "type": "concept",
+     "name": "jealousy"
+    }
+   },
+   {
+    "label": "rage",
+    "ref": "Gal 5:20",
+    "card": "anger"
+   },
+   {
+    "label": "rivalries",
+    "ref": "Gal 5:20",
+    "card": "rivalries",
+    "make": {
+     "type": "concept",
+     "name": "rivalries"
+    }
+   },
+   {
+    "label": "divisions",
+    "ref": "Gal 5:20",
+    "card": "division"
+   },
+   {
+    "label": "factions",
+    "ref": "Gal 5:20",
+    "card": "factions",
+    "make": {
+     "type": "concept",
+     "name": "factions"
+    }
+   },
+   {
+    "label": "envy",
+    "ref": "Gal 5:21",
+    "card": "envy"
+   },
+   {
+    "label": "drunkenness",
+    "ref": "Gal 5:21",
+    "card": "drunkenness",
+    "make": {
+     "type": "concept",
+     "name": "drunkenness"
+    }
+   },
+   {
+    "label": "orgies",
+    "ref": "Gal 5:21",
+    "card": "orgies",
+    "make": {
+     "type": "concept",
+     "name": "orgies"
+    }
+   }
+  ],
+  "moves": [
+   {
+    "words": "walk by the Spirit",
+    "ref": "Gal 5:16"
+   },
+   {
+    "words": "practice such things",
+    "ref": "Gal 5:21"
+   },
+   {
+    "words": "crucified the flesh",
+    "ref": "Gal 5:24"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'flesh > corruption > death'",
+    "why": "a summary; the passage says 'will not inherit the kingdom of God' (5:21), not death."
+   },
+   {
+    "what": "'enmity', 'strife', 'fits of anger', 'dissensions'",
+    "why": "another translation's words, given here in the Berean's: hatred, discord, rage, factions. Impurity and debauchery are in the same list and were missing."
+   }
+  ]
+ },
+ "seven_churches": {
+  "label": "the seven churches",
+  "card": "event_letters_to_the_seven_churches",
+  "passage": "Rev 1:4-3:22",
+  "members": [
+   {
+    "label": "Ephesus",
+    "ref": "Rev 2:1",
+    "card": "church_at_ephesus"
+   },
+   {
+    "label": "Smyrna",
+    "ref": "Rev 2:8",
+    "card": "church_at_smyrna"
+   },
+   {
+    "label": "Pergamum",
+    "ref": "Rev 2:12",
+    "card": "church_at_pergamos"
+   },
+   {
+    "label": "Thyatira",
+    "ref": "Rev 2:18",
+    "card": "church_at_thyatira"
+   },
+   {
+    "label": "Sardis",
+    "ref": "Rev 3:1",
+    "card": "church_at_sardis"
+   },
+   {
+    "label": "Philadelphia",
+    "ref": "Rev 3:7",
+    "card": "church_at_philadelphia"
+   },
+   {
+    "label": "Laodicea",
+    "ref": "Rev 3:14",
+    "card": "church_at_laodicea"
+   }
+  ],
+  "moves": [
+   {
+    "words": "write",
+    "ref": "Rev 2:1"
+   },
+   {
+    "words": "I know your deeds",
+    "ref": "Rev 2:2"
+   },
+   {
+    "words": "repent",
+    "ref": "Rev 2:5"
+   },
+   {
+    "words": "he who has an ear, let him hear",
+    "ref": "Rev 2:7"
+   },
+   {
+    "words": "to the one who overcomes",
+    "ref": "Rev 2:7"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'diagnosis > warning > promise'",
+    "why": "a summary; the moves given are the letters' own recurring words."
+   }
+  ]
+ },
+ "seven_spirits": {
+  "label": "the seven spirits of God",
+  "no_links": "Revelation's seven spirits are not joined to Isaiah 11:2's list by the text; the card shows the list beside them and the graph does not link them.",
+  "passage": "Rev 1:4; 3:1; 4:5; 5:6; Isa 11:2",
+  "note": "Revelation names seven spirits of God (1:4; 3:1; 4:5; 5:6) and does not list them. The members below are Isaiah 11:2's, which this collection sets beside them; Isaiah does not number them.",
+  "members": [
+   {
+    "label": "wisdom",
+    "ref": "Isa 11:2",
+    "card": "wisdom"
+   },
+   {
+    "label": "understanding",
+    "ref": "Isa 11:2",
+    "card": "understanding"
+   },
+   {
+    "label": "counsel",
+    "ref": "Isa 11:2",
+    "card": "counsel"
+   },
+   {
+    "label": "strength",
+    "ref": "Isa 11:2",
+    "card": "strength"
+   },
+   {
+    "label": "knowledge",
+    "ref": "Isa 11:2",
+    "card": "knowledge"
+   },
+   {
+    "label": "fear of the LORD",
+    "ref": "Isa 11:2",
+    "card": "the_fear_of_the_lord"
+   }
+  ],
+  "moves": [
+   {
+    "words": "will rest on Him",
+    "ref": "Isa 11:2"
+   },
+   {
+    "words": "sent out into all the earth",
+    "ref": "Rev 5:6"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'Messiah > empowerment > justice'",
+    "why": "a summary, not the passages' verbs."
+   }
+  ],
+  "card": "seven_spirits_of_god",
+  "make_card": {
+   "type": "text",
+   "name": "the seven spirits of God",
+   "kind": "saying",
+   "refs": [
+    "Rev 3:1",
+    "Rev 1:4",
+    "Rev 4:5",
+    "Rev 5:6"
+   ],
+   "desc": "'the seven spirits of God' (Rev 3:1). Revelation names them four times and does not list them: at 4:5 they are 'seven torches of fire' before the throne, at 5:6 the Lamb's 'seven horns and seven eyes'."
+  },
+  "members_heading": "Isaiah 11:2, set beside them",
+  "uncounted": "the six of Isaiah 11:2 under a card of seven spirits"
+ },
+ "ten_commandments": {
+  "label": "the Ten Commandments",
+  "card": "ten_commandments",
+  "passage": "Exod 20:1-17",
+  "members": [
+   {
+    "label": "no other gods before Me",
+    "ref": "Exod 20:3",
+    "card": "other_gods",
+    "make": {
+     "type": "concept",
+     "name": "other gods"
+    }
+   },
+   {
+    "label": "an idol",
+    "ref": "Exod 20:4",
+    "card": "idolatry"
+   },
+   {
+    "label": "not bow down to them",
+    "ref": "Exod 20:5",
+    "card": "idolatry"
+   },
+   {
+    "label": "not take the name of the LORD your God in vain",
+    "ref": "Exod 20:7",
+    "card": "the_name_of_the_lord_in_vain",
+    "make": {
+     "type": "concept",
+     "name": "taking the name of the LORD in vain"
+    }
+   },
+   {
+    "label": "remember the Sabbath day",
+    "ref": "Exod 20:8",
+    "card": "sabbath"
+   },
+   {
+    "label": "honor your father and mother",
+    "ref": "Exod 20:12",
+    "card": "honor"
+   },
+   {
+    "label": "not murder",
+    "ref": "Exod 20:13",
+    "card": "murderer"
+   },
+   {
+    "label": "not commit adultery",
+    "ref": "Exod 20:14",
+    "card": "adulterer"
+   },
+   {
+    "label": "not steal",
+    "ref": "Exod 20:15",
+    "card": "theft"
+   },
+   {
+    "label": "not bear false witness",
+    "ref": "Exod 20:16",
+    "card": "false_witness",
+    "make": {
+     "type": "concept",
+     "name": "false witness"
+    }
+   },
+   {
+    "label": "not covet your neighbor's house",
+    "ref": "Exod 20:17",
+    "card": "coveting",
+    "make": {
+     "type": "concept",
+     "name": "coveting"
+    }
+   },
+   {
+    "label": "not covet your neighbor's wife",
+    "ref": "Exod 20:17",
+    "card": "coveting"
+   }
+  ],
+  "moves": [
+   {
+    "words": "God spoke all these words",
+    "ref": "Exod 20:1"
+   },
+   {
+    "words": "who brought you out of the land of Egypt",
+    "ref": "Exod 20:2"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'covenant > identity > holiness'",
+    "why": "a summary, not the passage's verbs. The commands are listed in the text's order and not numbered: traditions divide them differently."
+   },
+   {
+    "what": "listed by the text's sentences (twelve), not as ten",
+    "why": "ten members split at 20:3/20:4 with 20:17 whole is one tradition's count (the A.34 review)."
+   }
+  ],
+  "uncounted": "traditions divide Exodus 20:2-17 differently",
+  "note": "The commands are shown by the text's own sentences and not numbered. Traditions divide Exodus 20:2-17 differently: where the first begins, whether verses 3-6 are one or two, whether verse 17 is one or two."
+ },
+ "tabernacle_furnishings": {
+  "label": "the tabernacle and its furnishings",
+  "card": "tabernacle",
+  "passage": "Exod 25-30",
+  "members": [
+   {
+    "label": "the ark",
+    "ref": "Exod 25:10",
+    "card": "ark_of_the_covenant"
+   },
+   {
+    "label": "the mercy seat",
+    "ref": "Exod 25:17",
+    "card": "the_mercy_seat"
+   },
+   {
+    "label": "the table",
+    "ref": "Exod 25:23",
+    "card": "table_of_the_presence",
+    "make": {
+     "type": "object",
+     "name": "the table of the Presence",
+     "refs": [
+      "Exod 25:30"
+     ]
+    }
+   },
+   {
+    "label": "the Bread of the Presence",
+    "ref": "Exod 25:30",
+    "card": "the_shewbread"
+   },
+   {
+    "label": "the lampstand",
+    "ref": "Exod 25:31",
+    "card": "the_candlestick"
+   },
+   {
+    "label": "the curtains",
+    "ref": "Exod 26:1",
+    "card": "tabernacle_curtains",
+    "make": {
+     "type": "object",
+     "name": "the ten curtains"
+    }
+   },
+   {
+    "label": "the veil",
+    "ref": "Exod 26:31",
+    "card": "the_veil",
+    "make": {
+     "type": "object",
+     "name": "the veil",
+     "refs": [
+      "Exod 26:33"
+     ]
+    }
+   },
+   {
+    "label": "the altar",
+    "ref": "Exod 27:1",
+    "card": "the_altar_of_burnt_offering"
+   },
+   {
+    "label": "the altar of incense",
+    "ref": "Exod 30:27",
+    "card": "the_altar_of_incense"
+   },
+   {
+    "label": "the bronze basin",
+    "ref": "Exod 30:18",
+    "card": "the_laver"
+   }
+  ],
+  "moves": [
+   {
+    "words": "make a sanctuary for Me",
+    "ref": "Exod 25:8"
+   },
+   {
+    "words": "so that I may dwell among them",
+    "ref": "Exod 25:8"
+   },
+   {
+    "words": "according to the pattern I show you",
+    "ref": "Exod 25:9"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'heaven > earth > presence'",
+    "why": "a summary, not the passage's verbs."
+   },
+   {
+    "what": "'bronze sea'",
+    "why": "the bronze Sea is Solomon's temple (1 Kgs 7:23), not the tabernacle."
+   }
+  ]
+ },
+ "sacrificial_system": {
+  "label": "the offerings",
+  "passage": "Lev 1-5",
+  "members": [
+   {
+    "label": "the burnt offering",
+    "ref": "Lev 1:3",
+    "card": "burnt_offerings"
+   },
+   {
+    "label": "the grain offering",
+    "ref": "Lev 2:1",
+    "card": "grain_offering",
+    "make": {
+     "type": "object",
+     "name": "grain offering"
+    }
+   },
+   {
+    "label": "the peace offering",
+    "ref": "Lev 3:1",
+    "card": "peace_offering",
+    "make": {
+     "type": "object",
+     "name": "peace offering"
+    }
+   },
+   {
+    "label": "the sin offering",
+    "ref": "Lev 4:3",
+    "card": "sin_offering",
+    "make": {
+     "type": "object",
+     "name": "sin offering"
+    }
+   },
+   {
+    "label": "the guilt offering",
+    "ref": "Lev 5:15",
+    "card": "guilt_offering",
+    "make": {
+     "type": "object",
+     "name": "guilt offering"
+    }
+   }
+  ],
+  "moves": [
+   {
+    "words": "brings an offering to the LORD",
+    "ref": "Lev 1:2"
+   },
+   {
+    "words": "lay his hand on the head",
+    "ref": "Lev 1:4"
+   },
+   {
+    "words": "to make atonement for him",
+    "ref": "Lev 1:4"
+   },
+   {
+    "words": "slaughter",
+    "ref": "Lev 1:5"
+   },
+   {
+    "words": "splatter it on all sides of the altar",
+    "ref": "Lev 1:5"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'sin > substitution > cleansing > fellowship'",
+    "why": "a summary, not the passage's verbs."
+   }
+  ],
+  "card": "lev_1_5",
+  "make_card": {
+   "type": "text",
+   "name": "the offerings",
+   "kind": "abridged",
+   "refs": [
+    "Lev 1:2",
+    "Lev 1:3",
+    "Lev 2:1",
+    "Lev 3:1",
+    "Lev 4:3",
+    "Lev 5:15"
+   ],
+   "desc": "'When any of you brings an offering to the LORD' (Lev 1:2): the burnt offering, the grain offering, the peace offering, the sin offering and the guilt offering, each given its own law, beginning in Leviticus 1-5."
+  },
+  "moves_heading": "the moves of the burnt offering, in Leviticus 1's words"
+ },
+ "psalm_beatitudes": {
+  "label": "“Blessed is the man” in the Psalms",
+  "passage": "Ps 1:1; 32:1-2; 112:1",
+  "members": [
+   {
+    "label": "who does not walk in the counsel of the wicked",
+    "ref": "Ps 1:1",
+    "card": "counsel_of_the_wicked"
+   },
+   {
+    "label": "whose transgressions are forgiven",
+    "ref": "Ps 32:1",
+    "card": "forgiveness"
+   },
+   {
+    "label": "whose iniquity the LORD does not count against him",
+    "ref": "Ps 32:2",
+    "card": "forgiveness"
+   },
+   {
+    "label": "who fears the LORD",
+    "ref": "Ps 112:1",
+    "card": "the_fear_of_the_lord"
+   }
+  ],
+  "moves": [
+   {
+    "words": "his delight is in the Law of the LORD",
+    "ref": "Ps 1:2"
+   },
+   {
+    "words": "meditates day and night",
+    "ref": "Ps 1:2"
+   },
+   {
+    "words": "greatly delights in His commandments",
+    "ref": "Ps 112:1"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'righteousness > stability > prosperity'",
+    "why": "a summary, not the psalms' verbs."
+   }
+  ],
+  "card": "blessed_is_the_man",
+  "make_card": {
+   "type": "text",
+   "name": "Blessed is the man",
+   "kind": "saying",
+   "refs": [
+    "Ps 1:1",
+    "Ps 32:1",
+    "Ps 32:2",
+    "Ps 112:1"
+   ],
+   "desc": "'Blessed is the man who does not walk in the counsel of the wicked' (Ps 1:1). The Psalter opens with it, and Psalms 32 and 112 open the same way: the one 'whose transgressions are forgiven' (32:1), the one 'who fears the LORD' (112:1)."
+  }
+ },
+ "apocalyptic_sevens": {
+  "label": "the sevens of Revelation",
+  "passage": "Revelation",
+  "members": [
+   {
+    "label": "seven golden lampstands",
+    "ref": "Rev 1:12",
+    "card": "image_candlestick"
+   },
+   {
+    "label": "seven stars",
+    "ref": "Rev 1:20",
+    "card": "the_seven_stars_are_the_angels"
+   },
+   {
+    "label": "seven seals",
+    "ref": "Rev 5:1",
+    "card": "seven_seals",
+    "make": {
+     "type": "object",
+     "name": "the seven seals",
+     "refs": [
+      "Rev 6:1"
+     ]
+    }
+   },
+   {
+    "label": "seven trumpets",
+    "ref": "Rev 8:2",
+    "card": "seven_trumpets",
+    "make": {
+     "type": "object",
+     "name": "the seven trumpets",
+     "refs": [
+      "Rev 8:6"
+     ]
+    }
+   },
+   {
+    "label": "seven golden bowls",
+    "ref": "Rev 15:7",
+    "card": "seven_bowls",
+    "make": {
+     "type": "object",
+     "name": "the seven bowls",
+     "refs": [
+      "Rev 16:1"
+     ]
+    }
+   }
+  ],
+  "moves": [
+   {
+    "words": "the Lamb opened one of the seven seals",
+    "ref": "Rev 6:1"
+   },
+   {
+    "words": "prepared to sound them",
+    "ref": "Rev 8:6"
+   },
+   {
+    "words": "pour out on the earth the seven bowls",
+    "ref": "Rev 16:1"
+   }
+  ],
+  "changed": [
+   {
+    "what": "the shape 'escalation > judgment > renewal'",
+    "why": "a summary, not the book's verbs."
+   }
+  ],
+  "card": "sevens_of_revelation",
+  "make_card": {
+   "type": "text",
+   "name": "the sevens of Revelation",
+   "kind": "abridged",
+   "refs": [
+    "Rev 1:12",
+    "Rev 1:16",
+    "Rev 5:1",
+    "Rev 8:2",
+    "Rev 15:7"
+   ],
+   "desc": "Revelation counts in sevens: seven golden lampstands and seven stars (1:12, 16), seven seals (5:1), seven trumpets (8:2), seven golden bowls (15:7). A collection gathered here, not a list the text gives. Listed in the order the book gives them; the card does not say how the sevens relate to one another."
+  }
+ },
+ "dying_and_rising_with_christ": {
+  "label": "dying and rising with Christ",
+  "passage": "Rom 6:3-11; Gal 2:20; Col 2:12; Col 3:9-10; Eph 4:22-24; 2Cor 5:17; John 3:3",
+  "members": [
+   {
+    "label": "born again",
+    "ref": "John 3:3",
+    "card": "born_again"
+   },
+   {
+    "label": "baptized into His death",
+    "ref": "Rom 6:3",
+    "card": "baptized_into_his_death",
+    "make": {
+     "type": "text",
+     "name": "baptized into His death",
+     "kind": "saying"
+    }
+   },
+   {
+    "label": "buried with Him through baptism",
+    "ref": "Rom 6:4",
+    "card": "buried_with_him_by_baptism"
+   },
+   {
+    "label": "walk in newness of life",
+    "ref": "Rom 6:4",
+    "card": "walk_in_newness_of_life",
+    "make": {
+     "type": "text",
+     "name": "walk in newness of life",
+     "kind": "saying"
+    }
+   },
+   {
+    "label": "dead to sin, but alive to God",
+    "ref": "Rom 6:11",
+    "card": "dead_to_sin_alive_to_god",
+    "make": {
+     "type": "text",
+     "name": "dead to sin, but alive to God",
+     "kind": "saying"
+    }
+   },
+   {
+    "label": "a new creation",
+    "ref": "2Cor 5:17",
+    "card": "new_creature"
+   },
+   {
+    "label": "crucified with Christ",
+    "ref": "Gal 2:20",
+    "card": "crucified_with_christ"
+   },
+   {
+    "label": "put on the new self",
+    "ref": "Eph 4:24",
+    "card": "old_man_and_new_man"
+   },
+   {
+    "label": "raised with Him",
+    "ref": "Col 2:12",
+    "card": "raised_with_him",
+    "make": {
+     "type": "text",
+     "name": "raised with Him",
+     "kind": "saying"
+    }
+   },
+   {
+    "label": "taken off the old self",
+    "ref": "Col 3:9",
+    "card": "old_man_and_new_man"
+   }
+  ],
+  "moves": [
+   {
+    "words": "count yourselves dead to sin",
+    "ref": "Rom 6:11"
+   },
+   {
+    "words": "put off your former way of life",
+    "ref": "Eph 4:22"
+   },
+   {
+    "words": "be renewed in the spirit of your minds",
+    "ref": "Eph 4:23"
+   },
+   {
+    "words": "put on the new self",
+    "ref": "Eph 4:24"
+   }
+  ],
+  "changed": [
+   {
+    "what": "'baptized into His death'",
+    "why": "added: the taxonomy began at 'crucified' and Romans 6 begins at 'baptized' (6:3)."
+   },
+   {
+    "what": "Romans 6:3 is not linked to the baptism card",
+    "why": "that card is baptism in water (Matt 3:6, Acts 2:38); traditions differ on what Romans 6:3's baptism is, so the verse has a node of its own in its own words."
+   },
+   {
+    "what": "members in canon order; the moves are the passages' commands",
+    "why": "baptized, buried, raised in a row read as one sequence the text does not give across passages, and are things done to the reader, not commands (the A.34 review)."
+   }
+  ],
+  "card": "dying_and_rising_with_christ",
+  "make_card": {
+   "type": "text",
+   "name": "dying and rising with Christ",
+   "kind": "abridged",
+   "refs": [
+    "Rom 6:3",
+    "Rom 6:4",
+    "Gal 2:20",
+    "Col 2:12",
+    "Col 3:9",
+    "Eph 4:22",
+    "2Cor 5:17",
+    "John 3:3"
+   ],
+   "desc": "'all of us who were baptized into Christ Jesus were baptized into His death' (Rom 6:3), 'buried with Him', so that 'we too may walk in newness of life' (6:4). Galatians 2:20, Colossians 2:12 and 3:9-10, and Ephesians 4:22-24 are set beside it, and John 3:3 and 2 Corinthians 5:17 are gathered with them here; the card gathers them and does not say they teach one thing."
+  }
+ }
+}

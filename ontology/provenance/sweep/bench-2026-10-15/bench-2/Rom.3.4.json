@@ -1,0 +1,203 @@
+{
+ "ref": "Rom.3.4",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'Never may it be' (Μὴ γένοιτο) is an optative with an impersonal subject; no candidate fits.",
+   "category": "impersonal optative subject"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "'It has been written' is a passive with no agent; the scripture is the subject. The builder's 'man' is wrong: it is not the one who wrote.",
+   "category": "passive citation with no agent"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w5",
+   "divine": true,
+   "why": "The quoted 'you' (second singular, may be justified) addresses God, the addressee of the psalm quoted; w5 is God.",
+   "category": "addressee of quoted psalm"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w5",
+   "divine": true,
+   "why": "The second quoted verb (will prevail) has the same second-person subject, God, as cl4.",
+   "category": "addressee of quoted psalm"
+  },
+  {
+   "slot": "w19",
+   "choice": "w5",
+   "divine": true,
+   "why": "'Of You' (σου) is the possessor of 'words'; the words are God's, so the referent is God.",
+   "category": "possessor is God in quotation"
+  },
+  {
+   "slot": "w25",
+   "choice": "w5",
+   "divine": true,
+   "why": "The accusative 'you' (σε) is the subject of the infinitive 'being judged' in the quotation, and it is God.",
+   "category": "addressee of quoted psalm"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "remove",
+   "why": "The purpose sits in the quoted words, not in the citation frame 'it has been written'; the frame is the saying and gets a content link instead.",
+   "category": "purpose attached to citation frame"
+  },
+  {
+   "src": "cl5",
+   "type": "when_if_though",
+   "dst": "cl6",
+   "action": "remove",
+   "why": "This is a Hebrew fronted כִּי link. Here ἐν τῷ + infinitive is a temporal ('when being judged'), which the within link carries.",
+   "category": "Hebrew link used for Greek temporal"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "The second quoted verb falls under the same ὅπως as cl4, joined by καί; its purpose comes through cl4, not from the frame.",
+   "category": "purpose attached to citation frame"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "δέ after a rejection is a correction ('rather'), not a plain 'and'.",
+   "category": "correction read as plain and"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Two jussives, 'let God be true' and 'let every man be a liar' (verb elided), joined by δέ: one run of commands.",
+   "category": "commands joined by and"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "keep",
+   "why": "καί joins two subjunctives under one ὅπως: 'be justified and prevail'.",
+   "category": "two verbs under one clause joined by and"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "The frame 'as it is written' (καθάπερ) is a comparison, not a plain 'and'; it is a separate sentence of citation.",
+   "category": "comparison read as plain and"
+  },
+  {
+   "src": "cl0",
+   "type": "but_rather",
+   "dst": "cl1",
+   "action": "add",
+   "why": "A negative exclamation then δέ with a correcting jussive: 'Never may it be; rather let God be true'.",
+   "category": "negative then correction"
+  },
+  {
+   "src": "cl2",
+   "type": "as",
+   "dst": "cl3",
+   "action": "add",
+   "why": "καθάπερ ('just as') compares the statement of 'every man a liar' with what is written; the compared clause is a saying.",
+   "category": "comparison to a written saying"
+  },
+  {
+   "src": "cl3",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add",
+   "why": "The citation clause (it has been written) introduces what is quoted, so content links it to the quoted clause (R1).",
+   "category": "citation content"
+  },
+  {
+   "src": "cl1",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "add",
+   "why": "ὅπως ('so that') gives the aim of God's being true: a third-person command followed by a second-person subjunctive, as the rule for a purpose after a command.",
+   "category": "purpose after command, different person"
+  },
+  {
+   "src": "cl5",
+   "type": "within",
+   "dst": "cl6",
+   "action": "add",
+   "why": "The infinitive phrase ἐν τῷ κρίνεσθαι σε sits in a prepositional role of cl5 (temporal 'when'); within carries that role.",
+   "category": "temporal clause nested in verb phrase"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "Only the two jussives joined by δέ form one imperative group; 'Never may it be' is a rejection formula, not a command, and 'part' is not a role of this kind.",
+   "category": "commands joined by and"
+  },
+  {
+   "id": "Rom.3.4#g1",
+   "kind": "writing",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    }
+   ],
+   "divine": false,
+   "why": "The quoted psalm as a unit: the citation formula is its frame and the quoted words are its parts. No writer is named, so there is no sender.",
+   "category": "quoted psalm as unit"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl0 (Μὴ γένοιτο, 'Certainly not!')",
+   "what": "A rejection of the claim in 3:3; no link type records a disavowal of the preceding question."
+  },
+  {
+   "where": "cl5 to cl6 (ἐν τῷ κρίνεσθαι, 'when being judged')",
+   "what": "A temporal 'when' clause has no link type of its own; recorded as within, with the temporal role stated in why."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the purpose reading of cl1 to cl4",
+   "why": "Whether the quoted ὅπως clause states God's aim in being true, or only the psalm's own purpose, is a reading; I added the link because the form allows it, and it is open to review."
+  }
+ ]
+}

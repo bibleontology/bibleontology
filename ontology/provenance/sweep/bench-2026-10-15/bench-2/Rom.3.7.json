@@ -1,0 +1,83 @@
+{
+ "ref": "Rom.3.7",
+ "referents": [
+  {
+   "slot": "w14",
+   "choice": "w5",
+   "divine": true,
+   "why": "'Of Him' (αὐτοῦ) is the possessor of 'glory'; the glory is God's, so the referent is God.",
+   "category": "possessor is God"
+  },
+  {
+   "slot": "w15",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'why' (τί) in the consequent question; no referent.",
+   "category": "interrogative word, not a referent"
+  },
+  {
+   "slot": "w17",
+   "choice": "none",
+   "divine": false,
+   "why": "'Also I' (κἀγώ) is the imagined objector speaking in the diatribe; no candidate is the objector.",
+   "category": "voice of imagined objector not offered"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Direction reversed: the consequent question cl0 is what the condition cl1 governs, so the link runs from cl0 to cl1.",
+   "category": "condition direction reversed"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The καί in cl0 is 'also' inside κἀγώ, not a conjunction joining the two clauses; the εἰ governs the consequence.",
+   "category": "also read as and between clauses"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The question 'why am I still judged as a sinner?' is conditioned by 'if the truth of God abounded in my lie'.",
+   "category": "condition before its consequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl0"
+    }
+   ],
+   "divine": false,
+   "why": "The condition is cl1 and the consequence is cl0; the grouping is right, only the link direction was wrong.",
+   "category": "condition and consequence"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "the speaker of the objection ('I')",
+   "why": "The imagined objector is not a candidate; the 'I' is the voice of the diatribe's objection, not a person in the passage."
+  },
+  {
+   "what": "δέ opening the verse (Εἰ δέ)",
+   "why": "A verse-opening 'but' has no host in its verse, so no contrast link is drawn."
+  }
+ ]
+}

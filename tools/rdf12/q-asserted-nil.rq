@@ -1,0 +1,5 @@
+PREFIX e:   <https://bibleontology.org/e/>
+PREFIX bor: <https://bibleontology.org/ns/relation#>
+SELECT (COUNT(*) AS ?n)
+FROM <http://rdf4j.org/schema/rdf4j#nil>
+WHERE { e:job bor:described_as e:testified_against_by_his_own_lips }

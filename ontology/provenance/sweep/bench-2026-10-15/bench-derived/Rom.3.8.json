@@ -1,0 +1,107 @@
+{
+ "ref": "Rom.3.8",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w18",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "remove"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl5",
+   "action": "remove"
+  },
+  {
+   "src": "cl2",
+   "type": "that",
+   "dst": "cl3",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    },
+    {
+     "role": "sender",
+     "node": "w7"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

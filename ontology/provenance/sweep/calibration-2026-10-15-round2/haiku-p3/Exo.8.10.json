@@ -1,0 +1,53 @@
+{
+ "ref": "Exo.8.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'them' (object of 'piled up') is the frogs of the previous verse. The frogs are not among the candidates, and the heaps are where they are piled, not what is piled, so heaps do not fit.",
+   "category": "object not among candidates"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "third masculine plural 'they piled up' with no named doer: an impersonal subject. No candidate is a sensible doer of the piling.",
+   "category": "impersonal third plural"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl1 (the stench) comes after cl0 (the piling). This link runs backward.",
+   "category": "reversed then link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "the stench is a state the heaps bring about, which R4 records as result rather than then. The result link is added below.",
+   "category": "then where result fits"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "the heaps of dead frogs are what brings about the stench.",
+   "category": "state brought about by an act"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "the referents of 'them' (w3) and of the unnamed doer of cl0",
+   "why": "the frogs they pile are not among the candidates, and the subject is an impersonal third plural."
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+# Line endings.
+#
+# Git checks files out with CRLF on Windows, which is right for anything read
+# on this machine and wrong for anything executed on the server. A shell
+# script with CRLF fails in a way that reads as nonsense -- bash treats the
+# carriage return as part of the command and reports `$'\r': command not
+# found` -- and a sudoers file with CRLF can make sudo refuse everything,
+# which is a bad afternoon on a machine you reach only through sudo.
+#
+# So everything that lands on Linux keeps LF regardless of the platform it is
+# edited on.
+deploy/*        text eol=lf
+*.sh            text eol=lf
+*.service       text eol=lf
+Caddyfile       text eol=lf
+
+# The data files are read by Python on both platforms and are large; leaving
+# them alone avoids rewriting thirty megabytes on checkout.
+*.jsonl         -text
+
+# Compressed data is bytes, never text. out/structure-chapters.bin opens with
+# half a megabyte of JSON before its zlib blocks, so git's own guess (a NUL in
+# the first 8,000 bytes) would call it text, and core.autocrlf would rewrite
+# CR LF pairs inside the compressed data on commit -- a corrupt clause
+# structure that only shows as a decompress error on the server (2026-10-01).
+*.bin           binary
+*.gz            binary
+
+# Images are bytes too, wherever they sit. `deploy/* text` above would make a
+# PNG in deploy/ text and rewrite its CR LF pairs on commit: the social
+# preview card was stored corrupt that way on 2026-10-23, caught by comparing
+# the stored blob with the file. Later lines win, so these come after it.
+*.png           binary
+*.jpg           binary
+*.ico           binary
+
+# Third-party files are pinned by checksum (app2/VENDORED.md);
+# line-ending conversion would change the bytes the checksum names.
+app2/static/vendor/**    -text
+*.woff2                  binary

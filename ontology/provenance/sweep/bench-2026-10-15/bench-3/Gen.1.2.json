@@ -1,0 +1,33 @@
+{
+ "ref": "Gen.1.2",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause linked to itself. The waw joins cl0 to cl1, which is kept below.",
+   "category": "self-link"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Separate waw before 'darkness was over the surface of the deep'. Two clauses in sequence; no cause, result or purpose.",
+   "category": "plain and between clauses"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Waw before 'the Spirit of God was hovering'. A further clause of the scene; no cause, result or purpose.",
+   "category": "plain and between clauses"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

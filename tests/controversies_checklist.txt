@@ -1,0 +1,143 @@
+# Contested doctrines, as test cases for whether the graph takes sides
+#
+# The question this file asks is not "which reading is right". It is the test
+# already the project's own test of neutrality:
+#
+#     Could two competent people using this graph disagree about something
+#     and both find their position in it?
+#
+# A graph built from a corpus that its readers argue about has exactly two ways
+# to fail. It can adjudicate -- state a conclusion one side rejects -- or it can
+# be lopsided, holding one side's verses thoroughly and the other's barely, so
+# that a reader searching in good faith finds a stacked deck. The second is the
+# more likely failure here and the harder to notice, because it looks like
+# ordinary incompleteness.
+#
+# SCORING, per row:
+#
+#   A  both sides reachable   the verses each side leans on are in the graph,
+#                             cited, and a reader can find them from the same
+#                             entity or passage.        <- the target
+#   B  one side only          one position's verses are held and the other's
+#                             are absent or unreachable. A defect, and the
+#                             direction of the lean is the finding.
+#   C  neither                not covered yet. Honest, and not a lean.
+#   D  the graph adjudicates  an edge or a note states a conclusion one side
+#                             would reject.             <- the worst outcome
+#
+# D outranks everything. A single D is worse than twenty Cs, because C is a gap
+# and D is a claim. Anything scoring D is a bug to fix before beta, whatever
+# the coverage numbers say.
+#
+# The verses listed are what each side actually cites, not a summary of the
+# argument. Where a verse is textually disputed that is noted, because a proof
+# text whose manuscript status is contested has to carry that status or the
+# graph is quietly picking a side.
+#
+# Format: id | question | side A verses | side B verses | notes
+
+## Trinity and the person of Christ
+
+trinity | Is Jesus God? | John 1:1, John 20:28, Matt 1:23, Phil 2:6, Col 1:15, Heb 1:3, Heb 1:8, Titus 2:13, 1Tim 3:16, John 5:18 | John 14:28, Mark 13:32, Mark 10:18, Matt 19:17, Matt 27:46, John 20:17, John 17:3, John 5:19, John 5:30, John 14:24, Mark 14:36, 1Cor 15:28, 1Cor 11:3, Eph 1:17, Acts 2:36 | The measured split of the second column: 6 verses name the Father, 7 name God, 2 name both. Three of the God-worded ones address or name the Father in the same verse (John 17:3, Eph 1:17, John 20:17). Most of the remainder speak of Christ incarnate or exalted. Whether those describe the incarnate state or the eternal relation is the division itself, and the graph must not resolve it.
+
+spirit_deity | Is the Holy Spirit God, and personal? | Acts 5:3-4, Matt 28:19, 2Cor 13:14, John 14:26, John 16:13 | 1Cor 2:11, Rom 8:26, John 14:16 | Acts 5:3-4 is the strongest: lying to the Holy Ghost is lying to God, in consecutive verses.
+
+johannine_comma | Do the three bear record in heaven? | 1John 5:7 | 1John 5:8 | **The KJV adds a clause naming the Father, the Word and the Holy Ghost as three that are one, and the ASV in this repository does not have it.** The most explicit Trinity statement in the KJV is the one whose text is disputed. Carrying it without its status would discredit every other citation in the graph.
+
+filioque | Does the Spirit proceed from the Father alone, or from the Father and the Son? | John 15:26 | John 16:7, John 14:26, Rom 8:9, Gal 4:6 | The split between East and West. John 15:26 says "proceedeth from the Father" and also "whom I will send unto you"; both clauses are in one verse.
+
+## Salvation
+
+faith_and_works | Is a person justified by faith alone? | Rom 3:28, Rom 4:2-5, Gal 2:16, Eph 2:8-9 | Jas 2:14-26, Matt 7:21, Matt 25:31-46 | Already partly in the graph. Both cite Abraham and Gen 15:6; James 2:21 and Rom 4:2 read the same verse in opposite directions, which makes this the cleanest test in the file.
+
+election | Are the saved chosen beforehand, or by their own choosing? | Rom 8:29-30, Rom 9:11-21, Eph 1:4-5, John 6:44 | 1Tim 2:4, 2Pet 3:9, Ezek 18:23, Matt 23:37, Rev 22:17 | Matthew 23:37 -- "how often would I ... and ye would not" -- is the verse most often set against Romans 9.
+
+perseverance | Can a believer fall away? | John 10:28-29, Rom 8:38-39, Phil 1:6 | Heb 6:4-6, Heb 10:26-27, 2Pet 2:20-22, Gal 5:4 | Hebrews 6 is the passage the whole argument turns on.
+
+atonement_extent | For whom did Christ die? | John 10:15, John 17:9, Acts 20:28, Eph 5:25 | 1John 2:2, 1Tim 2:6, 2Pet 2:1, John 3:16, Heb 2:9 | 1 John 2:2 -- "not only for ours but also for the sins of the whole world" -- against John 10:15.
+
+original_sin | Is guilt inherited? | Rom 5:12-19, Ps 51:5, Eph 2:3 | Ezek 18:20, Deut 24:16 | Ezekiel 18:20 states the opposite principle plainly about a son and a father.
+
+## Ordinances
+
+baptism_subjects | Who should be baptised? | Acts 2:38-39, Acts 16:15, Acts 16:33, 1Cor 1:16, Col 2:11-12 | Acts 8:36-37, Mark 16:16, Acts 18:8 | The household baptisms against the verses requiring belief first. **Acts 8:37 is textually disputed** and absent from the ASV, and it is one of the believer's-baptism proof texts.
+
+baptismal_regeneration | Does baptism save? | Acts 2:38, Acts 22:16, 1Pet 3:21, Titus 3:5, John 3:5 | Eph 2:8-9, 1Cor 1:17, Luke 23:43, Rom 4:11 | The thief on the cross against 1 Peter 3:21.
+
+real_presence | What is the bread? | Matt 26:26, Mark 14:22, John 6:53-56, 1Cor 10:16, 1Cor 11:27-29 | Luke 22:19, 1Cor 11:24-25, John 6:63 | "This is my body" against "this do in remembrance of me", both at the same supper. Already relevant to the imagery layer: this is the tier-1 identification the graph records as stated.
+
+## Authority and the church
+
+sola_scriptura | Is scripture the only rule? | 2Tim 3:16-17, Acts 17:11, Mark 7:8-13, Isa 8:20 | 2Thess 2:15, 1Cor 11:2, 1Tim 3:15, John 21:25 | 2 Thessalonians 2:15 names tradition and epistle together.
+
+petrine_primacy | What was given to Peter? | Matt 16:18-19, Luke 22:32, John 21:15-17 | Matt 16:23, Gal 2:11-14, Acts 15:13-21, 1Pet 5:1, Eph 2:20 | Matthew 16:18 and 16:23 are five verses apart. Galatians 2:11 has Paul withstanding him to the face; Acts 15 has James giving the sentence.
+
+women_ministry | May women teach or lead? | 1Tim 2:11-12, 1Cor 14:34-35, 1Tim 3:2, Eph 5:22-24 | Gal 3:28, Rom 16:1-7, Judg 4:4, Acts 2:17-18, Acts 18:26, Acts 21:9, Luke 8:1-3, John 20:17-18 | The graph's title-only figures pass is relevant: this class is disproportionately women, and under-extraction here is a lean rather than a gap. Deborah judging Israel, Junia, Priscilla teaching Apollos, Philip's four daughters, the women at the tomb sent to tell.
+
+## Last things
+
+millennium | Is the thousand years before or after Christ's return, or neither? | Rev 20:1-6, Rev 19:11-21 | 2Pet 3:10, 1Thess 4:16-17, Matt 24:29-31, 1Cor 15:23-24 | Revelation 20 is the only passage naming the thousand years, and every position has to read it.
+
+rapture_timing | Are the saints taken before the tribulation? | 1Thess 4:16-17, 1Cor 15:51-52, Rev 3:10, John 14:3 | Matt 24:29-31, 2Thess 2:1-4, Rev 20:4, John 17:15 | 2 Thessalonians 2:3 -- "except there come a falling away first" -- against Revelation 3:10.
+
+final_state | Is punishment everlasting, or does it end? | Matt 25:46, Rev 14:11, Rev 20:10, Mark 9:43-48, 2Thess 1:9 | Mal 4:1-3, Ps 37:20, Obad 1:16, 1Cor 15:22-28, Rom 5:18, 1Tim 4:10, Acts 3:21 | Three positions, not two: everlasting conscious punishment, annihilation, universal restoration. **The Sheol/Hades/Gehenna crosswalk is directly relevant** -- the KJV renders three different words "hell", and which word stands where is load-bearing for all three readings.
+
+israel_and_church | Do the promises to Israel pass to the church? | Gal 3:29, Gal 6:16, Rom 2:28-29, 1Pet 2:9, Eph 2:14-16 | Rom 11:1-2, Rom 11:25-29, Jer 31:35-37, Gen 17:7-8 | Romans 11 is the chapter both sides read.
+
+## Law and practice
+
+sabbath | Which day, and is it binding? | Exod 20:8-11, Isa 58:13-14, Mark 2:27-28, Luke 4:16 | Col 2:16-17, Rom 14:5-6, Gal 4:9-11, Acts 20:7, 1Cor 16:2 | Colossians 2:16 names the sabbath among things not to be judged in.
+
+law_and_christian | Does the law still bind? | Matt 5:17-19, Rom 3:31, Rom 7:12, Jas 2:10 | Rom 10:4, Gal 3:24-25, Rom 6:14, Heb 8:13, Acts 15:10 | Matthew 5:18 -- "one jot or one tittle shall in no wise pass" -- against Romans 10:4.
+
+tongues_cessation | Have the sign gifts ceased? | 1Cor 13:8-10, Heb 2:3-4, 2Cor 12:12, Eph 2:20 | 1Cor 14:39, Acts 2:17-18, 1Cor 12:7-11, Mark 16:17 | **Mark 16:17 is in the disputed longer ending of Mark**, which the ASV brackets, and it is a cessationist-versus-continuationist proof text.
+
+divorce_remarriage | When, if ever, may one remarry? | Matt 19:9, Matt 5:32, 1Cor 7:15 | Mark 10:11-12, Luke 16:18, Rom 7:2-3, 1Cor 7:10-11 | Matthew's exception clause is absent from Mark and Luke, which is itself a synoptic-parallel case the sibling-passage detector should surface.
+
+wine | May a Christian drink? | Prov 20:1, Prov 23:29-35, Lev 10:9, Hab 2:15 | John 2:1-11, 1Tim 5:23, Ps 104:14-15, Deut 14:26, Luke 7:33-34 | Already touched by the imagery work. Note Paul never says "wine" in 1 Corinthians.
+
+head_coverings | Is the covering binding, or cultural? | 1Cor 11:4-16 | 1Cor 11:16, Gal 3:28, Acts 15:28-29 | Both sides read one chapter, and verse 16 -- "we have no such custom" -- is read in opposite directions.
+
+## Creation and providence
+
+creation_days | How long were the days? | Gen 1:5, Exod 20:11, Gen 5, Mark 10:6 | Ps 90:4, 2Pet 3:8, Gen 2:4, Heb 4:3-11 | Exodus 20:11 grounds the sabbath in six days, which is the strongest link between the reading and a practice.
+
+hardening | Who hardened Pharaoh's heart? | Exod 4:21, Exod 7:3, Exod 9:12, Exod 14:4, Rom 9:17-18 | Exod 8:15, Exod 8:32, Exod 9:34, 1Sam 6:6 | **The corpus says both, in the same narrative**, which makes this the sharpest sovereignty-and-will test available and one the graph can hold entirely without adjudicating.
+
+intermediate_state | What happens between death and resurrection? | Luke 23:43, 2Cor 5:8, Phil 1:23, Luke 16:22-23, Rev 6:9-11 | Eccl 9:5-6, Ps 6:5, Ps 115:17, Job 14:12, John 11:11-14, 1Thess 4:13-16 | Ecclesiastes 9:5 is Qoheleth speaking, which the graph already records as a speaker's claim rather than the corpus's -- and that distinction is exactly what this row tests.
+
+## How to use this
+
+Work a row by asking three things, in order:
+
+1. **Is anything here a D?** Does an edge, a note or a description state a
+   conclusion one side rejects? Fix it before anything else.
+2. **Are both columns reachable?** From the entity or passage a reader would
+   naturally start at, not by knowing the verse reference already.
+3. **Is the lean measurable?** Count cited verses per column. A row at 9 and 1
+   is a finding even when both columns are technically non-empty.
+
+Rows touching textual disputes -- the Johannine Comma, Acts 8:37, the longer
+ending of Mark -- carry a further requirement: **the disputed status has to be
+visible where the verse is**, not only in a document like this one.
+
+## Added from the reader's list, August 2026
+
+# Seven debates his list named that this file did not hold. Canon is
+# deliberately absent: the graph covers the Protestant canon and says so on the
+# About page, and a row here would imply the corpus can adjudicate its own
+# extent, which it cannot. That is a scope declaration, not a contested reading.
+
+atonement_model | How does the death of Christ save? | Rom 3:25, Isa 53:5, 1Pet 3:18, 2Cor 5:21, Gal 3:13, Rom 5:9 | Col 2:15, Heb 2:14, 1John 3:8, John 12:31, 1Cor 15:54-57, Rom 5:8, 1Pet 2:21 | First column is the substitution language, second the victory-over-powers language plus the example language. **These are not exclusive and most traditions hold more than one**, which makes this a poor test of lean and a good test of whether the graph flattens a verse into a single model. Nothing here should carry an edge naming a theory.
+
+descent_into_hell | Did Christ descend, and to what? | 1Pet 3:18-19, 1Pet 4:6, Eph 4:8-9, Acts 2:27, Acts 2:31 | Luke 23:43, John 19:30, Matt 12:40 | The disputed line of the Apostles' Creed. 1Pet 3:19 "preached unto the spirits in prison" is the whole of the first column's weight and is read four different ways within it. Second column is the verses read as placing him elsewhere or as finishing at the cross.
+
+spirit_baptism | When is the Spirit received, and how is it known? | Acts 2:4, Acts 8:15-16, Acts 10:44-46, Acts 19:2, Acts 19:6, Matt 3:11 | 1Cor 12:13, Eph 1:13, Rom 8:9, Gal 3:2, Titus 3:5 | First column is the Acts narratives, where receiving is separable from believing and is twice attended by tongues. Second is the epistles, where it is stated as universal among believers. **The split is between two genres and not two doctrines**, which is why it is contested at all.
+
+inerrancy | What is claimed for scripture itself? | 2Tim 3:16, 2Pet 1:20-21, John 10:35, Ps 12:6, Prov 30:5, Matt 5:18 | 1Cor 7:12, 1Cor 7:25, Mark 10:5, 2Cor 11:17, Acts 17:11 | First column is the verses claiming inspiration and permanence. Second is the places a writer distinguishes his own judgment from a command, or a concession is named as one. Neither column settles inerrancy against infallibility, which is a distinction the corpus never draws.
+
+sacrament_number | How many, and what are they? | Matt 28:19, 1Cor 11:23-26, Luke 22:19 | Jas 5:14, John 20:23, Acts 8:17, Acts 13:3, Eph 5:31-32, 1Tim 4:14 | First column is the two the corpus commands directly. Second is the practices other traditions count alongside them, each with a verse. **The corpus never enumerates a set**, so both columns are readers' lists and the row records that rather than a number.
+
+church_governance | Who leads a congregation, and how are they set in? | Acts 14:23, Titus 1:5, 1Tim 3:1-7, 1Pet 5:1-2, Acts 20:17, Acts 20:28 | Acts 6:3, Acts 15:22, Acts 1:23-26, 1Cor 5:4, Matt 18:17 | First column is appointment from above -- elders ordained, bishops qualified. Second is the congregation choosing or acting as a body. Titus 1:5 and 1Pet 5:1-2 use elder and oversight of the same people, which is the textual fact the three-way argument runs through.
+
+apostolic_succession | Does apostolic authority continue, and how? | Acts 1:20-26, 2Tim 2:2, Titus 1:5, Acts 14:23, 1Tim 4:14, 2Tim 1:6 | Acts 1:21-22, 1Cor 9:1, 1Cor 15:8, Eph 2:20, Rev 21:14 | First column is the passing on of office and the laying on of hands. Second is the verses attaching apostleship to conditions that cannot recur -- having seen the Lord, having been with him from the baptism of John, being the foundation already laid.

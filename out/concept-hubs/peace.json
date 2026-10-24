@@ -1,0 +1,2227 @@
+{
+ "id": "peace",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h7965",
+   "lemma": "שָׁלוֹם",
+   "form": "noun",
+   "translit": "sha.lom",
+   "gloss": "peace: completely",
+   "lang": "Hebrew",
+   "uses": 208,
+   "other_sense": 0
+  },
+  {
+   "key": "h8001",
+   "lemma": "שְׁלָם",
+   "form": "noun",
+   "translit": "she.lam",
+   "gloss": "peace",
+   "lang": "Hebrew",
+   "uses": 4,
+   "other_sense": 0
+  },
+  {
+   "key": "g1515",
+   "lemma": "εἰρήνη",
+   "form": "noun",
+   "translit": "eirēnē",
+   "gloss": "peace",
+   "lang": "Greek",
+   "uses": 85,
+   "other_sense": 0
+  },
+  {
+   "key": "g1514",
+   "lemma": "εἰρηνεύω",
+   "form": "verb",
+   "translit": "eirēneuō",
+   "gloss": "be at peace",
+   "lang": "Greek",
+   "uses": 4,
+   "other_sense": 0
+  },
+  {
+   "key": "g1516",
+   "lemma": "εἰρηνικός",
+   "form": "adjective",
+   "translit": "eirēnikos",
+   "gloss": "peaceful",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g1517",
+   "lemma": "εἰρηνοποιέω",
+   "form": "verb",
+   "translit": "eirēnopoieō",
+   "gloss": "to make peace",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g1518",
+   "lemma": "εἰρηνοποιός",
+   "form": "adjective",
+   "translit": "eirēnopoios",
+   "gloss": "peacemaker",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "h7999",
+   "lemma": "שָׁלַם",
+   "form": "noun",
+   "translit": "yəšallēm",
+   "gloss": "to restitute",
+   "lang": "Hebrew",
+   "uses": 12,
+   "other_sense": 95
+  }
+ ],
+ "titles": {
+  "noun": "How the text uses peace",
+  "adjective": "Called “peaceable”",
+  "verb": "Living at peace, making peace"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "righteousness",
+   "name": "righteousness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "war",
+   "name": "war",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "covenant",
+   "name": "covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "grace",
+   "name": "grace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "joy",
+   "name": "joy",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "love",
+   "name": "love",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "salvation",
+   "name": "salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_messiah",
+   "name": "Messiah / Christology (major theme)",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "jerusalem",
+   "name": "Jerusalem",
+   "type": "place",
+   "missing": false
+  },
+  {
+   "id": "peace_offering",
+   "name": "peace offering",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "blessing",
+   "name": "blessing",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "rest",
+   "name": "rest",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "grace_and_peace_from_god_our_father",
+   "name": "Grace and peace to you from God our Father",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "i_came_not_to_send_peace_but_a_sword",
+   "name": "I have not come to bring peace, but a sword",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "image_readiness_of_the_gospel_of_peace",
+   "name": "the readiness of the gospel of peace",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "the_full_armor_of_god",
+   "name": "the full armor of God",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "how_beautiful_are_the_feet",
+   "name": "How beautiful on the mountains are the feet",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "fruit_of_the_spirit",
+   "name": "the fruit of the Spirit",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "peacemakers",
+   "name": "peacemakers",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "peaceableness",
+   "name": "peaceableness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_church_r34",
+   "name": "Love one another",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "John.14.27",
+   "ref": "John 14:27",
+   "text": "Peace I leave with you; My peace I give to you. I do not give to you as the world gives. Do not let your hearts be troubled; do not be afraid."
+  },
+  {
+   "id": "Phil.4.7",
+   "ref": "Philippians 4:7",
+   "text": "And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus."
+  },
+  {
+   "id": "Isa.26.3",
+   "ref": "Isaiah 26:3",
+   "text": "You will keep in perfect peace the steadfast of mind, because he trusts in You."
+  },
+  {
+   "id": "Isa.52.7",
+   "ref": "Isaiah 52:7",
+   "text": "How beautiful on the mountains are the feet of those who bring good news, who proclaim peace, who bring good tidings, who proclaim salvation, who say to Zion, “Your God reigns!”"
+  },
+  {
+   "id": "Num.6.26",
+   "ref": "Numbers 6:26",
+   "text": "may the LORD lift up His countenance toward you and give you peace.'"
+  },
+  {
+   "id": "Ps.85.10",
+   "ref": "Psalms 85:10",
+   "text": "Loving devotion and faithfulness have joined together; righteousness and peace have kissed."
+  },
+  {
+   "id": "Rom.5.1",
+   "ref": "Romans 5:1",
+   "text": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ,"
+  },
+  {
+   "id": "Gal.5.22",
+   "ref": "Galatians 5:22",
+   "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,"
+  },
+  {
+   "id": "Eph.2.14",
+   "ref": "Ephesians 2:14",
+   "text": "For He Himself is our peace, who has made the two one and has torn down the dividing wall of hostility"
+  },
+  {
+   "id": "Matt.5.9",
+   "ref": "Matthew 5:9",
+   "text": "Blessed are the peacemakers, for they will be called sons of God."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 309,
+   "rows": [
+    {
+     "label": "The wish of peace: “Peace to you”, “All peace”, “Grace and peace to you”",
+     "note": "The opening wish of the letters, kept as written, with the same wish spoken in Hebrew and Aramaic: 'Peace to you', 'Peace be with you', a king's letter ('All peace', 'May your prosperity be multiplied'), and the disciples' 'Peace to this house'. It is listed apart from the rows that say what grace or mercy does.",
+     "doors": [
+      {
+       "id": "grace",
+       "name": "grace",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "blessing",
+       "name": "blessing",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "grace_and_peace_from_god_our_father",
+       "name": "Grace and peace to you from God our Father",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 36,
+     "verses": [
+      "Num.6.26",
+      "Judg.19.20",
+      "Rom.1.7",
+      "1Cor.1.3",
+      "Matt.10.13",
+      "Judg.6.23",
+      "1Sam.25.6",
+      "1Chr.12.18",
+      "Ezra.4.17",
+      "Ezra.5.7",
+      "Ps.122.8",
+      "Dan.4.1",
+      "Dan.6.25",
+      "Dan.10.19",
+      "Luke.10.5",
+      "Luke.10.6",
+      "2Cor.1.2",
+      "Gal.1.3",
+      "Gal.6.16",
+      "Eph.1.2",
+      "Eph.6.23",
+      "Phil.1.2",
+      "Col.1.2",
+      "1Thess.1.1",
+      "2Thess.1.2",
+      "1Tim.1.2",
+      "2Tim.1.2",
+      "Titus.1.4",
+      "Phlm.1.3",
+      "1Pet.1.2",
+      "1Pet.5.14",
+      "2Pet.1.2",
+      "2John.1.3",
+      "3John.1.14",
+      "Jude.1.2",
+      "Rev.1.4"
+     ],
+     "eg": [
+      {
+       "id": "Num.6.26",
+       "ref": "Numbers 6:26",
+       "text": "may the LORD lift up His countenance toward you and give you peace.'",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Judg.19.20",
+       "ref": "Judges 19:20",
+       "text": "“Peace to you,” said the old man. “Let me supply everything you need. Only do not spend the night in the square.”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.7",
+       "ref": "Romans 1:7",
+       "text": "To all in Rome who are loved by God and called to be saints: Grace and peace to you from God our Father and the Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.3",
+       "ref": "1 Corinthians 1:3",
+       "text": "Grace and peace to you from God our Father and the Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Peace be with you”, “Peace I leave with you”, said by Jesus",
+     "note": "The first four name Jesus as the speaker. John 14:27 and 16:33 are in His farewell speech to the disciples (John 13-17).",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Luke.24.36",
+      "John.20.19",
+      "John.20.21",
+      "John.20.26",
+      "John.14.27",
+      "John.16.33"
+     ],
+     "eg": [
+      {
+       "id": "Luke.24.36",
+       "ref": "Luke 24:36",
+       "text": "While they were describing these events, Jesus Himself stood among them and said, “Peace be with you.”",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "John.20.19",
+       "ref": "John 20:19",
+       "text": "It was the first day of the week, and that very evening, while the disciples were together with the doors locked for fear of the Jews, Jesus came and stood among them. “Peace be with you!” He said to them.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "John.20.21",
+       "ref": "John 20:21",
+       "text": "Again Jesus said to them, “Peace be with you. As the Father has sent Me, so also I am sending you.”",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "John.20.26",
+       "ref": "John 20:26",
+       "text": "Eight days later, His disciples were once again inside with the doors locked, and Thomas was with them. Jesus came and stood among them and said, “Peace be with you.”",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“In peace”: go, be sent, come, die",
+     "note": "The Hebrew בְּשָׁלוֹם and Greek εἰς εἰρήνην, 'in peace', after a verb of going, sending, returning, coming or dying: 'Go in peace', 'Do you come in peace?' and its answer, 'gathered to your fathers in peace'. Jas 2:16 is the text's own example of saying it and doing nothing.",
+     "doors": [],
+     "n": 42,
+     "verses": [
+      "Exod.4.18",
+      "1Kgs.2.13",
+      "Luke.7.50",
+      "Gen.15.15",
+      "1Sam.1.17",
+      "Acts.16.36",
+      "Exod.18.23",
+      "1Sam.20.42",
+      "1Sam.25.35",
+      "1Sam.29.7",
+      "2Kgs.5.19",
+      "2Sam.15.9",
+      "2Sam.15.27",
+      "Judg.18.6",
+      "Gen.44.17",
+      "Gen.26.29",
+      "Gen.26.31",
+      "2Sam.3.21",
+      "2Sam.3.22",
+      "2Sam.3.23",
+      "1Kgs.22.17",
+      "2Chr.18.16",
+      "Isa.55.12",
+      "Luke.8.48",
+      "Mark.5.34",
+      "Acts.15.33",
+      "1Cor.16.11",
+      "Jas.2.16",
+      "Luke.2.29",
+      "1Sam.16.4",
+      "1Sam.16.5",
+      "2Kgs.9.17",
+      "2Kgs.9.18",
+      "2Kgs.9.19",
+      "2Kgs.9.22",
+      "2Kgs.9.31",
+      "1Kgs.20.18",
+      "1Kgs.2.6",
+      "2Kgs.22.20",
+      "2Chr.34.28",
+      "Jer.34.5",
+      "Isa.57.2"
+     ],
+     "eg": [
+      {
+       "id": "Exod.4.18",
+       "ref": "Exodus 4:18",
+       "text": "Then Moses went back to his father-in-law Jethro and said to him, “Please let me return to my brothers in Egypt to see if they are still alive.” “Go in peace,” Jethro replied.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.2.13",
+       "ref": "1 Kings 2:13",
+       "text": "Now Adonijah son of Haggith went to Bathsheba the mother of Solomon, and she asked, “Do you come in peace?” “Yes, in peace,” he replied.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Luke.7.50",
+       "ref": "Luke 7:50",
+       "text": "And Jesus told the woman, “Your faith has saved you; go in peace.”",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Gen.15.15",
+       "ref": "Genesis 15:15",
+       "text": "You, however, will go to your fathers in peace and be buried at a ripe old age.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Asked after, greeted: “Is it well?”, “All is well”",
+     "note": "The same Hebrew word, שָׁלוֹם: the Berean gives it as 'well', 'all right', 'welfare', 'how they were doing' or 'greet'. It is the greeting and the question after someone's health as well as the opposite of war.",
+     "doors": [],
+     "n": 27,
+     "verses": [
+      "Gen.29.6",
+      "2Kgs.4.26",
+      "2Sam.18.29",
+      "Gen.43.27",
+      "Gen.43.23",
+      "Gen.43.28",
+      "Gen.37.14",
+      "Exod.18.7",
+      "Judg.18.15",
+      "1Sam.10.4",
+      "1Sam.17.18",
+      "1Sam.17.22",
+      "1Sam.25.5",
+      "1Sam.30.21",
+      "2Sam.11.7",
+      "2Sam.18.28",
+      "2Sam.18.32",
+      "2Sam.20.9",
+      "2Kgs.4.23",
+      "2Kgs.5.21",
+      "2Kgs.5.22",
+      "2Kgs.9.11",
+      "2Kgs.10.13",
+      "1Chr.18.10",
+      "2Sam.8.10",
+      "Esth.2.11",
+      "Jer.15.5"
+     ],
+     "eg": [
+      {
+       "id": "Gen.29.6",
+       "ref": "Genesis 29:6",
+       "text": "“Is he well?” Jacob inquired. “Yes,” they answered, “and here comes his daughter Rachel with his sheep.”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.4.26",
+       "ref": "2 Kings 4:26",
+       "text": "Please run out now to meet her and ask, ‘Are you all right? Is your husband all right? Is your child all right?'” And she answered, “Everything is all right.”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.18.29",
+       "ref": "2 Samuel 18:29",
+       "text": "The king asked, “Is the young man Absalom all right?” And Ahimaaz replied, “When Joab sent the king's servant and your servant, I saw a great tumult, but I do not know what it was.”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Gen.43.27",
+       "ref": "Genesis 43:27",
+       "text": "He asked if they were well, and then he asked, “How is your elderly father you told me about? Is he still alive?”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Safe, secure; welfare, well-being, prosperity",
+     "note": "Deut 23:6 and Ezra 9:12 are commands not to seek the peace or prosperity of Ammon, Moab and the peoples of the land.",
+     "doors": [],
+     "n": 33,
+     "verses": [
+      "Gen.28.21",
+      "Jer.29.11",
+      "Ps.37.11",
+      "Josh.10.21",
+      "1Kgs.22.27",
+      "1Kgs.22.28",
+      "2Chr.18.26",
+      "2Chr.18.27",
+      "2Chr.19.1",
+      "2Sam.19.24",
+      "2Sam.19.30",
+      "1Sam.20.13",
+      "1Sam.20.21",
+      "1Sam.20.7",
+      "Zech.8.10",
+      "Isa.41.3",
+      "Jer.43.12",
+      "Job.21.9",
+      "Job.5.24",
+      "2Chr.15.5",
+      "Luke.11.21",
+      "Deut.23.6",
+      "Ps.35.27",
+      "Ezra.9.12",
+      "Jer.29.7",
+      "Jer.38.4",
+      "Isa.38.17",
+      "Isa.45.7",
+      "Isa.54.13",
+      "Ps.72.7",
+      "Ps.73.3",
+      "Job.15.21",
+      "Ps.38.3"
+     ],
+     "eg": [
+      {
+       "id": "Gen.28.21",
+       "ref": "Genesis 28:21",
+       "text": "so that I may return safely to my father's house, then the LORD will be my God.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Jer.29.11",
+       "ref": "Jeremiah 29:11",
+       "text": "For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, to give you a future and a hope.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.37.11",
+       "ref": "Psalms 37:11",
+       "text": "But the meek will inherit the land and delight in abundant prosperity.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Josh.10.21",
+       "ref": "Joshua 10:21",
+       "text": "The whole army returned safely to Joshua in the camp at Makkedah, and no one dared to utter a word against the Israelites.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The heart and the mind; lie down, dwell in a peaceful place",
+     "note": null,
+     "doors": [
+      {
+       "id": "rest",
+       "name": "rest",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Isa.26.3",
+      "Phil.4.7",
+      "Ps.4.8",
+      "Isa.32.18",
+      "John.14.27",
+      "Col.3.15",
+      "Rom.8.6",
+      "Lev.26.6",
+      "Ezek.34.25",
+      "Jer.25.37",
+      "Jer.12.5"
+     ],
+     "eg": [
+      {
+       "id": "Isa.26.3",
+       "ref": "Isaiah 26:3",
+       "text": "You will keep in perfect peace the steadfast of mind, because he trusts in You.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Phil.4.7",
+       "ref": "Philippians 4:7",
+       "text": "And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Ps.4.8",
+       "ref": "Psalms 4:8",
+       "text": "I will lie down and sleep in peace, for You alone, O LORD, make me dwell in safety.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.32.18",
+       "ref": "Isaiah 32:18",
+       "text": "Then my people will dwell in a peaceful place, in safe and secure places of rest.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Peace and war, the sword, enemies; a time of peace",
+     "note": null,
+     "doors": [
+      {
+       "id": "war",
+       "name": "war",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "enemies",
+       "name": "enemies",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "i_came_not_to_send_peace_but_a_sword",
+       "name": "I have not come to bring peace, but a sword",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "Eccl.3.8",
+      "Ps.120.7",
+      "Matt.10.34",
+      "Eph.2.14",
+      "Lev.26.6",
+      "Deut.20.12",
+      "Josh.11.19",
+      "1Kgs.2.5",
+      "1Kgs.4.24",
+      "1Kgs.20.18",
+      "2Kgs.20.19",
+      "1Chr.22.9",
+      "Ps.120.6",
+      "Isa.39.8",
+      "Jer.4.10",
+      "Jer.12.12",
+      "Jer.14.13",
+      "Mic.3.5",
+      "Zech.8.10",
+      "Zech.9.10",
+      "Acts.9.31",
+      "Acts.24.2",
+      "Rev.6.4"
+     ],
+     "eg": [
+      {
+       "id": "Eccl.3.8",
+       "ref": "Ecclesiastes 3:8",
+       "text": "a time to love and a time to hate, a time for war and a time for peace.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.120.7",
+       "ref": "Psalms 120:7",
+       "text": "I am in favor of peace; but when I speak, they want war.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Matt.10.34",
+       "ref": "Matthew 10:34",
+       "text": "Do not assume that I have come to bring peace to the earth; I have not come to bring peace, but a sword.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.14",
+       "ref": "Ephesians 2:14",
+       "text": "For He Himself is our peace, who has made the two one and has torn down the dividing wall of hostility",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Peace made between: an offer of peace, a covenant of peace, make peace with, at peace with",
+     "note": "Also the Hebrew idiom 'men of your peace', which the Berean gives as 'allies', 'close friend', 'trusted friends', or (Ps 37:37, Luke 10:6) 'a man of peace'. Job 5:23 and 22:21 are Eliphaz speaking to Job.",
+     "doors": [
+      {
+       "id": "covenant",
+       "name": "covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 34,
+     "verses": [
+      "Deut.20.10",
+      "Josh.9.15",
+      "Isa.54.10",
+      "Josh.11.19",
+      "Deut.2.26",
+      "Deut.20.11",
+      "Judg.21.13",
+      "1Kgs.5.12",
+      "Judg.4.17",
+      "1Sam.7.14",
+      "Luke.14.32",
+      "Acts.12.20",
+      "Isa.27.5",
+      "Ezek.34.25",
+      "Ezek.37.26",
+      "Num.25.12",
+      "Josh.10.1",
+      "Josh.10.4",
+      "2Sam.10.19",
+      "1Chr.19.19",
+      "1Kgs.22.45",
+      "Deut.20.12",
+      "Job.5.23",
+      "Prov.16.7",
+      "2Sam.20.19",
+      "2Pet.3.14",
+      "Job.22.21",
+      "Obad.1.7",
+      "Ps.41.9",
+      "Jer.20.10",
+      "Jer.38.22",
+      "Ps.55.20",
+      "Luke.10.6",
+      "Ps.37.37"
+     ],
+     "eg": [
+      {
+       "id": "Deut.20.10",
+       "ref": "Deuteronomy 20:10",
+       "text": "When you approach a city to fight against it, you are to make an offer of peace.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Josh.9.15",
+       "ref": "Joshua 9:15",
+       "text": "And Joshua made a treaty of peace with them to let them live, and the leaders of the congregation swore an oath to them.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.54.10",
+       "ref": "Isaiah 54:10",
+       "text": "Though the mountains may be removed and the hills may be shaken, My loving devotion will not depart from you, and My covenant of peace will not be broken,” says the LORD, who has compassion on you.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Josh.11.19",
+       "ref": "Joshua 11:19",
+       "text": "No city made peace with the Israelites except the Hivites living in Gibeon; all others were taken in battle.",
+       "words": [
+        {
+         "key": "h7999",
+         "lemma": "שָׁלַם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Peace on the earth, peace in heaven",
+     "note": "Luke 2:14 and Matt 10:34 are set side by side, as the text has them; the page takes no side on how they fit.",
+     "doors": [
+      {
+       "id": "i_came_not_to_send_peace_but_a_sword",
+       "name": "I have not come to bring peace, but a sword",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Matt.10.34",
+      "Rev.6.4",
+      "Luke.2.14",
+      "Luke.12.51",
+      "Luke.19.38"
+     ],
+     "eg": [
+      {
+       "id": "Matt.10.34",
+       "ref": "Matthew 10:34",
+       "text": "Do not assume that I have come to bring peace to the earth; I have not come to bring peace, but a sword.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Rev.6.4",
+       "ref": "Revelation 6:4",
+       "text": "Then another horse went forth. It was bright red, and its rider was granted permission to take away peace from the earth and to make men slay one another. And he was given a great sword.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.14",
+       "ref": "Luke 2:14",
+       "text": "“Glory to God in the highest, and on earth peace to men on whom His favor rests!”",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Luke.12.51",
+       "ref": "Luke 12:51",
+       "text": "Do you think that I have come to bring peace to the earth? No, I tell you, but division.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“There is no peace”; “Peace, peace,” when there is none",
+     "note": "Peace missing, taken away, hoped for and not come; and peace announced where it is not. Jer 28:9 is the test the text gives for the second.",
+     "doors": [],
+     "n": 25,
+     "verses": [
+      "Isa.48.22",
+      "Jer.6.14",
+      "Lam.3.17",
+      "Ezek.13.10",
+      "Jer.8.15",
+      "Luke.19.42",
+      "Isa.57.21",
+      "Jer.12.12",
+      "Jer.30.5",
+      "Isa.59.8",
+      "Ezek.7.25",
+      "Jer.14.19",
+      "Jer.16.5",
+      "Rev.6.4",
+      "Jer.8.11",
+      "Jer.14.13",
+      "Jer.23.17",
+      "Jer.4.10",
+      "Jer.28.9",
+      "Ezek.13.16",
+      "Mic.3.5",
+      "1Thess.5.3",
+      "Jer.9.8",
+      "Ps.28.3",
+      "Deut.29.19"
+     ],
+     "eg": [
+      {
+       "id": "Isa.48.22",
+       "ref": "Isaiah 48:22",
+       "text": "“There is no peace,” says the LORD, “for the wicked.”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Jer.6.14",
+       "ref": "Jeremiah 6:14",
+       "text": "They dress the wound of My people with very little care, saying, ‘Peace, peace,' when there is no peace at all.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Lam.3.17",
+       "ref": "Lamentations 3:17",
+       "text": "My soul has been deprived of peace; I have forgotten what prosperity is.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.13.10",
+       "ref": "Ezekiel 13:10",
+       "text": "Because they have led My people astray, saying, ‘Peace,' when there is no peace, and whitewashing any flimsy wall that is built,",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Speak, proclaim, preach peace; the gospel of peace; good news",
+     "note": null,
+     "doors": [
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "how_beautiful_are_the_feet",
+       "name": "How beautiful on the mountains are the feet",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "image_readiness_of_the_gospel_of_peace",
+       "name": "the readiness of the gospel of peace",
+       "type": "image",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Isa.52.7",
+      "Isa.57.19",
+      "Eph.2.17",
+      "Nah.1.15",
+      "Ps.85.8",
+      "Esth.9.30",
+      "Esth.10.3",
+      "Zech.9.10",
+      "Acts.10.36",
+      "Eph.6.15",
+      "Ps.35.20"
+     ],
+     "eg": [
+      {
+       "id": "Isa.52.7",
+       "ref": "Isaiah 52:7",
+       "text": "How beautiful on the mountains are the feet of those who bring good news, who proclaim peace, who bring good tidings, who proclaim salvation, who say to Zion, “Your God reigns!”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.57.19",
+       "ref": "Isaiah 57:19",
+       "text": "bringing praise to their lips. Peace, peace to those far and near,” says the LORD, “and I will heal them.”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.17",
+       "ref": "Ephesians 2:17",
+       "text": "He came and preached peace to you who were far away and peace to those who were near.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Nah.1.15",
+       "ref": "Nahum 1:15",
+       "text": "Look to the mountains-the feet of one who brings good news, who proclaims peace! Celebrate your feasts, O Judah; fulfill your vows. For the wicked will never again march through you; they will be utterly cut off.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        },
+        {
+         "key": "h7999",
+         "lemma": "שָׁלַם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "From the LORD, from God: the God of peace, the peace of God, “The LORD Is Peace”",
+     "note": "Given, blessed, established, spoken, taken away: what the verses say the LORD does with peace; and the text's own phrases, kept as written ('the God of peace', 'the peace of God', 'the Lord of peace', the altar named 'The LORD Is Peace'). The page does not say more than the verses do about whose peace this is. Isa 45:7 sets it beside calamity: 'I bring prosperity and create calamity'. Ps 147:14, 'He makes peace at your borders', follows 'Exalt the LORD, O Jerusalem' (147:12). Job 25:2 is Bildad speaking.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 21,
+     "verses": [
+      "Num.6.26",
+      "Isa.26.12",
+      "Rom.15.33",
+      "Judg.6.24",
+      "Ps.29.11",
+      "1Kgs.2.33",
+      "Hag.2.9",
+      "Isa.66.12",
+      "Isa.57.19",
+      "Judg.6.23",
+      "Ps.85.8",
+      "Jer.16.5",
+      "Isa.45.7",
+      "Job.25.2",
+      "1Thess.5.23",
+      "2Thess.3.16",
+      "Heb.13.20",
+      "Phil.4.7",
+      "Phil.4.9",
+      "Rom.16.20",
+      "Ps.147.14"
+     ],
+     "eg": [
+      {
+       "id": "Num.6.26",
+       "ref": "Numbers 6:26",
+       "text": "may the LORD lift up His countenance toward you and give you peace.'",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.26.12",
+       "ref": "Isaiah 26:12",
+       "text": "O LORD, You will establish peace for us. For all that we have accomplished, You have done for us.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.33",
+       "ref": "Romans 15:33",
+       "text": "The God of peace be with all of you. Amen.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Judg.6.24",
+       "ref": "Judges 6:24",
+       "text": "So Gideon built an altar to the LORD there and called it The LORD Is Peace. To this day it stands in Ophrah of the Abiezrites.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The ruler from Bethlehem, the king who comes to Zion, the servant: “He will be our peace”, “He will proclaim peace”",
+     "note": "The text says “He”. In Micah he is the ruler from Bethlehem (5:2) who shepherds in the strength of the LORD (5:4); in Zechariah, the king who comes to Zion (9:9); in Isaiah 53:5, “the punishment that brought us peace was upon Him”, the servant. Christian readers take these of Christ; Jewish readers read them of a king of David's line, of the Messiah, or (Isaiah 53) of Israel. The page does not choose.",
+     "doors": [
+      {
+       "id": "theme_messiah",
+       "name": "Messiah / Christology (major theme)",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Mic.5.5",
+      "Zech.9.10",
+      "Isa.53.5"
+     ],
+     "eg": [
+      {
+       "id": "Mic.5.5",
+       "ref": "Micah 5:5",
+       "text": "And He will be our peace when Assyria invades our land and tramples our citadels. We will raise against it seven shepherds, even eight leaders of men.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Zech.9.10",
+       "ref": "Zechariah 9:10",
+       "text": "And I will cut off the chariot from Ephraim and the horse from Jerusalem, and the bow of war will be broken. Then He will proclaim peace to the nations. His dominion will extend from sea to sea, and from the Euphrates to the ends of the earth.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.53.5",
+       "ref": "Isaiah 53:5",
+       "text": "But He was pierced for our transgressions, He was crushed for our iniquities; the punishment that brought us peace was upon Him, and by His stripes we are healed.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "In Christ, through Jesus Christ: “He Himself is our peace”",
+     "note": "Ephesians 2:13 names Christ Jesus; the verses speak of Him making the two one. Ephesians 2:15 says “abolishing in His flesh the law of commandments and decrees”; readers part on what is abolished, and the page takes no side.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Eph.2.14",
+      "Eph.2.15",
+      "Acts.10.36",
+      "Rom.5.1",
+      "Phil.4.7",
+      "1Pet.5.14",
+      "Col.3.15"
+     ],
+     "eg": [
+      {
+       "id": "Eph.2.14",
+       "ref": "Ephesians 2:14",
+       "text": "For He Himself is our peace, who has made the two one and has torn down the dividing wall of hostility",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.15",
+       "ref": "Ephesians 2:15",
+       "text": "by abolishing in His flesh the law of commandments and decrees. He did this to create in Himself one new man out of the two, thus making peace",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Acts.10.36",
+       "ref": "Acts 10:36",
+       "text": "He has sent this message to the people of Israel, proclaiming the gospel of peace through Jesus Christ, who is Lord of all.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.1",
+       "ref": "Romans 5:1",
+       "text": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ,",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Peace with God”",
+     "note": "Rom 5:1 says “we have peace with God through our Lord Jesus Christ”, after “justified through faith”; Isa 27:5 “make peace with Me”; Job 22:21 “be at peace with Him”. In Romans 5:1 the Greek reads “let us have peace” (ἔχωμεν) and the Berean prints “we have peace”. Job 22:21 is Eliphaz speaking to Job. Where readers part on what this peace is, the page takes no side.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Rom.5.1",
+      "Isa.27.5",
+      "Job.22.21"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.1",
+       "ref": "Romans 5:1",
+       "text": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ,",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Isa.27.5",
+       "ref": "Isaiah 27:5",
+       "text": "Or let them lay claim to My protection; let them make peace with Me-yes, let them make peace with Me.”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Job.22.21",
+       "ref": "Job 22:21",
+       "text": "Reconcile now and be at peace with Him; thereby good will come to you.",
+       "words": [
+        {
+         "key": "h7999",
+         "lemma": "שָׁלַם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prince of Peace; “of the increase of His government and peace”",
+     "note": "The verses speak of “a child born”; readers take them of Hezekiah, of the Messiah, or of Jesus, and the page does not choose.",
+     "doors": [
+      {
+       "id": "theme_messiah",
+       "name": "Messiah / Christology (major theme)",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Isa.9.6",
+      "Isa.9.7"
+     ],
+     "eg": [
+      {
+       "id": "Isa.9.6",
+       "ref": "Isaiah 9:6",
+       "text": "For unto us a child is born, unto us a son is given, and the government will be upon His shoulders. And He will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.9.7",
+       "ref": "Isaiah 9:7",
+       "text": "Of the increase of His government and peace there will be no end. He will reign on the throne of David and over his kingdom, to establish and sustain it with justice and righteousness from that time and forevermore. The zeal of the LORD of Hosts will accomplish this.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Peace upon Israel; for Jerusalem and the city",
+     "note": "Gal 6:16 reads “Peace and mercy to all who walk by this rule, even to the Israel of God”; where readers part on who the Israel of God is, the page takes no side. Jer 29:7 is the city of the exile.",
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "jerusalem",
+       "name": "Jerusalem",
+       "type": "place",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Ps.125.5",
+      "Ps.128.6",
+      "Gal.6.16",
+      "Ps.122.6",
+      "Ps.122.7",
+      "Ps.122.8",
+      "Jer.29.7"
+     ],
+     "eg": [
+      {
+       "id": "Ps.125.5",
+       "ref": "Psalms 125:5",
+       "text": "But those who turn to crooked ways the LORD will banish with the evildoers. Peace be upon Israel.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.128.6",
+       "ref": "Psalms 128:6",
+       "text": "that you may see your children's children. Peace be upon Israel!",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Gal.6.16",
+       "ref": "Galatians 6:16",
+       "text": "Peace and mercy to all who walk by this rule, even to the Israel of God.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Ps.122.6",
+       "ref": "Psalms 122:6",
+       "text": "Pray for the peace of Jerusalem: “May those who love you prosper.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "What peace stands beside: righteousness, justice, truth, love, joy, the law, life and blessing",
+     "note": "Companions in the same verse, not claims about how they relate. Gal 5:22 is the fruit of the Spirit. Eph 2:15, which speaks of the law abolished, stands in the Christ row with its own note.",
+     "doors": [
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "truth",
+       "name": "truth",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "love",
+       "name": "love",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "joy",
+       "name": "joy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "blessing",
+       "name": "blessing",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "fruit_of_the_spirit",
+       "name": "the fruit of the Spirit",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 36,
+     "verses": [
+      "Ps.85.10",
+      "Isa.32.17",
+      "Rom.14.17",
+      "Gal.5.22",
+      "Jas.3.18",
+      "2Tim.2.22",
+      "Heb.7.2",
+      "Isa.48.18",
+      "Isa.59.8",
+      "Isa.60.17",
+      "Isa.9.7",
+      "Ps.35.27",
+      "Ps.72.3",
+      "Ps.72.7",
+      "Eccl.3.8",
+      "1Pet.5.14",
+      "2Cor.13.11",
+      "2John.1.3",
+      "Eph.6.23",
+      "Esth.9.30",
+      "Isa.54.10",
+      "Jer.16.5",
+      "Jer.28.9",
+      "Jer.33.6",
+      "Jude.1.2",
+      "Mal.2.6",
+      "Ps.119.165",
+      "Ps.122.6",
+      "Zech.8.19",
+      "Isa.55.12",
+      "Prov.12.20",
+      "Rom.15.13",
+      "Prov.3.2",
+      "Mal.2.5",
+      "Rom.8.6",
+      "Ps.29.11"
+     ],
+     "eg": [
+      {
+       "id": "Ps.85.10",
+       "ref": "Psalms 85:10",
+       "text": "Loving devotion and faithfulness have joined together; righteousness and peace have kissed.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.32.17",
+       "ref": "Isaiah 32:17",
+       "text": "The work of righteousness will be peace; the service of righteousness will be quiet confidence forever.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Rom.14.17",
+       "ref": "Romans 14:17",
+       "text": "For the kingdom of God is not a matter of eating and drinking, but of righteousness, peace, and joy in the Holy Spirit.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.22",
+       "ref": "Galatians 5:22",
+       "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness,",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Peace and faith, believing",
+     "note": "Where the text names faith beside peace the verse is listed as written; where traditions part on what faith does, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Rom.5.1",
+      "Luke.7.50",
+      "Rom.15.13",
+      "Heb.11.31",
+      "Mark.5.34",
+      "Luke.8.48",
+      "Gal.5.22",
+      "Eph.6.23",
+      "2Tim.2.22"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.1",
+       "ref": "Romans 5:1",
+       "text": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ,",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Luke.7.50",
+       "ref": "Luke 7:50",
+       "text": "And Jesus told the woman, “Your faith has saved you; go in peace.”",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.15.13",
+       "ref": "Romans 15:13",
+       "text": "Now may the God of hope fill you with all joy and peace as you believe in Him, so that you may overflow with hope by the power of the Holy Spirit.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.31",
+       "ref": "Hebrews 11:31",
+       "text": "By faith the prostitute Rahab, because she welcomed the spies in peace, did not perish with those who were disobedient.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Seek it, pursue it, live in it: the way of peace, among the brothers, those who do good, being made holy",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_church_r34",
+       "name": "Love one another",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "brother",
+       "name": "brother",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "holiness",
+       "name": "holiness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "Ps.34.14",
+      "1Pet.3.11",
+      "Rom.14.19",
+      "Prov.3.17",
+      "Heb.12.14",
+      "2Tim.2.22",
+      "Ezek.7.25",
+      "Jer.29.7",
+      "Rom.2.10",
+      "Isa.57.2",
+      "Mal.2.6",
+      "Ps.37.37",
+      "Ps.119.165",
+      "Isa.59.8",
+      "Luke.1.79",
+      "Rom.3.17",
+      "1Cor.14.33",
+      "1Cor.7.15",
+      "2Cor.13.11",
+      "Acts.7.26",
+      "Acts.9.31",
+      "Eph.4.3",
+      "1Thess.5.23"
+     ],
+     "eg": [
+      {
+       "id": "Ps.34.14",
+       "ref": "Psalms 34:14",
+       "text": "Turn away from evil and do good; seek peace and pursue it.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.3.11",
+       "ref": "1 Peter 3:11",
+       "text": "He must turn from evil and do good; he must seek peace and pursue it.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.14.19",
+       "ref": "Romans 14:19",
+       "text": "So then, let us pursue what leads to peace and to mutual edification.",
+       "words": [
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Prov.3.17",
+       "ref": "Proverbs 3:17",
+       "text": "All her ways are pleasant, and all her paths are peaceful.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Peace in other uses",
+     "note": "Verses the rows above do not take, among them those where the Berean’s word for the Hebrew שָׁלוֹם is not ‘peace’ (‘in triumph’, ‘wholly’, ‘a sound answer’, ‘sound judgments’) or where the Berean prints no word for it at all.",
+     "doors": [],
+     "n": 16,
+     "verses": [
+      "2Sam.17.3",
+      "Isa.33.7",
+      "Ps.55.18",
+      "Zech.6.13",
+      "Gen.37.4",
+      "Gen.41.16",
+      "Judg.8.9",
+      "Judg.11.13",
+      "Judg.11.31",
+      "1Chr.12.19",
+      "Ps.7.4",
+      "Ps.69.22",
+      "Song.8.10",
+      "Jer.13.19",
+      "Zech.8.12",
+      "Zech.8.16"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.17.3",
+       "ref": "2 Samuel 17:3",
+       "text": "and bring all the people back to you as a bride returning to her husband. You seek the life of only one man; then all the people will be at peace.”",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.33.7",
+       "ref": "Isaiah 33:7",
+       "text": "Behold, their valiant ones cry aloud in the streets; the envoys of peace weep bitterly.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.55.18",
+       "ref": "Psalms 55:18",
+       "text": "He redeems my soul in peace from the battle waged against me, even though many oppose me.",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      },
+      {
+       "id": "Zech.6.13",
+       "ref": "Zechariah 6:13",
+       "text": "Yes, He will build the temple of the LORD; He will be clothed in splendor and will sit on His throne and rule. And He will be a priest on His throne, and there will be peaceful counsel between the two.'",
+       "words": [
+        {
+         "key": "h7965",
+         "lemma": "שָׁלוֹם"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 5,
+   "rows": [
+    {
+     "label": "Live at peace with one another, with everyone; “making peace through the blood of His cross”",
+     "note": "Live at peace is εἰρηνεύω; “making peace” in Col 1:20 is εἰρηνοποιέω. Col 1:20: where readers part on what reconciliation with God is and how it is made, the page takes no side.",
+     "doors": [],
+     "n": 5,
+     "verses": [
+      "Mark.9.50",
+      "Rom.12.18",
+      "2Cor.13.11",
+      "Col.1.20",
+      "1Thess.5.13"
+     ],
+     "eg": [
+      {
+       "id": "Mark.9.50",
+       "ref": "Mark 9:50",
+       "text": "Salt is good, but if the salt loses its saltiness, with what will you season it? Have salt among yourselves, and be at peace with one another.”",
+       "words": [
+        {
+         "key": "g1514",
+         "lemma": "εἰρηνεύω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.12.18",
+       "ref": "Romans 12:18",
+       "text": "If it is possible on your part, live at peace with everyone.",
+       "words": [
+        {
+         "key": "g1514",
+         "lemma": "εἰρηνεύω"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.13.11",
+       "ref": "2 Corinthians 13:11",
+       "text": "Finally, brothers, rejoice! Aim for perfect harmony, encourage one another, be of one mind, live in peace. And the God of love and peace will be with you.",
+       "words": [
+        {
+         "key": "g1514",
+         "lemma": "εἰρηνεύω"
+        },
+        {
+         "key": "g1515",
+         "lemma": "εἰρήνη"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.20",
+       "ref": "Colossians 1:20",
+       "text": "and through Him to reconcile to Himself all things, whether things on earth or things in heaven, by making peace through the blood of His cross.",
+       "words": [
+        {
+         "key": "g1517",
+         "lemma": "εἰρηνοποιέω"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 3,
+   "rows": [
+    {
+     "label": "Peacemakers (εἰρηνοποιός); peace-loving; the peaceful fruit of discipline (εἰρηνικός)",
+     "note": "Two different words: εἰρηνοποιός, “peacemakers” (Matt 5:9), and εἰρηνικός, which the Berean prints “peace-loving” (Jas 3:17) and “peace” (Heb 12:11, the fruit of discipline).",
+     "doors": [
+      {
+       "id": "peacemakers",
+       "name": "peacemakers",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "peaceableness",
+       "name": "peaceableness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Matt.5.9",
+      "Jas.3.17",
+      "Heb.12.11"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.9",
+       "ref": "Matthew 5:9",
+       "text": "Blessed are the peacemakers, for they will be called sons of God.",
+       "words": [
+        {
+         "key": "g1518",
+         "lemma": "εἰρηνοποιός"
+        }
+       ]
+      },
+      {
+       "id": "Jas.3.17",
+       "ref": "James 3:17",
+       "text": "But the wisdom from above is first of all pure, then peace-loving, gentle, accommodating, full of mercy and good fruit, impartial, and sincere.",
+       "words": [
+        {
+         "key": "g1516",
+         "lemma": "εἰρηνικός"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.11",
+       "ref": "Hebrews 12:11",
+       "text": "No discipline seems enjoyable at the time, but painful. Later on, however, it yields a harvest of righteousness and peace to those who have been trained by it.",
+       "words": [
+        {
+         "key": "g1516",
+         "lemma": "εἰρηνικός"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “peace”",
+  "words": [
+   {
+    "key": "h8002",
+    "lemma": "שֶׁלֶם",
+    "translit": "she.lem",
+    "gloss": "peace offering",
+    "lang": "Hebrew",
+    "n": 23,
+    "verses": [
+     "Lev.4.10",
+     "Lev.7.13",
+     "Lev.7.14",
+     "Lev.7.29",
+     "Lev.23.19",
+     "Num.7.17",
+     "Num.7.23",
+     "Num.7.29",
+     "Num.7.35",
+     "Num.7.41",
+     "Num.7.47",
+     "Num.7.53",
+     "Num.7.59",
+     "Num.7.65",
+     "Num.7.71",
+     "Num.7.77",
+     "Num.7.83",
+     "Num.7.88",
+     "Num.10.10",
+     "1Chr.21.26",
+     "2Chr.29.35",
+     "2Chr.31.2",
+     "Prov.7.14"
+    ],
+    "eg": [
+     {
+      "id": "Lev.4.10",
+      "ref": "Leviticus 4:10",
+      "text": "just as the fat is removed from the ox of the peace offering. Then the priest shall burn them on the altar of burnt offering."
+     },
+     {
+      "id": "Lev.7.13",
+      "ref": "Leviticus 7:13",
+      "text": "Along with his peace offering of thanksgiving he is to present an offering with cakes of leavened bread."
+     }
+    ]
+   },
+   {
+    "key": "g269",
+    "lemma": "ἄμαχος",
+    "translit": "amachos",
+    "gloss": "peacable",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "1Tim.3.3",
+     "Titus.3.2"
+    ],
+    "eg": [
+     {
+      "id": "1Tim.3.3",
+      "ref": "1 Timothy 3:3",
+      "text": "not dependent on wine, not violent but gentle, peaceable, and free of the love of money."
+     },
+     {
+      "id": "Titus.3.2",
+      "ref": "Titus 3:2",
+      "text": "to malign no one, and to be peaceable and gentle, showing full consideration to everyone."
+     }
+    ]
+   },
+   {
+    "key": "h7962",
+    "lemma": "שַׁלְוָה",
+    "translit": "shal.vah",
+    "gloss": "ease",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Dan.11.21",
+     "Dan.11.24"
+    ],
+    "eg": [
+     {
+      "id": "Dan.11.21",
+      "ref": "Daniel 11:21",
+      "text": "In his place a despicable person will arise; royal honors will not be given to him, but he will come in a time of peace and seize the kingdom by intrigue."
+     },
+     {
+      "id": "Dan.11.24",
+      "ref": "Daniel 11:24",
+      "text": "In a time of peace, he will invade the richest provinces and do what his fathers and forefathers never did. He will lavish plunder, loot, and wealth on his followers, and he will plot against the strongholds-but only for a time."
+     }
+    ]
+   }
+  ]
+ }
+}

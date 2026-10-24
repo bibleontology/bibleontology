@@ -1,0 +1,19 @@
+{"ref": "Exo.8.7",
+ "referents": [
+  {"slot": "w5", "choice": "Exo.8.5#w4", "divine": false, "why": "Second person masculine singular in Moses's speech; the speech is addressed to Pharaoh (Exo.8.5: Moses said to Pharaoh), and Pharaoh is masculine singular, so the morphology agrees.", "category": "addressee of a speech in dialogue"},
+  {"slot": "w9", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive second masculine singular on houses: Pharaoh's houses, Pharaoh being the addressee of the speech. Agrees in person, gender and number.", "category": "possessive pronoun addressed to Pharaoh"},
+  {"slot": "w13", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive second masculine singular on officials: Pharaoh's officials, same speech and same addressee.", "category": "possessive pronoun addressed to Pharaoh"},
+  {"slot": "w17", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive second masculine singular on people: Pharaoh's people, same speech and same addressee.", "category": "possessive pronoun addressed to Pharaoh"},
+  {"slot": "cl1s", "choice": "w3", "divine": false, "why": "Third feminine plural. The only feminine plural candidate is frogs (w3), and the clause says they remain in the Nile, which is the frogs' stay. The masculine candidates are excluded by morphology.", "category": "feminine plural subject, morphology decides"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "The source named cl4 has no clause in this verse; it appears to be Exo.8.6#cl4, the purpose clause 'so that you may know'. That is not a narrated event the weqatal continues, and 'and then' is within-verse only by its own definition. The weqatal's link is to the command 'pray' (Exo.8.4#cl2), not to the purpose clause.", "category": "and-then across a verse boundary from a purpose clause"},
+  {"src": "Exo.8.4#cl2", "type": "result", "dst": "cl0", "action": "add", "why": "Pharaoh's command 'pray to the LORD' (Exo.8.4) followed by waw and a third-person weqatal saying what will come of it: the frogs will depart. cl0 opens with a separate waw, so this is the imperative-then-weqatal pattern, joined across the verse boundary by the full id.", "category": "command then weqatal result across verses"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl1, 'only in the River they will remain', asyndetic after cl0", "what": "The restriction on the departure: the frogs leave, but only those in the Nile stay (the exception already stated in Exo.8.5). No link type covers an 'only' or 'except' with no negative and no 'but'."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl0 and cl1 are parts of Exo.8.6#turn1 (Moses's reply, which this verse continues and closes)", "why": "The members of that group are not in the input and no group is listed for this verse, so its membership cannot be confirmed or changed here. Left as built."}
+ ]}

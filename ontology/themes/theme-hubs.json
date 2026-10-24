@@ -1,0 +1,1614 @@
+{
+ "_about": "A theme's front page (plan 7.6b; Doug, 2026-10-06: 'a one stop entry point to understanding what the Bible really says about this topic ... on its own terms'; 'a theme cannot be expected to hold it all on one page - it is an entry point for many other pages'). Its opening in plain words and the texts' own, the page it hinges on as its first door, a place to begin for a reader new to it, its other doors, and its note. Every quotation machine-checked against the Berean (tests/test_readings_text.py). `imagery`: the table the page hinges on -- its file, its door's words (also its page's title), its address under the theme (`slug`), and short column names for the index.",
+ "apocalyptic": {
+  "intro": "Passages in which someone is shown what is hidden, in visions: thrones, beasts, scrolls, a city, a river. Daniel, Ezekiel, Zechariah and Revelation are full of them, and many of the same images appear in more than one book.",
+  "opening": [
+   [
+    "Ezekiel 1:1",
+    "the heavens opened and I saw visions of God"
+   ],
+   [
+    "Daniel 2:28",
+    "there is a God in heaven who reveals mysteries"
+   ],
+   [
+    "Daniel 7:1",
+    "visions passed through his mind as he lay on his bed. He wrote down the dream"
+   ],
+   [
+    "Zechariah 1:8",
+    "I looked out into the night and saw a man riding on a red horse"
+   ],
+   [
+    "Revelation 1:1",
+    "This is the revelation of Jesus Christ, which God gave Him to show His servants"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no interpretive stance: they do not say what any image stands for, whom it refers to, whether one passage looks forward to another, or when anything happens. Readers and traditions (preterist, historicist, futurist, idealist, and others) read these passages differently, and every reading can start from the same words.",
+  "imagery": {
+   "file": "apocalyptic-imagery.json",
+   "door": "The imagery side by side",
+   "blurb": "images set out across Daniel, Ezekiel, Isaiah, the other prophets, the Gospels and letters, and Revelation, each in the passages' own words, with what is alike and what differs.",
+   "slug": "imagery",
+   "short": {
+    "Daniel": "Dan",
+    "Ezekiel": "Ezek",
+    "Isaiah": "Isa",
+    "Jeremiah & the Twelve": "Jer +12",
+    "Gospels & letters": "NT",
+    "Elsewhere": "Else",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "The throne and the living creatures",
+   "Beasts from the sea, ten horns, and a mouth speaking arrogant words",
+   "The river and the water of life, and the tree of life"
+  ],
+  "visions": [
+   "Daniel 7",
+   "Daniel 8",
+   "Daniel 9",
+   "Daniel 10",
+   "Daniel 12",
+   "Ezekiel 1",
+   "Ezekiel 37",
+   "Ezekiel 40",
+   "Ezekiel 47",
+   "Isaiah 24",
+   "Joel 2",
+   "Zechariah 1",
+   "Zechariah 4",
+   "Zechariah 14",
+   "Matthew 24",
+   "Mark 13",
+   "Luke 21",
+   "Revelation 1",
+   "Revelation 4",
+   "Revelation 13",
+   "Revelation 21"
+  ],
+  "starters_label": "New to these books? Begin with one image",
+  "starters_hint": "You do not need to take in all of it. Pick one image and read what each book says about it.",
+  "chapters_label": "The visions, chapter by chapter",
+  "share_label": "How the books share these images"
+ },
+ "new_creation": {
+  "intro": "Passages that speak of things made new: new heavens and a new earth, a city, a river and a tree, death and tears no more, and a person made new, with a new heart and a new spirit.",
+  "opening": [
+   [
+    "Isaiah 65:17",
+    "I will create new heavens and a new earth"
+   ],
+   [
+    "2 Corinthians 5:17",
+    "if anyone is in Christ, he is a new creation"
+   ],
+   [
+    "Romans 8:21",
+    "the creation itself will be set free from its bondage to decay"
+   ],
+   [
+    "Revelation 21:5",
+    "Behold, I make all things new"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether these passages speak of this earth renewed or replaced, of something begun now or wholly to come, or how a person made new relates to the new heavens and the new earth. Every reading can start from the same words.",
+  "imagery": {
+   "file": "new-creation-side-by-side.json",
+   "door": "The new creation side by side",
+   "slug": "side-by-side",
+   "blurb": "things more than one source says, from Genesis and the prophets to the letters and Revelation, each in the passages' own words, with what is alike and what differs.",
+   "short": {
+    "Genesis": "Gen",
+    "The Prophets": "Prophets",
+    "Psalms & elsewhere": "Ps +",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "New heavens and a new earth",
+   "A new heart and a new spirit",
+   "The tree of life"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 2",
+   "Isaiah 65",
+   "Isaiah 66",
+   "Ezekiel 36",
+   "Ezekiel 47",
+   "Romans 8",
+   "1 Corinthians 15",
+   "2 Corinthians 5",
+   "2 Peter 3",
+   "Revelation 21",
+   "Revelation 22"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "How the sources share these"
+ },
+ "prophetic_word": {
+  "intro": "Men and women who spoke for God: called, sent, given words to say, warning and promising, and tested by whether their words came true. Their words are quoted again and again in later books, by other prophets, in the Gospels and Acts, in the letters and in Revelation.",
+  "opening": [
+   [
+    "Jeremiah 1:9",
+    "Behold, I have put My words in your mouth"
+   ],
+   [
+    "Isaiah 6:8",
+    "Here am I. Send me!"
+   ],
+   [
+    "Amos 3:7",
+    "Surely the Lord GOD does nothing without revealing His plan to His servants the prophets"
+   ],
+   [
+    "Deuteronomy 18:22",
+    "When a prophet speaks in the name of the LORD and the message does not come to pass or come true, that is a message the LORD has not spoken"
+   ],
+   [
+    "Hebrews 1:1",
+    "God spoke to our fathers through the prophets"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. Where a later passage says that something \"fulfilled what was spoken\" by a prophet, those are that passage's own words, quoted; the site does not say it. Readers and traditions read these pairs very differently (as prediction and fulfilment, as pattern and type, as a later reading of an earlier text, or as a text with more than one sense), and every reading can start from the same words.",
+  "imagery": {
+   "file": "prophets-taken-up.json",
+   "door": "The prophets' words, taken up later",
+   "slug": "taken-up",
+   "blurb": "passages of the prophets set beside the later passages that quote them, each in the passages' own words, with what is alike and what differs.",
+   "short": {
+    "The Prophets": "Prophets",
+    "Elsewhere in the Old Testament": "OT",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Prepare the way for the LORD",
+   "Zion will be plowed like a field",
+   "But you, Bethlehem Ephrathah"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read the prophet's words beside the later ones.",
+  "visions": [
+   "Deuteronomy 18",
+   "Isaiah 6",
+   "Isaiah 40",
+   "Isaiah 53",
+   "Jeremiah 1",
+   "Jeremiah 31",
+   "Ezekiel 2",
+   "Joel 2",
+   "Amos 7",
+   "Micah 5",
+   "Zechariah 9",
+   "Malachi 3"
+  ],
+  "chapters_label": "The prophets, chapter by chapter",
+  "share_label": "Where the prophets' words are taken up"
+ },
+ "messiah": {
+  "intro": "The titles the texts give: anointed, Messiah, Christ; Son of David and King of Israel; Son of Man and Son of God; Servant, Shepherd, Branch, Lamb and Stone. Where each is used, and of whom the text uses it, from the Law and the Psalms to the Gospels, the letters and Revelation.",
+  "opening": [
+   [
+    "Psalm 2:2",
+    "against the LORD and against His Anointed One"
+   ],
+   [
+    "Isaiah 45:1",
+    "This is what the LORD says to Cyrus His anointed"
+   ],
+   [
+    "Daniel 7:13",
+    "One like the Son of Man coming with the clouds of heaven"
+   ],
+   [
+    "Mark 8:29",
+    "Who do you say I am?"
+   ],
+   [
+    "John 1:41",
+    "We have found the Messiah” (which is translated as Christ)"
+   ]
+  ],
+  "note": "These pages set side by side where the texts use each title and of whom, as each text names them. Readers and traditions (Christian traditions, Jewish readers of the Hebrew Bible, and scholars) read these titles very differently: who a title is about, and what it says of anyone. The site does not decide; every reading can start from the same words.",
+  "imagery": {
+   "file": "messiah-titles.json",
+   "door": "The titles side by side",
+   "slug": "titles",
+   "blurb": "titles, each with where it is used and of whom, from the Law and the Psalms to Revelation, in the passages' own words, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Anointed, Messiah, Christ",
+   "Son of Man",
+   "The Lamb"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one title and see where it is used, and of whom.",
+  "visions": [
+   "Psalm 2",
+   "Psalm 110",
+   "Isaiah 9",
+   "Isaiah 11",
+   "Isaiah 42",
+   "Isaiah 53",
+   "Daniel 7",
+   "Matthew 16",
+   "Mark 8",
+   "John 1",
+   "Hebrews 7",
+   "Revelation 5"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the titles are used"
+ },
+ "creation": {
+  "intro": "The making of the world, told in Genesis and told again: in the Psalms, Job and Proverbs, in the prophets, and in John, the letters and Revelation. The heavens stretched out, the earth founded, the sea given its bounds, the light, the creatures, the man from the dust, and the rest.",
+  "opening": [
+   [
+    "Psalm 33:6",
+    "By the word of the LORD the heavens were made"
+   ],
+   [
+    "Psalm 104:24",
+    "In wisdom You have made them all"
+   ],
+   [
+    "Isaiah 40:28",
+    "The LORD is the everlasting God, the Creator of the ends of the earth"
+   ],
+   [
+    "John 1:3",
+    "Through Him all things were made"
+   ],
+   [
+    "Hebrews 11:3",
+    "the universe was formed at God's command"
+   ],
+   [
+    "Revelation 4:11",
+    "You created all things; by Your will they exist and were created"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether the days are days, how old the earth is, how creation came about, and how the accounts of Genesis 1 and Genesis 2 relate. Every reading can start from the same words.",
+  "imagery": {
+   "file": "creation-told-again.json",
+   "door": "Creation told again",
+   "slug": "told-again",
+   "blurb": "things the creation accounts and the places that retell them say in shared words, from Genesis and the Psalms to John, the letters and Revelation, with what is alike and what differs.",
+   "short": {
+    "Genesis": "Gen",
+    "The Prophets": "Prophets",
+    "Psalms & elsewhere": "Ps +",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "In the beginning",
+   "The Maker of heaven and earth, the sea and all that is in them",
+   "By His word, at His command"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 1",
+   "Genesis 2",
+   "Job 38",
+   "Psalm 104",
+   "Proverbs 8",
+   "Isaiah 40",
+   "Isaiah 45",
+   "John 1",
+   "Colossians 1",
+   "Hebrews 11",
+   "Revelation 4"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "How the sources share these"
+ },
+ "image_of_god": {
+  "intro": "Humankind made in the image and likeness of God, in Genesis; and the image spoken of again in the Psalms, in the laws given after the flood, and in the letters, which speak of an image borne, renewed and reflected.",
+  "opening": [
+   [
+    "Genesis 1:27",
+    "So God created man in His own image; in the image of God He created him; male and female He created them"
+   ],
+   [
+    "Genesis 9:6",
+    "for in His own image God has made mankind"
+   ],
+   [
+    "Psalm 8:5",
+    "You made him a little lower than the angels; You crowned him with glory and honor"
+   ],
+   [
+    "James 3:9",
+    "men, who have been made in God's likeness"
+   ],
+   [
+    "Colossians 3:10",
+    "the new self, which is being renewed in knowledge in the image of its Creator"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: what the image consists of (reason, relationship, rule or the soul), whether it was lost or marred, and who bears it now. Every reading can start from the same words.",
+  "imagery": {
+   "file": "image-side-by-side.json",
+   "door": "The image side by side",
+   "slug": "side-by-side",
+   "blurb": "places that speak of humankind made in the image and likeness of God, and of an image borne or renewed, in the passages' own words, with what is alike and what differs.",
+   "short": {
+    "Genesis": "Gen",
+    "The Prophets": "Prophets",
+    "Psalms & elsewhere": "Ps +",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Made in His own image",
+   "In His own likeness",
+   "The image of God"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 1",
+   "Genesis 5",
+   "Genesis 9",
+   "Psalm 8",
+   "1 Corinthians 15",
+   "2 Corinthians 3",
+   "2 Corinthians 4",
+   "Colossians 1",
+   "Colossians 3",
+   "James 3"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "How the sources share these"
+ },
+ "blessing_commission": {
+  "intro": "The blessings God speaks and the charges He gives: to the first man and woman, to Noah, to Abraham and his offspring, the blessing of Aaron, and the sending of the disciples, each beside the places that repeat its words.",
+  "opening": [
+   [
+    "Genesis 1:28",
+    "Be fruitful and multiply, and fill the earth"
+   ],
+   [
+    "Genesis 12:3",
+    "all the families of the earth will be blessed through you"
+   ],
+   [
+    "Numbers 6:24",
+    "May the LORD bless you and keep you"
+   ],
+   [
+    "Matthew 28:19",
+    "go and make disciples of all nations"
+   ],
+   [
+    "Acts 1:8",
+    "you will be My witnesses in Jerusalem, and in all Judea and Samaria, and to the ends of the earth"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: how the blessing promised to Abraham relates to the nations, to Israel and to the church, and whether the charge of Genesis 1 and the charge of Matthew 28 are one or two. Every reading can start from the same words.",
+  "imagery": {
+   "file": "blessed-and-sent.json",
+   "door": "Blessed and sent",
+   "slug": "blessed-and-sent",
+   "blurb": "blessings spoken and charges given, each set beside the places that repeat or take up its words, from Genesis to Acts and Revelation, with what is alike and what differs.",
+   "short": {
+    "Genesis": "Gen",
+    "The Prophets": "Prophets",
+    "Psalms & elsewhere": "Ps +",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Be fruitful and multiply",
+   "Fill the earth",
+   "Rule over the fish of the sea and the birds of the air"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 1",
+   "Genesis 9",
+   "Genesis 12",
+   "Genesis 22",
+   "Genesis 28",
+   "Numbers 6",
+   "Isaiah 49",
+   "Matthew 28",
+   "Luke 24",
+   "Acts 1",
+   "Galatians 3"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "How the sources share these"
+ },
+ "covenant": {
+  "intro": "The covenants the texts tell of: with Noah, with Abraham, at Sinai, with David, and the new covenant of Jeremiah and the Last Supper. The words the texts use of them, side by side: a covenant established, everlasting, kept, remembered and broken, and a new covenant.",
+  "opening": [
+   [
+    "Genesis 9:11",
+    "I establish My covenant with you"
+   ],
+   [
+    "Genesis 17:7",
+    "an everlasting covenant"
+   ],
+   [
+    "Exodus 24:8",
+    "This is the blood of the covenant"
+   ],
+   [
+    "2 Samuel 23:5",
+    "He has established with me an everlasting covenant"
+   ],
+   [
+    "Jeremiah 31:31",
+    "I will make a new covenant with the house of Israel and with the house of Judah"
+   ],
+   [
+    "Luke 22:20",
+    "This cup is the new covenant in My blood"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: how the covenants relate to one another, whether the covenant with Israel continues and with whom the new covenant is made, whether the covenant at Sinai binds now, and whether any later rite takes the place of a covenant sign. Every reading can start from the same words.",
+  "imagery": {
+   "file": "covenant-words.json",
+   "door": "The covenant words side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of covenant that more than one book shares, from Noah and Abraham to Sinai, David, the prophets and the Last Supper, each set out where it is used, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "I will establish My covenant",
+   "An everlasting covenant",
+   "A sign between Me and you"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 9",
+   "Genesis 15",
+   "Genesis 17",
+   "Exodus 19",
+   "Exodus 24",
+   "Deuteronomy 29",
+   "2 Samuel 7",
+   "Psalm 89",
+   "Jeremiah 31",
+   "Luke 22",
+   "Hebrews 8"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the covenant words are used"
+ },
+ "kingdom": {
+  "intro": "God's reign, in the texts' own words: “The LORD reigns” in the Psalms, an everlasting kingdom in Daniel, “Your kingdom come” in the Lord's Prayer, the kingdom of God and the kingdom of heaven in the Gospels, each as its verse words it, and the kingdom of the world become the kingdom of our Lord in Revelation.",
+  "opening": [
+   [
+    "Psalm 93:1",
+    "The LORD reigns"
+   ],
+   [
+    "Psalm 145:13",
+    "Your kingdom is an everlasting kingdom"
+   ],
+   [
+    "Daniel 2:44",
+    "the God of heaven will set up a kingdom that will never be destroyed"
+   ],
+   [
+    "Matthew 6:10",
+    "Your kingdom come"
+   ],
+   [
+    "Mark 1:15",
+    "The kingdom of God is near"
+   ],
+   [
+    "Revelation 11:15",
+    "The kingdom of the world has become the kingdom of our Lord and of His Christ"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether the kingdom is present, future or both, and when it comes; how the kingdom of heaven and the kingdom of God relate; the thousand years of Revelation 20; and how the kingdom relates to Israel and to the church. Every reading can start from the same words.",
+  "imagery": {
+   "file": "kingdom-side-by-side.json",
+   "door": "The kingdom side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of God's reign and kingdom that more than one book shares, from the Law and the Psalms to Daniel, the Gospels and Revelation, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "The LORD reigns",
+   "The LORD will reign forever; the eternal King",
+   "An everlasting kingdom, from generation to generation"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Exodus 15",
+   "1 Samuel 8",
+   "2 Samuel 7",
+   "Psalm 2",
+   "Psalm 93",
+   "Psalm 145",
+   "Daniel 2",
+   "Daniel 7",
+   "Matthew 5",
+   "Matthew 13",
+   "Luke 17",
+   "Revelation 11"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the kingdom words are used"
+ },
+ "law_wisdom": {
+  "intro": "The Law, in two parts. First, where it was set out: “the law that Moses set before the Israelites” (Deuteronomy 4:44), its commandments, and the places that quote them. Second, where the New Testament speaks of it, opening at Matthew 5:17: “Do not think that I have come to abolish the Law or the Prophets. I have not come to abolish them, but to fulfill them” (Matthew 5:17); “love is the fulfillment of the law” (Romans 13:10). Set first here are the two commandments of which Jesus says “No other commandment is greater than these” (Mark 12:31): “Love the Lord your God” and “Love your neighbor as yourself” (Matthew 22:37-39; Mark 12:30-31). And the page meets Wisdom at Ecclesiastes 12:13: “Fear God and keep His commandments”.",
+  "opening": [
+   [
+    "Deuteronomy 6:5",
+    "you shall love the LORD your God with all your heart and with all your soul and with all your strength"
+   ],
+   [
+    "Leviticus 19:18",
+    "love your neighbor as yourself"
+   ],
+   [
+    "Matthew 22:38",
+    "This is the first and greatest commandment"
+   ],
+   [
+    "Matthew 22:40",
+    "All the Law and the Prophets hang on these two commandments"
+   ],
+   [
+    "Deuteronomy 4:44",
+    "This is the law that Moses set before the Israelites"
+   ],
+   [
+    "Matthew 5:17",
+    "Do not think that I have come to abolish the Law or the Prophets. I have not come to abolish them, but to fulfill them"
+   ],
+   [
+    "Romans 13:10",
+    "love is the fulfillment of the law"
+   ],
+   [
+    "Ecclesiastes 12:13",
+    "Fear God and keep His commandments, because this is the whole duty of man"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether and how the Law binds now, how its commandments are to be divided, how law and gospel relate, the Sabbath, and what the apostles' letters say of the Law. Every reading can start from the same words.",
+  "imagery": {
+   "file": "commandments-taken-up.json",
+   "door": "The commandments taken up",
+   "slug": "taken-up",
+   "blurb": "commandments and sayings of the Law: the two greatest commandments first, then the bridge to wisdom, each commandment beside the later passages that quote it, and what the texts say of the Law itself, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Love the LORD your God with all your heart",
+   "Love your neighbor as yourself",
+   "Fear the LORD and keep His commandments",
+   "Fulfilling the law"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Exodus 20",
+   "Leviticus 19",
+   "Deuteronomy 5",
+   "Deuteronomy 6",
+   "Psalm 19",
+   "Psalm 119",
+   "Matthew 5",
+   "Matthew 22",
+   "Romans 13",
+   "Galatians 3"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the commandments are taken up",
+  "see_also": [
+   {
+    "theme": "wisdom_literature",
+    "row": "The fear of the LORD is the beginning of wisdom"
+   }
+  ]
+ },
+ "wisdom_literature": {
+  "intro": "The sayings of Job, Proverbs, Ecclesiastes and the Psalms, set beside the places that repeat them or take up their words: the fear of the LORD, grass that withers, a breath and a shadow, the proud and the humble, the enemy who is hungry.",
+  "opening": [
+   [
+    "Proverbs 1:7",
+    "The fear of the LORD is the beginning of knowledge"
+   ],
+   [
+    "Proverbs 3:5",
+    "Trust in the LORD with all your heart, and lean not on your own understanding"
+   ],
+   [
+    "Proverbs 4:23",
+    "Guard your heart with all diligence, for from it flow springs of life"
+   ],
+   [
+    "Job 28:28",
+    "The fear of the Lord, that is wisdom"
+   ],
+   [
+    "Ecclesiastes 1:2",
+    "Futility of futilities"
+   ],
+   [
+    "Psalm 90:12",
+    "So teach us to number our days, that we may present a heart of wisdom"
+   ],
+   [
+    "James 1:5",
+    "if any of you lacks wisdom, he should ask God"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: who wrote the books, whether Proverbs' sayings promise what will happen or describe what usually does, and whether Wisdom in Proverbs 8 is a person. Every reading can start from the same words.",
+  "imagery": {
+   "file": "wisdom-sayings.json",
+   "door": "Wisdom's sayings side by side",
+   "slug": "sayings",
+   "blurb": "sayings of Job, Proverbs, Ecclesiastes and the Psalms, each beside the places that repeat it or take up its words, in the Law, the prophets, the Gospels and the letters, with what is alike and what differs.",
+   "short": {
+    "Job": "Job",
+    "Psalms": "Ps",
+    "Proverbs & Ecclesiastes": "Prov +",
+    "Elsewhere in the Old Testament": "OT",
+    "Gospels & Acts": "Gosp",
+    "The letters & Revelation": "Letters"
+   }
+  },
+  "starters": [
+   "The fear of the LORD is the beginning of wisdom",
+   "Trust in the LORD; be not wise in your own eyes",
+   "Guard your heart; out of the heart"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Job 1",
+   "Job 28",
+   "Psalm 1",
+   "Psalm 37",
+   "Psalm 90",
+   "Proverbs 1",
+   "Proverbs 3",
+   "Proverbs 8",
+   "Ecclesiastes 1",
+   "Ecclesiastes 3",
+   "James 3"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the sayings are taken up"
+ },
+ "sacrifice": {
+  "intro": "The offerings of the Law, burnt offering and sin offering, peace and thank offerings, the Passover lamb, and the places that speak of them again: the prophets' “I desire mercy, not sacrifice”, the psalmists' “a broken spirit”, and the letters' “once for all” and “living sacrifices”.",
+  "opening": [
+   [
+    "Genesis 22:8",
+    "God Himself will provide the lamb for the burnt offering"
+   ],
+   [
+    "Leviticus 17:11",
+    "it is the blood that makes atonement for the soul"
+   ],
+   [
+    "Psalm 51:17",
+    "The sacrifices of God are a broken spirit"
+   ],
+   [
+    "Hosea 6:6",
+    "I desire mercy, not sacrifice"
+   ],
+   [
+    "Hebrews 10:10",
+    "once for all"
+   ],
+   [
+    "Romans 12:1",
+    "to offer your bodies as living sacrifices"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: how a sacrifice takes away sin, whether the Lord's Supper is a sacrifice, whether sacrifices will be offered again, and how the offerings of the Law relate to what the letters say of Christ. Every reading can start from the same words.",
+  "imagery": {
+   "file": "offerings-side-by-side.json",
+   "door": "The offerings side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of offering and sacrifice that more than one book shares, from Abel and Abraham and the Law's offerings to the psalms, the prophets and the letters, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "A pleasing aroma",
+   "Without blemish",
+   "The blood is the life: do not eat it"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 22",
+   "Exodus 12",
+   "Leviticus 1",
+   "Leviticus 16",
+   "Leviticus 17",
+   "Psalm 40",
+   "Psalm 51",
+   "Isaiah 1",
+   "Hosea 6",
+   "Hebrews 9",
+   "Hebrews 10"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the offerings are spoken of"
+ },
+ "priesthood": {
+  "intro": "The priests of Israel, Aaron and his sons and the Levites, what they wore and did and might not do, and the places that speak of priests again: the prophets and the psalms, the letter to the Hebrews, Peter and Revelation.",
+  "opening": [
+   [
+    "Exodus 28:1",
+    "to serve Me as priests"
+   ],
+   [
+    "Malachi 2:7",
+    "the lips of a priest should preserve knowledge"
+   ],
+   [
+    "Hebrews 4:14",
+    "a great high priest"
+   ],
+   [
+    "1 Peter 2:9",
+    "a royal priesthood"
+   ],
+   [
+    "Revelation 1:6",
+    "priests to His God and Father"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether the church has priests, and who they are; the priesthood of all believers; succession; and who the priest in the order of Melchizedek is, beyond what each verse says. Every reading can start from the same words.",
+  "imagery": {
+   "file": "priests-side-by-side.json",
+   "door": "The priests side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of priests and priesthood that more than one book shares, from Aaron and the Levites to the prophets, the psalms, Hebrews, Peter and Revelation, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Stand before the LORD to minister to Him",
+   "To pronounce blessings in His name",
+   "The lips of a priest: teaching the law"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Exodus 28",
+   "Exodus 29",
+   "Leviticus 8",
+   "Leviticus 16",
+   "Numbers 18",
+   "Malachi 2",
+   "Hebrews 5",
+   "Hebrews 7",
+   "1 Peter 2"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the priests are spoken of"
+ },
+ "temple_presence": {
+  "intro": "God's dwelling, in the texts' words: the tabernacle and the cloud, the temple filled with glory, the place chosen as a dwelling for His Name, the house of prayer, and the places that speak of a temple again, of Jesus' body, of God's people, of a believer's body, and of a city in which John saw no temple.",
+  "opening": [
+   [
+    "Exodus 25:8",
+    "make a sanctuary for Me, so that I may dwell among them"
+   ],
+   [
+    "1 Kings 8:11",
+    "the glory of the LORD filled the house"
+   ],
+   [
+    "1 Kings 8:27",
+    "will God indeed dwell upon the earth"
+   ],
+   [
+    "John 2:19",
+    "Destroy this temple"
+   ],
+   [
+    "1 Corinthians 3:16",
+    "you yourselves are God's temple"
+   ],
+   [
+    "Revelation 21:22",
+    "I saw no temple in the city"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether a temple will be built again, and how the temple, Jesus' body, the church and a believer's body relate. Every reading can start from the same words.",
+  "imagery": {
+   "file": "dwelling-side-by-side.json",
+   "door": "The dwelling side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of God's dwelling and presence that more than one book shares, from the tabernacle and the temple to the psalms, the prophets, the Gospels, the letters and Revelation, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "I will dwell among them",
+   "Called a temple: “in three days I will raise it up”, “the temple of His body”, “your body is a temple of the Holy Spirit”",
+   "The cloud filled the house, and the glory of the LORD filled it"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Exodus 25",
+   "Exodus 40",
+   "1 Kings 8",
+   "Psalm 84",
+   "Isaiah 6",
+   "Ezekiel 10",
+   "Ezekiel 43",
+   "John 2",
+   "1 Corinthians 3",
+   "Revelation 21"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the dwelling is spoken of"
+ },
+ "spirit": {
+  "intro": "The Spirit, in the texts' own words: hovering over the waters, coming upon judges, kings and prophets, poured out, given as a new spirit, filling, baptizing and bearing fruit, each place as its verse words it.",
+  "opening": [
+   [
+    "Genesis 1:2",
+    "the Spirit of God was hovering over the surface of the waters"
+   ],
+   [
+    "Psalm 139:7",
+    "Where can I go to escape Your Spirit"
+   ],
+   [
+    "Ezekiel 36:26",
+    "a new spirit"
+   ],
+   [
+    "Joel 2:28",
+    "I will pour out My Spirit on all people"
+   ],
+   [
+    "Acts 2:4",
+    "they were all filled with the Holy Spirit"
+   ],
+   [
+    "Galatians 5:22",
+    "the fruit of the Spirit is love"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether the gifts of the Spirit continue today, whether being baptized or filled with the Spirit comes at conversion or later, from whom the Spirit proceeds, and how the Spirit is to be spoken of. Every reading can start from the same words.",
+  "imagery": {
+   "file": "spirit-side-by-side.json",
+   "door": "The Spirit side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of the Spirit that more than one book shares, from creation and the judges to the prophets, the Gospels, Acts and the letters, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "The Spirit of the LORD came upon him",
+   "The Spirit fell upon them",
+   "The Spirit rested on them, and they prophesied"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 1",
+   "Numbers 11",
+   "1 Samuel 16",
+   "Psalm 51",
+   "Isaiah 11",
+   "Ezekiel 37",
+   "Joel 2",
+   "John 3",
+   "John 14",
+   "Acts 2",
+   "Romans 8",
+   "1 Corinthians 12",
+   "Galatians 5"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the Spirit is spoken of"
+ },
+ "church": {
+  "intro": "The people gathered, in the texts' words: the assembly of the LORD in Israel, and in the Gospels and letters the church, one body, God's household, a chosen people, the bride, the flock, and all that its members are told to do for one another.",
+  "opening": [
+   [
+    "Psalm 22:22",
+    "I will praise You in the assembly"
+   ],
+   [
+    "1 Corinthians 12:27",
+    "you are the body of Christ"
+   ],
+   [
+    "Ephesians 2:19",
+    "members of God's household"
+   ],
+   [
+    "1 Peter 2:9",
+    "a chosen people, a royal priesthood, a holy nation"
+   ],
+   [
+    "John 13:34",
+    "Love one another"
+   ],
+   [
+    "1 Timothy 3:15",
+    "the church of the living God, the pillar and foundation of the truth"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: the church and Israel, how the church is ordered, the visible and the invisible church, Peter and the rock, and the number of the sacraments. Every reading can start from the same words.",
+  "imagery": {
+   "file": "church-side-by-side.json",
+   "door": "The church side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of the people gathered that more than one book shares, from the assembly of the LORD in Israel to the Gospels and the letters, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "The assembly of the LORD",
+   "The church of God",
+   "Praise in the assembly"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Deuteronomy 23",
+   "Psalm 22",
+   "Matthew 18",
+   "John 17",
+   "Acts 2",
+   "Romans 12",
+   "1 Corinthians 12",
+   "Ephesians 2",
+   "Ephesians 4",
+   "1 Peter 2"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the church is spoken of"
+ },
+ "sin_exile_death": {
+  "intro": "Sin, exile and death in the texts' own words: sin crouching at the door, a stiff-necked people, “We have sinned”, the people carried away into exile and scattered among the nations, the dust a man returns to, and the letters' “the wages of sin is death” and “the sting of death”.",
+  "opening": [
+   [
+    "Genesis 4:7",
+    "sin is crouching at your door"
+   ],
+   [
+    "Genesis 3:19",
+    "For dust you are, and to dust you shall return"
+   ],
+   [
+    "Psalm 137:1",
+    "By the rivers of Babylon we sat and wept"
+   ],
+   [
+    "Romans 3:23",
+    "for all have sinned and fall short of the glory of God"
+   ],
+   [
+    "Romans 6:23",
+    "For the wages of sin is death"
+   ],
+   [
+    "1 Corinthians 15:55",
+    "Where, O Death, is your sting"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: how sin passes from the first man to others, how far human nature is fallen, what kind of death a verse means, and whether the exile has ended. Every reading can start from the same words.",
+  "imagery": {
+   "file": "sin-exile-death-side-by-side.json",
+   "door": "Sin, exile and death side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of sin, exile and death that more than one book shares, from Genesis and the history books to the psalms, the prophets and the letters, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Sin desires you: let it not rule",
+   "Evil in the heart",
+   "A stiff-necked people"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 3",
+   "Genesis 4",
+   "Genesis 6",
+   "Deuteronomy 28",
+   "2 Kings 17",
+   "2 Kings 25",
+   "Psalm 51",
+   "Psalm 137",
+   "Ezekiel 18",
+   "Romans 5",
+   "Romans 6",
+   "1 Corinthians 15"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where sin, exile and death are spoken of"
+ },
+ "judgment": {
+  "intro": "Judgment in the texts' own words: the Judge of all the earth, the great and awesome Day of the LORD, fire, every deed brought into judgment, the judgment seat, and books opened, each as its verse words it.",
+  "opening": [
+   [
+    "Genesis 18:25",
+    "Will not the Judge of all the earth do what is right"
+   ],
+   [
+    "Psalm 96:13",
+    "He will judge the world in righteousness"
+   ],
+   [
+    "Joel 2:31",
+    "the great and awesome Day of the LORD"
+   ],
+   [
+    "Ecclesiastes 12:14",
+    "For God will bring every deed into judgment"
+   ],
+   [
+    "Romans 14:10",
+    "we will all stand before God's judgment seat"
+   ],
+   [
+    "Revelation 20:12",
+    "And books were opened"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: what hell is, purgatory, the order and timing of the last things, and whether judgment is by works, by faith, or both. Every reading can start from the same words.",
+  "imagery": {
+   "file": "judgment-side-by-side.json",
+   "door": "Judgment side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of judgment that more than one book shares, from Genesis and the prophets to the Gospels, the letters and Revelation, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "The Judge of all the earth",
+   "Coming to judge the earth; judging the world in righteousness",
+   "Judge the living and the dead"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Genesis 18",
+   "Psalm 96",
+   "Isaiah 13",
+   "Joel 2",
+   "Amos 5",
+   "Zephaniah 1",
+   "Malachi 4",
+   "Matthew 25",
+   "Romans 2",
+   "2 Corinthians 5",
+   "Revelation 20"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where judgment is spoken of"
+ },
+ "deliverance": {
+  "intro": "Deliverance in the texts' own words: the LORD fighting for His people, a mighty hand and an outstretched arm, the way through the sea, “They cried out to the LORD”, “The LORD is my light and my salvation”, and the letters' “Everyone who calls on the name of the Lord will be saved”.",
+  "opening": [
+   [
+    "Exodus 14:14",
+    "The LORD will fight for you"
+   ],
+   [
+    "Exodus 15:2",
+    "He has become my salvation"
+   ],
+   [
+    "Psalm 18:2",
+    "The LORD is my rock, my fortress, and my deliverer"
+   ],
+   [
+    "Psalm 27:1",
+    "The LORD is my light and my salvation"
+   ],
+   [
+    "Jonah 2:9",
+    "Salvation is from the LORD"
+   ],
+   [
+    "Romans 10:13",
+    "Everyone who calls on the name of the Lord will be saved"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: how a person is saved, whether salvation can be lost, election and free will, and whether all will be saved. Every reading can start from the same words.",
+  "imagery": {
+   "file": "deliverance-side-by-side.json",
+   "door": "Deliverance side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of deliverance and salvation that more than one book shares, from the Exodus and the history books to the psalms, the prophets, the Gospels and the letters, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "The LORD will fight for you",
+   "A mighty hand and an outstretched arm",
+   "Who brought you out of the land of Egypt"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Exodus 3",
+   "Exodus 14",
+   "Exodus 15",
+   "Judges 2",
+   "1 Samuel 17",
+   "Psalm 18",
+   "Psalm 34",
+   "Psalm 107",
+   "Isaiah 43",
+   "Jonah 2",
+   "Luke 1",
+   "Romans 10",
+   "Ephesians 2"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where deliverance is spoken of"
+ },
+ "mercy_restoration": {
+  "intro": "Mercy and restoring in the texts' own words: “compassionate and gracious, slow to anger, abounding in loving devotion”, said again and again from Exodus to Jonah; “His loving devotion endures forever”; mercies new every morning; and the promises to restore, to gather and to heal, each as its verse words it and to whom it is spoken.",
+  "opening": [
+   [
+    "Exodus 34:6",
+    "The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion and faithfulness"
+   ],
+   [
+    "Micah 6:8",
+    "what does the LORD require of you but to act justly, to love mercy, and to walk humbly with your God"
+   ],
+   [
+    "Psalm 136:1",
+    "His loving devotion endures forever"
+   ],
+   [
+    "Lamentations 3:23",
+    "They are new every morning"
+   ],
+   [
+    "Joel 2:13",
+    "So rend your hearts and not your garments"
+   ],
+   [
+    "Jeremiah 29:14",
+    "I will restore you from captivity"
+   ],
+   [
+    "Ephesians 2:4",
+    "God, who is rich in mercy"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether all will be restored in the end; whether the promises of restoration to Israel are to Israel, to the church, or to both; and whether they are yet to come. Every reading can start from the same words.",
+  "imagery": {
+   "file": "mercy-restoration-side-by-side.json",
+   "door": "Mercy and restoration side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of mercy and of restoring that more than one book shares, from Exodus and the psalms to the prophets, the Gospels and the letters, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Compassionate and gracious, slow to anger, abounding in loving devotion",
+   "His loving devotion endures forever",
+   "To love mercy; blessed are the merciful",
+   "According to Your great compassion"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Exodus 34",
+   "Numbers 14",
+   "2 Chronicles 7",
+   "Psalm 103",
+   "Psalm 136",
+   "Isaiah 55",
+   "Jeremiah 29",
+   "Lamentations 3",
+   "Ezekiel 36",
+   "Joel 2",
+   "Jonah 4",
+   "Luke 15"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where mercy and restoring are spoken of"
+ },
+ "trinity": {
+  "intro": "The Father, the Son and the Holy Spirit, in the texts' own words: named together at Jesus' baptism and in “the name of the Father and of the Son and of the Holy Spirit”; God called one; and the Father, the Son and the Spirit each spoken of in turn. The word “Trinity” is the church's name for the teaching, not the text's. This page sets the texts side by side and says neither that the three are one God nor that they are not.",
+  "opening": [
+   [
+    "Matthew 28:19",
+    "in the name of the Father and of the Son and of the Holy Spirit"
+   ],
+   [
+    "Deuteronomy 6:4",
+    "Hear, O Israel: The LORD our God, the LORD is One"
+   ],
+   [
+    "John 10:30",
+    "I and the Father are one"
+   ],
+   [
+    "Matthew 3:17",
+    "This is My beloved Son, in whom I am well pleased"
+   ],
+   [
+    "John 14:28",
+    "the Father is greater than I"
+   ],
+   [
+    "2 Corinthians 13:14",
+    "The grace of the Lord Jesus Christ, and the love of God, and the fellowship of the Holy Spirit be with all of you"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether the three are one God, and how the Father, the Son and the Spirit relate. Every reading can start from the same words.",
+  "imagery": {
+   "file": "father-son-spirit-side-by-side.json",
+   "door": "Father, Son and Spirit side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings that more than one book shares where the texts speak of the Father, the Son and the Spirit together, of God as one, and of each distinctly, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "The Father, the Son and the Holy Spirit named together",
+   "A voice: “This is My beloved Son”, and the Spirit descending like a dove",
+   "There is no other; no God besides Me"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Deuteronomy 6",
+   "Matthew 3",
+   "Matthew 28",
+   "John 1",
+   "John 10",
+   "John 14",
+   "John 16",
+   "John 17",
+   "Acts 2",
+   "Romans 8",
+   "1 Corinthians 12",
+   "2 Corinthians 13",
+   "Ephesians 4"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the Father, the Son and the Spirit are spoken of"
+ },
+ "spiritual_warfare": {
+  "intro": "The struggle the texts describe, beginning where Ephesians 6 does: “Put on the full armor of God, so that you can make your stand against the devil's schemes”, with the belt of truth, the breastplate of righteousness, the shield of faith, the helmet of salvation and the sword of the Spirit. Then resisting the devil and standing firm, Satan before the LORD in Job and Zechariah, the unclean spirits, and Michael.",
+  "opening": [
+   [
+    "Ephesians 6:11",
+    "Put on the full armor of God, so that you can make your stand against the devil's schemes"
+   ],
+   [
+    "Ephesians 6:12",
+    "our struggle is not against flesh and blood"
+   ],
+   [
+    "James 4:7",
+    "Resist the devil, and he will flee from you"
+   ],
+   [
+    "1 Peter 5:8",
+    "Your adversary the devil prowls around like a roaring lion"
+   ],
+   [
+    "2 Corinthians 10:4",
+    "The weapons of our warfare are not the weapons of the flesh"
+   ],
+   [
+    "Romans 16:20",
+    "The God of peace will soon crush Satan under your feet"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: whether “the satan” of Job and Zechariah is a title or a name, whether demons are cast out today and how, territorial spirits, and what the armor is. Every reading can start from the same words.",
+  "imagery": {
+   "file": "armor-and-struggle-side-by-side.json",
+   "door": "The armor and the struggle side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of struggle against evil powers that more than one book shares, beginning with the armor of Ephesians 6 and the places that share its words, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Put on the armor",
+   "A belt around the waist",
+   "The breastplate of righteousness"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Job 1",
+   "Job 2",
+   "Zechariah 3",
+   "Daniel 10",
+   "Matthew 4",
+   "Mark 1",
+   "Mark 5",
+   "Luke 10",
+   "2 Corinthians 10",
+   "Ephesians 6",
+   "James 4",
+   "1 Peter 5",
+   "Revelation 12"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where the struggle is spoken of",
+  "see_also": [
+   {
+    "card": "the_full_armor_of_god",
+    "label": "the card for the armor itself",
+    "door": "Its own card",
+    "blurb": "the six pieces, each opening what the verse says it is, and the passage's own verbs: put on, take up, stand firm."
+   }
+  ]
+ },
+ "freedom": {
+  "intro": "Freedom in the texts' own words: “Do not be afraid”, “Be anxious for nothing”, “will not be put to shame”; slaves to sin, and set free; “no longer a slave, but a son”; the yoke broken and the yoke offered; liberty proclaimed; and “It is for freedom that Christ has set us free.”",
+  "opening": [
+   [
+    "2 Corinthians 3:17",
+    "where the Spirit of the Lord is, there is freedom"
+   ],
+   [
+    "Isaiah 41:10",
+    "Do not fear, for I am with you"
+   ],
+   [
+    "Philippians 4:6",
+    "Be anxious for nothing"
+   ],
+   [
+    "1 Peter 5:7",
+    "Cast all your anxiety on Him, because He cares for you"
+   ],
+   [
+    "John 8:32",
+    "the truth will set you free"
+   ],
+   [
+    "Luke 4:18",
+    "to proclaim liberty to the captives"
+   ],
+   [
+    "Galatians 5:1",
+    "It is for freedom that Christ has set us free"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: freedom from the Law, free will, and whether the freedom spoken of is political or inward. Every reading can start from the same words.",
+  "imagery": {
+   "file": "set-free-side-by-side.json",
+   "door": "Set free, side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of fear and its end, of anxiety, of shame, and of bondage and release that more than one book shares, from the Exodus to the Gospels and the letters, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Where the Spirit of the Lord is, there is freedom; walk in freedom, live in freedom",
+   "Be strong and courageous; do not be afraid or discouraged",
+   "Take courage"
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Exodus 6",
+   "Exodus 20",
+   "Leviticus 25",
+   "Psalm 23",
+   "Psalm 34",
+   "Isaiah 41",
+   "Isaiah 61",
+   "Matthew 6",
+   "Matthew 11",
+   "Luke 4",
+   "John 8",
+   "Romans 6",
+   "Romans 8",
+   "Galatians 5",
+   "Philippians 4"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where fear, bondage and freedom are spoken of",
+  "search_title": "Freedom in the Bible: from fear, anxiety, shame and sin"
+ },
+ "children_of_god": {
+  "intro": "God's children in the texts' own words: “that we should be called children of God”, the right to become children of God, sons of the living God, “Israel is My firstborn son”, born again, adoption, “Abba, Father”, heirs, and Jesus' brothers, each said to those its verse names.",
+  "opening": [
+   [
+    "1 John 3:1",
+    "Behold what manner of love the Father has given to us, that we should be called children of God"
+   ],
+   [
+    "John 1:12",
+    "He gave the right to become children of God"
+   ],
+   [
+    "Exodus 4:22",
+    "Israel is My firstborn son"
+   ],
+   [
+    "Hosea 1:10",
+    "sons of the living God"
+   ],
+   [
+    "Romans 8:16",
+    "The Spirit Himself testifies with our spirit that we are God's children"
+   ],
+   [
+    "Matthew 5:9",
+    "Blessed are the peacemakers, for they will be called sons of God"
+   ]
+  ],
+  "note": "These pages set side by side what the texts themselves say. They take no stance where readers and traditions differ: who God's children are, how Israel and the church relate, and whether “born of water and the Spirit” speaks of baptism. Every reading can start from the same words.",
+  "imagery": {
+   "file": "children-of-god-side-by-side.json",
+   "door": "Children of God side by side",
+   "slug": "side-by-side",
+   "blurb": "wordings of being God's children that more than one book shares, from Exodus and the prophets to the Gospels and the letters, each said to those its verse names, with what is alike and what differs.",
+   "short": {
+    "The Law & history": "Law",
+    "Psalms & wisdom": "Ps +",
+    "The Prophets": "Prophets",
+    "Gospels & Acts": "Gosp",
+    "The letters": "Letters",
+    "Revelation": "Rev"
+   }
+  },
+  "starters": [
+   "Children of God",
+   "Sons of God; sons of the LORD your God",
+   "Sons of the Most High; \"You are gods\""
+  ],
+  "starters_label": "Where to begin",
+  "starters_hint": "You do not need to take in all of it. Pick one and read what each book says.",
+  "visions": [
+   "Exodus 4",
+   "Deuteronomy 14",
+   "Hosea 1",
+   "Hosea 11",
+   "Matthew 5",
+   "John 1",
+   "John 3",
+   "Romans 8",
+   "Galatians 3",
+   "Galatians 4",
+   "Hebrews 12",
+   "1 John 3"
+  ],
+  "chapters_label": "The chapters, one by one",
+  "share_label": "Where God's children are spoken of"
+ }
+}

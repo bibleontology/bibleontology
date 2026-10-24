@@ -1,0 +1,77 @@
+{
+ "ref": "Exo.8.2",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "w2",
+   "divine": false,
+   "why": "'his hand' (third masc sg possessive): Aaron, the subject of the stretching out",
+   "category": "possessive in a narrative report",
+   "votes": 3
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "divine": false,
+   "why": "third feminine singular 'it covered': the frog (w12, feminine singular), the subject carried on from cl1",
+   "category": "third person with a feminine antecedent",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.8.1#cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then links only within a verse; the link from the earlier command is recorded as fulfilment below",
+   "category": "cross-verse then",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "the coming up of the frogs is what the stretching out brings about, so it is a result rather than a plain next event",
+   "category": "act and its result",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Aaron stretched out the hand, and so the frogs came up: a clause stating what the act brings about (R4)",
+   "category": "act and its result",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "a wayyiqtol continues the narrative line: the frogs covered the land after they came up",
+   "category": "narrative sequence",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Exo.8.1#cl3 to Exo.8.2#cl0",
+   "what": "A sequence across verses has no link type: then is within a verse only, and the episode rung is not in link_types."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Whether 'the frogs came up' (cl1) fulfils the command 'bring up the frogs' (Exo.8.1 cl3).",
+   "why": "Same root but qal rather than hiphil, and no 'did so' report; left unlinked."
+  },
+  {
+   "what": "whether cl0 (Aaron stretched out his hand) fulfils the command Exo.8.1#cl2 (stretch out your hand)",
+   "why": "the verb is repeated in a narrative report with a named subject, but there is no pro-form (ken or asah) as the fulfils condition requires; not linked."
+  }
+ ],
+ "voted": 3
+}

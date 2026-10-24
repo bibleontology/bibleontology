@@ -1,0 +1,126 @@
+{"passage": "P-gnats", "verses": [
+{"ref": "Exo.8.12",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "'your staff' is second person masculine singular, and the staff is Aaron's: Aaron is the addressee of the inner speech (stretch out, strike).", "category": "possessive inside commanded speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "'tell Aaron' is a command given to Moses by the LORD, so its implied you is Moses; Aaron is the one told, not the one addressed by the command.", "category": "implied subject of outer command"},
+  {"slot": "cl2s", "choice": "w7", "divine": false, "why": "'stretch out your staff' is a command inside the quoted message, addressed to Aaron (second person masculine singular).", "category": "implied subject inside commanded speech"},
+  {"slot": "cl3s", "choice": "w7", "divine": false, "why": "'strike' is a further command in the same quoted message, so its implied you is Aaron.", "category": "implied subject inside commanded speech"},
+  {"slot": "cl4s", "choice": "w15", "divine": false, "why": "the third masculine singular weqatal 'it will become gnats' takes the dust (masculine singular) as subject: the dust that the command told Aaron to strike is what becomes gnats.", "category": "implied subject from the act before"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "the saying clause 'the LORD said to Moses' introduces what is said, 'Tell Aaron...'.", "category": "speech content link"},
+  {"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "'tell Aaron' introduces the quoted words, which are a run of commands joined by 'and': the content is the imperative group.", "category": "speech content link to command group"},
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "a link from a later clause back to the opening speech clause is backward; the strike command sits inside the speech and is not the next event after its opening.", "category": "backward then link into speech frame"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "two commands joined by waw at one level, same person, so plain 'and' and not 'so that'.", "category": "commands joined by and"},
+  {"src": "cl3", "type": "then", "dst": "cl4", "action": "remove", "why": "a command followed by a third-person weqatal saying what it brings about is a result, not a plain next event.", "category": "plain and read as result"},
+  {"src": "cl3", "type": "result", "dst": "cl4", "action": "add", "why": "the strike command, then the weqatal saying what will come of it (the dust becomes gnats); the same clause is also the effect of the imperative group.", "category": "command and its outcome"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": true, "why": "the LORD speaks to Moses; what Moses is told to say is a nested turn, so the commands are not direct parts of this turn.", "category": "outer speech with nested turn"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "Exo.8.12#g1"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w7"}], "divine": false, "why": "Moses is commanded to tell Aaron, so the commanded words are spoken by Moses (the one commanded to speak them) to Aaron.", "category": "commanded speech sender"},
+  {"id": "Exo.8.12#g1", "kind": "turn", "action": "add", "members": [{"role": "part", "node": "imp2"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w7"}], "divine": true, "why": "the quoted message is the LORD's words delivered by Moses; the innermost turn's sender is the one quoted.", "category": "quoted message as innermost turn"},
+  {"id": "imp2", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl2"}, {"role": "command", "node": "cl3"}, {"role": "effect", "node": "cl4"}], "divine": false, "why": "stretch out and strike are commands joined by 'and' at one level: one imperative group, with the weqatal as its effect.", "category": "commands joined by and as one group"},
+  {"id": "imp3", "kind": "imperative", "action": "remove", "members": [{"role": "command", "node": "cl3"}, {"role": "part", "node": "cl4"}], "divine": false, "why": "the strike command belongs to the single collection imp2; a second group for it duplicates the first.", "category": "duplicate command group"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Exo.8.13",
+ "referents": [
+  {"slot": "w8", "choice": "w5", "divine": false, "why": "'his hand' is third masculine singular; the one who stretches out the hand is Aaron, named in the clause.", "category": "possessive of the acting person"},
+  {"slot": "w11", "choice": "w5", "divine": false, "why": "'his staff' is third masculine singular, Aaron's staff.", "category": "possessive of the acting person"},
+  {"slot": "cl0s", "choice": "Exo.8.8#c2", "divine": false, "why": "'they did so' is a plural report of the command chain, which was addressed to Moses (to tell) and Aaron (to act); a plural can refer only to the two together, so the composite Moses and Aaron.", "category": "plural pro-form after command chain"},
+  {"slot": "cl2s", "choice": "w5", "divine": false, "why": "'he struck' continues the subject named in the preceding clause, Aaron.", "category": "same agent continuing"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "a link from the closing clause back to the opening report is backward; the dust becoming gnats is the result of the striking, not the next event after the report.", "category": "backward then link"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "a wayyiqtol continues the narrative line from the report.", "category": "narrative continuation"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "a wayyiqtol continues the narrative line.", "category": "narrative continuation"},
+  {"src": "cl2", "type": "then", "dst": "cl3", "action": "keep", "why": "a wayyiqtol continues the narrative line after the strike.", "category": "narrative continuation"},
+  {"src": "cl0", "type": "fulfils", "dst": "Exo.8.12#imp2", "action": "add", "why": "'did so' is a narrative report with no named subject after a command chain; it fulfils the whole collection of commands, so it points at the imperative group.", "category": "summary report fulfils command collection"},
+  {"src": "cl1", "type": "fulfils", "dst": "Exo.8.12#cl2", "action": "add", "why": "the clause repeats the verb of the command 'stretch out', so it fulfils that command.", "category": "member by member fulfilment"},
+  {"src": "cl1", "type": "elaborates", "dst": "cl0", "action": "add", "why": "after the summary report, a narrative clause that fulfils one command gives the detail of the report.", "category": "detail of summary report"},
+  {"src": "cl2", "type": "fulfils", "dst": "Exo.8.12#cl3", "action": "add", "why": "the clause repeats the verb 'strike' of the command, so it fulfils that command.", "category": "member by member fulfilment"},
+  {"src": "cl2", "type": "elaborates", "dst": "cl0", "action": "add", "why": "the striking is the detail of the summary report.", "category": "detail of summary report"},
+  {"src": "cl2", "type": "result", "dst": "cl4", "action": "add", "why": "an act done to something (striking the dust), then what that thing becomes (it was gnats).", "category": "act and what it brings about"},
+  {"src": "cl4", "type": "fulfils", "dst": "Exo.8.12#cl4", "action": "add", "why": "the clause repeats the verb of the command's effect (become), so it fulfils the effect and is the result of the acts before it.", "category": "fulfilment of command effect"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Exo.8.14",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "'their secret arts' is third masculine plural; the ones using their arts are the magicians.", "category": "possessive of the acting group"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "'they were not able' is third common plural, the magicians who attempted the act in the clause before.", "category": "subject continuing from attempt"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "keep", "why": "an attempt (did thus) with the infinitive 'to bring forth' as lamed plus infinitive construct saying what the act was done to achieve.", "category": "attempt with infinitive purpose"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "the link is the previous verse's last clause (Exo.8.13#cl4) pointing forward; then is within a verse only, and across verses is the episode rung, not built here.", "category": "cross-verse then link"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "an attempt with a purpose, then 'and' and a negated verb of being able, is a failed result, not a plain 'and'.", "category": "plain and read as failed result"},
+  {"src": "cl0", "type": "failed_result", "dst": "cl2", "action": "add", "why": "the attempt has a purpose (to bring forth), and the outcome clause is a negated verb of being able: the purpose was not achieved.", "category": "attempt that failed"},
+  {"src": "cl2", "type": "then", "dst": "cl3", "action": "keep", "why": "a wayyiqtol continues the narrative line after the failure.", "category": "narrative continuation"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Exo.8.15",
+ "referents": [
+  {"slot": "w8", "choice": "none", "divine": false, "why": "'this is the finger of God': the third feminine singular pronoun has as its referent the sign itself (the bringing forth of gnats). No candidate is an event; the feminine candidate finger is the predicate, not the subject.", "category": "pronoun for an event"},
+  {"slot": "w17", "choice": "w3", "divine": false, "why": "'them' is third masculine plural and refers to the magicians who spoke to Pharaoh in the clause before.", "category": "object of the speech just given"},
+  {"slot": "cl3s", "choice": "w5", "divine": false, "why": "'he did not listen' is third masculine singular, and the one who does the listening is Pharaoh, the one spoken to; the builder's heart cannot listen.", "category": "subject that is a person not an organ"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "as", "dst": "cl4", "action": "keep", "why": "'just as he had said' compares the refusal with a saying: the action is declared the fulfilment of an earlier word.", "category": "comparison with an earlier saying"},
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "a link from the later refusal back to the speech frame is backward; the refusal is not the next event after the magicians spoke.", "category": "backward then link into speech frame"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is inside the speech; a wayyiqtol continues the narrative from the nearest clause not inside a speech, which is the speech frame.", "category": "then from inside speech"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "the wayyiqtol 'and the heart was hard' continues the narrative from the nearest non-speech clause before it, the magicians' saying.", "category": "narrative continuation past speech"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "a will hardened, then the refusal that follows: a state brings about what follows, so the link is a result.", "category": "plain and read as result"},
+  {"src": "cl2", "type": "result", "dst": "cl3", "action": "add", "why": "the hardened heart is the state, and the refusal to listen is what it brings about.", "category": "state and what it brings about"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "the saying clause 'the magicians said' introduces what is said, 'this is the finger of God'.", "category": "speech content link"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "w3"}, {"role": "addressee", "node": "w5"}], "divine": false, "why": "the magicians speak to Pharaoh; the sender and addressee are right, and the saying clause and its said clause are the parts.", "category": "speech confirmed"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "the subject 'this' (slot w8) of 'this is the finger of God'", "why": "it is a feminine singular pronoun with no candidate for an event; recorded as none rather than forced onto the finger, which is the predicate."}
+ ]
+},
+{"ref": "Exo.8.16",
+ "referents": [
+  {"slot": "w22", "choice": "w13", "divine": false, "why": "'say to him' is third masculine singular, the one spoken to in the message: Pharaoh.", "category": "object of the instruction to speak"},
+  {"slot": "w28", "choice": "w25", "divine": true, "why": "'my people' is first common singular inside the quoted message 'thus says the LORD', so the speaker of that message is the LORD (the one quoted).", "category": "first person inside quoted message"},
+  {"slot": "w31", "choice": "w25", "divine": true, "why": "'that they may serve me' is first common singular in the same quoted message, so 'me' is the LORD.", "category": "first person inside quoted message"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "'rise early' is a command spoken by the LORD to Moses; the implied you is Moses.", "category": "implied subject of outer command"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "'present yourself before Pharaoh' is a command to Moses in the same outer speech.", "category": "implied subject of outer command"},
+  {"slot": "cl5s", "choice": "w4", "divine": false, "why": "'you will say to him' is spoken to Moses as the one who delivers the message.", "category": "implied subject of outer command"},
+  {"slot": "cl7s", "choice": "w13", "divine": false, "why": "'let my people go' is a command inside the quoted message, addressed to Pharaoh (second person masculine singular, the one the message is delivered to).", "category": "implied subject inside quoted message"},
+  {"slot": "cl8s", "choice": "w27", "divine": false, "why": "'that they may serve me' has a plural subject; the people is a collective noun taking plural agreement, the ones the release is for.", "category": "collective with plural agreement"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "a link from the setting clause back to the LORD's opening clause is backward; the setting is inside the speech.", "category": "backward then link into speech frame"},
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "two commands joined by waw at one level, same person.", "category": "commands joined by and"},
+  {"src": "cl4", "type": "then", "dst": "cl5", "action": "keep", "why": "the weqatal 'you will say' continues whatever it follows, the participle setting the time.", "category": "weqatal continuation"},
+  {"src": "cl7", "type": "and", "dst": "cl8", "action": "remove", "why": "a command followed by waw and a yiqtol in a different person is a purpose, not a plain 'and'.", "category": "plain and read as purpose"},
+  {"src": "cl7", "type": "purpose", "dst": "cl8", "action": "add", "why": "the command 'let my people go' is followed by waw and a yiqtol in the third person, stating what it is for.", "category": "command and its purpose"},
+  {"src": "cl0", "type": "content", "dst": "imp1", "action": "add", "why": "the saying clause 'he said' introduces commands that Moses is to hear.", "category": "speech content link to command group"},
+  {"src": "cl5", "type": "content", "dst": "cl6", "action": "add", "why": "'you will say to him' is a saying clause introducing the message 'thus he says the LORD'.", "category": "speech content link"},
+  {"src": "cl6", "type": "content", "dst": "imp7", "action": "add", "why": "'thus he says the LORD' introduces a command, 'let my people go', with its purpose; what is said is the imperative group.", "category": "speech content link to command group"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "imp1"}, {"role": "part", "node": "cl3"}, {"role": "part", "node": "cl4"}, {"role": "part", "node": "Exo.8.16#g1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": true, "why": "the LORD speaks to Moses: the commands, the setting, and the instruction to speak are its parts; the delivered message is a nested turn.", "category": "outer speech with nested turn"},
+  {"id": "imp1", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}, {"role": "command", "node": "cl2"}], "divine": false, "why": "rise early and present yourself are commands joined by 'and' at one level: one imperative group, with two command members.", "category": "commands joined by and as one group"},
+  {"id": "Exo.8.16#g1", "kind": "turn", "action": "add", "members": [{"role": "frame", "node": "cl5"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w13"}], "divine": false, "why": "Moses is told to say to Pharaoh the message quoted from the LORD: a middle turn with Moses as the sender.", "category": "delivery turn"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl6"}, {"role": "part", "node": "imp7"}, {"role": "sender", "node": "w25"}, {"role": "addressee", "node": "w13"}], "divine": true, "why": "the innermost turn is the quoted message: its sender is the LORD, the one quoted, and its addressee is Pharaoh.", "category": "quoted message as innermost turn"},
+  {"id": "imp7", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl7"}, {"role": "aim", "node": "cl8"}], "divine": false, "why": "'let my people go' is the command; 'that they may serve me' is what qualifies it, its aim.", "category": "command with aim"}
+ ],
+ "none_fit": [
+  {"where": "cl4 then cl5", "what": "a bare participle clause ('when Pharaoh goes out to the water') giving the time of the command that follows; no link type states a temporal setting."}
+ ],
+ "cant_tell": [
+  {"what": "whether the setting cl3 and cl4 belong to the LORD's words or to Moses's delivery", "why": "the second person and the sequence put them in the LORD's speech to Moses, so they are parts of the outer turn; recorded because the setting could be read as Moses's own timing."}
+ ]
+}
+]}

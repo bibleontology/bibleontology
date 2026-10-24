@@ -1,0 +1,82 @@
+{
+ "ref": "Psa.107.1",
+ "referents": [
+  {
+   "slot": "w9",
+   "choice": "w2",
+   "divine": true,
+   "why": "The suffix on 'his' (third masculine singular) on steadfast love: the loyalty is the LORD's. Of the masculine singular candidates, w2 LORD is the only sensible owner; w8 is the noun itself and w7 'forever' is an adverb.",
+   "category": "possessive suffix on a divine attribute"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "The implied 'you' of the imperative 'give thanks' is masculine plural, a congregation addressed. No candidate is a plural group addressed: w2 is singular, and the psalmist is the voice speaking, who is not the one commanded by his own call to thanks.",
+   "category": "implied addressee of a psalm's call to praise"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The conjunction כִּי before 'He is good' gives the reason for the command to give thanks.",
+   "category": "reason after a command"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The second כִּי explains the goodness just named by the everlasting loyalty; the reason is chained to the reason for thanks.",
+   "category": "reason chained to a reason"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "basis",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "The builder recorded cl1 as 'part', which is not a role of the imperative kind. The כִּי clause is the basis of the command.",
+   "category": "reason recorded under a wrong role"
+  },
+  {
+   "id": "writing",
+   "kind": "writing",
+   "action": "change",
+   "members": [
+    {
+     "role": "part",
+     "node": "imp0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "Verse 1 has no heading, so there is no frame; cl0 is the first line of the psalm's text and now sits inside imp0. The text names no writer here, and the LORD is the one thanked, not the writer, so the sender is removed. cl2 is the ground of cl1 and is listed so every clause sits in a group.",
+   "category": "psalm unit without heading or named writer"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "audience of the command 'give thanks' (slot cl0s)",
+   "why": "The plural addressee is not named in the verse or before, and no candidate is a group the psalm addresses; the answer depends on the psalm's setting, which the text does not give."
+  }
+ ]
+}

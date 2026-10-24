@@ -1,0 +1,19 @@
+{"ref": "Psa.107.1",
+ "referents": [
+  {"slot": "w9", "choice": "w2", "divine": true, "why": "Third masculine singular possessive on the noun steadfast love (w8). Of the verse's candidates, only LORD (w2) is a third masculine singular person; the psalmist is first person, and w8 is the noun possessed, so it cannot be its own possessor.", "category": "possessor of a noun in the same verse"},
+  {"slot": "cl0s", "choice": "cant_tell", "divine": false, "why": "Second masculine plural addressee of the imperative 'give thanks'. No candidate is a second-person referent: the psalmist is the voice (first person), LORD is the object of the thanks, and the verse names no audience. The psalm's audience appears only in the wider psalm, and 'before' is empty.", "category": "implied addressee of a command not named in verse"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "cl0 is a command; cl1 opens with כִּי ('for') and gives its reason: for He is good.", "category": "explicit reason after command"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "why": "cl2 opens with כִּי and states the ground of the goodness just named: his steadfast love endures forever. The conjunction is explicit, so 'because' is kept rather than 'elaborates'.", "category": "explicit reason after clause"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl0"}, {"role": "basis", "node": "cl1"}], "divine": false, "why": "The builder labelled cl1 as 'part', a role the imperative kind does not have. cl1 is the basis (the reason given for the command), so the role is corrected to basis.", "category": "role not in group kind"},
+  {"id": "writing", "kind": "writing", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "cl2"}], "divine": false, "why": "The builder made LORD (w2) the sender of the psalm. The writing kind's sender is the writer where the text names one; this verse names no writer, and LORD is the one praised, not the author. The sender member is removed.", "category": "sender mistaken for the one praised"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "Whether cl0, the opening command, is the writing's frame (its heading)", "why": "The verse has no heading or ascription. The frame is kept as the builder set it, but the verse does not confirm it."},
+  {"what": "The writer of the psalm", "why": "The verse does not name one, so the writing has no sender. The psalmist voice is the psalm's own speech, not a named writer."},
+  {"what": "The addressee of the command 'give thanks' (cl0s)", "why": "Second masculine plural; no candidate in this verse fits, and the verse does not name an audience."}
+ ]}

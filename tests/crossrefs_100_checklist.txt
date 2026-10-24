@@ -1,0 +1,151 @@
+# A hundred phrases the corpus says more than once
+#
+# The spine list: sentences and formulas that recur across books, testaments
+# and centuries, with the places they recur given.
+#
+# THE QUESTION THIS FILE ASKS is different from the other checklists, and it is
+# the one this graph is best shaped to answer:
+#
+#     Are the recurrences reachable from each other, and does the graph say
+#     which of them the corpus itself connects?
+#
+# That last clause is the whole discipline. Some of these chains are stated:
+# Matthew 1:23 quotes Isaiah 7:14 and says so. Hebrews 10:38 quotes Habakkuk
+# 2:4 and says so. Others are a resemblance a reader notices -- "let there be
+# light" and "God, who said, 'Let light shine out of darkness'" (2 Cor
+# 4:6) are plainly related and Paul does not cite Genesis.
+#
+# **A stated quotation and an unstated echo are different facts and must not
+# be recorded the same way.** The graph has `quoted` for the first. For the
+# second it has the phrase layer, which finds shared wording without claiming
+# intent, and descriptions, which can say "and no verse joins them".
+#
+# A row is done when each end is cited, the ends reach each other, and the
+# manner of the connection -- quotation, allusion, or a reader's observation --
+# is visible rather than flattened.
+#
+# Several rows repeat by design: 5 and 72 are both the shepherd, 26 and 98 both
+# the refuge, 29 and 94 both the helper, 20 and 93 both "the just shall live by
+# faith". The list is a reader's memory, not a schema, and the duplication is
+# a fact about which phrases carry the most weight.
+#
+# Instrument: `bibleont.phrases` finds shared wording; `bibleont.patterns`
+# finds shared construction; `bibleont.citations` finds stated quotations.
+#
+# Format: n | phrase | references | status
+
+## Creation, identity, and God's nature
+1 | In the beginning | Gen 1:1; John 1:1; Heb 1:2; Rev 21:1 |
+2 | Let there be light | Gen 1:3; Isa 9:2; John 8:12; 2Cor 4:6; Rev 22:5 |
+3 | I AM | Exod 3:14; Isa 43:10-11; John 8:58; Rev 1:8 |
+4 | The word of the LORD came | Jer 1:4; Ezek 1:3; John 1:1-14 |
+5 | The LORD is my shepherd | Ps 23; Ezek 34; John 10; 1Pet 5:4 |
+6 | Holy, holy, holy | Isa 6:3; Rev 4:8 |
+7 | The LORD is my light and my salvation | Ps 27:1; John 8:12 |
+8 | The LORD reigneth | Ps 93; Ps 97; Rev 11:15 |
+9 | The living God | Deut 5:26; Jer 10:10; Matt 16:16; 1Thess 1:9 |
+10 | Merciful and gracious | Exod 34:6; Ps 103:8; Joel 2:13 |
+11 | The fear of the LORD is the beginning of wisdom | Prov 1:7; Ps 111:10 |
+12 | The heavens declare the glory of God | Ps 19:1; Rom 1:20 |
+13 | God is a Spirit | John 4:24; Gen 1:2 |
+14 | God is love | 1John 4:8; Exod 34:6; Ps 136 |
+15 | The LORD liveth | Deut 32:40; Ps 18:46; Rev 1:18 |
+
+## Covenant, promise, and blessing
+16 | I will be your God, ye shall be my people | Exod 6:7; Lev 26:12; Jer 31:33; 2Cor 6:16; Rev 21:3 |
+17 | All nations will be blessed through you | Gen 12:3; Gen 22:18; Gal 3:8-16 |
+18 | A new heart and a new spirit | Ezek 36:26; Jer 31:31-34; Heb 8:8-12 |
+19 | The priestly blessing | Num 6:24-26 |
+20 | The just shall live by faith | Hab 2:4; Rom 1:17; Gal 3:11; Heb 10:38 |
+21 | Choose life | Deut 30:19; John 10:10 |
+22 | The LORD will provide | Gen 22:14; Rom 8:32 |
+23 | His mercy endureth for ever | Ps 136; 1Chr 16:34 |
+24 | The LORD is my portion | Lam 3:24; Ps 73:26 |
+25 | The LORD shall fight for you | Exod 14:14; Rom 8:31 |
+26 | The LORD is my refuge | Ps 91; Ps 46; Heb 6:18 |
+27 | God remembered his covenant | Exod 2:24; Ps 105:8 |
+28 | The faithful God | Deut 7:9; Ps 33:4; 1Cor 1:9 |
+29 | The LORD is my helper | Ps 118:7; Heb 13:6 |
+30 | The LORD is my strength | Exod 15:2; Ps 18:1; Isa 12:2 |
+
+## Law, righteousness, and sin
+31 | Hear, O Israel; love the LORD thy God | Deut 6:4-5; Matt 22:37; Mark 12:29-30 |
+32 | Love thy neighbour as thyself | Lev 19:18; Matt 22:39; Rom 13:9; Gal 5:14 |
+33 | Be ye holy, for I am holy | Lev 11:44-45; 1Pet 1:15-16 |
+34 | Man shall not live by bread alone | Deut 8:3; Matt 4:4 |
+35 | There is none righteous | Ps 14:1-3; Rom 3:10-23 |
+36 | The LORD weigheth the hearts | Prov 21:2; 1Sam 16:7 |
+37 | The LORD trieth the righteous | Ps 11:5; 1Pet 1:7 |
+38 | The fool hath said in his heart, There is no God | Ps 14:1; Ps 53:1 |
+39 | The righteous are bold as a lion | Prov 28:1; Acts 4 |
+40 | The fear of the LORD prolongeth days | Prov 10:27 |
+41 | A false balance is abomination | Prov 11:1; Amos 8 |
+42 | Whom the LORD loveth he correcteth | Prov 3:11-12; Heb 12:5-6 |
+43 | The heart is deceitful above all things | Jer 17:9; Rom 7 |
+44 | The LORD searcheth all hearts | 1Chr 28:9; Rev 2:23 |
+45 | The wages of sin is death | Gen 2-3; Rom 6:23 |
+
+## Sacrifice, atonement, and the servant
+46 | The passover lamb | Exod 12; John 1:29; 1Cor 5:7 |
+47 | With his stripes we are healed | Isa 53:5; 1Pet 2:24 |
+48 | The LORD hath laid on him the iniquity of us all | Isa 53:6; 2Cor 5:21 |
+49 | They will look on the One they have pierced | Zech 12:10; John 19:37; Rev 1:7 |
+50 | Without shedding of blood is no remission | Heb 9:22; Lev |
+51 | The Lamb slain | Rev 5:6-13; Isa 53 |
+52 | The blood of the covenant | Exod 24:8; Matt 26:28; Heb 9:15-20 |
+53 | He shall redeem Israel | Ps 130:7-8; Luke 1:68 |
+54 | He hath borne our griefs | Isa 53:4; Matt 8:17 |
+55 | So shall he sprinkle many nations | Isa 52:15; 1Pet 1:2 |
+56 | A ransom for many | Isa 53; Mark 10:45 |
+57 | The cup | Ps 116:13; Matt 26:39; 1Cor 10:16 |
+58 | The Rock | Exod 17; Ps 18:2; 1Cor 10:4 |
+59 | The LORD is become my salvation | Exod 15:2; Ps 27:1 |
+60 | I know that my redeemer liveth | Job 19:25 |
+
+## Messianic kingship and priesthood
+61 | Thou art my Son | Ps 2:7; Matt 3:17; Heb 1:5 |
+62 | Sit thou at my right hand | Ps 110:1; Matt 22:44; Acts 2:34-36 |
+63 | A priest for ever after the order of Melchizedek | Ps 110:4; Heb 5-7 |
+64 | A shoot will spring up from the stump of Jesse | Isa 11:1; Rom 15:12 |
+65 | The stone which the builders refused | Ps 118:22; Matt 21:42; Acts 4:11 |
+66 | My servant shall deal prudently | Isa 52:13 |
+67 | The Branch | Jer 23:5; Zech 3:8; Zech 6:12 |
+68 | Thy King cometh unto thee, lowly | Zech 9:9; Matt 21:5 |
+69 | Wonderful, Counsellor, The mighty God | Isa 9:6 |
+70 | Immanuel | Isa 7:14; Matt 1:23 |
+71 | The LORD our righteousness | Jer 23:6; 1Cor 1:30 |
+72 | The LORD is my shepherd (again) | Ps 23; John 10 |
+73 | The righteous Branch | Jer 33:15 |
+74 | A tried stone, a precious corner stone | Isa 28:16; Rom 9:33; 1Pet 2:6 |
+75 | The Lion of the tribe of Juda | Gen 49:9; Rev 5:5 |
+
+## Kingdom, repentance, and the gospel call
+76 | Prepare ye the way of the LORD | Isa 40:3; Matt 3:3; Mark 1:3 |
+77 | Repent: for the kingdom of heaven is at hand | Matt 3:2; Matt 4:17; Isa 40 |
+78 | Good tidings unto the meek | Isa 61:1; Luke 4:18 |
+79 | The Spirit of the Lord is upon me | Isa 61:1; Luke 4:18 |
+80 | Blessed is the man | Ps 1; Ps 32; Matt 5:3-12 |
+81 | Come unto me, all ye that labour | Matt 11:28; Heb 4:9-11 |
+82 | Follow me | across the gospels |
+83 | The kingdom of heaven is like | the parables |
+84 | The harvest truly is plenteous | Joel 3; Matt 9:37 |
+85 | The day of the LORD | Joel 2; Amos 5; Zeph 1; Acts 2; 1Thess 5 |
+
+## Justification, grace, and union
+86 | Abraham believed God | Gen 15:6; Rom 4; Gal 3; Jas 2 |
+87 | It is by grace you have been saved through faith | Eph 2:8-9; Titus 3:5 |
+88 | No condemnation | Rom 8:1; John 5:24 |
+89 | A new creation | Isa 65:17; 2Cor 5:17; Rev 21:5 |
+90 | Christ in you | Col 1:27; Ezek 36 |
+91 | Walk in the Spirit | Gal 5; Rom 8 |
+92 | Put on the new man | Eph 4; Col 3 |
+93 | The just shall live by faith (again) | Hab 2:4; Rom 1:17 |
+94 | The Lord is my helper (again) | Ps 118; Heb 13:6 |
+95 | We are his workmanship | Eph 2:10; Ps 139 |
+
+## Faith, hope, endurance, and prayer
+96 | Wait on the LORD | Ps 27:14; Isa 40:31 |
+97 | Cast thy burden upon the LORD | Ps 55:22; 1Pet 5:7 |
+98 | The LORD is my refuge (again) | Ps 46; Ps 91; Heb 6:18 |
+99 | The prayer of a righteous man has great power | Ps 34; Jas 5:16 |
+100 | God shall wipe away all tears | Isa 25:8; Rev 7:17; Rev 21:4 |

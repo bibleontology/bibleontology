@@ -1,0 +1,135 @@
+{
+ "ref": "Mrk.15.4",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "'Him' is the object of 'questioned', masculine singular. Jesus is the one questioned and the addressee of Pilate's speech.",
+   "category": "object pronoun, addressee of speech",
+   "votes": 3
+  },
+  {
+   "slot": "w11",
+   "choice": "none",
+   "divine": false,
+   "why": "'how many things' (posa) is an interrogative quantifier whose referent is the charges. No candidate in this verse is the charges.",
+   "category": "quantifier with no candidate noun",
+   "votes": 3
+  },
+  {
+   "slot": "w12",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "'you' (genitive, against you) is second person inside Pilate's speech, so it is the addressee of that speech: Jesus.",
+   "category": "second person inside a speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "'you' in 'Have you no answer?' is second person inside Pilate's speech: Jesus.",
+   "category": "second person inside a speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl3s",
+   "choice": "Mrk.15.1#c8",
+   "divine": false,
+   "why": "Third plural accusers, 'they are bringing charges'. The plural leaders of 15:1 and 15:3 are the referent; the elders composite is the plural candidate offered.",
+   "category": "third plural accusers",
+   "votes": 2
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot follow itself; the self-link is invalid.",
+   "category": "self link",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle saying is nested in the questioning clause.",
+   "category": "participle nested in main clause",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The speech is nested in the saying participle, as the grammar nests the object clause.",
+   "category": "speech nested in saying",
+   "votes": 2
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "Clause cl3 is a second sentence of Pilate's speech, not nested in the role of cl2 (Have you no answer). Nothing nests it there.",
+   "category": "sentence sequence read as nesting",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The saying participle introduces Pilate's words. Per R1, added alongside the turn.",
+   "category": "saying clause to its speech",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "The second sentence (Look how many charges) is also Pilate's words under the same saying. Per R1.",
+   "category": "saying clause to its speech",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl2 and cl3",
+   "what": "Two juxtaposed sentences of one speech with no conjunction: the second gives the charges that the question leans on. No link type says grounded in without a conjunction."
+  },
+  {
+   "where": "cl0, 'again' (palin)",
+   "what": "Repetition of Pilate's earlier questioning (Mrk.15.2#cl0). No link type marks 'again'."
+  },
+  {
+   "where": "cl3, 'See how many...' (ide)",
+   "what": "An exclamation of notice ('look'), not a command to anyone; no group kind for a bare exclamation."
+  },
+  {
+   "where": "Mrk.15.4 cl2 and cl3",
+   "what": "two sentences of one speech set side by side without a connective; no link type for juxtaposed sentences, the turn carries them"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Whether 'they' in cl3 is the chief priests specifically",
+   "why": "The chief priests are not offered as a candidate in this verse; the nearest plural candidate is the elders composite, which may not cover the whole accusing group."
+  },
+  {
+   "what": "Who 'they' in cl3 are: the accusers of Mrk.15.3, who are not in the candidate list.",
+   "why": "The chief priests are named in Mrk.15.1 but are not offered as a candidate here, and c8 is the only plural accuser listed. Chose c8 for now."
+  },
+  {
+   "what": "referent of cl3s (the accusers, they bring charges)",
+   "why": "the chief priests of Mrk.15.3 are the plausible accusers but are not among the candidates offered for this verse"
+  }
+ ],
+ "voted": 3
+}

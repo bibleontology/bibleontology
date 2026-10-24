@@ -1,0 +1,60 @@
+{
+ "ref": "Exo.8.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "confidence": "medium",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'them' is masculine plural. The object is the dead frogs of the previous verse, which are feminine and are not in this verse's candidate list, so no candidate fits.",
+   "category": "object not among the candidates"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "cant_tell",
+   "confidence": "medium",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'they piled them' is an impersonal third plural. The text does not name who heaped the frogs, and no candidate is the people of Egypt.",
+   "category": "impersonal third plural"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl0 is the first clause of the verse, so the and-then link runs backward.",
+   "category": "then link reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "confidence": "medium",
+   "why": "the land stinking follows from the heaping of the dead frogs, a state that the act brings about (R4), not a plain and-then. Replaced by the result link below.",
+   "category": "plain and read as result"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "medium",
+   "why": "the heaping of the dead frogs brings about the stench in the land, the state that follows the act.",
+   "category": "act then its state"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Who piled the frogs (cl0s) and what 'them' (w3) is",
+   "why": "The frogs are not a candidate in this verse, and the masculine 'them' does not agree with the feminine frogs. The text gives no other referent."
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+name: A finding in the graph
+description: A relation the verses do not support, a person merged or split, a claim in the wrong voice, a term that does not mean what it says.
+labels: ["finding"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. A finding with its verse is checked first. Questions of which doctrine is right are out of scope here: the graph records what the text says and who says it, and credits each reading to those who hold it.
+  - type: input
+    id: where
+    attributes:
+      label: The record or claim
+      description: Its address, for example https://bibleontology.org/e/kish, or a claim id from the export.
+    validations:
+      required: true
+  - type: input
+    id: verse
+    attributes:
+      label: The verse or verses
+      description: For example 1 Sam 9:1.
+    validations:
+      required: true
+  - type: textarea
+    id: says
+    attributes:
+      label: What the graph says
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and why
+      description: The evidence from the text. Where translations differ, the Hebrew or Greek decides.
+    validations:
+      required: true

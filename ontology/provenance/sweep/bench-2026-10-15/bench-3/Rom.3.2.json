@@ -1,0 +1,58 @@
+{
+ "ref": "Rom.3.2",
+ "referents": [
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "Third plural 'they' (masculine) is the Jews of 3:1, who are not among the candidates; the candidates are a way, oracles (neuter plural) and God, none of them a people who could be entrusted.",
+   "category": "antecedent not offered as candidate"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "'Chiefly that they were entrusted' gives the chief advantage; the text states no reason for the entrusting.",
+   "category": "no reason in the text"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "why": "cl2 is the content of cl1's 'chiefly that ...', a clause nested in cl1's predicate.",
+   "category": "clause nested as predicate content"
+  },
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "'Much in every way' is not explained by its own detail; cl1 is the first of the ways it names.",
+   "category": "no reason in the text"
+  },
+  {
+   "src": "cl1",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "'First of all' gives the first detail of 'much in every way'.",
+   "category": "detail of an earlier clause"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "3:2 cl1",
+   "what": "'The first advantage is that X': a clause that is the predicate of a copula. No link type covers a predicate that clause; recorded as within."
+  },
+  {
+   "where": "3:2 slot cl2s",
+   "what": "The Jews named in 3:1 are not a candidate; 3:1's candidate list holds only benefit and circumcision."
+  }
+ ],
+ "cant_tell": []
+}

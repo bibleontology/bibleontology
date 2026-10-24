@@ -1,0 +1,36 @@
+{
+ "run": "conf-1",
+ "model": "haiku",
+ "mode": "passage, one run, confidence on every decision; rules R1-R8",
+ "blind_check": "tool_uses exactly 2 for every run",
+ "passages": {
+  "P-psa119": {
+   "tokens": 71354,
+   "verses": 1
+  },
+  "P-psa107": {
+   "tokens": 74427,
+   "verses": 1
+  },
+  "P-gen1": {
+   "tokens": 87268,
+   "verses": 5
+  },
+  "P-psa23": {
+   "tokens": 96740,
+   "verses": 6
+  },
+  "P-frogs-b": {
+   "tokens": 132085,
+   "verses": 7
+  },
+  "P-gnats": {
+   "tokens": 135349,
+   "verses": 5
+  },
+  "P-frogs-a": {
+   "tokens": 141711,
+   "verses": 8
+  }
+ }
+}

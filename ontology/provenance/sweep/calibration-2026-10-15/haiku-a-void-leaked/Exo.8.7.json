@@ -1,0 +1,20 @@
+{"ref": "Exo.8.7",
+ "referents": [
+  {"slot": "w5", "choice": "Exo.8.5#w4", "divine": false, "why": "Second person masculine singular inside Moses's speech to Pharaoh (Exo.8.5 turn, continued through Exo.8.6). The addressee of that speech is Pharaoh, the only masculine singular second-person addressee.", "category": "second person in a speech, addressee"},
+  {"slot": "w9", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive 'your' on 'houses' is second masculine singular, so it refers to the addressee of the speech: Pharaoh.", "category": "possessive in a speech, addressee"},
+  {"slot": "w13", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive 'your' on 'officials' is second masculine singular, so it refers to the addressee of the speech: Pharaoh.", "category": "possessive in a speech, addressee"},
+  {"slot": "w17", "choice": "Exo.8.5#w4", "divine": false, "why": "Possessive 'your' on 'people' is second masculine singular, so it refers to the addressee of the speech: Pharaoh.", "category": "possessive in a speech, addressee"},
+  {"slot": "cl1s", "choice": "w3", "divine": false, "why": "Third feminine plural in cl1 'they will remain'. The only feminine plural candidate is frogs (w3), the subject of cl0 'they will depart'. The frogs remain in the Nile.", "category": "implied subject carried over from the clause before"}
+ ],
+ "links": [
+  {"src": "Exo.8.6#cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "The builder wrote the bare id cl4, which here means the previous verse's clause Exo.8.6#cl4 ('so that you may know'). 'Then' is within-verse only per link_types, and the weqatal continues the speech rather than a narrative event after the purpose clause. The real link is the promised result of the prayer, added below.", "category": "then across verses"},
+  {"src": "Exo.8.4#cl2", "type": "result", "dst": "cl0", "action": "add", "why": "Pharaoh's imperative 'pray to Yahweh' (Exo.8.4#cl2) is followed by waw + third-person weqatal 'they will depart', which is what Moses promises the prayer will bring about. The same pattern as command then 'and it will become', with the command in an earlier verse.", "category": "promised result of an earlier command"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 to cl1", "what": "Asyndetic exceptive: 'only in the River they will remain' states where the frogs stay after 'they will depart', with no conjunction and no negative. No contrast, exception or elaboration link fits without a 'but' or a negative clause."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl0 and cl1 continue Moses's reply turn that starts in Exo.8.6 (Exo.8.6#turn1), or open a new turn.", "why": "This verse has no new frame clause, and the speech appears to continue. The lists give no way to join a turn across verses without a frame, and changing an earlier verse's group is outside this verse, so no group is recorded here."}
+ ]
+}

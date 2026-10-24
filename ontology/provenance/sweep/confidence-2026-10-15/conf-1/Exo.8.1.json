@@ -1,0 +1,179 @@
+{
+ "ref": "Exo.8.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your hand' belongs to the one the quoted command is addressed to, Aaron.",
+   "category": "possessive inside a quoted command"
+  },
+  {
+   "slot": "w14",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your staff' belongs to Aaron, the addressee of the quoted command.",
+   "category": "possessive inside a quoted command"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'say to Aaron' is the LORD's command to Moses, the addressee of cl0. The builder's w7 is the wrong person.",
+   "category": "implied subject of a command to the speech's addressee"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'stretch out your hand' is the message Moses is to tell Aaron, so the implied 'you' is Aaron.",
+   "category": "implied subject inside a commanded speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'bring up the frogs' is in the same quoted message, addressed to Aaron.",
+   "category": "implied subject inside a commanded speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "confidence": "medium",
+   "why": "two commands joined by a plain waw; the second is not a purpose or result (not third person), so 'and' stands.",
+   "category": "commands joined by and"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "high",
+   "why": "'he said to Moses' introduces the command 'say to Aaron'.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add",
+   "confidence": "high",
+   "why": "'tell Aaron' introduces a collection of two commands joined by 'and', so its content is the whole imperative group.",
+   "category": "speech content as command collection"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the LORD speaks to Moses; the commanded speech of Moses is the part. The builder had the commands as direct parts.",
+   "category": "outer turn with commanded turn as part"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.1#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "Moses is commanded to tell Aaron, so Moses is the one who speaks to Aaron; the builder's sender cl1s is a slot, not a candidate, so it is corrected to Moses.",
+   "category": "commanded speech spoken by the one commanded"
+  },
+  {
+   "id": "Exo.8.1#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the words Moses is to deliver are quoted from the LORD: the innermost turn, whose sender is the one quoted.",
+   "category": "quoted message as innermost turn"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "'stretch out' and 'bring up' are two commands joined by one waw; 'part' is not an imperative role.",
+   "category": "commands joined by and"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

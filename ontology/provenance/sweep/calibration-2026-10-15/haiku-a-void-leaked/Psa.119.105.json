@@ -1,0 +1,17 @@
+{"ref": "Psa.119.105",
+ "referents": [
+  {"slot": "w3", "choice": "none", "divine": false, "why": "'my' (first person common singular) on 'feet' is the psalm's own voice, per the rule for psalms. The candidate list holds no voice candidate, so no listed candidate fits.", "category": "psalm voice missing from candidates"},
+  {"slot": "w5", "choice": "none", "divine": false, "why": "'your' (second person masculine singular) is the possessive on 'word'. It names the one the psalm addresses, God, since the verse praises his word. No candidate names God or the LORD; the candidates are only nouns of this verse.", "category": "addressee absent from candidates"},
+  {"slot": "w10", "choice": "none", "divine": false, "why": "'my' (first person common singular) on 'path' is the psalm's own voice, as with w3. No voice candidate is listed.", "category": "psalm voice missing from candidates"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "keep", "why": "A plain waw joins two parallel lines, 'a lamp to my feet' and 'a light to my path'. No cause, result or purpose is marked, and the sense does not require one.", "category": "plain and joining parallel lines"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "w4"}], "divine": false, "why": "The second line restates the first's roles ('a light' for 'a lamp', 'to my path' for 'to my feet') without a subject, because the subject is the same 'your word', w4.", "category": "parallel lines sharing one subject"}
+ ],
+ "none_fit": [
+  {"where": "w3 and w10 (psalm voice)", "what": "The rule that 'my' in a psalm is the psalm's own voice needs a voice candidate, and none is listed."},
+  {"where": "w5 (your, addressed to God)", "what": "The psalm's addressee (God) has no candidate, so the referent of 'your' cannot be recorded."}
+ ],
+ "cant_tell": []}

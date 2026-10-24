@@ -1,0 +1,33 @@
+{"ref": "Exo.8.12",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "'your' (2ms) is inside the speech Moses is to say to Aaron, so it is the addressee of that speech: Aaron's staff.", "category": "possessive in a commanded speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "'Say to Aaron' is a command inside the LORD's speech to Moses; the implied 'you' is the one the LORD is speaking to, Moses. Aaron is the one Moses is to speak to, not the one commanded here.", "category": "implied subject of a command that introduces a speech"},
+  {"slot": "cl2s", "choice": "w7", "divine": false, "why": "'Stretch out your staff' belongs to the speech Moses is to say to Aaron, so the implied 'you' is Aaron; the 'your' of 'your staff' agrees.", "category": "implied subject inside a commanded speech"},
+  {"slot": "cl3s", "choice": "w7", "divine": false, "why": "Same speech as the clause before; the waw joins the second command to the first, so the implied 'you' is still Aaron.", "category": "implied subject inside a commanded speech"},
+  {"slot": "cl4s", "choice": "w15", "divine": false, "why": "'It will become gnats': a third masculine singular weqatal whose subject is what the preceding command acted on, the dust (masculine singular); the staff was stretched out, not turned into gnats, and the act decides.", "category": "implied subject is what the previous clause acted on"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "cl3 is a command inside a speech nested two deep; the narrative line of cl0 does not continue into it.", "category": "link from inside a speech to the narrative line"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "Two commands joined by a separate-word waw (וְ) at one level, 'stretch out ... and strike'.", "category": "commands joined by plain and"},
+  {"src": "cl3", "type": "then", "dst": "cl4", "action": "remove", "why": "A weqatal after an imperative says what the commands bring about, which is `result`, not a plain narrative sequence.", "category": "effect of a command read as plain sequence"},
+  {"src": "cl3", "type": "result", "dst": "cl4", "action": "add", "why": "Imperative, then waw + third-person weqatal 'and it will become gnats': what the commanded acts will bring about.", "category": "command and its effect"},
+  {"src": "cl0", "type": "content", "dst": "turn1", "action": "add", "why": "'The LORD said to Moses' and what he said: the command to say to Aaron, taken with its content.", "category": "speech clause and what was said"},
+  {"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "'Say to Aaron' and what Moses is to say: the run of commands joined by 'and' at one level, taken as one imperative group.", "category": "speech clause and what was said (nested speech)"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change",
+   "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}],
+   "divine": true, "why": "The LORD speaks to Moses; what is said is the command to say something to Aaron, which is the nested turn, not cl1-cl4 flattened as direct parts.", "category": "nested speech held as a part of the outer turn"},
+  {"id": "turn1", "kind": "turn", "action": "change",
+   "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "imp2"}, {"role": "addressee", "node": "w7"}, {"role": "sender", "node": "w4"}],
+   "divine": false, "why": "Moses is told to say to Aaron: the sender is the one commanded (the implied 'you' of cl1, Moses), the addressee Aaron, and what is said is the imperative group.", "category": "nested speech, sender is the one commanded"},
+  {"id": "imp2", "kind": "imperative", "action": "change",
+   "members": [{"role": "command", "node": "cl2"}, {"role": "command", "node": "cl3"}, {"role": "effect", "node": "cl4"}],
+   "divine": false, "why": "Commands joined by 'and' at one level are one imperative group with several command members; the waw + third-person weqatal after them is its effect.", "category": "commands joined by and form one group with a shared effect"},
+  {"id": "imp3", "kind": "imperative", "action": "remove",
+   "members": [{"role": "command", "node": "cl3"}, {"role": "effect", "node": "cl4"}],
+   "divine": false, "why": "Folded into imp2: cl3 is a second command of the same group, not a separate one with cl4 as its own effect; keeping both would count cl3 twice.", "category": "one group split into two overlapping groups"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

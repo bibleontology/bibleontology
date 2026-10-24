@@ -1,0 +1,14 @@
+{"ref": "Psa.23.3",
+ "referents": [
+  {"slot": "w1", "choice": "Psa.23.1#psalmist", "divine": false, "why": "'my' on the soul: first person common singular, and the psalm's own voice is the only first-person candidate.", "category": "first person in psalm voice"},
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "divine": false, "why": "'me' as object of the yiqtol in cl1: first person singular; the psalm does not quote another speaker here, so it is the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "'his' on the name: third masculine singular possessor. The only masculine singular divine candidate is the LORD of the preceding verse, whose name the phrase invokes.", "category": "possessive of the divine name"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "implied subject of the yiqtol in cl0, third masculine singular. The shepherd sentence of 23:1 names the LORD as subject and the implied He continues it.", "category": "implied subject of a continuing divine action"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "implied subject of the yiqtol in cl1, third masculine singular, the same agent as the clause before it; the LORD is the only agreeing candidate.", "category": "implied subject of a continuing divine action"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "Two clauses in a row joined by no conjunction, each with a yiqtol whose subject is implied and is the same LORD. This is the acts pattern rather than a command, so it is a group of one agent's acts, not an imperative.", "category": "one agent's clauses in a row without conjunction"}
+ ],
+ "none_fit": [{"where": "cl1, 'for the sake of his name' (לְמַעַן שְׁמוֹ)", "what": "a nominal purpose phrase inside the clause, not a clause; the purpose link takes clause-to-clause sources, so no link is added."}],
+ "cant_tell": []}

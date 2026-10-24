@@ -1,0 +1,37 @@
+{
+ "ref": "Rom.3.1",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'What' (Τί) opening the first question; it asks for the advantage and refers to no candidate.",
+   "category": "interrogative word, not a referent"
+  },
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'what' (τίς) is the predicate question word of the second question; the subject is 'the benefit' itself, so no candidate is referred to.",
+   "category": "interrogative word, not a referent"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "ἢ ('or') joins two parallel questions; the second is an alternative to the first.",
+   "category": "parallel questions joined by or"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "οὖν ('then') in cl1",
+   "why": "It points back to the argument of chapter 2, which is not in this passage, so no clause here can be its host."
+  }
+ ]
+}

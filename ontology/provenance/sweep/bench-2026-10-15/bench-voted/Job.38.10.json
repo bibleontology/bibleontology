@@ -1,0 +1,102 @@
+{
+ "ref": "Job.38.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'On it' (masculine singular) is the sea of 38:8, not offered as a candidate.",
+   "category": "referent outside candidate list",
+   "votes": 3
+  },
+  {
+   "slot": "w5",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'my boundaries': the speaker, the LORD.",
+   "category": "first person in divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person subject of the wayyiqtol 'I fixed': the speaker, the LORD.",
+   "category": "first person in divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person subject of 'I set in place': the speaker, the LORD.",
+   "category": "first person in divine speech",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A self-link. The wayyiqtol cannot be then-linked to itself, and 'then' runs within a verse only.",
+   "category": "self-link",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The wayyiqtol 'I set in place' continues the narrative line from 'I fixed'.",
+   "category": "narrative sequence",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "Job.38.10#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Job.38.1#w2"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, each stating its subject only in its verb, are acts of the one agent, the LORD. Recorded as a reading for review (R5).",
+   "category": "acts of one agent",
+   "votes": 2
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The waw and 'when' joining 38:10 to 38:9",
+   "why": "A cross-verse relation. The verse-level link types cannot express it, so it is not recorded here."
+  },
+  {
+   "what": "Whether the 'when' series from 38:9 continues into these clauses, and what its host is",
+   "why": "The verbs are wayyiqtol narrative; 'then' is within a verse only, and the parser does not mark a host across verses."
+  },
+  {
+   "what": "The LORD is not in this verse's candidate list.",
+   "why": "Chosen from the speech, as in 38:8."
+  },
+  {
+   "what": "Whether the LORD's run of acts from 38:8 to 38:10 is one acts group across verses.",
+   "why": "The group is recorded only within 38:10 here. A cross-verse group would be a passage-level reading."
+  }
+ ],
+ "voted": 3
+}

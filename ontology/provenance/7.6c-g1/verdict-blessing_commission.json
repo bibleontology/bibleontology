@@ -1,0 +1,47 @@
+{
+  "verdict": "revise",
+  "concepts": [
+    {"n": 1, "verdict": "revise", "name": "God blessed", "drop": [],
+     "note_fixes": [],
+     "why": "All readers / name against passages: 'them' is said only in Gen 1:22, 1:28 and 5:2. Gen 2:3 blesses the seventh day, Gen 24:1 blesses Abraham ('him'), Job 42:12 blesses Job's latter days. 'God blessed' (verb and subject only) is what all seven say. Notes are exact quotations; no day-length or tradition issue in 2:3."},
+    {"n": 2, "verdict": "revise", "name": "I will make you fruitful", "drop": [],
+     "note_fixes": [],
+     "why": "Name against passages: 'increased' is said only in Gen 47:27 and Exod 1:7; Gen 17:6, 26:22, 28:3, Lev 26:9 and Jer 23:3 say 'fruitful' (with 'multiply' in 28:3, Lev 26:9, Jer 23:3), and 'Fruitful and multiply' is already a table row. 'Make you fruitful' (Gen 17:6, 28:3, Lev 26:9) is the shared wording; Gen 26:22 and 47:27 and Exod 1:7 are records of it, so a plain name such as 'Fruitful' would also serve. Notes all exact."},
+    {"n": 3, "verdict": "revise", "name": null, "drop": ["Psalm 115:16"],
+     "note_fixes": [],
+     "why": "Passages: Ps 115:16 says the earth is given to mankind, but not that man is made ruler of anything; it shares the idea of a gift, not the concept. Gen 9:2 ('delivered into your hand') is close enough to Ps 8:6 to stay. Image of God / dominion reader (Catholic, Orthodox, Reformed, secular): the group places Gen 1:26 beside Ps 8 without saying what the image is, which is acceptable as long as no note or name ties the image to ruling; none does."},
+    {"n": 4, "verdict": "accept"},
+    {"n": 5, "verdict": "accept"},
+    {"n": 6, "verdict": "revise", "name": null, "drop": [],
+     "note_fixes": ["Leviticus 26:3-4: the passage gives only the blessing half (rains, produce) and neither says 'bless' nor mentions a curse, so under the name 'A blessing and a curse' it shares a pattern rather than holds the concept. Either extend to Leviticus 26:3-4 and 26:14-16 so both halves stand, or drop it. Deut 28:2 and 28:15 together are the pair that does hold it."],
+     "why": "Passages: one-sided Lev 26:3-4 as above. Deut 11:26-28, 28:2/28:15, 30:19 and Josh 8:34 all hold both halves. Notes are exact quotations. No tradition takes a side here."},
+    {"n": 7, "verdict": "accept"},
+    {"n": 8, "verdict": "accept"},
+    {"n": 9, "verdict": "accept"},
+    {"n": 10, "verdict": "accept"},
+    {"n": 11, "verdict": "revise", "name": "I am with you", "drop": [],
+     "note_fixes": [],
+     "why": "Name against passages: 'Do not be afraid' is said in Gen 26:24, Josh 1:9, Isa 41:10 (Do not fear), Jer 1:8 and Acts 18:9; Gen 28:15, Exod 3:12 and Matt 28:20 say 'I am with you' with no word of fear, so the name says more than three of the eight. 'I am with you' is in all eight. Notes are exact."}
+    ,
+    {"n": 12, "verdict": "revise", "name": "I am sending you", "drop": [],
+     "note_fixes": [],
+     "why": "Name against passages: 'Whom shall I send?' is a question asked only in Isa 6:8; the other six record the sending itself (Exod 3:10, Ezek 2:3, John 20:21, Acts 26:17 'I am sending you'; Judg 6:14 'Am I not sending you?'; Jer 1:7 'I send you'). 'I am sending you' is the wording most of them share, and Isa 6:8 stays as the one that asks. Notes exact. Placing John 20:21 beside the Old Testament sendings is fine as the group only says each is a sending, not that one renews another."}
+  ],
+  "secondary_or_links": [
+    "Secondary 'The blessing -> the land': Genesis 12:7 ('I will give this land') does not mention blessing; only Gen 28:4 and Deut 28:8 do. Drop 12:7 or replace it with Genesis 12:1-2.",
+    "Secondary 'The man in the garden -> to cultivate and keep it' (Gen 2:15): the verse says nothing of blessing or sending; it shares a theme only. Drop it, or keep only if the page wants the one task given before the blessing of Gen 1:28.",
+    "Concept 9 (Gen 12:3 etc.): the Berean renders every instance 'will be blessed', but the original is not uniform; Genesis 22:18 and 26:4 use the reflexive form that can read 'bless themselves' (a secular/Jewish reader will check this), while 12:3, 18:18 and 28:14 are passive. The name and notes are the Berean's exact words, so they stand; do not add any note that settles the reading, and consider a plain 'also read' note on 22:18 and 26:4 if the site gives the Hebrew.",
+    "Link 'Prophetic Word & Fulfillment': linking this theme to one named 'Fulfillment' while Gen 12:3 sits beside Acts 3:25 and Gal 3:8 risks saying the Old Testament passage is fulfilled in the New (rule 4). Keep it only because of the prophets' commissions (Isa 6, Jer 1, Ezek 2); otherwise drop it.",
+    "Links 'Law/Wisdom' and 'Wisdom Literature' both appear; if they are two separate themes keep both, if they overlap keep one.",
+    "Order: concept 9 (Abraham's blessing, Genesis 12) comes after the Balaam passages (Numbers 22-24); a reader following the Bible's order would expect it nearer the fathers' blessings (after concept 4 or before 6). Not a side-taking order, only a reading-order note.",
+    "Concept 7: Matt 5:3 says 'Blessed are the poor in spirit', not 'Blessed is the man'; acceptable as the same form, but the name is not literally in that verse."
+  ],
+  "missing": [
+    {"sub_theme": "I will bless you", "refs": ["Genesis 12:2", "Genesis 22:17", "Genesis 26:3"],
+     "why": "God's own blessing promise to Abraham and Isaac in the first person is the centre of the theme and is not a concept here; 12:3 (concept 9) and 26:24 (concept 11) pick it up only in part. Check against the table rows for overlap."},
+    {"sub_theme": "Blessed be Abram by God Most High", "refs": ["Genesis 14:19-20", "Hebrews 7:1", "Hebrews 7:6-7"],
+     "why": "Melchizedek's blessing of Abram, and Abram's tithe, is one of the few blessings spoken over Abraham by another and is plainly developed (Heb 7). No NT claim of fulfilment is needed to list it."},
+    {"sub_theme": "The cup of blessing / He lifted up his hands and blessed them", "refs": ["1 Corinthians 10:16", "Luke 24:50-51", "Psalm 133:3"],
+     "why": "Blessing given by Jesus at the end of Luke, blessing at the Lord's table and where the LORD commands the blessing (Ps 133:3) round out the theme. Worded as plain quotations they take no side on the sacraments; the bread passages in the secondary list already sit close."}
+  ]
+}

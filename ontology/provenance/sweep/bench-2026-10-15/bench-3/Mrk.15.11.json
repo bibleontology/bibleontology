@@ -1,0 +1,45 @@
+{
+ "ref": "Mrk.15.11",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w5",
+   "divine": false,
+   "why": "Plural 'to them' is the crowd that the chief priests stirred up and to whom Barabbas is to be released. The noun crowd is a singular collective and takes a plural pronoun by sense.",
+   "category": "collective noun with plural pronoun"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Mrk.15.9#w2",
+   "divine": false,
+   "why": "The one who releases a prisoner is Pilate, the releaser of 15:6 and 15:9. Barabbas is the object released, so the builder's referent makes the released man the releaser, which the act rules out.",
+   "category": "act decides the subject"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Greek hina with the subjunctive: the stirring up is done so that the release happens. This is what the action is for.",
+   "category": "purpose clause after an action"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self link. No fused waw joins this clause to an earlier one within the verse.",
+   "category": "self link"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Mrk.15.11 opening conjunction (de, 'but')",
+   "what": "A verse-opening 'but' contrasting the chief priests' action with Pilate's offer in 15:9-10 has no host in its verse, so the contrast type cannot record it. Left unlinked."
+  }
+ ],
+ "cant_tell": []
+}

@@ -1,0 +1,100 @@
+{
+ "ref": "Exo.7.27",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  },
+  {
+   "slot": "w7",
+   "choice": "Exo.7.26#w2",
+   "divine": true
+  },
+  {
+   "slot": "w12",
+   "choice": "Exo.7.26#w7",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl2",
+   "action": "remove"
+  },
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond0",
+   "kind": "conditional",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl0"
+    },
+    {
+     "role": "consequence",
+     "node": "cl3"
+    }
+   ]
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "part",
+     "node": "cond0"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    }
+   ]
+  }
+ ],
+ "derived": [
+  [
+   "D5",
+   "cond0",
+   "cl2",
+   "cl3"
+  ]
+ ]
+}

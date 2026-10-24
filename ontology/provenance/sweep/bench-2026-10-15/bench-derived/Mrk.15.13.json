@@ -1,0 +1,58 @@
+{
+ "ref": "Mrk.15.13",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Mrk.15.12#w2",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "addressee",
+     "node": "w2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

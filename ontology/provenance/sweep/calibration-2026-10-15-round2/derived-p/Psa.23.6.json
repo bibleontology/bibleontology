@@ -1,0 +1,30 @@
+{
+ "ref": "Psa.23.6",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "w9",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

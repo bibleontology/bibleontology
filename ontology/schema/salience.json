@@ -1,0 +1,38 @@
+{
+ "_what": "THE FILTER AS DATA (plan 8.1f; Doug, 2026-10-19: \"I want to be able to sell this filtering concept to the semantic web community ... it should also be self evident in some way and not just a UI feature\", then \"Card words + navigator\"). Strongest by default, the rest on request; filter, don't delete. Each entry declares one measure: what it is of, how it is computed, the cut or rank that makes the default view, which views apply it (a view chooses whether to: \"the UI still needs control of when to use the filter\"), and the case that set it. Read by tools/meaning/salience.py; the server, the resolver, the audit and the export use that, never a constant of their own. Published as a dqv:QualityPolicy with each entry a dqv:Metric.",
+ "version": "2026-10-19",
+ "measures": {
+  "card_word_share": {
+   "of": "a word on a card (a card's anchored Hebrew or Greek word)",
+   "measure": "the share of the word's renderings in the text that render the card's name (tools/meaning/concept_anchors.py)",
+   "range": [0, 1],
+   "cut": 0.15,
+   "default": "share at or above the cut; and, whatever its share, the word a verse the card cites uses (plan 4.7a: the verse is the evidence)",
+   "on_request": "share under the cut",
+   "applied_by": ["the card's 'Where the text speaks of it' (server)", "the resolution layer", "the concept audit"],
+   "case": "The server's cut since the card verses were built from anchors (plan 4.7). On 2026-10-19 it hid 3,114 anchors on 1,107 cards; the audit and the resolver had been counting them (the committee's practitioner)."
+  },
+  "navigator_tie_strength": {
+   "of": "a tie between two records (every relation joining them)",
+   "measure": "certainty factor x (0.35 x the relation type's weight + 1.1 x log2(1 + shared verses + 0.5 x shared chapters)); certainty factors explicit 1, implied 0.8, disputed 0.6, conjectured 0.55; a type with no weight counts 2 (app1's edgeStrength; app2/static/index.html kgnStrength)",
+   "parameters": {"certainty_factor": {"explicit": 1, "implied": 0.8, "disputed": 0.6, "conjectured": 0.55},
+                  "certainty_factor_default": 1, "weight_coefficient": 0.35, "weight_default": 2,
+                  "shared_coefficient": 1.1, "chapter_weight": 0.5},
+   "rank": {"unit": "records drawn, the centre included", "desktop": 21, "phone": 7,
+            "ties_at_the_boundary": "kept or dropped whole"},
+   "default": "the strongest ties around the centre, up to the rank",
+   "on_request": "the rest, by the navigator's slider",
+   "applied_by": ["the knowledge graph navigator"],
+   "case": "app1's NODE_TARGET 15 x NODE_TOLERANCE 1.4 = 21 records; on a phone, the centre and six, 7 (Doug, 2026-10-02). David alone has over 200 connections (Doug on r/semanticweb, 2026-10-12: 'show the journey the text actually narrates first')."
+  },
+  "claim_certainty": {
+   "of": "a claim",
+   "measure": "the certainty step (claim:certainty: explicit, implied, conjectured, disputed)",
+   "cut": null,
+   "default": "every step, conjectured and disputed marked as such",
+   "on_request": "nothing",
+   "applied_by": ["cards (marking only)", "the navigator's tie strength (as its certainty factor)"],
+   "case": "Measured 2026-10-19: no view hides a claim by its certainty; it lowers a tie's rank in the navigator and is marked on cards."
+  }
+ }
+}

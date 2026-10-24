@@ -1,0 +1,82 @@
+{
+ "ref": "Mrk.15.1",
+ "referents": [
+  {
+   "slot": "cl3s",
+   "choice": "w4",
+   "divine": false,
+   "why": "third plural 'they' handed Jesus over; the chief priests (w4, masculine plural) are the agent carried through the verse, the first-named subject",
+   "category": "implied subject of a finite verb"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "participle having formed a counsel is nested in the main act of the chief priests",
+   "category": "participle inside main clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "participle having bound Jesus is nested in the main act of leading him away",
+   "category": "participle inside main clause"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "Greek kai is a separate word, not fused into the verb, so the link is and, not and then",
+   "category": "separate-word and read as then"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl3",
+   "action": "add",
+   "why": "second finite act of the same agent (handed over) joined by separate kai",
+   "category": "separate-word and"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Mrk.15.1#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl3"
+    },
+    {
+     "role": "group_subject",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "two finite acts of the chief priests (led away, handed over), each stating its subject only in the verb; recorded as a reading for review",
+   "category": "acts of one agent"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.1 cl1 and cl2",
+   "what": "anterior participles (having formed a counsel, having bound Jesus) that precede the main act; no link type for prior circumstance, so kept as within"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "referent of cl3s (they, who handed Jesus over)",
+   "why": "the subject is the chief priests together with elders, scribes and the Council; no candidate covers them together (c8 is elders and scribes only), so w4 is chosen as the first-named agent"
+  }
+ ]
+}

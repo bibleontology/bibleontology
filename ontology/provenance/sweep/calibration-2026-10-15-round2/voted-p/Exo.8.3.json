@@ -1,0 +1,54 @@
+{
+ "ref": "Exo.8.3",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'their secret arts' (third masc pl possessive): the magicians (w4), the subject of the doing",
+   "category": "possessive in a narrative report",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "third masc plural 'they brought up': the magicians named in cl0",
+   "category": "third plural with a named antecedent",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.8.2#cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then links only within a verse; across verses it is not the next event on this line",
+   "category": "cross-verse then",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "a wayyiqtol continues the narrative line: they brought up the frogs after doing the same",
+   "category": "narrative sequence",
+   "votes": 2
+  },
+  {
+   "src": "cl0",
+   "type": "likewise",
+   "dst": "Exo.8.2#cl0",
+   "action": "add",
+   "why": "'did thus' (ken) with a named subject who was not commanded: the magicians imitate Aaron's stretching out, the deed just done after the latest command",
+   "category": "imitation, not fulfilment",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [],
+ "voted": 3
+}

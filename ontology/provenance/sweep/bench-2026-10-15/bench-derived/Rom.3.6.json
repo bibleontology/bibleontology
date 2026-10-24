@@ -1,0 +1,27 @@
+{
+ "ref": "Rom.3.6",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "remove",
+   "members": []
+  }
+ ],
+ "derived": []
+}

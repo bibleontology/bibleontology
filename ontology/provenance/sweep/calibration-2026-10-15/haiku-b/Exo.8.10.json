@@ -1,0 +1,14 @@
+{"ref": "Exo.8.10",
+ "referents": [
+  {"slot": "w3", "choice": "none", "divine": false, "why": "Masculine plural 'them' is the object of the piling in the frog narrative. The frogs of Exo.8.9 cl1 are the only fitting referent, but no candidate offers them. The masculine plural candidates w4 and w5 are the heaps the piling makes, so they cannot be what is piled.", "category": "referent absent from candidate list"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "Implied masculine plural subject of 'they piled them into heaps'. The act is the dead frogs' (the subject of 'they died' in Exo.8.9 cl1), which is not among the candidates. The heaps (w4, w5) are the product of the act, not its doer, and the people of the verse-internal candidates do not fit a piling of frogs.", "category": "implied subject absent from candidate list"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "wayyiqtol cl1 (the land stank) continues the narrative line after cl0 (they were piled into heaps), joined by the fused waw. The order of events is piling, then stench.", "category": "plain narrative sequence"},
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "Reverses the narrative order. The stench (cl1) follows the piling (cl0), so 'cl1 and then cl0' is the wrong direction; the kept link cl0 -then-> cl1 states the sequence.", "category": "narrative order reversed"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0s and w3 (the piled-up 'they' and 'them')", "what": "The frogs of Exo.8.9 are the referent, but the candidate list omits them, so both slots are set to none rather than to a heap or to the land."}
+ ],
+ "cant_tell": []}

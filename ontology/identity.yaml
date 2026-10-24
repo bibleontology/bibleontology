@@ -1,0 +1,776 @@
+# Cross-batch identity decisions.
+#
+# Extraction batches are produced independently, so two batches can mint the same
+# id for two different people (there are dozens of Azariahs), or two different
+# ids for the same person (Saul of Tarsus / Paul). Neither can be resolved from
+# inside a single batch, so both are decided here, by hand, once.
+#
+# The merge step auto-unifies records that share an id, then audits every such
+# unification for the signatures of a bad merge (two fathers, conflicting era or
+# tribe, incompatible disambiguation notes) and refuses to proceed silently. The
+# entries below are the standing answers to those audits.
+
+version: 1
+
+# --- same person, different ids -------------------------------------------
+# canonical_id: [ids that should collapse into it]
+# The canonical record keeps the first non-empty value of each field; every
+# alternate name is preserved in "aka".
+same:
+  # --- three records of one serpent, all from Genesis 3:1 -----------------
+  # Not a parallel-account split and not a judgement call: `serpent`,
+  # `serpent_being` and `the_serpent` carry the same name, cite the same
+  # single verse, and share 22 relations between them. One extraction minted
+  # the same actor three times, which split the most consequential exchange
+  # in Genesis across three lifelines and drew every line of the dialogue
+  # twice.
+  #
+  # Canonical is `serpent`, typed `creature`, because that is what Genesis
+  # says -- "more crafty than any beast of the field" (Gen 3:1). The other
+  # two were typed `being`, which quietly imports Revelation 12:9's
+  # identification into a chapter that does not make it. Rev 12:9 SAYS the
+  # dragon is "that old serpent", and a statement the corpus makes is a
+  # relation to record, never a type to assign upstream of it.
+  serpent: [serpent_being, the_serpent]                # Gen 3:1
+
+  # --- Jesus, recorded a second time by the Titus extraction --------------
+  # `jesus_christ` (typed `being`, 7 relations: grace, mercy and peace from
+  # him, Titus 1:4; "our great God and Savior Jesus Christ", 2:13; "through
+  # Jesus Christ our Savior", 3:6) is Jesus, by the verses that minted it.
+  # Merged on the same meaning by Doug's word, 2026-10-02 ("Merge Jesus
+  # Christ"), as a targeted edit -- NOT by re-running bibleont.merge, which
+  # rebuilds from staging alone and would drop the ~4,000 relations later
+  # tools added (docs/OPERATIONS.md). The divine persons are merged by hand
+  # only, one decision at a time (Doug: "any deities - Jesus, God, the
+  # Father, the Holy Spirit may be handled manually given their importance").
+  jesus: [jesus_christ]                                # Titus 1:1-4, 2:13, 3:6
+
+  # --- one man, two spellings across parallel accounts --------------------
+  # The same class as Melchisedec/Melchizedek and Nebuchadrezzar: Chronicles
+  # retells Samuel and Genesis and spells the names its own way. This is the
+  # main source of split records in the graph, not extractor error.
+  hadadezer_king_of_zobah: [hadarezer_king_of_zobah]   # 2Sam 8:3 / 1Chr 18:3
+  jaare_oregim: [jair_father_of_elhanan]               # 2Sam 21:19 / 1Chr 20:5
+  sabtah: [sabta]                                      # Gen 10:7 / 1Chr 1:9
+  caphtorim: [caphthorim]                              # Gen 10:14 / 1Chr 1:12
+  # Surfaced by merging the fathers: one battle, one Philistine, one weaver's
+  # beam, told twice. Fixing a split record exposed the split beneath it.
+  elhanan_son_of_jaare_oregim: [elhanan_son_of_jair]    # 2Sam 21:19 / 1Chr 20:5
+  # 1Chr 20:1 is the parallel of 2Sam 12:26 -- one siege, one Joab, one city.
+  # The bare id carried a single edge, which is why the consolidation check's
+  # rare-edge pairing never reached it.
+  rabbah_ammon: [rabbah]                               # 2Sam 12:26 / 1Chr 20:1
+
+  # --- the ark at Abinadab's house: 2Sam 6 against 1Chr 13 ----------------
+  # One episode told twice, down to the three months with Obed-edom, and
+  # every person in it minted twice. Samuel spells the son Uzzah and
+  # Chronicles spells him Uzza; that is the whole of the difference.
+  #
+  # The father first, because he is what blocked the rest. 1Sam 7:1 puts the
+  # ark in "the house of Abinadab in the hill" at Kirjath-jearim; 2Sam 6:3
+  # fetches it from "the house of Abinadab that was in Gibeah" -- the same
+  # hill, the KJV rendering the same word twice. Same house, same ark.
+  abinadab_of_kirjath_jearim: [abinadab_father_of_uzzah]
+  uzzah_son_of_abinadab: [uzza]                        # 2Sam 6:3 / 1Chr 13:7
+  ahio_son_of_abinadab: [ahio]                         # 2Sam 6:3 / 1Chr 13:7
+
+  # --- the priestly line: 2Sam 8 and 1Kgs 1 against 1Chr 6 ----------------
+  # 1Chr 6:7-8 runs "Amariah begat Ahitub, and Ahitub begat Zadok, and Zadok
+  # begat Ahimaaz"; 2Sam 8:17 has "Zadok the son of Ahitub", 2Sam 15:27
+  # "Ahimaaz thy son". One line, three men, each recorded twice -- once as
+  # genealogy and once as narrative.
+  #
+  # Note that 1Chr 6:12 gives a *second* Ahitub-begat-Zadok later in the same
+  # chapter. These entries rest on 6:7-8 and do not touch that pair.
+  ahitub_son_of_amariah: [ahitub_father_of_zadok]      # 1Chr 6:7 / 2Sam 8:17
+  zadok_son_of_ahitub: [zadok]                         # 2Sam 8:17 / 1Chr 6:8
+  ahimaaz_son_of_zadok: [ahimaaz]                      # 2Sam 15:27 / 1Chr 6:8
+
+  # One polity, not two. The kingdom held its reigns as a place and its wars as
+  # a people, so the same thing appeared twice with half its life each and a
+  # reader could not tell why Assyria fought one and Ahab reigned over the other.
+  israel_northern_kingdom: [house_of_israel]
+
+  # Genesis 10:15 and 1 Chronicles 1:13 both read "Canaan was the father of
+  # Sidon his firstborn, and of the Hittites" in the Berean. An older
+  # translation spells him Sidon in one and Zidon in the other, so the same
+  # son, one letter apart, was carried as two. Found by auditing a precision sample,
+  # not by the consolidation check, which scores the pair 4.9 against a
+  # threshold of 5.0 -- close enough that `--min-score 4` shows it.
+  sidon: [zidon]
+
+  # --- Greek forms in Matthew's genealogy -> the Hebrew forms elsewhere ------
+  # Matt 1 transliterates from the Greek, so the same men appear under different
+  # spellings than in Genesis, Ruth and Chronicles. Without these the Matthean
+  # genealogy floats as a disconnected parallel chain.
+  rehoboam: [roboam]
+  jehoshaphat: [josaphat]
+  # Points at the split id directly: a batch-scoped split is keyed on the id the
+  # batch actually wrote, so aliasing to the bare `manasseh` would slip past it.
+  manasseh_king_of_judah: [manasses]
+  hezekiah: [ezekias]
+  josiah: [josias]
+  boaz: [booz]
+  nahshon: [naasson]
+  amminadab: [aminadab]
+  pharez: [phares]
+  zerah: [zara]
+  tamar: [thamar]
+  rahab: [rachab]
+  # "Urias" is the Greek form and in KJV refers only to Uriah the Hittite. The
+  # bare id `uriah` is NOT aliased here: there are other Uriahs (the priest of
+  # 2Kgs 16:10, the prophet Urijah of Jer 26:20) who will arrive with later
+  # batches and must not be swept into this one.
+  uriah_hittite: [urias]
+  bath_sheba: [bathsheba]
+  # The only entry for Zerubbabel, and it has to be: `zorobabel` is the Greek
+  # form in Matthew and Luke, `sheshbazzar` the disputed second name from Ezra
+  # 1:8 against Ezra 3:2. Both were once written in separate blocks further
+  # down, alongside the other Greek forms and the other stated second names,
+  # which read well and did not work -- YAML keeps the last key of a repeated
+  # name and drops the rest without a word. `_StrictLoader` in merge.py now
+  # refuses the file outright rather than letting a decision evaporate.
+  zerubbabel: [zorobabel, sheshbazzar]
+  shealtiel: [salathiel]
+  judah: [judas_son_of_jacob, judah_son_of_jacob]
+  jacob: [israel, jacob_patriarch]
+
+  # --- spelling variants between Genesis and Chronicles ---------------------
+  # Only names that are unambiguous globally belong here. "Shelah" and "Lamech"
+  # each belong to two different men in scripture, so those are handled as
+  # batch-scoped renames under `distinct` instead.
+  cainan: [kenan]
+  enoch_son_of_jared: [henoch]
+
+  # Derived by `python -m bibleont.crosswalk`, which compares the KJV against
+  # the verse-aligned ASV (1901) and proposes only pairs whose recorded parent
+  # matches. Each was confirmed to share a father before being added here.
+  nebaioth: [nebajoth]     # both son of Ishmael (Gen 25:13 / 1Chr 1:29)
+  put: [phut]              # both son of Ham (Gen 10:6 / 1Chr 1:8)
+  ashkenaz: [ashchenaz]    # both son of Gomer (Gen 10:3 / 1Chr 1:6)
+
+  # --- bare id from one batch, qualified id from another --------------------
+  # Proposed by `python -m bibleont.propose_aliases`, which only offers a pair
+  # when both ids have the SAME recorded parent. 1 Chronicles lists David's and
+  # Esau's sons without qualifying them; 2 Samuel and Genesis 36 qualify the
+  # same men. Note what is deliberately absent: `nathan` merges into
+  # `nathan_son_of_david`, but `nathan_prophet` stays a separate person.
+  absalom_son_of_david: [absalom]
+  adonijah_son_of_david: [adonijah]
+  amnon_son_of_david: [amnon]
+  eliada_son_of_david: [eliada]
+  eliphelet_son_of_david: [eliphelet]
+  elishama_son_of_david: [elishama]
+  ibhar_son_of_david: [ibhar]
+  ithream_son_of_david: [ithream]
+  japhia_son_of_david: [japhia]
+  nathan_son_of_david: [nathan]
+  nepheg_son_of_david: [nepheg]
+  shephatiah_son_of_david: [shephatiah]
+  shobab_son_of_david: [shobab]
+  # `eliphaz` was aliased here the same way, and Job's friend "Eliphaz the
+  # Temanite" (Job 2:11) was folded into Esau's son (Gen 36:4) -- 145 of Job's
+  # relations on Esau's son. The text never says they are one man. Split
+  # 2026-10-02 (Doug approving): Job's are `eliphaz_the_temanite`.
+  #   eliphaz_son_of_esau: [eliphaz]
+  # `korah` was aliased here when Esau's son was the only Korah in the graph.
+  # He is not the one Numbers 16 is about, and folding a bare id into him gave
+  # him the rebellion and Jude 1:11 as well. The Levite is now
+  # `korah_son_of_izhar` and nothing claims the bare name.
+  #   korah_son_of_esau: [korah]
+  reuel_son_of_esau: [reuel]
+  # Both records are mother of Pharez, and a child has one mother.
+  # ("Thamar" is Matthew's Greek spelling of Tamar; the alias chain
+  # thamar -> tamar -> tamar_wife_of_er is followed through.)
+  tamar_wife_of_er: [tamar]
+
+  # --- kings of Judah under two spellings ----------------------------------
+  # Each pair shares a recorded father, which is what settles them.
+  abijah: [abia]                        # both son of Rehoboam (1Chr 3:10 / 2Chr 12:16)
+  jehoram_king_of_judah: [joram]        # both son of Jehoshaphat (1Chr 3:11 / 2Chr 21:1)
+  enos: [enosh]
+  jared: [jered]
+  ram_son_of_hezron: [ram]
+  ahaz_son_of_jotham: [achaz]
+  jotham_king_of_judah: [joatham]
+  seth: [sheth]
+  paul: [saul_of_tarsus]
+  peter: [simon_peter, cephas, simon_bar_jona]
+  esau: [edom]
+  abraham: [abram]
+  sarah: [sarai]
+  solomon: [jedidiah]
+  gideon: [jerubbaal]
+  daniel: [belteshazzar]
+  hadassah: [esther]
+  # zerubbabel/sheshbazzar belongs in this block by sense -- a second name
+  # the text may or may not be stating -- but it is declared once, near the
+  # top of `same`, with the Greek form. See the note at the foot of the file.
+  # NOT merged: matthew_the_apostle and levi_son_of_alphaeus. Traditional
+  # harmonization equates them (Matt 9:9 calls the tax collector Matthew where
+  # Mark 2:14 and Luke 5:27 call him Levi), but no verse in the KJV states the
+  # identification, so the graph keeps them apart — as it does for Ahiah and
+  # Ahimelech, and for Moses' Gershom and the Gershom of Judg 18:30.
+  thomas: [didymus]
+  john_mark: [mark]
+  joshua: [oshea, hoshea_son_of_nun]
+  uzziah: [azariah_king_of_judah]
+  # Four spellings, one king: Jehoiachin in Kings, Jeconiah in Chronicles and
+  # Jeremiah 27, Coniah in Jeremiah 22, Jechonias in Matthew. Jer 27:20 joins
+  # two of them in a single clause -- "Jeconiah the son of Jehoiakim king of
+  # Judah" -- and 1Chr 3:17 puts Jeconiah in the line that reaches Zerubbabel.
+  # Collapsing Jechonias gives him two recorded fathers; that is the point
+  # rather than the problem, and `contested_parentage` says why.
+  jehoiachin: [jeconiah, coniah, jechonias]
+
+  # --- found by bibleont.consolidate ----------------------------------------
+  # One person recorded twice, each batch minting its own id from the book it
+  # was reading. The refs are disjoint and the relations agree, which is the
+  # signature: two records sharing a name and an identical typed relation to the
+  # same third party are almost never two people.
+
+  # Gen 38:30 spells him Zarah; Josh 7:1 and Matt 1:3 spell him Zerah. Achan is
+  # traced back to him, and Matthew's genealogy runs through him.
+  zarah_son_of_judah: [zerah, zarah]
+
+  # The Hebrew form in Ezra and Haggai against the Greek form in Matthew and
+  # Luke -- the same governor of Judah, son of Shealtiel. Declared with his
+  # other alias near the top of `same`, because one key may appear once.
+
+  # 2 Kgs 19:37 and Isa 37:38 are parallel accounts of the same assassination,
+  # and each batch minted its own id for the two sons who committed it. The
+  # qualified id is canonical so the bare name stays free for the Sepharvite
+  # deity of 2 Kgs 17:31, which is not yet in the graph.
+  adrammelech_son_of_sennacherib: [adrammelech]
+  sharezer_son_of_sennacherib: [sharezer]
+
+  # Saul's third son: "Melchi-shua" at 1 Sam 14:49 and 31:2, "Malchi-shua" at
+  # 1 Chr 8:33 and 10:2. One man, and the rarity weighting hid him -- Saul has
+  # several sons, so "son of Saul" is not a rare enough edge to score.
+  melchishua: [malchishua]
+
+  # Both verses call Phaltiel "the son of Laish"; splitting Phalti from
+  # Phaltiel had split his father too. The qualified id is canonical so the
+  # bare name stays free for Laish the town (Judg 18:7).
+  laish_father_of_phaltiel: [laish]
+
+  # 1 Sam 25:44 gives Michal to "Phalti the son of Laish"; 2 Sam 3:15 takes her
+  # back from "Phaltiel the son of Laish". One man, one father, two spellings --
+  # and invisible to the consolidation check, which only compares records that
+  # share a name.
+  phaltiel: [phalti]
+
+  # 1 Sam 25:3 names Nabal, Abigail's first husband; 2 Sam 2:2 calls him "Nabal
+  # the Carmelite" when identifying her. One man, two batches.
+  nabal_carmelite: [nabal]
+
+  # 1 Sam 25:43 calls her Ahinoam of Jezreel, 2 Sam 3:2 the Jezreelitess. One
+  # wife of David, recorded twice, which gave him two marriages to her.
+  ahinoam_of_jezreel: [ahinoam_jezreelitess]
+
+# --- different people, same id --------------------------------------------
+# When two batches independently produce this id, do NOT merge them. Split by
+# the batch that produced each record, and give each the id shown.
+#
+#   <colliding id>:
+#     - id: <new id>
+#       batches: [<batch ids whose record means this person>]
+#       disambiguation: <how to tell them apart>
+  # --- duplicates merged 2026-10-02 (Doug approving), from the site
+  # evaluation: same name, same type, a verse in common, and the verse
+  # shows one referent. Folded by hand per docs/OPERATIONS.md; the kept
+  # record lists each in `merged_from`, so an old address still opens it.
+  # 18 same-name pairs read as DIFFERENT people were left apart (e.g. the
+  # three Elnathans of Ezra 8:16, the two Malchijahs of Ezra 10:25).
+  #   aholibamah_daughter_of_anah -> aholibamah: Gen 36:2: 'Oholibamah daughter of Anah' is the one wife of Esau; 36:5 her sons. Same woman
+  aholibamah: [aholibamah_daughter_of_anah]
+  #   bashemath -> bashemath_daughter_of_elon: Gen 26:34: 'Basemath daughter of Elon the Hittite', one wife. Caution: bashemath's spouse_
+  bashemath_daughter_of_elon: [bashemath]
+  #   the_believers_in_crete -> believers_in_crete: Titus 3:1: 'Remind the believers' - one group Titus is to remind; the two records hold the
+  believers_in_crete: [the_believers_in_crete]
+  #   the_believers_in_god -> believers_in_god: Titus 3:8: 'those who have believed God' - one phrase, one group (three records of it: pai
+  #   they_which_have_believed_in_god -> believers_in_god: Titus 3:8: same phrase; both end up in believers_in_god (pairs 5-6).
+  believers_in_god: [the_believers_in_god, they_which_have_believed_in_god]
+  #   bildad_the_shuhite -> bildad: Job 2:11: 'Bildad the Shuhite', one of the three friends - same man.
+  bildad: [bildad_the_shuhite]
+  #   brawler -> brawlers: Titus 3:2: one word 'peaceable' (KJV 'no brawlers') in one verse; two concept cards for it
+  brawlers: [brawler]
+  #   camel_s_hair -> camels_hair: Mark 1:6: 'clothed in camel's hair' - one garment, both records John wore.
+  camels_hair: [camel_s_hair]
+  #   dedan -> dedan_son_of_jokshan: Gen 25:3: 'Jokshan was the father of Sheba and Dedan... the sons of Dedan' - one man; keep
+  dedan_son_of_jokshan: [dedan]
+  #   east_of_eden -> east_of_the_garden_of_eden: Gen 3:24: 'stationed cherubim on the east side of the Garden of Eden' - one place.
+  east_of_the_garden_of_eden: [east_of_eden]
+  #   er -> er_son_of_judah: Gen 38:3, 38:7: 'Judah named him Er... Er, Judah's firstborn' - one man; keep disambiguate
+  er_son_of_judah: [er]
+  #   rivers -> floods: Job 20:17: 'the streams, the rivers flowing with honey and cream' - one picture (in Hebrew
+  floods: [rivers]
+  #   foolish_assessment -> foolish: Titus 3:3: 'at one time we too were foolish' - one word, both records 'us assessed_as'.
+  foolish: [foolish_assessment]
+  #   a_fugitive_and_a_vagabond -> fugitive_and_vagabond: Gen 4:12: one sentence on Cain, 'a fugitive and a wanderer on the earth'; both records car
+  fugitive_and_vagabond: [a_fugitive_and_a_vagabond]
+  #   gentle -> gentle_obligation: Titus 3:2: 'to be peaceable and gentle' - one requirement on the same believers, two farm 
+  gentle_obligation: [gentle]
+  #   girdle_of_a_skin -> girdle_of_skin: Mark 1:6: 'a leather belt around his waist' - one belt.
+  girdle_of_skin: [girdle_of_a_skin]
+  #   hateful_assessment -> hateful: Titus 3:3: 'hating one another' (KJV 'hateful') - one word, both 'us assessed_as'.
+  hateful: [hateful_assessment]
+  #   gen_1_3_speech -> let_there_be_light: Gen 1:3: 'And God said, Let there be light' - one utterance, both asserted_by God.
+  let_there_be_light: [gen_1_3_speech]
+  #   the_lights -> lights: Gen 1:14-17: 'Let there be lights in the expanse... God set these lights' - the same light
+  lights: [the_lights]
+  #   lot_elder_daughter -> lots_elder_daughter: Gen 19:31: 'the older daughter said to the younger' - one woman (mother of Moab, 19:37).
+  lots_elder_daughter: [lot_elder_daughter]
+  #   lot_younger_daughter -> lots_younger_daughter: Gen 19:31: 'the younger' - one woman (mother of Ben-ammi, 19:38).
+  lots_younger_daughter: [lot_younger_daughter]
+  #   manasseh -> manasseh_son_of_joseph: Gen 41:51: 'Joseph named the firstborn Manasseh' - one man; 'manasseh' has no relations.
+  manasseh_son_of_joseph: [manasseh]
+  #   midian_person -> midian: Gen 25:2: Keturah 'bore him... Midian' - one son; both records carry the same five sons of
+  midian: [midian_person]
+  #   not_brawlers -> not_brawlers_obligation: Titus 3:2: 'to be peaceable' - one requirement on the same believers, two farm runs.
+  not_brawlers_obligation: [not_brawlers]
+  #   onan -> onan_son_of_judah: Gen 38:4, 38:8: 'she named him Onan... Judah said to Onan' - one man.
+  onan_son_of_judah: [onan]
+  #   the_people_of_judea_and_jerusalem -> people_of_judea_and_jerusalem: Mark 1:5: 'People went out to him from all of Jerusalem and the countryside of Judea... ba
+  people_of_judea_and_jerusalem: [the_people_of_judea_and_jerusalem]
+  #   ready_to_every_good_work -> ready_for_every_good_work_obligation: Titus 3:1: 'ready for every good work' - one requirement, two farm runs.
+  ready_for_every_good_work_obligation: [ready_to_every_good_work]
+  #   rib_object -> rib: Gen 2:21-22: 'He took one of the man's ribs... from the rib... He made a woman' - one rib.
+  rib: [rib_object]
+  #   shelah -> shelah_son_of_judah: Gen 38:5, 38:11: 'named him Shelah... my son Shelah' - one man.
+  shelah_son_of_judah: [shelah]
+  #   shewing_all_meekness_unto_all_men -> show_meekness_to_all_men_obligation: Titus 3:2: 'showing full consideration to everyone' - one requirement, two farm runs.
+  show_meekness_to_all_men_obligation: [shewing_all_meekness_unto_all_men]
+  #   subject_to_principalities_and_powers -> subject_to_principalities_and_powers_obligation: Titus 3:1: 'submit to rulers and authorities' - one requirement, two farm runs.
+  subject_to_principalities_and_powers_obligation: [subject_to_principalities_and_powers]
+  #   ground_object -> the_ground: Gen 3:17: 'cursed is the ground because of you'; 3:19 'return to the ground' - both record
+  the_ground: [ground_object]
+  #   light_day_one -> the_light: Gen 1:3-5: 'there was light... God called the light day' - one created light, both records
+  the_light: [light_day_one]
+  #   titus_3_8_faithful_saying -> titus_3_8_saying: Titus 3:8: 'This saying is trustworthy' - one statement, both asserted_by Paul.
+  titus_3_8_saying: [titus_3_8_faithful_saying]
+  #   uz -> uz_land: Job 1:1: 'a man in the land of Uz' - one land; keep the disambiguated id (people named Uz 
+  uz_land: [uz]
+  #   zarah -> zarah_son_of_judah: Gen 38:30: 'his brother came out with the scarlet thread... named Zerah' - one man, twin o
+  #   (recorded with the earlier zerah entry above: zarah_son_of_judah: [zerah, zarah])
+  #   zophar_the_naamathite -> zophar: Job 2:11: 'Zophar the Naamathite' - one man.
+  zophar: [zophar_the_naamathite]
+
+  # --- one man recorded twice, merged 2026-10-13 (Doug approving) ---------
+  # Found by tools/same_person_candidates.py (same relation to the same person
+  # + same name consonants, never named in one verse). Folded by hand per
+  # docs/OPERATIONS.md; the kept record lists each in `merged_from`.
+  #   lamech_the_cainite -> lamech_son_of_methusael: Gen 4:18 makes Methusael the father of Lamech and Gen 4:19 goes straight on: 'And Lamech married two women, one named Adah and the other Zillah' - the text introduces no second Lamech.
+  lamech_son_of_methusael: [lamech_the_cainite]        # Gen 4:18-19
+  #   nahor_father_of_terah -> nahor_son_of_serug: Gen 11:22 Serug fathers Nahor, Gen 11:24-25 that Nahor fathers Terah; Luke 3:34 gives the same line.
+  nahor_son_of_serug: [nahor_father_of_terah]          # Gen 11:22-25 / Luke 3:34
+  #   job_1_15_messenger -> job_1_14_messenger: Job 1:14-15 is one messenger's speech; 1:16 begins 'While he was still speaking, another messenger came' - so the messengers after him are the second, third and fourth, not the third, fourth and fifth.
+  job_1_14_messenger: [job_1_15_messenger]             # Job 1:14-16
+
+  # --- `korah` split in two, 2026-10-13 (Doug approving) -------------------
+  # The bare record joined two men by the name alone. 1Chr 1:35 ('The sons of
+  # Esau: Eliphaz, Reuel, Jeush, Jalam, and Korah') is Esau's son, the Korah
+  # of Gen 36:5: that verse and its `father_of` relation went to
+  # `korah_son_of_esau`. Jude 1:11 ('perished in Korah's rebellion', 'Core' in
+  # the KJV) names the Korah of Numbers 16: that verse, the KJV spelling and
+  # the old card (which described Jude's Korah) went to `korah_son_of_izhar`,
+  # which lists `korah` in `merged_from`, so an old address still opens him.
+  # Deliberately NOT written as a `same:` alias: `korah` is no one man's other
+  # name, and an alias would fold it into one of them (see the note above on
+  # `korah_son_of_esau: [korah]`).
+  #   korah -> (1Chr 1:35) korah_son_of_esau, (Jude 1:11) korah_son_of_izhar
+
+distinct:
+
+  # "Thy name shall be called no more Jacob, but Israel" (Gen 32:28, 35:10).
+  # The decomposer records that as `jacob -titled-> israel` and mints `israel`
+  # as a TITLE, which is right and is what the vocabulary asks for -- `titled`
+  # takes a title, not a person.
+  #
+  # But `same:` aliases `israel` onto `jacob`, from when the only `israel` in
+  # the graph was a duplicate person record for the same man. The alias then
+  # swallowed the title, and the relation recording the renaming collapsed
+  # into `jacob -titled-> jacob`: **the identity merge destroyed the verse
+  # that justifies it.**
+  #
+  # Splits are resolved before aliases, so naming the title separately keeps
+  # both facts -- that Jacob and Israel are one man, and that he was given
+  # that name at Peniel.
+  israel:
+    - id: israel_title
+      batches: [gen-farm-20260829-182034]
+      disambiguation: the name given to Jacob at Peniel (Gen 32:28, 35:10); the title itself, distinct from Jacob the man and from the nation
+
+  # Tema is a son of Ishmael (Gen 25:15, 1Chr 1:30) and the desert place his
+  # descendants settled, which is the one Job means: "the troops of Tema
+  # looked" (Job 6:19), and Isaiah and Jeremiah use it the same way (Isa
+  # 21:14, Jer 25:23). Both readings were right and they collided on one id,
+  # which typed a man as a place and invalidated `ishmael -father_of-> tema`.
+  tema:
+    - id: tema_place
+      batches: [job-farm-20260829-155817]
+      disambiguation: the place in the Arabian desert (Job 6:19, Isa 21:14, Jer 25:23); distinct from Tema son of Ishmael
+
+  # Ophir likewise: a son of Joktan (Gen 10:29, 1Chr 1:23) and the country his
+  # name came to mean, proverbial for gold -- "the gold of Ophir" (Job 22:24,
+  # Ps 45:9, Isa 13:12) and where Solomon's fleet sailed (1Kgs 9:28).
+  ophir:
+    - id: ophir_place
+      batches: [job-farm-20260829-155817]
+      disambiguation: the gold-bearing country (1Kgs 9:28, Job 22:24, Ps 45:9); distinct from Ophir son of Joktan
+
+  # Two families called Harim, and Ezra 2 counts them separately: "the children
+  # of Harim, three hundred and twenty" among Israel (2:32) and "the children of
+  # Harim, a thousand and seventeen" among the priests (2:39). Ezra 10 lists both
+  # in their own divisions, at v31 and v21.
+  the sons of harim:
+    - id: family_of_harim
+      batches: [ezra-roster]
+      disambiguation: a lay family of Israel (Ezra 2:32, Ezra 10:31)
+    - id: family_of_harim_priests
+      batches: [ezra-roster]
+      disambiguation: a priestly family (Ezra 2:39, Ezra 10:21)
+
+  # Shemaiah and Shemariah are two names, not two spellings. They are paired
+  # only because they sit in one family and one roster, which is what every pair
+  # of brothers looks like to the check.
+  shemaiah:
+    - id: shemaiah_of_harim
+      batches: [ezra-roster]
+      disambiguation: of the sons of Harim, named at Ezra 10:31; distinct from Shemariah of the same family
+    - id: shemariah_of_harim
+      batches: [ezra-roster]
+      disambiguation: of the sons of Harim, named at Ezra 10:32; distinct from Shemaiah of the same family
+
+  # Aridatha (Esth 9:8) and Aridai (Esth 9:9) are two of Haman's ten sons,
+  # listed one verse apart. They share a father and a verse because they are
+  # brothers in one roll -- which is what the consolidation check keys on, so
+  # it will keep proposing them. It is wrong, and this says so.
+  aridai:
+    - id: aridatha
+      batches: [2chr-ezra-neh-esth]
+      disambiguation: son of Haman, named at Esth 9:8
+    - id: aridai
+      batches: [2chr-ezra-neh-esth]
+      disambiguation: son of Haman, named at Esth 9:9, a different son from Aridatha
+
+  # Sheshbazzar and Zerubbabel are identified with each other by some readers
+  # and not others. The text never equates them: Sheshbazzar receives the
+  # vessels (Ezra 1:8) and lays the foundation (Ezra 5:16), Zerubbabel builds.
+  # Merging them would settle a question the corpus leaves open.
+  sheshbazzar:
+    - id: sheshbazzar
+      batches: [2chr-ezra-neh-esth]
+      disambiguation: prince of Judah made governor by Cyrus; the text does not identify him with Zerubbabel
+    - id: zerubbabel
+      batches: [2chr-ezra-neh-esth]
+      disambiguation: son of Shealtiel, who led the return and rebuilt the altar
+
+  # Beor father of Balaam, of Pethor by the river, vs. Beor whose son Bela
+  # reigned in Edom. One entity carried both sons until Hebrews sent someone
+  # looking at the New Testament spellings -- 2 Pet 2:15 calls Balaam "the son
+  # of Bosor" -- and the graph was found asserting a parentage no verse states.
+  # Nothing in the text joins the two men beyond the name.
+  beor:
+    - id: beor
+      batches: [gen-26-50]
+      disambiguation: father of Bela, king of Edom (Gen 36:32)
+    - id: beor_father_of_balaam
+      batches: [josh-judg-ruth]
+      disambiguation: father of Balaam of Pethor (Num 22:5); "Bosor" in 2 Pet 2:15
+
+  # Abimelech king of Gerar, who dealt with Abraham and Isaac, vs. Abimelech son
+  # of Gideon, who killed his brothers and seized Shechem. Centuries apart.
+  abimelech:
+    - id: abimelech_king_of_gerar
+      batches: [gen-1-25, gen-26-50]
+      disambiguation: Philistine king of Gerar in the patriarchs' day (Gen 20:2)
+    - id: abimelech_son_of_gideon
+      batches: [josh-judg-ruth]
+      disambiguation: son of Gideon who slew his brothers and ruled Shechem (Judg 9:1-5)
+
+  # Aram son of Shem (Gen 10:23) vs. Ram son of Hezron in Judah's line, whom
+  # Matthew's Greek spells "Aram" (Matt 1:3-4). Unrelated men.
+  aram:
+    - id: aram_son_of_shem
+      batches: [1chr, gen-1-25]
+      disambiguation: son of Shem, brother of Uz and Hul (Gen 10:23)
+    - id: ram_son_of_hezron
+      batches: [matt]
+      disambiguation: son of Hezron in Judah's line; "Aram" in Matthew's Greek (Matt 1:3)
+
+  # Jonathan son of Saul vs. Jonathan son of Gershom, the Danite priest.
+  jonathan:
+    - id: jonathan_son_of_saul
+      batches: [1sam, 1chr]
+      disambiguation: eldest son of King Saul, David's friend (1Sam 14:49)
+    - id: jonathan_son_of_gershom
+      batches: [josh-judg-ruth]
+      disambiguation: Levite priest to the Danites (Judg 18:30)
+
+  # Phinehas son of Eleazar (the zealous priest) vs. Phinehas son of Eli
+  # (who died at Aphek). Two generations apart.
+  phinehas:
+    - id: phinehas_son_of_eleazar
+      batches: [1chr, josh-judg-ruth]
+      disambiguation: grandson of Aaron, the priest of Num 25 (1Chr 6:4)
+    - id: phinehas_son_of_eli
+      batches: [1sam]
+      disambiguation: son of Eli, died carrying the ark (1Sam 4:11)
+
+  # Ahitub son of Amariah in the Chronicles priestly line vs. Ahitub son of
+  # Phinehas, Ahijah's father in Saul's day.
+  ahitub:
+    - id: ahitub_son_of_amariah
+      batches: [1chr]
+      disambiguation: priestly line of 1Chr 6:7
+    - id: ahitub_son_of_phinehas
+      batches: [1sam]
+      disambiguation: son of Phinehas son of Eli; father of Ahiah (1Sam 14:3)
+
+  # Eleazar son of Aaron vs. the Eleazar of Matthew's post-exilic list.
+  eleazar:
+    - id: eleazar_son_of_aaron
+      batches: [1chr, josh-judg-ruth]
+      disambiguation: third son of Aaron, high priest after him (1Chr 6:4)
+    - id: eleazar_son_of_eliud
+      batches: [matt]
+      disambiguation: in Joseph's ancestry after the exile (Matt 1:15)
+
+  # Jotham king of Judah vs. Gideon's youngest son, who escaped Abimelech.
+  jotham:
+    - id: jotham_king_of_judah
+      batches: [1chr]
+      disambiguation: son of Uzziah/Azariah, king of Judah (1Chr 3:12)
+    - id: jotham_son_of_gideon
+      batches: [josh-judg-ruth]
+      disambiguation: youngest son of Gideon; spoke the parable at Shechem (Judg 9:5-7)
+
+  # Hezron son of Reuben vs. Hezron son of Pharez in Judah's line.
+  hezron:
+    - id: hezron_son_of_reuben
+      batches: [1chr]
+      disambiguation: third son of Reuben (1Chr 5:3)
+    - id: hezron_son_of_pharez
+      batches: [josh-judg-ruth, matt]
+      disambiguation: son of Pharez, ancestor of David (Ruth 4:18)
+  esrom:
+    - id: hezron_son_of_pharez
+      batches: [matt]
+      disambiguation: son of Pharez; "Esrom" in Matthew's Greek (Matt 1:3)
+
+  # Carmi son of Reuben vs. Carmi son of Zabdi, Achan's father.
+  carmi:
+    - id: carmi_son_of_reuben
+      batches: [1chr]
+      disambiguation: son of Reuben (1Chr 5:3)
+    - id: carmi_son_of_zabdi
+      batches: [josh-judg-ruth]
+      disambiguation: father of Achan, of the tribe of Judah (Josh 7:1)
+
+  # Hanoch son of Reuben vs. Hanoch son of Midian.
+  hanoch:
+    - id: hanoch_son_of_reuben
+      batches: [1chr]
+      disambiguation: firstborn of Reuben (1Chr 5:3)
+    - id: hanoch_son_of_midian
+      batches: [gen-1-25]
+      disambiguation: son of Midian, grandson of Abraham by Keturah (Gen 25:4)
+
+  # Batch-scoped renames. These names each belong to more than one man in
+  # scripture, so they are corrected per batch rather than aliased globally.
+  # Each was confirmed against the parentage the batch itself recorded.
+  shelah:
+    - id: salah
+      batches: [1chr]
+      disambiguation: son of Arphaxad, father of Eber; "Salah" in Genesis (Gen 10:24)
+  lamech:
+    - id: lamech_father_of_noah
+      batches: [1chr]
+      disambiguation: son of Methuselah, father of Noah (Gen 5:28-29)
+  eliab:
+    - id: eliab_son_of_jesse
+      batches: [1chr]
+      disambiguation: firstborn of Jesse, eldest brother of David (1Chr 2:13)
+  tubal:
+    - id: tubal_son_of_japheth
+      batches: [1chr]
+      disambiguation: son of Japheth (1Chr 1:5)
+  meshech:
+    - id: meshech_son_of_japheth
+      batches: [gen-1-25]
+      disambiguation: son of Japheth (Gen 10:2)
+  uz:
+    - id: uz_son_of_aram
+      batches: [1chr]
+      disambiguation: son of Aram; 1Chr 1:17 lists him directly under Shem
+  azariah:
+    - id: uzziah
+      batches: [1chr]
+      disambiguation: son of Amaziah, king of Judah; called Uzziah in 2Chr 26 and Ozias in Matt 1:8
+  ozias:
+    - id: uzziah
+      batches: [matt]
+      disambiguation: king of Judah; "Ozias" in Matthew's Greek (Matt 1:8)
+  # Manasseh king of Judah (son of Hezekiah) vs. Manasseh son of Joseph, the
+  # tribal patriarch. Half a millennium apart.
+  manasseh:
+    - id: manasseh_king_of_judah
+      batches: [1chr, 2chr-ezra-neh-esth, matt, kings, prophets-wisdom]
+      disambiguation: son of Hezekiah, king of Judah (2Chr 33:1)
+    - id: manasseh_son_of_joseph
+      batches: [gen-26-50, exod-lev-num-deut]
+      disambiguation: firstborn of Joseph and Asenath, tribal patriarch (Gen 41:51)
+
+  # Jobab son of Joktan (Gen 10:29) vs. Jobab son of Zerah of Bozrah, king of
+  # Edom (Gen 36:33).
+  jobab:
+    - id: jobab_son_of_joktan
+      batches: [gen-1-25, 1chr]
+      disambiguation: son of Joktan, of Shem's line (Gen 10:29)
+    - id: jobab_king_of_edom
+      batches: [gen-26-50]
+      disambiguation: son of Zerah of Bozrah, king of Edom (Gen 36:33)
+
+  # A pre-existing fusion, caught only once 2 Chronicles arrived: 1 Chronicles
+  # left Joash king of Judah unqualified, and Judges has an unrelated Joash who
+  # is Gideon's father. The bare id was standing for both.
+  joash:
+    - id: joash_king_of_judah
+      batches: [1chr, 2chr-ezra-neh-esth, kings]
+      disambiguation: son of Ahaziah, hidden by Jehosheba and crowned by Jehoiada (2Chr 24:1)
+    - id: joash_father_of_gideon
+      batches: [josh-judg-ruth]
+      disambiguation: the Abiezrite of Ophrah, father of Gideon (Judg 6:11)
+
+  # Matthew's "Urias" (Matt 1:6, "her that had been the wife of Urias") is Uriah
+  # the Hittite. Scoped to the matt batch so that later books' other Uriahs keep
+  # the bare id available.
+  uriah:
+    - id: uriah_hittite
+      batches: [matt]
+      disambiguation: Uriah the Hittite, husband of Bathsheba; "Urias" in Matthew's Greek (Matt 1:6)
+  asshur:
+    - id: asshur_son_of_shem
+      batches: [1chr]
+      disambiguation: son of Shem (1Chr 1:17)
+  dedan:
+    - id: dedan_son_of_raamah
+      batches: [1chr]
+      disambiguation: son of Raamah, of Cush's line (1Chr 1:9)
+
+# --- best reading, not settled fact ----------------------------------------
+# Identifications that are the most reasonable reading of the text without being
+# established by it. Merged exactly like `same`, but reported on every merge so
+# they stay visible and easy to reverse rather than hardening into assumptions
+# nobody remembers making. Put the reasoning in `notes` below.
+#
+# Moving an entry from here to `same` is a claim that the question is closed.
+# Moving it to `distinct` splits the people again. Both are one-line edits.
+provisional: {}
+#   ahimelech:
+#     - ahiah          # both "son of Ahitub", priest under Saul (1Sam 14:3, 22:9);
+#                      # 1 Samuel never equates them, so this stays provisional
+
+# --- the text itself disagrees ---------------------------------------------
+# Ids where scripture gives more than one parent and the disagreement is real,
+# not an extraction error. Both edges are kept; the merge notes them instead of
+# demanding a resolution, because picking one would be inventing an answer the
+# text does not give.
+contested_parentage:
+  abigail_mother_of_amasa: >
+    2Sam 17:25 calls her "Abigail the daughter of Nahash, sister to Zeruiah
+    Joab's mother"; 1Chr 2:13-16 lists her among Jesse's children, making her
+    David's sister. Both agree she is Zeruiah's sister and Amasa's mother.
+    Harmonizations exist (Nahash as the first husband of Jesse's wife, making
+    Abigail and Zeruiah David's half-sisters; or Nahash as a second name for
+    Jesse) but the two texts as they stand name different fathers. Both edges
+    are kept.
+  kish: >
+    1Sam 9:1 makes Kish the son of Abiel; 1Chr 8:33 and 9:39 make him the son of
+    Ner. Harmonizations exist (Ner as a second name, or a dropped generation) but
+    the text as it stands disagrees with itself.
+  joseph_husband_of_mary: >
+    The best-known disagreement in scripture. Matt 1:16 makes Joseph the son of
+    Jacob; Luke 3:23 makes him the son of Heli. Harmonizations exist (one line
+    legal and the other biological, or one tracing Mary's descent) but the two
+    texts as they stand name different fathers. Both edges are kept.
+  shealtiel: >
+    Matt 1:12 makes Shealtiel the son of Jechonias; Luke 3:27 the son of Neri.
+    The same Matthew/Luke divergence, one generation further back.
+  salah: >
+    Luke 3:35-36 inserts a second Cainan between Arphaxad and Salah, following
+    the Septuagint; Gen 10:24 and 1Chr 1:18 have Arphaxad beget Salah directly.
+    Both are recorded, and the Lukan Cainan is kept under his own id.
+
+# --- one text summarising a line the corpus gives in full ------------------
+#
+# Not contested. The texts agree; one of them abridges, and the corpus
+# supplies the intervening generations elsewhere. The summarising edge is
+# typed ancestor_of rather than father_of, which is true whether the writer
+# meant a direct generation or used the ordinary idiom in which a man begets
+# his descendants -- father_of would be true only on the first reading.
+#
+# Kept as a record rather than as a validator exemption: with one father_of
+# each, none of these is flagged any more.
+compressed_lineage:
+  uzziah: >
+    1Chr 3:11-12 gives the line Joram -> Ahaziah -> Joash -> Amaziah -> Azariah
+    (Uzziah). Matt 1:8 compresses it to "Joram begat Ozias", skipping three
+    kings. Both edges are kept and typed differently: Amaziah father_of Uzziah
+    from Kings and Chronicles, Jehoram ancestor_of Uzziah from Matthew. The
+    second is true whether Matthew meant a direct generation or the ordinary
+    idiom, which is why it is the honest type -- father_of would settle a
+    question the verse does not.
+
+    The identification that makes the gap visible at all is not stated
+    anywhere: Ozias is Azariah because 2Kgs 14:21 and 2Chr 26:1 describe one
+    coronation twice, same age and same father, under two names.
+
+    Why the count comes out at fourteen with three names absent is not
+    recorded here. Readings exist; the corpus offers none of them.
+  jehoiachin: >
+    2Kgs 24:6 makes him the son of Jehoiakim, and Jer 27:20 says the same of
+    Jeconiah, which is what identifies the two records as one man. Matt 1:11
+    makes him the son of Josias -- his grandfather -- skipping Jehoiakim
+    entirely, the same abridgement Matthew makes at 1:8 over Uzziah. Both edges
+    are kept and typed differently: Jehoiakim father_of Jehoiachin from Kings
+    and Chronicles, Josiah ancestor_of Jehoiachin from Matthew.
+
+    Worth saying why, because this is the second-commonest reason a graph goes
+    quietly wrong. The scribes who carried these texts could have reconciled
+    the two genealogies at any point in a thousand years of copying, and did
+    not. They transmitted a line that visibly disagrees with the one in Kings
+    rather than smoothing it, which means the disagreement is evidence and not
+    damage. A graph that resolves it is discarding the one thing the manuscript
+    tradition went to the trouble of preserving.
+
+    Two verses carry the identification and a third carries the conflict, so
+    the reader can see all of it without leaving the citations.
+  gether: >
+    Gen 10:23 lists Gether among the sons of Aram; 1Chr 1:17 lists him directly
+    under Shem, compressing a generation. Same man, two genealogical framings.
+  hul: >
+    Gen 10:23 lists Hul among the sons of Aram; 1Chr 1:17 lists him directly
+    under Shem, compressing a generation. Same man, two genealogical framings.
+  uz_son_of_aram: >
+    Gen 10:23 lists Uz among the sons of Aram; 1Chr 1:17 lists him directly under
+    Shem, compressing a generation. Same man, two genealogical framings.
+
+# --- notes on contested identifications ------------------------------------
+notes:
+  joses_is_not_joseph: >
+    The ASV renders both "Joses" and "Joseph" as Joseph, so the crosswalk offers
+    the pair — but they are different men and must stay separate. The Joses of
+    Matt 13:55 is a brother of Jesus; the Joses of Acts 4:36 is Barnabas's given
+    name; neither is Joseph son of Jacob. This is the standing answer whenever
+    the crosswalk raises it again.
+  salah_is_not_shelah: >
+    Likewise Salah son of Arphaxad (Gen 10:24) and Shelah son of Judah (Gen 38:5)
+    are both "Shelah" in the ASV. Different men, different fathers, kept apart.
+  zerubbabel: >
+    Ezra 1:8 names Sheshbazzar and Ezra 3:2 Zerubbabel as leading the return.
+    Many readers treat them as one man, some as two. Merged here; if you prefer
+    them separate, delete the line above and the graph will keep them apart.
+  uzziah: >
+    2Kgs 15:1 calls him Azariah, 2Chr 26:1 Uzziah. Same king of Judah.

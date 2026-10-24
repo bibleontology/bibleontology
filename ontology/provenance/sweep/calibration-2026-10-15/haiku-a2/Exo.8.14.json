@@ -1,0 +1,22 @@
+{"ref": "Exo.8.14",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "'their' is third masculine plural, and the only masculine plural people in the verse are the magicians (w4); it is the possessive of 'their secret arts'.", "category": "possessive in a noun phrase"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "'they were not able' is third common plural and is the subject of the failed attempt; the magicians are the actors of the clause before, so the implied subject is the same group.", "category": "implied subject of a failed attempt"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "keep", "why": "lamed plus infinitive construct ('to bring forth the gnats') after the act, saying what the act was for; it is not after a verb of intending or speaking.", "category": "infinitive of purpose"},
+  {"src": "cl0", "type": "likewise", "dst": "Exo.8.13#cl2", "action": "add", "why": "wayyiqtol 'did so' (ken) with a named subject, the magicians, who were not commanded; they copy the deed just done, Aaron's striking of the dust, by their own arts. This is imitation, not fulfilment.", "category": "did likewise, not fulfilment"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "'and then' is within-verse only by its link type definition. This is a continuation across the verse boundary, and this verse's clauses are cl0 to cl3 with no cl4.", "category": "cross-verse then"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "the plain 'and' is replaced by the more specific failed_result: an attempt with a purpose, then 'and' plus a negated verb of being able.", "category": "plain and read as failed attempt"},
+  {"src": "cl0", "type": "failed_result", "dst": "cl2", "action": "add", "why": "the attempt (cl0 with purpose cl1) is followed by 'and' plus a negated qatal of being able, so the purpose was not achieved.", "category": "failed attempt"},
+  {"src": "cl2", "type": "then", "dst": "cl3", "action": "keep", "why": "the wayyiqtol continues the narrative line after the failure clause; 'and then' is the within-verse continuation.", "category": "narrative continuation"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl2"}, {"role": "group_subject", "node": "w4"}], "divine": false, "why": "the attempt and its failure are two acts of one agent, the magicians, each stating its subject only in its verb. The purpose clause cl1 is nested inside cl0 and is not a member.", "category": "one agent's attempt and its failure"}
+ ],
+ "none_fit": [
+  {"where": "cl4 -then-> cl0 (builder link, cross-verse)", "what": "a narrative continuation across the verse boundary; the 'then' type is within-verse only and link_types has no episode-level link for it"}
+ ],
+ "cant_tell": [
+  {"what": "the clause that the builder link source 'cl4' refers to", "why": "this verse's clauses are cl0 to cl3, and cl4 is a local id from another verse, probably Exo.8.13#cl4; I was not to open other files, so I cannot confirm it"}
+ ]}

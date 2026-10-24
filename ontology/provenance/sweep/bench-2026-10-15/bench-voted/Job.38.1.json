@@ -1,0 +1,37 @@
+{
+ "ref": "Job.38.1",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "The verb 'he said' is third masculine singular, a wayyiqtol continuing 'the LORD answered Job'. The speaker of the whole speech is the LORD (w2), the only masculine singular proper subject who acts here.",
+   "category": "implied subject of narrative verb",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Wayyiqtol with a separate waw: answered, and then said. The narrative line continues.",
+   "category": "narrative sequence",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether the speech's parts from 38:2 to 38:38 form one turn or several nested turns",
+   "why": "Only 38:1 is judged here; the parts are linked when those verses are judged."
+  },
+  {
+   "what": "The speech introduced by 'and said' (cl1) has its content from 38:2 onward. Its content link and turn are recorded at 38:2, where the first said clause is judged.",
+   "why": "A link from this saying clause cannot be written forward into a later verse from here, so it is recorded once, at the first said clause."
+  }
+ ],
+ "voted": 3
+}

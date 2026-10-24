@@ -1,0 +1,79 @@
+{
+ "ref": "Exo.8.11",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w2",
+   "divine": false,
+   "why": "'his heart' (third masculine singular possessive) is Pharaoh's: the hardening is his.",
+   "category": "possessive of the subject"
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.8.8#c2",
+   "divine": false,
+   "why": "masculine plural object 'them' of 'would not listen to': Moses and Aaron, the composite of the two named in this verse.",
+   "category": "plural object pronoun"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "third masculine singular 'he would not listen': the subject of the hardening and refusal is Pharaoh.",
+   "category": "implied subject"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "'he saw that there was relief': that after a verb of seeing introduces what is seen.",
+   "category": "object clause of seeing"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl1 is the object of cl0's seeing, not an event that follows it; the narrative line runs from cl0 to cl2.",
+   "category": "then from an embedded clause"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "a separate-word waw joins two acts of Pharaoh. The text does not say the hardening results from seeing the relief.",
+   "category": "separate waw between acts"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "R4 gives this pair as a will hardened, then the refusal that follows, which is result rather than and.",
+   "category": "hardened will then refusal"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'he hardened his heart' and then 'would not listen to them': the refusal is what the hardening brings about (R4).",
+   "category": "hardened will then refusal"
+  },
+  {
+   "src": "cl3",
+   "type": "as",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "'just as the LORD had said': a comparison to a saying, which declares the refusal the fulfilment of an earlier word.",
+   "category": "comparison to an earlier word"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

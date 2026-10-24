@@ -1,0 +1,47 @@
+{
+ "ref": "Job.38.7",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The temporal clause 'while ... sang together' holds the infinitive 'sang together' nested in its role. The builder lists this link twice; it is kept once.",
+   "category": "infinitive nested in temporal clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The second predicate 'and they shouted' lies inside the same temporal clause span.",
+   "category": "second predicate inside temporal clause"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The wayyiqtol 'they shouted' follows the infinitive, so the form gives 'and then'. The sense is simultaneous; see none_fit.",
+   "category": "wayyiqtol after infinitive"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "38:7 cl1 then cl2",
+   "what": "Simultaneity (the stars sang while the sons shouted): no link type says 'at the same time'. The form gives 'and then'."
+  },
+  {
+   "where": "38:7 cl0",
+   "what": "A time setting for the acts of 38:4 to 38:6 (when the foundations were laid): no cross-verse temporal link type."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "The implied subject 'they' of cl2 ('they shouted', third masculine plural) has no slot.",
+   "why": "The text makes it 'all the sons of God' (w7 to w9), which has no composite candidate, so no choice can be recorded for it."
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+# Bible Ontology: the published exports, described (VoID and DCAT).
+# Written by tools/export_void.py; the terms follow ontology/ns-version.json, graph_license.
+
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/Clear-Bible/macula-hebrew/> dcterms:title "MACULA Hebrew Linguistic Datasets, available at https://github.com/Clear-Bible/macula-hebrew/" .
+<https://github.com/Clear-Bible/macula-greek/> dcterms:title "MACULA Greek Linguistic Datasets, available at https://github.com/Clear-Bible/macula-greek/" .
+<https://www.STEPBible.org> dcterms:title "STEP Bible" .
+<https://bereanbible.com> dcterms:title "The Berean Standard Bible (public domain)" .
+
+<https://bibleontology.org/dataset> a void:Dataset, dcat:Dataset ;
+    dcterms:title "Bible Ontology" ;
+    dcterms:description "A knowledge graph of what the text of the Bible says: its people, places, events and claims, each relation resting on its verses and credited to the voice that makes it." ;
+    foaf:homepage <https://bibleontology.org/> ;
+    dcterms:modified "2026-10-23"^^xsd:date ;
+    dcat:version "2026.10.23" ;
+    void:uriSpace "https://bibleontology.org/e/" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:creator [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:publisher [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:source <https://github.com/Clear-Bible/macula-hebrew/>, <https://github.com/Clear-Bible/macula-greek/>, <https://www.STEPBible.org>, <https://bereanbible.com> ;
+    void:vocabulary <https://bibleontology.org/ns/claim#>, <https://bibleontology.org/ns/relation#>, <https://bibleontology.org/ns/meaning#>, <https://bibleontology.org/ns/structure#>, <http://www.w3.org/ns/prov#>, <http://www.w3.org/ns/dqv#> ;
+    void:subset <https://bibleontology.org/dataset/claims-rdf12>, <https://bibleontology.org/dataset/claims>, <https://bibleontology.org/dataset/entities>, <https://bibleontology.org/dataset/ties>, <https://bibleontology.org/dataset/card-words> .
+
+<https://bibleontology.org/dataset/claims-rdf12> a void:Dataset, dcat:Dataset ;
+    dcterms:title "Claims (RDF 1.2)" ;
+    dcterms:description "Every relation as a claim with its verses, certainty and voice: each a triple term, and only the narrator's outright statements also asserted." ;
+    dcterms:isPartOf <https://bibleontology.org/dataset> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:creator [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:publisher [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:source <https://github.com/Clear-Bible/macula-hebrew/>, <https://github.com/Clear-Bible/macula-greek/>, <https://www.STEPBible.org>, <https://bereanbible.com> ;
+    void:vocabulary <https://bibleontology.org/ns/claim#>, <https://bibleontology.org/ns/relation#>, <http://www.w3.org/ns/prov#> ;
+    void:dataDump <https://github.com/bibleontology/bibleontology/raw/main/out/export/claims-rdf12.trig.gz> ;
+    dcat:distribution [ a dcat:Distribution ; dcterms:title "claims-rdf12.trig.gz" ; dcat:mediaType <https://www.iana.org/assignments/media-types/application/trig> ; dcat:compressFormat <https://www.iana.org/assignments/media-types/application/gzip> ; dcat:downloadURL <https://github.com/bibleontology/bibleontology/raw/main/out/export/claims-rdf12.trig.gz> ] .
+
+<https://bibleontology.org/dataset/claims> a void:Dataset, dcat:Dataset ;
+    dcterms:title "Claims (RDF 1.1)" ;
+    dcterms:description "The same claims, each voice's plain triples in its own named graph." ;
+    dcterms:isPartOf <https://bibleontology.org/dataset> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:creator [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:publisher [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:source <https://github.com/Clear-Bible/macula-hebrew/>, <https://github.com/Clear-Bible/macula-greek/>, <https://www.STEPBible.org>, <https://bereanbible.com> ;
+    void:vocabulary <https://bibleontology.org/ns/claim#>, <https://bibleontology.org/ns/relation#>, <http://www.w3.org/ns/prov#> ;
+    void:dataDump <https://github.com/bibleontology/bibleontology/raw/main/out/export/claims.trig.gz> ;
+    dcat:distribution [ a dcat:Distribution ; dcterms:title "claims.trig.gz" ; dcat:mediaType <https://www.iana.org/assignments/media-types/application/trig> ; dcat:compressFormat <https://www.iana.org/assignments/media-types/application/gzip> ; dcat:downloadURL <https://github.com/bibleontology/bibleontology/raw/main/out/export/claims.trig.gz> ] .
+
+<https://bibleontology.org/dataset/entities> a void:Dataset, dcat:Dataset ;
+    dcterms:title "Records, typed" ;
+    dcterms:description "Each record's address and name, and its class where one maps." ;
+    dcterms:isPartOf <https://bibleontology.org/dataset> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:creator [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:publisher [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:source <https://github.com/Clear-Bible/macula-hebrew/>, <https://github.com/Clear-Bible/macula-greek/>, <https://www.STEPBible.org>, <https://bereanbible.com> ;
+    void:vocabulary <https://bibleontology.org/ns/meaning#> ;
+    void:dataDump <https://github.com/bibleontology/bibleontology/raw/main/out/export/entities.ttl.gz> ;
+    dcat:distribution [ a dcat:Distribution ; dcterms:title "entities.ttl.gz" ; dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ; dcat:compressFormat <https://www.iana.org/assignments/media-types/application/gzip> ; dcat:downloadURL <https://github.com/bibleontology/bibleontology/raw/main/out/export/entities.ttl.gz> ] .
+
+<https://bibleontology.org/dataset/ties> a void:Dataset, dcat:Dataset ;
+    dcterms:title "Navigator ties" ;
+    dcterms:description "How strongly records are tied, with each tie's measure and each centre's floor." ;
+    dcterms:isPartOf <https://bibleontology.org/dataset> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:creator [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:publisher [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:source <https://github.com/Clear-Bible/macula-hebrew/>, <https://github.com/Clear-Bible/macula-greek/>, <https://www.STEPBible.org>, <https://bereanbible.com> ;
+    void:vocabulary <https://bibleontology.org/ns/meaning#>, <http://www.w3.org/ns/dqv#> ;
+    void:dataDump <https://github.com/bibleontology/bibleontology/raw/main/out/export/ties.trig.gz> ;
+    dcat:distribution [ a dcat:Distribution ; dcterms:title "ties.trig.gz" ; dcat:mediaType <https://www.iana.org/assignments/media-types/application/trig> ; dcat:compressFormat <https://www.iana.org/assignments/media-types/application/gzip> ; dcat:downloadURL <https://github.com/bibleontology/bibleontology/raw/main/out/export/ties.trig.gz> ] .
+
+<https://bibleontology.org/dataset/card-words> a void:Dataset, dcat:Dataset ;
+    dcterms:title "Card words" ;
+    dcterms:description "The words on each card with their strength, and which are shown by default." ;
+    dcterms:isPartOf <https://bibleontology.org/dataset> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:creator [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:publisher [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:source <https://github.com/Clear-Bible/macula-hebrew/>, <https://github.com/Clear-Bible/macula-greek/>, <https://www.STEPBible.org>, <https://bereanbible.com> ;
+    void:vocabulary <https://bibleontology.org/ns/meaning#>, <http://www.w3.org/ns/dqv#> ;
+    void:dataDump <https://github.com/bibleontology/bibleontology/raw/main/out/export/card-words.trig.gz> ;
+    dcat:distribution [ a dcat:Distribution ; dcterms:title "card-words.trig.gz" ; dcat:mediaType <https://www.iana.org/assignments/media-types/application/trig> ; dcat:compressFormat <https://www.iana.org/assignments/media-types/application/gzip> ; dcat:downloadURL <https://github.com/bibleontology/bibleontology/raw/main/out/export/card-words.trig.gz> ] .

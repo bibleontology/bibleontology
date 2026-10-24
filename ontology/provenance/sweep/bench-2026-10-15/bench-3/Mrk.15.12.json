@@ -1,0 +1,113 @@
+{
+ "ref": "Mrk.15.12",
+ "referents": [
+  {
+   "slot": "w6",
+   "choice": "none",
+   "divine": false,
+   "why": "Dative 'to them' is the crowd Pilate questions. The crowd of 15:8 and 15:11 is not offered as a candidate here.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "Neuter interrogative 'What' as object of 'do'. It asks which deed is to be done and refers to no candidate; the answer is the action itself.",
+   "category": "interrogative not a referent"
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false,
+   "why": "Relative 'the One' (masculine singular) is Jesus, the person the crowd calls King. Jesus is not offered as a candidate. The candidate King (w13) names the title, not the person, so it does not fit as the referent.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w2",
+   "divine": false,
+   "why": "First singular 'What I should do' inside Pilate's question: the speaker is Pilate. The builder's w2 is correct.",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "Second plural 'you call' inside Pilate's question: the addressees are the crowd, not offered as a candidate.",
+   "category": "referent not in candidate list"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The answering participle is part of the saying verb, nested as the grammar nests it.",
+   "category": "speech nested in a participle"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "The relative clause 'you call King' sits inside the question's noun phrase, as a relative clause does.",
+   "category": "relative clause inside noun phrase"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The question is the said words, nested inside the saying clause.",
+   "category": "speech nested in saying"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self link. The verse opens with the question, so there is no earlier clause within the verse.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The saying clause introduces the question, which is what is said (R1). Kept alongside the turn.",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Mrk.15.12#turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "The part is the question cl2. The answering participle cl1 is the saying clause, not what is said, so it leaves the part; its speech is carried by the content link. Sender is Pilate. The addressee member is removed because the crowd it would name is not an offered candidate.",
+   "category": "turn part is the said clause"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.12 candidates",
+   "what": "Jesus, the referent of 'the One' and of the implied object in this verse, is not offered as a candidate, and neither is the crowd addressed. Both are set to none."
+  }
+ ],
+ "cant_tell": []
+}

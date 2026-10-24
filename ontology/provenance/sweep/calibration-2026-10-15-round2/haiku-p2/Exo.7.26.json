@@ -1,0 +1,239 @@
+{
+ "ref": "Exo.7.26",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "'him' after 'you will say to him' is Pharaoh, the one Moses is sent to (masculine singular, addressee of the commanded speech).",
+   "category": "addressee of a commanded speech"
+  },
+  {
+   "slot": "w18",
+   "choice": "w14",
+   "divine": true,
+   "why": "'my people' is in the LORD's own words (thus says the LORD, cl3), so the first person is the LORD.",
+   "category": "first person inside quoted divine speech"
+  },
+  {
+   "slot": "w21",
+   "choice": "w14",
+   "divine": true,
+   "why": "'that they may serve me' is in the LORD's own words, so 'me' is the LORD.",
+   "category": "first person inside quoted divine speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'go' is an imperative the LORD gives to Moses (cl0), so its implied you is Moses.",
+   "category": "implied subject of a command to the messenger"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'you will say' is the second command in the same chain, addressed to Moses.",
+   "category": "implied subject of a command chain"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w7",
+   "divine": false,
+   "why": "'let go my people' is the innermost quoted command, spoken to Pharaoh, who is told to release them.",
+   "category": "implied you of a quoted command"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w17",
+   "divine": false,
+   "why": "'they may serve me' is third masculine plural; 'people' is a collective singular that takes plural agreement.",
+   "category": "plural agreement with a collective noun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot follow itself; this is a builder self-link.",
+   "category": "self-link"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The weqatal 'you will say' continues the command 'go' (a weqatal continues what it follows).",
+   "category": "command then its continuation"
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "The waw joins a command to a change of person (they serve me), which the and-rule reads as so that.",
+   "category": "and joining command to purpose"
+  },
+  {
+   "src": "cl4",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "add",
+   "why": "Let my people go, so that they may serve me: a third-person yiqtol after a command.",
+   "category": "purpose after command"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "imp1",
+   "action": "add",
+   "why": "The LORD's words to Moses are the collection of commands go and say.",
+   "category": "speech content, command collection"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'You will say to him' introduces 'thus says the LORD', the nested speech.",
+   "category": "speech content, nested"
+  },
+  {
+   "src": "cl3",
+   "type": "content",
+   "dst": "imp4",
+   "action": "add",
+   "why": "'Thus says the LORD' introduces the command let go with its aim.",
+   "category": "speech content, innermost"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "imp1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "The LORD speaks to Moses. Its part is the command collection; the commanded speech Moses gives to Pharaoh is nested as Exo.7.26#g1.",
+   "category": "outer speech holds commands"
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "'Go' and 'tell' are commands joined by and at one level, so one imperative group with two command members. The builder's part role is not an imperative role.",
+   "category": "commands joined by and"
+  },
+  {
+   "id": "Exo.7.26#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": false,
+   "why": "Moses is commanded to say this; the words he speaks are his (R2), addressed to Pharaoh, and the quoted LORD turn is its part.",
+   "category": "commanded speech nested in speech"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "imp4"
+    },
+    {
+     "role": "part",
+     "node": "Exo.7.27#cond0"
+    },
+    {
+     "role": "sender",
+     "node": "w14"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": true,
+   "why": "The innermost quoted speech of the LORD to Pharaoh. The conditional in Exo.7.27 continues the same quotation, so it is a part of this turn (R3).",
+   "category": "quoted divine speech spans verses"
+  },
+  {
+   "id": "imp4",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl4"
+    },
+    {
+     "role": "aim",
+     "node": "cl5"
+    }
+   ],
+   "divine": false,
+   "why": "Let go is the command; that they may serve me is its aim. The builder's part is not an imperative role.",
+   "category": "aim of a command"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "imp1 and Exo.7.26#g1",
+   "what": "The imperative members (command, aim, basis, effect, warning) have no role for a speech that a command tells someone to make; the commanded speech is carried by a nested turn instead."
+  }
+ ],
+ "cant_tell": []
+}

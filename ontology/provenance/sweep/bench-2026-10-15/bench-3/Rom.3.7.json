@@ -1,0 +1,79 @@
+{
+ "ref": "Rom.3.7",
+ "referents": [
+  {
+   "slot": "w14",
+   "choice": "w5",
+   "divine": true,
+   "why": "'The glory of Him' (third masculine singular): the nearest agreeing candidate is w5, God.",
+   "category": "pronoun for God"
+  },
+  {
+   "slot": "w15",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'why' (neuter singular) asks the question; refers to no candidate.",
+   "category": "interrogative pronoun"
+  },
+  {
+   "slot": "w17",
+   "choice": "none",
+   "divine": false,
+   "why": "'Also I' (first singular) is the objector's voice in the question 'why am I still judged?'; not a candidate.",
+   "category": "first person in a diatribe question"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed: the question 'why am I still judged?' (cl0) is what the condition governs.",
+   "category": "condition reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The if-clause cl1 ('if my lie accentuates God's truthfulness') conditions the question cl0.",
+   "category": "condition precedes what it governs"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "No and joins the two clauses; the kai inside cl0 is 'also I', not a link to cl1.",
+   "category": "and read between clauses"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl0"
+    }
+   ],
+   "divine": false,
+   "why": "The condition conditions the question cl0.",
+   "category": "condition with its consequence"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Verse-opening de ('However, if ...') joined to 3:6",
+   "why": "Mid-verse only; a verse-opening 'but' has no host in its own verse."
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "ref": "Job.38.3",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Possessive 'your' on 'loins' in the command 'gird up your loins' is second masculine singular: the one commanded, Job.",
+   "category": "implied addressee in command",
+   "votes": 3
+  },
+  {
+   "slot": "w8",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Object 'you' of 'I will ask you' is second masculine singular: the addressee of the speech, Job.",
+   "category": "addressee of speech",
+   "votes": 3
+  },
+  {
+   "slot": "w11",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'Make known to me': the first person inside the LORD's speech refers to its speaker, the LORD.",
+   "category": "first person in divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Implied 'you' of the imperative 'gird up' is the one the command is spoken to, Job.",
+   "category": "implied subject of command",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'I will ask': the speaker of this speech, the LORD.",
+   "category": "speaker in divine speech",
+   "votes": 3
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Implied 'you' of the imperative 'make known' is the addressee, Job.",
+   "category": "implied subject of command",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "The waw joins a command to a yiqtol in a different person. Per the and-definition that is 'so that', not a plain and.",
+   "category": "and after command means so that",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Gird up (command) so that I will question you: the first-person yiqtol after the second-person command is its purpose.",
+   "category": "command then purpose",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "The waw joins a command ('make known') to the first-person yiqtol before it. The asking's content is that command, so the plain and is replaced.",
+   "category": "and after question carries content",
+   "votes": 2
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "aim",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "The builder gave the member role 'part', which is not an imperative role. The question the command aims at is its aim.",
+   "category": "role mislabelled",
+   "votes": 3
+  },
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Job.38.1#w4"
+    }
+   ],
+   "divine": true,
+   "why": "The sender is the LORD; the builder gave a slot id (cl1s), which is not a candidate. The addressee, Job, is added.",
+   "category": "speaker and addressee of a question",
+   "votes": 3
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The content of 'I will ask you' (the questions) begins in 38:4 and is not linked here",
+   "why": "The questions are judged with their own verses; here the turn's part is only cl2."
+  },
+  {
+   "what": "Whether turn0 is nested in the LORD's speech turn Job.38.1#g1",
+   "why": "The nesting is not linked from this verse; the outer turn's parts run to 38:38."
+  },
+  {
+   "what": "Whether 'you shall inform Me' (cl2) is the purpose of the questioning or a second demand in the same speech.",
+   "why": "Both readings fit the waw. The purpose type is chosen because the link rule gives it for a command after a change of person; the form does not settle the sense."
+  }
+ ],
+ "voted": 3
+}

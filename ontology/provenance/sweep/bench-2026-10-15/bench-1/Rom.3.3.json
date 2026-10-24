@@ -1,0 +1,74 @@
+{
+ "ref": "Rom.3.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative Ti opening 'what if': it refers to nothing, and no candidate is neuter singular.",
+   "category": "interrogative word, not a referent"
+  },
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'Some' (masculine plural) is the subject of 'disbelieved'; no masculine plural candidate is offered.",
+   "category": "subject not offered as candidate"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'Of them' (masculine plural) is the disbelievers, the referent of w4, which is a slot and not a candidate; no masculine plural candidate.",
+   "category": "possessive of an uncandidated subject"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed: the condition is cl1, and what it conditions is the question of cl2, not the wh-clause cl0.",
+   "category": "condition attached to wrong clause"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "No reason is stated; 'some disbelieved' is the condition, not a reason for 'what if'.",
+   "category": "no reason in text"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'What if some disbelieved? Will their unbelief nullify God's faithfulness?' The question cl2 is conditioned by cl1.",
+   "category": "conditional with question consequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "change",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The consequence is the question in cl2 (will their unbelief nullify God's faithfulness); cl0 is only the 'what if' frame.",
+   "category": "conditional consequence is the question"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

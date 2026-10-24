@@ -1,0 +1,48 @@
+{
+ "ref": "Exo.8.3",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'their secret arts': the magicians (w4), third plural.",
+   "category": "third person possessive"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'they brought up the frogs': the magicians, the subject of the wayyiqtol.",
+   "category": "third person plural subject"
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.8.2#cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then runs within a verse only; across the verse boundary it is not used.",
+   "category": "then across verses"
+  },
+  {
+   "src": "cl0",
+   "type": "likewise",
+   "dst": "Exo.8.2#cl0",
+   "action": "add",
+   "why": "'did thus' (ken) with a named subject not carrying out a command: the magicians do the same as Aaron's deed just done, after the latest command. Imitation, not fulfilment.",
+   "category": "imitation with ken"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "wayyiqtol continues the narrative: they did thus, then brought up the frogs.",
+   "category": "wayyiqtol continuation"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,34 @@
+{
+ "_what": "The judging runs whose output the published graph carries, each a prov:Activity in the claim export (plan 8.1e item 4: one provenance idiom). A claim's reader stays its claim:reader agent; the run that produced it is prov:wasGeneratedBy; the models are prov:SoftwareAgent. Each run's per-item trail is in ontology/provenance/ under 'trail'.",
+ "agents": {
+  "claude-sonnet-5-5": {"label": "Claude Sonnet 5.5"},
+  "claude-haiku-5-5": {"label": "Claude Haiku 5.5"}
+ },
+ "runs": {
+  "lift-2026-10-19": {
+   "label": "statements lifted from the clauses, judged by two models, every end checked",
+   "reading": "lifted from the clause: two judges, every end checked",
+   "models": ["claude-sonnet-5-5", "claude-haiku-5-5"],
+   "ended": "2026-10-19",
+   "trail": "ontology/provenance/meaning/lifted-relations-2026-10-19.jsonl.gz",
+   "how": "tools/meaning/resolve_records.py, tools/meaning/lift_relations.py (run, ends), tools/meaning/write_statements.py"
+  },
+  "sweep-2026-10-17": {
+   "label": "the structure sweep: a first pass and a resolution pass over every passage",
+   "reading": "automated analysis: the speaker of the speech turn, from the structure sweep (Claude Haiku 5.5 and Sonnet 5.5)",
+   "models": ["claude-haiku-5-5", "claude-sonnet-5-5"],
+   "ended": "2026-10-17",
+   "trail": "out/sweep/runs (sweep-1, resolve-1)",
+   "how": "tools/sweep/ (the sweep), tools/sweep/speaker_credit.py (the speaker credits)"
+  },
+  "statement-time-2026-10-20": {
+   "label": "the time of a held verb statement, read by two models blind to each other (plan 2.19a)",
+   "reading": "the time of the statement, read by two judges",
+   "models": ["claude-haiku-5-5", "claude-sonnet-5-5"],
+   "ended": "2026-10-20",
+   "trail": "ontology/provenance/meaning/statement-time-2026-10-20.jsonl",
+   "how": "tools/meaning/statement_time.py (runs haiku-1/sonnet-1, then haiku-2/sonnet-2 with the original verb), tools/meaning/write_statements.py",
+   "influences": "a claim whose claim:modalityFrom is \"reading\": prov:wasInfluencedBy this run"
+  }
+ }
+}

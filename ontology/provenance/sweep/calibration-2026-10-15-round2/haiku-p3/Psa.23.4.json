@@ -1,0 +1,118 @@
+{
+ "ref": "Psa.23.4",
+ "referents": [
+  {
+   "slot": "w10",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Second person singular 'you are with me': the psalm turns to address the LORD, the shepherd of verse 1.",
+   "category": "second person addressee is the LORD"
+  },
+  {
+   "slot": "w12",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular object 'me' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w14",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Second person singular possessive 'your rod', addressed to the same LORD.",
+   "category": "second person addressee is the LORD"
+  },
+  {
+   "slot": "w17",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Second person singular possessive 'your staff', addressed to the same LORD.",
+   "category": "second person addressee is the LORD"
+  },
+  {
+   "slot": "w18",
+   "choice": "c13",
+   "divine": false,
+   "why": "Third masculine plural 'they' agrees with the composite rod and staff taken together; the comforting is done by the pair.",
+   "category": "composite plural pronoun"
+  },
+  {
+   "slot": "w20",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular object 'me' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular 'I will go', the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular 'I will fear', the psalm's own voice.",
+   "category": "first person in a psalm"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "conceded",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "'conceded' is not a declared link type. The same relation is recorded below with the declared type.",
+   "category": "link type not in the list"
+  },
+  {
+   "src": "cl1",
+   "type": "though",
+   "dst": "cl0",
+   "action": "add",
+   "why": "Gam ki (even though) makes cl0 the concession and cl1 what holds anyway: 'I will fear no evil, even though I walk through the valley'.",
+   "category": "concession before its claim"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Ki after the main clause gives the reason for not fearing: 'for you are with me'.",
+   "category": "reason after main clause"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Psa.23.4#g1",
+   "kind": "concession",
+   "action": "add",
+   "members": [
+    {
+     "role": "conceded",
+     "node": "cl0"
+    },
+    {
+     "role": "holds_anyway",
+     "node": "cl1"
+    },
+    {
+     "role": "its_ground",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "Gam ki gives the obstacle (cl0), the claim that holds anyway (cl1), and its ground (cl2).",
+   "category": "concession with its ground"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl3 and cl4",
+   "what": "A topic noun phrase with no verb ('your rod and your staff'), followed by a clause that repeats it as 'they' (left dislocation). No link type states topic and comment."
+  }
+ ],
+ "cant_tell": []
+}

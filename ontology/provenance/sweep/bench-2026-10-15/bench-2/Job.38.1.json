@@ -1,0 +1,61 @@
+{
+ "ref": "Job.38.1",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "'he said' follows 'answered Job out of the whirlwind'; the one who answers and speaks is the LORD (masc sing). Job is the one addressed, not the speaker.",
+   "category": "implied subject of a speaking clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "wayyiqtol continues the narrative line: answered, and then said.",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "Job.38.2#cl0",
+   "action": "add",
+   "why": "'said' introduces the LORD's speech, which begins in 38:2; the content link points forward to its first clause (R1).",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Job.38.1#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "The LORD's speech to Job is opened by this saying clause; the outer turn holds the frame, the sender (the LORD) and the addressee (Job). Its part is the speech from 38:2 on, not yet judged.",
+   "category": "speech turn opened by a narrative saying"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether the speech's parts from 38:2 to 38:38 form one turn or several nested turns",
+   "why": "Only 38:1 is judged here; the parts are linked when those verses are judged."
+  }
+ ]
+}

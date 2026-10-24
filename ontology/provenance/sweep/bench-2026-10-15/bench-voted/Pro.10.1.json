@@ -1,0 +1,54 @@
+{
+ "ref": "Pro.10.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "The possessive 'his' sits in 'his mother' in the second line, which is about the foolish son; w7 is the masculine singular foolish son, and the mother is his. The wise son of the first line is not the owner of this mother.",
+   "category": "possessive in antithetic second line",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Plain waw joining two opposed proverb lines. The sense is contrast ('but' in the English), not cause, result or purpose, and the contrast type takes only explicit but-words, so the 'and' link stands.",
+   "category": "waw in antithetic proverb pair",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl1 -and-> cl2",
+   "what": "antithetic pair of lines joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"
+  },
+  {
+   "where": "cl1 and cl2",
+   "what": "Antithetic couplet: the second line opposes the first, carried only by a plain waw. No link type covers antithesis without an explicit but-word."
+  },
+  {
+   "where": "Pro.10.1 cl1 -and-> cl2",
+   "what": "Contrast marked only by a bare waw (Hebrew vav, English 'but'). The contrast link is for the word 'but' (אוּלָם, אֶפֶס כִּי) only, so this antithesis has no link type."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "how far the writing group extends beyond this verse",
+   "why": "The heading governs the collection that follows; this verse alone does not show where its part ends."
+  },
+  {
+   "what": "Whether the couplet is a parallel group",
+   "why": "The second line restates roles with its verb elided, but its subject is a different son (wise, then foolish), so the parallel kind's condition of one shared subject does not hold. Not added."
+  },
+  {
+   "what": "A writing group for the heading cl0 ('the proverbs of Solomon')",
+   "why": "The heading opens a collection that runs beyond this verse. A writing group needs its part from later verses, so it is held rather than built from this verse alone."
+  }
+ ],
+ "voted": 3
+}

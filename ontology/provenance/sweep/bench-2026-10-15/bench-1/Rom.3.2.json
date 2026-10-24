@@ -1,0 +1,46 @@
+{
+ "ref": "Rom.3.2",
+ "referents": [
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "'They' are the Jews named in 3:1 ('the Jew'); that people is not among the candidates (way, oracles, of God), so no candidate fits.",
+   "category": "referent named earlier but not offered"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Gar (for) opens cl1 and gives the reason for 'much in every way': the first advantage is that they were entrusted.",
+   "category": "reason after a claim of degree"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "The hoti clause does not give a reason for cl1; it states what the first advantage is.",
+   "category": "that-clause read as reason"
+  },
+  {
+   "src": "cl1",
+   "type": "that",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'First, that they were entrusted': the hoti clause states the content of the point made in cl1.",
+   "category": "that-clause as content of a stated point"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "the referent of 'they' (cl2s)",
+   "why": "the Jews of 3:1 are the intended people but are not offered as a candidate"
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "ref": "Exo.8.13",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "w5",
+   "divine": false,
+   "why": "'his hand' is third masculine singular; the one who stretches out his hand is Aaron (w5).",
+   "category": "possessive in narrative"
+  },
+  {
+   "slot": "w11",
+   "choice": "w5",
+   "divine": false,
+   "why": "'his staff' is third masculine singular; Aaron's staff.",
+   "category": "possessive in narrative"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Exo.8.8#c2",
+   "divine": false,
+   "why": "Plural 'they did so' fulfils what the LORD's command told two people to do: Moses was to tell Aaron, and Aaron was to stretch out and strike. The composite is the two together.",
+   "category": "plural they fulfilling a command to two people"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w5",
+   "divine": false,
+   "why": "'he struck' is third masculine singular, continuing the subject Aaron of the preceding clause.",
+   "category": "implied subject continuing narrative"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed and cross-verse: cl0 opens the verse, and cl4 is the verse's last clause.",
+   "category": "verse-opening clause linked backwards"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "wayyiqtol continues the narrative line from the report.",
+   "category": "narrative continuation"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "wayyiqtol continues the narrative line: stretching out then striking.",
+   "category": "narrative continuation"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "An act done to something, then what that thing becomes: the rule gives this as result, not a plain then.",
+   "category": "act with its result"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add",
+   "why": "Striking the dust brings about gnats on man and beast.",
+   "category": "act with its result"
+  },
+  {
+   "src": "cl0",
+   "type": "fulfils",
+   "dst": "Exo.8.12#imp2",
+   "action": "add",
+   "why": "A positive narrative 'did so' with no named subject, after a command collection: it fulfils the whole imperative group.",
+   "category": "summary report fulfilling a command collection"
+  },
+  {
+   "src": "cl1",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl2",
+   "action": "add",
+   "why": "Repeats the verb of the command to stretch out the staff.",
+   "category": "member-by-member fulfilment"
+  },
+  {
+   "src": "cl1",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "Gives the detail of the summary report it fulfils.",
+   "category": "member-by-member fulfilment"
+  },
+  {
+   "src": "cl2",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl3",
+   "action": "add",
+   "why": "Repeats the verb of the command to strike the dust.",
+   "category": "member-by-member fulfilment"
+  },
+  {
+   "src": "cl2",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "Detail of the summary report.",
+   "category": "member-by-member fulfilment"
+  },
+  {
+   "src": "cl3",
+   "type": "fulfils",
+   "dst": "Exo.8.12#cl4",
+   "action": "add",
+   "why": "Repeats the verb of the command's effect (hayah, it became gnats) in narrative; it is also the result of the acts before it.",
+   "category": "fulfilment of an effect"
+  },
+  {
+   "src": "cl3",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "Repeats the verb of a fulfilled command after the report; detail of what was done.",
+   "category": "member-by-member fulfilment"
+  },
+  {
+   "src": "cl4",
+   "type": "elaborates",
+   "dst": "cl0",
+   "action": "add",
+   "why": "Qatal restatement of the effect (all the dust became gnats across Egypt), detail of the report.",
+   "category": "detail of a summary report"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

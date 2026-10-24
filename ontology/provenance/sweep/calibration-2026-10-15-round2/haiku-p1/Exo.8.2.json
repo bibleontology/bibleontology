@@ -1,0 +1,72 @@
+{
+ "ref": "Exo.8.2",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "w2",
+   "divine": false,
+   "why": "'his hand' (third masc sg possessive): Aaron, the subject of the stretching out",
+   "category": "possessive in a narrative report"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "divine": false,
+   "why": "third feminine singular 'it covered': the frog (w12, feminine singular), the subject carried on from cl1",
+   "category": "third person with a feminine antecedent"
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.8.1#cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then links only within a verse; the link from the earlier command is recorded as fulfilment below",
+   "category": "cross-verse then"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "the coming up of the frogs is what the stretching out brings about, so it is a result rather than a plain next event",
+   "category": "act and its result"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Aaron stretched out the hand, and so the frogs came up: a clause stating what the act brings about (R4)",
+   "category": "act and its result"
+  },
+  {
+   "src": "cl0",
+   "type": "fulfils",
+   "dst": "Exo.8.1#cl2",
+   "action": "add",
+   "why": "Aaron stretches out the hand he was commanded to stretch out; the same verb reports the command carried out",
+   "category": "fulfilment of an earlier command"
+  },
+  {
+   "src": "cl1",
+   "type": "fulfils",
+   "dst": "Exo.8.1#cl3",
+   "action": "add",
+   "why": "the frogs came up, the effect of the command to bring them up (same root, different stem)",
+   "category": "fulfilment of an earlier command"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "a wayyiqtol continues the narrative line: the frogs covered the land after they came up",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

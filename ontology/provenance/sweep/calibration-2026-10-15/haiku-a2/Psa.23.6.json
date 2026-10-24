@@ -1,0 +1,15 @@
+{"ref": "Psa.23.6",
+ "referents": [
+  {"slot": "w5", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular object suffix 'me' in a psalm. The psalm is in its own voice (Psa 23:1 'my shepherd', Psa 23:4 'you are with me'), so the psalmist voice candidate is the fit.", "category": "psalm voice first person"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person singular possessive suffix 'my' on 'life'. Same psalm voice as the object 'me' in the same verse.", "category": "psalm voice possessive"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied subject 'I' of the weqatal 'I will dwell', first common singular. The psalm's own voice; the verb's person and number agree.", "category": "psalm voice implied subject"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "The weqatal 'and I will dwell' continues the yiqtol clause before it. The waw is fused into the weqatal, so the relation is 'and then' as the builder has it. It is a change of subject, not a cause, result or purpose.", "category": "fused waw weqatal continues"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "The implied third-plural subject of cl0 ('they will pursue me') has no entry in the slots list, so it is not decided as a slot here.", "why": "On the sense it is goodness and mercy (candidate c1, the only plural composite that fits the masculine plural verb), but the slots list did not include it, so no referent is recorded for it in referents."}
+ ]
+}

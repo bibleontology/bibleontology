@@ -1,0 +1,59 @@
+{
+ "ref": "Psa.23.5",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "w7",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "w13",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "w15",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "g1",
+   "kind": "acts",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w3"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

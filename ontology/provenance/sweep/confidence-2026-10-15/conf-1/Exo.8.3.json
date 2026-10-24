@@ -1,0 +1,55 @@
+{
+ "ref": "Exo.8.3",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'their magic arts' belongs to the magicians named in the clause, the only masculine plural candidate.",
+   "category": "possessive of the clause's subject"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "third masculine plural 'they brought up' is the magicians of the verse.",
+   "category": "implied subject of a narrative clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "a bare id naming a clause of the previous verse; 'then' does not cross verses.",
+   "category": "cross-verse then, bare id"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "a wayyiqtol continues the narrative: they did the same, and then brought up the frogs.",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl0",
+   "type": "likewise",
+   "dst": "Exo.8.2#cl0",
+   "action": "add",
+   "confidence": "medium",
+   "why": "'they did thus' is 'did the same' with a named subject who was not commanded; it copies the deed just done, Aaron stretching out his hand. Imitation, not fulfilment.",
+   "category": "named person doing the same deed uncommanded"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,633 @@
+{
+ "_source": "A significant number (plan 6.16). Doug, 2026-10-03: 'I thought that there might be number patterns for 7 and 12 as well. 12 tribes - 12 disciples. echo'; '12 seems real'; 'what about 12?'. Twelve counts SETS, not spans: the tribes, things numbered one for each tribe, the Twelve, and other sets the text counts. Every verse of the Berean with 'twelve' or '12' is placed on an occasion, quoted where the text ties one twelve to another, or set aside with its reason (complete: berean), checked by tools/numbers/significant_numbers.py. Revised the same day after the eight-reader review: 'sets beside', not 'ties'; Matthew's 'twelve thrones' not given as Luke's; the differing tribe lists said; Matthias (Acts 1:26) noted; Ishmael's twelve 'counted', not 'given'; the cloak's ten pieces and one tribe said.",
+ "id": "number_twelve",
+ "name": "twelve",
+ "number": 12,
+ "words": [
+  "twelve",
+  "12"
+ ],
+ "complete": "berean",
+ "lead": "Twelve also counts years, cities, cubits and thousands. This card gathers the sets of twelve the text counts — the tribes, things numbered for the tribes, the Twelve — and the places where the text itself sets one twelve beside another.",
+ "phrases": [
+  {
+   "id": "one_each",
+   "text": "one from each tribe",
+   "match": "one (man |leader )?(for|from) each tribe|thousand (men )?(were recruited )?from each tribe|thousand from each tribe|one from the leader of each tribe|one staff for the head of each tribe|From each of their fathers' tribes send one man|according to the number of the tribes",
+   "note": "The text counts one from each tribe in places that do not say twelve (Num 1:4; 13:2; 34:18)."
+  }
+ ],
+ "groups": [
+  {
+   "id": "tribes",
+   "title": "The twelve tribes and Jacob's twelve sons"
+  },
+  {
+   "id": "one_each",
+   "title": "Twelve for the tribes"
+  },
+  {
+   "id": "apostles",
+   "title": "The Twelve"
+  },
+  {
+   "id": "other",
+   "title": "Other sets the text counts as twelve",
+   "note": "Listed because the text counts them; the text does not tie these to the tribes or to the Twelve."
+  }
+ ],
+ "occasions": [
+  {
+   "id": "sons",
+   "group": "tribes",
+   "title": "Jacob's twelve sons",
+   "verses": [
+    "Gen 35:22",
+    "Gen 42:13",
+    "Gen 42:32",
+    "Acts 7:8"
+   ]
+  },
+  {
+   "id": "tribes",
+   "group": "tribes",
+   "title": "The twelve tribes of Israel",
+   "verses": [
+    "Gen 49:28",
+    "Ezek 47:13",
+    "Acts 26:7",
+    "Jas 1:1"
+   ],
+   "note": "The text counts twelve tribes across lists that differ: Ezekiel gives Joseph two portions (47:13), and Revelation 7 names Levi and Joseph but not Dan or Ephraim."
+  },
+  {
+   "id": "thrones",
+   "group": "tribes",
+   "title": "Thrones, judging the twelve tribes",
+   "verses": [
+    "Matt 19:28",
+    "Luke 22:30"
+   ],
+   "events": [
+    "event_rich_young_ruler"
+   ],
+   "note": "Matthew has twelve thrones; Luke has thrones. Matthew says 'you who have followed Me', Luke 'you who have stood by Me' (22:28); neither says 'the Twelve' here."
+  },
+  {
+   "id": "sealed",
+   "group": "tribes",
+   "title": "Twelve thousand sealed from each tribe",
+   "verses": [
+    "Rev 7:5",
+    "Rev 7:6",
+    "Rev 7:7",
+    "Rev 7:8"
+   ],
+   "events": [
+    "event_revelation_judgments"
+   ],
+   "note": "The tribes named here are Judah, Reuben, Gad, Asher, Naphtali, Manasseh, Simeon, Levi, Issachar, Zebulun, Joseph and Benjamin; Dan and Ephraim are not named. The text counts twelve tribes across lists that differ."
+  },
+  {
+   "id": "city",
+   "group": "tribes",
+   "title": "The city's twelve gates and twelve foundations",
+   "verses": [
+    "Rev 21:12",
+    "Rev 21:14",
+    "Rev 21:21"
+   ],
+   "events": [
+    "event_new_creation_consummation"
+   ],
+   "note": "Rev 21:14 says 'the twelve apostles of the Lamb'; the card places them with the Twelve of the Gospels. The twelve foundation stones are named one by one (21:19-20)."
+  },
+  {
+   "id": "pillars",
+   "group": "one_each",
+   "title": "Twelve pillars at the mountain",
+   "verses": [
+    "Exod 24:4"
+   ],
+   "events": [
+    "event_israel_receives_the_law"
+   ]
+  },
+  {
+   "id": "breastpiece",
+   "group": "one_each",
+   "title": "The breastpiece's twelve stones",
+   "verses": [
+    "Exod 28:21",
+    "Exod 39:14"
+   ],
+   "events": [
+    "event_tabernacle_instructions",
+    "event_construction_of_the_tabernacle"
+   ]
+  },
+  {
+   "id": "leaders",
+   "group": "one_each",
+   "title": "The twelve leaders and their offerings",
+   "verses": [
+    "Num 1:44",
+    "Num 7:3",
+    "Num 7:84",
+    "Num 7:86",
+    "Num 7:87"
+   ],
+   "events": [
+    "event_census_of_israel"
+   ],
+   "note": "Each leader brings his tribe's offering on his own day (Num 7:12-83)."
+  },
+  {
+   "id": "staffs",
+   "group": "one_each",
+   "title": "Twelve staffs",
+   "verses": [
+    "Num 17:2",
+    "Num 17:6"
+   ],
+   "events": [
+    "event_aarons_budding_rod"
+   ]
+  },
+  {
+   "id": "midian_war",
+   "group": "one_each",
+   "title": "A thousand from each tribe against Midian",
+   "verses": [
+    "Num 31:5"
+   ]
+  },
+  {
+   "id": "spies",
+   "group": "one_each",
+   "title": "Twelve men sent to spy out the land",
+   "verses": [
+    "Deut 1:23"
+   ]
+  },
+  {
+   "id": "jordan",
+   "group": "one_each",
+   "title": "Twelve men and twelve stones at the Jordan",
+   "verses": [
+    "Josh 3:12",
+    "Josh 4:2",
+    "Josh 4:3",
+    "Josh 4:4",
+    "Josh 4:8",
+    "Josh 4:9",
+    "Josh 4:20"
+   ],
+   "events": [
+    "event_crossing_the_jordan"
+   ]
+  },
+  {
+   "id": "cloak",
+   "group": "one_each",
+   "title": "Ahijah's cloak torn in twelve pieces",
+   "verses": [
+    "1Kgs 11:30"
+   ],
+   "events": [
+    "event_solomons_wealth_decline"
+   ],
+   "note": "Ten pieces for ten tribes, and one tribe kept 'for the sake of My servant David' (1 Kgs 11:31-32); the text does not say what each piece stands for."
+  },
+  {
+   "id": "altar",
+   "group": "one_each",
+   "title": "Elijah's altar of twelve stones",
+   "verses": [
+    "1Kgs 18:31"
+   ],
+   "events": [
+    "event_elijah_vs_baal"
+   ]
+  },
+  {
+   "id": "ezra",
+   "group": "one_each",
+   "title": "Twelve goats and twelve bulls for all Israel",
+   "verses": [
+    "Ezra 6:17",
+    "Ezra 8:35"
+   ],
+   "events": [
+    "event_temple_completed",
+    "event_ezras_return"
+   ]
+  },
+  {
+   "id": "the_twelve",
+   "group": "apostles",
+   "title": "The Twelve",
+   "verses": [
+    "Matt 10:1",
+    "Matt 10:2",
+    "Matt 10:5",
+    "Matt 11:1",
+    "Matt 20:17",
+    "Matt 26:14",
+    "Matt 26:20",
+    "Matt 26:47",
+    "Mark 3:14",
+    "Mark 3:16",
+    "Mark 4:10",
+    "Mark 6:7",
+    "Mark 9:35",
+    "Mark 10:32",
+    "Mark 11:11",
+    "Mark 14:10",
+    "Mark 14:17",
+    "Mark 14:20",
+    "Mark 14:43",
+    "Luke 6:13",
+    "Luke 8:1",
+    "Luke 9:1",
+    "Luke 9:12",
+    "Luke 18:31",
+    "Luke 22:3",
+    "Luke 22:47",
+    "John 6:67",
+    "John 6:70",
+    "John 6:71",
+    "John 20:24",
+    "Acts 6:2",
+    "1Cor 15:5"
+   ],
+   "events": [
+    "event_calling_of_the_twelve",
+    "event_mission_discourse_to_the_twelve"
+   ],
+   "note": "Linked to the events where the Twelve are chosen and sent; elsewhere they are named as a company. After Judas, Matthias is 'added to the eleven apostles' (Acts 1:26), a verse that does not say twelve."
+  },
+  {
+   "id": "ishmael",
+   "group": "other",
+   "title": "Ishmael's twelve rulers",
+   "verses": [
+    "Gen 17:20",
+    "Gen 25:16"
+   ]
+  },
+  {
+   "id": "elim",
+   "group": "other",
+   "title": "Twelve springs at Elim",
+   "verses": [
+    "Exod 15:27",
+    "Num 33:9"
+   ],
+   "events": [
+    "event_bitter_water_made_sweet"
+   ]
+  },
+  {
+   "id": "loaves",
+   "group": "other",
+   "title": "Twelve loaves set before the LORD",
+   "verses": [
+    "Lev 24:5"
+   ]
+  },
+  {
+   "id": "governors",
+   "group": "other",
+   "title": "Solomon's twelve governors",
+   "verses": [
+    "1Kgs 4:7"
+   ],
+   "events": [
+    "event_solomons_wisdom_administration"
+   ]
+  },
+  {
+   "id": "sea",
+   "group": "other",
+   "title": "The Sea on twelve bronze oxen",
+   "verses": [
+    "1Kgs 7:25",
+    "1Kgs 7:44",
+    "2Chr 4:4",
+    "2Chr 4:15",
+    "Jer 52:20"
+   ],
+   "events": [
+    "event_temple_built"
+   ]
+  },
+  {
+   "id": "lions",
+   "group": "other",
+   "title": "Twelve lions on Solomon's steps",
+   "verses": [
+    "1Kgs 10:20",
+    "2Chr 9:19"
+   ],
+   "events": [
+    "event_solomons_wealth_decline"
+   ]
+  },
+  {
+   "id": "elisha",
+   "group": "other",
+   "title": "Elisha plowing with twelve teams of oxen",
+   "verses": [
+    "1Kgs 19:19"
+   ],
+   "events": [
+    "event_elijah_at_horeb"
+   ]
+  },
+  {
+   "id": "pieces",
+   "group": "other",
+   "title": "The Levite's concubine cut in twelve pieces",
+   "verses": [
+    "Judg 19:29"
+   ],
+   "events": [
+    "event_levites_concubine_civil_war"
+   ],
+   "note": "Sent 'throughout the territory of Israel'; the text does not say one for each tribe."
+  },
+  {
+   "id": "baskets",
+   "group": "other",
+   "title": "Twelve baskets left over",
+   "verses": [
+    "Matt 14:20",
+    "Mark 6:43",
+    "Mark 8:19",
+    "Luke 9:17",
+    "John 6:13"
+   ],
+   "events": [
+    "event_feeding_of_the_five_thousand"
+   ]
+  },
+  {
+   "id": "legions",
+   "group": "other",
+   "title": "More than twelve legions of angels, which Jesus says He could ask for",
+   "verses": [
+    "Matt 26:53"
+   ],
+   "events": [
+    "event_jesus_arrested"
+   ]
+  },
+  {
+   "id": "stars",
+   "group": "other",
+   "title": "A crown of twelve stars",
+   "verses": [
+    "Rev 12:1"
+   ],
+   "events": [
+    "event_woman_dragon_and_male_child"
+   ]
+  },
+  {
+   "id": "fruit",
+   "group": "other",
+   "title": "The tree of life's twelve kinds of fruit",
+   "verses": [
+    "Rev 22:2"
+   ]
+  }
+ ],
+ "joins": [
+  {
+   "title": "Jacob's sons are the tribes",
+   "occasions": [
+    "sons",
+    "tribes"
+   ],
+   "a": [
+    "Gen 49:28",
+    "These are the tribes of Israel, twelve in all"
+   ]
+  },
+  {
+   "title": "Twelve pillars for the twelve tribes",
+   "occasions": [
+    "pillars"
+   ],
+   "a": [
+    "Exod 24:4",
+    "twelve pillars for the twelve tribes of Israel"
+   ]
+  },
+  {
+   "title": "Twelve stones for the names of the sons of Israel",
+   "occasions": [
+    "breastpiece"
+   ],
+   "a": [
+    "Exod 28:21",
+    "The twelve stones are to correspond to the names of the sons of Israel"
+   ]
+  },
+  {
+   "title": "One from the leader of each tribe",
+   "occasions": [
+    "staffs"
+   ],
+   "a": [
+    "Num 17:2",
+    "twelve staffs, one from the leader of each tribe"
+   ]
+  },
+  {
+   "title": "One from each tribe",
+   "occasions": [
+    "spies",
+    "jordan"
+   ],
+   "a": [
+    "Deut 1:23",
+    "I selected twelve men from among you, one from each tribe"
+   ],
+   "b": [
+    "Josh 4:8",
+    "They took up twelve stones from the middle of the Jordan, one for each tribe of Israel"
+   ]
+  },
+  {
+   "title": "One for each tribe of the sons of Jacob",
+   "occasions": [
+    "altar",
+    "ezra"
+   ],
+   "a": [
+    "1Kgs 18:31",
+    "Elijah took twelve stones, one for each tribe of the sons of Jacob"
+   ],
+   "b": [
+    "Ezra 6:17",
+    "twelve male goats, one for each tribe of Israel"
+   ]
+  },
+  {
+   "title": "Twelve pieces, and ten tribes",
+   "occasions": [
+    "cloak"
+   ],
+   "a": [
+    "1Kgs 11:30",
+    "tore it into twelve pieces"
+   ],
+   "b": [
+    "1Kgs 11:31",
+    "Take ten pieces for yourself ... I will give you ten tribes"
+   ],
+   "note": "The text gives ten pieces for ten tribes, and one tribe kept for David's line (11:32)."
+  },
+  {
+   "title": "The Twelve and the twelve tribes",
+   "occasions": [
+    "thrones",
+    "the_twelve"
+   ],
+   "a": [
+    "Matt 19:28",
+    "you who have followed Me will also sit on twelve thrones, judging the twelve tribes of Israel"
+   ],
+   "b": [
+    "Luke 22:30",
+    "sit on thrones, judging the twelve tribes of Israel"
+   ]
+  },
+  {
+   "title": "The tribes on the gates, the apostles on the foundations",
+   "occasions": [
+    "city",
+    "the_twelve"
+   ],
+   "a": [
+    "Rev 21:12",
+    "twelve gates inscribed with the names of the twelve tribes of Israel"
+   ],
+   "b": [
+    "Rev 21:14",
+    "twelve foundations bearing the names of the twelve apostles of the Lamb"
+   ],
+   "note": "'The twelve apostles of the Lamb' (21:14); the card places them with the Twelve of the Gospels."
+  },
+  {
+   "title": "From all the tribes of Israel",
+   "occasions": [
+    "sealed"
+   ],
+   "a": [
+    "Rev 7:4",
+    "144,000 from all the tribes of Israel"
+   ]
+  },
+  {
+   "title": "Ishmael's twelve, promised and counted",
+   "occasions": [
+    "ishmael"
+   ],
+   "a": [
+    "Gen 17:20",
+    "He will become the father of twelve rulers"
+   ],
+   "b": [
+    "Gen 25:16",
+    "twelve princes of their tribes"
+   ]
+  }
+ ],
+ "set_aside": {
+  "thousands": {
+   "why": "twelve thousand of an army, people or horses, or a measure of 12,000",
+   "verses": [
+    "Josh 8:25",
+    "Judg 21:10",
+    "2Sam 10:6",
+    "2Sam 17:1",
+    "1Kgs 4:26",
+    "1Kgs 10:26",
+    "2Chr 1:14",
+    "2Chr 9:25",
+    "Ps 60:1",
+    "Rev 21:16"
+   ]
+  },
+  "measures": {
+   "why": "a measure in cubits",
+   "verses": [
+    "1Kgs 7:15",
+    "Jer 52:21",
+    "Ezek 40:49",
+    "Ezek 43:16"
+   ]
+  },
+  "years": {
+   "why": "years, months, days or hours, or an age. Jairus's daughter (twelve years old) and the woman who had bled twelve years share one story (Mark 5:21-43; Luke 8:40-56); Jesus was twelve at Passover (Luke 2:42)",
+   "verses": [
+    "Gen 14:4",
+    "1Kgs 16:23",
+    "2Kgs 3:1",
+    "2Kgs 21:1",
+    "2Chr 33:1",
+    "Neh 5:14",
+    "Esth 2:12",
+    "Dan 4:29",
+    "Matt 9:20",
+    "Mark 5:25",
+    "Mark 5:42",
+    "Luke 2:42",
+    "Luke 8:42",
+    "Luke 8:43",
+    "John 11:9",
+    "Acts 24:11"
+   ]
+  },
+  "counts": {
+   "why": "a count of cities, musicians, men or animals",
+   "verses": [
+    "Josh 18:24",
+    "Josh 19:15",
+    "Josh 21:7",
+    "Josh 21:40",
+    "1Chr 6:63",
+    "2Sam 2:15",
+    "Num 29:17",
+    "Ezra 8:24",
+    "Acts 19:7",
+    "1Chr 25:9",
+    "1Chr 25:10",
+    "1Chr 25:11",
+    "1Chr 25:12",
+    "1Chr 25:13",
+    "1Chr 25:14",
+    "1Chr 25:15",
+    "1Chr 25:16",
+    "1Chr 25:17",
+    "1Chr 25:18",
+    "1Chr 25:19",
+    "1Chr 25:20",
+    "1Chr 25:21",
+    "1Chr 25:22",
+    "1Chr 25:23",
+    "1Chr 25:24",
+    "1Chr 25:25",
+    "1Chr 25:26",
+    "1Chr 25:27",
+    "1Chr 25:28",
+    "1Chr 25:29",
+    "1Chr 25:30",
+    "1Chr 25:31"
+   ]
+  }
+ }
+}

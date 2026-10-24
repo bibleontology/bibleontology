@@ -1,0 +1,21 @@
+{"ref": "Exo.8.14",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "Third masculine plural possessive on 'secret arts' (lemma lat, masc plural). The only agreeing plural referent that is the doer of the attempt in this clause is 'magicians' (w4, masc plural); the arts are theirs.", "category": "possessive pronoun in a prepositional phrase"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "Implied subject of the qatal 'not they were able' (third common plural). The subject carries over from cl0, whose subject is the magicians (w4), so the plural agrees and the act is theirs. Agrees with the parser's builder_says.", "category": "implied subject carried over from the previous clause"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "keep", "why": "The infinitive construct with lamed (to bring forth the gnats) gives the aim of the attempt in cl0.", "category": "infinitive purpose of an attempt"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "The builder wrote cl4, which is not a clause of this verse (cl0 to cl3 only); it is most likely the previous verse's last clause (Exo.8.13#cl4). 'then' is within-verse only, so a wayyiqtol opening a verse that continues the previous verse's narrative is the episode rung, not this link.", "category": "narrative continuation across a verse boundary"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "remove", "why": "The waw joins the failed attempt to its outcome, so the sense is more specific than a plain 'and'. failed_result is the specialization (attempt with a purpose, then waw and negated 'they were able') and replaces it.", "category": "attempt whose outcome failed"},
+  {"src": "cl0", "type": "failed_result", "dst": "cl2", "action": "add", "why": "Attempt with a purpose (cl0 to cl1, to bring forth the gnats), then waw and negated qatal 'not they were able': the purpose was not achieved. The conjunction is a plain waw, not 'but', so contrast does not apply.", "category": "attempt whose outcome failed"},
+  {"src": "cl0", "type": "likewise", "dst": "Exo.8.13#cl2", "action": "add", "why": "'They did thus' (did so with kaken) by a named subject, the magicians, is the same deed as Aaron's striking of the dust in the verse before. Not a fulfilment, since the magicians were not commanded: imitation.", "category": "imitation of a deed just done"},
+  {"src": "cl2", "type": "then", "dst": "cl3", "action": "keep", "why": "Wayyiqtol cl3 (the gnats remained) continues the narrative after the negated clause within the verse.", "category": "narrative continuation within verse"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0, the verse-opening wayyiqtol", "what": "narrative continuation from the previous verse (the episode rung). The within-verse 'then' link does not cover a continuation across a verse boundary."}
+ ],
+ "cant_tell": [
+  {"what": "whether cl0 and cl2 form an 'acts' group (one agent's acts, same subject)", "why": "The relation is already carried by the failed_result link, so no group was added. Doug may decide."},
+  {"what": "identity of the builder's cl4", "why": "The verse has clauses cl0 to cl3 only. cl4 is taken as the previous verse's last clause, as the builder meant, but this is inferred, not stated in the data."}
+ ]}

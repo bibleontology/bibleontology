@@ -1,0 +1,240 @@
+{
+  "_what": "Greek function words for the clean builder (stages S2-S4): the SAME kinds as tables/hebrew/lexicon.json, so a Greek purpose link is the same `purpose` as a Hebrew one. Keys are accent-free lower case. What Greek marks that Hebrew does not is kept as an attribute on the shared kind (2026-09-27: where Greek does things that Hebrew cannot, it is good to show it, but in a way that the core structures align).",
+  "mood_field": "mood",
+  "force_by_verb_type": {
+    "imperative": "directive",
+    "optative": "directive",
+    "infinitive": "nonfinite",
+    "participle": "nonfinite",
+    "_default": "assertion"
+  },
+  "subjunctive_main": "directive",
+  "_subjunctive": "A subjunctive in a main clause, with no subordinating connective, is hortatory or prohibitive ('let us go', 'do not ...'): directive, like the Hebrew cohortative and jussive. Under ἵνα, ἐάν, ὅταν and the like it is dependent, and the clause's force is set by its host.",
+  "question_types": [
+    "interrogative"
+  ],
+  "question_lemmas": [
+    "πως",
+    "που",
+    "ποτε",
+    "ποθεν",
+    "ποσος",
+    "ποιος",
+    "μητι",
+    "αρα"
+  ],
+  "question_punctuation": ";",
+  "_question": "Nestle 1904 prints the Greek question mark (;). Like the BSB's quotation marks it is an editor's structure, not the text's words (PRINCIPLES 44): used, and recorded as its source.",
+  "negative_types": [
+    "negative"
+  ],
+  "negative_lemmas": [
+    "ου",
+    "ουκ",
+    "ουχ",
+    "ουχι",
+    "μη",
+    "μηδε",
+    "ουδε",
+    "ουκετι",
+    "μηκετι",
+    "ουδεποτε",
+    "μηδεποτε",
+    "μηπω",
+    "ουπω"
+  ],
+  "subordinators": [
+    "ινα",
+    "οπως",
+    "εαν",
+    "ει",
+    "οταν",
+    "οτε",
+    "εως",
+    "ωστε",
+    "οτι",
+    "διοτι",
+    "επει",
+    "επειδη",
+    "καθως",
+    "ως",
+    "ωσπερ",
+    "μηποτε",
+    "μη",
+    "πριν",
+    "αχρι",
+    "μεχρι",
+    "εαν μη",
+    "ει μη"
+  ],
+  "connectives": {
+    "και": {
+      "any": "and"
+    },
+    "δε": {
+      "any": "and",
+      "after_men": "contrast"
+    },
+    "τε": {
+      "any": "and"
+    },
+    "ουδε": {
+      "any": "and",
+      "negative": true
+    },
+    "μηδε": {
+      "any": "and",
+      "negative": true
+    },
+    "ουτε": {
+      "any": "and",
+      "negative": true
+    },
+    "μητε": {
+      "any": "and",
+      "negative": true
+    },
+    "αλλα": {
+      "any": "contrast",
+      "after_negative": "but_rather"
+    },
+    "πλην": {
+      "any": "contrast"
+    },
+    "γαρ": {
+      "any": "because"
+    },
+    "οτι": {
+      "any": "because"
+    },
+    "διοτι": {
+      "any": "because"
+    },
+    "επει": {
+      "any": "because"
+    },
+    "ουν": {
+      "any": "therefore"
+    },
+    "διο": {
+      "any": "therefore"
+    },
+    "αρα": {
+      "any": "therefore"
+    },
+    "η": {
+      "any": "or"
+    },
+    "ειτε": {
+      "any": "or"
+    },
+    "ει": {
+      "any": "if",
+      "forward": true
+    },
+    "εαν": {
+      "any": "if",
+      "forward": true
+    }
+  },
+  "within_by_prep": {
+    "ινα": "purpose",
+    "οπως": "purpose",
+    "ωστε": "result",
+    "οτι": "because",
+    "διοτι": "because",
+    "επει": "because",
+    "επειδη": "because",
+    "ει": "if",
+    "εαν": "if",
+    "οταν": "when_if_though",
+    "οτε": "when_if_though",
+    "επαν": "when_if_though",
+    "ηνικα": "when_if_though",
+    "ως": "as",
+    "καθως": "as",
+    "ωσπερ": "as",
+    "καθαπερ": "as",
+    "εως": "until_limit",
+    "αχρι": "until_limit",
+    "μεχρι": "until_limit",
+    "μηποτε": "lest",
+    "μηπως": "lest",
+    "εις ο": "purpose",
+    "προς ο": "purpose",
+    "δια ο": "because",
+    "εν ο": "when_if_though"
+  },
+  "_within": "A clause nested under a connective or a preposition takes the relation it carries; 'εἰς τό' + infinitive is purpose, 'διὰ τό' + infinitive reason, 'ἐν τῷ' + infinitive the time (the articular infinitive, which Hebrew has no form for, lands on the shared kinds). `if` is written condition -> consequence, as the Hebrew is. πρίν ('before') and μετὰ τό ('after') have no kind yet and stay `within`.",
+  "reverse": [
+    "if"
+  ],
+  "speech_verbs": [
+    "λεγω",
+    "λαλεω",
+    "αποκρινομαι",
+    "φημι",
+    "κραζω",
+    "φωνεω",
+    "ερωταω",
+    "επερωταω",
+    "κηρυσσω",
+    "διαμαρτυρομαι"
+  ],
+  "perceive_verbs": [
+    "οιδα",
+    "γινωσκω",
+    "οραω",
+    "ακουω",
+    "βλεπω",
+    "θεωρεω",
+    "πιστευω",
+    "νοεω",
+    "μανθανω",
+    "επιγινωσκω",
+    "ευρισκω",
+    "λεγω",
+    "ομολογεω",
+    "μαρτυρεω",
+    "γραφω"
+  ],
+  "addressee_preps": [
+    "προς"
+  ],
+  "addressee_role": "io",
+  "narrative_moods": [],
+  "heading_words": [],
+  "letters": [
+    "Rom",
+    "1Co",
+    "2Co",
+    "Gal",
+    "Eph",
+    "Php",
+    "Col",
+    "1Th",
+    "2Th",
+    "1Ti",
+    "2Ti",
+    "Tit",
+    "Phm",
+    "Jas",
+    "1Pe",
+    "2Pe",
+    "Jud"
+  ],
+  "_letters": "A letter is a Writing, as a psalm is: its opening names its writer in the nominative (Paul, James, Peter, Jude). The writer is the letter's voice, as the psalmist is the psalm's.",
+  "that_after_perceive": [
+    "οτι"
+  ],
+  "sequence_adverbs": [
+    "τοτε"
+  ],
+  "reflexive_marked": true,
+  "narrative_then": [
+    "και",
+    "δε"
+  ],
+  "_narrative_then": "Between two past-tense indicatives, καί and δέ carry the narrative's sequence: the same `then` the Hebrew wayyiqtol carries inside its verb (2026-09-28: 121 Greek `then` links against 20,177 Hebrew, so no sequence pattern could reach the New Testament).",
+  "_reflexive": "Greek has reflexive pronouns of its own (ἑαυτοῦ, σεαυτοῦ, ἐμαυτοῦ), so a plain αὐτός in a clause is not that clause's subject (S5). Hebrew uses the plain pronoun reflexively and has no such entry."
+}

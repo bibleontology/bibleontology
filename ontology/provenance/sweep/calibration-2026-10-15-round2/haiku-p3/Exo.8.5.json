@@ -1,0 +1,145 @@
+{
+ "ref": "Exo.8.5",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w2",
+   "divine": false,
+   "why": "'me' in the imperative 'honor yourself over me' is Moses, the speaker of the turn opened by cl0 'he said Moses'; first person inside a speech is its sender.",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "w12",
+   "choice": "w4",
+   "divine": false,
+   "why": "second masculine singular 'from you' (cl3): the addressee of Moses's speech is Pharaoh.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w16",
+   "choice": "w4",
+   "divine": false,
+   "why": "masculine singular possessive 'your officials': the addressee, Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w20",
+   "choice": "w4",
+   "divine": false,
+   "why": "masculine singular possessive 'your people': the addressee, Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "w26",
+   "choice": "w4",
+   "divine": false,
+   "why": "second masculine singular 'from you': the addressee, Pharaoh.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w30",
+   "choice": "w4",
+   "divine": false,
+   "why": "masculine singular possessive 'your houses': the addressee, Pharaoh.",
+   "category": "possessive of the addressee"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "the implied 'you' of the imperative 'honor yourself' is the one commanded, Pharaoh, the addressee.",
+   "category": "implied subject of a command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w2",
+   "divine": false,
+   "why": "first person singular 'I will pray' in Moses's speech; Moses is its sender.",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w24",
+   "divine": false,
+   "why": "third feminine plural 'they will remain' agrees only with the frogs (w24), the subject of the removal being asked for.",
+   "category": "third person plural inside a speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "purpose",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "lamed plus infinitive construct 'to remove the frogs' says what the praying is for; the infinitive is in a prepositional role after the verb of praying.",
+   "category": "infinitive of purpose"
+  },
+  {
+   "src": "cl5",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl5 is not a clause of this verse (cl0 to cl4). 'then' is within a verse only, so a link to a clause of another verse is not this type.",
+   "category": "builder link to a missing clause"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'he said' introduces what is said; the imperative 'honor yourself over me' is the first said clause. The question and the exception stay as parts of the same turn.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl4",
+   "type": "elaborates",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'only in the River they will remain' gives the detail of the removal: which frogs are taken away and which stay.",
+   "category": "exception detail"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "Moses speaks to Pharaoh; the saying clause, the commanded clause, the question and the exception are its parts. Sender and addressee are the candidates the text supports.",
+   "category": "speech with commands and question"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl4 against cl3",
+   "what": "'only in the Nile they will remain' is an exception to the removal ('except for those in the Nile'). elaborates gives its detail, but no link type states an exception to a request."
+  }
+ ],
+ "cant_tell": []
+}

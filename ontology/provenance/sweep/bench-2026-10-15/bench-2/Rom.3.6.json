@@ -1,0 +1,49 @@
+{
+ "ref": "Rom.3.6",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'Never may it be' (Μὴ γένοιτο) is an optative with an impersonal subject; no candidate fits.",
+   "category": "impersonal optative subject"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "ἐπεί ('otherwise, since') gives the reason for the rejection: how would God judge the world, if not?",
+   "category": "reason for rejection"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "remove",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "'Never may it be' is a rejection formula, not a command, and it is not joined by 'and' to a command. The because link carries the reason; 'part' is not a role of this kind.",
+   "category": "rejection formula read as command"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl0 (Μὴ γένοιτο, 'Certainly not!')",
+   "what": "A rejection formula; no link type records a disavowal. Left as an unlinked exclamation, with its because link to cl1."
+  }
+ ],
+ "cant_tell": []
+}

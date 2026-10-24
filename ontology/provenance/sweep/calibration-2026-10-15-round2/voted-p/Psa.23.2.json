@@ -1,0 +1,71 @@
+{
+ "ref": "Psa.23.2",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "first person singular 'me' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "w9",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "first person singular 'me' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "third masculine singular; the subject of 'he makes me lie down' is the shepherd named in verse 1, the LORD",
+   "category": "implied subject carried from an earlier verse",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "third masculine singular; 'he leads me' continues the same shepherd as verse 1",
+   "category": "implied subject carried from an earlier verse",
+   "votes": 3
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.2#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "divine": true,
+   "why": "two lines with the same implied subject, the LORD, and the same frame (he, me, a verb, a place); the second restates the first's roles without an overt subject",
+   "category": "parallel lines with a shared implied subject",
+   "votes": 2
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether the paired lines 'he makes me lie down' and 'he leads me' are parallel lines (kind parallel) or a run of acts",
+   "why": "Both shapes fit; only the acts reading is recorded, as the rules ask for acts groups as readings."
+  }
+ ],
+ "voted": 3
+}

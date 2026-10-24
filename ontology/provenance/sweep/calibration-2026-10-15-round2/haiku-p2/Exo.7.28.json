@@ -1,0 +1,128 @@
+{
+ "ref": "Exo.7.28",
+ "referents": [
+  {
+   "slot": "w37",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your kneading bowls' is the possessive of the addressee, Pharaoh, in the LORD's words.",
+   "category": "possessive of addressee"
+  },
+  {
+   "slot": "w11",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your palace' is Pharaoh's.",
+   "category": "possessive of addressee"
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your bedchamber' is Pharaoh's.",
+   "category": "possessive of addressee"
+  },
+  {
+   "slot": "w20",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your bed' is Pharaoh's.",
+   "category": "possessive of addressee"
+  },
+  {
+   "slot": "w25",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your officials' are Pharaoh's.",
+   "category": "possessive of addressee"
+  },
+  {
+   "slot": "w29",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your people' is Pharaoh's.",
+   "category": "possessive of addressee"
+  },
+  {
+   "slot": "w33",
+   "choice": "Exo.7.26#w7",
+   "divine": false,
+   "why": "'Your ovens' are Pharaoh's.",
+   "category": "possessive of addressee"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'They will go up' is third common plural, and the subject is the frogs, which the swarm is about.",
+   "category": "plural subject: the frogs"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'They will go in' continues the same frogs as subject.",
+   "category": "plural subject: the frogs"
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.7.27#cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A then-link runs within a verse only, and the swarm is the outcome of the striking, which is a result.",
+   "category": "cross-verse then"
+  },
+  {
+   "src": "Exo.7.27#cl3",
+   "type": "result",
+   "dst": "cl0",
+   "action": "add",
+   "why": "'I am about to strike with frogs' and 'the Nile will teem with frogs': the swarm is what the striking brings about.",
+   "category": "outcome of an announced plague"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The weqatal 'they will go up' continues the swarm.",
+   "category": "weqatal continuation"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The weqatal continues the same subject through the list of places.",
+   "category": "weqatal continuation"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Exo.7.28#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl2"
+    },
+    {
+     "role": "group_subject",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "Two consecutive clauses, both acts of the frogs, each naming its subject only in the verb. Proposed as a reading for review (R5).",
+   "category": "frogs' acts in a row"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

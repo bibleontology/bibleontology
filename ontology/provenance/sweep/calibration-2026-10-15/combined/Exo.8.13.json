@@ -1,0 +1,31 @@
+{"ref": "Exo.8.13",
+ "referents": [
+  {"slot": "w8", "choice": "w5", "divine": false, "why": "'his' (3ms suffix on hand) belongs to the subject of cl1, Aaron, who stretches out his hand; w5 agrees in person, gender and number.", "category": "possessive suffix on the subject's own body part"},
+  {"slot": "w11", "choice": "w5", "divine": false, "why": "'his' (3ms suffix on staff) is in the same clause as the stretching hand, whose subject is Aaron; the earlier command named 'your staff' as Aaron's.", "category": "possessive suffix on the subject's own instrument"},
+  {"slot": "cl0s", "choice": "Exo.8.8#c2", "divine": false, "why": "3mp implied subject of 'they did so', a pro-form report after a command chain; the chain (Moses told to say to Aaron, then Aaron to stretch and strike) was addressed to Moses and Aaron, and only a plural composite agrees with the morphology. Aaron alone is the doer in cl1 and cl2.", "category": "implied plural subject of a pro-form fulfilment report"},
+  {"slot": "cl2s", "choice": "w5", "divine": false, "why": "3ms implied subject of a wayyiqtol continuing cl1 without a new subject; the nearest agreeing doer is Aaron, who stretches out his hand and then strikes.", "category": "implied subject continuing the previous clause's doer"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "cl4 is a qatal restatement at the end of the verse and cannot lead back to the verse's first clause as 'and then'; the order is reversed and cl4 is not a new event.", "category": "backward link from a closing restatement"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "remove", "why": "'They did so' is a summary report, and cl1 gives the detail of what was done, not a later event; the sense is detail, not sequence.", "category": "summary report read as next event"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "Two wayyiqtol acts in order: he stretched out his hand, and he then struck the dust.", "category": "sequence of acts"},
+  {"src": "cl2", "type": "then", "dst": "cl3", "action": "keep", "why": "Wayyiqtol continues the narrative line; the striking is followed by the gnats coming (the stronger relation is also added as result).", "category": "sequence of acts"},
+  {"src": "cl0", "type": "fulfils", "dst": "Exo.8.12#cl3", "action": "add", "why": "'They did so' (asah + ken) with no named subject, not negated, after the command chain; points at the nearest preceding command ('strike the dust'), whose group runs from the stretching command.", "category": "fulfilment of an earlier command"},
+  {"src": "cl1", "type": "fulfils", "dst": "Exo.8.12#cl2", "action": "add", "why": "Repeats the verb of the command 'stretch out your staff' (stretch out) and its object and instrument.", "category": "fulfilment of an earlier command"},
+  {"src": "cl1", "type": "elaborates", "dst": "cl0", "action": "add", "why": "After a 'they did so' report, the narrative clause repeating a commanded verb gives the detail of what was done.", "category": "detail after a summary report"},
+  {"src": "cl2", "type": "fulfils", "dst": "Exo.8.12#cl3", "action": "add", "why": "Repeats the verb of the command 'strike the dust of the earth' with the same object.", "category": "fulfilment of an earlier command"},
+  {"src": "cl2", "type": "elaborates", "dst": "cl0", "action": "add", "why": "Detail of what 'they did so' means: Aaron struck the dust.", "category": "detail after a summary report"},
+  {"src": "cl3", "type": "fulfils", "dst": "Exo.8.12#cl4", "action": "add", "why": "Repeats the verb of the command's effect (it will become gnats) with 'it was gnats'; the effect came about.", "category": "fulfilment of a command's effect"},
+  {"src": "cl2", "type": "result", "dst": "cl3", "action": "add", "why": "The gnats came upon man and beast as what the striking brought about; the clause repeating the effect's verb is the result of the acts before it.", "category": "outcome of a commanded act"},
+  {"src": "cl4", "type": "elaborates", "dst": "cl3", "action": "add", "why": "cl4 restates and widens cl3: all the dust of the earth became gnats throughout Egypt. It is the detail of the gnats coming, not of the verse-opening report. No self-link on cl4 is added; the effect is already fulfilled by cl3.", "category": "restatement widening an outcome"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "action-state", "action": "add", "members": [{"role": "action", "node": "Exo.8.12#cl2"}, {"role": "state", "node": "cl1"}], "divine": false, "why": "The command to stretch out the staff and its report as done, with the same verb and agent.", "category": "command and its report"},
+  {"id": "g2", "kind": "action-state", "action": "add", "members": [{"role": "action", "node": "Exo.8.12#cl3"}, {"role": "state", "node": "cl2"}], "divine": false, "why": "The command to strike the dust and its report as done, same verb and object.", "category": "command and its report"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "Whether Moses is included in the plural they of cl0s", "why": "The 3mp fits Moses and Aaron together as the chain's addressees, but only Aaron acts in cl1 and cl2, and the text does not say whether Moses joined in. The composite is chosen on morphology and the command chain."},
+  {"what": "The members of the imperative groups Exo.8.12#imp2 and Exo.8.12#imp3", "why": "They are given by id without members, and the stretch-out and strike commands joined by 'and' would by the group rule be one imperative group with effect cl4 of that verse; the fulfils links therefore point at the command clauses directly."},
+  {"what": "Whether the command 'say to Aaron' (Exo.8.12 cl1) is fulfilled", "why": "No clause here repeats 'say'; only 'they did so' could cover it, and the text does not show the relay."}
+ ]}

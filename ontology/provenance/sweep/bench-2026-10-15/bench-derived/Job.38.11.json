@@ -1,0 +1,93 @@
+{
+ "ref": "Job.38.11",
+ "referents": [
+  {
+   "slot": "w14",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "result",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

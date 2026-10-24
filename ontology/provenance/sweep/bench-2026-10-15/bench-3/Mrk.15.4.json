@@ -1,0 +1,134 @@
+{
+ "ref": "Mrk.15.4",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "him (auton) is the object of Pilate's questioning, Jesus",
+   "category": "object pronoun in narrated act"
+  },
+  {
+   "slot": "w11",
+   "choice": "none",
+   "divine": false,
+   "why": "how many (poson) is an interrogative quantity over the charges; no candidate is what it refers to",
+   "category": "interrogative quantifier"
+  },
+  {
+   "slot": "w12",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "against you (sou) in the charges is second person singular, addressed to Jesus in Pilate's speech",
+   "category": "second person inside speech"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Mrk.15.1#w18",
+   "divine": true,
+   "why": "implied you in Have you no answer? is Jesus, addressee of Pilate's question",
+   "category": "implied you inside speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "they bring the charges: the chief priests of Mrk.15.3 are the accusers, but no candidate for them is offered; the nearest plural, elders and scribes (c8), are not the accusers",
+   "category": "accuser not among candidates"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "participle saying is nested in the main verb of asking",
+   "category": "participle inside main clause"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self link; a clause does not follow itself",
+   "category": "self link"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "the question is what the saying participle introduces; recorded as content (R1), not nesting",
+   "category": "speech content read as within"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "saying introduces Have you no answer? (R1)",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "the second sentence, Look how many charges, is also what is said in the same speech (R1)",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "two sentences of one speech with no connective between them, not one nested in the other",
+   "category": "juxtaposed sentences read as nested"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Mrk.15.1#w18"
+    }
+   ],
+   "divine": true,
+   "why": "Pilate's speech to Jesus: frame is the asking, parts are the two sentences said; the saying participle cl1 is not itself said, so removed as part; addressee Jesus added",
+   "category": "turn with addressee"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.4 cl2 and cl3",
+   "what": "two sentences of one speech set side by side without a connective; no link type for juxtaposed sentences, the turn carries them"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "referent of cl3s (the accusers, they bring charges)",
+   "why": "the chief priests of Mrk.15.3 are the plausible accusers but are not among the candidates offered for this verse"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "_about": "Where the original reads differently from the Berean at a word that matters, shown at the word itself: an asterisk in the verse and the finding beside it, marked as the site's own. The Berean's words are never changed. Doug, 2026-10-08: 'keep Berean's words - but make the note clearly marked - even with an asterisk or equivalent right in the verse - this is for consistency in using a translation but communicating our findings.' Each finding: the verse (site id), the Berean's exact words to mark, the original word (lemma) and MACULA's gloss, and a note in plain words. Every finding is checked against MACULA (© Biblica) before it goes in; tests/test_translation_findings.py checks each 'word' is in its verse.",
+ "findings": [
+  {"ref": "1Cor.13.8", "word": "they will be restrained",
+   "lemma": "παύω", "gloss": "they will be ceased",
+   "note": "The Greek verb here is παύω, which MACULA glosses \"they will be ceased\". It is a different verb from the one said of prophecies and knowledge in the same verse (καταργέω, \"done away\", \"pass away\")."},
+  {"ref": "Josh.9.15", "word": "treaty",
+   "lemma": "בְּרִית", "gloss": "a covenant",
+   "note": "The Hebrew word is בְּרִית (berit), the word for covenant: \"he made a covenant with them to let them live\"."},
+  {"ref": "Isa.64.7", "word": "delivered us",
+   "lemma": "מוּג", "gloss": "you have melted us",
+   "note": "The Hebrew verb is מוּג, which MACULA glosses \"melted\": \"you have melted us in the hand of our iniquity\" (64:6 in the Hebrew numbering)."},
+  {"ref": "Heb.7.27", "word": "His own sins",
+   "lemma": "ἴδιος", "gloss": "for the own sins",
+   "note": "The capital in \"His\" is the Berean's. The Greek reads \"as the high priests, first for the own sins\": the sins offered for first are the high priests'."}
+ ]
+}

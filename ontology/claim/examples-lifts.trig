@@ -1,0 +1,129 @@
+# THE 1.2.0 SHAPE AGAINST ONE WORKED EXAMPLE OF EACH LIFT (plan 8.1e item 5;
+# the lifts are plan 2.19). Written 2026-10-20, before any lift past the first is
+# built, so the shape is tested before data arrives, not fitted to it after.
+#
+# Each example is a real verse, real records and the structure layer's own
+# parts. Everything in claim:, bor: and bos: must be declared
+# (tests/test_lift_shapes.py checks it). The first version found five gaps
+# (docs/review/lift-shapes-1.2.0.md) and wrote them in a gap: namespace; Doug
+# approved each on the refreshed 1.2.0 inventory (2026-10-20), so they are now
+# the vocabulary's own terms: bor:spoke_to (G1), claim:modality_foretold (G2),
+# claim:evidencedBy reaching a phrase or a turn (G4), parts of the structure
+# addressed with the verse pages' book codes (G5), a described statement
+# labelled by its plain form (G6).
+#
+# A claim's triple is stated (inside its voice's graph, at the end) only when
+# the statement is made outright. A command, a promise, a prediction, a
+# negated clause or a verb whose form does not say it happened is described
+# and never stated.
+
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix claim: <https://bibleontology.org/ns/claim#> .
+@prefix bor:   <https://bibleontology.org/ns/relation#> .
+@prefix bos:   <https://bibleontology.org/ns/structure#> .
+@prefix e:     <https://bibleontology.org/e/> .
+@prefix p:     <https://bibleontology.org/p/> .
+@prefix voice: <https://bibleontology.org/voice/> .
+@prefix x:     <https://bibleontology.org/claim/example-> .
+
+# ---- 1. A verb statement (lift 1, built): John 3:16 ------------------------
+x:verb a claim:Claim ;
+    claim:subject e:god ; claim:relation bor:states ; claim:object e:world ;
+    claim:verse p:John.3.16 ; claim:certainty claim:explicit ;
+    claim:verbLabel "loved" ; claim:mood "indicative" ; claim:person "third" ;
+    claim:negated false ;
+    claim:modality claim:modality_stated ; claim:modalityFrom "form" ;
+    claim:family claim:family_verb_emotion ;
+    claim:clause <https://bibleontology.org/structure/John.3.16#cl0> ;
+    claim:voice claim:narrator .
+
+# ---- 2. A place (lift 2): Gen 13:3, "to Bethel" -----------------------------
+# The hand row stays the curated form; the lift is its evidence: the
+# prepositional phrase, by its word in the structure (G4).
+x:place a claim:Claim ;
+    claim:subject e:abraham ; claim:relation bor:traveled_to ; claim:object e:beth_el ;
+    claim:verse p:Gen.13.3 ; claim:certainty claim:explicit ;
+    claim:evidencedBy <https://bibleontology.org/structure/Gen.13.3#w13> ;
+    claim:voice claim:narrator .
+
+# ---- 3. Who speaks to whom (lift 3): Gen 22:7, "Isaac said to Abraham" -------
+# The narrator's statement, the speech TURN its evidence (G1, G4).
+x:speech a claim:Claim ;
+    claim:subject e:isaac ; claim:relation bor:spoke_to ; claim:object e:abraham ;
+    claim:verse p:Gen.22.7 ; claim:certainty claim:explicit ;
+    claim:evidencedBy <https://bibleontology.org/structure/Gen.22.7#turn0> ;
+    claim:voice claim:narrator .
+
+# ---- 4. A command (lift 4): Deut 6:5, "you shall love the LORD your God" ----
+# Moses' words to Israel. The form is a weqatal, which does not decide it;
+# a reading says "commanded", and modalityFrom says so. Its label is the
+# verb's plain form (G6): nothing happened. Described, NEVER stated.
+x:command a claim:Claim ;
+    claim:subject e:children_of_israel ; claim:relation bor:states ; claim:object e:god ;
+    claim:verse p:Deut.6.5 ; claim:certainty claim:explicit ;
+    claim:verbLabel "love" ; claim:mood "weqatal" ; claim:stem "qal" ; claim:person "second" ;
+    claim:negated false ;
+    claim:modality claim:modality_commanded ; claim:modalityFrom "reading" ;
+    claim:family claim:family_verb_emotion ;
+    claim:clause <https://bibleontology.org/structure/Deut.6.5#cl0> ;
+    claim:claimedBy e:moses ;
+    claim:voice voice:moses .
+
+# ...and a prediction of another (G2): John 13:38, "the rooster will not crow
+# until you have denied Me three times" (Jesus to Peter). Described, never
+# stated: that it came true is Mark 14:72's statement, the narrator's.
+x:foretold a claim:Claim ;
+    claim:subject e:peter ; claim:relation bor:states ; claim:object e:jesus ;
+    claim:verse p:John.13.38 ; claim:certainty claim:explicit ;
+    claim:verbLabel "deny" ; claim:mood "subjunctive" ; claim:negated false ;
+    claim:modality claim:modality_foretold ; claim:modalityFrom "reading" ;
+    claim:claimedBy e:jesus ;
+    claim:voice voice:jesus .
+
+# ---- 5. A reason between statements (lift 5): John 3:16 ----------------------
+# "God so loved the world THAT he gave his one and only Son": the structure
+# links cl0 to cl1 with bos:result. No claim term is needed: the two claims
+# meet through claim:clause, at the address the structure layer will use (G5).
+x:reason-given a claim:Claim ;
+    claim:subject e:god ; claim:relation bor:states ; claim:object e:jesus ;
+    claim:verse p:John.3.16 ; claim:certainty claim:explicit ;
+    claim:verbLabel "gave" ; claim:mood "indicative" ; claim:negated false ;
+    claim:modality claim:modality_stated ; claim:modalityFrom "form" ;
+    claim:clause <https://bibleontology.org/structure/John.3.16#cl1> ;
+    claim:voice claim:narrator .
+<https://bibleontology.org/structure/John.3.16#cl0> a bos:Clause ;
+    bos:result <https://bibleontology.org/structure/John.3.16#cl1> .
+<https://bibleontology.org/structure/John.3.16#cl1> a bos:Clause .
+
+# ---- 6. Identity (lift 6): John 6:35, "I am the bread of life" ---------------
+# The hand row (titled) is the narrator's; the clause is in Jesus' turn. Whose
+# words it is, the structure's turn says (sender).
+x:identity a claim:Claim ;
+    claim:subject e:jesus ; claim:relation bor:titled ; claim:object e:the_bread_of_life ;
+    claim:verse p:John.6.35 ; claim:certainty claim:explicit ;
+    claim:evidencedBy <https://bibleontology.org/structure/John.6.35#cl1> ;
+    claim:voice claim:narrator .
+
+# ---- 7. Family from apposition (lift 6): 1 Sam 10:21, "Saul son of Kish" -----
+# The apposition is inside cl2 ("Saul the son of Kish was taken"), evidence for
+# the hand row from a verse it did not yet cite (G4).
+x:family a claim:Claim ;
+    claim:subject e:kish ; claim:relation bor:father_of ; claim:object e:saul ;
+    claim:verse p:1Chr.8.33, p:1Sam.9.1, p:1Sam.14.51, p:1Sam.10.21 ; claim:certainty claim:explicit ;
+    claim:evidencedBy <https://bibleontology.org/structure/1Sam.10.21#cl2> ;
+    claim:voice claim:narrator .
+
+# ---- What is STATED: only the statements made outright ----------------------
+# never a bor:states triple (plan 8.3f, Doug 2026-10-22, "states: A"): the
+# relation has no verb, so different sentences would share one triple; a verb
+# statement is described by its claim, verb and all, and stated nowhere
+claim:narrator {
+    e:abraham bor:traveled_to e:beth_el .
+    e:isaac bor:spoke_to e:abraham .
+    e:jesus bor:titled e:the_bread_of_life .
+    e:kish bor:father_of e:saul .
+}
+voice:moses {
+}
+voice:jesus {
+}

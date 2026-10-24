@@ -1,0 +1,167 @@
+{
+ "ref": "Exo.8.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "'your hand' (second masc sg possessive) in the command to Aaron, the addressee of the commanded speech",
+   "category": "possessive inside a commanded speech"
+  },
+  {
+   "slot": "w14",
+   "choice": "w7",
+   "divine": false,
+   "why": "'your staff', same command to Aaron",
+   "category": "possessive inside a commanded speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "implied subject of 'say to Aaron', a command the LORD gives to Moses in cl0; the builder's Aaron is the addressee, not the one commanded to speak",
+   "category": "implied subject of a command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w7",
+   "divine": false,
+   "why": "implied subject of 'stretch out', the command in the words Moses is to say to Aaron",
+   "category": "implied subject inside a commanded speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w7",
+   "divine": false,
+   "why": "implied subject of 'bring up the frogs', the same command to Aaron",
+   "category": "implied subject inside a commanded speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "commands joined by waw at one level are one imperative group; the waw is a plain and inside it",
+   "category": "commands joined by and"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'the LORD said to Moses' introduces the command to say to Aaron",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "imp2",
+   "action": "add",
+   "why": "'say to Aaron' introduces a collection of commands (stretch out, bring up)",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.1#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "the LORD speaks to Moses; the commanded speech to Aaron is its part, so the builder's direct parts are replaced by that turn",
+   "category": "speech nesting"
+  },
+  {
+   "id": "Exo.8.1#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": false,
+   "why": "Moses is told to say the message to Aaron: the commanded turn is spoken by Moses and holds the quoted LORD's words as its part (R2)",
+   "category": "commanded speech"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "part",
+     "node": "imp2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w7"
+    }
+   ],
+   "divine": true,
+   "why": "the quoted message is the LORD's words, so its sender is the LORD and not Moses (the builder had cl1s); the frame moves to the commanded turn",
+   "category": "quoted message"
+  },
+  {
+   "id": "imp2",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl3"
+    }
+   ],
+   "divine": false,
+   "why": "'stretch out' and 'bring up' are commands joined by and at one level: one imperative group with two command members (cl3 was a part)",
+   "category": "command group"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl1 'say to Aaron'",
+   "what": "a command that is also the frame of the commanded turn; the imperative kind does not take it as a command member"
+  }
+ ],
+ "cant_tell": []
+}

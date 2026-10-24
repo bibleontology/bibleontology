@@ -1,0 +1,26 @@
+{"ref": "Psa.23.4",
+ "referents": [
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "Second masculine singular inside the psalm's own address to God from verse 4 on; the only second person the psalm addresses is the LORD named in verse 1, a masculine singular proper noun.", "category": "second person addressed in the psalm's own speech"},
+  {"slot": "w12", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person common singular 'me' in the psalm's own voice; the speaker of the psalm is the psalmist.", "category": "first person in the psalm's own voice"},
+  {"slot": "w14", "choice": "Psa.23.1#w3", "divine": true, "why": "Possessive second masculine singular on 'rod' in the address to God; the owner of the rod is the one addressed, the LORD of verse 1.", "category": "possessive second person in the address to God"},
+  {"slot": "w17", "choice": "Psa.23.1#w3", "divine": true, "why": "Possessive second masculine singular on 'staff'; as with the rod, the owner is the one addressed, the LORD.", "category": "possessive second person in the address to God"},
+  {"slot": "w18", "choice": "c13", "divine": false, "why": "Third masculine plural pronoun; no single candidate is plural (rod is masculine singular, staff feminine singular), so the composite rod and staff is the only plural that fits, and comforting is a sensible act for both.", "category": "plural pronoun for a pair of objects"},
+  {"slot": "w20", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person common singular object of 'comfort'; the psalm's own voice.", "category": "first person object in the psalm's own voice"},
+  {"slot": "cl0s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied first person common singular subject of the yiqtol 'I will go'; the psalm's own voice.", "category": "implied first person in the psalm's own voice"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied first person common singular subject of 'I will fear'; the psalm's own voice.", "category": "implied first person in the psalm's own voice"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "conceded", "dst": "cl0", "action": "remove", "why": "'conceded' is not in link_types. The relation the text makes, a concession marked by even-though on cl0, is the 'though' type, added below in the same direction.", "category": "builder link type not in the list"},
+  {"src": "cl1", "type": "though", "dst": "cl0", "action": "add", "why": "The verse opens with gam ki ('even though') on cl0, which precedes and qualifies cl1, 'I will fear no evil'; the concession type reads src, even though dst.", "category": "concession marked by even-though"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "why": "Ki after the main clause cl1 gives its reason, 'for You are with me'; a ki after its main clause stays because.", "category": "reason after main clause"},
+  {"src": "cl4", "type": "elaborates", "dst": "cl2", "action": "add", "why": "After the reason clause, the semicolon and an unconnected clause (rod and staff, they comfort me) give the detail of how the LORD is with the psalmist. The verse has no connective, so this is a reading, also recorded under cant_tell.", "category": "detail after reason, no connective"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "concession", "action": "add", "members": [{"role": "conceded", "node": "cl0"}, {"role": "holds_anyway", "node": "cl1"}, {"role": "its_ground", "node": "cl2"}], "divine": false, "why": "The verse is an even-though structure: the obstacle (I walk through the valley), the claim that holds anyway (I will fear no evil), and its ground (for You are with me).", "category": "concession with ground"}
+ ],
+ "none_fit": [
+  {"where": "cl3 and cl4 (your rod and your staff, they comfort me)", "what": "A fronted noun phrase taken up by a pronoun in the next clause (left dislocation). No link type or group kind covers a topic resumed by a pronoun: within is nesting, and parallel needs the subject omitted."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl3 and cl4 (rod and staff, they comfort me) explain cl2 (you are with me) or stand as a separate statement", "why": "The semicolon and the lack of any connective leave it open; the elaborates link above takes the reading that the rod and staff show how the LORD is present."}
+ ]}

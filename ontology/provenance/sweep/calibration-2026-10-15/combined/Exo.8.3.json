@@ -1,0 +1,16 @@
+{"ref": "Exo.8.3",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "Third masculine plural suffix on 'secret arts' (their enchantments); the only agreeing possessor that is a sensible doer of enchanting is the magicians (w4), the subject of cl0.", "category": "possessive suffix on the subject's own instrument"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "Implied subject of a third masculine plural wayyiqtol continuing cl0, whose named subject is the magicians (w4); same agent, the 'also' marks them doing it too.", "category": "implied subject continuing the previous clause's named subject"}
+ ],
+ "links": [
+  {"src": "cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "There is no cl2 in this verse; the id is the previous verse's last clause (Exo.8.2#cl2, the land covered). A within-verse 'then' cannot cross a verse boundary, and this verse's cl0 opens a new contrast (the magicians doing the same), not the next event after the frogs covered the land.", "category": "link from a clause outside the verse"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "remove", "why": "Bringing up frogs is not a later event after 'did thus'; it is what the magicians' doing the same consisted of, so the plain wayyiqtol sequence overstates a time order the sense does not give. Replaced by elaborates.", "category": "detail of an act read as next event"},
+  {"src": "cl0", "type": "likewise", "dst": "Exo.8.2#cl0", "action": "add", "why": "'They did thus' (ken) with a named subject (the magicians) who were not commanded: imitation of the deed just done, Aaron stretching out his hand so the frogs came up. Target is the deed begun, Aaron's stretching out (the frogs rising, Exo.8.2#cl1, is its outcome and is also copied).", "category": "others doing the same as a deed just done"},
+  {"src": "cl1", "type": "elaborates", "dst": "cl0", "action": "add", "why": "Waw + wayyiqtol 'and they brought up the frogs' says what the 'same thing' was: it is the detail of cl0, not a further act.", "category": "clause giving the detail of 'did the same'"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "Which clause of Exo.8.2 the 'thus' copies: the stretching out (Exo.8.2#cl0) or the frogs coming up (Exo.8.2#cl1)", "why": "'Did thus' (ken) does not name the act. The likewise link is written to Exo.8.2#cl0 as the deed begun; the relation holds either way, only the target is unsettled."}
+ ]}

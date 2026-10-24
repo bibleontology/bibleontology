@@ -1,0 +1,129 @@
+{
+ "ref": "Rom.3.5",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'Our' unrighteousness: first plural, the speakers 'we'; no candidate is first plural.",
+   "category": "speaker group not offered as candidate"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'what' (neuter singular) in 'what shall we say?'; refers to no candidate.",
+   "category": "interrogative pronoun"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'We' who say (first plural): the speakers of the diatribe, not a candidate; the builder's w0 is not a candidate.",
+   "category": "speaker group not offered as candidate"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "none",
+   "divine": false,
+   "why": "'I speak' (first singular): the writer Paul in a parenthetical; not a candidate.",
+   "category": "writer's own voice not offered as candidate"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed: the question 'what shall we say?' (cl0) is what the condition governs, not the other way round.",
+   "category": "condition reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The if-clause cl1 ('if our unrighteousness shows God's righteousness') conditions the question cl0; cl0 carries the 'if' opener.",
+   "category": "condition precedes what it governs"
+  },
+  {
+   "src": "cl3",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "'The one inflicting the wrath' is an articular participle describing God in cl2, not a clause joined by and to the question.",
+   "category": "participle read as and"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "add",
+   "why": "The articular participle is nested in cl2 as the description of God, the role of a relative clause in a noun phrase.",
+   "category": "descriptive participle nested in noun phrase"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'What shall we say?' is a saying clause; 'That God is unjust ...?' is what is said (R1).",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl0"
+    }
+   ],
+   "divine": false,
+   "why": "The condition 'if our unrighteousness shows God's righteousness' governs 'what shall we say?'.",
+   "category": "condition with its consequence"
+  },
+  {
+   "id": "Rom.3.5#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The saying 'what shall we say?' with what is said, 'God unjust?'. No sender is offered, so none is recorded.",
+   "category": "speech with unnamed speaker"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "3:5 cl4 'According to man I speak'",
+   "what": "A parenthetical qualifier of the writer's own speech; no link type records it, so it is left unlinked."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Sender of the turn (the 'we' of 'what shall we say?')",
+   "why": "The 'we' is the diatribe's speaker and is not offered as a candidate; the turn has no sender."
+  },
+  {
+   "what": "Verse-opening de ('But if ...') joined to 3:4",
+   "why": "Contrast with a verse-opening 'but' has no host in its own verse; no link added."
+  }
+ ]
+}

@@ -1,0 +1,134 @@
+# Bible Ontology -- alignment: our terms mapped to their nearest equivalents in five standard
+# vocabularies, as SKOS mapping properties, declared here as owl:AnnotationProperty.
+# Each mapping's reason is the comment above it; the page is https://bibleontology.org/ns/alignment
+
+@prefix bom: <https://bibleontology.org/ns/meaning#> .
+@prefix bor: <https://bibleontology.org/ns/relation#> .
+@prefix bos: <https://bibleontology.org/ns/structure#> .
+@prefix claim: <https://bibleontology.org/ns/claim#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://bibleontology.org/ns/alignment> a owl:Ontology ;
+    dcterms:title "Bible Ontology — alignment" ;
+    rdfs:label "Bible Ontology — alignment" ;
+    dcterms:creator "Doug Egge" ;
+    owl:versionInfo "1.2.0" ;
+    owl:versionIRI <https://bibleontology.org/ns/alignment/2026-10-21> ;
+    dcterms:modified "2026-10-21"^^xsd:date ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "Our terms mapped to their nearest equivalents in schema.org, FOAF, CIDOC CRM, OntoLex-Lemon and Web Annotation, as SKOS mapping properties: closeMatch (near enough for most queries, never the same), broadMatch (theirs is broader), narrowMatch (theirs is narrower), relatedMatch (associated, not interchangeable). No exactMatch. A mapping commits a reasoner to nothing beyond typing both ends as skos:Concept, which SKOS entails (punning, permitted in OWL 2); here the four mapping properties are declared as annotation properties. A mapping says how the text presents a person, place or event; none takes a view on historicity. The alignments the vocabularies state themselves (subclasses and subproperties of PROV, OntoLex and SKOS terms; DQV terms are used only as types) are in the vocabularies." ;
+    rdfs:seeAlso <https://bibleontology.org/ns/meaning>, <https://bibleontology.org/ns/structure>, <https://bibleontology.org/ns/relation>, <https://bibleontology.org/ns/claim> .
+
+skos:closeMatch a owl:AnnotationProperty .
+skos:broadMatch a owl:AnnotationProperty .
+skos:narrowMatch a owl:AnnotationProperty .
+skos:relatedMatch a owl:AnnotationProperty .
+
+# A man, woman or child of the story; schema.org's Person includes the dead and the fictional.
+bom:Human skos:closeMatch schema:Person .
+# FOAF's Person is any person, living, dead, real or imaginary.
+bom:Human skos:closeMatch foaf:Person .
+# CIDOC's real persons who live or are assumed to have lived.
+bom:Human skos:closeMatch crm:E21_Person .
+# Anyone the text treats as a person, God and angels included; FOAF's Agent is anything that acts, so it is broader.
+bom:PersonalBeing skos:broadMatch foaf:Agent .
+# CIDOC's Actor: people, singly or in groups, able to act intentionally; E21 Person is a subclass.
+bom:Human skos:broadMatch crm:E39_Actor .
+# People taken as one: a tribe, a nation, a household.
+bom:Group skos:closeMatch foaf:Group .
+# CIDOC's gatherings of people who act collectively or are seen as a unit.
+bom:Group skos:closeMatch crm:E74_Group .
+# A city, region, mountain, river or well.
+bom:Place skos:closeMatch schema:Place .
+# CIDOC's extents in space.
+bom:Place skos:closeMatch crm:E53_Place .
+# A happening as a thing: the flood, the exodus, a feast.
+bom:Event skos:closeMatch schema:Event .
+# CIDOC's changes of state in the world.
+bom:Event skos:closeMatch crm:E5_Event .
+# A point or stretch of time.
+bom:Time skos:closeMatch crm:E52_Time-Span .
+# Made things: a sword, an altar, the ark.
+bom:Artifact skos:closeMatch crm:E22_Human-Made_Object .
+# schema:children runs from a parent to a child, as father_of does; it covers mothers too, so it is broader.
+bor:father_of skos:broadMatch schema:children .
+# As father_of.
+bor:mother_of skos:broadMatch schema:children .
+# CIDOC's parent to child, biological, assumed or legal; broader, as schema:children is.
+bor:father_of skos:broadMatch crm:P152i_is_parent_of .
+# As father_of.
+bor:mother_of skos:broadMatch crm:P152i_is_parent_of .
+# Two people married to each other.
+bor:spouse_of skos:closeMatch schema:spouse .
+# Two people who are siblings, full or unspecified.
+bor:sibling_of skos:closeMatch schema:sibling .
+# Sharing one parent; schema:sibling does not distinguish, so it is broader.
+bor:half_sibling_of skos:broadMatch schema:sibling .
+# FOAF's knows is any reciprocated acquaintance; a friendship is narrower.
+bor:friend_of skos:broadMatch foaf:knows .
+# A person who belonged to a group. schema's memberOf is narrower: its groups are organizations, not tribes or households, and its members persons or organizations.
+bor:member_of skos:narrowMatch schema:memberOf .
+# The same membership read the other way: schema:member runs from the organization to the member.
+bor:member_of skos:relatedMatch schema:member .
+# CIDOC's membership, read from the member's side.
+bor:member_of skos:closeMatch crm:P107i_is_current_or_former_member_of .
+# The same membership read the other way: foaf:member runs from the group to the member.
+bor:member_of skos:relatedMatch foaf:member .
+# A person born at a place.
+bor:born_at skos:closeMatch schema:birthPlace .
+# A person who died at a place.
+bor:died_at skos:closeMatch schema:deathPlace .
+# A place within a larger place.
+bor:located_in skos:closeMatch schema:containedInPlace .
+# CIDOC's containment of one place in another.
+bor:located_in skos:closeMatch crm:P89_falls_within .
+# A settled residence; schema's homeLocation is a contact location, not a narrated dwelling.
+bor:dwelt_at skos:relatedMatch schema:homeLocation .
+# A person or group that lived at a place.
+bor:dwelt_at skos:closeMatch crm:P74_has_current_or_former_residence .
+# One unit of the text inside a larger one: a saying within a psalm.
+bor:part_of skos:closeMatch schema:isPartOf .
+# CIDOC's part of a symbolic object.
+bor:part_of skos:closeMatch crm:P106i_forms_part_of .
+# The book, psalm or letter as a unit; CreativeWork is any creative work, so broader.
+bos:Writing skos:broadMatch schema:CreativeWork .
+# A book of the Bible is a schema:Book; a psalm or a letter within one is a writing too, so Book is narrower.
+bos:Writing skos:narrowMatch schema:Book .
+# A writing is an expression in natural language; E33 is broader.
+bos:Writing skos:broadMatch crm:E33_Linguistic_Object .
+# A memorable expression the text uses, recorded as a unit.
+bom:Saying skos:broadMatch crm:E33_Linguistic_Object .
+# A saying is a unit of the text's own wording; schema's Quotation is words quoted from a work (a pending term).
+bom:Saying skos:relatedMatch schema:Quotation .
+# A statement makes a claim about the thing it names; P67 is any reference, without the claim.
+bor:speaks_of skos:relatedMatch crm:P67_refers_to .
+# A telling is an account of an event; P129 is a text's primary subject. Related, since ours joins two tellings too, not only a telling and its event.
+bor:recounts skos:relatedMatch crm:P129_is_about .
+# An idea the text names, linked to the senses that express it; both are SKOS concepts.
+bom:Concept skos:closeMatch ontolex:LexicalConcept .
+# E13 is the act of asserting one relation between two items; a claim is the record of one such relation with whose it is. Ours is the statement, CIDOC's the act.
+claim:Claim skos:relatedMatch crm:E13_Attribute_Assignment .
+# What the assertion is about.
+claim:subject skos:relatedMatch crm:P140_assigned_attribute_to .
+# What is asserted of it.
+claim:object skos:relatedMatch crm:P141_assigned .
+# Which relation is asserted.
+claim:relation skos:relatedMatch crm:P177_assigned_property_of_type .
+# Who makes the assertion; CIDOC's actor carries out the act.
+claim:claimedBy skos:relatedMatch crm:P14_carried_out_by .
+# schema.org's Claim is a factually-oriented claim, as reviewed by fact-checkers; ours is a relation the text or a speaker asserts.
+claim:Claim skos:relatedMatch schema:Claim .
+# E13 records who holds an opinion about an item, as a reading names its reader; CIDOC's is the act, ours the reading.
+bom:Reading skos:relatedMatch crm:E13_Attribute_Assignment .
+# One reader's claim about the text, with the reader and its evidence; an annotation is a body about a target, with its creator.
+bom:Reading skos:relatedMatch oa:Annotation .

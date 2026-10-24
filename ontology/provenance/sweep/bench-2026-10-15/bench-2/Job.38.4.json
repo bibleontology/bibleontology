@@ -1,0 +1,104 @@
+{
+ "ref": "Job.38.4",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'when I laid the foundations': the first person inside the LORD's speech is the LORD.",
+   "category": "first person in the speech"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'where were you': second person, the addressee Job.",
+   "category": "second person in the speech"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "The implied subject of the imperative 'tell' is the one told, Job.",
+   "category": "implied you of a command"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'you have understanding': second person, Job.",
+   "category": "second person in the speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive 'when I founded the earth' is a temporal clause nested in the question.",
+   "category": "temporal clause nested in a question"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'Tell me, if you have understanding': the condition cl3 conditions the command cl2; the if-link runs from what is conditioned to its condition (R3).",
+   "category": "condition after a command"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "Job.38.4#g1"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Job.38.1#w4"
+    }
+   ],
+   "divine": true,
+   "why": "The speaker of 'tell' is the LORD, not Job (the builder's sender was the one told). Under R3 the turn's part is the conditional group, not the bare condition.",
+   "category": "turn sender and part"
+  },
+  {
+   "id": "Job.38.4#g1",
+   "kind": "conditional",
+   "action": "add",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl3"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The conditional 'if you have understanding' conditions the command 'tell me' (R3).",
+   "category": "conditional inside a speech"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether the Hebrew has an 'im (if) before 'you have understanding'",
+   "why": "The parser's opens_with for cl3 is null, so the if-link rests on the English and the sense; the particle should be checked against the text."
+  }
+ ]
+}

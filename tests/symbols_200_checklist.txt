@@ -1,0 +1,245 @@
+# Two hundred symbols, with the sense a reader arrives expecting
+#
+# THE QUESTION THIS FILE ASKS is not "is the word in the corpus" -- almost all
+# of them are, and a concordance answers that. It is:
+#
+#     Does the graph hold this as a figure, cited, and reachable from the
+#     passages that use it -- and does it hold the sense without asserting it?
+#
+# The second half matters more than the first. Every row carries a gloss
+# ("rainbow -- covenant mercy") and **those glosses are the reader's, not the
+# corpus's**. A few are stated in the text: 1 Peter 3:21 says the ark is a
+# figure of baptism, John 3:14 says the brazen serpent is a figure of the Son
+# of man, Genesis 9:13 says the bow is a token of a covenant. Most are not.
+#
+# So the rule this file is scored against is the one the imagery layer already
+# follows. Where the corpus states the meaning, it is recorded as a stated
+# thing with the verse that states it. Where the meaning is a tradition's
+# reading -- however good a reading -- it stays in this column and out of the
+# graph. A row is done when the figure exists, is cited, and reaches the
+# material that uses it. **It is not done by adding an edge asserting the
+# gloss**, and a row that acquired one would be a defect rather than progress.
+#
+# Some entries are the same word twice with different senses (1 and 92 are both
+# the rainbow; 21 and 130 are both a yoke). That is the list being honest about
+# how the corpus uses them, and the graph holds one record per word with the
+# senses in its description, not one record per sense.
+#
+# Instruments: `image` records are minted only where the corpus uses a word
+# figuratively more than once, and are kept apart from the tangible thing of
+# the same name by `drawn_from`. `bibleont.candidates` finds figures that share
+# verses with material they do not reach.
+#
+# Format: n | symbol | the sense a reader expects | status
+
+## Covenant, identity, and authority
+1 | Rainbow | covenant mercy |
+2 | Circumcision | covenant sign |
+3 | Ark of the Covenant | presence, covenant, law |
+4 | Signet ring | delegated authority |
+5 | Sceptre | rule, kingship |
+6 | Throne | glory, sovereignty |
+7 | Name/Seal of God | ownership, protection |
+8 | Alpha and Omega | eternity, completeness |
+9 | Keys | authority to open and close |
+10 | Covenant blood | ratification, life |
+11 | Boundary stone | covenant, justice |
+12 | Witness stone | memorial of oath |
+13 | Book or scroll of the covenant | binding revelation |
+14 | Oath-raised hand | solemn pledge |
+15 | Sign on hand or forehead | allegiance, remembrance |
+16 | White stone | acceptance, new identity |
+17 | Crown | victory, reward |
+18 | Diadem | royal dignity |
+19 | Rod or staff | guidance, discipline |
+20 | Shepherd's crook | care, protection |
+21 | Yoke | bondage or discipleship |
+22 | Seal on heart or arm | love, belonging |
+23 | Ring (marriage) | covenant union |
+24 | Bride's garments | purity, readiness |
+25 | Sign of Jonah | death and resurrection pattern |
+
+## Divine presence, Spirit, and worship
+26 | Cloud | presence, mystery |
+27 | Pillar of cloud and fire | guidance |
+28 | Fire | presence, purification, judgment |
+29 | Wind | Spirit, unseen power |
+30 | Light | truth, revelation |
+31 | Burning bush | holy presence |
+32 | Glory | the weight of God's being |
+33 | Temple | dwelling of God |
+34 | Tabernacle | mobile presence, access |
+35 | Holy of Holies | ultimate nearness |
+36 | Mercy seat | atonement, meeting place |
+37 | Lampstand | witness, illumination |
+38 | Showbread | fellowship, provision |
+39 | Incense | prayer rising |
+40 | Altar of incense | intercession |
+41 | Bronze altar | substitutionary sacrifice |
+42 | Bronze laver | cleansing |
+43 | Oil and anointing | Spirit, consecration |
+44 | Priestly garments | representation, holiness |
+45 | Ephod | priestly mediation |
+46 | Breastplate stones | tribes, remembrance |
+47 | Urim and Thummim | discernment |
+48 | Trumpets | God speaking, assembly, judgment |
+49 | Censer | priestly mediation |
+50 | Sackcloth and ashes | repentance |
+51 | Tearing garments | grief, outrage |
+52 | Lifting hands | prayer, dependence |
+53 | Covering the head | submission |
+54 | Baptism water | cleansing, union with Christ |
+55 | Lord's Supper bread | participation in Christ |
+56 | Lord's Supper cup | covenant blood |
+57 | Veil | separation from holiness |
+58 | Torn veil | opened access |
+59 | Sabbath day | rest, completion |
+60 | Festival calendar | redemptive pattern |
+
+## Sacrifice, redemption, and salvation
+61 | Passover lamb | deliverance, substitution |
+62 | Sin offering goat | guilt transfer |
+63 | Scapegoat | removal of sin |
+64 | Red heifer | purification from death |
+65 | Bronze serpent | healing by faith |
+66 | Cross | atoning death, victory |
+67 | Blood on doorposts | protection, obedience |
+68 | Manna | daily dependence, spiritual food |
+69 | Bread of life | Christ as sustainer |
+70 | Living water | Spirit, eternal life |
+71 | Rock struck for water | Christ smitten |
+72 | Cup of suffering | submission to God's will |
+73 | Cup of blessing | participation in grace |
+74 | Altar stones | memorial of encounter |
+75 | Firstfruits offering | pledge of harvest |
+76 | Tithe | acknowledgment of ownership |
+77 | Kinsman-redeemer | legal restoration |
+78 | Ransom price | substitutionary payment |
+79 | Chains | bondage to sin |
+80 | Prison | judgment, captivity |
+81 | Door | access, exclusion |
+82 | Narrow gate | costly entry |
+83 | Wedding feast | consummated kingdom |
+84 | Wedding garment | required righteousness |
+85 | Field with treasure | hidden kingdom value |
+86 | Pearl of great price | supreme worth |
+87 | Net | gathering for judgment |
+88 | Fish catch | mission, inclusion |
+89 | Ark of Noah | salvation through judgment |
+90 | Flood waters | judgment, cleansing |
+91 | Olive branch | peace after wrath |
+92 | Rainbow (again) | mercy after judgment |
+93 | Cities of refuge | mercy within law |
+94 | Refiner's fire | purifying trials |
+95 | Potter's clay | God's sovereign shaping |
+
+## Creation, growth, and harvest
+96 | Seed | Word, faith, future kingdom |
+97 | Vine | God's people, fruitfulness |
+98 | Branches | dependence, productivity |
+99 | Fig tree | fruitfulness or judgment |
+100 | Olive tree | covenant people, continuity |
+101 | Mustard seed | small beginnings, great outcome |
+102 | Tree of life | eternal life, communion |
+103 | Tree of knowledge | moral boundary |
+104 | Grass | human frailty |
+105 | Thorns and thistles | curse, frustration |
+106 | Harvest | final judgment |
+107 | Wheat | true believers |
+108 | Tares | false among true |
+109 | Sheaves | gathered people |
+110 | Wine | joy, covenant, sometimes judgment |
+111 | New wine | new covenant, Spirit |
+112 | Salt | preservation, covenant loyalty |
+113 | Leaven | pervasive influence, often sin |
+114 | House on rock | obedience, stability |
+115 | House on sand | disobedience, collapse |
+116 | Vineyard | Israel, stewardship |
+117 | Wall of the vineyard | protection, boundary |
+118 | Fig leaves | self-covering, shame |
+119 | Garments of skin | God's covering |
+120 | Sheepfold | secure belonging |
+121 | Gate of the sheepfold | Christ as access |
+122 | Shepherd | divine care, leadership |
+123 | Hireling | false care |
+124 | Lost sheep | straying sinner |
+125 | Lost coin | valued but hidden |
+126 | Lost son | relational estrangement |
+127 | Field | world, sphere of sowing |
+128 | Plow | commitment to work |
+129 | Oxen | service, strength |
+130 | Yoke of oxen | shared labour |
+131 | Fallow ground | unbroken heart |
+132 | Rain | blessing, Word |
+133 | Drought | judgment, withdrawal |
+134 | Figs and grapes | covenant blessing |
+135 | Locusts | devastating judgment |
+
+## Cosmic, apocalyptic, and prophetic imagery
+136 | Beast | kingdom or power |
+137 | Dragon | Satanic power |
+138 | Horns | kings, strength |
+139 | Heads of the beast | successive regimes |
+140 | Wings | speed, protection |
+141 | Stars | angels, leaders |
+142 | Lampstands | churches, witnesses |
+143 | Sun | glory, righteousness |
+144 | Moon | reflected light, change |
+145 | Sea | chaos, nations |
+146 | Waters | peoples, multitudes |
+147 | Rivers | life, blessing |
+148 | Floods | overwhelming judgment |
+149 | Earthquake | divine intervention |
+150 | Thunder | God's voice |
+151 | Lightning | sudden judgment |
+152 | Smoke | presence or destruction |
+153 | White hair | wisdom, eternity |
+154 | White horse | conquering purity |
+155 | Red horse | war |
+156 | Black horse | famine |
+157 | Pale horse | death |
+158 | Seals | stages of judgment |
+159 | Trumpet judgments | escalating warning |
+160 | Bowls of wrath | poured judgment |
+161 | New Jerusalem | consummated people and place |
+162 | Babylon | corrupt world system |
+163 | Harlot woman | apostate system |
+164 | Pure bride | faithful people |
+165 | Mark on hand or forehead | allegiance |
+166 | Book of life | registered belonging |
+167 | Scroll with seven seals | controlled history |
+168 | Tree by the river | ongoing healing |
+169 | Lake of fire | final judgment |
+170 | Outer darkness | exclusion |
+171 | Chains on the dragon | restrained evil |
+172 | Throne room | cosmic governance |
+173 | White robe | vindicated righteousness |
+174 | Palm branches | victory, praise |
+175 | Golden bowls | prayers preserved |
+
+## Human condition, ethics, and inner life
+176 | Heart | the inner person |
+177 | Eyes | perception, desire |
+178 | Ears | receptivity to truth |
+179 | Hands | action, responsibility |
+180 | Feet | walk, conduct |
+181 | Body | corporate interdependence |
+182 | Armour of God | spiritual protection |
+183 | Helmet | salvation as mindset |
+184 | Breastplate | righteousness guarding |
+185 | Shield | faith as defence |
+186 | Sword | Word, judgment |
+187 | Belt | truth holding together |
+188 | Sandals | readiness to go |
+189 | Mirror | self-examination by the Word |
+190 | Household table | fellowship, provision |
+191 | Doorpost | boundary of the home |
+192 | Lamp in the house | guidance, witness |
+193 | Salt of the earth | moral influence |
+194 | City on a hill | visible community |
+195 | Path or way | life direction |
+196 | Narrow road | costly obedience |
+197 | Broad road | easy destruction |
+198 | Slavery chains | bondage to sin |
+199 | Adoption | new status |
+200 | Inheritance | promised future share |

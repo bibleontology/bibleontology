@@ -1,0 +1,297 @@
+{
+ "_about": "Where each theme concept belongs (plan 7.6b). Copilot's theme map (out/theme-map.json) is left as drawn; this file says where a concept is shown. `home`: the one theme whose page holds it; `also`: the sibling themes that link to it. A concept not listed stays in the theme Copilot gave it. Doug, 2026-10-06: 'some overlap is ok - but strive to put things in their logical place'; group 5's three themes approved on docs/review/THEME-HOMES-GROUP5.html ('approved'). `why`: the reason it moves, or why its title is to be reviewed. `names`: a theme's new display name, with the name it replaced; the id and address never change.",
+ "groups": [
+  {
+   "name": "Creation and New Creation",
+   "themes": [
+    "creation",
+    "image_of_god",
+    "blessing_commission",
+    "new_creation"
+   ]
+  },
+  {
+   "name": "Covenant, Kingdom and Wisdom",
+   "themes": [
+    "covenant",
+    "kingdom",
+    "law_wisdom",
+    "wisdom_literature"
+   ]
+  },
+  {
+   "name": "Worship and Presence",
+   "themes": [
+    "sacrifice",
+    "priesthood",
+    "temple_presence",
+    "spirit",
+    "trinity",
+    "church",
+    "children_of_god"
+   ]
+  },
+  {
+   "name": "Sin, Judgment and Restoration",
+   "themes": [
+    "sin_exile_death",
+    "judgment",
+    "spiritual_warfare",
+    "deliverance",
+    "freedom",
+    "mercy_restoration"
+   ]
+  },
+  {
+   "name": "Prophecy, Messiah and Apocalyptic",
+   "themes": [
+    "prophetic_word",
+    "messiah",
+    "apocalyptic"
+   ]
+  }
+ ],
+ "concepts": {
+  "apocalyptic:5": {
+   "home": "apocalyptic",
+   "also": [
+    "kingdom"
+   ]
+  },
+  "apocalyptic:6": {
+   "home": "judgment",
+   "also": [
+    "apocalyptic"
+   ],
+   "why": "moves: judgment of nations is Judgment's subject; the visions show it, so Apocalyptic links to it"
+  },
+  "apocalyptic:7": {
+   "home": "apocalyptic",
+   "also": [
+    "judgment"
+   ],
+   "why": "label to review: \"vindication\" names an outcome; the texts' own words (Dan 12, Rev 6:10) may say it better"
+  },
+  "apocalyptic:8": {
+   "home": "prophetic_word",
+   "also": [
+    "apocalyptic",
+    "judgment"
+   ],
+   "why": "moves: \"the day of the LORD\" is the prophets' phrase (Joel, Amos, Zephaniah, Malachi)"
+  },
+  "apocalyptic:9": {
+   "home": "messiah",
+   "also": [
+    "apocalyptic"
+   ],
+   "why": "moves: the Messiah's victory is Messiah's subject"
+  },
+  "apocalyptic:10": {
+   "home": "judgment",
+   "also": [
+    "new_creation",
+    "apocalyptic"
+   ],
+   "why": "moves: final judgment to Judgment; resurrection is linked from New Creation"
+  },
+  "apocalyptic:11": {
+   "home": "new_creation",
+   "also": [
+    "apocalyptic"
+   ],
+   "why": "moves: and may repeat New Creation's own \"Renewal of Heaven and Earth\" and \"Eternal State\" -- one thing recorded twice is merged only on your word"
+  },
+  "prophetic_word:2": {
+   "home": "prophetic_word",
+   "also": [
+    "covenant"
+   ]
+  },
+  "prophetic_word:3": {
+   "home": "prophetic_word",
+   "also": [
+    "mercy_restoration"
+   ]
+  },
+  "prophetic_word:4": {
+   "home": "prophetic_word",
+   "also": [
+    "judgment"
+   ]
+  },
+  "prophetic_word:5": {
+   "home": "prophetic_word",
+   "also": [
+    "mercy_restoration"
+   ]
+  },
+  "prophetic_word:10": {
+   "home": "prophetic_word",
+   "also": [
+    "messiah"
+   ]
+  },
+  "prophetic_word:11": {
+   "home": "messiah",
+   "also": [
+    "prophetic_word"
+   ],
+   "why": "moves, and label to review: \"Fulfillment in Jesus Christ\" states the Christian reading as the site's; the texts that say \"to fulfill what was spoken\" can carry it in their own words"
+  },
+  "prophetic_word:12": {
+   "home": "prophetic_word",
+   "also": [
+    "church"
+   ],
+   "why": "label to review: with c13 it takes a side on a live dispute -- whether prophecy continues (Pentecostal, charismatic) or ceased (cessationist)"
+  },
+  "new_creation:2": {
+   "home": "new_creation",
+   "also": [
+    "apocalyptic"
+   ]
+  },
+  "new_creation:3": {
+   "home": "new_creation",
+   "also": [
+    "image_of_god"
+   ]
+  },
+  "new_creation:4": {
+   "home": "new_creation",
+   "also": [
+    "sin_exile_death"
+   ]
+  },
+  "new_creation:5": {
+   "home": "new_creation",
+   "also": [
+    "temple_presence"
+   ]
+  },
+  "new_creation:6": {
+   "home": "new_creation",
+   "also": [
+    "temple_presence",
+    "apocalyptic"
+   ]
+  },
+  "new_creation:9": {
+   "home": "new_creation",
+   "also": [
+    "covenant"
+   ]
+  },
+  "new_creation:10": {
+   "home": "new_creation",
+   "also": [
+    "kingdom"
+   ]
+  },
+  "new_creation:11": {
+   "home": "new_creation",
+   "also": [
+    "messiah"
+   ]
+  },
+  "new_creation:12": {
+   "home": "new_creation",
+   "also": [
+    "spirit"
+   ]
+  },
+  "law_wisdom:5": {
+   "home": "wisdom_literature",
+   "also": [
+    "law_wisdom"
+   ],
+   "why": "moves (Doug, 2026-10-07: 'if we do move wisdom fully to wisdom literature, the law is a huge topic'; on the card, 'The Law'): wisdom is Wisdom Literature's subject; The Law links to it"
+  },
+  "law_wisdom:6": {
+   "home": "wisdom_literature",
+   "also": [
+    "law_wisdom"
+   ],
+   "why": "moves (Doug, 2026-10-07: 'if we do move wisdom fully to wisdom literature, the law is a huge topic'; on the card, 'The Law'): wisdom is Wisdom Literature's subject; The Law links to it"
+  },
+  "law_wisdom:7": {
+   "home": "law_wisdom",
+   "also": [
+    "wisdom_literature"
+   ],
+   "why": "stays: the bridge, in the texts' words ('Fear God and keep His commandments'); Wisdom Literature links to it"
+  },
+  "wisdom_literature:9": {
+   "home": "wisdom_literature",
+   "also": [
+    "law_wisdom"
+   ],
+   "why": "stays: wisdom's side of the bridge; The Law links to it"
+  },
+  "apocalyptic:4": {
+   "home": "spiritual_warfare",
+   "also": [
+    "apocalyptic"
+   ],
+   "why": "moves (P-2026-10-07-2, Doug: approved): Cosmic Conflict is Spiritual Warfare's core; the visions show it, so Apocalyptic links to it"
+  },
+  "deliverance:9": {
+   "home": "freedom",
+   "also": [
+    "deliverance"
+   ],
+   "why": "moves (the card for P-2026-10-07-3, Doug: 'Split into two'): Liberation / Freedom is Freedom's core; Deliverance links to it"
+  }
+ },
+ "names": {
+  "prophetic_word": {
+   "name": "Prophets and Prophecy",
+   "was": "Prophetic Word & Fulfillment",
+   "when": "2026-10-06",
+   "why": "Whether a word was fulfilled is what traditions read differently; the texts that say 'to fulfill what was spoken' stay on the page in their own words. Doug: 'make sure you get the Prophetic Word renamed everywhere including in the Apocalyptic card' (P-2026-10-06-14)"
+  },
+  "messiah": {
+   "name": "Messiah",
+   "was": "Messiah / Christology",
+   "when": "2026-10-07",
+   "why": "'Christology' is a term of doctrine, and the theme's pages set out the titles in the texts' own words. Doug, asked whether to rename it now rather than in the final names pass: 'Rename now'"
+  },
+  "law_wisdom": {
+   "name": "The Law",
+   "was": "Law / Wisdom",
+   "when": "2026-10-07",
+   "why": "Wisdom moved fully to Wisdom Literature, and the Law is a subject of its own: the Torah, the Sermon on the Mount, the first part of Romans. The front page keeps the bridge to wisdom in the texts' words. Doug: 'rethinking: if we do move wisdom fully to wisdom literature, the law is a huge topic'; 'it could still connect to wisdom on the card to present a bridge and retain the url'; on the card, 'Yes: The Law'"
+  }
+ },
+ "site_shown": [
+  "trinity",
+  "spiritual_warfare",
+  "children_of_god",
+  "freedom"
+ ],
+ "_site_shown": "The site's own themes (ontology/themes/site-themes.md) shown on the site: each added only when its owner has seen it (plan 7.6b). Until then the server hides it everywhere; the preview shows it.",
+ "outlines_shown": [
+  "creation",
+  "image_of_god",
+  "blessing_commission",
+  "new_creation",
+  "covenant",
+  "kingdom",
+  "law_wisdom",
+  "wisdom_literature",
+  "sacrifice",
+  "priesthood",
+  "temple_presence",
+  "sin_exile_death",
+  "judgment",
+  "mercy_restoration",
+  "deliverance",
+  "prophetic_word",
+  "messiah",
+  "spirit",
+  "church",
+  "apocalyptic"
+ ],
+ "_outlines_shown": "Themes whose outline, redone in the texts' words (ontology/themes/redone-outlines.md, plan 7.6c), the live map shows in place of Copilot's: each added only on its owner's approval. Group 1, Doug, 2026-10-08: 'All four live'. Group 2, Doug, 2026-10-08: 'reviewed the 4 and they all look great - I approve'. Groups 3-5 (the remaining twelve), Doug, 2026-10-08: 'reviewed the outlines and I approve'."
+}

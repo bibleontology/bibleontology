@@ -1,0 +1,120 @@
+{
+ "ref": "Rom.3.5",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "'Of us' (first plural) in 'our unrighteousness' is Paul and his readers; no first-plural candidate.",
+   "category": "first person plural not offered"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'what' in 'what shall we say': refers to nothing; no neuter singular candidate.",
+   "category": "interrogative word"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'We' in 'what shall we say' is Paul and his readers; no first-plural candidate.",
+   "category": "first person plural not offered"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "none",
+   "divine": false,
+   "why": "'I speak' (first singular) is the writer's own remark about how he speaks; no first-person candidate.",
+   "category": "writer's own voice not offered"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "if",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed: the protasis cl1 is the condition, and the question cl0 is what it conditions.",
+   "category": "condition attached to wrong clause"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl1",
+   "action": "add",
+   "why": "'What shall we say, if our unrighteousness highlights God's righteousness?' cl0 is conditioned by cl1.",
+   "category": "conditional question"
+  },
+  {
+   "src": "cl3",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The participle 'inflicting the wrath' describes God in the objection; it is not a conjunct of 'what shall we say'.",
+   "category": "participle read as conjunct"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "add",
+   "why": "The articular participle (the one inflicting wrath) is a relative-like clause nested in the noun phrase 'God'.",
+   "category": "relative participle in noun phrase"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'What shall we say?' introduces the objection that follows: is God unjust to inflict wrath?",
+   "category": "saying introduces objection"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond1",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl1"
+    },
+    {
+     "role": "consequence",
+     "node": "cl0"
+    }
+   ],
+   "divine": false,
+   "why": "The protasis is cl1 and the question it conditions is cl0.",
+   "category": "conditional question"
+  },
+  {
+   "id": "Rom.3.5#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "'What shall we say' introduces the objection, which is its part (ruling R1). No sender or addressee is a candidate.",
+   "category": "speech introduces objection"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl4 'According to man I speak'",
+   "what": "A remark on the manner of the writer's own speaking ('in human terms'); no link type records a qualification of one's own saying."
+  }
+ ],
+ "cant_tell": []
+}

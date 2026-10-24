@@ -1,0 +1,80 @@
+{
+ "ref": "Mrk.15.13",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false,
+   "why": "Object 'Him' of 'Crucify' is Jesus, who is not offered as a candidate here. The builder's w2 is wrong: Pilate is not the one to be crucified. The offered candidates are Pilate and Barabbas only.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Mrk.15.12#w2",
+   "divine": false,
+   "why": "A command's implied 'you' is the person it is spoken to. The crowd shouts back at Pilate's question of 15:12, so the command is addressed to Pilate, singular.",
+   "category": "implied you of a command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The imperative is the quoted cry, nested inside the shouting verb as grammar nests a quotation.",
+   "category": "speech nested in saying"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self link. No earlier clause within the verse is on the narrative line.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The shouting verb introduces the words 'Crucify Him', which are what is said (R1).",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Mrk.15.13#turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "addressee",
+     "node": "Mrk.15.12#w2"
+    }
+   ],
+   "divine": false,
+   "why": "The builder's sender w1 is not a candidate in this verse. The crowd that shouts is the sender but is not offered, so the sender member is removed. The addressee is Pilate, the one the shout answers.",
+   "category": "sender not in candidate list"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.13 cl0, implied subject 'they cried out'",
+   "what": "The implied third plural subject is not in the slot list. It is the crowd, which is not offered as a candidate."
+  },
+  {
+   "where": "Mrk.15.13 'they shouted back'",
+   "what": "A shout that answers a question has no link type for a reply. Left unlinked."
+  }
+ ],
+ "cant_tell": []
+}

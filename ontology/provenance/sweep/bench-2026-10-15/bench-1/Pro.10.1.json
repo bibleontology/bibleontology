@@ -1,0 +1,62 @@
+{
+ "ref": "Pro.10.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "The possessive 'his' sits in 'his mother' in the second line, which is about the foolish son; w7 is the masculine singular foolish son, and the mother is his. The wise son of the first line is not the owner of this mother.",
+   "category": "possessive in antithetic second line"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Plain waw joining two opposed proverb lines. The sense is contrast ('but' in the English), not cause, result or purpose, and the contrast type takes only explicit but-words, so the 'and' link stands.",
+   "category": "waw in antithetic proverb pair"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Pro.10.1#g1",
+   "kind": "writing",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "w1"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The heading 'The proverbs of Solomon' is the frame; the text names Solomon as writer; the two proverb lines are what it says.",
+   "category": "heading as writing frame"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl1 -and-> cl2",
+   "what": "antithetic pair of lines joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "how far the writing group extends beyond this verse",
+   "why": "The heading governs the collection that follows; this verse alone does not show where its part ends."
+  }
+ ]
+}

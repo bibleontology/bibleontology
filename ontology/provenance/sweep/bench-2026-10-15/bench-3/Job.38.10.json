@@ -1,0 +1,86 @@
+{
+ "ref": "Job.38.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'On it' (third masculine singular): the sea, not offered as a candidate.",
+   "category": "pronoun for a non-person from an earlier verse"
+  },
+  {
+   "slot": "w5",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'My boundaries' (first person): the LORD speaking. Not in this verse's candidate list.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Implied first person subject of the wayyiqtol 'I fixed': the LORD.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Implied first person subject of 'I set in place': the LORD.",
+   "category": "first person in divine speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot follow itself. This is a parser self-loop with no support in the form.",
+   "category": "self-link artefact"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The wayyiqtol continues the line: the LORD fixed the boundaries, then set the bar and doors.",
+   "category": "wayyiqtol sequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Job.38.10#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Job.38.1#w2"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, each stating its subject only in its verb, both acts of the LORD. Recorded as a reading for review.",
+   "category": "acts of one agent"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The LORD is not in this verse's candidate list.",
+   "why": "Chosen from the speech, as in 38:8."
+  },
+  {
+   "what": "Whether the LORD's run of acts from 38:8 to 38:10 is one acts group across verses.",
+   "why": "The group is recorded only within 38:10 here. A cross-verse group would be a passage-level reading."
+  }
+ ]
+}

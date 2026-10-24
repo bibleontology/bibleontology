@@ -1,0 +1,159 @@
+{
+  "_source": "Lemma forms verified against out/interlinear.jsonl.gz on 2026-09-15, not transliterated from memory. Four Hebrew forms were mis-pointed on the first attempt (batach, ahab, yashar, mishpat all returned 0) and were found by gloss instead; the counts below are what the corpus actually holds.",
+
+  "_intent": "Doug, 2026-09-15: 'we might be able to fast track grace, faith, and love by their original language words (Agape) and word families'. These are the three themes ontology/major-themes.json marks `no_vocabulary` -- three of the most agreed themes in Christianity, and the stamp taxonomy has no id for any of them.",
+
+  "_epistemics": "A WORD FAMILY IS THE INVERSE OF A STAMP. A stamp is a model's reading: broad recall, unverifiable, and it can be wrong in ways nothing catches. A lemma family is the word being present: verifiable by anyone with a concordance, and it misses everything taught without the word. High precision, low recall -- exactly backwards from the stamps, which is why the two together are worth more than either.",
+
+  "_the_recall_problem": "Doug, 2026-09-15: 'grace being trickier because it is often demonstrated without the word - mercy being closely related.' This is the governing limitation and it is not a caveat, it is the thing to measure. Luke 15 is the clearest teaching of grace in the Gospels and contains no χάρις. Genesis 22 is the New Testament's own example of faith (Heb 11:17) and contains no אָמַן. So each family carries an `enacted` list -- passages broadly agreed to teach the theme -- and tools/wordfamily.py reports how many of them the lemmas MISS. That number is the family's measured recall floor, published rather than apologised for.",
+
+  "_the_overlap_is_real": "חֶסֶד is glossed 'steadfast love' 130 times and 'kindness' 37 times in this corpus. It belongs to grace, to love, and to faithfulness at once, and the Septuagint often renders it ἔλεος. Hebrew does not cut these three the way English does. Families are therefore allowed to share lemmas, and the sharing is reported rather than resolved -- forcing חֶסֶד into one family would be imposing a distinction the text does not make.",
+
+  "families": [
+    {
+      "id": "grace",
+      "name": "Grace and steadfast love",
+      "greek": {
+        "χάρις": 155, "χαρίζομαι": 23, "χαριτόω": 2,
+        "ἔλεος": 27, "ἐλεέω": 29, "οἰκτιρμός": 5
+      },
+      "hebrew": {
+        "חֶסֶד": 248, "חֵן": 70, "חָנַן": 78,
+        "רָחַם": 46, "רַחֲמִים": 39, "רַחוּם": 13, "חָסִיד": 32
+      },
+      "shares": ["חֶסֶד with love and faith -- see _the_overlap_is_real"],
+      "enacted": ["Luke.15.20", "Luke.23.43", "John.8.11", "Matt.20.15",
+                  "Luke.18.13", "Hos.3.1", "Rom.5.8"],
+      "note": "The Greek is thin (155 χάρις) and the Hebrew is where the weight sits (248 חֶסֶד). Reading the family as 'grace' alone would make it look like a New Testament idea, which is the error the חֶסֶד count refutes."
+    },
+    {
+      "id": "faith",
+      "name": "Faith, trust and faithfulness",
+      "greek": {
+        "πίστις": 243, "πιστεύω": 241, "πιστός": 67, "ἀπιστία": 11
+      },
+      "hebrew": {
+        "אָמַן": 105, "אֱמוּנָה": 49, "אֱמֶת": 127,
+        "בָּטַח": 118, "חָסָה": 37
+      },
+      "shares": ["אֱמֶת and אֱמוּנָה with grace: God's faithfulness and human trust are one word family in Hebrew and two ideas in English"],
+      "enacted": ["Gen.22.9", "Dan.3.17", "1Sam.17.37", "Exod.14.13",
+                  "Job.13.15", "Mark.5.27"],
+      "note": "πίστις is BOTH 'faith' and 'faithfulness', and πιστός is the Pastorals' formula word -- 'this is a faithful saying' -- which tools/declaredthemes.py already found firing on church-order instructions rather than on trust. The lemma does not settle the sense."
+    },
+    {
+      "id": "love",
+      "name": "Love",
+      "greek": {
+        "ἀγάπη": 116, "ἀγαπάω": 143, "ἀγαπητός": 61,
+        "φιλέω": 25, "φίλος": 29
+      },
+      "hebrew": {
+        "אָהֵב": 207, "אַהֲבָה": 35, "חֶסֶד": 248, "דּוֹד": 61,
+        "רֵעַ": 191
+      },
+      "shares": ["חֶסֶד with grace"],
+      "enacted": ["John.13.5", "Luke.10.33", "Ruth.1.16", "Phil.2.7",
+                  "John.19.26", "Hos.11.8"],
+      "note": "רֵעַ is 'neighbour', the OBJECT of the command rather than the act, and is included only because Lev 19:18 and its six NT citations are unreachable without it. If it drags in ordinary uses of 'another', that is a measured cost -- see the tool's per-lemma output."
+    },
+    {
+      "id": "adoption",
+      "name": "Becoming God's children",
+      "greek": {
+        "υἱοθεσία": 5, "ἀββά": 3, "κληρονόμος": 15, "συγκληρονόμος": 4,
+        "μονογενής": 9, "τεκνίον": 8, "πρωτότοκος": 8
+      },
+      "hebrew": {
+        "בְּכֹר": 122, "בְּכֹרָה": 10
+      },
+      "pairs": [
+        ["τέκνον", "θεός"], ["υἱός", "θεός"], ["πατήρ", "υἱοθεσία"],
+        ["בֵּן", "אֱלֹהִים"]
+      ],
+      "_rejected_rule": "['אָב','בֵּן'] (father + son in one verse) was tried and dropped on 2026-09-15. It reached 308 verses, 272 of them reachable by nothing else, and a sample of those was almost entirely 1 Chronicles genealogy -- 1Chr.2.21, 2.23, 2.45, 2.52, 12.31, 19.2, 23.9, 23.11, 24.2. It buries real instances: 1Chr.17.11-13, 22.10 and 2Sam.7.14 are the Davidic 'I will be his father and he shall be my son', which is the theme exactly. Dropping it costs 2Sam.7.14 from the recall list. That is the right trade -- a rule whose yield is mostly genealogy is not evidence for a theme, and it is the same failure tools/gradatio.py hit when Chronicles inventories of gold and bronze dominated its chains.",
+      "shares": [],
+      "enacted": ["Rom.8.15", "Rom.8.16", "1John.3.1", "John.1.12", "Gal.4.5",
+                  "Eph.1.5", "Ps.103.13", "Exod.4.22", "Deut.14.1",
+                  "2Sam.7.14", "Hos.11.1", "Jer.31.9", "Matt.5.9", "Rev.21.7"],
+      "note": "Doug, 2026-09-15: 'another big one is us becoming God's children - all over Romans 8, 1 John 3:1, Psalm 103, many more that I am not taking the time to lookup'. THE FAILURE MODE HERE IS THE OPPOSITE OF GRACE'S. Grace is enacted without its word; adoption's words are everywhere and mean nothing bare -- בֵּן alone is 4,937 verses of ordinary sons, and υἱός includes every 'Son of Man'. The technical term υἱοθεσία is 5 verses. So this family is carried by COLLOCATIONS: child-with-God, father-with-son. That is a weaker instrument than a rare lemma and the enacted list is deliberately long enough to show it."
+    },
+    {
+      "id": "holiness",
+      "name": "Holiness",
+      "greek": {
+        "ἅγιος": 234, "ἁγιάζω": 28, "ἁγιασμός": 10, "ἁγιωσύνη": 3,
+        "ὅσιος": 8, "καθαρός": 27, "καθαρίζω": 31, "ἀκάθαρτος": 31,
+        "μιαίνω": 5
+      },
+      "hebrew": {
+        "קֹדֶשׁ": 468, "קָדוֹשׁ": 116, "קָדַשׁ": 172, "מִקְדָּשׁ": 75,
+        "טָהֹר": 94, "טָהֵר": 95, "טָמֵא": 249, "טֻמְאָה": 36
+      },
+      "_rejected_lemma": "חָלַל, 141 verses, was in the first draft as the profanation verb and was dropped on 2026-09-15. Its commonest gloss in this corpus is 'began' (28) against 'profaned' (27) -- it is two verbs sharing a spelling, and a lemma set cannot tell them apart. Including it would have added ~114 verses of things beginning. Same judgement as the father+son rule in `adoption`: a member whose majority yield is the wrong sense is not evidence.",
+      "shares": [],
+      "enacted": ["Lev.11.45", "Lev.19.2", "Isa.6.3", "Exod.3.5", "Ps.24.3",
+                  "1Pet.1.16", "Heb.12.14", "Matt.5.8", "Rev.4.8"],
+      "note": "THE LARGEST HOLE THE AUDIT FOUND. קֹדֶשׁ is 468 verses across 29 books and there is no id for holiness anywhere in the 264-stamp vocabulary or the 21 theme ids. Found by tools/lexcoverage.py going word by word, which is the method's whole justification: a list cannot report what it forgot. The family deliberately includes the clean/unclean pair (טָהוֹר, טָמֵא) and the profanation verb (חָלַל), because Leviticus works the theme through the NEGATIVE as much as the positive and a family holding only the positive would miss most of the Torah's treatment of it."
+    },
+    {
+      "id": "fear_of_the_lord",
+      "name": "The fear of the LORD",
+      "greek": {
+        "φόβος": 47, "φοβέω": 95, "εὐλάβεια": 2
+      },
+      "hebrew": {
+        "יָרֵא": 378, "יִרְאָה": 45, "מוֹרָא": 12, "פַּחַד": 49
+      },
+      "shares": [],
+      "enacted": ["Prov.1.7", "Prov.9.10", "Ps.111.10", "Job.28.28",
+                  "Eccl.12.13", "Deut.10.12", "Isa.11.2", "Luke.1.50",
+                  "Acts.9.31"],
+      "note": "Proverbs calls it the beginning of knowledge and of wisdom, and Eccl 12:13 makes it the conclusion of the whole matter -- one of the OT's own self-summaries, which tools/declaredthemes.py lists as an OT candidate no lemma set could reach. The family's recall problem is the opposite: יָרֵא is also ordinary fright (Gen 3:10, every 'do not be afraid'), so this family needs a sense split that lemmas alone cannot give. Published with that limit stated rather than tuned away."
+    },
+    {
+      "id": "wrath",
+      "name": "The wrath of God",
+      "greek": {
+        "ὀργή": 36, "θυμός": 18, "παροργίζω": 2, "ὀργίζω": 8
+      },
+      "hebrew": {
+        "אַף": 414, "חֵמָה": 115, "קֶצֶף": 28, "עֶבְרָה": 34,
+        "חָרָה": 82, "זַעַם": 22
+      },
+      "shares": [],
+      "enacted": ["Exod.34.6", "Nah.1.2", "Rom.1.18", "Ps.103.8",
+                  "Hos.11.9", "John.3.36", "Rev.6.16", "Lam.3.22"],
+      "note": "414 verses of אַף across 35 books, no stamp. The interest is not wrath alone but its PAIRING: Exod 34:6 and Ps 103:8 both say slow to anger AND abounding in steadfast love in one breath, and Hos 11:8-9 is the pairing as an argument with itself. That pairing is reachable now that grace and wrath are both families -- the two lemma sets in one section is a detectable structure, and it is the shape Doug's judgement-and-redemption pattern needs."
+    },
+    {
+      "id": "blood",
+      "name": "Blood",
+      "greek": {
+        "αἷμα": 88, "αἱματεκχυσία": 1
+      },
+      "hebrew": {
+        "דָּם": 360
+      },
+      "shares": [],
+      "enacted": ["Gen.4.10", "Exod.12.13", "Lev.17.11", "Isa.1.11",
+                  "Matt.26.28", "Heb.9.22", "1Pet.1.19", "Rev.12.11"],
+      "note": "The atonement layer's central symbol and 360 verses with no id. It is a SYMBOL rather than a theme -- Doug, 2026-09-15: 'if we can just get the thematic and symbollism layers a little farther along' -- and it is the cleanest test case for the symbolic layer, because one word carries Abel's blood crying from the ground, the doorposts in Egypt, the life that is in the blood, and the cup at the supper. A single lemma, four distinct symbolic uses, which is exactly what the slot-and-fill pattern machinery is for."
+    },
+    {
+      "id": "justice",
+      "name": "Justice and righteousness",
+      "greek": {
+        "δικαιοσύνη": 92, "δίκαιος": 79, "δικαιόω": 39, "κρίσις": 47
+      },
+      "hebrew": {
+        "מִשְׁפָּט": 422, "צְדָקָה": 157, "צֶדֶק": 119,
+        "צַדִּיק": 206, "שָׁפַט": 202, "יָשָׁר": 119
+      },
+      "shares": [],
+      "enacted": ["Mic.6.8", "Amos.5.24", "Isa.1.17", "Luke.4.18",
+                  "Jas.1.27", "Prov.14.31"],
+      "note": "Added alongside Doug's three because major-themes.json flags it as the WORSE case: it has a stand-in, `stranger_sojourner` on 245 sections, and a stand-in does not report itself the way a hole does. מִשְׁפָּט/צְדָקָה is the pair Amos 5:24 puts together and is the actual vocabulary."
+    }
+  ]
+}

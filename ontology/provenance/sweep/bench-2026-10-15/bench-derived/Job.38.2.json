@@ -1,0 +1,51 @@
+{
+ "ref": "Job.38.2",
+ "referents": [
+  {
+   "slot": "w0",
+   "choice": "Job.38.1#w4",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "Job.38.1#cl1",
+   "type": "content",
+   "dst": "cl0",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "describing",
+   "dst": "cl1",
+   "action": "add"
+  }
+ ],
+ "groups": [
+  {
+   "id": "g1",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

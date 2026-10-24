@@ -1,0 +1,82 @@
+{
+ "ref": "Job.38.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'on it': 'it' is the sea, not a candidate.",
+   "category": "antecedent outside the candidates"
+  },
+  {
+   "slot": "w5",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'my boundary': the first person in the LORD's speech is the LORD.",
+   "category": "first person in the speech"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "The implied 'I' of 'I decreed' is the LORD.",
+   "category": "implied first person in the speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "The implied 'I' of 'I set in place' is the LORD.",
+   "category": "implied first person in the speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A self-link.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The wayyiqtol 'set in place' continues the narrative line after 'decreed': and then.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Job.38.10#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Job.38.1#w2"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, each stating its subject only in its verb, are acts of the one agent, the LORD. Recorded as a reading for review (R5).",
+   "category": "acts of one agent"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether the 'when' series from 38:9 continues into these clauses, and what its host is",
+   "why": "The verbs are wayyiqtol narrative; 'then' is within a verse only, and the parser does not mark a host across verses."
+  }
+ ]
+}

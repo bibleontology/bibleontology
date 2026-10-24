@@ -1,0 +1,136 @@
+# The hundred people outside sources treat as central
+#
+# The graph has dug into some lives far more than others, and the reason is
+# extraction order rather than judgment. The corpus is in large part a
+# narrative, and a graph that downplays its people to favour concepts has
+# traded one lopsidedness for another.
+#
+# THE QUESTION THIS FILE ASKS is not "is this person in the graph". Almost all
+# of them are, with kin and places and events. It is:
+#
+#     Does this person have their burning bush, and does the graph have it?
+#
+# The bush is the test case. It is in the Moses story, it is the most
+# recognisable image attached to him, and for a long time this graph held it as
+# an orphan with no verses and no connections -- present, and saying nothing.
+# A reader who came to Moses would not have found it.
+#
+# So for each name: what is the image, object, saying or figure that a reader
+# associates with this person, and is it in the graph, cited, and reachable
+# from them? Some will have none, and that is an answer. Some will have
+# several. The ones to worry about are the ones where a figure obviously
+# exists and the graph has the person without it.
+#
+# Ordered by the tiers as given, which are a rough proxy for how likely a
+# reader is to arrive already knowing something.
+#
+# Format: tier | name | the figure(s) a reader would expect | status
+
+## Tier 1 -- central figures
+1 | Jesus | | 
+1 | Moses | the burning bush, the rod, the tables of stone, the brazen serpent | 
+1 | Abraham | the ram in the thicket, the stars, the knife on Moriah | 
+1 | David | the sling and stone, the harp, the shepherd | 
+1 | Paul | the road to Damascus, the thorn in the flesh, the armour | 
+1 | Mary (mother of Jesus) | | 
+1 | Peter | the keys, the rock, the cock crowing, the nets | 
+1 | Adam | the dust, the rib, the garden, the fig leaves | 
+1 | Eve | the fruit, the serpent | 
+1 | Noah | the ark, the dove, the rainbow, the olive leaf | 
+
+## Tier 2 -- patriarchs, matriarchs, covenant figures
+2 | Isaac | the wood, the altar | 
+2 | Jacob/Israel | the ladder, the wrestling, the coat given | 
+2 | Joseph (son of Jacob) | the coat of many colours, the pit, the dreams | 
+2 | Sarah | the laughter, the tent door | 
+2 | Joshua | the walls, the sun standing still, the Jordan stones | 
+2 | Samuel | the horn of oil, the voice in the night | 
+2 | Solomon | the sword and the child, the temple, wisdom | 
+2 | John the Baptist | the locusts, the water, the voice in the wilderness | 
+2 | Elijah | the still small voice, the chariot of fire, the mantle, the ravens | 
+2 | Elisha | the mantle taken up, the double portion, the axe head | 
+2 | Ruth | the gleaning, the corner of the garment | 
+2 | Boaz | the kinsman-redeemer, the shoe | 
+2 | Job | the ashes, the whirlwind, the potsherd | 
+2 | Isaiah | the coal from the altar, the suffering servant | 
+2 | Jeremiah | the potter's clay, the yoke, the almond rod | 
+
+## Tier 3 -- prophets, apostles, leaders
+3 | Daniel | the lions' den, the writing on the wall, the fiery furnace | 
+3 | Nehemiah | the wall, the trowel and sword | 
+3 | Ezra | the book, the reading | 
+3 | Hezekiah | the sundial, the letter spread before the Lord | 
+3 | Josiah | the book found | 
+3 | Saul (first king) | the torn skirt, the spear, the evil spirit | 
+3 | Bathsheba | | 
+3 | Esther | the sceptre, the banquet | 
+3 | Miriam | the timbrel, the leprosy | 
+3 | Aaron | the rod that budded, the breastplate, the golden calf | 
+3 | Caleb | the grapes of Eshcol | 
+3 | Gideon | the fleece, the trumpets and pitchers | 
+3 | Samson | the hair, the jawbone, the pillars, the lion | 
+3 | Deborah | the palm tree | 
+3 | Nathan | the ewe lamb parable | 
+3 | James (brother of Jesus) | | 
+3 | John (apostle) | | 
+3 | Andrew | | 
+3 | Thomas | the wounds, the hand in the side | 
+3 | Philip (apostle) | | 
+3 | Barnabas | | 
+3 | Timothy | | 
+3 | Titus | | 
+3 | Stephen | the stones, the face of an angel | 
+3 | Cornelius | the sheet let down | 
+
+## Tier 4 -- kings, prophets, disciples, NT figures
+4 | Rebekah | the pitcher at the well | 
+4 | Leah | | 
+4 | Rachel | the weeping, the household gods | 
+4 | Hannah | the vow, the little coat | 
+4 | Jeroboam | the calves, the torn garment | 
+4 | Rehoboam | the whips and scorpions | 
+4 | Ahab | the vineyard | 
+4 | Jezebel | the dogs, the window | 
+4 | Uzziah | the censer, the leprosy | 
+4 | Zechariah (prophet) | the candlestick, the flying roll | 
+4 | Malachi | the refiner's fire | 
+4 | Hosea | the unfaithful wife | 
+4 | Joel | the locusts, the outpouring | 
+4 | Amos | the plumbline, the basket of summer fruit | 
+4 | Micah | | 
+4 | Habakkuk | the watchtower | 
+4 | Zephaniah | | 
+4 | Haggai | the unfinished house | 
+4 | Simeon (Luke 2) | | 
+4 | Anna | | 
+4 | Nicodemus | the night, the new birth | 
+4 | Joseph of Arimathea | the new tomb, the linen | 
+4 | Mary Magdalene | the garden, the alabaster question | 
+4 | Martha | the serving | 
+
+## Tier 5 -- secondary but significant
+5 | Cain | the mark, the ground crying out | 
+5 | Abel | the firstlings, the blood | 
+5 | Lamech | | 
+5 | Melchizedek | the bread and wine, the order | 
+5 | Lot | the cities, the angels | 
+5 | Lot's wife | the pillar of salt | 
+5 | Ishmael | the wilderness, the bottle of water | 
+5 | Esau | the birthright, the pottage | 
+5 | Potiphar | the garment left behind | 
+5 | Pharaoh (Exodus) | the hardened heart | 
+5 | Balaam | the ass, the sword in the way | 
+5 | Rahab | the scarlet cord, the window | 
+5 | Jephthah | the vow | 
+5 | the persecuted before Paul's conversion | the consent unto his death | 
+5 | Herod the Great | the star, the children of Bethlehem | 
+5 | Herod Antipas | the head in a charger | 
+5 | Pilate | the washing of hands, the basin, the title on the cross | 
+5 | the centurion at the cross | | 
+5 | the Samaritan woman | the well, the waterpot, living water | 
+5 | the rich young ruler | the eye of the needle | 
+5 | Zacchaeus | the sycomore tree | 
+5 | Lazarus (raised) | the graveclothes, the stone | 
+5 | the thief on the cross | | 
+5 | Priscilla | | 
+5 | Aquila | | 

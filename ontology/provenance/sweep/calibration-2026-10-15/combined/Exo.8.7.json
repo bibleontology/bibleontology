@@ -1,0 +1,23 @@
+{"ref": "Exo.8.7",
+ "referents": [
+  {"slot": "w5", "choice": "Exo.8.5#w4", "divine": false, "why": "Second masculine singular suffix 'you' inside Moses's speech; the addressee of that speech is Pharaoh, to whom Moses has been answering since 8.5.", "category": "second person inside a speech"},
+  {"slot": "w9", "choice": "Exo.8.5#w4", "divine": false, "why": "Second masculine singular 'your' on 'houses'; the speech's addressee is Pharaoh (the same address as in the preceding verse's 'from you and from your houses').", "category": "second person inside a speech"},
+  {"slot": "w13", "choice": "Exo.8.5#w4", "divine": false, "why": "Second masculine singular 'your' on 'officials'; the possessor is the single addressee, Pharaoh.", "category": "second person inside a speech"},
+  {"slot": "w17", "choice": "Exo.8.5#w4", "divine": false, "why": "Second masculine singular 'your' on 'people'; the possessor is the single addressee, Pharaoh.", "category": "second person inside a speech"},
+  {"slot": "cl1s", "choice": "w3", "divine": false, "why": "Third feminine plural 'they will remain'; the only feminine plural candidate is 'frogs' (w3), the subject of the clause before, and the frogs are the sensible doer of remaining in the Nile.", "category": "implied subject continuing the previous clause's subject"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "cl4 is not a clause of this verse (it belongs to the earlier verse), and 'and then' links a wayyiqtol sequence within a verse only; this weqatal is an announcement continuing Moses's speech, not the next narrative event after 'you may know'.", "category": "cross-verse then link on a speech continuation"}
+ ],
+ "groups": [
+  {"id": "g1", "kind": "turn", "action": "add",
+   "members": [{"role": "sender", "node": "Exo.8.5#w2"}, {"role": "addressee", "node": "Exo.8.5#w4"}, {"role": "part", "node": "cl0"}, {"role": "part", "node": "cl1"}],
+   "divine": false, "why": "Both clauses are Moses's announcement to Pharaoh: second person 'you / your' throughout is Pharaoh; there is no frame clause here because the speech opened in the verse before and runs on.", "category": "speech continuing across a verse boundary"}
+ ],
+ "none_fit": [
+  {"where": "cl1 to cl0", "what": "'Only in the Nile they will remain' is a restriction or exception on the departure of the frogs (the frogs leave everywhere except the Nile). No link type covers a restrictive 'only'; but_rather is limited to 'ki im' after a negative and contrast to 'ulam' or 'efes ki'."}
+ ],
+ "cant_tell": [
+  {"what": "Whether g1 should be folded into Exo.8.6#turn1 as a part of it, rather than standing as a separate turn.", "why": "The members of Exo.8.6#turn1 are not in the input; the text itself shows the same speaker and addressee continuing without a new saying clause, so it is one speech, but I cannot edit a group I cannot see."},
+  {"what": "Whether cl0 is the effect of the imperative group Exo.8.4#imp2 (Pharaoh's request to pray).", "why": "The request is two verses back and the frogs' departure here is Moses's prediction in reply, not a waw plus weqatal directly following that imperative; no link is added."}
+ ]}

@@ -1,0 +1,46 @@
+{
+ "ref": "Job.38.6",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'on what' asks what the bases of the earth rest on. The answer, nothing, is not a candidate.",
+   "category": "interrogative with no candidate"
+  },
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its bases' (feminine singular) refers to the earth of 38:4, not offered as a candidate.",
+   "category": "referent outside candidate list"
+  },
+  {
+   "slot": "w6",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Rhetorical 'who' asking who laid its cornerstone: the expected answer is the LORD.",
+   "category": "rhetorical question, answer is the speaker"
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its cornerstone' (feminine) refers to the earth, not offered as a candidate.",
+   "category": "referent outside candidate list"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Two questions side by side, 'on what were its bases set, or who laid its cornerstone': alternatives.",
+   "category": "or between two questions"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

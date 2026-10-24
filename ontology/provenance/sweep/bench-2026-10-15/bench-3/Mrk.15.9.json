@@ -1,0 +1,106 @@
+{
+ "ref": "Mrk.15.9",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "Dative 'them' (autois) is the crowd Pilate answers, named in 15:8 as 'the crowd', but no candidate offered here is the crowd. The offered candidates are Pilate, King, Barabbas and Jesus, none of them a plural group that could be addressed.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "Second plural 'to you' inside Pilate's speech: the addressee of that speech is the crowd, which is not offered as a candidate.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "none",
+   "divine": false,
+   "why": "Implied second plural subject of 'you want' inside Pilate's question. Its addressee is the crowd, not offered as a candidate.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "First singular 'I should release' inside Pilate's own question: the speaker of that speech is Pilate, masculine singular, which agrees. The builder's w2 is correct.",
+   "category": "first person inside a speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "The subjunctive 'I should release' is the object of 'you want', nested as the grammar nests an object clause.",
+   "category": "object clause of a verb of wanting"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The participle 'saying' carries the speech, so the said clause is nested inside it as grammar nests it.",
+   "category": "speech nested in a participle"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The answering clause carries the saying participle as its complement.",
+   "category": "speech nested in a participle"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot follow itself. The verse opens here, so there is no earlier clause on the narrative line.",
+   "category": "self link"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The participle 'saying' introduces the words that follow, and the question is what is said (R1). The turn keeps the question as its part, as well.",
+   "category": "speech content"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Mrk.15.9#turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "The part of the turn is what is said, the question cl2, not the participle cl1 that introduces it; cl1 is now the saying clause linked by content. Sender is Pilate, the one speaking. The addressee member is removed because the crowd it would name is not an offered candidate.",
+   "category": "turn part is the said clause"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.9 candidates",
+   "what": "The crowd named in 15:8 is the addressee of Pilate's speech ('them', 'you') but is not offered as a candidate, so those slots are none rather than a choice."
+  }
+ ],
+ "cant_tell": []
+}

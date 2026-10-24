@@ -1,0 +1,2606 @@
+{
+ "_source": "Doug, 2026-09-13, from a Copilot thread he directed. Organised and de-duplicated here, nothing discarded.",
+ "_intent": "A FINDING aid, not an authority. Doug: 'The list I am going to give and the existing overlay are for finding, but not intended to override the principles. At the end of the day we stay true to the text and surface what is there.' A stamp is a claim that the text shows this, and must cite the verse that shows it. Where the taxonomy expects something the text does not say, the text wins and the stamp is absent.",
+ "_use": "Stamp section-level nodes so patterns can be ranked by interest, related across the corpus, and navigated up and down the graph.",
+ "themes": {
+  "_note": "20, ordered by the storyline. The five most pattern-dense are marked dense:true.",
+  "items": [
+   {
+    "id": "creation",
+    "label": "Creation",
+    "gloss": "God's ordering of the world and His purpose for humanity"
+   },
+   {
+    "id": "image_of_god",
+    "label": "Image of God",
+    "gloss": "human vocation to reflect God's character"
+   },
+   {
+    "id": "blessing_commission",
+    "label": "Blessing & Commission",
+    "gloss": "flourishing and mission"
+   },
+   {
+    "id": "covenant",
+    "label": "Covenant",
+    "gloss": "God binding Himself to His people through promises",
+    "dense": true
+   },
+   {
+    "id": "kingdom",
+    "label": "Kingdom",
+    "gloss": "God's reign breaking into history",
+    "dense": true
+   },
+   {
+    "id": "law_wisdom",
+    "label": "Law / Wisdom",
+    "gloss": "God's revealed will for life with Him"
+   },
+   {
+    "id": "sacrifice",
+    "label": "Sacrifice",
+    "gloss": "substitution, atonement, cleansing",
+    "dense": true
+   },
+   {
+    "id": "priesthood",
+    "label": "Priesthood",
+    "gloss": "mediation, holiness, representation",
+    "dense": true
+   },
+   {
+    "id": "temple_presence",
+    "label": "Temple / Presence",
+    "gloss": "God dwelling with His people",
+    "dense": true
+   },
+   {
+    "id": "sin_exile_death",
+    "label": "Sin, Exile, and Death",
+    "gloss": "rebellion and its consequences",
+    "dense": true
+   },
+   {
+    "id": "promise_faithfulness",
+    "label": "Promise & Faithfulness",
+    "gloss": "God keeps His word across generations"
+   },
+   {
+    "id": "judgment",
+    "label": "Judgment",
+    "gloss": "God's righteous response to evil"
+   },
+   {
+    "id": "mercy_restoration",
+    "label": "Mercy & Restoration",
+    "gloss": "compassion toward the repentant"
+   },
+   {
+    "id": "deliverance",
+    "label": "Deliverance / Salvation",
+    "gloss": "exodus-type rescue"
+   },
+   {
+    "id": "prophetic_word",
+    "label": "Prophetic Word & Fulfillment",
+    "gloss": "God interprets history and declares future acts"
+   },
+   {
+    "id": "suffering_servant",
+    "label": "Suffering Servant",
+    "gloss": "the one who bears sin and brings healing"
+   },
+   {
+    "id": "spirit",
+    "label": "The Spirit",
+    "gloss": "empowering, indwelling presence"
+   },
+   {
+    "id": "people_of_god",
+    "label": "People of God",
+    "gloss": "Israel to Church as covenant community"
+   },
+   {
+    "id": "redemption_in_christ",
+    "label": "Redemption in Christ",
+    "gloss": "the gospel as climax of all motifs"
+   },
+   {
+    "id": "new_creation",
+    "label": "New Creation / Consummation",
+    "gloss": "the restored world where God dwells with humanity"
+   },
+   {
+    "id": "union_with_christ",
+    "label": "Union with Christ",
+    "gloss": "the believer joined to Christ's death and resurrection; the gospel's shape applied to a person"
+   }
+  ],
+  "_level": "section",
+  "_earned": "a property of the whole unit's argument or arc"
+ },
+ "imagery": {
+  "_note": "100 symbolic images, grouped. label = the image; gloss = its meaning.",
+  "cosmic_nature": [
+   [
+    "light",
+    "truth, revelation, God's presence"
+   ],
+   [
+    "darkness",
+    "ignorance, evil, judgment"
+   ],
+   [
+    "water",
+    "chaos, cleansing, life"
+   ],
+   [
+    "sea",
+    "danger, evil powers, untamed creation"
+   ],
+   [
+    "river",
+    "blessing, life, Spirit"
+   ],
+   [
+    "mountain",
+    "meeting with God, authority"
+   ],
+   [
+    "wilderness",
+    "testing, dependence, exile"
+   ],
+   [
+    "garden",
+    "abundance, divine presence"
+   ],
+   [
+    "tree_of_life",
+    "eternal life, divine wisdom"
+   ],
+   [
+    "tree_of_knowledge",
+    "moral discernment, temptation"
+   ],
+   [
+    "storm",
+    "divine power, judgment"
+   ],
+   [
+    "thunder",
+    "God's voice"
+   ],
+   [
+    "earthquake",
+    "divine intervention"
+   ],
+   [
+    "sun",
+    "glory, righteousness"
+   ],
+   [
+    "moon",
+    "change, cycles, lesser light"
+   ],
+   [
+    "stars",
+    "angels, descendants, divine order"
+   ],
+   [
+    "dust",
+    "mortality, humility"
+   ],
+   [
+    "fire",
+    "purification, presence, judgment"
+   ],
+   [
+    "cloud",
+    "divine presence, guidance"
+   ],
+   [
+    "wind",
+    "Spirit, divine action"
+   ]
+  ],
+  "agricultural": [
+   [
+    "seed",
+    "faith, the Word, beginnings"
+   ],
+   [
+    "vine",
+    "covenant relationship, fruitfulness"
+   ],
+   [
+    "branches",
+    "dependence on God"
+   ],
+   [
+    "olive_tree",
+    "Israel, covenant continuity"
+   ],
+   [
+    "fig_tree",
+    "fruitfulness or judgment"
+   ],
+   [
+    "mustard_seed",
+    "small beginnings to great outcomes"
+   ],
+   [
+    "harvest",
+    "judgment, gathering of people"
+   ],
+   [
+    "wheat",
+    "righteousness"
+   ],
+   [
+    "tares",
+    "false believers, evil"
+   ],
+   [
+    "sheaves",
+    "blessing, provision"
+   ],
+   [
+    "grass",
+    "human frailty"
+   ],
+   [
+    "thorns",
+    "curse, suffering"
+   ],
+   [
+    "fruit",
+    "character, obedience"
+   ],
+   [
+    "root",
+    "origin, stability, lineage"
+   ],
+   [
+    "firstfruits",
+    "consecration, resurrection"
+   ]
+  ],
+  "objects_tools": [
+   [
+    "rock",
+    "stability, God as refuge"
+   ],
+   [
+    "stone",
+    "judgment, memorial, hardness"
+   ],
+   [
+    "cornerstone",
+    "Christ's foundational role"
+   ],
+   [
+    "capstone",
+    "completion, authority"
+   ],
+   [
+    "sand",
+    "multitude, instability"
+   ],
+   [
+    "clay",
+    "human dependence, God's sovereignty"
+   ],
+   [
+    "potter",
+    "divine shaping of people"
+   ],
+   [
+    "lamp",
+    "guidance, witness"
+   ],
+   [
+    "lampstand",
+    "church as light-bearer"
+   ],
+   [
+    "scroll",
+    "revelation, divine decree"
+   ],
+   [
+    "cup",
+    "suffering or blessing"
+   ],
+   [
+    "yoke",
+    "burden, discipleship"
+   ],
+   [
+    "anchor",
+    "hope"
+   ],
+   [
+    "garments",
+    "righteousness or shame"
+   ],
+   [
+    "sackcloth",
+    "repentance"
+   ],
+   [
+    "ashes",
+    "mourning, humility"
+   ],
+   [
+    "trumpet",
+    "warning, divine announcement"
+   ],
+   [
+    "sword",
+    "judgment, Word of God"
+   ],
+   [
+    "scales",
+    "justice"
+   ],
+   [
+    "keys",
+    "authority"
+   ],
+   [
+    "chains",
+    "bondage"
+   ],
+   [
+    "door",
+    "access, opportunity"
+   ],
+   [
+    "gate",
+    "entry into life or destruction"
+   ],
+   [
+    "path_way",
+    "moral direction"
+   ],
+   [
+    "shield",
+    "faith, protection"
+   ]
+  ],
+  "temple_worship": [
+   [
+    "altar",
+    "sacrifice, worship"
+   ],
+   [
+    "incense",
+    "prayer rising to God"
+   ],
+   [
+    "veil",
+    "separation from holiness"
+   ],
+   [
+    "holy_of_holies",
+    "God's dwelling"
+   ],
+   [
+    "ark_of_covenant",
+    "God's throne, covenant presence"
+   ],
+   [
+    "showbread",
+    "provision, fellowship"
+   ],
+   [
+    "menorah",
+    "illumination, Spirit"
+   ],
+   [
+    "oil",
+    "anointing, empowerment"
+   ],
+   [
+    "sacrificial_blood",
+    "atonement, life given"
+   ],
+   [
+    "baptismal_water",
+    "cleansing, rebirth"
+   ],
+   [
+    "temple",
+    "God dwelling with humanity"
+   ],
+   [
+    "tabernacle",
+    "mobile presence, pilgrimage"
+   ],
+   [
+    "priestly_garments",
+    "holiness, representation"
+   ],
+   [
+    "crown",
+    "victory, kingship"
+   ],
+   [
+    "trumpets_gathering",
+    "divine intervention, gathering"
+   ]
+  ],
+  "animals": [
+   [
+    "lamb",
+    "innocence, sacrifice, Christ"
+   ],
+   [
+    "shepherd_img",
+    "care, leadership"
+   ],
+   [
+    "sheep",
+    "God's people"
+   ],
+   [
+    "goat",
+    "sin-bearing, stubbornness"
+   ],
+   [
+    "serpent",
+    "deception, evil"
+   ],
+   [
+    "lion",
+    "strength, kingship or danger"
+   ],
+   [
+    "eagle",
+    "renewal, divine care"
+   ],
+   [
+    "fish",
+    "discipleship, mission"
+   ],
+   [
+    "donkey",
+    "humility, peaceful kingship"
+   ],
+   [
+    "horse",
+    "war, judgment"
+   ],
+   [
+    "ox",
+    "strength, service"
+   ],
+   [
+    "beasts",
+    "kingdoms, empires, chaos"
+   ],
+   [
+    "dragon",
+    "Satan, cosmic evil"
+   ],
+   [
+    "dove",
+    "Spirit, peace"
+   ],
+   [
+    "locusts",
+    "judgment, devastation"
+   ]
+  ],
+  "human_condition": [
+   [
+    "blindness",
+    "spiritual ignorance"
+   ],
+   [
+    "deafness",
+    "refusal to hear God"
+   ],
+   [
+    "thirst",
+    "spiritual longing"
+   ],
+   [
+    "hunger",
+    "need for righteousness"
+   ],
+   [
+    "slavery",
+    "bondage to sin"
+   ],
+   [
+    "adoption",
+    "new identity in God's family"
+   ],
+   [
+    "marriage",
+    "covenant, Christ and church"
+   ],
+   [
+    "body",
+    "community, interdependence"
+   ],
+   [
+    "heart",
+    "inner life, will, motives"
+   ],
+   [
+    "eyes",
+    "perception, discernment"
+   ],
+   [
+    "old_self",
+    "the person before Christ; what is put off (Eph 4:22, Col 3:9)"
+   ],
+   [
+    "new_self",
+    "the person in Christ; what is put on (Eph 4:24, Col 3:10)"
+   ],
+   [
+    "death_to_sin",
+    "the self reckoned dead to sin (Rom 6:2, 6:11)"
+   ],
+   [
+    "new_creature",
+    "anyone in Christ is a new creation (2 Cor 5:17)"
+   ],
+   [
+    "circumcision_of_heart",
+    "inward change against outward sign (Rom 2:29, Col 2:11)"
+   ]
+  ],
+  "new_creation_img": [
+   [
+    "firstborn_from_the_dead",
+    "Christ as the beginning of the new order (Col 1:18)"
+   ],
+   [
+    "imperishable_seed",
+    "new birth from what does not decay (1 Pet 1:23)"
+   ],
+   [
+    "renewal_of_the_mind",
+    "transformation rather than conformity (Rom 12:2)"
+   ],
+   [
+    "groaning_creation",
+    "creation itself awaiting release (Rom 8:22)"
+   ],
+   [
+    "harvest_of_firstfruits",
+    "resurrection as the first of a crop (1 Cor 15:20)"
+   ],
+   [
+    "wiped_away_tears",
+    "grief ended in the new order (Rev 21:4)"
+   ],
+   [
+    "no_more_sea",
+    "chaos abolished (Rev 21:1)"
+   ],
+   [
+    "leaves_for_healing",
+    "the nations healed (Rev 22:2)"
+   ]
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "places": {
+  "_note": "30 place-images. Geography as theology. pattern = the arc the place generates.",
+  "items": [
+   [
+    "eden",
+    "divine presence, abundance, vocation",
+    "garden > exile > return"
+   ],
+   [
+    "east",
+    "movement away from God",
+    "Cain > Babel > exile > return"
+   ],
+   [
+    "nod",
+    "wandering, instability",
+    "restlessness > mercy"
+   ],
+   [
+    "ararat",
+    "new creation after judgment",
+    "flood > covenant > restart"
+   ],
+   [
+    "babel_babylon",
+    "pride, empire, idolatry, oppression",
+    "tower > exile > fall > anti-kingdom"
+   ],
+   [
+    "ur",
+    "pagan origins, divine calling",
+    "call > covenant > pilgrimage"
+   ],
+   [
+    "canaan",
+    "inheritance, blessing, rest",
+    "promise > journey > conquest > exile > return"
+   ],
+   [
+    "egypt",
+    "slavery, oppression, false security",
+    "descent > bondage > deliverance"
+   ],
+   [
+    "goshen",
+    "protection in a foreign land",
+    "remnant > preservation"
+   ],
+   [
+    "red_sea",
+    "salvation through judgment",
+    "waters > deliverance > new identity"
+   ],
+   [
+    "wilderness_place",
+    "testing, dependence, formation",
+    "40 > temptation > provision"
+   ],
+   [
+    "sinai",
+    "covenant, revelation, divine fire",
+    "ascent > law > presence > commissioning"
+   ],
+   [
+    "jordan",
+    "boundary between old life and new",
+    "crossing > inheritance > baptism"
+   ],
+   [
+    "jericho",
+    "firstfruits of conquest",
+    "walls > faith > victory"
+   ],
+   [
+    "jerusalem",
+    "worship, kingdom, divine presence",
+    "Zion > temple > Messiah > new Jerusalem"
+   ],
+   [
+    "zion",
+    "God's dwelling, security, hope",
+    "mountain > king > nations streaming up"
+   ],
+   [
+    "temple_mount",
+    "heaven-earth overlap",
+    "sacrifice > holiness > access > veil torn"
+   ],
+   [
+    "bethlehem",
+    "humble origins, Davidic promise",
+    "small > chosen > Messiah"
+   ],
+   [
+    "nazareth",
+    "lowliness, unexpected choice",
+    "reversal"
+   ],
+   [
+    "galilee",
+    "light to the nations",
+    "ministry begins > kingdom spreads"
+   ],
+   [
+    "samaria",
+    "division, impurity, surprising inclusion",
+    "reconciliation > expansion"
+   ],
+   [
+    "mount_of_olives",
+    "judgment, prayer, eschatology",
+    "ascension > return"
+   ],
+   [
+    "gethsemane",
+    "crushing, surrender, suffering",
+    "cup > obedience > betrayal"
+   ],
+   [
+    "golgotha",
+    "sacrifice, atonement, cosmic victory",
+    "cross > darkness > veil torn"
+   ],
+   [
+    "tombs",
+    "death, uncleanness, hopelessness",
+    "resurrection > new creation"
+   ],
+   [
+    "emmaus",
+    "revelation through Scripture",
+    "journey > understanding > mission"
+   ],
+   [
+    "antioch",
+    "missionary expansion, multiethnic church",
+    "sending > Spirit > Gentiles"
+   ],
+   [
+    "rome",
+    "empire, global reach, witness",
+    "persecution > proclamation"
+   ],
+   [
+    "patmos",
+    "exile to revelation",
+    "suffering > vision > unveiling"
+   ],
+   [
+    "new_jerusalem",
+    "final dwelling of God with humanity",
+    "Eden restored > nations healed"
+   ]
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "event_images": {
+  "_note": "70 symbolic event-shapes (temporal theology), grouped.",
+  "beginning": [
+   "creation_ev",
+   "naming",
+   "breath_spirit",
+   "blessing_ev",
+   "commissioning"
+  ],
+  "fall": [
+   "temptation",
+   "transgression",
+   "curse",
+   "exile_ev",
+   "judgment_ev"
+  ],
+  "waters": [
+   "flood",
+   "ark_preservation",
+   "sea_crossing",
+   "baptism",
+   "water_from_rock"
+  ],
+  "covenant": [
+   "covenant_cutting",
+   "oath_swearing",
+   "theophany",
+   "law_giving",
+   "covenant_meal"
+  ],
+  "atonement": [
+   "sacrifice_ev",
+   "passover",
+   "day_of_atonement",
+   "scapegoat_sending",
+   "priestly_intercession"
+  ],
+  "formation": [
+   "wilderness_wandering",
+   "fasting",
+   "forty_period",
+   "trial_contest",
+   "anointing"
+  ],
+  "kingdom_ev": [
+   "coronation",
+   "battle",
+   "victory_procession",
+   "judges_raised",
+   "davidic_covenant"
+  ],
+  "decline": [
+   "idolatry",
+   "kingdom_divided",
+   "siege",
+   "temple_destroyed",
+   "captivity"
+  ],
+  "prophetic_ev": [
+   "prophetic_call",
+   "symbolic_action",
+   "covenant_lawsuit",
+   "woe_pronouncement",
+   "promise_oracle"
+  ],
+  "renewal": [
+   "return_from_exile",
+   "rebuilding",
+   "revival_repentance",
+   "healing",
+   "resurrection_ev"
+  ],
+  "gospel_climax": [
+   "incarnation",
+   "baptism_of_jesus",
+   "temptation_of_jesus",
+   "miracles",
+   "transfiguration",
+   "crucifixion",
+   "burial",
+   "resurrection",
+   "ascension",
+   "pentecost"
+  ],
+  "mission": [
+   "sending",
+   "persecution",
+   "council_discernment",
+   "breaking_bread",
+   "baptizing_nations"
+  ],
+  "eschatological": [
+   "day_of_the_lord",
+   "final_battle",
+   "books_opened",
+   "new_heavens_earth",
+   "marriage_supper"
+  ],
+  "narrative_templates": [
+   "creation > fall > exile > return",
+   "descent > ascent",
+   "chaos > word > order",
+   "bondage > deliverance > covenant",
+   "testing > faithfulness > commissioning",
+   "death > resurrection",
+   "judgment > mercy > restoration",
+   "promise > fulfillment",
+   "anointing > empowerment > mission"
+  ],
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it"
+ },
+ "proper_things": {
+  "_note": "100 named, specific objects that carry symbolic weight. Dense nodes.",
+  "temple_worship": [
+   "ark_of_the_covenant",
+   "mercy_seat",
+   "cherubim",
+   "table_of_showbread",
+   "lampstand_menorah",
+   "altar_of_incense",
+   "bronze_altar",
+   "bronze_sea",
+   "lavers",
+   "veil_obj",
+   "priestly_garments_obj",
+   "ephod",
+   "breastplate_stones",
+   "urim_and_thummim",
+   "anointing_oil",
+   "incense_obj",
+   "trumpets_obj",
+   "censer",
+   "sacrificial_blood_obj",
+   "scrolls_of_the_law"
+  ],
+  "royal": [
+   "crown_obj",
+   "scepter",
+   "throne",
+   "royal_seal",
+   "signet_ring",
+   "sword_of_the_king",
+   "banner_standard",
+   "treasury_vessels"
+  ],
+  "covenant_revelation": [
+   "tablets_of_stone",
+   "book_of_the_covenant",
+   "scroll_eaten",
+   "sealed_scroll",
+   "rainbow",
+   "oath_cutting_animals",
+   "staff_of_moses",
+   "rod_of_aaron",
+   "bronze_serpent",
+   "two_sticks",
+   "measuring_line",
+   "plumb_line"
+  ],
+  "construction": [
+   "cornerstone_obj",
+   "capstone_obj",
+   "gates_obj",
+   "walls",
+   "city_foundations",
+   "tent_tabernacle",
+   "house",
+   "pillars_jachin_boaz"
+  ],
+  "tools_ritual": [
+   "yoke_obj",
+   "millstone",
+   "weights_and_scales",
+   "lamp_obj",
+   "flask_of_oil",
+   "cup_obj",
+   "net",
+   "shepherds_staff",
+   "sling",
+   "shofar",
+   "keys_obj"
+  ],
+  "food_provision": [
+   "manna",
+   "bread",
+   "wine",
+   "milk_and_honey",
+   "salt",
+   "baskets",
+   "loaves_and_fish",
+   "fig_leaves",
+   "garments_obj",
+   "sackcloth_obj"
+  ],
+  "weapons": [
+   "sword_obj",
+   "shield_obj",
+   "bow",
+   "chariot",
+   "armor",
+   "battle_trumpets"
+  ],
+  "animal_objects": [
+   "passover_lamb",
+   "scapegoat",
+   "ram_in_thicket",
+   "fish_of_jonah",
+   "donkey_colt",
+   "rooster",
+   "locusts_obj"
+  ],
+  "human_identity": [
+   "circumcision",
+   "phylacteries",
+   "tassels",
+   "ring_of_the_prodigal",
+   "sandals",
+   "robe",
+   "coins"
+  ],
+  "cosmic_apocalyptic": [
+   "stars_obj",
+   "lampstands_rev",
+   "bowls_of_wrath",
+   "trumpets_rev",
+   "mark_of_the_beast",
+   "book_of_life",
+   "throne_of_the_lamb",
+   "river_of_life",
+   "tree_of_life_restored",
+   "new_jerusalem_foundations"
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "aggregates": {
+  "_note": "Composite imagery: pre-grouped bundles that behave as one node with members. 'The overlay already holds the_whole_armour_of_god; these are its siblings.'",
+  "items": [
+   {
+    "id": "armor_of_god",
+    "ref": "Eph 6",
+    "pattern": "stand > resist > advance",
+    "members": [
+     "belt_of_truth",
+     "breastplate_of_righteousness",
+     "shoes_of_peace",
+     "shield_of_faith",
+     "helmet_of_salvation",
+     "sword_of_the_spirit"
+    ]
+   },
+   {
+    "id": "fruit_of_the_spirit",
+    "ref": "Gal 5",
+    "pattern": "Spirit > transformation > character",
+    "members": [
+     "love",
+     "joy",
+     "peace",
+     "patience",
+     "kindness",
+     "goodness",
+     "faithfulness",
+     "gentleness",
+     "self_control"
+    ]
+   },
+   {
+    "id": "beatitudes",
+    "ref": "Matt 5",
+    "pattern": "reversal > reward > kingdom identity",
+    "members": [
+     "poor_in_spirit",
+     "mourning",
+     "meek",
+     "hungering_for_righteousness",
+     "merciful",
+     "pure_in_heart",
+     "peacemakers",
+     "persecuted",
+     "reviled"
+    ]
+   },
+   {
+    "id": "gifts_of_the_spirit",
+    "ref": "1 Cor 12; Rom 12; Eph 4",
+    "pattern": "diversity > unity > edification",
+    "members": [
+     "wisdom",
+     "knowledge",
+     "faith",
+     "healing",
+     "miracles",
+     "prophecy",
+     "discernment",
+     "tongues",
+     "interpretation",
+     "teaching",
+     "exhortation",
+     "leadership",
+     "mercy_gift",
+     "apostleship",
+     "shepherding"
+    ]
+   },
+   {
+    "id": "works_of_the_flesh",
+    "ref": "Gal 5",
+    "pattern": "flesh > corruption > death",
+    "members": [
+     "sexual_immorality",
+     "idolatry_v",
+     "sorcery",
+     "enmity",
+     "strife",
+     "jealousy",
+     "fits_of_anger",
+     "rivalries",
+     "dissensions",
+     "divisions",
+     "envy",
+     "drunkenness",
+     "orgies"
+    ]
+   },
+   {
+    "id": "seven_churches",
+    "ref": "Rev 2-3",
+    "pattern": "diagnosis > warning > promise",
+    "members": [
+     "ephesus",
+     "smyrna",
+     "pergamum",
+     "thyatira",
+     "sardis",
+     "philadelphia",
+     "laodicea"
+    ]
+   },
+   {
+    "id": "seven_spirits",
+    "ref": "Isa 11; Rev",
+    "pattern": "Messiah > empowerment > justice",
+    "members": [
+     "wisdom_s",
+     "understanding",
+     "counsel",
+     "might",
+     "knowledge_s",
+     "fear_of_the_lord"
+    ]
+   },
+   {
+    "id": "ten_commandments",
+    "ref": "Exod 20",
+    "pattern": "covenant > identity > holiness"
+   },
+   {
+    "id": "tabernacle_furnishings",
+    "ref": "Exod 25-40",
+    "pattern": "heaven > earth > presence",
+    "members": [
+     "ark_of_the_covenant",
+     "mercy_seat",
+     "table_of_showbread",
+     "lampstand_menorah",
+     "bronze_altar",
+     "lavers",
+     "veil_obj",
+     "curtains",
+     "bronze_sea",
+     "altar_of_incense"
+    ]
+   },
+   {
+    "id": "sacrificial_system",
+    "ref": "Leviticus",
+    "pattern": "sin > substitution > cleansing > fellowship",
+    "members": [
+     "burnt_offering",
+     "grain_offering",
+     "peace_offering",
+     "sin_offering",
+     "guilt_offering"
+    ]
+   },
+   {
+    "id": "psalm_beatitudes",
+    "ref": "Ps 1, 32, 112",
+    "pattern": "righteousness > stability > prosperity"
+   },
+   {
+    "id": "apocalyptic_sevens",
+    "ref": "Revelation",
+    "pattern": "escalation > judgment > renewal",
+    "members": [
+     "seven_seals",
+     "seven_trumpets",
+     "seven_bowls",
+     "seven_lampstands",
+     "seven_stars"
+    ]
+   },
+   {
+    "id": "dying_and_rising_with_christ",
+    "ref": "Rom 6:3-11; Gal 2:20; Eph 4:22-24; Col 2:12, 3:9-10; 2 Cor 5:17",
+    "pattern": "crucified > buried > raised > walk in newness",
+    "note": "Added 2026-09-13 after Doug asked whether dying to the old self was on the list. It was not, in any form -- 'born again' appeared only as a MESSAGE. This is the believer's identity told as the gospel's own shape, so it is an aggregate rather than a single image.",
+    "members": [
+     "crucified_with_christ",
+     "buried_with_him_in_baptism",
+     "raised_with_him",
+     "old_self_put_off",
+     "new_self_put_on",
+     "dead_to_sin_alive_to_god",
+     "born_again",
+     "new_creature",
+     "walk_in_newness_of_life"
+    ]
+   }
+  ],
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it"
+ },
+ "character_roles": {
+  "_note": "Archetypal identities, NOT individuals. Copilot flagged this as the category Doug had not yet asked for, and called it the relational tissue between all the others.",
+  "items": [
+   "shepherd",
+   "king",
+   "prophet",
+   "priest",
+   "judge",
+   "servant",
+   "son",
+   "bridegroom",
+   "bride",
+   "father",
+   "mother",
+   "firstborn",
+   "stranger_sojourner",
+   "slave_bondservant",
+   "enemy_adversary",
+   "witness",
+   "watchman",
+   "warrior",
+   "builder",
+   "vinedresser",
+   "fisherman",
+   "gatekeeper",
+   "host",
+   "guest",
+   "pilgrim",
+   "remnant",
+   "nations_as_character",
+   "woman_wisdom",
+   "woman_folly",
+   "beastly_ruler",
+   "false_shepherd",
+   "false_prophet",
+   "man_of_lawlessness",
+   "new_adam",
+   "new_moses",
+   "new_david",
+   "new_israel"
+  ],
+  "role_patterns": [
+   "shepherd > sheep > pasture > protection > provision",
+   "king > kingdom > law > judgment > peace",
+   "prophet > word > confrontation > repentance > restoration",
+   "priest > sacrifice > cleansing > access > presence",
+   "bridegroom > bride > covenant > faithfulness > consummation",
+   "father > son > inheritance > obedience > blessing",
+   "servant > suffering > vindication > glory",
+   "enemy > oppression > deliverance > victory"
+  ],
+  "_level": "section",
+  "_earned": "a property of the whole unit's argument or arc"
+ },
+ "prophetic_categories": {
+  "_note": "12 content modes, grouped under 4 meta-domains.",
+  "items": [
+   [
+    "indictment",
+    "covenant lawsuit",
+    "you have > evidence > witness"
+   ],
+   [
+    "judgment_oracle",
+    "coming destruction",
+    "sin > consequence > certainty"
+   ],
+   [
+    "woe_oracle",
+    "grief over corruption",
+    "woe to > reason > outcome"
+   ],
+   [
+    "call_to_repentance",
+    "return to covenant loyalty",
+    "warning > appeal > promise"
+   ],
+   [
+    "salvation_oracle",
+    "future restoration",
+    "reversal > hope > new creation"
+   ],
+   [
+    "restoration_vision",
+    "renewal of temple, land, people",
+    "ruin > rebuilding > glory"
+   ],
+   [
+    "symbolic_action",
+    "enacted prophecy",
+    "action > interpretation > fulfillment"
+   ],
+   [
+    "apocalyptic_vision",
+    "cosmic imagery, beasts, conflict",
+    "revelation > conflict > victory"
+   ],
+   [
+    "messianic_prophecy",
+    "king, servant, shepherd, branch",
+    "expectation > identity > mission"
+   ],
+   [
+    "oracle_against_nations",
+    "judgment on foreign powers",
+    "sovereignty > justice > global order"
+   ],
+   [
+    "covenant_renewal",
+    "reaffirmation of terms",
+    "remembrance > recommitment > blessing"
+   ],
+   [
+    "day_of_the_lord_vision",
+    "ultimate intervention",
+    "darkness > upheaval > restoration"
+   ]
+  ],
+  "meta": {
+   "covenant_enforcement": [
+    "indictment",
+    "woe_oracle",
+    "judgment_oracle",
+    "call_to_repentance"
+   ],
+   "covenant_promise": [
+    "salvation_oracle",
+    "restoration_vision",
+    "messianic_prophecy"
+   ],
+   "symbolic_revelation": [
+    "apocalyptic_vision",
+    "symbolic_action"
+   ],
+   "covenant_expansion": [
+    "oracle_against_nations",
+    "day_of_the_lord_vision"
+   ]
+  },
+  "_level": "section",
+  "_earned": "a property of the whole unit's argument or arc"
+ },
+ "dreams": {
+  "_note": "8 categories. Structure: symbol > interpretation > fulfillment.",
+  "items": [
+   "destiny_calling",
+   "warning_dream",
+   "guidance_dream",
+   "judgment_dream",
+   "symbolic_kingdom_dream",
+   "restoration_dream",
+   "apocalyptic_dream",
+   "revelatory_dream"
+  ],
+  "structure": "symbol > interpretation > fulfillment",
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it"
+ },
+ "parables": {
+  "_note": "7 categories. Structure: scenario > twist > point > application.",
+  "items": [
+   "kingdom_parable",
+   "judgment_parable",
+   "grace_mercy_parable",
+   "ethical_discipleship_parable",
+   "contrast_parable",
+   "invitation_parable",
+   "revelatory_mystery_parable"
+  ],
+  "structure": "scenario > twist > point > application",
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it"
+ },
+ "apocalyptic_crisis": {
+  "_note": "High-density, contested symbols sitting at the intersection of history, prophecy and eschatology. Doug asked about the abomination of desolation; it is the flagship of the first group.",
+  "items": [
+   [
+    "temple_desecration",
+    [
+     "abomination_of_desolation",
+     "profaned_altar",
+     "stopped_sacrifices",
+     "idol_in_holy_place"
+    ]
+   ],
+   [
+    "beast_anti_kingdom",
+    [
+     "four_beasts",
+     "little_horn",
+     "man_of_lawlessness",
+     "beast_from_sea",
+     "image_of_the_beast"
+    ]
+   ],
+   [
+    "cosmic_collapse",
+    [
+     "sun_darkened",
+     "moon_to_blood",
+     "stars_falling",
+     "heavens_shaken"
+    ]
+   ],
+   [
+    "war_in_heaven",
+    [
+     "michael_vs_dragon",
+     "angels_holding_winds",
+     "abyss_opened"
+    ]
+   ],
+   [
+    "covenant_crisis",
+    [
+     "broken_staff",
+     "scattering_of_sheep",
+     "withered_fig_tree",
+     "empty_house"
+    ]
+   ],
+   [
+    "day_of_the_lord_sym",
+    [
+     "darkness_sym",
+     "fire_sym",
+     "trumpet_blasts",
+     "shaking_of_nations"
+    ]
+   ],
+   [
+    "judgment_mechanism",
+    [
+     "locust_armies",
+     "plagues",
+     "bowls_of_wrath_sym",
+     "seals_and_trumpets"
+    ]
+   ],
+   [
+    "anti_presence",
+    [
+     "desolate_house",
+     "removed_lampstand",
+     "no_more_sacrifice",
+     "idol_enthroned"
+    ]
+   ]
+  ],
+  "abomination_of_desolation": {
+   "pattern": "desecration > desolation > deliverance > restoration",
+   "components": {
+    "place": "holy place / temple",
+    "event": "desecration",
+    "object": "abominable thing",
+    "character": "anti-kingdom ruler",
+    "prophetic": "judgment + apocalyptic revelation"
+   }
+  },
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it"
+ },
+ "significant_events": {
+  "_note": "200 events in 20 domains of 10. Copilot was explicit that no scholarly list of this exact shape exists; it is a construction, useful for finding and not an authority. Claude 2026-09-14: the 200 events were prose strings inside `domains`, so no id-shaped reader could see them and the stamper was never offered one -- the category read as EMPTY. `items` carries them as ids. The last five are beats the Flood/Sodom pass found the taxonomy could not express: all four episodes show God observing before judging (Gen 6:5, 3:9, 4:9-10, 18:21) and nothing named it.",
+  "domains": {
+   "creation_origins": [
+    "creation of heavens and earth",
+    "formation of humanity",
+    "image-bearing commission",
+    "fall of Adam and Eve",
+    "first sacrifice / covering",
+    "Cain murders Abel",
+    "flood judgment",
+    "covenant with Noah",
+    "tower of Babel",
+    "dispersion of nations"
+   ],
+   "patriarchal": [
+    "call of Abram",
+    "covenant cutting (Gen 15)",
+    "birth of Ishmael",
+    "destruction of Sodom",
+    "binding of Isaac",
+    "birth of Jacob and Esau",
+    "Jacob's ladder dream",
+    "wrestling with God",
+    "Joseph's dreams",
+    "Joseph's rise in Egypt"
+   ],
+   "exodus_liberation": [
+    "birth of Moses",
+    "burning bush",
+    "ten plagues",
+    "Passover",
+    "Red Sea crossing",
+    "Song of Moses",
+    "bitter water made sweet",
+    "manna given",
+    "water from the rock",
+    "Amalek defeated"
+   ],
+   "covenant_law": [
+    "Sinai theophany",
+    "Ten Commandments given",
+    "golden calf",
+    "tabernacle instructions",
+    "priestly consecration",
+    "glory fills the tabernacle",
+    "census of Israel",
+    "twelve spies sent",
+    "rebellion at Kadesh",
+    "bronze serpent"
+   ],
+   "conquest_settlement": [
+    "crossing the Jordan",
+    "fall of Jericho",
+    "Achan's sin",
+    "sun stands still",
+    "allotment of land",
+    "covenant renewal at Shechem",
+    "judges raised up",
+    "Gideon's victory",
+    "Samson's downfall",
+    "Ruth's redemption"
+   ],
+   "rise_of_kingdom": [
+    "Samuel's call",
+    "Saul anointed",
+    "David anointed",
+    "David defeats Goliath",
+    "ark brought to Jerusalem",
+    "Davidic covenant",
+    "Solomon's wisdom",
+    "temple built",
+    "temple dedicated",
+    "Solomon's downfall"
+   ],
+   "division_decline": [
+    "kingdom divided",
+    "Jeroboam's idolatry",
+    "Elijah vs Baal",
+    "Elisha's miracles",
+    "Assyria conquers Israel",
+    "Hezekiah's deliverance",
+    "Josiah's reforms",
+    "discovery of the Law",
+    "Babylon rises",
+    "Jerusalem besieged"
+   ],
+   "exile_crisis": [
+    "temple destroyed",
+    "people exiled",
+    "Jeremiah's lament",
+    "Ezekiel's throne vision",
+    "valley of dry bones",
+    "Daniel interprets dreams",
+    "fiery furnace",
+    "Nebuchadnezzar's humiliation",
+    "writing on the wall",
+    "Daniel in the lions' den"
+   ],
+   "restoration_return": [
+    "Cyrus' decree",
+    "first return",
+    "altar rebuilt",
+    "temple foundation laid",
+    "temple completed",
+    "Ezra's reforms",
+    "Nehemiah rebuilds walls",
+    "covenant renewal",
+    "reading of the Law",
+    "dedication of Jerusalem"
+   ],
+   "wisdom_poetic": [
+    "Job's suffering",
+    "Job's encounter with God",
+    "Psalms of David",
+    "Psalm 22 lament",
+    "Psalm 23 shepherding",
+    "Psalm 51 repentance",
+    "Proverbs' wisdom call",
+    "Ecclesiastes' conclusion",
+    "Song of Songs union",
+    "praise of Yahweh's kingship"
+   ],
+   "messianic_expectation": [
+    "Immanuel prophecy",
+    "Branch prophecy",
+    "suffering servant",
+    "new covenant promise",
+    "new heart promise",
+    "new Spirit promise",
+    "Day of the Lord visions",
+    "nations streaming to Zion",
+    "new creation prophecy",
+    "dry bones resurrection"
+   ],
+   "incarnation_early_life": [
+    "annunciation",
+    "birth of Jesus",
+    "visit of shepherds",
+    "visit of magi",
+    "flight to Egypt",
+    "return to Nazareth",
+    "boy Jesus in the temple",
+    "John's baptism",
+    "Spirit descends",
+    "temptation in wilderness"
+   ],
+   "ministry": [
+    "calling disciples",
+    "first miracle (Cana)",
+    "Sermon on the Mount",
+    "feeding 5,000",
+    "walking on water",
+    "transfiguration",
+    "raising Lazarus",
+    "triumphal entry",
+    "cleansing the temple",
+    "Olivet discourse"
+   ],
+   "passion": [
+    "Last Supper",
+    "Gethsemane",
+    "betrayal by Judas",
+    "trial before Sanhedrin",
+    "trial before Pilate",
+    "scourging",
+    "crucifixion",
+    "darkness over land",
+    "veil torn",
+    "burial"
+   ],
+   "resurrection_ascension": [
+    "empty tomb",
+    "appearance to Mary",
+    "road to Emmaus",
+    "appearance to disciples",
+    "Great Commission",
+    "doubting Thomas",
+    "breakfast by the sea",
+    "ascension",
+    "promise of Spirit",
+    "waiting in Jerusalem"
+   ],
+   "birth_of_church": [
+    "Pentecost",
+    "Peter's sermon",
+    "healing at the gate",
+    "Ananias and Sapphira",
+    "appointment of deacons",
+    "Stephen's martyrdom",
+    "Philip and the Ethiopian",
+    "conversion of Saul",
+    "Cornelius' conversion",
+    "Council of Jerusalem"
+   ],
+   "mission_expansion": [
+    "Paul's first journey",
+    "Paul's Macedonian vision",
+    "Lydia's conversion",
+    "Philippian jailer",
+    "Athens sermon",
+    "Corinth ministry",
+    "Ephesus revival",
+    "riot in Ephesus",
+    "Paul's arrest",
+    "Paul's trials"
+   ],
+   "apostolic_teaching": [
+    "Romans argument climax",
+    "Galatians confrontation",
+    "1 Corinthians resurrection teaching",
+    "Ephesians cosmic unity",
+    "Philippians Christ hymn",
+    "Colossians supremacy of Christ",
+    "pastoral instructions",
+    "Hebrews high priest argument",
+    "James ethical exhortations",
+    "Peter's suffering theology"
+   ],
+   "final_ministry": [
+    "Paul's voyage",
+    "shipwreck",
+    "Malta miracles",
+    "Paul in Rome",
+    "Peter's final exhortations",
+    "Jude's warnings",
+    "John's exile to Patmos",
+    "letters to seven churches",
+    "witness of martyrs",
+    "final apostolic warnings"
+   ],
+   "eschatological": [
+    "throne room vision",
+    "opening of seals",
+    "trumpet judgments",
+    "woman vs dragon",
+    "beast rises",
+    "fall of Babylon",
+    "Armageddon",
+    "great white throne",
+    "new heavens and new earth",
+    "New Jerusalem descends"
+   ]
+  },
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it",
+  "items": [
+   "creation_of_heavens_and_earth",
+   "formation_of_humanity",
+   "image_bearing_commission",
+   "fall_of_adam_and_eve",
+   "first_sacrifice_covering",
+   "cain_murders_abel",
+   "flood_judgment",
+   "covenant_with_noah",
+   "tower_of_babel",
+   "dispersion_of_nations",
+   "call_of_abram",
+   "covenant_cutting_gen_15",
+   "birth_of_ishmael",
+   "destruction_of_sodom",
+   "binding_of_isaac",
+   "birth_of_jacob_and_esau",
+   "jacob_s_ladder_dream",
+   "wrestling_with_god",
+   "joseph_s_dreams",
+   "joseph_s_rise_in_egypt",
+   "birth_of_moses",
+   "burning_bush",
+   "ten_plagues",
+   "passover",
+   "red_sea_crossing",
+   "song_of_moses",
+   "bitter_water_made_sweet",
+   "manna_given",
+   "water_from_the_rock",
+   "amalek_defeated",
+   "sinai_theophany",
+   "ten_commandments_given",
+   "golden_calf",
+   "tabernacle_instructions",
+   "priestly_consecration",
+   "glory_fills_the_tabernacle",
+   "census_of_israel",
+   "twelve_spies_sent",
+   "rebellion_at_kadesh",
+   "bronze_serpent",
+   "crossing_the_jordan",
+   "fall_of_jericho",
+   "achan_s_sin",
+   "sun_stands_still",
+   "allotment_of_land",
+   "covenant_renewal_at_shechem",
+   "judges_raised_up",
+   "gideon_s_victory",
+   "samson_s_downfall",
+   "ruth_s_redemption",
+   "samuel_s_call",
+   "saul_anointed",
+   "david_anointed",
+   "david_defeats_goliath",
+   "ark_brought_to_jerusalem",
+   "davidic_covenant",
+   "solomon_s_wisdom",
+   "temple_built",
+   "temple_dedicated",
+   "solomon_s_downfall",
+   "kingdom_divided",
+   "jeroboam_s_idolatry",
+   "elijah_vs_baal",
+   "elisha_s_miracles",
+   "assyria_conquers_israel",
+   "hezekiah_s_deliverance",
+   "josiah_s_reforms",
+   "discovery_of_the_law",
+   "babylon_rises",
+   "jerusalem_besieged",
+   "temple_destroyed",
+   "people_exiled",
+   "jeremiah_s_lament",
+   "ezekiel_s_throne_vision",
+   "valley_of_dry_bones",
+   "daniel_interprets_dreams",
+   "fiery_furnace",
+   "nebuchadnezzar_s_humiliation",
+   "writing_on_the_wall",
+   "daniel_in_the_lions_den",
+   "cyrus_decree",
+   "first_return",
+   "altar_rebuilt",
+   "temple_foundation_laid",
+   "temple_completed",
+   "ezra_s_reforms",
+   "nehemiah_rebuilds_walls",
+   "covenant_renewal",
+   "reading_of_the_law",
+   "dedication_of_jerusalem",
+   "job_s_suffering",
+   "job_s_encounter_with_god",
+   "psalms_of_david",
+   "psalm_22_lament",
+   "psalm_23_shepherding",
+   "psalm_51_repentance",
+   "proverbs_wisdom_call",
+   "ecclesiastes_conclusion",
+   "song_of_songs_union",
+   "praise_of_yahweh_s_kingship",
+   "immanuel_prophecy",
+   "branch_prophecy",
+   "suffering_servant",
+   "new_covenant_promise",
+   "new_heart_promise",
+   "new_spirit_promise",
+   "day_of_the_lord_visions",
+   "nations_streaming_to_zion",
+   "new_creation_prophecy",
+   "dry_bones_resurrection",
+   "annunciation",
+   "birth_of_jesus",
+   "visit_of_shepherds",
+   "visit_of_magi",
+   "flight_to_egypt",
+   "return_to_nazareth",
+   "boy_jesus_in_the_temple",
+   "john_s_baptism",
+   "spirit_descends",
+   "temptation_in_wilderness",
+   "calling_disciples",
+   "first_miracle_cana",
+   "sermon_on_the_mount",
+   "feeding_5_000",
+   "walking_on_water",
+   "transfiguration",
+   "raising_lazarus",
+   "triumphal_entry",
+   "cleansing_the_temple",
+   "olivet_discourse",
+   "last_supper",
+   "gethsemane",
+   "betrayal_by_judas",
+   "trial_before_sanhedrin",
+   "trial_before_pilate",
+   "scourging",
+   "crucifixion",
+   "darkness_over_land",
+   "veil_torn",
+   "burial",
+   "empty_tomb",
+   "appearance_to_mary",
+   "road_to_emmaus",
+   "appearance_to_disciples",
+   "great_commission",
+   "doubting_thomas",
+   "breakfast_by_the_sea",
+   "ascension",
+   "promise_of_spirit",
+   "waiting_in_jerusalem",
+   "pentecost",
+   "peter_s_sermon",
+   "healing_at_the_gate",
+   "ananias_and_sapphira",
+   "appointment_of_deacons",
+   "stephen_s_martyrdom",
+   "philip_and_the_ethiopian",
+   "conversion_of_saul",
+   "cornelius_conversion",
+   "council_of_jerusalem",
+   "paul_s_first_journey",
+   "paul_s_macedonian_vision",
+   "lydia_s_conversion",
+   "philippian_jailer",
+   "athens_sermon",
+   "corinth_ministry",
+   "ephesus_revival",
+   "riot_in_ephesus",
+   "paul_s_arrest",
+   "paul_s_trials",
+   "romans_argument_climax",
+   "galatians_confrontation",
+   "ev_1_corinthians_resurrection_teaching",
+   "ephesians_cosmic_unity",
+   "philippians_christ_hymn",
+   "colossians_supremacy_of_christ",
+   "pastoral_instructions",
+   "hebrews_high_priest_argument",
+   "james_ethical_exhortations",
+   "peter_s_suffering_theology",
+   "paul_s_voyage",
+   "shipwreck",
+   "malta_miracles",
+   "paul_in_rome",
+   "peter_s_final_exhortations",
+   "jude_s_warnings",
+   "john_s_exile_to_patmos",
+   "letters_to_seven_churches",
+   "witness_of_martyrs",
+   "final_apostolic_warnings",
+   "throne_room_vision",
+   "opening_of_seals",
+   "trumpet_judgments",
+   "woman_vs_dragon",
+   "beast_rises",
+   "fall_of_babylon",
+   "armageddon",
+   "great_white_throne",
+   "new_heavens_and_new_earth",
+   "new_jerusalem_descends",
+   "divine_investigation",
+   "remnant_marked",
+   "survivor_disgraced",
+   "warning_before_judgment",
+   "intercession_before_judgment"
+  ]
+ },
+ "messages": {
+  "_note": "100 message-types: what the text says TO the reader or to a participant. Doug: 'messages to the reader or participants in narratives.' These are the meaning-bearing edges.",
+  "divine_to_individual": [
+   "do not fear",
+   "go",
+   "return",
+   "rise",
+   "listen",
+   "obey my voice",
+   "do not turn aside",
+   "be strong and courageous",
+   "I am with you",
+   "I will bless you"
+  ],
+  "warning_confrontation": [
+   "why have you done this",
+   "sin is crouching at the door",
+   "you have not obeyed",
+   "you have forsaken me",
+   "your heart is hard",
+   "you are the man",
+   "your sin will find you out",
+   "you have provoked me",
+   "you have forgotten the covenant",
+   "you have despised my word"
+  ],
+  "promise_reassurance": [
+   "I will be your God",
+   "I will give you rest",
+   "I will fight for you",
+   "I will heal you",
+   "I will restore you",
+   "I will gather you",
+   "I will make you fruitful",
+   "I will never leave you",
+   "I will give you a new heart",
+   "I will pour out my Spirit"
+  ],
+  "identity_calling": [
+   "you are my son",
+   "you are my servant",
+   "you are a chosen people",
+   "you are a royal priesthood",
+   "you are my witnesses",
+   "you are the light of the world",
+   "you are the salt of the earth",
+   "you are my sheep",
+   "you are my friends",
+   "you are heirs"
+  ],
+  "moral_ethical": [
+   "do justice",
+   "love mercy",
+   "walk humbly",
+   "love your neighbor",
+   "forgive",
+   "do not repay evil for evil",
+   "do not oppress the poor",
+   "do not harden your heart",
+   "choose life",
+   "be holy"
+  ],
+  "wisdom_discernment": [
+   "fear the Lord",
+   "trust in the Lord",
+   "guard your heart",
+   "incline your ear",
+   "do not be wise in your own eyes",
+   "walk in the way of wisdom",
+   "avoid the path of the wicked",
+   "remember your Creator",
+   "consider your ways",
+   "number your days"
+  ],
+  "prophetic_to_reader": [
+   "hear the word of the Lord",
+   "thus says the Lord",
+   "repent",
+   "return to me",
+   "seek the Lord",
+   "break up your fallow ground",
+   "wash your hands",
+   "cease to do evil",
+   "learn to do good",
+   "prepare the way of the Lord"
+  ],
+  "crisis_judgment": [
+   "the day of the Lord is near",
+   "the axe is at the root",
+   "your house is left desolate",
+   "the end has come",
+   "the Lord roars from Zion",
+   "the heavens will shake",
+   "the nations will tremble",
+   "Babylon will fall",
+   "the judge is standing at the door",
+   "every secret thing will be revealed"
+  ],
+  "gospel_kingdom": [
+   "the kingdom of God is at hand",
+   "follow me",
+   "take up your cross",
+   "come to me",
+   "your faith has saved you",
+   "go in peace",
+   "your sins are forgiven",
+   "you must be born again",
+   "abide in me",
+   "make disciples of all nations"
+  ],
+  "eschatological_msg": [
+   "behold I make all things new",
+   "come out of her my people",
+   "blessed are those who wash their robes",
+   "the Lamb will be your light",
+   "the nations will walk in its light",
+   "death shall be no more",
+   "the Spirit and the Bride say come",
+   "hold fast what you have",
+   "to the one who conquers",
+   "surely I am coming soon"
+  ],
+  "_level": "verse",
+  "_earned": "a clause-level form or predication in one verse"
+ },
+ "speech_acts": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. The corpus is a third poetry and half dialogue; the Copilot list held the OBJECTS of worship (altar, incense) but not the ACTS.",
+  "items": [
+   "blessing_spoken",
+   "cursing",
+   "oath",
+   "vow",
+   "lament",
+   "praise",
+   "thanksgiving",
+   "confession_of_sin",
+   "confession_of_faith",
+   "intercession",
+   "rebuke",
+   "commissioning_word",
+   "naming",
+   "summons",
+   "complaint",
+   "petition",
+   "doxology",
+   "benediction",
+   "testimony",
+   "accusation",
+   "defence",
+   "riddle",
+   "taunt",
+   "boast",
+   "promise_spoken",
+   "warning_spoken",
+   "call_and_response",
+   "refusal",
+   "lament_over_a_city",
+   "last_words"
+  ],
+  "_level": "verse",
+  "_earned": "a clause-level form or predication in one verse"
+ },
+ "reversals": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. Repeatable plot inversions. Among the strongest pattern generators in the canon and absent from the list entirely.",
+  "items": [
+   [
+    "younger_over_elder",
+    "Isaac over Ishmael, Jacob over Esau, Ephraim over Manasseh, David over his brothers"
+   ],
+   [
+    "barren_woman_conceives",
+    "Sarah, Rebekah, Rachel, Hannah, Elizabeth"
+   ],
+   [
+    "exile_to_exaltation",
+    "Joseph, Daniel, Esther, Christ"
+   ],
+   [
+    "humiliation_to_vindication",
+    "the servant, the psalmist, the crucified"
+   ],
+   [
+    "last_shall_be_first",
+    "kingdom inversion"
+   ],
+   [
+    "weak_defeats_strong",
+    "David and Goliath, Gideon's three hundred"
+   ],
+   [
+    "outsider_believes",
+    "Rahab, Ruth, the centurion, the Samaritan"
+   ],
+   [
+    "insider_fails",
+    "Israel, the elder brother, the Pharisee"
+   ],
+   [
+    "stone_rejected_becomes_head",
+    "Ps 118:22 and its NT reuse"
+   ],
+   [
+    "death_produces_life",
+    "the grain of wheat, the cross"
+   ],
+   [
+    "scattering_produces_gathering",
+    "Babel to Pentecost"
+   ],
+   [
+    "famine_to_provision",
+    "Joseph, Elijah, the feedings"
+   ]
+  ],
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it"
+ },
+ "devices": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. Form, not content. tools/devices.py and tools/formulaic.py already detect several; naming them lets a stamp point at a shape.",
+  "items": [
+   "synonymous_parallelism",
+   "antithetic_parallelism",
+   "synthetic_parallelism",
+   "chiasm",
+   "inclusio",
+   "refrain",
+   "acrostic",
+   "merism",
+   "hendiadys",
+   "anaphora",
+   "rhetorical_question",
+   "apostrophe",
+   "personification",
+   "hyperbole",
+   "irony",
+   "numerical_saying",
+   "list_formula",
+   "genealogy_formula",
+   "itinerary_formula",
+   "regnal_formula",
+   "call_narrative_formula",
+   "messenger_formula",
+   "oath_formula",
+   "covenant_formula",
+   "woe_formula",
+   "beatitude_formula",
+   "a_fortiori",
+   "diatribe"
+  ],
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it"
+ },
+ "numbers": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. Symbolically weighted counts. Deterministically detectable and absent from the list.",
+  "items": [
+   [
+    "three",
+    "completeness, divine witness"
+   ],
+   [
+    "four",
+    "the earth, its corners and winds"
+   ],
+   [
+    "seven",
+    "covenant fullness, sabbath"
+   ],
+   [
+    "ten",
+    "measure, commandment, tithe"
+   ],
+   [
+    "twelve",
+    "the tribes, the apostles, covenant people"
+   ],
+   [
+    "forty",
+    "testing, a generation"
+   ],
+   [
+    "seventy",
+    "the nations, elders, years of exile"
+   ],
+   [
+    "three_and_a_half",
+    "a limited time of trouble"
+   ],
+   [
+    "one_thousand",
+    "vastness"
+   ],
+   [
+    "144000",
+    "the sealed people, 12 x 12 x 1000"
+   ],
+   [
+    "six_hundred_sixty_six",
+    "falling short, the beast"
+   ],
+   [
+    "seventy_times_seven",
+    "limitless forgiveness"
+   ]
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "divine_names": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. tools/speakers.py already tells these apart by lemma -- YHWH 1,005, Adonai 170, Elohim 112, El 13. The list held only 'the Lord'.",
+  "items": [
+   "yhwh",
+   "elohim",
+   "adonai",
+   "el_shaddai",
+   "el_elyon",
+   "el_roi",
+   "yhwh_sabaoth",
+   "ancient_of_days",
+   "i_am",
+   "holy_one_of_israel",
+   "king_of_kings",
+   "lamb_of_god",
+   "son_of_man",
+   "son_of_god",
+   "word_logos",
+   "alpha_and_omega",
+   "rock_of_israel",
+   "shepherd_of_israel",
+   "redeemer_goel",
+   "father"
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "times_festivals": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. Calendar structures that generate typology.",
+  "items": [
+   "sabbath",
+   "new_moon",
+   "passover_feast",
+   "unleavened_bread",
+   "firstfruits_feast",
+   "weeks_pentecost",
+   "trumpets",
+   "day_of_atonement_feast",
+   "tabernacles",
+   "purim",
+   "dedication_hanukkah",
+   "sabbatical_year",
+   "jubilee",
+   "morning_and_evening",
+   "third_day",
+   "seventh_day",
+   "appointed_time_moed",
+   "fullness_of_time",
+   "last_days",
+   "hour"
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "divine_anthropomorphism": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. God described in bodily terms. Frequent, and none of it was on the list.",
+  "items": [
+   [
+    "hand_of_god",
+    "power, action, possession"
+   ],
+   [
+    "arm_of_the_lord",
+    "saving strength"
+   ],
+   [
+    "face_of_god",
+    "presence, favour, or its withdrawal"
+   ],
+   [
+    "eyes_of_the_lord",
+    "watchfulness, judgment"
+   ],
+   [
+    "ears_of_the_lord",
+    "attention to prayer"
+   ],
+   [
+    "mouth_of_the_lord",
+    "authoritative speech"
+   ],
+   [
+    "finger_of_god",
+    "direct action, writing"
+   ],
+   [
+    "heart_of_god",
+    "divine intention, grief"
+   ],
+   [
+    "nostrils_anger",
+    "wrath, and 'slow to anger' as long nostrils"
+   ],
+   [
+    "wings_of_god",
+    "shelter, refuge"
+   ],
+   [
+    "back_of_god",
+    "what may be seen of glory"
+   ],
+   [
+    "voice_walking_in_the_garden",
+    "nearness"
+   ]
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "affect": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. Emotional states named by the text. The Psalter is built from them and the list had none.",
+  "items": [
+   "fear_of_god",
+   "fear_dread",
+   "joy",
+   "gladness",
+   "grief",
+   "mourning",
+   "anger",
+   "compassion",
+   "zeal",
+   "jealousy",
+   "hope",
+   "despair",
+   "longing",
+   "contentment",
+   "shame",
+   "honour_affect",
+   "comfort",
+   "distress",
+   "trembling",
+   "rest_of_soul",
+   "bitterness",
+   "delight"
+  ],
+  "_level": "verse",
+  "_earned": "a clause-level form or predication in one verse"
+ },
+ "legal_wisdom_forms": {
+  "_note": "Added by Claude 2026-09-13 at Doug's request to fill gaps in the Copilot list. Genre shapes that structure Torah and the wisdom books.",
+  "items": [
+   "apodictic_law",
+   "case_law_if_then",
+   "talion_formula",
+   "blessing_and_curse_list",
+   "purity_regulation",
+   "cities_of_refuge_provision",
+   "redemption_provision",
+   "levirate_provision",
+   "proverb",
+   "better_than_saying",
+   "numerical_proverb",
+   "riddle",
+   "fable",
+   "disputation",
+   "instruction_of_a_father",
+   "wisdom_call",
+   "folly_call",
+   "vanity_saying",
+   "carpe_diem_saying"
+  ],
+  "_level": "verse",
+  "_earned": "a clause-level form or predication in one verse"
+ },
+ "spiritual_beings": {
+  "_note": "Added by Claude 2026-09-13 from a pass through the overlay, which holds this and the taxonomy could not express it. The overlay's `being` type (12 entities) exposed it: the list had angels nowhere, in a corpus where they open and close the story.",
+  "items": [
+   "angel_of_the_lord",
+   "angel",
+   "archangel",
+   "michael",
+   "gabriel",
+   "cherubim_beings",
+   "seraphim",
+   "living_creatures",
+   "heavenly_host",
+   "sons_of_god",
+   "watchers",
+   "satan_accuser",
+   "devil",
+   "unclean_spirit",
+   "demon",
+   "legion",
+   "lying_spirit",
+   "destroyer",
+   "prince_of_persia",
+   "elders_around_the_throne",
+   "four_horsemen",
+   "the_father",
+   "the_son",
+   "the_holy_spirit",
+   "spirit_of_the_lord",
+   "glory_kavod"
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "assessments": {
+  "_note": "Added by Claude 2026-09-13 from a pass through the overlay, which holds this and the taxonomy could not express it. The overlay's `assessment` type (418) with 463 assessed_as relations. How the text JUDGES a person or act -- distinct from what they do.",
+  "items": [
+   "righteous",
+   "wicked",
+   "blameless",
+   "upright",
+   "perfect_tamim",
+   "faithful_assess",
+   "unfaithful",
+   "deceived",
+   "deceiver",
+   "hard_hearted",
+   "stiff_necked",
+   "proud",
+   "humble_assess",
+   "wise_assess",
+   "foolish_assess",
+   "innocent",
+   "guilty",
+   "clean",
+   "unclean",
+   "holy_assess",
+   "profane",
+   "chosen",
+   "rejected",
+   "accepted",
+   "abomination",
+   "pleasing_to_god",
+   "found_wanting",
+   "greater_than",
+   "least",
+   "worthy",
+   "unworthy",
+   "stranger",
+   "beloved"
+  ],
+  "_level": "verse",
+  "_earned": "a clause-level form or predication in one verse"
+ },
+ "named_covenants": {
+  "_note": "Added by Claude 2026-09-13 from a pass through the overlay, which holds this and the taxonomy could not express it. The overlay's `covenant` type names them individually; the list held covenant only as a theme and a cutting-event.",
+  "items": [
+   "covenant_with_noah",
+   "covenant_with_abraham",
+   "covenant_of_circumcision",
+   "covenant_at_sinai",
+   "covenant_with_phinehas",
+   "covenant_with_david",
+   "covenant_at_shechem",
+   "covenant_of_salt",
+   "new_covenant",
+   "covenant_of_peace",
+   "jonathan_and_david",
+   "oath_to_the_fathers",
+   "marriage_covenant",
+   "covenant_with_creation"
+  ],
+  "_level": "passage",
+  "_earned": "a shape spanning several verses; no single verse carries it"
+ },
+ "discourse_openers": {
+  "_note": "Added by Claude 2026-09-13 from a pass through the overlay, which holds this and the taxonomy could not express it. The overlay's `pattern` type is full of these -- 'Behold' opening a turn, 'Peradventure there be N righteous', 'My lord, hear me'. Finer-grained than the devices list and directly detectable.",
+  "items": [
+   "behold",
+   "verily_amen",
+   "thus_says_the_lord",
+   "hear_o_israel",
+   "woe_to",
+   "blessed_is",
+   "how_long",
+   "why_have_you",
+   "who_is_like",
+   "peradventure_if_there_be",
+   "my_lord_hear_me",
+   "it_came_to_pass",
+   "in_the_days_of",
+   "now_it_happened",
+   "and_god_said",
+   "i_am_the_lord",
+   "fear_not",
+   "take_heed",
+   "remember",
+   "see_i_have_set"
+  ],
+  "_level": "verse",
+  "_earned": "a clause-level form or predication in one verse"
+ },
+ "collective_actors": {
+  "_note": "Added by Claude 2026-09-13 from a pass through the overlay, which holds this and the taxonomy could not express it. The overlay's `group` type (363). The list had character ROLES for individuals and nothing for collectives, which act as characters throughout.",
+  "items": [
+   "the_people",
+   "the_congregation",
+   "the_elders",
+   "the_nations",
+   "the_remnant",
+   "the_house_of_israel",
+   "the_house_of_judah",
+   "the_tribes",
+   "the_priests",
+   "the_levites",
+   "the_prophets",
+   "the_wicked_collective",
+   "the_righteous_collective",
+   "the_poor",
+   "the_crowd",
+   "the_disciples",
+   "the_twelve",
+   "the_seventy",
+   "the_scribes",
+   "the_pharisees",
+   "the_sadducees",
+   "the_gentiles",
+   "the_saints",
+   "the_church",
+   "the_armies",
+   "the_kings_of_the_earth"
+  ],
+  "_level": "word",
+  "_earned": "a lemma or named entity present in the text"
+ },
+ "conditionality": {
+  "_note": "Added by Claude 2026-09-13 from a pass through the overlay, which holds this and the taxonomy could not express it. The overlay carries 91 conditional_on relations. Covenant runs on if/then, and the list had no way to stamp it.",
+  "items": [
+   [
+    "if_you_obey_then_blessing",
+    "the positive protasis"
+   ],
+   [
+    "if_you_forsake_then_curse",
+    "the negative protasis"
+   ],
+   [
+    "unless_you",
+    "the barred condition"
+   ],
+   [
+    "as_long_as",
+    "duration-bound promise"
+   ],
+   [
+    "until",
+    "terminating condition"
+   ],
+   [
+    "lest",
+    "the averted outcome"
+   ],
+   [
+    "whoever_does",
+    "open condition, any comer"
+   ],
+   [
+    "if_my_people_will",
+    "the conditional restoration"
+   ],
+   [
+    "though_he_slay_me",
+    "concession against expectation"
+   ],
+   [
+    "how_much_more",
+    "a fortiori conditional"
+   ]
+  ],
+  "_level": "verse",
+  "_earned": "a clause-level form or predication in one verse"
+ },
+ "observances": {
+  "_note": "Added by Claude 2026-09-13 from a pass through the overlay, which holds this and the taxonomy could not express it. The overlay's `observance` type. times_festivals covers the calendar; these are the practices.",
+  "items": [
+   "fasting",
+   "vow",
+   "nazirite_vow",
+   "abstinence",
+   "tithing",
+   "almsgiving",
+   "prayer_practice",
+   "sabbath_keeping",
+   "circumcision_practice",
+   "purification_washing",
+   "anointing_practice",
+   "laying_on_of_hands",
+   "breaking_bread_practice",
+   "baptizing",
+   "foot_washing",
+   "casting_lots",
+   "sackcloth_and_ashes",
+   "pilgrimage",
+   "firstborn_redemption"
+  ],
+  "_level": "verse",
+  "_earned": "a clause-level form or predication in one verse"
+ },
+ "_levels": {
+  "order": [
+   "word",
+   "verse",
+   "passage",
+   "section"
+  ],
+  "rule": "A stamp may be descended only to its own level and no further. Ascent is by PROPORTION (what fraction of children carry it), never by union -- union is monotonic, so a book node would carry nearly the whole vocabulary and distinguish nothing.",
+  "basis": "Measured 2026-09-12: 1 trait of 12 survived the informativeness filter at verse level, 12 at section level. A verse is too small to BE citation-heavy or an exodus pattern.",
+  "earned": {
+   "word": "a lemma or named entity present in the text",
+   "verse": "a clause-level form or predication in one verse",
+   "passage": "a shape spanning several verses; no single verse carries it",
+   "section": "a property of the whole unit's argument or arc"
+  }
+ }
+}

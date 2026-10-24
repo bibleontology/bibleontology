@@ -1,0 +1,25 @@
+{
+ "sheet": "docs/review/generic-check-2026-10-18.html",
+ "by": "Doug",
+ "date": "2026-10-18",
+ "what": "Plan 1.41: the generics checked against the text's own words (out/sweep/generic-links.jsonl). A sample of 32: 14 same, 10 part_of, 8 neither.",
+ "tally": {"right": 30, "wrong": 2, "_note": "James 2:2 first marked wrong, changed to right by Doug after the Greek was shown: 'I agree on james 2:2 now'"},
+ "wrong": [
+  {"generic": "Heb.10#generic:some-who-have-the-custom-of-not-meeting-together", "judged": "same as 'custom' (ἔθος)", "his_note": "some is the people",
+   "finding": "a habit is not the people; the generic stands for 'some' itself, so no naming word: neither"},
+  {"generic": "Jas.2#generic:a-poor-man-in-shabby-clothes", "judged": "same as 'a poor' (πτωχός)", "his_note": "should be man with qualifiers",
+   "finding": "RIGHT after all (Doug, 2026-10-18: 'I agree on james 2:2 now'): the Greek has no 'man' for him (ἀνήρ is the rich man's); πτωχός stands alone with 'in shabby clothes' attached, as 'the fourth' does in Rev 16:8"},
+  {"generic": "Rev.16#generic:the-fourth-angel", "judged": "neither", "his_note": "reference is to the angel",
+   "finding": "same as 'the fourth' (τέταρτος, 16:8): the Greek says 'the fourth' alone, 'angel' is the Berean's; the judge was offered it and reasoned only about 16:5's angel"}
+ ],
+ "his_words": [
+  "do I always need to compare to the one word? the context matters",
+  "so if it says 'believing gentiles' it can point to gentiles because that is who the comparison is against even though it is really a group within the gentiles?",
+  "in this one I cannot find the 'of him'"
+ ],
+ "sheet_fixes_from_his_questions": [
+  "each row shows what the generic stands for (the words it replaced)",
+  "the question stated at the top: are the 'Stands for' words the same people as the bold word, read in their verses",
+  "'Stands for' shows the original's word-for-word gloss ('of him' is the Berean's 'his')"
+ ]
+}

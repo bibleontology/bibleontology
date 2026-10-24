@@ -1,0 +1,53 @@
+{
+ "ref": "Pro.10.3",
+ "referents": [
+  {
+   "slot": "cl1s",
+   "choice": "w2",
+   "divine": true,
+   "why": "Third masculine singular 'he rejects' in the second line of the same sentence. The subject of the first line is the LORD (w2, masc sg), the nearest agreeing sensible doer of a rejecting act. The parser's guess agrees.",
+   "category": "implied subject carried across a waw line"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Plain waw opening cl1 (וְ). The opposition is the sense, not the connective, so it stays 'and'.",
+   "category": "plain and read as opposition"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Pro.10.3#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl0"
+    },
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w2"
+    }
+   ],
+   "divine": true,
+   "why": "Two lines with one subject, the LORD. The second restates the first's roles (the LORD's act toward a desire of the righteous or the wicked) and states no subject of its own. This is the parallel kind's case.",
+   "category": "two lines with one subject"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl0 and cl1",
+   "what": "Antithetic couplet (the righteous not left hungry against the wicked's craving rejected) joined by a waw; no link type for antithesis without an explicit but-word."
+  }
+ ],
+ "cant_tell": []
+}

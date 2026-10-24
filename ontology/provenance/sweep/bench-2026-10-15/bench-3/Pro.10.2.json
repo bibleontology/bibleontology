@@ -1,0 +1,27 @@
+{
+ "ref": "Pro.10.2",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Bare waw joins 'ill-gotten treasures profit nothing' and 'righteousness delivers from death'. No 'but' word; contrast by sense only, not a cause or result.",
+   "category": "plain and between antithetic lines"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Pro.10.2 cl0 -and-> cl1",
+   "what": "Contrast marked only by a bare waw; no link type covers an unmarked antithesis."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Whether cl0 has an implied third masculine plural subject ('they') that the slot list omits",
+   "why": "The gloss shows 'they' before the verb and 'treasures of wickedness' after it. The noun reads as the postposed subject, which needs no slot, so none was added; flagged in case the parser meant an implied subject."
+  }
+ ]
+}

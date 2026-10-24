@@ -1,0 +1,130 @@
+{
+ "ref": "Exo.7.27",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'you refuse' is inside the LORD's message to Pharaoh, which continues across the verse break; the addressee is Pharaoh.",
+   "category": "second person inside a quoted divine speech"
+  },
+  {
+   "slot": "w7",
+   "choice": "Exo.7.26#w2",
+   "confidence": "high",
+   "divine": true,
+   "rhetorical": false,
+   "why": "'I will plague' is the LORD speaking in the same message; Exo.7.26#w2 is the LORD named in the previous verse (the same person as the inner speaker w14).",
+   "category": "first person inside a quoted divine speech"
+  },
+  {
+   "slot": "w12",
+   "choice": "Exo.7.26#w7",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "'your country' is the addressee's; the addressee is Pharaoh.",
+   "category": "possessive of the addressee"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "remove",
+   "confidence": "high",
+   "why": "the infinitive 'to let them go' completes the verb 'refuse'; purpose is excluded for that.",
+   "category": "infinitive completing a verb of refusal"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "confidence": "high",
+   "why": "the infinitive is the object of 'refuse', a clause nested in a role of another clause.",
+   "category": "infinitive as object"
+  },
+  {
+   "src": "cl0",
+   "type": "if",
+   "dst": "cl2",
+   "action": "remove",
+   "confidence": "high",
+   "why": "the link runs the wrong way: the condition is the destination and the consequence is the source.",
+   "category": "condition direction"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl0",
+   "action": "add",
+   "confidence": "high",
+   "why": "'but if you refuse' is the condition on 'here, I am about to strike'.",
+   "category": "condition direction"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "confidence": "high",
+   "why": "the condition and its consequence are already joined by the if-link; a plain 'and' adds nothing.",
+   "category": "duplicate connective"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "keep",
+   "confidence": "medium",
+   "why": "'here!' introduces the consequence, which continues in a waw-joined participle.",
+   "category": "consequence continued by and"
+  }
+ ],
+ "groups": [
+  {
+   "id": "cond0",
+   "kind": "conditional",
+   "action": "keep",
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl0"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ],
+   "confidence": "high",
+   "divine": false,
+   "why": "the 'if' clause and the clause it conditions; cl3 is a separate part of the speech.",
+   "category": "condition and consequence"
+  },
+  {
+   "id": "Exo.7.26#turn1",
+   "kind": "turn",
+   "action": "extend",
+   "members": [
+    {
+     "role": "part",
+     "node": "Exo.7.27#cond0"
+    },
+    {
+     "role": "part",
+     "node": "Exo.7.27#cl3"
+    }
+   ],
+   "confidence": "high",
+   "divine": true,
+   "why": "the LORD's quoted message continues into this verse; a conditional said by the speaker is a part of the turn as a whole group.",
+   "category": "speech continued across verses"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

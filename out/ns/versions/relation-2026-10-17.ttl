@@ -1,0 +1,1577 @@
+@prefix bor: <https://bibleontology.org/ns/relation#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bor:accused a owl:ObjectProperty ;
+    rdfs:label "accused" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group lays a charge against another person or group; it is the complaint made, not a plot against someone and not the verdict." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was accused by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:adoptive_parent_of a owl:ObjectProperty ;
+    rdfs:label "raised / adopted" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person who becomes a parent of another through a willful, formal process of adoption." ;
+    bor:category "Kinship" ;
+    bor:inverseLabel "was raised by" .
+
+bor:ally_of a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "was allied with" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two parties were allied politically or militarily; the relation reads the same from either side and is not a mere friendship." ;
+    bor:category "Association" .
+
+bor:ancestor_of a owl:ObjectProperty ;
+    rdfs:label "is an ancestor of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group is an ancestor of another across more than one generation, or without the intervening generations being given, including a people traced to a named ancestor." ;
+    bor:category "Descent (non-parent)" ;
+    bor:inverseLabel "is a descendant of" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:anointed a owl:ObjectProperty ;
+    rdfs:label "anointed" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group anoints a person, as the text records it; a body of people can confer the office as well as a prophet." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was anointed by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "person" .
+
+bor:answered a owl:ObjectProperty ;
+    rdfs:label "answered" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "One speech replies to another, or a person replies to a speech or a person; where the text has a speaker answer the previous speech, the reply is to what was said and not only to the one who said it." ;
+    bor:category "Language" ;
+    bor:inverseLabel "was answered by" ;
+    bor:sourceKind "being",
+        "group",
+        "person",
+        "text" ;
+    bor:targetKind "being",
+        "creature",
+        "group",
+        "person",
+        "text" .
+
+bor:appeared_to a owl:ObjectProperty ;
+    rdfs:label "appeared to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A being, person or group appears to a person or group in a visitation the text narrates, without classifying it as a vision, a dream or a bodily appearance." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was visited by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:appointed a owl:ObjectProperty ;
+    rdfs:label "appointed / installed" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being places a person or group in an office or command." ;
+    bor:category "Rule & succession" ;
+    bor:inverseLabel "was appointed by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:ascribed_to a owl:ObjectProperty ;
+    rdfs:label "is ascribed to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A writing carries a superscription naming a person or group; the edge records the ascription as it is printed and does not say whether it means authorship, dedication or subject." ;
+    bor:category "Language" ;
+    bor:inverseLabel "has ascribed to them" ;
+    bor:sourceKind "text" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:aspect_of a owl:ObjectProperty ;
+    rdfs:label "is an aspect of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A concept or pattern is one facet of a broader idea, joined to it and not merged into it; the grouping is the map's and not the text's, and each aspect is described by the passages it cites." ;
+    bor:category "Concepts" ;
+    bor:inverseLabel "has as an aspect" ;
+    bor:sourceKind "concept",
+        "pattern" ;
+    bor:targetKind "being",
+        "concept",
+        "covenant",
+        "group",
+        "image",
+        "object",
+        "observance",
+        "person",
+        "place",
+        "title" .
+
+bor:asserted_by a owl:ObjectProperty ;
+    rdfs:label "is asserted by" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A claim, verdict, title or saying is vouched for by a named party, or by the writing itself where no speaker is named; it lets two differing claims be held side by side without being joined." ;
+    bor:category "Language" ;
+    bor:inverseLabel "asserts" ;
+    bor:sourceKind "assessment",
+        "concept",
+        "image",
+        "pattern",
+        "text",
+        "title" ;
+    bor:targetKind "being",
+        "concept",
+        "creature",
+        "group",
+        "person",
+        "text" .
+
+bor:assessed_as a owl:ObjectProperty ;
+    rdfs:label "did" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A subject is the doer of a deed that the text itself evaluates, such as the verdict pronounced on a reign or on a part of creation; the evaluation is the text's own and not a reader's." ;
+    bor:category "Verdicts" ;
+    bor:inverseLabel "was done by" ;
+    bor:sourceKind "being",
+        "concept",
+        "covenant",
+        "creature",
+        "group",
+        "object",
+        "person",
+        "place",
+        "text" ;
+    bor:targetKind "assessment",
+        "concept",
+        "pattern" .
+
+bor:assumed_form_of a owl:ObjectProperty ;
+    rdfs:label "was a form assumed by" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A temporary form is the form that a person or being took on and later set aside, where the text narrates the taking; the form is the source and the one who took it is the target." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "took the form of" ;
+    bor:sourceKind "being",
+        "creature",
+        "group",
+        "object",
+        "person" ;
+    bor:targetKind "being",
+        "person" .
+
+bor:ate a owl:ObjectProperty ;
+    rdfs:label "ate" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being, group or creature eats something, where the text records the eating." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was eaten by" ;
+    bor:sourceKind "being",
+        "creature",
+        "group",
+        "object",
+        "person" ;
+    bor:targetKind "concept",
+        "creature",
+        "image",
+        "object",
+        "place" .
+
+bor:attacked a owl:ObjectProperty ;
+    rdfs:label "attacked / made war on" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being attacks or makes war on a person or group." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was attacked by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:baptized a owl:ObjectProperty ;
+    rdfs:label "baptized" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or being baptizes a person or group." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was baptized by" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:based_at a owl:ObjectProperty ;
+    rdfs:label "centred on" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A group is centred on a place, so that a church, household or tribe is a group with a location and not a synonym for the place." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was the centre of" ;
+    bor:sourceKind "group" ;
+    bor:targetKind "place" .
+
+bor:besought a owl:ObjectProperty ;
+    rdfs:label "pleaded with" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group entreats another where the text marks the act as a petition; the polite \"please\" of ordinary speech is not recorded." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was pleaded with by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
+
+bor:betrayed a owl:ObjectProperty ;
+    rdfs:label "betrayed" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group betrays another person or group." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was betrayed by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:betrothed_to a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "is betrothed to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two people are betrothed to each other before marriage; the relation reads the same from either side." ;
+    bor:category "Marriage & union" .
+
+bor:blessed a owl:ObjectProperty ;
+    rdfs:label "blessed" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A being, person or group pronounces a formal and consequential blessing on a person or group, not a casual greeting." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was blessed by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:born_at a owl:ObjectProperty ;
+    rdfs:label "was born at" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person was born at a place, recorded only where the text says born and not merely present." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was the birthplace of" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "place" .
+
+bor:bought a owl:ObjectProperty ;
+    rdfs:label "bought" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group buys a place, object or thing, in a purchase the text records." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was bought by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "concept",
+        "object",
+        "place" .
+
+bor:built a owl:ObjectProperty ;
+    rdfs:label "built" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being raises a place or structure, where the text says who built it." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was built by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "object",
+        "place" .
+
+bor:buried_at a owl:ObjectProperty ;
+    rdfs:label "was buried at" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person was buried at a place or object." ;
+    bor:category "Places" ;
+    bor:inverseLabel "is the burial place of" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "object",
+        "place" .
+
+bor:came_upon a owl:ObjectProperty ;
+    rdfs:label "came upon" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "The Spirit or another being comes upon a person or group, as the text puts it; the edge says the verse reports this and does not say what the coming produced or how long it lasted." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "had the Spirit come upon them" ;
+    bor:sourceKind "being" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:carried a owl:ObjectProperty ;
+    rdfs:label "carried" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group bears or transports an object, concept or creature." ;
+    bor:category "Things" ;
+    bor:inverseLabel "was carried by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "concept",
+        "creature",
+        "object" .
+
+bor:cast_into a owl:ObjectProperty ;
+    rdfs:label "was cast into" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group is put into a place or object against their will and kept there; the source is the one who ends up inside and not the one who threw them." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "held" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "object",
+        "place" .
+
+bor:category a owl:AnnotationProperty ;
+    rdfs:label "the group a relation belongs to" .
+
+bor:charged a owl:ObjectProperty ;
+    rdfs:label "charged" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group lays a binding instruction on another, stronger than a request." ;
+    bor:category "Service & authority" ;
+    bor:inverseLabel "was charged by" ;
+    bor:sourceKind "being",
+        "group",
+        "person",
+        "title" ;
+    bor:targetKind "concept",
+        "group",
+        "person" .
+
+bor:co_regent_with a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "reigned jointly with" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two people reigned jointly; the relation reads the same from either side." ;
+    bor:category "Rule & succession" .
+
+bor:commanded_the_making_of a owl:ObjectProperty ;
+    rdfs:label "commanded the making of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or being commands that something be made, which is kept apart from the one who does the making." ;
+    bor:category "Things" ;
+    bor:inverseLabel "was commanded by" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "object" .
+
+bor:commander_of a owl:ObjectProperty ;
+    rdfs:label "commanded the army of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person commanded the army of another." ;
+    bor:category "Service & authority" ;
+    bor:inverseLabel "had as army commander" .
+
+bor:companion_of a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "traveled / worked with" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two people travelled or worked together; the relation reads the same from either side." ;
+    bor:category "Association" .
+
+bor:composed_of a owl:ObjectProperty ;
+    rdfs:label "is built from the words" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A phrase is built from the words of a term; this is a fact about the wording only and does not say that the phrase is a kind of that thing." ;
+    bor:category "Language" ;
+    bor:inverseLabel "appears in the phrase" ;
+    bor:sourceKind "assessment",
+        "being",
+        "concept",
+        "covenant",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "observance",
+        "person",
+        "place",
+        "text",
+        "title" ;
+    bor:targetKind "assessment",
+        "being",
+        "concept",
+        "covenant",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "observance",
+        "person",
+        "place",
+        "text",
+        "title" .
+
+bor:concubine_of a owl:ObjectProperty ;
+    rdfs:label "is a concubine of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A woman is a concubine of a man, a status the text distinguishes from marriage; the concubine is the source and the man the target." ;
+    bor:category "Marriage & union" ;
+    bor:inverseLabel "had as concubine" .
+
+bor:conditional_on a owl:ObjectProperty ;
+    rdfs:label "is conditional on" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A consequence the text states is tied to the condition on which it depends, as in a bargain, a blessing or a warning that begins \"if\"." ;
+    bor:category "Language" ;
+    bor:inverseLabel "is the condition for" ;
+    bor:sourceKind "assessment",
+        "concept",
+        "covenant",
+        "image",
+        "text",
+        "title" ;
+    bor:targetKind "assessment",
+        "concept",
+        "covenant",
+        "image",
+        "text",
+        "title" .
+
+bor:conquered a owl:ObjectProperty ;
+    rdfs:label "conquered" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group subjugated another with a lasting outcome, as distinct from a single battle." ;
+    bor:category "Peoples & groups" ;
+    bor:inverseLabel "was conquered by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:conspired_against a owl:ObjectProperty ;
+    rdfs:label "conspired against" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being plots against a person or group." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was the target of a conspiracy by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:contrary_to a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "is contrary to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "The text sets two things against each other, by saying they are contrary or by building the contrast into its structure; the opposition is the text's and not a reader's, and tensions the text leaves standing are not recorded." ;
+    bor:category "What the text sets against it" ;
+    bor:sourceKind "assessment",
+        "being",
+        "concept",
+        "image",
+        "text",
+        "title" ;
+    bor:targetKind "assessment",
+        "being",
+        "concept",
+        "image",
+        "text",
+        "title" .
+
+bor:counselor_of a owl:ObjectProperty ;
+    rdfs:label "was counselor to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person advised another." ;
+    bor:category "Service & authority" ;
+    bor:inverseLabel "was counseled by" .
+
+bor:cousin_of a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "is the cousin of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two people are cousins, recorded only where the text itself says so; the relation reads the same from either side." ;
+    bor:category "Kinship" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "person" .
+
+bor:cursed a owl:ObjectProperty ;
+    rdfs:label "pronounced a curse on" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or being pronounces a curse on a person, group, place, creature, object or being." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was cursed by" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "being",
+        "creature",
+        "group",
+        "object",
+        "person",
+        "place" .
+
+bor:deceived a owl:ObjectProperty ;
+    rdfs:label "deceived" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group, being or creature deceives a person, group or being." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was deceived by" ;
+    bor:sourceKind "being",
+        "creature",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
+
+bor:deity_of a owl:ObjectProperty ;
+    rdfs:label "is the God of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A divine being is called the God of a person or people, as in the text's formula \"the God of\" a patriarch or of Israel; it is a relationship the text states and not an identification of the two." ;
+    bor:category "Father, Son & Spirit" ;
+    bor:inverseLabel "whose God he is called" ;
+    bor:sourceKind "being" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:deposed a owl:ObjectProperty ;
+    rdfs:label "deposed / removed from power" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person is removed from power by another." ;
+    bor:category "Rule & succession" ;
+    bor:inverseLabel "was deposed by" .
+
+bor:descended_from_person a owl:ObjectProperty ;
+    rdfs:label "descends from" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A tribe or nation descends from the person it is named for, as the text explains the origin of a people; the person and the people remain separate nodes." ;
+    bor:category "Peoples & groups" ;
+    bor:inverseLabel "is the ancestor of" ;
+    bor:sourceKind "group" ;
+    bor:targetKind "person" .
+
+bor:described_as a owl:ObjectProperty ;
+    rdfs:label "is described as" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A subject is said by the text to be a certain way: an age, a state, a trait, a role or a verdict on the subject itself, as distinct from a deed that is evaluated." ;
+    bor:category "Verdicts" ;
+    bor:inverseLabel "is said of" ;
+    bor:sourceKind "being",
+        "concept",
+        "covenant",
+        "creature",
+        "group",
+        "object",
+        "person",
+        "place",
+        "text" ;
+    bor:targetKind "assessment",
+        "concept",
+        "pattern" .
+
+bor:destroyed a owl:ObjectProperty ;
+    rdfs:label "destroyed" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group destroys a place, people, thing or creature, where the text says so." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was destroyed by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "concept",
+        "creature",
+        "group",
+        "object",
+        "person",
+        "place" .
+
+bor:died_at a owl:ObjectProperty ;
+    rdfs:label "died at" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person died at a place." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was where they died" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "place" .
+
+bor:distinguished_from a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "is distinguished from" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "The text sets the two apart, for example when a speaker contrasts himself with another; it records the statement and does not settle what the contrast means." ;
+    bor:category "Father, Son & Spirit" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "being",
+        "person" .
+
+bor:drawn_from a owl:ObjectProperty ;
+    rdfs:label "is drawn from" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A word used as an image is joined to the tangible thing of the same name, where the graph holds one; the two share a word and are not one node." ;
+    bor:category "Images & figures" ;
+    bor:inverseLabel "is used as an image" ;
+    bor:sourceKind "image" ;
+    bor:targetKind "creature",
+        "event",
+        "group",
+        "object",
+        "observance",
+        "person",
+        "place" .
+
+bor:draws_on a owl:ObjectProperty ;
+    rdfs:label "draws on the image of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A title, saying or image is built on another image, person, place, being or text; this is a claim about wording and not about what the image means." ;
+    bor:category "Images & figures" ;
+    bor:inverseLabel "is the image behind" ;
+    bor:sourceKind "image",
+        "text",
+        "title" ;
+    bor:targetKind "being",
+        "covenant",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "observance",
+        "person",
+        "place",
+        "text",
+        "title" .
+
+bor:dwelt_at a owl:ObjectProperty ;
+    rdfs:label "lived at" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group lived at a place, a settled residence the text establishes and not a single visit." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was home to" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "place" .
+
+bor:enemy_of a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "was an enemy of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two parties were declared or lasting enemies where neither is clearly the aggressor; the relation reads the same from either side." ;
+    bor:category "Conflict" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
+
+bor:explained a owl:ObjectProperty ;
+    rdfs:label "explained" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group gives the interpretation of a parable, dream or vision; it is kept apart from telling because the two are often different people." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was explained by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "text" .
+
+bor:father_of a owl:ObjectProperty ;
+    rdfs:label "is the father of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person is the father of another, as a direct generation; a wider descent is recorded as ancestry instead." ;
+    bor:category "Kinship" ;
+    bor:inverseLabel "is the son/daughter of" .
+
+bor:fought a owl:ObjectProperty ;
+    rdfs:label "made war on" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group made war on a person or group, where either side may be a person or a people." ;
+    bor:category "Peoples & groups" ;
+    bor:inverseLabel "was fought by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:founded a owl:ObjectProperty ;
+    rdfs:label "founded" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person founded a place, or is called the father of a town in the text's idiom, which is usually read as its founder or chief ancestor; the words of the phrase are quoted so that a reader can weigh the reading." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was founded by" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "place" .
+
+bor:friend_of a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "was a close friend of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two people were close friends; the relation reads the same from either side." ;
+    bor:category "Association" .
+
+bor:gave a owl:ObjectProperty ;
+    rdfs:label "gave" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group transfers something to another; the edge records the giving and not what the gift came to mean." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was given by" ;
+    bor:sourceKind "being",
+        "concept",
+        "group",
+        "object",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "covenant",
+        "creature",
+        "group",
+        "object",
+        "observance",
+        "person",
+        "place" .
+
+bor:grounds a owl:ObjectProperty ;
+    rdfs:label "is the ground for" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "One statement is the reason the text gives for another, so that the second rests on the first." ;
+    bor:category "Language" ;
+    bor:inverseLabel "is grounded on" ;
+    bor:sourceKind "assessment",
+        "concept",
+        "image",
+        "text",
+        "title" ;
+    bor:targetKind "assessment",
+        "concept",
+        "image",
+        "text",
+        "title" .
+
+bor:half_sibling_of a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "is a half-sibling of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two people share one parent, where the text is explicit about it; the relation reads the same from either side." ;
+    bor:category "Kinship" .
+
+bor:healed a owl:ObjectProperty ;
+    rdfs:label "healed / raised" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or being heals, casts out a spirit from, or raises from the dead, a person or group the text names or clearly picks out." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was healed by" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:heard a owl:ObjectProperty ;
+    rdfs:label "heard" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group hears a speech, a cry or a report, where the text records the hearing." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was heard by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "assessment",
+        "being",
+        "concept",
+        "event",
+        "group",
+        "person",
+        "text" .
+
+bor:imprisoned a owl:ObjectProperty ;
+    rdfs:label "imprisoned" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group holds another person, group or concept in captivity." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was imprisoned by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "concept",
+        "group",
+        "person" .
+
+bor:in_theme a owl:ObjectProperty ;
+    rdfs:label "is a core concept of the major theme" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A concept, observance, event or saying is a core concept of a major theme; the grouping is a reader's map of the text, supported by the passages cited." ;
+    bor:category "Concepts" ;
+    bor:inverseLabel "has as a core concept" ;
+    bor:sourceKind "concept",
+        "event",
+        "observance",
+        "text" ;
+    bor:targetKind "concept" .
+
+bor:incited a owl:ObjectProperty ;
+    rdfs:label "moved / provoked to act" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "One party moves another to act, in the sense of causing someone to take an action; the action itself is carried by what the one moved then does." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was moved to act by" ;
+    bor:sourceKind "being",
+        "concept",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
+
+bor:instance_of a owl:ObjectProperty ;
+    rdfs:label "is an instance of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A passage, saying, event or group is one case of a shape that several passages share; the shape is the graph's grouping and not a claim that the writers intended one." ;
+    bor:category "Language" ;
+    bor:inverseLabel "occurs as" ;
+    bor:sourceKind "assessment",
+        "event",
+        "group",
+        "passage",
+        "text",
+        "title" ;
+    bor:targetKind "concept",
+        "pattern" .
+
+bor:instituted a owl:ObjectProperty ;
+    rdfs:label "instituted" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or being establishes an observance, where the text names who established it." ;
+    bor:category "Observances" ;
+    bor:inverseLabel "was instituted by" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "observance" .
+
+bor:inverseLabel a owl:AnnotationProperty ;
+    rdfs:label "how the relation reads from the target's side" .
+
+bor:issues_from a owl:ObjectProperty ;
+    rdfs:label "issues from" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "One thing comes out of another as its source; it is origin and not containment, and a river that goes out of a place is not a part of it." ;
+    bor:category "Source and derivation" ;
+    bor:inverseLabel "gives rise to" ;
+    bor:sourceKind "being",
+        "concept",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "person",
+        "place" ;
+    bor:targetKind "being",
+        "concept",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "person",
+        "place" .
+
+bor:judged a owl:ObjectProperty ;
+    rdfs:label "passed judgment on" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being passes judgment on a person or group, in a formal legal proceeding or a pronounced verdict." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was judged by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:kept_at a owl:ObjectProperty ;
+    rdfs:label "was kept at" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "An object, concept or creature is kept at a place; an object that moves can have several such places, each with its own citation." ;
+    bor:category "Things" ;
+    bor:inverseLabel "held" ;
+    bor:sourceKind "concept",
+        "creature",
+        "object" ;
+    bor:targetKind "place" .
+
+bor:killed a owl:ObjectProperty ;
+    rdfs:label "killed" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being kills a person, group or creature, including by ordering the death." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was killed by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "creature",
+        "group",
+        "person" .
+
+bor:led a owl:ObjectProperty ;
+    rdfs:label "led" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being, group or concept leads a person or group, including the leading of one person by God." ;
+    bor:category "Peoples & groups" ;
+    bor:inverseLabel "was led by" ;
+    bor:sourceKind "being",
+        "concept",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:likened_to a owl:ObjectProperty ;
+    rdfs:label "is likened to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "The text marks a comparison in which the first is compared to the second, the thing described being the source and the image the target." ;
+    bor:category "Images & figures" ;
+    bor:inverseLabel "is used as an image for" ;
+    bor:sourceKind "being",
+        "concept",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "observance",
+        "person",
+        "place",
+        "text" ;
+    bor:targetKind "being",
+        "concept",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "observance",
+        "person",
+        "place",
+        "text" .
+
+bor:located_in a owl:ObjectProperty ;
+    rdfs:label "is in" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A place or object lies within a larger place." ;
+    bor:category "Places" ;
+    bor:inverseLabel "contains" ;
+    bor:sourceKind "object",
+        "place" ;
+    bor:targetKind "place" .
+
+bor:made a owl:ObjectProperty ;
+    rdfs:label "made" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being fashions or creates something, where the text names the maker; commissioning the work is a separate relation." ;
+    bor:category "Things" ;
+    bor:inverseLabel "was made by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "concept",
+        "creature",
+        "group",
+        "object",
+        "person",
+        "place" .
+
+bor:member_of a owl:ObjectProperty ;
+    rdfs:label "belonged to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or concept belonged to a group, recorded only where the text places them in it." ;
+    bor:category "Peoples & groups" ;
+    bor:inverseLabel "counted among its members" ;
+    bor:sourceKind "concept",
+        "person" ;
+    bor:targetKind "group" .
+
+bor:mentor_of a owl:ObjectProperty ;
+    rdfs:label "was mentor / master to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person was the master or mentor of another, who was the disciple." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was disciple of" .
+
+bor:ministered_to a owl:ObjectProperty ;
+    rdfs:label "taught / ministered to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being teaches or ministers to another in a substantial personal encounter that is neither a healing nor an ongoing discipleship." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was taught by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:mother_of a owl:ObjectProperty ;
+    rdfs:label "is the mother of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person is the mother of another, as a direct generation." ;
+    bor:category "Kinship" ;
+    bor:inverseLabel "is the child of" .
+
+bor:named a owl:ObjectProperty ;
+    rdfs:label "named" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group gives a name to someone or something, or changes an existing name, where the text says who did the naming." ;
+    bor:category "Language" ;
+    bor:inverseLabel "was named by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "creature",
+        "group",
+        "object",
+        "person",
+        "place" .
+
+bor:named_with a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "is named with" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "The text names the two together in a single formula or sentence; the edge records the joint naming and does not say how the two are related." ;
+    bor:category "Father, Son & Spirit" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "being",
+        "person" .
+
+bor:observed a owl:ObjectProperty ;
+    rdfs:label "kept" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group keeps an observance on an occasion the text records." ;
+    bor:category "Observances" ;
+    bor:inverseLabel "was kept by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "observance" .
+
+bor:occasion_of a owl:ObjectProperty ;
+    rdfs:label "is an occasion of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "An event is an occasion of a significant number, being a time the text counts as that span; the edge is cited to the verse that counts it and claims no meaning for the number." ;
+    bor:category "Significant numbers" ;
+    bor:inverseLabel "has as an occasion" ;
+    bor:sourceKind "event" ;
+    bor:targetKind "pattern" .
+
+bor:offered a owl:ObjectProperty ;
+    rdfs:label "offered" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group offers a person, creature or object as a sacrifice; it records the act the text names and not whether the offering was carried through." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was offered by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "creature",
+        "object",
+        "person" .
+
+bor:part_of a owl:ObjectProperty ;
+    rdfs:label "is part of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "One unit of the text lies inside a larger unit, such as a saying within a psalm or a passage within a longer passage; the relation is containment and is passed on through each level." ;
+    bor:category "Language" ;
+    bor:inverseLabel "contains" ;
+    bor:sourceKind "event",
+        "passage",
+        "text",
+        "title" ;
+    bor:targetKind "event",
+        "passage",
+        "text",
+        "title" .
+
+bor:party_to a owl:ObjectProperty ;
+    rdfs:label "is party to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or being is named by the text as a party to a covenant." ;
+    bor:category "Covenants" ;
+    bor:inverseLabel "was made with" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "covenant" .
+
+bor:persecuted a owl:ObjectProperty ;
+    rdfs:label "persecuted / sought to kill" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group pursued another with sustained harm, from a position of power over them, and not by a single act of violence." ;
+    bor:category "Conflict" ;
+    bor:inverseLabel "was persecuted by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:possibly_same_as a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "may be the same person as" ;
+    rdfs:comment "A reading that two records may be one person, with the case for and against; never an identity, and never to be mapped to owl:sameAs." ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two person records that the text never joins may, in a reader's view, be one person; this is not an identity, each record keeps its own verses, and the evidence is given on both sides." ;
+    bor:category "Who else this may be" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "person" .
+
+bor:predecessor_of a owl:ObjectProperty ;
+    rdfs:label "was succeeded by" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person held an office, such as king, high priest or judge, and another held it next; the direction always runs from the earlier holder to the later." ;
+    bor:category "Rule & succession" ;
+    bor:inverseLabel "succeeded" .
+
+bor:present_with a owl:ObjectProperty ;
+    rdfs:label "is with" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A being, person, group or concept is with a person, group, being or concept, where the text states the presence in so many words." ;
+    bor:category "Peoples & groups" ;
+    bor:inverseLabel "has with them" ;
+    bor:sourceKind "being",
+        "concept",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "group",
+        "person" .
+
+bor:prophet_to a owl:ObjectProperty ;
+    rdfs:label "prophesied to / confronted" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person speaks as a prophet to a person or group, confronting them with a message." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was confronted by the prophet" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:put_away a owl:ObjectProperty ;
+    rdfs:label "sent away" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group sends another away to end a marriage, in the text's own word and not in a later legal term such as divorce." ;
+    bor:category "Marriage & union" ;
+    bor:inverseLabel "was sent away by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:quoted a owl:ObjectProperty ;
+    rdfs:label "quoted" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A speaker or writing takes up the words of another speaker or writing; the target is the person the text credits with the words, not the book they are found in." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was quoted by" ;
+    bor:sourceKind "being",
+        "group",
+        "person",
+        "text" ;
+    bor:targetKind "being",
+        "group",
+        "person",
+        "text" .
+
+bor:re_enacts a owl:ObjectProperty ;
+    rdfs:label "re-enacts" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A later account is told so as to re-enact an earlier one; the grade of the edge says whether the text states it, a quotation carries it, or a reader's correspondence alone supports it." ;
+    bor:category "Story echoes" ;
+    bor:inverseLabel "is re-enacted in" ;
+    bor:sourceKind "event",
+        "passage",
+        "text" ;
+    bor:targetKind "event",
+        "passage",
+        "text" .
+
+bor:rebuked a owl:ObjectProperty ;
+    rdfs:label "rebuked" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group reproves another in an episode the narrative reports; a letter that itself delivers a reproof, without reporting a confrontation, does not make an edge to its readers." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was rebuked by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "creature",
+        "group",
+        "person" .
+
+bor:recounts a owl:ObjectProperty ;
+    rdfs:label "recounts" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A telling is one account of an event or of another telling, so that two writings can describe the same thing without being merged into one voice." ;
+    bor:category "Language" ;
+    bor:inverseLabel "is recounted by" ;
+    bor:sourceKind "passage",
+        "pattern",
+        "text" ;
+    bor:targetKind "covenant",
+        "event",
+        "observance",
+        "pattern",
+        "text" .
+
+bor:reigned_over a owl:ObjectProperty ;
+    rdfs:label "reigned over" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person reigned over a realm or a people; the realm and the seat of government are separate facts." ;
+    bor:category "Rule & succession" ;
+    bor:inverseLabel "was reigned over by" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "group",
+        "place" .
+
+bor:repaired a owl:ObjectProperty ;
+    rdfs:label "repaired" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group repairs a place or structure; it is kept apart from building because the text distinguishes the two." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was repaired by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "object",
+        "place" .
+
+bor:ruled_from a owl:ObjectProperty ;
+    rdfs:label "ruled from" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person ruled from a place that was the seat of the rule." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was the seat of" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "place" .
+
+bor:ruler_of a owl:ObjectProperty ;
+    rdfs:label "was ruler of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person holds a district office over a place or group; it is a ruling office and not a throne, and one district may have more than one such officer." ;
+    bor:category "Rule & succession" ;
+    bor:inverseLabel "was ruled by" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "group",
+        "place" .
+
+bor:same_steps_as a owl:ObjectProperty ;
+    rdfs:label "has the same steps as" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two accounts have the same sequence of steps, each step quoted from both texts; the edge makes no claim that either was told with the other in mind." ;
+    bor:category "Story echoes" ;
+    bor:sourceKind "event",
+        "passage",
+        "text" ;
+    bor:targetKind "event",
+        "passage",
+        "text" .
+
+bor:self_designated_as a owl:ObjectProperty ;
+    rdfs:label "calls himself" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or being applies a title to himself in his own speech, as against a title that the narrator or another speaker gives him; it records who said the words and not what follows from them." ;
+    bor:category "Father, Son & Spirit" ;
+    bor:inverseLabel "is what he calls himself" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "title" .
+
+bor:sent a owl:ObjectProperty ;
+    rdfs:label "sent" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group sends another person, being, group or creature, where the text narrates the sending." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was sent by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "creature",
+        "group",
+        "person" .
+
+bor:servant_of a owl:ObjectProperty ;
+    rdfs:label "served" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, group or concept serves a person, group or being; the relation covers officials, armour-bearers, stewards and slaves alike, since the text rarely separates them." ;
+    bor:category "Service & authority" ;
+    bor:inverseLabel "was served by" ;
+    bor:sourceKind "concept",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
+
+bor:sibling_of a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "is a sibling of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two people are siblings, full or unspecified; the relation reads the same from either side." ;
+    bor:category "Kinship" .
+
+bor:signifies a owl:ObjectProperty ;
+    rdfs:label "signifies" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "The text states outright what a thing stands for; it records the key the text gives and not a reader's decision about what something means, and it does not carry over to other uses of the same word." ;
+    bor:category "Things" ;
+    bor:inverseLabel "is signified by" ;
+    bor:sourceKind "concept",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "observance",
+        "person",
+        "place" ;
+    bor:targetKind "being",
+        "covenant",
+        "creature",
+        "group",
+        "object",
+        "observance",
+        "person",
+        "place",
+        "text",
+        "title" .
+
+bor:sourceKind a owl:AnnotationProperty ;
+    rdfs:label "the kind of record a relation starts from" .
+
+bor:speaks_of a owl:ObjectProperty ;
+    rdfs:label "speaks of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A statement, title, image or verdict makes a claim about the thing it names; the statement is the source with the verse behind it, and nothing runs the other way." ;
+    bor:category "Concepts" ;
+    bor:inverseLabel "is spoken of in" ;
+    bor:sourceKind "assessment",
+        "image",
+        "text",
+        "title" ;
+    bor:targetKind "assessment",
+        "being",
+        "concept",
+        "covenant",
+        "creature",
+        "group",
+        "image",
+        "object",
+        "observance",
+        "person",
+        "place",
+        "text",
+        "title" .
+
+bor:specializes a owl:ObjectProperty ;
+    rdfs:label "is a narrower form of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "One form is a narrower form of a broader form; both are forms and neither is an occurrence, and the grouping is the graph's own and not a statement of the text." ;
+    bor:category "Patterns" ;
+    bor:sourceKind "pattern" ;
+    bor:targetKind "pattern" .
+
+bor:spoken_in a owl:ObjectProperty ;
+    rdfs:label "is spoken in" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A kind of message is spoken within a pattern, concept, event or passage; it is supported by the verses the message and the other node share, and not by the names sounding alike." ;
+    bor:category "Language" ;
+    bor:inverseLabel "has spoken in it" ;
+    bor:sourceKind "pattern" ;
+    bor:targetKind "concept",
+        "event",
+        "passage",
+        "pattern" .
+
+bor:spoken_of_as a owl:ObjectProperty ;
+    rdfs:label "is spoken of as" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "The text applies the name or nature of one person or being to another; the edge says only that a particular verse says so, and it is not a claim that the two are the same." ;
+    bor:category "Father, Son & Spirit" ;
+    bor:inverseLabel "is a name the text gives to" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "being",
+        "person" .
+
+bor:spouse_of a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "is married to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "Two people are married to each other; the relation reads the same from either side." ;
+    bor:category "Marriage & union" .
+
+bor:stationed_at a owl:ObjectProperty ;
+    rdfs:label "was stationed at" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A being or creature is posted at a place or object and left there; it records the placement and not residence or purpose." ;
+    bor:category "Places" ;
+    bor:inverseLabel "had stationed at it" ;
+    bor:sourceKind "being",
+        "creature" ;
+    bor:targetKind "object",
+        "place" .
+
+bor:supersedes a owl:ObjectProperty ;
+    rdfs:label "makes obsolete" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "One covenant is said by the text to make an earlier covenant obsolete; it is recorded only where the text says so." ;
+    bor:category "Covenants" ;
+    bor:inverseLabel "was made obsolete by" ;
+    bor:sourceKind "covenant" ;
+    bor:targetKind "covenant" .
+
+bor:takes_up a owl:ObjectProperty ;
+    rdfs:label "takes up the words of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A later account quotes, summarises or gathers the words given in an earlier one; the pairs of words are the evidence and no likeness between persons is claimed." ;
+    bor:category "Story echoes" ;
+    bor:inverseLabel "has its words taken up in" ;
+    bor:sourceKind "event",
+        "passage",
+        "text" ;
+    bor:targetKind "event",
+        "passage",
+        "text" .
+
+bor:targetKind a owl:AnnotationProperty ;
+    rdfs:label "the kind of record a relation points to" .
+
+bor:titled a owl:ObjectProperty ;
+    rdfs:label "is called" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or being is called by a title that the text gives; the title is its own entity, kept apart from the creature or object it is built from." ;
+    bor:category "Images & figures" ;
+    bor:inverseLabel "is a title of" ;
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "title" .
+
+bor:token_of a owl:ObjectProperty ;
+    rdfs:label "is the sign of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "An object, observance, creature or place is named by the text as the sign of a covenant." ;
+    bor:category "Covenants" ;
+    bor:inverseLabel "is signified by" ;
+    bor:sourceKind "creature",
+        "object",
+        "observance",
+        "place" ;
+    bor:targetKind "covenant" .
+
+bor:told a owl:ObjectProperty ;
+    rdfs:label "told" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group gives a parable, dream or vision, the one the figure belongs to; it is not the one who wrote it down." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was told by" ;
+    bor:sourceKind "being",
+        "concept",
+        "creature",
+        "group",
+        "person" ;
+    bor:targetKind "person",
+        "text" .
+
+bor:took a owl:ObjectProperty ;
+    rdfs:label "took" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group takes something from another or from its place; the counterpart of giving." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was taken by" ;
+    bor:sourceKind "being",
+        "concept",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "creature",
+        "group",
+        "object",
+        "person",
+        "place" .
+
+bor:traveled_to a owl:ObjectProperty ;
+    rdfs:label "went to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group went to a place on a journey the narrative marks; it is deliberately a weak tie." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was visited by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "place" .
+
+bor:uncle_of a owl:ObjectProperty ;
+    rdfs:label "is the uncle/aunt of" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person is the uncle or aunt of another, recorded where the text states it and not where it follows from two named parents and a sibling." ;
+    bor:category "Kinship" ;
+    bor:inverseLabel "is the nephew/niece of" .
+
+bor:warned a owl:ObjectProperty ;
+    rdfs:label "warned" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group gives another notice of danger or of a consequence to come." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was warned by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
+
+bor:wore a owl:ObjectProperty ;
+    rdfs:label "wore" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group wears a garment or piece of dress the text puts on them; it is not the same as carrying the garment and says nothing of who had the right to wear it." ;
+    bor:category "Things" ;
+    bor:inverseLabel "was worn by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "object" .
+
+bor:wrote_letter_to a owl:ObjectProperty ;
+    rdfs:label "wrote to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person wrote to another person, taken from the address of the letter itself." ;
+    bor:category "Association" ;
+    bor:inverseLabel "received a letter from" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "person" .
+
+bor:wrote_to a owl:ObjectProperty ;
+    rdfs:label "wrote to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person wrote to a congregation, taken from the address of the letter itself; the target is the group and not the town where it met." ;
+    bor:category "Peoples & groups" ;
+    bor:inverseLabel "received a letter from" ;
+    bor:sourceKind "person" ;
+    bor:targetKind "group" .
+
+<https://bibleontology.org/ns/relation> a owl:Ontology ;
+    rdfs:label "Bible Ontology — relations" ;
+    dcterms:created "2026-10-11"^^xsd:date ;
+    dcterms:creator "Doug Egge" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2026-10-17"^^xsd:date ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:title "Bible Ontology — relations" ;
+    vann:preferredNamespacePrefix "bor" ;
+    vann:preferredNamespaceUri "https://bibleontology.org/ns/relation#" ;
+    rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and no rule of any kind concerning God, the Father, Jesus or the Holy Spirit. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred.",
+        "The controlled vocabulary of relations the Bible Ontology graph may assert: each reads '<source> <label> <target>', and every relation in the graph uses one of these types. Companion to https://bibleontology.org/ns/meaning.",
+        "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
+    owl:priorVersion <https://bibleontology.org/ns/relation/2026-10-15> ;
+    owl:versionIRI <https://bibleontology.org/ns/relation/2026-10-17> ;
+    owl:versionInfo "1.1.1" .
+

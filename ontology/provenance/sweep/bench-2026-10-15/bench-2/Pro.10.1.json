@@ -1,0 +1,49 @@
+{
+ "ref": "Pro.10.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false,
+   "why": "Possessive 'his' on 'mother' (masc sg). The mother in view is the mother of the foolish son of this same clause, so the possessor is that son (w7, masc sg, modified by 'foolish' w8), not the wise son of the first clause (w2).",
+   "category": "possessive pronoun in the clause's own subject"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Plain waw opening cl2. The English 'but' gives an antithesis, but the contrast link is reserved for explicit but-words (אוּלָם, אֶפֶס כִּי), so a bare waw stays 'and'.",
+   "category": "plain and read as opposition"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Pro.10.1#g1",
+   "kind": "writing",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "w1"
+    }
+   ],
+   "divine": false,
+   "why": "The heading 'the proverbs of Solomon' is the frame of the collection and names its writer (Solomon, w1). Part is left empty: the proverbs run beyond this verse and no single verse holds them.",
+   "category": "book heading naming its writer"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl1 and cl2",
+   "what": "Antithetic couplet: the second line opposes the first, carried only by a plain waw. No link type covers antithesis without an explicit but-word."
+  }
+ ],
+ "cant_tell": []
+}

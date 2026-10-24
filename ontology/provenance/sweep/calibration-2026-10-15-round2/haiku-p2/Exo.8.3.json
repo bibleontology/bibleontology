@@ -1,0 +1,56 @@
+{
+ "ref": "Exo.8.3",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'Their secret arts' belong to the magicians, named as subject of cl0 (masculine plural).",
+   "category": "possessive of a named subject"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'They brought up the frogs' is third masculine plural, the magicians.",
+   "category": "plural subject: named magicians"
+  }
+ ],
+ "links": [
+  {
+   "src": "Exo.8.2#cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A then-link runs within a verse only. The comparison with Aaron's deed in Exo.8.2 is the likewise link.",
+   "category": "cross-verse then"
+  },
+  {
+   "src": "cl0",
+   "type": "likewise",
+   "dst": "Exo.8.2#cl0",
+   "action": "add",
+   "why": "'The magicians did so (ken)' with a named subject, doing what Aaron just did, and they were not commanded. Imitation, not fulfilment; Aaron's act follows the latest command.",
+   "category": "did likewise with ken"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "Bringing up frogs is what their arts bring about, so the relation is an outcome.",
+   "category": "outcome read as sequence"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The magicians did likewise by their arts, and they brought up the frogs: the frogs are what the arts bring about.",
+   "category": "outcome of an act"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

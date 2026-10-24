@@ -1,0 +1,39 @@
+{"ref": "Exo.8.4",
+ "referents": [
+  {"slot": "w18", "choice": "w2", "divine": false, "why": "first common singular 'me' inside Pharaoh's speech (cl1 introduces it); the speaker is Pharaoh, not the builder's 'he' of the saying clause", "category": "first person inside a speech"},
+  {"slot": "w22", "choice": "w2", "divine": false, "why": "first common singular suffix 'my' on 'people' inside Pharaoh's speech; refers to the speaker", "category": "first person inside a speech"},
+  {"slot": "cl1s", "choice": "w2", "divine": false, "why": "third masculine singular wayyiqtol 'he said'; the subject named in cl0 (Pharaoh) continues, since cl0 and cl1 share the subject", "category": "implied subject of a speech-introducing verb"},
+  {"slot": "cl2s", "choice": "c3", "divine": false, "why": "second masculine plural imperative; the 'you' is those Pharaoh summoned and addressed, Moses and Aaron together", "category": "implied subject of a command to the addressees"},
+  {"slot": "cl3s", "choice": "w12", "divine": true, "why": "third masculine singular jussive 'let him remove the frogs'; what is asked in prayer 'to Yahweh' is done by Yahweh, the only sensible doer among the singular masculine candidates", "category": "implied subject of a jussive after a prayer command"},
+  {"slot": "cl4s", "choice": "w2", "divine": false, "why": "first common singular cohortative 'I will let go' inside Pharaoh's speech; the speaker, not the builder's 'he' of cl1", "category": "first person inside a speech"},
+  {"slot": "cl5s", "choice": "w27", "divine": false, "why": "third masculine plural jussive 'that they may sacrifice'; 'the people' (your people, the object of cl4) is a collective noun taking a plural verb, and are the ones sent out to sacrifice", "category": "plural verb with collective noun as referent"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "reverse duplicate of the cl0 to cl1 link; the summoning comes first and the saying follows, so the link runs from cl0 only", "category": "duplicate link in the wrong direction"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "two wayyiqtol clauses in sequence: he summoned, and then he said", "category": "narrative sequence of wayyiqtol clauses"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "a waw joining an imperative to a jussive in a different person (you to he) is 'so that', not a plain and; replaced by purpose", "category": "plain and read for change of person after a command"},
+  {"src": "cl3", "type": "and", "dst": "cl4", "action": "keep", "why": "waw plus first-person cohortative, a promise after the jussive; the form marks no condition, so the plain 'and' is kept rather than 'if'", "category": "promise after a request joined by plain and"},
+  {"src": "cl4", "type": "and", "dst": "cl5", "action": "remove", "why": "waw plus a jussive in a different person (I to they) states what the release is for; replaced by purpose", "category": "plain and read for change of person"},
+  {"src": "cl2", "type": "purpose", "dst": "cl3", "action": "add", "why": "command to pray, then waw + jussive in a different person: 'pray ... that he may remove the frogs'", "category": "command then jussive in a different person"},
+  {"src": "cl4", "type": "purpose", "dst": "cl5", "action": "add", "why": "'I will let your people go, that they may sacrifice': waw + jussive in a different person says what the release is for; the first term is a cohortative, not a command (see none_fit)", "category": "purpose after a cohortative promise"},
+  {"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "the saying clause and what was said, which opens with a command (the pray command and its aim) inside the speech", "category": "speech frame and its content"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change",
+   "members": [{"role": "frame", "node": "cl1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "c3"}, {"role": "part", "node": "imp2"}, {"role": "part", "node": "cl4"}, {"role": "part", "node": "cl5"}],
+   "divine": false, "why": "Pharaoh (sender) speaks to Moses and Aaron (addressees, whom cl0 says he summoned); the parts are the command group and the promise with its purpose; cl2 and cl3 sit inside the imperative group, so they are no longer direct parts", "category": "turn with its addressee stated by the previous clause"},
+  {"id": "imp2", "kind": "imperative", "action": "change",
+   "members": [{"role": "command", "node": "cl2"}, {"role": "aim", "node": "cl3"}],
+   "divine": false, "why": "one command (pray) and the jussive that states its aim (that he may remove the frogs); cl3 is an aim of the command, not a second part", "category": "command with its aim as a jussive in another person"},
+  {"id": "imp3", "kind": "imperative", "action": "remove",
+   "members": [{"role": "command", "node": "cl3"}, {"role": "part", "node": "cl4"}],
+   "divine": false, "why": "cl3 is a third-person jussive, not a command given to the addressees, and cl4 is a first-person promise; neither makes an imperative group", "category": "non-command read as a command"},
+  {"id": "imp4", "kind": "imperative", "action": "remove",
+   "members": [{"role": "command", "node": "cl4"}, {"role": "part", "node": "cl5"}],
+   "divine": false, "why": "cl4 is the speaker's own cohortative promise, not a command, so there is no imperative group; its relation to cl5 is a purpose link", "category": "non-command read as a command"}
+ ],
+ "none_fit": [
+  {"where": "cl3 to cl4", "what": "The release in cl4 is promised in exchange for the removal in cl3 ('pray, and then I will let them go'); the form carries no condition (plain waw, cohortative), and no link type covers a promise or offer made on the strength of a request being met, so the plain 'and' is kept."},
+  {"where": "cl4 to cl5", "what": "The purpose type names a command as its first term, but here the first term is a cohortative promise (I will let go) and the clause after it a jussive (that they may sacrifice); the sense of purpose is plain and the closest type is used, but the wording of the type does not cover this case."}
+ ],
+ "cant_tell": []}

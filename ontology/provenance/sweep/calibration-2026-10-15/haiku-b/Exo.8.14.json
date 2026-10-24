@@ -1,0 +1,22 @@
+{
+ "ref": "Exo.8.14",
+ "referents": [
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "The possessive 'their' (masculine plural) on 'secret arts' in cl0 must agree with a masculine plural. w4, the magicians, is the subject of cl0 and the one doing the act, so the arts are theirs. The other masculine plurals (gnats, w12) cannot own arts.", "category": "possessive pronoun in a prepositional phrase"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "cl2 is a third common plural verb, 'were not able', negated, following cl0 whose subject is the magicians. The doers of the failed attempt are the magicians. The parser's w4 agrees in morphology and in the act.", "category": "implied subject of a failed attempt"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "keep", "why": "The lamed + infinitive construct 'to bring forth the gnats' names what the act was done to achieve. 'Did' is not one of the verbs the purpose rule excludes (being able, speaking, intending), so the infinitive is the purpose.", "category": "purpose of an attempt"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "cl4 is the last clause of the previous verse (Exo.8.13#cl4), not a clause of this verse. The 'then' type is within a verse only; across verses its definition names the episode rung, which is not a link type here. See none_fit.", "category": "narrative sequence across a verse boundary"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "keep", "why": "cl2 opens with a separate waw, so 'and' is literally correct and joins the attempt to what came of it. The failure is carried by the added failed_result link, which does not replace this one.", "category": "plain and joining attempt to outcome"},
+  {"src": "cl2", "type": "then", "dst": "cl3", "action": "keep", "why": "cl3 is a wayyiqtol, its waw fused into the verb, and cl2 is the nearest preceding clause in the same verse outside any speech. 'And then' holds.", "category": "wayyiqtol continuing the narrative line"},
+  {"src": "cl0", "type": "failed_result", "dst": "cl2", "action": "add", "why": "cl0 is an attempt with a purpose (cl1, to bring forth the gnats). cl2 follows with 'and' plus a negated verb of being able ('not they were able'). The attempt's purpose was not achieved.", "category": "failed attempt with its outcome"},
+  {"src": "cl0", "type": "likewise", "dst": "Exo.8.13#cl2", "action": "add", "why": "'They did so' (ken, 'so') with a named subject, the soothsayer-priests, doing what Aaron had just done after the command to strike the dust (Exo.8.13#cl2), not what they were commanded. This is imitation, not fulfilment. The deed follows the latest command (Exo.8.12). Which deed 'so' picks out is recorded in cant_tell.", "category": "imitation of a deed just done"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl4 -> cl0, the boundary between Exo.8.13 and Exo.8.14", "what": "A narrative sequence from the last clause of one verse to the first clause of the next. 'then' is within a verse only and its definition points to an episode rung, but no link type or group kind carries that."}
+ ],
+ "cant_tell": [
+  {"what": "Which deed the 'so' of cl0 copies: Aaron's striking of the dust (Exo.8.13#cl2) or the gnats' coming (Exo.8.13#cl3).", "why": "The pro-form is not specified further. The magicians' stated aim (cl1, to bring forth the gnats) matches the outcome in cl3, but the method they take up is the striking in cl2. The form does not settle it, so the likewise link points at cl2 and this is left open."}
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "ref": "Job.38.6",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'on what' asks for a foundation, a place; no candidate answers it, and the bases themselves are what the question asks about.",
+   "category": "interrogative what asking for a place"
+  },
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its bases' (feminine singular): the earth of 38:4, not offered as a candidate.",
+   "category": "pronoun for a non-person from an earlier verse"
+  },
+  {
+   "slot": "w6",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Interrogative 'who' with third masculine singular 'laid the cornerstone': the rhetorical answer is the LORD, the speaker.",
+   "category": "rhetorical who answered by the speaker"
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false,
+   "why": "'Its corner' (feminine singular): the earth, as w3.",
+   "category": "pronoun for a non-person from an earlier verse"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "'Or' (the Hebrew o) joins two questions side by side.",
+   "category": "two questions side by side"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

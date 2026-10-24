@@ -1,0 +1,120 @@
+[
+ {
+  "src": "shammua_son_of_david",
+  "dst": "shimea",
+  "verdict": "pass",
+  "problems": [
+   {
+    "seats": ["academic biblical scholar"],
+    "words": "so the likeness of order is the whole of the case",
+    "issue": "Optional, not blocking. Quotations are exact (2Sam 5:14, 1Chr 14:4, 1Chr 3:5 checked against the Berean text). The introductory formula is also shared ('born to him in Jerusalem' / 'were born to him in Jerusalem') and Chronicles itself carries both forms (1Chr 14:4 Shammua, 1Chr 3:5 Shimea), so 'the whole of the case' slightly undersells the FOR side. Not an accuracy fault."
+   }
+  ]
+ },
+ {
+  "src": "shammah_son_of_jesse",
+  "dst": "shimma",
+  "verdict": "pass",
+  "problems": [
+   {
+    "seats": ["evangelical Baptist", "Calvinist"],
+    "words": "the lists do not agree on everything",
+    "issue": "Optional softening only: 'do not agree' could be read as alleging an error. The note names no harmonisation and no error, and its quotations are exact (1Sam 17:13; 1Chr 2:13; 'had eight sons' 1Sam 17:12; Chronicles names exactly seven in 2:13-15). A more neutral phrasing would be 'the two accounts do not give the same number of sons'."
+   }
+  ]
+ },
+ {
+  "src": "shammah_son_of_jesse",
+  "dst": "shimeah_brother_of_david",
+  "verdict": "revise",
+  "problems": [
+   {
+    "seats": ["academic biblical scholar", "evangelical Baptist"],
+    "words": "the Berean text calls him 'David's brother Shimei' at 1Chr 20:7",
+    "issue": "'calls him' presupposes that the Shimei of 1Chr 20:7 (Hebrew Shimea, father of Jonathan) is the same man as the Shimeah of 2Sam 13:3 (father of Jonadab). That identification is a separate reading, not something the verses state, so the FOR side assumes what another note only proposes. The quotation itself is exact."
+   },
+   {
+    "seats": ["academic biblical scholar"],
+    "words": "Jesse had other sons than these (1Chr 2:13-15)",
+    "issue": "Ambiguous ('these' = which?), and 1Chr 2:13-15 itself contains a Shimea, so the pointer is murky. Say plainly that the text names several brothers of David."
+   }
+  ],
+  "suggested": "A reading, not the text's statement. FOR: Shimeah is 'David's brother' (2Sam 13:3; a 'David's brother Shimei' is also named at 1Chr 20:7), and Shammah is the third of Jesse's sons (1Sam 17:13), which makes him David's brother too. AGAINST: no verse calls Shammah Shimeah, or names Shammah as the father of Jonadab or of Jonathan; the text names more than one brother of David (1Sam 17:13; 1Chr 2:13-15), so a brother named Shimeah need not be the one the Samuel list calls Shammah; and the names are spelled differently."
+ },
+ {
+  "src": "shimeah_brother_of_david",
+  "dst": "shimma",
+  "verdict": "revise",
+  "problems": [
+   {
+    "seats": ["academic biblical scholar", "evangelical Baptist"],
+    "words": "no verse says the Shimea of 1Chr 2:13 is the father of Jonathan, or the Shimeah of 2Sam 13:3",
+    "issue": "Garbled: two separate claims (father of Jonathan at 1Chr 20:7; the Shimeah of 2Sam 13:3, father of Jonadab) are run together. The Hebrew claim itself is correct: 1Chr 2:13 and 1Chr 20:7 both read the same word (Shimea, שִׁמְעָא); 2Sam 13:3 reads שִׁמְעָה."
+   },
+   {
+    "seats": ["academic biblical scholar"],
+    "words": "Samuel's spelling of the brother's name is Shimeah (2Sam 13:3)",
+    "issue": "Treats the Shimeah of 2Sam 13:3 as already the same man as the Shimei of 1Chr 20:7. Safer to rest on the parallel 2Sam 21:21 / 1Chr 20:7 and to state the Hebrew ending difference (-ah vs -a) openly on the AGAINST side. Note also that Jonadab and Jonathan are different sons."
+   }
+  ],
+  "suggested": "A reading, not the text's statement. FOR: both are David's brother, and in Chronicles the Hebrew spells the two names alike -- 'Shimea third' among Jesse's sons (1Chr 2:13) and 'Jonathan the son of David's brother Shimei' (1Chr 20:7) are the same Hebrew word, though the Berean English gives Shimea in one place and Shimei in the other; Samuel's spelling of the name of a brother of David is Shimeah (2Sam 13:3; 2Sam 21:21). AGAINST: no verse says the Shimea of 1Chr 2:13 is the Shimeah of 2Sam 13:3, or that either is the father of Jonathan; Jonadab (2Sam 13:3) and Jonathan (1Chr 20:7) are named as different sons; and the Hebrew of Samuel ends differently (Shimeah, שִׁמְעָה) from the Hebrew of Chronicles (Shimea, שִׁמְעָא), though the difference may be only one of spelling."
+ },
+ {
+  "src": "ebal",
+  "dst": "obal",
+  "verdict": "pass",
+  "problems": [
+   {
+    "seats": ["rabbi", "academic biblical scholar"],
+    "words": "which is why the graph holds two records",
+    "issue": "Not blocking. Everything checks: 'Obal, Abimael, Sheba' is identical in Gen 10:28 and 1Chr 1:22; Hebrew עוֹבָל (Gen 10:28) vs עֵיבָל (1Chr 1:22) is correct; Ebal son of Shobal at Gen 36:23 is correct and its Hebrew is עֵיבָל. The hedge 'may be only one of spelling' is balanced."
+   }
+  ]
+ },
+ {
+  "src": "adah_wife_of_esau",
+  "dst": "bashemath_daughter_of_elon",
+  "verdict": "revise",
+  "problems": [
+   {
+    "seats": ["evangelical Baptist", "Calvinist", "Arminian", "Lutheran", "Methodist", "Charismatic", "Orthodox", "academic biblical scholar", "Catholic", "rabbi", "young African American believer"],
+    "words": "gives the name Basemath to a different wife",
+    "issue": "'a different wife' states as fact that the Basemath of Gen 36:3 is another woman than the Basemath daughter of Elon in 26:34. That is the very tension the text leaves open, so this wording resolves it (toward two women) while the note claims to resolve nothing. Say only that Gen 36:3 attaches the name Basemath to a woman described as Ishmael's daughter."
+   },
+   {
+    "seats": ["academic biblical scholar", "evangelical Baptist"],
+    "words": "The text sets the two lists side by side",
+    "issue": "Inaccurate: Gen 26:34 and 36:2-3 are ten chapters apart. The text gives its lists in different places; it does not set them side by side."
+   },
+   {
+    "seats": ["academic biblical scholar"],
+    "words": "FOR: the two lists of Esau's wives each name a daughter of Elon the Hittite",
+    "issue": "Fair, but the note omits that the lists differ in other names too (Judith daughter of Beeri, Gen 26:34; Oholibamah daughter of Anah, Gen 36:2), so they are not simple parallels. Adding this keeps the evidence even-handed. Quotations checked exact; the Gen 36:10 summary is correct."
+   }
+  ],
+  "suggested": "A reading, not the text's statement. FOR: the two lists of Esau's wives each name a daughter of Elon the Hittite -- 'Basemath daughter of Elon the Hittite' (Gen 26:34) and 'Adah daughter of Elon the Hittite' (Gen 36:2). AGAINST: no verse says the two names are one woman; the names are different; Gen 36:3 also attaches the name Basemath to a woman described as 'Basemath daughter of Ishmael and sister of Nebaioth', and Gen 36:10 names Adah as the mother of Eliphaz and Basemath as the mother of Reuel; and the lists differ in other names too (Judith daughter of Beeri in Gen 26:34, Oholibamah daughter of Anah in Gen 36:2). The text gives its lists of Esau's wives in different places and does not reconcile them, so the graph keeps both records; this is a tension the text holds, not something this link resolves."
+ },
+ {
+  "src": "bashemath_daughter_of_ishmael",
+  "dst": "mahalath",
+  "verdict": "revise",
+  "problems": [
+   {
+    "seats": ["evangelical Baptist", "Calvinist", "Arminian", "Lutheran", "Methodist", "Charismatic", "Orthodox", "academic biblical scholar", "Catholic", "rabbi", "young African American believer"],
+    "words": "Ishmael's daughter and the sister of Nebaioth who became Esau's wife is Mahalath in Gen 28:9 (...) and Basemath in Gen 36:3",
+    "issue": "Written as a flat assertion that one woman bears both names. That is the identification being proposed, so the FOR is stated as the conclusion and the verses do not say it. Rephrase: each verse names a wife of Esau who is Ishmael's daughter and Nebaioth's sister, under a different name. Quotations are exact."
+   },
+   {
+    "seats": ["academic biblical scholar", "evangelical Baptist"],
+    "words": "The text sets its lists of Esau's wives side by side",
+    "issue": "Inaccurate: the lists are in Gen 26:34, 28:9 and 36:2-3, in different chapters, not side by side."
+   },
+   {
+    "seats": ["academic biblical scholar"],
+    "words": "AGAINST: ... the names are different",
+    "issue": "Accurate, but add that Mahalath is not named anywhere in Gen 36 (checked verse by verse; no occurrence), the plainest textual gap."
+   }
+  ],
+  "suggested": "A reading, not the text's statement. FOR: Gen 28:9 names the wife Esau married as 'Mahalath, the sister of Nebaioth and daughter of Abraham's son Ishmael', and Gen 36:3 names 'Basemath daughter of Ishmael and sister of Nebaioth' -- the same father and the same brother are named in each, with a different name for the daughter. AGAINST: no verse says the two names are one woman; the names are different; Mahalath is not named in Gen 36; and Basemath is also the name of a daughter of Elon the Hittite (Gen 26:34), so the name does not point to one woman alone. The text gives its lists of Esau's wives in different places and does not reconcile them, so the graph keeps both records; this is a tension the text holds, not something this link resolves."
+ }
+]

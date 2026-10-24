@@ -1,0 +1,44 @@
+{
+ "ref": "Rom.3.6",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'May it be' (optative) is impersonal; no person is its subject.",
+   "category": "impersonal optative"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Epei gives the reason for the rejection: otherwise how would God judge the world.",
+   "category": "reason for a rejection"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "basis",
+     "node": "cl1"
+    }
+   ],
+   "divine": false,
+   "why": "The reason is the basis of the rejection; 'part' is not a role of an imperative group.",
+   "category": "group member role"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

@@ -1,0 +1,86 @@
+{
+ "ref": "Exo.8.7",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "'from you' in Moses' continuing speech: the addressee, Pharaoh",
+   "category": "second person in a speech",
+   "votes": 3
+  },
+  {
+   "slot": "w9",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "possessive 'your' with houses: Pharaoh",
+   "category": "possessive second person",
+   "votes": 3
+  },
+  {
+   "slot": "w13",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "possessive 'your' with officials: Pharaoh",
+   "category": "possessive second person",
+   "votes": 3
+  },
+  {
+   "slot": "w17",
+   "choice": "Exo.8.5#w4",
+   "divine": false,
+   "why": "possessive 'your' with people: Pharaoh",
+   "category": "possessive second person",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w3",
+   "divine": false,
+   "why": "feminine plural 'they will remain' agrees with the frogs (feminine plural)",
+   "category": "third person plural, agreeing",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "then is within a verse only; cl4 is the last clause of the verse before (Exo.8.6), and this verse-initial weqatal has no earlier clause in its own verse. The join across the verse boundary is the episode rung",
+   "category": "cross-verse then",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0, cl1",
+   "what": "an exception marked by רַק (only): the frogs depart, and they remain only in the Nile. As in Exo.8.5, no type covers an exception with רַק; contrast takes אוּלָם or אֶפֶס כִּי"
+  },
+  {
+   "where": "cl0 'the frogs will depart' and cl1 'only in the Nile they will remain'",
+   "what": "a restriction on a general outcome (רַק, 'only'). There is no 'but' word, and no link type for a restriction on an outcome."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "whether the departure in cl0 (weqatal) is what the prayer brings about (a promised result), or only the continuation of Moses' speech",
+   "why": "result is defined from an imperative; the prayer is not an imperative in this verse, and then does not cross verses"
+  },
+  {
+   "what": "whether this verse is still Moses's speech from the verse before, or a new speaker",
+   "why": "The Berean closes the quotation here. The Hebrew has no speaker marking and the verse has no frame clause of its own, so the sender of cl0 and cl1 is not settled by this verse."
+  },
+  {
+   "what": "whether cl0 and cl1 are parts of the turn Moses opened in Exo.8.6 (turn1)",
+   "why": "Moses's speech continues across the verse break. The turn is recorded in the verse that opens it, and no group here can take clauses from that turn."
+  },
+  {
+   "what": "whether cl0 is the effect of the imperative group that holds Exo.8.4#cl2 ('pray')",
+   "why": "the result link is added here, but group membership of Exo.8.4's imperative group is judged in the Exo.8.4 answer, not here."
+  }
+ ],
+ "voted": 3
+}

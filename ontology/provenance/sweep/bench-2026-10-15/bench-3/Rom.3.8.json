@@ -1,0 +1,160 @@
+{
+ "ref": "Rom.3.8",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false,
+   "why": "'Some' (masculine plural indefinite): the slanderers; not a candidate.",
+   "category": "indefinite with unnamed antecedent"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'Us' (first plural accusative subject of the infinitive 'to say'): the people slandered; not a candidate. The builder's 'some' is wrong.",
+   "category": "speaker group not offered as candidate"
+  },
+  {
+   "slot": "w18",
+   "choice": "none",
+   "divine": false,
+   "why": "'Their' (masculine plural) refers to the slanderers ('some'); the only candidate, condemnation, is neuter singular.",
+   "category": "pronoun pointing to an unoffered antecedent"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'We are slandered' (passive, first plural): the people slandered; not a candidate.",
+   "category": "speaker group not offered as candidate"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "'We' in the slogan 'let us do evil' (first plural): the people the slander says say it; not a candidate.",
+   "category": "speaker group not offered as candidate"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "keep",
+   "why": "'Let us do evil, that good may come': a hortatory subjunctive in the first person, then a third-person subjunctive for its purpose.",
+   "category": "purpose of a command in another person"
+  },
+  {
+   "src": "cl2",
+   "type": "that",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "The quoted words are what is said; the owner's ruling names content for a speech clause. Replaced by a content link.",
+   "category": "speech content with that type"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "'To say: Let us do evil ...': the infinitive is a saying clause and cl3 is what is said (R1).",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "'Some affirm that we say ...': cl1 is a saying clause, so its object is content (R1), not a within nesting.",
+   "category": "speech content with within type"
+  },
+  {
+   "src": "cl1",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'Some affirm' is a saying clause; cl2 ('we say ...') is what is said (R1).",
+   "category": "speech content"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "'Their condemnation is just' is a separate verdict after the question, not nested in cl1.",
+   "category": "separate sentence nested by error"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot be joined to itself.",
+   "category": "self-link"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Kai joins the two comparisons 'as we are slandered' and 'as some say'.",
+   "category": "and between parallel comparisons"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "Rom.3.8#g1"
+    }
+   ],
+   "divine": false,
+   "why": "The outer speech is 'some affirm ...'; its part is the nested speech of 'we say ...'. The sender 'some' (w7) is not a candidate, so no sender is set. cl5 is a verdict outside the speech, so it is not a part.",
+   "category": "speech nested in speech"
+  },
+  {
+   "id": "Rom.3.8#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    }
+   ],
+   "divine": false,
+   "why": "The inner speech 'we say: Let us do evil ...'. No sender candidate exists for 'we'.",
+   "category": "nested speech with unnamed sender"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "3:8 cl5 'Their condemnation is just'",
+   "what": "A verdict on the slanderers after the quoted slogan; no link type records a verdict."
+  },
+  {
+   "where": "3:8 turn0 sender",
+   "what": "'Some' (w7), the slanderers, is a slot and not a candidate, so the sender cannot be recorded."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "'As we are slandered' (cl0) and 'as some say we say' (cl1), both kathos clauses",
+   "why": "A comparison of the slander with the claim; no link type with a clear host. Only the and between them is kept."
+  }
+ ]
+}

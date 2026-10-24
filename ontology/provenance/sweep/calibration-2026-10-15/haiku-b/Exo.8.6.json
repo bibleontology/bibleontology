@@ -1,0 +1,26 @@
+{"ref": "Exo.8.6",
+ "referents": [
+  {"slot": "w8", "choice": "Exo.8.5#w4", "divine": false, "why": "The suffix 'your' on 'word' (dabar) in Moses's speech. The addressee of that speech is Pharaoh, and it is Pharaoh's word, 'Tomorrow', that is being answered. Masculine singular agrees with Pharaoh.", "category": "possessive in a reply to the addressee"},
+  {"slot": "w16", "choice": "none", "divine": false, "why": "First common plural 'our' on God, in Moses's speech: the speaker together with the people he speaks for (Israel). No candidate is Israel. The only plural composite that includes the speaker is Moses and Aaron (Exo.8.4#c3), and Aaron is not in this speech. The builder's 'he' is singular and so wrong for a plural.", "category": "plural possessive for the speaker's own people"},
+  {"slot": "cl0s", "choice": "Exo.8.5#w4", "divine": false, "why": "wayyiqtol 'he said' opening the verse: Pharaoh answers Moses's question of verse 9 with 'Tomorrow'. The masculine singular candidate speaking to Moses is Pharaoh.", "category": "speaker of a short answer"},
+  {"slot": "cl2s", "choice": "Exo.8.5#w2", "divine": false, "why": "wayyiqtol 'he said' after Pharaoh's answer, introducing the reply 'according to your word'. The speaker is Moses, masculine singular, and the addressee is Pharaoh.", "category": "speaker of a reply in a dialogue"},
+  {"slot": "cl4s", "choice": "Exo.8.5#w4", "divine": false, "why": "The second masculine singular yiqtol 'you may know' in Moses's speech. The addressee of that speech is Pharaoh, the only second-person candidate being spoken to.", "category": "implied subject in a speech to a named addressee"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "that", "dst": "cl5", "action": "keep", "why": "'You may know' takes the ki clause as what is known: the complement of a verb of knowing.", "category": "content clause after a verb of knowing"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "'Then' runs forward from an earlier narrative clause, and cl0 is the earlier one. cl4 is a purpose clause inside Moses's speech, not a narrative event, so the link is reversed and not a narrative sequence.", "category": "then-link out of a speech, reversed"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is 'to tomorrow', part of Pharaoh's speech, not a narrative event. The narrative 'and he said' continues from the frame of that speech, cl0.", "category": "then-link from inside a speech"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "wayyiqtol 'and he said' continues the narrative line. The nearest preceding clause not inside a speech is cl0, the frame of Pharaoh's answer.", "category": "narrative continuation across a speech"},
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "keep", "why": "lemaan with a yiqtol, 'so that you may know', says what the wish 'may it be according to your word' is for. The purpose type is written for waw plus jussive, but the conjunction and the sense support purpose here.", "category": "so that after a wish"},
+  {"src": "cl3", "type": "as", "dst": "cl1", "action": "add", "why": "'According to your word' compares the wished outcome to Pharaoh's word 'to tomorrow'. This is the saying case of 'as': the action is declared to be as the earlier word said. The form only partly fits, since cl3 has ke with a noun and no clause.", "category": "comparison to an earlier word"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "Exo.8.5#w4"}, {"role": "addressee", "node": "Exo.8.5#w2"}], "divine": false, "why": "Pharaoh's answer: sender Pharaoh, addressed to Moses, who asked the question of verse 9. The sender slot is replaced by the candidate it resolves to, and the addressee is added.", "category": "addressee of a short reply"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "cl3"}, {"role": "part", "node": "cl4"}, {"role": "sender", "node": "Exo.8.5#w2"}, {"role": "addressee", "node": "Exo.8.5#w4"}], "divine": false, "why": "Moses's reply to Pharaoh: sender Moses, addressee Pharaoh, with the wish and the purpose clause as parts. cl5 is held through the that-link of cl4.", "category": "addressee of a reply in a dialogue"}
+ ],
+ "none_fit": [
+  {"where": "w16, 'our God'", "what": "A plural 'we' for the speaker's people (Israel) as a whole. No candidate is that people, nor a composite of Moses with them, and the lists have no group for a nation."}
+ ],
+ "cant_tell": [
+  {"what": "cl3 has no verb: the optative 'may it be' is elided, so the wish is a bare prepositional phrase", "why": "The purpose link cl3 to cl4 and the as-link to cl1 are kept on sense. Lemaan with a yiqtol after a wish reads as purpose, but the purpose type is written for a command followed by waw and a jussive."}
+ ]}

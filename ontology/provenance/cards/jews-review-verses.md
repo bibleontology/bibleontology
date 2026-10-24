@@ -1,0 +1,49 @@
+- Esth.2.5: Now there was at the citadel of Susa a Jewish man from the tribe of Benjamin named Mordecai son of Jair, the son of Shimei, the son of Kish.
+- Esth.3.6: And when he learned the identity of Mordecai's people, he scorned the notion of laying hands on Mordecai alone. Instead, he sought to destroy all of Mordecai's people, the Jews, throughout the kingdom of Xerxes.
+- Esth.8.16: For the Jews it was a time of light and gladness, of joy and honor.
+- Esth.8.17: In every province and every city, wherever the king's edict and decree reached, there was joy and gladness among the Jews, with feasting and celebrating. And many of the people of the land themselves became Jews, because the fear of the Jews had fallen upon them.
+- Esth.9.27: the Jews bound themselves to establish the custom that they and their descendants and all who join them should not fail to celebrate these two days at the appointed time each and every year, according to their regulation.
+- Esth.10.3: For Mordecai the Jew was second only to King Xerxes, preeminent among the Jews and highly favored by his many kinsmen, seeking the good of his people and speaking peace to all his countrymen.
+- Neh.1.2: Hanani, one of my brothers, arrived with men from Judah. So I questioned them about the remnant of the Jews who had survived the exile, and also about Jerusalem.
+- Jer.40.11: When all the Jews in Moab, Ammon, Edom, and all the other lands heard that the king of Babylon had left a remnant in Judah and had appointed Gedaliah son of Ahikam, the son of Shaphan, over them,
+- Zech.8.23: This is what the LORD of Hosts says: “In those days ten men from the nations of every tongue will tightly grasp the robe of a Jew, saying, ‘Let us go with you, for we have heard that God is with you.'”
+- Ezra.5.5: But the eye of their God was on the elders of the Jews, so that they were not stopped until a report was sent to Darius and written instructions about this matter were returned.
+- Ezra.6.14: So the Jewish elders built and prospered through the prophesying of Haggai the prophet and Zechariah son of Iddo. They finished building according to the command of the God of Israel and the decrees of Cyrus, Darius, and Artaxerxes, kings of Persia.
+- Dan.3.8: At this time some astrologers came forward and maliciously accused the Jews,
+- John.4.9: “You are a Jew,” said the woman. “How can You ask for a drink from me, a Samaritan woman?” (For Jews do not associate with Samaritans.)
+- John.4.22: You worship what you do not know; we worship what we do know, for salvation is from the Jews.
+- John.5.18: Because of this, the Jews tried all the harder to kill Him. Not only was He breaking the Sabbath, but He was even calling God His own Father, making Himself equal with God.
+- John.7.1: After this, Jesus traveled throughout Galilee. He did not want to travel in Judea, because the Jews there were trying to kill Him.
+- John.8.31: So He said to the Jews who had believed Him, “If you continue in My word, you are truly My disciples.
+- John.8.44: You belong to your father, the devil, and you want to carry out his desires. He was a murderer from the beginning, refusing to uphold the truth, because there is no truth in him. When he lies, he speaks his native language, because he is a liar and the father of lies.
+- John.10.31: At this, the Jews again picked up stones to stone Him.
+- John.11.19: and many of the Jews had come to Martha and Mary to console them in the loss of their brother.
+- John.11.45: Therefore many of the Jews who had come to Mary, and had seen what Jesus did, believed in Him.
+- John.12.11: for on account of him many of the Jews were deserting them and believing in Jesus.
+- John.18.20: “I have spoken openly to the world,” Jesus answered. “I always taught in the synagogues and at the temple, where all the Jews come together. I said nothing in secret.
+- John.19.21: So the chief priests of the Jews said to Pilate, “Do not write, ‘The King of the Jews,' but only that He said, ‘I am the King of the Jews.'”
+- Acts.2.5: Now there were dwelling in Jerusalem God-fearing Jews from every nation under heaven.
+- Acts.9.23: After many days had passed, the Jews conspired to kill him,
+- Acts.14.1: At Iconium, Paul and Barnabas went as usual into the Jewish synagogue, where they spoke so well that a great number of Jews and Greeks believed.
+- Acts.17.11: Now the Bereans were more noble-minded than the Thessalonians, for they received the message with great eagerness and examined the Scriptures every day to see if these teachings were true.
+- Acts.18.2: There he found a Jew named Aquila, a native of Pontus, who had recently come from Italy with his wife Priscilla because Claudius had ordered all the Jews to leave Rome. Paul went to visit them,
+- Acts.21.39: But Paul answered, “I am a Jew from Tarsus in Cilicia, a citizen of no ordinary city. Now I beg you to allow me to speak to the people.”
+- Acts.22.3: “I am a Jew, born in Tarsus of Cilicia, but raised in this city. I was educated at the feet of Gamaliel in strict conformity to the law of our fathers. I was just as zealous for God as any of you are today.
+- Acts.23.12: When daylight came, the Jews formed a conspiracy and bound themselves with an oath not to eat or drink until they had killed Paul.
+- Rom.1.16: I am not ashamed of the gospel, because it is the power of God for salvation to everyone who believes, first to the Jew, then to the Greek.
+- Rom.2.28: A man is not a Jew because he is one outwardly, nor is circumcision only outward and physical.
+- Rom.2.29: No, a man is a Jew because he is one inwardly, and circumcision is a matter of the heart, by the Spirit, not by the written code. Such a man's praise does not come from men, but from God.
+- Rom.3.1: What, then, is the advantage of being a Jew? Or what is the value of circumcision?
+- Rom.3.2: Much in every way. First of all, they have been entrusted with the very words of God.
+- Rom.10.12: For there is no difference between Jew and Greek: The same Lord is Lord of all, and gives richly to all who call on Him,
+- Rom.11.1: I ask then, did God reject His people? Certainly not! I am an Israelite myself, a descendant of Abraham, from the tribe of Benjamin.
+- Rom.11.28: Regarding the gospel, they are enemies on your account; but regarding election, they are loved on account of the patriarchs.
+- Rom.11.29: For God's gifts and His call are irrevocable.
+- 1Cor.9.20: To the Jews I became like a Jew, to win the Jews. To those under the law I became like one under the law (though I myself am not under the law), to win those under the law.
+- Gal.2.15: We who are Jews by birth and not Gentile “sinners”
+- Gal.3.28: There is neither Jew nor Greek, slave nor free, male nor female, for you are all one in Christ Jesus.
+- 1Thess.2.14: For you, brothers, became imitators of the churches of God in Judea that are in Christ Jesus. You suffered from your own countrymen the very things they suffered from the Jews,
+- 1Thess.2.15: who killed both the Lord Jesus and their own prophets and drove us out as well. They are displeasing to God and hostile to all men,
+- Rev.2.9: I know your affliction and your poverty-though you are rich! And I am aware of the slander of those who falsely claim to be Jews, but are in fact a synagogue of Satan.
+- Matt.2.2: asking, “Where is the One who has been born King of the Jews? We saw His star in the east and have come to worship Him.”
+- Matt.27.11: Meanwhile Jesus stood before the governor, who questioned Him: “Are You the King of the Jews?” “You have said so,” Jesus replied.

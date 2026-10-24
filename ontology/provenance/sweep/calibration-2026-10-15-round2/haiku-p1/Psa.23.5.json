@@ -1,0 +1,56 @@
+{
+ "ref": "Psa.23.5",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'me' in the psalm's own voice",
+   "category": "psalm's own first person"
+  },
+  {
+   "slot": "w7",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'my enemies' in the psalm's own voice",
+   "category": "psalm's own first person"
+  },
+  {
+   "slot": "w13",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'my head' in the psalm's own voice",
+   "category": "psalm's own first person"
+  },
+  {
+   "slot": "w15",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'my cup' in the psalm's own voice",
+   "category": "psalm's own first person"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "second masculine singular 'you prepare'; the one addressed is the LORD, the shepherd of verse 1",
+   "category": "second person in address to God"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "second masculine singular 'you anoint'; the one addressed is the LORD",
+   "category": "second person in address to God"
+  }
+ ],
+ "links": [],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether 'You prepare a table ...; You anoint my head ...' is a parallel group",
+   "why": "the same implied subject, but the second clause does not restate the first's roles (table before foes against head with oil)"
+  }
+ ]
+}

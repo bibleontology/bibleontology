@@ -1,0 +1,46 @@
+{
+ "ref": "Exo.8.8",
+ "referents": [
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "divine": true,
+   "why": "third masculine singular 'he had appointed' (qatal) in the relative clause on 'the frogs': the one who brought the frogs against Pharaoh is the LORD, named in this verse (w12).",
+   "category": "subject of a relative clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl0 ('went out') is the earlier event and cl1 ('cried out') the later. This link runs backward.",
+   "category": "reversed then link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "wayyiqtol cl1 continues the narrative line from cl0: Moses and Aaron leave Pharaoh, and then Moses cries out.",
+   "category": "narrative sequence"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'which he had appointed for Pharaoh' is a relative clause inside the noun phrase 'the frogs', which is the object in cl1.",
+   "category": "relative clause in a noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether 'Moses cried out to the LORD' (cl1) fulfils the command 'pray to Yahweh' (Exo.8.4#cl2)",
+   "why": "the fulfilment rule needs a pro-form report (asah plus ken). This report has none, so no fulfils link is added; the sense supports it."
+  }
+ ]
+}

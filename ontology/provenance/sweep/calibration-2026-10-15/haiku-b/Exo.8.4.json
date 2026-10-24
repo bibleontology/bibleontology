@@ -1,0 +1,40 @@
+{"ref": "Exo.8.4",
+ "referents": [
+  {"slot": "w18", "choice": "w2", "divine": false, "why": "First person 'me' inside Pharaoh's speech; the speaker of that speech is Pharaoh (sender of cl1), masculine singular agrees.", "category": "first person inside a quoted speech"},
+  {"slot": "w22", "choice": "w2", "divine": false, "why": "Possessive first person 'my people' inside the same speech: the speaker's people, so the speaker Pharaoh.", "category": "first person possessive inside a quoted speech"},
+  {"slot": "cl1s", "choice": "w2", "divine": false, "why": "Subject of the wayyiqtol 'he said' that continues cl0, whose subject is Pharaoh, the one who summoned Moses and Aaron; masculine singular agrees.", "category": "narrative wayyiqtol subject carried from the frame"},
+  {"slot": "cl2s", "choice": "c3", "divine": false, "why": "Imperative plural 'pray' is addressed to the two men summoned in cl0; the composite Moses and Aaron takes second person plural.", "category": "implied you of a command to two people"},
+  {"slot": "cl3s", "choice": "w12", "divine": true, "why": "The doer of the jussive 'that he may remove the frogs' is the one prayed to in cl2, the LORD (w12), masculine singular.", "category": "implied subject of a purpose clause naming the one prayed to"},
+  {"slot": "cl4s", "choice": "w2", "divine": false, "why": "First person 'I will let go' is the speaker of the speech, Pharaoh.", "category": "first person inside a quoted speech"},
+  {"slot": "cl5s", "choice": "w27", "divine": false, "why": "The 'they' who sacrifice are the people let go, the object of cl4 ('your people', w27); the collective noun takes plural verb agreement, as the sense requires.", "category": "collective noun with plural agreement"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "Wayyiqtol continues the narrative line: he summoned, and then he said.", "category": "narrative sequence"},
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "Reversed direction: the saying follows the summoning and does not precede it.", "category": "reversed narrative order"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "A waw joining a command to a third-person jussive is 'so that' (purpose), not a plain and.", "category": "command joined to a change of person"},
+  {"src": "cl2", "type": "purpose", "dst": "cl3", "action": "add", "why": "Imperative 'pray' then waw + jussive 'that he may remove' in a different person: the removal is what the prayer is for.", "category": "command then jussive purpose"},
+  {"src": "cl3", "type": "and", "dst": "cl4", "action": "keep", "why": "Jussive then cohortative joined by a plain waw; the cohortative after a jussive is a promise, not a purpose, so the and stands.", "category": "promise after a request"},
+  {"src": "cl4", "type": "and", "dst": "cl5", "action": "remove", "why": "The sense requires purpose: the release is for the sacrifice, a waw + jussive in a different person after a directive.", "category": "release then jussive purpose"},
+  {"src": "cl4", "type": "purpose", "dst": "cl5", "action": "add", "why": "'I will let your people go, that they may sacrifice': the sacrifice is what the release is for.", "category": "release then jussive purpose"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [
+    {"role": "frame", "node": "cl1"},
+    {"role": "part", "node": "imp2"},
+    {"role": "part", "node": "cl5"},
+    {"role": "sender", "node": "w2"},
+    {"role": "addressee", "node": "c3"}
+   ], "divine": false, "why": "Pharaoh's speech to Moses and Aaron: the frame is 'he said', the content is the command group and the purpose clause, and sender and addressee are candidates. The builder gave the sender as a slot id, which the turn kind does not take.", "category": "speech with commanded content"},
+  {"id": "imp2", "kind": "imperative", "action": "change", "members": [
+    {"role": "command", "node": "cl2"},
+    {"role": "aim", "node": "cl3"},
+    {"role": "effect", "node": "cl4"}
+   ], "divine": false, "why": "The prayer is the command; the removal is its aim, and the promised release is what it brings about. The builder's part role is not an imperative role.", "category": "command with aim and effect"},
+  {"id": "imp3", "kind": "imperative", "action": "remove", "members": [], "divine": false, "why": "The jussive cl3 is the aim of imp2, not a command of its own; the imperative kind does not take a part role.", "category": "jussive wrongly grouped as command"},
+  {"id": "imp4", "kind": "imperative", "action": "remove", "members": [], "divine": false, "why": "cl4 is a first-person promise, not a command, and the release's purpose is carried by a purpose link to cl5.", "category": "promise wrongly grouped as command"}
+ ],
+ "none_fit": [
+  {"where": "cl4 'I will let your people go', following the prayer", "what": "A promise of release that follows and depends on the request. The result type needs an imperative then a third-person weqatal; this is a first-person cohortative, so it is carried as the imperative group's effect instead."}
+ ],
+ "cant_tell": []
+}

@@ -1,0 +1,11 @@
+{"ref": "Psa.23.1",
+ "referents": [
+  {"slot": "w5", "choice": "psalmist", "divine": false, "why": "First person singular 'my' on 'shepherd' inside the psalm. The psalm does not quote another speaker here, so 'my' is the psalm's own voice.", "category": "first person in psalm voice"},
+  {"slot": "cl2s", "choice": "psalmist", "divine": false, "why": "First person singular implied by the yiqtol 'I shall not want' (first common singular). It is the psalm's own voice, not a quoted speech.", "category": "first person in psalm voice"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "writing", "kind": "writing", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "sender", "node": "w2"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "cl2"}], "divine": false, "why": "The heading 'a Psalm of David' is the frame and names the writer (David, w2). The two clauses that follow are what the psalm says.", "category": "psalm heading as writing frame"}
+ ],
+ "none_fit": [],
+ "cant_tell": []}

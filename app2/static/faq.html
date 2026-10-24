@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frequently asked questions · Bible Ontology</title>
+<meta name="description" content="Short answers about Bible Ontology: the name, what it is, whether to trust it, which Bible and books it uses, its principles and what is planned.">
+<link rel="stylesheet" href="/vendor/fonts-2026-10-01/fonts.css">
+<style>
+:root{--paper:#F3F5F8;--surface:#FFFFFF;--ink:#141F2C;--muted:#5C6A7B;--rule:#D9E0E8;--ochre:#A96A1E;--slate:#356A8C}
+@media (prefers-color-scheme: dark){:root{--paper:#0F151D;--surface:#18202B;--ink:#E7ECF2;--muted:#93A2B3;--rule:#2A3542;--ochre:#DFA759;--slate:#79AECD}}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Spectral,Georgia,serif;font-size:18px;line-height:1.7}
+header{border-bottom:1px solid var(--rule);background:var(--surface)}
+header .in{max-width:44rem;margin:0 auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.brand{font-weight:600;color:var(--ink);text-decoration:none}.brand span{color:var(--ochre)}
+nav a{color:var(--slate);font-size:15px;margin-left:14px}
+main{max-width:44rem;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:2rem;line-height:1.2;margin:.4em 0 .1em}
+.date{color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:13px;margin:0 0 1.6em}
+h2{font-size:1.3rem;margin:1.8em 0 .4em}
+a{color:var(--slate)}
+blockquote{margin:1.2em 0;padding:.2em 1.2em;border-left:3px solid var(--ochre);color:var(--ink);font-style:italic}
+blockquote b{font-style:italic}
+ul{padding-left:1.3em}li{margin:.3em 0}
+.posts{list-style:none;padding:0}.posts li{margin:1.4em 0}.posts a{font-size:1.25rem;font-weight:600}
+footer{max-width:44rem;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:14px}
+.reply{margin-top:3em;padding:1em 1.2em;background:var(--surface);border:1px solid var(--rule);border-radius:8px}
+.reply h2{margin-top:0}.reply p{font-size:16px;color:var(--muted);margin:.3em 0 .8em}
+.reply textarea{width:100%;box-sizing:border-box;min-height:8em;font:inherit;font-size:16px;padding:.6em;
+  border:1px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink)}
+.reply button{margin-top:.6em;font:600 15px system-ui,sans-serif;padding:.5em 1.2em;border:0;border-radius:999px;
+  background:var(--slate);color:var(--surface);cursor:pointer}
+.reply .hp{position:absolute;left:-9999px}
+#rmsg{font:14px system-ui,sans-serif;color:var(--muted);margin-left:.8em}
+</style></head><body>
+<header><div class="in"><a class="brand" href="/">Bible <span>Ontology</span></a>
+<nav><a href="/blog/">Blog</a><a href="/faq">FAQ</a><a href="/about">About</a></nav></div></header>
+<main><article><h1>Frequently asked questions</h1><p>Short answers to what people ask first. The <a href="/about">About page</a> says more about how the site is built and what it does not attempt.</p>
+<h2>Why is it called Bible Ontology?</h2>
+<p>"Ontology" means two things, and the name uses both. In philosophy, ontology is the study of what is. In computing, an ontology is a careful description of the kinds of things in a subject and how they relate. This site is the second kind: a structured map of the people, places, events and ideas the Bible speaks of, and how the text connects them. It does not do the philosopher's work for you. It records what the text says about people, places, events and ideas, and marks anything beyond that as a reading.</p>
+<h2>What is this site?</h2>
+<p>A free map of how the Bible connects to itself: people, places, events, ideas and passages, and the links between them. Each connection carries the verse it rests on, so you can check it.</p>
+<h2>Is it an ontology or a knowledge graph?</h2>
+<p>Both, in two layers. The ontology is the vocabulary: the kinds of things (a person, an event, a passage) and the kinds of links between them. The knowledge graph is the content written in that vocabulary: about 11,500 records and 21,000 links. The ontology is the shape; the graph is what fills it.</p>
+<h2>Where can I see the ontology itself?</h2>
+<p>At its own addresses. Each opens as a readable page in a browser, and as RDF (Turtle) for software:</p>
+<ul><li><a href="/ns/meaning">bibleontology.org/ns/meaning</a>: what a node is about</li><li><a href="/ns/structure">bibleontology.org/ns/structure</a>: how the text is built, its clauses and how they group</li><li><a href="/ns/relation">bibleontology.org/ns/relation</a>: the kinds of link between records</li></ul>
+<h2>What standards does it follow?</h2>
+<p>The W3C's: the ontology is written in RDF and RDF Schema, declares its classes and properties with OWL's vocabulary, gives definitions with SKOS, and names its author and dates with Dublin Core terms. The word layer follows OntoLex-Lemon, the W3C model for lexicons, and its consistency is checked with SHACL shapes. The files are published as Turtle. The structure layer's clause links are also mapped to Rhetorical Structure Theory, so a reader from that field can match them to its terms.</p>
+<h2>Can I trust it?</h2>
+<p>You do not have to take its word for it: it is built so you can check. Each connection carries the verse it rests on, and anything that cannot be tied to a verse is marked as a suggestion or a reading. How certain each link is gets marked; interpretations are labelled as readings, with their reader; and where a translation and the original differ, the original decides. It also has errors, and it is thin in places. When you find one, <b>Something wrong or missing?</b> (in the site's ⋯ menu, and on every card) tells us.</p>
+<h2>What denomination or creed does it align with?</h2>
+<p>None. It covers 66 books, the Protestant canon (the Old Testament, or Hebrew Scriptures, and the New Testament). Where traditions differ it aims to take no side, and sets the verses side by side instead. Its own sentences about what a text says are checked by AI models reading them as eleven kinds of reader would: Lutheran, Reformed, Wesleyan, Baptist, Pentecostal, Catholic, Orthodox, a biblical-theological reader, a rabbi, a young African American believer and a secular scholar. These are AI readings, not real members of those traditions, and a sentence is kept only if every one of those readings could accept it.</p>
+<h2>Is it free? Are there ads or accounts?</h2>
+<p>Free, non-profit, no ads, no accounts. There is nothing to sign up for.</p>
+<h2>Which Bible does it use?</h2>
+<p>The English is the Berean Standard Bible, which its publishers have placed in the public domain. Underneath, it is built from the Hebrew, Aramaic and Greek, using the MACULA linguistic datasets. Where a translation and the original language differ, the original decides; where the site has found such a difference, the verse carries an asterisk and a note saying why.</p>
+<h2>Which books are included?</h2>
+<p>The 66 books of the Protestant canon: the 39 of the Old Testament (the Hebrew Scriptures, in the Christian order) and the 27 of the New Testament. The further books in Catholic and Orthodox Bibles (Tobit, Sirach, the Maccabees and others) are outside the site's scope; that is a limit, not a judgment on them.</p>
+<h2>Was it made with AI?</h2>
+<p>Yes. The structure of each verse is read off the Hebrew and Greek grammar by rules. The people, places, events, links and much of the wording were read out of the text and drafted by AI models, under the direction of the site's owner; the <a href="/about">About page</a> names the tools and what each did. Because AI makes mistakes, each link carries the verse it rests on so you can check it, and the site's own sentences are checked against the verses they cite and by the AI readings described above.</p>
+<h2>What are the three chips after every verse?</h2>
+<ul><li><b>orig</b> shows the verse in Hebrew or Greek, word by word.</li><li><b>struct</b> shows how the verse is built: its clauses and how they connect.</li><li><b>links</b> shows other verses it takes up or is taken up by, retellings, and the patterns it is part of. It appears only where there is something to show.</li></ul>
+<h2>What do the lines in the graph mean?</h2>
+<p>How sure a link is. A solid line is stated outright in the text; a dashed line is implied by it; a dotted line is inferred, conjectured or disputed (two children of the same parent drawn as siblings, for instance). A thicker line means more of the text is given to the two together; a thick line with a number on it holds several links between the same two, and tapping it lets you choose one.</p>
+<h2>How do I use the graph?</h2>
+<p>Open the <a href="/graph">Knowledge Graph Navigator</a>. Click any node to put it in the middle, or type a name in the box on the graph. <b>Open card</b> shows everything recorded about the node in the middle.</p>
+<h2>Why isn't a verse or person I expected here?</h2>
+<p>The graph is thin in places, and the About page says where. If something is missing or wrong, <b>Something wrong or missing?</b> in the ⋯ menu or on any card tells us. A note is read, and it carries nothing about who sent it.</p>
+<h2>What principles guide how it is built?</h2>
+<p>Ten that shape the work:</p>
+<ul><li><b>Built from the text.</b> Every connection carries the verse it rests on; anything that cannot be tied to a verse is marked as a suggestion or a reading.</li><li><b>The original language decides.</b> Where a translation and the Hebrew, Aramaic or Greek differ, the original wins, and a connection that rests on one translation's wording alone is not kept.</li><li><b>Record what the text says, not what it means.</b> Anything beyond what the words show is marked as a reading, with its reader.</li><li><b>Structure, not doctrine.</b> It groups and connects what the text says, and aims to take no position where readers divide; it shows the verses each side reads and does not decide between them.</li><li><b>Readings are marked as readings,</b> each credited to its source and never presented as fact.</li><li><b>Tensions stay as the text leaves them.</b> Passages that seem to pull against each other are not harmonised away.</li><li><b>The Hebrew Scriptures are given their own voice.</b> What a passage says in its own words is shown on its own, and a New Testament reading of it is shown beside it as that text's reading.</li><li><b>Literal and figurative are never assumed.</b> An image stays an image, and where readers disagree whether a passage is literal, the site says so.</li><li><b>Nothing is stated more strongly than the text states it.</b> How certain each link is gets marked, and a connection reached through several steps is shown as no more certain than its weakest step.</li><li><b>Hard verses are not softened.</b> A difficult passage is shown in the text's own words, with nothing added to ease it.</li></ul>
+<h2>Can I reuse the data?</h2>
+<p>The ontology it is organised by, published at the addresses above, is licensed under the Creative Commons Attribution 4.0 licence from version 1.1.1 (17 October 2026): it may be shared and adapted, with credit to Bible Ontology by Doug Egge (<a href="https://bibleontology.org">bibleontology.org</a>). The graph itself is under the same licence from 23 October 2026, when it was offered for download at <a href="https://github.com/bibleontology/bibleontology">github.com/bibleontology/bibleontology</a>, with the code that builds it. The sources it draws on keep their own terms, listed on the About page.</p>
+<h2>What's planned?</h2>
+<p>These are plans, not features, and this answer will say so until each one exists.</p>
+<ul><li><b>A public repository (committed).</b> The ontology and the graph's data, released openly under Creative Commons Attribution, so anyone can check them, reuse them and build on them.</li><li><b>A fuller formal ontology (OWL) — intended, not yet scheduled.</b> Any inference marked, cited and kept apart from what the text states.</li><li><b>Access for AI assistants (MCP) — intended, not yet scheduled.</b> Tools could query the graph directly and cite verses in their answers.</li><li><b>Questions in plain language, with your own AI key — intended, not yet scheduled.</b> Answered from the graph with their verses, paid for by your own AI account rather than the site.</li></ul>
+<h2>Who made this?</h2>
+<p>The <a href="/about">About page</a> says who built it and why.</p></article></main>
+<footer>Bible Ontology · <a href="/">Open the site</a></footer>
+</body></html>

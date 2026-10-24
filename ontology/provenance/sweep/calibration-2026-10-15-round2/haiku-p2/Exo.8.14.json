@@ -1,0 +1,64 @@
+{
+ "ref": "Exo.8.14",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'their secret arts' is third masculine plural; the ones using their arts are the magicians.",
+   "category": "possessive of the acting group"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'they were not able' is third common plural, the magicians who attempted the act in the clause before.",
+   "category": "subject continuing from attempt"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "purpose",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "an attempt (did thus) with the infinitive 'to bring forth' as lamed plus infinitive construct saying what the act was done to achieve.",
+   "category": "attempt with infinitive purpose"
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "the link is the previous verse's last clause (Exo.8.13#cl4) pointing forward; then is within a verse only, and across verses is the episode rung, not built here.",
+   "category": "cross-verse then link"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "an attempt with a purpose, then 'and' and a negated verb of being able, is a failed result, not a plain 'and'.",
+   "category": "plain and read as failed result"
+  },
+  {
+   "src": "cl0",
+   "type": "failed_result",
+   "dst": "cl2",
+   "action": "add",
+   "why": "the attempt has a purpose (to bring forth), and the outcome clause is a negated verb of being able: the purpose was not achieved.",
+   "category": "attempt that failed"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "a wayyiqtol continues the narrative line after the failure.",
+   "category": "narrative continuation"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

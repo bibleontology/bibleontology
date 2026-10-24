@@ -1,0 +1,18 @@
+{"ref": "Psa.23.6",
+ "referents": [
+  {"slot": "w5", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First common singular pronominal suffix on 'pursue me'; in a psalm the 'me' is the psalm's own voice and nothing in the psalm quotes anyone else.", "category": "psalm first person is the psalm's voice"},
+  {"slot": "w9", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First common singular possessive suffix on 'life' (the days of my life); the psalm's own voice, no quoted speaker.", "category": "psalm first person is the psalm's voice"},
+  {"slot": "cl1s", "choice": "Psa.23.1#psalmist", "divine": false, "why": "Implied subject of the first common singular weqatal 'I will return/dwell'; the psalm's own voice, matching the 'me' of cl0.", "category": "implied subject in a psalm's own voice"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "cl1 opens with a fused waw on a weqatal, which continues the yiqtol promise before it; the form supports 'and then' as a continuation of the same hope, not a cause, result or purpose. The two promises (follow all my days; dwell forever) overlap in time rather than strictly follow, so the sequence is formal, not chronological.", "category": "weqatal continuing a yiqtol promise"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 implied subject", "what": "The third masculine plural subject of 'they will pursue me' is goodness and mercy (c1), but the slots list has no slot for it, so no referent could be recorded. The parser leaves a named plural subject on a verb unrepresented as a slot; a slot for a verb whose subject is a named compound noun would let the agreement (masculine plural verb with a compound of two nouns) be checked."},
+  {"where": "cl0 and cl1", "what": "No group kind fits a psalm's closing pair of confident hopes (goodness and mercy pursue me; I will dwell in the LORD's house): they have different subjects, so 'acts' and 'parallel' do not apply, and there is no kind for a parallel of two promises or hopes."}
+ ],
+ "cant_tell": [
+  {"what": "Whether the implied plural subject of cl0 'they will pursue me' should be recorded as c1 (goodness and mercy).", "why": "On the sense and morphology c1 is the only plural composite that fits the masculine plural verb and is the doer; it is not a listed slot, so it is noted here rather than decided."},
+  {"what": "The verb of cl1: the gloss renders 'I will return' (שׁוב) where the BSB reads 'I will dwell' (ישׁב).", "why": "The parser's gloss and the translation differ in the lexeme; the structure (first common singular weqatal, psalmist subject) is the same either way, so the slot choice is unaffected, but the original should arbitrate which sense the clause carries."}
+ ]}

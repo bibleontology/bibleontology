@@ -1,0 +1,3347 @@
+{
+ "_note": "What the text repeats (tools/patterns/recurs.py): the formulas by which it declares an echo, and the refrains it repeats word for word, each searched across the language divide.",
+ "declared": [
+  {
+   "id": "fulfilled",
+   "title": "Fulfilment formulas",
+   "note": "The narrator or a speaker says that something happened so that an earlier word would be fulfilled.",
+   "n": 36,
+   "books": 11,
+   "verses": [
+    {
+     "v": "1Kgs.2.27",
+     "to": []
+    },
+    {
+     "v": "1Kgs.8.20",
+     "to": []
+    },
+    {
+     "v": "1Kgs.12.15",
+     "to": []
+    },
+    {
+     "v": "2Kgs.15.12",
+     "to": []
+    },
+    {
+     "v": "2Chr.6.10",
+     "to": []
+    },
+    {
+     "v": "2Chr.10.15",
+     "to": []
+    },
+    {
+     "v": "2Chr.36.22",
+     "to": []
+    },
+    {
+     "v": "Ezra.1.1",
+     "to": []
+    },
+    {
+     "v": "Matt.1.22",
+     "to": [
+      "Isa.7.14",
+      "Isa.8.8",
+      "Isa.8.10"
+     ]
+    },
+    {
+     "v": "Matt.2.15",
+     "to": [
+      "Hos.11.1"
+     ]
+    },
+    {
+     "v": "Matt.2.17",
+     "to": [
+      "Jer.31.15"
+     ]
+    },
+    {
+     "v": "Matt.2.23",
+     "to": []
+    },
+    {
+     "v": "Matt.4.14",
+     "to": [
+      "Isa.9.2"
+     ]
+    },
+    {
+     "v": "Matt.8.17",
+     "to": [
+      "Isa.53.4"
+     ]
+    },
+    {
+     "v": "Matt.12.17",
+     "to": [
+      "Isa.42.4"
+     ]
+    },
+    {
+     "v": "Matt.13.35",
+     "to": [
+      "Ps.78.2"
+     ]
+    },
+    {
+     "v": "Matt.21.4",
+     "to": [
+      "Zech.9.9"
+     ]
+    },
+    {
+     "v": "Matt.26.54",
+     "to": []
+    },
+    {
+     "v": "Matt.26.56",
+     "to": []
+    },
+    {
+     "v": "Matt.27.9",
+     "to": []
+    },
+    {
+     "v": "Mark.14.49",
+     "to": []
+    },
+    {
+     "v": "Luke.4.21",
+     "to": []
+    },
+    {
+     "v": "Luke.22.37",
+     "to": [
+      "Isa.53.12"
+     ]
+    },
+    {
+     "v": "John.12.38",
+     "to": [
+      "Isa.53.1"
+     ]
+    },
+    {
+     "v": "John.13.18",
+     "to": [
+      "Ps.41.9"
+     ]
+    },
+    {
+     "v": "John.15.25",
+     "to": [
+      "Ps.35.19",
+      "Ps.38.19",
+      "Ps.69.4"
+     ]
+    },
+    {
+     "v": "John.17.12",
+     "to": []
+    },
+    {
+     "v": "John.18.9",
+     "to": [
+      "John.6.39",
+      "John.17.12"
+     ]
+    },
+    {
+     "v": "John.18.32",
+     "to": [
+      "John.12.32"
+     ]
+    },
+    {
+     "v": "John.19.24",
+     "to": [
+      "Ps.22.18"
+     ]
+    },
+    {
+     "v": "John.19.28",
+     "to": [
+      "Ps.22.15"
+     ]
+    },
+    {
+     "v": "John.19.36",
+     "to": [
+      "Ps.34.20"
+     ]
+    },
+    {
+     "v": "Acts.1.16",
+     "to": []
+    },
+    {
+     "v": "Acts.13.27",
+     "to": []
+    },
+    {
+     "v": "Jas.2.23",
+     "to": [
+      "Gen.15.6",
+      "Isa.41.8"
+     ]
+    },
+    {
+     "v": "Rev.17.17",
+     "to": []
+    }
+   ]
+  },
+  {
+   "id": "written",
+   "title": "“As it is written”",
+   "note": "The text points to an earlier written word as its authority or its pattern.",
+   "n": 71,
+   "books": 19,
+   "verses": [
+    {
+     "v": "2Sam.1.18",
+     "to": []
+    },
+    {
+     "v": "2Kgs.23.21",
+     "to": []
+    },
+    {
+     "v": "2Chr.35.12",
+     "to": []
+    },
+    {
+     "v": "Ezra.3.2",
+     "to": []
+    },
+    {
+     "v": "Neh.8.15",
+     "to": [
+      "Lev.23.37"
+     ]
+    },
+    {
+     "v": "Neh.10.34",
+     "to": []
+    },
+    {
+     "v": "Neh.10.36",
+     "to": []
+    },
+    {
+     "v": "Ps.40.7",
+     "to": []
+    },
+    {
+     "v": "Isa.65.6",
+     "to": []
+    },
+    {
+     "v": "Dan.9.13",
+     "to": []
+    },
+    {
+     "v": "Matt.4.4",
+     "to": [
+      "Deut.8.3"
+     ]
+    },
+    {
+     "v": "Matt.4.6",
+     "to": [
+      "Ps.91.12",
+      "Ps.91.11"
+     ]
+    },
+    {
+     "v": "Matt.4.10",
+     "to": [
+      "Deut.6.13"
+     ]
+    },
+    {
+     "v": "Matt.11.10",
+     "to": [
+      "Mal.3.1"
+     ]
+    },
+    {
+     "v": "Matt.21.13",
+     "to": [
+      "Isa.56.7",
+      "Jer.7.11"
+     ]
+    },
+    {
+     "v": "Matt.26.24",
+     "to": []
+    },
+    {
+     "v": "Matt.26.31",
+     "to": [
+      "Zech.13.7"
+     ]
+    },
+    {
+     "v": "Mark.1.2",
+     "to": [
+      "Mal.3.1"
+     ]
+    },
+    {
+     "v": "Mark.7.6",
+     "to": [
+      "Isa.29.13"
+     ]
+    },
+    {
+     "v": "Mark.9.13",
+     "to": []
+    },
+    {
+     "v": "Mark.14.21",
+     "to": []
+    },
+    {
+     "v": "Mark.14.27",
+     "to": [
+      "Zech.13.7"
+     ]
+    },
+    {
+     "v": "Luke.2.23",
+     "to": [
+      "Exod.13.2"
+     ]
+    },
+    {
+     "v": "Luke.3.4",
+     "to": [
+      "Isa.40.3"
+     ]
+    },
+    {
+     "v": "Luke.4.4",
+     "to": [
+      "Deut.8.3"
+     ]
+    },
+    {
+     "v": "Luke.4.8",
+     "to": [
+      "Deut.6.13"
+     ]
+    },
+    {
+     "v": "Luke.4.10",
+     "to": [
+      "Ps.91.12"
+     ]
+    },
+    {
+     "v": "Luke.7.27",
+     "to": [
+      "Mal.3.1"
+     ]
+    },
+    {
+     "v": "Luke.19.46",
+     "to": [
+      "Isa.56.7",
+      "Jer.7.11"
+     ]
+    },
+    {
+     "v": "John.2.17",
+     "to": [
+      "Ps.69.9"
+     ]
+    },
+    {
+     "v": "John.6.31",
+     "to": [
+      "Ps.78.24"
+     ]
+    },
+    {
+     "v": "John.6.45",
+     "to": [
+      "Isa.54.13"
+     ]
+    },
+    {
+     "v": "John.8.17",
+     "to": [
+      "Deut.19.15"
+     ]
+    },
+    {
+     "v": "John.12.14",
+     "to": [
+      "Zech.9.9"
+     ]
+    },
+    {
+     "v": "Acts.1.20",
+     "to": [
+      "Ps.69.25",
+      "Ps.109.8"
+     ]
+    },
+    {
+     "v": "Acts.7.42",
+     "to": [
+      "Amos.5.27"
+     ]
+    },
+    {
+     "v": "Acts.13.33",
+     "to": [
+      "Ps.2.7"
+     ]
+    },
+    {
+     "v": "Acts.15.15",
+     "to": [
+      "Amos.9.12"
+     ]
+    },
+    {
+     "v": "Acts.23.5",
+     "to": [
+      "Exod.22.28"
+     ]
+    },
+    {
+     "v": "Rom.1.17",
+     "to": [
+      "Hab.2.4"
+     ]
+    },
+    {
+     "v": "Rom.2.24",
+     "to": [
+      "Isa.52.5"
+     ]
+    },
+    {
+     "v": "Rom.3.4",
+     "to": [
+      "Ps.51.4"
+     ]
+    },
+    {
+     "v": "Rom.3.10",
+     "to": [
+      "Ps.14.3",
+      "Ps.53.3"
+     ]
+    },
+    {
+     "v": "Rom.4.17",
+     "to": [
+      "Gen.17.5"
+     ]
+    },
+    {
+     "v": "Rom.8.36",
+     "to": [
+      "Ps.44.22"
+     ]
+    },
+    {
+     "v": "Rom.9.13",
+     "to": [
+      "Mal.1.3",
+      "Mal.1.2"
+     ]
+    },
+    {
+     "v": "Rom.9.33",
+     "to": [
+      "Isa.8.14",
+      "Isa.28.16"
+     ]
+    },
+    {
+     "v": "Rom.10.15",
+     "to": [
+      "Isa.52.7"
+     ]
+    },
+    {
+     "v": "Rom.11.8",
+     "to": [
+      "Deut.29.4",
+      "Isa.29.10"
+     ]
+    },
+    {
+     "v": "Rom.11.26",
+     "to": [
+      "Isa.59.20"
+     ]
+    },
+    {
+     "v": "Rom.12.19",
+     "to": [
+      "Deut.32.35"
+     ]
+    },
+    {
+     "v": "Rom.14.11",
+     "to": [
+      "Isa.45.23"
+     ]
+    },
+    {
+     "v": "Rom.15.3",
+     "to": [
+      "Ps.69.9"
+     ]
+    },
+    {
+     "v": "Rom.15.9",
+     "to": [
+      "2Sam.22.50",
+      "Ps.18.49"
+     ]
+    },
+    {
+     "v": "Rom.15.21",
+     "to": [
+      "Isa.52.15"
+     ]
+    },
+    {
+     "v": "1Cor.1.19",
+     "to": [
+      "Isa.29.14"
+     ]
+    },
+    {
+     "v": "1Cor.1.31",
+     "to": [
+      "Jer.9.24"
+     ]
+    },
+    {
+     "v": "1Cor.2.9",
+     "to": [
+      "Isa.64.4"
+     ]
+    },
+    {
+     "v": "1Cor.3.19",
+     "to": [
+      "Job.5.13"
+     ]
+    },
+    {
+     "v": "1Cor.9.9",
+     "to": [
+      "Deut.25.4"
+     ]
+    },
+    {
+     "v": "1Cor.10.7",
+     "to": [
+      "Exod.32.6"
+     ]
+    },
+    {
+     "v": "1Cor.14.21",
+     "to": [
+      "Isa.28.11"
+     ]
+    },
+    {
+     "v": "1Cor.15.45",
+     "to": [
+      "Gen.2.7"
+     ]
+    },
+    {
+     "v": "2Cor.8.15",
+     "to": [
+      "Exod.16.18"
+     ]
+    },
+    {
+     "v": "2Cor.9.9",
+     "to": [
+      "Ps.112.9"
+     ]
+    },
+    {
+     "v": "Gal.3.10",
+     "to": [
+      "Deut.27.26"
+     ]
+    },
+    {
+     "v": "Gal.3.13",
+     "to": [
+      "Deut.21.23"
+     ]
+    },
+    {
+     "v": "Gal.4.22",
+     "to": [
+      "Gen.16.15",
+      "Gen.21.2"
+     ]
+    },
+    {
+     "v": "Gal.4.27",
+     "to": [
+      "Isa.54.1"
+     ]
+    },
+    {
+     "v": "Heb.10.7",
+     "to": [
+      "Ps.40.6"
+     ]
+    },
+    {
+     "v": "1Pet.1.16",
+     "to": [
+      "Lev.11.44",
+      "Lev.19.2"
+     ]
+    }
+   ]
+  }
+ ],
+ "refrains": [
+  {
+   "id": "r:this_is_what_the_lord_says",
+   "title": "This is what the LORD says",
+   "phrase": "this is what the lord says",
+   "n": 155,
+   "chapters": 90,
+   "books": 14,
+   "english": [
+    "Exod.4.22",
+    "Exod.7.17",
+    "Exod.8.1",
+    "Exod.8.20",
+    "Exod.11.4",
+    "1Sam.2.27",
+    "2Sam.7.5",
+    "2Sam.12.11",
+    "2Sam.24.12",
+    "1Kgs.12.24",
+    "1Kgs.13.2",
+    "1Kgs.13.21",
+    "1Kgs.20.13",
+    "1Kgs.20.14",
+    "1Kgs.20.28",
+    "1Kgs.20.42",
+    "1Kgs.21.19",
+    "1Kgs.21.21",
+    "1Kgs.22.11",
+    "2Kgs.1.4",
+    "2Kgs.1.6",
+    "2Kgs.1.16",
+    "2Kgs.2.21",
+    "2Kgs.3.16",
+    "2Kgs.4.43",
+    "2Kgs.7.1",
+    "2Kgs.9.3",
+    "2Kgs.9.12",
+    "2Kgs.19.6",
+    "2Kgs.19.32",
+    "2Kgs.20.1",
+    "2Kgs.22.16",
+    "1Chr.17.4",
+    "1Chr.21.10",
+    "1Chr.21.11",
+    "2Chr.11.4",
+    "2Chr.12.5",
+    "2Chr.18.10",
+    "2Chr.20.15",
+    "2Chr.34.24",
+    "Isa.21.6",
+    "Isa.21.16",
+    "Isa.37.6",
+    "Isa.37.33",
+    "Isa.38.1",
+    "Isa.43.1",
+    "Isa.45.1",
+    "Isa.45.14",
+    "Isa.49.8",
+    "Isa.49.25",
+    "Isa.50.1",
+    "Isa.52.3",
+    "Isa.56.1",
+    "Isa.56.4",
+    "Isa.65.8",
+    "Isa.66.1",
+    "Isa.66.12",
+    "Jer.2.2",
+    "Jer.2.5",
+    "Jer.4.3",
+    "Jer.4.27",
+    "Jer.6.16",
+    "Jer.6.21",
+    "Jer.6.22",
+    "Jer.8.4",
+    "Jer.9.22",
+    "Jer.9.23",
+    "Jer.10.2",
+    "Jer.10.18",
+    "Jer.11.11",
+    "Jer.11.21",
+    "Jer.12.14",
+    "Jer.13.9",
+    "Jer.13.13",
+    "Jer.14.10",
+    "Jer.14.15",
+    "Jer.15.2",
+    "Jer.15.19",
+    "Jer.16.3",
+    "Jer.16.5",
+    "Jer.17.5",
+    "Jer.17.21",
+    "Jer.18.11",
+    "Jer.18.13",
+    "Jer.19.1",
+    "Jer.20.4",
+    "Jer.21.8",
+    "Jer.21.12",
+    "Jer.22.1",
+    "Jer.22.3",
+    "Jer.22.6",
+    "Jer.22.11",
+    "Jer.22.18",
+    "Jer.22.30",
+    "Jer.23.38",
+    "Jer.26.2",
+    "Jer.26.4",
+    "Jer.27.16",
+    "Jer.28.11",
+    "Jer.28.13",
+    "Jer.28.16",
+    "Jer.29.10",
+    "Jer.29.16",
+    "Jer.29.32",
+    "Jer.30.5",
+    "Jer.30.12",
+    "Jer.30.18",
+    "Jer.31.2",
+    "Jer.31.7",
+    "Jer.31.15",
+    "Jer.31.16",
+    "Jer.31.37",
+    "Jer.32.28",
+    "Jer.32.42",
+    "Jer.33.10",
+    "Jer.33.17",
+    "Jer.33.20",
+    "Jer.33.25",
+    "Jer.34.2",
+    "Jer.34.4",
+    "Jer.34.17",
+    "Jer.36.29",
+    "Jer.36.30",
+    "Jer.37.9",
+    "Jer.38.2",
+    "Jer.38.3",
+    "Jer.44.30",
+    "Jer.45.4",
+    "Jer.47.2",
+    "Jer.48.40",
+    "Jer.49.1",
+    "Jer.49.12",
+    "Jer.49.28",
+    "Jer.51.1",
+    "Jer.51.36",
+    "Ezek.11.5",
+    "Ezek.21.3",
+    "Ezek.21.9",
+    "Ezek.30.6",
+    "Amos.1.3",
+    "Amos.1.6",
+    "Amos.1.9",
+    "Amos.1.11",
+    "Amos.1.13",
+    "Amos.2.1",
+    "Amos.2.4",
+    "Amos.2.6",
+    "Amos.3.12",
+    "Amos.5.4",
+    "Amos.7.17",
+    "Mic.2.3",
+    "Mic.3.5",
+    "Nah.1.12",
+    "Zech.1.16",
+    "Zech.8.3"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.4.22",
+   "variants": [
+    "this is what the lord says you",
+    "this is what the lord says about",
+    "this is what the lord says concerning",
+    "and said this is what the lord says",
+    "david that this is what the lord says",
+    "that this is what the lord says i am"
+   ]
+  },
+  {
+   "id": "r:then_the_lord_said_to_moses",
+   "title": "Then the LORD said to Moses",
+   "phrase": "then the lord said to moses",
+   "n": 85,
+   "chapters": 58,
+   "books": 4,
+   "english": [
+    "Exod.7.14",
+    "Exod.8.1",
+    "Exod.8.16",
+    "Exod.8.20",
+    "Exod.9.1",
+    "Exod.9.8",
+    "Exod.9.13",
+    "Exod.9.22",
+    "Exod.10.1",
+    "Exod.10.12",
+    "Exod.10.21",
+    "Exod.11.1",
+    "Exod.13.1",
+    "Exod.14.1",
+    "Exod.14.15",
+    "Exod.14.26",
+    "Exod.16.4",
+    "Exod.16.11",
+    "Exod.16.28",
+    "Exod.17.14",
+    "Exod.19.10",
+    "Exod.20.22",
+    "Exod.24.1",
+    "Exod.24.12",
+    "Exod.25.1",
+    "Exod.30.11",
+    "Exod.30.22",
+    "Exod.31.1",
+    "Exod.32.7",
+    "Exod.33.1",
+    "Exod.34.1",
+    "Exod.40.1",
+    "Lev.4.1",
+    "Lev.5.14",
+    "Lev.6.8",
+    "Lev.6.19",
+    "Lev.7.22",
+    "Lev.7.28",
+    "Lev.8.1",
+    "Lev.12.1",
+    "Lev.13.1",
+    "Lev.14.1",
+    "Lev.14.33",
+    "Lev.17.1",
+    "Lev.18.1",
+    "Lev.19.1",
+    "Lev.20.1",
+    "Lev.21.1",
+    "Lev.21.16",
+    "Lev.22.1",
+    "Lev.22.17",
+    "Lev.22.26",
+    "Lev.23.1",
+    "Lev.24.1",
+    "Lev.24.13",
+    "Lev.25.1",
+    "Lev.27.1",
+    "Num.2.1",
+    "Num.3.5",
+    "Num.3.40",
+    "Num.4.1",
+    "Num.4.17",
+    "Num.5.1",
+    "Num.5.11",
+    "Num.6.22",
+    "Num.8.1",
+    "Num.9.9",
+    "Num.10.1",
+    "Num.11.16",
+    "Num.14.26",
+    "Num.15.1",
+    "Num.15.17",
+    "Num.16.23",
+    "Num.16.36",
+    "Num.19.1",
+    "Num.21.8",
+    "Num.25.4",
+    "Num.25.10",
+    "Num.26.52",
+    "Num.27.12",
+    "Num.28.1",
+    "Num.34.1",
+    "Num.34.16",
+    "Num.35.9",
+    "Deut.31.14"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.7.14",
+   "variants": [
+    "then the lord said to moses stretch out your hand"
+   ]
+  },
+  {
+   "id": "r:this_is_what_the_lord_god_says",
+   "title": "This is what the Lord GOD says",
+   "phrase": "this is what the lord god says",
+   "n": 131,
+   "chapters": 46,
+   "books": 5,
+   "english": [
+    "Isa.7.7",
+    "Isa.28.16",
+    "Isa.49.22",
+    "Isa.52.4",
+    "Isa.65.13",
+    "Jer.7.20",
+    "Ezek.2.4",
+    "Ezek.3.11",
+    "Ezek.3.27",
+    "Ezek.5.5",
+    "Ezek.5.7",
+    "Ezek.5.8",
+    "Ezek.6.3",
+    "Ezek.6.11",
+    "Ezek.7.2",
+    "Ezek.7.5",
+    "Ezek.11.7",
+    "Ezek.11.16",
+    "Ezek.11.17",
+    "Ezek.12.10",
+    "Ezek.12.19",
+    "Ezek.12.23",
+    "Ezek.12.28",
+    "Ezek.13.3",
+    "Ezek.13.8",
+    "Ezek.13.13",
+    "Ezek.13.18",
+    "Ezek.13.20",
+    "Ezek.14.4",
+    "Ezek.14.6",
+    "Ezek.14.21",
+    "Ezek.15.6",
+    "Ezek.16.3",
+    "Ezek.16.36",
+    "Ezek.16.59",
+    "Ezek.17.3",
+    "Ezek.17.9",
+    "Ezek.17.19",
+    "Ezek.17.22",
+    "Ezek.20.3",
+    "Ezek.20.5",
+    "Ezek.20.27",
+    "Ezek.20.30",
+    "Ezek.20.39",
+    "Ezek.20.47",
+    "Ezek.21.24",
+    "Ezek.21.26",
+    "Ezek.21.28",
+    "Ezek.22.3",
+    "Ezek.22.19",
+    "Ezek.22.28",
+    "Ezek.23.22",
+    "Ezek.23.28",
+    "Ezek.23.32",
+    "Ezek.23.35",
+    "Ezek.23.46",
+    "Ezek.24.3",
+    "Ezek.24.6",
+    "Ezek.24.9",
+    "Ezek.24.21",
+    "Ezek.25.3",
+    "Ezek.25.6",
+    "Ezek.25.8",
+    "Ezek.25.12",
+    "Ezek.25.13",
+    "Ezek.25.15",
+    "Ezek.25.16",
+    "Ezek.26.3",
+    "Ezek.26.7",
+    "Ezek.26.15",
+    "Ezek.26.19",
+    "Ezek.27.3",
+    "Ezek.28.2",
+    "Ezek.28.6",
+    "Ezek.28.12",
+    "Ezek.28.22",
+    "Ezek.28.25",
+    "Ezek.29.3",
+    "Ezek.29.8",
+    "Ezek.29.13",
+    "Ezek.29.19",
+    "Ezek.30.2",
+    "Ezek.30.10",
+    "Ezek.30.13",
+    "Ezek.30.22",
+    "Ezek.31.10",
+    "Ezek.31.15",
+    "Ezek.32.3",
+    "Ezek.32.11",
+    "Ezek.33.25",
+    "Ezek.33.27",
+    "Ezek.34.2",
+    "Ezek.34.10",
+    "Ezek.34.11",
+    "Ezek.34.17",
+    "Ezek.34.20",
+    "Ezek.35.3",
+    "Ezek.35.14",
+    "Ezek.36.2",
+    "Ezek.36.3",
+    "Ezek.36.4",
+    "Ezek.36.5",
+    "Ezek.36.6",
+    "Ezek.36.7",
+    "Ezek.36.13",
+    "Ezek.36.22",
+    "Ezek.36.33",
+    "Ezek.36.37",
+    "Ezek.37.5",
+    "Ezek.37.9",
+    "Ezek.37.12",
+    "Ezek.37.19",
+    "Ezek.37.21",
+    "Ezek.38.3",
+    "Ezek.38.10",
+    "Ezek.38.14",
+    "Ezek.38.17",
+    "Ezek.39.1",
+    "Ezek.39.17",
+    "Ezek.39.25",
+    "Ezek.43.18",
+    "Ezek.44.6",
+    "Ezek.44.9",
+    "Ezek.45.9",
+    "Ezek.45.18",
+    "Ezek.46.1",
+    "Ezek.46.16",
+    "Ezek.47.13",
+    "Amos.3.11",
+    "Amos.5.3",
+    "Obad.1.1"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Isa.7.7",
+   "variants": [
+    "this is what the lord god says because you",
+    "tell them that this is what the lord god says",
+    "and declare that this is what the lord god says",
+    "and tell them that this is what the lord god says"
+   ]
+  },
+  {
+   "id": "r:the_god_of_israel_says",
+   "title": "This is what the LORD, the God of Israel, says",
+   "phrase": "the god of israel says",
+   "n": 83,
+   "chapters": 60,
+   "books": 13,
+   "english": [
+    "Exod.5.1",
+    "Exod.32.27",
+    "Josh.7.13",
+    "Josh.24.2",
+    "Judg.6.8",
+    "1Sam.2.30",
+    "1Sam.10.18",
+    "2Sam.12.7",
+    "1Kgs.11.31",
+    "1Kgs.14.7",
+    "1Kgs.17.14",
+    "2Kgs.9.6",
+    "2Kgs.19.20",
+    "2Kgs.21.12",
+    "2Kgs.22.15",
+    "2Kgs.22.18",
+    "2Chr.34.23",
+    "2Chr.34.26",
+    "Isa.37.21",
+    "Jer.7.3",
+    "Jer.7.21",
+    "Jer.9.15",
+    "Jer.11.3",
+    "Jer.13.12",
+    "Jer.16.9",
+    "Jer.19.3",
+    "Jer.19.15",
+    "Jer.21.4",
+    "Jer.23.2",
+    "Jer.24.5",
+    "Jer.25.15",
+    "Jer.25.27",
+    "Jer.27.4",
+    "Jer.27.21",
+    "Jer.28.2",
+    "Jer.28.14",
+    "Jer.29.4",
+    "Jer.29.8",
+    "Jer.29.21",
+    "Jer.29.25",
+    "Jer.30.2",
+    "Jer.31.23",
+    "Jer.32.14",
+    "Jer.32.15",
+    "Jer.32.36",
+    "Jer.33.4",
+    "Jer.34.2",
+    "Jer.34.13",
+    "Jer.35.13",
+    "Jer.35.17",
+    "Jer.35.18",
+    "Jer.35.19",
+    "Jer.37.7",
+    "Jer.38.17",
+    "Jer.39.16",
+    "Jer.42.15",
+    "Jer.42.18",
+    "Jer.43.10",
+    "Jer.44.2",
+    "Jer.44.7",
+    "Jer.44.11",
+    "Jer.44.25",
+    "Jer.45.2",
+    "Jer.46.25",
+    "Jer.48.1",
+    "Jer.50.18",
+    "Jer.51.33"
+   ],
+   "across": [
+    "Exod.4.22",
+    "Judg.10.11",
+    "1Kgs.8.23",
+    "1Kgs.11.2",
+    "2Kgs.19.15",
+    "1Chr.17.24",
+    "1Chr.27.23",
+    "2Chr.6.14",
+    "Isa.43.14",
+    "Isa.44.6",
+    "Isa.45.11",
+    "Isa.48.17",
+    "Isa.49.7",
+    "Jer.42.9",
+    "Amos.5.4",
+    "Mal.2.16"
+   ],
+   "signature": {
+    "Hebrew": [
+     "יהוה",
+     "יִשְׂרָאֵל",
+     "אָמַר"
+    ]
+   },
+   "example": "Exod.5.1",
+   "variants": [
+    "this is what the lord the god of israel says",
+    "this is what the lord of hosts the god of israel says"
+   ]
+  },
+  {
+   "id": "r:the_word_of_the_lord_came_to_me",
+   "title": "The word of the LORD came to me, saying",
+   "phrase": "the word of the lord came to me saying",
+   "n": 56,
+   "chapters": 37,
+   "books": 3,
+   "english": [
+    "Jer.1.4",
+    "Jer.2.1",
+    "Jer.16.1",
+    "Jer.18.5",
+    "Jer.24.4",
+    "Jer.32.6",
+    "Ezek.3.16",
+    "Ezek.6.1",
+    "Ezek.7.1",
+    "Ezek.11.14",
+    "Ezek.12.1",
+    "Ezek.12.8",
+    "Ezek.12.17",
+    "Ezek.12.21",
+    "Ezek.12.26",
+    "Ezek.13.1",
+    "Ezek.14.2",
+    "Ezek.14.12",
+    "Ezek.15.1",
+    "Ezek.16.1",
+    "Ezek.17.1",
+    "Ezek.17.11",
+    "Ezek.18.1",
+    "Ezek.20.2",
+    "Ezek.20.45",
+    "Ezek.21.1",
+    "Ezek.21.8",
+    "Ezek.21.18",
+    "Ezek.22.1",
+    "Ezek.22.17",
+    "Ezek.22.23",
+    "Ezek.23.1",
+    "Ezek.24.1",
+    "Ezek.24.15",
+    "Ezek.24.20",
+    "Ezek.25.1",
+    "Ezek.26.1",
+    "Ezek.27.1",
+    "Ezek.28.1",
+    "Ezek.28.11",
+    "Ezek.28.20",
+    "Ezek.29.1",
+    "Ezek.29.17",
+    "Ezek.30.1",
+    "Ezek.30.20",
+    "Ezek.31.1",
+    "Ezek.32.1",
+    "Ezek.32.17",
+    "Ezek.33.1",
+    "Ezek.33.23",
+    "Ezek.34.1",
+    "Ezek.35.1",
+    "Ezek.36.16",
+    "Ezek.37.15",
+    "Ezek.38.1",
+    "Zech.4.8"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Jer.1.4",
+   "variants": [
+    "and the word of the lord came to me saying",
+    "again the word of the lord came to me saying",
+    "month the word of the lord came to me saying"
+   ]
+  },
+  {
+   "id": "r:as_the_lord_had_commanded",
+   "title": "Just as the LORD had commanded",
+   "phrase": "as the lord had commanded",
+   "n": 67,
+   "chapters": 35,
+   "books": 9,
+   "english": [
+    "Exod.7.6",
+    "Exod.7.10",
+    "Exod.7.20",
+    "Exod.12.28",
+    "Exod.12.50",
+    "Exod.16.34",
+    "Exod.34.4",
+    "Exod.39.1",
+    "Exod.39.5",
+    "Exod.39.7",
+    "Exod.39.21",
+    "Exod.39.26",
+    "Exod.39.29",
+    "Exod.39.31",
+    "Exod.39.32",
+    "Exod.39.42",
+    "Exod.39.43",
+    "Exod.40.16",
+    "Exod.40.19",
+    "Exod.40.21",
+    "Exod.40.23",
+    "Exod.40.25",
+    "Exod.40.27",
+    "Exod.40.29",
+    "Exod.40.32",
+    "Lev.8.4",
+    "Lev.8.9",
+    "Lev.8.13",
+    "Lev.8.17",
+    "Lev.8.21",
+    "Lev.8.29",
+    "Lev.9.10",
+    "Lev.16.34",
+    "Lev.24.23",
+    "Num.1.19",
+    "Num.1.54",
+    "Num.2.33",
+    "Num.3.42",
+    "Num.3.51",
+    "Num.4.49",
+    "Num.8.3",
+    "Num.8.22",
+    "Num.9.5",
+    "Num.15.36",
+    "Num.17.11",
+    "Num.20.27",
+    "Num.27.22",
+    "Num.29.40",
+    "Num.31.7",
+    "Num.31.31",
+    "Num.31.41",
+    "Num.31.47",
+    "Num.36.10",
+    "Deut.10.5",
+    "Deut.34.9",
+    "Josh.8.27",
+    "Josh.11.15",
+    "Josh.11.20",
+    "Josh.14.2",
+    "Josh.14.5",
+    "Josh.19.50",
+    "Josh.21.8",
+    "2Sam.5.25",
+    "2Sam.24.19",
+    "Ps.106.34",
+    "Jer.13.5",
+    "Matt.27.10"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.7.6",
+   "variants": [
+    "just as the lord had commanded",
+    "as the lord had commanded moses",
+    "as the lord had commanded him",
+    "did as the lord had commanded"
+   ]
+  },
+  {
+   "id": "r:will_know_that_i_am_the_lord",
+   "title": "Then you will know that I am the LORD",
+   "phrase": "will know that i am the lord",
+   "n": 71,
+   "chapters": 34,
+   "books": 5,
+   "english": [
+    "Exod.6.7",
+    "Exod.7.5",
+    "Exod.7.17",
+    "Exod.14.4",
+    "Exod.14.18",
+    "Exod.16.12",
+    "Exod.29.46",
+    "1Kgs.20.13",
+    "1Kgs.20.28",
+    "Isa.49.23",
+    "Ezek.6.7",
+    "Ezek.6.10",
+    "Ezek.6.13",
+    "Ezek.6.14",
+    "Ezek.7.4",
+    "Ezek.7.27",
+    "Ezek.11.10",
+    "Ezek.11.12",
+    "Ezek.12.15",
+    "Ezek.12.16",
+    "Ezek.12.20",
+    "Ezek.13.9",
+    "Ezek.13.14",
+    "Ezek.13.21",
+    "Ezek.13.23",
+    "Ezek.14.8",
+    "Ezek.15.7",
+    "Ezek.16.62",
+    "Ezek.17.24",
+    "Ezek.20.38",
+    "Ezek.20.42",
+    "Ezek.20.44",
+    "Ezek.22.16",
+    "Ezek.23.49",
+    "Ezek.24.24",
+    "Ezek.24.27",
+    "Ezek.25.5",
+    "Ezek.25.7",
+    "Ezek.25.11",
+    "Ezek.25.17",
+    "Ezek.26.6",
+    "Ezek.28.22",
+    "Ezek.28.23",
+    "Ezek.28.24",
+    "Ezek.28.26",
+    "Ezek.29.6",
+    "Ezek.29.9",
+    "Ezek.29.16",
+    "Ezek.29.21",
+    "Ezek.30.8",
+    "Ezek.30.19",
+    "Ezek.30.25",
+    "Ezek.30.26",
+    "Ezek.32.15",
+    "Ezek.33.29",
+    "Ezek.34.27",
+    "Ezek.35.4",
+    "Ezek.35.9",
+    "Ezek.35.15",
+    "Ezek.36.11",
+    "Ezek.36.23",
+    "Ezek.36.38",
+    "Ezek.37.6",
+    "Ezek.37.13",
+    "Ezek.37.28",
+    "Ezek.38.23",
+    "Ezek.39.6",
+    "Ezek.39.7",
+    "Ezek.39.22",
+    "Ezek.39.28",
+    "Joel.3.17"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.6.7",
+   "variants": [
+    "then you will know that i am the lord",
+    "then they will know that i am the lord",
+    "and they will know that i am the lord"
+   ]
+  },
+  {
+   "id": "r:hear_the_word_of_the_lord",
+   "title": "Hear the word of the LORD",
+   "phrase": "hear the word of the lord",
+   "n": 37,
+   "chapters": 33,
+   "books": 10,
+   "english": [
+    "Josh.3.9",
+    "1Kgs.22.19",
+    "2Kgs.7.1",
+    "2Kgs.20.16",
+    "2Chr.18.18",
+    "Isa.1.10",
+    "Isa.28.14",
+    "Isa.39.5",
+    "Isa.66.5",
+    "Jer.2.4",
+    "Jer.7.2",
+    "Jer.9.20",
+    "Jer.17.20",
+    "Jer.19.3",
+    "Jer.21.11",
+    "Jer.22.2",
+    "Jer.22.29",
+    "Jer.29.20",
+    "Jer.34.4",
+    "Jer.42.15",
+    "Jer.44.24",
+    "Jer.44.26",
+    "Ezek.6.3",
+    "Ezek.13.2",
+    "Ezek.16.35",
+    "Ezek.20.47",
+    "Ezek.25.3",
+    "Ezek.34.7",
+    "Ezek.34.9",
+    "Ezek.36.1",
+    "Ezek.36.4",
+    "Ezek.37.4",
+    "Hos.4.1",
+    "Amos.7.16",
+    "Acts.13.44",
+    "Acts.19.10"
+   ],
+   "across": [
+    "Jer.31.10"
+   ],
+   "signature": {
+    "Hebrew": [
+     "שָׁמַע",
+     "דָּבָר",
+     "יהוה"
+    ]
+   },
+   "example": "1Kgs.22.19",
+   "variants": [
+    "therefore hear the word of the lord"
+   ]
+  },
+  {
+   "id": "r:did_evil_in_the_sight_of_the_lord",
+   "title": "And he did evil in the sight of the LORD",
+   "phrase": "did evil in the sight of the lord",
+   "n": 40,
+   "chapters": 26,
+   "books": 5,
+   "english": [
+    "Judg.2.11",
+    "Judg.3.7",
+    "Judg.3.12",
+    "Judg.4.1",
+    "Judg.6.1",
+    "Judg.10.6",
+    "Judg.13.1",
+    "1Kgs.11.6",
+    "1Kgs.14.22",
+    "1Kgs.15.26",
+    "1Kgs.15.34",
+    "1Kgs.16.25",
+    "1Kgs.16.30",
+    "1Kgs.22.52",
+    "2Kgs.3.2",
+    "2Kgs.8.18",
+    "2Kgs.8.27",
+    "2Kgs.13.2",
+    "2Kgs.13.11",
+    "2Kgs.14.24",
+    "2Kgs.15.9",
+    "2Kgs.15.18",
+    "2Kgs.15.24",
+    "2Kgs.15.28",
+    "2Kgs.17.2",
+    "2Kgs.21.2",
+    "2Kgs.21.20",
+    "2Kgs.23.32",
+    "2Kgs.23.37",
+    "2Kgs.24.9",
+    "2Kgs.24.19",
+    "2Chr.21.6",
+    "2Chr.22.4",
+    "2Chr.29.6",
+    "2Chr.33.2",
+    "2Chr.33.22",
+    "2Chr.36.5",
+    "2Chr.36.9",
+    "2Chr.36.12",
+    "Jer.52.2"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "1Kgs.15.26",
+   "variants": [
+    "and he did evil in the sight of the lord"
+   ]
+  },
+  {
+   "id": "r:as_surely_as_the_lord_lives",
+   "title": "As surely as the LORD lives",
+   "phrase": "as surely as the lord lives",
+   "n": 34,
+   "chapters": 27,
+   "books": 9,
+   "english": [
+    "Judg.8.19",
+    "Ruth.3.13",
+    "1Sam.14.45",
+    "1Sam.19.6",
+    "1Sam.20.3",
+    "1Sam.20.21",
+    "1Sam.25.26",
+    "1Sam.26.10",
+    "1Sam.26.16",
+    "1Sam.28.10",
+    "1Sam.29.6",
+    "2Sam.4.9",
+    "2Sam.12.5",
+    "2Sam.14.11",
+    "2Sam.15.21",
+    "1Kgs.1.29",
+    "1Kgs.2.24",
+    "1Kgs.22.14",
+    "2Kgs.2.2",
+    "2Kgs.2.4",
+    "2Kgs.2.6",
+    "2Kgs.4.30",
+    "2Kgs.5.16",
+    "2Kgs.5.20",
+    "2Chr.18.13",
+    "Jer.4.2",
+    "Jer.5.2",
+    "Jer.12.16",
+    "Jer.16.14",
+    "Jer.16.15",
+    "Jer.23.7",
+    "Jer.23.8",
+    "Jer.38.16",
+    "Hos.4.15"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Judg.8.19",
+   "variants": []
+  },
+  {
+   "id": "r:this_is_what_the_lord_of_hosts_says",
+   "title": "This is what the LORD of Hosts says",
+   "phrase": "this is what the lord of hosts says",
+   "n": 45,
+   "chapters": 25,
+   "books": 7,
+   "english": [
+    "1Sam.15.2",
+    "2Sam.7.8",
+    "1Chr.17.7",
+    "Jer.6.6",
+    "Jer.6.9",
+    "Jer.9.7",
+    "Jer.9.17",
+    "Jer.11.22",
+    "Jer.19.11",
+    "Jer.23.15",
+    "Jer.23.16",
+    "Jer.25.8",
+    "Jer.25.28",
+    "Jer.25.32",
+    "Jer.26.18",
+    "Jer.27.19",
+    "Jer.29.17",
+    "Jer.33.12",
+    "Jer.49.7",
+    "Jer.49.35",
+    "Jer.50.33",
+    "Jer.51.58",
+    "Hag.1.2",
+    "Hag.1.5",
+    "Hag.1.7",
+    "Hag.2.6",
+    "Hag.2.11",
+    "Zech.1.3",
+    "Zech.1.4",
+    "Zech.1.14",
+    "Zech.1.17",
+    "Zech.2.8",
+    "Zech.3.7",
+    "Zech.6.12",
+    "Zech.7.9",
+    "Zech.8.2",
+    "Zech.8.4",
+    "Zech.8.6",
+    "Zech.8.7",
+    "Zech.8.9",
+    "Zech.8.14",
+    "Zech.8.19",
+    "Zech.8.20",
+    "Zech.8.23",
+    "Mal.1.4"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "1Sam.15.2",
+   "variants": []
+  },
+  {
+   "id": "r:years_old_when_he_became_king_and_he",
+   "title": "Years old when he became king, and he reigned in Jerusalem",
+   "phrase": "years old when he became king and he reigned in jerusalem",
+   "n": 34,
+   "chapters": 23,
+   "books": 4,
+   "english": [
+    "1Kgs.22.42",
+    "2Kgs.8.17",
+    "2Kgs.8.26",
+    "2Kgs.14.2",
+    "2Kgs.15.2",
+    "2Kgs.15.33",
+    "2Kgs.16.2",
+    "2Kgs.18.2",
+    "2Kgs.21.1",
+    "2Kgs.21.19",
+    "2Kgs.22.1",
+    "2Kgs.23.31",
+    "2Kgs.23.36",
+    "2Kgs.24.8",
+    "2Kgs.24.18",
+    "2Chr.20.31",
+    "2Chr.21.5",
+    "2Chr.21.20",
+    "2Chr.22.2",
+    "2Chr.24.1",
+    "2Chr.25.1",
+    "2Chr.26.3",
+    "2Chr.27.1",
+    "2Chr.27.8",
+    "2Chr.28.1",
+    "2Chr.29.1",
+    "2Chr.33.1",
+    "2Chr.33.21",
+    "2Chr.34.1",
+    "2Chr.36.2",
+    "2Chr.36.5",
+    "2Chr.36.9",
+    "2Chr.36.11",
+    "Jer.52.1"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "1Kgs.22.42",
+   "variants": [
+    "two years old when he became king and he reigned in jerusalem",
+    "years old when he became king and he reigned in jerusalem fifty",
+    "years old when he became king and he reigned in jerusalem three months",
+    "was twenty five years old when he became king and he reigned in jerusalem",
+    "was twenty two years old when he became king and he reigned in jerusalem",
+    "he was twenty five years old when he became king and he reigned in jerusalem"
+   ]
+  },
+  {
+   "id": "r:the_lord_said_to_me",
+   "title": "The LORD said to me",
+   "phrase": "the lord said to me",
+   "n": 48,
+   "chapters": 31,
+   "books": 11,
+   "english": [
+    "Deut.1.42",
+    "Deut.2.2",
+    "Deut.2.9",
+    "Deut.2.17",
+    "Deut.2.31",
+    "Deut.3.2",
+    "Deut.3.26",
+    "Deut.4.10",
+    "Deut.5.28",
+    "Deut.9.12",
+    "Deut.10.1",
+    "Deut.10.11",
+    "Deut.18.17",
+    "1Sam.15.16",
+    "2Kgs.18.25",
+    "Ps.2.7",
+    "Isa.8.1",
+    "Isa.8.3",
+    "Isa.18.4",
+    "Isa.21.6",
+    "Isa.21.16",
+    "Isa.36.10",
+    "Jer.1.7",
+    "Jer.1.9",
+    "Jer.1.12",
+    "Jer.1.14",
+    "Jer.3.6",
+    "Jer.3.11",
+    "Jer.11.6",
+    "Jer.11.9",
+    "Jer.13.1",
+    "Jer.13.6",
+    "Jer.14.11",
+    "Jer.14.14",
+    "Jer.15.1",
+    "Jer.17.19",
+    "Jer.27.2",
+    "Ezek.11.2",
+    "Ezek.23.36",
+    "Ezek.44.2",
+    "Ezek.44.5",
+    "Hos.3.1",
+    "Amos.7.8",
+    "Amos.7.15",
+    "Amos.8.2",
+    "Zech.11.13",
+    "Zech.11.15",
+    "Acts.22.10"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Deut.1.42",
+   "variants": []
+  },
+  {
+   "id": "r:cried_out_to_the_lord",
+   "title": "Cried out to the LORD",
+   "phrase": "cried out to the lord",
+   "n": 28,
+   "chapters": 21,
+   "books": 10,
+   "english": [
+    "Exod.8.12",
+    "Exod.14.10",
+    "Exod.15.25",
+    "Exod.17.4",
+    "Num.12.13",
+    "Num.20.16",
+    "Josh.24.7",
+    "Judg.3.9",
+    "Judg.3.15",
+    "Judg.4.3",
+    "Judg.6.6",
+    "Judg.6.7",
+    "Judg.10.10",
+    "Judg.15.18",
+    "1Sam.7.9",
+    "1Sam.12.8",
+    "1Sam.12.10",
+    "1Sam.15.11",
+    "1Kgs.17.20",
+    "1Kgs.17.21",
+    "2Chr.13.14",
+    "2Chr.14.11",
+    "Ps.107.6",
+    "Ps.107.13",
+    "Ps.107.19",
+    "Ps.107.28",
+    "Jonah.1.14"
+   ],
+   "across": [
+    "Neh.9.4"
+   ],
+   "signature": {
+    "Hebrew": [
+     "זָעַק",
+     "זָעַק",
+     "יהוה"
+    ]
+   },
+   "example": "Exod.8.12",
+   "variants": [
+    "moses cried out to the lord",
+    "the israelites cried out to the lord"
+   ]
+  },
+  {
+   "id": "r:declares_the_lord_of_hosts",
+   "title": "Declares the LORD of Hosts",
+   "phrase": "declares the lord of hosts",
+   "n": 25,
+   "chapters": 17,
+   "books": 6,
+   "english": [
+    "Isa.14.22",
+    "Isa.14.23",
+    "Isa.17.3",
+    "Isa.22.25",
+    "Jer.8.3",
+    "Jer.25.29",
+    "Jer.30.8",
+    "Jer.49.26",
+    "Nah.2.13",
+    "Nah.3.5",
+    "Zeph.2.9",
+    "Hag.1.9",
+    "Hag.2.4",
+    "Hag.2.8",
+    "Hag.2.9",
+    "Hag.2.23",
+    "Zech.1.3",
+    "Zech.1.16",
+    "Zech.3.9",
+    "Zech.3.10",
+    "Zech.5.4",
+    "Zech.8.6",
+    "Zech.8.11",
+    "Zech.13.2",
+    "Zech.13.7"
+   ],
+   "across": [],
+   "signature": {
+    "Hebrew": [
+     "נְאֻם",
+     "יהוה",
+     "צָבָא"
+    ]
+   },
+   "example": "Isa.14.22",
+   "variants": [
+    "you declares the lord of hosts"
+   ]
+  },
+  {
+   "id": "r:gave_birth_to_a_son",
+   "title": "She gave birth to a son",
+   "phrase": "gave birth to a son",
+   "n": 24,
+   "chapters": 17,
+   "books": 13,
+   "english": [
+    "Gen.4.25",
+    "Gen.19.37",
+    "Gen.19.38",
+    "Gen.29.32",
+    "Gen.29.33",
+    "Gen.29.34",
+    "Gen.29.35",
+    "Gen.30.23",
+    "Gen.38.3",
+    "Gen.38.4",
+    "Exod.2.2",
+    "Exod.2.22",
+    "Judg.13.24",
+    "Ruth.4.13",
+    "1Sam.1.20",
+    "2Sam.12.24",
+    "2Kgs.4.17",
+    "1Chr.7.16",
+    "1Chr.7.23",
+    "Isa.8.3",
+    "Hos.1.8",
+    "Matt.1.25",
+    "Luke.1.57",
+    "Rev.12.5"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Gen.4.25",
+   "variants": [
+    "she gave birth to a son",
+    "and she gave birth to a son",
+    "she conceived and gave birth to a son",
+    "gave birth to a son and she named him"
+   ]
+  },
+  {
+   "id": "r:the_land_that_the_lord_your_god_is",
+   "title": "The land that the LORD your God is giving you",
+   "phrase": "the land that the lord your god is giving you",
+   "n": 23,
+   "chapters": 16,
+   "books": 3,
+   "english": [
+    "Exod.20.12",
+    "Deut.4.40",
+    "Deut.5.16",
+    "Deut.11.31",
+    "Deut.12.10",
+    "Deut.15.4",
+    "Deut.15.7",
+    "Deut.16.20",
+    "Deut.17.14",
+    "Deut.18.9",
+    "Deut.19.2",
+    "Deut.19.3",
+    "Deut.19.10",
+    "Deut.19.14",
+    "Deut.21.1",
+    "Deut.21.23",
+    "Deut.24.4",
+    "Deut.25.15",
+    "Deut.26.1",
+    "Deut.26.2",
+    "Deut.27.2",
+    "Deut.27.3",
+    "Josh.1.11"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.20.12",
+   "variants": [
+    "the land that the lord your god is giving you as an inheritance"
+   ]
+  },
+  {
+   "id": "r:that_day_declares_the_lord",
+   "title": "In that day, declares the LORD",
+   "phrase": "that day declares the lord",
+   "n": 18,
+   "chapters": 17,
+   "books": 9,
+   "english": [
+    "Isa.22.25",
+    "Jer.4.9",
+    "Jer.30.8",
+    "Jer.39.17",
+    "Jer.49.26",
+    "Jer.50.30",
+    "Hos.2.16",
+    "Amos.2.16",
+    "Amos.8.3",
+    "Amos.8.9",
+    "Obad.1.8",
+    "Mic.4.6",
+    "Mic.5.10",
+    "Zeph.1.10",
+    "Hag.2.23",
+    "Zech.3.10",
+    "Zech.12.4",
+    "Zech.13.2"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Isa.22.25",
+   "variants": [
+    "in that day declares the lord",
+    "on that day declares the lord"
+   ]
+  },
+  {
+   "id": "r:will_fall_by_the_sword",
+   "title": "Will fall by the sword",
+   "phrase": "will fall by the sword",
+   "n": 22,
+   "chapters": 19,
+   "books": 8,
+   "english": [
+    "Lev.26.7",
+    "Lev.26.8",
+    "Num.14.43",
+    "Isa.3.25",
+    "Isa.13.15",
+    "Isa.31.8",
+    "Jer.20.4",
+    "Ezek.5.12",
+    "Ezek.6.11",
+    "Ezek.6.12",
+    "Ezek.11.10",
+    "Ezek.17.21",
+    "Ezek.23.25",
+    "Ezek.24.21",
+    "Ezek.25.13",
+    "Ezek.30.6",
+    "Ezek.30.17",
+    "Ezek.33.27",
+    "Dan.11.33",
+    "Hos.7.16",
+    "Hos.13.16",
+    "Amos.7.17"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Lev.26.7",
+   "variants": [
+    "they will fall by the sword"
+   ]
+  },
+  {
+   "id": "r:the_anger_of_the_lord_burned_against",
+   "title": "So the anger of the LORD burned against",
+   "phrase": "the anger of the lord burned against",
+   "n": 17,
+   "chapters": 16,
+   "books": 10,
+   "english": [
+    "Exod.4.14",
+    "Num.11.33",
+    "Num.12.9",
+    "Num.25.3",
+    "Num.32.13",
+    "Deut.29.27",
+    "Josh.7.1",
+    "Judg.2.14",
+    "Judg.2.20",
+    "Judg.3.8",
+    "Judg.10.7",
+    "2Sam.6.7",
+    "2Sam.24.1",
+    "2Kgs.13.3",
+    "1Chr.13.10",
+    "2Chr.25.15",
+    "Ps.106.40"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Num.12.9",
+   "variants": [
+    "so the anger of the lord burned against"
+   ]
+  },
+  {
+   "id": "r:a_land_flowing_with_milk_and_honey",
+   "title": "A land flowing with milk and honey",
+   "phrase": "a land flowing with milk and honey",
+   "n": 19,
+   "chapters": 15,
+   "books": 7,
+   "english": [
+    "Exod.3.8",
+    "Exod.3.17",
+    "Exod.13.5",
+    "Exod.33.3",
+    "Lev.20.24",
+    "Num.14.8",
+    "Num.16.13",
+    "Num.16.14",
+    "Deut.6.3",
+    "Deut.11.9",
+    "Deut.26.9",
+    "Deut.26.15",
+    "Deut.27.3",
+    "Deut.31.20",
+    "Josh.5.6",
+    "Jer.11.5",
+    "Jer.32.22",
+    "Ezek.20.6",
+    "Ezek.20.15"
+   ],
+   "across": [],
+   "signature": {
+    "Hebrew": [
+     "אֶרֶץ",
+     "זוּב",
+     "חָלָב",
+     "דְּבַשׁ"
+    ]
+   },
+   "example": "Exod.3.8",
+   "variants": []
+  },
+  {
+   "id": "r:must_be_put_to_death",
+   "title": "Must be put to death",
+   "phrase": "must be put to death",
+   "n": 17,
+   "chapters": 14,
+   "books": 8,
+   "english": [
+    "Exod.21.16",
+    "Exod.35.2",
+    "Lev.20.2",
+    "Lev.20.9",
+    "Lev.20.15",
+    "Lev.24.16",
+    "Lev.24.21",
+    "Num.1.51",
+    "Num.3.10",
+    "Num.18.7",
+    "Deut.13.5",
+    "Deut.17.12",
+    "Deut.18.20",
+    "2Kgs.11.8",
+    "2Chr.23.7",
+    "Matt.15.4",
+    "Mark.7.10"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.21.16",
+   "variants": []
+  },
+  {
+   "id": "r:his_loving_devotion_endures_forever",
+   "title": "His loving devotion endures forever",
+   "phrase": "his loving devotion endures forever",
+   "n": 41,
+   "chapters": 10,
+   "books": 4,
+   "english": [
+    "1Chr.16.34",
+    "1Chr.16.41",
+    "2Chr.5.13",
+    "2Chr.7.3",
+    "2Chr.7.6",
+    "2Chr.20.21",
+    "Ps.100.5",
+    "Ps.106.1",
+    "Ps.107.1",
+    "Ps.118.1",
+    "Ps.118.2",
+    "Ps.118.3",
+    "Ps.118.4",
+    "Ps.118.29",
+    "Ps.136.1",
+    "Ps.136.2",
+    "Ps.136.3",
+    "Ps.136.4",
+    "Ps.136.5",
+    "Ps.136.6",
+    "Ps.136.7",
+    "Ps.136.8",
+    "Ps.136.9",
+    "Ps.136.10",
+    "Ps.136.11",
+    "Ps.136.12",
+    "Ps.136.13",
+    "Ps.136.14",
+    "Ps.136.15",
+    "Ps.136.16",
+    "Ps.136.17",
+    "Ps.136.18",
+    "Ps.136.19",
+    "Ps.136.20",
+    "Ps.136.21",
+    "Ps.136.22",
+    "Ps.136.23",
+    "Ps.136.24",
+    "Ps.136.25",
+    "Ps.136.26",
+    "Jer.33.11"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "1Chr.16.34",
+   "variants": [
+    "give thanks to the lord for he is good his loving devotion endures forever"
+   ]
+  },
+  {
+   "id": "r:says_the_lord_of_hosts",
+   "title": "Says the LORD of Hosts",
+   "phrase": "says the lord of hosts",
+   "n": 106,
+   "chapters": 43,
+   "books": 8,
+   "english": [
+    "Isa.45.13",
+    "Jer.7.3",
+    "Hag.2.7",
+    "Hag.2.9",
+    "Zech.1.3",
+    "Zech.4.6",
+    "Zech.7.13",
+    "Zech.8.14",
+    "Mal.1.6",
+    "Mal.1.10",
+    "Mal.1.11",
+    "Mal.1.13",
+    "Mal.1.14",
+    "Mal.2.2",
+    "Mal.2.4",
+    "Mal.2.8",
+    "Mal.2.16",
+    "Mal.3.1",
+    "Mal.3.5",
+    "Mal.3.7",
+    "Mal.3.10",
+    "Mal.3.11",
+    "Mal.3.12",
+    "Mal.3.17",
+    "Mal.4.1",
+    "Mal.4.3"
+   ],
+   "across": [
+    "1Sam.1.11",
+    "1Sam.15.2",
+    "2Sam.7.8",
+    "2Sam.7.26",
+    "1Chr.17.7",
+    "1Chr.17.24",
+    "Jer.6.6",
+    "Jer.6.9",
+    "Jer.7.21",
+    "Jer.9.7",
+    "Jer.9.15",
+    "Jer.9.17",
+    "Jer.11.22",
+    "Jer.16.9",
+    "Jer.19.3",
+    "Jer.19.11",
+    "Jer.19.15",
+    "Jer.23.15",
+    "Jer.23.16",
+    "Jer.25.8",
+    "Jer.25.27",
+    "Jer.25.28",
+    "Jer.25.32",
+    "Jer.26.18",
+    "Jer.27.4",
+    "Jer.27.19",
+    "Jer.27.21",
+    "Jer.28.2",
+    "Jer.28.14",
+    "Jer.29.4",
+    "Jer.29.8",
+    "Jer.29.17",
+    "Jer.29.21",
+    "Jer.29.25",
+    "Jer.31.23",
+    "Jer.32.14",
+    "Jer.32.15",
+    "Jer.33.12",
+    "Jer.35.13",
+    "Jer.35.18",
+    "Jer.35.19",
+    "Jer.39.16",
+    "Jer.42.15",
+    "Jer.42.18",
+    "Jer.43.10",
+    "Jer.44.2",
+    "Jer.44.11",
+    "Jer.44.25",
+    "Jer.46.25",
+    "Jer.48.1",
+    "Jer.49.7",
+    "Jer.49.35",
+    "Jer.50.18",
+    "Jer.50.33",
+    "Jer.51.33",
+    "Jer.51.58",
+    "Hag.1.2",
+    "Hag.1.5",
+    "Hag.1.7",
+    "Hag.2.6",
+    "Hag.2.11",
+    "Zech.1.4",
+    "Zech.1.12",
+    "Zech.1.14",
+    "Zech.1.17",
+    "Zech.2.8",
+    "Zech.3.7",
+    "Zech.6.12",
+    "Zech.7.9",
+    "Zech.8.2",
+    "Zech.8.4",
+    "Zech.8.6",
+    "Zech.8.7",
+    "Zech.8.9",
+    "Zech.8.19",
+    "Zech.8.20",
+    "Zech.8.23",
+    "Mal.1.4",
+    "Mal.1.8",
+    "Mal.1.9"
+   ],
+   "signature": {
+    "Hebrew": [
+     "אָמַר",
+     "יהוה",
+     "צָבָא"
+    ]
+   },
+   "example": "Isa.45.13",
+   "variants": []
+  },
+  {
+   "id": "r:truly_truly_i_tell_you",
+   "title": "Truly, truly, I tell you",
+   "phrase": "truly truly i tell you",
+   "n": 25,
+   "chapters": 11,
+   "books": 1,
+   "english": [
+    "John.1.51",
+    "John.3.3",
+    "John.3.5",
+    "John.3.11",
+    "John.5.19",
+    "John.5.24",
+    "John.5.25",
+    "John.6.26",
+    "John.6.32",
+    "John.6.47",
+    "John.6.53",
+    "John.8.34",
+    "John.8.51",
+    "John.8.58",
+    "John.10.1",
+    "John.10.7",
+    "John.12.24",
+    "John.13.16",
+    "John.13.20",
+    "John.13.21",
+    "John.13.38",
+    "John.14.12",
+    "John.16.20",
+    "John.16.23",
+    "John.21.18"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "John.1.51",
+   "variants": [
+    "truly truly i tell you whoever",
+    "jesus replied truly truly i tell you"
+   ]
+  },
+  {
+   "id": "r:the_lord_said_to_moses_and_aaron",
+   "title": "The LORD said to Moses and Aaron",
+   "phrase": "the lord said to moses and aaron",
+   "n": 15,
+   "chapters": 12,
+   "books": 3,
+   "english": [
+    "Exod.7.8",
+    "Exod.9.8",
+    "Exod.12.1",
+    "Exod.12.43",
+    "Lev.13.1",
+    "Lev.14.33",
+    "Lev.15.1",
+    "Num.2.1",
+    "Num.4.1",
+    "Num.4.17",
+    "Num.14.26",
+    "Num.16.20",
+    "Num.19.1",
+    "Num.20.12",
+    "Num.20.23"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.7.8",
+   "variants": []
+  },
+  {
+   "id": "r:came_to_him_and_said",
+   "title": "Came to him and said",
+   "phrase": "came to him and said",
+   "n": 19,
+   "chapters": 18,
+   "books": 10,
+   "english": [
+    "2Sam.12.1",
+    "1Kgs.19.13",
+    "1Kgs.21.5",
+    "2Kgs.20.1",
+    "2Chr.25.7",
+    "Isa.38.1",
+    "Jonah.1.6",
+    "Matt.4.3",
+    "Matt.8.19",
+    "Matt.13.27",
+    "Matt.13.36",
+    "Matt.14.15",
+    "Matt.15.12",
+    "Matt.19.16",
+    "Mark.6.35",
+    "Mark.14.45",
+    "John.3.26",
+    "John.10.41",
+    "Acts.10.3"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "1Kgs.19.13",
+   "variants": [
+    "disciples came to him and said"
+   ]
+  },
+  {
+   "id": "r:do_you_not_know_that",
+   "title": "Do you not know that",
+   "phrase": "do you not know that",
+   "n": 16,
+   "chapters": 11,
+   "books": 8,
+   "english": [
+    "Gen.44.15",
+    "1Kgs.22.3",
+    "2Chr.13.5",
+    "Job.20.4",
+    "John.19.10",
+    "Rom.6.16",
+    "1Cor.3.16",
+    "1Cor.5.6",
+    "1Cor.6.2",
+    "1Cor.6.3",
+    "1Cor.6.9",
+    "1Cor.6.15",
+    "1Cor.6.19",
+    "1Cor.9.13",
+    "1Cor.9.24",
+    "Jas.4.4"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Gen.44.15",
+   "variants": []
+  },
+  {
+   "id": "r:along_with_all_his_accomplishments",
+   "title": "Along with all his accomplishments",
+   "phrase": "along with all his accomplishments",
+   "n": 16,
+   "chapters": 11,
+   "books": 2,
+   "english": [
+    "1Kgs.15.7",
+    "1Kgs.15.31",
+    "1Kgs.16.14",
+    "1Kgs.22.39",
+    "2Kgs.8.23",
+    "2Kgs.10.34",
+    "2Kgs.12.19",
+    "2Kgs.13.8",
+    "2Kgs.13.12",
+    "2Kgs.14.28",
+    "2Kgs.15.6",
+    "2Kgs.15.21",
+    "2Kgs.15.26",
+    "2Kgs.15.31",
+    "2Kgs.21.17",
+    "2Kgs.24.5"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "1Kgs.15.7",
+   "variants": [
+    "along with all his accomplishments are they not written in the book of the chronicles of the kings of judah"
+   ]
+  },
+  {
+   "id": "r:i_the_lord_have_spoken",
+   "title": "I, the LORD, have spoken",
+   "phrase": "i the lord have spoken",
+   "n": 15,
+   "chapters": 11,
+   "books": 2,
+   "english": [
+    "Num.14.35",
+    "Ezek.5.13",
+    "Ezek.5.15",
+    "Ezek.5.17",
+    "Ezek.17.21",
+    "Ezek.17.24",
+    "Ezek.21.17",
+    "Ezek.21.32",
+    "Ezek.22.14",
+    "Ezek.24.14",
+    "Ezek.26.14",
+    "Ezek.30.12",
+    "Ezek.34.24",
+    "Ezek.36.36",
+    "Ezek.37.14"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Num.14.35",
+   "variants": []
+  },
+  {
+   "id": "r:will_know_that_i_the_lord",
+   "title": "Will know that I, the LORD",
+   "phrase": "will know that i the lord",
+   "n": 14,
+   "chapters": 12,
+   "books": 3,
+   "english": [
+    "Exod.8.22",
+    "Isa.49.26",
+    "Isa.60.16",
+    "Ezek.5.13",
+    "Ezek.7.9",
+    "Ezek.17.21",
+    "Ezek.17.24",
+    "Ezek.21.5",
+    "Ezek.22.22",
+    "Ezek.34.30",
+    "Ezek.35.12",
+    "Ezek.36.36",
+    "Ezek.37.14",
+    "Ezek.37.28"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.8.22",
+   "variants": []
+  },
+  {
+   "id": "r:cried_out_in_a_loud_voice",
+   "title": "He cried out in a loud voice",
+   "phrase": "cried out in a loud voice",
+   "n": 12,
+   "chapters": 11,
+   "books": 8,
+   "english": [
+    "1Sam.28.12",
+    "Neh.9.4",
+    "Ezek.11.13",
+    "Matt.27.46",
+    "Mark.15.34",
+    "Luke.4.33",
+    "Acts.7.57",
+    "Acts.7.60",
+    "Rev.6.10",
+    "Rev.7.10",
+    "Rev.10.3",
+    "Rev.19.17"
+   ],
+   "across": [],
+   "signature": {
+    "Hebrew": [
+     "זָעַק",
+     "זָעַק",
+     "גָּדוֹל",
+     "קוֹל"
+    ]
+   },
+   "example": "Luke.4.33",
+   "variants": [
+    "he cried out in a loud voice"
+   ]
+  },
+  {
+   "id": "r:the_word_of_the_lord_came_to_jeremiah",
+   "title": "The word of the LORD came to Jeremiah",
+   "phrase": "the word of the lord came to jeremiah",
+   "n": 18,
+   "chapters": 16,
+   "books": 2,
+   "english": [
+    "Jer.1.2",
+    "Jer.28.12",
+    "Jer.29.30",
+    "Jer.32.26",
+    "Jer.33.19",
+    "Jer.33.23",
+    "Jer.34.12",
+    "Jer.35.12",
+    "Jer.36.27",
+    "Jer.37.6",
+    "Jer.42.7",
+    "Jer.43.8"
+   ],
+   "across": [
+    "Jer.14.1",
+    "Jer.33.1",
+    "Jer.46.1",
+    "Jer.47.1",
+    "Jer.49.34",
+    "Dan.9.2"
+   ],
+   "signature": {
+    "Hebrew": [
+     "דָּבָר",
+     "יהוה",
+     "הָיָה",
+     "יִרְמְיָהוּ"
+    ]
+   },
+   "example": "Jer.1.2",
+   "variants": []
+  },
+  {
+   "id": "r:do_not_be_afraid_of_them",
+   "title": "Do not be afraid of them",
+   "phrase": "do not be afraid of them",
+   "n": 11,
+   "chapters": 11,
+   "books": 7,
+   "english": [
+    "Num.14.9",
+    "Deut.3.22",
+    "Deut.7.18",
+    "Deut.20.1",
+    "Josh.10.8",
+    "Josh.11.6",
+    "Neh.4.14",
+    "Jer.1.8",
+    "Ezek.2.6",
+    "Ezek.3.9",
+    "Matt.10.26"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Num.14.9",
+   "variants": []
+  },
+  {
+   "id": "r:they_said_to_one_another",
+   "title": "They said to one another",
+   "phrase": "they said to one another",
+   "n": 14,
+   "chapters": 12,
+   "books": 9,
+   "english": [
+    "Gen.11.3",
+    "Gen.37.19",
+    "Gen.42.21",
+    "Exod.16.15",
+    "Num.14.4",
+    "Judg.6.29",
+    "2Kgs.7.3",
+    "2Kgs.7.6",
+    "2Kgs.7.9",
+    "Matt.21.38",
+    "Luke.24.32",
+    "John.19.24",
+    "Acts.26.31",
+    "Acts.28.4"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Gen.11.3",
+   "variants": []
+  },
+  {
+   "id": "r:i_am_giving_you_today",
+   "title": "Commandments I am giving you today",
+   "phrase": "i am giving you today",
+   "n": 15,
+   "chapters": 9,
+   "books": 1,
+   "english": [
+    "Deut.4.40",
+    "Deut.8.1",
+    "Deut.11.8",
+    "Deut.11.13",
+    "Deut.11.27",
+    "Deut.13.18",
+    "Deut.15.5",
+    "Deut.19.9",
+    "Deut.27.1",
+    "Deut.27.10",
+    "Deut.28.1",
+    "Deut.28.13",
+    "Deut.28.15",
+    "Deut.30.2",
+    "Deut.30.8"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Deut.11.13",
+   "variants": [
+    "commandments i am giving you today"
+   ]
+  },
+  {
+   "id": "r:and_i_will_give_you",
+   "title": "And I will give you",
+   "phrase": "and i will give you",
+   "n": 22,
+   "chapters": 21,
+   "books": 13,
+   "english": [
+    "Gen.34.11",
+    "Gen.34.12",
+    "Gen.45.18",
+    "Gen.47.16",
+    "Exod.2.9",
+    "Exod.24.12",
+    "Exod.33.14",
+    "Num.22.8",
+    "Judg.17.10",
+    "1Kgs.5.6",
+    "1Kgs.11.31",
+    "1Kgs.13.7",
+    "1Kgs.21.2",
+    "2Kgs.18.23",
+    "Ps.118.28",
+    "Isa.36.8",
+    "Jer.3.15",
+    "Ezek.11.17",
+    "Ezek.36.26",
+    "Zech.3.7",
+    "Matt.11.28",
+    "Rev.2.10"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Gen.34.11",
+   "variants": []
+  },
+  {
+   "id": "r:the_one_who_sent_me",
+   "title": "The One who sent Me",
+   "phrase": "the one who sent me",
+   "n": 12,
+   "chapters": 11,
+   "books": 4,
+   "english": [
+    "Matt.10.40",
+    "Mark.9.37",
+    "Luke.9.48",
+    "Luke.10.16",
+    "John.1.33",
+    "John.6.40",
+    "John.7.33",
+    "John.8.26",
+    "John.12.44",
+    "John.12.45",
+    "John.13.20",
+    "John.15.21"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Matt.10.40",
+   "variants": []
+  },
+  {
+   "id": "r:must_surely_be_put_to_death",
+   "title": "Must surely be put to death",
+   "phrase": "must surely be put to death",
+   "n": 21,
+   "chapters": 8,
+   "books": 3,
+   "english": [
+    "Exod.21.12",
+    "Exod.21.15",
+    "Exod.21.17",
+    "Exod.22.19",
+    "Exod.31.14",
+    "Exod.31.15",
+    "Lev.20.10",
+    "Lev.20.11",
+    "Lev.20.12",
+    "Lev.20.13",
+    "Lev.20.16",
+    "Lev.20.27",
+    "Lev.24.16",
+    "Lev.24.17",
+    "Lev.27.29",
+    "Num.15.35",
+    "Num.35.16",
+    "Num.35.17",
+    "Num.35.18",
+    "Num.35.21",
+    "Num.35.31"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.21.12",
+   "variants": []
+  },
+  {
+   "id": "r:have_sinned_against_the_lord",
+   "title": "We have sinned against the LORD",
+   "phrase": "have sinned against the lord",
+   "n": 12,
+   "chapters": 12,
+   "books": 8,
+   "english": [
+    "Exod.10.16",
+    "Num.32.23",
+    "Deut.1.41",
+    "Josh.7.20",
+    "1Sam.7.6",
+    "2Sam.12.13",
+    "Jer.3.25",
+    "Jer.8.14",
+    "Jer.40.3",
+    "Jer.44.23",
+    "Jer.50.7",
+    "Zeph.1.17"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Deut.1.41",
+   "variants": [
+    "we have sinned against the lord"
+   ]
+  },
+  {
+   "id": "r:so_that_you_may_know_that",
+   "title": "So that you may know that",
+   "phrase": "so that you may know that",
+   "n": 10,
+   "chapters": 10,
+   "books": 8,
+   "english": [
+    "Exod.8.10",
+    "Exod.9.29",
+    "Exod.31.13",
+    "Isa.45.3",
+    "Jer.44.29",
+    "Ezek.20.20",
+    "Matt.9.6",
+    "Mark.2.10",
+    "Luke.5.24",
+    "1John.5.13"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.8.10",
+   "variants": []
+  },
+  {
+   "id": "r:brought_them_out_of_the_land_of_egypt",
+   "title": "Brought them out of the land of Egypt",
+   "phrase": "brought them out of the land of egypt",
+   "n": 11,
+   "chapters": 11,
+   "books": 9,
+   "english": [
+    "Exod.29.46",
+    "Lev.23.43",
+    "Deut.29.25",
+    "Judg.2.12",
+    "1Kgs.8.21",
+    "2Kgs.17.7",
+    "2Chr.7.22",
+    "Jer.7.22",
+    "Jer.11.4",
+    "Jer.34.13",
+    "Ezek.20.10"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.29.46",
+   "variants": []
+  },
+  {
+   "id": "r:as_surely_as_i_live_declares_the_lord",
+   "title": "As surely as I live, declares the Lord GOD",
+   "phrase": "as surely as i live declares the lord god",
+   "n": 13,
+   "chapters": 9,
+   "books": 1,
+   "english": [
+    "Ezek.5.11",
+    "Ezek.14.16",
+    "Ezek.14.18",
+    "Ezek.14.20",
+    "Ezek.16.48",
+    "Ezek.17.16",
+    "Ezek.18.3",
+    "Ezek.20.31",
+    "Ezek.20.33",
+    "Ezek.33.11",
+    "Ezek.34.8",
+    "Ezek.35.6",
+    "Ezek.35.11"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Ezek.5.11",
+   "variants": []
+  },
+  {
+   "id": "r:the_lord_said_to_joshua",
+   "title": "The LORD said to Joshua",
+   "phrase": "the lord said to joshua",
+   "n": 12,
+   "chapters": 9,
+   "books": 1,
+   "english": [
+    "Josh.3.7",
+    "Josh.4.1",
+    "Josh.4.15",
+    "Josh.5.2",
+    "Josh.5.9",
+    "Josh.6.2",
+    "Josh.7.10",
+    "Josh.8.1",
+    "Josh.8.18",
+    "Josh.10.8",
+    "Josh.11.6",
+    "Josh.20.1"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Josh.3.7",
+   "variants": []
+  },
+  {
+   "id": "r:obey_the_voice_of_the_lord",
+   "title": "Obey the voice of the LORD your God",
+   "phrase": "obey the voice of the lord",
+   "n": 33,
+   "chapters": 24,
+   "books": 10,
+   "english": [
+    "Deut.27.10",
+    "Deut.28.1",
+    "Deut.28.2",
+    "Deut.28.62",
+    "Deut.30.8",
+    "Jer.26.13",
+    "Jer.38.20",
+    "Jer.42.6",
+    "Jer.43.7",
+    "Jer.44.23",
+    "Zech.6.15"
+   ],
+   "across": [
+    "Exod.15.26",
+    "Deut.8.20",
+    "Deut.13.18",
+    "Deut.15.5",
+    "Deut.26.14",
+    "Deut.28.15",
+    "Deut.28.45",
+    "Deut.30.10",
+    "Josh.5.6",
+    "1Sam.12.15",
+    "1Sam.15.19",
+    "1Sam.15.20",
+    "1Sam.15.22",
+    "1Sam.28.18",
+    "1Kgs.20.36",
+    "2Kgs.18.12",
+    "Ps.106.25",
+    "Jer.3.25",
+    "Jer.7.28",
+    "Jer.42.13",
+    "Jer.42.21",
+    "Dan.9.10"
+   ],
+   "signature": {
+    "Hebrew": [
+     "שָׁמַע",
+     "קוֹל",
+     "יהוה"
+    ]
+   },
+   "example": "Deut.27.10",
+   "variants": [
+    "obey the voice of the lord your god"
+   ]
+  },
+  {
+   "id": "r:raised_him_from_the_dead",
+   "title": "Raised him from the dead",
+   "phrase": "raised him from the dead",
+   "n": 11,
+   "chapters": 10,
+   "books": 7,
+   "english": [
+    "John.12.17",
+    "Acts.2.24",
+    "Acts.3.15",
+    "Acts.13.30",
+    "Acts.13.34",
+    "Acts.17.31",
+    "Rom.10.9",
+    "Gal.1.1",
+    "Eph.1.20",
+    "Col.2.12",
+    "1Pet.1.21"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "John.12.17",
+   "variants": []
+  },
+  {
+   "id": "r:i_have_spoken_to_you",
+   "title": "I have spoken to you",
+   "phrase": "i have spoken to you",
+   "n": 15,
+   "chapters": 11,
+   "books": 3,
+   "english": [
+    "Exod.20.22",
+    "Exod.32.34",
+    "Jer.7.13",
+    "Jer.25.3",
+    "Jer.30.2",
+    "Jer.35.14",
+    "Jer.36.2",
+    "John.6.63",
+    "John.14.25",
+    "John.15.3",
+    "John.15.11",
+    "John.16.1",
+    "John.16.4",
+    "John.16.25",
+    "John.16.33"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.20.22",
+   "variants": []
+  },
+  {
+   "id": "r:and_he_said_to_me",
+   "title": "And He said to me",
+   "phrase": "and he said to me",
+   "n": 14,
+   "chapters": 14,
+   "books": 5,
+   "english": [
+    "Deut.5.28",
+    "1Chr.28.6",
+    "Ezek.3.22",
+    "Ezek.11.5",
+    "Ezek.37.4",
+    "Ezek.41.4",
+    "Ezek.43.7",
+    "Ezek.46.24",
+    "Ezek.47.8",
+    "2Cor.12.9",
+    "Rev.7.14",
+    "Rev.19.9",
+    "Rev.21.6",
+    "Rev.22.6"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Deut.5.28",
+   "variants": []
+  },
+  {
+   "id": "r:will_be_put_to_shame",
+   "title": "Will be put to shame",
+   "phrase": "will be put to shame",
+   "n": 9,
+   "chapters": 9,
+   "books": 3,
+   "english": [
+    "Ps.25.3",
+    "Ps.109.28",
+    "Isa.30.5",
+    "Isa.44.11",
+    "Isa.65.13",
+    "Isa.66.5",
+    "Jer.8.9",
+    "Jer.17.13",
+    "Jer.46.24"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Ps.25.3",
+   "variants": []
+  },
+  {
+   "id": "r:of_israel_declares_the_lord",
+   "title": "O house of Israel,” declares the LORD",
+   "phrase": "of israel declares the lord",
+   "n": 12,
+   "chapters": 11,
+   "books": 4,
+   "english": [
+    "Jer.3.20",
+    "Jer.5.15",
+    "Jer.18.6",
+    "Ezek.20.40",
+    "Ezek.38.18",
+    "Ezek.39.29",
+    "Amos.2.11",
+    "Amos.6.14",
+    "Amos.9.7"
+   ],
+   "across": [
+    "Jer.3.12",
+    "Jer.4.1",
+    "Zech.12.1"
+   ],
+   "signature": {
+    "Hebrew": [
+     "יִשְׂרָאֵל",
+     "נְאֻם",
+     "יהוה"
+    ]
+   },
+   "example": "Jer.3.20",
+   "variants": [
+    "o house of israel declares the lord"
+   ]
+  },
+  {
+   "id": "r:blessed_be_the_lord_the_god_of_israel",
+   "title": "Blessed be the LORD, the God of Israel",
+   "phrase": "blessed be the lord the god of israel",
+   "n": 9,
+   "chapters": 9,
+   "books": 6,
+   "english": [
+    "1Sam.25.32",
+    "1Kgs.1.48",
+    "1Kgs.8.15",
+    "1Chr.16.36",
+    "2Chr.2.12",
+    "2Chr.6.4",
+    "Ps.41.13",
+    "Ps.106.48",
+    "Luke.1.68"
+   ],
+   "across": [],
+   "signature": {
+    "Hebrew": [
+     "בָּרַךְ",
+     "יהוה",
+     "יהוה",
+     "יִשְׂרָאֵל"
+    ]
+   },
+   "example": "1Sam.25.32",
+   "variants": []
+  },
+  {
+   "id": "r:this_is_the_word_that_came_to_jeremiah",
+   "title": "This is the word that came to Jeremiah from the LORD",
+   "phrase": "this is the word that came to jeremiah from the lord",
+   "n": 9,
+   "chapters": 9,
+   "books": 1,
+   "english": [
+    "Jer.7.1",
+    "Jer.11.1",
+    "Jer.18.1",
+    "Jer.21.1",
+    "Jer.30.1",
+    "Jer.32.1",
+    "Jer.34.1",
+    "Jer.35.1",
+    "Jer.40.1"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Jer.7.1",
+   "variants": []
+  },
+  {
+   "id": "r:had_caused_israel_to_commit",
+   "title": "The sins that Jeroboam son of Nebat had caused Israel to commit",
+   "phrase": "had caused israel to commit",
+   "n": 16,
+   "chapters": 7,
+   "books": 2,
+   "english": [
+    "1Kgs.15.26",
+    "1Kgs.15.30",
+    "1Kgs.15.34",
+    "1Kgs.16.13",
+    "1Kgs.16.19",
+    "2Kgs.3.3",
+    "2Kgs.10.29",
+    "2Kgs.10.31",
+    "2Kgs.13.2",
+    "2Kgs.13.6",
+    "2Kgs.13.11",
+    "2Kgs.14.24",
+    "2Kgs.15.9",
+    "2Kgs.15.18",
+    "2Kgs.15.24",
+    "2Kgs.15.28"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "2Kgs.3.3",
+   "variants": [
+    "the sins that jeroboam son of nebat had caused israel to commit"
+   ]
+  },
+  {
+   "id": "r:he_swore_to_your_fathers",
+   "title": "He swore to your fathers",
+   "phrase": "he swore to your fathers",
+   "n": 10,
+   "chapters": 8,
+   "books": 2,
+   "english": [
+    "Exod.13.5",
+    "Deut.6.10",
+    "Deut.7.8",
+    "Deut.7.12",
+    "Deut.7.13",
+    "Deut.8.18",
+    "Deut.9.5",
+    "Deut.13.17",
+    "Deut.19.8",
+    "Deut.29.13"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.13.5",
+   "variants": []
+  },
+  {
+   "id": "r:if_it_pleases_the_king",
+   "title": "If it pleases the king",
+   "phrase": "if it pleases the king",
+   "n": 10,
+   "chapters": 8,
+   "books": 3,
+   "english": [
+    "Ezra.5.17",
+    "Neh.2.5",
+    "Neh.2.7",
+    "Esth.1.19",
+    "Esth.3.9",
+    "Esth.5.4",
+    "Esth.5.8",
+    "Esth.7.3",
+    "Esth.8.5",
+    "Esth.9.13"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Ezra.5.17",
+   "variants": []
+  },
+  {
+   "id": "r:for_i_tell_you_that",
+   "title": "For I tell you that",
+   "phrase": "for i tell you that",
+   "n": 12,
+   "chapters": 10,
+   "books": 3,
+   "english": [
+    "Matt.3.9",
+    "Matt.5.20",
+    "Matt.18.10",
+    "Matt.23.39",
+    "Luke.3.8",
+    "Luke.10.24",
+    "Luke.14.24",
+    "Luke.19.26",
+    "Luke.22.16",
+    "Luke.22.18",
+    "Luke.22.37",
+    "Rom.15.8"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Matt.3.9",
+   "variants": []
+  },
+  {
+   "id": "r:like_a_woman_in_labor",
+   "title": "Like a woman in labor",
+   "phrase": "like a woman in labor",
+   "n": 9,
+   "chapters": 8,
+   "books": 4,
+   "english": [
+    "Ps.48.6",
+    "Isa.13.8",
+    "Isa.42.14",
+    "Jer.4.31",
+    "Jer.22.23",
+    "Jer.30.6",
+    "Jer.49.24",
+    "Mic.4.9",
+    "Mic.4.10"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Ps.48.6",
+   "variants": []
+  },
+  {
+   "id": "r:do_not_be_afraid_or_discouraged",
+   "title": "Do not be afraid or discouraged",
+   "phrase": "do not be afraid or discouraged",
+   "n": 9,
+   "chapters": 8,
+   "books": 4,
+   "english": [
+    "Deut.1.21",
+    "Deut.31.8",
+    "Josh.8.1",
+    "Josh.10.25",
+    "1Chr.22.13",
+    "1Chr.28.20",
+    "2Chr.20.15",
+    "2Chr.20.17",
+    "2Chr.32.7"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Deut.1.21",
+   "variants": []
+  },
+  {
+   "id": "r:this_is_what_the_lord_has_commanded",
+   "title": "This is what the LORD has commanded",
+   "phrase": "this is what the lord has commanded",
+   "n": 9,
+   "chapters": 8,
+   "books": 4,
+   "english": [
+    "Exod.16.16",
+    "Exod.16.32",
+    "Exod.35.4",
+    "Lev.8.5",
+    "Lev.9.6",
+    "Lev.17.2",
+    "Num.30.1",
+    "Num.36.6",
+    "Acts.13.47"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Exod.16.16",
+   "variants": []
+  },
+  {
+   "id": "r:i_will_stretch_out_my_hand_against",
+   "title": "I will stretch out My hand against",
+   "phrase": "i will stretch out my hand against",
+   "n": 9,
+   "chapters": 8,
+   "books": 3,
+   "english": [
+    "Jer.6.12",
+    "Jer.15.6",
+    "Jer.51.25",
+    "Ezek.6.14",
+    "Ezek.14.9",
+    "Ezek.25.13",
+    "Ezek.25.16",
+    "Ezek.35.3",
+    "Zeph.1.4"
+   ],
+   "across": [],
+   "signature": {},
+   "example": "Jer.6.12",
+   "variants": []
+  }
+ ]
+}

@@ -1,0 +1,194 @@
+{
+  "id": "prayer",
+  "overall": "ship after fixes",
+  "fixes": [
+    {
+      "row": "Jesus prays",
+      "kind": "misfit",
+      "verses": ["Matt.19.13"],
+      "readers": ["Baptist / free church", "Reformed", "secular academic", "biblical-theological"],
+      "why": "Matt 19:13 says children were brought to Jesus 'for Him to place His hands on them and pray for them'. That is a request that He pray; the verse does not say He prayed (the disciples rebuke the people). Under the label 'Jesus prays' it says more than the verse does (rule 1).",
+      "fix": "Move Matt 19:13 out of 'Jesus prays' into 'Asked to pray for them' (it fits that row's note: a person asking another to pray for them). Optionally add to 'Jesus prays' a one-line note: 'Where a verse says only \"He\", the verses just before name Jesus; Luke 22:43-44 is absent from some early manuscripts.'"
+    },
+    {
+      "row": "Prayed to the LORD, to God",
+      "kind": "label",
+      "verses": ["Exod.8.8", "Exod.9.28", "Exod.10.17", "Num.21.7", "1Sam.12.19", "Jer.29.7", "Jer.37.3", "Jer.42.2", "Jer.42.20"],
+      "readers": ["secular academic", "rabbi", "Lutheran"],
+      "why": "The label is in the past tense ('Prayed') but at least nine of the 44 verses are commands or requests ('Pray to the LORD...', 'Intercede with the LORD...'), and several are spoken by Pharaoh, Zedekiah and the remnant. The label claims an act the verse does not show. The divine word in the rest is the one prayed to (checked all 44); no verse was found where the divine word is only a measure or a bystander.",
+      "fix": "Relabel 'Praying to the LORD, to God' (covers both what was prayed and what was asked of others), or split the nine request/command verses into the 'Asked to pray for them' row they already sit in."
+    },
+    {
+      "row": "Prayed for others, on their behalf",
+      "kind": "misfit",
+      "verses": ["Jer.7.16", "Jer.11.14", "Jer.14.11"],
+      "readers": ["rabbi", "Reformed", "secular academic", "Lutheran"],
+      "why": "These three verses forbid praying for the people ('do not pray for these people'). In a row labelled 'Prayed for others' they read as the opposite of what they say, and they already have their own row. The row also holds bare requests ('Pray for us', 'Now pray for me') under a past-tense label.",
+      "fix": "Drop Jer 7:16, 11:14 and 14:11 from this row (they stay in '\"Do not pray for this people\"'), and relabel 'Praying for others, on their behalf' so the requests (Col 4:3, 1 Thess 5:25, Heb 13:18) fit."
+    },
+    {
+      "row": "Hearing and answering prayer",
+      "kind": "label",
+      "verses": ["Isa.1.15", "Jer.7.16", "Jer.11.14", "Ps.35.13"],
+      "readers": ["African American believer", "rabbi", "Wesleyan", "Baptist / free church"],
+      "why": "Four verses say God does NOT hear ('I will not listen', 'my prayers returned unanswered'). Under 'Hearing and answering prayer' they are softened into the row's tone (rule 1), and the text's honest content about unanswered and refused prayer (lament, Lamentations) has no place of its own (see missing).",
+      "fix": "Move these four verses (with Lam 3:8, 3:44, Ps 80:4, Prov 28:9, 1 Pet 3:7 from the catch-all) to a new row 'Prayer not heard, shut out, unanswered'; if the row is not made, relabel 'Prayer heard, asked to be heard, and refused'."
+    },
+    {
+      "row": "Prayer rises before God, like incense",
+      "kind": "label",
+      "verses": ["Rev.5.8", "Jonah.2.7", "2Chr.30.27", "Acts.10.4"],
+      "readers": ["Catholic / Orthodox", "Baptist / free church", "secular academic", "biblical-theological"],
+      "why": "The label says more than its verses. Only Ps 141:2, Rev 5:8 and Rev 8:3-4 have incense; Jonah 2:7, 2 Chr 30:27 and Acts 10:4 do not. Rev 5:8 has the prayers held in bowls by the elders before the Lamb, not rising 'before God' (rule 3: the Lamb is not to be folded into 'God' by label). The note itself is neutral and fair to all seats: the text's picture is kept, and 'what that shows about the saints and the angels, readers part on' takes no side. Nothing there reads as a case for or against prayer to saints or the Virgin.",
+      "fix": "Relabel 'Prayer goes up to God; prayers and incense' and add to the note: 'Incense is in Ps 141:2 and Rev 5:8, 8:3-4; in Rev 5:8 the bowls are before the Lamb.' Keep the existing note sentence."
+    },
+    {
+      "row": "Prayer and the Spirit",
+      "kind": "OT framing",
+      "verses": ["Zech.12.10", "1Cor.14.14", "1Cor.14.15"],
+      "readers": ["rabbi", "Baptist / free church", "Pentecostal / Charismatic", "secular academic"],
+      "why": "(a) Zech 12:10 sits last under a heading with a capital S in a row led by Ephesians and Jude. In the Hebrew it is רוּחַ חֵן וְתַחֲנוּנִים, 'a spirit of grace and supplications' poured out by God; it is not an instance of praying in the Spirit, and the OT should be heard first (rule 5). (b) 'the Spirit' as label leans to the reading that 1 Cor 14:14's 'my spirit' is the Holy Spirit; the Berean prints it lower-case and the note rightly says the page does not choose. Labelling and note should agree.",
+      "fix": "Relabel 'Prayer and the Spirit, or the spirit'. List Zech 12:10 first and add to the note: 'In Zech 12:10 the Hebrew is \"a spirit of grace and supplications\".' The 1 Cor 14:14-15 handling (the text's own words, no tongues row, no side taken) is fair to Pentecostal, Baptist and Catholic readers alike and should stay as is."
+    },
+    {
+      "row": "Prayer and healing",
+      "kind": "OT framing",
+      "verses": ["2Chr.7.14", "Isa.19.22", "Gen.20.17"],
+      "readers": ["rabbi", "secular academic", "Wesleyan", "Pentecostal / Charismatic"],
+      "why": "The note speaks only of healing and anointing (a NT question). In 2 Chr 7:14 it is the land that is healed, in Isa 19:22 Egypt as a nation, in Gen 20:17 the barrenness of Abimelech's household. Filed beside Jas 5:14-16 and Acts 28:8 they read as the same thing (rule 5). Also, the row has Jas 5:14 and 5:16 but not 5:15 ('the prayer offered in faith will restore the one who is sick'), which is in the noun catch-all; the passage is cut in the middle.",
+      "fix": "Add to the note: 'In 2 Chr 7:14 the land is healed; in Isa 19:22, Egypt; in Gen 20:17, Abimelech's household.' List the Hebrew verses first. Add Jas 5:15 to the row (noun form) or via the new 'Prayer and faith' row."
+    },
+    {
+      "row": "Prayer, confession and forgiveness",
+      "kind": "note",
+      "verses": ["1Kgs.8.30", "1Kgs.8.35", "2Chr.6.21", "2Chr.7.14", "Neh.1.6", "Dan.9.20"],
+      "readers": ["rabbi", "Catholic / Orthodox", "Reformed"],
+      "why": "The note ('Where Christian traditions part on confession, the page takes no side') is attached to a row where seven of twelve verses are Israel's own prayers (Solomon, Nehemiah, Daniel). They are not Christian-tradition questions, and the note reads as if they were.",
+      "fix": "Reword: 'Set out as the verses have them: Israel's prayers of confession (1 Kgs 8; 2 Chr 6-7; Neh 1; Dan 9) first, then the NT verses. Where Christian traditions part on confession, the page takes no side.'"
+    },
+    {
+      "row": "Prayer for show, with many words",
+      "kind": "tilt",
+      "verses": ["Matt.6.7", "Mark.12.40", "Luke.20.47"],
+      "readers": ["Catholic / Orthodox", "Lutheran", "Pentecostal / Charismatic", "African American believer"],
+      "why": "'With many words' is the qualifier of Matt 6:7, and there it is 'babble on like pagans' and 'thinking to be heard by many words'; Mark 12:40 is 'for a show make lengthy prayers'. Stripped of 'for show' and 'like pagans', the label can be read as a verdict against long, repeated or set prayer (a liturgical reader's, and a believer who prays at length). Solomon's long prayer and Jesus' night of prayer sit in other rows.",
+      "fix": "Relabel 'Praying to be seen; \"babbling\" like the pagans' (the text's words), and add a note: 'These are Jesus' words about prayer meant to be seen and prayer thought to work by its length; the page does not draw a conclusion about set or lengthy prayer.'"
+    },
+    {
+      "row": "Prayer and petition",
+      "kind": "misfit",
+      "verses": ["Neh.1.11", "1Kgs.8.52"],
+      "readers": ["secular academic", "rabbi"],
+      "why": "The note says the text sets 'תְּפִלָּה with תְּחִנָּה or תַּחֲנוּן' side by side. Neh 1:11 has תְּפִלָּה twice and no petition word; 1 Kgs 8:52 has תְּחִנָּה twice and no prayer word. Each verse shows only one word, so rule 6 fails for them.",
+      "fix": "Remove Neh 1:11 and 1 Kgs 8:52 from this row (1 Kgs 8:52 stays in 'Hearing and answering prayer'; Neh 1:11 goes to the noun catch-all)."
+    },
+    {
+      "row": "He intercedes for us",
+      "kind": "label",
+      "verses": ["Rom.8.26", "Rom.8.27", "Rom.8.34", "Heb.7.25"],
+      "readers": ["Reformed", "Lutheran", "Catholic / Orthodox", "Pentecostal / Charismatic"],
+      "why": "The pronoun label hides two persons (rule 3: divine persons by hand). Rom 8:26-27 is the Spirit and Rom 8:34, Heb 7:25 are Christ, and the text says 'for the saints' and 'for them' as well as 'for us'. Keeping the Spirit's and Christ's intercession in one row, apart from the human rows (which have no verse of anyone asking someone who has died), is fair to every seat; the note, 'What this intercession is, the page does not say', is the right neutral stance. Only the label needs the names.",
+      "fix": "Relabel 'The Spirit intercedes; Christ intercedes'. Keep the note."
+    },
+    {
+      "row": "Every other use: prays, prayed",
+      "kind": "note",
+      "verses": ["Isa.45.14", "Isa.44.17", "Isa.45.20", "Dan.6.7", "Dan.6.12"],
+      "readers": ["rabbi", "secular academic", "Baptist / free church", "biblical-theological"],
+      "why": "Isa 45:14 is here because the Hebrew verb is יִתְפַּלָּלוּ ('they will make supplication'), but the Berean prints 'they will confess to you'; it is a verse that does not show its label (rule 6), and in the Hebrew the supplication is addressed 'to you' (Zion), not to God. Without a note the hub could suggest prayer to Zion is a model. The same row also holds prayer to idols (Isa 44:17, 45:20), to Moab's sanctuary (Isa 16:12) and petition to a king (Dan 6:7, 6:12) with no note, while the noun catch-all already has one.",
+      "fix": "Mark Isa 45:14 in the verse with an asterisk at 'confess' and the finding beside it ('the Hebrew is the verb for praying: \"they will make supplication to you\", said of the nations and Zion'). Add to the verb catch-all a note like the noun one: 'Includes prayer to idols (Isa 44:17; 45:20), prayer at a foreign sanctuary (Isa 16:12) and petition to a king (Dan 6:7, 6:12), and Isa 45:14, where the Hebrew verb is the same.'"
+    }
+  ],
+  "worker_points": [
+    {
+      "point": "1. 'Jesus prays', 22 verses, by pick; most name Jesus only as 'He' (rule 3).",
+      "verdict": "fine",
+      "why": "Read every verse. Each unnamed 'He' is in a passage that names Jesus in the same scene (Matt 14:22; Gethsemane Matt 26:36 and Mark 14:32; Luke 5:16 after 5:12-14; Luke 22:39; Mark 6:45). The label states the person and the page does not infer him from a rule; picked by hand. Only Matt 19:13 does not fit (see fix). Luke 22:43-44 is a textual question a note can mention."
+    },
+    {
+      "point": "2. 'Prayer to the Father' (Matt 6:6, 6:9, Luke 11:2, Matt 26:39, 26:42) and no 'Lord's Prayer as a set prayer'.",
+      "verdict": "fine",
+      "why": "Each verse names the Father. The row says nothing about use. No row for prayer to Jesus by name leaves a quiet gap for Baptist, Pentecostal and Orthodox readers, but the 'the Lord' row and its note do not exclude it; see John 17 and Acts 7:59-60 in missing."
+    },
+    {
+      "point": "3. 'Prayer to \"the Lord\"' (Acts 1:24, 8:22, 8:24), referent not chosen.",
+      "verdict": "fine",
+      "why": "The note keeps the text's word and takes no side between the Father and Jesus. Fair to all seats."
+    },
+    {
+      "point": "4. 'He intercedes for us' one row; Christ's and the Spirit's intercession removed from human intercession.",
+      "verdict": "fix",
+      "why": "The separation and the note are right and fair to every seat. Only the label needs naming the two persons (rule 3). Isa 53:12 stays in 'others' as a different word; fine."
+    },
+    {
+      "point": "5. 'Asked to pray for them': only living people asking; no row for prayer to saints.",
+      "verdict": "fine",
+      "why": "The hub does not assert there is no intercession of saints and does not assert there is; the row says exactly what it is. Catholic / Orthodox readers lose nothing the text gives them, and Protestant readers are not made to see a verdict. Add Matt 19:13 to it."
+    },
+    {
+      "point": "6. 'Prayer rises before God, like incense' with Rev 5:8, 8:3-4 and the note.",
+      "verdict": "fix",
+      "why": "The note is neutral and acceptable to Catholic, Orthodox, Baptist and Reformed readers. The label overstates (incense, 'before God', the Lamb in Rev 5:8). See fix."
+    },
+    {
+      "point": "7. 'Prayer and the Spirit' with 1 Cor 14:14-15; no tongues row.",
+      "verdict": "fix",
+      "why": "Keeping the text's own verses and no row on tongues is fair to Pentecostal, Baptist and Catholic readers. The capital-S label and Zech 12:10 need the small fix above. Acts 8:15 (also in 'Prayed for others') is fine as a double home."
+    },
+    {
+      "point": "8. 'Prayer, confession and forgiveness' and 'Prayer and healing' by co-occurrence.",
+      "verdict": "fix",
+      "why": "Co-occurrence is honestly stated and no causation is claimed. Both notes speak only of Christian traditions while many verses are Hebrew; reword (see fixes)."
+    },
+    {
+      "point": "9. 'Prayed to the LORD, to God' filled by rule on divine words in the clause.",
+      "verdict": "fine",
+      "why": "Checked all 44. The divine word is the one prayed to in each; the six hand exclusions (Rom 8:27, Phil 1:9, Col 4:3, and so on) caught the cases where God is only the one who acts. Rom 11:2 ('appealed to God against Israel') and Col 1:9 ('asking God') are fair readings. The rule reads only the text's own יהוה, אֱלֹהִים, θεός, so no person is inferred; this is acceptable under rule 3. The only issue is the tense of the label."
+    },
+    {
+      "point": "10. 'Told to pray' includes anyone's imperative, with a note.",
+      "verdict": "fine",
+      "why": "The note says so openly (Pharaoh, Moses). Matt 9:38 and Luke 10:2 ('Ask the Lord of the harvest') are the same saying and fairly in."
+    },
+    {
+      "point": "11. פָּלַל also 'intercede, judge'; three verses dropped; Num 21:7, 1 Kgs 13:6, 1 Sam 2:25 kept.",
+      "verdict": "fine",
+      "why": "Keeping the verse where the Berean says 'intercede' is right; 1 Sam 2:25 reads 'God can intercede for him' and sits in the catch-all, which is accurate to the Hebrew's two senses."
+    },
+    {
+      "point": "12. Isa 45:14 in the catch-all (Berean 'confess', Hebrew פָּלַל).",
+      "verdict": "fix",
+      "why": "Following the original (rule 4: the original arbitrates) is right, but a verse with no visible prayer word and an addressee that is Zion needs the asterisk mark the project already uses and a note (see fix)."
+    },
+    {
+      "point": "13. Tongues, set prayer, Rosary, Hours, posture, Lord's Prayer as recited text in no row.",
+      "verdict": "fine",
+      "why": "The hub keeps to what the text says. Saying nothing is neutral for every seat here; none of these has a prayer-word verse of its own. Posture verses (1 Tim 2:8, Acts 20:36) sitting in the catch-all is acceptable."
+    },
+    {
+      "point": "The Hebrew prayers (Solomon's, Daniel's, Hannah's) heard on their own terms (rule 5).",
+      "verdict": "fine",
+      "why": "Solomon's dedication has its own row ('Prayer toward this house, this place, this city', including the foreigner in 1 Kgs 8:42 / 2 Chr 6:32), Hannah's verses are in 'Prayed to the LORD' (1 Sam 1:10, 1:12, 1:26) and the catch-all (1 Sam 1:27, 2:1), Daniel's in 'Prayed to the LORD' (Dan 9:4) and 'Prayer and fasting' (Dan 9:3). None is filed under a NT heading. The two places to tighten are the Spirit and healing rows above."
+    },
+    {
+      "point": "'Prayer and faith' (Matt 21:22, Mark 11:24, Jas 5:15) left in the catch-alls.",
+      "verdict": "fix",
+      "why": "A reader will look for it: three verses of the text's own teaching on prayer, all with 'believe' or 'in faith'. The worker's concern about a rule catching Luke 22:32 and 1 Thess 3:10 is met by a pick. See missing."
+    }
+  ],
+  "missing": [
+    {
+      "what": "A row 'Prayer and faith' by pick: whatever is asked in prayer, believing (Matt 21:22; Mark 11:24); 'the prayer offered in faith' (Jas 5:15). Add Jas 5:15 to the healing row too.",
+      "verses": ["Matt.21.22", "Mark.11.24", "Jas.5.15"]
+    },
+    {
+      "what": "A row 'Prayer not heard, shut out, unanswered': the text says plainly that prayer is sometimes refused or hindered, and lament is a large part of the Psalms. Now these sit under 'Hearing and answering' or in catch-alls. Matters to the rabbi, the African American believer (lament) and the Wesleyan alike.",
+      "verses": ["Isa.1.15", "Jer.7.16", "Jer.11.14", "Ps.35.13", "Ps.80.4", "Lam.3.8", "Lam.3.44", "Prov.28.9", "1Pet.3.7"]
+    },
+    {
+      "what": "Jesus' own prayer in John 17 (ἐρωτάω, Berean 'I ask on their behalf' / 'I am not asking') and prayer addressed to the Lord Jesus by name (Acts 7:59-60, 'Lord Jesus, receive my spirit'; the verbs are not the hub's prayer words). Their absence leaves 'Jesus prays' without his longest prayer and 'Prayer to the Father / the Lord' without a verse addressed to Jesus. Needs ἐρωτάω and ἐπικαλέομαι added to the hub's words by pick.",
+      "verses": ["John.17.9", "John.17.15", "John.17.20", "Acts.7.59", "Acts.7.60"]
+    }
+  ],
+  "summary": "Sound, honest hub: the contested rows (saints and incense, the Spirit and tongues, Christ's and the Spirit's intercession) keep to the text and take no side, and the Hebrew prayers are heard on their own terms. It ships after label and note fixes (past-tense and 'Prayed for others' misfits, the incense/Lamb and 'many words' labels, Matt 19:13, the Jeremiah and Isaiah 1:15 refusals, Isa 45:14) and three small additions (prayer and faith, prayer not heard, John 17)."
+}

@@ -1,0 +1,12 @@
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX claim: <https://bibleontology.org/ns/claim#>
+# Speech within speech (plan 8.1d): a reporting speaker's claim reifies "the
+# speaker says the inner claim", and the inner claim reifies its own triple --
+# who reports whom saying what. (Until 2026-10-19 the reporter's claim nested
+# the inner triple term instead; the committee asked for one range of
+# claim:says in both files, plan 8.1e item 4.)
+SELECT ?reporter ?speaker ?s ?p ?o ?verse WHERE {
+  ?c rdf:reifies <<( ?speaker claim:says ?inner )>> ;
+     claim:claimedBy ?reporter ; claim:verse ?verse .
+  ?inner rdf:reifies <<( ?s ?p ?o )>> .
+}

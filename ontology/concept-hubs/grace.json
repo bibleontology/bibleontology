@@ -1,0 +1,787 @@
+{
+ "_about": "The grace hub (plan 7.6f), third built after love and righteousness. Rows as in love.json and righteousness.json: a noun row by the words standing in the noun's own phrase or verse, an adjective row by the same, a verb row by the frame's agent, or by hand where the text sets a group apart. The committee flagged it medium (2026-10-09): grace as a gift received at baptism or in the sacraments, as prevenient and resistible, as irresistible, or as God's uncreated energies are all read onto the same verses; a 'grace given' row may seem to say how grace is conveyed; only χάρις was listed, so the Hebrew חֵן and the idea of favour were absent. Taken as rules: the phrases are kept as written ('grace given to me', 'by grace you have been saved'); no row says how or when grace is received; the greeting and the closing blessing stand apart from the rows that say what grace does (a verse that is only a greeting is kept out of the others); the Hebrew words are in, as Hebrew, and חֶסֶד, ἔλεος and the rest are named apart; the verses where the contested pairings stand (faith, works, the law, justified, saved, called, fallen away, standing) are set side by side, 'match: all'. Built by tools/concepts/hub_build.py into out/concept-hubs/grace.json. Consolidated 2026-10-10 from 46 rows to 24 at the coordinator's request (about 15-25 rows, never 40+): rows that say the same kind of thing are merged and nothing is dropped; every contested pairing keeps its own row and note, and the Jesus and Spirit rows stay by pick.",
+ "id": "grace",
+ "shown": true,
+ "lead": "noun",
+ "match": "all",
+ "titles": {
+  "noun": "What the text says of grace",
+  "verb": "Who is gracious to whom",
+  "adjective": "Called “gracious”"
+ },
+ "words": [
+  "g5485",
+  "g5487",
+  "g5483",
+  "h2580",
+  "h2587",
+  "h2603"
+ ],
+ "forms": {
+  "h2603": "verb"
+ },
+ "_forms_why": "the lexicon holds חָנַן only as h2603a and h2603b, so it has no part of speech under h2603 (the key the occurrences use); without this it was filed as a noun and its verb verses fell into noun rows (Gen 33:5 'God has graciously given' under 'The grace of God')",
+ "_words_why": "The family on the card is χάρις with χαριτόω (favored, 'freely given') and χαρίζομαι ('to give freely'; the Berean renders it forgive, grant). The Hebrew words are added because the Greek Old Testament renders חֵן 'favor' by χάρις (the 'find favor in the eyes of' of Genesis is the 'found favor with God' of Luke 1:30), and חַנּוּן and חָנַן are the adjective and verb of the same root as חֵן ('the LORD is gracious', 'be gracious to me'): a Hebrew word and the Greek that renders it are rightly together, as אהב and ἀγαπάω are in love. חָנַן (h2603) is in 'words' as a verb by 'forms' (see _forms_why); its hithpael (to seek favor: Berean 'plead', 'make supplication') is another stem of the same verb and is kept by 'sense_keep'. חֶסֶד (steadfast love, loyal love) is a different word and is not here: it is named apart under 'Other words translated grace or favor', and where it stands beside חֵן or χάρις a row says so. χάρισμα (gift, 17 verses) is left out: it is 'gift' in the Berean, a different word, and a row cannot be kept to one of the hub's words, so 1 Cor 12's gifts of the Spirit would have flooded the grace rows. δωρεά 'free gift' and δῶρον 'gift' are likewise different words. χάρις has other senses, which are not hidden: 'thanks' (Rom 6:17), 'credit' (Luke 6:32-34) and 'commendable' (1 Pet 2:19-20) stand in their own rows at the foot of the noun list, marked as the same Greek word, and the 'other sense' count on the card says how many there are.",
+ "sense": "grac|favor|charm|alluring|adorn|mercy|pity|kind|generous|forgiv|forgave|grant|freely",
+ "sense_keep": {
+  "Deut.3.23": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "1Kgs.8.33": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "1Kgs.8.47": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "1Kgs.8.59": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "1Kgs.9.3": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "2Chr.6.24": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "2Chr.6.37": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "2Kgs.1.13": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "Esth.4.8": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "Esth.8.3": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "Job.8.5": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "Job.19.16": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "Ps.30.8": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "Ps.142.1": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication",
+  "Gen.42.21": "the hithpael of חָנַן, 'seek favor' (MACULA's gloss); the Berean says plead, implore, make supplication"
+ },
+ "moves": {
+  "Hos.12.5": {
+   "to": "Hos.12.4",
+   "why": "MACULA numbers the Hebrew: 'he wept and sought his favor' is Hebrew 12:5, the Berean's 12:4"
+  }
+ },
+ "others": {
+  "_why": "Doug, 2026-10-09 (love): other words the English also calls the concept are shown apart, each with its verses. Here: the words the Berean renders grace, gracious or favor that are not the hub's own -- רָצוֹן (acceptance, 'favor' of the LORD), פָּנֶה ('lift up the face', 'seek the favor of'), חֶסֶד ('favor', 'gracious deeds' a few times) and the rest. min_n 3 with min_share 1: three verses make a word, or every use of it. Panel (2026-10-10): 'add' puts first the verses where the Berean prints favor for פָּנֶה (1 Kgs 13:6, whose English has none, had led) and for נֹעַם (Prov 15:26 'pleasant' had led).",
+  "title": "Other words translated “grace” or “favor”",
+  "gloss": "\\b(grac(e|es|ious|iously|eful)|favor(s|ed|able|ably)?)\\b",
+  "min_n": 3,
+  "min_share": 1.0,
+  "exclude": [],
+  "add": {
+   "h6440": {
+    "verses": [
+     "1Sam.13.12",
+     "Mal.1.9",
+     "2Chr.33.12",
+     "Exod.32.11"
+    ],
+    "note": "The Hebrew word is “face” (to seek the face of someone); the Berean prints it “favor” in these verses and not in others."
+   },
+   "h5278": {
+    "verses": [
+     "Ps.90.17"
+    ],
+    "note": "The Hebrew word means “pleasantness”; the Berean prints “favor” in Ps 90:17, “pleasant” in Prov 15:26, and in Zech 11 names a staff “Favor”."
+   }
+  }
+ },
+ "leads": [
+  "god",
+  "jesus",
+  "faith",
+  "mercy",
+  "favor",
+  "salvation",
+  "justification",
+  "forgiveness",
+  "peace",
+  "gift",
+  "humility",
+  "kindness"
+ ],
+ "own_words": [
+  "Gen.6.8",
+  "Exod.34.6",
+  "Num.6.25",
+  "Eph.2.8",
+  "2Cor.12.9",
+  "John.1.17",
+  "Rom.11.6",
+  "Titus.2.11"
+ ],
+ "gather": [
+  "grace_of_god",
+  "by_grace_you_have_been_saved",
+  "theme_deliverance_r42",
+  "theme_deliverance_r53",
+  "god_resists_the_proud",
+  "my_grace_is_sufficient",
+  "the_god_of_all_grace",
+  "grace_and_peace_from_god_our_father",
+  "titus_3_15_benediction",
+  "justified_by_grace",
+  "pattern_find_grace"
+ ],
+ "sets": {
+  "divine": [
+   "יהוה",
+   "θεός",
+   "אֱלֹהִים",
+   "אֲדֹנָי",
+   "אֵל"
+  ]
+ },
+ "rows": [
+  {
+   "form": "noun",
+   "label": "Find favor, find grace; favor given",
+   "object_of": [
+    "מָצָא",
+    "εὑρίσκω",
+    "נָשָׂא",
+    "נָתַן"
+   ],
+   "add": [
+    "2Sam.16.4"
+   ],
+   "lead": [
+    "Gen.6.8",
+    "Ruth.2.2",
+    "Luke.1.30",
+    "Gen.39.21"
+   ],
+   "doors": [
+    "favor",
+    "pattern_find_grace"
+   ],
+   "not_verses": {
+    "Deut.24.1": "the Hebrew is 'does not find favor in his eyes'; the Berean renders it 'becomes displeasing to him', and its 'finds' is of an indecency",
+    "1Sam.16.22": "the Hebrew is 'he has found favor in my eyes'; the Berean renders it 'I am pleased with him'",
+    "Gen.34.11": "the Hebrew is the same idiom ('let me find favor in your eyes'), but the Berean renders it 'Grant me this favor'; it stands in 'A favor done or asked'",
+    "Prov.13.15": "the Hebrew is 'gives favor', but the Berean renders it 'Good understanding wins favor'"
+   },
+   "_add_why": "2 Sam 16:4 'May I find favor in your eyes' is the same idiom; the frames carry no object for it",
+   "_why": "the Hebrew idiom 'find favor in the eyes of' (חֵן as the object of מָצָא) and its Greek counterpart; Heb 4:16 'find grace to help' is the same verb with the same object. Esth 2:15 and 2:17 'won' are נָשָׂא with חֵן. Merged with 'Favor given' (חֵן as the object of נָתַן: Gen 39:21, Exod 3:21, Ps 84:11)"
+  },
+  {
+   "form": "noun",
+   "label": "Grace given",
+   "in_verse": [
+    "δίδωμι"
+   ],
+   "lead": [
+    "Rom.12.6",
+    "1Cor.3.10",
+    "Eph.4.7",
+    "1Cor.1.4"
+   ],
+   "doors": [
+    "gift"
+   ],
+   "not_verses": {
+    "John.1.17": "'the law was given through Moses' is what is given; grace 'came' through Jesus Christ",
+    "2Thess.2.16": "what was given is 'eternal comfort and good hope'; grace is the means ('by grace')",
+    "Acts.14.3": "what is granted is the signs and wonders, by the Lord who affirmed the message of His grace",
+    "Acts.20.32": "what the word of His grace can give is an inheritance",
+    "Eph.4.29": "it is a speaker's word that 'brings grace to those who listen'; it stands in 'Gracious lips and words'",
+    "Acts.7.10": "'He granted Joseph favor and wisdom in the sight of Pharaoh' is favor with a king; it stands in 'Favor and grace between people'"
+   },
+   "note": "The text says grace is given. Most of these verses speak of grace given to Paul or to believers for a work or a gift (Rom 12:3-6, 1 Cor 3:10, Eph 3:2-8, Gal 2:9). How and when grace is received -- through baptism and the sacraments, before and apart from any act of ours, whether it can be resisted or lost -- is where Christian traditions part, and the page takes no side and has no row on it."
+  },
+  {
+   "form": "noun",
+   "label": "The grace of God",
+   "with": "@divine",
+   "adjacent": true,
+   "lead": [
+    "Titus.2.11",
+    "Acts.20.24",
+    "1Cor.15.10",
+    "Heb.12.15"
+   ],
+   "doors": [
+    "god",
+    "grace_of_god"
+   ],
+   "note": "The text's own phrase; the Berean sometimes prints it “God's grace” or “the grace God has given”.",
+   "_why": "a phrase the text writes ('the grace of God', 'God's grace'), read by adjacency of the word, not inferred; Rom 15:15 'the grace God has given me' has the words apart and stands under 'Grace given'"
+  },
+  {
+   "form": "noun",
+   "label": "The grace of the Lord Jesus, grace in Christ Jesus",
+   "pick": [
+    "John.1.17",
+    "Acts.15.11",
+    "Rom.5.15",
+    "1Cor.1.4",
+    "2Cor.8.9",
+    "Gal.1.6",
+    "1Tim.1.14",
+    "2Tim.1.9",
+    "2Tim.2.1",
+    "2Thess.1.12",
+    "2Pet.3.18"
+   ],
+   "doors": [
+    "jesus"
+   ],
+   "_why": "by hand, as the divine persons are: verses where the text itself names the Lord Jesus, Christ or Christ Jesus beside grace. The blessings that end the letters ('The grace of the Lord Jesus be with you') are in their own row. Left out because the verse says 'He' or 'the Beloved' and not the name: John 1:16, Eph 1:6, Rom 1:5, 1 Pet 1:13"
+  },
+  {
+   "form": "noun",
+   "label": "A spirit of grace (Zechariah); the Spirit of grace (Hebrews)",
+   "pick": [
+    "Zech.12.10",
+    "Heb.10.29"
+   ],
+   "doors": [],
+   "note": "The Berean prints Zechariah's “spirit” in lower case and Hebrews' “Spirit” in capital; the page does not say they are the same.",
+   "_why": "by hand: the Spirit is a divine person, named only where the text names him. Zech 12:10 is the Hebrew phrase חֵן וְתַחֲנוּנִים, 'grace and supplications'"
+  },
+  {
+   "form": "noun",
+   "label": "Grace beside truth, kindness, mercy and steadfast love",
+   "in_verse": [
+    "ἀλήθεια",
+    "חֶסֶד",
+    "רַחֲמִים",
+    "רָחַם",
+    "ἔλεος",
+    "ἐλεέω",
+    "χρηστότης"
+   ],
+   "lead": [
+    "John.1.17",
+    "Eph.2.7",
+    "Heb.4.16",
+    "Gen.39.21"
+   ],
+   "doors": [
+    "truth",
+    "mercy",
+    "kindness"
+   ],
+   "not_verses": {
+    "1Tim.1.2": "the greeting, in its own row",
+    "2Tim.1.2": "the greeting, in its own row",
+    "2John.1.3": "the greeting, in its own row"
+   },
+   "note": "Different words: חֵן and χάρις (grace, favor), חֶסֶד (steadfast love), רַחֲמִים and ἔλεος (mercy). The page sets them side by side as the text does and does not say that one is another.",
+   "_why": "merged 'Grace and truth' (John 1:14, 1:17, Col 1:6) with the pairing of grace with kindness, mercy and steadfast love. ἀλήθεια only for truth: אֱמֶת stood in Gen 47:29, where it is the faithfulness Jacob asks of Joseph"
+  },
+  {
+   "form": "noun",
+   "label": "Grace and faith",
+   "in_verse": [
+    "πίστις",
+    "πιστεύω"
+   ],
+   "lead": [
+    "Eph.2.8",
+    "Rom.4.16",
+    "Rom.5.2",
+    "Acts.18.27"
+   ],
+   "doors": [
+    "faith"
+   ],
+   "not_verses": {
+    "1Tim.1.2": "the greeting; 'the faith' names whose child he is, and is not set beside grace",
+    "Titus.1.4": "the greeting, as 1 Tim 1:2",
+    "1Tim.6.21": "the closing blessing; 'the faith' is what some have swerved from",
+    "Titus.3.15": "the closing blessing; 'in the faith' says who loves us"
+   },
+   "note": "Set beside the rows on works and the law; a verse that names both stands in both. Some of these verses name faith and grace in one sentence without saying how they relate. Where Christian traditions part on how faith, works and grace stand to one another, the page takes no side."
+  },
+  {
+   "form": "noun",
+   "label": "Grace and works",
+   "in_verse": [
+    "ἔργον",
+    "ἐργάζομαι"
+   ],
+   "add": [
+    "Eph.2.8"
+   ],
+   "lead": [
+    "Rom.11.6",
+    "2Tim.1.9",
+    "2Cor.9.8",
+    "Acts.14.26"
+   ],
+   "doors": [
+    "works"
+   ],
+   "_add_why": "Eph 2:8 'by grace you have been saved through faith ... it is the gift of God' runs on into 2:9 'not from works'; the Greek sentence is one, the verse division cuts it, and the faith row already holds 2:8",
+   "note": "Some of these verses set grace and works against each other; others speak of work done by grace or for it. In Rom 4:4 the Berean prints the Greek word for grace as “gift”, and Eph 2:8 is here because its sentence runs on into 2:9, “not from works”. Where Christian traditions part on how works and grace stand to one another, the page takes no side."
+  },
+  {
+   "form": "noun",
+   "label": "Grace and the law",
+   "in_verse": [
+    "νόμος",
+    "תּוֹרָה"
+   ],
+   "lead": [
+    "Rom.6.14",
+    "Gal.2.21",
+    "John.1.17",
+    "Rom.5.20"
+   ],
+   "doors": [
+    "law"
+   ],
+   "note": "These are the apostles' words about the law. The Hebrew Scriptures speak of the LORD's grace in their own rows (Exod 34:6, Num 6:25, Ps 103:8). Where Christian traditions part on how the law and grace stand to one another, the page takes no side."
+  },
+  {
+   "form": "noun",
+   "label": "Grace and sin, trespass",
+   "in_verse": [
+    "ἁμαρτία",
+    "ἀνομία",
+    "παράπτωμα",
+    "ἁμαρτάνω"
+   ],
+   "lead": [
+    "Rom.5.20",
+    "Rom.6.1",
+    "Eph.2.5",
+    "Jude.1.4"
+   ],
+   "doors": [
+    "sin"
+   ],
+   "add": [
+    "Jude.1.4"
+   ],
+   "note": "The Berean prints “trespass” for a different Greek word from “sin”; the row sets them together as the verses do.",
+   "_add_why": "Jude 4 ('turn the grace of our God into a license for immorality') asks what Rom 6:1 and 6:15 ask; the panel moved it here from the bucket row"
+  },
+  {
+   "form": "noun",
+   "label": "Grace, being justified, righteousness",
+   "in_verse": [
+    "δικαιόω",
+    "δικαιοσύνη"
+   ],
+   "lead": [
+    "Rom.3.24",
+    "Titus.3.7",
+    "Gal.5.4",
+    "Rom.5.21"
+   ],
+   "doors": [
+    "justification"
+   ],
+   "note": "Where Christian traditions part on what it is to be justified, the page takes no side. The Berean prints justified and righteousness for two Greek words of one root; the page sets them together because the verses do."
+  },
+  {
+   "form": "noun",
+   "label": "Grace and being saved, redeemed, forgiven",
+   "in_verse": [
+    "σῴζω",
+    "σωτηρία",
+    "σωτήριος",
+    "ἀπολύτρωσις",
+    "λυτρόω",
+    "ἄφεσις",
+    "ἀφίημι",
+    "ἱλαστήριον"
+   ],
+   "lead": [
+    "Eph.2.8",
+    "Eph.2.5",
+    "Acts.15.11",
+    "Eph.1.7"
+   ],
+   "doors": [
+    "salvation",
+    "redemption",
+    "forgiveness"
+   ],
+   "not_verses": {
+    "Acts.2.47": "χάρις here is the favor of all the people; 'those who were being saved' is another clause"
+   }
+  },
+  {
+   "form": "noun",
+   "label": "Grace and being called, chosen",
+   "in_verse": [
+    "καλέω",
+    "ἐκλογή",
+    "ἐκλέγομαι",
+    "προορίζω",
+    "πρόθεσις",
+    "בָּחַר"
+   ],
+   "lead": [
+    "Gal.1.15",
+    "2Tim.1.9",
+    "Rom.11.5",
+    "1Pet.5.10"
+   ],
+   "doors": [],
+   "not_verses": {
+    "Prov.22.1": "נִבְחָר here is 'more desirable': a good name is more desirable than riches",
+    "Acts.11.23": "παρακαλέω here is 'encouraged'"
+   },
+   "note": "Where Christian traditions part on calling, choosing and what it rests on, the page takes no side."
+  },
+  {
+   "form": "noun",
+   "label": "Stand, continue, grow, be strengthened in grace; grace received in vain, or not in vain; fallen away from it, fallen short of it",
+   "pick": [
+    "Rom.5.2",
+    "1Pet.5.12",
+    "Acts.13.43",
+    "Heb.13.9",
+    "2Tim.2.1",
+    "2Pet.3.18",
+    "Gal.5.4",
+    "Heb.12.15",
+    "2Cor.6.1",
+    "1Cor.15.10"
+   ],
+   "doors": [],
+   "note": "The text speaks of standing and growing in grace, and of falling short of it or receiving it in vain. Where Christian traditions part on whether grace can be resisted or lost, the page takes no side.",
+   "_why": "merged two rows that were set side by side. By hand: 1 Cor 15:10 is the other side of 'in vain' ('His grace to me was not in vain'). Panel (2026-10-10): first screen two of each half, neutral doors (the old door 'You have fallen away from grace' is one half only), and a label that says 'not in vain' where 1 Cor 15:10 says it",
+   "lead": [
+    "Rom.5.2",
+    "1Pet.5.12",
+    "Gal.5.4",
+    "Heb.12.15"
+   ]
+  },
+  {
+   "form": "noun",
+   "label": "Full of grace; the word of His grace; grace to the humble; grace and glory",
+   "pick": [
+    "John.1.14",
+    "John.1.16",
+    "Luke.2.40",
+    "Acts.4.33",
+    "Acts.6.8",
+    "Acts.14.3",
+    "Acts.20.32",
+    "Acts.20.24",
+    "Prov.3.34",
+    "1Pet.5.5",
+    "Jas.4.6",
+    "Ps.84.11",
+    "Eph.1.6",
+    "1Pet.5.10",
+    "2Cor.4.15",
+    "2Pet.3.18",
+    "Heb.2.9",
+    "Rom.5.2"
+   ],
+   "doors": [
+    "glory",
+    "humility",
+    "god_resists_the_proud",
+    "gospel"
+   ],
+   "_why": "by hand; four small groups: grace as what a person is full of or has upon him (John 1:14, 1:16, Luke 2:40, Acts 4:33, 6:8); grace as the content of the message (Acts 14:3, 20:32 and 20:24; 14:3 and 20:32 are kept out of 'Grace given' for this); the humble (Prov 3:34, then its two quotations); grace beside glory (Ps 84:11 first). Panel (2026-10-10): Prov 11:16 moved to the charm row, 2 Cor 8:19 to 'Favor and grace between people', Jude 4 to 'Grace and sin, trespass'; the earliest verse leads each part",
+   "lead": [
+    "John.1.14",
+    "Prov.3.34",
+    "Ps.84.11",
+    "Acts.20.32"
+   ],
+   "note": "Jas 4:6 and 1 Pet 5:5 quote Prov 3:34."
+  },
+  {
+   "form": "noun",
+   "label": "Grace in weakness and need; “Has God forgotten to be gracious?”",
+   "pick": [
+    "2Cor.12.9",
+    "Heb.4.16",
+    "1Pet.5.10",
+    "2Cor.9.8",
+    "Ezra.9.8",
+    "Ps.77.9"
+   ],
+   "lead": [
+    "2Cor.12.9",
+    "Heb.4.16",
+    "1Pet.5.10",
+    "Ezra.9.8"
+   ],
+   "doors": [
+    "my_grace_is_sufficient",
+    "the_god_of_all_grace"
+   ],
+   "note": "In Ezra 9:8 the Berean prints the Hebrew תְּחִנָּה as “grace”, and in Ps 77:9 the infinitive of the verb חָנַן, “to be gracious”; these two are not words of the hub's rows, so they are placed here by hand.",
+   "_why": "by hand (panel, missing): 2 Cor 12:9 is an own_words verse that had no row; grace that helps or sustains (Heb 4:16 'grace to help in our time of need', 1 Pet 5:10 'the God of all grace ... will restore you', 2 Cor 9:8); Ezra 9:8 and Ps 77:9, the Hebrew verses the panel found in no row, because the builder reads neither word as the hub's (h8467 and h2589)"
+  },
+  {
+   "form": "noun",
+   "label": "Gracious lips and words; grace as charm, a garland, an adornment",
+   "pick": [
+    "Ps.45.2",
+    "Prov.22.11",
+    "Eccl.10.12",
+    "Luke.4.22",
+    "Col.4.6",
+    "Eph.4.29",
+    "Prov.1.9",
+    "Prov.3.22",
+    "Prov.4.9",
+    "Prov.5.19",
+    "Prov.17.8",
+    "Prov.31.30",
+    "Nah.3.4",
+    "Prov.11.16",
+    "Prov.26.25"
+   ],
+   "doors": [],
+   "note": "The Berean renders the Hebrew חֵן as grace, adornment, graceful, charm and, in Nahum, “seductive”.",
+   "_why": "by hand: חֵן as attractiveness, the sense 'favour, grace, charm, elegance' of the lexicon; Luke 4:22, Col 4:6 and Eph 4:29 speak of gracious words. Panel: Prov 11:16 ('A gracious woman attains honor') and Prov 26:25 ('When he speaks graciously') added; Prov 26:25 is out of the verb rows by sense_drop (gracious speech, not favor shown)"
+  },
+  {
+   "form": "noun",
+   "label": "Favor and grace between people: favor with God and man, a favor done, asked or withheld, the gift for the saints",
+   "pick": [
+    "Luke.2.52",
+    "Acts.2.47",
+    "Acts.7.10",
+    "Gen.34.11",
+    "Acts.24.27",
+    "Acts.25.3",
+    "Acts.25.9",
+    "2Cor.8.4",
+    "2Cor.8.6",
+    "2Cor.8.7",
+    "2Cor.8.19",
+    "1Cor.16.3",
+    "Ps.109.12"
+   ],
+   "doors": [
+    "favor",
+    "gift"
+   ],
+   "note": "The Berean renders the Greek χάρις here as “privilege” (2 Cor 8:4), “act of grace”, “grace of giving”, “gracious offering” and “gift” (1 Cor 16:3).",
+   "_why": "by hand; merges three rows. 2 Cor 8:1 and 9:8, 9:14 are left in the other rows: the offering is in the verses around them, not in them. Ps 109:12 ('no one to favor his fatherless children', the verb חָנַן) is here because the frames hold no entry for it, so no verb row can reach it. Panel asked Ps 109:12 to move to the verb row 'withheld'; the builder cannot place a verb the frames never saw, so it stays here and the label says 'withheld' (a pick row cannot mix with the rules, and the catch-all cannot be given a verse no frame saw)"
+  },
+  {
+   "form": "noun",
+   "label": "The same Greek words in other senses: thanks, credit, what is commendable, released, handed over, restored, sight given",
+   "pick": [
+    "Rom.6.17",
+    "Rom.7.25",
+    "1Cor.15.57",
+    "2Cor.2.14",
+    "2Cor.8.16",
+    "2Cor.9.15",
+    "1Tim.1.12",
+    "2Tim.1.3",
+    "Luke.17.9",
+    "1Cor.10.30",
+    "Col.3.16",
+    "Heb.12.28",
+    "Luke.6.32",
+    "Luke.6.33",
+    "Luke.6.34",
+    "1Pet.2.19",
+    "1Pet.2.20",
+    "Acts.3.14",
+    "Acts.25.11",
+    "Acts.25.16",
+    "Phlm.1.22",
+    "Luke.7.21"
+   ],
+   "doors": [],
+   "note": "The word is χάρις again; the Berean renders it thanks, thankfulness, gratitude (Rom 6:17, 7:25 and others), credit (Luke 6:32-34) and commendable (1 Pet 2:19-20). The verb χαρίζομαι is printed released (Acts 3:14), hand over (Acts 25:11, 25:16), gave sight (Luke 7:21) and restored (Phlm 22). Other senses of the words, not counted as grace in the rows above.",
+   "_why": "by hand: the verses of two Greek words in senses other than grace, kept visible (rule 6) rather than dropped. The five verb verses are out of the verb rows by sense_drop"
+  },
+  {
+   "form": "noun",
+   "label": "The letters' greeting and closing: “Grace and peace to you”, “Grace be with you”",
+   "pick": [
+    "1Cor.1.3",
+    "1Pet.1.2",
+    "1Thess.1.1",
+    "1Tim.1.2",
+    "2Cor.1.2",
+    "2John.1.3",
+    "2Pet.1.2",
+    "2Thess.1.2",
+    "2Tim.1.2",
+    "Col.1.2",
+    "Eph.1.2",
+    "Gal.1.3",
+    "Phlm.1.3",
+    "Phil.1.2",
+    "Rev.1.4",
+    "Rom.1.7",
+    "Titus.1.4",
+    "Rom.16.20",
+    "1Cor.16.23",
+    "2Cor.13.14",
+    "Gal.6.18",
+    "Eph.6.24",
+    "Phil.4.23",
+    "Col.4.18",
+    "1Thess.5.28",
+    "2Thess.3.18",
+    "1Tim.6.21",
+    "2Tim.4.22",
+    "Titus.3.15",
+    "Phlm.1.25",
+    "Heb.13.25",
+    "Rev.22.21"
+   ],
+   "doors": [
+    "peace",
+    "grace_and_peace_from_god_our_father",
+    "titus_3_15_benediction"
+   ],
+   "note": "The opening greeting (grace and peace, or grace, mercy and peace) and the closing blessing of the letters (Eph 6:24 reads “Grace to all who love our Lord Jesus Christ”), set apart from the rows that say what grace does.",
+   "_why": "by hand: a rule on 'with' (μετά) took 'with confidence' in Heb 4:16 and Acts 7:46, and the greeting rule (εἰρήνη within three words) gave exactly these seventeen; both were frozen as picks so the two formulas could stand in one row",
+   "lead": [
+    "1Cor.1.3",
+    "1Tim.1.2",
+    "1Cor.16.23",
+    "Rev.22.21"
+   ]
+  },
+  {
+   "form": "verb",
+   "label": "God, the LORD, is gracious: “Be gracious to me”, “May He be gracious”, “has been gracious”",
+   "agent": "@divine",
+   "in_verse": [
+    "חָנַן"
+   ],
+   "add": [
+    "Ps.41.10",
+    "Job.33.24"
+   ],
+   "lead": [
+    "Ps.4.1",
+    "Num.6.25",
+    "Gen.33.5",
+    "2Kgs.13.23"
+   ],
+   "doors": [
+    "god"
+   ],
+   "note": "The Berean prints this Hebrew verb as “be gracious” and “show favor”, and in many of these verses as “have mercy” or “be merciful” (Exod 33:19, Ps 6:2, 51:1); the Hebrew word is the same, חָנַן. Mercy in the sense of רַחֲמִים is another word, not counted here. A few verses say only “He” or “You” (Isa 30:19, Ps 102:13, Ps 41:10); the verse before names the LORD or, in Ps 41:10, the verse itself does.",
+   "_add_why": "Ps 41:10 'But You, O LORD, be gracious to me': the frame's agent is 'You'. Job 33:24 'to be gracious to him' (God's messenger speaks, God is the one gracious): the panel moved it here from the last verb row",
+   "_why": "by the frame's agent: God, the LORD or Lord named in the verse as the one who is gracious (a prayer addressed to Him, a wish, a promise, a report); the verb's own lemma is required so that χαρίζομαι is not caught. not_patient בָּגַד keeps Ps 59:5 ('show no mercy to the wicked traitors') out: it says the opposite and stands in the 'withheld' row",
+   "not_patient": [
+    "בָּגַד"
+   ]
+  },
+  {
+   "form": "verb",
+   "label": "Seek favor, plead",
+   "doors": [],
+   "pick": [
+    "Deut.3.23",
+    "1Kgs.8.33",
+    "1Kgs.8.47",
+    "1Kgs.8.59",
+    "1Kgs.9.3",
+    "2Chr.6.24",
+    "2Chr.6.37",
+    "2Kgs.1.13",
+    "Esth.4.8",
+    "Esth.8.3",
+    "Job.8.5",
+    "Job.9.15",
+    "Job.19.16",
+    "Ps.30.8",
+    "Ps.142.1",
+    "Gen.42.21",
+    "Hos.12.4"
+   ],
+   "note": "The same Hebrew verb as “be gracious”, in the reflexive stem: to seek someone's favor. The Berean renders it plead, implore, make supplication and “beg for mercy”; MACULA glosses it “seek favor”.",
+   "_why": "by hand, from the frames: the stem decides. 17 verses, of which the sense filter would have kept only Job 9:15 and Hos 12:5 by their glosses; they are set together here because the original arbitrates"
+  },
+  {
+   "form": "verb",
+   "label": "The Greek verbs of grace: forgave, granted, freely given; the angel's word to Mary (Luke 1:28)",
+   "pick": [
+    "Luke.7.42",
+    "Luke.7.43",
+    "2Cor.2.7",
+    "2Cor.2.10",
+    "2Cor.12.13",
+    "Eph.4.32",
+    "Col.2.13",
+    "Col.3.13",
+    "Acts.27.24",
+    "1Cor.2.12",
+    "Gal.3.18",
+    "Phil.1.29",
+    "Phil.2.9",
+    "Rom.8.32",
+    "Eph.1.6",
+    "Luke.1.28"
+   ],
+   "doors": [
+    "forgiveness",
+    "gift"
+   ],
+   "lead": [
+    "Eph.4.32",
+    "Rom.8.32",
+    "Luke.1.28",
+    "Acts.27.24"
+   ],
+   "note": "The Greek is χαρίζομαι, the verb of χάρις (to give freely, graciously, as a favor), and χαριτόω (Luke 1:28, Eph 1:6); the Berean renders them forgive, grant and freely give. The usual verb of forgiving, ἀφίημι, is a different word and is not counted in this hub. Luke 1:28 is a form of χαριτόω (κεχαριτωμένη, a perfect participle); the Berean prints “you who are highly favored”. Traditions read the form differently, and the page does not choose.",
+   "_why": "by hand: the divine persons are not left to a rule. The senses that are not grace (released, hand over, restored, gave sight) are out of the verb rows by sense_drop and stand in 'The same Greek words in other senses'"
+  },
+  {
+   "form": "verb",
+   "label": "Favor, kindness and pity shown or withheld: to the poor, between people, to the wicked, withheld in judgment or war",
+   "doors": [],
+   "lead": [
+    "Prov.14.21",
+    "Isa.26.10",
+    "Lam.4.16",
+    "Prov.19.17"
+   ],
+   "_why": "the rest of חָנַן by the frames: the righteous or a man showing favor to the poor, needy or fatherless (Prov 14:21, 14:31, 19:17, 28:8, Ps 37:21, 37:26, 112:5; Ps 109:12 is a curse), the verb under a negative (Deut 7:2, 28:50, Isa 27:11, Lam 4:16, Prov 21:10), and the plain uses between people (Job 19:21, Judg 21:22) and to the wicked (Isa 26:10). Panel: Ps 59:5 comes here (the last 'withheld' verse); Job 33:24 went to the first verb row. Prov 26:25 ('speaks graciously') is out of this row by sense_drop and stands in 'Gracious lips and words'"
+  },
+  {
+   "form": "adjective",
+   "label": "Gracious and compassionate; called “gracious”",
+   "doors": [
+    "god",
+    "mercy"
+   ],
+   "lead": [
+    "Exod.34.6",
+    "Ps.103.8",
+    "Joel.2.13",
+    "Jonah.4.2"
+   ],
+   "note": "The Berean renders the Hebrew חַנּוּן “compassionate” in Exod 22:27, where the Hebrew has the LORD say “for I am gracious”; Ps 112:4 says it of the upright."
+  }
+ ],
+ "sense_drop": {
+  "Acts.3.14": {
+   "why": "χαρίζομαι 'grant as a favor' is printed released, hand over, restored, gave sight here: not the grace sense, so the verse leaves the hub's verb rows (the builder's verb catch-all would otherwise take it into 'shown or withheld'); it is shown in the row of other senses so that the verb's uses are not hidden",
+   "words": [
+    "g5483"
+   ]
+  },
+  "Acts.25.11": {
+   "why": "χαρίζομαι 'grant as a favor' is printed released, hand over, restored, gave sight here: not the grace sense, so the verse leaves the hub's verb rows (the builder's verb catch-all would otherwise take it into 'shown or withheld'); it is shown in the row of other senses so that the verb's uses are not hidden",
+   "words": [
+    "g5483"
+   ]
+  },
+  "Acts.25.16": {
+   "why": "χαρίζομαι 'grant as a favor' is printed released, hand over, restored, gave sight here: not the grace sense, so the verse leaves the hub's verb rows (the builder's verb catch-all would otherwise take it into 'shown or withheld'); it is shown in the row of other senses so that the verb's uses are not hidden",
+   "words": [
+    "g5483"
+   ]
+  },
+  "Phlm.1.22": {
+   "why": "χαρίζομαι 'grant as a favor' is printed released, hand over, restored, gave sight here: not the grace sense, so the verse leaves the hub's verb rows (the builder's verb catch-all would otherwise take it into 'shown or withheld'); it is shown in the row of other senses so that the verb's uses are not hidden",
+   "words": [
+    "g5483"
+   ]
+  },
+  "Luke.7.21": {
+   "why": "χαρίζομαι 'grant as a favor' is printed released, hand over, restored, gave sight here: not the grace sense, so the verse leaves the hub's verb rows (the builder's verb catch-all would otherwise take it into 'shown or withheld'); it is shown in the row of other senses so that the verb's uses are not hidden",
+   "words": [
+    "g5483"
+   ]
+  },
+  "Prov.26.25": {
+   "why": "'When he speaks graciously, do not believe him': gracious speech, not favor shown; it stands in 'Gracious lips and words'",
+   "words": [
+    "h2603"
+   ]
+  }
+ }
+}

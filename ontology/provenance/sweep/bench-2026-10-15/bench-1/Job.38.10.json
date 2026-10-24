@@ -1,0 +1,59 @@
+{
+ "ref": "Job.38.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'On it' (masculine singular) is the sea of 38:8, not offered as a candidate.",
+   "category": "referent outside candidate list"
+  },
+  {
+   "slot": "w5",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person 'my boundaries': the speaker, the LORD.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person subject of the wayyiqtol 'I fixed': the speaker, the LORD.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person subject of 'I set in place': the speaker, the LORD.",
+   "category": "first person in divine speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A self-link. The wayyiqtol cannot be then-linked to itself, and 'then' runs within a verse only.",
+   "category": "self-link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The wayyiqtol 'I set in place' continues the narrative line from 'I fixed'.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The waw and 'when' joining 38:10 to 38:9",
+   "why": "A cross-verse relation. The verse-level link types cannot express it, so it is not recorded here."
+  }
+ ]
+}

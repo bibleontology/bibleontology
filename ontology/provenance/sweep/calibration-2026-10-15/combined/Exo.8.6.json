@@ -1,0 +1,30 @@
+{"ref": "Exo.8.6",
+ "referents": [
+  {"slot": "w8", "choice": "Exo.8.5#w4", "divine": false, "why": "'your word' is second masculine singular inside Moses' reply; the word he points back to is Pharaoh's 'tomorrow', so the addressee of this speech is Pharaoh", "category": "second person inside a reply, addressee of that speech"},
+  {"slot": "w16", "choice": "Exo.8.4#c3", "divine": false, "why": "'our' is first common plural in Moses' speech; it cannot be Moses alone, and Pharaoh (the addressee, who is told to know the LORD) is excluded; the nearest plural group on Moses' side is Moses and Aaron, who were both summoned. The builder's 'he' is singular and fails the morphology", "category": "first person plural inside speech, speaker's own side"},
+  {"slot": "cl0s", "choice": "Exo.8.5#w4", "divine": false, "why": "the clause answers Moses' question 'When shall I pray?' with 'tomorrow'; the one asked, and the one who gave the honor, is Pharaoh, so the act decides over nearest-noun order (Moses was the last named speaker)", "category": "implied subject of an answer, set by the act not the nearest noun"},
+  {"slot": "cl2s", "choice": "Exo.8.5#w2", "divine": false, "why": "wayyiqtol 'he said' replying to Pharaoh's answer; the speaker who changes is Moses, whose speech is 'according to your word' addressed to Pharaoh", "category": "implied subject, change of speaker in a dialogue exchange"},
+  {"slot": "cl4s", "choice": "Exo.8.5#w4", "divine": false, "why": "'you may know' is second masculine singular in Moses' speech; the person addressed, and the one whose word is accepted, is Pharaoh", "category": "implied you inside a speech, addressee of that speech"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "that", "dst": "cl5", "action": "keep", "why": "cl5 states what Pharaoh is to know (yada, 'that there is no one like the LORD'); it is the object of knowing, not a reason", "category": "content of knowing"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "cl4 is inside Moses' speech; 'and then' runs only along the narrative line of wayyiqtol clauses, and this yiqtol with lemaan is not a next event after Pharaoh's 'he said'", "category": "speech clause read as narrative sequence"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 ('tomorrow') is inside Pharaoh's speech, not on the narrative line; the wayyiqtol cl2 continues from the saying clause cl0, not from what was said", "category": "speech clause read as narrative sequence"},
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "keep", "why": "lemaan + yiqtol in a different person (you) after the wish 'according to your word': the assent is for the sake of Pharaoh's knowing; the form is outside the literal lists but the sense is purpose", "category": "purpose clause after an elliptical wish"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "cl0 is the speaking clause and cl1 'tomorrow' is what Pharaoh said; the said fragment sits inside the saying", "category": "speech frame and its content"},
+  {"src": "cl2", "type": "content", "dst": "cl3", "action": "add", "why": "cl2 is the speaking clause and cl3 is the first of the words Moses said", "category": "speech frame and its content"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "the second wayyiqtol 'he said' follows the first on the narrative line, one speaker answering the other", "category": "narrative sequence across a speech"},
+  {"src": "cl3", "type": "as", "dst": "cl1", "action": "add", "why": "'according to your word' (ke + dabar) points back to Pharaoh's saying 'tomorrow': Moses declares his reply the fulfilment of Pharaoh's word", "category": "accord with an earlier saying"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "cl0s"}, {"role": "addressee", "node": "Exo.8.5#w2"}], "divine": false, "why": "Pharaoh's answer is addressed to Moses, who has just asked 'When?'; the builder gave no addressee", "category": "turn missing its addressee"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "cl3"}, {"role": "part", "node": "cl4"}, {"role": "sender", "node": "cl2s"}, {"role": "addressee", "node": "Exo.8.5#w4"}], "divine": false, "why": "Moses' reply is addressed to Pharaoh ('your word', 'you may know'); the builder gave no addressee", "category": "turn missing its addressee"}
+ ],
+ "none_fit": [
+  {"where": "cl3 'according to your word'", "what": "a verbless assent or wish ('so be it, as you say') has no group kind or link type of its own; it is not a command (no imperative group) and its relation to Pharaoh's 'tomorrow' is closest to 'as' but is a prepositional phrase rather than a clause"},
+  {"where": "cl3 to cl4", "what": "lemaan + yiqtol after a wish is a purpose, but the purpose type is defined for a command followed by waw + jussive or for lamed + infinitive"}
+ ],
+ "cant_tell": [
+  {"what": "whether 'our' in 'the LORD our God' is Moses and Aaron or Moses with all Israel", "why": "the text gives only a first person plural; Moses and Aaron is the only composite on offer and agrees in number, but Israel is also plausible"},
+  {"what": "whether cl3 carries an elided verb (likely a jussive 'let it be') that would make it a command", "why": "the parse gives no verb; no imperative group is added because the list cannot confirm a command"}
+ ]}

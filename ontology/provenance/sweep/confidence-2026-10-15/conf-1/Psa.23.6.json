@@ -1,0 +1,46 @@
+{
+ "ref": "Psa.23.6",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "me, the psalm's own voice",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w9",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "my life, the psalm's own voice",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#psalmist",
+   "confidence": "high",
+   "divine": false,
+   "rhetorical": false,
+   "why": "I will return, first common singular in the psalm's voice",
+   "category": "first person in a psalm"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "The weqatal of cl1 continues the yiqtol of cl0 as the next event within the verse; the builder link is kept.",
+   "category": "weqatal continuation"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

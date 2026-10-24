@@ -1,0 +1,52 @@
+{
+ "ref": "Job.38.5",
+ "referents": [
+  {
+   "slot": "w0",
+   "choice": "Job.38.1#w2",
+   "divine": true
+  },
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w7",
+   "choice": "Job.38.1#w2",
+   "divine": true
+  },
+  {
+   "slot": "w10",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Job.38.1#w4",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "or",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "or",
+   "dst": "cl2",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

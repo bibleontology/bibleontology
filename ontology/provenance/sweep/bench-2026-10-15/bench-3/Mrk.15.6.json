@@ -1,0 +1,59 @@
+{
+ "ref": "Mrk.15.6",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "to them (autois) is the people, who are named as the crowd only in verse 8; no candidate in this verse is a plural that could receive the release",
+   "category": "recipient not among candidates"
+  },
+  {
+   "slot": "w7",
+   "choice": "w6",
+   "divine": false,
+   "why": "whom (hon, masculine singular) is a relative pronoun; its antecedent is the prisoner (w6), masculine singular",
+   "category": "relative pronoun"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Mrk.15.5#w9",
+   "divine": false,
+   "why": "he used to release is an annual custom of Pilate (the custom is named as Pilate's); masculine singular fits",
+   "category": "implied subject of habitual act"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false,
+   "why": "they requested: the people who asked for a prisoner, the same people as to them; no candidate is a plural crowd here",
+   "category": "requesters not among candidates"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self link",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "relative clause whom they requested is nested in the object noun phrase a prisoner of cl0",
+   "category": "relative clause in noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "referents of to them (w4) and they (cl1s): the people, the crowd",
+   "why": "the people are named in the English but not by a noun in this verse; the crowd (w3) is a candidate only in verse 8"
+  }
+ ]
+}

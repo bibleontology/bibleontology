@@ -1,0 +1,88 @@
+{
+ "ref": "Psa.107.1",
+ "referents": [
+  {
+   "slot": "w9",
+   "choice": "w2",
+   "divine": true
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "command",
+     "node": "cl0"
+    },
+    {
+     "role": "basis",
+     "node": "g1"
+    }
+   ]
+  },
+  {
+   "id": "writing",
+   "kind": "writing",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "sender",
+     "node": "psalmist"
+    },
+    {
+     "role": "part",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ]
+  },
+  {
+   "id": "g1",
+   "kind": "parallel",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "line",
+     "node": "cl2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

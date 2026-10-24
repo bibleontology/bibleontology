@@ -1,0 +1,145 @@
+{
+ "ref": "Exo.8.5",
+ "referents": [
+  {
+   "slot": "w7",
+   "choice": "w2",
+   "divine": false,
+   "why": "'me' in 'honor yourself over me' is Moses, the speaker of his own words to Pharaoh; a first person inside a speech is its speaker.",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "w12",
+   "choice": "w4",
+   "divine": false,
+   "why": "'you' in 'I will pray for you' is second masculine singular inside Moses's speech; the addressee is Pharaoh.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w16",
+   "choice": "w4",
+   "divine": false,
+   "why": "'your officials': second masculine singular possessor in Moses's speech, the addressee Pharaoh.",
+   "category": "possessive in addressee's speech"
+  },
+  {
+   "slot": "w20",
+   "choice": "w4",
+   "divine": false,
+   "why": "'your people': possessor is the addressee Pharaoh.",
+   "category": "possessive in addressee's speech"
+  },
+  {
+   "slot": "w26",
+   "choice": "w4",
+   "divine": false,
+   "why": "'from you': second masculine singular in Moses's speech, addressee Pharaoh.",
+   "category": "second person inside a speech"
+  },
+  {
+   "slot": "w30",
+   "choice": "w4",
+   "divine": false,
+   "why": "'your houses': possessor is the addressee Pharaoh.",
+   "category": "possessive in addressee's speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "the implied 'you' of the command 'honor yourself' is the person the command is spoken to, Pharaoh.",
+   "category": "implied subject of a command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w2",
+   "divine": false,
+   "why": "'I will pray' is first person common singular in Moses's speech.",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w24",
+   "divine": false,
+   "why": "third feminine plural 'they will remain only in the Nile' agrees with the frogs (feminine plural) that are being removed.",
+   "category": "feminine plural referent"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl2",
+   "type": "purpose",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "The lamed infinitive 'to cut off the frogs' gives what the prayer asks for. After a verb of speaking (pray) the infinitive is what is said, which the purpose rule excludes; it is recorded as content instead.",
+   "category": "infinitive after a verb of speech"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "Pray is a clause of saying; the infinitive gives what is asked (R1). Also keeps the petition content inside the turn.",
+   "category": "infinitive after a verb of speech"
+  },
+  {
+   "src": "cl5",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "cl5 is not a clause of this verse, and a then link is within a verse only (across verses is the episode rung).",
+   "category": "dangling link across verses"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Moses said; the imperative 'honor yourself over me' is the first said clause of his speech (R1).",
+   "category": "saying with its speech"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": false,
+   "why": "Moses speaks to Pharaoh; the speech holds cl1, cl2 and the parenthetical cl4. Sender and addressee are correct (R2).",
+   "category": "speech with a parenthetical"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl4, 'only in the River they will remain', inside Moses's question",
+   "what": "a restriction on what the removal covers (the frogs removed except those that stay in the Nile). No link type carries an exception to a purpose clause: 'unless' is a condition, and 'but_rather' needs a negative clause with כִּי אִם."
+  }
+ ],
+ "cant_tell": []
+}

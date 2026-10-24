@@ -1,0 +1,2368 @@
+{
+ "_note": "Built by tools/upper_ontologies.py from the ontology files.",
+ "parts": [
+  {
+   "id": "meaning",
+   "name": "The meaning classes",
+   "count": 60,
+   "note": "A proposal, not yet applied: what every node in the meaning layer would be a kind of — a being, a thing, a setting, an occurrence, an abstraction — and the kinds of saying and figurative use the text would be read into. Language-independent, so a Hebrew and a Greek passage could be compared. Nothing in the graph is stated in these classes yet. (ontology/meaning/meaning.ttl)",
+   "tree": [
+    {
+     "label": "Entity",
+     "comment": "Anything a word can be about. Abstract: every entity is one of the classes below, or — where the text's own categorizations conflict — left a bare Entity, with the conflict visible in its predications (PRINCIPLES 4).",
+     "children": [
+      {
+       "label": "Abstract",
+       "comment": "Things of the mind, of speech, of relation and measure.",
+       "children": [
+        {
+         "label": "Attribute",
+         "comment": "Holiness, righteousness, strength, height.",
+         "children": []
+        },
+        {
+         "label": "Cognition",
+         "comment": "Wisdom, knowledge, faith (as WordNet files it).",
+         "children": []
+        },
+        {
+         "label": "Communication",
+         "comment": "Word, law, name, song, letter — as things; a speech ACT is structure (kinds.json Communication).",
+         "children": []
+        },
+        {
+         "label": "Feeling",
+         "comment": "",
+         "children": []
+        },
+        {
+         "label": "Motive",
+         "comment": "",
+         "children": []
+        },
+        {
+         "label": "Possession",
+         "comment": "Inheritance, wages, silver as money.",
+         "children": []
+        },
+        {
+         "label": "Quantity",
+         "comment": "",
+         "children": []
+        },
+        {
+         "label": "Relation",
+         "comment": "",
+         "children": []
+        },
+        {
+         "label": "Shape",
+         "comment": "",
+         "children": []
+        }
+       ]
+      },
+      {
+       "label": "Being",
+       "comment": "Living things and those the text treats as persons.",
+       "children": [
+        {
+         "label": "Animal",
+         "comment": "Including the serpent of Genesis 3, typed by what Genesis says (identity.yaml): Rev 12:9's identification is a Predication, never a type.",
+         "children": []
+        },
+        {
+         "label": "Group",
+         "comment": "People taken as one: a tribe, a nation, a household, a congregation (ontology/schema group_kinds carries across as categories).",
+         "children": []
+        },
+        {
+         "label": "Person or personal being",
+         "comment": "Anyone the text treats as a person: a human, God, an angel, a spirit addressed or speaking. One class over all of them, with SUBCLASSES. WordNet files God under noun.person too. 18.7% of categorized noun tokens.",
+         "children": [
+          {
+           "label": "Deity",
+           "comment": "God, and any god the text speaks of as a god — 'Dagon their god' (1Sa 5:7) is classified so by what the text says, with its speaker (the Philistines), not endorsed. The Classification's saidBy is what separates the two.",
+           "children": []
+          },
+          {
+           "label": "Heavenly being",
+           "comment": "Angels, messengers from God, cherubim, seraphim, the heavenly host.",
+           "children": []
+          },
+          {
+           "label": "Human",
+           "comment": "A man, woman or child of the story.",
+           "children": []
+          },
+          {
+           "label": "Spirit",
+           "comment": "A spirit the text treats as acting or speaking: an unclean spirit, a demon, a lying spirit (1Ki 22:22).",
+           "children": []
+          }
+         ]
+        },
+        {
+         "label": "Plant",
+         "comment": "",
+         "children": []
+        }
+       ]
+      },
+      {
+       "label": "Occurrent",
+       "comment": "Things that happen, and conditions that hold.",
+       "children": [
+        {
+         "label": "Act",
+         "comment": "A doing named as a noun: sacrifice, war, judgement.",
+         "children": []
+        },
+        {
+         "label": "Event",
+         "comment": "A happening as a thing: the flood, the exodus, a feast.",
+         "children": []
+        },
+        {
+         "label": "Phenomenon",
+         "comment": "Light, fire, wind, rain, thunder.",
+         "children": []
+        },
+        {
+         "label": "State",
+         "comment": "Peace, sickness, barrenness.",
+         "children": []
+        }
+       ]
+      },
+      {
+       "label": "Setting",
+       "comment": "Where and when.",
+       "children": [
+        {
+         "label": "Place",
+         "comment": "place_kinds (city, town, region, mountain, river, well, sacred_site ...) carry across as categories under it.",
+         "children": []
+        },
+        {
+         "label": "Time",
+         "comment": "",
+         "children": []
+        }
+       ]
+      },
+      {
+       "label": "Thing",
+       "comment": "Physical things that are not alive.",
+       "children": [
+        {
+         "label": "Artifact",
+         "comment": "Made things: sword, altar, ark, lamp, city wall.",
+         "children": []
+        },
+        {
+         "label": "Body part",
+         "comment": "",
+         "children": []
+        },
+        {
+         "label": "Food and drink",
+         "comment": "",
+         "children": []
+        },
+        {
+         "label": "Natural object",
+         "comment": "The earth, a stone, a star, a rock.",
+         "children": []
+        },
+        {
+         "label": "Substance",
+         "comment": "Water, oil, blood, gold, clay.",
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Figurative use",
+     "comment": "One place the text speaks in an image.",
+     "children": []
+    },
+    {
+     "label": "Image",
+     "comment": "A recurring vehicle as one node: 'the sword', 'light', 'the shepherd'. It gathers its figurative uses and nothing more. Two images are NOT related because their tenors coincide (seed -> word of God <- sword: PRINCIPLES 17).",
+     "children": []
+    },
+    {
+     "label": "Image field",
+     "comment": "Images used TOGETHER in one passage, as one picture: shepherd, sheep, pasture, still waters, rod and staff (Psa 23; plan 4.4). A field is found by co-occurrence inside a structure group, with the group as evidence — never by similarity of meaning.",
+     "children": []
+    },
+    {
+     "label": "Individual",
+     "comment": "ONE referent across its mentions: Abraham, Jerusalem, Goliath's sword. Typed by one class above (the least disputed). The 8,416 records of ontology/entities/entities.jsonl are the first candidates; their `type` maps onto the classes (person->PersonalBeing, place->Place, group->Group, creature->Animal, object->Artifact, event->Event, covenant->Communication?), and 'being' and 'image', which make claims, become predications and figures.",
+     "children": []
+    },
+    {
+     "label": "Saying",
+     "comment": "A memorable expression the text uses, recorded as a unit: 'a still small voice', 'I lay a stone in Zion', 'a ransom for many'. The entity store's `text` records (2,305) land here with their kind; those whose kind is parable, dream, vision or sign also OPEN a told world (bom:opens).",
+     "children": []
+    },
+    {
+     "label": "Usage",
+     "comment": "",
+     "children": []
+    },
+    {
+     "label": "World",
+     "comment": "Where a referent exists for the text. The story world, or a TOLD world: the sower of a parable, the ram and goat of Daniel 8, the beast of Revelation 13 are not individuals of the story world, and nothing about them transfers there except what the text says (the interpretation it gives).",
+     "children": [
+      {
+       "label": "StoryWorld",
+       "comment": "",
+       "children": []
+      },
+      {
+       "label": "ToldWorld",
+       "comment": "Opened by a parable, dream, vision or sign-act (the old graph's text_kinds): a structure-side Communication whose content is a told world (BACKLOG, 2026-09-25).",
+       "children": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "structure",
+   "name": "The structure kinds",
+   "count": 111,
+   "note": "What the structure graph holds: clauses, contents, turns, groups, and the links between them, each with its status. (ontology/kinds.json)",
+   "layers": [
+    {
+     "label": "Meaning",
+     "what": "Language-independent: what a clause says, what force it is said with, and how clauses group. Patterns are matched here, so a Hebrew and a Greek passage can be the same shape.",
+     "classes": [
+      {
+       "label": "Unit",
+       "status": "built",
+       "definition": "Anything the graph holds a node for. Abstract: nothing is a bare Unit."
+      },
+      {
+       "label": "Clause",
+       "status": "built",
+       "definition": "One act of saying something: a content, said with a force. The unit the rest of the structure groups."
+      },
+      {
+       "label": "Content",
+       "status": "built",
+       "definition": "What a clause says, without the force: a predicate and its participants. Two clauses that say the same thing with different force share a content KEY."
+      },
+      {
+       "label": "Verb",
+       "status": "built",
+       "definition": "The predicate of a clause as a node, carrying its form (mood, stem, person) so it can be pointed at."
+      },
+      {
+       "label": "Ordered pair",
+       "status": "built",
+       "definition": "Two units taken together, in an order that matters, with one of them the head. A group keeps its head's force. Abstract: every group is one of the specializations below."
+      },
+      {
+       "label": "Action, then state",
+       "status": "built",
+       "definition": "A command, then the same act reported as having happened. The order is the content: reversed, it would be an act followed by a command to do it."
+      },
+      {
+       "label": "Imperative, and what qualifies it",
+       "status": "built",
+       "definition": "A command as a unit: the first members are the command — ONE command, or a COLLECTION of commands joined by 'and' at one speech level ('stretch out your staff AND strike the dust', Exo 8:12) — and every further member is a QUALIFIER the text attaches to them, typed by what it does. A saying's `content` points at the group, not at its first command. A group may have no qualifier: a collection alone is one. One class, extended by qualifier types rather than specialized into a class per combination — a command often carries several at once. The group keeps the command's force: qualified, it is still a command."
+      },
+      {
+       "label": "Imperative, and its basis",
+       "status": "withdrawn",
+       "definition": "A command and the reason the text gives for it, as its own class."
+      },
+      {
+       "label": "Condition, then consequence",
+       "status": "built",
+       "definition": "An 'if' clause and the clause it conditions, as one node: 1 = the condition, 2 = the consequence. The group keeps the consequence's force — it is the clause that asserts or commands; the condition only says when."
+      },
+      {
+       "label": "Imperative, and the consequence of refusing it",
+       "status": "withdrawn",
+       "definition": "A command, then a condition whose protasis is that same command REFUSED — the command's own verb under 'refuse' (מָאֵן) or 'not' — and whose apodosis is what will follow. The group keeps the imperative's force: a warning attached to a command is still a command, as a basis is."
+      },
+      {
+       "label": "Parallel lines",
+       "status": "built",
+       "definition": "Two lines where the second states the first's roles minus the subject, because it is the same subject. The subject sits on the group AND is carried to each line: both readings are true."
+      },
+      {
+       "label": "Descriptions of one referent",
+       "status": "built",
+       "definition": "Consecutive 'the one who ...' clauses (participles used as nouns, each folded out of its '[he is] ...' frame) describing one referent, across verses within a chapter: Psa 103:3-5 'who forgives all your iniquity, who heals all your diseases, who redeems your life from the pit, who crowns you ..., who satisfies you with good'. The group's subject is the common referent (the first description's unstated 'he'); each description keeps its own subject node."
+      },
+      {
+       "label": "Concession: the obstacle, what holds anyway, and why",
+       "status": "built",
+       "definition": "Where the text marks a concession (גַּם כִּי, 'even though'): the conceded clause (the obstacle), the claim that holds anyway, and — where a כִּי gives it — that claim's ground. Where the held claim is NEGATED, the response the obstacle would have brought is named by the text and denied, and the group carries it as `denied`: Psa 23:4 'even though I walk through the valley of deep darkness, I will NOT FEAR harm, for you are with me' → conceded, holds anyway, its ground; denied 'fear'. That this is an overridden motivation is the reading over the group (meaning graph). The mirror of `failed_result`: there an act's aim does not come; here a circumstance's expected outcome does not, and the text says why."
+      },
+      {
+       "label": "Acts of one agent",
+       "status": "built",
+       "definition": "Clauses in a row that are the acts of one agent: joined by no word, none a narrative 'and then' (wayyiqtol), each stating its subject only in its verb, and every one of those subjects resolved to the SAME referent. The agent sits on the group (`group_subject`), as a Parallel's subject does; the acts are its members (`agent_act`), in order. A run crosses verses within a chapter. Psalm 23:2-3: 'he makes me lie down / he leads me / he restores my soul / he guides me' — four acts of the LORD."
+      },
+      {
+       "label": "Episode",
+       "status": "proposed",
+       "definition": "A run of clauses one rung above the sentence. Hypothesis: וַיְהִי + a time phrase opens one (27.9% open a Berean section against 11.5% for other wayyiqtol). A signal, not a rule."
+      },
+      {
+       "label": "Communication unit",
+       "status": "built",
+       "definition": "Someone communicating something to someone: a SENDER, an ADDRESSEE, what is communicated (its parts), a MEDIUM (speech or writing) and a MODE (performed — it happens in the text; commanded — a directive to communicate, which may be fulfilled later or not at all). Communications NEST: every one except the outermost is a part of an enclosing communication, and the chain rolls all the way up to the writer of the scroll, the psalm or the letter. Abstract: every communication is one of the specializations below."
+      },
+      {
+       "label": "Writing (scroll, psalm, letter)",
+       "status": "built",
+       "definition": "The outermost communication: the book, psalm or letter as a unit, from its writer to its readers. Every speech with no enclosing speech is a part of it, and narration is its own voice. The SENDER is set only where the text states one — 'Paul, an apostle ... to the church of God in Corinth' (1 Cor 1:1-2), a psalm's heading — and left open where it does not: the text of Exodus names no writer, so the graph names none."
+      },
+      {
+       "label": "Author (the voice of a writing)",
+       "status": "built",
+       "definition": "The authoring voice of a Writing — the role, as distinct from the person who fills it. The writing's own 'I' and 'my' point here; the voice resolves to a named person only at the highest level, the Writing, where the text itself names one (`resolves_to`): a psalm's heading, a letter's greeting ('Paul, an apostle'). Never by tradition. Abstract: each author voice is one of the specializations below; built for psalms so far."
+      },
+      {
+       "label": "Psalmist",
+       "status": "built",
+       "definition": "The Author of a psalm. One per psalm, headed or not. The psalm's 'I' and 'my', outside any quoted speech, point to the psalmist; the psalmist resolves to the heading's name at the Writing level."
+      },
+      {
+       "label": "Address (a turn to 'you')",
+       "status": "built",
+       "definition": "A run of clauses marked second person — verbs, pronouns, suffixes — outside any quoted speech, inside a Writing: the writer turning to address someone. Nested in the Writing as one of its parts; sender the writer. Built for the Psalms."
+      },
+      {
+       "label": "Assertion",
+       "status": "built",
+       "definition": "A clause said with assertive force — it states that something is, was or will be so — as against a directive ('let my people go') or a wish. Derived from the clause's form through the language layer (see `forces`): a wayyiqtol, qatal, yiqtol, weqatal, a predicating participle, a Greek indicative, or a verbless clause asserts. The parent of Illustration."
+      },
+      {
+       "label": "Directive",
+       "status": "built",
+       "definition": "A clause said with directive force — it tells someone to do or be something: an imperative, a jussive ('let there be light'), a cohortative ('let us'), a Greek imperative or hortatory subjunctive. The head of an Imperative group is one."
+      },
+      {
+       "label": "Question",
+       "status": "proposed",
+       "definition": "A clause said with interrogative force: it asks. Marked in the Hebrew by an interrogative word (מִי 'who', מָה 'what / why', אֵיךְ 'how', אַיֵּה 'where', לָמָּה / מַדּוּעַ 'why') or the prefixed interrogative הֲ. Derived from form in the clean builder's stage S2 (docs/BUILDER-DESIGN.md). Before it, the graph had no question force at all: every one of 2,213 interrogatives stood in a clause marked assertion (invariants baseline, 2026-09-27)."
+      },
+      {
+       "label": "Illustration (a symbolic assertion)",
+       "status": "proposed",
+       "definition": "An assertion made through an image rather than concretely: 'the LORD is my shepherd'. A specialization of assertion — the claim is true, but by likeness: the LORD is not a shepherd, and says more by being called one."
+      },
+      {
+       "label": "Action (a content that is a doing)",
+       "status": "proposed",
+       "definition": "A content whose predicate is something done: 'me lie down in green pastures' (Psa 23:2), 'the frogs go up' (Exo 8:2). A TYPE — what the content is, wherever it stands. 'An action effect', a reader's words for 23:2, is an Action in the effect role of `causes`: the type and the role are asked for separately, so a pattern can want either (PRINCIPLES 47)."
+      },
+      {
+       "label": "State (a content that is a condition)",
+       "status": "proposed",
+       "definition": "A content whose predicate is a condition rather than a doing: 'multiply', 'be strong', 'be angry', 'be king' — and, in a reader's reading of Psalm 23:3, a depleted life replenished. A TYPE; in the effect role of `causes` it is what was called a state effect. Sibling of Action."
+      },
+      {
+       "label": "Action effect",
+       "status": "withdrawn",
+       "definition": "Proposed 2026-09-25 as a kind of Content: the effect of a causative that is itself an action ('he makes me LIE DOWN', Psa 23:2)."
+      },
+      {
+       "label": "State effect",
+       "status": "withdrawn",
+       "definition": "Proposed 2026-09-25 beside ActionEffect: the effect of a causative that is a condition."
+      },
+      {
+       "label": "Context-setting clause and its scope",
+       "status": "proposed",
+       "definition": "A clause that sets the context in which following clauses are read — 'the LORD is my shepherd' for Psalm 23:1-4 — and the span it governs. 'I shall not want' is read in its light (because the LORD is my shepherd, I lack nothing), though nothing connects them in the Hebrew."
+      },
+      {
+       "label": "Speech turn",
+       "status": "built",
+       "definition": "A communication by speech, however many verses it runs. Open at the end of a verse that holds a speech and does not end on a narrative wayyiqtol outside it; continued by each following verse that does not open with a narrative wayyiqtol. TURNS NEST: the outermost is opened by a narrated saying that sits inside no speech; each saying inside its speech opens the next turn in, which is a `part` of the one around it. Each turn has a mode (performed / commanded) and, where the text gives them, a sender and an addressee. Continuing verses are parts of the innermost turn."
+      },
+      {
+       "label": "Head and qualifier",
+       "status": "proposed",
+       "definition": "A noun phrase as its head plus what qualifies it: 'the houses OF your officials'. MACULA marks it NPofNP 54,333 times; we flatten it to one node."
+      },
+      {
+       "label": "Cause and effect",
+       "status": "withdrawn",
+       "definition": "The first name for Gen 1:3's pair. Withdrawn because the text does not say the light came BECAUSE of the command; that is a reading."
+      },
+      {
+       "label": "State nested in its command",
+       "status": "withdrawn",
+       "definition": "'There was light' drawn as a child of 'let there be light'."
+      }
+     ],
+     "relations": [
+      {
+       "label": "asserts",
+       "status": "built",
+       "definition": "A clause says a content, with a force. The force is on this edge, not on the content, so one content can be commanded in one clause and reported in the next."
+      },
+      {
+       "label": "participant",
+       "status": "built",
+       "definition": "The roles MACULA assigns inside a clause. The content is the hub; each role is an edge from it."
+      },
+      {
+       "label": "verb",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "subject",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "object",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "second object",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "indirect object",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "predicate",
+       "status": "built",
+       "definition": "The predicate of a verbless clause: 'your word is A LAMP'."
+      },
+      {
+       "label": "prepositional",
+       "status": "built",
+       "definition": "A participant through a preposition, which is kept: 'TO the LORD' and 'BEFORE the LORD' are different relations."
+      },
+      {
+       "label": "object",
+       "status": "built",
+       "definition": "In a VERBLESS clause whose predicate is a prepositional phrase, the preposition does the verb's work and is the predicate node; this links it to its object. 'you [are] WITH me' (Psa 23:4): you ← is (no verb) → with (עִמָּד) → me. With a verb, the preposition stays on its role's edge ('leads me BESIDE waters'): there the verb is the claim."
+      },
+      {
+       "label": "for the sake of",
+       "status": "built",
+       "definition": "What an act is done FOR: its motive, marked by the text with לְמַעַן before a noun — 'he guides me in paths of righteousness FOR THE SAKE OF his name' (Psa 23:3), 'for the sake of the fifty' (Gen 18:24). A reading ('motivation') enters as a kind only where the text marks it; לְמַעַן is that mark. Before a CLAUSE the same word is 'so that', a purpose, and is not this."
+      },
+      {
+       "label": "adverbial",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "refers to",
+       "status": "built",
+       "definition": "Who (or what) a pronoun or pro-form is: 'he' (Psa 23:2) is the LORD (23:1). Four rules: (1) a SINGULAR third-person pronoun resolves only if EXACTLY ONE referent in the leading text — the last 12 clauses, same speech level — agrees with it in gender and number; with two or more it is held, not guessed. Predicates, headings, pronouns and the psalm's voice are not referents; a divine name is singular AND masculine, since its verbs are (left without a gender it agreed with 'she': Pro 9:2 'she has prepared her meat', Wisdom, → the LORD; 49 feminine pronouns → a divine name before, 14 after, all rule 2's; 2026-09-26); a resolved pronoun's referent stays in the leading text. A PLURAL 'they' is held (see known_fault). (2) In a psalm's own voice, an implicit 'you' inside an address is that address's addressee: God by default, or a vocative beside the clause ('Bless the LORD, O my soul', Psa 103:1). An EXPLICIT 'you' (אַתָּה, a pronoun word) is resolved the same way — 'YOU are with me' (Psa 23:4) was left out because the rule read only the 'you' a verb carries (2026-09-26). A FEMININE 'you' or 'your' is not given a divine addressee — 'why are you downcast, O my soul' (Psa 42:12) addresses the soul — and is held (12 + 14; 2 feminine → divine remain, Psa 16:2 and 137:8). Known fault, found by the acts-of-one-agent sample: the God default misfires in calls to worship (105:1 'give thanks to the LORD'), in oracles (2:9 'you will break them'), and where a new vocative takes over (103:22) — P-2026-09-26-21. (3) WITHDRAWN 2026-09-25: 'so' in a fulfilment was a pronoun pointing at the command. כֵּן belongs a level higher — it is lifted out of the clause onto the `fulfils` or `likewise` link it stood for, and is no longer a word in the content. (4) And its implicit 'they' is the ones that command chain was addressed to, walked up through `content` — 'they did so' (Exo 8:13) → Moses and Aaron, a minted composite. Rules 3 and 4 resolve by STRUCTURE, not by candidates, so they apply to plurals. (5) A clause that fulfils one command of a collection has, as its implicit subject, that command's actor: 'he struck' (Exo 8:13) fulfils 'strike', whose actor is Aaron — held by rule 1 (Aaron, Moses and the LORD all agree), resolved by the fulfilment. (7) THE HEART STANDS FOR ITS OWNER: after a clause whose subject is a heart with a named or resolved owner ('Pharaoh's heart was hardened'), an implicit subject agreeing with that owner is the owner ('and he would not listen', Exo 8:15). 10 resolved, 9 right — the miss is Psa 22:15, where the heart itself is the subject ('my heart ... it melted'). (6) The implicit subject of a command's EFFECT that agrees with the command's object is that object: 'strike the dust ... and it will become gnats' (Exo 8:12) → the dust; 4 in the corpus, 4 right. (8) THE PSALM'S 'ME' IS THE PSALMIST: a first-person singular pronoun — object suffix 'he makes ME lie down', 'you are with ME', the 'my' suffix node, independent אֲנִי — in a clause outside any quotation and the heading refers to the psalmist, the psalm's voice, as its 'I' (subject) and 'my' (possessor) already did; the psalmist resolves to the writer at the Writing. The one who prays the psalm was weighed as a second referent and set above the structure graph, since the text does not state it. LABELS: Hebrew has no 'it', so an unresolved third-person singular is drawn 'he/it' or 'she/it'; resolved to a named person or God it is 'he', to a thing 'it'."
+      },
+      {
+       "label": "causes",
+       "status": "built",
+       "definition": "A causative verb (Hebrew hiphil) holds two events: the causing, and the event caused. The outer content keeps the causer and the verb; the INNER content has the object of the causing as its subject, with the places and manner — 'he makes [me lie down in green pastures]'. Only where the root also occurs in the plain stem (qal), so a hiphil-only verb ('strike', 'save') is not split."
+      },
+      {
+       "label": "qualifier",
+       "status": "built",
+       "definition": "HEAD AND QUALIFIER inside a phrase: each dependent MACULA attaches to a head, typed by how (`rel`) — of (NPofNP: pastures OF grass), attribute (NpAdjp: a CLEAN heart), prep (NpPp: waters OF rest), quantity (QuanNP: ALL the earth), number (SEVEN years). Walked down from each role's head, recursively, so the head stays what the clause is about and everything else qualifies it. The content key stays the heads."
+      },
+      {
+       "label": "negation",
+       "status": "built",
+       "definition": "The negative of a clause — לֹא 'not', אַל 'do not', אַיִן 'there is no'; Greek οὐ, μή and kin. Part of the content KEY by lemma, so 'I lack' and 'I do not lack' are different contents, and the content carries `polarity: negative`."
+      },
+      {
+       "label": "speaker",
+       "status": "built",
+       "definition": "Who says a speech clause that names no speaker. Always inferred, by alternation between the last two to take a turn, with embedded speech excluded; declines when fewer than two have spoken."
+      },
+      {
+       "label": "clause to clause",
+       "status": "built",
+       "definition": "How one clause stands to another. Rule 45: a connective attaches to the nearest candidate, and the other candidate is kept on the edge as alt_host."
+      },
+      {
+       "label": "says",
+       "status": "built",
+       "definition": "A speech clause and what was said. The said clause is embedded: it is inside the speaking, not next on the narrative line. Where what was said is a run of commands joined by 'and', the content is the COLLECTION — the Imperative group — not its first member."
+      },
+      {
+       "label": "and",
+       "status": "built",
+       "definition": "A separate-word waw. Where the waw is fused into the verb (wayyiqtol, weqatal) the relation is 'and then' instead. Where it joins a command to a change of person, it is 'so that'."
+      },
+      {
+       "label": "inside",
+       "status": "built",
+       "definition": "A clause nested in another clause's role, as MACULA nests it; the edge carries the role (and preposition) it fills. 'You refuse [to let them go]' — the infinitive clause is the object of refusing. Relative clauses inside a noun phrase land here too; which kind of inside it is, the role says."
+      },
+      {
+       "label": "that",
+       "status": "built",
+       "definition": "The clause is WHAT is known, seen, heard or said: the object of the verb, not a reason for it. כִּי after יָדַע, רָאָה, שָׁמַע, אָמַר, זָכַר, נָגַד, בִּין, שָׁבַע."
+      },
+      {
+       "label": "because",
+       "status": "built",
+       "definition": "The text states a reason (כִּי, יַעַן, עֵקֶב). The edge runs from what is explained to its reason."
+      },
+      {
+       "label": "if",
+       "status": "built",
+       "definition": "The condition is the destination and what it conditions is the source. A Hebrew condition precedes what it governs, so the host is the NEXT clause that is not an infinitive complement; the clause before is kept as alt_host."
+      },
+      {
+       "label": "even though",
+       "status": "built",
+       "definition": "Concession: גַּם כִּי. Like a condition, it precedes what it qualifies and attaches forward."
+      },
+      {
+       "label": "undecided",
+       "status": "proposed",
+       "definition": "A connective the text carries whose relation the FORM does not decide. The link is written with its candidate relations listed, instead of the builder guessing or leaving the word unlinked. First case: the verse-opening כִּי, 'for' (the reason for what precedes) or 'when' (the setting of what follows). The candidates come from the function-word lexicon (PRINCIPLES 41: an explicit uncertain category is cheaper than a forced decision)."
+      },
+      {
+       "label": "when / if / though",
+       "status": "built",
+       "definition": "A FRONTED כִּי: a כִּי clause that comes before the clause it governs, which it sets — 'when', 'if' or 'though'; the Hebrew does not say which, so the link does not. It attaches forward, as a condition does. Fronted means: in MACULA's (flat) unit, no clause stands directly before the כִּי ('and' may: וְכִי opens a new sentence) and a clause follows the כִּי clause directly. MID-VERSE ONLY: a כִּי that opens a verse is usually 'FOR ...', the reason for the verse before, and the form does not separate it from a fronted 'though' — built for both, a sample of 12 was 3 right; those (≈298) stay unlinked and are counted (`fronted_ki_verse_initial_held`). Jer 38:15 'even if I give you advice, you will not listen'; Jer 14:12's second, 'and (though) they offer, I will not accept'. A כִּי AFTER its main clause stays `because` (or `that` after a verb of perceiving). Not 'setting': the superseded flat layer has an edge of that name (Deu 11:26 'I am setting before you')."
+      },
+      {
+       "label": "until",
+       "status": "built",
+       "definition": "עַד before a clause: the inner clause is a LIMIT in time on the clause it sits in, not a place inside it. 'they became slaves to him and his sons UNTIL the kingdom of Persia reigned' (2Ch 36:20). Was a bare `within`."
+      },
+      {
+       "label": "describing",
+       "status": "built",
+       "definition": "A bare participle clause — no subject, no conjunction, not substantival — right after a finite clause, agreeing with that clause's subject: it describes that subject as it acts, or who it is, and does not stand as its own assertion. 'all of it wails, GOING DOWN IN WEEPING' (Isa 15:3); 'they ate the feast, SACRIFICING peace offerings' (2Ch 30:22); 'hear this, O leaders, who LOATHE justice' (Mic 3:9)."
+      },
+      {
+       "label": "but / however",
+       "status": "built",
+       "definition": "The text says 'but': אוּלָם or אֶפֶס כִּי before a clause — words that are a clause connective and nothing else. 'but let us fight them in the plain' (1Ki 20:23), 'however, the city was formerly named Luz' (Gen 28:19). NOT רַק / אַךְ / אֲבָל: MACULA reads them mostly as focus on a phrase ('ONLY the high places'), and at clause level they are 'but', 'only' or 'surely' — Psa 23:6 opens with אַךְ, 'SURELY goodness'. Whether a contrast is also a concession is a reading. Mid-verse only, as every backward link: a verse-opening 'but' has no host in its verse."
+      },
+      {
+       "label": "but rather / except",
+       "status": "built",
+       "definition": "CORRECTION: כִּי אִם after a negative clause — 'not X but Y', and its exception sense, 'none ... except'. 'This one will not be your heir, but one who comes from your own body' (Gen 15:4); 'he must not eat ... unless he has bathed' (Lev 22:6); 'the Lord GOD does nothing without revealing his plan' (Amo 3:7). Read before as 'because' (כִּי alone), which reversed it."
+      },
+      {
+       "label": "or",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "lest",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "unless",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "therefore",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "fulfils",
+       "status": "built",
+       "definition": "A report that a command was carried out, where the text SAYS so with a pro-form: a narrative 'they did so' (עָשָׂה + כֵּן) or 'and it was so' (הָיָה + כֵּן), not negated, with no named subject, after a command. Points at the nearest preceding command in the book (not a cohortative), or at its collection. Its 'so' refers to that command unit, and its implicit 'they' to the ones the command chain was addressed to (walked up through `content`): Exo 8:13 'they did so' → Moses and Aaron, the collection 'stretch out your staff and strike the dust'. Plan 1.19. THEN, MEMBER BY MEMBER: the narrative clauses after the formula that repeat a command's verb fulfil THAT command and elaborate the formula ('Aaron stretched out ... struck'); one that repeats the command's EFFECT verb fulfils the effect ('the gnats were on man and beast' ← 'it will become gnats'), and is the `result` of the acts before it — the command's cause and effect, carried into the report. An action-state pair whose state is now a known fulfilment is removed: matched by lemma alone, it had joined the LORD's saying to Aaron's acts."
+      },
+      {
+       "label": "and so — failed",
+       "status": "built",
+       "definition": "A specialization of `result`: the outcome of an attempt, where the outcome is that the attempt's purpose was NOT achieved. 'The magicians did so by their secret arts TO BRING FORTH the gnats, AND NOT THEY COULD' (Exo 8:14, BSB 8:18). Marked by an attempt that has a `purpose`, then 'and' + negated יָכֹל 'be able'. A pattern asking for results matches it (PRINCIPLES 47); one asking for failure asks for it alone."
+      },
+      {
+       "label": "just as",
+       "status": "built",
+       "definition": "A comparison: כְּ (כַּאֲשֶׁר 'just as') before a clause nested in this one's prepositional role. Where the compared clause is a SAYING — 'he would not listen to them, JUST AS THE LORD HAD SAID' (Exo 8:15, BSB 8:19) — the edge carries `as_said`: the text declares the action the fulfilment of an earlier word. Which earlier word is not yet linked."
+      },
+      {
+       "label": "did likewise",
+       "status": "built",
+       "definition": "Someone else doing the same as a deed just done, where the text says so with כֵּן 'so, thus': 'the magicians did so by their secret arts' (Exo 8:14, BSB 8:18) → Aaron's deed (8:13). A narrative 'did so' with a NAMED subject that is not doing what it was commanded — imitation, not fulfilment. Linked only to a deed done after the latest command, so a named person carrying out a request is not read as copying. The כֵּן is lifted out of the clause's content onto this link (and onto `fulfils` likewise)"
+      },
+      {
+       "label": "elaborates",
+       "status": "built",
+       "definition": "A clause giving the detail of an earlier one. Built where it is structural: after 'they did so', the narrative clauses that repeat a fulfilled command's VERB are the detail of what was done — 'Aaron stretched out his hand with his staff and struck the dust' (Exo 8:13) elaborates 'this they did', and each fulfils its own command (stretch out, strike, 8:12)."
+      },
+      {
+       "label": "and so",
+       "status": "built",
+       "definition": "A command and what it brings about: an imperative, then waw + a third-person weqatal (Exo 8:12, 'strike the dust ... and it will become gnats'). The clause-to-clause link; in the Imperative group the same clause is the `effect`. Was read as a plain 'and'."
+      },
+      {
+       "label": "so that",
+       "status": "built",
+       "definition": "What an action is FOR. Two forms. (1) A command, then waw + jussive / cohortative / yiqtol in a DIFFERENT person. Looks forward, where 'because' looks back. A cohortative after a jussive is excluded: that is a promise. (2) Since 2026-09-25: a clause nested in another's prepositional role as לְ + infinitive construct — 'the magicians did so by their secret arts TO BRING FORTH the gnats' (Exo 8:14, BSB 8:18). Not where the infinitive is the main verb's COMPLEMENT — after be able, do again, begin, finish, be willing, refuse, seek, know how, cease, hurry ('if you refuse to let them go', Exo 7:27) — nor after a speech or intention verb, where it is what was said ('Solomon purposed to build'); nor after הָיָה / נָתַן, which the form does not settle; nor the quotative לֵאמֹר. 2,180 built. MEASURED blind by two DeepSeek runs agreeing case for case: 10 of 16 before the speech exclusion, 10 of 13 of that sample after; the rest explain HOW rather than what for ('dealt wondrously') — meaning, not form."
+      },
+      {
+       "label": "and then",
+       "status": "built",
+       "definition": "The next event where the 'and' is inside the verb. A wayyiqtol continues the narrative line — the nearest clause before it that is not inside a speech; a weqatal continues whatever it follows. Within a verse only: across verses is the episode rung."
+      },
+      {
+       "label": "group member",
+       "status": "built",
+       "definition": "A group's members, each with its position (`order`). The member's role in the group is the edge's name."
+      },
+      {
+       "label": "action",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "state",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "command",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "qualifier of a command",
+       "status": "built",
+       "definition": "The extension point of Imperative: each qualifier type is a member relation, and a new one is added here rather than as a new class."
+      },
+      {
+       "label": "basis",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "aim",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "effect",
+       "status": "built",
+       "definition": "What the commanded act brings about: an imperative, then waw + a third-person weqatal. 'Stretch out your staff and strike the dust of the earth, AND IT WILL BECOME gnats' (Exo 8:12, BSB 8:16). The cause is the whole run of commands joined by 'and' before it, so they are all the group's commands. Distinct from `aim` (waw + jussive: what is intended) and from the proposed `promise` (what obeying earns). The same ROLE name as the effect in `causes` — one role, two relations (types and roles kept apart)."
+      },
+      {
+       "label": "warning",
+       "status": "proposed",
+       "definition": "The if/then whose condition refuses the command's own verb. 16 in the Hebrew Bible by the draft rule (a floor); frogs, flies and locusts in the plague cycle."
+      },
+      {
+       "label": "the saying",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "part of the communication",
+       "status": "built",
+       "definition": "What a communication contains: a nested communication (the speech inside it), or the highest unit of a continuing verse — a grouping (if/then, imperative with qualifiers, parallel pair) where a root clause heads one, otherwise the clause."
+      },
+      {
+       "label": "sender",
+       "status": "built",
+       "definition": "Who communicates it: the saying's stated subject, or the speaker inferred for it; for a commanded speech in the second person, the addressee of the enclosing communication ('and YOU shall say to him' — Moses)."
+      },
+      {
+       "label": "addressee",
+       "status": "built",
+       "definition": "To whom: the saying's `pp: to`. Left empty where the text does not say."
+      },
+      {
+       "label": "condition",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "consequence",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "line",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "who",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "even though",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "still",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "because",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "act",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "subject of the collection",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "voice",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "resolves to",
+       "status": "built",
+       "definition": "Who fills a voice, as the highest level states it — the psalm's heading. Held lightly: whoever prays the psalm takes up the voice."
+      },
+      {
+       "label": "whose",
+       "status": "built",
+       "definition": "Whose a noun is, where a possessive suffix says and the referent can be named. Three rules: (1) in a psalm's own voice, outside quoted speech, a first-person singular 'my' is the PSALMIST's — the voice, not David directly (622). (2) Inside a psalm's address, 'your' is the addressee's (568). (3) A third-person 'his' / 'their' is its OWN CLAUSE'S SUBJECT, where that subject is known and agrees — 'Abraham fell on his face', 'for his name's sake' (Psa 23:3) → the LORD — except for a noun inside the subject's own phrase ('his choicest young men'); held otherwise (1,927 resolved, 12 of 16 in a corpus sample). WRONG TURN kept: the subject pronoun's rule applied to possessives (any one agreeing referent in the leading text) was 3 of 16 — 'their eyes' → heart, 'their brothers' → instruments: a possessive's candidates include every thing, and animacy is meaning's."
+      },
+      {
+       "label": "next (text order)",
+       "status": "built",
+       "definition": "The ORDERED CHAIN: each clause to the one after it in text order, across verse boundaries, within a book. An ordering, not a relation of meaning — flagged `order_link`, never `clause_link`, so no rule follows it as a relation and no clause counts as joined because of it. What a pronoun walks back up to find its referent."
+      }
+     ]
+    },
+    {
+     "label": "Language",
+     "what": "How Hebrew, Aramaic and Greek mark the upper layer: verb forms, connective words, word order. A Hebrew wayyiqtol and a Greek aorist indicative are different forms that may do the same thing.",
+     "classes": [],
+     "relations": [
+      {
+       "label": "copula",
+       "status": "built",
+       "definition": "Greek: the linking verb of a copular clause."
+      },
+      {
+       "label": "topic",
+       "status": "built",
+       "definition": "Greek: a constituent fronted as what the clause is about."
+      },
+      {
+       "label": "auxiliary",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "ellipsis",
+       "status": "built",
+       "definition": null
+      },
+      {
+       "label": "tail",
+       "status": "built",
+       "definition": null
+      }
+     ]
+    },
+    {
+     "label": "Words",
+     "what": "The word occurrences themselves, with lemma, Strong's number and morphology, as MACULA gives them. To become its own asset — the WORD GRAPH: every occurrence and lexeme with a stable source id, each attribute sourced, frozen and versioned, which the structure and meaning layers reference by id (docs/BACKLOG.md, 2026-09-25).",
+     "classes": [
+      {
+       "label": "Word occurrence",
+       "status": "built",
+       "definition": "One word at one place in one verse. No identity across verses is claimed; 'the LORD' in Gen 2:4 and in Exo 8:6 are two nodes until a later pass merges them with evidence."
+      },
+      {
+       "label": "Coordinated words",
+       "status": "built",
+       "definition": "Words joined by 'and' and taken as one participant: 'the heavens and the earth', 'Moses and Aaron'. The only noun-phrase grouping built so far; each member hangs off it by `member`. Also MINTED where the text refers to a group it never names together: the doers of a fulfilled command ('they did so', Exo 8:13 → Moses and Aaron, the addressees down the command chain), marked `minted_for`."
+      }
+     ],
+     "relations": [
+      {
+       "label": "member",
+       "status": "built",
+       "definition": "One of the words in a coordination — or, in a minted composite, one of the participants it gathers (Exo 8:13: Moses, Aaron)."
+      },
+      {
+       "label": "flat layer",
+       "status": "superseded",
+       "definition": "The layer before clauses existed: an edge from subject to object labelled with the verb, plus `references`, `possessed_by`, `apposition`, `adjunct` and `of`. The verb as a label is why mood had nowhere to live, and its 'nearest agreeing clause subject' makes Pharaoh remove the frogs (Exo 8:4) and Moses bring them (Exo 8:8). Everything it says, the clause layer says better or should. Queue item 9."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "relations",
+   "name": "The relation vocabulary",
+   "count": 126,
+   "note": "Every kind of link the graph may assert between people, places, things and ideas, by category. A relation not on this list cannot be recorded. (ontology/schema/relationship_types.yaml)",
+   "groups": [
+    {
+     "label": "Kinship",
+     "items": [
+      {
+       "id": "adoptive_parent_of",
+       "label": "raised / adopted",
+       "notes": "Mordecai and Esther (Esth 2:7); Pharaoh's daughter and Moses (Exod 2:10)."
+      },
+      {
+       "id": "cousin_of",
+       "label": "is the cousin of",
+       "notes": "Only where the text itself says cousin: \"Mark the cousin of Barnabas\" (Col 4:10, Greek ἀνεψιός). Normally a cousin is inferred from two parents who are siblings, and then it is not recorded here -- record the parents and"
+      },
+      {
+       "id": "father_of",
+       "label": "is the father of",
+       "notes": "Biological or legally-recognized father. In Hebrew idiom \"son of\" can mean any male ancestor (Matt 1:1, \"Jesus Christ, the son of David\"); use ancestor_of for those. Use this only where a direct generation is meant."
+      },
+      {
+       "id": "half_sibling_of",
+       "label": "is a half-sibling of",
+       "notes": ""
+      },
+      {
+       "id": "mother_of",
+       "label": "is the mother of",
+       "notes": "Direct maternal parent."
+      },
+      {
+       "id": "sibling_of",
+       "label": "is a sibling of",
+       "notes": "Full or unspecified siblings. Use half_sibling_of when the text is explicit about a shared single parent (e.g. Amnon and Tamar, 2Sam 13:1-4)."
+      },
+      {
+       "id": "uncle_of",
+       "label": "is the uncle/aunt of",
+       "notes": "Recorded where the text states it: \"Saul's uncle Ner\" (1Sam 14:50), \"his mother's brother Laban\" (Gen 29:10). Where both the parent and the sibling are named, record those instead and let the relationship follow from the"
+      }
+     ]
+    },
+    {
+     "label": "Rule & succession",
+     "items": [
+      {
+       "id": "appointed",
+       "label": "appointed / installed",
+       "notes": "Placing someone in an office or command (1Kgs 4:1-6; Acts 6:3-6)."
+      },
+      {
+       "id": "co_regent_with",
+       "label": "reigned jointly with",
+       "notes": ""
+      },
+      {
+       "id": "deposed",
+       "label": "deposed / removed from power",
+       "notes": ""
+      },
+      {
+       "id": "predecessor_of",
+       "label": "was succeeded by",
+       "notes": "Source held an office (king, high priest, judge, governor) and target held it next. Direction is always earlier -> later."
+      },
+      {
+       "id": "reigned_over",
+       "label": "reigned over",
+       "notes": "The realm, not the seat. \"Ahab began to reign over Israel\" (1Kgs 16:29) and \"Ahab ruled from Samaria\" are two different facts, and the text states them separately -- often in the same verse. Without this the reigns had n"
+      },
+      {
+       "id": "ruler_of",
+       "label": "was ruler of",
+       "notes": "The district officer, not the king: \"Rephaiah son of Hur, ruler of a half-district of Jerusalem\" (Neh 3:9). Nehemiah 3 names nine of them and halves several districts between two men, which `reigned_over` cannot express "
+      }
+     ]
+    },
+    {
+     "label": "Prophetic & priestly",
+     "items": [
+      {
+       "id": "anointed",
+       "label": "anointed",
+       "notes": "Samuel anointed Saul (1Sam 10:1) and David (1Sam 16:13)."
+      },
+      {
+       "id": "baptized",
+       "label": "baptized",
+       "notes": ""
+      },
+      {
+       "id": "blessed",
+       "label": "blessed",
+       "notes": "Formal, consequential blessings (Gen 27:27-29), not casual greetings."
+      },
+      {
+       "id": "came_upon",
+       "label": "came upon",
+       "notes": "**The corpus's most characteristic statement about the Spirit, and until this type existed the graph could not hold a single instance of it.** Forty-one verses say the Spirit came upon, came mightily upon, rested upon, f"
+      },
+      {
+       "id": "cursed",
+       "label": "pronounced a curse on",
+       "notes": ""
+      },
+      {
+       "id": "healed",
+       "label": "healed / raised",
+       "notes": "Physical healing, exorcism, or raising from the dead, where the text names or clearly identifies the person. Unnamed but individuated people count (\"the woman with the issue of blood\", \"the centurion's servant\") — give t"
+      },
+      {
+       "id": "mentor_of",
+       "label": "was mentor / master to",
+       "notes": "Elijah and Elisha (1Kgs 19:19-21); Paul and Timothy (1Tim 1:2)."
+      },
+      {
+       "id": "ministered_to",
+       "label": "taught / ministered to",
+       "notes": "A substantial personal encounter that is neither healing nor formal discipleship: the woman at the well (John 4:7-26), Nicodemus (John 3:1-10), Zacchaeus (Luke 19:5-9), the rich young ruler. Use mentor_of for an ongoing "
+      },
+      {
+       "id": "offered",
+       "label": "offered",
+       "notes": "The text's own verb, and it is deliberately the only thing this records. Genesis 22:2 has \"Offer him there as a burnt offering\", Hebrews 11:17 \"By faith Abraham, when he was tested, offered up Isaac\", James 2:21 \"justifi"
+      },
+      {
+       "id": "prophet_to",
+       "label": "prophesied to / confronted",
+       "notes": "Nathan to David (2Sam 12:1-7); Elijah to Ahab (1Kgs 18:17-18)."
+      }
+     ]
+    },
+    {
+     "label": "Service & authority",
+     "items": [
+      {
+       "id": "charged",
+       "label": "charged",
+       "notes": "A binding instruction laid on someone: \"Mordecai had instructed her not to do so\" (Esth 2:10), Abimelech warning all the people on pain of death (Gen 26:11). Weaker than a command from God and stronger than a request."
+      },
+      {
+       "id": "commander_of",
+       "label": "commanded the army of",
+       "notes": "Joab under David (2Sam 8:16); Abner under Saul (1Sam 14:50)."
+      },
+      {
+       "id": "counselor_of",
+       "label": "was counselor to",
+       "notes": "Ahithophel to David and then Absalom (2Sam 15:12; 16:23)."
+      },
+      {
+       "id": "servant_of",
+       "label": "served",
+       "notes": "Source serves target. Covers officials, armour-bearers, stewards and slaves alike; the text rarely separates them cleanly."
+      }
+     ]
+    },
+    {
+     "label": "Marriage & union",
+     "items": [
+      {
+       "id": "betrothed_to",
+       "label": "is betrothed to",
+       "notes": "Joseph and Mary before marriage (Matt 1:18)."
+      },
+      {
+       "id": "concubine_of",
+       "label": "is a concubine of",
+       "notes": "Source is the concubine, target is the man. Recorded because the text distinguishes the status and it affects succession claims (2Sam 3:7)."
+      },
+      {
+       "id": "put_away",
+       "label": "sent away",
+       "notes": "The text's own word for the dissolution at Ezra 10:19 -- \"They pledged to send their wives away\" (the Hebrew is \"to send out\", as at 10:3). Kept as the text puts it rather than translated into divorce, which carries late"
+      },
+      {
+       "id": "spouse_of",
+       "label": "is married to",
+       "notes": ""
+      }
+     ]
+    },
+    {
+     "label": "Association",
+     "items": [
+      {
+       "id": "ally_of",
+       "label": "was allied with",
+       "notes": "Political or military alliance (1Kgs 22:4), not mere friendship."
+      },
+      {
+       "id": "companion_of",
+       "label": "traveled / worked with",
+       "notes": "Paul and Barnabas (Acts 13:2); missionary and ministry partners."
+      },
+      {
+       "id": "friend_of",
+       "label": "was a close friend of",
+       "notes": "David and Jonathan (1Sam 18:1-3)."
+      },
+      {
+       "id": "wrote_letter_to",
+       "label": "wrote to",
+       "notes": "The counterpart for letters addressed to a person rather than a congregation: Paul to Timothy, Titus and Philemon, John to Gaius (3John 1)."
+      }
+     ]
+    },
+    {
+     "label": "Descent (non-parent)",
+     "items": [
+      {
+       "id": "ancestor_of",
+       "label": "is an ancestor of",
+       "notes": "Multi-generation descent, or descent asserted without the intervening generations being given. Genealogy chains (Matt 1, Luke 3, 1Chr 1-9) produce father_of edges link-by-link; use ancestor_of for the summary claims the "
+      }
+     ]
+    },
+    {
+     "label": "Conflict",
+     "items": [
+      {
+       "id": "accused",
+       "label": "accused",
+       "notes": "Where the text uses the word: the Chaldeans accused the Jews (Dan 3:8), the men who accused Daniel and were cast into the den themselves (Dan 6:24), the chief priests accusing Jesus of many things (Mark 15:3). 37 verses "
+      },
+      {
+       "id": "attacked",
+       "label": "attacked / made war on",
+       "notes": ""
+      },
+      {
+       "id": "betrayed",
+       "label": "betrayed",
+       "notes": "Judas and Jesus (Matt 26:14-16, 48-49)."
+      },
+      {
+       "id": "cast_into",
+       "label": "was cast into",
+       "notes": "Someone put somewhere against their will and kept there: Daniel into the den of lions (Dan 6:16), the three into the burning fiery furnace (Dan 3:21), Joseph into the pit (Gen 37:24), Jeremiah into the dungeon (Jer 38:6)"
+      },
+      {
+       "id": "conspired_against",
+       "label": "conspired against",
+       "notes": ""
+      },
+      {
+       "id": "deceived",
+       "label": "deceived",
+       "notes": "Jacob and Isaac (Gen 27:19); Gibeonites and Joshua (Josh 9:3-15); the serpent and Eve (Gen 3:13)."
+      },
+      {
+       "id": "destroyed",
+       "label": "destroyed",
+       "notes": ""
+      },
+      {
+       "id": "enemy_of",
+       "label": "was an enemy of",
+       "notes": "Declared or sustained hostility where neither side is clearly the aggressor."
+      },
+      {
+       "id": "imprisoned",
+       "label": "imprisoned",
+       "notes": ""
+      },
+      {
+       "id": "judged",
+       "label": "passed judgment on",
+       "notes": "Pilate and Jesus (John 19:13-16); formal legal proceedings."
+      },
+      {
+       "id": "killed",
+       "label": "killed",
+       "notes": "Direct responsibility, including ordering the death (2Sam 12:9, where the text charges David with Uriah's death). Note the ordering in the relation's note when it is indirect."
+      },
+      {
+       "id": "persecuted",
+       "label": "persecuted / sought to kill",
+       "notes": "The word for Saul toward David: sustained pursuit of harm by someone with power over the target (1Sam 19:1-2, 23:14). For a single act of violence use killed or attacked; for scheming use conspired_against."
+      }
+     ]
+    },
+    {
+     "label": "Places",
+     "items": [
+      {
+       "id": "based_at",
+       "label": "centred on",
+       "notes": "Joins a congregation, household or tribe to the place it belongs to, so that \"the church at Ephesus\" is a group with a location rather than a synonym for the town."
+      },
+      {
+       "id": "born_at",
+       "label": "was born at",
+       "notes": "Jesus at Bethlehem (Luke 2:4-7); use only where the text says born, not merely present."
+      },
+      {
+       "id": "bought",
+       "label": "bought",
+       "notes": "A purchase the text records with a price and usually a named seller. 60 verses use bought or purchase, and the land transactions among them are foundational rather than incidental: Abraham buying Machpelah of Ephron (Gen"
+      },
+      {
+       "id": "built",
+       "label": "built",
+       "notes": "Cain and the city of Enoch (Gen 4:17), Solomon and the house of the LORD (1Kgs 6:14), the sons of Hassenaah and the fish gate (Neh 3:3). Who raised the structure, where the text says so. `made` is the equivalent for obje"
+      },
+      {
+       "id": "buried_at",
+       "label": "was buried at",
+       "notes": "Sarah in the cave of Machpelah (Gen 23:19); Jacob's burial (Gen 50:13)."
+      },
+      {
+       "id": "died_at",
+       "label": "died at",
+       "notes": ""
+      },
+      {
+       "id": "dwelt_at",
+       "label": "lived at",
+       "notes": "A settled residence the text establishes, not a single visit. Abraham at Hebron (Gen 13:18); Paul at Corinth for a year and six months (Acts 18:11)."
+      },
+      {
+       "id": "founded",
+       "label": "founded",
+       "notes": "For the Chronicles idiom \"X the father of Y\" where Y is a town -- \"Ashhur the father of Tekoa\" (1Chr 2:24, 4:5), \"Penuel was the father of Gedor\" (1Chr 4:4), \"Hur ... the father of Bethlehem\" (1Chr 4:4). The standard rea"
+      },
+      {
+       "id": "located_in",
+       "label": "is in",
+       "notes": "Place to place — Bethlehem in Judah, Capernaum in Galilee."
+      },
+      {
+       "id": "repaired",
+       "label": "repaired",
+       "notes": "Kept separate from `built` because Nehemiah 3 says both, thirty-five times each, and a reader who is told Hanun \"built\" the valley gate when the verse says \"repaired\" has been told something the text did not say. Where a"
+      },
+      {
+       "id": "ruled_from",
+       "label": "ruled from",
+       "notes": "David reigning from Hebron then Jerusalem (2Sam 5:5)."
+      },
+      {
+       "id": "stationed_at",
+       "label": "was stationed at",
+       "notes": "Where the text posts a being or a creature and leaves it there. The cherubim at the east of Eden with the flaming sword (Gen 3:24); the two over the mercy seat, from between which God says he will speak (Exod 25:20-22); "
+      },
+      {
+       "id": "traveled_to",
+       "label": "went to",
+       "notes": "A journey the narrative marks. Deliberately weak: nearly everyone goes nearly everywhere, and recording each move would swamp the stronger ties."
+      }
+     ]
+    },
+    {
+     "label": "Peoples & groups",
+     "items": [
+      {
+       "id": "conquered",
+       "label": "conquered",
+       "notes": "Subjugation with a lasting outcome, distinct from a battle: Assyria carrying Israel away (2Kgs 17:6), Babylon taking Judah (2Kgs 25:21). The exile is one of the central facts of the Old Testament and names no single acto"
+      },
+      {
+       "id": "descended_from_person",
+       "label": "descends from",
+       "notes": "A tribe or nation to the person it is named for and traced from: the children of Judah from Judah, the Moabites from Moab (Gen 19:37). This is how the text itself explains a people's origin, and it is what keeps the pers"
+      },
+      {
+       "id": "fought",
+       "label": "made war on",
+       "notes": "Either side may be a person or a people, because the text puts it both ways: \"Saul struck down the Amalekites\" (1Sam 15:7) and \"So the Philistines fought, and Israel was defeated\" (1Sam 4:10), which names no commander at"
+      },
+      {
+       "id": "led",
+       "label": "led",
+       "notes": "Moses and Israel, Joab and David's army, a judge over the people -- and the LORD leading one person, which is most of the Psalms and Prophets."
+      },
+      {
+       "id": "member_of",
+       "label": "belonged to",
+       "notes": "Only where the text places the person in the group: Saul a Benjamite (1Sam 9:1), Paul a Pharisee (Acts 23:6), Barnabas a Levite (Acts 4:36)."
+      },
+      {
+       "id": "present_with",
+       "label": "is with",
+       "notes": "Only where the text states the presence. Omnipresence is a doctrine and not a citation; this type records verses that say someone is with someone."
+      },
+      {
+       "id": "wrote_to",
+       "label": "wrote to",
+       "notes": "An epistle addressed to a congregation, cited from the salutation that names it: \"To the saints in Ephesus\" (Eph 1:1), \"To the church of God in Corinth\" (1Cor 1:2). The target is the CHURCH, which is a group, not the tow"
+      }
+     ]
+    },
+    {
+     "label": "Things",
+     "items": [
+      {
+       "id": "carried",
+       "label": "carried",
+       "notes": "The Levites and the ark (Deut 31:9, 1Chr 15:15)."
+      },
+      {
+       "id": "commanded_the_making_of",
+       "label": "commanded the making of",
+       "notes": "Distinct from `made`. Exodus is careful about it: the pattern is shown to Moses on the mountain (Exod 25:9, 40) and Bezalel does the work (Exod 37:1). Collapsing the two would credit the wrong hand."
+      },
+      {
+       "id": "kept_at",
+       "label": "was kept at",
+       "notes": "The ark at Kirjath-jearim (1Sam 7:1), in the house of Obed-edom (2Sam 6:11). Objects move, so this is expected to be many-valued and each resting place carries its own citation."
+      },
+      {
+       "id": "made",
+       "label": "made",
+       "notes": "Bezalel and the ark (Exod 37:1), Moses and the bronze snake (Num 21:9). Who fashioned the thing, where the text says so; commissioning is `commanded_the_making_of`, because Exodus keeps them apart."
+      },
+      {
+       "id": "signifies",
+       "label": "signifies",
+       "notes": "**The text's own key, and only ever that.** \"That Rock was Christ\" (1Cor 10:4), \"the field is the world\" (Matt 13:38), \"the seven stars are the angels of the seven churches\" (Rev 1:20). The graph is not deciding that a r"
+      },
+      {
+       "id": "wore",
+       "label": "wore",
+       "notes": "Clothing the text puts on a named person. Aaron and the ephod, the breastpiece of judgment and the turban (Exod 28); David wearing a linen ephod (2Sam 6:14); Joshua the high priest and the clean turban (Zech 3:5)."
+      }
+     ]
+    },
+    {
+     "label": "Observances",
+     "items": [
+      {
+       "id": "instituted",
+       "label": "instituted",
+       "notes": "Where the text names who established the practice. Much of the law is given without a human institutor, and that absence is left as it stands rather than filled in."
+      },
+      {
+       "id": "observed",
+       "label": "kept",
+       "notes": "A named keeping: Josiah's passover (2Kgs 23:22), Hezekiah's (2Chr 30:1). Not every mention -- the point is an occasion the text records."
+      }
+     ]
+    },
+    {
+     "label": "Covenants",
+     "items": [
+      {
+       "id": "party_to",
+       "label": "is party to",
+       "notes": "Who the text says the covenant was made with, in the verse that says it."
+      },
+      {
+       "id": "supersedes",
+       "label": "makes obsolete",
+       "notes": "Recorded only where the text says so. Heb 8:13 -- \"By speaking of a new covenant, He has made the first one obsolete\" -- and Jer 31:32, which sets the new one against \"the covenant I made with their fathers\". The relatio"
+      },
+      {
+       "id": "token_of",
+       "label": "is the sign of",
+       "notes": "The sign the text names: the rainbow in the clouds (Gen 9:13), circumcision (Gen 17:11) -- \"a sign of the covenant\", in the text's own word -- and \"the blood of the covenant\" splattered on the people (Exod 24:8). (Labell"
+      }
+     ]
+    },
+    {
+     "label": "Verdicts",
+     "items": [
+      {
+       "id": "assessed_as",
+       "label": "did",
+       "notes": "The formula Kings and Chronicles pronounce on nearly every reign -- \"did evil in the sight of the LORD\" (1Kgs 15:26), \"did what was right in the eyes of the LORD\" (15:11) -- with eyes and sight used interchangeably. This"
+      },
+      {
+       "id": "described_as",
+       "label": "is described as",
+       "notes": "What the text says the subject is, or is like: an age, a state, a trait, a role, or a verdict on the subject itself. Not a deed -- \"did evil in the sight of the LORD\" is assessed_as."
+      }
+     ]
+    },
+    {
+     "label": "Encounters & speech",
+     "items": [
+      {
+       "id": "appeared_to",
+       "label": "appeared to",
+       "notes": "A visitation the text narrates: Gabriel sent to Zacharias and to Mary (Luke 1:19, 1:26), to Daniel (Dan 8:16), and Jesus met on the road to Damascus (Acts 9:3-5). Recorded as what the text says happened, without classify"
+      },
+      {
+       "id": "assumed_form_of",
+       "label": "was a form assumed by",
+       "notes": "A form deliberately taken and later set aside, where the TEXT narrates the taking. Philippians 2:6-8 is the clearest case and the reason this type exists: \"existing in the form of God ... taking the form of a servant, be"
+      },
+      {
+       "id": "ate",
+       "label": "ate",
+       "notes": ""
+      },
+      {
+       "id": "besought",
+       "label": "pleaded with",
+       "notes": "Asking, where the text marks it as entreaty rather than conversation: \"Isaac prayed to the LORD on behalf of his wife\" (Gen 25:21). The politeness particle (Hebrew נָא, \"please\") is not this and is deliberately excluded "
+      },
+      {
+       "id": "explained",
+       "label": "explained",
+       "notes": "Who gave the interpretation. Kept apart from `told` because the two are often different people and the difference is the story: Pharaoh dreams and Joseph interprets, Nebuchadnezzar dreams and Daniel interprets, John sees"
+      },
+      {
+       "id": "gave",
+       "label": "gave",
+       "notes": ""
+      },
+      {
+       "id": "heard",
+       "label": "heard",
+       "notes": ""
+      },
+      {
+       "id": "incited",
+       "label": "moved / provoked to act",
+       "notes": ""
+      },
+      {
+       "id": "quoted",
+       "label": "quoted",
+       "notes": "One speaker taking another's words. \"I am the God of Abraham, and the God of Isaac, and the God of Jacob\" (Matt 22:32) is Exodus 3:6; \"Love your neighbor as yourself\" (Matt 22:39) is Leviticus 19:18."
+      },
+      {
+       "id": "rebuked",
+       "label": "rebuked",
+       "notes": "69 verses. Peter rebuking Jesus and being rebuked in turn (Mark 8:32-33) is the pattern: a reproof the narrative reports, not an inference from tone."
+      },
+      {
+       "id": "sent",
+       "label": "sent",
+       "notes": "Who sent whom, where the text narrates it. Jacob sent messengers to Esau (Gen 32:3), Ezra sent to Iddo at Casiphia (Ezra 8:17), the Father sends the Comforter (John 14:26) and Jesus sends him too (John 16:7)."
+      },
+      {
+       "id": "told",
+       "label": "told",
+       "notes": "Who gave the picture -- spoke the parable, dreamed the dream, saw the vision. Distinct from who wrote it down, which the graph does not record: every \"I am\" saying in John is Jesus speaking and John reporting, and the fi"
+      },
+      {
+       "id": "took",
+       "label": "took",
+       "notes": ""
+      },
+      {
+       "id": "warned",
+       "label": "warned",
+       "notes": "Most of them consequential: Elisha warning the king of Israel of ambushes (2Kgs 6:10), the Magi and then Joseph \"warned in a dream\" (Matt 2:12, 2:22)."
+      }
+     ]
+    },
+    {
+     "label": "Images & figures",
+     "items": [
+      {
+       "id": "drawn_from",
+       "label": "is drawn from",
+       "notes": "Joins the word used as an image to the tangible thing of the same name, where the graph holds one. The lion of 1 Peter 5:8 and the lion Daniel was shut in with are **not one node**: one is a figure, one is an animal in a"
+      },
+      {
+       "id": "draws_on",
+       "label": "draws on the image of (an image) · draws on (anything else)",
+       "notes": "**A lexical claim and nothing more.** The title is built on that word; Revelation never says why a lion, and this does not either. \"The lion symbolises Christ\" would be the reading rather than the text, and is not what t"
+      },
+      {
+       "id": "likened_to",
+       "label": "is likened to",
+       "notes": "A comparison the text marks -- \"like a roaring lion\" (1Pet 5:8), \"like chaff driven off by the wind\" (Ps 1:4). The tenor is the source and the image the target: \"the devil is likened to a lion\", never the reverse (a doze"
+      },
+      {
+       "id": "titled",
+       "label": "is called",
+       "notes": "A name the text gives, in the verse that gives it: \"the Lion of the tribe of Judah\" (Rev 5:5), \"the Lamb of God\" (John 1:29), \"I am the true vine\" (John 15:1). The title is its own entity, never the creature or object it"
+      }
+     ]
+    },
+    {
+     "label": "Father, Son & Spirit",
+     "items": [
+      {
+       "id": "deity_of",
+       "label": "is the God of",
+       "notes": "The formula \"the God of Abraham, the God of Isaac, and the God of Jacob\" (Exod 3:6, 3:15, Matt 22:32, Mark 12:26, Acts 7:32), and \"the God of Israel\" wherever the corpus uses it."
+      },
+      {
+       "id": "distinguished_from",
+       "label": "is distinguished from",
+       "notes": "The text sets two of them apart. \"The Father is greater than I\" (John 14:28); \"No one knows about that day or hour ... nor the Son, but only the Father\" (Mark 13:32); \"the head of Christ is God\" (1Cor 11:3)."
+      },
+      {
+       "id": "named_with",
+       "label": "is named with",
+       "notes": "The corpus names them together in one formula. \"Baptizing them in the name of the Father and of the Son and of the Holy Spirit\" (Matt 28:19); \"The grace of the Lord Jesus Christ, and the love of God, and the fellowship o"
+      },
+      {
+       "id": "self_designated_as",
+       "label": "calls himself",
+       "notes": "A title the speaker applies to himself, as against one the text or another speaker applies to him. `titled` cannot carry the difference and the difference is often the entire point."
+      },
+      {
+       "id": "spoken_of_as",
+       "label": "is spoken of as",
+       "notes": "The text applies the name or the nature of one to another. **Not \"is\".** The whole claim the edge makes is that a particular verse says a particular thing, and the note carries the words."
+      }
+     ]
+    },
+    {
+     "label": "Concepts",
+     "items": [
+      {
+       "id": "aspect_of",
+       "label": "is an aspect of",
+       "notes": "\"God as Creator\" is an aspect of God; \"Spirit in Creation\" of the Holy Spirit; \"Sacrifice as Worship\" of sacrifice. Each aspect is its own node because scripture describes it on its own (the passages it cites), and it is"
+      },
+      {
+       "id": "in_theme",
+       "label": "is a core concept of the major theme",
+       "notes": "\"Covenant Signs\" is a core concept of the major theme Covenant; \"the day of atonement\" (an observance) of the major theme Sacrifice. The theme's own page lists its concepts with their passages."
+      },
+      {
+       "id": "speaks_of",
+       "label": "speaks of",
+       "notes": "Joins a cited statement to the word it makes a claim about. \"God is love\" (1John 4:8) speaks of love; \"now these three remain: faith, hope, and love\" (1Cor 13:13) speaks of all three."
+      }
+     ]
+    },
+    {
+     "label": "Source and derivation",
+     "items": [
+      {
+       "id": "issues_from",
+       "label": "issues from",
+       "notes": ""
+      }
+     ]
+    },
+    {
+     "label": "Story echoes",
+     "items": [
+      {
+       "id": "re_enacts",
+       "label": "re-enacts",
+       "notes": "The later account to the earlier. Graded by its evidence, and the note quotes the words that ground it; a link resting on correspondence alone is conjectured and says so."
+      },
+      {
+       "id": "same_steps_as",
+       "label": "has the same steps as",
+       "notes": "The later account to the earlier. The pairs on the card are the evidence, quoted from both texts; not a claim that one was told with the other in mind."
+      },
+      {
+       "id": "takes_up",
+       "label": "takes up the words of",
+       "notes": "The later account to the earlier whose words it quotes, summarises or gathers. The pairs on the card are the evidence; no likeness between persons is claimed."
+      }
+     ]
+    },
+    {
+     "label": "Significant numbers",
+     "items": [
+      {
+       "id": "occasion_of",
+       "label": "is an occasion of",
+       "notes": "The event to the significant number its verses count as a span (forty days, forty years). Cited to those verses; claims no meaning."
+      }
+     ]
+    },
+    {
+     "label": "Who else this may be",
+     "items": [
+      {
+       "id": "possibly_same_as",
+       "label": "may be the same person as",
+       "notes": "Two records the text never joins, which a reader holds may be one person. The note gives what points each way; neither record's verses are moved."
+      }
+     ]
+    },
+    {
+     "label": "Language (not yet declared in the schema)",
+     "items": [
+      {
+       "id": "answered",
+       "label": "answered",
+       "notes": ""
+      },
+      {
+       "id": "ascribed_to",
+       "label": "is ascribed to",
+       "notes": "The superscription as printed, never authorship. Do not add it where the text does not carry one, and do not infer it from style or subject."
+      },
+      {
+       "id": "asserted_by",
+       "label": "is asserted by",
+       "notes": ""
+      },
+      {
+       "id": "composed_of",
+       "label": "is built from the words",
+       "notes": "Lexical composition only. Never use it to justify a semantic claim, and never emit it alongside is_a reasoning -- if a relation of meaning seems to hold, that is a question for a person, not an edge."
+      },
+      {
+       "id": "conditional_on",
+       "label": "is conditional on",
+       "notes": ""
+      },
+      {
+       "id": "grounds",
+       "label": "is the ground for",
+       "notes": ""
+      },
+      {
+       "id": "instance_of",
+       "label": "is an instance of",
+       "notes": "Group by form, not by meaning. Two passages sharing a shape may be about entirely different things, and saying they rhyme is not saying they agree."
+      },
+      {
+       "id": "named",
+       "label": "named",
+       "notes": ""
+      },
+      {
+       "id": "part_of",
+       "label": "is part of",
+       "notes": "Structural containment within the corpus. Transitive, so the validator may drop a direct edge that a path of the same type already implies -- within this type only, since a `speaks_of` edge over the same pair is a differ"
+      },
+      {
+       "id": "recounts",
+       "label": "recounts",
+       "notes": ""
+      },
+      {
+       "id": "spoken_in",
+       "label": "is spoken in",
+       "notes": "Grouping across taxonomies, grounded verse by verse; the count of shared verses is in the note."
+      }
+     ]
+    },
+    {
+     "label": "Opposition (not yet declared in the schema)",
+     "items": [
+      {
+       "id": "contrary_to",
+       "label": "is contrary to",
+       "notes": "The corpus sets two things against each other. \"The flesh craves what is contrary to the Spirit, and the Spirit what is contrary to the flesh. They are opposed to each other\" (Gal 5:17). \"What fellowship does light have "
+      }
+     ]
+    },
+    {
+     "label": "Other (not yet declared in the schema)",
+     "items": [
+      {
+       "id": "specializes",
+       "label": "is a narrower form of",
+       "notes": "Form to broader form. Never occurrence to form -- that is instance_of. The taxonomy is the graph's reading rather than the text's, so mark it implied unless a verse states the kinship."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tags",
+   "name": "Passage kinds a reading tags",
+   "count": 131,
+   "note": "The kinds of passage a reading tags — a model's reading of each clause, and September's stamps on sections: what SORT of passage this is (a parable, a vision, a reversal, a chiasm), which no node says. A reading, never a finding. (ontology/interest-taxonomy.json) Of the draft vocabulary's 1,043 entries, 175 name a thing a node holds and are folded into it (its card links the reading's clauses); 472 no reading used and a node holds; 233 neither; 32 were used but connected to nothing else and were dropped. Each is listed in ontology/tag-crosswalk.json.",
+   "groups": [
+    {
+     "label": "Genre",
+     "note": "What kind of speech or vision a passage is: a parable, a dream, an oracle of judgment.",
+     "sub": [
+      {
+       "label": "prophetic categories",
+       "items": [
+        {
+         "id": "indictment",
+         "label": "indictment",
+         "gloss": "covenant lawsuit"
+        },
+        {
+         "id": "judgment_oracle",
+         "label": "judgment_oracle",
+         "gloss": "coming destruction"
+        },
+        {
+         "id": "woe_oracle",
+         "label": "woe_oracle",
+         "gloss": "grief over corruption"
+        },
+        {
+         "id": "call_to_repentance",
+         "label": "call_to_repentance",
+         "gloss": "return to covenant loyalty"
+        },
+        {
+         "id": "salvation_oracle",
+         "label": "salvation_oracle",
+         "gloss": "future restoration"
+        },
+        {
+         "id": "restoration_vision",
+         "label": "restoration_vision",
+         "gloss": "renewal of temple, land, people"
+        },
+        {
+         "id": "symbolic_action",
+         "label": "symbolic_action",
+         "gloss": "enacted prophecy"
+        },
+        {
+         "id": "apocalyptic_vision",
+         "label": "apocalyptic_vision",
+         "gloss": "cosmic imagery, beasts, conflict"
+        },
+        {
+         "id": "oracle_against_nations",
+         "label": "oracle_against_nations",
+         "gloss": "judgment on foreign powers"
+        },
+        {
+         "id": "day_of_the_lord_vision",
+         "label": "day_of_the_lord_vision",
+         "gloss": "ultimate intervention"
+        }
+       ]
+      },
+      {
+       "label": "dreams",
+       "items": [
+        {
+         "id": "destiny_calling",
+         "label": "destiny calling",
+         "gloss": ""
+        },
+        {
+         "id": "warning_dream",
+         "label": "warning dream",
+         "gloss": ""
+        },
+        {
+         "id": "guidance_dream",
+         "label": "guidance dream",
+         "gloss": ""
+        },
+        {
+         "id": "judgment_dream",
+         "label": "judgment dream",
+         "gloss": ""
+        },
+        {
+         "id": "symbolic_kingdom_dream",
+         "label": "symbolic kingdom dream",
+         "gloss": ""
+        },
+        {
+         "id": "restoration_dream",
+         "label": "restoration dream",
+         "gloss": ""
+        },
+        {
+         "id": "apocalyptic_dream",
+         "label": "apocalyptic dream",
+         "gloss": ""
+        },
+        {
+         "id": "revelatory_dream",
+         "label": "revelatory dream",
+         "gloss": ""
+        }
+       ]
+      },
+      {
+       "label": "parables",
+       "items": [
+        {
+         "id": "kingdom_parable",
+         "label": "kingdom parable",
+         "gloss": ""
+        },
+        {
+         "id": "judgment_parable",
+         "label": "judgment parable",
+         "gloss": ""
+        },
+        {
+         "id": "grace_mercy_parable",
+         "label": "grace mercy parable",
+         "gloss": ""
+        },
+        {
+         "id": "ethical_discipleship_parable",
+         "label": "ethical discipleship parable",
+         "gloss": ""
+        },
+        {
+         "id": "contrast_parable",
+         "label": "contrast parable",
+         "gloss": ""
+        },
+        {
+         "id": "invitation_parable",
+         "label": "invitation parable",
+         "gloss": ""
+        },
+        {
+         "id": "revelatory_mystery_parable",
+         "label": "revelatory mystery parable",
+         "gloss": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Story shape",
+     "note": "A shape an event takes, wherever it recurs: a sea crossing, a theophany, the younger over the elder.",
+     "sub": [
+      {
+       "label": "event images",
+       "items": [
+        {
+         "id": "breath_spirit",
+         "label": "breath spirit",
+         "gloss": ""
+        },
+        {
+         "id": "exile_ev",
+         "label": "exile ev",
+         "gloss": ""
+        },
+        {
+         "id": "ark_preservation",
+         "label": "ark preservation",
+         "gloss": ""
+        },
+        {
+         "id": "sea_crossing",
+         "label": "sea crossing",
+         "gloss": ""
+        },
+        {
+         "id": "water_from_rock",
+         "label": "water from rock",
+         "gloss": ""
+        },
+        {
+         "id": "covenant_cutting",
+         "label": "covenant cutting",
+         "gloss": ""
+        },
+        {
+         "id": "oath_swearing",
+         "label": "oath swearing",
+         "gloss": ""
+        },
+        {
+         "id": "theophany",
+         "label": "theophany",
+         "gloss": ""
+        },
+        {
+         "id": "law_giving",
+         "label": "law giving",
+         "gloss": ""
+        },
+        {
+         "id": "covenant_meal",
+         "label": "covenant meal",
+         "gloss": ""
+        },
+        {
+         "id": "scapegoat_sending",
+         "label": "scapegoat sending",
+         "gloss": ""
+        },
+        {
+         "id": "priestly_intercession",
+         "label": "priestly intercession",
+         "gloss": ""
+        },
+        {
+         "id": "wilderness_wandering",
+         "label": "wilderness wandering",
+         "gloss": ""
+        },
+        {
+         "id": "forty_period",
+         "label": "forty period",
+         "gloss": ""
+        },
+        {
+         "id": "trial_contest",
+         "label": "trial contest",
+         "gloss": ""
+        },
+        {
+         "id": "coronation",
+         "label": "coronation",
+         "gloss": ""
+        },
+        {
+         "id": "victory_procession",
+         "label": "victory procession",
+         "gloss": ""
+        },
+        {
+         "id": "judges_raised",
+         "label": "judges raised",
+         "gloss": ""
+        },
+        {
+         "id": "idolatry",
+         "label": "idolatry",
+         "gloss": ""
+        },
+        {
+         "id": "siege",
+         "label": "siege",
+         "gloss": ""
+        },
+        {
+         "id": "captivity",
+         "label": "captivity",
+         "gloss": ""
+        },
+        {
+         "id": "prophetic_call",
+         "label": "prophetic call",
+         "gloss": ""
+        },
+        {
+         "id": "covenant_lawsuit",
+         "label": "covenant lawsuit",
+         "gloss": ""
+        },
+        {
+         "id": "woe_pronouncement",
+         "label": "woe pronouncement",
+         "gloss": ""
+        },
+        {
+         "id": "promise_oracle",
+         "label": "promise oracle",
+         "gloss": ""
+        },
+        {
+         "id": "rebuilding",
+         "label": "rebuilding",
+         "gloss": ""
+        },
+        {
+         "id": "revival_repentance",
+         "label": "revival repentance",
+         "gloss": ""
+        },
+        {
+         "id": "incarnation",
+         "label": "incarnation",
+         "gloss": ""
+        },
+        {
+         "id": "baptism_of_jesus",
+         "label": "baptism of jesus",
+         "gloss": ""
+        },
+        {
+         "id": "temptation_of_jesus",
+         "label": "temptation of jesus",
+         "gloss": ""
+        },
+        {
+         "id": "miracles",
+         "label": "miracles",
+         "gloss": ""
+        },
+        {
+         "id": "sending",
+         "label": "sending",
+         "gloss": ""
+        },
+        {
+         "id": "persecution",
+         "label": "persecution",
+         "gloss": ""
+        },
+        {
+         "id": "council_discernment",
+         "label": "council discernment",
+         "gloss": ""
+        },
+        {
+         "id": "breaking_bread",
+         "label": "breaking bread",
+         "gloss": ""
+        },
+        {
+         "id": "baptizing_nations",
+         "label": "baptizing nations",
+         "gloss": ""
+        },
+        {
+         "id": "day_of_the_lord",
+         "label": "day of the lord",
+         "gloss": ""
+        },
+        {
+         "id": "final_battle",
+         "label": "final battle",
+         "gloss": ""
+        },
+        {
+         "id": "books_opened",
+         "label": "books opened",
+         "gloss": ""
+        },
+        {
+         "id": "new_heavens_earth",
+         "label": "new heavens earth",
+         "gloss": ""
+        },
+        {
+         "id": "marriage_supper",
+         "label": "marriage supper",
+         "gloss": ""
+        }
+       ]
+      },
+      {
+       "label": "reversals",
+       "items": [
+        {
+         "id": "younger_over_elder",
+         "label": "younger_over_elder",
+         "gloss": "Isaac over Ishmael, Jacob over Esau, Ephraim over Manasseh, David over his brothers"
+        },
+        {
+         "id": "barren_woman_conceives",
+         "label": "barren_woman_conceives",
+         "gloss": "Sarah, Rebekah, Rachel, Hannah, Elizabeth"
+        },
+        {
+         "id": "exile_to_exaltation",
+         "label": "exile_to_exaltation",
+         "gloss": "Joseph, Daniel, Esther, Christ"
+        },
+        {
+         "id": "humiliation_to_vindication",
+         "label": "humiliation_to_vindication",
+         "gloss": "the servant, the psalmist, the crucified"
+        },
+        {
+         "id": "last_shall_be_first",
+         "label": "last_shall_be_first",
+         "gloss": "kingdom inversion"
+        },
+        {
+         "id": "weak_defeats_strong",
+         "label": "weak_defeats_strong",
+         "gloss": "David and Goliath, Gideon's three hundred"
+        },
+        {
+         "id": "outsider_believes",
+         "label": "outsider_believes",
+         "gloss": "Rahab, Ruth, the centurion, the Samaritan"
+        },
+        {
+         "id": "insider_fails",
+         "label": "insider_fails",
+         "gloss": "Israel, the elder brother, the Pharisee"
+        },
+        {
+         "id": "stone_rejected_becomes_head",
+         "label": "stone_rejected_becomes_head",
+         "gloss": "Ps 118:22 and its NT reuse"
+        },
+        {
+         "id": "death_produces_life",
+         "label": "death_produces_life",
+         "gloss": "the grain of wheat, the cross"
+        },
+        {
+         "id": "scattering_produces_gathering",
+         "label": "scattering_produces_gathering",
+         "gloss": "Babel to Pentecost"
+        },
+        {
+         "id": "famine_to_provision",
+         "label": "famine_to_provision",
+         "gloss": "Joseph, Elijah, the feedings"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Literary device",
+     "note": "How a passage is made: parallelism, chiasm, inclusio; and the collections the text lists (the beatitudes, the armour of God).",
+     "sub": [
+      {
+       "label": "aggregates",
+       "items": [
+        {
+         "id": "armor_of_god",
+         "label": "armor_of_god",
+         "gloss": ""
+        },
+        {
+         "id": "fruit_of_the_spirit",
+         "label": "fruit_of_the_spirit",
+         "gloss": ""
+        },
+        {
+         "id": "beatitudes",
+         "label": "beatitudes",
+         "gloss": ""
+        },
+        {
+         "id": "gifts_of_the_spirit",
+         "label": "gifts_of_the_spirit",
+         "gloss": ""
+        },
+        {
+         "id": "works_of_the_flesh",
+         "label": "works_of_the_flesh",
+         "gloss": ""
+        },
+        {
+         "id": "seven_churches",
+         "label": "seven_churches",
+         "gloss": ""
+        },
+        {
+         "id": "seven_spirits",
+         "label": "seven_spirits",
+         "gloss": ""
+        },
+        {
+         "id": "ten_commandments",
+         "label": "ten_commandments",
+         "gloss": ""
+        },
+        {
+         "id": "tabernacle_furnishings",
+         "label": "tabernacle_furnishings",
+         "gloss": ""
+        },
+        {
+         "id": "sacrificial_system",
+         "label": "sacrificial_system",
+         "gloss": ""
+        },
+        {
+         "id": "psalm_beatitudes",
+         "label": "psalm_beatitudes",
+         "gloss": ""
+        },
+        {
+         "id": "apocalyptic_sevens",
+         "label": "apocalyptic_sevens",
+         "gloss": ""
+        },
+        {
+         "id": "dying_and_rising_with_christ",
+         "label": "dying_and_rising_with_christ",
+         "gloss": ""
+        }
+       ]
+      },
+      {
+       "label": "devices",
+       "items": [
+        {
+         "id": "synonymous_parallelism",
+         "label": "synonymous parallelism",
+         "gloss": ""
+        },
+        {
+         "id": "antithetic_parallelism",
+         "label": "antithetic parallelism",
+         "gloss": ""
+        },
+        {
+         "id": "synthetic_parallelism",
+         "label": "synthetic parallelism",
+         "gloss": ""
+        },
+        {
+         "id": "chiasm",
+         "label": "chiasm",
+         "gloss": ""
+        },
+        {
+         "id": "inclusio",
+         "label": "inclusio",
+         "gloss": ""
+        },
+        {
+         "id": "refrain",
+         "label": "refrain",
+         "gloss": ""
+        },
+        {
+         "id": "acrostic",
+         "label": "acrostic",
+         "gloss": ""
+        },
+        {
+         "id": "merism",
+         "label": "merism",
+         "gloss": ""
+        },
+        {
+         "id": "hendiadys",
+         "label": "hendiadys",
+         "gloss": ""
+        },
+        {
+         "id": "anaphora",
+         "label": "anaphora",
+         "gloss": ""
+        },
+        {
+         "id": "rhetorical_question",
+         "label": "rhetorical question",
+         "gloss": ""
+        },
+        {
+         "id": "apostrophe",
+         "label": "apostrophe",
+         "gloss": ""
+        },
+        {
+         "id": "personification",
+         "label": "personification",
+         "gloss": ""
+        },
+        {
+         "id": "hyperbole",
+         "label": "hyperbole",
+         "gloss": ""
+        },
+        {
+         "id": "irony",
+         "label": "irony",
+         "gloss": ""
+        },
+        {
+         "id": "numerical_saying",
+         "label": "numerical saying",
+         "gloss": ""
+        },
+        {
+         "id": "list_formula",
+         "label": "list formula",
+         "gloss": ""
+        },
+        {
+         "id": "genealogy_formula",
+         "label": "genealogy formula",
+         "gloss": ""
+        },
+        {
+         "id": "itinerary_formula",
+         "label": "itinerary formula",
+         "gloss": ""
+        },
+        {
+         "id": "regnal_formula",
+         "label": "regnal formula",
+         "gloss": ""
+        },
+        {
+         "id": "call_narrative_formula",
+         "label": "call narrative formula",
+         "gloss": ""
+        },
+        {
+         "id": "messenger_formula",
+         "label": "messenger formula",
+         "gloss": ""
+        },
+        {
+         "id": "oath_formula",
+         "label": "oath formula",
+         "gloss": ""
+        },
+        {
+         "id": "covenant_formula",
+         "label": "covenant formula",
+         "gloss": ""
+        },
+        {
+         "id": "woe_formula",
+         "label": "woe formula",
+         "gloss": ""
+        },
+        {
+         "id": "beatitude_formula",
+         "label": "beatitude formula",
+         "gloss": ""
+        },
+        {
+         "id": "a_fortiori",
+         "label": "a fortiori",
+         "gloss": ""
+        },
+        {
+         "id": "diatribe",
+         "label": "diatribe",
+         "gloss": ""
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Crisis",
+     "note": "The undoing the apocalyptic passages describe.",
+     "sub": [
+      {
+       "label": "apocalyptic crisis",
+       "items": [
+        {
+         "id": "temple_desecration",
+         "label": "temple_desecration",
+         "gloss": [
+          "abomination_of_desolation",
+          "profaned_altar",
+          "stopped_sacrifices",
+          "idol_in_holy_place"
+         ]
+        },
+        {
+         "id": "beast_anti_kingdom",
+         "label": "beast_anti_kingdom",
+         "gloss": [
+          "four_beasts",
+          "little_horn",
+          "man_of_lawlessness",
+          "beast_from_sea",
+          "image_of_the_beast"
+         ]
+        },
+        {
+         "id": "cosmic_collapse",
+         "label": "cosmic_collapse",
+         "gloss": [
+          "sun_darkened",
+          "moon_to_blood",
+          "stars_falling",
+          "heavens_shaken"
+         ]
+        },
+        {
+         "id": "war_in_heaven",
+         "label": "war_in_heaven",
+         "gloss": [
+          "michael_vs_dragon",
+          "angels_holding_winds",
+          "abyss_opened"
+         ]
+        },
+        {
+         "id": "covenant_crisis",
+         "label": "covenant_crisis",
+         "gloss": [
+          "broken_staff",
+          "scattering_of_sheep",
+          "withered_fig_tree",
+          "empty_house"
+         ]
+        },
+        {
+         "id": "day_of_the_lord_sym",
+         "label": "day_of_the_lord_sym",
+         "gloss": [
+          "darkness_sym",
+          "fire_sym",
+          "trumpet_blasts",
+          "shaking_of_nations"
+         ]
+        },
+        {
+         "id": "judgment_mechanism",
+         "label": "judgment_mechanism",
+         "gloss": [
+          "locust_armies",
+          "plagues",
+          "bowls_of_wrath_sym",
+          "seals_and_trumpets"
+         ]
+        },
+        {
+         "id": "anti_presence",
+         "label": "anti_presence",
+         "gloss": [
+          "desolate_house",
+          "removed_lampstand",
+          "no_more_sacrifice",
+          "idol_enthroned"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "No card yet",
+     "note": "Themes and events a reading tags that no node holds yet; each is a candidate for one.",
+     "sub": [
+      {
+       "label": "themes",
+       "items": [
+        {
+         "id": "promise_faithfulness",
+         "label": "Promise & Faithfulness",
+         "gloss": "God keeps His word across generations"
+        },
+        {
+         "id": "people_of_god",
+         "label": "People of God",
+         "gloss": "Israel to Church as covenant community"
+        },
+        {
+         "id": "redemption_in_christ",
+         "label": "Redemption in Christ",
+         "gloss": "the gospel as climax of all motifs"
+        }
+       ]
+      },
+      {
+       "label": "significant events",
+       "items": [
+        {
+         "id": "scourging",
+         "label": "scourging",
+         "gloss": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

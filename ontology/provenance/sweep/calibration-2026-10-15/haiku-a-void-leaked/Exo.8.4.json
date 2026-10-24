@@ -1,0 +1,33 @@
+{"ref": "Exo.8.4",
+ "referents": [
+  {"slot": "w18", "choice": "w2", "divine": false, "why": "first person singular ('from me') inside Pharaoh's speech, whose sender is cl1s; the speaker is Pharaoh", "category": "first person inside a speech is its speaker"},
+  {"slot": "w22", "choice": "w2", "divine": false, "why": "first person singular possessive ('my people') inside Pharaoh's speech; the possessor is the speaker", "category": "first person inside a speech is its speaker"},
+  {"slot": "cl1s", "choice": "w2", "divine": false, "why": "third masculine singular subject of 'he said' (wayyiqtol) right after cl0, whose subject is Pharaoh; the nearest agreeing referent that does the act of speaking", "category": "narrative subject carried over from the preceding clause"},
+  {"slot": "cl2s", "choice": "c3", "divine": false, "why": "second masculine plural imperative 'pray' is addressed to the two men summoned in cl0; the composite Moses and Aaron agrees in number", "category": "addressee of a command to several people"},
+  {"slot": "cl3s", "choice": "w12", "divine": true, "why": "subject of the jussive 'that he may remove the frogs' is the one asked in cl2 ('pray to the LORD'); third masculine singular; the LORD of cl2 is w12, while w31 is the LORD of cl5", "category": "implied subject of an asked-for act"},
+  {"slot": "cl4s", "choice": "w2", "divine": false, "why": "first common singular 'I will let go' inside Pharaoh's speech; the speaker is Pharaoh", "category": "first person inside a speech is its speaker"},
+  {"slot": "cl5s", "choice": "w27", "divine": false, "why": "third masculine plural 'that they may sacrifice' follows 'let go your people' (cl4); the people released are the nearest agreeing doer; w27 is 'your people', not w21 'my people', which are the ones the frogs leave", "category": "third plural after a collective is released"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "reversed direction: the summoning (cl0) is the earlier event and the saying (cl1) follows it, so the sequence is cl0 then cl1, which is already kept", "category": "reversed narrative sequence"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "wayyiqtol 'and he said' continues the narrative after 'he summoned'", "category": "narrative sequence of wayyiqtol clauses"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "a waw joining a command (second person imperative) to a jussive in a different person is 'so that', not a plain 'and'", "category": "command joined to a change of person"},
+  {"src": "cl2", "type": "purpose", "dst": "cl3", "action": "add", "why": "the praying is for the removal of the frogs: command, then waw and a jussive in a different person (third)", "category": "command joined to a change of person"},
+  {"src": "cl3", "type": "and", "dst": "cl4", "action": "keep", "why": "a jussive followed by a cohortative in a different person is a promise, which purpose excludes; the sense is conditional, but no marker or link type states it, so the plain waw stays", "category": "promise after a request"},
+  {"src": "cl4", "type": "and", "dst": "cl5", "action": "remove", "why": "cohortative 'I will let go' then jussive 'that they may sacrifice' in a different person; the release is for the sacrifice, which is purpose", "category": "release for a stated purpose"},
+  {"src": "cl4", "type": "purpose", "dst": "cl5", "action": "add", "why": "the release is for the sacrifice: a directive clause (force directive) then a jussive in a different person, the second being the aim of the first", "category": "release for a stated purpose"},
+  {"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "cl1 is the saying clause; what is said is the imperative group imp2 (command cl2, with its aim cl3 and effect cl4)", "category": "speech and its content group"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "c3"}, {"role": "part", "node": "imp2"}, {"role": "part", "node": "cl5"}], "divine": false, "why": "Pharaoh's speech to Moses and Aaron; sender was the slot cl1s, now its candidate w2; addressee added (the command's 'you' is c3); the command group is a part, and cl5 is the speech's own part; the builder listed the commands directly as parts", "category": "speech with addressee and nested command"},
+  {"id": "imp2", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl2"}, {"role": "aim", "node": "cl3"}, {"role": "effect", "node": "cl4"}], "divine": false, "why": "one command ('pray') with its aim (the removal, cl3) and the promised effect (the release, cl4); the builder's part role is not an imperative member", "category": "command with aim and effect"},
+  {"id": "imp3", "kind": "imperative", "action": "remove", "members": [], "divine": false, "why": "cl3 is the aim of the command in imp2, not a command of its own; the jussive is a clause of the prayer", "category": "jussive wrongly taken as a command"},
+  {"id": "imp4", "kind": "imperative", "action": "remove", "members": [], "divine": false, "why": "cl4 is the effect of imp2 and cl5 is a part of the speech; cl4 is a promise, not a command, and no group kind names a promise", "category": "promise wrongly taken as a command"}
+ ],
+ "none_fit": [
+  {"where": "cl3 -> cl4 (and)", "what": "a promise made conditional on a request, with no conditional particle; the conditional group needs an 'if' clause and the if link needs a condition marker, so neither fits"}
+ ],
+ "cant_tell": [
+  {"what": "whether the release in cl4 is conditional on the removal in cl3", "why": "the sense reads as conditional, but the form carries no marker and the plain waw is not decisive"},
+  {"what": "whether the release in cl4 is the effect of the command group imp2 or a separate promise", "why": "the imperative kind says what a command brings about; the release is what Pharaoh promises if the frogs go, which fits effect only loosely and no kind names a promise"}
+ ]}

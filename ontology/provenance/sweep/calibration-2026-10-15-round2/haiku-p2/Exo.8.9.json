@@ -1,0 +1,46 @@
+{
+ "ref": "Exo.8.9",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "The LORD's act brings about the frogs' death. R4 gives an act and then what it brings about as result, not as then.",
+   "category": "plain then read as result"
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The frogs' death is what the LORD's act brought about: an act done, then what the thing becomes (R4).",
+   "category": "act then its outcome"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reverses the order: cl0 is the act, cl1 is its outcome.",
+   "category": "then runs backward"
+  },
+  {
+   "src": "Exo.8.8#cl1",
+   "type": "result",
+   "dst": "cl0",
+   "action": "add",
+   "why": "Moses cried out to the LORD (Exo.8.8); the LORD then did as he asked. An act and what it brought about, across verses (R4).",
+   "category": "prayer and its outcome across verses"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0, 'the LORD did as Moses requested (according to the word of Moses)'",
+   "what": "a fulfilment of a spoken request with a named subject. 'fulfils' needs a pro-form report with no named subject, and 'as' needs a clause, not a noun phrase (דְּבַר)."
+  }
+ ],
+ "cant_tell": []
+}

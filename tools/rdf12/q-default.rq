@@ -1,0 +1,3 @@
+PREFIX e:   <https://bibleontology.org/e/>
+PREFIX bor: <https://bibleontology.org/ns/relation#>
+SELECT (COUNT(*) AS ?n) WHERE { e:job bor:described_as ?o }

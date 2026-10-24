@@ -1,0 +1,48 @@
+{
+ "ref": "Mrk.15.10",
+ "referents": [
+  {
+   "slot": "w6",
+   "choice": "Mrk.15.5#w2",
+   "divine": true,
+   "why": "'Him' (auton), the one handed over by the chief priests out of envy: Jesus. The builder's Pilate does not fit, since the handing over is of Jesus.",
+   "category": "object of an act of handing over"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Mrk.15.9#w2",
+   "divine": false,
+   "why": "Third singular 'he knew' in a clause opened by gar. The knower is the one who asked in Mrk.15.9, Pilate.",
+   "category": "implied subject of a verb of knowing"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Hoti after 'he knew': what is known. Verb of knowing.",
+   "category": "object clause of knowing"
+  },
+  {
+   "src": "cl0",
+   "type": "because",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link.",
+   "category": "self link"
+  },
+  {
+   "src": "Mrk.15.9#cl2",
+   "type": "because",
+   "dst": "cl0",
+   "action": "add",
+   "why": "Verse-opening gar is 'for': the reason for Pilate's offer to release Jesus in Mrk.15.9 is that he knew of the envy. The edge runs from the explained clause to its reason.",
+   "category": "reason for the preceding verse"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

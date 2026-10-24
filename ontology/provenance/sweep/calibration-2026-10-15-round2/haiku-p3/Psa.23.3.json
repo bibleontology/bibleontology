@@ -1,0 +1,72 @@
+{
+ "ref": "Psa.23.3",
+ "referents": [
+  {
+   "slot": "w1",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person 'my soul' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w4",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person singular object 'me' in the psalm's own voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w10",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular possessive 'his name' is the name of the shepherd of verses 1 and 2, the LORD.",
+   "category": "third person possessive refers to LORD"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular subject of 'he restores', the same shepherd acting.",
+   "category": "third person shepherd act refers to LORD"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Third masculine singular subject of 'he guides me', the same shepherd acting.",
+   "category": "third person shepherd act refers to LORD"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.3#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, one agent (the LORD), each stating its subject only in its verb. Recorded as a reading for review.",
+   "category": "acts of one agent"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl1, 'for the sake of his name'",
+   "what": "A purpose carried by a noun phrase, not by a clause. The purpose link needs a clause or a lamed-infinitive construct."
+  }
+ ],
+ "cant_tell": []
+}

@@ -1,0 +1,50 @@
+{
+ "ref": "Pro.10.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle clause 'one who works a palm of slackness' is a relative clause inside the subject noun phrase of the predicate 'poor'. It is not a bare participle after a finite clause, so 'describing' does not apply. The nesting stands.",
+   "category": "participle nested in subject noun phrase",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Plain waw setting the diligent hand against the slack one: contrast by sense, not cause, result or purpose. The 'and' link stands.",
+   "category": "waw in antithetic proverb pair",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "cl0 -and-> cl2",
+   "what": "antithetic pair joined by a plain waw; the contrast link needs an explicit but-word, and no group kind holds an antithetic pair"
+  },
+  {
+   "where": "cl0 and cl2",
+   "what": "Antithetic couplet (the slack hand against the diligent hand) joined by a waw; no link type for antithesis without an explicit but-word."
+  },
+  {
+   "where": "Pro.10.4 cl0 -and-> cl2",
+   "what": "Contrast marked only by a bare waw; no link type covers an unmarked antithesis."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "Implied subject 'one who' of the participle 'works' (cl1), which is also the subject of cl0's 'is poor'.",
+   "why": "A generic person with no candidate that names it, and the parser gives it no slot, so there is no referent to choose."
+  },
+  {
+   "what": "The implied subject of the participle in cl1 ('one who works') is not in the slot list",
+   "why": "It is a relative 'one who' whose referent is the person cl0 calls poor. The parser gave no slot, so none was added."
+  }
+ ],
+ "voted": 3
+}

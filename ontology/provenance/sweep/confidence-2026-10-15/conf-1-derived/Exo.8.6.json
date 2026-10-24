@@ -1,0 +1,129 @@
+{
+ "ref": "Exo.8.6",
+ "referents": [
+  {
+   "slot": "w8",
+   "choice": "Exo.8.5#w4",
+   "divine": false
+  },
+  {
+   "slot": "w16",
+   "choice": "Exo.8.4#c3",
+   "divine": false
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Exo.8.5#w4",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Exo.8.5#w2",
+   "divine": false
+  },
+  {
+   "slot": "cl4s",
+   "choice": "Exo.8.5#w4",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "add"
+  },
+  {
+   "src": "cl4",
+   "type": "that",
+   "dst": "cl5",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove"
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w2"
+    }
+   ]
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

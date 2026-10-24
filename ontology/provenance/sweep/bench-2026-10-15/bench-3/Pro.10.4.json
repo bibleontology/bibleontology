@@ -1,0 +1,35 @@
+{
+ "ref": "Pro.10.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle clause 'one who works a slack hand' is the relative subject nested in the noun phrase of 'is poor'. It is substantival, not a bare participle asserting its own act, so 'describing' does not apply.",
+   "category": "relative clause inside a noun phrase"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Bare waw joins the idle-hands line and the diligent-hands line. No 'but' word; not a cause or result.",
+   "category": "plain and between antithetic lines"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Pro.10.4 cl0 -and-> cl2",
+   "what": "Contrast marked only by a bare waw; no link type covers an unmarked antithesis."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "The implied subject of the participle in cl1 ('one who works') is not in the slot list",
+   "why": "It is a relative 'one who' whose referent is the person cl0 calls poor. The parser gave no slot, so none was added."
+  }
+ ]
+}

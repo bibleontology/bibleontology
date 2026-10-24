@@ -1,0 +1,118 @@
+{
+ "ref": "Psa.23.4",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "Implied first person singular subject of 'I will go' in the concessive clause; the psalm's voice.",
+   "category": "implied subject in a psalm"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "Implied first person singular subject of 'I will fear'; the psalm's voice.",
+   "category": "implied subject in a psalm"
+  },
+  {
+   "slot": "w10",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Second person masculine singular 'you' in 'you are with me'. The psalm turns to address the LORD named in verse 1; no speech is quoted.",
+   "category": "second person addressed to the LORD"
+  },
+  {
+   "slot": "w12",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person 'me' in 'you are with me': the psalm's voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w14",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Second person masculine singular possessive 'your rod', addressed to the LORD.",
+   "category": "second person addressed to the LORD"
+  },
+  {
+   "slot": "w17",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Second person masculine singular possessive 'your staff', addressed to the LORD.",
+   "category": "second person addressed to the LORD"
+  },
+  {
+   "slot": "w18",
+   "choice": "c13",
+   "divine": false,
+   "why": "Third masculine plural 'they' whose subject is the 'rod and staff' named in the clause before. The composite is the only plural candidate; masculine plural is the usual agreement for a masculine and a feminine noun together.",
+   "category": "plural pronoun for a composite"
+  },
+  {
+   "slot": "w20",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person 'me' in 'they comfort me': the psalm's voice.",
+   "category": "first person in a psalm"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "though",
+   "dst": "cl0",
+   "action": "add",
+   "why": "The opening gam ki (even though) makes cl0 the concession and cl1 the claim that holds anyway: 'I will fear no evil, even though I walk through the valley'.",
+   "category": "concession marked by a particle"
+  },
+  {
+   "src": "cl1",
+   "type": "conceded",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "The builder's label 'conceded' is not in link_types; the same relation is recorded above as the though link.",
+   "category": "builder label outside the vocabulary"
+  },
+  {
+   "src": "cl1",
+   "type": "because",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The ki after the main clause gives the reason: 'for you are with me'.",
+   "category": "reason after main clause"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Psa.23.4#g1",
+   "kind": "concession",
+   "action": "add",
+   "members": [
+    {
+     "role": "conceded",
+     "node": "cl0"
+    },
+    {
+     "role": "holds_anyway",
+     "node": "cl1"
+    },
+    {
+     "role": "its_ground",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The gam ki clause is the obstacle, the fearless claim holds anyway, and the ki clause gives its ground. The group names no referent of its own; the divine referent sits in the slots.",
+   "category": "concession with its ground"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Psa.23.4 cl3 and cl4",
+   "what": "'your rod and your staff, they comfort me': a noun phrase set first as topic and serving as the subject of the verb after it. No link type relates a topic noun phrase to the clause it is the subject of; the 'they' slot carries the connection to the composite."
+  }
+ ],
+ "cant_tell": []
+}

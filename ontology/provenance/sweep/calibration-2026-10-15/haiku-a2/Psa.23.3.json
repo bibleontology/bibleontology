@@ -1,0 +1,14 @@
+{"ref": "Psa.23.3",
+ "referents": [
+  {"slot": "w1", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person common singular 'my' (of soul) in a psalm is the psalm's own voice; no other speaker is quoted in this verse.", "category": "first person in the psalm's own voice"},
+  {"slot": "w4", "choice": "Psa.23.1#psalmist", "divine": false, "why": "First person common singular 'me', object of 'guides' in clause 1; same psalm voice, no speech by another.", "category": "first person in the psalm's own voice"},
+  {"slot": "w10", "choice": "Psa.23.1#w3", "divine": true, "why": "Third masculine singular suffix on 'name' (his name), the name of the one who guides, i.e. the LORD named in verse 1; no other masculine singular candidate fits the sake-of-name clause.", "category": "possessive pronoun for the divine name"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied third masculine singular subject of a yiqtol (he restores); the act is the shepherd's, and the nearest agreeing doer is the LORD of verse 1.", "category": "implied subject of a yiqtol line in the psalm"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "Implied third masculine singular subject of a yiqtol (he guides me), the same agent as the preceding line; the nearest agreeing doer is the LORD of verse 1.", "category": "implied subject of a yiqtol line in the psalm"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "parallel", "action": "add", "members": [{"role": "line", "node": "cl0"}, {"role": "line", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}], "divine": true, "why": "Verse 3 is a bicolon with no conjunction: the second line restates the first line's roles (agent and object of the same act of shepherding) without a subject of its own, because the subject is the same LORD.", "category": "bicolon with one shared subject"}
+ ],
+ "none_fit": [{"where": "cl1, 'for the sake of His name' (lamed + ma'an + name)", "what": "a purpose given as a noun phrase, not a clause; the purpose link takes a clause or command as its destination, so the purpose cannot be linked to the name"}],
+ "cant_tell": []}

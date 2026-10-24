@@ -1,0 +1,39 @@
+{
+ "ref": "Pro.10.5",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The participle 'one who gathers in summer' is the relative subject nested in the noun phrase of the predicate ('a son who acts prudently').",
+   "category": "relative clause inside a noun phrase"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "Same structure as cl0 within cl1: the participle 'one who sleeps at harvest' is the relative subject nested in the predicate noun phrase.",
+   "category": "relative clause inside a noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "Pro.10.5 cl0 and cl2",
+   "what": "Two antithetic sentences joined with no connective at all (no waw and no 'but' in the Hebrew; opens_with is null). No link type fits an unconnected antithesis, so none was added."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "The implied subjects of the participles in cl1 and cl3 ('one who') are not in the slot list",
+   "why": "As in Pro.10.4, each is a relative pronoun whose referent is the person the enclosing clause describes. The parser gave no slot, so none was added."
+  },
+  {
+   "what": "Whether cl0 and cl2 form a 'descriptions' group",
+   "why": "The kind needs consecutive 'the one who' clauses describing one referent. Here the two clauses describe different people (the gatherer and the sleeper), so the group is not added."
+  }
+ ]
+}

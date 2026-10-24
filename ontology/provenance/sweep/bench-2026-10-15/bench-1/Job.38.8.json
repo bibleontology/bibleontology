@@ -1,0 +1,60 @@
+{
+ "ref": "Job.38.8",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "Implied 'he' of the wayyiqtol 'he shut off the sea': the one who does the act is the LORD, speaker of the speech. Named in 38:1 and not repeated in this verse's candidate list.",
+   "category": "implied subject of divine act"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "'It came forth from the womb': the subject is the sea, the masculine singular candidate w4.",
+   "category": "implied subject of narrative clause"
+  },
+  {
+   "slot": "w7",
+   "choice": "w4",
+   "divine": false,
+   "why": "'It burst forth' in the infinitive: the sea, the masculine singular candidate w4.",
+   "category": "pronoun in infinitive clause"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "The infinitive 'burst forth' sits inside the yiqtol 'when' clause, nested in its temporal role.",
+   "category": "temporal infinitive"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot be then-linked to itself. 'Then' runs within a verse only, and cl0 has no within-verse predecessor: its waw continues the question series of 38:4-7.",
+   "category": "self-link"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The 'when' clause (infinitive inside the yiqtol) sets the time of the shutting, so it is nested in cl0's temporal role.",
+   "category": "temporal clause of an act"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "The waw of 38:8 cl0 and the question series of 38:4-7",
+   "why": "A cross-verse relation. 'Then' is within-verse only (episode rung), so it is not recorded here."
+  }
+ ]
+}

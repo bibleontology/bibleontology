@@ -1,0 +1,55 @@
+{
+ "ref": "Psa.23.1",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "First person singular 'my' (shepherd) in the psalm's own voice; the psalm quotes no one else here.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "First person singular 'I shall not want', the psalm's own voice.",
+   "category": "first person in a psalm"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "writing",
+   "kind": "writing",
+   "action": "keep",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The superscription is the frame, David is the named writer, and the two lines are its parts.",
+   "category": "psalm as writing from its writer"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "whether 'I shall not want' (cl2) is a consequence of 'The LORD is my shepherd' (cl1)",
+   "why": "The lines are set side by side with a semicolon and no conjunction; the sense suggests a reason but the form does not state one."
+  }
+ ]
+}

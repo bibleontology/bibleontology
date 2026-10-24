@@ -1,0 +1,33 @@
+{
+ "ref": "Gen.1.2",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "A clause cannot be joined to itself. The waw relation the builder meant is already recorded as cl0 to cl1.",
+   "category": "self-link removed"
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Separate waw opens cl1; a plain and joining two descriptive clauses, with no cause or result.",
+   "category": "plain and between descriptive clauses"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Separate waw opens cl2; a plain and joining the darkness clause to the spirit clause.",
+   "category": "plain and between descriptive clauses"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

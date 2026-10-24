@@ -1,0 +1,16 @@
+{"ref": "Psa.107.1",
+ "referents": [
+  {"slot": "w9", "choice": "w2", "divine": true, "why": "The suffix on 'loving devotion' is third masculine singular, so its possessor must be masculine singular. The LORD (w2) is the only candidate that can own God's devotion; the psalmist is first person and the other nouns are not persons.", "category": "possessive suffix to the divine name"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "The command 'give thanks' is plural and addressed to a group the verse does not name. The candidates are the LORD (the one thanked), the psalmist (voice) and the writing, and none of them is the people being told to give thanks.", "category": "implied audience of a call to praise"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "The conjunction כִּי gives the reason for the command: thanks is given because He is good.", "category": "reason for a command"},
+  {"src": "cl1", "type": "because", "dst": "cl2", "action": "keep", "why": "The second כִּי gives the ground of the goodness just asserted: the goodness is shown in loyalty that endures. The conjunction supports a reason, and the clause explains what 'good' consists in.", "category": "reason restating an attribute"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl0"}, {"role": "basis", "node": "cl1"}], "divine": false, "why": "The builder labelled cl1 'part', which is not a role of the imperative kind. cl1 is the reason the command rests on, so its role is basis.", "category": "basis role for a reason clause"},
+  {"id": "writing", "kind": "writing", "action": "change", "members": [{"role": "part", "node": "imp0"}, {"role": "part", "node": "cl2"}], "divine": false, "why": "The builder made cl0 the frame and the LORD (w2) the sender. cl0 is a command, not a heading; the verse has no heading and names no writer; the LORD is the one thanked, not the writer. What the psalm says here is the command and its ground.", "category": "writing frame and sender mistaken"}
+ ],
+ "none_fit": [{"where": "cl0s", "what": "a plural audience of a call to praise is not a candidate kind; the candidate list has no congregation or assembly"}],
+ "cant_tell": [{"what": "the audience addressed by the command", "why": "the verse names no audience, and no candidate stands for the people being told to give thanks"}]
+}

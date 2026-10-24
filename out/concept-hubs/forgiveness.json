@@ -1,0 +1,2068 @@
+{
+ "id": "forgiveness",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "verb",
+ "words": [
+  {
+   "key": "h5545",
+   "lemma": "סָלַח",
+   "form": "verb",
+   "translit": "sa.lach",
+   "gloss": "to forgive",
+   "lang": "Hebrew",
+   "uses": 45,
+   "other_sense": 0
+  },
+  {
+   "key": "h5375",
+   "lemma": "נָשָׂא",
+   "form": "verb",
+   "translit": "na.sa",
+   "gloss": "to lift: give(gift)",
+   "lang": "Hebrew",
+   "uses": 20,
+   "other_sense": 590
+  },
+  {
+   "key": "h5547",
+   "lemma": "סְלִיחָה",
+   "form": "noun",
+   "translit": "se.li.chah",
+   "gloss": "forgiveness",
+   "lang": "Hebrew",
+   "uses": 3,
+   "other_sense": 0
+  },
+  {
+   "key": "h5546",
+   "lemma": "סַלָּח",
+   "form": "adjective",
+   "translit": "sal.lach",
+   "gloss": "forgiving",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g863",
+   "lemma": "ἀφίημι",
+   "form": "verb",
+   "translit": "aphiēmi",
+   "gloss": "to release: permit",
+   "lang": "Greek",
+   "uses": 37,
+   "other_sense": 94
+  },
+  {
+   "key": "g859",
+   "lemma": "ἄφεσις",
+   "form": "noun",
+   "translit": "aphesis",
+   "gloss": "forgiveness",
+   "lang": "Greek",
+   "uses": 15,
+   "other_sense": 1
+  }
+ ],
+ "titles": {
+  "verb": "Forgiving, and being forgiven",
+  "noun": "What the text says of forgiveness",
+  "adjective": "Called “forgiving”"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "repentance",
+   "name": "repentance",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "baptism",
+   "name": "baptism",
+   "type": "observance",
+   "missing": false
+  },
+  {
+   "id": "sacrifice",
+   "name": "sacrifice",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "prayer",
+   "name": "prayer",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "mercy",
+   "name": "mercy",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "grace",
+   "name": "grace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "redemption",
+   "name": "redemption",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "blood",
+   "name": "blood",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "brother",
+   "name": "brother",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "remission_of_sins",
+   "name": "forgiveness of sins",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "repent_and_be_baptized",
+   "name": "repent, and be baptized",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "if_we_confess_our_sins",
+   "name": "if we confess our sins",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "if_my_people",
+   "name": "if my people shall humble themselves",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "event_parable_of_the_unforgiving_servant",
+   "name": "Parable of the Unforgiving Servant",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "event_paralytic_lowered_through_roof",
+   "name": "Paralytic lowered through roof",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "theme_spirit_r12",
+   "name": "Blasphemy against the Spirit",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r14",
+   "name": "To make atonement",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "1John.1.9",
+   "ref": "1 John 1:9",
+   "text": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness."
+  },
+  {
+   "id": "Acts.2.38",
+   "ref": "Acts 2:38",
+   "text": "Peter replied, “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit."
+  },
+  {
+   "id": "2Chr.7.14",
+   "ref": "2 Chronicles 7:14",
+   "text": "and if My people who are called by My name humble themselves and pray and seek My face and turn from their wicked ways, then I will hear from heaven, forgive their sin, and heal their land."
+  },
+  {
+   "id": "Matt.6.12",
+   "ref": "Matthew 6:12",
+   "text": "And forgive us our debts, as we also have forgiven our debtors."
+  },
+  {
+   "id": "Luke.23.34",
+   "ref": "Luke 23:34",
+   "text": "Then Jesus said, “Father, forgive them, for they do not know what they are doing.” And they divided up His garments by casting lots."
+  },
+  {
+   "id": "Ps.130.4",
+   "ref": "Psalms 130:4",
+   "text": "But with You there is forgiveness, so that You may be feared."
+  },
+  {
+   "id": "Mark.2.7",
+   "ref": "Mark 2:7",
+   "text": "“Why does this man speak like this? He is blaspheming! Who can forgive sins but God alone?”"
+  },
+  {
+   "id": "John.20.23",
+   "ref": "John 20:23",
+   "text": "If you forgive anyone his sins, they are forgiven; if you withhold forgiveness from anyone, it is withheld.”"
+  }
+ ],
+ "forms": [
+  {
+   "form": "verb",
+   "verses": 101,
+   "rows": [
+    {
+     "label": "The LORD, God, the Father forgives",
+     "note": "The verses where the text itself names the LORD, God or the Father as the one who forgives. In none of its 45 verses is the Hebrew סָלַח said of a person: its forgiver is the LORD, or the verb is passive (“he will be forgiven”). The Greek ἀφίημι is said also of people, in the rows below.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Num.14.20",
+      "Mic.7.18",
+      "Matt.6.14",
+      "Isa.55.7",
+      "Num.14.18",
+      "Ps.99.8",
+      "Jer.31.34",
+      "Jer.50.20",
+      "Matt.6.15",
+      "Mark.11.25"
+     ],
+     "eg": [
+      {
+       "id": "Num.14.20",
+       "ref": "Numbers 14:20",
+       "text": "“I have pardoned them as you requested,” the LORD replied.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Mic.7.18",
+       "ref": "Micah 7:18",
+       "text": "Who is a God like You, who pardons iniquity and passes over the transgression of the remnant of His inheritance-who does not retain His anger forever, because He delights in loving devotion?",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.14",
+       "ref": "Matthew 6:14",
+       "text": "For if you forgive men their trespasses, your heavenly Father will also forgive you.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Isa.55.7",
+       "ref": "Isaiah 55:7",
+       "text": "Let the wicked man forsake his way and the unrighteous man his thoughts; let him return to the LORD, that He may have compassion, and to our God, for He will freely pardon.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“He forgives”, “I will forgive”, “You forgave”",
+     "note": "The verses say “He”, “I” or “You” and do not name who. In the Hebrew verses the passage around them names the LORD as the one spoken of, speaking or addressed (Exod 34:6; Ps 103:1; Ps 85:1; Num 14:17; Jer 5:9, 33:2, 36:1; 2 Chr 7:12); in 1 John 1:9 readers take “He” of the Father or of Christ, and the page does not choose.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "if_we_confess_our_sins",
+       "name": "if we confess our sins",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "if_my_people",
+       "name": "if my people shall humble themselves",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Exod.34.7",
+      "Ps.103.3",
+      "1John.1.9",
+      "Jer.5.1",
+      "Jer.33.8",
+      "Jer.36.3",
+      "2Chr.7.14",
+      "Ps.32.5",
+      "Ps.85.2",
+      "Num.14.19"
+     ],
+     "eg": [
+      {
+       "id": "Exod.34.7",
+       "ref": "Exodus 34:7",
+       "text": "maintaining loving devotion to a thousand generations, forgiving iniquity, transgression, and sin. Yet He will by no means leave the guilty unpunished; He will visit the iniquity of the fathers on their children and grandchildren to the third and fourth generations.”",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      },
+      {
+       "id": "Ps.103.3",
+       "ref": "Psalms 103:3",
+       "text": "He who forgives all your iniquities and heals all your diseases,",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "1John.1.9",
+       "ref": "1 John 1:9",
+       "text": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Jer.5.1",
+       "ref": "Jeremiah 5:1",
+       "text": "“Go up and down the streets of Jerusalem. Look now and take note; search her squares. If you can find a single person, anyone who acts justly, anyone who seeks the truth, then I will forgive the city.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Asked in prayer: forgive",
+     "note": null,
+     "doors": [
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 21,
+     "verses": [
+      "1Kgs.8.30",
+      "Dan.9.19",
+      "Luke.23.34",
+      "Matt.6.12",
+      "Luke.11.4",
+      "Ps.25.11",
+      "Amos.7.2",
+      "Exod.34.9",
+      "Exod.32.32",
+      "Job.7.21",
+      "Num.14.19",
+      "2Kgs.5.18",
+      "1Kgs.8.34",
+      "1Kgs.8.36",
+      "1Kgs.8.39",
+      "1Kgs.8.50",
+      "2Chr.6.21",
+      "2Chr.6.25",
+      "2Chr.6.27",
+      "2Chr.6.30",
+      "2Chr.6.39"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.8.30",
+       "ref": "1 Kings 8:30",
+       "text": "Hear the plea of Your servant and of Your people Israel when they pray toward this place. May You hear from heaven, Your dwelling place. May You hear and forgive.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Dan.9.19",
+       "ref": "Daniel 9:19",
+       "text": "O Lord, listen! O Lord, forgive! O Lord, hear and act! For Your sake, O my God, do not delay, because Your city and Your people bear Your name.”",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Luke.23.34",
+       "ref": "Luke 23:34",
+       "text": "Then Jesus said, “Father, forgive them, for they do not know what they are doing.” And they divided up His garments by casting lots.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.12",
+       "ref": "Matthew 6:12",
+       "text": "And forgive us our debts, as we also have forgiven our debtors.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Who can forgive sins",
+     "note": "Set side by side as the text has them: “Who can forgive sins but God alone?” (Mark 2:7; Luke 5:21; Luke 7:49), the Son of Man has authority on earth to forgive sins (Matt 9:6; Mark 2:10; Luke 5:24), “If you forgive anyone his sins, they are forgiven; if you withhold forgiveness from anyone, it is withheld” (John 20:23). Where traditions part on who may forgive, and how, the page takes no side and ranks none above another.",
+     "doors": [
+      {
+       "id": "event_paralytic_lowered_through_roof",
+       "name": "Paralytic lowered through roof",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Mark.2.7",
+      "Mark.2.10",
+      "John.20.23",
+      "Luke.5.21",
+      "Luke.5.24",
+      "Matt.9.6",
+      "Luke.7.49"
+     ],
+     "eg": [
+      {
+       "id": "Mark.2.7",
+       "ref": "Mark 2:7",
+       "text": "“Why does this man speak like this? He is blaspheming! Who can forgive sins but God alone?”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Mark.2.10",
+       "ref": "Mark 2:10",
+       "text": "But so that you may know that the Son of Man has authority on earth to forgive sins...” He said to the paralytic,",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "John.20.23",
+       "ref": "John 20:23",
+       "text": "If you forgive anyone his sins, they are forgiven; if you withhold forgiveness from anyone, it is withheld.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.5.21",
+       "ref": "Luke 5:21",
+       "text": "But the scribes and Pharisees began thinking to themselves, “Who is this man who speaks blasphemy? Who can forgive sins but God alone?”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Blessed are they whose sins are forgiven”; “Your sins are forgiven”",
+     "note": "The blessing of Psalm 32:1, which Romans 4:7 quotes; and the saying as the text gives it: Jesus to the paralytic and to the woman who anointed him, and John to little children (“through His name”). The text says the sins are forgiven and does not say here who forgives; “Who can forgive sins” is the row above.",
+     "doors": [
+      {
+       "id": "blessed_is_the_man",
+       "name": "Blessed is the man",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "event_paralytic_lowered_through_roof",
+       "name": "Paralytic lowered through roof",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "remission_of_sins",
+       "name": "forgiveness of sins",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Ps.32.1",
+      "Mark.2.5",
+      "Luke.7.48",
+      "Rom.4.7",
+      "Matt.9.2",
+      "Luke.5.20",
+      "Mark.2.9",
+      "Matt.9.5",
+      "Luke.5.23",
+      "Luke.7.47",
+      "1John.2.12"
+     ],
+     "eg": [
+      {
+       "id": "Ps.32.1",
+       "ref": "Psalms 32:1",
+       "text": "Of David. A Maskil. Blessed is he whose transgressions are forgiven, whose sins are covered.",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      },
+      {
+       "id": "Mark.2.5",
+       "ref": "Mark 2:5",
+       "text": "When Jesus saw their faith, He said to the paralytic, “Son, your sins are forgiven.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.7.48",
+       "ref": "Luke 7:48",
+       "text": "Then Jesus said to her, “Your sins are forgiven.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.7",
+       "ref": "Romans 4:7",
+       "text": "“Blessed are they whose lawless acts are forgiven, whose sins are covered.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "People forgiving people, and asked to",
+     "note": "People forgiving people: “forgive my brother”, “if your brother ... repents, forgive him” (Matthew 18; Luke 17), the master who “forgave his debt” (Matt 18:27, 32), and, in the Hebrew, a person asked to forgive (Joseph, Moses, Samuel, David) with נָשָׂא, not סָלַח (said only of the LORD). Eph 4:32 (“forgiving each other just as in Christ God forgave you”) and Col 3:13 use a different Greek word, χαρίζομαι, and Luke 6:37 (“Forgive, and you will be forgiven”) another, ἀπολύω; they are listed under “Other words the lexicon glosses forgive”, not here. The verses that join our forgiving to God's are the next row.",
+     "doors": [
+      {
+       "id": "brother",
+       "name": "brother",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_parable_of_the_unforgiving_servant",
+       "name": "Parable of the Unforgiving Servant",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Matt.18.21",
+      "Matt.18.35",
+      "Luke.17.3",
+      "Luke.17.4",
+      "Mark.11.25",
+      "Matt.6.14",
+      "Matt.6.15",
+      "Luke.11.4",
+      "Matt.6.12",
+      "Matt.18.27",
+      "Matt.18.32",
+      "Gen.50.17",
+      "Exod.10.17",
+      "1Sam.15.25",
+      "1Sam.25.28"
+     ],
+     "eg": [
+      {
+       "id": "Matt.18.21",
+       "ref": "Matthew 18:21",
+       "text": "Then Peter came to Jesus and asked, “Lord, how many times shall I forgive my brother who sins against me? Up to seven times?”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.18.35",
+       "ref": "Matthew 18:35",
+       "text": "That is how My heavenly Father will treat each of you unless you forgive your brother from your heart.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.3",
+       "ref": "Luke 17:3",
+       "text": "Watch yourselves. If your brother sins, rebuke him; and if he repents, forgive him.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.4",
+       "ref": "Luke 17:4",
+       "text": "Even if he sins against you seven times in a day, and seven times returns to say, ‘I repent,' you must forgive him.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Our forgiving, and our Father's",
+     "note": "The text's own phrases, set side by side and not ordered: “forgive us our debts, as we also have forgiven our debtors” (Matt 6:12; Luke 11:4), “if you forgive men their trespasses, your heavenly Father will also forgive you” (Matt 6:14-15; Mark 11:25), “unless you forgive your brother from your heart” (Matt 18:35). Whether, and in what sense, God's forgiveness depends on ours the page takes no side; whether our forgiving depends on the other's repenting is the question of Luke 17:3-4, in the row above. Eph 4:32 (“just as in Christ God forgave you”) and Col 3:13 (“Forgive as the Lord forgave you”) say the same of our forgiving in another Greek word, χαρίζομαι, and Luke 6:37 (“Forgive, and you will be forgiven”) in ἀπολύω; they are listed under “Other words the lexicon glosses forgive” below, and are kept out of the rows because they are different words.",
+     "doors": [
+      {
+       "id": "event_parable_of_the_unforgiving_servant",
+       "name": "Parable of the Unforgiving Servant",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Matt.6.12",
+      "Matt.6.14",
+      "Matt.6.15",
+      "Mark.11.25",
+      "Luke.11.4",
+      "Matt.18.35"
+     ],
+     "eg": [
+      {
+       "id": "Matt.6.12",
+       "ref": "Matthew 6:12",
+       "text": "And forgive us our debts, as we also have forgiven our debtors.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.14",
+       "ref": "Matthew 6:14",
+       "text": "For if you forgive men their trespasses, your heavenly Father will also forgive you.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.15",
+       "ref": "Matthew 6:15",
+       "text": "But if you do not forgive men their trespasses, neither will your Father forgive yours.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Mark.11.25",
+       "ref": "Mark 11:25",
+       "text": "And when you stand to pray, if you hold anything against another, forgive it, so that your Father in heaven will forgive your trespasses as well.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Forgiveness and faith",
+     "note": "“When Jesus saw their faith, He said ... your sins are forgiven” (Mark 2:5; Matt 9:2; Luke 5:20), “the prayer offered in faith ... If he has sinned, he will be forgiven” (Jas 5:15). The noun form has Acts 10:43 and 26:18. This row, the repentance row below and the baptism row in the noun form are listed in the alphabetical order of their labels and carry no ranking; where traditions part on how faith, repentance, baptism and forgiveness stand to one another, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Mark.2.5",
+      "Jas.5.15",
+      "Luke.5.20",
+      "Matt.9.2"
+     ],
+     "eg": [
+      {
+       "id": "Mark.2.5",
+       "ref": "Mark 2:5",
+       "text": "When Jesus saw their faith, He said to the paralytic, “Son, your sins are forgiven.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.15",
+       "ref": "James 5:15",
+       "text": "And the prayer offered in faith will restore the one who is sick. The Lord will raise him up. If he has sinned, he will be forgiven.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.5.20",
+       "ref": "Luke 5:20",
+       "text": "When Jesus saw their faith, He said, “Friend, your sins are forgiven.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.9.2",
+       "ref": "Matthew 9:2",
+       "text": "Just then some men brought to Him a paralytic lying on a mat. When Jesus saw their faith, He said to the paralytic, “Take courage, son; your sins are forgiven.”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Forgiveness, repentance, turning and confessing",
+     "note": "The verses that name repentance, turning or confessing in the verse itself: “humble themselves and pray ... turn from their wicked ways, then I will ... forgive” (2 Chr 7:14), “Let the wicked man forsake his way ... return to the LORD” (Isa 55:7), “if we confess our sins, He is faithful and just to forgive” (1 John 1:9), “if he repents, forgive him” (Luke 17:3), “turn and be forgiven” (Mark 4:12). Other verses name none in the verse (Luke 23:34; Luke 5:20; Ps 25:11). The page does not say whether forgiveness is conditional. This row, the faith row above and the baptism row in the noun form are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "if_we_confess_our_sins",
+       "name": "if we confess our sins",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "2Chr.7.14",
+      "Isa.55.7",
+      "Jer.36.3",
+      "Ps.32.5",
+      "1John.1.9",
+      "Luke.17.3",
+      "Luke.17.4",
+      "Acts.8.22",
+      "Mark.4.12"
+     ],
+     "eg": [
+      {
+       "id": "2Chr.7.14",
+       "ref": "2 Chronicles 7:14",
+       "text": "and if My people who are called by My name humble themselves and pray and seek My face and turn from their wicked ways, then I will hear from heaven, forgive their sin, and heal their land.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Isa.55.7",
+       "ref": "Isaiah 55:7",
+       "text": "Let the wicked man forsake his way and the unrighteous man his thoughts; let him return to the LORD, that He may have compassion, and to our God, for He will freely pardon.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Jer.36.3",
+       "ref": "Jeremiah 36:3",
+       "text": "Perhaps when the people of Judah hear about all the calamity I plan to bring upon them, each of them will turn from his wicked way. Then I will forgive their iniquity and their sin.”",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Ps.32.5",
+       "ref": "Psalms 32:5",
+       "text": "Then I acknowledged my sin to You and did not hide my iniquity. I said, “I will confess my transgressions to the LORD,” and You forgave the guilt of my sin. Selah",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Atonement made, and he will be forgiven",
+     "note": "The Hebrew has two words in these verses, כִּפֵּר “make atonement” and סָלַח “forgive”, side by side, and the page does not make them one; the atonement is made by the priest with the offering, the forgiving is said in the passive. The same כִּפֶּר is “atone” elsewhere (the Berean prints “atone”, “atoned for”, “provide atonement” at Ps 65:3, 79:9, Deut 21:8, 2 Chr 30:18) and “forgave” once (Ps 78:38); the page does not make the words one. Lev 6:2-7 gives this forgiveness after deceit, extortion and false swearing, wrongs done knowingly. How the offering and the forgiving are related is a question traditions answer differently, and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r14",
+       "name": "To make atonement",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sin_offering",
+       "name": "sin offering",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "guilt_offering",
+       "name": "guilt offering",
+       "type": "object",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Lev.4.20",
+      "Lev.4.26",
+      "Lev.4.31",
+      "Lev.4.35",
+      "Lev.5.10",
+      "Lev.5.13",
+      "Lev.5.16",
+      "Lev.5.18",
+      "Lev.6.7",
+      "Lev.19.22",
+      "Num.15.25",
+      "Num.15.28"
+     ],
+     "eg": [
+      {
+       "id": "Lev.4.20",
+       "ref": "Leviticus 4:20",
+       "text": "He shall offer this bull just as he did the bull for the sin offering; in this way the priest will make atonement on their behalf, and they will be forgiven.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Lev.4.26",
+       "ref": "Leviticus 4:26",
+       "text": "He must burn all its fat on the altar, like the fat of the peace offerings; thus the priest will make atonement for that man's sin, and he will be forgiven.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Lev.4.31",
+       "ref": "Leviticus 4:31",
+       "text": "Then he is to remove all the fat, just as it is removed from the peace offering, and the priest is to burn it on the altar as a pleasing aroma to the LORD. In this way the priest will make atonement for him, and he will be forgiven.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Lev.4.35",
+       "ref": "Leviticus 4:35",
+       "text": "And he shall remove all the fat, just as the fat of the lamb is removed from the peace offerings, and he shall burn it on the altar along with the food offerings to the LORD. In this way the priest will make atonement for him for the sin he has committed, and he will be forgiven.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sinning unintentionally, in ignorance: forgiven",
+     "note": "These four verses say the sin was unintentional or in ignorance. Lev 6:2-7, in the atonement row above, has the same forgiving words for deceit, extortion and false swearing; Num 15:30-31 speaks of the person who sins defiantly, “cut off from among his people”, with no word for forgiveness. The page does not say what the text leaves unsaid.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r14",
+       "name": "To make atonement",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Num.15.25",
+      "Num.15.26",
+      "Num.15.28",
+      "Lev.5.18"
+     ],
+     "eg": [
+      {
+       "id": "Num.15.25",
+       "ref": "Numbers 15:25",
+       "text": "The priest is to make atonement for the whole congregation of Israel, so that they may be forgiven; for the sin was unintentional and they have brought to the LORD a food offering and a sin offering, presented before the LORD for their unintentional sin.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Num.15.26",
+       "ref": "Numbers 15:26",
+       "text": "Then the whole congregation of Israel and the foreigners residing among them will be forgiven, since it happened to all the people unintentionally.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Num.15.28",
+       "ref": "Numbers 15:28",
+       "text": "And the priest shall make atonement before the LORD on behalf of the person who erred by sinning unintentionally; and when atonement has been made for him, he will be forgiven.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Lev.5.18",
+       "ref": "Leviticus 5:18",
+       "text": "He is to bring to the priest an unblemished ram of proper value from the flock as a guilt offering. Then the priest will make atonement on his behalf for the wrong he has committed in ignorance, and he will be forgiven.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Forgiving sins, iniquity, transgression, trespass",
+     "note": null,
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "iniquity",
+       "name": "iniquity",
+       "type": "assessment",
+       "missing": false
+      },
+      {
+       "id": "trespass",
+       "name": "offense",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 51,
+     "verses": [
+      "Exod.34.7",
+      "Luke.11.4",
+      "Matt.6.14",
+      "Rom.4.7",
+      "Gen.50.17",
+      "Exod.10.17",
+      "Exod.23.21",
+      "Exod.32.32",
+      "Exod.34.9",
+      "Num.14.18",
+      "Num.14.19",
+      "Josh.24.19",
+      "1Sam.15.25",
+      "1Sam.25.28",
+      "1Kgs.8.34",
+      "1Kgs.8.36",
+      "1Kgs.8.50",
+      "2Chr.6.25",
+      "2Chr.6.27",
+      "2Chr.7.14",
+      "Job.7.21",
+      "Ps.25.11",
+      "Ps.32.5",
+      "Ps.85.2",
+      "Ps.103.3",
+      "Jer.31.34",
+      "Jer.33.8",
+      "Jer.36.3",
+      "Mic.7.18",
+      "Matt.6.15",
+      "Matt.9.2",
+      "Matt.9.5",
+      "Matt.9.6",
+      "Matt.12.31",
+      "Mark.2.5",
+      "Mark.2.7",
+      "Mark.2.9",
+      "Mark.2.10",
+      "Mark.3.28",
+      "Mark.11.25",
+      "Luke.5.20",
+      "Luke.5.21",
+      "Luke.5.23",
+      "Luke.5.24",
+      "Luke.7.47",
+      "Luke.7.48",
+      "Luke.7.49",
+      "John.20.23",
+      "Jas.5.15",
+      "1John.1.9",
+      "1John.2.12"
+     ],
+     "eg": [
+      {
+       "id": "Exod.34.7",
+       "ref": "Exodus 34:7",
+       "text": "maintaining loving devotion to a thousand generations, forgiving iniquity, transgression, and sin. Yet He will by no means leave the guilty unpunished; He will visit the iniquity of the fathers on their children and grandchildren to the third and fourth generations.”",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.4",
+       "ref": "Luke 11:4",
+       "text": "And forgive us our sins, for we also forgive everyone who sins against us. And lead us not into temptation.'”",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.14",
+       "ref": "Matthew 6:14",
+       "text": "For if you forgive men their trespasses, your heavenly Father will also forgive you.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.7",
+       "ref": "Romans 4:7",
+       "text": "“Blessed are they whose lawless acts are forgiven, whose sins are covered.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Will not forgive, was not forgiven",
+     "note": "Most are the LORD's refusal. Matt 6:15 sets it beside our not forgiving. Isa 2:9 is a plea that He not forgive. John 20:23 is said to the disciples and is set with Mark 2:7 and Mark 2:10 in “Who can forgive sins”, where the page takes no side.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Josh.24.19",
+      "Deut.29.20",
+      "2Kgs.24.4",
+      "Exod.23.21",
+      "Hos.1.6",
+      "Jer.5.7",
+      "Isa.2.9",
+      "Lam.3.42",
+      "Matt.6.15",
+      "John.20.23"
+     ],
+     "eg": [
+      {
+       "id": "Josh.24.19",
+       "ref": "Joshua 24:19",
+       "text": "But Joshua said to the people, “You are not able to serve the LORD, for He is a holy God; He is a jealous God; He will not forgive your rebellion or your sins.",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      },
+      {
+       "id": "Deut.29.20",
+       "ref": "Deuteronomy 29:20",
+       "text": "The LORD will never be willing to forgive him. Instead, His anger and jealousy will burn against that man, and every curse written in this book will fall upon him. The LORD will blot out his name from under heaven",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.24.4",
+       "ref": "2 Kings 24:4",
+       "text": "and also for the innocent blood he had shed. For he had filled Jerusalem with innocent blood, and the LORD was unwilling to forgive.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Exod.23.21",
+       "ref": "Exodus 23:21",
+       "text": "Pay attention to him and listen to his voice; do not defy him, for he will not forgive rebellion, since My Name is in him.",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blasphemy against the Holy Spirit",
+     "note": "The verses set a word against the Son of Man (forgiven) beside blasphemy against the Spirit (not forgiven), and “all sins and blasphemies” forgiven men (Mark 3:28); Mark 3:29 is in the noun form. What the blasphemy is, readers take differently and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_spirit_r12",
+       "name": "Blasphemy against the Spirit",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "blasphemy",
+       "name": "blasphemy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Matt.12.31",
+      "Matt.12.32",
+      "Mark.3.28",
+      "Luke.12.10"
+     ],
+     "eg": [
+      {
+       "id": "Matt.12.31",
+       "ref": "Matthew 12:31",
+       "text": "Therefore I tell you, every sin and blasphemy will be forgiven men, but the blasphemy against the Spirit will not be forgiven.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.32",
+       "ref": "Matthew 12:32",
+       "text": "Whoever speaks a word against the Son of Man will be forgiven, but whoever speaks against the Holy Spirit will not be forgiven, either in this age or in the one to come.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Mark.3.28",
+       "ref": "Mark 3:28",
+       "text": "Truly I tell you, the sons of men will be forgiven all sins and blasphemies, as many as they utter.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.12.10",
+       "ref": "Luke 12:10",
+       "text": "And everyone who speaks a word against the Son of Man will be forgiven, but whoever blasphemes against the Holy Spirit will not be forgiven.",
+       "words": [
+        {
+         "key": "g863",
+         "lemma": "ἀφίημι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Numbers 30:5, 8, 12: the LORD “will absolve her” of a vow her father or husband has annulled -- the same Hebrew verb as in the rows above, a vow and not a sin. Psalm 25:18: the Berean reads “take away all my sins”; the Hebrew verb is the one the lexicon glosses forgive.",
+     "doors": [],
+     "n": 5,
+     "verses": [
+      "Isa.33.24",
+      "Num.30.5",
+      "Ps.25.18",
+      "Num.30.8",
+      "Num.30.12"
+     ],
+     "eg": [
+      {
+       "id": "Isa.33.24",
+       "ref": "Isaiah 33:24",
+       "text": "And no resident of Zion will say, “I am sick.” The people who dwell there will be forgiven of iniquity.",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      },
+      {
+       "id": "Num.30.5",
+       "ref": "Numbers 30:5",
+       "text": "But if her father prohibits her on the day he hears about it, then none of the vows or pledges by which she has bound herself shall stand. The LORD will absolve her because her father has prohibited her.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      },
+      {
+       "id": "Ps.25.18",
+       "ref": "Psalms 25:18",
+       "text": "Consider my affliction and trouble, and take away all my sins.",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
+        }
+       ]
+      },
+      {
+       "id": "Num.30.8",
+       "ref": "Numbers 30:8",
+       "text": "But if her husband prohibits her when he hears of it, he nullifies the vow that binds her or the rash promise she has made, and the LORD will absolve her.",
+       "words": [
+        {
+         "key": "h5545",
+         "lemma": "סָלַח"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "noun",
+   "verses": 18,
+   "rows": [
+    {
+     "label": "With the LORD there is forgiveness",
+     "note": "Dan 9:9 sets forgiveness beside compassion, Neh 9:17 beside grace, compassion and loving devotion. The Hebrew speaks of sin taken away in other words, with no word for forgiveness, and those verses are not in this hub: “blots out your transgressions” (Isa 43:25), “As far as the east is from the west, so far has He removed our transgressions” (Ps 103:12), “cast out all our sins into the depths of the sea” (Mic 7:19), “blot out my transgressions” and “Wash me clean of my iniquity” (Ps 51:1-2).",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "grace",
+       "name": "grace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Ps.130.4",
+      "Dan.9.9",
+      "Neh.9.17"
+     ],
+     "eg": [
+      {
+       "id": "Ps.130.4",
+       "ref": "Psalms 130:4",
+       "text": "But with You there is forgiveness, so that You may be feared.",
+       "words": [
+        {
+         "key": "h5547",
+         "lemma": "סְלִיחָה"
+        }
+       ]
+      },
+      {
+       "id": "Dan.9.9",
+       "ref": "Daniel 9:9",
+       "text": "To the Lord our God belong compassion and forgiveness, even though we have rebelled against Him",
+       "words": [
+        {
+         "key": "h5547",
+         "lemma": "סְלִיחָה"
+        }
+       ]
+      },
+      {
+       "id": "Neh.9.17",
+       "ref": "Nehemiah 9:17",
+       "text": "They refused to listen and failed to remember the wonders You performed among them. They stiffened their necks and appointed a leader to return them to their bondage in Egypt. But You are a forgiving God, gracious and compassionate, slow to anger and rich in loving devotion, and You did not forsake them.",
+       "words": [
+        {
+         "key": "h5547",
+         "lemma": "סְלִיחָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Forgiveness of sins, of trespasses",
+     "note": "Luke 1:77 sets it beside the knowledge of salvation, Eph 1:7 and Col 1:14 beside redemption, Acts 5:31 beside the Savior.",
+     "doors": [
+      {
+       "id": "remission_of_sins",
+       "name": "forgiveness of sins",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "redemption",
+       "name": "redemption",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Mark.1.4",
+      "Luke.1.77",
+      "Acts.13.38",
+      "Eph.1.7",
+      "Matt.26.28",
+      "Luke.3.3",
+      "Luke.24.47",
+      "Acts.2.38",
+      "Acts.5.31",
+      "Acts.10.43",
+      "Acts.26.18",
+      "Col.1.14"
+     ],
+     "eg": [
+      {
+       "id": "Mark.1.4",
+       "ref": "Mark 1:4",
+       "text": "John the Baptist appeared in the wilderness, preaching a baptism of repentance for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.77",
+       "ref": "Luke 1:77",
+       "text": "to give to His people the knowledge of salvation through the forgiveness of their sins,",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.13.38",
+       "ref": "Acts 13:38",
+       "text": "Therefore let it be known to you, brothers, that through Jesus the forgiveness of sins is proclaimed to you.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.7",
+       "ref": "Ephesians 1:7",
+       "text": "In Him we have redemption through His blood, the forgiveness of our trespasses, according to the riches of His grace",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Baptism and forgiveness",
+     "note": "“A baptism of repentance for the forgiveness of sins” (Mark 1:4; Luke 3:3) is the baptism John preached; “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins” (Acts 2:38) is Peter's, at Pentecost. Acts 22:16 (“Get up, be baptized, and wash your sins away, calling on His name”) joins baptism and the washing away of sins without a word for forgiveness, and so is not in this hub. This row, the faith row below and the repentance row below it are in the alphabetical order of their labels and carry no ranking; where traditions part on what baptism does and how it stands to repentance, faith and forgiveness, the page takes no side.",
+     "doors": [
+      {
+       "id": "baptism",
+       "name": "baptism",
+       "type": "observance",
+       "missing": false
+      },
+      {
+       "id": "repent_and_be_baptized",
+       "name": "repent, and be baptized",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Mark.1.4",
+      "Luke.3.3",
+      "Acts.2.38"
+     ],
+     "eg": [
+      {
+       "id": "Mark.1.4",
+       "ref": "Mark 1:4",
+       "text": "John the Baptist appeared in the wilderness, preaching a baptism of repentance for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Luke.3.3",
+       "ref": "Luke 3:3",
+       "text": "He went into all the region around the Jordan, preaching a baptism of repentance for the forgiveness of sins,",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.2.38",
+       "ref": "Acts 2:38",
+       "text": "Peter replied, “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Believing, faith and forgiveness",
+     "note": "“Everyone who believes in Him receives forgiveness of sins through His name” (Acts 10:43), “forgiveness of sins and an inheritance among those sanctified by faith in Me” (Acts 26:18). This row sits between the baptism row above and the repentance row below in the alphabetical order of their labels and carries no ranking; the page takes no side on how they stand to one another.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Acts.10.43",
+      "Acts.26.18"
+     ],
+     "eg": [
+      {
+       "id": "Acts.10.43",
+       "ref": "Acts 10:43",
+       "text": "All the prophets testify about Him that everyone who believes in Him receives forgiveness of sins through His name.”",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.26.18",
+       "ref": "Acts 26:18",
+       "text": "to open their eyes, so that they may turn from darkness to light and from the power of Satan to God, that they may receive forgiveness of sins and an inheritance among those sanctified by faith in Me.'",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Repentance and forgiveness",
+     "note": "“Repentance and forgiveness of sins will be proclaimed” (Luke 24:47), “to grant repentance and forgiveness of sins to Israel” (Acts 5:31), “Repent and be baptized ... for the forgiveness of your sins” (Acts 2:38). The baptism, faith and repentance rows are in the alphabetical order of their labels and carry no ranking; where Christian traditions part on how repentance, baptism, faith and forgiveness stand to one another, the page takes no side.",
+     "doors": [
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "repent_and_be_baptized",
+       "name": "repent, and be baptized",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Luke.24.47",
+      "Mark.1.4",
+      "Acts.5.31",
+      "Acts.2.38",
+      "Luke.3.3"
+     ],
+     "eg": [
+      {
+       "id": "Luke.24.47",
+       "ref": "Luke 24:47",
+       "text": "and in His name repentance and forgiveness of sins will be proclaimed to all nations, beginning in Jerusalem.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Mark.1.4",
+       "ref": "Mark 1:4",
+       "text": "John the Baptist appeared in the wilderness, preaching a baptism of repentance for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.5.31",
+       "ref": "Acts 5:31",
+       "text": "God exalted Him to His right hand as Prince and Savior, in order to grant repentance and forgiveness of sins to Israel.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.2.38",
+       "ref": "Acts 2:38",
+       "text": "Peter replied, “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blood, offering and forgiveness",
+     "note": "“Without the shedding of blood there is no forgiveness” (Heb 9:22), “My blood of the covenant, which is poured out for many for the forgiveness of sins” (Matt 26:28), “where these have been forgiven, an offering for sin is no longer needed” (Heb 10:18). Where traditions part on how Christ's blood and forgiveness are related, the page takes no side.",
+     "doors": [
+      {
+       "id": "blood",
+       "name": "blood",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sacrifice",
+       "name": "sacrifice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "redemption",
+       "name": "redemption",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Heb.9.22",
+      "Matt.26.28",
+      "Eph.1.7",
+      "Heb.10.18"
+     ],
+     "eg": [
+      {
+       "id": "Heb.9.22",
+       "ref": "Hebrews 9:22",
+       "text": "According to the law, in fact, nearly everything must be purified with blood, and without the shedding of blood there is no forgiveness.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.28",
+       "ref": "Matthew 26:28",
+       "text": "This is My blood of the covenant, which is poured out for many for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.7",
+       "ref": "Ephesians 1:7",
+       "text": "In Him we have redemption through His blood, the forgiveness of our trespasses, according to the riches of His grace",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.18",
+       "ref": "Hebrews 10:18",
+       "text": "And where these have been forgiven, an offering for sin is no longer needed.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Forgiveness “in His name”, “through Him”, “in Him”",
+     "note": "Acts 2:38 (“in the name of Jesus Christ”) and 13:38 (“through Jesus”) name Jesus in the verse; the others say “His name”, “Him”, “whom”, and the passage around them names Christ (Luke 24:46; Acts 10:36; Eph 1:5; Col 1:13). How the text relates Him to forgiveness -- by His name, through Him, in Him -- is in the verses, and the page does not choose.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Acts.2.38",
+      "Acts.13.38",
+      "Acts.10.43",
+      "Luke.24.47",
+      "Eph.1.7",
+      "Col.1.14"
+     ],
+     "eg": [
+      {
+       "id": "Acts.2.38",
+       "ref": "Acts 2:38",
+       "text": "Peter replied, “Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of your sins, and you will receive the gift of the Holy Spirit.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.13.38",
+       "ref": "Acts 13:38",
+       "text": "Therefore let it be known to you, brothers, that through Jesus the forgiveness of sins is proclaimed to you.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Acts.10.43",
+       "ref": "Acts 10:43",
+       "text": "All the prophets testify about Him that everyone who believes in Him receives forgiveness of sins through His name.”",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      },
+      {
+       "id": "Luke.24.47",
+       "ref": "Luke 24:47",
+       "text": "and in His name repentance and forgiveness of sins will be proclaimed to all nations, beginning in Jerusalem.",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Mark 3:29 (“will never be forgiven; he is guilty of eternal sin”): see “Blasphemy against the Holy Spirit” in the verb form, where Mark 3:28, Matt 12:31-32 and Luke 12:10 stand with it; what the blasphemy is, readers take differently and the page takes no side. The same noun ἄφεσις is also “release”: Luke 4:18 (“to proclaim liberty to the captives ... to release the oppressed”) is the one of its 16 verses where it is not forgiveness, and is not counted here.",
+     "doors": [],
+     "n": 1,
+     "verses": [
+      "Mark.3.29"
+     ],
+     "eg": [
+      {
+       "id": "Mark.3.29",
+       "ref": "Mark 3:29",
+       "text": "But whoever blasphemes against the Holy Spirit will never be forgiven; he is guilty of eternal sin.”",
+       "words": [
+        {
+         "key": "g859",
+         "lemma": "ἄφεσις"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 1,
+   "rows": [
+    {
+     "label": "Kind and forgiving",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 1,
+     "verses": [
+      "Ps.86.5"
+     ],
+     "eg": [
+      {
+       "id": "Ps.86.5",
+       "ref": "Psalms 86:5",
+       "text": "For You, O Lord, are kind and forgiving, rich in loving devotion to all who call on You.",
+       "words": [
+        {
+         "key": "h5546",
+         "lemma": "סַלָּח"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words the lexicon glosses “forgive”",
+  "words": [
+   {
+    "key": "h3722",
+    "lemma": "כִּפֶּר",
+    "translit": "ḵipper",
+    "gloss": "make atonement",
+    "lang": "Hebrew",
+    "n": 8,
+    "verses": [
+     "Ps.78.38",
+     "Ps.79.9",
+     "Deut.21.8",
+     "2Chr.30.18",
+     "Ps.65.3",
+     "Isa.22.14",
+     "Jer.18.23",
+     "Ezek.16.63"
+    ],
+    "note": "כִּפֶּר means “make atonement”, a different word from סָלַח. The Berean prints “forgave” here (Ps 78:38) and in no other of the eight verses the lexicon glosses forgive; elsewhere it prints “atone”, “atoned for”, “provide atonement” (Ps 65:3, Ps 79:9, Deut 21:8, 2 Chr 30:18). The page does not make the two words one.",
+    "eg": [
+     {
+      "id": "Ps.78.38",
+      "ref": "Psalms 78:38",
+      "text": "And yet He was compassionate; He forgave their iniquity and did not destroy them. He often restrained His anger and did not unleash His full wrath."
+     },
+     {
+      "id": "Ps.79.9",
+      "ref": "Psalms 79:9",
+      "text": "Help us, O God of our salvation, for the glory of Your name; deliver us and atone for our sins, for the sake of Your name."
+     }
+    ]
+   },
+   {
+    "key": "g5483",
+    "lemma": "χαρίζομαι",
+    "translit": "charizō",
+    "gloss": "to give grace",
+    "lang": "Greek",
+    "n": 8,
+    "verses": [
+     "Eph.4.32",
+     "Col.3.13",
+     "Col.2.13",
+     "2Cor.2.10",
+     "Luke.7.42",
+     "2Cor.2.7",
+     "Luke.7.43",
+     "2Cor.12.13"
+    ],
+    "note": "χαρίζομαι means “give freely, grant”; the Berean prints “forgive” in these verses, and elsewhere “granted” and “freely give” (Phil 1:29; Rom 8:32; Gal 3:18). It is a different word from ἀφίημι, so these verses are not in the rows.",
+    "eg": [
+     {
+      "id": "Eph.4.32",
+      "ref": "Ephesians 4:32",
+      "text": "Be kind and tenderhearted to one another, forgiving each other just as in Christ God forgave you."
+     },
+     {
+      "id": "Col.3.13",
+      "ref": "Colossians 3:13",
+      "text": "Bear with one another and forgive any complaint you may have against someone else. Forgive as the Lord forgave you."
+     }
+    ]
+   },
+   {
+    "key": "g630",
+    "lemma": "ἀπολύω",
+    "translit": "apoluō",
+    "gloss": "to release: divorce",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.6.37"
+    ],
+    "eg": [
+     {
+      "id": "Luke.6.37",
+      "ref": "Luke 6:37",
+      "text": "Do not judge, and you will not be judged. Do not condemn, and you will not be condemned. Forgive, and you will be forgiven."
+     }
+    ]
+   }
+  ]
+ }
+}

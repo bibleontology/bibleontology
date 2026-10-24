@@ -1,0 +1,25 @@
+{
+ "what": "Doug's marks on docs/review/sweep-examples-2026-10-16.html: 19 verses by kind, first pass (Haiku, one vote) with the resolution pass (Sonnet) where it ran. 8 right, 11 partly, 0 wrong.",
+ "sheet": "sweep-examples-2026-10-16",
+ "marks": {
+  "Rut.1.14": {"mark": "partly", "note": "I would flag the composition candidate - this is a common problem that we can accommodate as a collection and we often do when directly referenced - even if we spin up a super light weight node to solve for this it is doable - could be done in a separate pass"},
+  "Rut.2.4": {"mark": "right", "note": ""},
+  "Gen.3.9": {"mark": "partly", "note": "is is good - but it could even add a resolution link of man to Adam - I would not remove the man reference though "},
+  "Gen.4.9": {"mark": "right", "note": "looks right, but I have no obvious way to know which \"he said\" you are referring to here:\n\n“he” in “he.said” third/masculine/singular\tnone\tCain\thigh"},
+  "Gen.22.2": {"mark": "partly", "note": "I is God but it is only resolvable in the context of verse 1 - do we need an Opus pass for these that Sonnet can't figure out?  "},
+  "Exo.9.1": {"mark": "partly", "note": "people is good - but My People is a specific entity which belongs in the graph - not complaining, but there is an opportunity - even if it resolves at this level showing that it is the Lord's people at the lowest level of the graph - and since you show my resolving to the Lord you may already have this"},
+  "Exo.9.10": {"mark": "right"},
+  "Gen.5.6": {"mark": "right"},
+  "Exo.21.2": {"mark": "partly", "note": "you is probably fine - but could potentially be resolved as the recipients of the law: whatever the Israelites are caused at this stage.  Nevertheless, I am good with it as is."},
+  "Exo.15.2": {"mark": "partly", "note": "Ex 15:1 gives the resolution of my as the singer (Moses or an Israelite).  I see where the plural to singular challenge comes in.  This is not unlike \"the psalmist\"."},
+  "Jon.3.4": {"mark": "right"},
+  "Mrk.4.4": {"mark": "partly", "note": "this is a hard one - the farmer is he - but the farmer is an image - I think I know who the image references but I think it is better not to resolve the farmer image because I have no provenance record to prove that it is God.  The seed is also an image.  It clearly refers to the image of the seed.   The seed is resolved later in the explanation in verse 15.  Parables are hard and perhaps deserve their own targeted resolution pass since Jesus explains them after the fact.  An llm needs the full context and potentially a targeted prompt explaining how to understand parables - but there are not that many of them so we can spend up a little"},
+  "Mrk.2.7": {"mark": "right", "note": "Do we have a specialized category for this type of turn for reasoning/think as is pretty clear in the prior verse?  Either way, the structure is the same with the thinker being the group of scribes."},
+  "Mrk.8.36": {"mark": "right", "note": "since it is a continuation of a turn the speaker is clearly Jesus"},
+  "Jhn.14.2": {"mark": "right"},
+  "Act.9.4": {"mark": "partly", "note": "2 turns later in verse 5 the voice is resolved as Jesus but I would not lose the voice - I might just in an ideal world add an additional level of resolution to the voice - this is not an expectation but it would be awesome to see"},
+  "Act.2.25": {"mark": "right", "note": "this is great - that said - there are multiple levels of attribution context here but there are means of capturing that which we have established"},
+  "Act.2.9": {"mark": "partly", "note": "it's fine - but maybe flag a note because categories could be added - we have the Israelites and Jews, for example.  People groups is a real thing."},
+  "Act.1.10": {"mark": "partly", "note": "v1 establishes him as Jesus and v2 establishes them as apostles (chosen by Jesus)  - that said, no answer beats a wrong answer"}
+ }
+}

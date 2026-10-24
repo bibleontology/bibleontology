@@ -1,0 +1,152 @@
+{"passage": "B-job38", "verses": [
+{"ref": "Job.38.1",
+ "referents": [{"slot": "cl1s", "choice": "w2", "divine": true, "why": "The verb 'he said' is third masculine singular, a wayyiqtol continuing 'the LORD answered Job'. The speaker of the whole speech is the LORD (w2), the only masculine singular proper subject who acts here.", "category": "implied subject of narrative verb"}],
+ "links": [{"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "Wayyiqtol with a separate waw: answered, and then said. The narrative line continues.", "category": "narrative sequence"}],
+ "groups": [], "none_fit": [], "cant_tell": []},
+{"ref": "Job.38.2",
+ "referents": [{"slot": "w0", "choice": "Job.38.1#w4", "divine": false, "why": "Interrogative 'who' in 'who is this who obscures', addressed to the one answered in 38:1 (Job). The question asks who this person is.", "category": "interrogative addressed to Job"}],
+ "links": [
+  {"src": "Job.38.1#cl1", "type": "content", "dst": "cl0", "action": "add", "why": "The saying clause 'said' in 38:1 introduces the speech whose first clause is this question (R1).", "category": "speech content"},
+  {"src": "cl0", "type": "describing", "dst": "cl1", "action": "add", "why": "The bare participle 'obscuring' right after the question clause describes its subject 'this' as it acts.", "category": "participle describing subject"}
+ ],
+ "groups": [{"id": "Job.38.2#g1", "kind": "turn", "action": "add", "members": [{"role": "frame", "node": "Job.38.1#cl1"}, {"role": "part", "node": "cl0"}, {"role": "sender", "node": "Job.38.1#w2"}, {"role": "addressee", "node": "Job.38.1#w4"}], "divine": true, "why": "The speech opens: the LORD (sender) speaks to Job (addressee). Its saying clause is 38:1 cl1. The turn runs on through the verses that follow.", "category": "speech of the LORD to Job"}],
+ "none_fit": [], "cant_tell": []},
+{"ref": "Job.38.3",
+ "referents": [
+  {"slot": "w5", "choice": "Job.38.1#w4", "divine": false, "why": "Possessive 'your' on 'loins' in the command 'gird up your loins' is second masculine singular: the one commanded, Job.", "category": "implied addressee in command"},
+  {"slot": "w8", "choice": "Job.38.1#w4", "divine": false, "why": "Object 'you' of 'I will ask you' is second masculine singular: the addressee of the speech, Job.", "category": "addressee of speech"},
+  {"slot": "w11", "choice": "Job.38.1#w2", "divine": true, "why": "'Make known to me': the first person inside the LORD's speech refers to its speaker, the LORD.", "category": "first person in divine speech"},
+  {"slot": "cl0s", "choice": "Job.38.1#w4", "divine": false, "why": "Implied 'you' of the imperative 'gird up' is the one the command is spoken to, Job.", "category": "implied subject of command"},
+  {"slot": "cl1s", "choice": "Job.38.1#w2", "divine": true, "why": "First person 'I will ask': the speaker of this speech, the LORD.", "category": "speaker in divine speech"},
+  {"slot": "cl2s", "choice": "Job.38.1#w4", "divine": false, "why": "Implied 'you' of the imperative 'make known' is the addressee, Job.", "category": "implied subject of command"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "and", "dst": "cl1", "action": "remove", "why": "The waw joins a command to a yiqtol in a different person. Per the and-definition that is 'so that', not a plain and.", "category": "and after command means so that"},
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "add", "why": "Gird up (command) so that I will question you: the first-person yiqtol after the second-person command is its purpose.", "category": "command then purpose"},
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "remove", "why": "The waw joins a command ('make known') to the first-person yiqtol before it. The asking's content is that command, so the plain and is replaced.", "category": "and after question carries content"},
+  {"src": "cl1", "type": "content", "dst": "cl2", "action": "add", "why": "'I will ask you' is a clause of saying (asking) whose content is the command 'make known to me' (R1).", "category": "question content"}
+ ],
+ "groups": [
+  {"id": "imp0", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl0"}, {"role": "aim", "node": "cl1"}], "divine": false, "why": "The builder gave the member role 'part', which is not an imperative role. The question the command aims at is its aim.", "category": "role mislabelled"},
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "cl2"}, {"role": "sender", "node": "Job.38.1#w2"}, {"role": "addressee", "node": "Job.38.1#w4"}], "divine": true, "why": "The sender is the LORD; the builder gave a slot id (cl1s), which is not a candidate. The addressee, Job, is added.", "category": "speaker and addressee of a question"}
+ ],
+ "none_fit": [], "cant_tell": []},
+{"ref": "Job.38.4",
+ "referents": [
+  {"slot": "w4", "choice": "Job.38.1#w2", "divine": true, "why": "First person 'I founded the earth' inside the LORD's speech: the speaker, the LORD.", "category": "first person in divine speech"},
+  {"slot": "cl0s", "choice": "Job.38.1#w4", "divine": false, "why": "'Where were you': second person, the one addressed, Job.", "category": "addressee in question"},
+  {"slot": "cl2s", "choice": "Job.38.1#w4", "divine": false, "why": "Implied 'you' of the imperative 'tell' is the one spoken to, Job.", "category": "implied subject of command"},
+  {"slot": "cl3s", "choice": "Job.38.1#w4", "divine": false, "why": "'You know understanding': second person, the addressee, Job.", "category": "addressee in question"}
+ ],
+ "links": [
+  {"src": "cl2", "type": "if", "dst": "cl3", "action": "add", "why": "'Tell, if you have understanding': the condition 'you know understanding' follows the command it governs. The if-link runs from what is conditioned (src) to its condition (dst).", "category": "condition after its clause"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "Job.38.4#g1"}, {"role": "sender", "node": "Job.38.1#w2"}, {"role": "addressee", "node": "Job.38.1#w4"}], "divine": true, "why": "The sender is the LORD. The builder had the addressee 'you' as sender. The part is the conditional group (R3), not the bare clause.", "category": "speaker corrected, condition as part"},
+  {"id": "Job.38.4#g1", "kind": "conditional", "action": "add", "members": [{"role": "condition", "node": "cl3"}, {"role": "consequence", "node": "cl2"}], "divine": false, "why": "R3: 'if you have understanding' conditions 'tell me'. The condition follows the command in the Hebrew.", "category": "condition inside a speech"}
+ ],
+ "none_fit": [{"where": "Job.38.4 cl2 'tell Me'", "what": "A demanded answer. What is to be told is the answer to the question of cl0, not a clause in this verse, and no link type records 'answer to'."}],
+ "cant_tell": []},
+{"ref": "Job.38.5",
+ "referents": [
+  {"slot": "w0", "choice": "Job.38.1#w2", "divine": true, "why": "Rhetorical 'who' asking who fixed its measurements. The answer the speech expects is the LORD himself, who founded the earth in 38:4.", "category": "rhetorical question, answer is the speaker"},
+  {"slot": "w3", "choice": "none", "divine": false, "why": "'Its' (feminine singular) refers to the earth of 38:4. That is not a candidate: the list offers only persons and groups.", "category": "referent outside candidate list"},
+  {"slot": "w7", "choice": "Job.38.1#w2", "divine": true, "why": "Rhetorical 'who' of 'who stretched a measuring line': the expected answer is the LORD.", "category": "rhetorical question, answer is the speaker"},
+  {"slot": "w10", "choice": "none", "divine": false, "why": "'It' (feminine singular) is the earth of 38:4, not offered as a candidate.", "category": "referent outside candidate list"},
+  {"slot": "cl1s", "choice": "Job.38.1#w4", "divine": false, "why": "'You know' is second masculine singular: the one addressed, Job.", "category": "addressee in assertion"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "because", "dst": "cl1", "action": "keep", "why": "Kaf after its clause ('Surely you know') gives the reason for the question, per the rule for kaf after its clause.", "category": "kaf after its clause as because"},
+  {"src": "cl1", "type": "or", "dst": "cl2", "action": "remove", "why": "The 'or' joins the two questions, 'who fixed' and 'who stretched'. The exclamation 'surely you know' sits between them and is not an alternative.", "category": "or joins questions across an exclamation"},
+  {"src": "cl0", "type": "or", "dst": "cl2", "action": "add", "why": "The alternative is two questions side by side: who fixed its measurements, or who stretched a line across it.", "category": "or between two questions"}
+ ],
+ "groups": [], "none_fit": [],
+ "cant_tell": [
+  {"what": "The because link cl0 to cl1", "why": "Kaf here may be emphatic 'surely' rather than a reason. It is kept because the rule reads kaf after its clause as because."},
+  {"what": "Referents of 'its' and 'it' (w3, w10)", "why": "The earth of 38:4 is the antecedent, but the candidate list offers only persons and groups, so each is recorded as none."}
+ ]},
+{"ref": "Job.38.6",
+ "referents": [
+  {"slot": "w1", "choice": "none", "divine": false, "why": "Interrogative 'on what' asks what the bases of the earth rest on. The answer, nothing, is not a candidate.", "category": "interrogative with no candidate"},
+  {"slot": "w3", "choice": "none", "divine": false, "why": "'Its bases' (feminine singular) refers to the earth of 38:4, not offered as a candidate.", "category": "referent outside candidate list"},
+  {"slot": "w6", "choice": "Job.38.1#w2", "divine": true, "why": "Rhetorical 'who' asking who laid its cornerstone: the expected answer is the LORD.", "category": "rhetorical question, answer is the speaker"},
+  {"slot": "w10", "choice": "none", "divine": false, "why": "'Its cornerstone' (feminine) refers to the earth, not offered as a candidate.", "category": "referent outside candidate list"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "or", "dst": "cl1", "action": "keep", "why": "Two questions side by side, 'on what were its bases set, or who laid its cornerstone': alternatives.", "category": "or between two questions"}
+ ],
+ "groups": [], "none_fit": [], "cant_tell": []},
+{"ref": "Job.38.7",
+ "referents": [],
+ "links": [
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The infinitive 'sang together' is the 'when' clause nested in cl0.", "category": "temporal infinitive"},
+  {"src": "cl0", "type": "within", "dst": "cl2", "action": "keep", "why": "'They shouted' sits inside the 'when' clause with the stars' singing, nested in its temporal role.", "category": "coordinated clause inside time clause"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "Same link as the entry above, listed twice in the builder output. Recorded once.", "category": "duplicate builder entry"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "keep", "why": "The wayyiqtol 'they shouted' continues the narrative line from the nearest preceding clause not inside a speech, the infinitive 'sang'.", "category": "narrative sequence"}
+ ],
+ "groups": [], "none_fit": [],
+ "cant_tell": [{"what": "The 'when' clause of 38:7 has no host clause in its verse", "why": "It completes the question of 38:4 ('where were you when...') across verses 5 and 6. No link type records a time clause that continues an earlier verse's question."}]},
+{"ref": "Job.38.8",
+ "referents": [
+  {"slot": "cl0s", "choice": "Job.38.1#w2", "divine": true, "why": "Implied 'he' of the wayyiqtol 'he shut off the sea': the one who does the act is the LORD, speaker of the speech. Named in 38:1 and not repeated in this verse's candidate list.", "category": "implied subject of divine act"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "'It came forth from the womb': the subject is the sea, the masculine singular candidate w4.", "category": "implied subject of narrative clause"},
+  {"slot": "w7", "choice": "w4", "divine": false, "why": "'It burst forth' in the infinitive: the sea, the masculine singular candidate w4.", "category": "pronoun in infinitive clause"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "within", "dst": "cl2", "action": "keep", "why": "The infinitive 'burst forth' sits inside the yiqtol 'when' clause, nested in its temporal role.", "category": "temporal infinitive"},
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "A clause cannot be then-linked to itself. 'Then' runs within a verse only, and cl0 has no within-verse predecessor: its waw continues the question series of 38:4-7.", "category": "self-link"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "add", "why": "The 'when' clause (infinitive inside the yiqtol) sets the time of the shutting, so it is nested in cl0's temporal role.", "category": "temporal clause of an act"}
+ ],
+ "groups": [], "none_fit": [],
+ "cant_tell": [{"what": "The waw of 38:8 cl0 and the question series of 38:4-7", "why": "A cross-verse relation. 'Then' is within-verse only (episode rung), so it is not recorded here."}]},
+{"ref": "Job.38.9",
+ "referents": [
+  {"slot": "w2", "choice": "Job.38.1#w2", "divine": true, "why": "First person 'I made the clouds' inside the LORD's speech: the speaker, the LORD.", "category": "first person in divine speech"},
+  {"slot": "w5", "choice": "none", "divine": false, "why": "'Its garment' (masculine singular) refers to the sea of 38:8, not offered as a candidate. The clouds are the garment, not the owner.", "category": "referent outside candidate list"},
+  {"slot": "w9", "choice": "none", "divine": false, "why": "'Its swaddling band' refers to the sea of 38:8, not offered as a candidate.", "category": "referent outside candidate list"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The infinitive 'made' is the 'when' clause that sets the time of cl0.", "category": "temporal infinitive"},
+  {"src": "cl0", "type": "within", "dst": "cl2", "action": "keep", "why": "'And thick darkness...' is coordinated inside the 'when' clause.", "category": "coordinated clause inside time clause"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "Same link as the entry above, listed twice in the builder output. Recorded once.", "category": "duplicate builder entry"},
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "Two nominal clauses joined by plain waw: the clouds are its garment, and thick darkness its swaddling band.", "category": "plain and between nominal clauses"}
+ ],
+ "groups": [], "none_fit": [],
+ "cant_tell": [{"what": "The 'when' of 38:9 and the sea referent of 'its'", "why": "The 'when' completes the question of 38:4 across verses. The 'its' refers to the sea of 38:8, which the candidate list omits."}]},
+{"ref": "Job.38.10",
+ "referents": [
+  {"slot": "w3", "choice": "none", "divine": false, "why": "'On it' (masculine singular) is the sea of 38:8, not offered as a candidate.", "category": "referent outside candidate list"},
+  {"slot": "w5", "choice": "Job.38.1#w2", "divine": true, "why": "First person 'my boundaries': the speaker, the LORD.", "category": "first person in divine speech"},
+  {"slot": "cl0s", "choice": "Job.38.1#w2", "divine": true, "why": "First person subject of the wayyiqtol 'I fixed': the speaker, the LORD.", "category": "first person in divine speech"},
+  {"slot": "cl1s", "choice": "Job.38.1#w2", "divine": true, "why": "First person subject of 'I set in place': the speaker, the LORD.", "category": "first person in divine speech"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "A self-link. The wayyiqtol cannot be then-linked to itself, and 'then' runs within a verse only.", "category": "self-link"},
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "The wayyiqtol 'I set in place' continues the narrative line from 'I fixed'.", "category": "narrative sequence"}
+ ],
+ "groups": [], "none_fit": [],
+ "cant_tell": [{"what": "The waw and 'when' joining 38:10 to 38:9", "why": "A cross-verse relation. The verse-level link types cannot express it, so it is not recorded here."}]},
+{"ref": "Job.38.11",
+ "referents": [
+  {"slot": "w14", "choice": "none", "divine": false, "why": "'Your waves' (second masculine singular): the addressee of the decree is the sea, personified. It is not a candidate.", "category": "addressee outside candidate list"},
+  {"slot": "cl0s", "choice": "Job.38.1#w2", "divine": true, "why": "First person 'I declared': the speaker, the LORD.", "category": "first person in divine speech"},
+  {"slot": "cl1s", "choice": "none", "divine": false, "why": "Second person 'you may come': the addressee of the decree is the sea, not a candidate.", "category": "addressee outside candidate list"},
+  {"slot": "cl2s", "choice": "none", "divine": false, "why": "Second person 'you will not add': the same addressee as cl1, the sea, not a candidate.", "category": "addressee outside candidate list"},
+  {"slot": "cl3s", "choice": "cant_tell", "divine": false, "why": "Third person 'someone will fix': an indefinite subject. The grammar names no agent, though the context suggests the LORD.", "category": "indefinite third person"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "The 'then' runs from the speech to the saying, which reverses it. The saying's content is the speech.", "category": "reversed link"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "'I declared' introduces what is said. The content link goes to the first said clause (R1).", "category": "speech content"},
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "'You may come this far' and 'not you will add': the English 'but no farther' is a plain waw in the Hebrew.", "category": "plain and between decrees"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "The waw joins what the boundary brings about, so it is not a plain and.", "category": "and that is a result"},
+  {"src": "cl2", "type": "result", "dst": "cl3", "action": "add", "why": "R4: the stopping of the proud waves is what the boundary brings about, so it is the earlier clause's result.", "category": "result of a boundary"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "cl2"}, {"role": "part", "node": "cl3"}, {"role": "sender", "node": "Job.38.1#w2"}], "divine": true, "why": "The sender is the LORD. The builder gave a slot id (cl0s), which is not a candidate. No addressee is recorded because the sea is not a candidate.", "category": "speaker corrected"}
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "Addressee of the turn (the sea, personified)", "why": "It is not a candidate, so no addressee member is recorded."},
+  {"what": "Agent of 'someone will fix' (cl3s)", "why": "An indefinite third person. The text names no agent."}
+ ]}
+]}

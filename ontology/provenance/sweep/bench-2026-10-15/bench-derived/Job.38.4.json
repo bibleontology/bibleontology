@@ -1,0 +1,94 @@
+{
+ "ref": "Job.38.4",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "Job.38.1#w2",
+   "divine": true
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w4",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Job.38.1#w4",
+   "divine": false
+  },
+  {
+   "slot": "cl3s",
+   "choice": "Job.38.1#w4",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "g1",
+   "action": "add"
+  },
+  {
+   "src": "cl2",
+   "type": "if",
+   "dst": "cl3",
+   "action": "add"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "g1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ]
+  },
+  {
+   "id": "g1",
+   "kind": "conditional",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "condition",
+     "node": "cl3"
+    },
+    {
+     "role": "consequence",
+     "node": "cl2"
+    }
+   ]
+  }
+ ],
+ "derived": [
+  [
+   "D1",
+   "cl2",
+   "g1"
+  ]
+ ]
+}

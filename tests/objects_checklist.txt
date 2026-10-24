@@ -1,0 +1,163 @@
+# One hundred tangible things a reader expects the graph to hold. Overlaps the
+# symbol checklist deliberately: that list asks whether a meaning was recorded
+# without being invented, this one asks whether the thing itself exists at all.
+# Tier 0, not tier 1.
+#
+# Format: <n>\t<item>\t<KJV search word>
+#
+# ---------------------------------------------------------------------------
+# HOW TO SCORE IT
+#
+# Four classes, and only the first is a straight recall count.
+#
+#   A. A thing in the world, named by the text.  The ark, the ephod, the
+#      mercy seat, the stone tablets, Goliath's sword. Expected: an entity.
+#      Missing one is a recall failure and nothing else.
+#
+#   B. A thing that exists only inside a told image.  The house built on sand
+#      (Matt 7:26), the sheepfold (John 10:1), the vineyard wall (Isa 5:5),
+#      the mustard seed of the parable. There is no such house and no such
+#      wall. Minting these as objects files them beside the ark as though they
+#      were the same kind of thing, which is the error this list is best at
+#      provoking. Expected: whatever the told-image decision settles on, and
+#      NOT an object entity.
+#
+#   C. A category, not a thing.  "Musical instruments", "altars built by
+#      patriarchs", "garments of righteousness". These name a class or a
+#      figure of speech. Expected: nothing, or the specific members if the
+#      text names them.
+#
+#   D. Not the corpus's word.  Menorah is candlestick; shofar is trumpet;
+#      denarius is penny; lyre is harp or psaltery. Searching for the modern
+#      term finds nothing and that is not a gap. Expected: the entity under
+#      the KJV name, if it exists at all.
+#
+#   E. A common noun, not an individual.  Sword appears 384 times, sea 352,
+#      bread 330, altar 321. There is no entity called "sword" any more than
+#      there is one called "man" -- what can be an entity is *a* sword the
+#      text singles out: Goliath's, taken by David from behind the ephod
+#      (1Sam 21:9). This is the largest class on the list and the easiest to
+#      score wrongly in both directions: counting the word as a hit inflates
+#      recall, and counting it as a miss demands nodes that should not exist.
+#      Expected: entities for the singled-out instances, nothing for the class.
+#
+# Report recall on class A. Report class B separately and treat any object
+# entity there as a defect. Classes C, D and E test the reader of the results
+# as much as the graph.
+#
+# ---------------------------------------------------------------------------
+# BASELINE, 18 August 2026, before any work against this list
+#
+#   entity exists    8, of which 2 are artefacts of naive name matching:
+#                    "bow and arrows" matched the bow in the cloud, which is
+#                    the rainbow, and "cloud" matched the pillar of cloud
+#                    through an aka. The true figure is 6.
+#   no entity       92
+#
+# The largest gaps by frequency are all class E -- sword, sea, bread, altar,
+# wilderness -- which is the strongest argument on this page for settling what
+# an object entity *is* before extracting against the list. A run that mints
+# `sword` has not made progress; it has made a dictionary.
+#
+# ---------------------------------------------------------------------------
+
+1	Altar	altar
+2	Bronze altar	brasen
+3	Incense altar	incense
+4	Censer	censer
+5	Sacrificial lamb	lamb
+6	Goat	goat
+7	Red heifer	heifer
+8	Firepan	firepans
+9	Trumpet	trumpet
+10	Harp	harp
+11	Ark of the Covenant	ark
+12	Mercy seat	mercy
+13	Cherubim on the ark	cherubims
+14	Table of showbread	shewbread
+15	Lampstand	candlestick
+16	Curtains of the tabernacle	curtains
+17	Bronze laver	laver
+18	Ephod	ephod
+19	Breastplate with stones	breastplate
+20	Urim and Thummim	Urim
+21	Stone tablets	tables
+22	Scrolls	roll
+23	Seals	seal
+24	Signet ring	signet
+25	Covenant blood	blood
+26	Lifted hand as oath	sware
+27	Boundary stones	landmark
+28	Witness stones	witness
+29	Trumpets of assembly	trumpets
+30	Cities of refuge	refuge
+31	Tower of Babel	Babel
+32	City gates	gate
+33	Wells	well
+34	Altars built by patriarchs	altar
+35	Houses on rock and sand	rock
+36	Watchtower	tower
+37	Fortress	fortress
+38	Vineyard wall	hedge
+39	Sheepfold	fold
+40	Throne	throne
+41	Wheat	wheat
+42	Barley	barley
+43	Grapes	grapes
+44	Fig tree	fig
+45	Olive tree	olive
+46	Mustard seed	mustard
+47	Manna	manna
+48	Bread	bread
+49	Wine	wine
+50	Honey	honey
+51	Lamb	lamb
+52	Lion	lion
+53	Serpent	serpent
+54	Dove	dove
+55	Donkey	ass
+56	Camel	camel
+57	Fish	fish
+58	Eagle	eagle
+59	Ox	ox
+60	Horse	horse
+61	Rock	rock
+62	Mountain	mountain
+63	River	river
+64	Sea	sea
+65	Wilderness	wilderness
+66	Cloud	cloud
+67	Pillar of fire	pillar
+68	Stars	stars
+69	Sun	sun
+70	Moon	moon
+71	Robe	robe
+72	Sackcloth	sackcloth
+73	Sandals	shoes
+74	Belt	girdle
+75	Staff	staff
+76	Shepherd's rod	rod
+77	Crown	crown
+78	Veil	vail
+79	Garments of righteousness	garments
+80	Armour	armour
+81	Sword	sword
+82	Spear	spear
+83	Bow and arrows	bow
+84	Sling	sling
+85	Plow	plow
+86	Yoke	yoke
+87	Net	net
+88	Hammer	hammer
+89	Scales	balances
+90	Potter's wheel	wheels
+91	Lamp	lamp
+92	Oil	oil
+93	Jar	pitcher
+94	Cup	cup
+95	Basin	bason
+96	Table	table
+97	Door	door
+98	Keys	keys
+99	Bread basket	basket
+100	Coins	penny

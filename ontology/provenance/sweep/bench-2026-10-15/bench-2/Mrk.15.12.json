@@ -1,0 +1,113 @@
+{
+ "ref": "Mrk.15.12",
+ "referents": [
+  {
+   "slot": "w6",
+   "choice": "none",
+   "divine": false,
+   "why": "'To them' (autois) after 'was saying': the crowd, plural addressees. No plural candidate is offered.",
+   "category": "plural addressee not among candidates"
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "Interrogative 'What' (Ti) as object of 'should do'. It asks for an action and names no referent; no neuter candidate.",
+   "category": "interrogative pronoun, not a referent"
+  },
+  {
+   "slot": "w10",
+   "choice": "w13",
+   "divine": true,
+   "why": "Relative 'whom' (hon) in 'whom you call King of the Jews'. Its antecedent is 'Him' (Jesus), whose title is 'the King'; candidate w13 is that title.",
+   "category": "relative pronoun with antecedent named by title"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w2",
+   "divine": false,
+   "why": "First singular in Pilate's question ('What I should do'). The speaker is Pilate.",
+   "category": "first person inside a speech"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "Plural 'you call' inside Pilate's question, addressed to the crowd, which is not a candidate.",
+   "category": "plural addressee not among candidates"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Participle 'answering' is a manner role of the main verb.",
+   "category": "participle of the main verb"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Object clause of 'was saying': a question. Grammar nesting kept beside the content link.",
+   "category": "saying with its speech"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "R1: 'was saying' introduces the question that is said.",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "Relative clause inside the object noun phrase 'Him'.",
+   "category": "relative clause inside noun phrase"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self-link.",
+   "category": "self link"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "Frame is cl0. Part was cl1, the participle 'answering', which says nothing; the question is cl2 (R1). Sender is Pilate. The addressee is the crowd, not a candidate, so none is given.",
+   "category": "speech turn with addressee not in candidates"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "addressee of Pilate's question (w6, cl3s)",
+   "why": "The crowd is the plural addressee but is not in the candidate list."
+  }
+ ]
+}

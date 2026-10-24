@@ -1,0 +1,33 @@
+{
+ "ref": "Job.38.2",
+ "referents": [
+  {
+   "slot": "w0",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "'Who is this who obscures My counsel' asks about the one addressed; the speech is to Job, so 'this' is Job (masc sing).",
+   "category": "question word with the addressee as referent"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "describing",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The bare participle 'making dark' follows the finite question clause and describes its subject as it acts: who is this one obscuring my counsel.",
+   "category": "participle describing the subject"
+  },
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "why": "'not knowledge' is a clause nested in the phrase 'by words' (words without knowledge); the link carries the role of modifier of the instrument.",
+   "category": "clause inside a noun phrase"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+}

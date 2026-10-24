@@ -1,0 +1,24 @@
+{"ref": "Exo.8.12",
+ "referents": [
+  {"slot": "w11", "choice": "w7", "divine": false, "why": "The possessive 'your' (second masculine singular) on the staff in cl2 belongs to the addressee of the speech Moses is giving, which is Aaron. Builder agrees.", "category": "possessive in commanded speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "The implied 'you' of cl1 'say to Aaron' is the one the LORD commands in cl0, which is Moses. Aaron is the one told, not the one commanded. Builder's w7 is wrong.", "category": "implied subject of outer command"},
+  {"slot": "cl2s", "choice": "w7", "divine": false, "why": "cl2 'stretch out your staff' sits inside Moses's speech to Aaron (introduced by cl1), so 'you' is Aaron, the addressee of that speech. Builder agrees.", "category": "implied subject inside a commanded speech"},
+  {"slot": "cl3s", "choice": "w7", "divine": false, "why": "Same speech as cl2: a second-person masculine singular imperative addressed to Aaron. Builder agrees.", "category": "implied subject inside a commanded speech"},
+  {"slot": "cl4s", "choice": "w15", "divine": false, "why": "cl4 is a third masculine singular weqatal 'it will become gnats'. Its subject is the dust that cl3 strikes (masculine singular, the thing acted on). The staff is not what becomes gnats. Builder had none.", "category": "implied subject as object of preceding command"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "cl0 is the frame of the LORD's speech and cl3 is inside what is said. A wayyiqtol 'and then' runs along the narrative line, so cl3 cannot be followed by cl0. The order is reversed and cl3 sits inside a speech.", "category": "speech frame wrongly sequenced after its content"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "keep", "why": "Plain waw joins two second-person commands ('stretch out', 'strike') within one speech. Not a cause, result or purpose, so it stays a plain and. The two commands are grouped in imp2.", "category": "plain and between commands"},
+  {"src": "cl3", "type": "then", "dst": "cl4", "action": "remove", "why": "Waw with a third-person weqatal after a command is the result type, not a narrative 'and then'. The builder read it as a plain and.", "category": "command then result read as plain and"},
+  {"src": "cl3", "type": "result", "dst": "cl4", "action": "add", "why": "The command 'strike the dust' and what it brings about, 'and it will become gnats'. Waw plus weqatal after an imperative. The same clause is the effect of imp2.", "category": "command then result"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "The LORD says to Moses the command 'say to Aaron', the embedded said clause.", "category": "speech content embedded"},
+  {"src": "cl1", "type": "content", "dst": "imp2", "action": "add", "why": "Moses says to Aaron what is commanded: the collection of commands in imp2, not its first member.", "category": "speech content embedded"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": true, "why": "The LORD (sender) says to Moses (addressee) a command to tell Aaron. The commanded turn is a part of this speech, so it nests here instead of the four clauses sitting flat. Divine: the sender is the LORD.", "category": "speech nesting: command to relay speech"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl1"}, {"role": "part", "node": "imp2"}, {"role": "sender", "node": "w4"}, {"role": "addressee", "node": "w7"}], "divine": false, "why": "Moses tells Aaron what to say. The sender is Moses, the resolved 'you' of cl1; the builder used the slot id cl1s, which is not a candidate. Its part is the imperative run, not the flat clauses.", "category": "speech nesting: command to relay speech"},
+  {"id": "imp2", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl2"}, {"role": "command", "node": "cl3"}, {"role": "effect", "node": "cl4"}], "divine": false, "why": "'Stretch out' and 'strike', joined by waw at one level, are one imperative group with two command members. 'It will become gnats' is its effect. The builder used a 'part' role, which the imperative kind does not declare, and split the run into two groups.", "category": "commands joined by and as one run"},
+  {"id": "imp3", "kind": "imperative", "action": "remove", "members": [{"role": "command", "node": "cl3"}, {"role": "effect", "node": "cl4"}], "divine": false, "why": "Its command cl3 is now a member of imp2. The split came from treating cl3 as a separate imperative with cl4 as its effect.", "category": "commands joined by and as one run"}
+ ],
+ "none_fit": [],
+ "cant_tell": []}

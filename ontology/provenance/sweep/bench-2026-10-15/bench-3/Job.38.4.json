@@ -1,0 +1,82 @@
+{
+ "ref": "Job.38.4",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "First person suffix on the infinitive 'founded' (when I founded the earth): the LORD, speaking.",
+   "category": "first person in divine speech"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Second person in the question 'were you': the one addressed, Job.",
+   "category": "second person in a question"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Implied second person subject of the imperative 'tell': the one commanded to speak, Job.",
+   "category": "implied you of a command"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "Job.38.1#w4",
+   "divine": false,
+   "why": "Second person 'you know understanding': Job.",
+   "category": "second person in a speech"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The be-plus-infinitive 'when I founded' is a temporal adjunct nested in the question.",
+   "category": "temporal clause nested in question"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "sender",
+     "node": "Job.38.1#w2"
+    },
+    {
+     "role": "addressee",
+     "node": "Job.38.1#w4"
+    }
+   ],
+   "divine": true,
+   "why": "The sender of 'tell me' is the LORD. The builder's sender 'cl2s' is the implied you of the command, who is Job, the addressee. The condition 'if you have understanding' belongs to the LORD's turn.",
+   "category": "speaker of a command to speak"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "What Job is commanded to tell is not stated in this verse, so the commanded turn has no content here.",
+   "why": "Under the commanded-speech rule the words are Job's, and the text gives none in this verse."
+  },
+  {
+   "what": "Whether 'if you have understanding' is a condition on 'tell Me' (an if link from cl2 to cl3).",
+   "why": "The particle is not shown in opens_with, so the form does not confirm it. No link added."
+  }
+ ]
+}

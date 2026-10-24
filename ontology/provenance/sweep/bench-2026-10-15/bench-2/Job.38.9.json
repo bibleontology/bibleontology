@@ -1,0 +1,94 @@
+{
+ "ref": "Job.38.9",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "Job.38.1#w2",
+   "divine": true,
+   "why": "'when I made the clouds': the first person in the LORD's speech is the LORD. He is not in this verse's candidate list but is named in 38:1.",
+   "category": "first person in the speech"
+  },
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false,
+   "why": "'its garment': 'its' is the sea of 38:8, not a candidate.",
+   "category": "antecedent outside the candidates"
+  },
+  {
+   "slot": "w9",
+   "choice": "none",
+   "divine": false,
+   "why": "'its blanket': 'its' is the sea, not a candidate.",
+   "category": "antecedent outside the candidates"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "The infinitive 'made the clouds' is nested in the 'when' clause.",
+   "category": "clause nested in a temporal clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'thick darkness its blanket' is inside the same 'when' clause.",
+   "category": "clause nested in a temporal clause"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "Duplicate of the first cl0 within cl1 link in the builder list.",
+   "category": "duplicate link"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "'and thick darkness its blanket': a plain and between two lines.",
+   "category": "coordinated lines"
+  },
+  {
+   "src": "Job.38.8#cl0",
+   "type": "within",
+   "dst": "cl0",
+   "action": "add",
+   "why": "This 'when I made the clouds' is a second temporal clause on the act of 38:8 (shut off the sea); the link points back into 38:8.",
+   "category": "temporal clause of an earlier act"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Job.38.9#g1",
+   "kind": "parallel",
+   "action": "add",
+   "members": [
+    {
+     "role": "line",
+     "node": "cl1"
+    },
+    {
+     "role": "line",
+     "node": "cl2"
+    },
+    {
+     "role": "group_subject",
+     "node": "Job.38.1#w2"
+    }
+   ],
+   "divine": true,
+   "why": "The second line restates the first's roles (object and predicate) without its verb or subject; the subject is the same, the LORD who makes.",
+   "category": "second line without its subject"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": []
+}

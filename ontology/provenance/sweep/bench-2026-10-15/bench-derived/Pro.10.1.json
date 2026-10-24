@@ -1,0 +1,20 @@
+{
+ "ref": "Pro.10.1",
+ "referents": [
+  {
+   "slot": "w11",
+   "choice": "w7",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "add"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

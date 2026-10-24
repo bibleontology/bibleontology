@@ -1,0 +1,64 @@
+{
+ "ref": "Exo.8.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false,
+   "why": "'them' is the object of the piling: the dead frogs of Exo.8.9. The frogs are not among this verse's candidates, and none of the offered candidates is the frogs",
+   "category": "referent not among candidates",
+   "votes": 3
+  },
+  {
+   "slot": "cl0s",
+   "choice": "cant_tell",
+   "divine": false,
+   "why": "the doer of the piling (masculine plural 'they') is unnamed, most likely the Egyptians gathering the dead; no candidate is a masculine plural people, and the nearest, houses and fields, are places, not doers",
+   "category": "unnamed doer",
+   "votes": 2
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "the land stank after the piling (cl0), not before; the link runs backward",
+   "category": "reversed then",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "The stench is what the piled dead frogs bring about. R4 gives an act and then what it becomes as result, not as then.",
+   "category": "plain then read as result",
+   "votes": 2
+  },
+  {
+   "src": "cl0",
+   "type": "result",
+   "dst": "cl1",
+   "action": "add",
+   "why": "The stench is the outcome of the piling of the dead frogs: an act, then what it brings about.",
+   "category": "act then its outcome",
+   "votes": 2
+  }
+ ],
+ "groups": [],
+ "none_fit": [
+  {
+   "where": "candidates for slot w3",
+   "what": "earlier non-person nouns (the frogs of Exo.8.9) are not offered as candidates, so a pronoun for them has no candidate to choose."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the referents of 'them' (w3) and of the unnamed doer of cl0",
+   "why": "the frogs they pile are not among the candidates, and the subject is an impersonal third plural."
+  }
+ ],
+ "voted": 3
+}

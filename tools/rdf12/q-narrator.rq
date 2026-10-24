@@ -1,0 +1,6 @@
+PREFIX e:     <https://bibleontology.org/e/>
+PREFIX bor:   <https://bibleontology.org/ns/relation#>
+PREFIX claim: <https://bibleontology.org/ns/claim#>
+# The RDF 1.1 file's right question: what does the narrator say Job is?
+# (Name the narrator's graph; never trust the store's idea of the default.)
+SELECT (COUNT(*) AS ?n) WHERE { GRAPH claim:narrator { e:job bor:described_as ?o } }

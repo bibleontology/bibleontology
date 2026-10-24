@@ -1,0 +1,2546 @@
+{
+ "id": "prayer",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "verb",
+ "words": [
+  {
+   "key": "g4336",
+   "lemma": "προσεύχομαι",
+   "form": "verb",
+   "translit": "proseuchomai",
+   "gloss": "to pray",
+   "lang": "Greek",
+   "uses": 79,
+   "other_sense": 2
+  },
+  {
+   "key": "g4335",
+   "lemma": "προσευχή",
+   "form": "noun",
+   "translit": "proseuchē",
+   "gloss": "prayer",
+   "lang": "Greek",
+   "uses": 36,
+   "other_sense": 0
+  },
+  {
+   "key": "h6419",
+   "lemma": "פָּלַל",
+   "form": "verb",
+   "translit": "pa.lal",
+   "gloss": "to pray",
+   "lang": "Hebrew",
+   "uses": 79,
+   "other_sense": 3
+  },
+  {
+   "key": "h8605",
+   "lemma": "תְּפִלָּה",
+   "form": "noun",
+   "translit": "te.phil.lah",
+   "gloss": "prayer",
+   "lang": "Hebrew",
+   "uses": 70,
+   "other_sense": 0
+  },
+  {
+   "key": "g1189",
+   "lemma": "δέομαι",
+   "form": "verb",
+   "translit": "deomai",
+   "gloss": "to pray",
+   "lang": "Greek",
+   "uses": 9,
+   "other_sense": 13
+  },
+  {
+   "key": "g1162",
+   "lemma": "δέησις",
+   "form": "noun",
+   "translit": "deēsis",
+   "gloss": "petition",
+   "lang": "Greek",
+   "uses": 16,
+   "other_sense": 0
+  },
+  {
+   "key": "h6279",
+   "lemma": "עָתַר",
+   "form": "verb",
+   "translit": "a.tar",
+   "gloss": "to pray",
+   "lang": "Hebrew",
+   "uses": 17,
+   "other_sense": 2
+  },
+  {
+   "key": "h8467",
+   "lemma": "תְּחִנָּה",
+   "form": "noun",
+   "translit": "te.chin.nah",
+   "gloss": "supplication",
+   "lang": "Hebrew",
+   "uses": 22,
+   "other_sense": 2
+  },
+  {
+   "key": "h8469",
+   "lemma": "תַּחֲנוּן",
+   "form": "noun",
+   "translit": "ta.cha.nun",
+   "gloss": "supplication",
+   "lang": "Hebrew",
+   "uses": 16,
+   "other_sense": 2
+  },
+  {
+   "key": "h1159",
+   "lemma": "בָּעוּ",
+   "form": "noun",
+   "translit": "ba.u",
+   "gloss": "petition",
+   "lang": "Hebrew",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "h1156",
+   "lemma": "בעה",
+   "form": "verb",
+   "translit": "be.a",
+   "gloss": "to ask",
+   "lang": "Hebrew",
+   "uses": 3,
+   "other_sense": 9
+  },
+  {
+   "key": "h6739",
+   "lemma": "צלה",
+   "form": "verb",
+   "translit": "tse.la",
+   "gloss": "to pray",
+   "lang": "Hebrew",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g1793",
+   "lemma": "ἐντυγχάνω",
+   "form": "verb",
+   "translit": "entugchanō",
+   "gloss": "to call on",
+   "lang": "Greek",
+   "uses": 4,
+   "other_sense": 1
+  },
+  {
+   "key": "g5241",
+   "lemma": "ὑπερεντυγχάνω",
+   "form": "verb",
+   "translit": "huperentugchanō",
+   "gloss": "to intercede",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g2171",
+   "lemma": "εὐχή",
+   "form": "noun",
+   "translit": "euchē",
+   "gloss": "a vow/prayer",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 2
+  }
+ ],
+ "titles": {
+  "verb": "Who prays, to whom, and for what",
+  "noun": "What the text says of prayer"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "holy_ghost",
+   "name": "the Holy Spirit",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "fasting",
+   "name": "fasting",
+   "type": "observance",
+   "missing": false
+  },
+  {
+   "id": "healing",
+   "name": "healing",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "intercession",
+   "name": "intercession",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "supplication",
+   "name": "supplication",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "worship",
+   "name": "worship",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "temple",
+   "name": "The Temple",
+   "type": "place",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "if_my_people",
+   "name": "if my people shall humble themselves",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_golden_bowls_full_of_incense",
+   "name": "golden bowls full of incense, which are the prayers of the saints",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "sact_petition",
+   "name": "Speech act: Petition",
+   "type": "pattern",
+   "missing": false
+  },
+  {
+   "id": "sact_intercession",
+   "name": "Speech act: Intercession",
+   "type": "pattern",
+   "missing": false
+  },
+  {
+   "id": "groanings_which_cannot_be_uttered",
+   "name": "groans too deep for words",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "my_god_has_shut_the_lions_mouths",
+   "name": "My God sent His angel and shut the mouths of the lions",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "2Chr.7.14",
+   "ref": "2 Chronicles 7:14",
+   "text": "and if My people who are called by My name humble themselves and pray and seek My face and turn from their wicked ways, then I will hear from heaven, forgive their sin, and heal their land."
+  },
+  {
+   "id": "Phil.4.6",
+   "ref": "Philippians 4:6",
+   "text": "Be anxious for nothing, but in everything, by prayer and petition, with thanksgiving, present your requests to God."
+  },
+  {
+   "id": "Jas.5.16",
+   "ref": "James 5:16",
+   "text": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous man has great power to prevail."
+  },
+  {
+   "id": "Matt.6.6",
+   "ref": "Matthew 6:6",
+   "text": "But when you pray, go into your inner room, shut your door, and pray to your Father, who is unseen. And your Father, who sees what is done in secret, will reward you."
+  },
+  {
+   "id": "Matt.6.9",
+   "ref": "Matthew 6:9",
+   "text": "So then, this is how you should pray: ‘Our Father in heaven, hallowed be Your name."
+  },
+  {
+   "id": "Luke.22.41",
+   "ref": "Luke 22:41",
+   "text": "And He withdrew about a stone's throw beyond them, where He knelt down and prayed,"
+  },
+  {
+   "id": "1Thess.5.17",
+   "ref": "1 Thessalonians 5:17",
+   "text": "Pray without ceasing."
+  },
+  {
+   "id": "Rom.8.26",
+   "ref": "Romans 8:26",
+   "text": "In the same way, the Spirit helps us in our weakness. For we do not know how we ought to pray, but the Spirit Himself intercedes for us with groans too deep for words."
+  }
+ ],
+ "forms": [
+  {
+   "form": "verb",
+   "verses": 201,
+   "rows": [
+    {
+     "label": "Jesus prays",
+     "note": "Where a verse says only “He”, the verses just before name Jesus. Luke 22:43-44 is absent from some early manuscripts.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 21,
+     "verses": [
+      "Matt.14.23",
+      "Matt.26.36",
+      "Matt.26.39",
+      "Matt.26.42",
+      "Matt.26.44",
+      "Mark.1.35",
+      "Mark.6.46",
+      "Mark.14.32",
+      "Mark.14.35",
+      "Mark.14.39",
+      "Luke.3.21",
+      "Luke.5.16",
+      "Luke.6.12",
+      "Luke.9.18",
+      "Luke.9.28",
+      "Luke.9.29",
+      "Luke.11.1",
+      "Luke.22.32",
+      "Luke.22.41",
+      "Luke.22.44",
+      "Heb.5.7"
+     ],
+     "eg": [
+      {
+       "id": "Matt.14.23",
+       "ref": "Matthew 14:23",
+       "text": "After He had dismissed them, He went up on the mountain by Himself to pray. When evening came, He was there alone,",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.36",
+       "ref": "Matthew 26:36",
+       "text": "Then Jesus went with His disciples to a place called Gethsemane, and He told them, “Sit here while I go over there and pray.”",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.39",
+       "ref": "Matthew 26:39",
+       "text": "Going a little farther, He fell facedown and prayed, “My Father, if it is possible, let this cup pass from Me. Yet not as I will, but as You will.”",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.42",
+       "ref": "Matthew 26:42",
+       "text": "A second time He went away and prayed, “My Father, if this cup cannot pass unless I drink it, may Your will be done.”",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer to the Father",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_father",
+       "name": "the Father",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Matt.6.6",
+      "Matt.6.9",
+      "Luke.11.2",
+      "Matt.26.39",
+      "Matt.26.42"
+     ],
+     "eg": [
+      {
+       "id": "Matt.6.6",
+       "ref": "Matthew 6:6",
+       "text": "But when you pray, go into your inner room, shut your door, and pray to your Father, who is unseen. And your Father, who sees what is done in secret, will reward you.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.9",
+       "ref": "Matthew 6:9",
+       "text": "So then, this is how you should pray: ‘Our Father in heaven, hallowed be Your name.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.2",
+       "ref": "Luke 11:2",
+       "text": "So Jesus told them, “When you pray, say: ‘Father, hallowed be Your name. Your kingdom come.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.39",
+       "ref": "Matthew 26:39",
+       "text": "Going a little farther, He fell facedown and prayed, “My Father, if it is possible, let this cup pass from Me. Yet not as I will, but as You will.”",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer to “the Lord”",
+     "note": "The text says “the Lord”; readers take it of the Father or of Jesus, and the page does not choose.",
+     "doors": [],
+     "n": 3,
+     "verses": [
+      "Acts.1.24",
+      "Acts.8.22",
+      "Acts.8.24"
+     ],
+     "eg": [
+      {
+       "id": "Acts.1.24",
+       "ref": "Acts 1:24",
+       "text": "And they prayed, “Lord, You know everyone's heart. Show us which of these two You have chosen",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Acts.8.22",
+       "ref": "Acts 8:22",
+       "text": "Repent, therefore, of your wickedness, and pray to the Lord. Perhaps He will forgive you for the intent of your heart.",
+       "words": [
+        {
+         "key": "g1189",
+         "lemma": "δέομαι"
+        }
+       ]
+      },
+      {
+       "id": "Acts.8.24",
+       "ref": "Acts 8:24",
+       "text": "Then Simon answered, “Pray to the Lord for me, so that nothing you have said may happen to me.”",
+       "words": [
+        {
+         "key": "g1189",
+         "lemma": "δέομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praying to the LORD, to God",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 44,
+     "verses": [
+      "Gen.20.17",
+      "2Kgs.19.15",
+      "Dan.9.4",
+      "Acts.10.2",
+      "Luke.18.11",
+      "Rom.11.2",
+      "Gen.25.21",
+      "Exod.8.8",
+      "Exod.8.29",
+      "Exod.8.30",
+      "Exod.9.28",
+      "Exod.10.17",
+      "Exod.10.18",
+      "Num.11.2",
+      "Num.21.7",
+      "Deut.9.26",
+      "Judg.13.8",
+      "1Sam.1.10",
+      "1Sam.1.12",
+      "1Sam.1.26",
+      "1Sam.7.5",
+      "1Sam.8.6",
+      "1Sam.12.19",
+      "1Kgs.8.44",
+      "1Kgs.8.54",
+      "2Kgs.4.33",
+      "2Kgs.6.18",
+      "2Kgs.20.2",
+      "2Chr.32.24",
+      "Neh.1.4",
+      "Neh.2.4",
+      "Neh.4.9",
+      "Isa.37.15",
+      "Isa.38.2",
+      "Jer.29.7",
+      "Jer.32.16",
+      "Jer.37.3",
+      "Jer.42.2",
+      "Jer.42.4",
+      "Jer.42.20",
+      "Jonah.2.1",
+      "Jonah.4.2",
+      "1Cor.11.13",
+      "Col.1.9"
+     ],
+     "eg": [
+      {
+       "id": "Gen.20.17",
+       "ref": "Genesis 20:17",
+       "text": "Then Abraham prayed to God, and God healed Abimelech and his wife and his maidservants, so that they could again bear children-",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.19.15",
+       "ref": "2 Kings 19:15",
+       "text": "And Hezekiah prayed before the LORD: “O LORD, God of Israel, enthroned between the cherubim, You alone are God over all the kingdoms of the earth. You made the heavens and the earth.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "Dan.9.4",
+       "ref": "Daniel 9:4",
+       "text": "And I prayed to the LORD my God and confessed, “O, Lord, the great and awesome God, who keeps His covenant of loving devotion to those who love Him and keep His commandments,",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "Acts.10.2",
+       "ref": "Acts 10:2",
+       "text": "He and all his household were devout and God-fearing. He gave generously to the people and prayed to God regularly.",
+       "words": [
+        {
+         "key": "g1189",
+         "lemma": "δέομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praying for others, on their behalf",
+     "note": null,
+     "doors": [
+      {
+       "id": "intercession",
+       "name": "intercession",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 26,
+     "verses": [
+      "Gen.20.7",
+      "Matt.5.44",
+      "Job.42.10",
+      "Jas.5.16",
+      "Col.1.3",
+      "Exod.8.28",
+      "Num.21.7",
+      "Deut.9.20",
+      "1Sam.7.5",
+      "1Sam.12.19",
+      "1Sam.12.23",
+      "1Kgs.13.6",
+      "Jer.29.7",
+      "Jer.37.3",
+      "Jer.42.2",
+      "Jer.42.20",
+      "Luke.6.28",
+      "Luke.22.32",
+      "Acts.8.15",
+      "Acts.8.24",
+      "Col.1.9",
+      "Col.4.3",
+      "1Thess.5.25",
+      "2Thess.1.11",
+      "2Thess.3.1",
+      "Heb.13.18"
+     ],
+     "eg": [
+      {
+       "id": "Gen.20.7",
+       "ref": "Genesis 20:7",
+       "text": "Now return the man's wife, for he is a prophet; he will pray for you and you will live. But if you do not restore her, be aware that you will surely die-you and all who belong to you.”",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "Matt.5.44",
+       "ref": "Matthew 5:44",
+       "text": "But I tell you, love your enemies and pray for those who persecute you,",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Job.42.10",
+       "ref": "Job 42:10",
+       "text": "After Job had prayed for his friends, the LORD restored his prosperity and doubled his former possessions.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.16",
+       "ref": "James 5:16",
+       "text": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous man has great power to prevail.",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        },
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Asked to pray for them",
+     "note": "Each is a person in the text asking another person to pray for him or for them.",
+     "doors": [
+      {
+       "id": "intercession",
+       "name": "intercession",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Exod.8.8",
+      "Num.21.7",
+      "1Sam.12.19",
+      "1Kgs.13.6",
+      "Jer.37.3",
+      "Jer.42.2",
+      "Acts.8.24",
+      "Rom.15.30",
+      "Col.4.3",
+      "1Thess.5.25",
+      "2Thess.3.1",
+      "Heb.13.18",
+      "Jas.5.14",
+      "Matt.19.13"
+     ],
+     "eg": [
+      {
+       "id": "Exod.8.8",
+       "ref": "Exodus 8:8",
+       "text": "Pharaoh summoned Moses and Aaron and said, “Pray to the LORD to take the frogs away from me and my people. Then I will let your people go, that they may sacrifice to the LORD.”",
+       "words": [
+        {
+         "key": "h6279",
+         "lemma": "עָתַר"
+        }
+       ]
+      },
+      {
+       "id": "Num.21.7",
+       "ref": "Numbers 21:7",
+       "text": "Then the people came to Moses and said, “We have sinned by speaking against the LORD and against you. Intercede with the LORD so He will take the snakes away from us.” So Moses interceded for the people.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.12.19",
+       "ref": "1 Samuel 12:19",
+       "text": "They pleaded with Samuel, “Pray to the LORD your God for your servants so that we will not die! For we have added to all our sins the evil of asking for a king.”",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.13.6",
+       "ref": "1 Kings 13:6",
+       "text": "Then the king responded to the man of God, “Intercede with the LORD your God and pray for me that my hand may be restored.” So the man of God interceded with the LORD, and the king's hand was restored to him as it was before.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Told to pray",
+     "note": "An imperative, whoever speaks it: Jesus to his disciples (“Pray that ...”), the apostles to the churches, Pharaoh to Moses (“Pray to the LORD”). A verse that is also a request for another's prayer stands in that row too.",
+     "doors": [],
+     "n": 33,
+     "verses": [
+      "Matt.6.9",
+      "Luke.22.40",
+      "1Thess.5.17",
+      "Jas.5.13",
+      "Exod.8.8",
+      "Matt.5.44",
+      "1Cor.14.13",
+      "Exod.8.28",
+      "Exod.9.28",
+      "Exod.10.17",
+      "Num.21.7",
+      "1Sam.12.19",
+      "1Kgs.13.6",
+      "Jer.29.7",
+      "Jer.37.3",
+      "Jer.42.2",
+      "Jer.42.20",
+      "Matt.6.6",
+      "Matt.9.38",
+      "Matt.24.20",
+      "Matt.26.41",
+      "Mark.13.18",
+      "Mark.14.38",
+      "Luke.6.28",
+      "Luke.10.2",
+      "Luke.22.46",
+      "Acts.8.22",
+      "Acts.8.24",
+      "1Thess.5.25",
+      "2Thess.3.1",
+      "Heb.13.18",
+      "Jas.5.14",
+      "Jas.5.16"
+     ],
+     "eg": [
+      {
+       "id": "Matt.6.9",
+       "ref": "Matthew 6:9",
+       "text": "So then, this is how you should pray: ‘Our Father in heaven, hallowed be Your name.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.22.40",
+       "ref": "Luke 22:40",
+       "text": "When He came to the place, He told them, “Pray that you will not enter into temptation.”",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.5.17",
+       "ref": "1 Thessalonians 5:17",
+       "text": "Pray without ceasing.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.13",
+       "ref": "James 5:13",
+       "text": "Is any one of you suffering? He should pray. Is anyone cheerful? He should sing praises.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Do not pray for this people”",
+     "note": null,
+     "doors": [],
+     "n": 3,
+     "verses": [
+      "Jer.7.16",
+      "Jer.11.14",
+      "Jer.14.11"
+     ],
+     "eg": [
+      {
+       "id": "Jer.7.16",
+       "ref": "Jeremiah 7:16",
+       "text": "As for you, do not pray for these people, do not offer a plea or petition on their behalf, and do not beg Me, for I will not listen to you.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        },
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.11.14",
+       "ref": "Jeremiah 11:14",
+       "text": "As for you, do not pray for these people. Do not raise up a cry or a prayer on their behalf, for I will not be listening when they call out to Me in their time of disaster.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        },
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.14.11",
+       "ref": "Jeremiah 14:11",
+       "text": "Then the LORD said to me, “Do not pray for the well-being of this people.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Spirit intercedes; Christ intercedes",
+     "note": "The text says the Spirit intercedes (Rom 8:26-27) and that Christ does (Rom 8:34; Heb 7:25). What this intercession is, the page does not say.",
+     "doors": [
+      {
+       "id": "intercession",
+       "name": "intercession",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Rom.8.26",
+      "Rom.8.27",
+      "Rom.8.34",
+      "Heb.7.25"
+     ],
+     "eg": [
+      {
+       "id": "Rom.8.26",
+       "ref": "Romans 8:26",
+       "text": "In the same way, the Spirit helps us in our weakness. For we do not know how we ought to pray, but the Spirit Himself intercedes for us with groans too deep for words.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        },
+        {
+         "key": "g5241",
+         "lemma": "ὑπερεντυγχάνω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.27",
+       "ref": "Romans 8:27",
+       "text": "And He who searches our hearts knows the mind of the Spirit, because the Spirit intercedes for the saints according to the will of God.",
+       "words": [
+        {
+         "key": "g1793",
+         "lemma": "ἐντυγχάνω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.34",
+       "ref": "Romans 8:34",
+       "text": "Who is there to condemn us? For Christ Jesus, who died, and more than that was raised to life, is at the right hand of God-and He is interceding for us.",
+       "words": [
+        {
+         "key": "g1793",
+         "lemma": "ἐντυγχάνω"
+        }
+       ]
+      },
+      {
+       "id": "Heb.7.25",
+       "ref": "Hebrews 7:25",
+       "text": "Therefore He is able to save completely those who draw near to God through Him, since He always lives to intercede for them.",
+       "words": [
+        {
+         "key": "g1793",
+         "lemma": "ἐντυγχάνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer and the Spirit, or the spirit",
+     "note": "The verses that set prayer and the Spirit or the spirit together, as written. In Zech 12:10 the Hebrew is “a spirit of grace and supplications”, poured out by God. Where readers part on what praying in the Spirit is, or whose “spirit” prays in 1 Cor 14:14, the page takes no side.",
+     "doors": [
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Zech.12.10",
+      "Acts.4.31",
+      "Acts.8.15",
+      "1Cor.14.14",
+      "1Cor.14.15",
+      "Eph.6.18",
+      "Jude.1.20"
+     ],
+     "eg": [
+      {
+       "id": "Zech.12.10",
+       "ref": "Zechariah 12:10",
+       "text": "Then I will pour out on the house of David and on the people of Jerusalem a spirit of grace and prayer, and they will look on Me, the One they have pierced. They will mourn for Him as one mourns for an only child, and grieve bitterly for Him as one grieves for a firstborn son.",
+       "words": [
+        {
+         "key": "h8469",
+         "lemma": "תַּחֲנוּן"
+        }
+       ]
+      },
+      {
+       "id": "Acts.4.31",
+       "ref": "Acts 4:31",
+       "text": "After they had prayed, their meeting place was shaken, and they were all filled with the Holy Spirit and spoke the word of God boldly.",
+       "words": [
+        {
+         "key": "g1189",
+         "lemma": "δέομαι"
+        }
+       ]
+      },
+      {
+       "id": "Acts.8.15",
+       "ref": "Acts 8:15",
+       "text": "On their arrival, they prayed for them to receive the Holy Spirit.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.14.14",
+       "ref": "1 Corinthians 14:14",
+       "text": "For if I pray in a tongue, my spirit prays, but my mind is unfruitful.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Praying to be seen; “babbling” like the pagans",
+     "note": "These are Jesus' words about prayer meant to be seen and prayer thought to work by its length; the page draws no conclusion about set or lengthy prayer.",
+     "doors": [],
+     "n": 4,
+     "verses": [
+      "Matt.6.5",
+      "Matt.6.7",
+      "Mark.12.40",
+      "Luke.20.47"
+     ],
+     "eg": [
+      {
+       "id": "Matt.6.5",
+       "ref": "Matthew 6:5",
+       "text": "And when you pray, do not be like the hypocrites. For they love to pray standing in the synagogues and on the street corners to be seen by men. Truly I tell you, they already have their full reward.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.7",
+       "ref": "Matthew 6:7",
+       "text": "And when you pray, do not babble on like pagans, for they think that by their many words they will be heard.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Mark.12.40",
+       "ref": "Mark 12:40",
+       "text": "They defraud widows of their houses, and for a show make lengthy prayers. These men will receive greater condemnation.”",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Luke.20.47",
+       "ref": "Luke 20:47",
+       "text": "They defraud widows of their houses, and for a show make lengthy prayers. These men will receive greater condemnation.”",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer toward this house, this place, this city",
+     "note": null,
+     "doors": [
+      {
+       "id": "temple",
+       "name": "The Temple",
+       "type": "place",
+       "missing": false
+      },
+      {
+       "id": "solomon",
+       "name": "Solomon",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "1Kgs.8.29",
+      "1Kgs.8.30",
+      "1Kgs.8.33",
+      "1Kgs.8.35",
+      "1Kgs.8.38",
+      "1Kgs.8.42",
+      "1Kgs.8.44",
+      "1Kgs.8.48",
+      "2Chr.6.20",
+      "2Chr.6.21",
+      "2Chr.6.24",
+      "2Chr.6.26",
+      "2Chr.6.29",
+      "2Chr.6.32",
+      "2Chr.6.34",
+      "2Chr.6.38",
+      "2Chr.7.15",
+      "Jonah.2.7",
+      "Dan.6.10"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.8.29",
+       "ref": "1 Kings 8:29",
+       "text": "May Your eyes be open toward this temple night and day, toward the place of which You said, ‘My Name shall be there,' so that You may hear the prayer that Your servant prays toward this place.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        },
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.30",
+       "ref": "1 Kings 8:30",
+       "text": "Hear the plea of Your servant and of Your people Israel when they pray toward this place. May You hear from heaven, Your dwelling place. May You hear and forgive.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        },
+        {
+         "key": "h8467",
+         "lemma": "תְּחִנָּה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.33",
+       "ref": "1 Kings 8:33",
+       "text": "When Your people Israel are defeated before an enemy because they have sinned against You, and they return to You and confess Your name, praying and pleading with You in this temple,",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.35",
+       "ref": "1 Kings 8:35",
+       "text": "When the skies are shut and there is no rain because Your people have sinned against You, and they pray toward this place and confess Your name, and they turn from their sins because You have afflicted them,",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer, confession and forgiveness",
+     "note": "Set out as the verses have them: Israel's own prayers of confession (1 Kgs 8; 2 Chr 6-7; Neh 1; Dan 9) first, then the New Testament verses. Where Christian traditions part on confession, the page takes no side.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Exod.10.17",
+      "Mark.11.25",
+      "Jas.5.16",
+      "1Sam.12.19",
+      "1Kgs.8.30",
+      "1Kgs.8.35",
+      "2Chr.6.21",
+      "2Chr.6.26",
+      "2Chr.7.14",
+      "Neh.1.6",
+      "Dan.9.20",
+      "Acts.8.22"
+     ],
+     "eg": [
+      {
+       "id": "Exod.10.17",
+       "ref": "Exodus 10:17",
+       "text": "Now please forgive my sin once more and appeal to the LORD your God, that He may remove this death from me.”",
+       "words": [
+        {
+         "key": "h6279",
+         "lemma": "עָתַר"
+        }
+       ]
+      },
+      {
+       "id": "Mark.11.25",
+       "ref": "Mark 11:25",
+       "text": "And when you stand to pray, if you hold anything against another, forgive it, so that your Father in heaven will forgive your trespasses as well.”",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.16",
+       "ref": "James 5:16",
+       "text": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous man has great power to prevail.",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        },
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.12.19",
+       "ref": "1 Samuel 12:19",
+       "text": "They pleaded with Samuel, “Pray to the LORD your God for your servants so that we will not die! For we have added to all our sins the evil of asking for a king.”",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer and healing",
+     "note": "Set out as the verses have them: prayer, and healing named in the same verse. In Gen 20:17 it is the barrenness of Abimelech's household that is healed; in 2 Chr 7:14, the land; in Isa 19:22, Egypt. Where Christian traditions part on healing and anointing (Jas 5:14-16), the page takes no side.",
+     "doors": [
+      {
+       "id": "healing",
+       "name": "healing",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Gen.20.17",
+      "2Chr.7.14",
+      "Isa.19.22",
+      "Acts.28.8",
+      "Jas.5.14",
+      "Jas.5.15",
+      "Jas.5.16"
+     ],
+     "eg": [
+      {
+       "id": "Gen.20.17",
+       "ref": "Genesis 20:17",
+       "text": "Then Abraham prayed to God, and God healed Abimelech and his wife and his maidservants, so that they could again bear children-",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.7.14",
+       "ref": "2 Chronicles 7:14",
+       "text": "and if My people who are called by My name humble themselves and pray and seek My face and turn from their wicked ways, then I will hear from heaven, forgive their sin, and heal their land.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      },
+      {
+       "id": "Isa.19.22",
+       "ref": "Isaiah 19:22",
+       "text": "And the LORD will strike Egypt with a plague; He will strike them but heal them. They will turn to the LORD, and He will hear their prayers and heal them.",
+       "words": [
+        {
+         "key": "h6279",
+         "lemma": "עָתַר"
+        }
+       ]
+      },
+      {
+       "id": "Acts.28.8",
+       "ref": "Acts 28:8",
+       "text": "The father of Publius was sick in bed, suffering from fever and dysentery. Paul went in to see him, and after praying and placing his hands on him, he healed the man.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: prays, prayed",
+     "note": "Includes prayer to idols (Isa 44:17; 45:20), prayer at a foreign sanctuary (Isa 16:12) and petition to a king (Dan 6:7, 6:12), where the same verbs are used, and Isa 45:14, where the Hebrew verb is the verb for praying (“they will make supplication to you”, said of the nations and Zion) though the Berean prints “confess”.",
+     "doors": [],
+     "n": 58,
+     "verses": [
+      "Jas.5.17",
+      "Acts.16.25",
+      "Dan.6.11",
+      "1Chr.17.25",
+      "Exod.8.9",
+      "Mark.11.24",
+      "1Cor.11.4",
+      "1Sam.1.27",
+      "1Sam.2.1",
+      "1Sam.2.25",
+      "2Sam.7.27",
+      "2Sam.21.14",
+      "2Sam.24.25",
+      "1Kgs.8.28",
+      "2Kgs.6.17",
+      "2Kgs.19.20",
+      "1Chr.5.20",
+      "2Chr.6.19",
+      "2Chr.7.1",
+      "2Chr.30.18",
+      "2Chr.32.20",
+      "2Chr.33.13",
+      "Ezra.6.10",
+      "Ezra.8.23",
+      "Ezra.10.1",
+      "Job.22.27",
+      "Job.33.26",
+      "Job.42.8",
+      "Ps.5.2",
+      "Ps.32.6",
+      "Isa.16.12",
+      "Isa.37.21",
+      "Isa.44.17",
+      "Isa.45.14",
+      "Isa.45.20",
+      "Jer.29.12",
+      "Dan.6.7",
+      "Dan.6.12",
+      "Luke.1.10",
+      "Luke.18.1",
+      "Luke.18.10",
+      "Luke.21.36",
+      "Acts.6.6",
+      "Acts.9.11",
+      "Acts.9.40",
+      "Acts.10.9",
+      "Acts.10.30",
+      "Acts.11.5",
+      "Acts.12.12",
+      "Acts.13.3",
+      "Acts.14.23",
+      "Acts.20.36",
+      "Acts.21.5",
+      "Acts.22.17",
+      "1Cor.11.5",
+      "1Thess.3.10",
+      "1Tim.2.8",
+      "Jas.5.18"
+     ],
+     "eg": [
+      {
+       "id": "Jas.5.17",
+       "ref": "James 5:17",
+       "text": "Elijah was a man just like us. He prayed earnestly that it would not rain, and it did not rain on the land for three and a half years.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Acts.16.25",
+       "ref": "Acts 16:25",
+       "text": "About midnight Paul and Silas were praying and singing hymns to God, and the other prisoners were listening to them.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Dan.6.11",
+       "ref": "Daniel 6:11",
+       "text": "Then these men went as a group and found Daniel petitioning and imploring his God.",
+       "words": [
+        {
+         "key": "h1156",
+         "lemma": "בעה"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.17.25",
+       "ref": "1 Chronicles 17:25",
+       "text": "For You, my God, have revealed to Your servant that You will build a house for him. Therefore Your servant has found the courage to pray before You.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "noun",
+   "verses": 144,
+   "rows": [
+    {
+     "label": "A house of prayer, a place of prayer",
+     "note": null,
+     "doors": [
+      {
+       "id": "temple",
+       "name": "The Temple",
+       "type": "place",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Isa.56.7",
+      "Matt.21.13",
+      "Mark.11.17",
+      "Luke.19.46",
+      "Acts.16.13",
+      "Acts.16.16"
+     ],
+     "eg": [
+      {
+       "id": "Isa.56.7",
+       "ref": "Isaiah 56:7",
+       "text": "I will bring them to My holy mountain and make them joyful in My house of prayer. Their burnt offerings and sacrifices will be accepted on My altar, for My house will be called a house of prayer for all the nations.”",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Matt.21.13",
+       "ref": "Matthew 21:13",
+       "text": "And He declared to them, “It is written: ‘My house will be called a house of prayer.' But you are making it ‘a den of robbers.'”",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "Mark.11.17",
+       "ref": "Mark 11:17",
+       "text": "Then Jesus began to teach them, and He declared, “Is it not written: ‘My house will be called a house of prayer for all the nations'? But you have made it ‘a den of robbers.'”",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "Luke.19.46",
+       "ref": "Luke 19:46",
+       "text": "He declared to them, “It is written: ‘My house will be a house of prayer.' But you have made it ‘a den of robbers.'”",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“A prayer of David”: prayers named for who prayed them",
+     "note": null,
+     "doors": [],
+     "n": 7,
+     "verses": [
+      "Ps.17.1",
+      "Ps.86.1",
+      "Ps.90.1",
+      "Ps.102.1",
+      "Ps.142.1",
+      "Ps.72.20",
+      "Hab.3.1"
+     ],
+     "eg": [
+      {
+       "id": "Ps.17.1",
+       "ref": "Psalms 17:1",
+       "text": "A prayer of David. Hear, O LORD, my righteous plea; listen to my cry. Give ear to my prayer-it comes from lips free of deceit.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.86.1",
+       "ref": "Psalms 86:1",
+       "text": "A prayer of David. Incline Your ear, O LORD, and answer me, for I am poor and needy.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.90.1",
+       "ref": "Psalms 90:1",
+       "text": "A prayer of Moses the man of God. Lord, You have been our dwelling place through all generations.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.102.1",
+       "ref": "Psalms 102:1",
+       "text": "A prayer of one who is afflicted, when he grows faint and pours out his lament before the LORD. Hear my prayer, O LORD; let my cry for help come before You.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer and petition",
+     "note": "The text sets these two words side by side: תְּפִלָּה with תְּחִנָּה or תַּחֲנוּן, προσευχή with δέησις.",
+     "doors": [
+      {
+       "id": "supplication",
+       "name": "supplication",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "1Kgs.8.28",
+      "Eph.6.18",
+      "1Kgs.8.38",
+      "1Kgs.8.45",
+      "1Kgs.8.49",
+      "1Kgs.8.54",
+      "1Kgs.9.3",
+      "2Chr.6.19",
+      "2Chr.6.29",
+      "2Chr.6.35",
+      "2Chr.6.39",
+      "Dan.9.3",
+      "Dan.9.17",
+      "Phil.4.6",
+      "1Tim.2.1",
+      "1Tim.5.5"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.8.28",
+       "ref": "1 Kings 8:28",
+       "text": "Yet regard the prayer and plea of Your servant, O LORD my God, so that You may hear the cry and the prayer that Your servant is praying before You today.",
+       "words": [
+        {
+         "key": "h8467",
+         "lemma": "תְּחִנָּה"
+        },
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Eph.6.18",
+       "ref": "Ephesians 6:18",
+       "text": "Pray in the Spirit at all times, with every kind of prayer and petition. To this end, stay alert with all perseverance in your prayers for all the saints.",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        },
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.38",
+       "ref": "1 Kings 8:38",
+       "text": "then may whatever prayer or petition Your people Israel make-each knowing his own afflictions and spreading out his hands toward this temple-",
+       "words": [
+        {
+         "key": "h8467",
+         "lemma": "תְּחִנָּה"
+        },
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.45",
+       "ref": "1 Kings 8:45",
+       "text": "then may You hear from heaven their prayer and their plea, and may You uphold their cause.",
+       "words": [
+        {
+         "key": "h8467",
+         "lemma": "תְּחִנָּה"
+        },
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hearing and answering prayer",
+     "note": null,
+     "doors": [
+      {
+       "id": "hearing",
+       "name": "hearing",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 44,
+     "verses": [
+      "Ps.17.1",
+      "Ps.65.2",
+      "Isa.38.5",
+      "Luke.1.13",
+      "1Kgs.8.28",
+      "Heb.5.7",
+      "1Kgs.8.29",
+      "1Kgs.8.30",
+      "1Kgs.8.45",
+      "1Kgs.8.49",
+      "1Kgs.8.52",
+      "1Kgs.9.3",
+      "2Kgs.20.5",
+      "2Chr.6.19",
+      "2Chr.6.20",
+      "2Chr.6.21",
+      "2Chr.6.35",
+      "2Chr.6.39",
+      "2Chr.7.12",
+      "2Chr.30.27",
+      "2Chr.33.13",
+      "Neh.1.6",
+      "Ps.4.1",
+      "Ps.6.9",
+      "Ps.28.2",
+      "Ps.31.22",
+      "Ps.39.12",
+      "Ps.54.2",
+      "Ps.55.1",
+      "Ps.61.1",
+      "Ps.66.19",
+      "Ps.69.13",
+      "Ps.84.8",
+      "Ps.86.1",
+      "Ps.86.6",
+      "Ps.102.1",
+      "Ps.116.1",
+      "Ps.130.2",
+      "Ps.140.6",
+      "Ps.143.1",
+      "Prov.15.29",
+      "Dan.9.17",
+      "Dan.9.18",
+      "Acts.10.31"
+     ],
+     "eg": [
+      {
+       "id": "Ps.17.1",
+       "ref": "Psalms 17:1",
+       "text": "A prayer of David. Hear, O LORD, my righteous plea; listen to my cry. Give ear to my prayer-it comes from lips free of deceit.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.65.2",
+       "ref": "Psalms 65:2",
+       "text": "O You who listen to prayer, all people will come to You.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.38.5",
+       "ref": "Isaiah 38:5",
+       "text": "“Go and tell Hezekiah that this is what the LORD, the God of your father David, says: ‘I have heard your prayer; I have seen your tears. Behold, I will add fifteen years to your life.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.13",
+       "ref": "Luke 1:13",
+       "text": "But the angel said to him, “Do not be afraid, Zechariah, because your prayer has been heard. Your wife Elizabeth will bear you a son, and you are to give him the name John.",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer not heard, shut out, hindered",
+     "note": null,
+     "doors": [
+      {
+       "id": "hearing",
+       "name": "hearing",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Isa.1.15",
+      "Jer.7.16",
+      "Jer.11.14",
+      "Ps.35.13",
+      "Ps.80.4",
+      "Lam.3.8",
+      "Lam.3.44",
+      "Prov.28.9",
+      "1Pet.3.7"
+     ],
+     "eg": [
+      {
+       "id": "Isa.1.15",
+       "ref": "Isaiah 1:15",
+       "text": "When you spread out your hands in prayer, I will hide My eyes from you; even though you multiply your prayers, I will not listen. Your hands are covered with blood.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.7.16",
+       "ref": "Jeremiah 7:16",
+       "text": "As for you, do not pray for these people, do not offer a plea or petition on their behalf, and do not beg Me, for I will not listen to you.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        },
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.11.14",
+       "ref": "Jeremiah 11:14",
+       "text": "As for you, do not pray for these people. Do not raise up a cry or a prayer on their behalf, for I will not be listening when they call out to Me in their time of disaster.",
+       "words": [
+        {
+         "key": "h6419",
+         "lemma": "פָּלַל"
+        },
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.35.13",
+       "ref": "Psalms 35:13",
+       "text": "Yet when they were ill, I put on sackcloth; I humbled myself with fasting, but my prayers returned unanswered.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer and believing",
+     "note": "The verses that name believing or faith as the prayer is made: whatever is asked in prayer, believing (Matt 21:22; Mark 11:24); “the prayer offered in faith” (Jas 5:15). Set out as written; the page takes no side on how faith and prayer relate.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Matt.21.22",
+      "Mark.11.24",
+      "Jas.5.15"
+     ],
+     "eg": [
+      {
+       "id": "Matt.21.22",
+       "ref": "Matthew 21:22",
+       "text": "If you believe, you will receive whatever you ask for in prayer.”",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "Mark.11.24",
+       "ref": "Mark 11:24",
+       "text": "Therefore I tell you, whatever you ask for in prayer, believe that you have received it, and it will be yours.",
+       "words": [
+        {
+         "key": "g4336",
+         "lemma": "προσεύχομαι"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.15",
+       "ref": "James 5:15",
+       "text": "And the prayer offered in faith will restore the one who is sick. The Lord will raise him up. If he has sinned, he will be forgiven.",
+       "words": [
+        {
+         "key": "g2171",
+         "lemma": "εὐχή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The prayer of the righteous, of the wicked",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_righteous",
+       "name": "the righteous",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_wicked",
+       "name": "the wicked",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Prov.15.29",
+      "Prov.15.8",
+      "1Pet.3.12",
+      "Jas.5.16",
+      "Ps.109.7"
+     ],
+     "eg": [
+      {
+       "id": "Prov.15.29",
+       "ref": "Proverbs 15:29",
+       "text": "The LORD is far from the wicked, but He hears the prayer of the righteous.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.15.8",
+       "ref": "Proverbs 15:8",
+       "text": "The sacrifice of the wicked is detestable to the LORD, but the prayer of the upright is His delight.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.3.12",
+       "ref": "1 Peter 3:12",
+       "text": "For the eyes of the Lord are on the righteous, and His ears are inclined to their prayer. But the face of the Lord is against those who do evil.”",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.16",
+       "ref": "James 5:16",
+       "text": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous man has great power to prevail.",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer goes up to God; prayers and incense",
+     "note": "The text's own picture, kept as written. Incense is in Ps 141:2 and Rev 5:8, 8:3-4; in Rev 5:8 the bowls are before the Lamb. In Rev 5:8 and 8:3-4 it is “the prayers of the saints”; what that shows about the saints and the angels, readers part on, and the page takes no side.",
+     "doors": [
+      {
+       "id": "saints",
+       "name": "saints",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Ps.141.2",
+      "Jonah.2.7",
+      "2Chr.30.27",
+      "Acts.10.4",
+      "Rev.5.8",
+      "Rev.8.3",
+      "Rev.8.4"
+     ],
+     "eg": [
+      {
+       "id": "Ps.141.2",
+       "ref": "Psalms 141:2",
+       "text": "May my prayer be set before You like incense; my uplifted hands, like the evening offering.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.2.7",
+       "ref": "Jonah 2:7",
+       "text": "As my life was fading away, I remembered the LORD. My prayer went up to You, to Your holy temple.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.30.27",
+       "ref": "2 Chronicles 30:27",
+       "text": "Then the priests and the Levites stood to bless the people, and God heard their voice, and their prayer came into His holy dwelling place in heaven.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Acts.10.4",
+       "ref": "Acts 10:4",
+       "text": "Cornelius stared at him in fear and asked, “What is it, Lord?” The angel answered, “Your prayers and gifts to the poor have ascended as a memorial offering before God.",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayer with thanks, and “remembering you in my prayers”",
+     "note": null,
+     "doors": [],
+     "n": 8,
+     "verses": [
+      "2Cor.1.11",
+      "Eph.1.16",
+      "Phil.4.6",
+      "Col.4.2",
+      "1Thess.1.2",
+      "1Tim.2.1",
+      "2Tim.1.3",
+      "Phlm.1.4"
+     ],
+     "eg": [
+      {
+       "id": "2Cor.1.11",
+       "ref": "2 Corinthians 1:11",
+       "text": "as you help us by your prayers. Then many will give thanks on our behalf for the favor shown us in answer to their prayers.",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.16",
+       "ref": "Ephesians 1:16",
+       "text": "I have not stopped giving thanks for you, remembering you in my prayers,",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "Phil.4.6",
+       "ref": "Philippians 4:6",
+       "text": "Be anxious for nothing, but in everything, by prayer and petition, with thanksgiving, present your requests to God.",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        },
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "Col.4.2",
+       "ref": "Colossians 4:2",
+       "text": "Devote yourselves to prayer, being watchful and thankful,",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Devoted to prayer, night and day",
+     "note": null,
+     "doors": [],
+     "n": 10,
+     "verses": [
+      "Neh.1.6",
+      "Luke.2.37",
+      "Rom.12.12",
+      "Acts.1.14",
+      "Acts.2.42",
+      "Acts.6.4",
+      "Eph.6.18",
+      "Col.4.2",
+      "1Tim.5.5",
+      "2Tim.1.3"
+     ],
+     "eg": [
+      {
+       "id": "Neh.1.6",
+       "ref": "Nehemiah 1:6",
+       "text": "let Your eyes be open and Your ears attentive to hear the prayer that I, Your servant, now pray before You day and night for Your servants, the Israelites. I confess the sins that we Israelites have committed against You. Both I and my father's house have sinned.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.37",
+       "ref": "Luke 2:37",
+       "text": "and then was a widow to the age of eighty-four. She never left the temple, but worshiped night and day, fasting and praying.",
+       "words": [
+        {
+         "key": "g1162",
+         "lemma": "δέησις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.12.12",
+       "ref": "Romans 12:12",
+       "text": "Be joyful in hope, patient in affliction, persistent in prayer.",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "Acts.1.14",
+       "ref": "Acts 1:14",
+       "text": "With one accord they all continued in prayer, along with the women and Mary the mother of Jesus, and with His brothers.",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: prayer, petition",
+     "note": "Includes petitions made to a man, where the same Hebrew words are not prayer to God: תְּחִנָּה to the king (Jer 37:20; 38:26), תַּחֲנוּן of the poor man and of Leviathan (Prov 18:23; Job 41:3).",
+     "doors": [],
+     "n": 49,
+     "verses": [
+      "2Sam.7.27",
+      "Mark.9.29",
+      "Rom.1.10",
+      "2Kgs.19.4",
+      "2Chr.6.40",
+      "2Chr.7.15",
+      "2Chr.33.18",
+      "2Chr.33.19",
+      "Neh.1.11",
+      "Neh.11.17",
+      "Job.16.17",
+      "Job.41.3",
+      "Ps.42.8",
+      "Ps.66.20",
+      "Ps.88.2",
+      "Ps.88.13",
+      "Ps.102.17",
+      "Ps.109.4",
+      "Ps.119.170",
+      "Ps.141.5",
+      "Prov.18.23",
+      "Isa.37.4",
+      "Jer.31.9",
+      "Jer.36.7",
+      "Jer.37.20",
+      "Jer.38.26",
+      "Jer.42.2",
+      "Jer.42.9",
+      "Dan.6.7",
+      "Dan.6.13",
+      "Dan.9.20",
+      "Dan.9.21",
+      "Dan.9.23",
+      "Zech.12.10",
+      "Luke.5.33",
+      "Luke.6.12",
+      "Luke.22.45",
+      "Acts.3.1",
+      "Acts.12.5",
+      "Rom.10.1",
+      "Rom.15.30",
+      "1Cor.7.5",
+      "2Cor.9.14",
+      "Phil.1.4",
+      "Phil.1.19",
+      "Col.4.12",
+      "Phlm.1.22",
+      "Jas.5.17",
+      "1Pet.4.7"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.7.27",
+       "ref": "2 Samuel 7:27",
+       "text": "For You, O LORD of Hosts, the God of Israel, have revealed this to Your servant when You said, ‘I will build a house for you.' Therefore Your servant has found the courage to offer this prayer to You.",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      },
+      {
+       "id": "Mark.9.29",
+       "ref": "Mark 9:29",
+       "text": "Jesus answered, “This kind cannot come out, except by prayer.”",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.10",
+       "ref": "Romans 1:10",
+       "text": "in my prayers at all times, asking that now at last by God's will I may succeed in coming to you.",
+       "words": [
+        {
+         "key": "g4335",
+         "lemma": "προσευχή"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.19.4",
+       "ref": "2 Kings 19:4",
+       "text": "Perhaps the LORD your God will hear all the words of the Rabshakeh, whom his master the king of Assyria has sent to defy the living God, and He will rebuke him for the words that the LORD your God has heard. Therefore lift up a prayer for the remnant that still survives.”",
+       "words": [
+        {
+         "key": "h8605",
+         "lemma": "תְּפִלָּה"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “pray”, “petition”, “intercede”",
+  "words": [
+   {
+    "key": "h7596",
+    "lemma": "שְׁאֵלָה",
+    "translit": "she.e.lah",
+    "gloss": "petition",
+    "lang": "Hebrew",
+    "n": 9,
+    "verses": [
+     "1Sam.1.17",
+     "1Sam.1.27",
+     "1Sam.2.20",
+     "Esth.5.6",
+     "Esth.5.7",
+     "Esth.5.8",
+     "Esth.7.2",
+     "Esth.7.3",
+     "Esth.9.12"
+    ],
+    "eg": [
+     {
+      "id": "1Sam.1.17",
+      "ref": "1 Samuel 1:17",
+      "text": "“Go in peace,” Eli replied, “and may the God of Israel grant the petition you have asked of Him.”"
+     },
+     {
+      "id": "1Sam.1.27",
+      "ref": "1 Samuel 1:27",
+      "text": "I prayed for this boy, and since the LORD has granted me what I asked of Him,"
+     }
+    ]
+   },
+   {
+    "key": "h2470",
+    "lemma": "חָלָה",
+    "translit": "ḥālāh",
+    "gloss": "sick",
+    "lang": "Hebrew",
+    "n": 8,
+    "verses": [
+     "1Kgs.13.6",
+     "2Kgs.13.4",
+     "2Chr.33.12",
+     "Job.11.19",
+     "Jer.26.19",
+     "Zech.7.2",
+     "Zech.8.21",
+     "Zech.8.22"
+    ],
+    "eg": [
+     {
+      "id": "1Kgs.13.6",
+      "ref": "1 Kings 13:6",
+      "text": "Then the king responded to the man of God, “Intercede with the LORD your God and pray for me that my hand may be restored.” So the man of God interceded with the LORD, and the king's hand was restored to him as it was before."
+     },
+     {
+      "id": "2Kgs.13.4",
+      "ref": "2 Kings 13:4",
+      "text": "Then Jehoahaz sought the favor of the LORD, and the LORD listened to him because He saw the oppression that the king of Aram had inflicted on Israel."
+     }
+    ]
+   },
+   {
+    "key": "h6293",
+    "lemma": "פָּגַע",
+    "translit": "pa.ga",
+    "gloss": "to fall on",
+    "lang": "Hebrew",
+    "n": 5,
+    "verses": [
+     "Gen.23.8",
+     "Job.21.15",
+     "Isa.53.12",
+     "Jer.7.16",
+     "Jer.27.18"
+    ],
+    "eg": [
+     {
+      "id": "Gen.23.8",
+      "ref": "Genesis 23:8",
+      "text": "“If you are willing for me to bury my dead,” he said to them, “listen to me, and approach Ephron son of Zohar on my behalf"
+     },
+     {
+      "id": "Job.21.15",
+      "ref": "Job 21:15",
+      "text": "Who is the Almighty, that we should serve Him, and what would we gain if we pray to Him?'"
+     }
+    ]
+   },
+   {
+    "key": "h2603",
+    "lemma": "חָנַן",
+    "translit": "ḥônēn",
+    "gloss": "gracious",
+    "lang": "Hebrew",
+    "n": 5,
+    "verses": [
+     "2Kgs.1.13",
+     "Esth.4.8",
+     "Job.8.5",
+     "Ps.30.8",
+     "Ps.142.1"
+    ],
+    "eg": [
+     {
+      "id": "2Kgs.1.13",
+      "ref": "2 Kings 1:13",
+      "text": "So the king sent a third captain with his fifty men. And the third captain went up, fell on his knees before Elijah, and begged him, “Man of God, may my life and the lives of these fifty servants of yours please be precious in your sight."
+     },
+     {
+      "id": "Esth.4.8",
+      "ref": "Esther 4:8",
+      "text": "Mordecai also gave Hathach a copy of the written decree issued in Susa for the destruction of the Jews, to show and explain to Esther, urging her to approach the king, implore his favor, and plead before him for her people."
+     }
+    ]
+   },
+   {
+    "key": "g2172",
+    "lemma": "εὔχομαι",
+    "translit": "euchomai",
+    "gloss": "to pray/wish for",
+    "lang": "Greek",
+    "n": 4,
+    "verses": [
+     "Acts.27.29",
+     "2Cor.13.7",
+     "2Cor.13.9",
+     "3John.1.2"
+    ],
+    "eg": [
+     {
+      "id": "Acts.27.29",
+      "ref": "Acts 27:29",
+      "text": "Fearing that we would run aground on the rocks, they dropped four anchors from the stern and prayed for daybreak."
+     },
+     {
+      "id": "2Cor.13.7",
+      "ref": "2 Corinthians 13:7",
+      "text": "Now we pray to God that you will not do anything wrong-not that we will appear to have stood the test, but that you will do what is right, even if we appear to have failed."
+     }
+    ]
+   },
+   {
+    "key": "g2065",
+    "lemma": "ἐρωτάω",
+    "translit": "erōtaō",
+    "gloss": "to ask",
+    "lang": "Greek",
+    "verses": [
+     "John.17.9",
+     "John.17.15",
+     "John.17.20"
+    ],
+    "n": 3,
+    "note": "John 17 is Jesus' own prayer: He lifts His eyes to heaven and says “Father” (17:1). The Greek word in these three is ἐρωτάω, “ask”, not προσεύχομαι; it is named here, apart, and the page does not hand one word over as the other.",
+    "eg": [
+     {
+      "id": "John.17.9",
+      "ref": "John 17:9",
+      "text": "I ask on their behalf. I do not ask on behalf of the world, but on behalf of those You have given Me; for they are Yours."
+     },
+     {
+      "id": "John.17.15",
+      "ref": "John 17:15",
+      "text": "I am not asking that You take them out of the world, but that You keep them from the evil one."
+     }
+    ]
+   },
+   {
+    "key": "g1783",
+    "lemma": "ἔντευξις",
+    "translit": "enteuxis",
+    "gloss": "intercession",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "1Tim.2.1",
+     "1Tim.4.5"
+    ],
+    "eg": [
+     {
+      "id": "1Tim.2.1",
+      "ref": "1 Timothy 2:1",
+      "text": "First of all, then, I urge that petitions, prayers, intercessions, and thanksgiving be offered for everyone-"
+     },
+     {
+      "id": "1Tim.4.5",
+      "ref": "1 Timothy 4:5",
+      "text": "because it is sanctified by the word of God and prayer."
+     }
+    ]
+   },
+   {
+    "key": "g2428",
+    "lemma": "ἱκετηρία",
+    "translit": "hiketēria",
+    "gloss": "supplication",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Heb.5.7"
+    ],
+    "eg": [
+     {
+      "id": "Heb.5.7",
+      "ref": "Hebrews 5:7",
+      "text": "During the days of Jesus' earthly life, He offered up prayers and petitions with loud cries and tears to the One who could save Him from death, and He was heard because of His reverence."
+     }
+    ]
+   }
+  ]
+ }
+}

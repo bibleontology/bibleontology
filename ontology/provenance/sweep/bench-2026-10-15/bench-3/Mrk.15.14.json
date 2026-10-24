@@ -1,0 +1,151 @@
+{
+ "ref": "Mrk.15.14",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false,
+   "why": "Dative 'to them' is the crowd Pilate questions. The crowd is not offered as a candidate.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "w7",
+   "choice": "none",
+   "divine": false,
+   "why": "Neuter interrogative 'What evil' asks for the deed; it refers to no candidate.",
+   "category": "interrogative not a referent"
+  },
+  {
+   "slot": "w14",
+   "choice": "none",
+   "divine": false,
+   "why": "Object 'Him' of 'Crucify' is Jesus, not offered as a candidate here. The builder's w2 is wrong, since Pilate is not the one crucified.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false,
+   "why": "Implied 'he' who did the evil is Jesus, the person Pilate asks about. Jesus is not offered as a candidate in this verse.",
+   "category": "referent not in candidate list"
+  },
+  {
+   "slot": "cl3s",
+   "choice": "w2",
+   "divine": false,
+   "why": "The imperative 'Crucify' is spoken to Pilate, who has just asked the question; the implied singular 'you' is Pilate.",
+   "category": "implied you of a command"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "Pilate's question is nested in his saying clause, as the said words.",
+   "category": "speech nested in saying"
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "The imperative is nested inside the crowd's shouting clause, as the said words.",
+   "category": "speech nested in saying"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Self link.",
+   "category": "self link"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "remove",
+   "why": "The connective before 'they shouted all the louder' is the separate word de, adversative, not a fused waw. The form does not support 'and then'. The relation the text carries is contrast, added below.",
+   "category": "connective is not a fused waw"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl1",
+   "action": "add",
+   "why": "Pilate's saying introduces his question, which is what is said (R1).",
+   "category": "speech content"
+  },
+  {
+   "src": "cl2",
+   "type": "content",
+   "dst": "cl3",
+   "action": "add",
+   "why": "The shouting introduces its command, which is what is said (R1).",
+   "category": "speech content"
+  },
+  {
+   "src": "cl0",
+   "type": "contrast",
+   "dst": "cl2",
+   "action": "add",
+   "why": "The mid-verse adversative de: 'but they shouted all the louder' sets the crowd's cry against Pilate's question. The host is cl0.",
+   "category": "adversative but mid-verse"
+  }
+ ],
+ "groups": [
+  {
+   "id": "Mrk.15.14#turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "Pilate is the sender of the question in cl1. The addressee is the crowd, not offered as a candidate, so the addressee member is removed.",
+   "category": "turn with unoffered addressee"
+  },
+  {
+   "id": "Mrk.15.14#turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "addressee",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "The sender of the shout is the crowd, not offered in this verse; the builder's w10 is 'King' from another verse and not a candidate here, so the sender member is removed. The addressee is Pilate.",
+   "category": "sender not in candidate list"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.14 cl2, implied subject 'they shouted'",
+   "what": "The implied third plural subject is not in the slot list. It is the crowd, not offered as a candidate."
+  }
+ ],
+ "cant_tell": []
+}

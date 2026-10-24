@@ -1,0 +1,36 @@
+{
+ "run": "haiku-p2",
+ "model": "haiku",
+ "mode": "passage",
+ "blind_check": "tool_uses exactly 2 for every run",
+ "passages": {
+  "P-gen1": {
+   "tokens": 81295,
+   "verses": 5
+  },
+  "P-frogs-a": {
+   "tokens": 140881,
+   "verses": 8
+  },
+  "P-frogs-b": {
+   "tokens": 134038,
+   "verses": 7
+  },
+  "P-gnats": {
+   "tokens": 118270,
+   "verses": 5
+  },
+  "P-psa23": {
+   "tokens": 97752,
+   "verses": 6
+  },
+  "P-psa107": {
+   "tokens": 73085,
+   "verses": 1
+  },
+  "P-psa119": {
+   "tokens": 70919,
+   "verses": 1
+  }
+ }
+}

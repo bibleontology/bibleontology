@@ -1,0 +1,222 @@
+{
+ "ref": "Rom.3.4",
+ "referents": [
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false,
+   "why": "'May it be' (optative) is impersonal; no person is its subject.",
+   "category": "impersonal optative",
+   "votes": 3
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "'It has been written' is an impersonal passive with no named writer; the builder's 'man' is not the subject of writing.",
+   "category": "impersonal passive",
+   "votes": 3
+  },
+  {
+   "slot": "cl4s",
+   "choice": "w5",
+   "divine": true,
+   "why": "Second singular inside the quoted words (Psalm 51:4 as quoted): the one spoken to is God, the only second-person candidate, w5.",
+   "category": "you inside quotation addressed to God",
+   "votes": 3
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w5",
+   "divine": true,
+   "why": "Same quoted 'you' in 'will prevail when judged': God.",
+   "category": "you inside quotation addressed to God",
+   "votes": 3
+  },
+  {
+   "slot": "w19",
+   "choice": "w5",
+   "divine": true,
+   "why": "'Your words' (second singular possessive) are God's words, and the addressee of the quotation is God, w5.",
+   "category": "possessive of quoted addressee",
+   "votes": 3
+  },
+  {
+   "slot": "w25",
+   "choice": "w5",
+   "divine": true,
+   "why": "'You' as object of 'being judged' (second singular): the one judged is God, w5.",
+   "category": "object of quoted infinitive",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl4",
+   "action": "remove",
+   "why": "The hopos clause is the wording of the quotation, not the purpose of the writing; the saying clause introduces it as content.",
+   "category": "quoted purpose read as purpose",
+   "votes": 3
+  },
+  {
+   "src": "cl3",
+   "type": "content",
+   "dst": "cl4",
+   "action": "add",
+   "why": "'It has been written' introduces the quotation, which is what the writing says (ruling R1).",
+   "category": "writing introduces quotation",
+   "votes": 3
+  },
+  {
+   "src": "cl3",
+   "type": "purpose",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "The second quoted clause is part of the quotation, not a purpose of the writing.",
+   "category": "quoted purpose read as purpose",
+   "votes": 3
+  },
+  {
+   "src": "cl5",
+   "type": "when_if_though",
+   "dst": "cl6",
+   "action": "remove",
+   "why": "Fronted ki is a Hebrew-only category; en tō + infinitive is a temporal adjunct, 'when you are judged'.",
+   "category": "wrong link type for Greek adjunct",
+   "votes": 3
+  },
+  {
+   "src": "cl5",
+   "type": "within",
+   "dst": "cl6",
+   "action": "add",
+   "why": "The infinitive phrase 'in being judged' is an adjunct nested inside the clause that governs it.",
+   "category": "infinitive adjunct nested in clause",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "and",
+   "dst": "cl1",
+   "action": "remove",
+   "why": "De after 'may it not be' is adversative: 'let God be true' is said instead of the rejected claim.",
+   "category": "adversative de read as plain and",
+   "votes": 3
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "De joins two parallel imperatives: 'let God be true, and every man a liar'.",
+   "category": "parallel imperatives",
+   "votes": 3
+  },
+  {
+   "src": "cl4",
+   "type": "and",
+   "dst": "cl5",
+   "action": "keep",
+   "why": "Two verbs of one quoted sentence joined by kai: 'be justified and prevail'.",
+   "category": "parallel verbs inside quotation",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl3",
+   "action": "remove",
+   "why": "Kathaper ('just as it is written') is a comparison with a text, not a plain and.",
+   "category": "comparison read as and",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "as",
+   "dst": "cl3",
+   "action": "add",
+   "why": "Kathaper ('just as') before a written text: the claim is backed by scripture. The fulfilment sense of 'as' does not apply; see none_fit.",
+   "category": "comparison with scripture",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "imp0",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ],
+   "divine": false,
+   "why": "The two imperatives at one level, 'let God be true' and 'let every man be a liar', are one group. The optative 'may it not be' is an exclamation, not a command, and 'part' is not an imperative member role.",
+   "category": "commands joined at one level",
+   "votes": 3
+  },
+  {
+   "id": "Rom.3.4#g1",
+   "kind": "writing",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "cl5"
+    }
+   ],
+   "divine": false,
+   "why": "The quoted psalm as a unit: the citation formula is its frame and the quoted words are its parts. No writer is named, so there is no sender.",
+   "category": "quoted psalm as unit",
+   "votes": 2
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl2 'every man a liar, just as it is written'",
+   "what": "Scripture cited as backing for the claim just before it. The 'as' type's fulfilment sense applies only to an earlier word, so no link type fits fully."
+  },
+  {
+   "where": "cl0 (Μὴ γένοιτο, 'Certainly not!')",
+   "what": "A rejection of the claim in 3:3; no link type records a disavowal of the preceding question."
+  },
+  {
+   "where": "cl5 to cl6 (ἐν τῷ κρίνεσθαι, 'when being judged')",
+   "what": "A temporal 'when' clause has no link type of its own; recorded as within, with the temporal role stated in why."
+  },
+  {
+   "where": "3:4 cl0 and cl1 ('Certainly not!' then 'let God be true')",
+   "what": "A denial followed by a counter-jussive, joined by de; no link type records a rebuttal."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the writer of the quoted words (cl3s)",
+   "why": "the passive names no writer and the passage does not name one"
+  },
+  {
+   "what": "the purpose reading of cl1 to cl4",
+   "why": "Whether the quoted ὅπως clause states God's aim in being true, or only the psalm's own purpose, is a reading; I added the link because the form allows it, and it is open to review."
+  },
+  {
+   "what": "'So that you may be justified' (hopos, cl4) inside the quotation",
+   "why": "Its purpose is an act (the man's lie) in this verse, but the form does not say which act it is for; no purpose link added."
+  }
+ ],
+ "voted": 3
+}

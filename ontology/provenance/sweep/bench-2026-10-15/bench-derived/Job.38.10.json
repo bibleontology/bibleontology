@@ -1,0 +1,62 @@
+{
+ "ref": "Job.38.10",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl0s",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "g1",
+   "kind": "acts",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "w2"
+    }
+   ]
+  }
+ ],
+ "derived": []
+}

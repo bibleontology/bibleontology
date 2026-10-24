@@ -1,0 +1,517 @@
+{
+ "_what": "One public definition per relation type, published in /ns/relation as skos:definition. Drafted by Claude Sonnet from the types' labels and notes, reviewed and approved by Doug Egge on 2026-10-14 ('approve the rest'); the one he rewrote is marked 'by': 'Doug Egge'. The drafted wording is AI-written and excluded from the copyright claim; which types exist and what each joins are his.",
+ "types": {
+  "spoke_to": {
+   "definition": "That one spoke to another, as the narrator tells it: \"Isaac said to Abraham\" (Gen 22:7). The speech turn is its evidence; what was said is the turn's content, not this relation.",
+   "by": "drafted by Claude Opus, 2026-10-20, from the approved recommendation (G1, the 1.2.0 inventory)"
+  },
+  "states": {
+   "definition": "A statement one clause of the text makes, its subject doing to its object what the verb says: \"God loved the world\" (John 3:16). The verb is carried with the claim as the verse renders it, with its grammar, the force it is said with and the kind of act it names. Only a statement made outright, by a verb whose form says it happened, is asserted; a command, promise, prediction or purpose is described and never stated. The plain triple carries no verb (every statement uses this one type): read the claim, whose claim:verb and claim:modality say what was said and how.",
+   "by": "drafted by Claude Opus, 2026-10-19, for Doug's review with the 1.2.0 inventory"
+  },
+  "deity_of": {
+   "definition": "A divine being is called the God of a person or people, as in the text's formula \"the God of\" a patriarch or of Israel; it is a relationship the text states and not an identification of the two.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "self_designated_as": {
+   "definition": "A person or being applies a title to himself in his own speech, as against a title that the narrator or another speaker gives him; it records who said the words and not what follows from them.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "spoken_of_as": {
+   "definition": "The text applies the name or nature of one person or being to another; the edge says only that a particular verse says so, and it is not a claim that the two are the same.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "quoted": {
+   "definition": "A speaker or writing takes up the words of another speaker or writing; the target is the person the text credits with the words, not the book they are found in.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "named_with": {
+   "definition": "The text names the two together in a single formula or sentence; the edge records the joint naming and does not say how the two are related.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "distinguished_from": {
+   "definition": "The text sets the two apart, for example when a speaker contrasts himself with another; it records the statement and does not settle what the contrast means.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "put_away": {
+   "definition": "A person or group sends another away to end a marriage, in the text's own word and not in a later legal term such as divorce.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "accused": {
+   "definition": "A person or group lays a charge against another person or group; it is the complaint made, not a plot against someone and not the verdict.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "charged": {
+   "definition": "A person, being or group lays a binding instruction on another, stronger than a request.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "besought": {
+   "definition": "A person or group entreats another where the text marks the act as a petition; the polite \"please\" of ordinary speech is not recorded.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "rebuked": {
+   "definition": "A person, being or group reproves another in an episode the narrative reports; a letter that itself delivers a reproof, without reporting a confrontation, does not make an edge to its readers.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "warned": {
+   "definition": "A person, being or group gives another notice of danger or of a consequence to come.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "told": {
+   "definition": "A person, being or group gives a parable, dream or vision, the one the figure belongs to; it is not the one who wrote it down.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "explained": {
+   "definition": "A person, being or group gives the interpretation of a parable, dream or vision; it is kept apart from telling because the two are often different people.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "sent": {
+   "definition": "A person, being or group sends another person, being, group or creature, where the text narrates the sending.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "assumed_form_of": {
+   "definition": "A temporary form is the form that a person or being took on and later set aside, where the text narrates the taking; the form is the source and the one who took it is the target.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "appeared_to": {
+   "definition": "A being, person or group appears to a person or group in a visitation the text narrates, without classifying it as a vision, a dream or a bodily appearance.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "party_to": {
+   "definition": "A person, group or being is named by the text as a party to a covenant.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "token_of": {
+   "definition": "An object, observance, creature or place is named by the text as the sign of a covenant.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "supersedes": {
+   "definition": "One covenant is said by the text to make an earlier covenant obsolete; it is recorded only where the text says so.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "assessed_as": {
+   "definition": "A subject is the doer of a deed that the text itself evaluates, such as the verdict pronounced on a reign or on a part of creation; the evaluation is the text's own and not a reader's.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "described_as": {
+   "definition": "A subject is said by the text to be a certain way: an age, a state, a trait, a role or a verdict on the subject itself, as distinct from a deed that is evaluated.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "titled": {
+   "definition": "A person or being is called by a title that the text gives; the title is its own entity, kept apart from the creature or object it is built from.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "asserted_by": {
+   "definition": "A claim, verdict, title or saying is vouched for by a named party, or by the writing itself where no speaker is named; it lets two differing claims be held side by side without being joined.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "grounds": {
+   "definition": "One statement is the reason the text gives for another, so that the second rests on the first.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "conditional_on": {
+   "definition": "A consequence the text states is tied to the condition on which it depends, as in a bargain, a blessing or a warning that begins \"if\".",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "recounts": {
+   "definition": "A telling is one account of an event or of another telling, so that two writings can describe the same thing without being merged into one voice.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "incited": {
+   "definition": "One party moves another to act, in the sense of causing someone to take an action; the action itself is carried by what the one moved then does.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "gave": {
+   "definition": "A person, being or group transfers something to another; the edge records the giving and not what the gift came to mean.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "took": {
+   "definition": "A person, being or group takes something from another or from its place; the counterpart of giving.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "ate": {
+   "definition": "A person, being, group or creature eats something, where the text records the eating.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "heard": {
+   "definition": "A person, being or group hears a speech, a cry or a report, where the text records the hearing.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "answered": {
+   "definition": "One speech replies to another, or a person replies to a speech or a person; where the text has a speaker answer the previous speech, the reply is to what was said and not only to the one who said it.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "named": {
+   "definition": "A person, being or group gives a name to someone or something, or changes an existing name, where the text says who did the naming.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "destroyed": {
+   "definition": "A person, being or group destroys a place, people, thing or creature, where the text says so.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "issues_from": {
+   "definition": "One thing comes out of another as its source; it is origin and not containment, and a river that goes out of a place is not a part of it.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "ascribed_to": {
+   "definition": "A writing carries a superscription naming a person or group; the edge records the ascription as it is printed and does not say whether it means authorship, dedication or subject.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "part_of": {
+   "definition": "One unit of the text lies inside a larger unit, such as a saying within a psalm or a passage within a longer passage; the relation is containment and is passed on through each level.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "spoken_in": {
+   "definition": "A kind of message is spoken within a pattern, concept, event or passage; it is supported by the verses the message and the other node share, and not by the names sounding alike.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "specializes": {
+   "definition": "One form is a narrower form of a broader form; both are forms and neither is an occurrence, and the grouping is the graph's own and not a statement of the text.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "instance_of": {
+   "definition": "A passage, saying, event or group is one case of a shape that several passages share; the shape is the graph's grouping and not a claim that the writers intended one.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "re_enacts": {
+   "definition": "A later account is told so as to re-enact an earlier one; the grade of the edge says whether the text states it, a quotation carries it, or a reader's correspondence alone supports it.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "takes_up": {
+   "definition": "A later account quotes, summarises or gathers the words given in an earlier one; the pairs of words are the evidence and no likeness between persons is claimed.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "same_steps_as": {
+   "definition": "Two accounts have the same sequence of steps, each step quoted from both texts; the edge makes no claim that either was told with the other in mind.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "possibly_same_as": {
+   "definition": "Two person records that the text never joins may, in a reader's view, be one person; this is not an identity, each record keeps its own verses, and the evidence is given on both sides.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "occasion_of": {
+   "definition": "An event is an occasion of a significant number, being a time the text counts as that span; the edge is cited to the verse that counts it and claims no meaning for the number.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "composed_of": {
+   "definition": "A phrase is built from the words of a term; this is a fact about the wording only and does not say that the phrase is a kind of that thing.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "draws_on": {
+   "definition": "A title, saying or image is built on another image, person, place, being or text; this is a claim about wording and not about what the image means.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "drawn_from": {
+   "definition": "A word used as an image is joined to the tangible thing of the same name, where the graph holds one; the two share a word and are not one node.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "likened_to": {
+   "definition": "The text marks a comparison in which the first is compared to the second, the thing described being the source and the image the target.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "made": {
+   "definition": "A person, group or being fashions or creates something, where the text names the maker; commissioning the work is a separate relation.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "commanded_the_making_of": {
+   "definition": "A person or being commands that something be made, which is kept apart from the one who does the making.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "wore": {
+   "definition": "A person or group wears a garment or piece of dress the text puts on them; it is not the same as carrying the garment and says nothing of who had the right to wear it.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "kept_at": {
+   "definition": "An object, concept or creature is kept at a place; an object that moves can have several such places, each with its own citation.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "carried": {
+   "definition": "A person or group bears or transports an object, concept or creature.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "signifies": {
+   "definition": "The text states outright what a thing stands for; it records the key the text gives and not a reader's decision about what something means, and it does not carry over to other uses of the same word.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "bought": {
+   "definition": "A person or group buys a place, object or thing, in a purchase the text records.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "built": {
+   "definition": "A person, group or being raises a place or structure, where the text says who built it.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "repaired": {
+   "definition": "A person or group repairs a place or structure; it is kept apart from building because the text distinguishes the two.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "ruler_of": {
+   "definition": "A person holds a district office over a place or group; it is a ruling office and not a throne, and one district may have more than one such officer.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "instituted": {
+   "definition": "A person or being establishes an observance, where the text names who established it.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "observed": {
+   "definition": "A person or group keeps an observance on an occasion the text records.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "father_of": {
+   "definition": "A person is the father of another, as a direct generation; a wider descent is recorded as ancestry instead.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "mother_of": {
+   "definition": "A person is the mother of another, as a direct generation.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "sibling_of": {
+   "definition": "Two people are siblings, full or unspecified; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "half_sibling_of": {
+   "definition": "Two people share one parent, where the text is explicit about it; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "ancestor_of": {
+   "definition": "A person or group is an ancestor of another across more than one generation, or without the intervening generations being given, including a people traced to a named ancestor.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "uncle_of": {
+   "definition": "A person is the uncle or aunt of another, recorded where the text states it and not where it follows from two named parents and a sibling.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "cousin_of": {
+   "definition": "Two people are cousins, recorded only where the text itself says so; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "adoptive_parent_of": {
+   "definition": "A person who becomes a parent of another through a willful, formal process of adoption.",
+   "by": "Doug Egge"
+  },
+  "spouse_of": {
+   "definition": "Two people are married to each other; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "concubine_of": {
+   "definition": "A woman is a concubine of a man, a status the text distinguishes from marriage; the concubine is the source and the man the target.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "betrothed_to": {
+   "definition": "Two people are betrothed to each other before marriage; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "predecessor_of": {
+   "definition": "A person held an office, such as king, high priest or judge, and another held it next; the direction always runs from the earlier holder to the later.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "co_regent_with": {
+   "definition": "Two people reigned jointly; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "appointed": {
+   "definition": "A person, group or being places a person or group in an office or command.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "offered": {
+   "definition": "A person or group offers a person, creature or object as a sacrifice; it records the act the text names and not whether the offering was carried through.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "speaks_of": {
+   "definition": "A statement, title, image or verdict makes a claim about the thing it names; the statement is the source with the verse behind it, and nothing runs the other way.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "came_upon": {
+   "definition": "The Spirit or another being comes upon a person or group, as the text puts it; the edge says the verse reports this and does not say what the coming produced or how long it lasted.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "anointed": {
+   "definition": "A person or group anoints a person, as the text records it; a body of people can confer the office as well as a prophet.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "deposed": {
+   "definition": "A person is removed from power by another.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "servant_of": {
+   "definition": "A person, group or concept serves a person, group or being; the relation covers officials, armour-bearers, stewards and slaves alike, since the text rarely separates them.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "commander_of": {
+   "definition": "A person commanded the army of another.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "counselor_of": {
+   "definition": "A person advised another.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "prophet_to": {
+   "definition": "A person speaks as a prophet to a person or group, confronting them with a message.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "mentor_of": {
+   "definition": "A person was the master or mentor of another, who was the disciple.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "blessed": {
+   "definition": "A being, person or group pronounces a formal and consequential blessing on a person or group, not a casual greeting.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "cursed": {
+   "definition": "A person or being pronounces a curse on a person, group, place, creature, object or being.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "baptized": {
+   "definition": "A person or being baptizes a person or group.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "healed": {
+   "definition": "A person or being heals, casts out a spirit from, or raises from the dead, a person or group the text names or clearly picks out.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "ministered_to": {
+   "definition": "A person, group or being teaches or ministers to another in a substantial personal encounter that is neither a healing nor an ongoing discipleship.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "ally_of": {
+   "definition": "Two parties were allied politically or militarily; the relation reads the same from either side and is not a mere friendship.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "friend_of": {
+   "definition": "Two people were close friends; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "companion_of": {
+   "definition": "Two people travelled or worked together; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "persecuted": {
+   "definition": "A person or group pursued another with sustained harm, from a position of power over them, and not by a single act of violence.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "enemy_of": {
+   "definition": "Two parties were declared or lasting enemies where neither is clearly the aggressor; the relation reads the same from either side.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "contrary_to": {
+   "definition": "The text sets two things against each other, by saying they are contrary or by building the contrast into its structure; the opposition is the text's and not a reader's, and tensions the text leaves standing are not recorded.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "conspired_against": {
+   "definition": "A person, group or being plots against a person or group.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "betrayed": {
+   "definition": "A person or group betrays another person or group.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "killed": {
+   "definition": "A person, group or being kills a person, group or creature, including by ordering the death.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "attacked": {
+   "definition": "A person, group or being attacks or makes war on a person or group.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "deceived": {
+   "definition": "A person, group, being or creature deceives a person, group or being.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "cast_into": {
+   "definition": "A person or group is put into a place or object against their will and kept there; the source is the one who ends up inside and not the one who threw them.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "imprisoned": {
+   "definition": "A person or group holds another person, group or concept in captivity.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "founded": {
+   "definition": "A person founded a place, or is called the father of a town in the text's idiom, which is usually read as its founder or chief ancestor; the words of the phrase are quoted so that a reader can weigh the reading.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "born_at": {
+   "definition": "A person was born at a place, recorded only where the text says born and not merely present.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "died_at": {
+   "definition": "A person died at a place.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "buried_at": {
+   "definition": "A person was buried at a place or object.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "dwelt_at": {
+   "definition": "A person or group lived at a place, a settled residence the text establishes and not a single visit.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "stationed_at": {
+   "definition": "A being or creature is posted at a place or object and left there; it records the placement and not residence or purpose.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "reigned_over": {
+   "definition": "A person reigned over a realm or a people; the realm and the seat of government are separate facts.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "ruled_from": {
+   "definition": "A person ruled from a place that was the seat of the rule.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "traveled_to": {
+   "definition": "A person or group went to a place on a journey the narrative marks; it is deliberately a weak tie.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "member_of": {
+   "definition": "A person or concept belonged to a group, recorded only where the text places them in it.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "led": {
+   "definition": "A person, being, group or concept leads a person or group, including the leading of one person by God.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "present_with": {
+   "definition": "A being, person, group or concept is with a person, group, being or concept, where the text states the presence in so many words.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "descended_from_person": {
+   "definition": "A tribe or nation descends from the person it is named for, as the text explains the origin of a people; the person and the people remain separate nodes.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "fought": {
+   "definition": "A person or group made war on a person or group, where either side may be a person or a people.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "conquered": {
+   "definition": "A person or group subjugated another with a lasting outcome, as distinct from a single battle.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "wrote_to": {
+   "definition": "A person wrote to a congregation, taken from the address of the letter itself; the target is the group and not the town where it met.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "wrote_letter_to": {
+   "definition": "A person wrote to another person, taken from the address of the letter itself.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "based_at": {
+   "definition": "A group is centred on a place, so that a church, household or tribe is a group with a location and not a synonym for the place.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "located_in": {
+   "definition": "A place or object lies within a larger place.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "judged": {
+   "definition": "A person, group or being passes judgment on a person or group, in a formal legal proceeding or a pronounced verdict.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "aspect_of": {
+   "definition": "A concept or pattern is one facet of a broader idea, joined to it and not merged into it; the grouping is the map's and not the text's, and each aspect is described by the passages it cites.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  },
+  "in_theme": {
+   "definition": "A concept, observance, event or saying is a core concept of a major theme; the grouping is a reader's map of the text, supported by the passages cited.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+  }
+ }
+}

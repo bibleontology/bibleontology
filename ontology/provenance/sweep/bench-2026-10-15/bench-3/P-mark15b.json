@@ -1,0 +1,144 @@
+{"passage": "B-mark15b", "verses": [
+{"ref": "Mrk.15.9",
+ "referents": [
+  {"slot": "w4", "choice": "none", "divine": false, "why": "Dative 'them' (autois) is the crowd Pilate answers, named in 15:8 as 'the crowd', but no candidate offered here is the crowd. The offered candidates are Pilate, King, Barabbas and Jesus, none of them a plural group that could be addressed.", "category": "referent not in candidate list"},
+  {"slot": "w8", "choice": "none", "divine": false, "why": "Second plural 'to you' inside Pilate's speech: the addressee of that speech is the crowd, which is not offered as a candidate.", "category": "referent not in candidate list"},
+  {"slot": "cl2s", "choice": "none", "divine": false, "why": "Implied second plural subject of 'you want' inside Pilate's question. Its addressee is the crowd, not offered as a candidate.", "category": "referent not in candidate list"},
+  {"slot": "cl3s", "choice": "w2", "divine": false, "why": "First singular 'I should release' inside Pilate's own question: the speaker of that speech is Pilate, masculine singular, which agrees. The builder's w2 is correct.", "category": "first person inside a speech"}
+ ],
+ "links": [
+  {"src": "cl2", "type": "within", "dst": "cl3", "action": "keep", "why": "The subjunctive 'I should release' is the object of 'you want', nested as the grammar nests an object clause.", "category": "object clause of a verb of wanting"},
+  {"src": "cl1", "type": "within", "dst": "cl2", "action": "keep", "why": "The participle 'saying' carries the speech, so the said clause is nested inside it as grammar nests it.", "category": "speech nested in a participle"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The answering clause carries the saying participle as its complement.", "category": "speech nested in a participle"},
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "A clause cannot follow itself. The verse opens here, so there is no earlier clause on the narrative line.", "category": "self link"},
+  {"src": "cl1", "type": "content", "dst": "cl2", "action": "add", "why": "The participle 'saying' introduces the words that follow, and the question is what is said (R1). The turn keeps the question as its part, as well.", "category": "speech content"}
+ ],
+ "groups": [
+  {"id": "Mrk.15.9#turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl2"}, {"role": "sender", "node": "w2"}], "divine": false, "why": "The part of the turn is what is said, the question cl2, not the participle cl1 that introduces it; cl1 is now the saying clause linked by content. Sender is Pilate, the one speaking. The addressee member is removed because the crowd it would name is not an offered candidate.", "category": "turn part is the said clause"}
+ ],
+ "none_fit": [
+  {"where": "Mrk.15.9 candidates", "what": "The crowd named in 15:8 is the addressee of Pilate's speech ('them', 'you') but is not offered as a candidate, so those slots are none rather than a choice."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Mrk.15.10",
+ "referents": [
+  {"slot": "cl0s", "choice": "Mrk.15.9#w2", "divine": false, "why": "Third singular masculine 'he' who knew is Pilate, the speaker of 15:9. The in-verse candidates are envy (a noun) and chief priests (plural), neither of which can be a singular knower.", "category": "third person refers to earlier referent"},
+  {"slot": "w6", "choice": "Mrk.15.5#w2", "divine": true, "why": "Object of 'had handed over' is Jesus, the one delivered up. The candidate Mrk.15.5#w2 is that Jesus, masculine singular, which agrees.", "category": "object is a named person"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "that", "dst": "cl1", "action": "keep", "why": "'He knew' takes the clause as its object: what was known, the delivering up by the chief priests.", "category": "clause as object of knowing"},
+  {"src": "cl0", "type": "because", "dst": "cl0", "action": "remove", "why": "Self link. The reason is not inside this verse; the verse-opening 'for' (gar) gives the reason for the offer in 15:9, recorded below.", "category": "self link"},
+  {"src": "Mrk.15.9#cl2", "type": "because", "dst": "cl0", "action": "add", "why": "Verse-opening gar is 'for', a reason word, not the Hebrew ki that the undecided type covers. Pilate's offer to release Jesus (15:9 cl2) is explained by his knowing it was envy (this verse cl0).", "category": "verse-opening reason across verses"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Mrk.15.11",
+ "referents": [
+  {"slot": "w11", "choice": "w5", "divine": false, "why": "Plural 'to them' is the crowd that the chief priests stirred up and to whom Barabbas is to be released. The noun crowd is a singular collective and takes a plural pronoun by sense.", "category": "collective noun with plural pronoun"},
+  {"slot": "cl1s", "choice": "Mrk.15.9#w2", "divine": false, "why": "The one who releases a prisoner is Pilate, the releaser of 15:6 and 15:9. Barabbas is the object released, so the builder's referent makes the released man the releaser, which the act rules out.", "category": "act decides the subject"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "purpose", "dst": "cl1", "action": "keep", "why": "Greek hina with the subjunctive: the stirring up is done so that the release happens. This is what the action is for.", "category": "purpose clause after an action"},
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "Self link. No fused waw joins this clause to an earlier one within the verse.", "category": "self link"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "Mrk.15.11 opening conjunction (de, 'but')", "what": "A verse-opening 'but' contrasting the chief priests' action with Pilate's offer in 15:9-10 has no host in its verse, so the contrast type cannot record it. Left unlinked."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Mrk.15.12",
+ "referents": [
+  {"slot": "w6", "choice": "none", "divine": false, "why": "Dative 'to them' is the crowd Pilate questions. The crowd of 15:8 and 15:11 is not offered as a candidate here.", "category": "referent not in candidate list"},
+  {"slot": "w8", "choice": "none", "divine": false, "why": "Neuter interrogative 'What' as object of 'do'. It asks which deed is to be done and refers to no candidate; the answer is the action itself.", "category": "interrogative not a referent"},
+  {"slot": "w10", "choice": "none", "divine": false, "why": "Relative 'the One' (masculine singular) is Jesus, the person the crowd calls King. Jesus is not offered as a candidate. The candidate King (w13) names the title, not the person, so it does not fit as the referent.", "category": "referent not in candidate list"},
+  {"slot": "cl2s", "choice": "w2", "divine": false, "why": "First singular 'What I should do' inside Pilate's question: the speaker is Pilate. The builder's w2 is correct.", "category": "first person inside a speech"},
+  {"slot": "cl3s", "choice": "none", "divine": false, "why": "Second plural 'you call' inside Pilate's question: the addressees are the crowd, not offered as a candidate.", "category": "referent not in candidate list"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The answering participle is part of the saying verb, nested as the grammar nests it.", "category": "speech nested in a participle"},
+  {"src": "cl2", "type": "within", "dst": "cl3", "action": "keep", "why": "The relative clause 'you call King' sits inside the question's noun phrase, as a relative clause does.", "category": "relative clause inside noun phrase"},
+  {"src": "cl0", "type": "within", "dst": "cl2", "action": "keep", "why": "The question is the said words, nested inside the saying clause.", "category": "speech nested in saying"},
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "Self link. The verse opens with the question, so there is no earlier clause within the verse.", "category": "self link"},
+  {"src": "cl0", "type": "content", "dst": "cl2", "action": "add", "why": "The saying clause introduces the question, which is what is said (R1). Kept alongside the turn.", "category": "speech content"}
+ ],
+ "groups": [
+  {"id": "Mrk.15.12#turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl2"}, {"role": "sender", "node": "w2"}], "divine": false, "why": "The part is the question cl2. The answering participle cl1 is the saying clause, not what is said, so it leaves the part; its speech is carried by the content link. Sender is Pilate. The addressee member is removed because the crowd it would name is not an offered candidate.", "category": "turn part is the said clause"}
+ ],
+ "none_fit": [
+  {"where": "Mrk.15.12 candidates", "what": "Jesus, the referent of 'the One' and of the implied object in this verse, is not offered as a candidate, and neither is the crowd addressed. Both are set to none."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Mrk.15.13",
+ "referents": [
+  {"slot": "w5", "choice": "none", "divine": false, "why": "Object 'Him' of 'Crucify' is Jesus, who is not offered as a candidate here. The builder's w2 is wrong: Pilate is not the one to be crucified. The offered candidates are Pilate and Barabbas only.", "category": "referent not in candidate list"},
+  {"slot": "cl1s", "choice": "Mrk.15.12#w2", "divine": false, "why": "A command's implied 'you' is the person it is spoken to. The crowd shouts back at Pilate's question of 15:12, so the command is addressed to Pilate, singular.", "category": "implied you of a command"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The imperative is the quoted cry, nested inside the shouting verb as grammar nests a quotation.", "category": "speech nested in saying"},
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "Self link. No earlier clause within the verse is on the narrative line.", "category": "self link"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "The shouting verb introduces the words 'Crucify Him', which are what is said (R1).", "category": "speech content"}
+ ],
+ "groups": [
+  {"id": "Mrk.15.13#turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "addressee", "node": "Mrk.15.12#w2"}], "divine": false, "why": "The builder's sender w1 is not a candidate in this verse. The crowd that shouts is the sender but is not offered, so the sender member is removed. The addressee is Pilate, the one the shout answers.", "category": "sender not in candidate list"}
+ ],
+ "none_fit": [
+  {"where": "Mrk.15.13 cl0, implied subject 'they cried out'", "what": "The implied third plural subject is not in the slot list. It is the crowd, which is not offered as a candidate."},
+  {"where": "Mrk.15.13 'they shouted back'", "what": "A shout that answers a question has no link type for a reply. Left unlinked."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Mrk.15.14",
+ "referents": [
+  {"slot": "w4", "choice": "none", "divine": false, "why": "Dative 'to them' is the crowd Pilate questions. The crowd is not offered as a candidate.", "category": "referent not in candidate list"},
+  {"slot": "w7", "choice": "none", "divine": false, "why": "Neuter interrogative 'What evil' asks for the deed; it refers to no candidate.", "category": "interrogative not a referent"},
+  {"slot": "w14", "choice": "none", "divine": false, "why": "Object 'Him' of 'Crucify' is Jesus, not offered as a candidate here. The builder's w2 is wrong, since Pilate is not the one crucified.", "category": "referent not in candidate list"},
+  {"slot": "cl1s", "choice": "none", "divine": false, "why": "Implied 'he' who did the evil is Jesus, the person Pilate asks about. Jesus is not offered as a candidate in this verse.", "category": "referent not in candidate list"},
+  {"slot": "cl3s", "choice": "w2", "divine": false, "why": "The imperative 'Crucify' is spoken to Pilate, who has just asked the question; the implied singular 'you' is Pilate.", "category": "implied you of a command"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "Pilate's question is nested in his saying clause, as the said words.", "category": "speech nested in saying"},
+  {"src": "cl2", "type": "within", "dst": "cl3", "action": "keep", "why": "The imperative is nested inside the crowd's shouting clause, as the said words.", "category": "speech nested in saying"},
+  {"src": "cl0", "type": "then", "dst": "cl0", "action": "remove", "why": "Self link.", "category": "self link"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "remove", "why": "The connective before 'they shouted all the louder' is the separate word de, adversative, not a fused waw. The form does not support 'and then'. The relation the text carries is contrast, added below.", "category": "connective is not a fused waw"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "Pilate's saying introduces his question, which is what is said (R1).", "category": "speech content"},
+  {"src": "cl2", "type": "content", "dst": "cl3", "action": "add", "why": "The shouting introduces its command, which is what is said (R1).", "category": "speech content"},
+  {"src": "cl0", "type": "contrast", "dst": "cl2", "action": "add", "why": "The mid-verse adversative de: 'but they shouted all the louder' sets the crowd's cry against Pilate's question. The host is cl0.", "category": "adversative but mid-verse"}
+ ],
+ "groups": [
+  {"id": "Mrk.15.14#turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "w2"}], "divine": false, "why": "Pilate is the sender of the question in cl1. The addressee is the crowd, not offered as a candidate, so the addressee member is removed.", "category": "turn with unoffered addressee"},
+  {"id": "Mrk.15.14#turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "cl3"}, {"role": "addressee", "node": "w2"}], "divine": false, "why": "The sender of the shout is the crowd, not offered in this verse; the builder's w10 is 'King' from another verse and not a candidate here, so the sender member is removed. The addressee is Pilate.", "category": "sender not in candidate list"}
+ ],
+ "none_fit": [
+  {"where": "Mrk.15.14 cl2, implied subject 'they shouted'", "what": "The implied third plural subject is not in the slot list. It is the crowd, not offered as a candidate."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Mrk.15.15",
+ "referents": [
+  {"slot": "w10", "choice": "w5", "divine": false, "why": "Dative 'to them' is the crowd Pilate wants to satisfy and to whom Barabbas is released. Crowd is in this verse's candidates, and the plural pronoun agrees with the collective.", "category": "collective noun with plural pronoun"},
+  {"slot": "cl3s", "choice": "w2", "divine": false, "why": "Subject of 'delivered' and 'had ... flogged' is Pilate, the subject of 'released' in the same verse. The builder's null is filled.", "category": "subject carried across clauses"},
+  {"slot": "cl5s", "choice": "w16", "divine": true, "why": "The passive subjunctive 'might be crucified' has as its subject the one crucified, Jesus (w16). It is not Pilate, so the builder's cl3s is wrong.", "category": "passive subject is the patient"}
+ ],
+ "links": [
+  {"src": "cl1", "type": "within", "dst": "cl2", "action": "keep", "why": "The participle 'wishing' takes the infinitive 'to satisfy' as its complement, a verb of wanting.", "category": "complement of a verb of wanting"},
+  {"src": "cl0", "type": "within", "dst": "cl1", "action": "keep", "why": "The wishing participle is nested in the release clause as an adjunct.", "category": "participle nested in finite clause"},
+  {"src": "cl3", "type": "within", "dst": "cl4", "action": "keep", "why": "The flogging participle is a prior act of Pilate that stands as its own event ('had Jesus flogged'), so it is nested, not describing.", "category": "participle of a prior act"},
+  {"src": "cl3", "type": "purpose", "dst": "cl5", "action": "keep", "why": "Greek hina with the subjunctive: the handing over is for the crucifixion. This is what the act is for.", "category": "purpose clause after an act"},
+  {"src": "cl2", "type": "then", "dst": "cl0", "action": "remove", "why": "The infinitive cl2 is nested inside cl1 inside cl0. A nested clause does not link forward to its own host as 'and then'.", "category": "nested clause linked to its host"},
+  {"src": "cl0", "type": "then", "dst": "cl3", "action": "remove", "why": "The connective is de (kai), adversative, not a fused waw. 'And then' is not supported by the form; the relation the text carries is contrast, added below.", "category": "connective is not a fused waw"},
+  {"src": "cl0", "type": "contrast", "dst": "cl3", "action": "add", "why": "Mid-verse adversative de: 'But he had Jesus flogged' sets Pilate's release of Barabbas against his handing over of Jesus. The host is cl0.", "category": "adversative but mid-verse"}
+ ],
+ "groups": [
+  {"id": "Mrk.15.15#g1", "kind": "acts", "action": "add", "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl3"}, {"role": "group_subject", "node": "w2"}], "divine": false, "why": "Proposed reading for review. Pilate's acts in a row: released Barabbas (cl0), had Jesus flogged and handed him over (cl3). Each states its subject only in the verb, and all resolve to Pilate.", "category": "one agent's acts in a row (reading)"}
+ ],
+ "none_fit": [
+  {"where": "Mrk.15.15 cl4, 'having flogged [him]'", "what": "The implied object of the participle, Jesus, is not in the slot list."}
+ ],
+ "cant_tell": []
+}
+]}

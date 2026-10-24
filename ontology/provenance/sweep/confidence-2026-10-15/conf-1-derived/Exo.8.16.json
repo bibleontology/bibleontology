@@ -1,0 +1,229 @@
+{
+ "ref": "Exo.8.16",
+ "referents": [
+  {
+   "slot": "w22",
+   "choice": "w13",
+   "divine": false
+  },
+  {
+   "slot": "w28",
+   "choice": "w25",
+   "divine": true
+  },
+  {
+   "slot": "w31",
+   "choice": "w25",
+   "divine": true
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w4",
+   "divine": false
+  },
+  {
+   "slot": "cl7s",
+   "choice": "w13",
+   "divine": false
+  },
+  {
+   "slot": "cl8s",
+   "choice": "w27",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "imp1",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl5",
+   "action": "add"
+  },
+  {
+   "src": "cl5",
+   "type": "content",
+   "dst": "cl6",
+   "action": "add"
+  },
+  {
+   "src": "cl6",
+   "type": "content",
+   "dst": "cl7",
+   "action": "add"
+  },
+  {
+   "src": "cl7",
+   "type": "purpose",
+   "dst": "cl8",
+   "action": "add"
+  },
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  },
+  {
+   "src": "cl7",
+   "type": "and",
+   "dst": "cl8",
+   "action": "remove"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl1"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "part",
+     "node": "cl3"
+    },
+    {
+     "role": "part",
+     "node": "cl4"
+    },
+    {
+     "role": "part",
+     "node": "g1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ]
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    }
+   ]
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "divine": true,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl6"
+    },
+    {
+     "role": "part",
+     "node": "cl7"
+    },
+    {
+     "role": "part",
+     "node": "cl8"
+    },
+    {
+     "role": "sender",
+     "node": "w25"
+    },
+    {
+     "role": "addressee",
+     "node": "w13"
+    }
+   ]
+  },
+  {
+   "id": "imp7",
+   "kind": "imperative",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "command",
+     "node": "cl7"
+    },
+    {
+     "role": "aim",
+     "node": "cl8"
+    }
+   ]
+  },
+  {
+   "id": "g1",
+   "kind": "turn",
+   "action": "change",
+   "divine": false,
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl5"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w13"
+    }
+   ]
+  }
+ ],
+ "derived": [
+  [
+   "D1a",
+   "cl6",
+   "imp7",
+   "cl7"
+  ]
+ ]
+}

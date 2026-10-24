@@ -1,0 +1,51 @@
+{
+ "ref": "Exo.8.8",
+ "referents": [
+  {
+   "slot": "cl2s",
+   "choice": "w12",
+   "confidence": "medium",
+   "divine": true,
+   "rhetorical": false,
+   "why": "'he had appointed for Pharaoh' is a masculine singular whose sense is the LORD, who sent the frogs. Aaron stretched out the hand, but the sending is the LORD's; the verb's subject is the LORD.",
+   "category": "subject of an earlier act by God"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl1",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add",
+   "confidence": "high",
+   "why": "the qatal 'which he had appointed for Pharaoh' is a relative clause inside the noun phrase 'the frogs', the object of cl1's 'on the matter of'.",
+   "category": "relative clause inside a noun phrase"
+  },
+  {
+   "src": "cl1",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "confidence": "high",
+   "why": "cl0 (they went out from Pharaoh) is the earlier event and cl1 (Moses cried out) the later. The and-then link runs backward.",
+   "category": "then link reversed"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "confidence": "high",
+   "why": "a wayyiqtol continues the narrative line; cl0 comes first and cl1 follows.",
+   "category": "narrative sequence"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether Moses's crying out (cl1) fulfils Pharaoh's command 'pray to the LORD' (Exo.8.4 cl2)",
+   "why": "fulfils needs a report that the command was carried out, in the did-so form after the command. The text says only that Moses cried out to the LORD, so no link is forced."
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "ref": "Gen.1.4",
+ "referents": [],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "that",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "כִּי after the verb of seeing: 'he saw that the light was good'. The clause is what God saw, the object of the verb, not a reason.",
+   "category": "that after verb of perceiving"
+  },
+  {
+   "src": "cl2",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Direction reversed. The narrative runs from the seeing (cl0) to the separating (cl2); cl2 does not precede cl0.",
+   "category": "reversed narrative order"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "wayyiqtol cl2 continues the narrative line from the seeing in cl0. The that-clause cl1 is the object of that seeing, not a speech, and does not break the line.",
+   "category": "narrative continuation"
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "opens_with of cl1",
+   "why": "The field holds a parser code (o010010040051), not a conjunction. The כִּי appears in the gloss as 'that', so the that-link is decided from the gloss."
+  }
+ ]
+}

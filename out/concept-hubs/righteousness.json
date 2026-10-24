@@ -1,0 +1,2580 @@
+{
+ "id": "righteousness",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h6666",
+   "lemma": "צְדָקָה",
+   "form": "noun",
+   "translit": "tse.da.qah",
+   "gloss": "righteousness",
+   "lang": "Hebrew",
+   "uses": 148,
+   "other_sense": 1
+  },
+  {
+   "key": "h6664",
+   "lemma": "צֶדֶק",
+   "form": "noun",
+   "translit": "tse.deq",
+   "gloss": "Righteousness",
+   "lang": "Hebrew",
+   "uses": 103,
+   "other_sense": 8
+  },
+  {
+   "key": "h6662",
+   "lemma": "צַדִּיק",
+   "form": "adjective",
+   "translit": "tsad.diq",
+   "gloss": "righteous",
+   "lang": "Hebrew",
+   "uses": 195,
+   "other_sense": 1
+  },
+  {
+   "key": "h6663",
+   "lemma": "צָדֵק",
+   "form": "verb",
+   "translit": "tsa.daq",
+   "gloss": "to justify",
+   "lang": "Hebrew",
+   "uses": 39,
+   "other_sense": 1
+  },
+  {
+   "key": "g1343",
+   "lemma": "δικαιοσύνη",
+   "form": "noun",
+   "translit": "dikaiosunē",
+   "gloss": "righteousness",
+   "lang": "Greek",
+   "uses": 86,
+   "other_sense": 0
+  },
+  {
+   "key": "g1342",
+   "lemma": "δίκαιος",
+   "form": "adjective",
+   "translit": "dikaios",
+   "gloss": "just",
+   "lang": "Greek",
+   "uses": 74,
+   "other_sense": 0
+  },
+  {
+   "key": "g1344",
+   "lemma": "δικαιόω",
+   "form": "verb",
+   "translit": "dikaioō",
+   "gloss": "to justify",
+   "lang": "Greek",
+   "uses": 34,
+   "other_sense": 1
+  },
+  {
+   "key": "g1345",
+   "lemma": "δικαίωμα",
+   "form": "noun",
+   "translit": "dikaiōma",
+   "gloss": "righteous act",
+   "lang": "Greek",
+   "uses": 6,
+   "other_sense": 4
+  },
+  {
+   "key": "g1347",
+   "lemma": "δικαίωσις",
+   "form": "noun",
+   "translit": "dikaiōsis",
+   "gloss": "justification",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What righteousness stands beside",
+  "adjective": "Who is called righteous",
+  "verb": "Justified"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "justice",
+   "name": "justice",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "abraham",
+   "name": "Abraham",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "the_kingdom_of_god",
+   "name": "the kingdom of God",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "throne",
+   "name": "throne",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "justification",
+   "name": "justification",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_righteous",
+   "name": "the righteous",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "righteous",
+   "name": "righteous",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_righteous",
+   "name": "the righteous",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_just",
+   "name": "the righteous",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "justification",
+   "name": "justification",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.15.6",
+   "ref": "Genesis 15:6",
+   "text": "Abram believed the LORD, and it was credited to him as righteousness."
+  },
+  {
+   "id": "Ps.89.14",
+   "ref": "Psalms 89:14",
+   "text": "Righteousness and justice are the foundation of Your throne; loving devotion and faithfulness go before You."
+  },
+  {
+   "id": "Amos.5.24",
+   "ref": "Amos 5:24",
+   "text": "But let justice roll on like a river, and righteousness like an ever-flowing stream."
+  },
+  {
+   "id": "Matt.5.6",
+   "ref": "Matthew 5:6",
+   "text": "Blessed are those who hunger and thirst for righteousness, for they will be filled."
+  },
+  {
+   "id": "Matt.6.33",
+   "ref": "Matthew 6:33",
+   "text": "But seek first the kingdom of God and His righteousness, and all these things will be added unto you."
+  },
+  {
+   "id": "Rom.1.17",
+   "ref": "Romans 1:17",
+   "text": "For the gospel reveals the righteousness of God that comes by faith from start to finish, just as it is written: “The righteous will live by faith.”"
+  },
+  {
+   "id": "2Cor.5.21",
+   "ref": "2 Corinthians 5:21",
+   "text": "God made Him who knew no sin to be sin on our behalf, so that in Him we might become the righteousness of God."
+  },
+  {
+   "id": "Isa.64.6",
+   "ref": "Isaiah 64:6",
+   "text": "Each of us has become like something unclean, and all our righteous acts are like filthy rags; we all wither like a leaf, and our iniquities carry us away like the wind."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 338,
+   "rows": [
+    {
+     "label": "Justice and righteousness",
+     "note": null,
+     "doors": [
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 75,
+     "verses": [
+      "Gen.18.19",
+      "Amos.5.24",
+      "Jer.22.3",
+      "Ps.33.5",
+      "Lev.19.15",
+      "Deut.16.18",
+      "Deut.33.21",
+      "2Sam.8.15",
+      "1Kgs.10.9",
+      "1Chr.18.14",
+      "2Chr.9.8",
+      "Job.8.3",
+      "Job.29.14",
+      "Job.35.2",
+      "Job.37.23",
+      "Ps.9.4",
+      "Ps.36.6",
+      "Ps.37.6",
+      "Ps.72.1",
+      "Ps.72.2",
+      "Ps.89.14",
+      "Ps.94.15",
+      "Ps.97.2",
+      "Ps.99.4",
+      "Ps.103.6",
+      "Ps.106.3",
+      "Ps.119.7",
+      "Ps.119.62",
+      "Ps.119.75",
+      "Ps.119.106",
+      "Ps.119.121",
+      "Ps.119.160",
+      "Ps.119.164",
+      "Prov.1.3",
+      "Prov.2.9",
+      "Prov.8.20",
+      "Prov.16.8",
+      "Prov.21.3",
+      "Eccl.3.16",
+      "Eccl.5.8",
+      "Isa.1.21",
+      "Isa.1.27",
+      "Isa.5.7",
+      "Isa.5.16",
+      "Isa.9.7",
+      "Isa.16.5",
+      "Isa.26.9",
+      "Isa.28.17",
+      "Isa.32.1",
+      "Isa.32.16",
+      "Isa.33.5",
+      "Isa.54.17",
+      "Isa.56.1",
+      "Isa.58.2",
+      "Isa.59.9",
+      "Isa.59.14",
+      "Jer.4.2",
+      "Jer.9.24",
+      "Jer.22.13",
+      "Jer.22.15",
+      "Jer.23.5",
+      "Jer.33.15",
+      "Ezek.18.5",
+      "Ezek.18.19",
+      "Ezek.18.21",
+      "Ezek.18.27",
+      "Ezek.33.14",
+      "Ezek.33.16",
+      "Ezek.33.19",
+      "Ezek.45.9",
+      "Hos.2.19",
+      "Amos.5.7",
+      "Amos.6.12",
+      "Mic.7.9",
+      "Zeph.2.3"
+     ],
+     "eg": [
+      {
+       "id": "Gen.18.19",
+       "ref": "Genesis 18:19",
+       "text": "For I have chosen him, so that he will command his children and his household after him to keep the way of the LORD by doing what is right and just, in order that the LORD may bring upon Abraham what He has promised.”",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Amos.5.24",
+       "ref": "Amos 5:24",
+       "text": "But let justice roll on like a river, and righteousness like an ever-flowing stream.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.22.3",
+       "ref": "Jeremiah 22:3",
+       "text": "This is what the LORD says: Administer justice and righteousness. Rescue the victim of robbery from the hand of his oppressor. Do no wrong or violence to the foreigner, the fatherless, or the widow. Do not shed innocent blood in this place.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.33.5",
+       "ref": "Psalms 33:5",
+       "text": "The LORD loves righteousness and justice; the earth is full of His loving devotion.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness and judgment",
+     "note": null,
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "John.16.8",
+      "Rom.5.16",
+      "Acts.17.31",
+      "Acts.24.25",
+      "2Tim.4.8",
+      "Rev.19.11"
+     ],
+     "eg": [
+      {
+       "id": "John.16.8",
+       "ref": "John 16:8",
+       "text": "And when He comes, He will convict the world in regard to sin and righteousness and judgment:",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.16",
+       "ref": "Romans 5:16",
+       "text": "Again, the gift is not like the result of the one man's sin: The judgment that followed one sin brought condemnation, but the gift that followed many trespasses brought justification.",
+       "words": [
+        {
+         "key": "g1345",
+         "lemma": "δικαίωμα"
+        }
+       ]
+      },
+      {
+       "id": "Acts.17.31",
+       "ref": "Acts 17:31",
+       "text": "For He has set a day when He will judge the world with justice by the Man He has appointed. He has given proof of this to everyone by raising Him from the dead.”",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Acts.24.25",
+       "ref": "Acts 24:25",
+       "text": "As Paul expounded on righteousness, self-control, and the coming judgment, Felix became frightened and said, “You may go for now. When I find the time, I will call for you.”",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness and the throne",
+     "note": null,
+     "doors": [
+      {
+       "id": "throne",
+       "name": "throne",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "1Kgs.3.6",
+      "1Kgs.10.9",
+      "2Chr.9.8",
+      "Ps.9.4",
+      "Ps.89.14",
+      "Ps.97.2",
+      "Prov.16.12",
+      "Prov.25.5",
+      "Isa.9.7",
+      "Isa.16.5"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.3.6",
+       "ref": "1 Kings 3:6",
+       "text": "Solomon replied, “You have shown much loving devotion to Your servant, my father David, because he walked before You in faithfulness, righteousness, and uprightness of heart. And You have maintained this loving devotion by giving him a son to sit on his throne this very day.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.10.9",
+       "ref": "1 Kings 10:9",
+       "text": "Blessed be the LORD your God, who has delighted in you to set you on the throne of Israel. Because of the LORD's eternal love for Israel, He has made you king to carry out justice and righteousness.”",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.9.8",
+       "ref": "2 Chronicles 9:8",
+       "text": "Blessed be the LORD your God, who has delighted in you to set you on His throne to be king for the LORD your God. Because your God loved Israel enough to establish them forever, He has made you king over them to carry out justice and righteousness.”",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.9.4",
+       "ref": "Psalms 9:4",
+       "text": "For You have upheld my just cause; You sit on Your throne judging righteously.",
+       "words": [
+        {
+         "key": "h6664",
+         "lemma": "צֶדֶק"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The righteousness of the LORD, of God",
+     "note": "The text's own phrase, kept as written: where readers part on whose righteousness this is -- God's own, or one given -- the page does not choose.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Deut.33.21",
+      "Rom.1.17",
+      "Judg.5.11",
+      "1Sam.12.7",
+      "Ps.4.1",
+      "Ps.103.6",
+      "Isa.54.17",
+      "Jer.23.6",
+      "Jer.33.16",
+      "Mic.6.5",
+      "Rom.1.32",
+      "Rom.3.5",
+      "Rom.3.21",
+      "Rom.3.22",
+      "Rom.10.3",
+      "2Cor.5.21",
+      "Phil.3.9",
+      "Jas.1.20",
+      "2Pet.1.1"
+     ],
+     "eg": [
+      {
+       "id": "Deut.33.21",
+       "ref": "Deuteronomy 33:21",
+       "text": "He chose the best land for himself, because a ruler's portion was reserved for him there. He came with the leaders of the people; he administered the LORD's justice and His ordinances for Israel.”",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.17",
+       "ref": "Romans 1:17",
+       "text": "For the gospel reveals the righteousness of God that comes by faith from start to finish, just as it is written: “The righteous will live by faith.”",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Judg.5.11",
+       "ref": "Judges 5:11",
+       "text": "the voices of the singers at the watering places. There they shall recount the righteous acts of the LORD, the righteous deeds of His villagers in Israel. Then the people of the LORD went down to the gates:",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.12.7",
+       "ref": "1 Samuel 12:7",
+       "text": "Now present yourselves, so that I may confront you before the LORD with all the righteous acts He has done for you and your fathers.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness and faith",
+     "note": null,
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "abraham",
+       "name": "Abraham",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 22,
+     "verses": [
+      "Rom.1.17",
+      "Rom.4.3",
+      "Gal.3.6",
+      "Phil.3.9",
+      "Matt.21.32",
+      "Rom.3.22",
+      "Rom.3.25",
+      "Rom.4.5",
+      "Rom.4.9",
+      "Rom.4.11",
+      "Rom.4.13",
+      "Rom.9.30",
+      "Rom.10.4",
+      "Rom.10.6",
+      "Rom.10.10",
+      "Gal.5.5",
+      "1Tim.6.11",
+      "2Tim.2.22",
+      "Heb.11.7",
+      "Heb.11.33",
+      "Jas.2.23",
+      "2Pet.1.1"
+     ],
+     "eg": [
+      {
+       "id": "Rom.1.17",
+       "ref": "Romans 1:17",
+       "text": "For the gospel reveals the righteousness of God that comes by faith from start to finish, just as it is written: “The righteous will live by faith.”",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.3",
+       "ref": "Romans 4:3",
+       "text": "For what does the Scripture say? “Abraham believed God, and it was credited to him as righteousness.”",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.6",
+       "ref": "Galatians 3:6",
+       "text": "So also, “Abraham believed God, and it was credited to him as righteousness.”",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Phil.3.9",
+       "ref": "Philippians 3:9",
+       "text": "and be found in Him, not having my own righteousness from the law, but that which is through faith in Christ, the righteousness from God on the basis of faith.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Credited as righteousness",
+     "note": null,
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "abraham",
+       "name": "Abraham",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Gen.15.6",
+      "Rom.4.3",
+      "Ps.106.31",
+      "Rom.4.5",
+      "Rom.4.6",
+      "Rom.4.9",
+      "Rom.4.11",
+      "Rom.4.22",
+      "Gal.3.6",
+      "Jas.2.23"
+     ],
+     "eg": [
+      {
+       "id": "Gen.15.6",
+       "ref": "Genesis 15:6",
+       "text": "Abram believed the LORD, and it was credited to him as righteousness.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.3",
+       "ref": "Romans 4:3",
+       "text": "For what does the Scripture say? “Abraham believed God, and it was credited to him as righteousness.”",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Ps.106.31",
+       "ref": "Psalms 106:31",
+       "text": "It was credited to him as righteousness for endless generations to come.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.5",
+       "ref": "Romans 4:5",
+       "text": "However, to the one who does not work, but believes in Him who justifies the ungodly, his faith is credited as righteousness.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness and the law",
+     "note": "A verse that names faith and the law stands in both rows.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Deut.6.25",
+      "Rom.3.21",
+      "Ps.119.138",
+      "Ps.119.142",
+      "Ps.119.144",
+      "Ps.119.172",
+      "Isa.42.21",
+      "Isa.48.18",
+      "Isa.51.7",
+      "Rom.4.13",
+      "Rom.8.4",
+      "Rom.9.31",
+      "Rom.10.4",
+      "Rom.10.5",
+      "Gal.2.21",
+      "Gal.3.21",
+      "Phil.3.6",
+      "Phil.3.9",
+      "2Pet.2.21"
+     ],
+     "eg": [
+      {
+       "id": "Deut.6.25",
+       "ref": "Deuteronomy 6:25",
+       "text": "And if we are careful to observe every one of these commandments before the LORD our God, as He has commanded us, then that will be our righteousness.”",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.21",
+       "ref": "Romans 3:21",
+       "text": "But now, apart from the law, the righteousness of God has been revealed, as attested by the Law and the Prophets.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.138",
+       "ref": "Psalms 119:138",
+       "text": "The testimonies You have laid down are righteous and altogether faithful.",
+       "words": [
+        {
+         "key": "h6664",
+         "lemma": "צֶדֶק"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.142",
+       "ref": "Psalms 119:142",
+       "text": "Your righteousness is everlasting and Your law is true.",
+       "words": [
+        {
+         "key": "h6664",
+         "lemma": "צֶדֶק"
+        },
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Seek, pursue, hunger for it",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_kingdom_of_god",
+       "name": "the kingdom of God",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Deut.16.20",
+      "Matt.5.6",
+      "Rom.9.30",
+      "Prov.15.9",
+      "Prov.21.21",
+      "Isa.51.1",
+      "Zeph.2.3",
+      "Matt.6.33",
+      "1Tim.6.11",
+      "2Tim.2.22"
+     ],
+     "eg": [
+      {
+       "id": "Deut.16.20",
+       "ref": "Deuteronomy 16:20",
+       "text": "Pursue justice, and justice alone, so that you may live, and you may possess the land that the LORD your God is giving you.",
+       "words": [
+        {
+         "key": "h6664",
+         "lemma": "צֶדֶק"
+        }
+       ]
+      },
+      {
+       "id": "Matt.5.6",
+       "ref": "Matthew 5:6",
+       "text": "Blessed are those who hunger and thirst for righteousness, for they will be filled.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.30",
+       "ref": "Romans 9:30",
+       "text": "What then will we say? That the Gentiles, who did not pursue righteousness, have obtained it, a righteousness that is by faith;",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Prov.15.9",
+       "ref": "Proverbs 15:9",
+       "text": "The LORD detests the way of the wicked, but He loves those who pursue righteousness.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Persecuted, suffering for righteousness",
+     "note": null,
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "Matt.5.10",
+      "1Pet.3.14"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.10",
+       "ref": "Matthew 5:10",
+       "text": "Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.3.14",
+       "ref": "1 Peter 3:14",
+       "text": "But even if you should suffer for what is right, you are blessed. “Do not fear what they fear; do not be shaken.”",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Do righteousness",
+     "note": null,
+     "doors": [
+      {
+       "id": "obedience",
+       "name": "obedience",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 39,
+     "verses": [
+      "Gen.18.19",
+      "Matt.6.1",
+      "Heb.11.33",
+      "Deut.33.21",
+      "1Sam.12.7",
+      "2Sam.8.15",
+      "1Kgs.10.9",
+      "1Chr.18.14",
+      "2Chr.9.8",
+      "Ps.99.4",
+      "Ps.103.6",
+      "Ps.106.3",
+      "Ps.119.121",
+      "Prov.21.3",
+      "Isa.56.1",
+      "Isa.58.2",
+      "Isa.64.5",
+      "Jer.9.24",
+      "Jer.22.3",
+      "Jer.22.15",
+      "Jer.23.5",
+      "Jer.33.15",
+      "Ezek.3.20",
+      "Ezek.18.5",
+      "Ezek.18.19",
+      "Ezek.18.21",
+      "Ezek.18.22",
+      "Ezek.18.24",
+      "Ezek.18.27",
+      "Ezek.33.14",
+      "Ezek.33.16",
+      "Ezek.33.19",
+      "Ezek.45.9",
+      "Acts.10.35",
+      "Jas.1.20",
+      "1John.2.29",
+      "1John.3.7",
+      "1John.3.10",
+      "Rev.22.11"
+     ],
+     "eg": [
+      {
+       "id": "Gen.18.19",
+       "ref": "Genesis 18:19",
+       "text": "For I have chosen him, so that he will command his children and his household after him to keep the way of the LORD by doing what is right and just, in order that the LORD may bring upon Abraham what He has promised.”",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.1",
+       "ref": "Matthew 6:1",
+       "text": "“Be careful not to perform your righteous acts before men to be seen by them. If you do, you will have no reward from your Father in heaven.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.33",
+       "ref": "Hebrews 11:33",
+       "text": "who through faith conquered kingdoms, administered justice, and gained what was promised; who shut the mouths of lions,",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Deut.33.21",
+       "ref": "Deuteronomy 33:21",
+       "text": "He chose the best land for himself, because a ruler's portion was reserved for him there. He came with the leaders of the people; he administered the LORD's justice and His ordinances for Israel.”",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness and sin, wickedness",
+     "note": null,
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 38,
+     "verses": [
+      "Deut.9.4",
+      "John.16.8",
+      "Rom.3.5",
+      "Deut.9.5",
+      "Job.35.8",
+      "Ps.45.7",
+      "Ps.69.27",
+      "Prov.10.2",
+      "Prov.11.5",
+      "Prov.13.6",
+      "Prov.14.34",
+      "Prov.16.12",
+      "Eccl.3.16",
+      "Isa.64.6",
+      "Ezek.3.20",
+      "Ezek.18.19",
+      "Ezek.18.20",
+      "Ezek.18.21",
+      "Ezek.18.22",
+      "Ezek.18.24",
+      "Ezek.18.27",
+      "Ezek.33.12",
+      "Ezek.33.14",
+      "Ezek.33.16",
+      "Ezek.33.19",
+      "Dan.9.16",
+      "Dan.9.24",
+      "Rom.5.21",
+      "Rom.6.13",
+      "Rom.6.16",
+      "Rom.6.18",
+      "Rom.6.19",
+      "Rom.6.20",
+      "Rom.8.10",
+      "2Cor.5.21",
+      "2Cor.6.14",
+      "Heb.1.9",
+      "1Pet.2.24"
+     ],
+     "eg": [
+      {
+       "id": "Deut.9.4",
+       "ref": "Deuteronomy 9:4",
+       "text": "When the LORD your God has driven them out before you, do not say in your heart, “Because of my righteousness the LORD has brought me in to possess this land.” Rather, the LORD is driving out these nations before you because of their wickedness.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "John.16.8",
+       "ref": "John 16:8",
+       "text": "And when He comes, He will convict the world in regard to sin and righteousness and judgment:",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.5",
+       "ref": "Romans 3:5",
+       "text": "But if our unrighteousness highlights the righteousness of God, what shall we say? That God is unjust to inflict His wrath on us? I am speaking in human terms.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Deut.9.5",
+       "ref": "Deuteronomy 9:5",
+       "text": "It is not because of your righteousness or uprightness of heart that you are going in to possess their land, but it is because of their wickedness that the LORD your God is driving out these nations before you, to keep the promise He swore to your fathers, to Abraham, Isaac, and Jacob.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness and salvation",
+     "note": null,
+     "doors": [
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 20,
+     "verses": [
+      "Ps.40.10",
+      "Rom.10.10",
+      "Ps.51.14",
+      "Isa.51.6",
+      "Ps.36.6",
+      "Ps.71.2",
+      "Ps.71.15",
+      "Ps.98.2",
+      "Ps.119.123",
+      "Isa.46.13",
+      "Isa.51.8",
+      "Isa.56.1",
+      "Isa.59.16",
+      "Isa.59.17",
+      "Isa.62.1",
+      "Isa.63.1",
+      "Isa.64.5",
+      "Jer.23.6",
+      "Jer.33.16",
+      "Heb.11.7"
+     ],
+     "eg": [
+      {
+       "id": "Ps.40.10",
+       "ref": "Psalms 40:10",
+       "text": "I have not covered up Your righteousness in my heart; I have declared Your faithfulness and salvation; I have not concealed Your loving devotion and faithfulness from the great assembly.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.10.10",
+       "ref": "Romans 10:10",
+       "text": "For with your heart you believe and are justified, and with your mouth you confess and are saved.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Ps.51.14",
+       "ref": "Psalms 51:14",
+       "text": "Deliver me from bloodguilt, O God, the God of my salvation, and my tongue will sing of Your righteousness.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.51.6",
+       "ref": "Isaiah 51:6",
+       "text": "Lift up your eyes to the heavens, and look at the earth below; for the heavens will vanish like smoke, the earth will wear out like a garment, and its people will die like gnats. But My salvation will last forever, and My righteousness will never fail.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness, faithfulness, truth and loving devotion",
+     "note": null,
+     "doors": [],
+     "n": 30,
+     "verses": [
+      "1Sam.26.23",
+      "1Kgs.3.6",
+      "Ps.15.2",
+      "Ps.33.5",
+      "Ps.36.10",
+      "Ps.40.10",
+      "Ps.45.4",
+      "Ps.85.10",
+      "Ps.85.11",
+      "Ps.89.14",
+      "Ps.96.13",
+      "Ps.103.17",
+      "Ps.119.75",
+      "Ps.119.138",
+      "Ps.119.142",
+      "Ps.119.160",
+      "Ps.143.1",
+      "Prov.11.18",
+      "Prov.14.34",
+      "Prov.21.21",
+      "Isa.11.5",
+      "Isa.16.5",
+      "Isa.48.1",
+      "Isa.59.4",
+      "Isa.59.14",
+      "Jer.4.2",
+      "Jer.9.24",
+      "Hos.2.19",
+      "Hos.10.12",
+      "Zech.8.8"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.26.23",
+       "ref": "1 Samuel 26:23",
+       "text": "May the LORD repay every man for his righteousness and faithfulness. For the LORD delivered you into my hand today, but I would not extend my hand against the LORD's anointed.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.3.6",
+       "ref": "1 Kings 3:6",
+       "text": "Solomon replied, “You have shown much loving devotion to Your servant, my father David, because he walked before You in faithfulness, righteousness, and uprightness of heart. And You have maintained this loving devotion by giving him a son to sit on his throne this very day.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.15.2",
+       "ref": "Psalms 15:2",
+       "text": "He who walks with integrity and practices righteousness, who speaks the truth from his heart,",
+       "words": [
+        {
+         "key": "h6664",
+         "lemma": "צֶדֶק"
+        }
+       ]
+      },
+      {
+       "id": "Ps.33.5",
+       "ref": "Psalms 33:5",
+       "text": "The LORD loves righteousness and justice; the earth is full of His loving devotion.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness and peace",
+     "note": null,
+     "doors": [
+      {
+       "id": "peace",
+       "name": "peace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Ps.85.10",
+      "Isa.32.17",
+      "Jas.3.18",
+      "Rom.14.17",
+      "Ps.35.27",
+      "Ps.72.3",
+      "Isa.9.7",
+      "Isa.48.18",
+      "Isa.60.17",
+      "2Tim.2.22",
+      "Heb.7.2"
+     ],
+     "eg": [
+      {
+       "id": "Ps.85.10",
+       "ref": "Psalms 85:10",
+       "text": "Loving devotion and faithfulness have joined together; righteousness and peace have kissed.",
+       "words": [
+        {
+         "key": "h6664",
+         "lemma": "צֶדֶק"
+        }
+       ]
+      },
+      {
+       "id": "Isa.32.17",
+       "ref": "Isaiah 32:17",
+       "text": "The work of righteousness will be peace; the service of righteousness will be quiet confidence forever.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Jas.3.18",
+       "ref": "James 3:18",
+       "text": "Peacemakers who sow in peace reap the fruit of righteousness.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Rom.14.17",
+       "ref": "Romans 14:17",
+       "text": "For the kingdom of God is not a matter of eating and drinking, but of righteousness, peace, and joy in the Holy Spirit.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Righteousness, deliverance and life",
+     "note": null,
+     "doors": [],
+     "n": 16,
+     "verses": [
+      "Prov.11.4",
+      "Prov.12.28",
+      "Ezek.14.14",
+      "Rom.5.17",
+      "Ps.51.14",
+      "Ps.71.2",
+      "Prov.10.2",
+      "Prov.11.6",
+      "Prov.11.19",
+      "Prov.21.21",
+      "Jer.22.3",
+      "Ezek.14.20",
+      "Ezek.33.12",
+      "Rom.5.18",
+      "Rom.5.21",
+      "Rom.8.10"
+     ],
+     "eg": [
+      {
+       "id": "Prov.11.4",
+       "ref": "Proverbs 11:4",
+       "text": "Riches are worthless in the day of wrath, but righteousness brings deliverance from death.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.12.28",
+       "ref": "Proverbs 12:28",
+       "text": "There is life in the path of righteousness, but another path leads to death.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.14.14",
+       "ref": "Ezekiel 14:14",
+       "text": "then even if these three men-Noah, Daniel, and Job-were in it, their righteousness could deliver only themselves, declares the Lord GOD.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.17",
+       "ref": "Romans 5:17",
+       "text": "For if, by the trespass of the one man, death reigned through that one man, how much more will those who receive the abundance of grace and of the gift of righteousness reign in life through the one man, Jesus Christ!",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The way of righteousness",
+     "note": null,
+     "doors": [],
+     "n": 6,
+     "verses": [
+      "Ps.23.3",
+      "Matt.21.32",
+      "2Pet.2.21",
+      "Prov.8.20",
+      "Prov.12.28",
+      "Prov.16.31"
+     ],
+     "eg": [
+      {
+       "id": "Ps.23.3",
+       "ref": "Psalms 23:3",
+       "text": "He restores my soul; He guides me in the paths of righteousness for the sake of His name.",
+       "words": [
+        {
+         "key": "h6664",
+         "lemma": "צֶדֶק"
+        }
+       ]
+      },
+      {
+       "id": "Matt.21.32",
+       "ref": "Matthew 21:32",
+       "text": "For John came to you in the way of righteousness, and you did not believe him, but the tax collectors and prostitutes did. And even after you saw this, you did not repent and believe him.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "2Pet.2.21",
+       "ref": "2 Peter 2:21",
+       "text": "It would have been better for them not to have known the way of righteousness than to have known it and then to turn away from the holy commandment passed on to them.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Prov.8.20",
+       "ref": "Proverbs 8:20",
+       "text": "I walk in the way of righteousness, along the paths of justice,",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Clothed in righteousness",
+     "note": null,
+     "doors": [],
+     "n": 6,
+     "verses": [
+      "Job.29.14",
+      "Eph.4.24",
+      "Isa.59.17",
+      "Isa.61.10",
+      "Eph.6.14",
+      "Rev.19.8"
+     ],
+     "eg": [
+      {
+       "id": "Job.29.14",
+       "ref": "Job 29:14",
+       "text": "I put on righteousness, and it clothed me; justice was my robe and my turban.",
+       "words": [
+        {
+         "key": "h6664",
+         "lemma": "צֶדֶק"
+        }
+       ]
+      },
+      {
+       "id": "Eph.4.24",
+       "ref": "Ephesians 4:24",
+       "text": "and to put on the new self, created to be like God in true righteousness and holiness.",
+       "words": [
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "Isa.59.17",
+       "ref": "Isaiah 59:17",
+       "text": "He put on righteousness like a breastplate, and the helmet of salvation on His head; He put on garments of vengeance and wrapped Himself in a cloak of zeal.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.61.10",
+       "ref": "Isaiah 61:10",
+       "text": "I will rejoice greatly in the LORD, my soul will exult in my God; for He has clothed me with garments of salvation and wrapped me in a robe of righteousness, as a bridegroom wears a priestly headdress, as a bride adorns herself with her jewels.",
+       "words": [
+        {
+         "key": "h6666",
+         "lemma": "צְדָקָה"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 110,
+    "verses": [
+     "1Cor.1.30",
+     "1Kgs.8.32",
+     "2Chr.6.23",
+     "2Cor.11.15",
+     "2Cor.3.9",
+     "2Cor.6.7",
+     "2Cor.9.10",
+     "2Cor.9.9",
+     "2Pet.2.5",
+     "2Pet.3.13",
+     "2Sam.19.28",
+     "2Sam.22.21",
+     "2Tim.3.16",
+     "Acts.13.10",
+     "Dan.9.18",
+     "Dan.9.7",
+     "Deut.1.16",
+     "Deut.24.13",
+     "Deut.33.19",
+     "Deut.9.6",
+     "Eccl.7.15",
+     "Eph.5.9",
+     "Ezek.18.26",
+     "Ezek.33.13",
+     "Ezek.33.18",
+     "Heb.12.11",
+     "Heb.5.13",
+     "Isa.1.26",
+     "Isa.10.22",
+     "Isa.11.4",
+     "Isa.26.10",
+     "Isa.33.15",
+     "Isa.41.10",
+     "Isa.41.2",
+     "Isa.42.6",
+     "Isa.45.13",
+     "Isa.45.23",
+     "Isa.45.24",
+     "Isa.45.8",
+     "Isa.46.12",
+     "Isa.5.23",
+     "Isa.51.5",
+     "Isa.54.14",
+     "Isa.57.12",
+     "Isa.58.8",
+     "Isa.61.11",
+     "Isa.61.3",
+     "Isa.62.2",
+     "Jer.11.20",
+     "Jer.31.23",
+     "Jer.51.10",
+     "Job.27.6",
+     "Job.33.26",
+     "Job.36.3",
+     "Job.6.29",
+     "Job.8.6",
+     "Joel.2.23",
+     "John.16.10",
+     "Luke.1.75",
+     "Mal.3.3",
+     "Mal.4.2",
+     "Matt.3.15",
+     "Matt.5.20",
+     "Neh.2.20",
+     "Phil.1.11",
+     "Prov.16.13",
+     "Prov.31.9",
+     "Prov.8.15",
+     "Prov.8.16",
+     "Prov.8.18",
+     "Prov.8.8",
+     "Ps.11.7",
+     "Ps.111.3",
+     "Ps.112.3",
+     "Ps.112.9",
+     "Ps.118.19",
+     "Ps.119.40",
+     "Ps.132.9",
+     "Ps.143.11",
+     "Ps.145.7",
+     "Ps.17.1",
+     "Ps.17.15",
+     "Ps.18.20",
+     "Ps.22.31",
+     "Ps.24.5",
+     "Ps.31.1",
+     "Ps.35.24",
+     "Ps.35.28",
+     "Ps.4.5",
+     "Ps.40.9",
+     "Ps.48.10",
+     "Ps.5.8",
+     "Ps.50.6",
+     "Ps.51.19",
+     "Ps.58.1",
+     "Ps.65.5",
+     "Ps.7.17",
+     "Ps.7.8",
+     "Ps.71.16",
+     "Ps.71.19",
+     "Ps.71.24",
+     "Ps.85.13",
+     "Ps.88.12",
+     "Ps.89.16",
+     "Ps.9.8",
+     "Ps.97.6",
+     "Ps.98.9",
+     "Rev.15.4",
+     "Rom.4.25",
+     "Titus.3.5"
+    ]
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 269,
+   "rows": [
+    {
+     "label": "The LORD is righteous",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Exod.9.27",
+      "John.17.25",
+      "Rev.16.5",
+      "Deut.32.4",
+      "2Chr.12.6",
+      "Ezra.9.15",
+      "Neh.9.8",
+      "Ps.7.11",
+      "Ps.11.7",
+      "Ps.116.5",
+      "Ps.119.137",
+      "Ps.129.4",
+      "Ps.145.17",
+      "Lam.1.18",
+      "Dan.9.14",
+      "Zeph.3.5"
+     ],
+     "eg": [
+      {
+       "id": "Exod.9.27",
+       "ref": "Exodus 9:27",
+       "text": "Then Pharaoh summoned Moses and Aaron. “This time I have sinned,” he said. “The LORD is righteous, and I and my people are wicked.",
+       "words": [
+        {
+         "key": "h6662",
+         "lemma": "צַדִּיק"
+        }
+       ]
+      },
+      {
+       "id": "John.17.25",
+       "ref": "John 17:25",
+       "text": "Righteous Father, although the world has not known You, I know You, and they know that You sent Me.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "Rev.16.5",
+       "ref": "Revelation 16:5",
+       "text": "And I heard the angel of the waters say: “Righteous are You, O Holy One, who is and was, because You have brought these judgments.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "Deut.32.4",
+       "ref": "Deuteronomy 32:4",
+       "text": "He is the Rock, His work is perfect; all His ways are just. A God of faithfulness without injustice, righteous and upright is He.",
+       "words": [
+        {
+         "key": "h6662",
+         "lemma": "צַדִּיק"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus called righteous",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Acts.3.14",
+      "Acts.7.52",
+      "Acts.22.14",
+      "1John.2.1",
+      "Matt.27.19",
+      "Luke.23.47",
+      "1Pet.3.18"
+     ],
+     "eg": [
+      {
+       "id": "Acts.3.14",
+       "ref": "Acts 3:14",
+       "text": "You rejected the Holy and Righteous One and asked that a murderer be released to you.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "Acts.7.52",
+       "ref": "Acts 7:52",
+       "text": "Which of the prophets did your fathers fail to persecute? They even killed those who foretold the coming of the Righteous One. And now you are His betrayers and murderers-",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "Acts.22.14",
+       "ref": "Acts 22:14",
+       "text": "Then he said, ‘The God of our fathers has appointed you to know His will and to see the Righteous One and to hear His voice.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "1John.2.1",
+       "ref": "1 John 2:1",
+       "text": "My little children, I am writing these things to you so that you will not sin. But if anyone does sin, we have an advocate before the Father-Jesus Christ, the Righteous One.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“He is righteous”",
+     "note": "The text says “He”; readers take it of the Father or of Christ, and the page does not choose.",
+     "doors": [],
+     "n": 3,
+     "verses": [
+      "1John.1.9",
+      "1John.2.29",
+      "1John.3.7"
+     ],
+     "eg": [
+      {
+       "id": "1John.1.9",
+       "ref": "1 John 1:9",
+       "text": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "1John.2.29",
+       "ref": "1 John 2:29",
+       "text": "If you know that He is righteous, you also know that everyone who practices righteousness has been born of Him.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        },
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      },
+      {
+       "id": "1John.3.7",
+       "ref": "1 John 3:7",
+       "text": "Little children, let no one deceive you: The one who practices righteousness is righteous, just as Christ is righteous.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        },
+        {
+         "key": "g1343",
+         "lemma": "δικαιοσύνη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Made righteous",
+     "note": "The Greek verb is καθίστημι, 'set down as, appointed'; readers part on whether this is declared or imparted, and the page takes no side.",
+     "doors": [],
+     "n": 1,
+     "verses": [
+      "Rom.5.19"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.19",
+       "ref": "Romans 5:19",
+       "text": "For just as through the disobedience of the one man the many were made sinners, so also through the obedience of the one man the many will be made righteous.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The righteous and the wicked, the unrighteous, sinners",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_righteous",
+       "name": "the righteous",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_wicked",
+       "name": "the wicked",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 90,
+     "verses": [
+      "Gen.18.23",
+      "Ps.1.6",
+      "Matt.5.45",
+      "Acts.24.15",
+      "Rom.5.19",
+      "Gen.18.25",
+      "Exod.9.27",
+      "Exod.23.7",
+      "Deut.25.1",
+      "2Sam.4.11",
+      "1Kgs.8.32",
+      "2Chr.6.23",
+      "Ps.1.5",
+      "Ps.7.9",
+      "Ps.11.5",
+      "Ps.34.21",
+      "Ps.37.12",
+      "Ps.37.16",
+      "Ps.37.17",
+      "Ps.37.21",
+      "Ps.37.32",
+      "Ps.58.10",
+      "Ps.75.10",
+      "Ps.129.4",
+      "Prov.3.33",
+      "Prov.10.3",
+      "Prov.10.6",
+      "Prov.10.7",
+      "Prov.10.11",
+      "Prov.10.16",
+      "Prov.10.20",
+      "Prov.10.24",
+      "Prov.10.25",
+      "Prov.10.28",
+      "Prov.10.30",
+      "Prov.10.32",
+      "Prov.11.8",
+      "Prov.11.10",
+      "Prov.11.23",
+      "Prov.11.31",
+      "Prov.12.5",
+      "Prov.12.7",
+      "Prov.12.10",
+      "Prov.12.12",
+      "Prov.12.21",
+      "Prov.12.26",
+      "Prov.13.5",
+      "Prov.13.9",
+      "Prov.13.25",
+      "Prov.14.19",
+      "Prov.14.32",
+      "Prov.15.6",
+      "Prov.15.28",
+      "Prov.15.29",
+      "Prov.17.15",
+      "Prov.18.5",
+      "Prov.21.12",
+      "Prov.21.18",
+      "Prov.24.15",
+      "Prov.24.16",
+      "Prov.24.24",
+      "Prov.25.26",
+      "Prov.28.1",
+      "Prov.28.12",
+      "Prov.28.28",
+      "Prov.29.2",
+      "Prov.29.7",
+      "Prov.29.16",
+      "Prov.29.27",
+      "Eccl.3.17",
+      "Eccl.7.15",
+      "Eccl.8.14",
+      "Eccl.9.2",
+      "Isa.5.23",
+      "Jer.12.1",
+      "Ezek.13.22",
+      "Ezek.18.20",
+      "Ezek.18.24",
+      "Ezek.21.3",
+      "Ezek.21.4",
+      "Ezek.33.12",
+      "Hab.1.4",
+      "Hab.1.13",
+      "Matt.9.13",
+      "Mark.2.17",
+      "Luke.5.32",
+      "Luke.15.7",
+      "1Tim.1.9",
+      "1Pet.3.18",
+      "1Pet.4.18"
+     ],
+     "eg": [
+      {
+       "id": "Gen.18.23",
+       "ref": "Genesis 18:23",
+       "text": "Abraham stepped forward and said, “Will You really sweep away the righteous with the wicked?",
+       "words": [
+        {
+         "key": "h6662",
+         "lemma": "צַדִּיק"
+        }
+       ]
+      },
+      {
+       "id": "Ps.1.6",
+       "ref": "Psalms 1:6",
+       "text": "For the LORD guards the path of the righteous, but the way of the wicked will perish.",
+       "words": [
+        {
+         "key": "h6662",
+         "lemma": "צַדִּיק"
+        }
+       ]
+      },
+      {
+       "id": "Matt.5.45",
+       "ref": "Matthew 5:45",
+       "text": "that you may be sons of your Father in heaven. He causes His sun to rise on the evil and the good, and sends rain on the righteous and the unrighteous.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "Acts.24.15",
+       "ref": "Acts 24:15",
+       "text": "and I have the same hope in God that they themselves cherish, that there will be a resurrection of both the righteous and the wicked.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Who else is called righteous, and who is not",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_righteous",
+       "name": "the righteous",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 156,
+     "verses": [
+      "Gen.6.9",
+      "Luke.1.6",
+      "Acts.10.22",
+      "Rom.3.10",
+      "Matt.1.19",
+      "Rom.1.17",
+      "Gen.7.1",
+      "Gen.18.24",
+      "Gen.18.26",
+      "Gen.18.28",
+      "Gen.20.4",
+      "Exod.23.8",
+      "Deut.4.8",
+      "Deut.16.19",
+      "1Sam.24.17",
+      "2Sam.23.3",
+      "1Kgs.2.32",
+      "2Kgs.10.9",
+      "Neh.9.33",
+      "Job.12.4",
+      "Job.17.9",
+      "Job.22.19",
+      "Job.27.17",
+      "Job.32.1",
+      "Job.34.17",
+      "Job.36.7",
+      "Ps.5.12",
+      "Ps.11.3",
+      "Ps.14.5",
+      "Ps.31.18",
+      "Ps.32.11",
+      "Ps.33.1",
+      "Ps.34.15",
+      "Ps.34.19",
+      "Ps.37.25",
+      "Ps.37.29",
+      "Ps.37.30",
+      "Ps.37.39",
+      "Ps.52.6",
+      "Ps.55.22",
+      "Ps.58.11",
+      "Ps.64.10",
+      "Ps.68.3",
+      "Ps.69.28",
+      "Ps.72.7",
+      "Ps.92.12",
+      "Ps.94.21",
+      "Ps.97.11",
+      "Ps.97.12",
+      "Ps.112.4",
+      "Ps.112.6",
+      "Ps.118.15",
+      "Ps.118.20",
+      "Ps.125.3",
+      "Ps.140.13",
+      "Ps.141.5",
+      "Ps.142.7",
+      "Ps.146.8",
+      "Prov.2.20",
+      "Prov.4.18",
+      "Prov.9.9",
+      "Prov.10.21",
+      "Prov.10.31",
+      "Prov.11.9",
+      "Prov.11.21",
+      "Prov.11.28",
+      "Prov.11.30",
+      "Prov.12.3",
+      "Prov.12.13",
+      "Prov.13.21",
+      "Prov.13.22",
+      "Prov.17.26",
+      "Prov.18.10",
+      "Prov.18.17",
+      "Prov.20.7",
+      "Prov.21.15",
+      "Prov.21.26",
+      "Prov.23.24",
+      "Prov.29.6",
+      "Eccl.7.16",
+      "Eccl.7.20",
+      "Eccl.9.1",
+      "Isa.3.10",
+      "Isa.24.16",
+      "Isa.26.2",
+      "Isa.26.7",
+      "Isa.29.21",
+      "Isa.41.26",
+      "Isa.45.21",
+      "Isa.53.11",
+      "Isa.57.1",
+      "Isa.60.21",
+      "Jer.20.12",
+      "Jer.23.5",
+      "Lam.4.13",
+      "Ezek.3.20",
+      "Ezek.3.21",
+      "Ezek.18.5",
+      "Ezek.18.9",
+      "Ezek.18.26",
+      "Ezek.23.45",
+      "Ezek.33.13",
+      "Ezek.33.18",
+      "Hos.14.9",
+      "Amos.2.6",
+      "Amos.5.12",
+      "Hab.2.4",
+      "Zech.9.9",
+      "Matt.10.41",
+      "Matt.13.17",
+      "Matt.13.43",
+      "Matt.13.49",
+      "Matt.20.4",
+      "Matt.23.28",
+      "Matt.23.29",
+      "Matt.23.35",
+      "Matt.25.37",
+      "Matt.25.46",
+      "Mark.6.20",
+      "Luke.1.17",
+      "Luke.2.25",
+      "Luke.12.57",
+      "Luke.14.14",
+      "Luke.18.9",
+      "Luke.20.20",
+      "Luke.23.50",
+      "John.5.30",
+      "John.7.24",
+      "Acts.4.19",
+      "Rom.2.13",
+      "Rom.3.26",
+      "Rom.5.7",
+      "Rom.7.12",
+      "Gal.3.11",
+      "Eph.6.1",
+      "Phil.1.7",
+      "Phil.4.8",
+      "Col.4.1",
+      "2Thess.1.5",
+      "2Thess.1.6",
+      "2Tim.4.8",
+      "Titus.1.8",
+      "Heb.10.38",
+      "Heb.11.4",
+      "Heb.12.23",
+      "Jas.5.6",
+      "Jas.5.16",
+      "1Pet.3.12",
+      "2Pet.1.13",
+      "2Pet.2.7",
+      "2Pet.2.8",
+      "1John.3.12",
+      "Rev.15.3",
+      "Rev.16.7",
+      "Rev.19.2",
+      "Rev.22.11"
+     ],
+     "eg": [
+      {
+       "id": "Gen.6.9",
+       "ref": "Genesis 6:9",
+       "text": "This is the account of Noah. Noah was a righteous man, blameless in his generation; Noah walked with God.",
+       "words": [
+        {
+         "key": "h6662",
+         "lemma": "צַדִּיק"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.6",
+       "ref": "Luke 1:6",
+       "text": "Both of them were righteous in the sight of God, walking blamelessly in all the commandments and decrees of the Lord.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "Acts.10.22",
+       "ref": "Acts 10:22",
+       "text": "“Cornelius the centurion has sent us,” they said. “He is a righteous and God-fearing man with a good reputation among the whole Jewish nation. A holy angel instructed him to request your presence in his home so he could hear a message from you.”",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.10",
+       "ref": "Romans 3:10",
+       "text": "As it is written: “There is no one righteous, not even one.",
+       "words": [
+        {
+         "key": "g1342",
+         "lemma": "δίκαιος"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 72,
+   "rows": [
+    {
+     "label": "Justified, and faith",
+     "note": "Set side by side with the row below, as the text has them; a verse that names both stands in both. Where Christian traditions part on how one is justified, the page takes no side.",
+     "doors": [
+      {
+       "id": "justification",
+       "name": "justification",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Rom.5.1",
+      "Rom.3.28",
+      "Gal.2.16",
+      "Jas.2.24",
+      "Acts.13.39",
+      "Rom.3.26",
+      "Rom.3.30",
+      "Rom.4.5",
+      "Gal.3.8",
+      "Gal.3.11",
+      "Gal.3.24"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.1",
+       "ref": "Romans 5:1",
+       "text": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ,",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.28",
+       "ref": "Romans 3:28",
+       "text": "For we maintain that a man is justified by faith apart from works of the law.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.16",
+       "ref": "Galatians 2:16",
+       "text": "know that a man is not justified by works of the law, but by faith in Jesus Christ. So we, too, have believed in Christ Jesus, that we may be justified by faith in Christ and not by works of the law, because by works of the law no one will be justified.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.24",
+       "ref": "James 2:24",
+       "text": "As you can see, a man is justified by his deeds and not by faith alone.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Justified, and works",
+     "note": null,
+     "doors": [
+      {
+       "id": "justification",
+       "name": "justification",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Jas.2.24",
+      "Rom.3.28",
+      "Jas.2.21",
+      "Rom.4.2",
+      "Rom.3.20",
+      "Gal.2.16",
+      "Jas.2.25"
+     ],
+     "eg": [
+      {
+       "id": "Jas.2.24",
+       "ref": "James 2:24",
+       "text": "As you can see, a man is justified by his deeds and not by faith alone.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.28",
+       "ref": "Romans 3:28",
+       "text": "For we maintain that a man is justified by faith apart from works of the law.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.21",
+       "ref": "James 2:21",
+       "text": "Was not our father Abraham justified by what he did when he offered his son Isaac on the altar?",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.2",
+       "ref": "Romans 4:2",
+       "text": "If Abraham was indeed justified by works, he had something to boast about, but not before God.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: justified, in the right, vindicated",
+     "note": null,
+     "doors": [
+      {
+       "id": "justification",
+       "name": "justification",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 57,
+     "verses": [
+      "Rom.3.24",
+      "Rom.5.9",
+      "Rom.8.30",
+      "Titus.3.7",
+      "Gen.38.26",
+      "Matt.11.19",
+      "Rom.2.13",
+      "Gen.44.16",
+      "Exod.23.7",
+      "Deut.25.1",
+      "2Sam.15.4",
+      "1Kgs.8.32",
+      "2Chr.6.23",
+      "Job.4.17",
+      "Job.9.2",
+      "Job.9.15",
+      "Job.9.20",
+      "Job.10.15",
+      "Job.11.2",
+      "Job.13.18",
+      "Job.15.14",
+      "Job.22.3",
+      "Job.25.4",
+      "Job.27.5",
+      "Job.32.2",
+      "Job.33.12",
+      "Job.33.32",
+      "Job.34.5",
+      "Job.35.7",
+      "Job.40.8",
+      "Ps.19.9",
+      "Ps.51.4",
+      "Ps.82.3",
+      "Ps.143.2",
+      "Prov.17.15",
+      "Isa.5.23",
+      "Isa.43.9",
+      "Isa.43.26",
+      "Isa.45.25",
+      "Isa.50.8",
+      "Isa.53.11",
+      "Jer.3.11",
+      "Ezek.16.51",
+      "Ezek.16.52",
+      "Dan.12.3",
+      "Matt.12.37",
+      "Luke.7.29",
+      "Luke.7.35",
+      "Luke.10.29",
+      "Luke.16.15",
+      "Luke.18.14",
+      "Rom.3.4",
+      "1Cor.4.4",
+      "1Cor.6.11",
+      "Gal.2.17",
+      "Gal.5.4",
+      "1Tim.3.16"
+     ],
+     "eg": [
+      {
+       "id": "Rom.3.24",
+       "ref": "Romans 3:24",
+       "text": "and are justified freely by His grace through the redemption that is in Christ Jesus.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.9",
+       "ref": "Romans 5:9",
+       "text": "Therefore, since we have now been justified by His blood, how much more shall we be saved from wrath through Him!",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.30",
+       "ref": "Romans 8:30",
+       "text": "And those He predestined, He also called; those He called, He also justified; those He justified, He also glorified.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      },
+      {
+       "id": "Titus.3.7",
+       "ref": "Titus 3:7",
+       "text": "so that, having been justified by His grace, we would become heirs with the hope of eternal life.",
+       "words": [
+        {
+         "key": "g1344",
+         "lemma": "δικαιόω"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": null,
+  "words": []
+ }
+}

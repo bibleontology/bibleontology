@@ -1,0 +1,44 @@
+{
+ "ref": "Psa.23.6",
+ "referents": [
+  {
+   "slot": "w5",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'me' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "w9",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'my life' in the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  },
+  {
+   "slot": "cl1s",
+   "choice": "psalmist",
+   "divine": false,
+   "why": "first person singular 'I will dwell', the psalm's own voice",
+   "category": "psalm's own first person",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "the weqatal of cl1 carries a fused waw and continues the clause before it: 'goodness and mercy will follow ... and I will dwell'",
+   "category": "weqatal continues the line",
+   "votes": 3
+  }
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [],
+ "voted": 3
+}

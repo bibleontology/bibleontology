@@ -1,0 +1,41 @@
+{
+ "ref": "Mrk.15.6",
+ "referents": [
+  {
+   "slot": "w4",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w7",
+   "choice": "w6",
+   "divine": false
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Mrk.15.5#w9",
+   "divine": false
+  },
+  {
+   "slot": "cl1s",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

@@ -1,0 +1,370 @@
+{
+ "Job.38.1": [
+  {
+   "group": "turn",
+   "members": [
+    [
+     "addressee",
+     "w4"
+    ],
+    [
+     "frame",
+     "cl1"
+    ],
+    [
+     "sender",
+     "w2"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Job.38.4": [
+  {
+   "group": "turn",
+   "members": [
+    [
+     "addressee",
+     "w4"
+    ],
+    [
+     "frame",
+     "cl2"
+    ],
+    [
+     "part",
+     "cl3"
+    ],
+    [
+     "sender",
+     "w2"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Job.38.9": [
+  {
+   "group": "parallel",
+   "members": [
+    [
+     "group_subject",
+     "w2"
+    ],
+    [
+     "line",
+     "cl1"
+    ],
+    [
+     "line",
+     "cl2"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Mrk.15.15": [
+  {
+   "group": "acts",
+   "members": [
+    [
+     "agent_act",
+     "cl0"
+    ],
+    [
+     "agent_act",
+     "cl3"
+    ],
+    [
+     "group_subject",
+     "w2"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Mrk.15.2": [
+  {
+   "group": "turn",
+   "members": [
+    [
+     "addressee",
+     "w4"
+    ],
+    [
+     "frame",
+     "cl2"
+    ],
+    [
+     "part",
+     "cl3"
+    ],
+    [
+     "part",
+     "cl4"
+    ],
+    [
+     "sender",
+     "w18"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Mrk.15.4": [
+  {
+   "group": "turn",
+   "members": [
+    [
+     "addressee",
+     "w18"
+    ],
+    [
+     "frame",
+     "cl0"
+    ],
+    [
+     "part",
+     "cl1"
+    ],
+    [
+     "part",
+     "cl2"
+    ],
+    [
+     "part",
+     "cl3"
+    ],
+    [
+     "sender",
+     "w2"
+    ]
+   ],
+   "votes": 1
+  },
+  {
+   "group": "turn",
+   "members": [
+    [
+     "addressee",
+     "w18"
+    ],
+    [
+     "frame",
+     "cl1"
+    ],
+    [
+     "part",
+     "cl2"
+    ],
+    [
+     "part",
+     "cl3"
+    ],
+    [
+     "sender",
+     "w2"
+    ]
+   ],
+   "votes": 1
+  },
+  {
+   "group": "turn",
+   "members": [
+    [
+     "addressee",
+     "w18"
+    ],
+    [
+     "frame",
+     "cl0"
+    ],
+    [
+     "part",
+     "cl2"
+    ],
+    [
+     "part",
+     "cl3"
+    ],
+    [
+     "sender",
+     "w2"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Pro.10.1": [
+  {
+   "group": "writing",
+   "members": [
+    [
+     "frame",
+     "cl0"
+    ],
+    [
+     "part",
+     "cl1"
+    ],
+    [
+     "part",
+     "cl2"
+    ],
+    [
+     "sender",
+     "w1"
+    ]
+   ],
+   "votes": 1
+  },
+  {
+   "group": "writing",
+   "members": [
+    [
+     "frame",
+     "cl0"
+    ],
+    [
+     "sender",
+     "w1"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Rom.3.4": [
+  {
+   "group": "turn",
+   "members": [
+    [
+     "addressee",
+     "w5"
+    ],
+    [
+     "frame",
+     "cl3"
+    ],
+    [
+     "part",
+     "cl4"
+    ],
+    [
+     "part",
+     "cl5"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Rom.3.6": [
+  {
+   "group": "imperative",
+   "members": [
+    [
+     "basis",
+     "cl1"
+    ],
+    [
+     "command",
+     "cl0"
+    ]
+   ],
+   "votes": 1
+  }
+ ],
+ "Rom.3.8": [
+  {
+   "group": "turn",
+   "members": [
+    [
+     "frame",
+     "cl1"
+    ],
+    [
+     "part",
+     "cl2"
+    ],
+    [
+     "part",
+     "g1"
+    ]
+   ],
+   "votes": 1
+  },
+  {
+   "group": "turn",
+   "members": [
+    [
+     "frame",
+     "cl2"
+    ],
+    [
+     "part",
+     "cl3"
+    ],
+    [
+     "part",
+     "cl4"
+    ]
+   ],
+   "votes": 1
+  },
+  {
+   "group": "turn",
+   "members": [
+    [
+     "frame",
+     "cl1"
+    ],
+    [
+     "part",
+     "cl2"
+    ]
+   ],
+   "votes": 1
+  },
+  {
+   "group": "imperative",
+   "members": [
+    [
+     "aim",
+     "cl4"
+    ],
+    [
+     "command",
+     "cl3"
+    ]
+   ],
+   "votes": 1
+  },
+  {
+   "group": "turn",
+   "members": [
+    [
+     "frame",
+     "cl1"
+    ],
+    [
+     "part",
+     "g1"
+    ]
+   ],
+   "votes": 1
+  },
+  {
+   "group": "turn",
+   "members": [
+    [
+     "frame",
+     "cl2"
+    ],
+    [
+     "part",
+     "cl3"
+    ]
+   ],
+   "votes": 1
+  }
+ ]
+}

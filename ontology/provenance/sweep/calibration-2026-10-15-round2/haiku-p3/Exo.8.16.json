@@ -1,0 +1,266 @@
+{
+ "ref": "Exo.8.16",
+ "referents": [
+  {
+   "slot": "w22",
+   "choice": "w13",
+   "divine": false,
+   "why": "'tell him': the one addressed by Moses's saying is Pharaoh (w13).",
+   "category": "object pronoun in commanded speech"
+  },
+  {
+   "slot": "w28",
+   "choice": "w25",
+   "divine": true,
+   "why": "'my people' is first person in the LORD's words, which Moses delivers; the speaker of those words is the LORD (w25).",
+   "category": "first person in a quoted divine speech"
+  },
+  {
+   "slot": "w31",
+   "choice": "w25",
+   "divine": true,
+   "why": "'that they may serve me' is first person in the same quoted divine speech: the LORD.",
+   "category": "first person in a quoted divine speech"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "w4",
+   "divine": false,
+   "why": "Implied 'you' of 'rise early' is the one the LORD speaks to, Moses (w4).",
+   "category": "implied you in direct command"
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w4",
+   "divine": false,
+   "why": "Implied 'you' of 'present yourself' is Moses (w4).",
+   "category": "implied you in direct command"
+  },
+  {
+   "slot": "cl5s",
+   "choice": "w4",
+   "divine": false,
+   "why": "Second masculine singular weqatal 'you will say': Moses (w4), who is commanded to speak to Pharaoh.",
+   "category": "implied you in commanded speech"
+  },
+  {
+   "slot": "cl7s",
+   "choice": "w13",
+   "divine": false,
+   "why": "The imperative 'let my people go' is addressed to the one Moses speaks to, Pharaoh (w13).",
+   "category": "implied you inside quoted divine speech"
+  },
+  {
+   "slot": "cl8s",
+   "choice": "w27",
+   "divine": false,
+   "why": "Third masculine plural 'that they may serve me' refers to the people (w27), a collective singular noun that takes plural verbs in Hebrew.",
+   "category": "plural verb with collective noun"
+  }
+ ],
+ "links": [
+  {
+   "src": "cl3",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "Reversed and cross-verse: cl0 opens the verse as a wayyiqtol continuing from the previous verse, and across verses the link is the episode rung.",
+   "category": "verse-opening clause linked backwards"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Two imperatives of one person joined by waw: plain and.",
+   "category": "plain and between commands"
+  },
+  {
+   "src": "cl4",
+   "type": "then",
+   "dst": "cl5",
+   "action": "remove",
+   "why": "cl4 is the participle inside the temporal clause 'when Pharaoh goes out'. The weqatal 'you will say' continues the commands of cl2, not that clause.",
+   "category": "command continuation across a temporal clause"
+  },
+  {
+   "src": "cl2",
+   "type": "and",
+   "dst": "cl5",
+   "action": "add",
+   "why": "Second-person weqatal after imperatives, same person: plain and, one level of commands.",
+   "category": "plain and between commands"
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "imp1",
+   "action": "add",
+   "why": "The LORD's words to Moses are a collection of commands (rise, present, say): the content is the whole imperative group.",
+   "category": "speech content of a collection of commands"
+  },
+  {
+   "src": "cl5",
+   "type": "content",
+   "dst": "cl6",
+   "action": "add",
+   "why": "'You will say to him' introduces the message, the said clause 'thus says the LORD'.",
+   "category": "speech content, commanded speech"
+  },
+  {
+   "src": "cl6",
+   "type": "content",
+   "dst": "cl7",
+   "action": "add",
+   "why": "'Thus says the LORD' introduces the quoted command 'let my people go', the said clause.",
+   "category": "speech content, quoted divine speech"
+  },
+  {
+   "src": "cl7",
+   "type": "and",
+   "dst": "cl8",
+   "action": "remove",
+   "why": "A command joined to a change of person is so that, not a plain and.",
+   "category": "command joined to a change of person"
+  },
+  {
+   "src": "cl7",
+   "type": "purpose",
+   "dst": "cl8",
+   "action": "add",
+   "why": "Imperative then waw plus yiqtol in a different person: what the release is for.",
+   "category": "command with its purpose"
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "imp1"
+    },
+    {
+     "role": "part",
+     "node": "Exo.8.16#g1"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    },
+    {
+     "role": "addressee",
+     "node": "w4"
+    }
+   ],
+   "divine": true,
+   "why": "The LORD speaks to Moses. The commanded speech Moses is to give Pharaoh is nested as a part, and the commands to Moses are a part.",
+   "category": "nested speech"
+  },
+  {
+   "id": "imp1",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl1"
+    },
+    {
+     "role": "command",
+     "node": "cl2"
+    },
+    {
+     "role": "command",
+     "node": "cl5"
+    }
+   ],
+   "divine": false,
+   "why": "Rise early, present yourself, and you will say: commands joined by and at one level form one group. The builder's part was not a role of that kind.",
+   "category": "commands joined by and"
+  },
+  {
+   "id": "turn1",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl6"
+    },
+    {
+     "role": "part",
+     "node": "imp7"
+    },
+    {
+     "role": "sender",
+     "node": "w25"
+    },
+    {
+     "role": "addressee",
+     "node": "w13"
+    }
+   ],
+   "divine": true,
+   "why": "The innermost turn is the LORD's message, quoted by Moses: its sender is the LORD and its addressee Pharaoh (R2).",
+   "category": "innermost quoted turn"
+  },
+  {
+   "id": "imp7",
+   "kind": "imperative",
+   "action": "change",
+   "members": [
+    {
+     "role": "command",
+     "node": "cl7"
+    },
+    {
+     "role": "aim",
+     "node": "cl8"
+    }
+   ],
+   "divine": false,
+   "why": "Let my people go, so that they may serve me: one command with its aim. The builder's part was not a role of that kind.",
+   "category": "command with its aim"
+  },
+  {
+   "id": "Exo.8.16#g1",
+   "kind": "turn",
+   "action": "add",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl5"
+    },
+    {
+     "role": "part",
+     "node": "turn1"
+    },
+    {
+     "role": "sender",
+     "node": "w4"
+    },
+    {
+     "role": "addressee",
+     "node": "w13"
+    }
+   ],
+   "divine": false,
+   "why": "Moses is commanded to speak to Pharaoh, so the commanded turn is his, with the LORD's message as its part (R2 and nested speech).",
+   "category": "commanded turn"
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "cl3 and cl4 (hinneh 'there' plus a bare participle, 'when Pharaoh goes out to the water')",
+   "what": "A temporal clause setting the time of the command in cl2. No link type covers a when-clause that is neither a condition nor a nested role, so it is left unlinked."
+  }
+ ],
+ "cant_tell": []
+}

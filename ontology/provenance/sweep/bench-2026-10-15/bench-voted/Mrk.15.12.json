@@ -1,0 +1,134 @@
+{
+ "ref": "Mrk.15.12",
+ "referents": [
+  {
+   "slot": "w6",
+   "choice": "none",
+   "divine": false,
+   "why": "'to them' (autois), masculine plural, is the crowd Pilate asks; the crowd is not among the candidates",
+   "category": "addressee not offered as a candidate",
+   "votes": 3
+  },
+  {
+   "slot": "w8",
+   "choice": "none",
+   "divine": false,
+   "why": "'What' (ti), neuter interrogative object of 'shall I do': it names no referent, it is what the question asks",
+   "category": "interrogative word, not a referent",
+   "votes": 3
+  },
+  {
+   "slot": "w10",
+   "choice": "w13",
+   "divine": true,
+   "why": "'the One' (hon, whom) is the relative pronoun of 'you call ... King of the Jews'; its antecedent is the King (w13), the title of Jesus",
+   "category": "relative pronoun resolved to its antecedent",
+   "votes": 2
+  },
+  {
+   "slot": "cl2s",
+   "choice": "w2",
+   "divine": false,
+   "why": "'I' (poiēsō, shall I do), first singular in Pilate's question: Pilate is the speaker",
+   "category": "first person inside speech is the speaker",
+   "votes": 3
+  },
+  {
+   "slot": "cl3s",
+   "choice": "none",
+   "divine": false,
+   "why": "'you' (legete, you call), second plural in the relative clause: the crowd, Pilate's addressees; not a candidate",
+   "category": "addressee not offered as a candidate",
+   "votes": 3
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "keep",
+   "why": "the participle 'answering' is the manner of the finite 'was saying'",
+   "category": "participle of answer within finite verb",
+   "votes": 3
+  },
+  {
+   "src": "cl2",
+   "type": "within",
+   "dst": "cl3",
+   "action": "keep",
+   "why": "the relative clause 'you call' is nested in the question's noun phrase",
+   "category": "relative clause nested in noun phrase",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "keep",
+   "why": "Object clause of 'was saying': a question. Grammar nesting kept beside the content link.",
+   "category": "saying with its speech",
+   "votes": 2
+  },
+  {
+   "src": "cl0",
+   "type": "content",
+   "dst": "cl2",
+   "action": "add",
+   "why": "cl0 is the speech verb 'was saying to them'; cl2 is the question said (R1)",
+   "category": "speech content",
+   "votes": 3
+  },
+  {
+   "src": "cl0",
+   "type": "then",
+   "dst": "cl0",
+   "action": "remove",
+   "why": "self-link",
+   "category": "self-link",
+   "votes": 3
+  }
+ ],
+ "groups": [
+  {
+   "id": "turn0",
+   "kind": "turn",
+   "action": "change",
+   "members": [
+    {
+     "role": "frame",
+     "node": "cl0"
+    },
+    {
+     "role": "part",
+     "node": "cl2"
+    },
+    {
+     "role": "sender",
+     "node": "w2"
+    }
+   ],
+   "divine": false,
+   "why": "the part is the question cl2 alone: the answering participle cl1 is the manner of the frame, not what is said (R1); the addressee is removed because the crowd is not a candidate",
+   "category": "turn part is the said clause",
+   "votes": 3
+  }
+ ],
+ "none_fit": [
+  {
+   "where": "Mrk.15.12 candidates",
+   "what": "Jesus, the referent of 'the One' and of the implied object in this verse, is not offered as a candidate, and neither is the crowd addressed. Both are set to none."
+  }
+ ],
+ "cant_tell": [
+  {
+   "what": "the crowd as addressee (slots w6 and cl3s) and so the turn's addressee",
+   "why": "the crowd is named in Mrk.15.11 (w5) but is not offered as a candidate in this verse"
+  },
+  {
+   "what": "addressee of Pilate's question (w6, cl3s)",
+   "why": "The crowd is the plural addressee but is not in the candidate list."
+  }
+ ],
+ "voted": 3
+}

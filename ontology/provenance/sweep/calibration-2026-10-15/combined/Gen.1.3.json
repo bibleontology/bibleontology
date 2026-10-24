@@ -1,0 +1,25 @@
+{"ref": "Gen.1.3",
+ "referents": [],
+ "links": [
+  {"src": "cl2", "type": "then", "dst": "cl0", "action": "keep", "why": "cl2 is a wayyiqtol (fused waw) and continues the narrative line; the nearest clause before it that is not inside a speech is cl0, since cl1 is God's quoted speech.", "category": "narrative line skipping an embedded speech"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is the jussive inside the quoted speech and is not on the narrative line, so cl2 does not follow it as a next event; the relation between them is carried out, which is a fulfilment, not a sequence.", "category": "speech clause treated as narrative step"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "cl0 is the speech clause 'God said' and cl1 is what was said, embedded in the speaking.", "category": "speech and its content"},
+  {"src": "cl2", "type": "fulfils", "dst": "cl1", "action": "add", "why": "cl2 'and there was light' repeats the verb of the jussive 'let there be light' and reports that the word was carried out; the ken pro-form of the fulfilment rule is absent, so this is by repeated verb and the sense, and is flagged in none_fit.", "category": "fulfilment of an earlier command by repeated verb"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "keep",
+   "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "w2"}],
+   "divine": true, "why": "cl0 'God said' introduces the speech, cl1 is what is said, and the subject of the saying is God (w2). No addressee is named in the verse.", "category": "speech turn without a stated addressee"},
+  {"id": "imp1", "kind": "imperative", "action": "change",
+   "members": [{"role": "command", "node": "cl1"}],
+   "divine": false, "why": "cl1 is the command (jussive). 'part' is not a role of the imperative group, and cl2 is a wayyiqtol narrative report, not a waw plus third-person weqatal, so it is not the group's effect.", "category": "report of carrying out wrongly placed inside the command group"},
+  {"id": "g1", "kind": "action-state", "action": "add",
+   "members": [{"role": "action", "node": "cl1"}, {"role": "state", "node": "cl2"}],
+   "divine": false, "why": "A command (cl1) followed by the same act reported as having happened (cl2, 'there was light', repeating the verb).", "category": "command and the same act reported as done"}
+ ],
+ "none_fit": [
+  {"where": "cl2 fulfils cl1", "what": "The fulfilment rule asks for a pro-form (ken); this verse has none, only the repeated verb 'was', so the fulfils link rests on the repeated verb and the sense. A form for a report of carrying out by repeating the command's verb, without ken, is not among the link types."}
+ ],
+ "cant_tell": [
+  {"what": "The addressee of God's speech", "why": "The verse names no one God speaks to, so the turn has no addressee member."}
+ ]}

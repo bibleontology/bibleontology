@@ -1,0 +1,42 @@
+{
+ "ref": "Job.38.9",
+ "referents": [
+  {
+   "slot": "w2",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w5",
+   "choice": "none",
+   "divine": false
+  },
+  {
+   "slot": "w9",
+   "choice": "none",
+   "divine": false
+  }
+ ],
+ "links": [
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl1",
+   "action": "add"
+  },
+  {
+   "src": "cl0",
+   "type": "within",
+   "dst": "cl2",
+   "action": "add"
+  },
+  {
+   "src": "cl1",
+   "type": "and",
+   "dst": "cl2",
+   "action": "add"
+  }
+ ],
+ "groups": [],
+ "derived": []
+}

@@ -1,0 +1,32 @@
+{"ref": "Exo.8.16",
+ "referents": [
+  {"slot": "w22", "choice": "w13", "divine": false, "why": "The suffix 'to him' in cl5 (masc sg) is the Pharaoh Moses is sent to, the same Pharaoh named in cl2 'before Pharaoh' in this verse.", "category": "object pronoun in commanded speech"},
+  {"slot": "w28", "choice": "w25", "divine": true, "why": "'My people' is spoken inside the LORD's quoted message (turn1, sender LORD), so the first person refers to the speaker of that speech, the LORD (w25).", "category": "first person inside a quoted divine speech"},
+  {"slot": "w31", "choice": "w25", "divine": true, "why": "'Serve me' is in the same quoted message as cl7; the first person refers to its speaker, the LORD (w25).", "category": "first person inside a quoted divine speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "Imperative 2nd masc sg in the LORD's speech to Moses (turn0, addressee Moses); the implied you is the person the command is spoken to.", "category": "implied subject of a command to Moses"},
+  {"slot": "cl2s", "choice": "w4", "divine": false, "why": "Coordinated imperative 'and present yourself' in the same speech to Moses; the implied you is Moses.", "category": "implied subject of a command to Moses"},
+  {"slot": "cl5s", "choice": "w4", "divine": false, "why": "Weqatal 2nd masc sg 'and you will say to him' is a command within the LORD's speech to Moses; the implied you is Moses.", "category": "implied subject of a command to Moses"},
+  {"slot": "cl7s", "choice": "w13", "divine": false, "why": "The imperative 'let my people go' is spoken by the LORD, through Moses, to Pharaoh, the addressee of turn1; the implied you of that command is Pharaoh.", "category": "implied subject of a command inside a quoted message"},
+  {"slot": "cl8s", "choice": "w27", "divine": false, "why": "Third masc plural 'they may serve me' refers to the people. The noun 'people' (am) is a collective singular that takes plural agreement ad sensum, so the plural pronoun agrees with its sense rather than its form.", "category": "plural pronoun for a collective noun"}
+ ],
+ "links": [
+  {"src": "cl3", "type": "then", "dst": "cl0", "action": "remove", "why": "cl3 ('behold') is a clause inside the LORD's speech that cl0 frames. A wayyiqtol continues the narrative line only from outside a speech, and cl3 is not a wayyiqtol, so the form does not support 'and then' to cl0.", "category": "then linked across a speech frame"},
+  {"src": "cl1", "type": "and", "dst": "cl2", "action": "keep", "why": "Two commands joined by a separate waw ('and present yourself'). A plain and, neither cause nor result; both belong to one imperative group.", "category": "plain and joining commands"},
+  {"src": "cl4", "type": "then", "dst": "cl5", "action": "keep", "why": "cl5 is a weqatal, which continues whatever it follows. The telling comes after the setting of Pharaoh's going out, within the run of commands.", "category": "weqatal continues prior clause"},
+  {"src": "cl7", "type": "and", "dst": "cl8", "action": "remove", "why": "The waw joins a command (2nd sg imperative) to a change of person (3rd pl yiqtol). The rule makes that 'so that', not a plain and.", "category": "plain and read as purpose"},
+  {"src": "cl7", "type": "purpose", "dst": "cl8", "action": "add", "why": "A command followed by waw and a yiqtol in a different person: the people are to be let go so that they may serve the LORD.", "category": "purpose after a command"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl3"}, {"role": "part", "node": "cl4"}, {"role": "part", "node": "imp1"}, {"role": "part", "node": "turn1"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": true, "why": "The LORD's speech to Moses. Its commands are nested as imp1, and the commanded speech turn1 (what Moses is to say to Pharaoh) is a part of it, as the nesting rule requires. cl3 and cl4 are the setting inside the speech.", "category": "speech containing a command and a commanded speech"},
+  {"id": "imp1", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl1"}, {"role": "command", "node": "cl2"}, {"role": "command", "node": "cl5"}], "divine": false, "why": "Three commands to Moses joined by and at one level: rise early, present yourself, and tell him. cl5 was missing as a command. The when-clause cl3-cl4 has no imperative member role, so it stays a part of turn0.", "category": "commands joined by and at one level"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl6"}, {"role": "part", "node": "imp7"}, {"role": "sender", "node": "w25"}, {"role": "addressee", "node": "w13"}], "divine": true, "why": "The message 'thus says the LORD' from Moses to Pharaoh. Its command is imp7 and its addressee, Pharaoh, was not stated by the builder. The sender is kept as the LORD whose words are quoted; see cant_tell.", "category": "quoted message with addressee added"},
+  {"id": "imp7", "kind": "imperative", "action": "change", "members": [{"role": "command", "node": "cl7"}, {"role": "aim", "node": "cl8"}], "divine": false, "why": "The command 'let my people go' has the clause 'that they may serve me' as its aim, not as a part. A yiqtol in a different person after a command is purpose.", "category": "command with purpose as aim"}
+ ],
+ "none_fit": [
+  {"where": "cl3-cl4 ('behold, he is going out to the water') set against cl2 and cl5", "what": "A temporal setting ('when Pharaoh goes out') that qualifies the commands. The link types reach a condition only through a fronted ki, and the imperative group has no role for a setting, so the clauses stay plain parts of turn0 with no link."}
+ ],
+ "cant_tell": [
+  {"what": "The sender of the quoted message turn1: the LORD, whose words are quoted, or Moses, who speaks them to Pharaoh as commanded in cl5.", "why": "A messenger formula gives the originator, but the grouping schema does not say whether a relayed message's sender is the originator or the relayer. The LORD is kept, the builder's choice."},
+  {"what": "Whether cl5 'and you will say to him' is a command in imp1 or only a report of what Moses is to do.", "why": "A weqatal can read as a command or as a future. The run of commands makes command the better reading, but the form alone does not settle it."}
+ ]
+}

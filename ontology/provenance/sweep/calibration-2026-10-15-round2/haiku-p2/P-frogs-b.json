@@ -1,0 +1,136 @@
+{"passage": "P-frogs-b", "verses": [
+{"ref": "Exo.8.5",
+ "referents": [
+  {"slot": "w7", "choice": "w2", "divine": false, "why": "'me' in 'honor yourself over me' is Moses, the speaker of his own words to Pharaoh; a first person inside a speech is its speaker.", "category": "first person inside a speech"},
+  {"slot": "w12", "choice": "w4", "divine": false, "why": "'you' in 'I will pray for you' is second masculine singular inside Moses's speech; the addressee is Pharaoh.", "category": "second person inside a speech"},
+  {"slot": "w16", "choice": "w4", "divine": false, "why": "'your officials': second masculine singular possessor in Moses's speech, the addressee Pharaoh.", "category": "possessive in addressee's speech"},
+  {"slot": "w20", "choice": "w4", "divine": false, "why": "'your people': possessor is the addressee Pharaoh.", "category": "possessive in addressee's speech"},
+  {"slot": "w26", "choice": "w4", "divine": false, "why": "'from you': second masculine singular in Moses's speech, addressee Pharaoh.", "category": "second person inside a speech"},
+  {"slot": "w30", "choice": "w4", "divine": false, "why": "'your houses': possessor is the addressee Pharaoh.", "category": "possessive in addressee's speech"},
+  {"slot": "cl1s", "choice": "w4", "divine": false, "why": "the implied 'you' of the command 'honor yourself' is the person the command is spoken to, Pharaoh.", "category": "implied subject of a command"},
+  {"slot": "cl2s", "choice": "w2", "divine": false, "why": "'I will pray' is first person common singular in Moses's speech.", "category": "first person inside a speech"},
+  {"slot": "cl4s", "choice": "w24", "divine": false, "why": "third feminine plural 'they will remain only in the Nile' agrees with the frogs (feminine plural) that are being removed.", "category": "feminine plural referent"}
+ ],
+ "links": [
+  {"src": "cl2", "type": "purpose", "dst": "cl3", "action": "remove", "why": "The lamed infinitive 'to cut off the frogs' gives what the prayer asks for. After a verb of speaking (pray) the infinitive is what is said, which the purpose rule excludes; it is recorded as content instead.", "category": "infinitive after a verb of speech"},
+  {"src": "cl2", "type": "content", "dst": "cl3", "action": "add", "why": "Pray is a clause of saying; the infinitive gives what is asked (R1). Also keeps the petition content inside the turn.", "category": "infinitive after a verb of speech"},
+  {"src": "cl5", "type": "then", "dst": "cl0", "action": "remove", "why": "cl5 is not a clause of this verse, and a then link is within a verse only (across verses is the episode rung).", "category": "dangling link across verses"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "Moses said; the imperative 'honor yourself over me' is the first said clause of his speech (R1).", "category": "saying with its speech"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "keep", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "part", "node": "cl2"}, {"role": "part", "node": "cl4"}, {"role": "sender", "node": "w2"}, {"role": "addressee", "node": "w4"}], "divine": false, "why": "Moses speaks to Pharaoh; the speech holds cl1, cl2 and the parenthetical cl4. Sender and addressee are correct (R2).", "category": "speech with a parenthetical"}
+ ],
+ "none_fit": [
+  {"where": "cl4, 'only in the River they will remain', inside Moses's question", "what": "a restriction on what the removal covers (the frogs removed except those that stay in the Nile). No link type carries an exception to a purpose clause: 'unless' is a condition, and 'but_rather' needs a negative clause with כִּי אִם."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Exo.8.6",
+ "referents": [
+  {"slot": "cl0s", "choice": "Exo.8.5#w4", "divine": false, "why": "'Tomorrow,' Pharaoh answered. A reply is spoken by the other party (R2); the speech before it is Moses's to Pharaoh.", "category": "speaker of a reply"},
+  {"slot": "w8", "choice": "Exo.8.5#w4", "divine": false, "why": "'according to your word' / 'as you say' is second masculine singular in Moses's reply; the addressee who spoke the word is Pharaoh.", "category": "second person inside a reply"},
+  {"slot": "w16", "choice": "none", "divine": false, "why": "'the LORD our God' is first person plural in Moses's speech: Moses with the Israelites. No candidate is that group; Moses and Aaron is not it, and 'people' is Pharaoh's people. The builder's choice (cl2s) is a clause, not a referent.", "category": "first person plural with no candidate group"},
+  {"slot": "cl2s", "choice": "Exo.8.5#w2", "divine": false, "why": "'he said' (wayyiqtol) after Pharaoh's answer is Moses replying.", "category": "speaker of a reply"},
+  {"slot": "cl4s", "choice": "Exo.8.5#w4", "divine": false, "why": "'you may know' is second person inside Moses's reply; the addressee is Pharaoh.", "category": "second person inside a speech"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "that", "dst": "cl5", "action": "keep", "why": "'you may know that there is not like the LORD': the clause is what is known, the object of know (dm, כִּי after a verb of knowing).", "category": "object of a verb of knowing"},
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "A then link runs forward from an earlier clause. cl0 is the verse's first clause, and cl4 sits inside Moses's speech, not on the narrative line.", "category": "then runs backward"},
+  {"src": "cl1", "type": "then", "dst": "cl2", "action": "remove", "why": "cl1 is inside Pharaoh's speech. A wayyiqtol continues from the nearest clause before it that is not inside a speech, which is cl0.", "category": "then from inside a speech"},
+  {"src": "cl0", "type": "then", "dst": "cl2", "action": "add", "why": "'and he said' (wayyiqtol) continues the narrative from the speaking frame cl0: Pharaoh answered, then Moses replied.", "category": "wayyiqtol continues the frame"},
+  {"src": "cl3", "type": "purpose", "dst": "cl4", "action": "keep", "why": "lemaan with yiqtol: 'so that you may know'. The agreement is for Pharaoh's knowing.", "category": "lemaan purpose"},
+  {"src": "cl0", "type": "content", "dst": "cl1", "action": "add", "why": "Pharaoh answered; the said clause is 'Tomorrow' (R1).", "category": "saying with its speech"},
+  {"src": "cl2", "type": "content", "dst": "cl3", "action": "add", "why": "Moses replied; the said clause is 'may it be according to your word' (R1).", "category": "saying with its speech"}
+ ],
+ "groups": [
+  {"id": "turn0", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl0"}, {"role": "part", "node": "cl1"}, {"role": "sender", "node": "Exo.8.5#w4"}, {"role": "addressee", "node": "Exo.8.5#w2"}], "divine": false, "why": "Pharaoh's answer, to Moses. The sender was a slot id; it is now the candidate, and the addressee is added (R2).", "category": "reply turn with addressee"},
+  {"id": "turn1", "kind": "turn", "action": "change", "members": [{"role": "frame", "node": "cl2"}, {"role": "part", "node": "cl3"}, {"role": "part", "node": "cl4"}, {"role": "sender", "node": "Exo.8.5#w2"}, {"role": "addressee", "node": "Exo.8.5#w4"}], "divine": false, "why": "Moses's reply, to Pharaoh. The sender was a slot id; it is now the candidate, and the addressee is added (R2).", "category": "reply turn with addressee"}
+ ],
+ "none_fit": [],
+ "cant_tell": []
+},
+{"ref": "Exo.8.7",
+ "referents": [
+  {"slot": "w5", "choice": "Exo.8.5#w4", "divine": false, "why": "'from you' is second masculine singular in what appears to be Moses's speech; the addressee is Pharaoh.", "category": "second person inside a speech"},
+  {"slot": "w9", "choice": "Exo.8.5#w4", "divine": false, "why": "'your houses': possessor is the addressee Pharaoh.", "category": "possessive in addressee's speech"},
+  {"slot": "w13", "choice": "Exo.8.5#w4", "divine": false, "why": "'your officials': possessor is the addressee Pharaoh.", "category": "possessive in addressee's speech"},
+  {"slot": "w17", "choice": "Exo.8.5#w4", "divine": false, "why": "'your people': possessor is the addressee Pharaoh.", "category": "possessive in addressee's speech"},
+  {"slot": "cl1s", "choice": "w3", "divine": false, "why": "third feminine plural 'they will remain only in the Nile' agrees with the frogs, the subject of cl0.", "category": "feminine plural referent"}
+ ],
+ "links": [
+  {"src": "cl4", "type": "then", "dst": "cl0", "action": "remove", "why": "cl4 is not a clause of this verse (it is the parenthetical of the verse before), and a then link is within a verse only.", "category": "dangling link across verses"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0 'the frogs will depart' and cl1 'only in the Nile they will remain'", "what": "a restriction on a general outcome (רַק, 'only'). There is no 'but' word, and no link type for a restriction on an outcome."}
+ ],
+ "cant_tell": [
+  {"what": "whether this verse is still Moses's speech from the verse before, or a new speaker", "why": "The Berean closes the quotation here. The Hebrew has no speaker marking and the verse has no frame clause of its own, so the sender of cl0 and cl1 is not settled by this verse."}
+ ]
+},
+{"ref": "Exo.8.8",
+ "referents": [
+  {"slot": "cl2s", "choice": "w12", "divine": true, "why": "'which he had appointed for Pharaoh' (qatal, third masculine singular) names the one who sent the frogs against Pharaoh: the LORD (Exo.8.1 commands the frogs; the plague is His). Moses and Pharaoh are the other masculine singular candidates, and neither sent the plague.", "category": "relative clause subject is God"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "keep", "why": "wayyiqtol: after Moses and Aaron left Pharaoh, Moses cried out. The sequence is on the verse's narrative line.", "category": "wayyiqtol sequence"},
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "Reverses the order: cl0 (they left) comes first in the text, and the then link runs forward from it.", "category": "then runs backward"},
+  {"src": "cl1", "type": "within", "dst": "cl2", "action": "add", "why": "'the frogs which he had appointed for Pharaoh' is a relative clause inside the noun phrase that is the object of cried out. The link reads: cl2 sits inside cl1.", "category": "relative clause inside noun phrase"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "whether Moses's crying out carries out Pharaoh's imperative 'pray to the LORD' (Exo.8.4 cl2) as a fulfilment", "why": "fulfils needs a pro-form report (asah + ken) with no named subject. The verse gives the prayer in plain words, so it is a reading for review and is not recorded as a link."}
+ ]
+},
+{"ref": "Exo.8.9",
+ "referents": [],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "remove", "why": "The LORD's act brings about the frogs' death. R4 gives an act and then what it brings about as result, not as then.", "category": "plain then read as result"},
+  {"src": "cl0", "type": "result", "dst": "cl1", "action": "add", "why": "The frogs' death is what the LORD's act brought about: an act done, then what the thing becomes (R4).", "category": "act then its outcome"},
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "Reverses the order: cl0 is the act, cl1 is its outcome.", "category": "then runs backward"},
+  {"src": "Exo.8.8#cl1", "type": "result", "dst": "cl0", "action": "add", "why": "Moses cried out to the LORD (Exo.8.8); the LORD then did as he asked. An act and what it brought about, across verses (R4).", "category": "prayer and its outcome across verses"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "cl0, 'the LORD did as Moses requested (according to the word of Moses)'", "what": "a fulfilment of a spoken request with a named subject. 'fulfils' needs a pro-form report with no named subject, and 'as' needs a clause, not a noun phrase (דְּבַר)."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Exo.8.10",
+ "referents": [
+  {"slot": "w3", "choice": "none", "divine": false, "why": "'them' (third masculine plural) is the dead frogs of Exo.8.9. The frogs are not among the candidates; the heaps are what they were piled into, not what was piled.", "category": "object is an earlier thing not offered as a candidate"},
+  {"slot": "cl0s", "choice": "none", "divine": false, "why": "The piling is done by the people of Egypt, who are not named. No candidate is a group of doers; the masculine plural candidates (heaps, houses) cannot pile.", "category": "implied subject is an unnamed people"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "then", "dst": "cl1", "action": "remove", "why": "The stench is what the piled dead frogs bring about. R4 gives an act and then what it becomes as result, not as then.", "category": "plain then read as result"},
+  {"src": "cl0", "type": "result", "dst": "cl1", "action": "add", "why": "The stench is the outcome of the piling of the dead frogs: an act, then what it brings about.", "category": "act then its outcome"},
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "Reverses the order: cl0 comes first in the text.", "category": "then runs backward"}
+ ],
+ "groups": [],
+ "none_fit": [
+  {"where": "candidates for slot w3", "what": "earlier non-person nouns (the frogs of Exo.8.9) are not offered as candidates, so a pronoun for them has no candidate to choose."}
+ ],
+ "cant_tell": []
+},
+{"ref": "Exo.8.11",
+ "referents": [
+  {"slot": "w11", "choice": "w2", "divine": false, "why": "'his heart' possessor is Pharaoh, the subject of the sentence (the one who sees and hardens).", "category": "possessive in narrative"},
+  {"slot": "w16", "choice": "Exo.8.8#c2", "divine": false, "why": "'them' (third masculine plural) is Moses and Aaron, the pair who spoke to Pharaoh in Exo.8.8 and whom he would not listen to.", "category": "object pronoun for a named pair"},
+  {"slot": "cl3s", "choice": "w2", "divine": false, "why": "'he would not listen' (qatal, third masculine singular) in narrative; the subject of the sentence is Pharaoh.", "category": "narrative implied subject"}
+ ],
+ "links": [
+  {"src": "cl0", "type": "that", "dst": "cl1", "action": "keep", "why": "'saw that relief had come': the clause is what was seen, the object of the verb of seeing.", "category": "object of seeing"},
+  {"src": "cl1", "type": "then", "dst": "cl0", "action": "remove", "why": "cl1 is the object of cl0 (what he saw), not a later event. The that link already carries it.", "category": "clause object read as then"},
+  {"src": "cl0", "type": "and", "dst": "cl2", "action": "keep", "why": "A separate waw before the infinitive absolute. The sequence is marked; the text gives time, not cause.", "category": "separate waw after seeing"},
+  {"src": "cl2", "type": "and", "dst": "cl3", "action": "remove", "why": "The hardening brings about the refusal. A plain 'and' is not a cause or result, and R4 gives 'a will hardened, then the refusal that follows' as result.", "category": "plain and read as result"},
+  {"src": "cl2", "type": "result", "dst": "cl3", "action": "add", "why": "'he hardened his heart' and then 'would not listen': a will hardened, then the refusal that follows (R4).", "category": "hardened will then refusal"},
+  {"src": "cl3", "type": "as", "dst": "cl4", "action": "keep", "why": "'just as the LORD had said' is a comparison with a saying; the refusal is declared the fulfilment of the LORD's earlier word.", "category": "comparison with a saying"}
+ ],
+ "groups": [],
+ "none_fit": [],
+ "cant_tell": [
+  {"what": "whether seeing the relief causes the hardening (cl0 to cl2)", "why": "The Hebrew sets seeing and then hardening with a waw. The text gives time, not cause; 'when' in the English is the translator's choice."}
+ ]
+}
+]}

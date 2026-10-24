@@ -1,0 +1,479 @@
+<!-- Written by DeepSeek-V4-Pro (.delegate\results\20260927-211013.md); reviewed by Claude before use. -->
+<!-- tools/wordgraph/viewer.html -->
+<!-- python -m http.server, from the tools/wordgraph directory, or via app2/server.py if wired in. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Graph Lexeme Viewer</title>
+<style>
+  :root {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #111827;
+    background: #f9fafb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: 2rem 1.5rem;
+  }
+  header h1 { margin: 0 0 .25rem; }
+  header p { margin: 0 0 1rem; color: #4b5563; }
+  .controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .controls input[type="search"] { flex: 1 1 260px; }
+  input[type="search"], select {
+    padding: .5rem .6rem;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font: inherit;
+    background: white;
+  }
+  .count { color: #4b5563; font-size: .9rem; }
+  .error {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: .75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: .95rem;
+  }
+  th, td {
+    padding: .5rem .65rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #f3f4f6;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+  tr.lex-row { cursor: pointer; }
+  tr.lex-row:hover { background: #eef2ff; }
+  tr.detail-row td {
+    background: #f8fafc;
+    border-bottom: 1px solid #d1d5db;
+  }
+  .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .muted { color: #6b7280; font-size: .9em; }
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .detail-panel { padding: .75rem 0; }
+  .detail-head {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: .75rem;
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .detail-section h3 {
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: #374151;
+    margin: 0 0 .25rem;
+  }
+  .source {
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: normal;
+    color: #6b7280;
+    font-size: .8rem;
+    margin-left: .4rem;
+  }
+  .freq-list {
+    list-style: none;
+    margin: .25rem 0 0;
+    padding: 0;
+  }
+  .freq-list li {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin: .3rem 0;
+  }
+  .freq-label {
+    width: 42%;
+    flex: 0 0 auto;
+    overflow-wrap: anywhere;
+  }
+  .bar-track {
+    flex: 1 1 auto;
+    background: #e5e7eb;
+    height: .7rem;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 60px;
+  }
+  .bar {
+    display: block;
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 4px;
+    min-width: 2px;
+  }
+  .bar.speech { background: #0f766e; }
+  .freq-count {
+    width: 90px;
+    flex: 0 0 auto;
+    text-align: right;
+    color: #4b5563;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 700px) {
+    .freq-label { width: 50%; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Word graph lexeme viewer</h1>
+  <p id="status">Loading wordgraph-viewer-data.json…</p>
+</header>
+
+<section class="controls">
+  <input id="search" type="search" placeholder="Search lemma or gloss">
+  <select id="language">
+    <option value="all">All languages</option>
+    <option value="hebrew">Hebrew (incl. Aramaic)</option>
+    <option value="greek">Greek</option>
+  </select>
+  <span id="count" class="count"></span>
+</section>
+
+<div id="error" class="error" hidden></div>
+
+<div class="table-wrap">
+<table id="lex-table" hidden>
+  <thead>
+    <tr>
+      <th data-key="lemma" data-label="Lemma">Lemma</th>
+      <th data-key="language" data-label="Language">Language</th>
+      <th data-key="usual_gloss" data-label="Usual gloss">Usual gloss</th>
+      <th data-key="count" data-label="Occurrences">Occurrences</th>
+      <th data-key="top_greek" data-label="Top Septuagint">Top Septuagint</th>
+    </tr>
+  </thead>
+  <tbody id="rows"></tbody>
+</table>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var lexemes = [];
+  var filtered = [];
+  var sortKey = 'count';
+  var sortDir = 'desc';
+  var expanded = {};
+
+  var table = document.getElementById('lex-table');
+  var tbody = document.getElementById('rows');
+  var statusEl = document.getElementById('status');
+  var errorEl = document.getElementById('error');
+  var searchEl = document.getElementById('search');
+  var languageEl = document.getElementById('language');
+  var countEl = document.getElementById('count');
+
+  function esc(value) {
+    return String(value === undefined || value === null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function langInfo(code) {
+    var c = String(code || '').toUpperCase();
+    if (c === 'H') return { label: 'Hebrew', group: 'hebrew' };
+    if (c === 'A') return { label: 'Aramaic', group: 'hebrew' };
+    if (c === 'G') return { label: 'Greek', group: 'greek' };
+    return { label: c || '—', group: 'other' };
+  }
+
+  function usualGloss(d) {
+    if (d.usual_gloss) return String(d.usual_gloss);
+    var glosses = d.glosses || [];
+    for (var i = 0; i < glosses.length; i += 1) {
+      if (glosses[i] && glosses[i].english) return String(glosses[i].english);
+    }
+    return '';
+  }
+
+  function topGreekPlain(d) {
+    var u = d.usual_greek;
+    if (!u || !u.greek) return '';
+    return String(u.greek) + (u.greekstrong ? ' ' + u.greekstrong : '');
+  }
+
+  function topGreekHtml(d) {
+    var u = d.usual_greek;
+    if (!u || !u.greek) return '—';
+    var label = esc(u.greek);
+    if (u.greekstrong) label += ' <span class="muted">(' + esc(String(u.greekstrong)) + ')</span>';
+    return label;
+  }
+
+  function matches(d) {
+    var q = searchEl.value.trim().toLowerCase();
+    if (q) {
+      var parts = [d.lemma, usualGloss(d)];
+      var glosses = d.glosses || [];
+      for (var i = 0; i < glosses.length; i += 1) {
+        if (glosses[i] && glosses[i].english) parts.push(glosses[i].english);
+      }
+      if (parts.join('\u0000').toLowerCase().indexOf(q) === -1) return false;
+    }
+
+    var f = languageEl.value;
+    if (f !== 'all' && langInfo(d.language).group !== f) return false;
+    return true;
+  }
+
+  function sortAndFilter() {
+    filtered = lexemes.filter(matches);
+    var collator = new Intl.Collator(undefined, { sensitivity: 'base', numeric: true });
+    filtered.sort(function (a, b) {
+      var av;
+      var bv;
+      if (sortKey === 'count') {
+        av = Number(a.count) || 0;
+        bv = Number(b.count) || 0;
+      } else if (sortKey === 'language') {
+        av = langInfo(a.language).label;
+        bv = langInfo(b.language).label;
+      } else if (sortKey === 'top_greek') {
+        av = topGreekPlain(a);
+        bv = topGreekPlain(b);
+      } else if (sortKey === 'usual_gloss') {
+        av = usualGloss(a);
+        bv = usualGloss(b);
+      } else {
+        av = a[sortKey] || '';
+        bv = b[sortKey] || '';
+      }
+      var cmp = collator.compare(String(av), String(bv));
+      return sortDir === 'desc' ? -cmp : cmp;
+    });
+    render();
+  }
+
+  function countList(items, labelKey) {
+    if (!Array.isArray(items) || items.length === 0) return '<p class="muted">No data</p>';
+    var ordered = items.slice().sort(function (a, b) {
+      return (Number(b.count) || 0) - (Number(a.count) || 0);
+    });
+    var max = ordered.reduce(function (prev, item) {
+      return Math.max(prev, Number(item.count) || 0);
+    }, 0);
+    var html = '<ul class="freq-list">';
+    ordered.forEach(function (item) {
+      var label = item[labelKey] || '';
+      var count = Number(item.count) || 0;
+      var pct = max > 0 ? Math.max(0, Math.min(100, Math.round((count / max) * 100))) : 0;
+      html += '<li><span class="freq-label" dir="auto">' + esc(label) + '</span>' +
+        '<span class="bar-track"><span class="bar" style="width:' + pct + '%"></span></span>' +
+        '<span class="freq-count">' + count + '</span></li>';
+    });
+    html += '</ul>';
+    return html;
+  }
+
+  function greekList(items) {
+    if (!Array.isArray(items) || items.length === 0) return '<p class="muted">No data</p>';
+    var ordered = items.slice().sort(function (a, b) {
+      return (Number(b.count) || 0) - (Number(a.count) || 0);
+    });
+    var max = ordered.reduce(function (prev, item) {
+      return Math.max(prev, Number(item.count) || 0);
+    }, 0);
+    var html = '<ul class="freq-list">';
+    ordered.forEach(function (item) {
+      var greek = item.greek || '';
+      var strong = item.greekstrong || '';
+      var label = strong ? (greek + ' (' + strong + ')') : greek;
+      var count = Number(item.count) || 0;
+      var pct = max > 0 ? Math.max(0, Math.min(100, Math.round((count / max) * 100))) : 0;
+      html += '<li><span class="freq-label" dir="auto">' + esc(label) + '</span>' +
+        '<span class="bar-track"><span class="bar" style="width:' + pct + '%"></span></span>' +
+        '<span class="freq-count">' + count + '</span></li>';
+    });
+    html += '</ul>';
+    return html;
+  }
+
+  function speechTypeList(items) {
+    if (!Array.isArray(items) || items.length === 0) return '<p class="muted">No data</p>';
+    var ordered = items.slice().sort(function (a, b) {
+      return (Number(b.count) || 0) - (Number(a.count) || 0);
+    });
+    var total = ordered.reduce(function (prev, item) {
+      return prev + (Number(item.count) || 0);
+    }, 0);
+    var max = ordered.reduce(function (prev, item) {
+      return Math.max(prev, Number(item.count) || 0);
+    }, 0);
+    var html = '<ul class="freq-list">';
+    ordered.forEach(function (item) {
+      var count = Number(item.count) || 0;
+      var pct = max > 0 ? Math.max(0, Math.min(100, Math.round((count / max) * 100))) : 0;
+      var pctTotal = total > 0 ? Math.round((count / total) * 100) : 0;
+      html += '<li><span class="freq-label">' + esc(item.force || '') + '</span>' +
+        '<span class="bar-track"><span class="bar speech" style="width:' + pct + '%"></span></span>' +
+        '<span class="freq-count">' + count + (total ? ' (' + pctTotal + '%)' : '') + '</span></li>';
+    });
+    html += '</ul>';
+    return html;
+  }
+
+  function detailHtml(d) {
+    var books = Array.isArray(d.books) ? d.books.join(', ') : '';
+    return '<div class="detail-panel">' +
+      '<div class="detail-head">' +
+        '<strong dir="auto">' + esc(d.lemma) + '</strong> ' +
+        '<span class="muted mono">' + esc(d.id) + '</span> ' +
+        '<span class="muted">Books: ' + esc(books) + '</span>' +
+      '</div>' +
+      '<div class="detail-grid">' +
+        '<div class="detail-section"><h3>Glosses <span class="source">MACULA</span></h3>' + countList(d.glosses, 'english') + '</div>' +
+        '<div class="detail-section"><h3>Stems <span class="source">MACULA</span></h3>' + countList(d.stems, 'stem') + '</div>' +
+        '<div class="detail-section"><h3>Septuagint <span class="source">Septuagint via MACULA</span></h3>' + greekList(d.septuagint) + '</div>' +
+        '<div class="detail-section"><h3>Speech types <span class="source">structure graph</span></h3>' + speechTypeList(d.speech_types) + '</div>' +
+        '<div class="detail-section"><h3>BSB renderings <span class="source">BSB</span></h3>' + countList(d.bsb_renderings, 'english') + '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function render() {
+    tbody.innerHTML = '';
+    if (filtered.length === 0) {
+      var empty = document.createElement('tr');
+      empty.className = 'detail-row';
+      empty.innerHTML = '<td colspan="5">No matching lexemes.</td>';
+      tbody.appendChild(empty);
+    }
+
+    filtered.forEach(function (d) {
+      var tr = document.createElement('tr');
+      tr.className = 'lex-row';
+      tr.innerHTML = '<td dir="auto">' + esc(d.lemma) + '</td>' +
+        '<td>' + esc(langInfo(d.language).label) + '</td>' +
+        '<td>' + (esc(usualGloss(d)) || '—') + '</td>' +
+        '<td class="num">' + (Number(d.count) || 0).toLocaleString() + '</td>' +
+        '<td dir="auto">' + topGreekHtml(d) + '</td>';
+      tr.addEventListener('click', function () {
+        if (expanded[d.id]) {
+          delete expanded[d.id];
+        } else {
+          expanded[d.id] = true;
+        }
+        render();
+      });
+      tbody.appendChild(tr);
+
+      if (expanded[d.id]) {
+        var trd = document.createElement('tr');
+        trd.className = 'detail-row';
+        var td = document.createElement('td');
+        td.colSpan = 5;
+        td.innerHTML = detailHtml(d);
+        trd.appendChild(td);
+        tbody.appendChild(trd);
+      }
+    });
+
+    countEl.textContent = filtered.length + ' of ' + lexemes.length + ' lexemes';
+    table.hidden = false;
+  }
+
+  function updateHeaderArrows() {
+    var headers = document.querySelectorAll('th[data-key]');
+    for (var i = 0; i < headers.length; i += 1) {
+      var th = headers[i];
+      var key = th.getAttribute('data-key');
+      var arrow = '';
+      if (key === sortKey) arrow = sortDir === 'asc' ? ' ▲' : ' ▼';
+      th.textContent = th.getAttribute('data-label') + arrow;
+    }
+  }
+
+  function initHeaders() {
+    var headers = document.querySelectorAll('th[data-key]');
+    for (var i = 0; i < headers.length; i += 1) {
+      (function (th) {
+        th.addEventListener('click', function () {
+          var key = th.getAttribute('data-key');
+          if (sortKey === key) {
+            sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+          } else {
+            sortKey = key;
+            sortDir = 'asc';
+            if (key === 'count') sortDir = 'desc';
+          }
+          updateHeaderArrows();
+          sortAndFilter();
+        });
+      })(headers[i]);
+    }
+    updateHeaderArrows();
+  }
+
+  function load() {
+    fetch('wordgraph-viewer-data.json', { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function (data) {
+        if (!Array.isArray(data)) throw new Error('Expected a JSON array');
+        lexemes = data;
+        statusEl.textContent = 'Loaded ' + lexemes.length + ' lexemes.';
+        sortAndFilter();
+      })
+      .catch(function (err) {
+        statusEl.textContent = 'Loading failed.';
+        errorEl.hidden = false;
+        errorEl.textContent = 'Could not load wordgraph-viewer-data.json: ' + err.message +
+          ' Serve this folder over HTTP, e.g. python -m http.server, from the tools/wordgraph directory, or via app2/server.py if wired in.';
+      });
+  }
+
+  searchEl.addEventListener('input', sortAndFilter);
+  languageEl.addEventListener('change', sortAndFilter);
+  initHeaders();
+  load();
+})();
+</script>
+</body>
+</html>

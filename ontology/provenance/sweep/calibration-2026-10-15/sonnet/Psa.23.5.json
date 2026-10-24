@@ -1,0 +1,23 @@
+{"ref": "Psa.23.5",
+ "referents": [
+  {"slot": "w3", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first/common/singular suffix 'me' in a psalm, no quoted speaker: the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w7", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first/common/singular suffix 'my' on 'enemies'; the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w13", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first/common/singular suffix 'my' on 'head'; the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "w15", "choice": "Psa.23.1#psalmist", "divine": false, "why": "first/common/singular suffix 'my' on 'cup'; the psalm's own voice", "category": "first person in a psalm"},
+  {"slot": "cl0s", "choice": "Psa.23.1#w3", "divine": true, "why": "second masculine singular 'you' in the psalmist's address; the psalm has spoken of the LORD (v1) as shepherd and shifts to 'you' in v4 ('You are with me'), so the addressee is the LORD, who is the one who prepares, shepherds and provides", "category": "implied second-person subject in address to God"},
+  {"slot": "cl1s", "choice": "Psa.23.1#w3", "divine": true, "why": "second masculine singular subject of 'you have refreshed', same addressee as the preceding clause in the same address", "category": "implied second-person subject in address to God"}
+ ],
+ "links": [],
+ "groups": [
+  {"id": "g1", "kind": "acts", "action": "add",
+   "members": [{"role": "agent_act", "node": "cl0"}, {"role": "agent_act", "node": "cl1"}, {"role": "group_subject", "node": "Psa.23.1#w3"}],
+   "divine": true, "why": "cl0 and cl1 are acts done to the psalmist by the same 'you', each stating its subject only in the verb (second masculine singular); the group subject is the LORD, not the psalmist's 'me' (w3), which is the object of the preparing, so the proposal naming w3 is wrong. cl2 is a statement about the cup, not an act of 'you', so it is left out.", "category": "consecutive acts of one addressed agent"}
+ ],
+ "none_fit": [
+  {"where": "cl2 'my cup is saturation' after cl1", "what": "No link type states 'a further blessing in the same series' or 'consequence of the anointing' for an asyndetic nominal clause; 'result' needs a command and weqatal, 'and' needs a separate waw, and 'then' needs a wayyiqtol or weqatal. Left unlinked rather than forced."},
+  {"where": "verses 4-5 as a unit addressed to the LORD", "what": "The turn kind needs a saying clause (frame), and the psalm has none introducing the address to the LORD; a psalm-level address in the second person has no group kind that holds without a saying clause."}
+ ],
+ "cant_tell": [
+  {"what": "Whether cl2 (cup overflows) is a result of the anointing or a separate image", "why": "No conjunction marks the join and the Hebrew is asyndetic; the verse does not settle the relation, so no link is added."},
+  {"what": "Where the turn addressed to the LORD begins (v4 or earlier) and whether v4 and v5 form one turn", "why": "The shift to second person starts in v4 ('for You are with me'), but no saying clause frames it; that is psalm-level structure, not this verse's to decide."}
+ ]}

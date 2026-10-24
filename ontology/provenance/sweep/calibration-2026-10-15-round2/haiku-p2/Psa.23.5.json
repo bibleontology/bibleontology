@@ -1,0 +1,79 @@
+{
+ "ref": "Psa.23.5",
+ "referents": [
+  {
+   "slot": "w3",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person 'me' in 'before me': the psalm's voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w7",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person possessive 'my enemies' in the psalm's voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w13",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person possessive 'my head' in the psalm's voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "w15",
+   "choice": "Psa.23.1#psalmist",
+   "divine": false,
+   "why": "First person possessive 'my cup' in the psalm's voice.",
+   "category": "first person in a psalm"
+  },
+  {
+   "slot": "cl0s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Second person masculine singular implied by the yiqtol 'you prepare'; addressed to the LORD, as in verse 4.",
+   "category": "second person addressed to the LORD"
+  },
+  {
+   "slot": "cl1s",
+   "choice": "Psa.23.1#w3",
+   "divine": true,
+   "why": "Second person masculine singular implied by the qatal 'you have anointed'; addressed to the LORD.",
+   "category": "second person addressed to the LORD"
+  }
+ ],
+ "links": [],
+ "groups": [
+  {
+   "id": "Psa.23.5#g1",
+   "kind": "acts",
+   "action": "add",
+   "members": [
+    {
+     "role": "agent_act",
+     "node": "cl0"
+    },
+    {
+     "role": "agent_act",
+     "node": "cl1"
+    },
+    {
+     "role": "group_subject",
+     "node": "Psa.23.1#w3"
+    }
+   ],
+   "divine": true,
+   "why": "Two clauses in a row, each with its subject only in the verb (second masculine singular), both acts of the LORD addressed. The cup clause is a state and stands outside the run.",
+   "category": "run of acts of one agent"
+  }
+ ],
+ "none_fit": [],
+ "cant_tell": [
+  {
+   "what": "Whether 'my cup overflows' is what the anointing brings about (a result) or a further image of abundance",
+   "why": "The clause follows after a semicolon with no conjunction and no verb of result, so no result link is recorded."
+  }
+ ]
+}
