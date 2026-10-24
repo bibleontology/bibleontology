@@ -12,7 +12,7 @@ Two things carry versions here:
   design.
 - **The graph's licence is granted:** CC BY 4.0, with credit to Bible Ontology by Doug Egge (bibleontology.org). The
   exports' headers and `out/export/void.ttl` say so; until today they said "all rights reserved".
-- **The temple, both cards:** the building's verses (584) and the figure's (9) by named-verse rulings, and the
+- **The temple, both cards:** the building's verses (583) and the figure's (9) by named-verse rulings, and the
   relations the cards' text names. Built by Solomon, Zerubbabel and Jeshua; destroyed by the Babylonians; repaired by
   Joash, Hezekiah and Josiah. The figure signifies God, Jesus, the churches at Corinth and Ephesus, and the body
   (1 Cor 6:19).
