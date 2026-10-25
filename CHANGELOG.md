@@ -6,6 +6,32 @@ Two things carry versions here:
 - **The graph's exports** in `out/export/`, which carry a date-shaped version of their own (`ontology/ns-version.json`,
   `data`; `out/export/void.ttl`).
 
+## Data 2026.10.25: 2026-10-25
+
+**Claims:** 21,440 (21,394 before), of them **8,089 asserted** (8,119).
+- **Claims inside speeches credited to their speakers in every book.** The credits had been looked up in the site's
+  book codes while the speech data uses MACULA's, so outside the books whose codes coincide none was found.
+- **The fault disclosed in the r/semanticweb post shrinks.** Links inside speeches still in the narrator's voice
+  (how one clause grounds another, a speaker's simile) were 83 in Job and are now **71**, 14 of them Eliphaz's in
+  Job 15. Still a known fault.
+- **Jena and RDF4J re-run on both files:** 227,920 quads (RDF 1.1, 92 graphs) and 237,291 (RDF 1.2); every query
+  answers as before (`tools/rdf12/README.md`).
+
+**Image cards: the verses where the text uses the figure** (the image audit, plan 8.2h).
+- Each image card had listed every verse of its word: "the hand of God" every "hand". 195 image cards were read verse
+  by verse, by two or three readers each, and now hold the verses where the figure is used. 30,734 card verses
+  became 6,220; verses the readers split three ways over are held on neither card. "The hand of God": 1,444 to 457.
+- **The first eight** (wine, lion, vine, the candlestick, lamb, clothes, ox, bread) also hold their literal cards'
+  verses apart from the figure's, with the relations their descriptions name (52 added): wine 169 verses to 38,
+  ox 236 to 10.
+- **92 image cards that showed no verses** now show the verses their own descriptions cite.
+- **76 image cards named by their figure,** no longer by a bare word another card uses: "the two houses", "a city on
+  a hill", "light, as a figure". Sixteen twin image cards keep their names until the twins are settled.
+- **The temple:** the temple of Baal (2 Kgs 11:18) and the cult prostitutes' houses (2 Kgs 23:7) no longer resolve
+  to the LORD's temple.
+
+**Vocabularies:** unchanged at 1.2.1.
+
 ## Data 2026.10.23: first public release, 2026-10-23
 
 - **The repository is public:** https://github.com/bibleontology/bibleontology. It begins here, a fresh export by

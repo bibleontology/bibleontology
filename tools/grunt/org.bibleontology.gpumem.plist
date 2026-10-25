@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Gives local models 20 GB of the Mac mini's 24 (macOS's default is about 16), at every boot: the sysctl does
+     not survive a restart on its own. A system daemon, so it runs as root before anyone logs in. Installed once by
+     hand with sudo (docs/OPERATIONS.md, "The Mac mini"). -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>org.bibleontology.gpumem</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/sbin/sysctl</string>
+        <string>-w</string>
+        <string>iogpu.wired_limit_mb=20480</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>

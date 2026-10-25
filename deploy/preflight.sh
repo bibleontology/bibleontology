@@ -345,6 +345,14 @@ else
 	bad "the export asserts what the narrator does not state -- python tests/test_assertion_policy.py"
 	grep -E "^FAIL" <<<"$out" | head -8
 fi
+# Speech is found in every book (the speech-claims diagnosis, 2026-10-24): the
+# speaker credits look verses up in MACULA's book codes and write the site's
+if out="$($PY tests/test_speaker_credit_codes.py 2>&1)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "speaker credits miss every book whose codes differ -- python tests/test_speaker_credit_codes.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
 # The stylesheet (2026-10-13): no CSS line a stray quote has broken -- five
 # had silently deleted rules, unnoticed since they were written
 if out="$($PY tests/test_css.py 2>&1)"; then

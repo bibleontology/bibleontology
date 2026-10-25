@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- The grunt runner (tools/grunt/runner.py), kept alive by launchd on the Mac mini. Installed by
+     `python tools/grunt/grunt.py install`; starts at login (the Mac logs itself in) and restarts if it exits. -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>org.bibleontology.grunt</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/dougegge/grunt/runner.py</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ThrottleInterval</key>
+    <integer>30</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/dougegge/grunt/runner.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/dougegge/grunt/runner.log</string>
+</dict>
+</plist>

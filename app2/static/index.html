@@ -6047,7 +6047,11 @@ function eventBlock(ev){
     ${!ev.notes && (ev.heads || []).length ? `<div class="evheads"><div class="g" style="margin:0 0 4px">What happens, in the
       Berean editors' section headings</div><ol>${ev.heads.slice(0, 12).map(h =>
         `<li><span class="link" data-go="${esc(h.go)}">${esc(h.title)}</span> <span class="g">${esc(prettyRef(h.go))}</span></li>`).join('')}${
-        ev.heads.length > 12 ? `<li class="g">and ${ev.heads.length - 12} more sections</li>` : ''}</ol></div>` : ''}
+        /* every "more" opens (2026-10-25, the "more" audit: "and 5 more sections" was plain text) */
+        ev.heads.length > 12 ? `<li class="g" style="list-style:none"><details class="moreinl"><summary>and ${
+          ev.heads.length - 12} more sections</summary><ol start="13">${ev.heads.slice(12).map(h =>
+          `<li><span class="link" data-go="${esc(h.go)}">${esc(h.title)}</span> <span class="g">${
+            esc(prettyRef(h.go))}</span></li>`).join('')}</ol></details></li>` : ''}</ol></div>` : ''}
     <p class="hint" style="max-width:62ch">${esc(ev.credit)}</p>
     ${sec('ev-tell', `Told in ${ev.tellings.length} ${ev.tellings.length === 1 ? 'passage' : 'passages'}`,
       tell, null, true)}
@@ -6485,8 +6489,10 @@ function textFaceBlock(d){
     const once = new Set();
     s += `<blockquote class="tquote">${r.map(x => linkNames(x.text, x.names, once)).join(' ')}${cut ? ' …' : ''}</blockquote>`
       + `<div style="margin:4px 0 ${i < Math.min(runs.length, SHOW) - 1 ? 8 : 12}px"><span class="cite" data-ref="${esc(r[0].id)}">${esc(cut ? lab + ' …' : lab)}</span>`
-      + (cut ? ` <span class="g">· ${f.more} more ${f.more === 1 ? 'verse' : 'verses'}</span>` : '')
-      + ` · <button class="refmore" data-go="${esc(r[0].id)}">open in the reader</button></div>`;
+      /* the words that promise more are the control (2026-10-25, the "more" audit: "· 12 more verses" was plain
+         text beside an "open in the reader" button) */
+      + ` · <button class="refmore" data-go="${esc(r[0].id)}">${cut
+          ? `${f.more} more ${f.more === 1 ? 'verse' : 'verses'}: open in the reader` : 'open in the reader'}</button></div>`;
   });
   if(runs.length > SHOW) s += `<p class="g" style="margin:0 0 12px">and ${runs.length - SHOW} more ${runs.length - SHOW === 1 ? 'place' : 'places'}: ${
     runs.slice(SHOW).map(r => `<span class="cite" data-ref="${esc(r[0].id)}">${esc(prettyRef(r[0].id))}</span>`).join(' ')}</p>`;
@@ -7028,7 +7034,11 @@ async function openEntity(id){
                 : ''}</div>`).join(''),
             null, P.total <= 40)).join('') : '';
       if(!v.total && !P){ box.innerHTML = '<span class="hint">No word of the text is tied to this yet.</span>'; return; }
-      $('#etextn').textContent = P ? P.total : v.total;
+      /* THE HEADING COUNTS WHAT OPENS. 2026-10-25, the "more" audit: on a phrase card the heading said the phrase's
+         count ("the hand of God", 16) over a section that also lists every verse of the card's words (457), so the
+         number a reader saw was not what opened. The card's own verses are the heading; the phrase keeps its count
+         in its own line above. */
+      $('#etextn').textContent = v.total || (P ? P.total : '');
       if(!v.total){
         box.innerHTML = phraseHtml;
         box.querySelectorAll('[data-go]').forEach(b => b.onclick = () => peekAt(b, b.dataset.go));

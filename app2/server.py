@@ -12130,6 +12130,14 @@ def card_page(eid):
     desc = _plain(c.get("desc"))
     first = re.split(r"(?<=[.!?])\s", desc.split("\n")[0])[0] if desc else ""
     n_refs, n_rel = len(c.get("refs") or []), c.get("total_relations") or 0
+    # THE VERSES THE CARD SHOWS, not the record's own citations: the temple's
+    # summary said "10 verses" over a card of 583 (the committee's falsifier,
+    # 2026-10-23). The same answer the app's "Where the text speaks of it" gets;
+    # a person's card is built from citations, so the larger of the two
+    try:
+        n_refs = max(n_refs, json.loads(answer("/api/entity-verses", urlencode({"id": eid}))).get("total") or 0)
+    except (ValueError, KeyError, TypeError):
+        pass
     title = f"{big} in the Bible: every verse and connection"
     summary = (first + " " if first else "") + \
         f"{n_refs} verse{'s' * (n_refs != 1)} and {n_rel} connection{'s' * (n_rel != 1)} " \

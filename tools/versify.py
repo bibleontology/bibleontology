@@ -381,6 +381,34 @@ def main() -> int:
           f"{overall(lambda r: r):.4f} -> "
           f"{overall(lambda r: mapping.get(r, r)):.4f}")
 
+    # CHECKED AGAINST STEP BIBLE'S TABLE (2026-10-24, the image audit: the site
+    # showed Hosea 14:8 for the vine, which is 14:7, and Psalm 12:8's text under
+    # Psalm 13's title). The alignment left 208 Hebrew verses where STEP's TAHOT
+    # (tools/versemap_step.py) numbers them otherwise, 124 of them in Psalms, and
+    # mapped 3 that STEP leaves in place. Where the two disagree, the verse whose
+    # Strong's numbers agree better wins, so STEP corrects the alignment without
+    # overruling the Berean where its numbering truly differs from the English
+    # tradition STEP follows. The Berean folds a psalm's title into verse 1, so
+    # STEP's "verse 0" is the Berean's 1.
+    from versemap_step import step_table
+    step = step_table()
+    fixed = []
+    for r in mg:
+        b = r.split(".")[0]
+        if not any(k.startswith(b + ".") for k in step):
+            continue                                  # a book STEP does not renumber
+        s = step.get(r, r)
+        if s.endswith(".0"):
+            s = s[:-1] + "1"
+        cur = mapping.get(r, r)
+        if s == cur or s not in bt:
+            continue
+        if jac(mg[r], bt[s]) >= jac(mg[r], bt.get(cur) or set()):
+            mapping[r] = s
+            fixed.append((r, cur, s))
+    print(f"   checked against STEP's table: {len(fixed)} verses re-mapped, e.g. {fixed[:4]}")
+    print(f"   mean agreement after: {overall(lambda r: mapping.get(r, r)):.4f}")
+
     if not a.write:
         print("\nnothing written -- pass --write")
         return 0

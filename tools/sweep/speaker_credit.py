@@ -33,6 +33,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
 from export_claims import verses  # noqa: E402
+from derive import BOOK  # noqa: E402  (the site's book code -> MACULA's)
 
 GROUP_EDGES = {"part", "command", "attached", "line", "condition", "consequence", "basis",
                "agent_act", "group_subject", "content"}
@@ -266,6 +267,13 @@ def main():
             refs = sorted({v for x in r.get("refs") or [] for v in verses(x)})
             if not refs:
                 continue
+            # THE SWEEP'S VERSES ARE MACULA'S (2026-10-24, the speech-claims
+            # diagnosis): verses() gives the site's book codes (Exod, 1Sam, Matt),
+            # every sweep id MACULA's (Exo, 1Sa, Mat), so outside the books whose
+            # codes coincide (Gen, Job, Isa ...) no verse ever held speech: 43% of
+            # the narrator's claims could not be credited. Looked up in MACULA's
+            # codes; written in the site's, which the claim export matches on
+            mrefs = [BOOK.get(b, b) + "." + rest for b, rest in (v.split(".", 1) for v in refs)]
             stats["claims"] += 1
             # A STATEMENT LIFTED FROM A CLAUSE (plan 2.19) knows its own clause,
             # better evidence than its verse: John 21:15 holds the narrator's
@@ -305,13 +313,19 @@ def main():
             # "this speech is part of Eliphaz's" describe the speech; they are
             # the graph's, never the speaker's (the first run credited 207
             # asserted_by and 476 speaks_of to the speakers)
-            if r["type"] in ABOUT_THE_TEXT or {ents[r["src"]], ents[r["dst"]]} & TEXT_KINDS:
+            # A RELATION BETWEEN TWO STATEMENTS is not about the text: "fire shall
+            # consume ... grounds his branch shall not be green" (Job 15:32-34) is
+            # how Eliphaz's own sentences hang together, speech content. Only a
+            # speech act with a statement end stays the narrator's here (the
+            # diagnosis of 2026-10-23: the end-type gate held 127 such claims)
+            if r["type"] in ABOUT_THE_TEXT or (r["type"] in SPEECH_ACTS
+                                               and {ents[r["src"]], ents[r["dst"]]} & TEXT_KINDS):
                 stats["narrator: about the text"] += 1
                 continue
-            found = [verse_turn(v, r["src"], r["dst"], r["type"]) for v in refs]
+            found = [verse_turn(v, r["src"], r["dst"], r["type"]) for v in mrefs]
             ts = [t for t, _ in found]
             if not any(ts):
-                part = any(spoken[v] for v in refs)
+                part = any(spoken[v] for v in mrefs)
                 stats["narrator: " + found[0][1] + (" (a verse holds speech)" if part else "")] += 1
                 continue
             if not all(ts):
@@ -344,7 +358,9 @@ def main():
             # THE SPEECH ACT ITSELF: "God warned Adam" (Gen 2:17), "Noah blessed
             # Shem" (9:26) describe the speaking, so they are the narrator's
             # even where every word of the verse is the speaker's
-            if r["type"] in SPEECH_ACTS and r["src"] == sp:
+            # nor credits a speech act to the one it was done to: "Gehazi deceived
+            # Elisha" is not Elisha's claim (the diagnosis of 2026-10-23)
+            if r["type"] in SPEECH_ACTS and sp in (r["src"], r["dst"]):
                 stats["narrator: the speech act itself"] += 1
                 continue
             if reported and (reported == sp or reported not in ents):

@@ -1,0 +1,404 @@
+{
+ "approved_by": "Doug, 2026-10-25: \"If you are asking for my approval on these name changes I give it\"",
+ "rule": "92 image cards shared their name with another card. The rule, from what the cards hold:\n  - a card of a few verses, or one named saying, takes the text's own phrase (\"the two houses\", \"a city on a hill\");\n  - a broad card (dozens or hundreds of verses) takes \"<word>, as a figure\": a phrase from one verse would make\n    a card of every figurative \"light\" read as \"I am the light of the world\";\n  - twins (two image cards for one figure) keep their names: renaming them apart would hide a duplicate that the\n    twin-cards proposal (P-2026-10-24-1) is to settle.\nNames drafted by a Claude Sonnet reader from each card's description and figure verses\n(out/meaning/image-audit/rename-output.json); the tiers applied here.",
+ "renames": {
+  "fowls": {
+   "old": "birds",
+   "new": "birds, as a figure",
+   "why": "21 verses: a broad figure"
+  },
+  "image_arm": {
+   "old": "arm",
+   "new": "arm, as a figure",
+   "why": "64 verses: a broad figure"
+  },
+  "image_body": {
+   "old": "body",
+   "new": "body, as a figure",
+   "why": "82 verses: a broad figure"
+  },
+  "image_bones": {
+   "old": "bones",
+   "new": "bones, as a figure",
+   "why": "49 verses: a broad figure"
+  },
+  "image_bottles": {
+   "old": "water jars",
+   "new": "the water jars of heaven",
+   "why": "1 verses: the text's own phrase (Job 38:37 'tilt the water jars of the heavens')"
+  },
+  "image_branches": {
+   "old": "branches",
+   "new": "the three branches of the vine",
+   "why": "2 verses: the text's own phrase (Gen 40:10,12 'on the vine were three branches'; twin of image_plants)"
+  },
+  "image_bread": {
+   "old": "bread",
+   "new": "bread, as a figure",
+   "why": "31 verses: a broad figure"
+  },
+  "image_breath": {
+   "old": "breath",
+   "new": "breath, as a figure",
+   "why": "107 verses: a broad figure"
+  },
+  "image_city_on_a_hill": {
+   "old": "city",
+   "new": "a city on a hill",
+   "why": "a named saying"
+  },
+  "image_cloud": {
+   "old": "cloud",
+   "new": "cloud, as a figure",
+   "why": "35 verses: a broad figure"
+  },
+  "image_cords": {
+   "old": "cords",
+   "new": "cords, as a figure",
+   "why": "14 verses: a broad figure"
+  },
+  "image_corner_stone": {
+   "old": "corner stone",
+   "new": "the rejected stone and the cornerstone",
+   "why": "4 verses: the text's own phrase (Psa 118:22 'The stone the builders rejected'; Isa 28:16 'a precious cornerstone')"
+  },
+  "image_crown": {
+   "old": "crown",
+   "new": "crown, as a figure",
+   "why": "29 verses: a broad figure"
+  },
+  "image_darkness": {
+   "old": "darkness",
+   "new": "darkness, as a figure",
+   "why": "90 verses: a broad figure"
+  },
+  "image_death": {
+   "old": "death",
+   "new": "death, as a figure",
+   "why": "86 verses: a broad figure"
+  },
+  "image_door": {
+   "old": "door",
+   "new": "door, as a figure",
+   "why": "39 verses: a broad figure"
+  },
+  "image_dove": {
+   "old": "dove",
+   "new": "dove, as a figure",
+   "why": "21 verses: a broad figure"
+  },
+  "image_dust": {
+   "old": "dust",
+   "new": "dust, as a figure",
+   "why": "46 verses: a broad figure"
+  },
+  "image_earnest": {
+   "old": "pledge",
+   "new": "the Spirit as a pledge",
+   "why": "3 verses: the text's own phrase (2Co 1:22 'put His Spirit in our hearts as a pledge')"
+  },
+  "image_earth": {
+   "old": "the earth",
+   "new": "the earth, as a figure",
+   "why": "135 verses: a broad figure"
+  },
+  "image_ends_of_the_earth": {
+   "old": "the ends of the earth",
+   "new": "spread to the ends of the earth",
+   "why": "1 verses: the text's own phrase (Job 38:13 'spread to the ends of the earth and shake the wicked out of it')"
+  },
+  "image_father": {
+   "old": "father",
+   "new": "father, as a figure",
+   "why": "159 verses: a broad figure"
+  },
+  "image_fire": {
+   "old": "fire",
+   "new": "fire, as a figure",
+   "why": "124 verses: a broad figure"
+  },
+  "image_flame": {
+   "old": "flame",
+   "new": "flame, as a figure",
+   "why": "26 verses: a broad figure"
+  },
+  "image_flood": {
+   "old": "river",
+   "new": "river, as a figure",
+   "why": "28 verses: a broad figure"
+  },
+  "image_fruit": {
+   "old": "fruit",
+   "new": "fruit, as a figure",
+   "why": "109 verses: a broad figure"
+  },
+  "image_gate": {
+   "old": "gate",
+   "new": "gate, as a figure",
+   "why": "16 verses: a broad figure"
+  },
+  "image_good_tree": {
+   "old": "tree",
+   "new": "the good tree",
+   "why": "a named saying"
+  },
+  "image_grass": {
+   "old": "grass",
+   "new": "grass, as a figure",
+   "why": "25 verses: a broad figure"
+  },
+  "image_grave": {
+   "old": "grave",
+   "new": "grave, as a figure",
+   "why": "9 verses: a broad figure"
+  },
+  "image_harvest": {
+   "old": "harvest",
+   "new": "harvest, as a figure",
+   "why": "12 verses: a broad figure"
+  },
+  "image_head": {
+   "old": "head",
+   "new": "head, as a figure",
+   "why": "110 verses: a broad figure"
+  },
+  "image_heaven": {
+   "old": "heaven",
+   "new": "heaven, as a figure",
+   "why": "115 verses: a broad figure"
+  },
+  "image_hind": {
+   "old": "doe",
+   "new": "a doe set free",
+   "why": "1 verses: the text's own phrase (Gen 49:21 'Naphtali is a doe set free')"
+  },
+  "image_house": {
+   "old": "house",
+   "new": "house, as a figure",
+   "why": "52 verses: a broad figure"
+  },
+  "image_ice": {
+   "old": "ice",
+   "new": "ice from a womb",
+   "why": "2 verses: the text's own phrase (Job 38:29 'From whose womb does the ice emerge?')"
+  },
+  "image_lamp": {
+   "old": "lamp",
+   "new": "lamp, as a figure",
+   "why": "34 verses: a broad figure"
+  },
+  "image_life": {
+   "old": "life",
+   "new": "life, as a figure",
+   "why": "98 verses: a broad figure"
+  },
+  "image_light": {
+   "old": "light",
+   "new": "light, as a figure",
+   "why": "120 verses: a broad figure"
+  },
+  "image_linen": {
+   "old": "fine linen",
+   "new": "fine linen of righteous acts",
+   "why": "3 verses: the text's own phrase (Rev 19:8 'the fine linen ... is the righteous acts of the saints')"
+  },
+  "image_milk": {
+   "old": "milk",
+   "new": "milk, as a figure",
+   "why": "31 verses: a broad figure"
+  },
+  "image_moth": {
+   "old": "moth",
+   "new": "a moth-eaten garment",
+   "why": "7 verses: the text's own phrase (Job 13:28 'like a moth-eaten garment'; Isa 51:8 'the moth will devour them like a garment')"
+  },
+  "image_narrow_gate": {
+   "old": "gate",
+   "new": "the narrow gate",
+   "why": "a named saying"
+  },
+  "image_nest": {
+   "old": "nest",
+   "new": "nest, as a figure",
+   "why": "9 verses: a broad figure"
+  },
+  "image_oil": {
+   "old": "oil",
+   "new": "oil, as a figure",
+   "why": "22 verses: a broad figure"
+  },
+  "image_ox": {
+   "old": "ox",
+   "new": "ox, as a figure",
+   "why": "10 verses: a broad figure"
+  },
+  "image_path": {
+   "old": "path",
+   "new": "path, as a figure",
+   "why": "65 verses: a broad figure"
+  },
+  "image_plants": {
+   "old": "branches",
+   "new": "an orchard of pomegranates",
+   "why": "1 verses: the text's own phrase (Sng 4:13 'Your branches are an orchard of pomegranates'; twin of image_branches)"
+  },
+  "image_robe": {
+   "old": "robe",
+   "new": "robe of righteousness",
+   "why": "4 verses: the text's own phrase (Isa 61:10 'a robe of righteousness'; Job 29:14 'justice was my robe')"
+  },
+  "image_rock": {
+   "old": "rock",
+   "new": "rock, as a figure",
+   "why": "51 verses: a broad figure"
+  },
+  "image_sackcloth": {
+   "old": "sackcloth",
+   "new": "sackcloth of mourning",
+   "why": "3 verses: the text's own phrase (Jol 1:8 'dressed in sackcloth, grieving'; Psa 30:11 'turned my mourning into dancing')"
+  },
+  "image_salt": {
+   "old": "salt",
+   "new": "salt of the earth",
+   "why": "7 verses: the text's own phrase (Mat 5:13 'You are the salt of the earth'; twin of salt)"
+  },
+  "image_seal": {
+   "old": "seal",
+   "new": "seal, as a figure",
+   "why": "31 verses: a broad figure"
+  },
+  "image_seed": {
+   "old": "seed",
+   "new": "seed, as a figure",
+   "why": "22 verses: a broad figure"
+  },
+  "image_snow": {
+   "old": "snow",
+   "new": "snow, as a figure",
+   "why": "11 verses: a broad figure"
+  },
+  "image_sparks": {
+   "old": "sparks",
+   "new": "sparks fly upward",
+   "why": "2 verses: the text's own phrase (Job 5:7 'as surely as sparks fly upward')"
+  },
+  "image_staff": {
+   "old": "staff",
+   "new": "rod and staff",
+   "why": "7 verses: the text's own phrase (desc Psa 23:4 'Your rod and Your staff'; Isa 10:5 'the rod of My anger')"
+  },
+  "image_stars": {
+   "old": "stars",
+   "new": "descendants like the stars",
+   "why": "1 verses: the text's own phrase (Gen 22:17 'multiply your descendants like the stars in the sky')"
+  },
+  "image_stone": {
+   "old": "stone",
+   "new": "stone, as a figure",
+   "why": "63 verses: a broad figure"
+  },
+  "image_strait": {
+   "old": "distress",
+   "new": "distress, as a figure",
+   "why": "10 verses: a broad figure"
+  },
+  "image_straw": {
+   "old": "straw",
+   "new": "straw compared to grain",
+   "why": "3 verses: the text's own phrase (Jer 23:28 'what is straw compared to grain?')"
+  },
+  "image_sun": {
+   "old": "sun",
+   "new": "sun, as a figure",
+   "why": "25 verses: a broad figure"
+  },
+  "image_sword": {
+   "old": "sword",
+   "new": "sword, as a figure",
+   "why": "85 verses: a broad figure"
+  },
+  "image_tempest": {
+   "old": "tempest",
+   "new": "tempest, as a figure",
+   "why": "14 verses: a broad figure"
+  },
+  "image_two_houses": {
+   "old": "house",
+   "new": "the two houses",
+   "why": "a named saying"
+  },
+  "image_viper": {
+   "old": "viper",
+   "new": "brood of vipers",
+   "why": "4 verses: the text's own phrase (Mat 3:7, Luk 3:7 'You brood of vipers')"
+  },
+  "image_water": {
+   "old": "water",
+   "new": "water, as a figure",
+   "why": "138 verses: a broad figure"
+  },
+  "image_waters": {
+   "old": "waters",
+   "new": "waters, as a figure",
+   "why": "132 verses: a broad figure"
+  },
+  "image_way": {
+   "old": "way",
+   "new": "way, as a figure",
+   "why": "342 verses: a broad figure"
+  },
+  "image_well": {
+   "old": "well",
+   "new": "well, as a figure",
+   "why": "the drafted phrase is another card's name"
+  },
+  "image_wind": {
+   "old": "wind",
+   "new": "wind, as a figure",
+   "why": "83 verses: a broad figure"
+  },
+  "image_wine": {
+   "old": "wine",
+   "new": "wine, as a figure",
+   "why": "38 verses: a broad figure"
+  },
+  "image_wisdom": {
+   "old": "wisdom",
+   "new": "wisdom, as a figure",
+   "why": "27 verses: a broad figure"
+  },
+  "image_woman": {
+   "old": "woman",
+   "new": "woman, as a figure",
+   "why": "62 verses: a broad figure"
+  },
+  "salt": {
+   "old": "salt",
+   "new": "covenant of salt",
+   "why": "7 verses: the text's own phrase (2Ch 13:5 'a covenant of salt'; Lev 2:13; twin of image_salt)"
+  },
+  "the_dark_cloud": {
+   "old": "thick darkness",
+   "new": "judging through thick darkness",
+   "why": "1 verses: the text's own phrase (Job 22:13 'Does He judge through thick darkness?')"
+  }
+ },
+ "twins_held": [
+  "bucklers",
+  "clay",
+  "feet",
+  "image_adder",
+  "image_chaff",
+  "image_clay",
+  "image_defence",
+  "image_feet",
+  "image_gin",
+  "image_gold",
+  "image_shield",
+  "image_stubble",
+  "image_table",
+  "image_trap",
+  "table",
+  "viper"
+ ]
+}

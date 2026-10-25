@@ -185,7 +185,8 @@ sit in the narrator's voice.
 
 **How the policy was found wrong, and checked since.** Before publishing, I counted what the RDF 1.2 file asserted
 and found it wrong. Anything not credited to someone else had been given to the narrator by default: 18,701 asserted
-triples. After the fix, 8,103 were asserted (8,119 today: the 16 relations added since are the narrator's). Of the
+triples. After the fix, 8,103 were asserted (8,089 in the data of 2026.10.25, after relations were added and more claims
+inside speeches were credited to their speakers). Of the
 roughly 10,600 no longer asserted, about 9,600 were the graph's own
 groupings, about 570 were conjectured or disputed, and the rest were verb statements.
 `tests/test_assertion_policy.py` checks the rule in the published files, not in the code, and must catch six planted
@@ -261,11 +262,11 @@ java -cp "<rdf4j>/lib/*:." Rdf4jCheck ../../out/export/claims.trig ../../out/exp
 
 | File | Jena quads |
 |---|---|
-| `claims.trig` (RDF 1.1) | 227,226 |
-| `claims-rdf12.trig` (RDF 1.2) | 236,622 |
+| `claims.trig` (RDF 1.1) | 227,920 |
+| `claims-rdf12.trig` (RDF 1.2) | 237,291 |
 
-The 9,396 more in the RDF 1.2 file are the difference of form. It carries one `rdf:reifies` per claim (21,394) and
-the 8,119 asserted triples, in place of the RDF 1.1 file's 20,117 triples in 76 named graphs. The queries' expected
+The 9,371 more in the RDF 1.2 file are the difference of form. It carries one `rdf:reifies` per claim (21,440) and
+the 8,089 asserted triples, in place of the RDF 1.1 file's 20,158 triples in 91 named graphs. The queries' expected
 answers are in the table above.
 
 rdflib 7.6 (Python) reads the RDF 1.1 file but not the 1.2 one: its TriG parser does not accept the `<<( ... )>>`

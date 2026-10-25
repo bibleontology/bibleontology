@@ -110,6 +110,23 @@ def main():
     # a noun is a particular one when it is "of" a pronoun or a name
     # (nouns only: a pronoun with an "of" is unresolved for its own reason)
     of_any = {s for s, d in possessed_pairs}
+    # A RULED WORD "OF" ANOTHER IS ANOTHER THING (2026-10-24, the Mac's first
+    # structure check): a ruling names a verse and a word, so in 2 Kgs 11:18 both
+    # בַּיִת -- "the temple of Baal" and "the house of the LORD" -- went to the
+    # temple, and "the people tore it down" with them. A ruled word whose "of" is a
+    # noun or name other than a divine name is held, not given to the ruled card
+    # Aramaic אֱלָהּ for Ezra's "house of God" (six ends held without it); and a
+    # quality is not an owner: "Your holy temple" is "the temple of Your holiness"
+    # (Ps 79:1), "a house of rest" (1 Chr 28:2)
+    divine_lemmas = LORD_NAMES | THEOS | ELOHIM | HELD_DIVINE | {"אֱלָהּ", "קֹדֶשׁ", "מְנוּחָה"}
+    PARTICULAR = {"place", "person", "group"}
+    of_what = collections.defaultdict(list)
+    for s, d in possessed_pairs:
+        of_what[s].append(nodes.get(d) or {})
+    of_other = {s for s, ds in of_what.items()
+                if any(d.get("class") in ("noun", "name", "propn") or d.get("proper") or d.get("type") == "proper"
+                       for d in ds)
+                and not any(d.get("lemma") in divine_lemmas for d in ds)}
     possessed = {s for s, d in possessed_pairs
                  if (nodes.get(s) or {}).get("class") == "noun"
                  and ((nodes.get(d) or {}).get("class") in ("pron", "pronoun") or (nodes.get(d) or {}).get("proper")
@@ -178,6 +195,20 @@ def main():
                     for d in range(4):
                         image_at[(f"{b}.{c}.{int(n) + d}", k)].add(iid)
 
+    # A RULED VERSE IS THE CARD'S THERE (2026-10-24, plan 8.2h; the temple,
+    # 2026-10-23: "Solomon built household"). A word a ruling limits to named
+    # verses was kept off its card everywhere (above), so in those very verses it
+    # fell through to whatever one-word card shared it: in the temple's verses
+    # בַּיִת resolved to "household" 81 times and to the temple never. A ruling
+    # names the verse and the word, which is better evidence than any rule below,
+    # so it is asked first. Divine records are never reached this way.
+    ruled_at = collections.defaultdict(set)              # (verse, key) -> cards
+    for card, r in M.repairs().items():
+        if card in ents and card not in DIVINE_HOLD:
+            for k, vs in r["named"].items():
+                for v in vs:
+                    ruled_at[(v, k)].add(card)
+
     # THE RELEASE (2026-10-19): words that reach God or Jesus through a
     # pointer chain, released as a class where no seat of the panel of eleven
     # objected in two passes (ontology/provenance/sweep/divine-releases-*.json)
@@ -226,10 +257,24 @@ def main():
                 return None, f"held: {r} through a referent"
             # the end is labelled by what it reached, so the ends check sees a
             # card however it was reached (295 had skipped it as "referent")
-            if r and how in ("card", "image"):
+            if r and how in ("card", "image", "ruled"):
                 return r, how + " via referent"
             return r, ("referent" if r and how == "named" else how)
         k = key_of(n) if n.get("word") else None
+        ruled = ruled_at.get((n.get("ref"), k)) or set()
+        # only for a particular thing: "the cloak of Elijah" (2 Kgs 2:13) is still a
+        # garment, and the first cut, on every ruled card, held 366 ends like it
+        if ruled and x in of_other and any((ents.get(c) or {}).get("type") in PARTICULAR for c in ruled):
+            return None, "held: a ruled word of another (the temple of Baal)"
+        # and one place is never plural: "the houses of the male cult prostitutes
+        # ... in the house of the LORD" (2 Kgs 23:7) had both gone to the temple
+        if ruled and n.get("number") == "plural" and any((ents.get(c) or {}).get("type") in PARTICULAR
+                                                          for c in ruled):
+            return None, "held: a plural is not the one place"
+        if len(ruled) == 1:
+            return next(iter(ruled)), "ruled"
+        if len(ruled) > 1:
+            return None, "several cards (ruled)"
         imgs = image_at.get((n.get("ref"), k)) or set()
         if len(imgs) == 1:
             return next(iter(imgs)), "image"

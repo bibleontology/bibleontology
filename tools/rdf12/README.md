@@ -141,3 +141,17 @@ On data 2026.10.23: 21,394 claims, 8,119 asserted. The 16 more are the temple re
 - **Java, for the record:** neither JDK is on Git Bash's path. Call `bin\java` in the JDK 21 folder under
   `C:\tmp\rdftools\` for Jena, and the JDK 25 folder's for RDF4J. (Their full folder names look like IPv4 addresses
   to the public copy's scan, which refused this README once for that.)
+
+## 2026-10-25: re-run on data 2026.10.25, the second public release
+
+21,440 claims, 8,089 asserted: 30 fewer, net. Claims inside speeches credited to their speakers in every book (the
+speaker credits, 2026-10-24) left the narrator's voice; relations added since entered it. The split was not counted.
+- **Parsing:** Jena counts 227,920 quads in the 1.1 file and 237,291 in the 1.2 file. RDF4J parses the same numbers:
+  92 graphs (77 before: more speakers have voice graphs of their own), and 1.
+- **Every query answers as before, in both stores:** `q-default.rq` 0 and 32 on the 1.1 file, 8 on the 1.2 file;
+  `q-narrator.rq` 8; `q-asserted-nil.rq` 0; `q-prov.rq` Job 47, Eliphaz 17, God 8, Elihu 5.
+- **The page's quad table and its paragraph updated:** 9,371 more quads in the 1.2 file, which carries 21,440
+  `rdf:reifies` and 8,089 asserted triples in place of the 1.1 file's 20,158 triples in 91 named graphs (computed
+  from the measured counts by the page's own identity, which holds on the earlier figures).
+- **The fault the r/semanticweb post disclosed,** links inside speeches still in the narrator's voice: 83 in Job
+  before, **71** now (14 of them Eliphaz's in Job 15), counted from the 1.2 file.
