@@ -1,0 +1,2580 @@
+{
+ "id": "blessing",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "verb",
+ "words": [
+  {
+   "key": "h1288",
+   "lemma": "בָּרַךְ",
+   "form": "verb",
+   "translit": "ba.rakh",
+   "gloss": "to bless",
+   "lang": "Hebrew",
+   "uses": 286,
+   "other_sense": 3
+  },
+  {
+   "key": "h1289",
+   "lemma": "בְּרַךְ",
+   "form": "verb",
+   "translit": "be.rakh",
+   "gloss": "to bless",
+   "lang": "Hebrew",
+   "uses": 4,
+   "other_sense": 1
+  },
+  {
+   "key": "g2127",
+   "lemma": "εὐλογέω",
+   "form": "verb",
+   "translit": "eulogeō",
+   "gloss": "to praise/bless",
+   "lang": "Greek",
+   "uses": 39,
+   "other_sense": 0
+  },
+  {
+   "key": "g1757",
+   "lemma": "ἐνευλογέω",
+   "form": "verb",
+   "translit": "eneulogeomai",
+   "gloss": "be blessed",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g2128",
+   "lemma": "εὐλογητός",
+   "form": "verb",
+   "translit": "eulogētos",
+   "gloss": "praiseworthy",
+   "lang": "Greek",
+   "uses": 8,
+   "other_sense": 0
+  },
+  {
+   "key": "h833",
+   "lemma": "אָשַׁר",
+   "form": "verb",
+   "translit": "a.shar",
+   "gloss": "to bless",
+   "lang": "Hebrew",
+   "uses": 9,
+   "other_sense": 6
+  },
+  {
+   "key": "g3106",
+   "lemma": "μακαρίζω",
+   "form": "verb",
+   "translit": "makarizō",
+   "gloss": "to bless",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "h1293",
+   "lemma": "בְּרָכָה",
+   "form": "noun",
+   "translit": "be.ra.khah",
+   "gloss": "blessing",
+   "lang": "Hebrew",
+   "uses": 64,
+   "other_sense": 0
+  },
+  {
+   "key": "g2129",
+   "lemma": "εὐλογία",
+   "form": "noun",
+   "translit": "eulogia",
+   "gloss": "praise",
+   "lang": "Greek",
+   "uses": 14,
+   "other_sense": 0
+  },
+  {
+   "key": "g3108",
+   "lemma": "μακαρισμός",
+   "form": "noun",
+   "translit": "makarismos",
+   "gloss": "blessedness",
+   "lang": "Greek",
+   "uses": 3,
+   "other_sense": 0
+  },
+  {
+   "key": "h835",
+   "lemma": "אֶשֶׁר",
+   "form": "adjective",
+   "translit": "e.sher",
+   "gloss": "blessed",
+   "lang": "Hebrew",
+   "uses": 42,
+   "other_sense": 0
+  },
+  {
+   "key": "g3107",
+   "lemma": "μακάριος",
+   "form": "adjective",
+   "translit": "makarios",
+   "gloss": "blessed",
+   "lang": "Greek",
+   "uses": 49,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "verb": "Who blesses, and whom",
+  "noun": "What the text says of blessing",
+  "adjective": "“Blessed is…”: who is called blessed"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "abraham",
+   "name": "Abraham",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "praise",
+   "name": "praise",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "curse",
+   "name": "curse",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "covenant",
+   "name": "covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "priests",
+   "name": "the priests",
+   "type": "group",
+   "missing": false
+  },
+  {
+   "id": "prayer",
+   "name": "prayer",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "happiness",
+   "name": "happiness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "theme_blessing_commission_r15",
+   "name": "A blessing and a curse",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_blessing_commission_r16",
+   "name": "Blessed is the man",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_blessing_commission_r17",
+   "name": "The curse turned into a blessing",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_blessing_commission_r18",
+   "name": "Bless those who curse you",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_blessing_commission_r19",
+   "name": "Blessing over bread and cup",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_blessing_commission_r9",
+   "name": "Blessed be Abram by God Most High",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "blessing_of_abraham",
+   "name": "the blessing of Abraham",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "blessed_hope",
+   "name": "the blessed hope",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.1.28",
+   "ref": "Genesis 1:28",
+   "text": "God blessed them and said to them, “Be fruitful and multiply, and fill the earth and subdue it; rule over the fish of the sea and the birds of the air and every creature that crawls upon the earth.”"
+  },
+  {
+   "id": "Gen.12.3",
+   "ref": "Genesis 12:3",
+   "text": "I will bless those who bless you and curse those who curse you; and all the families of the earth will be blessed through you.”"
+  },
+  {
+   "id": "Num.6.24",
+   "ref": "Numbers 6:24",
+   "text": "‘May the LORD bless you and keep you;"
+  },
+  {
+   "id": "Ps.103.1",
+   "ref": "Psalms 103:1",
+   "text": "Of David. Bless the LORD, O my soul; all that is within me, bless His holy name."
+  },
+  {
+   "id": "Ps.1.1",
+   "ref": "Psalms 1:1",
+   "text": "Blessed is the man who does not walk in the counsel of the wicked, or set foot on the path of sinners, or sit in the seat of mockers."
+  },
+  {
+   "id": "Matt.5.3",
+   "ref": "Matthew 5:3",
+   "text": "“Blessed are the poor in spirit, for theirs is the kingdom of heaven."
+  },
+  {
+   "id": "Rom.12.14",
+   "ref": "Romans 12:14",
+   "text": "Bless those who persecute you. Bless and do not curse."
+  },
+  {
+   "id": "Eph.1.3",
+   "ref": "Ephesians 1:3",
+   "text": "Blessed be the God and Father of our Lord Jesus Christ, who has blessed us in Christ with every spiritual blessing in the heavenly realms."
+  }
+ ],
+ "forms": [
+  {
+   "form": "verb",
+   "verses": 341,
+   "rows": [
+    {
+     "label": "God blessed: the living creatures, the man and the woman, the seventh day; “the LORD has blessed him”",
+     "note": "In Gen 5:2, Ps 37:22, Ps 107:38 and Ps 147:13 the verse says “He” or “Him”, and God or the LORD is named in the lines just before; in Ps 132:15 the LORD says “I”. Verses that say only “will be blessed” with no one named (Ps 112:2, 128:4, Prov 22:9) are under “Every other use”. In Matt 25:34 it is the King who says “Come, you who are blessed by My Father”. Eph 1:3 is also in “People bless God”, where it begins “Blessed be the God and Father of our Lord Jesus Christ”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "gen_1_blessing",
+       "name": "Blessing to be fruitful",
+       "type": "pattern",
+       "missing": false
+      },
+      {
+       "id": "sabbath",
+       "name": "the sabbath",
+       "type": "observance",
+       "missing": false
+      }
+     ],
+     "n": 43,
+     "verses": [
+      "Gen.1.22",
+      "Gen.2.3",
+      "Gen.25.11",
+      "Matt.25.34",
+      "Gen.1.28",
+      "Gen.5.2",
+      "Gen.9.1",
+      "Exod.20.11",
+      "Gen.24.1",
+      "Gen.24.35",
+      "Gen.26.12",
+      "Gen.30.27",
+      "Gen.30.30",
+      "Gen.35.9",
+      "Gen.39.5",
+      "Gen.48.3",
+      "Josh.17.14",
+      "Judg.13.24",
+      "2Sam.6.11",
+      "2Sam.6.12",
+      "1Chr.13.14",
+      "1Chr.26.5",
+      "2Chr.31.10",
+      "Job.1.10",
+      "Job.42.12",
+      "Ps.5.12",
+      "Ps.29.11",
+      "Ps.37.22",
+      "Ps.41.2",
+      "Ps.45.2",
+      "Ps.65.10",
+      "Ps.67.6",
+      "Ps.67.7",
+      "Ps.107.38",
+      "Ps.115.12",
+      "Ps.115.13",
+      "Ps.115.15",
+      "Ps.132.15",
+      "Ps.147.13",
+      "Prov.3.33",
+      "Isa.61.9",
+      "Isa.65.23",
+      "Eph.1.3"
+     ],
+     "eg": [
+      {
+       "id": "Gen.1.22",
+       "ref": "Genesis 1:22",
+       "text": "Then God blessed them and said, “Be fruitful and multiply and fill the waters of the seas, and let birds multiply on the earth.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.2.3",
+       "ref": "Genesis 2:3",
+       "text": "Then God blessed the seventh day and sanctified it, because on that day He rested from all the work of creation that He had accomplished.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.25.11",
+       "ref": "Genesis 25:11",
+       "text": "After Abraham's death, God blessed his son Isaac, who lived near Beer-lahai-roi.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Matt.25.34",
+       "ref": "Matthew 25:34",
+       "text": "Then the King will say to those on His right, ‘Come, you who are blessed by My Father, inherit the kingdom prepared for you from the foundation of the world.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“I will bless you”, “all the families of the earth will be blessed through you”: God’s word to Abraham, Sarah, Ishmael, Isaac and Jacob; and the verses that speak of the nations blessed",
+     "note": "The word is given to Abraham (12:2-3, 18:18, 22:17-18), to Sarah and Ishmael (17:16, 17:20), to Isaac (26:3-4, 26:24) and to Jacob (28:14); Isa 51:2 looks back to it, Acts 3:25-26 and Gal 3:8-9 take it up, and Heb 6:14 quotes Gen 22:17. Ps 72:17, Isa 19:25 and Jer 4:2 speak of the nations blessed without naming Abraham, and the page does not say they refer to the promise. In the Hebrew, Gen 12:3 and 28:14 use the passive of bārak (nibrəkû), and Gen 22:18 and 26:4 the reflexive (hitbārăkû), which Jer 4:2 and Ps 72:17 also use; the Berean prints “blessed” for both. Gen 12:2 (“so that you will be a blessing”) and Gal 3:14 (“the blessing promised to Abraham would come to the Gentiles in Christ Jesus”) use the noun and stand in the nouns section. Where Christian traditions part on who “your offspring” and “those who have faith” are, and on how Israel and the church stand to this promise, the page takes no side.",
+     "doors": [
+      {
+       "id": "abraham",
+       "name": "Abraham",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "blessing_of_abraham",
+       "name": "the blessing of Abraham",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "covenant",
+       "name": "covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "nations",
+       "name": "nations",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 20,
+     "verses": [
+      "Gen.12.3",
+      "Gen.22.18",
+      "Gen.26.4",
+      "Gen.28.14",
+      "Gen.12.2",
+      "Gen.17.16",
+      "Gen.17.20",
+      "Gen.18.18",
+      "Gen.22.17",
+      "Gen.26.3",
+      "Gen.26.24",
+      "Isa.19.25",
+      "Isa.51.2",
+      "Ps.72.17",
+      "Jer.4.2",
+      "Acts.3.25",
+      "Acts.3.26",
+      "Gal.3.8",
+      "Gal.3.9",
+      "Heb.6.14"
+     ],
+     "eg": [
+      {
+       "id": "Gen.12.3",
+       "ref": "Genesis 12:3",
+       "text": "I will bless those who bless you and curse those who curse you; and all the families of the earth will be blessed through you.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.22.18",
+       "ref": "Genesis 22:18",
+       "text": "And through your offspring all nations of the earth will be blessed, because you have obeyed My voice.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.26.4",
+       "ref": "Genesis 26:4",
+       "text": "I will make your descendants as numerous as the stars in the sky, and I will give them all these lands, and through your offspring all nations of the earth will be blessed,",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.28.14",
+       "ref": "Genesis 28:14",
+       "text": "Your descendants will be like the dust of the earth, and you will spread out to the west and east and north and south. All the families of the earth will be blessed through you and your offspring.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“The LORD your God will bless you”: said to Israel in the law, in the land and in the work of their hands",
+     "note": "Said by Moses to Israel about the land and the covenant they were entering (and by the LORD at Exod 20:24 and 23:25, and to the returned exiles at Hag 2:19). Some verses name a condition (“if you obey”: Deut 28:1-2, 30:16; “serve the LORD your God”: Exod 23:25), some say what the LORD has done (Deut 2:7, 12:7), some give the reason for a command (Deut 14:29, 15:10, 23:20, 24:19). Deut 28:1-14 is Moses’ speech about what the LORD will do (the LORD is named in 28:1 and 28:8); 28:3-6 say “You will be blessed” (the Hebrew bārûkh) and name no one who blesses. What these verses name -- the work of the hands, the land, the herds, bread and water -- is set beside the verses that call the poor and the persecuted blessed (a different word, אַשְׁרֵי or μακάριος: “Blessed is the one who” section, “Blessed are the poor…”) and beside the noun form’s verses that name goods with the blessing. Whether material blessing is promised to the faithful now, readers part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_blessing_commission_r15",
+       "name": "A blessing and a curse",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 26,
+     "verses": [
+      "Exod.23.25",
+      "Deut.7.13",
+      "Deut.15.10",
+      "Deut.30.16",
+      "Exod.20.24",
+      "Deut.1.11",
+      "Deut.2.7",
+      "Deut.7.14",
+      "Deut.12.7",
+      "Deut.14.24",
+      "Deut.14.29",
+      "Deut.15.4",
+      "Deut.15.6",
+      "Deut.15.14",
+      "Deut.15.18",
+      "Deut.16.10",
+      "Deut.16.15",
+      "Deut.23.20",
+      "Deut.24.19",
+      "Deut.28.3",
+      "Deut.28.4",
+      "Deut.28.5",
+      "Deut.28.6",
+      "Deut.28.8",
+      "Deut.28.12",
+      "Hag.2.19"
+     ],
+     "eg": [
+      {
+       "id": "Exod.23.25",
+       "ref": "Exodus 23:25",
+       "text": "So you shall serve the LORD your God, and He will bless your bread and your water. And I will take away sickness from among you.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Deut.7.13",
+       "ref": "Deuteronomy 7:13",
+       "text": "He will love you and bless you and multiply you. He will bless the fruit of your womb and the produce of your land-your grain, new wine, and oil, the young of your herds and the lambs of your flocks-in the land that He swore to your fathers to give you.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Deut.15.10",
+       "ref": "Deuteronomy 15:10",
+       "text": "Give generously to him, and do not let your heart be grieved when you do so. And because of this the LORD your God will bless you in all your work and in everything to which you put your hand.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Deut.30.16",
+       "ref": "Deuteronomy 30:16",
+       "text": "For I am commanding you today to love the LORD your God, to walk in His ways, and to keep His commandments, statutes, and ordinances, so that you may live and increase, and the LORD your God may bless you in the land that you are entering to possess.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A father’s blessing: Isaac to Jacob and Esau, Jacob to Joseph’s sons and to his own, Moses to the tribes",
+     "note": "Gen 27:38, 27:41, 49:28 and Deut 33:1 also stand in the noun section’s “A blessing pronounced or bestowed”, where the Hebrew is the noun בְּרָכָה and the same scenes are told; the verses here are the verb. Isaac’s blessing of Jacob (Gen 27) was spoken to the son he took to be Esau (27:23, 27:33); Heb 11:20 says “By faith Isaac blessed Jacob and Esau in regard to their future”. Jacob’s words over his sons (Gen 49) include words for Simeon and Levi that are not blessings (49:5-7); the verses here are those that carry the word “bless”. Deut 33 is “the blessing that Moses the man of God pronounced upon the Israelites before his death” (33:1, in the noun form).",
+     "doors": [
+      {
+       "id": "event_isaac_blesses_jacob",
+       "name": "Isaac Blesses Jacob",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "event_jacob_blesses_his_sons",
+       "name": "Jacob Blesses His Sons",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "event_jacob_blesses_ephraim_manasseh",
+       "name": "Jacob blesses Ephraim & Manasseh",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "blessing_of_moses",
+       "name": "the blessing of Moses",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 30,
+     "verses": [
+      "Gen.27.29",
+      "Gen.48.20",
+      "Gen.49.28",
+      "Heb.11.20",
+      "Gen.27.4",
+      "Gen.27.7",
+      "Gen.27.10",
+      "Gen.27.19",
+      "Gen.27.23",
+      "Gen.27.25",
+      "Gen.27.27",
+      "Gen.27.30",
+      "Gen.27.31",
+      "Gen.27.33",
+      "Gen.27.34",
+      "Gen.27.38",
+      "Gen.27.41",
+      "Gen.28.1",
+      "Gen.28.3",
+      "Gen.28.6",
+      "Gen.48.9",
+      "Gen.48.15",
+      "Gen.48.16",
+      "Gen.49.25",
+      "Deut.33.1",
+      "Deut.33.11",
+      "Deut.33.13",
+      "Deut.33.20",
+      "Deut.33.24",
+      "Heb.11.21"
+     ],
+     "eg": [
+      {
+       "id": "Gen.27.29",
+       "ref": "Genesis 27:29",
+       "text": "May peoples serve you and nations bow down to you. May you be the master of your brothers, and may the sons of your mother bow down to you. May those who curse you be cursed, and those who bless you be blessed.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.48.20",
+       "ref": "Genesis 48:20",
+       "text": "So that day Jacob blessed them and said: “By you shall Israel pronounce this blessing: ‘May God make you like Ephraim and Manasseh.'” So he put Ephraim before Manasseh.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.49.28",
+       "ref": "Genesis 49:28",
+       "text": "These are the tribes of Israel, twelve in all, and this was what their father said to them. He blessed them, and he blessed each one with a suitable blessing.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        },
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.20",
+       "ref": "Hebrews 11:20",
+       "text": "By faith Isaac blessed Jacob and Esau concerning the future.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The priests, the tribes at Gerizim, Moses, Joshua, David and Solomon bless the people in the LORD’s name: “The LORD bless you and keep you”, “May the LORD bless you from Zion”",
+     "note": "Num 6:23-27 gives the words (“The LORD bless you and keep you; the LORD make His face shine upon you and be gracious to you; the LORD lift up His countenance upon you and give you peace”) and ends “So they will put My name on the Israelites, and I will bless them”. Ps 118:26 (“From the house of the LORD we bless you”) is also in “Blessed is He who comes in the name of the Lord”. In Deut 27:12 and Josh 8:33 it is the tribes, standing on Mount Gerizim, who bless the people; Ps 128:5 is a wish (“May the LORD bless you from Zion”). Joshua’s blessing of Caleb (Josh 14:13) and David’s of his household (2 Sam 6:20) are one man and one household, and are in “People bless one another”.",
+     "doors": [
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "aaron",
+       "name": "Aaron",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "levites",
+       "name": "the Levites",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Num.6.24",
+      "Num.6.27",
+      "2Sam.6.18",
+      "Deut.10.8",
+      "Exod.39.43",
+      "Lev.9.22",
+      "Lev.9.23",
+      "Num.6.23",
+      "Deut.21.5",
+      "Deut.27.12",
+      "Josh.8.33",
+      "Josh.22.6",
+      "Josh.22.7",
+      "1Sam.2.20",
+      "1Kgs.8.14",
+      "1Kgs.8.55",
+      "1Chr.16.2",
+      "1Chr.16.43",
+      "1Chr.23.13",
+      "2Chr.6.3",
+      "2Chr.30.27",
+      "Ps.118.26",
+      "Ps.128.5",
+      "Ps.134.3"
+     ],
+     "eg": [
+      {
+       "id": "Num.6.24",
+       "ref": "Numbers 6:24",
+       "text": "‘May the LORD bless you and keep you;",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Num.6.27",
+       "ref": "Numbers 6:27",
+       "text": "So they shall put My name on the Israelites, and I will bless them.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.6.18",
+       "ref": "2 Samuel 6:18",
+       "text": "When David had finished sacrificing the burnt offerings and peace offerings, he blessed the people in the name of the LORD of Hosts.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Deut.10.8",
+       "ref": "Deuteronomy 10:8",
+       "text": "At that time the LORD set apart the tribe of Levi to carry the ark of the covenant of the LORD, to stand before the LORD to serve Him, and to pronounce blessings in His name, as they do to this day.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Balaam, hired to curse Israel, blesses them",
+     "note": "Num 22:6 is Balak’s wish (“he whom you bless is blessed, and he whom you curse is cursed”); 23:20 is Balaam’s answer (“I have received a command to bless; He has blessed, and I cannot change it”). Deut 23:5 and Neh 13:2 (“our God turned the curse into a blessing”) are in the noun form’s “The blessing and the curse”. The blessing and the curse stand together in Gen 12:3 (God’s word to Abraham), Num 22-24 (here), Deut 11:26 and 30:19, Deut 27:12-13 and 28, Prov 27:14 and Jas 3:9-10; the rows are cut by form (verb and noun) and by who speaks, and each of these is named where it stands.",
+     "doors": [
+      {
+       "id": "balaam",
+       "name": "Balaam",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "arc_balaam_hired_to_curse",
+       "name": "Story arc: Balaam hired to curse (Num 22–24; Deut 23)",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Num.22.6",
+      "Num.22.12",
+      "Num.23.20",
+      "Num.24.10",
+      "Num.23.11",
+      "Num.23.25",
+      "Num.24.1",
+      "Num.24.9",
+      "Josh.24.10"
+     ],
+     "eg": [
+      {
+       "id": "Num.22.6",
+       "ref": "Numbers 22:6",
+       "text": "So please come now and put a curse on this people, because they are too mighty for me. Perhaps I may be able to defeat them and drive them out of the land; for I know that those you bless are blessed, and those you curse are cursed.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Num.22.12",
+       "ref": "Numbers 22:12",
+       "text": "But God said to Balaam, “Do not go with them. You are not to curse this people, for they are blessed.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Num.23.20",
+       "ref": "Numbers 23:20",
+       "text": "I have indeed received a command to bless; He has blessed, and I cannot change it.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Num.24.10",
+       "ref": "Numbers 24:10",
+       "text": "Then Balak's anger burned against Balaam, and he struck his hands together and said to Balaam, “I summoned you to curse my enemies, but behold, you have persisted in blessing them these three times.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "People call one another blessed, and bless one another: “call her blessed”, “will call me blessed”; kin, hosts, guests, a king; “The LORD bless you”, “Blessed are you”",
+     "note": "The last ten (Gen 30:13; Job 29:11; Ps 72:17; Prov 3:18, 31:28; Song 6:9; Mal 3:12, 3:15; Luke 1:48; Jas 5:11) are two other words, אָשַׁר and μακαρίζω, “call blessed, count blessed”; the Berean prints “call blessed”, “called me blessed”, “are blessed”, “consider blessed”, and “happy” at Gen 30:13 (“the women call me happy”). Mal 3:15 is a hard verse: “we call the arrogant blessed”. In Gen 32:26-29 Jacob asks the man who wrestled with him to bless him and is blessed there; Jacob names the place Peniel, saying “I have seen God face to face” (32:30). The page does not say more of who he is. Joshua’s blessing of Caleb (Josh 14:13) and David’s of his household (2 Sam 6:20) are here, with the priests’ and leaders’ blessings of the people in the row above. The two acts in this row are two different Hebrew and Greek words: בָּרַךְ and εὐλογέω give or wish a blessing, אָשַׁר and μακαρίζω count someone blessed. The Mary sayings are cut across two rows by the Greek word: Luke 1:42 and 1:48 are here, and 1:45 and 11:27-28 are in the New Testament “Blessed is the one who…” row. Heb 7:1-7 tells that Melchizedek blessed Abraham and that “the lesser is blessed by the greater”.",
+     "doors": [
+      {
+       "id": "gen_24_60_speech",
+       "name": "the blessing on Rebekah",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "theme_blessing_commission_r9",
+       "name": "Blessed be Abram by God Most High",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "ruth",
+       "name": "Ruth",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 51,
+     "verses": [
+      "Prov.31.28",
+      "Luke.1.48",
+      "Gen.24.60",
+      "Ruth.2.4",
+      "Gen.14.19",
+      "Gen.24.31",
+      "Gen.26.29",
+      "Gen.31.55",
+      "Gen.32.26",
+      "Gen.32.29",
+      "Gen.47.7",
+      "Gen.47.10",
+      "Exod.12.32",
+      "Deut.24.13",
+      "Josh.14.13",
+      "Judg.5.24",
+      "Judg.17.2",
+      "Ruth.2.19",
+      "Ruth.2.20",
+      "Ruth.3.10",
+      "1Sam.15.13",
+      "1Sam.23.21",
+      "1Sam.25.33",
+      "1Sam.26.25",
+      "2Sam.2.5",
+      "2Sam.6.20",
+      "2Sam.13.25",
+      "2Sam.14.22",
+      "2Sam.19.39",
+      "2Sam.21.3",
+      "1Kgs.2.45",
+      "1Kgs.8.66",
+      "Neh.11.2",
+      "Job.31.20",
+      "Ps.72.15",
+      "Ps.129.8",
+      "Prov.5.18",
+      "Jer.31.23",
+      "Luke.1.42",
+      "Luke.2.34",
+      "Heb.7.1",
+      "Heb.7.6",
+      "Heb.7.7",
+      "Gen.30.13",
+      "Job.29.11",
+      "Ps.72.17",
+      "Prov.3.18",
+      "Song.6.9",
+      "Mal.3.12",
+      "Mal.3.15",
+      "Jas.5.11"
+     ],
+     "eg": [
+      {
+       "id": "Prov.31.28",
+       "ref": "Proverbs 31:28",
+       "text": "Her children rise up and call her blessed; her husband praises her as well:",
+       "words": [
+        {
+         "key": "h833",
+         "lemma": "אָשַׁר"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.48",
+       "ref": "Luke 1:48",
+       "text": "For He has looked with favor on the humble state of His servant. From now on all generations will call me blessed.",
+       "words": [
+        {
+         "key": "g3106",
+         "lemma": "μακαρίζω"
+        }
+       ]
+      },
+      {
+       "id": "Gen.24.60",
+       "ref": "Genesis 24:60",
+       "text": "And they blessed Rebekah and said to her, “Our sister, may you become the mother of thousands upon thousands. May your offspring possess the gates of their enemies.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Ruth.2.4",
+       "ref": "Ruth 2:4",
+       "text": "Just then Boaz arrived from Bethlehem and said to the harvesters, “The LORD be with you.” “The LORD bless you,” they replied.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A request for God’s blessing: “If only You would bless me”, “bless the house of Your servant”, “bless Your people”, “May God be gracious to us and bless us”",
+     "note": null,
+     "doors": [
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "1Chr.4.10",
+      "2Sam.7.29",
+      "Deut.26.15",
+      "Ps.28.9",
+      "1Chr.17.27",
+      "Ps.67.1"
+     ],
+     "eg": [
+      {
+       "id": "1Chr.4.10",
+       "ref": "1 Chronicles 4:10",
+       "text": "And Jabez called out to the God of Israel, “If only You would bless me and enlarge my territory! May Your hand be with me and keep me from harm, so that I will be free from pain.” And God granted the request of Jabez.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.7.29",
+       "ref": "2 Samuel 7:29",
+       "text": "Now therefore, may it please You to bless the house of Your servant, that it may continue forever before You. For You, O Lord GOD, have spoken, and with Your blessing the house of Your servant will be blessed forever.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        },
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Deut.26.15",
+       "ref": "Deuteronomy 26:15",
+       "text": "Look down from Your holy habitation, from heaven, and bless Your people Israel and the land You have given us as You swore to our fathers-a land flowing with milk and honey.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Ps.28.9",
+       "ref": "Psalms 28:9",
+       "text": "Save Your people and bless Your inheritance; shepherd them and carry them forever.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Blessed be the LORD”, “Bless the LORD, O my soul”: people bless God",
+     "note": "The Hebrew is בָּרַךְ (and בָּרוּךְ, “blessed be”), the Aramaic בְּרַךְ in Daniel, and the Greek εὐλογέω and εὐλογητός, which the Greek Old Testament uses for the Hebrew. “Praise” is a different word, הָלַל, αἰνέω, and has its own hub. In Luke 1:64 and 24:53 the Berean prints “praising”, in Rom 1:25 and 9:5 “worthy of praise”, in Mark 14:61 “the Son of the Blessed One”. Rom 9:5 can be read as a blessing of Christ (“who is God over all”) or of God apart from Christ, because the Greek can be punctuated either way; readers part, and the page does not choose. In Zech 11:5 those who sell the flock say “Blessed be the LORD, for I am rich”, a hard verse that stays.",
+     "doors": [
+      {
+       "id": "praise",
+       "name": "praise",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "worship",
+       "name": "worship",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 88,
+     "verses": [
+      "Gen.24.27",
+      "Ps.103.1",
+      "Luke.1.68",
+      "2Cor.1.3",
+      "Gen.9.26",
+      "Gen.14.20",
+      "Gen.24.48",
+      "Exod.18.10",
+      "Deut.8.10",
+      "Josh.22.33",
+      "Judg.5.2",
+      "Judg.5.9",
+      "Ruth.4.14",
+      "1Sam.25.32",
+      "1Sam.25.39",
+      "2Sam.18.28",
+      "2Sam.22.47",
+      "1Kgs.1.48",
+      "1Kgs.5.7",
+      "1Kgs.8.15",
+      "1Kgs.8.56",
+      "1Kgs.10.9",
+      "1Chr.16.36",
+      "1Chr.29.10",
+      "1Chr.29.20",
+      "2Chr.2.12",
+      "2Chr.6.4",
+      "2Chr.9.8",
+      "2Chr.20.26",
+      "2Chr.31.8",
+      "Ezra.7.27",
+      "Neh.8.6",
+      "Neh.9.5",
+      "Job.1.21",
+      "Ps.16.7",
+      "Ps.18.46",
+      "Ps.26.12",
+      "Ps.28.6",
+      "Ps.31.21",
+      "Ps.34.1",
+      "Ps.41.13",
+      "Ps.63.4",
+      "Ps.66.8",
+      "Ps.66.20",
+      "Ps.68.19",
+      "Ps.68.26",
+      "Ps.68.35",
+      "Ps.72.18",
+      "Ps.72.19",
+      "Ps.89.52",
+      "Ps.96.2",
+      "Ps.100.4",
+      "Ps.103.2",
+      "Ps.103.20",
+      "Ps.103.21",
+      "Ps.103.22",
+      "Ps.104.1",
+      "Ps.104.35",
+      "Ps.106.48",
+      "Ps.113.2",
+      "Ps.115.18",
+      "Ps.119.12",
+      "Ps.124.6",
+      "Ps.134.1",
+      "Ps.134.2",
+      "Ps.135.19",
+      "Ps.135.20",
+      "Ps.135.21",
+      "Ps.144.1",
+      "Ps.145.1",
+      "Ps.145.2",
+      "Ps.145.10",
+      "Ps.145.21",
+      "Ezek.3.12",
+      "Dan.2.19",
+      "Dan.2.20",
+      "Dan.3.28",
+      "Dan.4.34",
+      "Zech.11.5",
+      "Luke.1.64",
+      "Luke.2.28",
+      "Luke.24.53",
+      "Rom.1.25",
+      "Rom.9.5",
+      "1Cor.14.16",
+      "2Cor.11.31",
+      "Eph.1.3",
+      "1Pet.1.3"
+     ],
+     "eg": [
+      {
+       "id": "Gen.24.27",
+       "ref": "Genesis 24:27",
+       "text": "saying, “Blessed be the LORD, the God of my master Abraham, who has not withheld His kindness and faithfulness from my master. As for me, the LORD has led me on the journey to the house of my master's relatives.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Ps.103.1",
+       "ref": "Psalms 103:1",
+       "text": "Of David. Bless the LORD, O my soul; all that is within me, bless His holy name.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.68",
+       "ref": "Luke 1:68",
+       "text": "“Blessed be the Lord, the God of Israel, because He has visited and redeemed His people.",
+       "words": [
+        {
+         "key": "g2128",
+         "lemma": "εὐλογητός"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.1.3",
+       "ref": "2 Corinthians 1:3",
+       "text": "Blessed be the God and Father of our Lord Jesus Christ, the Father of compassion and the God of all comfort,",
+       "words": [
+        {
+         "key": "g2128",
+         "lemma": "εὐλογητός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus blessed: the children, the loaves and fish, the bread, His disciples",
+     "note": "In several of these the verse says “He” and the Gospel names Jesus in the lines just before (Mark 10:16, Luke 24:30 and 24:51); the Berean prints “spoke a blessing” and “blessed” for the one Greek verb. The cup at the Last Supper is “gave thanks” in Matt 26:27, another Greek verb, and is not here. Where Christian traditions part on what the bread and the cup are (a memorial, a real presence, a participation, and others), the page takes no side, and shows only where the text says “bless”.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "mark_10_13_16",
+       "name": "Blessing the children",
+       "type": "passage",
+       "missing": false
+      },
+      {
+       "id": "theme_blessing_commission_r19",
+       "name": "Blessing over bread and cup",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_last_supper",
+       "name": "Last Supper",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Mark.6.41",
+      "Mark.14.22",
+      "Mark.10.16",
+      "Luke.24.50",
+      "Matt.14.19",
+      "Matt.26.26",
+      "Mark.8.7",
+      "Luke.9.16",
+      "Luke.24.30",
+      "Luke.24.51"
+     ],
+     "eg": [
+      {
+       "id": "Mark.6.41",
+       "ref": "Mark 6:41",
+       "text": "Taking the five loaves and the two fish and looking up to heaven, Jesus spoke a blessing and broke the loaves. Then He gave them to His disciples to set before the people. And He divided the two fish among them all.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      },
+      {
+       "id": "Mark.14.22",
+       "ref": "Mark 14:22",
+       "text": "While they were eating, Jesus took bread, spoke a blessing and broke it, and gave it to the disciples, saying, “Take it; this is My body.”",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      },
+      {
+       "id": "Mark.10.16",
+       "ref": "Mark 10:16",
+       "text": "And He took the children in His arms, placed His hands on them, and blessed them.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.24.50",
+       "ref": "Luke 24:50",
+       "text": "When Jesus had led them out as far as Bethany, He lifted up His hands and blessed them.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blessing set against cursing: “bless those who curse you”, “With the tongue we bless our Lord and Father, and with it we curse men”",
+     "note": "Gen 12:3, Gen 27:29 and Num 24:9 also set “bless” beside “curse”; they are in the rows of God’s word to Abraham, of Isaac and of Balaam. Prov 27:14 (“If one blesses his neighbor with a loud voice early in the morning, it will be counted as a curse to him”) is a proverb. James sets the two in one mouth in 3:9 (here) and 3:10 (“From the same mouth come blessing and cursing”, in the noun section’s “The blessing and the curse”). The blessing and the curse stand together in Gen 12:3 (God’s word to Abraham), Num 22-24 (Balaam), Deut 11:26 and 30:19 (the noun section’s “The blessing and the curse”), Deut 27:12-13 and 28, Prov 27:14 and Jas 3:9-10; the rows are cut by form (verb and noun) and by who speaks, and each of these is named where it stands.",
+     "doors": [
+      {
+       "id": "curse",
+       "name": "curse",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_blessing_commission_r18",
+       "name": "Bless those who curse you",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "enemies",
+       "name": "enemies",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Luke.6.28",
+      "Rom.12.14",
+      "Jas.3.9",
+      "Ps.62.4",
+      "Ps.109.28",
+      "Prov.27.14",
+      "Prov.30.11",
+      "1Cor.4.12",
+      "1Pet.3.9"
+     ],
+     "eg": [
+      {
+       "id": "Luke.6.28",
+       "ref": "Luke 6:28",
+       "text": "bless those who curse you, pray for those who mistreat you.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.12.14",
+       "ref": "Romans 12:14",
+       "text": "Bless those who persecute you. Bless and do not curse.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      },
+      {
+       "id": "Jas.3.9",
+       "ref": "James 3:9",
+       "text": "With the tongue we bless our Lord and Father, and with it we curse men, who have been made in God's likeness.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.62.4",
+       "ref": "Psalms 62:4",
+       "text": "They fully intend to cast him down from his lofty perch; they delight in lies; with their mouths they bless, but inwardly they curse. Selah",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Where the Berean prints “curse”, “greet” or “congratulate”: the same Hebrew word",
+     "note": "In these verses the Hebrew is בָּרַךְ, “bless”, and the Berean prints another word. The Berean prints “curse” in Job 1:5, 1:11, 2:5, 2:9 and 1 Kgs 21:10, 21:13; the Hebrew word is the one for “bless”. In Job 1:5, 1:11, 2:5 and 2:9 and 1 Kgs 21:10 and 21:13 the object is God or the king: readers have long taken “bless” there as a softened word for “curse”, and the page does not decide. In 1 Sam 13:10, 25:14, 2 Kgs 4:29 and 10:15 the word is a greeting (“to greet him”); in 1 Kgs 1:47, 2 Sam 8:10 and 1 Chr 18:10 a congratulation.",
+     "doors": [
+      {
+       "id": "curse",
+       "name": "curse",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "cursing_god",
+       "name": "cursing God",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Job.1.5",
+      "1Sam.25.14",
+      "1Kgs.1.47",
+      "2Kgs.4.29",
+      "Job.1.11",
+      "Job.2.5",
+      "Job.2.9",
+      "1Kgs.21.10",
+      "1Kgs.21.13",
+      "1Sam.13.10",
+      "2Kgs.10.15",
+      "2Sam.8.10",
+      "1Chr.18.10"
+     ],
+     "eg": [
+      {
+       "id": "Job.1.5",
+       "ref": "Job 1:5",
+       "text": "And when the days of feasting were over, Job would send for his children to purify them, rising early in the morning to offer burnt offerings for all of them. For Job thought, “Perhaps my children have sinned and cursed God in their hearts.” This was Job's regular practice.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.25.14",
+       "ref": "1 Samuel 25:14",
+       "text": "Meanwhile, one of Nabal's young men informed Nabal's wife Abigail, “Look, David sent messengers from the wilderness to greet our master, but he screamed at them.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.1.47",
+       "ref": "1 Kings 1:47",
+       "text": "The king's servants have also gone to congratulate our lord King David, saying, ‘May your God make the name of Solomon more famous than your own name, and may He make his throne greater than your throne.' And the king has bowed in worship on his bed,",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.4.29",
+       "ref": "2 Kings 4:29",
+       "text": "So Elisha said to Gehazi, “Tie up your garment, take my staff in your hand, and go! If you meet anyone, do not greet him, and if anyone greets you, do not answer him. Then lay my staff on the boy's face.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Each of these is the verb and the Berean prints “bless” or “blessed”: Deut 29:19 (a man “invokes a blessing on himself” while he hears the oath, thinking he will have peace) and Ps 49:18 (“in his lifetime he blesses his soul”), both of one who blesses himself; Ps 112:2, 128:4 and Prov 22:9 (“will be blessed”, no one named as the one who blesses); 1 Sam 9:13 (Samuel must “bless the sacrifice”); Ps 10:3 (“he blesses the greedy and reviles the LORD”, which readers take two ways); Prov 20:21 and 22:9 (“A generous man will be blessed”); Isa 65:16 and 66:3 (one who “invokes a blessing in the land”; one who “blesses an idol”); Jer 17:7 (“Blessed is the man who trusts in the LORD”) is the same verb in the form “Blessed is…” and is also in the adjective section (John 12:13, “Blessed is He who comes in the name of the Lord”, is in the adjective section only); Jer 20:14 is Jeremiah’s “may the day my mother bore me not be blessed”. In Mark 14:61 (“Are You the Christ, the Son of the Blessed One?”) “the Blessed One” is a title of God, said by the high priest; nobody there is blessing anyone. 1 Cor 10:16 (“Is not the cup of blessing that we bless a participation in the blood of Christ?”) is Paul’s “we”; Matt 26:26 and Mark 14:22 are where the Gospels say Jesus blessed, in “Jesus blessed”.",
+     "doors": [],
+     "n": 13,
+     "verses": [
+      "Deut.29.19",
+      "1Sam.9.13",
+      "Ps.10.3",
+      "Isa.66.3",
+      "1Cor.10.16",
+      "Ps.49.18",
+      "Ps.112.2",
+      "Ps.128.4",
+      "Prov.20.21",
+      "Prov.22.9",
+      "Isa.65.16",
+      "Jer.17.7",
+      "Jer.20.14"
+     ],
+     "eg": [
+      {
+       "id": "Deut.29.19",
+       "ref": "Deuteronomy 29:19",
+       "text": "because when such a person hears the words of this oath, he invokes a blessing on himself, saying, ‘I will have peace, even though I walk in the stubbornness of my own heart.' This will bring disaster on the watered land as well as the dry.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.9.13",
+       "ref": "1 Samuel 9:13",
+       "text": "As soon as you enter the city, you will find him before he goes up to the high place to eat. The people will not eat until he comes, because he must bless the sacrifice; after that, the guests will eat. Go up at once; you will find him.”",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Ps.10.3",
+       "ref": "Psalms 10:3",
+       "text": "For the wicked man boasts in the cravings of his heart; he blesses the greedy and reviles the LORD.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Isa.66.3",
+       "ref": "Isaiah 66:3",
+       "text": "Whoever slaughters an ox is like one who slays a man; whoever sacrifices a lamb is like one who breaks a dog's neck; whoever presents a grain offering is like one who offers pig's blood; whoever offers frankincense is like one who blesses an idol. Indeed, they have chosen their own ways and delighted in their abominations.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 1,
+    "verses": [
+     "John.12.13"
+    ]
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 100,
+   "rows": [
+    {
+     "label": "“Blessed is the one who…”: who fears the LORD, trusts Him, walks in His ways, takes refuge in Him, does not walk in the counsel of the wicked; whose sin is forgiven",
+     "note": "The Hebrew אַשְׁרֵי and the Greek μακάριος are not the verb “bless”: they say “Blessed is the one who…” where בָּרַךְ and εὐλογέω give or ask for a blessing, and the Greek Old Testament renders the first by the second. Some translations print “happy”, and MACULA glosses a dozen of these “happy”. Rom 4:7-8 quotes Ps 32:1-2. Some of the Old Testament beatitudes name a household, children or bread with the blessed one (Ps 112:1-3, 127:5, 128:2-3); set beside the beatitudes of the poor and the persecuted in the next row, the page takes no side on whether material blessing is promised to the faithful now. Ps 137:8-9 (“Blessed is he who repays you… who seizes your infants and dashes them against the rocks”) is a hard verse and stays; the text does not say it is the LORD’s word. Jer 17:7 is the verb בָּרַךְ, “blessed”, and is also in the verb form’s “Every other use”.",
+     "doors": [
+      {
+       "id": "blessed_is_the_man",
+       "name": "Blessed is the man",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "theme_blessing_commission_r16",
+       "name": "Blessed is the man",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "happiness",
+       "name": "happiness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 45,
+     "verses": [
+      "Ps.1.1",
+      "Ps.32.1",
+      "Ps.84.5",
+      "Ps.84.12",
+      "Deut.33.29",
+      "1Kgs.10.8",
+      "2Chr.9.7",
+      "Job.5.17",
+      "Ps.2.12",
+      "Ps.32.2",
+      "Ps.33.12",
+      "Ps.34.8",
+      "Ps.40.4",
+      "Ps.41.1",
+      "Ps.65.4",
+      "Ps.84.4",
+      "Ps.89.15",
+      "Ps.94.12",
+      "Ps.106.3",
+      "Ps.112.1",
+      "Ps.119.1",
+      "Ps.119.2",
+      "Ps.127.5",
+      "Ps.128.1",
+      "Ps.128.2",
+      "Ps.137.8",
+      "Ps.137.9",
+      "Ps.144.15",
+      "Ps.146.5",
+      "Prov.3.13",
+      "Prov.8.32",
+      "Prov.8.34",
+      "Prov.14.21",
+      "Prov.16.20",
+      "Prov.20.7",
+      "Prov.28.14",
+      "Prov.29.18",
+      "Eccl.10.17",
+      "Isa.30.18",
+      "Isa.32.20",
+      "Isa.56.2",
+      "Dan.12.12",
+      "Jer.17.7",
+      "Rom.4.7",
+      "Rom.4.8"
+     ],
+     "eg": [
+      {
+       "id": "Ps.1.1",
+       "ref": "Psalms 1:1",
+       "text": "Blessed is the man who does not walk in the counsel of the wicked, or set foot on the path of sinners, or sit in the seat of mockers.",
+       "words": [
+        {
+         "key": "h835",
+         "lemma": "אֶשֶׁר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.32.1",
+       "ref": "Psalms 32:1",
+       "text": "Of David. A Maskil. Blessed is he whose transgressions are forgiven, whose sins are covered.",
+       "words": [
+        {
+         "key": "h835",
+         "lemma": "אֶשֶׁר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.84.5",
+       "ref": "Psalms 84:5",
+       "text": "Blessed are those whose strength is in You, whose hearts are set on pilgrimage.",
+       "words": [
+        {
+         "key": "h835",
+         "lemma": "אֶשֶׁר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.84.12",
+       "ref": "Psalms 84:12",
+       "text": "O LORD of Hosts, how blessed is the man who trusts in You!",
+       "words": [
+        {
+         "key": "h835",
+         "lemma": "אֶשֶׁר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Beatitudes (Matt 5:3-11, Luke 6:20-22): “the poor in spirit”, “you who are poor”, those who mourn, the meek, those who hunger, the merciful, the pure in heart, the peacemakers, the persecuted; and in trial: “even if you should suffer”, “the man who perseveres under trial”",
+     "note": "Matt 5:3 reads “the poor in spirit” and Luke 6:20 “you who are poor”; Rev 14:13 (“the dead-those who die in the Lord”) is one of the seven “Blessed” sayings of Revelation, which are together in the next row; Luke 6:20-22 is followed in 6:24-26 by the woes, which carry no word for “blessed”. Set beside the verses that name goods with the blessing (“Where the verse names harvest, barns, flocks…”) and the verbs said to Israel in the law; whether material blessing is promised to the faithful now, readers part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "matt_5_3_12",
+       "name": "the Beatitudes",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Matt.5.3",
+      "Luke.6.20",
+      "1Pet.3.14",
+      "Jas.1.12",
+      "Matt.5.4",
+      "Matt.5.5",
+      "Matt.5.6",
+      "Matt.5.7",
+      "Matt.5.8",
+      "Matt.5.9",
+      "Matt.5.10",
+      "Matt.5.11",
+      "Luke.6.21",
+      "Luke.6.22",
+      "1Pet.4.14"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.3",
+       "ref": "Matthew 5:3",
+       "text": "“Blessed are the poor in spirit, for theirs is the kingdom of heaven.",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "Luke.6.20",
+       "ref": "Luke 6:20",
+       "text": "Looking up at His disciples, Jesus said: “Blessed are you who are poor, for yours is the kingdom of God.",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.3.14",
+       "ref": "1 Peter 3:14",
+       "text": "But even if you should suffer for what is right, you are blessed. “Do not fear what they fear; do not be shaken.”",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "Jas.1.12",
+       "ref": "James 1:12",
+       "text": "Blessed is the man who perseveres under trial, because when he has stood the test, he will receive the crown of life that God has promised to those who love Him.",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Blessed is the one who…” in the New Testament, apart from the Beatitudes: hearing, keeping, believing, seeing, watching, giving; “the dead-those who die in the Lord”",
+     "note": "Luke 11:27-28 sets a woman’s “Blessed is the womb that bore You” beside Jesus’ answer, “Blessed rather are those who hear the word of God and obey it”. John 20:29 (“Blessed are those who have not seen and yet have believed”) and Acts 20:35 (“It is more blessed to give than to receive”) are words of Jesus. Matt 16:17 is Jesus’ “Blessed are you, Simon son of Jonah”; Luke 1:45 is Elizabeth’s “Blessed is she who has believed”. Rom 14:22 (“Blessed is the one who does not condemn himself by what he approves”) and 1 Cor 7:40 (a widow “more blessed” if she stays as she is) are the letters’ two other uses. Rev 20:6 (“Blessed and holy is the one who shares in the first resurrection”) is read very differently on the millennium; the page takes no side. Revelation has seven such sayings, and they stand together here: 1:3, 14:13 (“the dead-those who die in the Lord”), 16:15, 19:9, 20:6, 22:7 and 22:14. The sayings about Mary are cut across two rows by the Greek word: Luke 1:42 and 1:48 (“all generations will call me blessed”) are in “People bless one another”, 1:45 and 11:27-28 are here, and 11:27-28 comes later in the Gospel.",
+     "doors": [],
+     "n": 27,
+     "verses": [
+      "Luke.11.28",
+      "John.20.29",
+      "Jas.1.25",
+      "Rev.1.3",
+      "Matt.11.6",
+      "Matt.13.16",
+      "Matt.16.17",
+      "Matt.24.46",
+      "Luke.1.45",
+      "Luke.7.23",
+      "Luke.10.23",
+      "Luke.11.27",
+      "Luke.12.37",
+      "Luke.12.38",
+      "Luke.12.43",
+      "Luke.14.14",
+      "Luke.14.15",
+      "John.13.17",
+      "Acts.20.35",
+      "Rom.14.22",
+      "1Cor.7.40",
+      "Rev.14.13",
+      "Rev.16.15",
+      "Rev.19.9",
+      "Rev.20.6",
+      "Rev.22.7",
+      "Rev.22.14"
+     ],
+     "eg": [
+      {
+       "id": "Luke.11.28",
+       "ref": "Luke 11:28",
+       "text": "But He replied, “Blessed rather are those who hear the word of God and obey it.”",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "John.20.29",
+       "ref": "John 20:29",
+       "text": "Jesus said to him, “Because you have seen Me, you have believed; blessed are those who have not seen and yet have believed.”",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "Jas.1.25",
+       "ref": "James 1:25",
+       "text": "But the one who looks intently into the perfect law of freedom, and continues to do so-not being a forgetful hearer, but an effective doer-he will be blessed in what he does.",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "Rev.1.3",
+       "ref": "Revelation 1:3",
+       "text": "Blessed is the one who reads aloud the words of this prophecy, and blessed are those who hear and obey what is written in it, because the time is near.",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Blessed is He who comes in the name of the Lord”",
+     "note": "Ps 118:26 is the line; the Gospels quote it at the entry into Jerusalem (Matt 21:9, Mark 11:9-10, Luke 19:38, John 12:13) and Jesus quotes it of the time to come (Matt 23:39, Luke 13:35). In Mark 11:10 it is “the coming kingdom of our father David” that is blessed. The Greek is the participle εὐλογημένος, “blessed”, of the verb, not μακάριος.",
+     "doors": [],
+     "n": 8,
+     "verses": [
+      "Ps.118.26",
+      "Matt.21.9",
+      "Luke.13.35",
+      "John.12.13",
+      "Matt.23.39",
+      "Mark.11.9",
+      "Mark.11.10",
+      "Luke.19.38"
+     ],
+     "eg": [
+      {
+       "id": "Ps.118.26",
+       "ref": "Psalms 118:26",
+       "text": "Blessed is he who comes in the name of the LORD. From the house of the LORD we bless you.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        }
+       ]
+      },
+      {
+       "id": "Matt.21.9",
+       "ref": "Matthew 21:9",
+       "text": "The crowds that went ahead of Him and those that followed were shouting: “Hosanna to the Son of David!” “Blessed is He who comes in the name of the Lord!” “Hosanna in the highest!”",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.13.35",
+       "ref": "Luke 13:35",
+       "text": "Look, your house is left to you desolate. And I tell you that you will not see Me again until you say, ‘Blessed is He who comes in the name of the Lord.'”",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      },
+      {
+       "id": "John.12.13",
+       "ref": "John 12:13",
+       "text": "They took palm branches and went out to meet Him, shouting: “Hosanna!” “Blessed is He who comes in the name of the Lord!” “Blessed is the King of Israel!”",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Here μακάριος is not said over a person who does something: it is “the glorious gospel of the blessed God” (1 Tim 1:11), “the blessed and only Sovereign” (1 Tim 6:15) and “our blessed hope” (Titus 2:13). Luke 23:29, said on the way to the cross, is “Blessed are the barren women”, a hard verse that stays. In Acts 26:2 the Berean prints “I consider myself fortunate” for the same Greek word, and the page shows it as such.",
+     "doors": [
+      {
+       "id": "blessed_hope",
+       "name": "the blessed hope",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "1Tim.1.11",
+      "1Tim.6.15",
+      "Titus.2.13",
+      "Luke.23.29",
+      "Acts.26.2"
+     ],
+     "eg": [
+      {
+       "id": "1Tim.1.11",
+       "ref": "1 Timothy 1:11",
+       "text": "that agrees with the glorious gospel of the blessed God, with which I have been entrusted.",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.6.15",
+       "ref": "1 Timothy 6:15",
+       "text": "which the blessed and only Sovereign One-the King of kings and Lord of lords-will bring about in His own time.",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "Titus.2.13",
+       "ref": "Titus 2:13",
+       "text": "as we await the blessed hope and glorious appearance of our great God and Savior Jesus Christ.",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      },
+      {
+       "id": "Luke.23.29",
+       "ref": "Luke 23:29",
+       "text": "Look, the days are coming when people will say, ‘Blessed are the barren women, the wombs that never bore, and breasts that never nursed!'",
+       "words": [
+        {
+         "key": "g3107",
+         "lemma": "μακάριος"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "noun",
+   "verses": 81,
+   "rows": [
+    {
+     "label": "The blessing and the curse: set before Israel, turned, read out, in the same mouth",
+     "note": "“I set before you today a blessing and a curse” (Deut 11:26); “I have set before you life and death, the blessing and the curse” (Deut 30:19); “Our God turned the curse into a blessing” (Neh 13:2, of Balaam); “From the same mouth come blessing and cursing” (Jas 3:10). Deut 28:2 begins “All these blessings will come upon you and overtake you, if you will obey the voice of the LORD your God”. Where Christian traditions part on how the blessings and curses of the law stand to the faithful now, the page takes no side. The blessing and the curse stand together in Gen 12:3 (God’s word to Abraham), Num 22-24 (Balaam), Deut 11:26 and 30:19 (here), Deut 27:12-13 and 28 (Deut 28:2 here; the verbs of 28:3-12 in “The LORD your God will bless you”), Prov 27:14 and Jas 3:9-10 (“Blessing set against cursing”); the rows are cut by form (verb and noun) and by who speaks, and each of these is named where it stands.",
+     "doors": [
+      {
+       "id": "curse",
+       "name": "curse",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_blessing_commission_r15",
+       "name": "A blessing and a curse",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_blessing_commission_r17",
+       "name": "The curse turned into a blessing",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Deut.11.26",
+      "Deut.30.19",
+      "Deut.23.5",
+      "Jas.3.10",
+      "Gen.27.12",
+      "Deut.11.27",
+      "Deut.11.29",
+      "Deut.28.2",
+      "Deut.30.1",
+      "Josh.8.34",
+      "Neh.13.2",
+      "Ps.109.17",
+      "Mal.2.2"
+     ],
+     "eg": [
+      {
+       "id": "Deut.11.26",
+       "ref": "Deuteronomy 11:26",
+       "text": "See, today I am setting before you a blessing and a curse-",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Deut.30.19",
+       "ref": "Deuteronomy 30:19",
+       "text": "I call heaven and earth as witnesses against you today that I have set before you life and death, blessing and cursing. Therefore choose life, so that you and your descendants may live,",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Deut.23.5",
+       "ref": "Deuteronomy 23:5",
+       "text": "Yet the LORD your God would not listen to Balaam, and the LORD your God turned the curse into a blessing for you, because the LORD your God loves you.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Jas.3.10",
+       "ref": "James 3:10",
+       "text": "Out of the same mouth come blessing and cursing. My brothers, this should not be!",
+       "words": [
+        {
+         "key": "g2129",
+         "lemma": "εὐλογία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A blessing pronounced or bestowed: Isaac’s, Moses’; “Your brother came deceitfully and took your blessing”; “he sought the blessing with tears”; “The dying man blessed me”",
+     "note": "Job 29:13 (“The dying man blessed me”) and Exod 32:29 (“the LORD has bestowed a blessing on you this day”, Moses to the Levites) are the noun בְּרָכָה where the Berean prints a verb or a gift. Gen 27:38, 27:41, 49:28 and Deut 33:1 also stand in the verb section’s “A father’s blessing”, where the same scenes are told with the verb בָּרַךְ; the noun-only verses here are Gen 27:35-36, 28:4, Exod 32:29, Job 29:13 and Heb 12:17.",
+     "doors": [
+      {
+       "id": "event_isaac_blesses_jacob",
+       "name": "Isaac Blesses Jacob",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "blessing_of_moses",
+       "name": "the blessing of Moses",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Gen.27.35",
+      "Gen.28.4",
+      "Deut.33.1",
+      "Heb.12.17",
+      "Gen.27.36",
+      "Gen.27.38",
+      "Gen.27.41",
+      "Gen.49.28",
+      "Exod.32.29",
+      "Job.29.13"
+     ],
+     "eg": [
+      {
+       "id": "Gen.27.35",
+       "ref": "Genesis 27:35",
+       "text": "But Isaac replied, “Your brother came deceitfully and took your blessing.”",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Gen.28.4",
+       "ref": "Genesis 28:4",
+       "text": "And may He give the blessing of Abraham to you and your descendants, so that you may possess the land where you dwell as a foreigner, the land God gave to Abraham.”",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Deut.33.1",
+       "ref": "Deuteronomy 33:1",
+       "text": "This is the blessing that Moses the man of God pronounced upon the Israelites before his death.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        },
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.17",
+       "ref": "Hebrews 12:17",
+       "text": "For you know that afterward, when he wanted to inherit the blessing, he was rejected. He could find no ground for repentance, though he sought the blessing with tears.",
+       "words": [
+        {
+         "key": "g2129",
+         "lemma": "εὐλογία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Where the verse names harvest, barns, flocks, meat, rain, land, riches or children with the blessing",
+     "note": "The verses as written: some tell what the LORD did for a household (Gen 39:5), some are the LORD’s word to Israel in the land (Lev 25:21; Deut 28:8; Ezek 34:26; Mal 3:10), some are proverbs (Prov 10:22: “The blessing of the LORD enriches”; 11:26), some a father’s words over a son (Gen 49:25-26), one the land that drinks the rain (Heb 6:7). Set beside the verses that call the poor, the mourning and the persecuted blessed (a different word, אַשְׁרֵי, μακάριος: “Blessed is the one who”, next section; Ps 41:1 and Prov 14:21 also call the one who cares for the poor, or shows kindness to them, blessed) and the verbs said to Israel (“The LORD your God will bless you”). Whether material blessing is promised to the faithful now, readers part, and the page takes no side; no verse here is offered as a promise to the reader.",
+     "doors": [
+      {
+       "id": "money",
+       "name": "money",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "blessings_of_the_womb",
+       "name": "blessings of the womb",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "blessings_of_heaven_above",
+       "name": "blessings of the heavens above",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Gen.49.25",
+      "Prov.10.22",
+      "Lev.25.21",
+      "Gen.39.5",
+      "Gen.49.26",
+      "Deut.12.15",
+      "Deut.16.17",
+      "Deut.28.8",
+      "Deut.33.23",
+      "Prov.11.26",
+      "Isa.65.8",
+      "Ezek.34.26",
+      "Ezek.44.30",
+      "Joel.2.14",
+      "Mal.3.10",
+      "Heb.6.7"
+     ],
+     "eg": [
+      {
+       "id": "Gen.49.25",
+       "ref": "Genesis 49:25",
+       "text": "by the God of your father who helps you, and by the Almighty who blesses you, with blessings of the heavens above, with blessings of the depths below, with blessings of the breasts and womb.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        },
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.10.22",
+       "ref": "Proverbs 10:22",
+       "text": "The blessing of the LORD enriches, and He adds no sorrow to it.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Lev.25.21",
+       "ref": "Leviticus 25:21",
+       "text": "But I will send My blessing upon you in the sixth year, so that the land will yield a crop sufficient for three years.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Gen.39.5",
+       "ref": "Genesis 39:5",
+       "text": "From the time that he put Joseph in charge of his household and all he owned, the LORD blessed the Egyptian's household on account of him. The LORD's blessing was on everything he owned, both in his house and in his field.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        },
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blessing beside the righteous, life, the Spirit and Christ: “blessed us in Christ with every spiritual blessing”, “The memory of the righteous is a blessing”",
+     "note": "Eph 1:3: “every spiritual blessing in the heavenly realms in Christ”; Gal 3:14: “the blessing promised to Abraham would come to the Gentiles in Christ Jesus, so that by faith we might receive the promise of the Spirit”; 1 Pet 3:9: “so that you may inherit a blessing”. Rom 4:6 and 4:9 are μακαρισμός, “blessedness”, of the one to whom God credits righteousness; Gal 4:15 is the same word (“What then has become of your blessing?”). Where Christian traditions part on how the blessing of Abraham reaches the nations, and on faith and works in Rom 4, the page takes no side.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Ps.24.5",
+      "Ps.133.3",
+      "Eph.1.3",
+      "Gal.3.14",
+      "Prov.10.6",
+      "Prov.10.7",
+      "Prov.11.11",
+      "Prov.24.25",
+      "Prov.28.20",
+      "Isa.44.3",
+      "Rom.4.6",
+      "Rom.4.9",
+      "Rom.15.29",
+      "Gal.4.15",
+      "1Pet.3.9"
+     ],
+     "eg": [
+      {
+       "id": "Ps.24.5",
+       "ref": "Psalms 24:5",
+       "text": "He will receive blessing from the LORD and vindication from the God of his salvation.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.133.3",
+       "ref": "Psalms 133:3",
+       "text": "It is like the dew of Hermon falling on the mountains of Zion. For there the LORD has bestowed the blessing of life forevermore.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.3",
+       "ref": "Ephesians 1:3",
+       "text": "Blessed be the God and Father of our Lord Jesus Christ, who has blessed us in Christ with every spiritual blessing in the heavenly realms.",
+       "words": [
+        {
+         "key": "g2127",
+         "lemma": "εὐλογέω"
+        },
+        {
+         "key": "g2128",
+         "lemma": "εὐλογητός"
+        },
+        {
+         "key": "g2129",
+         "lemma": "εὐλογία"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.14",
+       "ref": "Galatians 3:14",
+       "text": "He redeemed us in order that the blessing promised to Abraham would come to the Gentiles in Christ Jesus, so that by faith we might receive the promise of the Spirit.",
+       "words": [
+        {
+         "key": "g2129",
+         "lemma": "εὐλογία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“You will be a blessing”, “May Your blessing be on Your people”, “rich blessings”",
+     "note": null,
+     "doors": [
+      {
+       "id": "blessing_of_abraham",
+       "name": "the blessing of Abraham",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Gen.12.2",
+      "Zech.8.13",
+      "Isa.19.24",
+      "Ps.3.8",
+      "Ps.37.26",
+      "Ps.129.8",
+      "2Sam.7.29",
+      "Ps.21.3"
+     ],
+     "eg": [
+      {
+       "id": "Gen.12.2",
+       "ref": "Genesis 12:2",
+       "text": "I will make you into a great nation, and I will bless you; I will make your name great, so that you will be a blessing.",
+       "words": [
+        {
+         "key": "h1288",
+         "lemma": "בָּרַךְ"
+        },
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Zech.8.13",
+       "ref": "Zechariah 8:13",
+       "text": "As you have been a curse among the nations, O house of Judah and house of Israel, so I will save you, and you will be a blessing. Do not be afraid; let your hands be strong.”",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.19.24",
+       "ref": "Isaiah 19:24",
+       "text": "In that day Israel will join a three-party alliance with Egypt and Assyria-a blessing upon the earth.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.3.8",
+       "ref": "Psalms 3:8",
+       "text": "Salvation belongs to the LORD; may Your blessing be on Your people. Selah",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blessing as a gift of goods: “Please accept my gift”, “Give me a blessing”, “a generous gift”; and where the Berean prints “peace” or “generous”",
+     "note": "The same word בְּרָכָה, “blessing”, is a present sent to someone: Jacob to Esau, Abigail to David, David to the elders of Judah, Naaman to Elisha; Achsah asks her father for a “blessing” and he gives her springs of water. In 2 Kgs 18:31 and Isa 36:16 the Assyrian’s “Make peace with me” is, in the Hebrew, “make a blessing with me”, a surrender; Prov 11:25 the “generous” soul. In 2 Cor 9:5 εὐλογία is the “generous gift” for the saints, and 9:6 (“sows generously”) uses it in the plural. The page does not say the gift and the blessing are one thing; it shows that the text uses one word.",
+     "doors": [],
+     "n": 11,
+     "verses": [
+      "Gen.33.11",
+      "1Sam.25.27",
+      "Josh.15.19",
+      "2Cor.9.5",
+      "Judg.1.15",
+      "1Sam.30.26",
+      "2Kgs.5.15",
+      "2Cor.9.6",
+      "2Kgs.18.31",
+      "Isa.36.16",
+      "Prov.11.25"
+     ],
+     "eg": [
+      {
+       "id": "Gen.33.11",
+       "ref": "Genesis 33:11",
+       "text": "Please accept my gift that was brought to you, because God has been gracious to me and I have all I need.” So Jacob pressed him until he accepted.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.25.27",
+       "ref": "1 Samuel 25:27",
+       "text": "Now let this gift your servant has brought to my lord be given to the young men who follow you.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Josh.15.19",
+       "ref": "Joshua 15:19",
+       "text": "“Give me a blessing,” she answered. “Since you have given me land in the Negev, give me springs of water as well.” So Caleb gave her both the upper and lower springs.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.9.5",
+       "ref": "2 Corinthians 9:5",
+       "text": "So I thought it necessary to urge the brothers to visit you beforehand and make arrangements for the generous gift you had promised. This way, your gift will be prepared generously and not begrudgingly.",
+       "words": [
+        {
+         "key": "g2129",
+         "lemma": "εὐλογία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Neh 9:5 (“exalted above all blessing and praise”) and Rev 5:12, 5:13 and 7:12 (“power and riches and wisdom and strength and honor and glory and blessing”; the Berean prints “praise” at 5:13) give blessing to God and to the Lamb; 1 Cor 10:16 is “the cup of blessing”. Ps 84:6 (the Berean prints “pools” where the Hebrew בְּרָכוֹת is “blessings”; translators read the word both ways) and Ps 21:6 (“You grant him blessings forever”, said of the king, with joy in the LORD’s presence) are left here as standing in none of the rows above. In Rom 16:18 εὐλογία is “fair speaking” and the Berean prints “flattery”, the other sense of the same Greek word.",
+     "doors": [],
+     "n": 8,
+     "verses": [
+      "Rev.5.12",
+      "Neh.9.5",
+      "1Cor.10.16",
+      "Ps.21.6",
+      "Rom.16.18",
+      "Ps.84.6",
+      "Rev.5.13",
+      "Rev.7.12"
+     ],
+     "eg": [
+      {
+       "id": "Rev.5.12",
+       "ref": "Revelation 5:12",
+       "text": "In a loud voice they were saying: “Worthy is the Lamb who was slain, to receive power and riches and wisdom and strength and honor and glory and blessing!”",
+       "words": [
+        {
+         "key": "g2129",
+         "lemma": "εὐλογία"
+        }
+       ]
+      },
+      {
+       "id": "Neh.9.5",
+       "ref": "Nehemiah 9:5",
+       "text": "Then the Levites-Jeshua, Kadmiel, Bani, Hashabneiah, Sherebiah, Hodiah, Shebaniah, and Pethahiah-said, “Stand up and bless the LORD your God from everlasting to everlasting: Blessed be Your glorious name, and may it be exalted above all blessing and praise.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.10.16",
+       "ref": "1 Corinthians 10:16",
+       "text": "Is not the cup of blessing that we bless a participation in the blood of Christ? And is not the bread that we break a participation in the body of Christ?",
+       "words": [
+        {
+         "key": "g2129",
+         "lemma": "εὐλογία"
+        }
+       ]
+      },
+      {
+       "id": "Ps.21.6",
+       "ref": "Psalms 21:6",
+       "text": "For You grant him blessings forever; You cheer him with joy in Your presence.",
+       "words": [
+        {
+         "key": "h1293",
+         "lemma": "בְּרָכָה"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": null,
+  "words": []
+ }
+}

@@ -1,0 +1,2865 @@
+{
+ "id": "wisdom",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h2451",
+   "lemma": "חׇכְמָה",
+   "form": "noun",
+   "translit": "chokh.mah",
+   "gloss": "wisdom",
+   "lang": "Hebrew",
+   "uses": 140,
+   "other_sense": 0
+  },
+  {
+   "key": "h2454",
+   "lemma": "חׇכְמוֹת",
+   "form": "noun",
+   "translit": "chokh.mot",
+   "gloss": "wisdom",
+   "lang": "Hebrew",
+   "uses": 4,
+   "other_sense": 0
+  },
+  {
+   "key": "g4678",
+   "lemma": "σοφία",
+   "form": "noun",
+   "translit": "sophia",
+   "gloss": "wisdom",
+   "lang": "Greek",
+   "uses": 49,
+   "other_sense": 0
+  },
+  {
+   "key": "h2450",
+   "lemma": "חָכָם",
+   "form": "adjective",
+   "translit": "cha.kham",
+   "gloss": "wise",
+   "lang": "Hebrew",
+   "uses": 134,
+   "other_sense": 0
+  },
+  {
+   "key": "g4680",
+   "lemma": "σοφός",
+   "form": "adjective",
+   "translit": "sophos",
+   "gloss": "wise",
+   "lang": "Greek",
+   "uses": 19,
+   "other_sense": 0
+  },
+  {
+   "key": "h2445",
+   "lemma": "חַכִּים",
+   "form": "adjective",
+   "translit": "chak.kim",
+   "gloss": "wise",
+   "lang": "Hebrew",
+   "uses": 13,
+   "other_sense": 0
+  },
+  {
+   "key": "h2449",
+   "lemma": "חָכַם",
+   "form": "verb",
+   "translit": "cha.kham",
+   "gloss": "be wise",
+   "lang": "Hebrew",
+   "uses": 26,
+   "other_sense": 0
+  },
+  {
+   "key": "g4679",
+   "lemma": "σοφίζω",
+   "form": "verb",
+   "translit": "sophizō",
+   "gloss": "to make wise",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 1
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of wisdom",
+  "adjective": "Who is called wise",
+  "verb": "Becoming wise, making wise"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "holy_ghost",
+   "name": "the Holy Spirit",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "solomon",
+   "name": "Solomon",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "bezaleel",
+   "name": "Bezalel",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "daniel",
+   "name": "Daniel",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "commandments",
+   "name": "the commandments",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "image_wisdom",
+   "name": "wisdom, as a figure",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "knowledge",
+   "name": "knowledge",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "understanding",
+   "name": "understanding",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "folly",
+   "name": "folly",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "fool",
+   "name": "fool",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "prayer",
+   "name": "prayer",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "wise_people",
+   "name": "the wise",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "wise_men",
+   "name": "wise men",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "the_fear_of_the_lord_is_the_beginning_of_wisdom",
+   "name": "the fear of the LORD is the beginning of wisdom",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_fear_of_the_lord_that_is_wisdom",
+   "name": "the fear of the Lord, that is wisdom",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "now_if_any_of_you_lacks_wisdom_he_should_ask_god",
+   "name": "Now if any of you lacks wisdom, he should ask God",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_wisdom_that_is_from_above",
+   "name": "the wisdom from above is first of all pure, then peace-loving",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "a_greater_than_solomon_is_here",
+   "name": "One greater than Solomon is here",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "event_solomons_wisdom",
+   "name": "Solomon’s wisdom",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "theme_wisdom_literature_r5",
+   "name": "Wisdom calls out, and the woman named Folly calls out",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_wisdom_literature_r32",
+   "name": "Has not God made foolish the wisdom of the world?",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_wisdom_literature_r33",
+   "name": "Christ the power of God and the wisdom of God",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_wisdom_literature_r3",
+   "name": "Get wisdom, get understanding",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_wisdom_literature_r8",
+   "name": "Where can wisdom be found?",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_wisdom_literature_r12",
+   "name": "The wise and the fool",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_wisdom_literature_r2",
+   "name": "The LORD gives wisdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_creation_r4",
+   "name": "The LORD founded the earth by wisdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_spirit_r3",
+   "name": "The spirit of wisdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r17",
+   "name": "Wisdom and the commandments",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "image_wisdom",
+   "name": "wisdom, as a figure",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "job_28_12_19",
+   "name": "Wisdom Cannot Be Bought",
+   "type": "passage",
+   "missing": false
+  },
+  {
+   "id": "job_28_20_28",
+   "name": "Only God Knows the Way to Wisdom",
+   "type": "passage",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Prov.9.10",
+   "ref": "Proverbs 9:10",
+   "text": "The fear of the LORD is the beginning of wisdom, and knowledge of the Holy One is understanding."
+  },
+  {
+   "id": "Prov.4.7",
+   "ref": "Proverbs 4:7",
+   "text": "Wisdom is supreme; so acquire wisdom. And whatever you may acquire, gain understanding."
+  },
+  {
+   "id": "Job.28.28",
+   "ref": "Job 28:28",
+   "text": "And He said to man, ‘Behold, the fear of the Lord, that is wisdom, and to turn away from evil is understanding.'”"
+  },
+  {
+   "id": "Eccl.1.18",
+   "ref": "Ecclesiastes 1:18",
+   "text": "For with much wisdom comes much sorrow, and as knowledge grows, grief increases."
+  },
+  {
+   "id": "Jas.1.5",
+   "ref": "James 1:5",
+   "text": "Now if any of you lacks wisdom, he should ask God, who gives generously to all without finding fault, and it will be given to him."
+  },
+  {
+   "id": "1Cor.1.24",
+   "ref": "1 Corinthians 1:24",
+   "text": "but to those who are called, both Jews and Greeks, Christ the power of God and the wisdom of God."
+  },
+  {
+   "id": "Col.2.3",
+   "ref": "Colossians 2:3",
+   "text": "in whom are hidden all the treasures of wisdom and knowledge."
+  },
+  {
+   "id": "Prov.8.1",
+   "ref": "Proverbs 8:1",
+   "text": "Does not wisdom call out, and understanding raise her voice?"
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 210,
+   "rows": [
+    {
+     "label": "Wisdom and the fear of the LORD: “the beginning of wisdom”; “the fear of the Lord, that is wisdom”",
+     "note": "The text's own phrases: “the beginning of wisdom” (Ps 111:10; Prov 9:10), “the beginning of knowledge” beside “fools despise wisdom” (Prov 1:7), “the instruction of wisdom” (Prov 15:33), “the fear of the Lord, that is wisdom” (Job 28:28), and “a storehouse of salvation, wisdom, and knowledge. The fear of the LORD is Zion's treasure” (Isa 33:6).",
+     "doors": [
+      {
+       "id": "the_fear_of_the_lord_is_the_beginning_of_wisdom",
+       "name": "the fear of the LORD is the beginning of wisdom",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "the_fear_of_the_lord_that_is_wisdom",
+       "name": "the fear of the Lord, that is wisdom",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Prov.9.10",
+      "Ps.111.10",
+      "Job.28.28",
+      "Prov.15.33",
+      "Prov.1.7",
+      "Isa.33.6"
+     ],
+     "eg": [
+      {
+       "id": "Prov.9.10",
+       "ref": "Proverbs 9:10",
+       "text": "The fear of the LORD is the beginning of wisdom, and knowledge of the Holy One is understanding.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.111.10",
+       "ref": "Psalms 111:10",
+       "text": "The fear of the LORD is the beginning of wisdom; all who follow His precepts gain rich understanding. His praise endures forever!",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Job.28.28",
+       "ref": "Job 28:28",
+       "text": "And He said to man, ‘Behold, the fear of the Lord, that is wisdom, and to turn away from evil is understanding.'”",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.15.33",
+       "ref": "Proverbs 15:33",
+       "text": "The fear of the LORD is the instruction of wisdom, and humility comes before honor.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Get wisdom: incline your ear to it, find it, acquire it; better than silver, gold and rubies",
+     "note": "Prov 4:5 says “Get wisdom, get understanding” and 4:7 “acquire wisdom”; Prov 17:16 asks why a fool has money in his hand “with no intention of buying wisdom”; Prov 23:23 reads “Invest in truth and never sell it -- in wisdom and instruction and understanding” (the Hebrew word is glossed “buy”); Job 28:18 says “the price of wisdom is beyond rubies”; Eccl 7:12 sets wisdom beside money as a shelter. Gen 3:6, the tree “desirable for obtaining wisdom”, uses a different word, שָׂכַל (see Other words); Solomon's request for a wise heart is in 1 Kgs 3 (see Called wise).",
+     "doors": [
+      {
+       "id": "theme_wisdom_literature_r3",
+       "name": "Get wisdom, get understanding",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Prov.4.7",
+      "Prov.16.16",
+      "Prov.3.13",
+      "Job.28.18",
+      "Prov.2.2",
+      "Prov.2.10",
+      "Prov.4.5",
+      "Prov.8.11",
+      "Prov.17.16",
+      "Prov.23.23",
+      "Prov.24.14",
+      "Eccl.7.12"
+     ],
+     "eg": [
+      {
+       "id": "Prov.4.7",
+       "ref": "Proverbs 4:7",
+       "text": "Wisdom is supreme; so acquire wisdom. And whatever you may acquire, gain understanding.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.16.16",
+       "ref": "Proverbs 16:16",
+       "text": "How much better to acquire wisdom than gold! To gain understanding is more desirable than silver.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.3.13",
+       "ref": "Proverbs 3:13",
+       "text": "Blessed is the man who finds wisdom, the man who acquires understanding,",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Job.28.18",
+       "ref": "Job 28:18",
+       "text": "Coral and quartz are unworthy of mention; the price of wisdom is beyond rubies.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wisdom and the law (torah): the statutes, the commandments, the precepts",
+     "note": "Deut 4:6 says that observing the statutes “will show your wisdom and understanding in the sight of the peoples”; Ps 111:10, “all who follow His precepts gain rich understanding”; Ezra 7:25 (Aramaic: see Other words), “the wisdom of your God ... the laws of your God”. The Hebrew תּוֹרָה is the law and also “instruction”, “teaching”: the Berean prints “faithful instruction” for it at Prov 31:26, where it is on a woman's tongue beside wisdom (that verse is in the row on wisdom on the lips). The same link is made with other forms of the word, in the other forms of this page: “the testimony of the LORD is trustworthy, making wise the simple” (Ps 19:7), “Your commandments make me wiser than my enemies” (Ps 119:98), the people who say “We are wise, and the Law of the LORD is with us” (Jer 8:8), “a wise and understanding people” (Deut 4:6, the adjective), and the Holy Scriptures “able to make you wise for salvation” (2 Tim 3:15, a different Greek verb, σοφίζω). The page lists them and does not say which sense a verse has, and says nothing of the law and the Christian.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "commandments",
+       "name": "the commandments",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r17",
+       "name": "Wisdom and the commandments",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Deut.4.6",
+      "Ps.111.10",
+      "Ezra.7.25"
+     ],
+     "eg": [
+      {
+       "id": "Deut.4.6",
+       "ref": "Deuteronomy 4:6",
+       "text": "Observe them carefully, for this will show your wisdom and understanding in the sight of the peoples, who will hear of all these statutes and say, “Surely this great nation is a wise and understanding people.”",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        },
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.111.10",
+       "ref": "Psalms 111:10",
+       "text": "The fear of the LORD is the beginning of wisdom; all who follow His precepts gain rich understanding. His praise endures forever!",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezra.7.25",
+       "ref": "Ezra 7:25",
+       "text": "And you, Ezra, according to the wisdom of your God, which you possess, are to appoint magistrates and judges to judge all the people west of the Euphrates-all who know the laws of your God. And you are to teach these laws to anyone who does not know them.",
+       "words": []
+      }
+     ]
+    },
+    {
+     "label": "Wisdom who calls out, speaks of herself, builds her house and is called “my sister”; “the wisdom of God said”",
+     "note": "Here Wisdom calls out, speaks in the first person, builds a house and is spoken of as “her”, and in the Gospels “wisdom is vindicated by her actions” and “the wisdom of God said”. Readers part on what Wisdom is in Proverbs 8 and 9: some take it of Christ, some of an attribute of God, some as a figure of speech; the page sets the words down and does not choose. Prov 8:22-31 is Wisdom speaking of herself and holds no word for wisdom in its own verses; it is listed here as that speech, without a word tag. The Berean reads “The LORD created me as His first course, before His works of old” (8:22), where the word-by-word Hebrew text glosses the verb “possessed”, and “Then I was a skilled craftsman at His side” (8:30); readers part on both words. The Hebrew of Prov 1:20 and 9:1 is the plural חָכְמוֹת; the Berean prints “Wisdom”. Luke 11:49 reads “the wisdom of God said”, and the matching words in Matt 23:34 read “I am sending you prophets and wise men and teachers”; the page sets the two down and does not say how they relate. Job 28 asks where wisdom is found (28:12, 28:20); the page does not say how that question and Wisdom's calling out here relate.",
+     "doors": [
+      {
+       "id": "image_wisdom",
+       "name": "wisdom, as a figure",
+       "type": "image",
+       "missing": false
+      },
+      {
+       "id": "theme_wisdom_literature_r5",
+       "name": "Wisdom calls out, and the woman named Folly calls out",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Prov.8.1",
+      "Prov.9.1",
+      "Prov.1.20",
+      "Luke.11.49",
+      "Prov.7.4",
+      "Prov.8.11",
+      "Prov.8.12",
+      "Prov.8.22",
+      "Prov.8.23",
+      "Prov.8.24",
+      "Prov.8.25",
+      "Prov.8.26",
+      "Prov.8.27",
+      "Prov.8.28",
+      "Prov.8.29",
+      "Prov.8.30",
+      "Prov.8.31",
+      "Matt.11.19",
+      "Luke.7.35"
+     ],
+     "eg": [
+      {
+       "id": "Prov.8.1",
+       "ref": "Proverbs 8:1",
+       "text": "Does not wisdom call out, and understanding raise her voice?",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.9.1",
+       "ref": "Proverbs 9:1",
+       "text": "Wisdom has built her house; she has carved out her seven pillars.",
+       "words": [
+        {
+         "key": "h2454",
+         "lemma": "חׇכְמוֹת"
+        }
+       ]
+      },
+      {
+       "id": "Prov.1.20",
+       "ref": "Proverbs 1:20",
+       "text": "Wisdom calls out in the street, she lifts her voice in the square;",
+       "words": [
+        {
+         "key": "h2454",
+         "lemma": "חׇכְמוֹת"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.49",
+       "ref": "Luke 11:49",
+       "text": "Because of this, the wisdom of God said, ‘I will send them prophets and apostles; some of them they will kill and others they will persecute.'",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "God's wisdom: the LORD made the world by it; it is deep and made known; “wisdom and strength belong to God”; “the wisdom from above”",
+     "note": "The text's own phrases, kept as written: the LORD “founded the earth by wisdom” (Prov 3:19) and “established the world by His wisdom” (Jer 10:12; 51:15), made all His works “in wisdom” (Ps 104:24), and “O, the depth of the riches of the wisdom and knowledge of God!” (Rom 11:33). Dan 2:20 (“wisdom and power belong to Him”) and 2:23 are Aramaic (see Other words). Jas 3:17 describes “the wisdom from above”, and Jas 3:15 says of another wisdom that it “does not come from above”; the two stand in different rows. Whether the wisdom by which the LORD made the world is an attribute, a figure or a person is the question of the row on Wisdom who calls out; the page does not choose.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "theme_creation_r4",
+       "name": "The LORD founded the earth by wisdom",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_wisdom_that_is_from_above",
+       "name": "the wisdom from above is first of all pure, then peace-loving",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Prov.3.19",
+      "Ps.104.24",
+      "Job.12.13",
+      "Rom.11.33",
+      "Job.38.36",
+      "Job.38.37",
+      "Jer.10.12",
+      "Jer.51.15",
+      "Dan.2.20",
+      "Dan.2.23",
+      "1Cor.1.21",
+      "1Cor.2.7",
+      "Eph.3.10",
+      "Rev.7.12",
+      "Jas.3.17"
+     ],
+     "eg": [
+      {
+       "id": "Prov.3.19",
+       "ref": "Proverbs 3:19",
+       "text": "The LORD founded the earth by wisdom and established the heavens by understanding.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.104.24",
+       "ref": "Psalms 104:24",
+       "text": "How many are Your works, O LORD! In wisdom You have made them all; the earth is full of Your creatures.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Job.12.13",
+       "ref": "Job 12:13",
+       "text": "Wisdom and strength belong to God; counsel and understanding are His.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.11.33",
+       "ref": "Romans 11:33",
+       "text": "O, the depth of the riches of the wisdom and knowledge of God! How unsearchable are His judgments, and untraceable His ways!",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD gives wisdom, and it is asked of Him: “if any of you lacks wisdom, he should ask God”",
+     "note": "Who gives is as each verse has it: “God gave Solomon wisdom” (1 Kgs 4:29), “the LORD gave Solomon wisdom” (1 Kgs 5:12), “the LORD gives wisdom” (Prov 2:6), “He gives wisdom and knowledge and joy” to the man pleasing in His sight (Eccl 2:26), “He granted Joseph favor and wisdom” (Acts 7:10, where 7:9 names God), “the wisdom God gave him” of Paul (2 Pet 3:15), and Jesus' own “I will give you speech and wisdom” (Luke 21:15). Solomon is told to ask and has asked (2 Chr 1:10-11), the psalmist says “You teach me wisdom” (Ps 51:6) and asks to be taught to number his days (Ps 90:12), and Paul prays that it be given (Eph 1:17; Col 1:9).",
+     "doors": [
+      {
+       "id": "theme_wisdom_literature_r2",
+       "name": "The LORD gives wisdom",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "now_if_any_of_you_lacks_wisdom_he_should_ask_god",
+       "name": "Now if any of you lacks wisdom, he should ask God",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "Jas.1.5",
+      "Prov.2.6",
+      "2Chr.1.11",
+      "Col.1.9",
+      "1Kgs.4.29",
+      "1Kgs.5.12",
+      "2Chr.1.10",
+      "2Chr.1.12",
+      "Eccl.2.26",
+      "Ps.51.6",
+      "Ps.90.12",
+      "Dan.1.17",
+      "Dan.2.21",
+      "Acts.7.10",
+      "Eph.1.17",
+      "Luke.21.15",
+      "Exod.31.3",
+      "2Pet.3.15"
+     ],
+     "eg": [
+      {
+       "id": "Jas.1.5",
+       "ref": "James 1:5",
+       "text": "Now if any of you lacks wisdom, he should ask God, who gives generously to all without finding fault, and it will be given to him.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "Prov.2.6",
+       "ref": "Proverbs 2:6",
+       "text": "For the LORD gives wisdom; from His mouth come knowledge and understanding.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.1.11",
+       "ref": "2 Chronicles 1:11",
+       "text": "God said to Solomon, “Since this was in your heart instead of requesting riches or wealth or honor for yourself or death for your enemies-and since you have not even requested long life but have asked for wisdom and knowledge to govern My people over whom I have made you king-",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.9",
+       "ref": "Colossians 1:9",
+       "text": "For this reason, since the day we heard about you, we have not stopped praying for you and asking God to fill you with the knowledge of His will in all spiritual wisdom and understanding,",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Spirit of God and wisdom: “filled with the Spirit of God, with skill”; “a spirit of wisdom”; “full of the Spirit and wisdom”",
+     "note": "Exod 31:3 and 35:31 read “the Spirit of God”; Isa 11:2 reads “The Spirit of the LORD will rest on Him -- the Spirit of wisdom and understanding”; Acts 6:3 and 6:10 read “the Spirit and wisdom”; Deut 34:9, Exod 28:3 and Eph 1:17 read “a spirit of wisdom”; 1 Cor 12:8 is “given through the Spirit the message of wisdom”. Readers part on whether “a spirit of wisdom” names the Holy Spirit or a gift of wisdom, and on whom Isa 11:2 speaks of; the page keeps each as the verse has it and does not choose. The Berean prints “skill” for the Hebrew word for wisdom at Exod 31:3 and 35:31.",
+     "doors": [
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "theme_spirit_r3",
+       "name": "The spirit of wisdom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Exod.31.3",
+      "Deut.34.9",
+      "Isa.11.2",
+      "Acts.6.3",
+      "Exod.28.3",
+      "Exod.35.31",
+      "Acts.6.10",
+      "Eph.1.17",
+      "1Cor.12.8"
+     ],
+     "eg": [
+      {
+       "id": "Exod.31.3",
+       "ref": "Exodus 31:3",
+       "text": "And I have filled him with the Spirit of God, with skill, ability, and knowledge in all kinds of craftsmanship,",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Deut.34.9",
+       "ref": "Deuteronomy 34:9",
+       "text": "Now Joshua son of Nun was filled with the spirit of wisdom because Moses had laid his hands on him. So the Israelites obeyed him and did as the LORD had commanded Moses.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.11.2",
+       "ref": "Isaiah 11:2",
+       "text": "The Spirit of the LORD will rest on Him-the Spirit of wisdom and understanding, the Spirit of counsel and strength, the Spirit of knowledge and fear of the LORD.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Acts.6.3",
+       "ref": "Acts 6:3",
+       "text": "Therefore, brothers, select from among you seven men confirmed to be full of the Spirit and wisdom. We will assign this responsibility to them",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Skill, and building by wisdom: the craftsmen of the tabernacle and the temple; “By wisdom a house is built”",
+     "note": "The same Hebrew word, חָכְמָה, which is wisdom in Proverbs. The Berean prints “skill” at Exod 31:3, 31:6, 35:31, 35:35, 36:1, 1 Kgs 7:14 and 1 Chr 28:21 and “wisdom” at Exod 28:3 (“a spirit of wisdom”). The page keeps this as a sense of its own and does not say that the craftsman's skill and the wisdom of the rows around it are one meaning or two. Prov 24:3 reads “By wisdom a house is built and by understanding it is established”; it is listed here beside Exod 31:3 and Prov 3:19 (in the row on God's wisdom), which also name wisdom and understanding at a building or a making, and the page does not say whether the house is a building or a household. The adjective's “skilled” workers are in the adjective form.",
+     "doors": [
+      {
+       "id": "bezaleel",
+       "name": "Bezalel",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Exod.35.35",
+      "Exod.36.1",
+      "1Kgs.7.14",
+      "1Chr.28.21",
+      "Exod.28.3",
+      "Exod.31.3",
+      "Exod.31.6",
+      "Exod.35.26",
+      "Exod.35.31",
+      "Exod.36.2",
+      "Prov.24.3"
+     ],
+     "eg": [
+      {
+       "id": "Exod.35.35",
+       "ref": "Exodus 35:35",
+       "text": "He has filled them with skill to do all kinds of work as engravers, designers, embroiderers in blue, purple, and scarlet yarn and fine linen, and as weavers-as artistic designers of every kind of craft.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Exod.36.1",
+       "ref": "Exodus 36:1",
+       "text": "“So Bezalel, Oholiab, and every skilled person are to carry out everything commanded by the LORD, who has given them skill and ability to know how to perform all the work of constructing the sanctuary.”",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        },
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.7.14",
+       "ref": "1 Kings 7:14",
+       "text": "He was the son of a widow from the tribe of Naphtali, and his father was a man of Tyre, a craftsman in bronze. Huram had great skill, understanding, and knowledge for every kind of bronze work. So he came to King Solomon and carried out all his work.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.28.21",
+       "ref": "1 Chronicles 28:21",
+       "text": "The divisions of the priests and Levites are ready for all the service of the house of God, and every willing man of every skill will be at your disposal for the work. The officials and all the people are fully at your command.”",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Solomon's wisdom: given by God, asked for, heard of, beyond all the kings of the earth",
+     "note": "In Matt 12:42 and Luke 11:31 the Queen of the South “came from the ends of the earth to hear the wisdom of Solomon” and Jesus says “One greater than Solomon is here”; the verses are also in the row on Jesus and wisdom. Solomon's request and the LORD's answer in 1 Kgs 3:5-14 (“a wise and discerning heart”, 3:12) use the adjective: see Called wise.",
+     "doors": [
+      {
+       "id": "solomon",
+       "name": "Solomon",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "event_solomons_wisdom",
+       "name": "Solomon’s wisdom",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "a_greater_than_solomon_is_here",
+       "name": "One greater than Solomon is here",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "1Kgs.3.28",
+      "1Kgs.4.30",
+      "1Kgs.10.6",
+      "Matt.12.42",
+      "1Kgs.2.6",
+      "1Kgs.4.29",
+      "1Kgs.4.34",
+      "1Kgs.5.12",
+      "1Kgs.10.4",
+      "1Kgs.10.7",
+      "1Kgs.10.8",
+      "1Kgs.10.23",
+      "1Kgs.10.24",
+      "1Kgs.11.41",
+      "2Chr.1.10",
+      "2Chr.1.11",
+      "2Chr.1.12",
+      "2Chr.9.3",
+      "2Chr.9.5",
+      "2Chr.9.6",
+      "2Chr.9.7",
+      "2Chr.9.22",
+      "2Chr.9.23",
+      "Luke.11.31"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.3.28",
+       "ref": "1 Kings 3:28",
+       "text": "When all Israel heard of the judgment the king had given, they stood in awe of him, for they saw that the wisdom of God was in him to administer justice.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.4.30",
+       "ref": "1 Kings 4:30",
+       "text": "Solomon's wisdom was greater than that of all the men of the East, greater than all the wisdom of Egypt.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.10.6",
+       "ref": "1 Kings 10:6",
+       "text": "She said to the king, “The report I heard in my own country about your words and wisdom is true.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.42",
+       "ref": "Matthew 12:42",
+       "text": "The Queen of the South will rise at the judgment with this generation and condemn it; for she came from the ends of the earth to hear the wisdom of Solomon, and now One greater than Solomon is here.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "In Job: “Where can wisdom be found?”, who has it and who claims it",
+     "note": "Spoken in turn by Eliphaz, Zophar, Job, Elihu and the LORD; each verse's speaker is on its page. Job 28 asks twice where wisdom is found (28:12, 28:20) and answers in 28:28; Job 39:17 says God has deprived the ostrich of wisdom. In Prov 1:20 and 8:1 Wisdom herself calls out; those verses are in the row on Wisdom who calls out, and the page does not say how they relate to Job 28.",
+     "doors": [
+      {
+       "id": "job_28_12_19",
+       "name": "Wisdom Cannot Be Bought",
+       "type": "passage",
+       "missing": false
+      },
+      {
+       "id": "job_28_20_28",
+       "name": "Only God Knows the Way to Wisdom",
+       "type": "passage",
+       "missing": false
+      },
+      {
+       "id": "theme_wisdom_literature_r8",
+       "name": "Where can wisdom be found?",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "Job.28.12",
+      "Job.28.20",
+      "Job.12.12",
+      "Job.32.7",
+      "Job.4.21",
+      "Job.11.6",
+      "Job.12.2",
+      "Job.12.13",
+      "Job.13.5",
+      "Job.15.8",
+      "Job.26.3",
+      "Job.28.18",
+      "Job.28.28",
+      "Job.32.13",
+      "Job.33.33",
+      "Job.38.36",
+      "Job.38.37",
+      "Job.39.17"
+     ],
+     "eg": [
+      {
+       "id": "Job.28.12",
+       "ref": "Job 28:12",
+       "text": "But where can wisdom be found, and where does understanding dwell?",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Job.28.20",
+       "ref": "Job 28:20",
+       "text": "From where, then, does wisdom come, and where does understanding dwell?",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Job.12.12",
+       "ref": "Job 12:12",
+       "text": "Wisdom is found with the elderly, and understanding comes with long life.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Job.32.7",
+       "ref": "Job 32:7",
+       "text": "I thought that age should speak, and many years should teach wisdom.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wisdom in Ecclesiastes: “wisdom exceeds folly”, a shelter, better than weapons of war; and “with much wisdom comes much sorrow”",
+     "note": "Both sides are in the book and both are here: wisdom “exceeds folly, just as light exceeds darkness” (2:13), “like money, is a shelter” (7:12) and is “better than weapons of war” (9:18); and “with much wisdom comes much sorrow” (1:18), in Sheol “there is no work or planning or knowledge or wisdom” (9:10), and “the wisdom of the poor man is despised” (9:16). The page sets them down and adds nothing.",
+     "doors": [],
+     "n": 24,
+     "verses": [
+      "Eccl.1.18",
+      "Eccl.2.13",
+      "Eccl.7.12",
+      "Eccl.9.16",
+      "Eccl.1.13",
+      "Eccl.1.16",
+      "Eccl.1.17",
+      "Eccl.2.3",
+      "Eccl.2.9",
+      "Eccl.2.12",
+      "Eccl.2.21",
+      "Eccl.2.26",
+      "Eccl.7.10",
+      "Eccl.7.11",
+      "Eccl.7.19",
+      "Eccl.7.23",
+      "Eccl.7.25",
+      "Eccl.8.1",
+      "Eccl.8.16",
+      "Eccl.9.10",
+      "Eccl.9.13",
+      "Eccl.9.15",
+      "Eccl.9.18",
+      "Eccl.10.10"
+     ],
+     "eg": [
+      {
+       "id": "Eccl.1.18",
+       "ref": "Ecclesiastes 1:18",
+       "text": "For with much wisdom comes much sorrow, and as knowledge grows, grief increases.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.2.13",
+       "ref": "Ecclesiastes 2:13",
+       "text": "And I saw that wisdom exceeds folly, just as light exceeds darkness:",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.7.12",
+       "ref": "Ecclesiastes 7:12",
+       "text": "For wisdom, like money, is a shelter, and the advantage of knowledge is that wisdom preserves the life of its owner.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.9.16",
+       "ref": "Ecclesiastes 9:16",
+       "text": "And I said, “Wisdom is better than strength, but the wisdom of the poor man is despised, and his words are not heeded.”",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wisdom and folly, pride and correction: “fools despise wisdom”; “with humility comes wisdom”; “a rod of correction imparts wisdom”",
+     "note": "Proverbs that set wisdom beside its opposite or its price in the same verse. Prov 29:15 joins the rod to wisdom (“A rod of correction imparts wisdom”); it does not set them against each other.",
+     "doors": [
+      {
+       "id": "theme_wisdom_literature_r12",
+       "name": "The wise and the fool",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "folly",
+       "name": "folly",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Prov.1.7",
+      "Prov.11.2",
+      "Prov.14.33",
+      "Prov.29.15",
+      "Prov.10.23",
+      "Prov.13.10",
+      "Prov.14.6",
+      "Prov.17.24",
+      "Prov.24.7",
+      "Prov.28.26",
+      "Prov.29.3"
+     ],
+     "eg": [
+      {
+       "id": "Prov.1.7",
+       "ref": "Proverbs 1:7",
+       "text": "The fear of the LORD is the beginning of knowledge, but fools despise wisdom and discipline.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.11.2",
+       "ref": "Proverbs 11:2",
+       "text": "When pride comes, disgrace follows, but with humility comes wisdom.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.14.33",
+       "ref": "Proverbs 14:33",
+       "text": "Wisdom rests in the heart of the discerning; even among fools she is known.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.29.15",
+       "ref": "Proverbs 29:15",
+       "text": "A rod of correction imparts wisdom, but a child left to himself disgraces his mother.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wisdom to understand and interpret: Daniel before the kings; “Here is a call for wisdom”; “This calls for a mind with wisdom”",
+     "note": "Dan 2:30, 5:11 and 5:14 are Aramaic (see Other words); Dan 5:11 speaks of “wisdom like that of the gods”. Rev 13:18 and 17:9 ask for wisdom to understand what the vision shows; what is to be understood the page does not say. Dan 12:3 and 12:10 (“the wise will understand”) use a different word, שָׂכַל (see Other words).",
+     "doors": [
+      {
+       "id": "daniel",
+       "name": "Daniel",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Dan.1.17",
+      "Rev.13.18",
+      "Rev.17.9",
+      "Dan.1.20",
+      "Dan.1.4",
+      "Dan.2.30",
+      "Dan.5.11",
+      "Dan.5.14"
+     ],
+     "eg": [
+      {
+       "id": "Dan.1.17",
+       "ref": "Daniel 1:17",
+       "text": "To these four young men God gave knowledge and understanding in every kind of literature and wisdom. And Daniel had insight into all kinds of visions and dreams.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Rev.13.18",
+       "ref": "Revelation 13:18",
+       "text": "Here is a call for wisdom: Let the one who has insight calculate the number of the beast, for it is the number of a man, and that number is 666.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "Rev.17.9",
+       "ref": "Revelation 17:9",
+       "text": "This calls for a mind with wisdom. The seven heads are seven mountains on which the woman sits.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "Dan.1.20",
+       "ref": "Daniel 1:20",
+       "text": "In every matter of wisdom and understanding about which the king consulted them, he found them ten times better than all the magicians and enchanters in his entire kingdom.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The lament “for the king of Tyre”: “full of wisdom and perfect in beauty”; “you corrupted your wisdom”",
+     "note": "Ezek 28:12-17 is a lament the text calls “for the king of Tyre” (28:12). Readers part on whether it speaks only of him; the page takes no side. The two verses that name wisdom are 28:12 and 28:17. Ezek 28:4-7, about the prince of Tyre's wisdom and wealth, is in the next row.",
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "Ezek.28.12",
+      "Ezek.28.17"
+     ],
+     "eg": [
+      {
+       "id": "Ezek.28.12",
+       "ref": "Ezekiel 28:12",
+       "text": "“Son of man, take up a lament for the king of Tyre and tell him that this is what the Lord GOD says: ‘You were the seal of perfection, full of wisdom and perfect in beauty.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.28.17",
+       "ref": "Ezekiel 28:17",
+       "text": "Your heart grew proud of your beauty; you corrupted your wisdom because of your splendor; so I cast you to the earth; I made you a spectacle before kings.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The wisdom of the wise, of the nations and “of this age”: boasted in, led astray, made foolish; none that “can prevail against the LORD”",
+     "note": "Acts 7:22 says Moses was educated in all the wisdom of the Egyptians; Ezek 28:4-7 is the prince of Tyre's wisdom and wealth, and the lament “for the king of Tyre” (28:12-17) has a row of its own before this one. In 1 Cor 2:6 “the rulers of this age” are named, and readers part on whether they are human rulers or spiritual powers; the page does not choose. 1 Cor 1:19-31 runs from this row to the next: 1:19 quotes Isa 29:14, 1:20 asks where the wise are, and 1:24 and 1:30 call Christ the wisdom of God (see Jesus and wisdom); the page does not say how they relate. Jas 3:15 is here; Jas 3:17, “the wisdom from above”, is in the row on God's wisdom, and the two are kept apart. Col 2:23 (“an appearance of wisdom”) is under Every other use.",
+     "doors": [],
+     "n": 23,
+     "verses": [
+      "Isa.29.14",
+      "Jer.9.23",
+      "Isa.47.10",
+      "1Cor.1.20",
+      "Isa.10.13",
+      "Jer.8.9",
+      "Jer.49.7",
+      "Ezek.28.4",
+      "Ezek.28.5",
+      "Ezek.28.7",
+      "Prov.21.30",
+      "Acts.7.22",
+      "1Cor.1.17",
+      "1Cor.1.19",
+      "1Cor.1.22",
+      "1Cor.2.1",
+      "1Cor.2.4",
+      "1Cor.2.5",
+      "1Cor.2.6",
+      "1Cor.2.13",
+      "1Cor.3.19",
+      "2Cor.1.12",
+      "Jas.3.15"
+     ],
+     "eg": [
+      {
+       "id": "Isa.29.14",
+       "ref": "Isaiah 29:14",
+       "text": "Therefore I will again confound these people with wonder upon wonder. The wisdom of the wise will vanish, and the intelligence of the intelligent will be hidden.”",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        },
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.9.23",
+       "ref": "Jeremiah 9:23",
+       "text": "This is what the LORD says: “Let not the wise man boast in his wisdom, nor the strong man in his strength, nor the wealthy man in his riches.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        },
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.47.10",
+       "ref": "Isaiah 47:10",
+       "text": "You were secure in your wickedness; you said, ‘No one sees me.' Your wisdom and knowledge led you astray; you told yourself, ‘I am, and there is none besides me.'",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.20",
+       "ref": "1 Corinthians 1:20",
+       "text": "Where is the wise man? Where is the scribe? Where is the philosopher of this age? Has not God made foolish the wisdom of the world?",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        },
+        {
+         "key": "g4680",
+         "lemma": "σοφός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus and wisdom: He grew in it, is asked where He got it, is “greater than Solomon”, gives it; Christ “the wisdom of God”; the Lamb receives it",
+     "note": "1 Cor 1:24 calls Christ “the power of God and the wisdom of God” and 1 Cor 1:30 says He “has become for us wisdom from God”; Col 2:3 says “in whom are hidden all the treasures of wisdom and knowledge” (Col 2:2 names “Christ”); Rev 5:12 says the Lamb is worthy to receive wisdom. In Luke 2:40, Matt 13:54 and Mark 6:2 the verse says “the Child”, “this man” and “Him”, and the passage around each is about Jesus; Luke 21:15 is Jesus' own “I will give you speech and wisdom”. Readers part on whether Christ is the Wisdom who speaks in Proverbs 8 (the row on Wisdom who calls out), and on whether “wisdom from God” names a person or what Christ is for us; the page sets the verses side by side and does not choose. 1 Cor 1:19-31 runs from the row on the wisdom of the wise to this one: 1:19 quotes Isa 29:14 (“I will destroy the wisdom of the wise”), 1:20 asks “Where is the wise man?” and “Has not God made foolish the wisdom of the world?”, and 1:24 and 1:30 are here; the page does not say how they relate.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "theme_wisdom_literature_r33",
+       "name": "Christ the power of God and the wisdom of God",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Luke.2.52",
+      "1Cor.1.24",
+      "1Cor.1.30",
+      "Col.2.3",
+      "Luke.2.40",
+      "Matt.13.54",
+      "Mark.6.2",
+      "Matt.12.42",
+      "Luke.11.31",
+      "Luke.21.15",
+      "Rev.5.12"
+     ],
+     "eg": [
+      {
+       "id": "Luke.2.52",
+       "ref": "Luke 2:52",
+       "text": "And Jesus grew in wisdom and stature, and in favor with God and man.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.24",
+       "ref": "1 Corinthians 1:24",
+       "text": "but to those who are called, both Jews and Greeks, Christ the power of God and the wisdom of God.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.30",
+       "ref": "1 Corinthians 1:30",
+       "text": "It is because of Him that you are in Christ Jesus, who has become for us wisdom from God: our righteousness, holiness, and redemption.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "Col.2.3",
+       "ref": "Colossians 2:3",
+       "text": "in whom are hidden all the treasures of wisdom and knowledge.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wisdom on the lips, in teaching and in daily life: “the mouth of the righteous man utters wisdom”; “teach and admonish one another with all wisdom”",
+     "note": "Prov 31:26 reads “She opens her mouth with wisdom, and faithful instruction is on her tongue”; the Hebrew for “instruction” is תּוֹרָה (see the row on wisdom and the law).",
+     "doors": [],
+     "n": 16,
+     "verses": [
+      "Ps.37.30",
+      "Prov.31.26",
+      "Col.3.16",
+      "Col.4.5",
+      "Ps.49.3",
+      "Prov.4.11",
+      "Prov.5.1",
+      "Prov.10.13",
+      "Prov.10.31",
+      "Prov.14.8",
+      "Prov.18.4",
+      "Prov.30.3",
+      "Acts.6.10",
+      "Col.1.28",
+      "Jas.3.13",
+      "2Sam.20.22"
+     ],
+     "eg": [
+      {
+       "id": "Ps.37.30",
+       "ref": "Psalms 37:30",
+       "text": "The mouth of the righteous man utters wisdom, and his tongue speaks justice.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.31.26",
+       "ref": "Proverbs 31:26",
+       "text": "She opens her mouth with wisdom, and faithful instruction is on her tongue.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Col.3.16",
+       "ref": "Colossians 3:16",
+       "text": "Let the word of Christ richly dwell within you as you teach and admonish one another with all wisdom, and as you sing psalms, hymns, and spiritual songs with gratitude in your hearts to God.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "Col.4.5",
+       "ref": "Colossians 4:5",
+       "text": "Act wisely toward outsiders, redeeming the time.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Words that stand beside wisdom: knowledge, understanding, insight, instruction, discretion (a list)",
+     "note": "Different words that stand beside wisdom, listed together as a list of verses; many are also in the rows above. The page does not say how they differ from it or from each other. Rev 13:18 and 17:9 are here for “insight” and in the row on Daniel's wisdom for “wisdom”.",
+     "doors": [],
+     "n": 62,
+     "verses": [
+      "Prov.1.2",
+      "Exod.31.3",
+      "Col.1.9",
+      "Dan.1.4",
+      "Rom.11.33",
+      "Exod.35.31",
+      "Exod.36.1",
+      "Deut.4.6",
+      "1Kgs.4.29",
+      "1Kgs.7.14",
+      "Job.11.6",
+      "Job.12.12",
+      "Job.12.13",
+      "Job.26.3",
+      "Job.28.12",
+      "Job.28.20",
+      "Job.28.28",
+      "Job.38.36",
+      "Job.39.17",
+      "Ps.49.3",
+      "Ps.111.10",
+      "Prov.1.7",
+      "Prov.2.2",
+      "Prov.2.6",
+      "Prov.2.10",
+      "Prov.3.13",
+      "Prov.3.19",
+      "Prov.4.5",
+      "Prov.4.7",
+      "Prov.5.1",
+      "Prov.7.4",
+      "Prov.8.1",
+      "Prov.8.12",
+      "Prov.9.10",
+      "Prov.10.23",
+      "Prov.14.6",
+      "Prov.15.33",
+      "Prov.16.16",
+      "Prov.21.30",
+      "Prov.23.23",
+      "Prov.24.3",
+      "Prov.30.3",
+      "Eccl.1.16",
+      "Eccl.1.17",
+      "Eccl.1.18",
+      "Eccl.2.21",
+      "Eccl.2.26",
+      "Eccl.7.12",
+      "Eccl.9.10",
+      "Isa.11.2",
+      "Isa.29.14",
+      "Isa.33.6",
+      "Isa.47.10",
+      "Jer.10.12",
+      "Jer.51.15",
+      "Ezek.28.4",
+      "Dan.1.20",
+      "1Cor.1.19",
+      "1Cor.12.8",
+      "Col.2.3",
+      "Rev.13.18",
+      "Rev.17.9"
+     ],
+     "eg": [
+      {
+       "id": "Prov.1.2",
+       "ref": "Proverbs 1:2",
+       "text": "for gaining wisdom and discipline, for comprehending words of insight,",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Exod.31.3",
+       "ref": "Exodus 31:3",
+       "text": "And I have filled him with the Spirit of God, with skill, ability, and knowledge in all kinds of craftsmanship,",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.9",
+       "ref": "Colossians 1:9",
+       "text": "For this reason, since the day we heard about you, we have not stopped praying for you and asking God to fill you with the knowledge of His will in all spiritual wisdom and understanding,",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "Dan.1.4",
+       "ref": "Daniel 1:4",
+       "text": "young men without blemish, handsome, gifted in all wisdom, knowledgeable, quick to understand, and qualified to serve in the king's palace-and to teach them the language and literature of the Chaldeans.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Among them the wise woman at Joab's word and “wisdom like the wisdom of the angel of God” (2 Sam 14:20), what the LORD's people lose at sea (Ps 107:27, “all their skill was useless”), “with all wisdom and understanding” (Eph 1:8) and “an appearance of wisdom” (Col 2:23).",
+     "doors": [],
+     "n": 4,
+     "verses": [
+      "2Sam.14.20",
+      "Eph.1.8",
+      "Ps.107.27",
+      "Col.2.23"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.14.20",
+       "ref": "2 Samuel 14:20",
+       "text": "Joab your servant has done this to bring about this change of affairs, but my lord has wisdom like the wisdom of the angel of God, to know everything that happens in the land.”",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.8",
+       "ref": "Ephesians 1:8",
+       "text": "that He lavished on us with all wisdom and understanding.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      },
+      {
+       "id": "Ps.107.27",
+       "ref": "Psalms 107:27",
+       "text": "They reeled and staggered like drunkards, and all their skill was useless.",
+       "words": [
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "Col.2.23",
+       "ref": "Colossians 2:23",
+       "text": "Such restrictions indeed have an appearance of wisdom, with their self-prescribed worship, their false humility, and their harsh treatment of the body; but they are of no value against the indulgence of the flesh.",
+       "words": [
+        {
+         "key": "g4678",
+         "lemma": "σοφία"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 166,
+   "rows": [
+    {
+     "label": "Skilled: craftsmen and workers in every kind of work, the most skillful of the wailing women, captains, an expert builder",
+     "note": "The adjective of the same root as wisdom, in its sense of skill in a craft. Isa 40:20 is the skilled craftsman who is sought “to set up an idol that will not topple”; Jer 9:17 sends for “the most skillful” of the wailing women; Ezek 27:8 has “Your men of skill, O Tyre ... as your captains”; 1 Cor 3:10 is Paul as “an expert builder”. In the Berean's numbering Huram-abi, “a skillful man”, is 2 Chr 2:13.",
+     "doors": [
+      {
+       "id": "bezaleel",
+       "name": "Bezalel",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "Exod.35.10",
+      "1Chr.22.15",
+      "Isa.40.20",
+      "1Cor.3.10",
+      "Exod.28.3",
+      "Exod.31.6",
+      "Exod.35.25",
+      "Exod.36.1",
+      "Exod.36.2",
+      "Exod.36.4",
+      "Exod.36.8",
+      "2Chr.2.7",
+      "2Chr.2.13",
+      "2Chr.2.14",
+      "Jer.9.17",
+      "Jer.10.9",
+      "Ezek.27.8",
+      "Ezek.27.9"
+     ],
+     "eg": [
+      {
+       "id": "Exod.35.10",
+       "ref": "Exodus 35:10",
+       "text": "Let every skilled craftsman among you come and make everything that the LORD has commanded:",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.22.15",
+       "ref": "1 Chronicles 22:15",
+       "text": "You also have many workers: stonecutters, masons, carpenters, and men skilled in every kind of work-",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.40.20",
+       "ref": "Isaiah 40:20",
+       "text": "One lacking such an offering chooses wood that will not rot. He seeks a skilled craftsman to set up an idol that will not topple.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.3.10",
+       "ref": "1 Corinthians 3:10",
+       "text": "By the grace God has given me, I laid a foundation as an expert builder, and someone else is building on it. But each one must be careful how he builds.",
+       "words": [
+        {
+         "key": "g4680",
+         "lemma": "σοφός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The wise men of Egypt, Babylon, Persia and Edom: magicians, advisers, interpreters",
+     "note": "The Daniel verses are the Aramaic חַכִּים 'wise men'; the Hebrew is חָכָם. In Dan 2:27 “No wise man, enchanter, medium, or magician can explain to the king the mystery”; in Isa 44:25 the LORD “confounds the wise”; in Isa 19:12 “Where are your wise men now?”.",
+     "doors": [
+      {
+       "id": "wise_men",
+       "name": "wise men",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "Gen.41.8",
+      "Exod.7.11",
+      "Dan.2.12",
+      "Jer.50.35",
+      "Esth.1.13",
+      "Esth.6.13",
+      "Isa.19.11",
+      "Isa.19.12",
+      "Isa.44.25",
+      "Jer.10.7",
+      "Jer.51.57",
+      "Obad.1.8",
+      "Dan.2.13",
+      "Dan.2.14",
+      "Dan.2.18",
+      "Dan.2.24",
+      "Dan.2.27",
+      "Dan.2.48",
+      "Dan.4.6",
+      "Dan.4.18",
+      "Dan.5.7",
+      "Dan.5.8",
+      "Dan.5.15"
+     ],
+     "eg": [
+      {
+       "id": "Gen.41.8",
+       "ref": "Genesis 41:8",
+       "text": "In the morning his spirit was troubled, so he summoned all the magicians and wise men of Egypt. Pharaoh told them his dreams, but no one could interpret them for him.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Exod.7.11",
+       "ref": "Exodus 7:11",
+       "text": "But Pharaoh called the wise men and sorcerers and magicians of Egypt, and they also did the same things by their magic arts.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Dan.2.12",
+       "ref": "Daniel 2:12",
+       "text": "This response made the king so angry and furious that he gave orders to destroy all the wise men of Babylon.",
+       "words": [
+        {
+         "key": "h2445",
+         "lemma": "חַכִּים"
+        }
+       ]
+      },
+      {
+       "id": "Jer.50.35",
+       "ref": "Jeremiah 50:35",
+       "text": "A sword is against the Chaldeans, declares the LORD, against those who live in Babylon, and against her officials and wise men.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Called wise: Joseph, the leaders Moses chose, Israel as “a wise and understanding people”, the wise women of Tekoa and Abel, Solomon, the Teacher",
+     "note": "Solomon's request and the LORD's answer, “a wise and discerning heart” (1 Kgs 3:12), are here; the noun's verses on Solomon are in the row on Solomon's wisdom. In the Berean's numbering 2 Chr 2:12 is Hiram speaking of Solomon, “a wise son”; the craftsman Huram-abi is 2:13 (see Skilled).",
+     "doors": [
+      {
+       "id": "wise_people",
+       "name": "the wise",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Gen.41.39",
+      "Deut.1.13",
+      "2Sam.20.16",
+      "1Kgs.3.12",
+      "Gen.41.33",
+      "Deut.1.15",
+      "Deut.4.6",
+      "2Sam.14.2",
+      "2Sam.14.20",
+      "1Kgs.2.9",
+      "1Kgs.5.7",
+      "2Chr.2.12",
+      "Judg.5.29",
+      "Eccl.12.9"
+     ],
+     "eg": [
+      {
+       "id": "Gen.41.39",
+       "ref": "Genesis 41:39",
+       "text": "Then Pharaoh said to Joseph, “Since God has made all this known to you, there is no one as discerning and wise as you.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Deut.1.13",
+       "ref": "Deuteronomy 1:13",
+       "text": "Choose for yourselves wise, understanding, and respected men from each of your tribes, and I will appoint them as your leaders.”",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.20.16",
+       "ref": "2 Samuel 20:16",
+       "text": "a wise woman called out from the city, “Listen! Listen! Please tell Joab to come here so that I may speak with him.”",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.3.12",
+       "ref": "1 Kings 3:12",
+       "text": "behold, I will do what you have asked. I will give you a wise and discerning heart, so that there will never have been another like you, nor will there ever be.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The wise and the fool, the foolish, the simple, the mocker",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_wisdom_literature_r12",
+       "name": "The wise and the fool",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "folly",
+       "name": "folly",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "fool",
+       "name": "fool",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 43,
+     "verses": [
+      "Prov.3.35",
+      "Prov.10.1",
+      "Eccl.2.14",
+      "Prov.29.11",
+      "Deut.32.6",
+      "Rom.1.14",
+      "Ps.49.10",
+      "Prov.9.8",
+      "Prov.10.8",
+      "Prov.10.14",
+      "Prov.11.29",
+      "Prov.12.15",
+      "Prov.13.1",
+      "Prov.13.20",
+      "Prov.14.1",
+      "Prov.14.3",
+      "Prov.14.16",
+      "Prov.14.24",
+      "Prov.15.2",
+      "Prov.15.7",
+      "Prov.15.12",
+      "Prov.15.20",
+      "Prov.17.28",
+      "Prov.21.11",
+      "Prov.21.20",
+      "Prov.26.5",
+      "Prov.26.12",
+      "Prov.29.9",
+      "Eccl.2.16",
+      "Eccl.2.19",
+      "Eccl.4.13",
+      "Eccl.6.8",
+      "Eccl.7.4",
+      "Eccl.7.5",
+      "Eccl.9.17",
+      "Eccl.10.2",
+      "Eccl.10.12",
+      "Isa.19.11",
+      "Jer.4.22",
+      "1Cor.1.25",
+      "1Cor.1.27",
+      "1Cor.3.18",
+      "1Cor.3.19"
+     ],
+     "eg": [
+      {
+       "id": "Prov.3.35",
+       "ref": "Proverbs 3:35",
+       "text": "The wise will inherit honor, but fools are held up to shame.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Prov.10.1",
+       "ref": "Proverbs 10:1",
+       "text": "The proverbs of Solomon: A wise son brings joy to his father, but a foolish son grief to his mother.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.2.14",
+       "ref": "Ecclesiastes 2:14",
+       "text": "The wise man has eyes in his head, but the fool walks in darkness. Yet I also came to realize that one fate overcomes them both.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Prov.29.11",
+       "ref": "Proverbs 29:11",
+       "text": "A fool vents all his anger, but a wise man holds it back.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The wise in their own eyes, shrewd or skilled in evil; the wise confounded, made foolish, put to shame; things hidden from the wise (Matt 11:25, Luke 10:21)",
+     "note": "The Hebrew חָכָם is also “shrewd, skilled”: Jonadab in 2 Sam 13:3 is “a very shrewd man” and Jer 4:22 has “They are skilled in doing evil”. Matt 11:25 and Luke 10:21 are Jesus' thanksgiving to the Father: “You have hidden these things from the wise and learned, and revealed them to little children”; they are here for the words “the wise”, and the page takes no side on what they say of who is given to see.",
+     "doors": [
+      {
+       "id": "theme_wisdom_literature_r32",
+       "name": "Has not God made foolish the wisdom of the world?",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Prov.3.7",
+      "Isa.29.14",
+      "1Cor.1.27",
+      "Matt.11.25",
+      "Job.5.13",
+      "Prov.26.5",
+      "Prov.26.12",
+      "Prov.26.16",
+      "Prov.28.11",
+      "Isa.5.21",
+      "Isa.44.25",
+      "Jer.4.22",
+      "Jer.8.8",
+      "Jer.8.9",
+      "Jer.9.23",
+      "2Sam.13.3",
+      "Rom.1.22",
+      "1Cor.1.19",
+      "1Cor.1.20",
+      "1Cor.1.26",
+      "1Cor.3.18",
+      "1Cor.3.19",
+      "1Cor.3.20",
+      "Luke.10.21"
+     ],
+     "eg": [
+      {
+       "id": "Prov.3.7",
+       "ref": "Proverbs 3:7",
+       "text": "Be not wise in your own eyes; fear the LORD and turn away from evil.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.29.14",
+       "ref": "Isaiah 29:14",
+       "text": "Therefore I will again confound these people with wonder upon wonder. The wisdom of the wise will vanish, and the intelligence of the intelligent will be hidden.”",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        },
+        {
+         "key": "h2451",
+         "lemma": "חׇכְמָה"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.27",
+       "ref": "1 Corinthians 1:27",
+       "text": "But God chose the foolish things of the world to shame the wise; God chose the weak things of the world to shame the strong.",
+       "words": [
+        {
+         "key": "g4680",
+         "lemma": "σοφός"
+        }
+       ]
+      },
+      {
+       "id": "Matt.11.25",
+       "ref": "Matthew 11:25",
+       "text": "At that time Jesus declared, “I praise You, Father, Lord of heaven and earth, because You have hidden these things from the wise and learned, and revealed them to little children.",
+       "words": [
+        {
+         "key": "g4680",
+         "lemma": "σοφός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "God is called wise: “the only wise God”; “wise in heart”; “the foolishness of God is wiser than man's wisdom”",
+     "note": "Isa 31:2 says “Yet He too is wise”; the LORD is named in 31:1 and the page does not fill the “He” in.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Job.9.4",
+      "Rom.16.27",
+      "1Cor.1.25"
+     ],
+     "eg": [
+      {
+       "id": "Job.9.4",
+       "ref": "Job 9:4",
+       "text": "God is wise in heart and mighty in strength. Who has resisted Him and prospered?",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Rom.16.27",
+       "ref": "Romans 16:27",
+       "text": "to the only wise God be glory forever through Jesus Christ! Amen.",
+       "words": [
+        {
+         "key": "g4680",
+         "lemma": "σοφός"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.25",
+       "ref": "1 Corinthians 1:25",
+       "text": "For the foolishness of God is wiser than man's wisdom, and the weakness of God is stronger than man's strength.",
+       "words": [
+        {
+         "key": "g4680",
+         "lemma": "σοφός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use, among them the wise who hear and learn",
+     "note": "The wise son, the wise heart, the wise man who listens, in Proverbs and Ecclesiastes: “A wise son brings joy to his father” (Prov 10:1) and “The words of the wise are like goads” (Eccl 12:11); also Matt 23:34 (“I am sending you prophets and wise men and teachers”), Rom 16:19 (“wise about what is good”), Eph 5:15 (“not as unwise but as wise”) and Isa 3:3 (“the cunning magician”, a leader of Jerusalem).",
+     "doors": [
+      {
+       "id": "wise_people",
+       "name": "the wise",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 50,
+     "verses": [
+      "Prov.1.5",
+      "Prov.9.9",
+      "Prov.15.31",
+      "Prov.18.15",
+      "Deut.16.19",
+      "Matt.23.34",
+      "Rom.16.19",
+      "Job.15.2",
+      "Job.15.18",
+      "Job.17.10",
+      "Job.34.2",
+      "Job.34.34",
+      "Job.37.24",
+      "Ps.107.43",
+      "Prov.1.6",
+      "Prov.11.30",
+      "Prov.12.18",
+      "Prov.13.14",
+      "Prov.16.14",
+      "Prov.16.21",
+      "Prov.16.23",
+      "Prov.20.26",
+      "Prov.21.22",
+      "Prov.22.17",
+      "Prov.23.24",
+      "Prov.24.5",
+      "Prov.24.23",
+      "Prov.25.12",
+      "Prov.29.8",
+      "Prov.30.24",
+      "Eccl.7.7",
+      "Eccl.7.19",
+      "Eccl.8.1",
+      "Eccl.8.5",
+      "Eccl.8.17",
+      "Eccl.9.1",
+      "Eccl.9.11",
+      "Eccl.9.15",
+      "Eccl.12.11",
+      "Isa.3.3",
+      "Isa.31.2",
+      "Jer.9.12",
+      "Jer.18.18",
+      "Ezek.28.3",
+      "Dan.2.21",
+      "Hos.13.13",
+      "Hos.14.9",
+      "1Cor.6.5",
+      "Eph.5.15",
+      "Jas.3.13"
+     ],
+     "eg": [
+      {
+       "id": "Prov.1.5",
+       "ref": "Proverbs 1:5",
+       "text": "let the wise listen and gain instruction, and the discerning acquire wise counsel",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Prov.9.9",
+       "ref": "Proverbs 9:9",
+       "text": "Instruct a wise man, and he will be wiser still; teach a righteous man, and he will increase his learning.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Prov.15.31",
+       "ref": "Proverbs 15:31",
+       "text": "He who listens to life-giving reproof will dwell among the wise.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      },
+      {
+       "id": "Prov.18.15",
+       "ref": "Proverbs 18:15",
+       "text": "The heart of the discerning acquires knowledge, and the ear of the wise seeks it out.",
+       "words": [
+        {
+         "key": "h2450",
+         "lemma": "חָכָם"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 27,
+   "rows": [
+    {
+     "label": "Be wise, grow wise, make wise: “become wise”, “wiser than all men”, “making wise the simple”",
+     "note": "Among them Solomon “wiser than all men” (1 Kgs 4:31), “If only they were wise” (Deut 32:29), “observe its ways and become wise” (Prov 6:6) and “the testimony of the LORD is trustworthy, making wise the simple” (Ps 19:7). 2 Tim 3:15 has the Holy Scriptures “able to make you wise for salvation through faith in Christ Jesus”: a different Greek verb, σοφίζω, set beside the Hebrew ones; the page keeps each as the verse has it.",
+     "doors": [
+      {
+       "id": "wise_people",
+       "name": "the wise",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 26,
+     "verses": [
+      "Deut.32.29",
+      "2Tim.3.15",
+      "1Kgs.4.31",
+      "Job.32.9",
+      "Job.35.11",
+      "Ps.19.7",
+      "Ps.58.5",
+      "Ps.105.22",
+      "Ps.119.98",
+      "Prov.6.6",
+      "Prov.8.33",
+      "Prov.9.9",
+      "Prov.9.12",
+      "Prov.13.20",
+      "Prov.19.20",
+      "Prov.20.1",
+      "Prov.21.11",
+      "Prov.23.15",
+      "Prov.23.19",
+      "Prov.27.11",
+      "Prov.30.24",
+      "Eccl.2.15",
+      "Eccl.2.19",
+      "Eccl.7.16",
+      "Eccl.7.23",
+      "Zech.9.2"
+     ],
+     "eg": [
+      {
+       "id": "Deut.32.29",
+       "ref": "Deuteronomy 32:29",
+       "text": "If only they were wise, they would understand it; they would comprehend their fate.",
+       "words": [
+        {
+         "key": "h2449",
+         "lemma": "חָכַם"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.3.15",
+       "ref": "2 Timothy 3:15",
+       "text": "From infancy you have known the Holy Scriptures, which are able to make you wise for salvation through faith in Christ Jesus.",
+       "words": [
+        {
+         "key": "g4679",
+         "lemma": "σοφίζω"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.4.31",
+       "ref": "1 Kings 4:31",
+       "text": "He was wiser than all men-wiser than Ethan the Ezrahite, and wiser than Heman, Calcol, and Darda, the sons of Mahol. And his fame spread throughout the surrounding nations.",
+       "words": [
+        {
+         "key": "h2449",
+         "lemma": "חָכַם"
+        }
+       ]
+      },
+      {
+       "id": "Job.32.9",
+       "ref": "Job 32:9",
+       "text": "It is not only the old who are wise, or the elderly who understand justice.",
+       "words": [
+        {
+         "key": "h2449",
+         "lemma": "חָכַם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Deal shrewdly: “Come, let us deal shrewdly with them” (Exod 1:10)",
+     "note": "The same Hebrew verb as “become wise” (Prov 6:6): here it is Pharaoh's plan against Israel. The page keeps the sense apart and does not say that the two are one meaning or two.",
+     "doors": [],
+     "n": 1,
+     "verses": [
+      "Exod.1.10"
+     ],
+     "eg": [
+      {
+       "id": "Exod.1.10",
+       "ref": "Exodus 1:10",
+       "text": "Come, let us deal shrewdly with them, or they will increase even more; and if a war breaks out, they may join our enemies, fight against us, and leave the country.”",
+       "words": [
+        {
+         "key": "h2449",
+         "lemma": "חָכַם"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “wisdom”, “wise”",
+  "words": [
+   {
+    "key": "h7919",
+    "lemma": "שָׂכַל",
+    "translit": "maśkiyl",
+    "gloss": "wise",
+    "lang": "Hebrew",
+    "n": 17,
+    "verses": [
+     "Gen.3.6",
+     "Dan.12.3",
+     "Dan.12.10",
+     "Job.22.2",
+     "Ps.2.10",
+     "Ps.94.8",
+     "Prov.1.3",
+     "Prov.10.5",
+     "Prov.10.19",
+     "Prov.14.35",
+     "Prov.15.24",
+     "Prov.17.2",
+     "Prov.19.14",
+     "Jer.23.5",
+     "Dan.11.33",
+     "Dan.11.35",
+     "Amos.5.13"
+    ],
+    "note": "שָׂכַל means to have insight, to act with understanding. The Berean prints “wisdom” at Gen 3:6 (the tree “desirable for obtaining wisdom”) and “wise” in the Daniel verses (Dan 12:10, “the wise will understand”). A different word from חָכְמָה; the page does not make the two one.",
+    "eg": [
+     {
+      "id": "Gen.3.6",
+      "ref": "Genesis 3:6",
+      "text": "When the woman saw that the tree was good for food and pleasing to the eyes, and that it was desirable for obtaining wisdom, she took the fruit and ate it. She also gave some to her husband who was with her, and he ate it."
+     },
+     {
+      "id": "Dan.12.3",
+      "ref": "Daniel 12:3",
+      "text": "Then the wise will shine like the brightness of the heavens, and those who lead many to righteousness will shine like the stars forever and ever."
+     }
+    ]
+   },
+   {
+    "key": "g5429",
+    "lemma": "φρόνιμος",
+    "translit": "phronimos",
+    "gloss": "thoughtful",
+    "lang": "Greek",
+    "n": 13,
+    "verses": [
+     "Matt.7.24",
+     "Matt.10.16",
+     "Rom.11.25",
+     "Matt.24.45",
+     "Matt.25.2",
+     "Matt.25.4",
+     "Matt.25.8",
+     "Matt.25.9",
+     "Luke.12.42",
+     "Luke.16.8",
+     "Rom.12.16",
+     "1Cor.4.10",
+     "2Cor.11.19"
+    ],
+    "note": "φρόνιμος means thoughtful, prudent. The Berean prints “wise” at Matt 7:24 (“a wise man who built his house on the rock”) and “shrewd” at Matt 10:16. A different word from σοφός; the page does not make the two one.",
+    "eg": [
+     {
+      "id": "Matt.7.24",
+      "ref": "Matthew 7:24",
+      "text": "Therefore everyone who hears these words of Mine and acts on them is like a wise man who built his house on the rock."
+     },
+     {
+      "id": "Matt.10.16",
+      "ref": "Matthew 10:16",
+      "text": "Behold, I am sending you out like sheep among wolves; therefore be as shrewd as snakes and as innocent as doves."
+     }
+    ]
+   },
+   {
+    "key": "h2452",
+    "lemma": "חׇכְמָה",
+    "translit": "chokh.mah",
+    "gloss": "wisdom",
+    "lang": "Hebrew",
+    "n": 7,
+    "verses": [
+     "Dan.2.20",
+     "Dan.2.21",
+     "Dan.2.23",
+     "Dan.2.30",
+     "Dan.5.11",
+     "Dan.5.14",
+     "Ezra.7.25"
+    ],
+    "note": "Aramaic חׇכְמָה, written as the Hebrew word is, in Daniel and Ezra: the Aramaic of the same word (Dan 2:20, “wisdom and power belong to Him”). It is listed here because the page counts the Hebrew and the Aramaic apart; its verses stand in the rows above where they fit.",
+    "eg": [
+     {
+      "id": "Dan.2.20",
+      "ref": "Daniel 2:20",
+      "text": "and declared: “Blessed be the name of God forever and ever, for wisdom and power belong to Him."
+     },
+     {
+      "id": "Dan.2.21",
+      "ref": "Daniel 2:21",
+      "text": "He changes the times and seasons; He removes kings and establishes them. He gives wisdom to the wise and knowledge to the discerning."
+     }
+    ]
+   },
+   {
+    "key": "h8454",
+    "lemma": "תּוּשִׁיָּה",
+    "translit": "tu.shiy.yah",
+    "gloss": "wisdom",
+    "lang": "Hebrew",
+    "n": 7,
+    "verses": [
+     "Job.11.6",
+     "Job.12.16",
+     "Prov.8.14",
+     "Prov.2.7",
+     "Prov.3.21",
+     "Isa.28.29",
+     "Mic.6.9"
+    ],
+    "note": "תּוּשִׁיָּה means sound wisdom, success in a matter. The Berean prints “wisdom” at Job 11:6 and 12:16, and Prov 8:14 stands in the chapter where Wisdom speaks. A different word from חָכְמָה; the page does not make the two one.",
+    "eg": [
+     {
+      "id": "Job.11.6",
+      "ref": "Job 11:6",
+      "text": "and disclose to you the secrets of wisdom, for true wisdom has two sides. Know then that God exacts from you less than your iniquity deserves."
+     },
+     {
+      "id": "Job.12.16",
+      "ref": "Job 12:16",
+      "text": "True wisdom and power belong to Him. The deceived and the deceiver are His."
+     }
+    ]
+   },
+   {
+    "key": "h6175",
+    "lemma": "עָרוּם",
+    "translit": "a.rum",
+    "gloss": "prudent",
+    "lang": "Hebrew",
+    "n": 5,
+    "verses": [
+     "Prov.12.16",
+     "Prov.12.23",
+     "Prov.13.16",
+     "Prov.22.3",
+     "Prov.27.12"
+    ],
+    "eg": [
+     {
+      "id": "Prov.12.16",
+      "ref": "Proverbs 12:16",
+      "text": "A fool's anger is known at once, but a prudent man overlooks an insult."
+     },
+     {
+      "id": "Prov.12.23",
+      "ref": "Proverbs 12:23",
+      "text": "A shrewd man keeps his knowledge to himself, but a foolish heart proclaims its folly."
+     }
+    ]
+   },
+   {
+    "key": "h6195",
+    "lemma": "עׇרְמָה",
+    "translit": "or.mah",
+    "gloss": "craftiness",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Prov.1.4",
+     "Prov.8.5",
+     "Prov.8.12"
+    ],
+    "eg": [
+     {
+      "id": "Prov.1.4",
+      "ref": "Proverbs 1:4",
+      "text": "To impart prudence to the simple and knowledge and discretion to the young,"
+     },
+     {
+      "id": "Prov.8.5",
+      "ref": "Proverbs 8:5",
+      "text": "O simple ones, learn to be shrewd; O fools, gain understanding."
+     }
+    ]
+   },
+   {
+    "key": "h6191",
+    "lemma": "עָרֹם",
+    "translit": "a.ram",
+    "gloss": "be shrewd",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Prov.15.5",
+     "Prov.19.25"
+    ],
+    "eg": [
+     {
+      "id": "Prov.15.5",
+      "ref": "Proverbs 15:5",
+      "text": "A fool rejects his father's discipline, but whoever heeds correction is prudent."
+     },
+     {
+      "id": "Prov.19.25",
+      "ref": "Proverbs 19:25",
+      "text": "Strike a mocker, and the simple will beware; rebuke the discerning man, and he will gain knowledge."
+     }
+    ]
+   },
+   {
+    "key": "h8458",
+    "lemma": "תַּחְבֻּלֹות",
+    "translit": "tach.bu.lah",
+    "gloss": "counsel",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Prov.20.18",
+     "Prov.24.6"
+    ],
+    "eg": [
+     {
+      "id": "Prov.20.18",
+      "ref": "Proverbs 20:18",
+      "text": "Set plans by consultation, and wage war under sound guidance."
+     },
+     {
+      "id": "Prov.24.6",
+      "ref": "Proverbs 24:6",
+      "text": "Only with sound guidance should you wage war, and victory lies in a multitude of counselors."
+     }
+    ]
+   },
+   {
+    "key": "g5428",
+    "lemma": "φρόνησις",
+    "translit": "phronēsis",
+    "gloss": "understanding",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.1.17"
+    ],
+    "eg": [
+     {
+      "id": "Luke.1.17",
+      "ref": "Luke 1:17",
+      "text": "And he will go on before the Lord in the spirit and power of Elijah, to turn the hearts of the fathers to their children and the disobedient to the wisdom of the righteous-to make ready a people prepared for the Lord.”"
+     }
+    ]
+   },
+   {
+    "key": "g3562",
+    "lemma": "νουνεχῶς",
+    "translit": "nounechōs",
+    "gloss": "wisely",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Mark.12.34"
+    ],
+    "eg": [
+     {
+      "id": "Mark.12.34",
+      "ref": "Mark 12:34",
+      "text": "When Jesus saw that the man had answered wisely, He said, “You are not far from the kingdom of God.” And no one dared to question Him any further."
+     }
+    ]
+   }
+  ]
+ }
+}

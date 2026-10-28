@@ -1,0 +1,65 @@
+{
+  "id": "sabbath",
+  "seats": ["secular academic scholar of religion", "biblical-theological (literary) teacher"],
+  "overall": "ship after fixes",
+  "quotes_checked": "30 of 30 exact (all 30 quotes on the card read against the server text; Isa 56:6 trailing hyphen, Rev 1:10 and Isa 58:13 clauses, Deut 5:14 final clause, Mark 2:27 and Matt 12:12/12:8 trimmed of the server's curly quotes are all faithful)",
+  "fixes": [
+    {
+      "where": "agreed (summary and passages)",
+      "kind": "missing verse",
+      "readers": ["biblical-theological (literary) teacher", "secular academic scholar of religion"],
+      "why": "Exodus 31:16-17 is one unit: the Sabbath as a permanent covenant and as a sign between the LORD and the Israelites, with the creation rest as its stated ground. Every reading has to deal with the sign language, and it is the text's own link from creation (Gen 2:3) to Sinai. The writer's own _why recommends adding it. Verse text fetched and read: Exodus 31:17.",
+      "fix": "Add to agreed.passages: {\"ref\": \"Exodus 31:17\", \"quote\": \"It is a sign between Me and the Israelites forever; for in six days the LORD made the heavens and the earth, but on the seventh day He rested and was refreshed.\"} (quote ends at 'refreshed.', omitting the closing quote marks the server adds). In the agreed summary, change 'and calls it a permanent covenant for the Israelites for the generations to come' to 'and calls it a permanent covenant and a sign between the LORD and the Israelites, for the generations to come'."
+    },
+    {
+      "where": "agreed (summary)",
+      "kind": "wording",
+      "readers": ["secular academic scholar of religion", "biblical-theological (literary) teacher"],
+      "why": "'Every reading also takes Jesus to have taught about the Sabbath within that Law' is a framing the second reading's holders may not own: they read Matthew 12:8 as placing the Sabbath under the Son of Man, not simply inside the Law. 'Within that Law' quietly assumes the continuity the readings dispute. The text-level common ground is only that Jesus spoke of the Sabbath to hearers who kept it.",
+      "fix": "Replace 'Every reading also takes Jesus to have taught about the Sabbath within that Law, saying that it was made for man and that it is lawful to do good on it.' with 'Every reading also takes Jesus to have spoken of the Sabbath to hearers who kept it, saying that it was made for man and that it is lawful to do good on it.'"
+    },
+    {
+      "where": "The Sabbath fulfilled in Christ's rest (passages)",
+      "kind": "missing verse",
+      "readers": ["biblical-theological (literary) teacher"],
+      "why": "The literary spine of Hebrews 3-4 is Hebrews 4:4, where the writer quotes the creation rest (Gen 2:2) and then moves to 'rest' (4:8, 4:9). Holders of the fulfilment reading cite the chain Genesis 2 - Psalm 95 - Hebrews 4 first; without 4:4 the Hebrews 4:3 and 4:10 notes float free of the creation text, and the card shows no verse where Hebrews itself names the seventh day. Heb 4:4 fetched and read.",
+      "fix": "Add (taking this reading to 9, or drop Galatians 4:10, which does not name the Sabbath and is already dealt with in the third reading's answers): {\"ref\": \"Hebrews 4:4\", \"quote\": \"For somewhere He has spoken about the seventh day in this manner: “And on the seventh day God rested from all His works.”\", \"note\": \"Hebrews names the seventh day and God's rest at creation, and goes on to speak of the rest that believers enter.\"}"
+    },
+    {
+      "where": "The seventh day still kept (passages)",
+      "kind": "missing verse",
+      "readers": ["biblical-theological (literary) teacher"],
+      "why": "The verse holders of this reading cite beside Matthew 5:17 is Matthew 5:18 (not a jot or stroke will disappear from the Law until everything is accomplished). It is the heart of their 'no verse ends the command' claim, and the card quotes only the half of the saying that the other readings also use. Matt 5:18 fetched and read.",
+      "fix": "Add (9 passages, or fold it into the Matthew 5:17 entry): {\"ref\": \"Matthew 5:18\", \"quote\": \"For I tell you truly, until heaven and earth pass away, not a single jot, not a stroke of a pen, will disappear from the Law until everything is accomplished.\", \"note\": \"Read as the Law, the Sabbath commandment among it, remaining until heaven and earth pass away.\"}"
+    },
+    {
+      "where": "The Lord's Day as the Christian Sabbath (passages)",
+      "kind": "missing verse",
+      "readers": ["biblical-theological (literary) teacher", "secular academic scholar of religion"],
+      "why": "The creation-ordinance claim in the summary rests on the Sabbath being kept before Sinai. The first narrated Sabbath keeping is Exodus 16, and holders of this reading cite it with Genesis 2:3 as evidence for a command older than the Law (the writer's own _why recommends it). Without it the summary's central claim has no verse behind it in the reading's list. Exod 16:23 fetched and read.",
+      "fix": "Add (9 passages; if the cap is held at 8, replace Luke 24:1, which John 20:19 already covers for the first-day claim): {\"ref\": \"Exodus 16:23\", \"quote\": \"Tomorrow is to be a day of complete rest, a holy Sabbath to the LORD.\", \"note\": \"A holy Sabbath to the LORD before the Law was given at Sinai, read as showing the command older than the Law.\"}"
+    },
+    {
+      "where": "The seventh day still kept (summary)",
+      "kind": "wording",
+      "readers": ["secular academic scholar of religion"],
+      "why": "'Members of the traditions named on this page do not hold this reading as a body' is true but reads oddly and could be taken as a dismissal; it also leaves the reader to guess which churches do hold it. The scholar's concern is accuracy about who keeps the seventh day (churches named for it, such as seventh-day churches, plus the Jewish and Sabbatarian lines of practice), stated without dismissal.",
+      "fix": "Replace the last sentence with 'Churches that hold it are commonly named for it (see seventh-day churches below); none of the traditions listed on this page holds it as a body, though individual members and congregations within some of them do.'"
+    },
+    {
+      "where": "terms: first day of the week",
+      "kind": "wording",
+      "readers": ["secular academic scholar of religion", "biblical-theological (literary) teacher"],
+      "why": "The note states the Greek fact (sabbaton/sabbata for 'week' and 'Sabbath') with no gloss, so the first reading's holders may hear a hint that 'first day' really means 'first of the Sabbaths', and the other readings may hear a dismissal. The note should say what the idiom is and that readers differ about what the meeting carries, not about the word. Also Luke 24:1 and John 20:19 use the plural genitive (sabbaton) too.",
+      "fix": "Replace the note with: 'In the Greek of Luke 24:1, John 20:19 and Acts 20:7 the phrase is literally \"the first of the Sabbaths\" (mia ton sabbaton), the ordinary way of saying \"the first day of the week\"; 1 Corinthians 16:2 has the singular. The word sabbaton is also the one translated \"Sabbath\". Readers agree that the first day of the week is meant and differ over what the meetings and gifts on that day show.'"
+    },
+    {
+      "where": "The Sabbath fulfilled in Christ's rest (summary)",
+      "kind": "wording",
+      "readers": ["secular academic scholar of religion"],
+      "why": "'Eastern Orthodox readers keep Sunday ... within the whole year's cycle of feasts' and 'Anabaptist readers ... keep the first day as a day of gathering' are the card's only claims about tradition practice that the scholar cannot check against the Berean text; they are condensed and could be read as describing all members. The summary already says the traditions differ among themselves; add that these are summaries of the traditions' teaching, not of every member's practice, so none reads as a statistic.",
+      "fix": "In the second sentence of the summary, replace 'Catholic teaching holds that' with 'Catholic teaching, in its catechism, holds that' and begin the Orthodox clause with 'Eastern Orthodox teaching and worship keep Sunday'. Keep the sentence 'These traditions differ among themselves ...' as written."
+    }
+  ],
+  "summary": "Every quote on the card is the Berean's exact wording, and no weighted word or verdict appears in the summaries, notes, order or agreed block; the three readings are fairly stated and balanced at eight verses each. The fixes add the verses each reading's holders cite first that the card omits (Exodus 31:17, Hebrews 4:4, Matthew 5:18, Exodus 16:23), loosen two phrases that quietly assume continuity or dismiss a reading, and tighten the note on the first day of the week."
+}

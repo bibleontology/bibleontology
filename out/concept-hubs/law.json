@@ -1,0 +1,2919 @@
+{
+ "id": "law",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h8451",
+   "lemma": "תּוֹרָה",
+   "form": "noun",
+   "translit": "to.rah",
+   "gloss": "instruction",
+   "lang": "Hebrew",
+   "uses": 186,
+   "other_sense": 26
+  },
+  {
+   "key": "g3551",
+   "lemma": "νόμος",
+   "form": "noun",
+   "translit": "nomos",
+   "gloss": "law",
+   "lang": "Greek",
+   "uses": 154,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of the law"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "moses",
+   "name": "Moses",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "commandments",
+   "name": "the commandments",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "covenant",
+   "name": "covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "grace",
+   "name": "grace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "works",
+   "name": "works",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "wisdom",
+   "name": "wisdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "justification",
+   "name": "justification",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_prophetic_word",
+   "name": "Prophetic Word & Fulfillment (major theme)",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "priests",
+   "name": "the priests",
+   "type": "group",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "theme_law_wisdom",
+   "name": "Law / Wisdom (major theme)",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r1",
+   "name": "The law given through Moses",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r6",
+   "name": "The essence of the Law and the Prophets",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r12",
+   "name": "Teach them diligently",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r15",
+   "name": "The Law of the LORD is perfect",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r16",
+   "name": "Your law is my delight",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r19",
+   "name": "Christ and the law",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r21",
+   "name": "The law of commandments and decrees",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r22",
+   "name": "The law and sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r23",
+   "name": "The law and the promise",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r25",
+   "name": "Under the law",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r26",
+   "name": "The Gentiles and the law of Moses",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_law_wisdom_r28",
+   "name": "All Israel has transgressed Your law",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "laws",
+   "name": "laws",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_law_is_holy",
+   "name": "the law is holy",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_law_of_the_lord_is_perfect",
+   "name": "The Law of the LORD is perfect, reviving the soul",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_law_of_the_spirit_of_life",
+   "name": "the law of the Spirit of life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "works_of_the_law",
+   "name": "works of the law",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "book_of_the_law",
+   "name": "the book of the law of Moses",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Ps.19.7",
+   "ref": "Psalms 19:7",
+   "text": "The Law of the LORD is perfect, reviving the soul; the testimony of the LORD is trustworthy, making wise the simple."
+  },
+  {
+   "id": "Prov.1.8",
+   "ref": "Proverbs 1:8",
+   "text": "Listen, my son, to your father's instruction, and do not forsake the teaching of your mother."
+  },
+  {
+   "id": "Isa.2.3",
+   "ref": "Isaiah 2:3",
+   "text": "And many peoples will come and say: “Come, let us go up to the mountain of the LORD, to the house of the God of Jacob. He will teach us His ways so that we may walk in His paths.” For the law will go forth from Zion, and the word of the LORD from Jerusalem."
+  },
+  {
+   "id": "Matt.5.17",
+   "ref": "Matthew 5:17",
+   "text": "Do not think that I have come to abolish the Law or the Prophets. I have not come to abolish them, but to fulfill them."
+  },
+  {
+   "id": "Rom.7.12",
+   "ref": "Romans 7:12",
+   "text": "So then, the law is holy, and the commandment is holy, righteous, and good."
+  },
+  {
+   "id": "Rom.10.4",
+   "ref": "Romans 10:4",
+   "text": "For Christ is the end of the law, to bring righteousness to everyone who believes."
+  },
+  {
+   "id": "Gal.3.24",
+   "ref": "Galatians 3:24",
+   "text": "So the law became our guardian to lead us to Christ, that we might be justified by faith."
+  },
+  {
+   "id": "Jas.2.10",
+   "ref": "James 2:10",
+   "text": "Whoever keeps the whole law but stumbles at just one point is guilty of breaking all of it."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 366,
+   "rows": [
+    {
+     "label": "The law of the LORD, of God",
+     "note": "The text's own phrase, kept as written: “the Law of the LORD” (Ps 1:2; 19:7), “the Law of the Lord” (Luke 2:23), “God's law” (Rom 7:22; 8:7). The page says nothing of how this law stands to any other.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "the_law_of_the_lord_is_perfect",
+       "name": "The Law of the LORD is perfect, reviving the soul",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 30,
+     "verses": [
+      "Ps.1.2",
+      "Ps.19.7",
+      "Luke.2.23",
+      "Rom.7.22",
+      "Exod.13.9",
+      "Josh.24.26",
+      "2Kgs.10.31",
+      "1Chr.16.40",
+      "1Chr.22.12",
+      "2Chr.12.1",
+      "2Chr.17.9",
+      "2Chr.31.3",
+      "2Chr.31.4",
+      "2Chr.34.14",
+      "2Chr.35.26",
+      "Ezra.7.10",
+      "Neh.8.8",
+      "Neh.8.18",
+      "Neh.9.3",
+      "Neh.10.28",
+      "Neh.10.29",
+      "Ps.37.31",
+      "Ps.119.1",
+      "Jer.8.8",
+      "Hos.4.6",
+      "Amos.2.4",
+      "Luke.2.24",
+      "Luke.2.39",
+      "Rom.7.25",
+      "Rom.8.7"
+     ],
+     "eg": [
+      {
+       "id": "Ps.1.2",
+       "ref": "Psalms 1:2",
+       "text": "But his delight is in the Law of the LORD, and on His law he meditates day and night.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.19.7",
+       "ref": "Psalms 19:7",
+       "text": "The Law of the LORD is perfect, reviving the soul; the testimony of the LORD is trustworthy, making wise the simple.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.23",
+       "ref": "Luke 2:23",
+       "text": "(as it is written in the Law of the Lord: “Every firstborn male shall be consecrated to the Lord”),",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.22",
+       "ref": "Romans 7:22",
+       "text": "For in my inner being I delight in God's law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Given and set before the people; “the Law of Moses”",
+     "note": "Several of these verses say “you” or “us”, not Moses by name: Deut 4:8 and 33:4 stand in Moses' speeches, Acts 7:53 is Stephen's (“you who received the law ordained by angels”) and Gal 3:19 says of the law “It was administered through angels by a mediator.” How the law given at Sinai stands to the law now is what the three rows after “Other laws” set side by side, and the page takes no side.",
+     "doors": [
+      {
+       "id": "moses",
+       "name": "Moses",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r1",
+       "name": "The law given through Moses",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 53,
+     "verses": [
+      "Deut.4.44",
+      "Josh.8.31",
+      "John.1.17",
+      "Exod.24.12",
+      "Luke.2.22",
+      "Rom.10.5",
+      "Lev.26.46",
+      "Num.31.21",
+      "Deut.1.5",
+      "Deut.4.8",
+      "Deut.27.3",
+      "Deut.27.8",
+      "Deut.31.9",
+      "Deut.31.11",
+      "Deut.31.24",
+      "Deut.33.4",
+      "Josh.1.7",
+      "Josh.8.32",
+      "Josh.22.5",
+      "Josh.23.6",
+      "1Kgs.2.3",
+      "2Kgs.14.6",
+      "2Kgs.21.8",
+      "2Kgs.23.25",
+      "2Chr.23.18",
+      "2Chr.25.4",
+      "2Chr.30.16",
+      "2Chr.33.8",
+      "2Chr.34.14",
+      "Ezra.3.2",
+      "Ezra.7.6",
+      "Neh.8.1",
+      "Neh.8.14",
+      "Neh.9.13",
+      "Neh.9.14",
+      "Neh.10.29",
+      "Ps.78.5",
+      "Dan.9.11",
+      "Dan.9.13",
+      "Mal.4.4",
+      "Luke.24.44",
+      "John.1.45",
+      "John.7.19",
+      "John.7.23",
+      "John.8.5",
+      "Acts.7.53",
+      "Acts.13.39",
+      "Acts.15.5",
+      "Acts.28.23",
+      "1Cor.9.9",
+      "Gal.3.19",
+      "Heb.9.19",
+      "Heb.10.28"
+     ],
+     "eg": [
+      {
+       "id": "Deut.4.44",
+       "ref": "Deuteronomy 4:44",
+       "text": "This is the law that Moses set before the Israelites.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Josh.8.31",
+       "ref": "Joshua 8:31",
+       "text": "just as Moses the servant of the LORD had commanded the Israelites. He built it according to what is written in the Book of the Law of Moses: “an altar of uncut stones on which no iron tool has been used.” And on it they offered burnt offerings to the LORD, and they sacrificed peace offerings.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "John.1.17",
+       "ref": "John 1:17",
+       "text": "For the law was given through Moses; grace and truth came through Jesus Christ.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Exod.24.12",
+       "ref": "Exodus 24:12",
+       "text": "Then the LORD said to Moses, “Come up to Me on the mountain and stay here, so that I may give you the tablets of stone, with the law and commandments I have written for their instruction.”",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The book of the law; what is written in the law",
+     "note": null,
+     "doors": [
+      {
+       "id": "book_of_the_law",
+       "name": "the book of the law of Moses",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 37,
+     "verses": [
+      "Josh.8.31",
+      "2Kgs.22.8",
+      "Luke.2.23",
+      "Gal.3.10",
+      "Deut.28.61",
+      "1Cor.9.9",
+      "Deut.29.21",
+      "Deut.30.10",
+      "Deut.31.26",
+      "Josh.1.8",
+      "Josh.8.34",
+      "Josh.23.6",
+      "Josh.24.26",
+      "2Kgs.14.6",
+      "2Kgs.22.11",
+      "1Chr.16.40",
+      "2Chr.17.9",
+      "2Chr.23.18",
+      "2Chr.25.4",
+      "2Chr.34.14",
+      "2Chr.34.15",
+      "2Chr.35.26",
+      "Ezra.3.2",
+      "Neh.8.1",
+      "Neh.8.3",
+      "Neh.8.8",
+      "Neh.8.18",
+      "Neh.9.3",
+      "Neh.10.34",
+      "Neh.10.36",
+      "Dan.9.13",
+      "Luke.10.26",
+      "John.1.45",
+      "John.8.17",
+      "John.10.34",
+      "John.15.25",
+      "1Cor.14.21"
+     ],
+     "eg": [
+      {
+       "id": "Josh.8.31",
+       "ref": "Joshua 8:31",
+       "text": "just as Moses the servant of the LORD had commanded the Israelites. He built it according to what is written in the Book of the Law of Moses: “an altar of uncut stones on which no iron tool has been used.” And on it they offered burnt offerings to the LORD, and they sacrificed peace offerings.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.22.8",
+       "ref": "2 Kings 22:8",
+       "text": "Then Hilkiah the high priest said to Shaphan the scribe, “I have found the Book of the Law in the house of the LORD!” And he gave it to Shaphan, who read it.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.23",
+       "ref": "Luke 2:23",
+       "text": "(as it is written in the Law of the Lord: “Every firstborn male shall be consecrated to the Lord”),",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.10",
+       "ref": "Galatians 3:10",
+       "text": "All who rely on works of the law are under a curse. For it is written: “Cursed is everyone who does not continue to do everything written in the Book of the Law.”",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Law and the Prophets",
+     "note": "In the Gospels and Acts the words are “the Law and the Prophets” (Matt 5:17, 7:12; Acts 13:15). The Old Testament verses here name the law and the prophets side by side, as what the LORD sent and the people refused, and not as a fixed phrase: “the entire Law that I commanded your fathers and delivered to you through My servants the prophets” (2 Kgs 17:13), “would not listen to the law or to the words that the LORD of Hosts had sent by His Spirit through the earlier prophets” (Zech 7:12), “Her prophets are reckless, faithless men. Her priests profane the sanctuary; they do violence to the law” (Zeph 3:4).",
+     "doors": [
+      {
+       "id": "theme_prophetic_word",
+       "name": "Prophetic Word & Fulfillment (major theme)",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r6",
+       "name": "The essence of the Law and the Prophets",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "Matt.5.17",
+      "Matt.7.12",
+      "Acts.13.15",
+      "Rom.3.21",
+      "2Kgs.17.13",
+      "Neh.9.26",
+      "Jer.2.8",
+      "Lam.2.9",
+      "Dan.9.10",
+      "Zeph.3.4",
+      "Zech.7.12",
+      "Matt.11.13",
+      "Matt.22.40",
+      "Luke.16.16",
+      "Luke.24.44",
+      "John.1.45",
+      "Acts.24.14",
+      "Acts.28.23"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.17",
+       "ref": "Matthew 5:17",
+       "text": "Do not think that I have come to abolish the Law or the Prophets. I have not come to abolish them, but to fulfill them.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Matt.7.12",
+       "ref": "Matthew 7:12",
+       "text": "In everything, then, do to others as you would have them do to you. For this is the essence of the Law and the Prophets.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Acts.13.15",
+       "ref": "Acts 13:15",
+       "text": "After the reading from the Law and the Prophets, the synagogue leaders sent word to them: “Brothers, if you have a word of encouragement for the people, please speak.”",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.21",
+       "ref": "Romans 3:21",
+       "text": "But now, apart from the law, the righteousness of God has been revealed, as attested by the Law and the Prophets.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Keep, do, walk in, obey the law; “I do not forget Your law”",
+     "note": "The text's own verbs: “keep” (Hebrew שָׁמַר, 'guard, observe'; Gen 26:5), “do”, “walk in” (Ps 119:1), “obey”, and the psalmist's “I do not forget Your law” (Ps 119:61, 109; “I have not forgotten Your law”, 119:153). The same Hebrew word is “the LORD's instruction” in “children unwilling to obey the LORD's instruction” (Isa 30:9) and “instructions” in “whether or not they will follow My instructions” (Exod 16:4); those verses are listed in “Instruction and teaching…” below. The verses that say who can keep it, and what keeping earns, are here and in “The law, and works” and “Sin, trespass, the curse”; the page takes no side.",
+     "doors": [
+      {
+       "id": "commandments",
+       "name": "the commandments",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "obedience",
+       "name": "obedience",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 41,
+     "verses": [
+      "Gen.26.5",
+      "Ps.119.1",
+      "Rom.2.13",
+      "Jas.2.10",
+      "John.7.19",
+      "Num.5.30",
+      "Josh.22.5",
+      "2Kgs.17.37",
+      "1Chr.22.12",
+      "2Chr.14.4",
+      "Ezra.7.10",
+      "Neh.9.34",
+      "Neh.10.29",
+      "Ps.78.10",
+      "Ps.105.45",
+      "Ps.119.34",
+      "Ps.119.44",
+      "Ps.119.55",
+      "Ps.119.61",
+      "Ps.119.109",
+      "Ps.119.136",
+      "Ps.119.153",
+      "Prov.28.4",
+      "Prov.28.7",
+      "Prov.29.18",
+      "Jer.16.11",
+      "Jer.26.4",
+      "Jer.44.23",
+      "Ezek.44.24",
+      "Dan.9.10",
+      "Acts.15.5",
+      "Acts.21.24",
+      "Rom.2.14",
+      "Rom.2.25",
+      "Rom.2.26",
+      "Rom.2.27",
+      "Gal.3.10",
+      "Gal.5.3",
+      "Gal.6.13",
+      "Jas.2.8",
+      "Jas.4.11"
+     ],
+     "eg": [
+      {
+       "id": "Gen.26.5",
+       "ref": "Genesis 26:5",
+       "text": "because Abraham listened to My voice and kept My charge, My commandments, My statutes, and My laws.”",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.1",
+       "ref": "Psalms 119:1",
+       "text": "Blessed are those whose way is blameless, who walk in the Law of the LORD.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.13",
+       "ref": "Romans 2:13",
+       "text": "For it is not the hearers of the law who are righteous before God, but it is the doers of the law who will be declared righteous.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.10",
+       "ref": "James 2:10",
+       "text": "Whoever keeps the whole law but stumbles at just one point is guilty of breaking all of it.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Loved and delighted in; called perfect, good, holy, spiritual, true; more precious than gold",
+     "note": "The text's own words: “his delight is in the Law of the LORD” (Ps 1:2), “The Law of the LORD is perfect” (Ps 19:7), “Oh, how I love Your law!” (Ps 119:97), “the law is holy, and the commandment is holy, righteous, and good” (Rom 7:12), “in my inner being I delight in God's law” (Rom 7:22). “The law is good, if one uses it legitimately” (1 Tim 1:8) is here with them; what the legitimate use is, readers take differently, and the page takes no side.",
+     "doors": [
+      {
+       "id": "the_law_is_holy",
+       "name": "the law is holy",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "the_law_of_the_lord_is_perfect",
+       "name": "The Law of the LORD is perfect, reviving the soul",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r16",
+       "name": "Your law is my delight",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r15",
+       "name": "The Law of the LORD is perfect",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Ps.1.2",
+      "Ps.19.7",
+      "Ps.119.97",
+      "Rom.7.12",
+      "Neh.9.13",
+      "Ps.40.8",
+      "Ps.119.70",
+      "Ps.119.72",
+      "Ps.119.77",
+      "Ps.119.92",
+      "Ps.119.113",
+      "Ps.119.142",
+      "Ps.119.163",
+      "Ps.119.165",
+      "Ps.119.174",
+      "Rom.7.14",
+      "Rom.7.16",
+      "Rom.7.22",
+      "1Tim.1.8"
+     ],
+     "eg": [
+      {
+       "id": "Ps.1.2",
+       "ref": "Psalms 1:2",
+       "text": "But his delight is in the Law of the LORD, and on His law he meditates day and night.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.19.7",
+       "ref": "Psalms 19:7",
+       "text": "The Law of the LORD is perfect, reviving the soul; the testimony of the LORD is trustworthy, making wise the simple.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.97",
+       "ref": "Psalms 119:97",
+       "text": "Oh, how I love Your law! All day long it is my meditation.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.12",
+       "ref": "Romans 7:12",
+       "text": "So then, the law is holy, and the commandment is holy, righteous, and good.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Forsaken, rejected, forgotten, transgressed, not kept",
+     "note": "The same Hebrew word, תּוֹרָה, is rejected or treated lightly in verses that stand in “Instruction and teaching…” below, where the Berean prints “instruction” or “law”: “they have rejected the instruction of the LORD of Hosts” (Isa 5:24), “Though I wrote for them the great things of My law, they regarded them as something strange” (Hos 8:12), “but have shown partiality in matters of the law” (Mal 2:9). They are listed there by MACULA's gloss of the word, and the page does not say which English is right.",
+     "doors": [
+      {
+       "id": "theme_law_wisdom_r28",
+       "name": "All Israel has transgressed Your law",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 31,
+     "verses": [
+      "Hos.4.6",
+      "Amos.2.4",
+      "Prov.28.4",
+      "Rom.2.25",
+      "2Chr.12.1",
+      "John.7.19",
+      "Rom.2.23",
+      "Neh.9.26",
+      "Neh.9.29",
+      "Neh.9.34",
+      "Ps.89.30",
+      "Ps.119.53",
+      "Ps.119.126",
+      "Ps.119.136",
+      "Ps.119.150",
+      "Prov.28.9",
+      "Isa.24.5",
+      "Jer.6.19",
+      "Jer.9.13",
+      "Jer.16.11",
+      "Jer.32.23",
+      "Ezek.22.26",
+      "Dan.9.11",
+      "Hos.8.1",
+      "Zeph.3.4",
+      "Zech.7.12",
+      "Acts.7.53",
+      "Rom.2.27",
+      "Heb.10.28",
+      "Jas.2.9",
+      "Jas.2.11"
+     ],
+     "eg": [
+      {
+       "id": "Hos.4.6",
+       "ref": "Hosea 4:6",
+       "text": "My people are destroyed for lack of knowledge. Because you have rejected knowledge, I will also reject you as My priests. Since you have forgotten the law of your God, I will also forget your children.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Amos.2.4",
+       "ref": "Amos 2:4",
+       "text": "This is what the LORD says: “For three transgressions of Judah, even four, I will not revoke My judgment, because they reject the Law of the LORD and fail to keep His statutes; they are led astray by the lies in which their fathers walked.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.28.4",
+       "ref": "Proverbs 28:4",
+       "text": "Those who forsake the law praise the wicked, but those who keep the law resist them.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.25",
+       "ref": "Romans 2:25",
+       "text": "Circumcision has value if you observe the law, but if you break the law, your circumcision has become uncircumcision.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Taught and read aloud; the priests, Levites, scribes and Pharisees",
+     "note": "The text's own words: “you are to read this law in the hearing of all Israel” (Deut 31:11), “they read from the Book of the Law of God, explaining it and giving insight” (Neh 8:8), “Ezra had set his heart to study the Law of the LORD, to practice it, and to teach its statutes and ordinances in Israel” (Ezra 7:10). The row also holds the verses that name the priests, the Levites, the scribes and the Pharisees beside the law, among them “The Levites ... instructed the people in the Law” (Neh 8:7) and “as to the law, a Pharisee” (Phil 3:5).",
+     "doors": [
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "scribes",
+       "name": "scribes",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "pharisees",
+       "name": "the Pharisees",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r12",
+       "name": "Teach them diligently",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 58,
+     "verses": [
+      "Deut.31.11",
+      "Neh.8.8",
+      "Ezra.7.10",
+      "Neh.8.7",
+      "Exod.24.12",
+      "Matt.12.5",
+      "Rom.2.17",
+      "Lev.7.7",
+      "Lev.14.2",
+      "Lev.14.57",
+      "Num.5.30",
+      "Num.31.21",
+      "Deut.17.11",
+      "Deut.17.18",
+      "Deut.17.19",
+      "Deut.31.9",
+      "Deut.31.12",
+      "Deut.33.10",
+      "Josh.8.34",
+      "2Kgs.22.8",
+      "2Kgs.23.24",
+      "2Chr.15.3",
+      "2Chr.17.9",
+      "2Chr.23.18",
+      "2Chr.30.16",
+      "2Chr.31.4",
+      "2Chr.34.14",
+      "Ezra.3.2",
+      "Neh.8.1",
+      "Neh.8.2",
+      "Neh.8.3",
+      "Neh.8.9",
+      "Neh.8.13",
+      "Neh.8.18",
+      "Neh.9.3",
+      "Neh.9.34",
+      "Neh.10.28",
+      "Neh.10.34",
+      "Neh.10.36",
+      "Neh.12.44",
+      "Ps.94.12",
+      "Isa.2.3",
+      "Jer.2.8",
+      "Ezek.22.26",
+      "Hos.4.6",
+      "Mic.4.2",
+      "Zeph.3.4",
+      "Matt.22.36",
+      "Luke.10.26",
+      "Acts.13.15",
+      "Acts.15.5",
+      "Acts.21.28",
+      "Acts.22.3",
+      "Rom.2.18",
+      "Rom.2.20",
+      "Phil.3.5",
+      "Heb.7.28",
+      "Heb.8.4"
+     ],
+     "eg": [
+      {
+       "id": "Deut.31.11",
+       "ref": "Deuteronomy 31:11",
+       "text": "when all Israel comes before the LORD your God at the place He will choose, you are to read this law in the hearing of all Israel.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Neh.8.8",
+       "ref": "Nehemiah 8:8",
+       "text": "So they read from the Book of the Law of God, explaining it and giving insight, so that the people could understand what was being read.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezra.7.10",
+       "ref": "Ezra 7:10",
+       "text": "For Ezra had set his heart to study the Law of the LORD, to practice it, and to teach its statutes and ordinances in Israel.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Neh.8.7",
+       "ref": "Nehemiah 8:7",
+       "text": "The Levites-Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, and Pelaiah-instructed the people in the Law as they stood in their places.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "On the heart, in the mind; “within my heart”",
+     "note": "“I will put My law in their minds and inscribe it on their hearts” (Jer 31:33; quoted in Heb 8:10 and 10:16), “the work of the law is written on their hearts” (Rom 2:15), “the law of his God is in his heart” (Ps 37:31). Where Christian traditions part on how these stand to the new covenant and to whom they are said, the page takes no side.",
+     "doors": [
+      {
+       "id": "covenant",
+       "name": "covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r15",
+       "name": "The Law of the LORD is perfect",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Ps.37.31",
+      "Ps.40.8",
+      "Jer.31.33",
+      "Rom.2.15",
+      "Isa.51.7",
+      "Rom.7.23",
+      "Rom.7.25",
+      "Heb.8.10",
+      "Heb.10.16"
+     ],
+     "eg": [
+      {
+       "id": "Ps.37.31",
+       "ref": "Psalms 37:31",
+       "text": "The law of his God is in his heart; his steps do not falter.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.40.8",
+       "ref": "Psalms 40:8",
+       "text": "I delight to do Your will, O my God; Your law is within my heart.”",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.31.33",
+       "ref": "Jeremiah 31:33",
+       "text": "“But this is the covenant I will make with the house of Israel after those days, declares the LORD. I will put My law in their minds and inscribe it on their hearts. And I will be their God, and they will be My people.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.15",
+       "ref": "Romans 2:15",
+       "text": "So they show that the work of the law is written on their hearts, their consciences also bearing witness, and their thoughts either accusing or defending them",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The foreigner, the Gentiles, the nations; circumcision and uncircumcision",
+     "note": "The text's own words: “The same law shall apply to both the native and the foreigner who resides among you” (Exod 12:49), “the law will go forth from Zion” to many peoples (Isa 2:3; Mic 4:2), “the Gentiles, who do not have the law” (Rom 2:14). Where Christian traditions part on how the law stands to Gentile believers, the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_law_wisdom_r26",
+       "name": "The Gentiles and the law of Moses",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "circumcision",
+       "name": "circumcision",
+       "type": "observance",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Exod.12.49",
+      "Num.15.29",
+      "Isa.2.3",
+      "Rom.2.14",
+      "John.7.23",
+      "Num.15.16",
+      "Deut.4.8",
+      "Deut.31.12",
+      "Isa.42.4",
+      "Isa.51.4",
+      "Mic.4.2",
+      "Rom.2.25",
+      "Rom.2.26",
+      "Rom.2.27",
+      "Phil.3.5"
+     ],
+     "eg": [
+      {
+       "id": "Exod.12.49",
+       "ref": "Exodus 12:49",
+       "text": "The same law shall apply to both the native and the foreigner who resides among you.”",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Num.15.29",
+       "ref": "Numbers 15:29",
+       "text": "You shall have the same law for the one who acts in error, whether he is a native-born Israelite or a foreigner residing among you.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.2.3",
+       "ref": "Isaiah 2:3",
+       "text": "And many peoples will come and say: “Come, let us go up to the mountain of the LORD, to the house of the God of Jacob. He will teach us His ways so that we may walk in His paths.” For the law will go forth from Zion, and the word of the LORD from Jerusalem.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.14",
+       "ref": "Romans 2:14",
+       "text": "Indeed, when Gentiles, who do not have the law, do by nature what the law requires, they are a law to themselves, even though they do not have the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Instruction and teaching: a father's, a mother's, a priest's, the wise's, God's",
+     "note": "The same Hebrew word, תּוֹרָה, that the other rows give as “law”. MACULA glosses it “instruction”, “teaching” or “ruling” in these verses and the Berean prints those words in most (Prov 1:8, 13:14, 31:26; Isa 1:10, 30:9; Mal 2:7), and “law” in a few (Isa 8:16, 8:20; Jer 18:18; Hos 8:12; Mal 2:9), “ruling” in Hag 2:11 and “custom” in 2 Sam 7:19. The page does not say the Hebrew has two words: it is one word that is both, and a reader of Proverbs hears “my son, do not forget my teaching” (Prov 3:1) in the same word as “the law of the LORD”. Where the verse is a parent's, it is a parent's; where it is God's, it is God's. The line between this row and the law rows is MACULA's gloss of the word, not a division the Hebrew makes: where the Berean prints “law” (Isa 8:16, 8:20; Jer 18:18; Hos 8:12; Mal 2:9) the verse is here by that gloss, and the page does not say which English is right. In 2 Sam 7:19 the Berean prints “Is this Your custom with man, O Lord GOD?” for the Hebrew phrase תּוֹרַת הָאָדָם (MACULA: “instruction”); the phrase is hard, the verse stands here by the Hebrew word, and the page does not settle what it means.",
+     "doors": [
+      {
+       "id": "wisdom",
+       "name": "wisdom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 26,
+     "verses": [
+      "Prov.1.8",
+      "Prov.13.14",
+      "Mal.2.7",
+      "Isa.30.9",
+      "Exod.16.4",
+      "Exod.16.28",
+      "2Sam.7.19",
+      "Job.22.22",
+      "Ps.78.1",
+      "Prov.3.1",
+      "Prov.4.2",
+      "Prov.6.20",
+      "Prov.6.23",
+      "Prov.7.2",
+      "Prov.31.26",
+      "Isa.1.10",
+      "Isa.5.24",
+      "Isa.8.16",
+      "Isa.8.20",
+      "Jer.18.18",
+      "Ezek.7.26",
+      "Hos.8.12",
+      "Hag.2.11",
+      "Mal.2.6",
+      "Mal.2.8",
+      "Mal.2.9"
+     ],
+     "eg": [
+      {
+       "id": "Prov.1.8",
+       "ref": "Proverbs 1:8",
+       "text": "Listen, my son, to your father's instruction, and do not forsake the teaching of your mother.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.13.14",
+       "ref": "Proverbs 13:14",
+       "text": "The teaching of the wise is a fountain of life, turning one from the snares of death.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Mal.2.7",
+       "ref": "Malachi 2:7",
+       "text": "For the lips of a priest should preserve knowledge, and people should seek instruction from his mouth, because he is the messenger of the LORD of Hosts.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.30.9",
+       "ref": "Isaiah 30:9",
+       "text": "These are rebellious people, deceitful children, children unwilling to obey the LORD's instruction.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“This is the law of ...”: the offerings, clean and unclean, childbirth, jealousy, the Nazirite",
+     "note": "The law of the burnt offering, the grain offering, the guilt offering, the fellowship offering, regarding skin diseases and mildew (the Berean's words for the Hebrew that older translations call leprosy), for a woman giving birth, of jealousy, of the Nazirite, the red heifer, animals and birds that are clean or unclean: the law as a particular ruling for a particular case, in the text's own phrase “This is the law of ...”. The Berean prints “law” for the one word. What the New Testament says of the law as a whole is set out in the three rows below, after “Other laws”, and the page takes no side.",
+     "doors": [
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "sacrifice",
+       "name": "sacrifice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Lev.6.9",
+      "Lev.12.7",
+      "Num.5.29",
+      "Num.6.21",
+      "Lev.6.14",
+      "Lev.6.25",
+      "Lev.7.1",
+      "Lev.7.7",
+      "Lev.7.11",
+      "Lev.7.37",
+      "Lev.11.46",
+      "Lev.13.59",
+      "Lev.14.2",
+      "Lev.14.32",
+      "Lev.14.54",
+      "Lev.14.57",
+      "Lev.15.32",
+      "Num.5.30",
+      "Num.6.13",
+      "Num.19.2",
+      "Num.19.14",
+      "Num.31.21",
+      "Ezek.43.11",
+      "Ezek.43.12",
+      "Ezek.44.5"
+     ],
+     "eg": [
+      {
+       "id": "Lev.6.9",
+       "ref": "Leviticus 6:9",
+       "text": "“Command Aaron and his sons that this is the law of the burnt offering: The burnt offering is to remain on the hearth of the altar all night, until morning, and the fire must be kept burning on the altar.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Lev.12.7",
+       "ref": "Leviticus 12:7",
+       "text": "And the priest will present them before the LORD and make atonement for her; and she shall be ceremonially cleansed from her flow of blood. This is the law for a woman giving birth, whether to a male or to a female.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Num.5.29",
+       "ref": "Numbers 5:29",
+       "text": "This is the law of jealousy when a wife goes astray and defiles herself while under her husband's authority,",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Num.6.21",
+       "ref": "Numbers 6:21",
+       "text": "This is the law of the Nazirite who vows his offering to the LORD for his separation, in addition to whatever else he can afford; he must fulfill whatever vow he makes, according to the law of his separation.”",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judged by the law; brought to court",
+     "note": "The text's own words: “You take Him and judge Him by your own law,” Pilate told them. “We are not permitted to execute anyone,” the Jews replied (John 18:31), “according to that law He must die” (John 19:7), “all who sin under the law will be judged by the law” (Rom 2:12), “Speak and act as those who are going to be judged by the law that gives freedom” (Jas 2:12), “You sit here to judge me according to the law, yet you yourself violate the law” (Acts 23:3). How the law's judgment stands to the final judgment is a point the page does not take up here: the final judgment is on the judgment page.",
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "John.18.31",
+      "Acts.23.3",
+      "Rom.2.12",
+      "Jas.2.12",
+      "Exod.18.16",
+      "John.7.51",
+      "Deut.17.11",
+      "Ezek.44.24",
+      "John.19.7",
+      "Acts.18.15",
+      "Acts.23.29",
+      "Acts.25.8",
+      "Rom.2.27",
+      "Heb.10.28",
+      "Jas.4.11"
+     ],
+     "eg": [
+      {
+       "id": "John.18.31",
+       "ref": "John 18:31",
+       "text": "“You take Him and judge Him by your own law,” Pilate told them. “We are not permitted to execute anyone,” the Jews replied.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Acts.23.3",
+       "ref": "Acts 23:3",
+       "text": "Then Paul said to him, “God will strike you, you whitewashed wall! You sit here to judge me according to the law, yet you yourself violate the law by commanding that I be struck.”",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.12",
+       "ref": "Romans 2:12",
+       "text": "All who sin apart from the law will also perish apart from the law, and all who sin under the law will be judged by the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.12",
+       "ref": "James 2:12",
+       "text": "Speak and act as those who are going to be judged by the law that gives freedom.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Beside the covenant and the promise",
+     "note": "The verses that name the covenant or the promise beside the law, among them “They failed to keep God's covenant and refused to live by His law” (Ps 78:10), “the people have transgressed My covenant and rebelled against My law” (Hos 8:1), “The law that came 430 years later does not revoke the covenant previously established by God, so as to nullify the promise” (Gal 3:17) and “the promise to Abraham ... was not given through the law, but through the righteousness that comes by faith” (Rom 4:13). These are different words in the Hebrew and the Greek (בְּרִית and διαθήκη covenant, ἐπαγγελία promise); the page says only that the verse names both, and takes no side on how the law and the promise stand to each other, which Christian traditions answer differently.",
+     "doors": [
+      {
+       "id": "covenant",
+       "name": "covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r23",
+       "name": "The law and the promise",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Ps.78.10",
+      "Hos.8.1",
+      "Gal.3.17",
+      "Rom.4.13",
+      "Deut.29.21",
+      "Deut.31.9",
+      "Deut.31.26",
+      "Ezra.10.3",
+      "Isa.24.5",
+      "Jer.31.33",
+      "Rom.4.14",
+      "Rom.4.16",
+      "Gal.3.18",
+      "Gal.3.21",
+      "Heb.8.10",
+      "Heb.10.16"
+     ],
+     "eg": [
+      {
+       "id": "Ps.78.10",
+       "ref": "Psalms 78:10",
+       "text": "They failed to keep God's covenant and refused to live by His law.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Hos.8.1",
+       "ref": "Hosea 8:1",
+       "text": "Put the ram's horn to your lips! An eagle looms over the house of the LORD, because the people have transgressed My covenant and rebelled against My law.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.17",
+       "ref": "Galatians 3:17",
+       "text": "What I mean is this: The law that came 430 years later does not revoke the covenant previously established by God, so as to nullify the promise.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.13",
+       "ref": "Romans 4:13",
+       "text": "For the promise to Abraham and his offspring that he would be heir of the world was not given through the law, but through the righteousness that comes by faith.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Beside the testimony, statutes, ordinances (also “justice”, “righteous standard”), precepts and commandments",
+     "note": "The verses that name the testimony, the statutes, the ordinances, the precepts or the commandments beside the law, among them “because Abraham listened to My voice and kept My charge, My commandments, My statutes, and My laws” (Gen 26:5), “the testimony of the LORD is trustworthy” (Ps 19:7), “Therefore the law is paralyzed, and justice never goes forth” (Hab 1:4), “so that the righteous standard of the law might be fulfilled in us” (Rom 8:4) and “the law is holy, and the commandment is holy” (Rom 7:12). These are different words in the Hebrew and the Greek (חֹק and חֻקָּה statute, מִצְוָה and ἐντολή commandment, עֵדוּת testimony, מִשְׁפָּט ordinance or justice, δικαίωμα righteous standard); the page says only that the verse names both.",
+     "doors": [
+      {
+       "id": "commandments",
+       "name": "the commandments",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 55,
+     "verses": [
+      "Gen.26.5",
+      "Ps.19.7",
+      "Hab.1.4",
+      "Rom.7.12",
+      "Matt.22.36",
+      "Rom.2.26",
+      "Exod.18.16",
+      "Exod.18.20",
+      "Exod.24.12",
+      "Lev.26.46",
+      "Num.15.16",
+      "Num.19.2",
+      "Num.31.21",
+      "Deut.4.8",
+      "Deut.17.11",
+      "Deut.17.19",
+      "Deut.30.10",
+      "Deut.33.10",
+      "Josh.22.5",
+      "1Kgs.2.3",
+      "2Kgs.17.13",
+      "2Kgs.17.34",
+      "2Kgs.17.37",
+      "2Chr.14.4",
+      "2Chr.30.16",
+      "2Chr.31.21",
+      "2Chr.33.8",
+      "Ezra.7.10",
+      "Ezra.10.3",
+      "Neh.8.18",
+      "Neh.9.13",
+      "Neh.9.14",
+      "Neh.9.29",
+      "Neh.9.34",
+      "Neh.10.29",
+      "Ps.78.5",
+      "Ps.89.30",
+      "Ps.105.45",
+      "Isa.24.5",
+      "Isa.42.4",
+      "Isa.51.4",
+      "Jer.44.23",
+      "Ezek.43.11",
+      "Ezek.44.5",
+      "Ezek.44.24",
+      "Amos.2.4",
+      "Mal.4.4",
+      "Matt.22.40",
+      "Rom.7.8",
+      "Rom.7.9",
+      "Rom.8.4",
+      "Eph.2.15",
+      "Heb.7.5",
+      "Heb.7.16",
+      "Heb.9.19"
+     ],
+     "eg": [
+      {
+       "id": "Gen.26.5",
+       "ref": "Genesis 26:5",
+       "text": "because Abraham listened to My voice and kept My charge, My commandments, My statutes, and My laws.”",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.19.7",
+       "ref": "Psalms 19:7",
+       "text": "The Law of the LORD is perfect, reviving the soul; the testimony of the LORD is trustworthy, making wise the simple.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Hab.1.4",
+       "ref": "Habakkuk 1:4",
+       "text": "Therefore the law is paralyzed, and justice never goes forth. For the wicked hem in the righteous, so that justice is perverted.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.12",
+       "ref": "Romans 7:12",
+       "text": "So then, the law is holy, and the commandment is holy, righteous, and good.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The law, and faith, believing",
+     "note": "Set side by side with the next row, as the text has them: a verse that names both stands in both. In Rom 3:27 the Berean prints “principle” (“On what principle? On that of works? No, but on that of faith”) where the Greek has νόμος; the original is kept and the row says so. Where Christian traditions part on how faith and the law stand to being made right with God, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "works_of_the_law",
+       "name": "works of the law",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Rom.3.28",
+      "Rom.4.13",
+      "Gal.3.11",
+      "Gal.3.2",
+      "Acts.13.39",
+      "Rom.3.27",
+      "Acts.15.5",
+      "Acts.21.20",
+      "Acts.24.14",
+      "Rom.3.31",
+      "Rom.4.14",
+      "Rom.4.16",
+      "Rom.10.4",
+      "Gal.2.16",
+      "Gal.3.5",
+      "Gal.3.12",
+      "Gal.3.23",
+      "Gal.3.24",
+      "Phil.3.9"
+     ],
+     "eg": [
+      {
+       "id": "Rom.3.28",
+       "ref": "Romans 3:28",
+       "text": "For we maintain that a man is justified by faith apart from works of the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.13",
+       "ref": "Romans 4:13",
+       "text": "For the promise to Abraham and his offspring that he would be heir of the world was not given through the law, but through the righteousness that comes by faith.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.11",
+       "ref": "Galatians 3:11",
+       "text": "Now it is clear that no one is justified before God by the law, because, “The righteous will live by faith.”",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.2",
+       "ref": "Galatians 3:2",
+       "text": "I would like to learn just one thing from you: Did you receive the Spirit by works of the law, or by hearing with faith?",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The law, and works",
+     "note": "“The works of the law” (Rom 3:20, 3:28; Gal 2:16, 3:2, 3:5, 3:10), the text's own phrase, kept as written. What “the works of the law” are, and how they stand to being made right with God, is a point on which Christian traditions part, and the page takes no side. Set beside the previous row: a verse that names both stands in both. In Rom 3:27 the Berean prints “principle” where the Greek has νόμος.",
+     "doors": [
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "works_of_the_law",
+       "name": "works of the law",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Rom.3.20",
+      "Rom.3.28",
+      "Gal.2.16",
+      "Gal.3.10",
+      "Rom.2.15",
+      "Rom.3.27",
+      "Gal.3.2",
+      "Gal.3.5",
+      "Jas.1.25"
+     ],
+     "eg": [
+      {
+       "id": "Rom.3.20",
+       "ref": "Romans 3:20",
+       "text": "Therefore no one will be justified in His sight by works of the law. For the law merely brings awareness of sin.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.28",
+       "ref": "Romans 3:28",
+       "text": "For we maintain that a man is justified by faith apart from works of the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.16",
+       "ref": "Galatians 2:16",
+       "text": "know that a man is not justified by works of the law, but by faith in Jesus Christ. So we, too, have believed in Christ Jesus, that we may be justified by faith in Christ and not by works of the law, because by works of the law no one will be justified.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.10",
+       "ref": "Galatians 3:10",
+       "text": "All who rely on works of the law are under a curse. For it is written: “Cursed is everyone who does not continue to do everything written in the Book of the Law.”",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The law, and grace",
+     "note": "“the law was given through Moses; grace and truth came through Jesus Christ” (John 1:17) and “you are not under law, but under grace” (Rom 6:14) are in the text as written. Where Christian traditions part on whether grace replaces the law, completes it or stands beside it, the page takes no side.",
+     "doors": [
+      {
+       "id": "grace",
+       "name": "grace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "John.1.17",
+      "Rom.6.14",
+      "Rom.6.15",
+      "Gal.5.4",
+      "Rom.4.16",
+      "Rom.5.20",
+      "Gal.2.21"
+     ],
+     "eg": [
+      {
+       "id": "John.1.17",
+       "ref": "John 1:17",
+       "text": "For the law was given through Moses; grace and truth came through Jesus Christ.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.14",
+       "ref": "Romans 6:14",
+       "text": "For sin shall not be your master, because you are not under law, but under grace.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.15",
+       "ref": "Romans 6:15",
+       "text": "What then? Shall we sin because we are not under law, but under grace? Certainly not!",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.4",
+       "ref": "Galatians 5:4",
+       "text": "You who are trying to be justified by the law have been severed from Christ; you have fallen away from grace.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Under the law”",
+     "note": "The text's own phrase: “under the law” (Rom 6:14-15; 1 Cor 9:20; Gal 3:23, 4:4-5, 4:21, 5:18). Paul writes in 1 Cor 9:20 that to those under the law he became “like one under the law (though I myself am not under the law)”. Who is under it, and what it is to be under it, is a point on which Christian traditions part, and the page takes no side. In Rom 3:19 the Berean prints “those who are under the law”; the Greek there is ἐν (“in”) and not ὑπό, so that verse is not in this row and stands under “Every other use”.",
+     "doors": [
+      {
+       "id": "theme_law_wisdom_r25",
+       "name": "Under the law",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Rom.6.14",
+      "Gal.4.4",
+      "Gal.5.18",
+      "1Cor.9.20",
+      "Rom.6.15",
+      "Gal.3.23",
+      "Gal.4.5",
+      "Gal.4.21"
+     ],
+     "eg": [
+      {
+       "id": "Rom.6.14",
+       "ref": "Romans 6:14",
+       "text": "For sin shall not be your master, because you are not under law, but under grace.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.4.4",
+       "ref": "Galatians 4:4",
+       "text": "But when the time had fully come, God sent His Son, born of a woman, born under the law,",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.18",
+       "ref": "Galatians 5:18",
+       "text": "But if you are led by the Spirit, you are not under the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.9.20",
+       "ref": "1 Corinthians 9:20",
+       "text": "To the Jews I became like a Jew, to win the Jews. To those under the law I became like one under the law (though I myself am not under the law), to win those under the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sin, trespass, the curse",
+     "note": "The text's own words: “the law merely brings awareness of sin” (Rom 3:20), “where there is no law, there is no transgression” (Rom 4:15), “the power of sin is the law” (1 Cor 15:56), “Cursed is he who does not put the words of this law into practice” (Deut 27:26), “All who rely on works of the law are under a curse” (Gal 3:10), “Christ redeemed us from the curse of the law” (Gal 3:13). Whether the law's curse is lifted, and for whom, Christian traditions answer differently, and the page takes no side.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "curse",
+       "name": "curse",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r22",
+       "name": "The law and sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 33,
+     "verses": [
+      "Rom.3.20",
+      "Rom.7.7",
+      "1Cor.15.56",
+      "Deut.27.26",
+      "Acts.25.8",
+      "Rom.2.12",
+      "Deut.29.21",
+      "Josh.8.34",
+      "2Kgs.10.31",
+      "Neh.10.29",
+      "Isa.42.24",
+      "Jer.44.23",
+      "Dan.9.11",
+      "Dan.9.13",
+      "Rom.2.23",
+      "Rom.4.15",
+      "Rom.5.13",
+      "Rom.5.20",
+      "Rom.6.14",
+      "Rom.6.15",
+      "Rom.7.5",
+      "Rom.7.8",
+      "Rom.7.9",
+      "Rom.7.14",
+      "Rom.7.23",
+      "Rom.7.25",
+      "Rom.8.2",
+      "Rom.8.3",
+      "Gal.3.10",
+      "Gal.3.13",
+      "Gal.3.19",
+      "1Tim.1.9",
+      "Jas.2.9"
+     ],
+     "eg": [
+      {
+       "id": "Rom.3.20",
+       "ref": "Romans 3:20",
+       "text": "Therefore no one will be justified in His sight by works of the law. For the law merely brings awareness of sin.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.7",
+       "ref": "Romans 7:7",
+       "text": "What then shall we say? Is the law sin? Certainly not! Indeed, I would not have been mindful of sin if not for the law. For I would not have been aware of coveting if the law had not said, “Do not covet.”",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.56",
+       "ref": "1 Corinthians 15:56",
+       "text": "The sting of death is sin, and the power of sin is the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Deut.27.26",
+       "ref": "Deuteronomy 27:26",
+       "text": "‘Cursed is he who does not put the words of this law into practice.' And let all the people say, ‘Amen!'",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Other “laws” the text names: of sin and death, of the Spirit of life, of Christ, of freedom, of righteousness, the royal law, of marriage",
+     "note": "The text's own phrases: “another law at work in my body” (Rom 7:23), “the law of the Spirit of life set you free from the law of sin and death” (Rom 8:2), “the law of Christ” (Gal 6:2), “the perfect law of freedom” (Jas 1:25), “the royal law stated in Scripture” (Jas 2:8), “the law of marriage” (Rom 7:2), “Israel, who pursued a law of righteousness” (Rom 9:31). In Rom 3:27 (“a law of faith” in the Greek) and Rom 7:21 the Greek is νόμος and the Berean prints “principle” (“On what principle? On that of works? No, but on that of faith”; “So this is the principle I have discovered”): the verses are kept because the original has the word, and the page does not say which English is right. Whether these are the law of Moses under other names or other principles is a point on which Christian traditions part, and the page takes no side. Gal 6:2 names Christ in the verse; Rom 8:2 names “Christ Jesus”. “Under the law of Christ” in 1 Cor 9:21 is the Greek ἔννομος, a different word, and is named under the other words below.",
+     "doors": [
+      {
+       "id": "the_law_of_the_spirit_of_life",
+       "name": "the law of the Spirit of life",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Rom.7.23",
+      "Rom.8.2",
+      "Gal.6.2",
+      "Jas.1.25",
+      "Rom.3.27",
+      "Rom.7.2",
+      "Rom.7.21",
+      "Rom.7.25",
+      "Rom.9.31",
+      "Heb.7.16",
+      "Jas.2.8",
+      "Jas.2.12"
+     ],
+     "eg": [
+      {
+       "id": "Rom.7.23",
+       "ref": "Romans 7:23",
+       "text": "But I see another law at work in my body, warring against the law of my mind and holding me captive to the law of sin that dwells within me.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.2",
+       "ref": "Romans 8:2",
+       "text": "For in Christ Jesus the law of the Spirit of life set you free from the law of sin and death.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.6.2",
+       "ref": "Galatians 6:2",
+       "text": "Carry one another's burdens, and in this way you will fulfill the law of Christ.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Jas.1.25",
+       "ref": "James 1:25",
+       "text": "But the one who looks intently into the perfect law of freedom, and continues to do so-not being a forgetful hearer, but an effective doer-he will be blessed in what he does.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Before the law was given”; “added because of transgressions”; “our guardian to lead us to Christ”; “only a shadow of the good things to come”",
+     "note": "The law in time, in the text's own words: “sin was in the world before the law was given” (Rom 5:13), “The law came in so that the trespass would increase” (Rom 5:20), “The law that came 430 years later” (Gal 3:17), “It was added because of transgressions, until the arrival of the seed to whom the promise referred” (Gal 3:19), “the law became our guardian to lead us to Christ” (Gal 3:24), “the law is only a shadow of the good things to come” (Heb 10:1). This row and the two beside it are set side by side in the alphabetical order of their labels and carry no ranking. Where Christian traditions part on whether the law is fulfilled, ended, or continuing as a guide for the believer, the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_law_wisdom_r23",
+       "name": "The law and the promise",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r19",
+       "name": "Christ and the law",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Gal.3.19",
+      "Gal.3.24",
+      "Heb.10.1",
+      "Rom.5.20",
+      "Rom.5.13",
+      "Gal.3.17",
+      "Gal.3.23"
+     ],
+     "eg": [
+      {
+       "id": "Gal.3.19",
+       "ref": "Galatians 3:19",
+       "text": "Why then was the law given? It was added because of transgressions, until the arrival of the seed to whom the promise referred. It was administered through angels by a mediator.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.24",
+       "ref": "Galatians 3:24",
+       "text": "So the law became our guardian to lead us to Christ, that we might be justified by faith.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.1",
+       "ref": "Hebrews 10:1",
+       "text": "For the law is only a shadow of the good things to come, not the realities themselves. It can never, by the same sacrifices offered year after year, make perfect those who draw near to worship.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.20",
+       "ref": "Romans 5:20",
+       "text": "The law came in so that the trespass would increase; but where sin increased, grace increased all the more,",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Died to the law, released from it, not under it, redeemed from its curse; “Christ is the end of the law”; “abolished in His flesh”; “a change of law”",
+     "note": "The text's own words: “you also died to the law through the body of Christ” (Rom 7:4), “we have been released from the law” (Rom 7:6), “Christ is the end of the law” (Rom 10:4), “by abolishing in His flesh the law of commandments and decrees” (Eph 2:15), “Christ redeemed us from the curse of the law” (Gal 3:13), “when the priesthood is changed, the law must be changed as well” (Heb 7:12), “the law made nothing perfect” (Heb 7:19). In Rom 10:4 the Greek is τέλος, which means end, goal or completion; readers part on which Paul says, and the page does not choose. This row and the two beside it are set side by side in the alphabetical order of their labels and carry no ranking. Where Christian traditions part on whether the law is fulfilled, ended, or continuing as a guide for the believer, the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_law_wisdom_r21",
+       "name": "The law of commandments and decrees",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r25",
+       "name": "Under the law",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Rom.7.4",
+      "Rom.10.4",
+      "Gal.2.19",
+      "Heb.7.12",
+      "Rom.6.14",
+      "Rom.6.15",
+      "Rom.7.6",
+      "Gal.3.13",
+      "Gal.5.18",
+      "Eph.2.15",
+      "Heb.7.19"
+     ],
+     "eg": [
+      {
+       "id": "Rom.7.4",
+       "ref": "Romans 7:4",
+       "text": "Therefore, my brothers, you also died to the law through the body of Christ, that you might belong to another, to Him who was raised from the dead, in order that we might bear fruit to God.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.10.4",
+       "ref": "Romans 10:4",
+       "text": "For Christ is the end of the law, to bring righteousness to everyone who believes.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.19",
+       "ref": "Galatians 2:19",
+       "text": "For through the law I died to the law so that I might live to God.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Heb.7.12",
+       "ref": "Hebrews 7:12",
+       "text": "For when the priesthood is changed, the law must be changed as well.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Not to abolish but to fulfill”; “we uphold the law”; not the least stroke will pass; summed up and fulfilled in love",
+     "note": "The text's own words: “Do not think that I have come to abolish the Law or the Prophets. I have not come to abolish them, but to fulfill them” (Matt 5:17), “until heaven and earth pass away, not a single jot, not a stroke of a pen, will disappear from the Law until everything is accomplished” (Matt 5:18), “Do we, then, nullify the law by this faith? Certainly not! Instead, we uphold the law” (Rom 3:31), “so that the righteous standard of the law might be fulfilled in us” (Rom 8:4), “love is the fulfillment of the law” (Rom 13:10), “The entire law is fulfilled in a single decree: ‘Love your neighbor as yourself’” (Gal 5:14), “in this way you will fulfill the law of Christ” (Gal 6:2), “Everything must be fulfilled that is written about Me in the Law of Moses, the Prophets, and the Psalms” (Luke 24:44). This row and the two beside it are set side by side in the alphabetical order of their labels and carry no ranking. Where Christian traditions part on whether the law is fulfilled, ended, or continuing as a guide for the believer, the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_law_wisdom_r19",
+       "name": "Christ and the law",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_law_wisdom_r6",
+       "name": "The essence of the Law and the Prophets",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Matt.5.17",
+      "Rom.3.31",
+      "Rom.13.10",
+      "Gal.5.14",
+      "Matt.5.18",
+      "Matt.7.12",
+      "Matt.22.40",
+      "Luke.16.17",
+      "Luke.24.44",
+      "Rom.8.4",
+      "Rom.13.8",
+      "Gal.6.2",
+      "Jas.2.8"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.17",
+       "ref": "Matthew 5:17",
+       "text": "Do not think that I have come to abolish the Law or the Prophets. I have not come to abolish them, but to fulfill them.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.31",
+       "ref": "Romans 3:31",
+       "text": "Do we, then, nullify the law by this faith? Certainly not! Instead, we uphold the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.13.10",
+       "ref": "Romans 13:10",
+       "text": "Love does no wrong to its neighbor. Therefore love is the fulfillment of the law.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.14",
+       "ref": "Galatians 5:14",
+       "text": "The entire law is fulfilled in a single decree: “Love your neighbor as yourself.”",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus speaks of the law: “I have not come to abolish”, “in your own Law”, “not one of you keeps it”",
+     "note": "The verses where Jesus Himself speaks of the law, in the Gospels' words. Luke 24:44 is the risen Jesus: “Everything must be fulfilled that is written about Me in the Law of Moses, the Prophets, and the Psalms.” In John 8:17 and 10:34 He says “your own Law” and “your Law”, in John 15:25 “their Law”. The page says nothing here of what He meant beyond the words.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Matt.5.17",
+      "John.8.17",
+      "John.7.19",
+      "John.10.34",
+      "Matt.5.18",
+      "Matt.7.12",
+      "Matt.12.5",
+      "Matt.22.40",
+      "Matt.23.23",
+      "Luke.10.26",
+      "Luke.16.16",
+      "Luke.16.17",
+      "Luke.24.44",
+      "John.7.23",
+      "John.15.25"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.17",
+       "ref": "Matthew 5:17",
+       "text": "Do not think that I have come to abolish the Law or the Prophets. I have not come to abolish them, but to fulfill them.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "John.8.17",
+       "ref": "John 8:17",
+       "text": "Even in your own Law it is written that the testimony of two men is valid.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "John.7.19",
+       "ref": "John 7:19",
+       "text": "Has not Moses given you the law? Yet not one of you keeps it. Why are you trying to kill Me?”",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "John.10.34",
+       "ref": "John 10:34",
+       "text": "Jesus replied, “Is it not written in your Law: ‘I have said you are gods'?",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "What no other row takes: the verses that name the law without saying what is done with it or how it stands to anything else, among them Deut 29:29, Neh 13:3 (“As soon as the people heard this law, they excluded from Israel all of foreign descent”), Luke 2:27, Rom 7:1, 7:3 and 1 Cor 14:34, and four verses of Ps 119 (29, 51, 85 and 18).",
+     "doors": [
+      {
+       "id": "laws",
+       "name": "laws",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 26,
+     "verses": [
+      "Deut.28.58",
+      "Luke.2.27",
+      "Rom.3.19",
+      "Deut.29.29",
+      "Deut.32.46",
+      "2Chr.6.16",
+      "2Chr.34.19",
+      "Neh.13.3",
+      "Ps.119.18",
+      "Ps.119.29",
+      "Ps.119.51",
+      "Ps.119.85",
+      "Isa.42.21",
+      "John.7.49",
+      "John.12.34",
+      "Acts.6.13",
+      "Acts.18.13",
+      "Acts.22.12",
+      "Rom.7.1",
+      "Rom.7.3",
+      "1Cor.9.8",
+      "1Cor.14.34",
+      "Gal.5.23",
+      "Phil.3.6",
+      "Heb.9.22",
+      "Heb.10.8"
+     ],
+     "eg": [
+      {
+       "id": "Deut.28.58",
+       "ref": "Deuteronomy 28:58",
+       "text": "If you are not careful to observe all the words of this law which are written in this book, that you may fear this glorious and awesome name-the LORD your God-",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.27",
+       "ref": "Luke 2:27",
+       "text": "Led by the Spirit, he went into the temple courts. And when the parents brought in the child Jesus to do for Him what was customary under the Law,",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.19",
+       "ref": "Romans 3:19",
+       "text": "Now we know that whatever the law says, it says to those who are under the law, so that every mouth may be silenced and the whole world held accountable to God.",
+       "words": [
+        {
+         "key": "g3551",
+         "lemma": "νόμος"
+        }
+       ]
+      },
+      {
+       "id": "Deut.29.29",
+       "ref": "Deuteronomy 29:29",
+       "text": "The secret things belong to the LORD our God, but the things revealed belong to us and to our children forever, so that we may follow all the words of this law.",
+       "words": [
+        {
+         "key": "h8451",
+         "lemma": "תּוֹרָה"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “law”, “instruction”, “teaching”",
+  "words": [
+   {
+    "key": "h4148",
+    "lemma": "מוּסָר",
+    "translit": "mu.sar",
+    "gloss": "discipline: bonds",
+    "lang": "Hebrew",
+    "n": 18,
+    "verses": [
+     "Prov.1.3",
+     "Prov.1.8",
+     "Job.36.10",
+     "Prov.1.2",
+     "Prov.1.7",
+     "Prov.4.1",
+     "Prov.4.13",
+     "Prov.7.22",
+     "Prov.8.10",
+     "Prov.8.33",
+     "Prov.10.17",
+     "Prov.15.33",
+     "Prov.19.20",
+     "Prov.19.27",
+     "Prov.23.12",
+     "Prov.23.23",
+     "Prov.24.32",
+     "Jer.10.8"
+    ],
+    "eg": [
+     {
+      "id": "Prov.1.3",
+      "ref": "Proverbs 1:3",
+      "text": "and for receiving instruction in wise living and in righteousness, justice, and equity."
+     },
+     {
+      "id": "Prov.1.8",
+      "ref": "Proverbs 1:8",
+      "text": "Listen, my son, to your father's instruction, and do not forsake the teaching of your mother."
+     }
+    ]
+   },
+   {
+    "key": "h1882",
+    "lemma": "דָּת",
+    "translit": "dat",
+    "gloss": "law",
+    "lang": "Hebrew",
+    "n": 10,
+    "verses": [
+     "Ezra.7.12",
+     "Ezra.7.26",
+     "Dan.6.8",
+     "Dan.6.15",
+     "Ezra.7.14",
+     "Ezra.7.21",
+     "Ezra.7.25",
+     "Dan.6.5",
+     "Dan.6.12",
+     "Dan.7.25"
+    ],
+    "note": "The Aramaic דָּת, a Persian loanword, is the king's edict or decree (Dan 6:8, 6:15, 'the law of the Medes and Persians'). In Ezra 7:12, 7:14, 7:21 and 7:26 it is also 'the law of your God', of the God of heaven. It is a different word from תּוֹרָה, and the page does not make the two one.",
+    "eg": [
+     {
+      "id": "Ezra.7.12",
+      "ref": "Ezra 7:12",
+      "text": "Artaxerxes, king of kings. To Ezra the priest, the scribe of the Law of the God of heaven: Greetings."
+     },
+     {
+      "id": "Ezra.7.26",
+      "ref": "Ezra 7:26",
+      "text": "If anyone does not keep the law of your God and the law of the king, let a strict judgment be executed against him, whether death, banishment, confiscation of property, or imprisonment."
+     }
+    ]
+   },
+   {
+    "key": "h1881",
+    "lemma": "דָּת",
+    "translit": "dat",
+    "gloss": "law",
+    "lang": "Hebrew",
+    "n": 10,
+    "verses": [
+     "Esth.3.8",
+     "Esth.1.13",
+     "Esth.1.8",
+     "Deut.33.2",
+     "Esth.1.15",
+     "Esth.1.19",
+     "Esth.3.14",
+     "Esth.4.11",
+     "Esth.4.16",
+     "Esth.8.13"
+    ],
+    "note": "The Hebrew דָּת, the same Persian loanword, is the king's edict, custom or law in Esther (1:8, 1:13, 3:8, 4:11). It is a different word from תּוֹרָה, and the page does not make the two one.",
+    "eg": [
+     {
+      "id": "Esth.3.8",
+      "ref": "Esther 3:8",
+      "text": "Then Haman informed King Xerxes, “There is a certain people scattered and dispersed among the peoples of every province of your kingdom. Their laws are different from everyone else's, and they do not obey the king's laws. So it is not in the king's best interest to tolerate them."
+     },
+     {
+      "id": "Esth.1.13",
+      "ref": "Esther 1:13",
+      "text": "Then the king consulted the wise men who knew the times, for it was customary for him to confer with the experts in law and justice."
+     }
+    ]
+   },
+   {
+    "key": "h4941",
+    "lemma": "מִשְׁפָּט",
+    "translit": "mish.pat",
+    "gloss": "(Hall of) Judgment",
+    "lang": "Hebrew",
+    "n": 7,
+    "verses": [
+     "Lev.24.22",
+     "Prov.1.3",
+     "2Kgs.17.26",
+     "2Kgs.17.27",
+     "Ps.119.7",
+     "Jer.5.4",
+     "Jer.5.5"
+    ],
+    "note": "The Hebrew מִשְׁפָּט is “justice”, “ordinance” and “judgment” as well as “law”: the Berean prints “standard of law” in Lev 24:22 and “justice” in Prov 1:3 and Hab 1:4. It is a different word from תּוֹרָה, and the page does not make the two one.",
+    "eg": [
+     {
+      "id": "Lev.24.22",
+      "ref": "Leviticus 24:22",
+      "text": "You are to have the same standard of law for the foreign resident and the native; for I am the LORD your God.'”"
+     },
+     {
+      "id": "Prov.1.3",
+      "ref": "Proverbs 1:3",
+      "text": "and for receiving instruction in wise living and in righteousness, justice, and equity."
+     }
+    ]
+   },
+   {
+    "key": "h3948",
+    "lemma": "לֶקַח",
+    "translit": "le.qach",
+    "gloss": "teaching",
+    "lang": "Hebrew",
+    "n": 4,
+    "verses": [
+     "Deut.32.2",
+     "Prov.4.2",
+     "Job.11.4",
+     "Isa.29.24"
+    ],
+    "eg": [
+     {
+      "id": "Deut.32.2",
+      "ref": "Deuteronomy 32:2",
+      "text": "Let my teaching fall like rain and my speech settle like dew, like gentle rain on new grass, like showers on tender plants."
+     },
+     {
+      "id": "Prov.4.2",
+      "ref": "Proverbs 4:2",
+      "text": "For I give you sound teaching; do not abandon my directive."
+     }
+    ]
+   },
+   {
+    "key": "g3547",
+    "lemma": "νομοδιδάσκαλος",
+    "translit": "nomodidaskalos",
+    "gloss": "teacher of the law",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "Luke.5.17",
+     "1Tim.1.7",
+     "Acts.5.34"
+    ],
+    "eg": [
+     {
+      "id": "Luke.5.17",
+      "ref": "Luke 5:17",
+      "text": "One day Jesus was teaching, and the Pharisees and teachers of the law were sitting there. People had come from Jerusalem and from every village of Galilee and Judea, and the power of the Lord was present for Him to heal the sick."
+     },
+     {
+      "id": "1Tim.1.7",
+      "ref": "1 Timothy 1:7",
+      "text": "They want to be teachers of the law, but they do not understand what they are saying or that which they so confidently assert."
+     }
+    ]
+   },
+   {
+    "key": "g3852",
+    "lemma": "παραγγελία",
+    "translit": "parangelia",
+    "gloss": "order",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "1Thess.4.2",
+     "1Tim.1.5"
+    ],
+    "eg": [
+     {
+      "id": "1Thess.4.2",
+      "ref": "1 Thessalonians 4:2",
+      "text": "For you know the instructions we gave you by the authority of the Lord Jesus."
+     },
+     {
+      "id": "1Tim.1.5",
+      "ref": "1 Timothy 1:5",
+      "text": "The goal of our instruction is the love that comes from a pure heart, a clear conscience, and a sincere faith."
+     }
+    ]
+   },
+   {
+    "key": "g1772",
+    "lemma": "ἔννομος",
+    "translit": "ennomos",
+    "gloss": "under law",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "1Cor.9.21"
+    ],
+    "eg": [
+     {
+      "id": "1Cor.9.21",
+      "ref": "1 Corinthians 9:21",
+      "text": "To those without the law I became like one without the law (though I am not outside the law of God but am under the law of Christ), to win those without the law."
+     }
+    ]
+   },
+   {
+    "key": "g3891",
+    "lemma": "παρανομέω",
+    "translit": "paranomeō",
+    "gloss": "to break the law",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Acts.23.3"
+    ],
+    "eg": [
+     {
+      "id": "Acts.23.3",
+      "ref": "Acts 23:3",
+      "text": "Then Paul said to him, “God will strike you, you whitewashed wall! You sit here to judge me according to the law, yet you yourself violate the law by commanding that I be struck.”"
+     }
+    ]
+   },
+   {
+    "key": "g3549",
+    "lemma": "νομοθετέω",
+    "translit": "nomotheteō",
+    "gloss": "to give laws",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Heb.7.11"
+    ],
+    "eg": [
+     {
+      "id": "Heb.7.11",
+      "ref": "Hebrews 7:11",
+      "text": "Now if perfection could have been attained through the Levitical priesthood (for on this basis the people received the law), why was there still need for another priest to appear-one in the order of Melchizedek and not in the order of Aaron?"
+     }
+    ]
+   },
+   {
+    "key": "g3550",
+    "lemma": "νομοθέτης",
+    "translit": "nomothetēs",
+    "gloss": "lawgiver",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Jas.4.12"
+    ],
+    "eg": [
+     {
+      "id": "Jas.4.12",
+      "ref": "James 4:12",
+      "text": "There is only one Lawgiver and Judge, the One who is able to save and destroy. But who are you to judge your neighbor?"
+     }
+    ]
+   },
+   {
+    "key": "g460",
+    "lemma": "ἀνόμως",
+    "translit": "anomōs",
+    "gloss": "without law",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Rom.2.12"
+    ],
+    "eg": [
+     {
+      "id": "Rom.2.12",
+      "ref": "Romans 2:12",
+      "text": "All who sin apart from the law will also perish apart from the law, and all who sin under the law will be judged by the law."
+     }
+    ]
+   }
+  ]
+ }
+}

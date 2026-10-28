@@ -122,6 +122,146 @@ Answer with ONLY a JSON object, nothing before or after it: {"answer": "yes" | "
 "doer": "<name, or not stated, or empty if the doer was named>", "reason": "<one line quoting the verse>"}"""
 
 
+# THE SECOND ASKING (2026-10-25). On the whole graph v4 answered "no" for 27% of real records (the temple: 11%), and
+# a random ten of them were all sound records: the ACTION is MACULA's word-for-word gloss of the Hebrew or Greek verb
+# ("struck", "made", "put"), and the Berean says "put to the sword", "held a feast", "placed", so the model matched
+# English words, not meanings. Doug, 2026-10-24: "this might mean multiple passes with different prompts". So the "no"
+# and "wrong_who" records are asked again with this brief, the planted faults with them; a flag goes forward only
+# when both askings make it.
+BRIEF_V5 = """You check a Bible knowledge graph's low-level structure against the text. You get one verse (with the \
+verse before and after) and ONE record the graph made from it: DOER -ACTION-> RECEIVER.
+
+IMPORTANT: the ACTION is a word-for-word gloss of the Hebrew or Greek verb, NOT the English translation's word. The \
+translation often says it differently: "struck" may be "put to the sword"; "made" may be "held" (a feast); "put" may \
+be "placed" or "set"; "known" may be "slept with"; "give" may be "grant" or "hand over". Judge whether the verse \
+contains an action WITH THIS MEANING, not the same English word. Ignore tense, negation, commands and questions. \
+DOER and RECEIVER are the graph's names: the verse may say "he", "it", "the house of the LORD". "unnamed" is never \
+wrong by itself.
+
+Answer:
+- "yes": the verse has an action with this meaning, and the doer and receiver are the ones the verse means.
+- "wrong_who": the action is there, but the doer or the receiver is a DIFFERENT person or thing than the verse means.
+- "no": nothing in the verse has this meaning at all, or it says the opposite.
+
+Worked examples:
+- Judg 20:48 "they put to the sword all the cities", record: unnamed -struck-> unnamed -> yes (putting to the sword is \
+striking).
+- Gen 40:20 "Pharaoh held a feast for all his officials", record: Pharaoh -made-> unnamed -> yes (made a feast).
+- Lev 8:21 "and burned the entire ram on the altar", record: Moses -burned-> ram -> yes.
+- Rom 11:3, record: Elijah -torn down-> altar -> wrong_who: Elijah is speaking; "they" tore them down.
+- Lev 26:30 "I will cut down your incense altars", record: God -built-> altar -> no: He will cut them down.
+
+Answer with ONLY a JSON object, nothing before or after it: {"answer": "yes" | "wrong_who" | "no", \
+"doer": "", "reason": "<one line quoting the verse>"}"""
+
+
+# THE THIRD ASKING (2026-10-25). V5 told the model the action was a gloss; it cleared only 382 of 1,625 flags, and a
+# random twelve of the rest held eight of its own faults (three negations or commands, three gloss mismatches, two
+# wrong speakers). A 26B model does not reliably obey "do not judge X". So the input changes instead of the
+# instruction: the record names the action in the VERSE'S OWN WORDS (the Berean's rendering of that lexeme, found in
+# the verse; MACULA's gloss only where none is), negation and commands are taught by worked examples rather than
+# forbidden, and a flag whose reason is only about mode is dropped by code (mode_only).
+BRIEF_V6 = """You check a Bible knowledge graph's low-level structure against the text. You get one verse (with the \
+verse before and after) and ONE record the graph made from it: DOER -ACTION-> RECEIVER. The ACTION is given in the \
+verse's own words. Answer one question: does this verse have this doer doing this action to this receiver?
+
+DOER and RECEIVER are the graph's names for things, not the verse's words: the temple may be "the house of the LORD" \
+or "it"; God may be "the LORD", "I" or "He". "unnamed" means the graph did not name that end; it is never wrong.
+
+- "yes": the action is in the verse, and the doer and receiver are the ones the verse means.
+- "wrong_who": the action is there, but the doer or the receiver is a DIFFERENT person or thing than the verse means.
+- "no": the verse has no such action at all, or the opposite action.
+
+Worked examples (study them: a command, a prohibition, a question and a future all count as the action):
+- Exod 20:13 "You shall not murder.", record: Israel -murder-> unnamed -> yes (a prohibition still names the \
+action and its doer).
+- Gen 13:14 "the LORD said to Abram, 'Now lift up your eyes'", record: Abram -lift up-> eyes -> yes (the one \
+commanded is the doer).
+- Lev 10:9 "You and your sons are not to drink wine", record: Aaron -drink-> wine -> yes.
+- 2 Sam 7:5 "Are you the one to build for Me a house?", record: David -build-> house -> yes.
+- Isa 42:14 "I have kept silent from ages past" (the LORD is speaking), record: God -kept silent-> unnamed -> yes.
+- Rom 11:3 "they have torn down Your altars", record: Elijah -torn down-> altar -> wrong_who: Elijah is speaking; \
+"they" tore them down.
+- 2 Kgs 11:18 "went to the temple of Baal and tore it down", record: unnamed -tore down-> The Temple -> wrong_who: it \
+is the temple of Baal.
+- Lev 26:30 "I will cut down your incense altars", record: God -built-> altar -> no: He will cut them down.
+
+Answer with ONLY a JSON object, nothing before or after it: {"answer": "yes" | "wrong_who" | "no", \
+"doer": "", "reason": "<one line quoting the verse>"}"""
+
+# a reason that objects only to the verb's mode, which this pass does not judge
+MODE_ONLY = re.compile(r"negat|prohibit|not the performance|a command|imperative|is a question|rhetorical|"
+                       r"future|a wish|not (?:actually )?(?:performed|done|happen)", re.I)
+
+
+def berean_words():
+    """lexeme key -> the Berean's renderings of it, most used first (out/bsb-words.json)"""
+    d = json.loads((ROOT / "out" / "bsb-words.json").read_text(encoding="utf-8"))["words"]
+    return {k: [w for w, _n in sorted(rs, key=lambda x: -x[1])] for k, rs in d.items()}
+
+
+def in_verse(renders, text):
+    """the first of a lexeme's Berean renderings that the verse itself uses, as the verse spells it"""
+    for w in renders:
+        m = re.search(r"\b" + re.escape(w) + r"\b", text or "", re.I)
+        if m:
+            return m.group(0)
+    return None
+
+
+def third_asking():
+    """the records both askings flagged, and every planted fault, asked with BRIEF_V6 and the verse's own word"""
+    rows = [json.loads(l) for l in open(OUT / "second.jsonl", encoding="utf-8")]
+    pick = [r for r in rows if r.get("planted") or r.get("answer") in ("no", "wrong_who")]
+    vkey = {}
+    for ln in open(ROOT / "out" / "meaning" / "clause-records.jsonl", encoding="utf-8"):
+        c = json.loads(ln)
+        vkey[c["clause"]] = c.get("verb_key")
+    bw = berean_words()
+    jobs = ROOT / "out" / "grunt" / "jobs"
+    name = "2d-structure-third"
+    found = 0
+    with open(jobs / f"{name}.jsonl", "w", encoding="utf-8", newline="\n") as f, \
+            open(jobs / f"{name}.items.jsonl", "w", encoding="utf-8") as g:
+        f.write(json.dumps({"_job": {"model": "gemma4:26b", "options": OPTIONS, "pass": "third asking"}}) + "\n")
+        for r in pick:
+            gloss = r["action"].split(" (")[0]
+            # a planted "no" swaps the verb for its opposite: keep the swap, or the plant is undone
+            own = None if r.get("planted") == "no" else in_verse(bw.get(vkey.get(r["key"].split("#planted")[0]), []), r["text"])
+            found += bool(own)
+            msg = {k: r[k] for k in ("ref", "before", "text", "after")}
+            msg["record"] = f"{r['doer']} -{own or gloss}-> {r['receiver']}"
+            f.write(json.dumps({"key": r["key"], "messages": [
+                {"role": "system", "content": BRIEF_V6},
+                {"role": "user", "content": json.dumps(msg, ensure_ascii=False)}]}, ensure_ascii=False) + "\n")
+            g.write(json.dumps({**r, "second_answer": r.get("answer"), "shown_action": own or gloss}, ensure_ascii=False) + "\n")
+    print(f"{len(pick)} asked a third time ({sum(1 for r in pick if r.get('planted'))} planted); the verse's own word "
+          f"found for {found} -> {jobs / (name + '.jsonl')}")
+
+
+def second_asking():
+    """the first asking's "no" and "wrong_who" records (all.jsonl so far), and its planted faults, as a job asked
+    with BRIEF_V5; the items keep the first answer"""
+    rows = [json.loads(l) for l in open(OUT / "all.jsonl", encoding="utf-8")]
+    pick = [r for r in rows if r.get("answer") in ("no", "wrong_who")
+            and not (r["doer"] == "unnamed" and r["receiver"] == "unnamed" and not r["planted"])]
+    jobs = ROOT / "out" / "grunt" / "jobs"
+    name = "2c-structure-second"
+    with open(jobs / f"{name}.jsonl", "w", encoding="utf-8", newline="\n") as f:
+        f.write(json.dumps({"_job": {"model": "gemma4:26b", "options": OPTIONS, "pass": "second asking"}}) + "\n")
+        for r in pick:
+            msg = {k: r[k] for k in ("ref", "before", "text", "after")}
+            msg["record"] = f"{r['doer']} -{r['action'].split(' (')[0]}-> {r['receiver']}"
+            f.write(json.dumps({"key": r["key"], "messages": [
+                {"role": "system", "content": BRIEF_V5},
+                {"role": "user", "content": json.dumps(msg, ensure_ascii=False)}]}, ensure_ascii=False) + "\n")
+    with open(jobs / f"{name}.items.jsonl", "w", encoding="utf-8") as f:
+        for r in pick:
+            f.write(json.dumps({**r, "first_answer": r["answer"]}, ensure_ascii=False) + "\n")
+    print(f"{len(pick)} asked again ({sum(1 for r in pick if r['planted'])} planted; records with both ends unnamed "
+          f"left out: they make no relation) -> {jobs / (name + '.jsonl')}")
+
+
 def entities():
     names = {}
     for f in glob.glob(str(ROOT / "ontology" / "entities" / "*.jsonl")):
@@ -301,5 +441,9 @@ if __name__ == "__main__":
         export(card, model, plant)
     elif cmd == "import":
         import_(card)
+    elif cmd == "second":
+        second_asking()
+    elif cmd == "third":
+        third_asking()
     else:
         report(card)

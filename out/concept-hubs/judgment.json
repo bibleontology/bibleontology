@@ -1,0 +1,3286 @@
+{
+ "id": "judgment",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "g2919",
+   "lemma": "κρίνω",
+   "form": "verb",
+   "translit": "krinō",
+   "gloss": "to judge",
+   "lang": "Greek",
+   "uses": 86,
+   "other_sense": 12
+  },
+  {
+   "key": "g2920",
+   "lemma": "κρίσις",
+   "form": "noun",
+   "translit": "krisis",
+   "gloss": "judgment",
+   "lang": "Greek",
+   "uses": 46,
+   "other_sense": 0
+  },
+  {
+   "key": "g2917",
+   "lemma": "κρίμα",
+   "form": "noun",
+   "translit": "krima",
+   "gloss": "judgment",
+   "lang": "Greek",
+   "uses": 25,
+   "other_sense": 2
+  },
+  {
+   "key": "g1341",
+   "lemma": "δικαιοκρισία",
+   "form": "noun",
+   "translit": "dikaiokrisia",
+   "gloss": "justice",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g2923",
+   "lemma": "κριτής",
+   "form": "noun",
+   "translit": "kritēs",
+   "gloss": "judge",
+   "lang": "Greek",
+   "uses": 17,
+   "other_sense": 0
+  },
+  {
+   "key": "g968",
+   "lemma": "βῆμα",
+   "form": "noun",
+   "translit": "bēma",
+   "gloss": "judgement seat",
+   "lang": "Greek",
+   "uses": 10,
+   "other_sense": 2
+  },
+  {
+   "key": "g1349",
+   "lemma": "δίκη",
+   "form": "noun",
+   "translit": "dikē",
+   "gloss": "condemnation",
+   "lang": "Greek",
+   "uses": 4,
+   "other_sense": 0
+  },
+  {
+   "key": "g2632",
+   "lemma": "κατακρίνω",
+   "form": "verb",
+   "translit": "katakrinō",
+   "gloss": "to condemn",
+   "lang": "Greek",
+   "uses": 18,
+   "other_sense": 0
+  },
+  {
+   "key": "g2631",
+   "lemma": "κατάκριμα",
+   "form": "noun",
+   "translit": "katakrima",
+   "gloss": "condemnation",
+   "lang": "Greek",
+   "uses": 3,
+   "other_sense": 0
+  },
+  {
+   "key": "g2633",
+   "lemma": "κατάκρισις",
+   "form": "noun",
+   "translit": "katakrisis",
+   "gloss": "condemnation",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g350",
+   "lemma": "ἀνακρίνω",
+   "form": "verb",
+   "translit": "anakrinō",
+   "gloss": "to investigate",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 12
+  },
+  {
+   "key": "h8199",
+   "lemma": "שָׁפַט",
+   "form": "verb",
+   "translit": "sha.phat",
+   "gloss": "to judge",
+   "lang": "Hebrew",
+   "uses": 180,
+   "other_sense": 2
+  },
+  {
+   "key": "h4941",
+   "lemma": "מִשְׁפָּט",
+   "form": "noun",
+   "translit": "mish.pat",
+   "gloss": "(Hall of) Judgment",
+   "lang": "Hebrew",
+   "uses": 240,
+   "other_sense": 163
+  },
+  {
+   "key": "h8201",
+   "lemma": "שֶׁפֶט",
+   "form": "noun",
+   "translit": "she.phet",
+   "gloss": "judgment",
+   "lang": "Hebrew",
+   "uses": 16,
+   "other_sense": 0
+  },
+  {
+   "key": "h1777",
+   "lemma": "דִּין",
+   "form": "verb",
+   "translit": "din",
+   "gloss": "to judge",
+   "lang": "Hebrew",
+   "uses": 20,
+   "other_sense": 4
+  },
+  {
+   "key": "h1779",
+   "lemma": "דִּין",
+   "form": "noun",
+   "translit": "din",
+   "gloss": "judgment",
+   "lang": "Hebrew",
+   "uses": 12,
+   "other_sense": 5
+  },
+  {
+   "key": "h1780",
+   "lemma": "דִּין",
+   "form": "noun",
+   "translit": "din",
+   "gloss": "judgment",
+   "lang": "Hebrew",
+   "uses": 5,
+   "other_sense": 0
+  },
+  {
+   "key": "h1781",
+   "lemma": "דַּיָּן",
+   "form": "noun",
+   "translit": "day.yan",
+   "gloss": "judge",
+   "lang": "Hebrew",
+   "uses": 2,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of judgment",
+  "verb": "Who judges whom"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "justice",
+   "name": "justice",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "righteousness",
+   "name": "righteousness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "wrath",
+   "name": "anger",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "works",
+   "name": "works",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "death",
+   "name": "death",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "judge",
+   "name": "judge",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_wicked",
+   "name": "the wicked",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_righteous",
+   "name": "the righteous",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "mercy",
+   "name": "mercy",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "grace",
+   "name": "grace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "theme_judgment",
+   "name": "Judgment (major theme)",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "after_this_the_judgment",
+   "name": "after that to face judgment",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_sheep_and_the_goats",
+   "name": "the sheep and the goats",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "let_judgment_run_down_as_waters",
+   "name": "let justice roll on like a river",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.18.25",
+   "ref": "Genesis 18:25",
+   "text": "Far be it from You to do such a thing-to kill the righteous with the wicked, so that the righteous and the wicked are treated alike. Far be it from You! Will not the Judge of all the earth do what is right?”"
+  },
+  {
+   "id": "Amos.5.24",
+   "ref": "Amos 5:24",
+   "text": "But let justice roll on like a river, and righteousness like an ever-flowing stream."
+  },
+  {
+   "id": "Ps.96.13",
+   "ref": "Psalms 96:13",
+   "text": "before the LORD, for He is coming-He is coming to judge the earth. He will judge the world in righteousness and the peoples in His faithfulness."
+  },
+  {
+   "id": "Heb.9.27",
+   "ref": "Hebrews 9:27",
+   "text": "Just as man is appointed to die once, and after that to face judgment,"
+  },
+  {
+   "id": "Rev.20.12",
+   "ref": "Revelation 20:12",
+   "text": "And I saw the dead, great and small, standing before the throne. And books were opened, and one of them was the Book of Life. And the dead were judged according to their deeds, as recorded in the books."
+  },
+  {
+   "id": "Matt.7.1",
+   "ref": "Matthew 7:1",
+   "text": "“Do not judge, or you will be judged."
+  },
+  {
+   "id": "John.5.24",
+   "ref": "John 5:24",
+   "text": "Truly, truly, I tell you, whoever hears My word and believes Him who sent Me has eternal life and will not come under judgment. Indeed, he has crossed over from death to life."
+  },
+  {
+   "id": "2Cor.5.10",
+   "ref": "2 Corinthians 5:10",
+   "text": "For we must all appear before the judgment seat of Christ, that each one may receive his due for the things done in the body, whether good or bad."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 369,
+   "rows": [
+    {
+     "label": "Justice for the poor, the fatherless, the widow, the foreigner",
+     "note": null,
+     "doors": [
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Exod.23.6",
+      "Deut.10.18",
+      "Isa.1.17",
+      "Jer.22.3",
+      "Lev.19.15",
+      "Deut.24.17",
+      "Deut.27.19",
+      "Job.36.6",
+      "Ps.68.5",
+      "Ps.72.2",
+      "Ps.140.12",
+      "Isa.3.14",
+      "Isa.10.2",
+      "Isa.32.7",
+      "Ezek.22.29",
+      "Mal.3.5"
+     ],
+     "eg": [
+      {
+       "id": "Exod.23.6",
+       "ref": "Exodus 23:6",
+       "text": "You shall not deny justice to the poor in their lawsuits.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Deut.10.18",
+       "ref": "Deuteronomy 10:18",
+       "text": "He executes justice for the fatherless and widow, and He loves the foreigner, giving him food and clothing.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Isa.1.17",
+       "ref": "Isaiah 1:17",
+       "text": "Learn to do right; seek justice and correct the oppressor. Defend the fatherless and plead the case of the widow.”",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Jer.22.3",
+       "ref": "Jeremiah 22:3",
+       "text": "This is what the LORD says: Administer justice and righteousness. Rescue the victim of robbery from the hand of his oppressor. Do no wrong or violence to the foreigner, the fatherless, or the widow. Do not shed innocent blood in this place.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Justice and righteousness (the Hebrew pair mishpat and tsedaqah)",
+     "note": "Most of these verses are Hebrew, where the Berean prints “justice” for mishpat and “righteousness” for tsedaqah or tsedeq. A few are Greek (John 16:8, Acts 24:25, 2 Cor 3:9, 2 Tim 4:8): there “righteousness” stands beside the Greek words for judgment (krisis, krima), condemnation (katakrisis) or the judge (kritēs), which are other words, and the page does not make them one with the Hebrew.",
+     "doors": [
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 71,
+     "verses": [
+      "Gen.18.19",
+      "Ps.89.14",
+      "Amos.5.24",
+      "Isa.5.16",
+      "John.16.8",
+      "2Cor.3.9",
+      "Lev.19.15",
+      "Deut.16.18",
+      "2Sam.8.15",
+      "1Kgs.10.9",
+      "1Chr.18.14",
+      "2Chr.9.8",
+      "Job.8.3",
+      "Job.29.14",
+      "Job.35.2",
+      "Job.37.23",
+      "Ps.9.4",
+      "Ps.33.5",
+      "Ps.36.6",
+      "Ps.37.6",
+      "Ps.72.1",
+      "Ps.72.2",
+      "Ps.94.15",
+      "Ps.97.2",
+      "Ps.99.4",
+      "Ps.103.6",
+      "Ps.106.3",
+      "Ps.119.75",
+      "Ps.119.121",
+      "Prov.1.3",
+      "Prov.2.9",
+      "Prov.8.20",
+      "Prov.16.8",
+      "Prov.21.3",
+      "Eccl.3.16",
+      "Eccl.5.8",
+      "Isa.1.21",
+      "Isa.1.27",
+      "Isa.5.7",
+      "Isa.9.7",
+      "Isa.16.5",
+      "Isa.26.9",
+      "Isa.28.17",
+      "Isa.32.1",
+      "Isa.32.16",
+      "Isa.33.5",
+      "Isa.54.17",
+      "Isa.56.1",
+      "Isa.59.9",
+      "Isa.59.14",
+      "Jer.4.2",
+      "Jer.9.24",
+      "Jer.22.3",
+      "Jer.22.13",
+      "Jer.22.15",
+      "Jer.23.5",
+      "Jer.33.15",
+      "Ezek.18.5",
+      "Ezek.18.19",
+      "Ezek.18.21",
+      "Ezek.18.27",
+      "Ezek.33.14",
+      "Ezek.33.16",
+      "Ezek.33.19",
+      "Ezek.45.9",
+      "Hos.2.19",
+      "Amos.5.7",
+      "Amos.6.12",
+      "Mic.7.9",
+      "Acts.24.25",
+      "2Tim.4.8"
+     ],
+     "eg": [
+      {
+       "id": "Gen.18.19",
+       "ref": "Genesis 18:19",
+       "text": "For I have chosen him, so that he will command his children and his household after him to keep the way of the LORD by doing what is right and just, in order that the LORD may bring upon Abraham what He has promised.”",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Ps.89.14",
+       "ref": "Psalms 89:14",
+       "text": "Righteousness and justice are the foundation of Your throne; loving devotion and faithfulness go before You.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Amos.5.24",
+       "ref": "Amos 5:24",
+       "text": "But let justice roll on like a river, and righteousness like an ever-flowing stream.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Isa.5.16",
+       "ref": "Isaiah 5:16",
+       "text": "But the LORD of Hosts will be exalted by His justice, and the holy God will show Himself holy in righteousness.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "In the gate and the court: judges, elders, witnesses, bribes; trials and sentences",
+     "note": null,
+     "doors": [
+      {
+       "id": "judge",
+       "name": "judge",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 45,
+     "verses": [
+      "Deut.16.18",
+      "Deut.17.9",
+      "Amos.5.15",
+      "Acts.18.12",
+      "Num.27.5",
+      "Matt.27.19",
+      "Deut.1.17",
+      "Deut.16.19",
+      "Deut.17.8",
+      "Deut.17.11",
+      "Deut.21.22",
+      "Deut.25.1",
+      "Judg.4.5",
+      "1Sam.8.3",
+      "2Sam.15.2",
+      "2Kgs.25.6",
+      "2Chr.19.6",
+      "2Chr.19.8",
+      "Ezra.7.26",
+      "Job.9.32",
+      "Job.31.13",
+      "Ps.1.5",
+      "Prov.17.23",
+      "Prov.18.5",
+      "Prov.19.28",
+      "Prov.24.23",
+      "Isa.3.14",
+      "Isa.28.6",
+      "Isa.53.8",
+      "Jer.26.11",
+      "Jer.26.16",
+      "Jer.39.5",
+      "Jer.52.9",
+      "Ezek.44.24",
+      "Zech.8.16",
+      "Mal.3.5",
+      "Luke.23.40",
+      "Luke.24.20",
+      "John.19.13",
+      "Acts.8.33",
+      "Acts.18.16",
+      "Acts.18.17",
+      "Acts.25.6",
+      "Acts.25.10",
+      "Acts.25.17"
+     ],
+     "eg": [
+      {
+       "id": "Deut.16.18",
+       "ref": "Deuteronomy 16:18",
+       "text": "You are to appoint judges and officials for your tribes in every town that the LORD your God is giving you. They are to judge the people with righteous judgment.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Deut.17.9",
+       "ref": "Deuteronomy 17:9",
+       "text": "You are to go to the Levitical priests and to the judge who presides at that time. Inquire of them, and they will give you a verdict in the case.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Amos.5.15",
+       "ref": "Amos 5:15",
+       "text": "Hate evil and love good; establish justice in the gate. Perhaps the LORD, the God of Hosts, will be gracious to the remnant of Joseph.”",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Acts.18.12",
+       "ref": "Acts 18:12",
+       "text": "While Gallio was proconsul of Achaia, the Jews coordinated an attack on Paul and brought him before the judgment seat.",
+       "words": [
+        {
+         "key": "g968",
+         "lemma": "βῆμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The king and the throne: “the king for judgment”, kings who do justice, the throne",
+     "note": "In Isa 9:7, 16:5, 32:1 and Jer 23:5 the king the prophet describes is one whom readers take differently; the page does not choose.",
+     "doors": [
+      {
+       "id": "throne",
+       "name": "throne",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "2Sam.15.2",
+      "1Kgs.3.28",
+      "Ps.72.1",
+      "Isa.9.7",
+      "2Sam.15.6",
+      "1Kgs.7.7",
+      "1Kgs.10.9",
+      "1Kgs.20.40",
+      "2Chr.9.8",
+      "Ezra.7.26",
+      "Ps.9.4",
+      "Ps.9.7",
+      "Ps.89.14",
+      "Ps.97.2",
+      "Ps.99.4",
+      "Ps.122.5",
+      "Prov.16.10",
+      "Prov.29.4",
+      "Isa.16.5",
+      "Isa.32.1",
+      "Jer.23.5",
+      "Dan.4.37",
+      "Hos.5.1",
+      "Zeph.3.15"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.15.2",
+       "ref": "2 Samuel 15:2",
+       "text": "He would get up early and stand beside the road leading to the city gate. Whenever anyone had a grievance to bring before the king for a decision, Absalom would call out and ask, “What city are you from?” And if he replied, “Your servant is from one of the tribes of Israel,”",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.3.28",
+       "ref": "1 Kings 3:28",
+       "text": "When all Israel heard of the judgment the king had given, they stood in awe of him, for they saw that the wisdom of God was in him to administer justice.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Ps.72.1",
+       "ref": "Psalms 72:1",
+       "text": "Of Solomon. Endow the king with Your justice, O God, and the son of the king with Your righteousness.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Isa.9.7",
+       "ref": "Isaiah 9:7",
+       "text": "Of the increase of His government and peace there will be no end. He will reign on the throne of David and over his kingdom, to establish and sustain it with justice and righteousness from that time and forevermore. The zeal of the LORD of Hosts will accomplish this.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD's justice and judgments: “a God of justice”, “true and just are Your judgments”",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 56,
+     "verses": [
+      "Deut.32.4",
+      "Isa.30.18",
+      "Ps.119.137",
+      "Rev.16.7",
+      "Gen.18.25",
+      "Rom.2.5",
+      "Deut.32.41",
+      "1Kgs.8.45",
+      "1Kgs.8.49",
+      "1Kgs.8.59",
+      "1Chr.16.12",
+      "1Chr.16.14",
+      "2Chr.6.35",
+      "2Chr.6.39",
+      "Job.14.3",
+      "Job.22.4",
+      "Job.34.12",
+      "Job.34.17",
+      "Job.34.23",
+      "Job.37.23",
+      "Job.40.8",
+      "Ps.7.6",
+      "Ps.9.16",
+      "Ps.10.5",
+      "Ps.33.5",
+      "Ps.36.6",
+      "Ps.37.28",
+      "Ps.48.11",
+      "Ps.76.9",
+      "Ps.89.14",
+      "Ps.97.2",
+      "Ps.97.8",
+      "Ps.99.4",
+      "Ps.103.6",
+      "Ps.105.5",
+      "Ps.105.7",
+      "Ps.119.75",
+      "Ps.119.84",
+      "Ps.119.120",
+      "Ps.119.149",
+      "Ps.140.12",
+      "Ps.143.2",
+      "Ps.146.7",
+      "Prov.29.26",
+      "Isa.26.8",
+      "Isa.26.9",
+      "Isa.61.8",
+      "Jer.9.24",
+      "Jer.10.24",
+      "Ezek.34.16",
+      "Hab.1.12",
+      "Zeph.3.5",
+      "Rom.11.33",
+      "2Thess.1.5",
+      "Rev.18.20",
+      "Rev.19.2"
+     ],
+     "eg": [
+      {
+       "id": "Deut.32.4",
+       "ref": "Deuteronomy 32:4",
+       "text": "He is the Rock, His work is perfect; all His ways are just. A God of faithfulness without injustice, righteous and upright is He.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Isa.30.18",
+       "ref": "Isaiah 30:18",
+       "text": "Therefore the LORD longs to be gracious to you; therefore He rises to show you compassion, for the LORD is a just God. Blessed are all who wait for Him.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.137",
+       "ref": "Psalms 119:137",
+       "text": "Righteous are You, O LORD, and upright are Your judgments.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Rev.16.7",
+       "ref": "Revelation 16:7",
+       "text": "And I heard the altar reply: “Yes, Lord God Almighty, true and just are Your judgments.”",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Justice asked of God, and the answer: “God has deprived me of justice”, “Does God pervert justice?”, “Where is the God of justice?”",
+     "note": "The complaint and the answer stand together as the text has them: Job says God has taken away his justice (27:2), Elihu that God does not pervert it (34:12), and those Malachi speaks to ask “Where is the God of justice?” (2:17). The page does not choose between them.",
+     "doors": [
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Job.27.2",
+      "Job.34.12",
+      "Mal.2.17",
+      "Isa.40.27",
+      "Job.8.3",
+      "Job.9.19",
+      "Job.13.18",
+      "Job.19.7",
+      "Job.23.4",
+      "Job.34.5",
+      "Job.34.6",
+      "Job.35.2",
+      "Job.40.8",
+      "Ps.17.2",
+      "Isa.49.4",
+      "Jer.12.1",
+      "Hab.1.4"
+     ],
+     "eg": [
+      {
+       "id": "Job.27.2",
+       "ref": "Job 27:2",
+       "text": "“As surely as God lives, who has deprived me of justice-the Almighty, who has embittered my soul-",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Job.34.12",
+       "ref": "Job 34:12",
+       "text": "Indeed, it is true that God does not act wickedly, and the Almighty does not pervert justice.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Mal.2.17",
+       "ref": "Malachi 2:17",
+       "text": "You have wearied the LORD with your words; yet you ask, “How have we wearied Him?” By saying, “All who do evil are good in the sight of the LORD, and in them He delights,” or, “Where is the God of justice?”",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Isa.40.27",
+       "ref": "Isaiah 40:27",
+       "text": "Why do you say, O Jacob, and why do you assert, O Israel, “My way is hidden from the LORD, and my claim is ignored by my God”?",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Justice turned away and perverted among people: “justice is turned away”, “in the place of judgment there is wickedness”, “the denial of justice and righteousness in the province”",
+     "note": "Here the verses speak of people turning justice away: the people's own words in Isa 59 (“justice is far from us”, 59:9), what Ecclesiastes saw in the place of judgment (3:16; 5:8), “to deny a man justice before the Most High” (Lam 3:35), and the wicked who hem in the righteous (Hab 1:4). They are set apart from the row before, where justice is asked of God.",
+     "doors": [
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Isa.59.14",
+      "Eccl.3.16",
+      "Eccl.5.8",
+      "Hab.1.4",
+      "Isa.59.8",
+      "Isa.59.9",
+      "Isa.59.11",
+      "Isa.59.15",
+      "Lam.3.35"
+     ],
+     "eg": [
+      {
+       "id": "Isa.59.14",
+       "ref": "Isaiah 59:14",
+       "text": "So justice is turned away, and righteousness stands at a distance. For truth has stumbled in the public square, and honesty cannot enter.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.3.16",
+       "ref": "Ecclesiastes 3:16",
+       "text": "Furthermore, I saw under the sun that in the place of judgment there is wickedness, and in the place of righteousness there is wickedness.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.5.8",
+       "ref": "Ecclesiastes 5:8",
+       "text": "If you see the oppression of the poor and the denial of justice and righteousness in the province, do not be astonished at the matter; for one official is watched by a superior, and others higher still are over them.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Hab.1.4",
+       "ref": "Habakkuk 1:4",
+       "text": "Therefore the law is paralyzed, and justice never goes forth. For the wicked hem in the righteous, so that justice is perverted.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judgments on Egypt, Moab, Edom, Babylon, Sidon, Thebes; judgments on Judah, Israel and Jerusalem",
+     "note": null,
+     "doors": [
+      {
+       "id": "egypt",
+       "name": "Egypt",
+       "type": "place",
+       "missing": false
+      },
+      {
+       "id": "babylon",
+       "name": "Babylon",
+       "type": "place",
+       "missing": false
+      }
+     ],
+     "n": 32,
+     "verses": [
+      "Exod.12.12",
+      "Isa.34.5",
+      "Ezek.5.8",
+      "Hos.5.11",
+      "Exod.6.6",
+      "Rev.17.1",
+      "Exod.7.4",
+      "Num.33.4",
+      "Isa.4.4",
+      "Jer.4.12",
+      "Jer.48.21",
+      "Jer.48.47",
+      "Jer.51.9",
+      "Ezek.5.10",
+      "Ezek.5.15",
+      "Ezek.11.9",
+      "Ezek.14.21",
+      "Ezek.16.38",
+      "Ezek.16.41",
+      "Ezek.23.24",
+      "Ezek.23.45",
+      "Ezek.25.11",
+      "Ezek.28.22",
+      "Ezek.28.26",
+      "Ezek.30.14",
+      "Ezek.30.19",
+      "Hos.5.1",
+      "Hos.6.5",
+      "Hos.10.4",
+      "Zeph.3.15",
+      "Mal.3.5",
+      "Rev.18.10"
+     ],
+     "eg": [
+      {
+       "id": "Exod.12.12",
+       "ref": "Exodus 12:12",
+       "text": "On that night I will pass through the land of Egypt and strike down every firstborn male, both man and beast, and I will execute judgment against all the gods of Egypt. I am the LORD.",
+       "words": [
+        {
+         "key": "h8201",
+         "lemma": "שֶׁפֶט"
+        }
+       ]
+      },
+      {
+       "id": "Isa.34.5",
+       "ref": "Isaiah 34:5",
+       "text": "When My sword has drunk its fill in the heavens, then it will come down upon Edom, upon the people I have devoted to destruction.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.5.8",
+       "ref": "Ezekiel 5:8",
+       "text": "Therefore this is what the Lord GOD says: ‘Behold, I Myself am against you, Jerusalem, and I will execute judgments among you in the sight of the nations.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Hos.5.11",
+       "ref": "Hosea 5:11",
+       "text": "Ephraim is oppressed, crushed in judgment, for he is determined to follow worthless idols.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A judge, the Judge; “all judgment to the Son”",
+     "note": "The text names the judge in several ways: “God, the Judge of all” (Heb 12:23), “the One appointed by God as Judge of the living and the dead” (Acts 10:42), “the righteous Judge” whom Paul calls “the Lord” (2 Tim 4:8), “one Lawgiver and Judge” (Jas 4:12), “the Judge is standing at the door” (Jas 5:9), and also earthly judges and the judge in Jesus' parable of the widow (Luke 18:2). In John 5:22 the Father “has entrusted all judgment to the Son”; in John 9:39 Jesus says “For judgment I have come into this world”. Where the verse says only “the Lord” or “the Judge”, readers take it of the Father or of Christ, and the page does not choose.",
+     "doors": [
+      {
+       "id": "judge",
+       "name": "judge",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "1Sam.24.15",
+      "Heb.12.23",
+      "Acts.10.42",
+      "John.5.22",
+      "Matt.5.25",
+      "2Tim.4.8",
+      "Ps.68.5",
+      "Matt.12.27",
+      "Luke.11.19",
+      "Luke.12.14",
+      "Luke.12.58",
+      "Luke.18.2",
+      "Luke.18.6",
+      "John.5.27",
+      "John.5.30",
+      "John.8.16",
+      "John.9.39",
+      "Acts.13.20",
+      "Acts.18.15",
+      "Acts.24.10",
+      "Jas.2.4",
+      "Jas.4.11",
+      "Jas.4.12",
+      "Jas.5.9"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.24.15",
+       "ref": "1 Samuel 24:15",
+       "text": "May the LORD be our judge and decide between you and me. May He take notice and plead my case and deliver me from your hand.”",
+       "words": [
+        {
+         "key": "h1781",
+         "lemma": "דַּיָּן"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.23",
+       "ref": "Hebrews 12:23",
+       "text": "in joyful assembly, to the congregation of the firstborn, enrolled in heaven. You have come to God the Judge of all, to the spirits of the righteous made perfect,",
+       "words": [
+        {
+         "key": "g2923",
+         "lemma": "κριτής"
+        }
+       ]
+      },
+      {
+       "id": "Acts.10.42",
+       "ref": "Acts 10:42",
+       "text": "And He commanded us to preach to the people and to testify that He is the One appointed by God to judge the living and the dead.",
+       "words": [
+        {
+         "key": "g2923",
+         "lemma": "κριτής"
+        }
+       ]
+      },
+      {
+       "id": "John.5.22",
+       "ref": "John 5:22",
+       "text": "Furthermore, the Father judges no one, but has assigned all judgment to the Son,",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judgment on the nations and the world; justice for the nations",
+     "note": "Isa 42 and 51 speak of justice going out to the nations; Matt 12:18-20 quotes Isa 42:1-4. Who the Servant of Isa 42:1 is, readers take differently; the page does not choose.",
+     "doors": [
+      {
+       "id": "world",
+       "name": "world",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 20,
+     "verses": [
+      "Isa.42.1",
+      "John.12.31",
+      "John.9.39",
+      "Ezek.5.8",
+      "Isa.26.9",
+      "Matt.12.18",
+      "Isa.41.1",
+      "Isa.42.3",
+      "Isa.42.4",
+      "Isa.51.4",
+      "Jer.4.2",
+      "Jer.30.11",
+      "Jer.46.28",
+      "Ezek.5.15",
+      "Ezek.39.21",
+      "Zeph.3.8",
+      "Matt.12.20",
+      "John.3.19",
+      "John.16.8",
+      "John.16.11"
+     ],
+     "eg": [
+      {
+       "id": "Isa.42.1",
+       "ref": "Isaiah 42:1",
+       "text": "“Here is My Servant, whom I uphold, My Chosen One, in whom My soul delights. I will put My Spirit on Him, and He will bring justice to the nations.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "John.12.31",
+       "ref": "John 12:31",
+       "text": "Now judgment is upon this world; now the prince of this world will be cast out.",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "John.9.39",
+       "ref": "John 9:39",
+       "text": "Then Jesus declared, “For judgment I have come into this world, so that the blind may see and those who see may become blind.”",
+       "words": [
+        {
+         "key": "g2917",
+         "lemma": "κρίμα"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.5.8",
+       "ref": "Ezekiel 5:8",
+       "text": "Therefore this is what the Lord GOD says: ‘Behold, I Myself am against you, Jerusalem, and I will execute judgments among you in the sight of the nations.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The day of judgment, the hour of judgment; “at the judgment”; “after that to face judgment”; the judgment seat of God; the court seated, the books opened",
+     "note": "Ps 1:5 (“the wicked will not stand in the judgment, nor sinners in the assembly of the righteous”) is read of a court and of the last day, and the page does not choose; it also stands in “In the gate and the court”. The Hebrew “Day of the LORD” texts (Joel 1:15, Amos 5:18, Zeph 1:14, Isa 13:9) use other words and are not on this page; Isa 13:13 and Zeph 1:15 are on the wrath page, Amos 5:18 is on the light page, and the sheep and the goats (Matt 25:31-46) is gathered with this page.",
+     "doors": [
+      {
+       "id": "judge",
+       "name": "judge",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "wrath",
+       "name": "anger",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 26,
+     "verses": [
+      "Matt.10.15",
+      "Heb.9.27",
+      "2Cor.5.10",
+      "Dan.7.10",
+      "Ps.1.5",
+      "Rom.2.5",
+      "Dan.7.22",
+      "Dan.7.26",
+      "Matt.11.22",
+      "Matt.11.24",
+      "Matt.12.36",
+      "Matt.12.41",
+      "Matt.12.42",
+      "Luke.10.14",
+      "Luke.11.31",
+      "Luke.11.32",
+      "Acts.24.25",
+      "Rom.14.10",
+      "Heb.10.27",
+      "1Pet.4.17",
+      "2Pet.2.9",
+      "2Pet.3.7",
+      "1John.4.17",
+      "Jude.1.6",
+      "Rev.14.7",
+      "Rev.18.10"
+     ],
+     "eg": [
+      {
+       "id": "Matt.10.15",
+       "ref": "Matthew 10:15",
+       "text": "Truly I tell you, it will be more bearable for Sodom and Gomorrah on the day of judgment than for that town.",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.27",
+       "ref": "Hebrews 9:27",
+       "text": "Just as man is appointed to die once, and after that to face judgment,",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.5.10",
+       "ref": "2 Corinthians 5:10",
+       "text": "For we must all appear before the judgment seat of Christ, that each one may receive his due for the things done in the body, whether good or bad.",
+       "words": [
+        {
+         "key": "g968",
+         "lemma": "βῆμα"
+        }
+       ]
+      },
+      {
+       "id": "Dan.7.10",
+       "ref": "Daniel 7:10",
+       "text": "A river of fire was flowing, coming out from His presence. Thousands upon thousands attended Him, and myriads upon myriads stood before Him. The court was convened, and the books were opened.",
+       "words": [
+        {
+         "key": "h1780",
+         "lemma": "דִּין"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judgment and works, deeds",
+     "note": "Set side by side with the rows on condemnation and on believing, as the text has them; a verse that names more than one stands in each. Where Christian traditions part on how judgment by works stands to being counted righteous by faith, the page takes no side.",
+     "doors": [
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "John.5.29",
+      "2Cor.5.10",
+      "Eccl.12.14",
+      "Rom.2.5",
+      "Ps.9.16",
+      "John.3.19",
+      "Rom.2.2",
+      "Jer.1.16",
+      "Jer.21.12",
+      "Ezek.7.27",
+      "Rom.2.3",
+      "Jude.1.15"
+     ],
+     "eg": [
+      {
+       "id": "John.5.29",
+       "ref": "John 5:29",
+       "text": "and come out-those who have done good to the resurrection of life, and those who have done evil to the resurrection of judgment.",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.5.10",
+       "ref": "2 Corinthians 5:10",
+       "text": "For we must all appear before the judgment seat of Christ, that each one may receive his due for the things done in the body, whether good or bad.",
+       "words": [
+        {
+         "key": "g968",
+         "lemma": "βῆμα"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.12.14",
+       "ref": "Ecclesiastes 12:14",
+       "text": "For God will bring every deed into judgment, along with every hidden thing, whether good or evil.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.5",
+       "ref": "Romans 2:5",
+       "text": "But because of your hard and unrepentant heart, you are storing up wrath against yourself for the day of wrath, when God's righteous judgment will be revealed.",
+       "words": [
+        {
+         "key": "g1341",
+         "lemma": "δικαιοκρισία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Condemnation, and “no condemnation”; “does not come into judgment”",
+     "note": "The Greek κατάκριμα and κατάκρισις, “condemnation”. Rom 5:16-18 sets the judgment that followed one trespass “to condemnation” beside the gift that follows many; Rom 8:1 says there is now no condemnation for those in Christ Jesus; John 5:24 says the one who hears and believes “does not come into judgment”. Set beside the row on works, as the text has them. Where Christian traditions part on how these stand to one another, and on how far “all” reaches in Rom 5:18, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Rom.8.1",
+      "John.5.24",
+      "Rom.5.18",
+      "2Cor.3.9",
+      "Rom.5.16",
+      "2Cor.7.3"
+     ],
+     "eg": [
+      {
+       "id": "Rom.8.1",
+       "ref": "Romans 8:1",
+       "text": "Therefore, there is now no condemnation for those who are in Christ Jesus.",
+       "words": [
+        {
+         "key": "g2631",
+         "lemma": "κατάκριμα"
+        }
+       ]
+      },
+      {
+       "id": "John.5.24",
+       "ref": "John 5:24",
+       "text": "Truly, truly, I tell you, whoever hears My word and believes Him who sent Me has eternal life and will not come under judgment. Indeed, he has crossed over from death to life.",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.18",
+       "ref": "Romans 5:18",
+       "text": "So then, just as one trespass brought condemnation for all men, so also one act of righteousness brought justification and life for all men.",
+       "words": [
+        {
+         "key": "g2631",
+         "lemma": "κατάκριμα"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.3.9",
+       "ref": "2 Corinthians 3:9",
+       "text": "For if the ministry of condemnation was glorious, how much more glorious is the ministry of righteousness!",
+       "words": [
+        {
+         "key": "g2633",
+         "lemma": "κατάκρισις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Justice with loving devotion, mercy, grace: “The LORD loves righteousness and justice”; “mercy triumphs over judgment”",
+     "note": "The text's own pairs. The page does not say how they are reconciled.",
+     "doors": [
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "grace",
+       "name": "grace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Ps.33.5",
+      "Hos.2.19",
+      "Mic.6.8",
+      "Jas.2.13",
+      "Matt.23.23",
+      "Ps.89.14",
+      "Ps.101.1",
+      "Ps.119.149",
+      "Isa.16.5",
+      "Jer.9.24",
+      "Hos.12.6",
+      "Zech.7.9"
+     ],
+     "eg": [
+      {
+       "id": "Ps.33.5",
+       "ref": "Psalms 33:5",
+       "text": "The LORD loves righteousness and justice; the earth is full of His loving devotion.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Hos.2.19",
+       "ref": "Hosea 2:19",
+       "text": "So I will betroth you to Me forever; I will betroth you in righteousness and justice, in loving devotion and compassion.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Mic.6.8",
+       "ref": "Micah 6:8",
+       "text": "He has shown you, O man, what is good. And what does the LORD require of you but to act justly, to love mercy, and to walk humbly with your God?",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.13",
+       "ref": "James 2:13",
+       "text": "For judgment without mercy will be shown to anyone who has not been merciful. Mercy triumphs over judgment.",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judgment and what follows, in the text's own words: eternal, fire, destruction, Gehenna",
+     "note": "The words the verses use: “eternal judgment” (Heb 6:2), “eternal destruction” (2 Thess 1:9), “eternal fire” (Jude 7), “destruction of the ungodly” (2 Pet 3:7), “the fire of hell” (Matt 5:22) and “the sentence of hell” (Matt 23:33), where the Greek is geenna in both. Where Christian traditions part on what follows the final judgment -- punishment without end, an end of the wicked, or the restoration of all -- the page takes no side; it sets the verses as they stand. This row holds only verses that use a word for judgment: the sheep and the goats (Matt 25:31-46), gathered with this card, is not in it.",
+     "doors": [
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Matt.5.22",
+      "Heb.6.2",
+      "2Thess.1.9",
+      "Jude.1.7",
+      "Matt.23.33",
+      "Heb.10.27",
+      "2Pet.2.3",
+      "2Pet.3.7",
+      "Jude.1.6"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.22",
+       "ref": "Matthew 5:22",
+       "text": "But I tell you that anyone who is angry with his brother will be subject to judgment. Again, anyone who says to his brother, ‘Raca,' will be subject to the Sanhedrin. But anyone who says, ‘You fool!' will be subject to the fire of hell.",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "Heb.6.2",
+       "ref": "Hebrews 6:2",
+       "text": "instruction about baptisms, the laying on of hands, the resurrection of the dead, and eternal judgment.",
+       "words": [
+        {
+         "key": "g2917",
+         "lemma": "κρίμα"
+        }
+       ]
+      },
+      {
+       "id": "2Thess.1.9",
+       "ref": "2 Thessalonians 1:9",
+       "text": "They will suffer the penalty of eternal destruction, separated from the presence of the Lord and the glory of His might,",
+       "words": [
+        {
+         "key": "g1349",
+         "lemma": "δίκη"
+        }
+       ]
+      },
+      {
+       "id": "Jude.1.7",
+       "ref": "Jude 1:7",
+       "text": "In like manner, Sodom and Gomorrah and the cities around them, who indulged in sexual immorality and pursued strange flesh, are on display as an example of those who sustain the punishment of eternal fire.",
+       "words": [
+        {
+         "key": "g1349",
+         "lemma": "δίκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judgment falling on particular acts: murder, resisting authority, eating and drinking without recognizing the body, would-be teachers, oaths, defrauding widows, turning grace into license",
+     "note": "Among them: murder (Matt 5:21), resisting authority (Rom 13:2), eating and drinking without recognizing the body (1 Cor 11:29), would-be teachers (Jas 3:1), oaths (Jas 5:12: “fall under judgment”), defrauding widows of their houses (Mark 12:40: “greater condemnation”), ungodly men who turn the grace of God into a license for immorality (Jude 4), the angels who sinned, “held for judgment” (2 Pet 2:4), and Rom 3:8, “their condemnation is deserved”.",
+     "doors": [],
+     "n": 14,
+     "verses": [
+      "Matt.5.21",
+      "Rom.13.2",
+      "1Cor.11.29",
+      "Jas.3.1",
+      "Rom.3.8",
+      "Mark.12.40",
+      "1Cor.11.34",
+      "Gal.5.10",
+      "1Tim.3.6",
+      "1Tim.5.12",
+      "1Tim.5.24",
+      "Jas.5.12",
+      "2Pet.2.4",
+      "Jude.1.4"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.21",
+       "ref": "Matthew 5:21",
+       "text": "You have heard that it was said to the ancients, ‘Do not murder' and ‘Anyone who murders will be subject to judgment.'",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.13.2",
+       "ref": "Romans 13:2",
+       "text": "Consequently, whoever resists authority is opposing what God has set in place, and those who do so will bring judgment on themselves.",
+       "words": [
+        {
+         "key": "g2917",
+         "lemma": "κρίμα"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.11.29",
+       "ref": "1 Corinthians 11:29",
+       "text": "For anyone who eats and drinks without recognizing the body eats and drinks judgment on himself.",
+       "words": [
+        {
+         "key": "g2917",
+         "lemma": "κρίμα"
+        }
+       ]
+      },
+      {
+       "id": "Jas.3.1",
+       "ref": "James 3:1",
+       "text": "Not many of you should become teachers, my brothers, because you know that we who teach will be judged more strictly.",
+       "words": [
+        {
+         "key": "g2917",
+         "lemma": "κρίμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Among them: the breastpiece of judgment and the Urim (Exod 28:15-30; Num 27:21) and the lot (Prov 16:33); Jude 9, where the Greek is “a judgment of blasphemy” and the Berean prints “slanderous charge”. About 163 verses where the Hebrew mishpat means statute, ordinance or custom (for example Deut 4:5 and Lev 18:4) are another sense of the word and are not shown on this page.",
+     "doors": [],
+     "n": 44,
+     "verses": [
+      "Exod.28.15",
+      "Matt.7.2",
+      "2Pet.2.11",
+      "Exod.28.29",
+      "Exod.28.30",
+      "Num.27.21",
+      "2Sam.15.4",
+      "1Kgs.3.11",
+      "1Kgs.11.33",
+      "2Chr.24.24",
+      "Job.32.9",
+      "Job.34.4",
+      "Job.36.17",
+      "Ps.25.9",
+      "Ps.37.30",
+      "Ps.111.7",
+      "Ps.112.5",
+      "Ps.149.9",
+      "Prov.2.8",
+      "Prov.12.5",
+      "Prov.13.23",
+      "Prov.16.33",
+      "Prov.19.29",
+      "Prov.21.7",
+      "Prov.21.15",
+      "Prov.28.5",
+      "Eccl.11.9",
+      "Isa.40.14",
+      "Isa.50.8",
+      "Jer.5.1",
+      "Jer.7.5",
+      "Jer.17.11",
+      "Lam.3.59",
+      "Ezek.18.8",
+      "Ezek.21.27",
+      "Mic.3.1",
+      "Mic.3.8",
+      "Mic.3.9",
+      "Hab.1.7",
+      "Luke.11.42",
+      "Luke.20.47",
+      "John.7.24",
+      "Acts.28.4",
+      "Jude.1.9"
+     ],
+     "eg": [
+      {
+       "id": "Exod.28.15",
+       "ref": "Exodus 28:15",
+       "text": "You are also to make a breastpiece of judgment with the same workmanship as the ephod. Construct it with gold, with blue, purple, and scarlet yarn, and with finely spun linen.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      },
+      {
+       "id": "Matt.7.2",
+       "ref": "Matthew 7:2",
+       "text": "For with the same judgment you pronounce, you will be judged, and with the measure you use, it will be measured to you.",
+       "words": [
+        {
+         "key": "g2917",
+         "lemma": "κρίμα"
+        }
+       ]
+      },
+      {
+       "id": "2Pet.2.11",
+       "ref": "2 Peter 2:11",
+       "text": "Yet not even angels, though greater in strength and power, dare to bring such slanderous charges against them before the Lord.",
+       "words": [
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "Exod.28.29",
+       "ref": "Exodus 28:29",
+       "text": "Whenever Aaron enters the Holy Place, he shall bear the names of the sons of Israel over his heart on the breastpiece of judgment, as a continual reminder before the LORD.",
+       "words": [
+        {
+         "key": "h4941",
+         "lemma": "מִשְׁפָּט"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 301,
+   "rows": [
+    {
+     "label": "God judges, and is asked to judge: “the Judge of all the earth”, “May the LORD judge between us”, “vindicate me”",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 89,
+     "verses": [
+      "Gen.18.25",
+      "Ps.96.13",
+      "Isa.33.22",
+      "1Pet.2.23",
+      "Job.9.15",
+      "Job.23.7",
+      "Gen.15.14",
+      "Gen.16.5",
+      "Gen.30.6",
+      "Gen.31.53",
+      "Exod.5.21",
+      "Deut.32.36",
+      "Judg.11.27",
+      "1Sam.2.10",
+      "1Sam.3.13",
+      "1Sam.24.12",
+      "1Sam.24.15",
+      "2Sam.18.31",
+      "1Kgs.8.32",
+      "1Chr.16.33",
+      "2Chr.6.23",
+      "2Chr.20.12",
+      "Ps.7.8",
+      "Ps.7.11",
+      "Ps.9.4",
+      "Ps.9.8",
+      "Ps.9.19",
+      "Ps.10.18",
+      "Ps.26.1",
+      "Ps.35.24",
+      "Ps.43.1",
+      "Ps.50.4",
+      "Ps.50.6",
+      "Ps.51.4",
+      "Ps.54.1",
+      "Ps.58.11",
+      "Ps.67.4",
+      "Ps.75.2",
+      "Ps.75.7",
+      "Ps.82.1",
+      "Ps.82.8",
+      "Ps.94.2",
+      "Ps.96.10",
+      "Ps.98.9",
+      "Ps.110.6",
+      "Ps.135.14",
+      "Eccl.3.17",
+      "Isa.2.4",
+      "Isa.3.13",
+      "Isa.51.5",
+      "Isa.66.16",
+      "Jer.2.35",
+      "Jer.11.20",
+      "Jer.25.31",
+      "Ezek.7.3",
+      "Ezek.7.8",
+      "Ezek.7.27",
+      "Ezek.11.10",
+      "Ezek.11.11",
+      "Ezek.16.38",
+      "Ezek.17.20",
+      "Ezek.18.30",
+      "Ezek.20.35",
+      "Ezek.20.36",
+      "Ezek.21.30",
+      "Ezek.24.14",
+      "Ezek.33.20",
+      "Ezek.34.17",
+      "Ezek.34.20",
+      "Ezek.34.22",
+      "Ezek.35.11",
+      "Ezek.36.19",
+      "Ezek.38.22",
+      "Joel.3.2",
+      "Joel.3.12",
+      "Mic.4.3",
+      "Acts.7.7",
+      "Rom.2.16",
+      "Rom.3.4",
+      "Rom.3.6",
+      "Rom.8.3",
+      "1Cor.5.13",
+      "Heb.10.30",
+      "Heb.13.4",
+      "1Pet.1.17",
+      "2Pet.2.6",
+      "Rev.18.8",
+      "Rev.18.20",
+      "Rev.19.2"
+     ],
+     "eg": [
+      {
+       "id": "Gen.18.25",
+       "ref": "Genesis 18:25",
+       "text": "Far be it from You to do such a thing-to kill the righteous with the wicked, so that the righteous and the wicked are treated alike. Far be it from You! Will not the Judge of all the earth do what is right?”",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "Ps.96.13",
+       "ref": "Psalms 96:13",
+       "text": "before the LORD, for He is coming-He is coming to judge the earth. He will judge the world in righteousness and the peoples in His faithfulness.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "Isa.33.22",
+       "ref": "Isaiah 33:22",
+       "text": "For the LORD is our Judge, the LORD is our lawgiver, the LORD is our King. It is He who will save us.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.2.23",
+       "ref": "1 Peter 2:23",
+       "text": "When they heaped abuse on Him, He did not retaliate; when He suffered, He made no threats, but entrusted Himself to Him who judges justly.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus: “I judge”, “I do not judge”, “has entrusted all judgment to the Son”, “who will judge the living and the dead”",
+     "note": "By hand: the verses where the text itself names Jesus, Christ or the Son, or has Jesus say “I”. They sit side by side as they stand -- “I judge no one” (John 8:15), “I do not judge him” (John 12:47), “I judge as I hear” (John 5:30), “the word I spoke will judge him on the last day” (John 12:48) -- and the page does not reconcile them.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "John.5.22",
+      "John.8.15",
+      "John.12.47",
+      "2Tim.4.1",
+      "John.3.17",
+      "Rom.2.16",
+      "John.5.30",
+      "John.8.11",
+      "John.8.16",
+      "John.8.26",
+      "John.12.48"
+     ],
+     "eg": [
+      {
+       "id": "John.5.22",
+       "ref": "John 5:22",
+       "text": "Furthermore, the Father judges no one, but has assigned all judgment to the Son,",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "John.8.15",
+       "ref": "John 8:15",
+       "text": "You judge according to the flesh; I judge no one.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "John.12.47",
+       "ref": "John 12:47",
+       "text": "As for anyone who hears My words and does not keep them, I do not judge him. For I have not come to judge the world, but to save the world.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.4.1",
+       "ref": "2 Timothy 4:1",
+       "text": "I charge you in the presence of God and of Christ Jesus, who will judge the living and the dead, and in view of His appearing and His kingdom:",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judging by one the verse calls “the Lord”, “He”, “the One” or describes: “the Man He has appointed”, “Faithful and True”",
+     "note": "The text says “the Lord”, “He”, “the One”, or describes him -- “Faithful and True” (Rev 19:11), “the Man He has appointed” (Acts 17:31), “Him who is ready to judge” (1 Pet 4:5), “One who seeks it and judges” (John 8:50). Readers take these of the Father or of Christ, and the page does not choose.",
+     "doors": [],
+     "n": 9,
+     "verses": [
+      "1Cor.4.4",
+      "Rev.6.10",
+      "Rev.19.11",
+      "Acts.17.31",
+      "John.8.50",
+      "1Cor.4.5",
+      "1Cor.11.32",
+      "1Pet.4.5",
+      "Rev.16.5"
+     ],
+     "eg": [
+      {
+       "id": "1Cor.4.4",
+       "ref": "1 Corinthians 4:4",
+       "text": "My conscience is clear, but that does not vindicate me. It is the Lord who judges me.",
+       "words": [
+        {
+         "key": "g350",
+         "lemma": "ἀνακρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.6.10",
+       "ref": "Revelation 6:10",
+       "text": "And they cried out in a loud voice, “How long, O Lord, holy and true, until You judge those who dwell upon the earth and avenge our blood?”",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.19.11",
+       "ref": "Revelation 19:11",
+       "text": "Then I saw heaven standing open, and there before me was a white horse. And its rider is called Faithful and True. With righteousness He judges and wages war.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.17.31",
+       "ref": "Acts 17:31",
+       "text": "For He has set a day when He will judge the world with justice by the Man He has appointed. He has given proof of this to everyone by raising Him from the dead.”",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Told to judge, and promised judging: “judge righteously”, “judge for yourselves”, “the saints will judge the world”, “twelve thrones”",
+     "note": "Set beside the row that follows, as the text has them; the page does not say how they are reconciled.",
+     "doors": [
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 20,
+     "verses": [
+      "Lev.19.15",
+      "John.7.24",
+      "1Cor.6.2",
+      "Matt.19.28",
+      "1Cor.5.12",
+      "Deut.1.16",
+      "Deut.16.18",
+      "Ps.82.3",
+      "Prov.31.9",
+      "Isa.1.17",
+      "Ezek.44.24",
+      "Zech.7.9",
+      "Zech.8.16",
+      "Luke.7.43",
+      "Luke.12.57",
+      "Luke.22.30",
+      "Acts.4.19",
+      "1Cor.6.3",
+      "1Cor.10.15",
+      "1Cor.11.13"
+     ],
+     "eg": [
+      {
+       "id": "Lev.19.15",
+       "ref": "Leviticus 19:15",
+       "text": "You must not pervert justice; you must not show partiality to the poor or favoritism to the rich; you are to judge your neighbor fairly.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "John.7.24",
+       "ref": "John 7:24",
+       "text": "Stop judging by outward appearances, and start judging justly.”",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.6.2",
+       "ref": "1 Corinthians 6:2",
+       "text": "Do you not know that the saints will judge the world? And if you are to judge the world, are you not competent to judge trivial cases?",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.19.28",
+       "ref": "Matthew 19:28",
+       "text": "Jesus said to them, “Truly I tell you, in the renewal of all things, when the Son of Man sits on His glorious throne, you who have followed Me will also sit on twelve thrones, judging the twelve tribes of Israel.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Told not to judge, and rebuked for judging: “Do not judge, or you will be judged”, “who are you to judge your neighbor?”, “stop judging by outward appearances”",
+     "note": null,
+     "doors": [],
+     "n": 17,
+     "verses": [
+      "Matt.7.1",
+      "Rom.14.4",
+      "Jas.4.12",
+      "Col.2.16",
+      "Rom.2.1",
+      "Matt.7.2",
+      "Luke.6.37",
+      "John.7.24",
+      "John.8.15",
+      "Rom.2.3",
+      "Rom.14.3",
+      "Rom.14.10",
+      "Rom.14.13",
+      "1Cor.4.5",
+      "1Cor.5.12",
+      "1Cor.10.29",
+      "Jas.4.11"
+     ],
+     "eg": [
+      {
+       "id": "Matt.7.1",
+       "ref": "Matthew 7:1",
+       "text": "“Do not judge, or you will be judged.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.14.4",
+       "ref": "Romans 14:4",
+       "text": "Who are you to judge someone else's servant? To his own master he stands or falls. And he will stand, for the Lord is able to make him stand.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Jas.4.12",
+       "ref": "James 4:12",
+       "text": "There is only one Lawgiver and Judge, the One who is able to save and destroy. But who are you to judge your neighbor?",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Col.2.16",
+       "ref": "Colossians 2:16",
+       "text": "Therefore let no one judge you by what you eat or drink, or with regard to a feast, a New Moon, or a Sabbath.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The judges: Moses, the judges of Israel, Samuel, the king, elders and priests judge the people; “who made you ruler and judge over us?”, “judged Israel twenty-three years”",
+     "note": "In Isa 11:3-4 the one who “will judge the poor with righteousness” is the shoot from the stump of Jesse (11:1); whom the verse means readers take differently, and the page does not choose.",
+     "doors": [
+      {
+       "id": "judge",
+       "name": "judge",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 95,
+     "verses": [
+      "Exod.2.14",
+      "Judg.4.4",
+      "1Sam.7.15",
+      "1Kgs.3.9",
+      "1Chr.17.6",
+      "1Chr.17.10",
+      "1Chr.23.4",
+      "1Chr.26.29",
+      "2Chr.1.2",
+      "2Chr.19.5",
+      "2Sam.7.11",
+      "2Sam.15.4",
+      "Amos.2.3",
+      "Deut.17.9",
+      "Deut.17.12",
+      "Deut.19.17",
+      "Deut.19.18",
+      "Deut.21.2",
+      "Deut.25.2",
+      "Ezra.10.14",
+      "Hos.7.7",
+      "Hos.13.10",
+      "Isa.1.26",
+      "Isa.3.2",
+      "Isa.16.5",
+      "Isa.40.23",
+      "Isa.59.4",
+      "Judg.2.16",
+      "Judg.2.17",
+      "Judg.2.18",
+      "Judg.2.19",
+      "Job.9.24",
+      "Job.12.17",
+      "Josh.8.33",
+      "Josh.23.2",
+      "Josh.24.1",
+      "Mic.5.1",
+      "Mic.7.3",
+      "Num.25.5",
+      "Obad.1.21",
+      "Ps.2.10",
+      "Ps.141.6",
+      "Ps.148.11",
+      "Zeph.3.3",
+      "Gen.19.9",
+      "Gen.49.16",
+      "Exod.18.13",
+      "Exod.18.16",
+      "Exod.18.22",
+      "Exod.18.26",
+      "Num.35.24",
+      "Judg.3.10",
+      "Judg.10.2",
+      "Judg.10.3",
+      "Judg.12.7",
+      "Judg.12.8",
+      "Judg.12.9",
+      "Judg.12.11",
+      "Judg.12.13",
+      "Judg.12.14",
+      "Judg.15.20",
+      "Judg.16.31",
+      "Ruth.1.1",
+      "1Sam.4.18",
+      "1Sam.7.6",
+      "1Sam.7.16",
+      "1Sam.7.17",
+      "1Sam.8.1",
+      "1Sam.8.2",
+      "1Sam.8.5",
+      "1Sam.8.6",
+      "1Sam.8.20",
+      "1Sam.12.7",
+      "1Kgs.3.28",
+      "1Kgs.7.7",
+      "2Kgs.15.5",
+      "2Kgs.23.22",
+      "2Chr.1.10",
+      "2Chr.1.11",
+      "2Chr.19.6",
+      "2Chr.22.8",
+      "2Chr.26.21",
+      "Ps.58.1",
+      "Ps.72.2",
+      "Ps.72.4",
+      "Prov.8.16",
+      "Prov.29.14",
+      "Isa.1.23",
+      "Isa.11.3",
+      "Isa.11.4",
+      "Jer.5.28",
+      "Mic.3.11",
+      "Dan.9.12",
+      "Lev.19.15",
+      "Deut.1.16"
+     ],
+     "eg": [
+      {
+       "id": "Exod.2.14",
+       "ref": "Exodus 2:14",
+       "text": "But the man replied, “Who made you ruler and judge over us? Are you planning to kill me as you killed the Egyptian?” Then Moses was afraid and thought, “This thing I have done has surely become known.”",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "Judg.4.4",
+       "ref": "Judges 4:4",
+       "text": "Now Deborah, a prophetess, the wife of Lappidoth, was judging Israel at that time.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.7.15",
+       "ref": "1 Samuel 7:15",
+       "text": "So Samuel judged Israel all the days of his life.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.3.9",
+       "ref": "1 Kings 3:9",
+       "text": "Therefore give Your servant an understanding heart to judge Your people and to discern between good and evil. For who is able to govern this great people of Yours?”",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judged, and believing, faith: “whoever believes in Him is not condemned”, “by faith Noah ... condemned the world”",
+     "note": "These two rows are listed in the alphabetical order of their labels and carry no ranking. Mark 16:16 stands in the longer ending (16:9-20) that the earliest manuscripts lack. Where Christian traditions part on how faith and works stand to the judgment, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "John.3.18",
+      "Mark.16.16",
+      "2Thess.2.12",
+      "Heb.11.7",
+      "Rom.14.22",
+      "Rom.14.23"
+     ],
+     "eg": [
+      {
+       "id": "John.3.18",
+       "ref": "John 3:18",
+       "text": "Whoever believes in Him is not condemned, but whoever does not believe has already been condemned, because he has not believed in the name of God's one and only Son.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Mark.16.16",
+       "ref": "Mark 16:16",
+       "text": "Whoever believes and is baptized will be saved, but whoever does not believe will be condemned.",
+       "words": [
+        {
+         "key": "g2632",
+         "lemma": "κατακρίνω"
+        }
+       ]
+      },
+      {
+       "id": "2Thess.2.12",
+       "ref": "2 Thessalonians 2:12",
+       "text": "in order that judgment may come upon all who have disbelieved the truth and delighted in wickedness.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.7",
+       "ref": "Hebrews 11:7",
+       "text": "By faith Noah, when warned about things not yet seen, in godly fear built an ark to save his family. By faith he condemned the world and became heir of the righteousness that comes by faith.",
+       "words": [
+        {
+         "key": "g2632",
+         "lemma": "κατακρίνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judged, and works, deeds, ways: “according to each one's work”, “according to his deeds”, “according to your ways”",
+     "note": "These two rows are listed in the alphabetical order of their labels and carry no ranking. Where Christian traditions part on how judgment by works stands to being counted righteous by faith, the page takes no side.",
+     "doors": [
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Ezek.7.3",
+      "1Pet.1.17",
+      "Rev.20.12",
+      "Ezek.18.30",
+      "1Kgs.8.32",
+      "Rom.2.1",
+      "2Chr.6.23",
+      "Eccl.3.17",
+      "Ezek.7.8",
+      "Ezek.7.27",
+      "Ezek.24.14",
+      "Ezek.33.20",
+      "Ezek.36.19",
+      "Rom.2.3",
+      "Rev.20.13"
+     ],
+     "eg": [
+      {
+       "id": "Ezek.7.3",
+       "ref": "Ezekiel 7:3",
+       "text": "The end is now upon you, and I will unleash My anger against you. I will judge you according to your ways and repay you for all your abominations.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.1.17",
+       "ref": "1 Peter 1:17",
+       "text": "Since you call on a Father who judges each one's work impartially, conduct yourselves in reverent fear during your stay as foreigners.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.20.12",
+       "ref": "Revelation 20:12",
+       "text": "And I saw the dead, great and small, standing before the throne. And books were opened, and one of them was the Book of Life. And the dead were judged according to their deeds, as recorded in the books.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.18.30",
+       "ref": "Ezekiel 18:30",
+       "text": "Therefore, O house of Israel, I will judge you, each according to his ways, declares the Lord GOD. Repent and turn from all your transgressions, so that your iniquity will not become your downfall.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Judging the earth, the peoples and the nations; judging the living and the dead",
+     "note": "Where Christian traditions part on the final judgment and what follows it -- punishment without end, an end of the wicked, or the restoration of all -- the page takes no side; the verses are set as they stand. Rev 20:12-13 and 1 Pet 4:6 are among the hardest, and are here.",
+     "doors": [
+      {
+       "id": "judge",
+       "name": "judge",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 31,
+     "verses": [
+      "Ps.96.13",
+      "Joel.3.12",
+      "2Tim.4.1",
+      "Rev.20.12",
+      "Gen.15.14",
+      "John.3.17",
+      "Rom.2.16",
+      "1Chr.16.33",
+      "Ps.9.8",
+      "Ps.9.19",
+      "Ps.67.4",
+      "Ps.96.10",
+      "Ps.98.9",
+      "Ps.110.6",
+      "Isa.2.4",
+      "Isa.66.16",
+      "Jer.25.31",
+      "Joel.3.2",
+      "Mic.4.3",
+      "John.12.47",
+      "John.16.11",
+      "Acts.7.7",
+      "Acts.17.31",
+      "Rom.3.6",
+      "1Cor.5.13",
+      "1Cor.6.2",
+      "Heb.11.7",
+      "1Pet.4.5",
+      "1Pet.4.6",
+      "Rev.11.18",
+      "Rev.20.13"
+     ],
+     "eg": [
+      {
+       "id": "Ps.96.13",
+       "ref": "Psalms 96:13",
+       "text": "before the LORD, for He is coming-He is coming to judge the earth. He will judge the world in righteousness and the peoples in His faithfulness.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "Joel.3.12",
+       "ref": "Joel 3:12",
+       "text": "Let the nations be roused and advance to the Valley of Jehoshaphat, for there I will sit down to judge all the nations on every side.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.4.1",
+       "ref": "2 Timothy 4:1",
+       "text": "I charge you in the presence of God and of Christ Jesus, who will judge the living and the dead, and in view of His appearing and His kingdom:",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.20.12",
+       "ref": "Revelation 20:12",
+       "text": "And I saw the dead, great and small, standing before the throne. And books were opened, and one of them was the Book of Life. And the dead were judged according to their deeds, as recorded in the books.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Condemn, condemned: “neither do I condemn you”, “who is the one who condemns?”, “will condemn this generation”",
+     "note": "The Greek verb κατακρίνω. It is said of the men who condemn Jesus to death (Matt 20:18; Mark 10:33; 14:64), of God who “condemned sin in the flesh” (Rom 8:3) and the cities of Sodom and Gomorrah (2 Pet 2:6), and of Jesus who says “neither do I condemn you” (John 8:11). Mark 16:16 stands in the longer ending (16:9-20) that the earliest manuscripts lack.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "John.8.11",
+      "Rom.8.34",
+      "Matt.12.41",
+      "Rom.8.3",
+      "Matt.12.42",
+      "Matt.20.18",
+      "Matt.27.3",
+      "Mark.10.33",
+      "Mark.14.64",
+      "Mark.16.16",
+      "Luke.11.31",
+      "Luke.11.32",
+      "John.8.10",
+      "Rom.2.1",
+      "Rom.14.23",
+      "1Cor.11.32",
+      "Heb.11.7",
+      "2Pet.2.6"
+     ],
+     "eg": [
+      {
+       "id": "John.8.11",
+       "ref": "John 8:11",
+       "text": "“No one, Lord,” she answered. “Then neither do I condemn you,” Jesus declared. “Now go and sin no more.”",
+       "words": [
+        {
+         "key": "g2632",
+         "lemma": "κατακρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.34",
+       "ref": "Romans 8:34",
+       "text": "Who is there to condemn us? For Christ Jesus, who died, and more than that was raised to life, is at the right hand of God-and He is interceding for us.",
+       "words": [
+        {
+         "key": "g2632",
+         "lemma": "κατακρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.41",
+       "ref": "Matthew 12:41",
+       "text": "The men of Nineveh will stand at the judgment with this generation and condemn it; for they repented at the preaching of Jonah, and now One greater than Jonah is here.",
+       "words": [
+        {
+         "key": "g2632",
+         "lemma": "κατακρίνω"
+        },
+        {
+         "key": "g2920",
+         "lemma": "κρίσις"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.3",
+       "ref": "Romans 8:3",
+       "text": "For what the law was powerless to do in that it was weakened by the flesh, God did by sending His own Son in the likeness of sinful man, as an offering for sin. He thus condemned sin in the flesh,",
+       "words": [
+        {
+         "key": "g2632",
+         "lemma": "κατακρίνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Among them: Gen 19:9, the men of Sodom (“he is already acting like a judge!”); Matt 5:40 and 1 Cor 6:1-6, going to law; Luke 19:22, “I will judge you by your own words”; Rom 2:12, 2:27 and Jas 2:12, judged by the law; Jas 5:9, “so that you will not be judged”, said to those who grumble against one another; Ps 82:2, God's question to the judges (“How long will you judge unjustly?”); Isa 43:26, the LORD and Israel arguing their case; Job 22:13, the question Eliphaz puts to Job (“Does He judge through thick darkness?”); Acts 23-26, Paul on trial.",
+     "doors": [],
+     "n": 46,
+     "verses": [
+      "Deut.25.1",
+      "Matt.5.40",
+      "Rom.2.12",
+      "2Sam.19.9",
+      "Job.21.22",
+      "Job.22.13",
+      "Job.36.31",
+      "Ps.37.33",
+      "Ps.82.2",
+      "Ps.109.7",
+      "Ps.109.31",
+      "Prov.29.9",
+      "Isa.5.3",
+      "Isa.43.26",
+      "Jer.22.16",
+      "Jer.30.13",
+      "Lam.3.59",
+      "Ezek.20.4",
+      "Ezek.22.2",
+      "Ezek.23.24",
+      "Ezek.23.36",
+      "Ezek.23.45",
+      "Luke.19.22",
+      "John.7.51",
+      "John.18.31",
+      "Acts.13.27",
+      "Acts.13.46",
+      "Acts.16.15",
+      "Acts.23.3",
+      "Acts.23.6",
+      "Acts.24.21",
+      "Acts.25.9",
+      "Acts.25.10",
+      "Acts.25.20",
+      "Acts.26.6",
+      "Acts.26.8",
+      "Rom.2.27",
+      "Rom.3.7",
+      "Rom.14.5",
+      "1Cor.2.15",
+      "1Cor.5.3",
+      "1Cor.6.1",
+      "1Cor.6.6",
+      "1Cor.11.31",
+      "Jas.2.12",
+      "Jas.5.9"
+     ],
+     "eg": [
+      {
+       "id": "Deut.25.1",
+       "ref": "Deuteronomy 25:1",
+       "text": "If there is a dispute between men, they are to go to court to be judged, so that the innocent may be acquitted and the guilty condemned.",
+       "words": [
+        {
+         "key": "h8199",
+         "lemma": "שָׁפַט"
+        }
+       ]
+      },
+      {
+       "id": "Matt.5.40",
+       "ref": "Matthew 5:40",
+       "text": "if someone wants to sue you and take your tunic, let him have your cloak as well;",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.12",
+       "ref": "Romans 2:12",
+       "text": "All who sin apart from the law will also perish apart from the law, and all who sin under the law will be judged by the law.",
+       "words": [
+        {
+         "key": "g2919",
+         "lemma": "κρίνω"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.19.9",
+       "ref": "2 Samuel 19:9",
+       "text": "And all the people throughout the tribes of Israel were arguing, “The king rescued us from the hand of our enemies and delivered us from the hand of the Philistines, but now he has fled the land because of Absalom.",
+       "words": [
+        {
+         "key": "h1777",
+         "lemma": "דִּין"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “judge”, “judgment”, “condemn”",
+  "words": [
+   {
+    "key": "h7561",
+    "lemma": "רָשַׁע",
+    "translit": "ra.sah",
+    "gloss": "be wicked",
+    "lang": "Hebrew",
+    "n": 14,
+    "verses": [
+     "Deut.25.1",
+     "Exod.22.9",
+     "Job.9.20",
+     "Job.9.29",
+     "Job.10.2",
+     "Job.15.6",
+     "Job.32.3",
+     "Job.34.17",
+     "Job.34.29",
+     "Job.40.8",
+     "Ps.37.33",
+     "Ps.94.21",
+     "Prov.12.2",
+     "Prov.17.15"
+    ],
+    "note": "רָשַׁע is “be wicked”, and in the form used here, “declare guilty”: “so that the innocent may be acquitted and the guilty condemned” (Deut 25:1). A different word from שָׁפַט, which is the court's judging; the page does not make the two words one.",
+    "eg": [
+     {
+      "id": "Deut.25.1",
+      "ref": "Deuteronomy 25:1",
+      "text": "If there is a dispute between men, they are to go to court to be judged, so that the innocent may be acquitted and the guilty condemned."
+     },
+     {
+      "id": "Exod.22.9",
+      "ref": "Exodus 22:9",
+      "text": "In all cases of illegal possession of an ox, a donkey, a sheep, a garment, or any lost item that someone claims, ‘This is mine,' both parties shall bring their cases before the judges. The one whom the judges find guilty must pay back double to his neighbor."
+     }
+    ]
+   },
+   {
+    "key": "g1106",
+    "lemma": "γνώμη",
+    "translit": "gnōmē",
+    "gloss": "resolution",
+    "lang": "Greek",
+    "n": 4,
+    "verses": [
+     "1Cor.7.25",
+     "1Cor.1.10",
+     "1Cor.7.40",
+     "2Cor.8.10"
+    ],
+    "note": "γνώμη means opinion, purpose, resolve. The Berean prints “judgment” at 1 Cor 7:25 (“I give a judgment as one who by the Lord's mercy is trustworthy”) and “conviction” at 1 Cor 1:10. It is not the word for a verdict, and the page does not make the two words one.",
+    "eg": [
+     {
+      "id": "1Cor.7.25",
+      "ref": "1 Corinthians 7:25",
+      "text": "Now about virgins, I have no command from the Lord, but I give a judgment as one who by the Lord's mercy is trustworthy."
+     },
+     {
+      "id": "1Cor.1.10",
+      "ref": "1 Corinthians 1:10",
+      "text": "I appeal to you, brothers, in the name of our Lord Jesus Christ, that all of you agree together, so that there may be no divisions among you and that you may be united in mind and conviction."
+     }
+    ]
+   },
+   {
+    "key": "g2613",
+    "lemma": "καταδικάζω",
+    "translit": "katadikazō",
+    "gloss": "to condemn",
+    "lang": "Greek",
+    "n": 4,
+    "verses": [
+     "Matt.12.7",
+     "Jas.5.6",
+     "Matt.12.37",
+     "Luke.6.37"
+    ],
+    "note": "καταδικάζω is a different Greek word for condemning from κατακρίνω: “you would not have condemned the innocent” (Matt 12:7), “You have condemned and murdered the righteous” (Jas 5:6).",
+    "eg": [
+     {
+      "id": "Matt.12.7",
+      "ref": "Matthew 12:7",
+      "text": "If only you had known the meaning of ‘I desire mercy, not sacrifice,' you would not have condemned the innocent."
+     },
+     {
+      "id": "Jas.5.6",
+      "ref": "James 5:6",
+      "text": "You have condemned and murdered the righteous, who did not resist you."
+     }
+    ]
+   },
+   {
+    "key": "g2607",
+    "lemma": "καταγινώσκω",
+    "translit": "kataginōskō",
+    "gloss": "to condemn",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "1John.3.20",
+     "1John.3.21",
+     "Gal.2.11"
+    ],
+    "note": "καταγινώσκω, “to find fault with, to condemn”: “Even if our hearts condemn us, God is greater than our hearts, and He knows all things” (1 John 3:20).",
+    "eg": [
+     {
+      "id": "1John.3.20",
+      "ref": "1 John 3:20",
+      "text": "Even if our hearts condemn us, God is greater than our hearts, and He knows all things."
+     },
+     {
+      "id": "1John.3.21",
+      "ref": "1 John 3:21",
+      "text": "Beloved, if our hearts do not condemn us, we have confidence before God,"
+     }
+    ]
+   },
+   {
+    "key": "h8196",
+    "lemma": "שְׁפוֹט",
+    "translit": "she.phot",
+    "gloss": "judgment",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "2Chr.20.9",
+     "Ezek.23.10"
+    ],
+    "eg": [
+     {
+      "id": "2Chr.20.9",
+      "ref": "2 Chronicles 20:9",
+      "text": "‘If disaster comes upon us-whether sword or judgment, plague or famine-we will stand before this temple and before You, for Your Name is in this temple. We will cry out to You in our distress, and You will hear us and save us.'"
+     },
+     {
+      "id": "Ezek.23.10",
+      "ref": "Ezekiel 23:10",
+      "text": "They exposed her nakedness, seized her sons and daughters, and put her to the sword. Thus she became a byword among women, and they executed judgment against her."
+     }
+    ]
+   },
+   {
+    "key": "g1348",
+    "lemma": "δικαστής",
+    "translit": "dikastēs",
+    "gloss": "magistrate",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Acts.7.27",
+     "Acts.7.35"
+    ],
+    "eg": [
+     {
+      "id": "Acts.7.27",
+      "ref": "Acts 7:27",
+      "text": "But the man who was abusing his neighbor pushed Moses aside and said, ‘Who made you ruler and judge over us?"
+     },
+     {
+      "id": "Acts.7.35",
+      "ref": "Acts 7:35",
+      "text": "This Moses, whom they had rejected with the words, ‘Who made you ruler and judge?' is the one whom God sent to be their ruler and redeemer through the angel who appeared to him in the bush."
+     }
+    ]
+   },
+   {
+    "key": "h1884",
+    "lemma": "דְּתָבָר",
+    "translit": "de.ta.var",
+    "gloss": "judge",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Dan.3.2",
+     "Dan.3.3"
+    ],
+    "eg": [
+     {
+      "id": "Dan.3.2",
+      "ref": "Daniel 3:2",
+      "text": "Then King Nebuchadnezzar sent word to assemble the satraps, prefects, governors, advisers, treasurers, judges, magistrates, and all the other officials of the provinces to attend the dedication of the statue he had set up."
+     },
+     {
+      "id": "Dan.3.3",
+      "ref": "Daniel 3:3",
+      "text": "So the satraps, prefects, governors, advisers, treasurers, judges, magistrates, and all the rulers of the provinces assembled for the dedication of the statue that King Nebuchadnezzar had set up, and they stood before it."
+     }
+    ]
+   },
+   {
+    "key": "g1253",
+    "lemma": "διάκρισις",
+    "translit": "diakrisis",
+    "gloss": "discernment",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Rom.14.1"
+    ],
+    "eg": [
+     {
+      "id": "Rom.14.1",
+      "ref": "Romans 14:1",
+      "text": "Accept him whose faith is weak, without passing judgment on his opinions."
+     }
+    ]
+   },
+   {
+    "key": "g2922",
+    "lemma": "κριτήριον",
+    "translit": "kritērion",
+    "gloss": "court/lawsuit",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "1Cor.6.4"
+    ],
+    "eg": [
+     {
+      "id": "1Cor.6.4",
+      "ref": "1 Corinthians 6:4",
+      "text": "So if you need to settle everyday matters, do you appoint as judges those of no standing in the church?"
+     }
+    ]
+   },
+   {
+    "key": "h6414",
+    "lemma": "פָּלִיל",
+    "translit": "pa.lil",
+    "gloss": "judge",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Exod.21.22"
+    ],
+    "eg": [
+     {
+      "id": "Exod.21.22",
+      "ref": "Exodus 21:22",
+      "text": "If men who are fighting strike a pregnant woman and her child is born prematurely, but there is no further injury, he shall surely be fined as the woman's husband demands and as the court allows."
+     }
+    ]
+   },
+   {
+    "key": "h1782",
+    "lemma": "דַּיָּן",
+    "translit": "day.yan",
+    "gloss": "judge",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezra.7.25"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.7.25",
+      "ref": "Ezra 7:25",
+      "text": "And you, Ezra, according to the wisdom of your God, which you possess, are to appoint magistrates and judges to judge all the people west of the Euphrates-all who know the laws of your God. And you are to teach these laws to anyone who does not know them."
+     }
+    ]
+   },
+   {
+    "key": "h1778",
+    "lemma": "דִּין",
+    "translit": "din",
+    "gloss": "to judge",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezra.7.25"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.7.25",
+      "ref": "Ezra 7:25",
+      "text": "And you, Ezra, according to the wisdom of your God, which you possess, are to appoint magistrates and judges to judge all the people west of the Euphrates-all who know the laws of your God. And you are to teach these laws to anyone who does not know them."
+     }
+    ]
+   },
+   {
+    "key": "g2924",
+    "lemma": "κριτικός",
+    "translit": "kritikos",
+    "gloss": "discerning",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Heb.4.12"
+    ],
+    "note": "κριτικός is “able to discern”: “It judges the thoughts and intentions of the heart” (Heb 4:12).",
+    "eg": [
+     {
+      "id": "Heb.4.12",
+      "ref": "Hebrews 4:12",
+      "text": "For the word of God is living and active. Sharper than any double-edged sword, it pierces even to dividing soul and spirit, joints and marrow. It judges the thoughts and intentions of the heart."
+     }
+    ]
+   },
+   {
+    "key": "h6417",
+    "lemma": "פְּלִילִיָּה",
+    "translit": "pe.li.liy.yah",
+    "gloss": "judgment",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Isa.28.7"
+    ],
+    "eg": [
+     {
+      "id": "Isa.28.7",
+      "ref": "Isaiah 28:7",
+      "text": "These also stagger from wine and stumble from strong drink: Priests and prophets reel from strong drink and are befuddled by wine. They stumble because of strong drink, muddled in their visions and stumbling in their judgments."
+     }
+    ]
+   },
+   {
+    "key": "h6416",
+    "lemma": "פְּלִילִי",
+    "translit": "pe.li.li",
+    "gloss": "judge",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Job.31.28"
+    ],
+    "eg": [
+     {
+      "id": "Job.31.28",
+      "ref": "Job 31:28",
+      "text": "this would also be an iniquity to be judged, for I would have denied God on high."
+     }
+    ]
+   },
+   {
+    "key": "g5267",
+    "lemma": "ὑπόδικος",
+    "translit": "hupodikos",
+    "gloss": "accountable",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Rom.3.19"
+    ],
+    "eg": [
+     {
+      "id": "Rom.3.19",
+      "ref": "Romans 3:19",
+      "text": "Now we know that whatever the law says, it says to those who are under the law, so that every mouth may be silenced and the whole world held accountable to God."
+     }
+    ]
+   },
+   {
+    "key": "g843",
+    "lemma": "αὐτοκατάκριτος",
+    "translit": "autokatakritos",
+    "gloss": "self-condemned",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Titus.3.11"
+    ],
+    "eg": [
+     {
+      "id": "Titus.3.11",
+      "ref": "Titus 3:11",
+      "text": "knowing that such a man is corrupt and sinful; he is self-condemned."
+     }
+    ]
+   }
+  ]
+ }
+}

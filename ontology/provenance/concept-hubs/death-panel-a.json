@@ -1,0 +1,68 @@
+{"id": "death",
+ "seats": ["Lutheran", "Reformed", "Wesleyan", "Baptist / free church", "Pentecostal / Charismatic", "Catholic", "Eastern Orthodox", "the rabbi", "the young African American believer"],
+ "overall": "ship after fixes",
+ "fixes": [
+  {"row": "What the text says follows dying, side by side",
+   "kind": "tilt",
+   "verses": ["Eccl.9.5", "Job.14.14", "2Sam.12.23", "Phil.1.21", "Luke.16.22"],
+   "readers": ["Catholic", "Eastern Orthodox", "Baptist / free church", "Pentecostal / Charismatic"],
+   "why": "The note says the verses are 'ranked in none', but the lead puts Eccl 9:5 and Job 14:14 (the dead know nothing, does a man live again) first and Phil 1:21 fourth. Those four are the lead a reader sees first, so the row leans toward soul-sleep while claiming a neutral order. Luke 16:22 (the beggar carried to Abraham's side) sits below them. Neutral label and note are right; the lead is the tilt.",
+   "fix": "Drop the lead so the row runs in canon order (2 Sam 12:23, Job 14:10, Job 14:14, Eccl 9:4-5, Luke 16:22, John 11:25-26, Rom 14:8, Phil 1:21, Heb 9:27, Rev 14:13). Keep the neutral label and the note as written."},
+
+  {"row": "Death and the resurrection: “raised”, “rise”",
+   "kind": "OT framing",
+   "verses": ["Dan.12.2", "Ezek.37.12", "Isa.26.19"],
+   "readers": ["the rabbi", "Eastern Orthodox", "Catholic"],
+   "why": "Every example and lead verse is New Testament, and the 'rise' word set (ἀνάστασις, ἐγείρω, ἀνίστημι, ζωοποιέω) has no Hebrew word, so the Hebrew Scriptures' own hope of waking from the dust is missing from the hub. Dan 12:2 (many who sleep in the dust of the earth will awake) appears nowhere in the file. Isa 26:19 (your dead will live) sits only under Other words, 'shades', which files a resurrection text under a different word for the dead. A reader who knows the Hebrew hope would find the page's account of resurrection one-sided toward the New Testament.",
+   "fix": "Add Dan.12.2 and Ezek.37.12-13 to this row by hand, and move Isa.26.19 out of Other words into this row (note that its word is the shades, רְפָאִים, and that the verse is read here as the dead living). Add a Hebrew 'rise' set (קוּם, חָיָה) to the spec so the row is no longer Greek only. Order the lead with the Hebrew verse first."},
+
+  {"row": "Worthy of death, sentenced to death",
+   "kind": "note",
+   "verses": ["Matt.26.66", "Mark.14.64", "Luke.23.15", "Luke.23.22", "Acts.25.11"],
+   "readers": ["the rabbi", "the young African American believer"],
+   "why": "The row has no note. Its verdicts are spoken by a council (Matt 26:66; Mark 14:64), by Pilate and a crowd (Luke 23:15, 23:22), and by a governor (Acts 25:11, 25:25), and set beside the law's own sentences (Deut 19:6, 21:22). With no note, a reader can take the verdicts against Jesus as a judgment on a people or on the Jewish authorities, which is the reading the young believer's guard against culturally insensitive presentation exists to catch and which the rabbi would call a misreading of the Hebrew text. The Greek of Matt 26:66 is 'ἔνοχος θανάτου' ('deserving of death'), which the Berean renders 'He deserves to die', so the row's label is accurate; the risk is the framing.",
+   "fix": "Add a note: “The verdicts are those of the speakers in each verse (a council, a governor, a crowd); the page takes no side on whether any was just, and it reads no verdict on any people.” Keep the verses as they are. Keep the law's sentences as the lead, as they are."},
+
+  {"row": "Delivered from death",
+   "kind": "misfit",
+   "verses": ["Heb.5.7"],
+   "readers": ["Reformed", "Lutheran", "Catholic"],
+   "why": "Heb 5:7 is the lead verse. The Berean reads 'the One who could save Him from death, and He was heard because of His reverence' (checked live; the Greek is ἐκ θανάτου, 'from death'). Under the label 'Delivered from death' beside the Christ-died rows, a reader can take the verse as saying Christ was delivered from death, which the death-of-Christ rows and the Christian traditions disagree about. The row is about deliverance; this verse is a prayer whose answer the text does not state.",
+   "fix": "Move Heb.5.7 from the lead to its canon place, and add to the row's note: “Heb 5:7 names the One able to save the Son from death; the verse does not say how the prayer was answered, and the page takes no side on whether the cross or the resurrection is meant.”"},
+
+  {"row": "Christ died",
+   "kind": "merge",
+   "verses": ["Rom.5.6", "Rom.5.8", "1Cor.15.3", "Gal.2.21", "John.11.51"],
+   "readers": ["Lutheran", "Reformed", "Catholic", "Eastern Orthodox", "Baptist / free church"],
+   "why": "This verb row and the noun row 'The death of Christ' are both 'Christ's death' rows. Each has the same notes on what the death does and on the Lord's Supper, and the same divine-person filter. Two rows that say the same thing (rule 7) make the reader find the atonement question twice, and the verbs read as a second, separate account.",
+   "fix": "Merge into 'The death of Christ' (noun row 7): keep its ten verses, add the twelve verb verses under the same label, and keep one note. Keep the verb rows that name the LORD and the law's penalty as they are."},
+
+  {"row": "Death and the resurrection: “raised”, “rise”",
+   "kind": "merge",
+   "verses": ["Rom.6.4", "Rom.6.9", "Acts.2.24", "1Cor.15.21"],
+   "readers": ["Reformed", "Wesleyan", "Pentecostal / Charismatic"],
+   "why": "The adjective row 'Jesus Christ raised from the dead' shares Rom 6:4 and Rom 6:9 with this noun row, and the two say the same thing about the risen Christ. Rule 7 asks that rows saying the same thing be flagged.",
+   "fix": "Once the Hebrew hope is added (see the OT framing fix above), keep this row as the resurrection row and drop Rom 6:4 and 6:9 from the adjective row 'Jesus Christ raised from the dead', or merge the two with one note. The reader then finds one place for the risen Christ."}
+ ],
+ "worker_points": [
+  {"point": "1. Death with sin and the law; 'Adam died' label for Gen 5:5 beside 1 Cor 15:22 and Rom 5:15", "verdict": "fine", "why": "The note names both readings and takes no side. Gen 5:5 only says Adam died, and the label 'Adam died' says exactly that; the quoted 'as in Adam all die' is 1 Cor 15:22 and is read as such."},
+  {"point": "2. 'You will surely die': what die means in Gen 2:17; Gen 3:4 in the row", "verdict": "fine", "why": "The row is a sentence-spoken row, and Gen 3:4 is a denial of the sentence. The note flags it, so the label does not claim the serpent's words as God's."},
+  {"point": "3. The second death", "verdict": "fine", "why": "The text's own phrase, and the note says the traditions part on what it is. Rev 21:8 stays as written."},
+  {"point": "4. Sheol, Hades, the grave, the pit as one row", "verdict": "fine", "why": "The note says Sheol and Hades are different words and not made one; the row is 'beside', not 'same as'."},
+  {"point": "5. Resurrection and the first resurrection; 1 Pet 4:6", "verdict": "fine", "why": "Notes name the Rev 20 reading as contested and keep 1 Pet 4:6 as written. The gap in Hebrew resurrection texts is raised as the OT framing fix above, not here."},
+  {"point": "6. 'What the text says follows dying, side by side': one neutral label; does the lead read as balanced; does Luke 16:22 favour a reading", "verdict": "fix", "why": "One neutral label is right and the row is not split. But the lead (Eccl 9:5, Job 14:14, 2 Sam 12:23, Phil 1:21) runs against the note's 'ranked in none'. Luke 16:22 under the label is a fair place; it is the lead order that tilts. See the tilt fix."},
+  {"point": "7. 'Death as ruler and enemy': end as done and as still to come", "verdict": "fine", "why": "The note holds both (2 Tim 1:10; 1 Cor 15:26; Rev 21:4) and says the page takes no side."},
+  {"point": "8. The death of Christ; Christ died; the atonement and the Lord's Supper", "verdict": "fix", "why": "The notes hold the traditions neutral, but the two rows say the same thing. See the merge fix."},
+  {"point": "9. 'Died to sin, died to the law, died with Christ' and the role of baptism", "verdict": "fine", "why": "The note says the page takes no side on what baptism does and points to the noun list for 'baptized into His death'."},
+  {"point": "10. Adjective row 4 'Dead said of the living' with Jas 2:17 and 2:26", "verdict": "fine", "why": "The note sends faith and works to the faith hub and takes no side. Jas 2:26 is a reader's fair place for it."},
+  {"point": "11. 'The LORD brings death' (hard verses kept) and 'The law's penalty' (Sabbath, Lev 20:13) for the rabbi and the young believer to judge", "verdict": "fine", "why": "The labels only quote the text, the hard verses stay, and the penalty row carries no doctrine. Lev 10:2 is the weakest fit for 'the LORD brings death' (fire from the LORD, and they died in His presence) but the verse names the LORD as the agent of the consuming fire."},
+  {"point": "12. 'Worthy of death' sets the verdicts against Jesus and Paul beside the law's own, plus Rom 1:32", "verdict": "fix", "why": "The grouping is faithful to the Greek ('ἔνοχος θανάτου') but the row has no note on the speakers of the verdicts. See the note fix."},
+  {"point": "13. Divine persons by hand; 'Him' and 'He' verses under More", "verdict": "fine", "why": "The method keeps the divine persons out of inference. Phil 2:8 and 1 Thess 5:10 under More is correct."}
+ ],
+ "missing": [
+  {"what": "Hebrew hope of resurrection: 'many who sleep in the dust of the earth will awake' (absent from every row)", "verses": ["Dan.12.2"]},
+  {"what": "The LORD opens the graves and brings His people up (absent from every row)", "verses": ["Ezek.37.12", "Ezek.37.13"]},
+  {"what": "'Your dead will live' filed under Other words as 'shades' (should sit in the resurrection row)", "verses": ["Isa.26.19"]}
+ ],
+ "examples_checked": "25 of 25 rows' four examples show their label as built; Berean read live for Heb 5:7 (confirmed) and Matt 26:66 (confirmed)",
+ "summary": "The hub is faithful to the text and its notes hold the traditions neutral, but the lead of the follows-dying row contradicts its own 'ranked in none' note, and the Hebrew resurrection hope (Dan 12:2, Ezek 37, Isa 26:19) is missing from the resurrection row. Ship after the six fixes: the tilt, the OT framing, a note on the verdicts, the Heb 5:7 misfit, and two merges of rows that say the same thing."}

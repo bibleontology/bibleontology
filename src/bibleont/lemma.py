@@ -250,9 +250,132 @@ def build_forms(verbose: bool = True) -> dict:
 LEXICON = RAW / "lexicon.json"
 _LEX: dict | None = None
 
-# Abbott-Smith and BDB entries run to paragraphs with classical citations.
-# A detail panel wants the sense, not the article.
-_DEF_CHARS = 340
+# THE ENTRY IS SHOWN WHOLE (2026-10-26). It was cut at 340 characters "because
+# a detail panel wants the sense, not the article", and the cut landed
+# mid-entry ("... 1a5b)") on the live card of אהב; the word cards are now what
+# a search engine reads, and half an outline reads as a fault. The cards
+# fold the entry under its own heading, so its length costs the reader nothing.
+
+# NO KJV RENDERING IS SHOWN, ANYWHERE (the site removes every visible trace of
+# KJV text). STEP's entries carry some, in two shapes: a name's "also called
+# Jeiel (Ketiv: Jeuel; KJV: Jehiel)", and Abbott-Smith's "(AV, such as is
+# common to man)" -- the Authorised Version is the KJV. A parenthesis that
+# names either is cut out whole; an entry still naming either afterwards
+# (the 15 where it stands in a clause -- "also called in KJV: Dodavah;") is
+# withheld rather than shown with the rendering in it. Measured 2026-10-26
+# over the 22,717 rows of both lexicons: 147 name the KJV or the AV, 132 are
+# cleared by the cut, 15 are withheld.
+_KJV = re.compile(r"\b(?:KJV|AV|A\.V\.|KJB)\b")
+
+
+def scrub_translation(text: str) -> str:
+    """The entry without its KJV/AV renderings, or "" if one cannot be cut out
+    cleanly. Idempotent."""
+    if not text or not _KJV.search(text):
+        return text or ""
+    out, i, n = [], 0, len(text)
+    while i < n:
+        if text[i] == "(":
+            depth, j = 0, i
+            while j < n:
+                if text[j] == "(":
+                    depth += 1
+                elif text[j] == ")":
+                    depth -= 1
+                    if depth == 0:
+                        break
+                j += 1
+            if j < n and _KJV.search(text[i:j + 1]):
+                while out and out[-1] == " ":
+                    out.pop()
+                i = j + 1
+                continue
+        out.append(text[i])
+        i += 1
+    cut = re.sub(r"\s+([,;.:])", r"\1", "".join(out))
+    return "" if _KJV.search(cut) else cut
+
+
+def headline_gloss(gloss: str) -> str:
+    """The word's main sense from a STEP gloss. The brief lexicons write a
+    word's sub-meaning after a colon -- "to love: lover", "to love: friend",
+    "land: soil", "angel: messenger" -- and an entry for the participle
+    ("friend") must not head the word's card. The part before the colon is the
+    umbrella sense."""
+    g = (gloss or "").strip()
+    return g.split(":", 1)[0].strip() if ":" in g else g
+
+
+def variant_entries(raw: dict) -> dict[str, list]:
+    """Entries for the Strong's numbers STEP holds only as letter variants.
+
+    STEP splits some numbers into homograph entries by BDB (H6213a "to make",
+    H6213b "to press"; H4480a "from", H4480b "portion"), and a word card is
+    keyed by the number alone, so none of the 538 numbers split that way and
+    used in the text (67,930 uses, among them 'house', 'son', 'do', 'for')
+    had a lexicon entry at all (measured 2026-10-26). The card shows STEP's
+    entries for the number, each headed by its own sense; it does NOT choose
+    one (the first letter is not reliably the main sense: H1004a is "place",
+    H1004b "house: home"), so the number has no headline sense from here.
+    Keyed by the zero-padded number, like the other entries.
+    """
+    bare = {(c[0], int(c[1:])) for c in raw if re.fullmatch(r"[HG]\d+", c)}
+    groups: dict[tuple, list] = {}
+    for code in raw:
+        m = re.fullmatch(r"([HG])0*(\d+)([A-Za-z])", code)
+        if m and (m.group(1), int(m.group(2))) not in bare:
+            groups.setdefault((m.group(1), int(m.group(2))), []).append((m.group(3).lower(), code))
+    out: dict[str, list] = {}
+    for (lang, num), vs in groups.items():
+        vs.sort()
+        ents = [(letter, raw[code]) for letter, code in vs]
+        agree = lambda i: ents[0][1][i] if len({e[i] for _l, e in ents}) == 1 else ""  # noqa: E731
+        lines = []
+        for letter, e in ents:
+            lines.append(f"Entry ({letter}) — {headline_gloss(e[3])}")
+            if len(e) > 4 and e[4]:
+                lines.append(e[4])
+        out[f"{lang}{num:04d}"] = [agree(0), agree(1), agree(2), "", " · ".join(lines)]
+    return out
+
+
+def tbes_entries() -> dict[str, list]:
+    """eStrong -> [dictionary form, transliteration, part of speech, gloss,
+    definition], from TBESH and TBESG as STEP publishes them.
+
+    **One row per number, and the main one.** STEP splits a number into
+    disambiguated rows (H0157G "to love: lover", H0157H "a Meaning of H0157G"
+    "to love: friend"), and the build kept the LAST: אהב was headed "friend",
+    and H0430 (God) was headed "(Gibeath)-elohim", a combined name. The row
+    whose dStrong is a plain "=" is the word itself; with none (H0430's three
+    are all "a Name of / a Part of"), the first row, which is STEP's own
+    order of precedence.
+    """
+    rows: dict[str, list] = {}
+    for path in sorted(glob.glob(str(RAW / "TBES*"))):
+        for line in io.open(path, encoding="utf-8", errors="replace"):
+            cols = line.rstrip("\n").split("\t")
+            if len(cols) < 7 or not re.match(r"^[HG]\d+[A-Za-z]?$", cols[0]):
+                continue
+            rows.setdefault(cols[0], []).append(cols)
+    out: dict[str, list] = {}
+    for code, group in rows.items():
+        cols = next((c for c in group if re.search(r"=\s*$", c[1])), group[0])
+        out[code] = [
+            cols[3].strip(),                        # dictionary form
+            cols[4].strip(),                        # transliteration
+            cols[5].strip(),                        # part of speech
+            cols[6].strip(),                        # short gloss
+            # a row for a sub-meaning opens with its own colon fragment
+            # (": lover"), which the gloss already carries; the outline follows.
+            # And its closing "Also means: a.hav (אָהֵב ": friend" H0157H)" is
+            # a pointer to STEP's other row of the same word, in STEP's own
+            # codes, and shows the participle's sense again: left out (176 rows)
+            scrub_translation(re.sub(r"\s*(?:·\s*)?Also means:[^·]*", "",
+                                     re.sub(r"^:[^·]*(?:·\s*)?", "", _plain(cols[7]))).strip(" ·")
+                              ) if len(cols) > 7 else "",
+        ]
+    return out
 
 
 def _plain(html: str) -> str:
@@ -278,23 +401,9 @@ def build_lexicon(verbose: bool = True) -> dict:
     back as `חַסְדּ` -- chesed with its ending sheared off by a suffix. The
     lexicon gives `חֶסֶד`, which is what a reader would look up.
     """
-    out: dict[str, list] = {}
-    for path in sorted(glob.glob(str(RAW / "TBES*"))):
-        n = 0
-        for line in io.open(path, encoding="utf-8", errors="replace"):
-            cols = line.rstrip("\n").split("\t")
-            if len(cols) < 7 or not re.match(r"^[HG]\d+[A-Za-z]?$", cols[0]):
-                continue
-            out[cols[0]] = [
-                cols[3].strip(),                        # dictionary form
-                cols[4].strip(),                        # transliteration
-                cols[5].strip(),                        # part of speech
-                cols[6].strip(),                        # short gloss
-                _plain(cols[7])[:_DEF_CHARS] if len(cols) > 7 else "",
-            ]
-            n += 1
-        if verbose:
-            print(f"  {n:>6,} entries  {os.path.basename(path)[:44]}")
+    out = tbes_entries()
+    if verbose:
+        print(f"  {len(out):>6,} entries from {len(glob.glob(str(RAW / 'TBES*')))} lexicons")
     LEXICON.write_text(json.dumps(out, ensure_ascii=False),
                        encoding="utf-8", newline="")
     if verbose:

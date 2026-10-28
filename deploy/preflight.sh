@@ -170,6 +170,52 @@ else
 	bad "theme tags failed -- python tests/test_theme_tags.py"
 	grep -E "^FAIL" <<<"$out" | head -8
 fi
+# The traditions' own words (2026-10-26): the layer current with the question
+# cards (rebuild: python tools/traditions/build.py), every edge with verses,
+# every cited document with its edge, and nothing from an unshown card served.
+# Three planted faults caught.
+if out="$($PY tests/test_traditions.py 2>&1)"; then
+	ok "traditions: $(tail -1 <<<"$out")"
+else
+	bad "traditions failed -- python tests/test_traditions.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# American spelling (2026-10-27, Doug: "I don't spell favor with a u"): the
+# question cards and the traditions layer, in the site's own words; quotes and
+# document titles left as written. Three planted checks.
+if out="$($PY tests/test_american_spelling.py 2>&1)"; then
+	ok "spelling: $(tail -1 <<<"$out")"
+else
+	bad "American spelling failed -- python tests/test_american_spelling.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# No KJV wording in any card, shown or held (2026-10-27): the export scans only
+# what it publishes, so two cards' KJV phrasings were first caught at the public
+# cut, after this preflight had passed. Three planted checks.
+if out="$($PY tests/test_kjv_cards.py 2>&1)"; then
+	ok "KJV in cards: $(tail -1 <<<"$out" | sed 's/^KJV in cards: //')"
+else
+	bad "KJV wording in a card -- python tests/test_kjv_cards.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# Every word card headed by its own number's word (2026-10-27): G2411 was the
+# adjective ἱερός, G689 a stray ἀδμίν, H1886 a suffix. Five known answers, no
+# two Greek cards alike unless STEP heads them alike, two planted checks.
+if out="$($PY tests/test_headwords.py 2>&1)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "a word card's headword -- python tests/test_headwords.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# Every Explore link opens something (2026-10-27): the traditions' rows had no
+# branch in Explore's own click chain and opened nothing, while the same links
+# worked from the question cards. Two planted checks.
+if out="$($PY tests/test_explore_links.py 2>&1)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "an Explore link opens nothing -- python tests/test_explore_links.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
 # The declared lists (A.34, 2026-10-07): one card each, every member a node,
 # every member and move in its verse's words, and the card's links served by
 # the page's delegated listener. Proven by planting nine faults: all caught.
@@ -426,6 +472,27 @@ if [ -z "$range" ] || has '^app2/'; then
 		ok "word pages: $(tail -2 <<<"$out" | head -1)"
 	else
 		bad "word addresses -- python tests/test_word_addresses.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE SEARCH'S SMALL DOORS (2026-10-26): the words of a verse in any
+	# order, H157 / G26 / Hebrew and Greek script to the word cards, the words
+	# behind the English, and the word cards in sitemap-words.xml -- each
+	# with its fault planted and caught. A word card that passes the sitemap's
+	# threshold but is not listed fails it: rebuild with tools/sitemap.py after
+	# the word pages change. ~2 minutes, in process
+	if out="$($PY tests/test_search_doors.py 2>&1)"; then
+		ok "search doors: $(tail -2 <<<"$out" | head -1)"
+	else
+		bad "search doors -- python tests/test_search_doors.py (sitemap stale: python tools/sitemap.py)"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE WORD CARDS (2026-10-26): verses in canonical order, renderings that
+	# add up to the uses, no KJV rendering in a lexicon entry, a withheld
+	# Hebrew entry never shown -- each with its fault planted and caught
+	if out="$($PY tests/test_word_pages.py 2>&1)"; then
+		ok "word pages: $(tail -2 <<<"$out" | head -1)"
+	else
+		bad "word pages -- python tests/test_word_pages.py"
 		grep -E "^FAIL" <<<"$out" | head -8
 	fi
 else

@@ -1,0 +1,2795 @@
+{
+ "id": "light",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h215",
+   "lemma": "אוֹר",
+   "form": "verb",
+   "translit": "or",
+   "gloss": "to light",
+   "lang": "Hebrew",
+   "uses": 43,
+   "other_sense": 0
+  },
+  {
+   "key": "g5461",
+   "lemma": "φωτίζω",
+   "form": "verb",
+   "translit": "phōtizō",
+   "gloss": "to illuminate",
+   "lang": "Greek",
+   "uses": 11,
+   "other_sense": 0
+  },
+  {
+   "key": "h216",
+   "lemma": "אוֹר",
+   "form": "noun",
+   "translit": "or",
+   "gloss": "light",
+   "lang": "Hebrew",
+   "uses": 106,
+   "other_sense": 0
+  },
+  {
+   "key": "h3974",
+   "lemma": "מָאוֹר",
+   "form": "noun",
+   "translit": "ma.or",
+   "gloss": "light",
+   "lang": "Hebrew",
+   "uses": 16,
+   "other_sense": 0
+  },
+  {
+   "key": "h219",
+   "lemma": "אֹרֹת",
+   "form": "noun",
+   "translit": "ʾōrōṯ",
+   "gloss": "light",
+   "lang": "Hebrew",
+   "uses": 3,
+   "other_sense": 1
+  },
+  {
+   "key": "g5457",
+   "lemma": "φῶς",
+   "form": "noun",
+   "translit": "phōs",
+   "gloss": "light",
+   "lang": "Greek",
+   "uses": 60,
+   "other_sense": 0
+  },
+  {
+   "key": "g5462",
+   "lemma": "φωτισμός",
+   "form": "noun",
+   "translit": "phōtismos",
+   "gloss": "light",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g5458",
+   "lemma": "φωστήρ",
+   "form": "noun",
+   "translit": "phōstēr",
+   "gloss": "light",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "g5459",
+   "lemma": "φωσφόρος",
+   "form": "noun",
+   "translit": "phōsphoros",
+   "gloss": "light-bearing",
+   "lang": "Greek",
+   "uses": 0,
+   "other_sense": 1
+  },
+  {
+   "key": "g5460",
+   "lemma": "φωτεινός",
+   "form": "adjective",
+   "translit": "phōteinos",
+   "gloss": "bright",
+   "lang": "Greek",
+   "uses": 4,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of light",
+  "verb": "Giving light, shining, lighting",
+  "adjective": "Called “bright”, “full of light”"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "darkness",
+   "name": "darkness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_light",
+   "name": "the light",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "let_there_be_light",
+   "name": "Let there be light",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "lights",
+   "name": "lights",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "lightning",
+   "name": "thunderbolt",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_light_of_the_world",
+   "name": "the light of the world",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "the_true_light",
+   "name": "the true Light",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "walk_in_the_light",
+   "name": "walk in the light",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "gospel",
+   "name": "gospel",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "stars",
+   "name": "stars",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "moon",
+   "name": "moon",
+   "type": "object",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "let_there_be_light",
+   "name": "Let there be light",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_light_of_the_world",
+   "name": "the light of the world",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "the_true_light",
+   "name": "the true Light",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "walk_in_the_light",
+   "name": "walk in the light",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_life_was_the_light_of_men",
+   "name": "that life was the light of men",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "your_word_is_a_lamp_unto_my_feet",
+   "name": "Your word is a lamp to my feet",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_people_living_in_darkness_have_seen_a_great_light",
+   "name": "the people living in darkness have seen a great light",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "event_a_light_for_the_gentiles",
+   "name": "A Light for the Gentiles",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "msg_you_are_the_light_of_the_world",
+   "name": "Message: You are the light of the world",
+   "type": "pattern",
+   "missing": false
+  },
+  {
+   "id": "msg_the_lamb_will_be_your_light",
+   "name": "Message: The Lamb will be your light",
+   "type": "pattern",
+   "missing": false
+  },
+  {
+   "id": "msg_the_nations_will_walk_in_its_light",
+   "name": "Message: The nations will walk in its light",
+   "type": "pattern",
+   "missing": false
+  },
+  {
+   "id": "darkness",
+   "name": "darkness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "lightning",
+   "name": "thunderbolt",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "image_light",
+   "name": "light, as a figure",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "image_lamp",
+   "name": "lamp, as a figure",
+   "type": "image",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.1.3",
+   "ref": "Genesis 1:3",
+   "text": "And God said, “Let there be light,” and there was light."
+  },
+  {
+   "id": "Ps.27.1",
+   "ref": "Psalms 27:1",
+   "text": "Of David. The LORD is my light and my salvation-whom shall I fear? The LORD is the stronghold of my life-whom shall I dread?"
+  },
+  {
+   "id": "Ps.119.105",
+   "ref": "Psalms 119:105",
+   "text": "Your word is a lamp to my feet and a light to my path."
+  },
+  {
+   "id": "Isa.9.2",
+   "ref": "Isaiah 9:2",
+   "text": "The people walking in darkness have seen a great light; on those living in the land of the shadow of death, a light has dawned."
+  },
+  {
+   "id": "Isa.60.1",
+   "ref": "Isaiah 60:1",
+   "text": "Arise, shine, for your light has come, and the glory of the LORD rises upon you."
+  },
+  {
+   "id": "Matt.5.14",
+   "ref": "Matthew 5:14",
+   "text": "You are the light of the world. A city on a hill cannot be hidden."
+  },
+  {
+   "id": "John.1.4",
+   "ref": "John 1:4",
+   "text": "In Him was life, and that life was the light of men."
+  },
+  {
+   "id": "John.8.12",
+   "ref": "John 8:12",
+   "text": "Once again, Jesus spoke to the people and said, “I am the light of the world. Whoever follows Me will never walk in the darkness, but will have the light of life.”"
+  },
+  {
+   "id": "2Cor.4.6",
+   "ref": "2 Corinthians 4:6",
+   "text": "For God, who said, “Let light shine out of darkness,” made His light shine in our hearts to give us the light of the knowledge of the glory of God in the face of Jesus Christ."
+  },
+  {
+   "id": "1John.1.5",
+   "ref": "1 John 1:5",
+   "text": "And this is the message we have heard from Him and announce to you: God is light, and in Him there is no darkness at all."
+  },
+  {
+   "id": "1John.1.7",
+   "ref": "1 John 1:7",
+   "text": "But if we walk in the light as He is in the light, we have fellowship with one another, and the blood of Jesus His Son cleanses us from all sin."
+  },
+  {
+   "id": "Rev.21.23",
+   "ref": "Revelation 21:23",
+   "text": "And the city has no need of sun or moon to shine on it, because the glory of God illuminates the city, and the Lamb is its lamp."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 189,
+   "rows": [
+    {
+     "label": "The light of the first day; “I form the light and create the darkness”; “the way to the home of light”",
+     "note": "Gen 1:3-5 has light on the first day; Gen 1:14-19 sets the lights in the sky on the fourth (the row below). The page sets both down as written and does not say how the one stands to the other. Isa 45:7, “I form the light and create the darkness”, is the LORD speaking; Job 38:19 is a question put to Job (“Where is the way to the home of light?”), not a statement about making it. 2 Cor 4:6 says God, “who said, ‘Let light shine out of darkness,’” made His light shine in our hearts; the verse does not cite Genesis.",
+     "doors": [
+      {
+       "id": "let_there_be_light",
+       "name": "Let there be light",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "the_light",
+       "name": "the light",
+       "type": "object",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Gen.1.3",
+      "Isa.45.7",
+      "Job.38.19",
+      "2Cor.4.6",
+      "Gen.1.4",
+      "Gen.1.5"
+     ],
+     "eg": [
+      {
+       "id": "Gen.1.3",
+       "ref": "Genesis 1:3",
+       "text": "And God said, “Let there be light,” and there was light.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Isa.45.7",
+       "ref": "Isaiah 45:7",
+       "text": "I form the light and create the darkness; I bring prosperity and create calamity. I, the LORD, do all these things.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Job.38.19",
+       "ref": "Job 38:19",
+       "text": "Where is the way to the home of light? Do you know where darkness resides,",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.4.6",
+       "ref": "2 Corinthians 4:6",
+       "text": "For God, who said, “Let light shine out of darkness,” made His light shine in our hearts to give us the light of the knowledge of the glory of God in the face of Jesus Christ.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        },
+        {
+         "key": "g5462",
+         "lemma": "φωτισμός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sun, moon and stars; the lights set in the sky; morning light, daylight and the dawn",
+     "note": null,
+     "doors": [
+      {
+       "id": "lights",
+       "name": "lights",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "stars",
+       "name": "stars",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "moon",
+       "name": "moon",
+       "type": "object",
+       "missing": false
+      }
+     ],
+     "n": 37,
+     "verses": [
+      "Gen.1.16",
+      "Ps.136.7",
+      "Jer.31.35",
+      "Judg.16.2",
+      "Gen.1.5",
+      "Matt.17.2",
+      "Rev.22.5",
+      "Gen.1.14",
+      "Gen.1.15",
+      "Gen.1.18",
+      "Judg.19.26",
+      "1Sam.14.36",
+      "1Sam.25.34",
+      "1Sam.25.36",
+      "2Sam.17.22",
+      "2Sam.23.4",
+      "2Kgs.7.9",
+      "Job.3.9",
+      "Job.24.14",
+      "Job.31.26",
+      "Job.41.18",
+      "Ps.74.16",
+      "Ps.148.3",
+      "Eccl.11.7",
+      "Eccl.12.2",
+      "Isa.13.10",
+      "Isa.30.26",
+      "Isa.58.8",
+      "Isa.60.19",
+      "Isa.60.20",
+      "Ezek.32.7",
+      "Ezek.32.8",
+      "Amos.8.9",
+      "Mic.2.1",
+      "Hab.3.11",
+      "Zeph.3.5",
+      "Acts.26.13"
+     ],
+     "eg": [
+      {
+       "id": "Gen.1.16",
+       "ref": "Genesis 1:16",
+       "text": "God made two great lights: the greater light to rule the day and the lesser light to rule the night. And He made the stars as well.",
+       "words": [
+        {
+         "key": "h3974",
+         "lemma": "מָאוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.136.7",
+       "ref": "Psalms 136:7",
+       "text": "He made the great lights-His loving devotion endures forever.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Jer.31.35",
+       "ref": "Jeremiah 31:35",
+       "text": "Thus says the LORD, who gives the sun for light by day, who sets in order the moon and stars for light by night, who stirs up the sea so that its waves roar-the LORD of Hosts is His name:",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Judg.16.2",
+       "ref": "Judges 16:2",
+       "text": "When the Gazites heard that Samson was there, they surrounded that place and lay in wait for him all night at the city gate. They were quiet throughout the night, saying, “Let us wait until dawn; then we will kill him.”",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Lightning",
+     "note": "The Hebrew is אוֹר, the same word as “light” elsewhere; MACULA glosses it “lightning” in Job 36:30-37:15 and the Berean prints “lightning” there, in Job 38:24 (“In which direction is the lightning dispersed”) and in Hos 6:5 (“My judgments go forth like lightning”). Hab 3:11 reads “the flash of Your flying arrows, the brightness of Your shining spear”.",
+     "doors": [
+      {
+       "id": "lightning",
+       "name": "thunderbolt",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Job.36.30",
+      "Job.37.3",
+      "Job.37.15",
+      "Hos.6.5",
+      "Job.36.32",
+      "Job.37.11",
+      "Job.38.24",
+      "Hab.3.11"
+     ],
+     "eg": [
+      {
+       "id": "Job.36.30",
+       "ref": "Job 36:30",
+       "text": "See how He scatters His lightning around Him and covers the depths of the sea.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Job.37.3",
+       "ref": "Job 37:3",
+       "text": "He unleashes His lightning beneath the whole sky and sends it to the ends of the earth.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Job.37.15",
+       "ref": "Job 37:15",
+       "text": "Do you know how God dispatches the clouds or makes the lightning flash?",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Hos.6.5",
+       "ref": "Hosea 6:5",
+       "text": "Therefore I have hewn them by the prophets; I have slain them by the words of My mouth, and My judgments go forth like lightning.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A lamp, a lampstand, oil for the light; the light of a fire",
+     "note": "The lamp and the lampstand are a sense of their own: the oil that keeps the light burning before the LORD in the tabernacle (Exod 27:20; Lev 24:2), the lamp put on a stand (Luke 8:16), the lamp of the wicked put out (Prov 13:9). In Mark 14:54 and Luke 22:56 the Greek φῶς is the light of the fire where Peter warmed himself (the Berean prints “fire” and “firelight”); in Acts 16:29 it is the lights the jailer called for; in Ps 78:14, “all the night with a fiery light”.",
+     "doors": [
+      {
+       "id": "image_lamp",
+       "name": "lamp, as a figure",
+       "type": "image",
+       "missing": false
+      },
+      {
+       "id": "the_candlestick",
+       "name": "the lampstand",
+       "type": "object",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "Exod.27.20",
+      "Prov.13.9",
+      "Luke.8.16",
+      "Exod.25.6",
+      "Mark.14.54",
+      "Rev.18.23",
+      "Exod.35.8",
+      "Exod.35.14",
+      "Exod.35.28",
+      "Exod.39.37",
+      "Lev.24.2",
+      "Num.4.9",
+      "Num.4.16",
+      "Job.18.6",
+      "Job.29.3",
+      "Ps.78.14",
+      "Ps.119.105",
+      "Prov.6.23",
+      "Jer.25.10",
+      "Luke.22.56",
+      "John.5.35",
+      "Acts.16.29",
+      "Rev.22.5"
+     ],
+     "eg": [
+      {
+       "id": "Exod.27.20",
+       "ref": "Exodus 27:20",
+       "text": "And you are to command the Israelites to bring you pure oil of pressed olives for the light, to keep the lamps burning continually.",
+       "words": [
+        {
+         "key": "h3974",
+         "lemma": "מָאוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Prov.13.9",
+       "ref": "Proverbs 13:9",
+       "text": "The light of the righteous shines brightly, but the lamp of the wicked is extinguished.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Luke.8.16",
+       "ref": "Luke 8:16",
+       "text": "No one lights a lamp and covers it with a jar or puts it under a bed. Instead, he sets it on a stand, so those who enter can see the light.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Exod.25.6",
+       "ref": "Exodus 25:6",
+       "text": "olive oil for the light; spices for the anointing oil and for the fragrant incense;",
+       "words": [
+        {
+         "key": "h3974",
+         "lemma": "מָאוֹר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Light and darkness: beside it, against it, turned into it",
+     "note": "The text sets the two side by side, divided (Gen 1:4), confused (Isa 5:20: “who turn darkness to light and light to darkness”), turned (Isa 42:16), hated and loved (John 3:19-20), rebelled against (Job 24:13: “those who rebel against the light”), put as two ways (Eph 5:8; 2 Cor 6:14), and counterfeited (2 Cor 11:14: “Satan himself masquerades as an angel of light”). In Exod 10:23, while Egypt is dark (10:21-22), “all the Israelites had light in their dwellings”; the pillar of fire follows in Exod 13:21 and 14:20 (the verb row, “Light given in the dark”).",
+     "doors": [
+      {
+       "id": "darkness",
+       "name": "darkness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 56,
+     "verses": [
+      "Gen.1.4",
+      "Isa.5.20",
+      "John.1.5",
+      "2Cor.6.14",
+      "Matt.4.16",
+      "Rom.2.19",
+      "Gen.1.5",
+      "Gen.1.18",
+      "Exod.10.23",
+      "Job.3.9",
+      "Job.12.22",
+      "Job.12.25",
+      "Job.17.12",
+      "Job.18.6",
+      "Job.24.13",
+      "Job.24.16",
+      "Job.26.10",
+      "Job.29.3",
+      "Job.30.26",
+      "Job.38.19",
+      "Ps.112.4",
+      "Ps.139.11",
+      "Eccl.2.13",
+      "Eccl.12.2",
+      "Isa.5.30",
+      "Isa.9.2",
+      "Isa.13.10",
+      "Isa.42.16",
+      "Isa.45.7",
+      "Isa.58.10",
+      "Isa.59.9",
+      "Jer.13.16",
+      "Lam.3.2",
+      "Ezek.32.8",
+      "Amos.5.18",
+      "Amos.5.20",
+      "Amos.8.9",
+      "Mic.7.8",
+      "Matt.6.23",
+      "Matt.10.27",
+      "Luke.11.35",
+      "Luke.12.3",
+      "John.3.19",
+      "John.8.12",
+      "John.12.35",
+      "John.12.46",
+      "Acts.26.18",
+      "Rom.13.12",
+      "2Cor.4.6",
+      "2Cor.11.14",
+      "Eph.5.8",
+      "1Thess.5.5",
+      "1Pet.2.9",
+      "1John.1.5",
+      "1John.2.8",
+      "1John.2.9"
+     ],
+     "eg": [
+      {
+       "id": "Gen.1.4",
+       "ref": "Genesis 1:4",
+       "text": "And God saw that the light was good, and He separated the light from the darkness.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Isa.5.20",
+       "ref": "Isaiah 5:20",
+       "text": "Woe to those who call evil good and good evil, who turn darkness to light and light to darkness, who replace bitter with sweet and sweet with bitter.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "John.1.5",
+       "ref": "John 1:5",
+       "text": "The Light shines in the darkness, and the darkness has not overcome it.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.6.14",
+       "ref": "2 Corinthians 6:14",
+       "text": "Do not be unequally yoked with unbelievers. For what partnership can righteousness have with wickedness? Or what fellowship does light have with darkness?",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“The LORD is my light”; “God is light”; “in Your light we see light”; “He wraps Himself in light”; “the light of Your face”",
+     "note": "The text's own words, kept as written. The page does not say whether “light” names what God is or what He has or gives. Ps 27:1 and Mic 7:8 are what the speaker says of the LORD; 1 John 1:5 is “God is light, and in Him there is no darkness at all”; Isa 60:19-20, “the LORD will be your everlasting light”; Ps 36:9, “in Your light we see light”; Ps 104:2, “He wraps Himself in light as with a garment”. Each verse names the LORD or God, addresses Him, or (Jas 1:17) says “the Father of the heavenly lights”. Ps 104:2 and Hab 3:4 say “He” and “His”, of the LORD and God named in the verse before (Ps 104:1; Hab 3:3). Ps 4:6, 44:3, 89:15 and 90:8 are the light of His face or presence. The page does not say what the light is: His face, His presence, His glory, His dwelling or Himself. Isa 10:16 names “the Lord GOD of Hosts”, and Isa 10:17 goes straight on with “the Light of Israel” and “its Holy One”, so the pair is read together: the Light of Israel becomes a fire, and its Holy One a flame. In Jas 1:17 the Greek says “the Father of the lights” (τῶν φώτων), and “heavenly” is the Berean's word; readers take “the lights” as the lights God set in the sky (Gen 1:14, “Let there be lights in the expanse of the sky”, where the Hebrew word is a different one) or as light itself, and the page does not choose.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "the_light",
+       "name": "the light",
+       "type": "object",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Ps.27.1",
+      "1John.1.5",
+      "Ps.36.9",
+      "Ps.104.2",
+      "Mic.7.8",
+      "Isa.60.19",
+      "Isa.60.20",
+      "Isa.10.16",
+      "Isa.10.17",
+      "Ps.4.6",
+      "Ps.43.3",
+      "Ps.44.3",
+      "Ps.89.15",
+      "Ps.90.8",
+      "Hab.3.4",
+      "Jas.1.17"
+     ],
+     "eg": [
+      {
+       "id": "Ps.27.1",
+       "ref": "Psalms 27:1",
+       "text": "Of David. The LORD is my light and my salvation-whom shall I fear? The LORD is the stronghold of my life-whom shall I dread?",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "1John.1.5",
+       "ref": "1 John 1:5",
+       "text": "And this is the message we have heard from Him and announce to you: God is light, and in Him there is no darkness at all.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Ps.36.9",
+       "ref": "Psalms 36:9",
+       "text": "For with You is the fountain of life; in Your light we see light.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.104.2",
+       "ref": "Psalms 104:2",
+       "text": "He wraps Himself in light as with a garment; He stretches out the heavens like a tent,",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus: “I am the light of the world”, “the light of the gospel of the glory of Christ”",
+     "note": "John 8:12, 9:5 and 12:46 are Jesus' own “I” (“I am the light of the world”, “I have come into the world as a light”). 2 Cor 4:4 and 4:6 say “the glory of Christ” and “the face of Jesus Christ”; Acts 26:23 says that “the Christ would suffer ... and would proclaim light”.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "the_light_of_the_world",
+       "name": "the light of the world",
+       "type": "title",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "John.8.12",
+      "John.9.5",
+      "John.12.46",
+      "Acts.26.23",
+      "John.12.35",
+      "John.12.36",
+      "2Cor.4.4",
+      "2Cor.4.6"
+     ],
+     "eg": [
+      {
+       "id": "John.8.12",
+       "ref": "John 8:12",
+       "text": "Once again, Jesus spoke to the people and said, “I am the light of the world. Whoever follows Me will never walk in the darkness, but will have the light of life.”",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "John.9.5",
+       "ref": "John 9:5",
+       "text": "While I am in the world, I am the light of the world.”",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "John.12.46",
+       "ref": "John 12:46",
+       "text": "I have come into the world as a light, so that no one who believes in Me should remain in darkness.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Acts.26.23",
+       "ref": "Acts 26:23",
+       "text": "that the Christ would suffer, and as the first to rise from the dead, would proclaim light to our people and to the Gentiles.”",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Where the verse says only “the Light” or “He”: John's prologue, “the Light has come into the world”, “as He is in the light”, “dwells in unapproachable light”",
+     "note": "These verses say “the Light”, “the true Light” or “He” and name no one in the verse. John's prologue names “the Word” (1:1, 1:14) and Jesus Christ (1:17); John the Baptist “was not the Light” but “came as a witness to testify about the Light” (1:7-8). 1 John 1:7 follows “God is light” (1:5); 1 Tim 6:16 follows 6:14-15, which speak of the appearing of “our Lord Jesus Christ” and of “the blessed and only Sovereign”. Readers take “the Light” and “He” of the Word, of Christ or of the Father, and the page sets the words down as written and does not choose.",
+     "doors": [
+      {
+       "id": "the_true_light",
+       "name": "the true Light",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "the_life_was_the_light_of_men",
+       "name": "that life was the light of men",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "John.1.4",
+      "John.1.9",
+      "John.3.19",
+      "1Tim.6.16",
+      "John.1.5",
+      "John.1.7",
+      "John.1.8",
+      "John.3.20",
+      "John.3.21",
+      "1John.1.7"
+     ],
+     "eg": [
+      {
+       "id": "John.1.4",
+       "ref": "John 1:4",
+       "text": "In Him was life, and that life was the light of men.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "John.1.9",
+       "ref": "John 1:9",
+       "text": "The true Light, who gives light to everyone, was coming into the world.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        },
+        {
+         "key": "g5461",
+         "lemma": "φωτίζω"
+        }
+       ]
+      },
+      {
+       "id": "John.3.19",
+       "ref": "John 3:19",
+       "text": "And this is the verdict: The Light has come into the world, but men loved the darkness rather than the Light because their deeds were evil.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.6.16",
+       "ref": "1 Timothy 6:16",
+       "text": "He alone is immortal and dwells in unapproachable light. No one has ever seen Him, nor can anyone see Him. To Him be honor and eternal dominion! Amen.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A light to the nations (Isa 42:6; 49:6) and for the Gentiles (Luke 2:32; Acts 13:47); the people in darkness who saw a great light; “your light has come”",
+     "note": "In Isa 42:6 and 49:6 the LORD says to His servant that He will make him “a light to the nations” (“a light for the nations”); in 49:3 the servant is called Israel. Luke 2:32 (“a light for revelation to the Gentiles”) is Simeon's, over the child he holds (2:28); in Acts 13:47 Paul and Barnabas say the Lord has commanded “us” with these words; in Acts 26:23 (in the row on Jesus) Paul says the Christ would proclaim light to the Gentiles. The Hebrew of Isaiah says “the nations” (גּוֹיִם); “the Gentiles” is the wording of Luke and Acts. Readers part on who “the servant” is: Israel, the Messiah, the prophet, or the nation and its Messiah together. The page lists the verses and does not choose. Isa 60 is also in the rows on “the LORD will be your everlasting light”, on light with no night, and on “Arise, shine”. Rom 2:19, a light “for those in darkness” said of one who relies on the law, is in the row on light through the word.",
+     "doors": [
+      {
+       "id": "event_a_light_for_the_gentiles",
+       "name": "A Light for the Gentiles",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "the_people_living_in_darkness_have_seen_a_great_light",
+       "name": "the people living in darkness have seen a great light",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Isa.42.6",
+      "Isa.49.6",
+      "Luke.2.32",
+      "Acts.13.47",
+      "Isa.9.2",
+      "Isa.51.4",
+      "Isa.60.1",
+      "Isa.60.3",
+      "Matt.4.16"
+     ],
+     "eg": [
+      {
+       "id": "Isa.42.6",
+       "ref": "Isaiah 42:6",
+       "text": "“I, the LORD, have called you for a righteous purpose, and I will take hold of your hand. I will keep you and appoint you to be a covenant for the people and a light to the nations,",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Isa.49.6",
+       "ref": "Isaiah 49:6",
+       "text": "He says: “It is not enough for You to be My Servant, to raise up the tribes of Jacob, and to restore the protected ones of Israel. I will also make You a light for the nations, to bring My salvation to the ends of the earth.”",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.32",
+       "ref": "Luke 2:32",
+       "text": "a light for revelation to the Gentiles, and for glory to Your people Israel.”",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Acts.13.47",
+       "ref": "Acts 13:47",
+       "text": "For this is what the Lord has commanded us: ‘I have made you a light for the Gentiles, to bring salvation to the ends of the earth.'”",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A light from heaven, a light shining: on the road to Damascus, in the prison cell, on the mountain",
+     "note": "Acts 9:3, 22:6, 22:9, 22:11 and 26:13 are the light that flashed around Saul; Acts 12:7, “a light shone in the cell” beside the angel of the Lord; Matt 17:2, “His face shone like the sun, and His clothes became as white as the light”. Matt 17:2 is the Transfiguration, on the mountain, where the text says He “was transfigured before them”; the page does not say what the light is. In Matt 17:5 “a bright cloud” enveloped them (the row on “full of light” and “bright”). The page lists the verses as written.",
+     "doors": [],
+     "n": 7,
+     "verses": [
+      "Acts.9.3",
+      "Acts.12.7",
+      "Acts.26.13",
+      "Matt.17.2",
+      "Acts.22.6",
+      "Acts.22.9",
+      "Acts.22.11"
+     ],
+     "eg": [
+      {
+       "id": "Acts.9.3",
+       "ref": "Acts 9:3",
+       "text": "As Saul drew near to Damascus on his journey, suddenly a light from heaven flashed around him.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Acts.12.7",
+       "ref": "Acts 12:7",
+       "text": "Suddenly an angel of the Lord appeared and a light shone in the cell. He tapped Peter on the side and woke him up, saying, “Get up quickly.” And the chains fell off his wrists.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Acts.26.13",
+       "ref": "Acts 26:13",
+       "text": "About noon, O king, as I was on the road, I saw a light from heaven, brighter than the sun, shining around me and my companions.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Matt.17.2",
+       "ref": "Matthew 17:2",
+       "text": "There He was transfigured before them. His face shone like the sun, and His clothes became as white as the light.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Walk in the light, abide in the light, stumble where there is no light; “You are the light of the world”; children of light; armor of light; out of darkness into His light",
+     "note": "The text puts light as the place one walks and stands: “let us walk in the light of the LORD” (Isa 2:5), “the one who walks in the daytime will not stumble, because he sees by the light of this world” (John 11:9), “By its light the nations will walk” (Rev 21:24). 1 John 1:7 reads “if we walk in the light as He is in the light”; the verse says “He” (see the row of verses that say only “He”). And it says of those who follow: “You are the light of the world” (Matt 5:14, Jesus to the disciples), “children of the light” (Luke 16:8; John 12:36; Eph 5:8; 1 Thess 5:5), “the armor of light” (Rom 13:12), “the fruit of the light” (Eph 5:9), “shine like stars in the world” (Phil 2:15), “the inheritance of the saints in the light” (Col 1:12), “His marvelous light” (1 Pet 2:9), “turn from darkness to light” (Acts 26:18).",
+     "doors": [
+      {
+       "id": "walk_in_the_light",
+       "name": "walk in the light",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "msg_you_are_the_light_of_the_world",
+       "name": "Message: You are the light of the world",
+       "type": "pattern",
+       "missing": false
+      }
+     ],
+     "n": 22,
+     "verses": [
+      "Isa.2.5",
+      "John.11.9",
+      "Matt.5.14",
+      "Eph.5.8",
+      "Ps.56.13",
+      "John.11.10",
+      "John.12.35",
+      "1John.1.7",
+      "1John.2.9",
+      "1John.2.10",
+      "Rev.21.24",
+      "Matt.5.16",
+      "Luke.16.8",
+      "John.12.36",
+      "Rom.13.12",
+      "Eph.5.9",
+      "Eph.5.13",
+      "Phil.2.15",
+      "1Thess.5.5",
+      "Col.1.12",
+      "1Pet.2.9",
+      "Acts.26.18"
+     ],
+     "eg": [
+      {
+       "id": "Isa.2.5",
+       "ref": "Isaiah 2:5",
+       "text": "Come, O house of Jacob, let us walk in the light of the LORD.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "John.11.9",
+       "ref": "John 11:9",
+       "text": "Jesus answered, “Are there not twelve hours of daylight? If anyone walks in the daytime, he will not stumble, because he sees by the light of this world.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Matt.5.14",
+       "ref": "Matthew 5:14",
+       "text": "You are the light of the world. A city on a hill cannot be hidden.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Eph.5.8",
+       "ref": "Ephesians 5:8",
+       "text": "For you were once darkness, but now you are light in the Lord. Walk as children of light,",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Light through the word: “a lamp to my feet”, “this teaching is a light”, the prophets' word; “the light of the gospel”",
+     "note": "The verses that set a lamp or a light beside the LORD's word: “Your word is a lamp to my feet and a light to my path” (Ps 119:105), “this commandment is a lamp, this teaching is a light” (Prov 6:23), “the word of the prophets ... as to a lamp shining in a dark place” (2 Pet 1:19). 2 Cor 4:4 and 4:6 have the Greek φωτισμός, “light”, of the gospel and of the knowledge of the glory of God. Ps 19:8 and 119:130 (“the unfolding of Your words gives light”) are in the verb form. The Hebrew תּוֹרָה, “instruction”, is the word the Berean prints “teaching” in Prov 6:23. In 2 Pet 1:19 “lamp” is another Greek word (λύχνος); the light-word the page follows there is φωσφόρος, “morning star”, and the verse is here by hand. Rom 2:19 is said to one who relies on the law and is “convinced that you are a guide for the blind, a light for those in darkness”: the self-image of the one addressed, not a claim the verse makes for the law.",
+     "doors": [
+      {
+       "id": "your_word_is_a_lamp_unto_my_feet",
+       "name": "Your word is a lamp to my feet",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "gospel",
+       "name": "gospel",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Ps.119.105",
+      "Prov.6.23",
+      "2Pet.1.19",
+      "2Cor.4.4",
+      "Isa.51.4",
+      "Rom.2.19",
+      "2Cor.4.6"
+     ],
+     "eg": [
+      {
+       "id": "Ps.119.105",
+       "ref": "Psalms 119:105",
+       "text": "Your word is a lamp to my feet and a light to my path.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Prov.6.23",
+       "ref": "Proverbs 6:23",
+       "text": "For this commandment is a lamp, this teaching is a light, and the reproofs of discipline are the way to life,",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "2Pet.1.19",
+       "ref": "2 Peter 1:19",
+       "text": "We also have the word of the prophets as confirmed beyond doubt. And you will do well to pay attention to it, as to a lamp shining in a dark place, until the day dawns and the morning star rises in your hearts.",
+       "words": [
+        {
+         "key": "g5459",
+         "lemma": "φωσφόρος"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.4.4",
+       "ref": "2 Corinthians 4:4",
+       "text": "The god of this age has blinded the minds of unbelievers, so they cannot see the light of the gospel of the glory of Christ, who is the image of God.",
+       "words": [
+        {
+         "key": "g5462",
+         "lemma": "φωτισμός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The light within: the eye as the lamp; light that is darkness; the light of the eyes",
+     "note": "Matt 6:23 and Luke 11:35: “if the light within you is darkness, how great is that darkness”; Prov 15:30, “The light of the eyes cheers the heart”; Ps 38:10, “even the light of my eyes has left me”. The bright eye and the body full of light are in the adjective form. 2 Cor 11:14, “Satan himself masquerades as an angel of light”, is in the row on light and darkness.",
+     "doors": [],
+     "n": 4,
+     "verses": [
+      "Matt.6.23",
+      "Luke.11.35",
+      "Prov.15.30",
+      "Ps.38.10"
+     ],
+     "eg": [
+      {
+       "id": "Matt.6.23",
+       "ref": "Matthew 6:23",
+       "text": "But if your eyes are bad, your whole body will be full of darkness. If then the light within you is darkness, how great is that darkness!",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.35",
+       "ref": "Luke 11:35",
+       "text": "Be careful, then, that the light within you is not darkness.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Prov.15.30",
+       "ref": "Proverbs 15:30",
+       "text": "The light of the eyes cheers the heart, and good news nourishes the bones.",
+       "words": [
+        {
+         "key": "h3974",
+         "lemma": "מָאוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.38.10",
+       "ref": "Psalms 38:10",
+       "text": "My heart pounds, my strength fails, and even the light of my eyes has faded.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Light and life: “the light of life”; to see the light, never to see it",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_life_was_the_light_of_men",
+       "name": "that life was the light of men",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Job.33.30",
+      "Ps.56.13",
+      "John.8.12",
+      "Job.33.28",
+      "Job.3.16",
+      "John.1.4",
+      "Job.3.20",
+      "Ps.27.1",
+      "Ps.36.9",
+      "Ps.49.19",
+      "Prov.6.23",
+      "Prov.16.15",
+      "Eccl.11.7",
+      "Isa.26.19"
+     ],
+     "eg": [
+      {
+       "id": "Job.33.30",
+       "ref": "Job 33:30",
+       "text": "to bring back his soul from the Pit, that he may be enlightened with the light of life.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.56.13",
+       "ref": "Psalms 56:13",
+       "text": "For You have delivered my soul from death, and my feet from stumbling, that I may walk before God in the light of life.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "John.8.12",
+       "ref": "John 8:12",
+       "text": "Once again, Jesus spoke to the people and said, “I am the light of the world. Whoever follows Me will never walk in the darkness, but will have the light of life.”",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      },
+      {
+       "id": "Job.33.28",
+       "ref": "Job 33:28",
+       "text": "He redeemed my soul from going down to the Pit, and I will live to see the light.'",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Light beside the righteous and the upright, righteousness and justice, gladness and salvation",
+     "note": "Ps 97:11, “Light shines on the righteous, gladness on the upright in heart”; Ps 112:4, “Light dawns in the darkness for the upright”; Esth 8:16, “For the Jews it was a time of light and gladness, of joy and honor”; Mic 7:9, “He will bring me into the light; I will see His righteousness”; Isa 58:8, 58:10, light breaking forth for the one who shares bread with the hungry.",
+     "doors": [
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Ps.97.11",
+      "Ps.112.4",
+      "Mic.7.9",
+      "Esth.8.16",
+      "Ps.27.1",
+      "Ps.37.6",
+      "Prov.13.9",
+      "Isa.58.8",
+      "Isa.58.10",
+      "Zeph.3.5"
+     ],
+     "eg": [
+      {
+       "id": "Ps.97.11",
+       "ref": "Psalms 97:11",
+       "text": "Light shines on the righteous, gladness on the upright in heart.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.112.4",
+       "ref": "Psalms 112:4",
+       "text": "Light dawns in the darkness for the upright-for the gracious, compassionate, and righteous.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Mic.7.9",
+       "ref": "Micah 7:9",
+       "text": "Because I have sinned against Him, I must endure the rage of the LORD, until He argues my case and executes justice for me. He will bring me into the light; I will see His righteousness.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Esth.8.16",
+       "ref": "Esther 8:16",
+       "text": "For the Jews it was a time of light and gladness, of joy and honor.",
+       "words": [
+        {
+         "key": "h219",
+         "lemma": "אֹרֹת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Light withheld, put out, turned to darkness; “the day of the LORD is darkness, not light”",
+     "note": "Hard verses stay: the lamp of the wicked is put out (Job 18:5; Prov 13:9), light is withheld from the wicked (Job 38:15), the day of the LORD is darkness and not light (Amos 5:18-20), the stars do not give their light (Isa 13:10), and no lamp will shine in the city again (Rev 18:23). Job's own cry, “Why is light given to one in misery?” (3:20), is here as the book has it.",
+     "doors": [
+      {
+       "id": "darkness",
+       "name": "darkness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "image_darkness",
+       "name": "darkness, as a figure",
+       "type": "image",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Job.18.5",
+      "Amos.5.18",
+      "Isa.5.30",
+      "Rev.18.23",
+      "Job.3.20",
+      "Job.12.25",
+      "Job.17.12",
+      "Job.18.6",
+      "Job.38.15",
+      "Prov.13.9",
+      "Amos.5.20",
+      "Isa.13.10",
+      "Isa.59.9",
+      "Jer.4.23",
+      "Lam.3.2",
+      "Ezek.32.7"
+     ],
+     "eg": [
+      {
+       "id": "Job.18.5",
+       "ref": "Job 18:5",
+       "text": "Indeed, the lamp of the wicked is extinguished; the flame of his fire does not glow.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Amos.5.18",
+       "ref": "Amos 5:18",
+       "text": "Woe to you who long for the Day of the LORD! What will the Day of the LORD be for you? It will be darkness and not light.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Isa.5.30",
+       "ref": "Isaiah 5:30",
+       "text": "In that day they will roar over it, like the roaring of the sea. If one looks over the land, he will see darkness and distress; even the light will be obscured by clouds.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Rev.18.23",
+       "ref": "Revelation 18:23",
+       "text": "The light of a lamp will never shine in you again, and the voices of a bride and bridegroom will never call out in you again. For your merchants were the great ones of the earth, because all the nations were deceived by your sorcery.”",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Light with no night: “the LORD will be your everlasting light”, “the Lord God will shine on them”, “the Lamb is its lamp”",
+     "note": "Isa 60:19-20 say that the sun is no longer the light by day and that “the LORD will be your everlasting light”; Rev 21:23 and 22:5 say that the city has no need of sun, moon or lamp, because “the glory of God illuminates the city, and the Lamb is its lamp” and “the Lord God will shine on them”. Zech 14:6 reads “On that day there will be no light, no cold or frost”; the Hebrew of that verse is difficult and translations differ. Zech 14:7 follows it: “when evening comes, there will be light”. Isa 60:1 and 60:3 are in the row on a light to the nations, and Isa 60:1 in the row “Arise, shine”. The page lists the verses side by side and does not say how the earlier ones stand to the later.",
+     "doors": [
+      {
+       "id": "msg_the_lamb_will_be_your_light",
+       "name": "Message: The Lamb will be your light",
+       "type": "pattern",
+       "missing": false
+      },
+      {
+       "id": "msg_the_nations_will_walk_in_its_light",
+       "name": "Message: The nations will walk in its light",
+       "type": "pattern",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Zech.14.7",
+      "Isa.60.19",
+      "Rev.21.23",
+      "Rev.22.5",
+      "Isa.60.20",
+      "Zech.14.6",
+      "Rev.21.11",
+      "Rev.21.24"
+     ],
+     "eg": [
+      {
+       "id": "Zech.14.7",
+       "ref": "Zechariah 14:7",
+       "text": "It will be a unique day known only to the LORD, without day or night; but when evening comes, there will be light.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Isa.60.19",
+       "ref": "Isaiah 60:19",
+       "text": "No longer will the sun be your light by day, nor the brightness of the moon shine on your night; for the LORD will be your everlasting light, and your God will be your splendor.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        },
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Rev.21.23",
+       "ref": "Revelation 21:23",
+       "text": "And the city has no need of sun or moon to shine on it, because the glory of God illuminates the city, and the Lamb is its lamp.",
+       "words": [
+        {
+         "key": "g5461",
+         "lemma": "φωτίζω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.22.5",
+       "ref": "Revelation 22:5",
+       "text": "There will be no more night in the city, and they will have no need for the light of a lamp or of the sun. For the Lord God will shine on them, and they will reign forever and ever.",
+       "words": [
+        {
+         "key": "g5457",
+         "lemma": "φῶς"
+        },
+        {
+         "key": "g5461",
+         "lemma": "φωτίζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Among them Eliphaz's “light will shine on your ways” (Job 22:28), “On whom does His light not rise?” (Job 25:3, where “His” is God's in the speech of Bildad, who has named God in 25:2), the hidden brought to light (Job 28:11), “the light of my countenance” (Job 29:24) and the sun bright in the skies that no one can gaze at (Job 37:21).",
+     "doors": [],
+     "n": 5,
+     "verses": [
+      "Job.22.28",
+      "Job.25.3",
+      "Job.28.11",
+      "Job.29.24",
+      "Job.37.21"
+     ],
+     "eg": [
+      {
+       "id": "Job.22.28",
+       "ref": "Job 22:28",
+       "text": "Your decisions will be carried out, and light will shine on your ways.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Job.25.3",
+       "ref": "Job 25:3",
+       "text": "Can His troops be numbered? On whom does His light not rise?",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Job.28.11",
+       "ref": "Job 28:11",
+       "text": "He stops up the sources of the streams to bring what is hidden to light.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Job.29.24",
+       "ref": "Job 29:24",
+       "text": "If I smiled at them, they did not believe it; the light of my countenance was precious.",
+       "words": [
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 54,
+   "rows": [
+    {
+     "label": "“Make Your face shine upon us”: the LORD's face made to shine",
+     "note": "The Hebrew verb is אוֹר, “to give light”, said of the LORD's face: in the priestly blessing (Num 6:25), in the psalms (31:16; 67:1; 80:3, 80:7, 80:19; 119:135) and in Daniel's prayer (9:17, “cause Your face to shine upon Your desolate sanctuary”). The Berean prints “shine” and “cause to shine”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Num.6.25",
+      "Ps.67.1",
+      "Ps.80.3",
+      "Dan.9.17",
+      "Ps.31.16",
+      "Ps.80.7",
+      "Ps.80.19",
+      "Ps.119.135"
+     ],
+     "eg": [
+      {
+       "id": "Num.6.25",
+       "ref": "Numbers 6:25",
+       "text": "may the LORD cause His face to shine upon you and be gracious to you;",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.67.1",
+       "ref": "Psalms 67:1",
+       "text": "For the choirmaster. With stringed instruments. A Psalm. A song. May God be gracious to us and bless us, and cause His face to shine upon us, Selah",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.80.3",
+       "ref": "Psalms 80:3",
+       "text": "Restore us, O God, and cause Your face to shine upon us, that we may be saved.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Dan.9.17",
+       "ref": "Daniel 9:17",
+       "text": "So now, our God, hear the prayers and petitions of Your servant. For Your sake, O Lord, cause Your face to shine upon Your desolate sanctuary.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Eyes made bright; the heart and the simple enlightened; hidden things brought to light",
+     "note": "The Hebrew verb for the eyes (“his eyes brightened”, 1 Sam 14:27; “give light to my eyes”, Ps 13:3) and the Greek φωτίζω for the heart and for the hidden (“the eyes of your heart may be enlightened”, Eph 1:18; “bring to light what is hidden”, 1 Cor 4:5). John 1:9, “the true Light, who gives light to everyone”, is also in the row of verses that say only “the Light”. Heb 6:4 and 10:32 read “once enlightened” and “after you were enlightened”: readers part on what the enlightening is, and for Heb 6:4-6 on a second question as well. One is whether “enlightened” names baptism (as some take it) or another turning to the light; the other is whether those once enlightened can fall away. The page puts these verses beside the others because they share the verb, not because it says they mean the same, and takes neither side.",
+     "doors": [],
+     "n": 16,
+     "verses": [
+      "1Sam.14.27",
+      "Ps.19.8",
+      "Eph.1.18",
+      "1Cor.4.5",
+      "1Sam.14.29",
+      "Ezra.9.8",
+      "Ps.13.3",
+      "Prov.29.13",
+      "Eccl.8.1",
+      "Job.33.30",
+      "Ps.119.130",
+      "Eph.3.9",
+      "Heb.6.4",
+      "Heb.10.32",
+      "2Tim.1.10",
+      "John.1.9"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.14.27",
+       "ref": "1 Samuel 14:27",
+       "text": "Jonathan, however, had not heard that his father had bound the people with the oath. So he reached out the end of the staff in his hand, dipped it into the honeycomb, and put his hand to his mouth, and his eyes brightened.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.19.8",
+       "ref": "Psalms 19:8",
+       "text": "The precepts of the LORD are right, bringing joy to the heart; the commandments of the LORD are radiant, giving light to the eyes.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.18",
+       "ref": "Ephesians 1:18",
+       "text": "I ask that the eyes of your heart may be enlightened, so that you may know the hope of His calling, the riches of His glorious inheritance in the saints,",
+       "words": [
+        {
+         "key": "g5461",
+         "lemma": "φωτίζω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.4.5",
+       "ref": "1 Corinthians 4:5",
+       "text": "Therefore judge nothing before the appointed time; wait until the Lord comes. He will bring to light what is hidden in darkness and will expose the motives of men's hearts. At that time each will receive his praise from God.",
+       "words": [
+        {
+         "key": "g5461",
+         "lemma": "φωτίζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Light given in the dark: the pillar of fire by night, the lamp, the lightning; a lamp lit, a fire kindled",
+     "note": "The pillar of fire “to give them light” (Exod 13:21; Neh 9:12, 9:19; Ps 105:39), the cloud that “lit up the night” (Exod 14:20), “my God lights up my darkness” (Ps 18:28), “the LORD is God and has made His light shine upon us” (Ps 118:27), the lightning that “lit up the world” (Ps 77:18; 97:4), and the same verb for lighting a lamp or kindling a fire: “they illuminate the area in front of the lampstand” (Exod 25:37; Num 8:2), “kindle useless fires on My altar” (Mal 1:10), “use them for kindling” (Isa 27:11), “as though a lamp were shining on you” (Luke 11:36). Where the verse says “You” or “His” the page does not add the name. Ps 139:12 also holds the noun (אוֹרָה) and is shown here only.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "image_lamp",
+       "name": "lamp, as a figure",
+       "type": "image",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Exod.13.21",
+      "Neh.9.12",
+      "Ps.18.28",
+      "Ps.139.12",
+      "Exod.14.20",
+      "Neh.9.19",
+      "Ps.97.4",
+      "Ps.77.18",
+      "Ps.105.39",
+      "Ps.118.27",
+      "Exod.25.37",
+      "Num.8.2",
+      "Isa.27.11",
+      "Mal.1.10",
+      "Luke.11.36"
+     ],
+     "eg": [
+      {
+       "id": "Exod.13.21",
+       "ref": "Exodus 13:21",
+       "text": "And the LORD went before them in a pillar of cloud to guide their way by day, and in a pillar of fire to give them light by night, so that they could travel by day or night.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Neh.9.12",
+       "ref": "Nehemiah 9:12",
+       "text": "You led them with a pillar of cloud by day and a pillar of fire by night, to light for them the way in which they should travel.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.18.28",
+       "ref": "Psalms 18:28",
+       "text": "For You, O LORD, light my lamp; my God lights up my darkness.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ps.139.12",
+       "ref": "Psalms 139:12",
+       "text": "even the darkness is not dark to You, but the night shines like the day, for darkness is as light to You.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        },
+        {
+         "key": "h219",
+         "lemma": "אֹרֹת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The lights give light on the earth; the day dawns",
+     "note": "The verb with the sun, moon and stars as the one that gives light (Gen 1:15, 1:17; Ezek 32:7; Isa 60:19) and with the day as what dawns (Gen 44:3; 1 Sam 29:10; 2 Sam 2:32; Prov 4:18, “the path of the righteous is like the first gleam of dawn”).",
+     "doors": [
+      {
+       "id": "lights",
+       "name": "lights",
+       "type": "object",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Gen.1.15",
+      "Gen.44.3",
+      "Prov.4.18",
+      "Ezek.32.7",
+      "Gen.1.17",
+      "Isa.60.19",
+      "1Sam.29.10",
+      "2Sam.2.32"
+     ],
+     "eg": [
+      {
+       "id": "Gen.1.15",
+       "ref": "Genesis 1:15",
+       "text": "And let them serve as lights in the expanse of the sky to shine upon the earth.” And it was so.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        },
+        {
+         "key": "h3974",
+         "lemma": "מָאוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Gen.44.3",
+       "ref": "Genesis 44:3",
+       "text": "At daybreak, the men were sent on their way with their donkeys.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Prov.4.18",
+       "ref": "Proverbs 4:18",
+       "text": "The path of the righteous is like the first gleam of dawn, shining brighter and brighter until midday.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.32.7",
+       "ref": "Ezekiel 32:7",
+       "text": "When I extinguish you, I will cover the heavens and darken their stars. I will cover the sun with a cloud, and the moon will not give its light.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        },
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Arise, shine”: the glory of the LORD, the earth lit with glory, the city lit by the glory of God; “resplendent with light”; a glistening wake",
+     "note": "Isa 60:1, “Arise, shine, for your light has come, and the glory of the LORD rises upon you”; Ezek 43:2, “the earth shone with His glory”; Rev 18:1, the earth “illuminated by his glory” (an angel's); Rev 21:23 and 22:5, “the glory of God illuminates it” and “the Lord God will shine on them”; Ps 76:4, “You are resplendent with light”; Job 41:32, of the leviathan, “He leaves a glistening wake behind him”. Job 41:32 is not said of glory: it is here only because the verb is the same. Isa 60:1 is also in the rows on a light to the nations and on light with no night.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Isa.60.1",
+      "Ezek.43.2",
+      "Rev.18.1",
+      "Rev.21.23",
+      "Rev.22.5",
+      "Ps.76.4",
+      "Job.41.32"
+     ],
+     "eg": [
+      {
+       "id": "Isa.60.1",
+       "ref": "Isaiah 60:1",
+       "text": "Arise, shine, for your light has come, and the glory of the LORD rises upon you.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        },
+        {
+         "key": "h216",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.43.2",
+       "ref": "Ezekiel 43:2",
+       "text": "and I saw the glory of the God of Israel coming from the east. His voice was like the roar of many waters, and the earth shone with His glory.",
+       "words": [
+        {
+         "key": "h215",
+         "lemma": "אוֹר"
+        }
+       ]
+      },
+      {
+       "id": "Rev.18.1",
+       "ref": "Revelation 18:1",
+       "text": "After this I saw another angel descending from heaven with great authority, and the earth was illuminated by his glory.",
+       "words": [
+        {
+         "key": "g5461",
+         "lemma": "φωτίζω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.21.23",
+       "ref": "Revelation 21:23",
+       "text": "And the city has no need of sun or moon to shine on it, because the glory of God illuminates the city, and the Lamb is its lamp.",
+       "words": [
+        {
+         "key": "g5461",
+         "lemma": "φωτίζω"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 4,
+   "rows": [
+    {
+     "label": "“Full of light”, “bright”: the body, the cloud",
+     "note": "The Greek φωτεινός: “your whole body will be full of light” (Matt 6:22; Luke 11:34, 11:36) and “a bright cloud” that enveloped them (Matt 17:5).",
+     "doors": [],
+     "n": 4,
+     "verses": [
+      "Matt.6.22",
+      "Matt.17.5",
+      "Luke.11.34",
+      "Luke.11.36"
+     ],
+     "eg": [
+      {
+       "id": "Matt.6.22",
+       "ref": "Matthew 6:22",
+       "text": "The eye is the lamp of the body. If your eyes are good, your whole body will be full of light.",
+       "words": [
+        {
+         "key": "g5460",
+         "lemma": "φωτεινός"
+        }
+       ]
+      },
+      {
+       "id": "Matt.17.5",
+       "ref": "Matthew 17:5",
+       "text": "While Peter was still speaking, a bright cloud enveloped them, and a voice from the cloud said, “This is My beloved Son, in whom I am well pleased. Listen to Him!”",
+       "words": [
+        {
+         "key": "g5460",
+         "lemma": "φωτεινός"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.34",
+       "ref": "Luke 11:34",
+       "text": "Your eye is the lamp of your body. When your eyes are good, your whole body also is full of light. But when they are bad, your body is full of darkness.",
+       "words": [
+        {
+         "key": "g5460",
+         "lemma": "φωτεινός"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.36",
+       "ref": "Luke 11:36",
+       "text": "So if your whole body is full of light, with no part of it in darkness, you will be radiant, as though a lamp were shining on you.”",
+       "words": [
+        {
+         "key": "g5460",
+         "lemma": "φωτεινός"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “light”, “shine”, “bright”",
+  "words": [
+   {
+    "key": "h5051",
+    "lemma": "נֹגַהּ",
+    "translit": "no.gah",
+    "gloss": "brightness",
+    "lang": "Hebrew",
+    "n": 16,
+    "verses": [
+     "2Sam.22.13",
+     "Ps.18.12",
+     "Isa.4.5",
+     "Isa.50.10",
+     "Isa.60.3",
+     "Isa.60.19",
+     "Isa.62.1",
+     "Ezek.1.4",
+     "Ezek.1.13",
+     "Ezek.1.27",
+     "Ezek.1.28",
+     "Ezek.10.4",
+     "Joel.2.10",
+     "Joel.3.15",
+     "Amos.5.20",
+     "Hab.3.4"
+    ],
+    "eg": [
+     {
+      "id": "2Sam.22.13",
+      "ref": "2 Samuel 22:13",
+      "text": "From the brightness of His presence coals of fire blazed forth."
+     },
+     {
+      "id": "Ps.18.12",
+      "ref": "Psalms 18:12",
+      "text": "From the brightness of His presence His clouds advanced-hailstones and coals of fire."
+     }
+    ]
+   },
+   {
+    "key": "g5316",
+    "lemma": "φαίνω",
+    "translit": "phainō",
+    "gloss": "to shine/appear",
+    "lang": "Greek",
+    "n": 9,
+    "verses": [
+     "Matt.24.27",
+     "Phil.2.15",
+     "John.1.5",
+     "John.5.35",
+     "2Pet.1.19",
+     "1John.2.8",
+     "Rev.1.16",
+     "Rev.18.23",
+     "Rev.21.23"
+    ],
+    "eg": [
+     {
+      "id": "Matt.24.27",
+      "ref": "Matthew 24:27",
+      "text": "For just as the lightning comes from the east and flashes as far as the west, so will be the coming of the Son of Man."
+     },
+     {
+      "id": "Phil.2.15",
+      "ref": "Philippians 2:15",
+      "text": "so that you may be blameless and pure, children of God without fault in a crooked and perverse generation, in which you shine as lights in the world"
+     }
+    ]
+   },
+   {
+    "key": "g2989",
+    "lemma": "λάμπω",
+    "translit": "lampō",
+    "gloss": "to shine",
+    "lang": "Greek",
+    "n": 6,
+    "verses": [
+     "Matt.5.15",
+     "2Cor.4.6",
+     "Matt.5.16",
+     "Matt.17.2",
+     "Luke.17.24",
+     "Acts.12.7"
+    ],
+    "eg": [
+     {
+      "id": "Matt.5.15",
+      "ref": "Matthew 5:15",
+      "text": "Neither do people light a lamp and put it under a basket. Instead, they set it on a stand, and it gives light to everyone in the house."
+     },
+     {
+      "id": "2Cor.4.6",
+      "ref": "2 Corinthians 4:6",
+      "text": "For God, who said, “Let light shine out of darkness,” made His light shine in our hearts to give us the light of the knowledge of the glory of God in the face of Jesus Christ."
+     }
+    ]
+   },
+   {
+    "key": "h3313",
+    "lemma": "יָפַע",
+    "translit": "ya.pah",
+    "gloss": "to shine",
+    "lang": "Hebrew",
+    "n": 6,
+    "verses": [
+     "Deut.33.2",
+     "Job.3.4",
+     "Job.10.22",
+     "Ps.50.2",
+     "Ps.80.1",
+     "Ps.94.1"
+    ],
+    "eg": [
+     {
+      "id": "Deut.33.2",
+      "ref": "Deuteronomy 33:2",
+      "text": "He said: “The LORD came from Sinai and dawned upon us from Seir; He shone forth from Mount Paran and came with myriads of holy ones, with flaming fire at His right hand."
+     },
+     {
+      "id": "Job.3.4",
+      "ref": "Job 3:4",
+      "text": "If only that day had turned to darkness! May God above disregard it; may no light shine upon it."
+     }
+    ]
+   },
+   {
+    "key": "h5050",
+    "lemma": "נָגַהּ",
+    "translit": "na.gah",
+    "gloss": "to shine",
+    "lang": "Hebrew",
+    "n": 4,
+    "verses": [
+     "Job.18.5",
+     "Job.22.28",
+     "Ps.18.28",
+     "Isa.9.2"
+    ],
+    "eg": [
+     {
+      "id": "Job.18.5",
+      "ref": "Job 18:5",
+      "text": "Indeed, the lamp of the wicked is extinguished; the flame of his fire does not glow."
+     },
+     {
+      "id": "Job.22.28",
+      "ref": "Job 22:28",
+      "text": "Your decisions will be carried out, and light will shine on your ways."
+     }
+    ]
+   },
+   {
+    "key": "g2986",
+    "lemma": "λαμπρός",
+    "translit": "lampros",
+    "gloss": "shining",
+    "lang": "Greek",
+    "n": 4,
+    "verses": [
+     "Acts.10.30",
+     "Rev.15.6",
+     "Rev.19.8",
+     "Rev.22.16"
+    ],
+    "eg": [
+     {
+      "id": "Acts.10.30",
+      "ref": "Acts 10:30",
+      "text": "Cornelius answered: “Four days ago I was in my house praying at this, the ninth hour. Suddenly a man in radiant clothing stood before me"
+     },
+     {
+      "id": "Rev.15.6",
+      "ref": "Revelation 15:6",
+      "text": "And out of the temple came the seven angels with the seven plagues, dressed in clean and bright linen and girded with golden sashes around their chests."
+     }
+    ]
+   },
+   {
+    "key": "h5094",
+    "lemma": "נְהֹור",
+    "translit": "nahîrû",
+    "gloss": "enlightenment",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Dan.2.22",
+     "Dan.5.11",
+     "Dan.5.14"
+    ],
+    "eg": [
+     {
+      "id": "Dan.2.22",
+      "ref": "Daniel 2:22",
+      "text": "He reveals the deep and hidden things; He knows what lies in darkness, and light dwells with Him."
+     },
+     {
+      "id": "Dan.5.11",
+      "ref": "Daniel 5:11",
+      "text": "There is a man in your kingdom who has the spirit of the holy gods in him. In the days of your father he was found to have insight, intelligence, and wisdom like that of the gods. Your father, King Nebuchadnezzar, appointed him chief of the magicians, enchanters, astrologers, and diviners. Your own father, the king,"
+     }
+    ]
+   },
+   {
+    "key": "h7160",
+    "lemma": "קָרַן",
+    "translit": "qa.ran",
+    "gloss": "to shine",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Exod.34.29",
+     "Exod.34.30",
+     "Exod.34.35"
+    ],
+    "eg": [
+     {
+      "id": "Exod.34.29",
+      "ref": "Exodus 34:29",
+      "text": "And when Moses came down from Mount Sinai with the two tablets of the Testimony in his hands, he was unaware that his face had become radiant from speaking with the LORD."
+     },
+     {
+      "id": "Exod.34.30",
+      "ref": "Exodus 34:30",
+      "text": "Aaron and all the Israelites looked at Moses, and behold, his face was radiant. And they were afraid to approach him."
+     }
+    ]
+   },
+   {
+    "key": "h5102",
+    "lemma": "נָהַר",
+    "translit": "nāhărû",
+    "gloss": null,
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Ps.34.5",
+     "Isa.60.5",
+     "Jer.31.12"
+    ],
+    "eg": [
+     {
+      "id": "Ps.34.5",
+      "ref": "Psalms 34:5",
+      "text": "Those who look to Him are radiant with joy; their faces shall never be ashamed."
+     },
+     {
+      "id": "Isa.60.5",
+      "ref": "Isaiah 60:5",
+      "text": "Then you will look and be radiant, and your heart will tremble and swell with joy, because the riches of the sea will be brought to you, and the wealth of the nations will come to you."
+     }
+    ]
+   },
+   {
+    "key": "g5338",
+    "lemma": "φέγγος",
+    "translit": "phengos",
+    "gloss": "brightness",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "Matt.24.29",
+     "Mark.13.24",
+     "Luke.11.33"
+    ],
+    "eg": [
+     {
+      "id": "Matt.24.29",
+      "ref": "Matthew 24:29",
+      "text": "Immediately after the tribulation of those days: ‘The sun will be darkened, and the moon will not give its light; the stars will fall from the sky, and the powers of the heavens will be shaken.'"
+     },
+     {
+      "id": "Mark.13.24",
+      "ref": "Mark 13:24",
+      "text": "But in those days, after that tribulation: ‘The sun will be darkened, and the moon will not give its light;"
+     }
+    ]
+   },
+   {
+    "key": "g1645",
+    "lemma": "ἐλαφρός",
+    "translit": "elaphros",
+    "gloss": "light",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Matt.11.30",
+     "2Cor.4.17"
+    ],
+    "note": "ἐλαφρός means light in weight, not heavy: “My burden is light” (Matt 11:30), “our light and momentary affliction” (2 Cor 4:17). The English word is the same; the Greek word is not φῶς, and the sense is not the light that shines.",
+    "eg": [
+     {
+      "id": "Matt.11.30",
+      "ref": "Matthew 11:30",
+      "text": "For My yoke is easy and My burden is light.”"
+     },
+     {
+      "id": "2Cor.4.17",
+      "ref": "2 Corinthians 4:17",
+      "text": "For our light and momentary affliction is producing for us an eternal weight of glory that is far beyond comparison."
+     }
+    ]
+   },
+   {
+    "key": "g4034",
+    "lemma": "περιλάμπω",
+    "translit": "perilampō",
+    "gloss": "to shine around",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Luke.2.9",
+     "Acts.26.13"
+    ],
+    "eg": [
+     {
+      "id": "Luke.2.9",
+      "ref": "Luke 2:9",
+      "text": "Just then an angel of the Lord stood before them, and the glory of the Lord shone around them, and they were terrified."
+     },
+     {
+      "id": "Acts.26.13",
+      "ref": "Acts 26:13",
+      "text": "About noon, O king, as I was on the road, I saw a light from heaven, brighter than the sun, shining around me and my companions."
+     }
+    ]
+   },
+   {
+    "key": "h2096",
+    "lemma": "זֹהַר",
+    "translit": "zo.har",
+    "gloss": "brightness",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Ezek.8.2",
+     "Dan.12.3"
+    ],
+    "eg": [
+     {
+      "id": "Ezek.8.2",
+      "ref": "Ezekiel 8:2",
+      "text": "Then I looked and saw a figure like that of a man. From His waist down His appearance was like fire, and from His waist up He was as bright as the gleam of amber."
+     },
+     {
+      "id": "Dan.12.3",
+      "ref": "Daniel 12:3",
+      "text": "Then the wise will shine like the brightness of the heavens, and those who lead many to righteousness will shine like the stars forever and ever."
+     }
+    ]
+   },
+   {
+    "key": "g4015",
+    "lemma": "περιαστράπτω",
+    "translit": "periastraptō",
+    "gloss": "to shine",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Acts.22.6"
+    ],
+    "eg": [
+     {
+      "id": "Acts.22.6",
+      "ref": "Acts 22:6",
+      "text": "About noon as I was approaching Damascus, suddenly a bright light from heaven flashed around me."
+     }
+    ]
+   },
+   {
+    "key": "g2987",
+    "lemma": "λαμπρότης",
+    "translit": "lamprotēs",
+    "gloss": "brightness",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Acts.26.13"
+    ],
+    "eg": [
+     {
+      "id": "Acts.26.13",
+      "ref": "Acts 26:13",
+      "text": "About noon, O king, as I was on the road, I saw a light from heaven, brighter than the sun, shining around me and my companions."
+     }
+    ]
+   },
+   {
+    "key": "g2014",
+    "lemma": "ἐπιφαίνω",
+    "translit": "epiphainō",
+    "gloss": "to appear",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.1.79"
+    ],
+    "eg": [
+     {
+      "id": "Luke.1.79",
+      "ref": "Luke 1:79",
+      "text": "to shine on those who live in darkness and in the shadow of death, to guide our feet into the path of peace.”"
+     }
+    ]
+   },
+   {
+    "key": "h5053",
+    "lemma": "נֹגַהּ",
+    "translit": "no.gah",
+    "gloss": "daylight",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.6.19"
+    ],
+    "eg": [
+     {
+      "id": "Dan.6.19",
+      "ref": "Daniel 6:19",
+      "text": "At the first light of dawn, the king got up and hurried to the den of lions."
+     }
+    ]
+   },
+   {
+    "key": "g2017",
+    "lemma": "ἐπιφαύσκω",
+    "translit": "epiphauskō",
+    "gloss": "to shine on",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Eph.5.14"
+    ],
+    "eg": [
+     {
+      "id": "Eph.5.14",
+      "ref": "Ephesians 5:14",
+      "text": "So it is said: “Wake up, O sleeper, rise up from the dead, and Christ will shine on you.”"
+     }
+    ]
+   },
+   {
+    "key": "g541",
+    "lemma": "ἀπαύγασμα",
+    "translit": "apaugasma",
+    "gloss": "radiance",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Heb.1.3"
+    ],
+    "eg": [
+     {
+      "id": "Heb.1.3",
+      "ref": "Hebrews 1:3",
+      "text": "The Son is the radiance of God's glory and the exact representation of His nature, upholding all things by His powerful word. After He had provided purification for sins, He sat down at the right hand of the Majesty on high."
+     }
+    ]
+   },
+   {
+    "key": "h5054",
+    "lemma": "נְגֹהָה",
+    "translit": "ne.go.hah",
+    "gloss": "brightness",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Isa.59.9"
+    ],
+    "eg": [
+     {
+      "id": "Isa.59.9",
+      "ref": "Isaiah 59:9",
+      "text": "Therefore justice is far from us, and righteousness does not reach us. We hope for light, but there is darkness; for brightness, but we walk in gloom."
+     }
+    ]
+   },
+   {
+    "key": "h166",
+    "lemma": "אָהַל",
+    "translit": "a.hal",
+    "gloss": "to shine",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Job.25.5"
+    ],
+    "eg": [
+     {
+      "id": "Job.25.5",
+      "ref": "Job 25:5",
+      "text": "If even the moon does not shine, and the stars are not pure in His sight,"
+     }
+    ]
+   },
+   {
+    "key": "h925",
+    "lemma": "בָּהִיר",
+    "translit": "ba.hir",
+    "gloss": "bright",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Job.37.21"
+    ],
+    "eg": [
+     {
+      "id": "Job.37.21",
+      "ref": "Job 37:21",
+      "text": "Now no one can gaze at the sun when it is bright in the skies after the wind has swept them clean."
+     }
+    ]
+   },
+   {
+    "key": "g1584",
+    "lemma": "ἐκλάμπω",
+    "translit": "eklampō",
+    "gloss": "to shine out",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Matt.13.43"
+    ],
+    "eg": [
+     {
+      "id": "Matt.13.43",
+      "ref": "Matthew 13:43",
+      "text": "Then the righteous will shine like the sun in the kingdom of their Father. He who has ears, let him hear."
+     }
+    ]
+   },
+   {
+    "key": "g4744",
+    "lemma": "στίλβω",
+    "translit": "stilbō",
+    "gloss": "to shine",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Mark.9.3"
+    ],
+    "eg": [
+     {
+      "id": "Mark.9.3",
+      "ref": "Mark 9:3",
+      "text": "His clothes became radiantly white, brighter than any launderer on earth could bleach them."
+     }
+    ]
+   }
+  ]
+ }
+}

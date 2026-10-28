@@ -1,0 +1,2357 @@
+{
+ "id": "blood",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h1818",
+   "lemma": "דָּם",
+   "form": "noun",
+   "translit": "dam",
+   "gloss": "blood",
+   "lang": "Hebrew",
+   "uses": 292,
+   "other_sense": 0
+  },
+  {
+   "key": "g129",
+   "lemma": "αἷμα",
+   "form": "noun",
+   "translit": "ahima",
+   "gloss": "(Field of) Blood",
+   "lang": "Greek",
+   "uses": 90,
+   "other_sense": 0
+  },
+  {
+   "key": "g130",
+   "lemma": "αἱματεκχυσία",
+   "form": "noun",
+   "translit": "ahimatekchusia",
+   "gloss": "bloodshed",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of blood"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "sacrifice",
+   "name": "sacrifice",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "atonement",
+   "name": "reconciliation",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "covenant",
+   "name": "covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "passover",
+   "name": "the passover",
+   "type": "observance",
+   "missing": false
+  },
+  {
+   "id": "lamb_of_god",
+   "name": "the Lamb of God",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "altar",
+   "name": "altar",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "redemption",
+   "name": "redemption",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "abel",
+   "name": "Abel",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "event_last_supper",
+   "name": "Last Supper",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "day_of_atonement",
+   "name": "the day of atonement",
+   "type": "observance",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "theme_sacrifice_r13",
+   "name": "The blood is the life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r29",
+   "name": "By His blood",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r4",
+   "name": "The Passover lamb",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r14",
+   "name": "To make atonement",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r13",
+   "name": "The blood of the covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "event_last_supper",
+   "name": "Last Supper",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "event_passover",
+   "name": "Passover",
+   "type": "event",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.9.4",
+   "ref": "Genesis 9:4",
+   "text": "But you must not eat meat with its lifeblood still in it."
+  },
+  {
+   "id": "Gen.4.10",
+   "ref": "Genesis 4:10",
+   "text": "“What have you done?” replied the LORD. “The voice of your brother's blood cries out to Me from the ground."
+  },
+  {
+   "id": "Lev.17.11",
+   "ref": "Leviticus 17:11",
+   "text": "For the life of the flesh is in the blood, and I have given it to you to make atonement for your souls upon the altar; for it is the blood that makes atonement for the soul."
+  },
+  {
+   "id": "Exod.12.13",
+   "ref": "Exodus 12:13",
+   "text": "The blood on the houses where you are staying will be a sign; when I see the blood, I will pass over you. No plague will fall on you to destroy you when I strike the land of Egypt."
+  },
+  {
+   "id": "Exod.24.8",
+   "ref": "Exodus 24:8",
+   "text": "So Moses took the blood, splattered it on the people, and said, “This is the blood of the covenant that the LORD has made with you in accordance with all these words.”"
+  },
+  {
+   "id": "Matt.26.28",
+   "ref": "Matthew 26:28",
+   "text": "This is My blood of the covenant, which is poured out for many for the forgiveness of sins."
+  },
+  {
+   "id": "Heb.9.22",
+   "ref": "Hebrews 9:22",
+   "text": "According to the law, in fact, nearly everything must be purified with blood, and without the shedding of blood there is no forgiveness."
+  },
+  {
+   "id": "1John.1.7",
+   "ref": "1 John 1:7",
+   "text": "But if we walk in the light as He is in the light, we have fellowship with one another, and the blood of Jesus His Son cleanses us from all sin."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 387,
+   "rows": [
+    {
+     "label": "Blood that cries out: Abel's, “The earth will reveal her bloodshed”",
+     "note": "The blood of the murdered speaks, and the ground has received it: “The voice of your brother's blood cries out to Me from the ground” (Gen 4:10; 4:11), “O earth, do not cover my blood” (Job 16:18), “The earth will reveal her bloodshed and will no longer conceal her slain” (Isa 26:21), the blood Jerusalem left on the bare rock (Ezek 24:7-8). Jesus speaks of the blood of the prophets from Abel to Zechariah (Matt 23:35; Luke 11:50-51). Heb 12:24 sets “the sprinkled blood that speaks a better word than the blood of Abel” beside it; what “a better word” is, readers take differently, and the page takes no side.",
+     "doors": [
+      {
+       "id": "abel",
+       "name": "Abel",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "cain",
+       "name": "Cain",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Gen.4.10",
+      "Job.16.18",
+      "Isa.26.21",
+      "Heb.12.24",
+      "Gen.4.11",
+      "Ezek.24.7",
+      "Ezek.24.8",
+      "Matt.23.35",
+      "Luke.11.50",
+      "Luke.11.51"
+     ],
+     "eg": [
+      {
+       "id": "Gen.4.10",
+       "ref": "Genesis 4:10",
+       "text": "“What have you done?” replied the LORD. “The voice of your brother's blood cries out to Me from the ground.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Job.16.18",
+       "ref": "Job 16:18",
+       "text": "O earth, do not cover my blood; may my cry for help never be laid to rest.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.26.21",
+       "ref": "Isaiah 26:21",
+       "text": "For behold, the LORD is coming out of His dwelling to punish the inhabitants of the earth for their iniquity. The earth will reveal her bloodshed and will no longer conceal her slain.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.24",
+       "ref": "Hebrews 12:24",
+       "text": "to Jesus the mediator of a new covenant, and to the sprinkled blood that speaks a better word than the blood of Abel.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“The life is in the blood”: eating and drinking blood, and the Council's “from blood” (Acts 15)",
+     "note": "After the flood the first word about blood is about the life in it: “you must not eat meat with its lifeblood still in it” (Gen 9:4). Leviticus and Deuteronomy give the reason (“the life of the flesh is in the blood”, Lev 17:11; “the blood is the life”, Deut 12:23) and say what to do with the blood (Lev 17:13; Deut 12:16; 15:23); Saul's men eat meat with the blood and are told they are sinning (1 Sam 14:32-34); David will not drink the water brought at the risk of men's lives, and pours it out (2 Sam 23:17; 1 Chr 11:19); “Do I eat the flesh of bulls or drink the blood of goats?” (Ps 50:13). In the New Testament the Council's letter lists “and from blood” among what Gentile believers should abstain from (Acts 15:20, 29; 21:25). Readers part on whether that letter still binds, on whether the blood there is eaten blood or bloodshed, and on whether Gen 9:4, given before the law of Moses, binds beyond Israel; the page takes no side. Lev 17:11 is also in the atonement row. Gen 9:4-6 is one speech: its next two verses are in “Blood avenged and required” (9:5) and “Shedding blood” (9:6).",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r13",
+       "name": "The blood is the life",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Gen.9.4",
+      "Lev.17.11",
+      "Deut.12.23",
+      "Acts.15.20",
+      "Lev.3.17",
+      "Lev.7.26",
+      "Lev.7.27",
+      "Lev.17.10",
+      "Lev.17.12",
+      "Lev.17.13",
+      "Lev.17.14",
+      "Lev.19.26",
+      "Deut.12.16",
+      "Deut.15.23",
+      "1Sam.14.32",
+      "1Sam.14.33",
+      "1Sam.14.34",
+      "2Sam.23.17",
+      "1Chr.11.19",
+      "Ps.50.13",
+      "Ezek.33.25",
+      "Zech.9.7",
+      "Acts.15.29",
+      "Acts.21.25"
+     ],
+     "eg": [
+      {
+       "id": "Gen.9.4",
+       "ref": "Genesis 9:4",
+       "text": "But you must not eat meat with its lifeblood still in it.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Lev.17.11",
+       "ref": "Leviticus 17:11",
+       "text": "For the life of the flesh is in the blood, and I have given it to you to make atonement for your souls upon the altar; for it is the blood that makes atonement for the soul.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Deut.12.23",
+       "ref": "Deuteronomy 12:23",
+       "text": "Only be sure not to eat the blood, because the blood is the life, and you must not eat the life with the meat.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Acts.15.20",
+       "ref": "Acts 15:20",
+       "text": "Instead, we should write and tell them to abstain from food polluted by idols, from sexual immorality, from the meat of strangled animals, and from blood.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Flesh and blood”: a human being; and “not of blood” (John 1:13)",
+     "note": "The phrase for a human being: “this was not revealed to you by flesh and blood” (Matt 16:17), “flesh and blood cannot inherit the kingdom of God” (1 Cor 15:50), “our struggle is not against flesh and blood” (Eph 6:12), “since the children have flesh and blood, He too shared in their humanity” (Heb 2:14), “I did not rush to consult with flesh and blood” (Gal 1:16). John 1:13, “children born not of blood, nor of the desire or will of man, but born of God”, does not have the phrase “flesh and blood”: it has the plural αἱμάτων, which the Berean prints “blood”, and it stands here for that word.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Matt.16.17",
+      "1Cor.15.50",
+      "Eph.6.12",
+      "Heb.2.14",
+      "John.1.13",
+      "Gal.1.16"
+     ],
+     "eg": [
+      {
+       "id": "Matt.16.17",
+       "ref": "Matthew 16:17",
+       "text": "Jesus replied, “Blessed are you, Simon son of Jonah! For this was not revealed to you by flesh and blood, but by My Father in heaven.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.50",
+       "ref": "1 Corinthians 15:50",
+       "text": "Now I declare to you, brothers, that flesh and blood cannot inherit the kingdom of God, nor does the perishable inherit the imperishable.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Eph.6.12",
+       "ref": "Ephesians 6:12",
+       "text": "For our struggle is not against flesh and blood, but against the rulers, against the authorities, against the powers of this world's darkness, and against the spiritual forces of evil in the heavenly realms.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Heb.2.14",
+       "ref": "Hebrews 2:14",
+       "text": "Now since the children have flesh and blood, He too shared in their humanity, so that by His death He might destroy him who holds the power of death, that is, the devil,",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A flow of blood: childbirth, a woman's flow, the woman who touched His cloak",
+     "note": "The blood of birth and of a woman's flow, the rules for them (Lev 12; 15:19, 25; 20:18), the child “wallowing in your blood” (Ezek 16:6, 9), and the woman who “had suffered from bleeding for twelve years” (Mark 5:25-29; Luke 8:43-44). Matt 9:20 tells the same story and has no word for blood (it is the verb αἱμορροέω, named under “Other words”), so it is not in this hub's rows.",
+     "doors": [],
+     "n": 12,
+     "verses": [
+      "Lev.12.7",
+      "Lev.15.25",
+      "Mark.5.25",
+      "Ezek.16.6",
+      "Lev.12.4",
+      "Lev.12.5",
+      "Lev.15.19",
+      "Lev.20.18",
+      "Ezek.16.9",
+      "Mark.5.29",
+      "Luke.8.43",
+      "Luke.8.44"
+     ],
+     "eg": [
+      {
+       "id": "Lev.12.7",
+       "ref": "Leviticus 12:7",
+       "text": "And the priest will present them before the LORD and make atonement for her; and she shall be ceremonially cleansed from her flow of blood. This is the law for a woman giving birth, whether to a male or to a female.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Lev.15.25",
+       "ref": "Leviticus 15:25",
+       "text": "When a woman has a discharge of her blood for many days at a time other than her menstrual period, or if it continues beyond her period, she will be unclean all the days of her unclean discharge, just as she is during the days of her menstruation.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Mark.5.25",
+       "ref": "Mark 5:25",
+       "text": "And a woman was there who had suffered from bleeding for twelve years.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.16.6",
+       "ref": "Ezekiel 16:6",
+       "text": "Then I passed by and saw you wallowing in your blood, and as you lay there in your blood I said to you, ‘Live!' There I said to you, ‘Live!'",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Shedding blood: “by man his blood will be shed”; murder, innocent blood, hands covered with blood",
+     "note": "Blood as the killing of a person, in the Hebrew often the plural דָּמִים, which the Berean prints “blood” or “bloodshed”: “Whoever sheds the blood of man, by man his blood will be shed” (Gen 9:6), “hands that shed innocent blood” among the things the LORD hates (Prov 6:17), “Your hands are covered with blood” (Isa 1:15), the bloody city (Ezek 22:2; Nah 3:1), “shedding the blood of the prophets” (Matt 23:30), Stephen's blood (Acts 22:20), the blood of the saints (Rev 16:6; 17:6; 18:24), Pilate's mixing of Galileans' blood with their sacrifices (Luke 13:1), and Amasa who “wallowed in his blood in the middle of the road” (2 Sam 20:12). David is told he may not build the house because “You have shed much blood and waged great wars” (1 Chr 22:8). Heb 12:4 speaks of resisting sin “to the point of shedding your blood”. In Ps 94:21 the Berean prints “condemn the innocent to death” where the Hebrew is “innocent blood”. The page lays the verses side by side and does not weigh the killing in war against the killing of a neighbor. Gen 9:4-6 is one speech: the life in the blood (9:4) is in “The life is in the blood” and the LORD's accounting (9:5) in “Blood avenged and required”. The brothers “dipped the robe in its blood”, the blood of a young goat (Gen 37:31), after their talk of Joseph's blood (37:22, 26); that verse is in “Every other use”.",
+     "doors": [],
+     "n": 77,
+     "verses": [
+      "Gen.9.6",
+      "Prov.6.17",
+      "Isa.1.15",
+      "Matt.23.30",
+      "Rom.3.15",
+      "Gen.37.22",
+      "Gen.37.26",
+      "Deut.21.7",
+      "Deut.27.25",
+      "1Sam.19.5",
+      "1Sam.25.31",
+      "1Sam.26.20",
+      "2Sam.16.7",
+      "2Sam.16.8",
+      "2Sam.20.12",
+      "1Kgs.2.5",
+      "2Kgs.21.16",
+      "2Kgs.24.4",
+      "1Chr.22.8",
+      "1Chr.28.3",
+      "Ps.5.6",
+      "Ps.26.9",
+      "Ps.55.23",
+      "Ps.59.2",
+      "Ps.79.3",
+      "Ps.94.21",
+      "Ps.106.38",
+      "Ps.139.19",
+      "Prov.1.11",
+      "Prov.1.16",
+      "Prov.1.18",
+      "Prov.12.6",
+      "Prov.28.17",
+      "Prov.29.10",
+      "Isa.33.15",
+      "Isa.59.3",
+      "Isa.59.7",
+      "Jer.2.34",
+      "Jer.7.6",
+      "Jer.19.4",
+      "Jer.22.3",
+      "Jer.22.17",
+      "Jer.26.15",
+      "Lam.4.13",
+      "Ezek.7.23",
+      "Ezek.9.9",
+      "Ezek.16.36",
+      "Ezek.16.38",
+      "Ezek.18.10",
+      "Ezek.22.2",
+      "Ezek.22.3",
+      "Ezek.22.4",
+      "Ezek.22.6",
+      "Ezek.22.9",
+      "Ezek.22.12",
+      "Ezek.22.13",
+      "Ezek.22.27",
+      "Ezek.23.45",
+      "Ezek.24.6",
+      "Ezek.24.9",
+      "Ezek.36.18",
+      "Hos.1.4",
+      "Hos.4.2",
+      "Hos.6.8",
+      "Joel.3.19",
+      "Mic.3.10",
+      "Mic.7.2",
+      "Nah.3.1",
+      "Hab.2.8",
+      "Hab.2.12",
+      "Hab.2.17",
+      "Luke.13.1",
+      "Acts.22.20",
+      "Heb.12.4",
+      "Rev.16.6",
+      "Rev.17.6",
+      "Rev.18.24"
+     ],
+     "eg": [
+      {
+       "id": "Gen.9.6",
+       "ref": "Genesis 9:6",
+       "text": "Whoever sheds the blood of man, by man his blood will be shed; for in His own image God has made mankind.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Prov.6.17",
+       "ref": "Proverbs 6:17",
+       "text": "haughty eyes, a lying tongue, hands that shed innocent blood,",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.1.15",
+       "ref": "Isaiah 1:15",
+       "text": "When you spread out your hands in prayer, I will hide My eyes from you; even though you multiply your prayers, I will not listen. Your hands are covered with blood.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Matt.23.30",
+       "ref": "Matthew 23:30",
+       "text": "And you say, ‘If we had lived in the days of our fathers, we would not have been partners with them in shedding the blood of the prophets.'",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blood-guilt: “his blood will be on his own head”, “no bloodguilt”, “bloodshed pollutes the land”",
+     "note": "Blood as the guilt of a death: “his blood will be on his own head” for whoever puts himself in the way (Josh 2:19; 2 Sam 1:16; Lev 20), the owner who is free of it (Exod 22:2-3), “bloodshed pollutes the land” (Num 35:33), the city that must clear itself (Deut 21:7-9), cases of bloodshed brought to the court (Deut 17:8), David praying “Deliver me from bloodguilt” (Ps 51:14), the watchman who is held “accountable for his blood” if he does not warn (Ezek 3:18, 20; 33:4-8), Paul “innocent of the blood of all men” (Acts 20:26) and “Your blood be on your own heads!” (Acts 18:6). The same Hebrew word as the blood of the altar; the row keeps the sense apart and not the word. Pilate's “I am innocent of this man's blood” (Matt 27:24) and the council's “this man's blood” (Acts 5:28) use the same phrase and stand here; the people's answer at the trial is set only with the passion, in “In the passion”, where it has a note on how it has been read.",
+     "doors": [],
+     "n": 49,
+     "verses": [
+      "Num.35.33",
+      "Josh.2.19",
+      "Ezek.33.6",
+      "Acts.18.6",
+      "Gen.42.22",
+      "Matt.27.24",
+      "Exod.22.2",
+      "Exod.22.3",
+      "Lev.17.4",
+      "Lev.20.9",
+      "Lev.20.11",
+      "Lev.20.12",
+      "Lev.20.13",
+      "Lev.20.16",
+      "Lev.20.27",
+      "Deut.17.8",
+      "Deut.19.10",
+      "Deut.19.13",
+      "Deut.21.7",
+      "Deut.21.8",
+      "Deut.21.9",
+      "Deut.22.8",
+      "Judg.9.24",
+      "1Sam.25.26",
+      "1Sam.25.33",
+      "2Sam.1.16",
+      "2Sam.3.28",
+      "2Sam.4.11",
+      "2Sam.21.1",
+      "1Kgs.2.9",
+      "1Kgs.2.31",
+      "1Kgs.2.32",
+      "1Kgs.2.33",
+      "1Kgs.2.37",
+      "2Kgs.9.26",
+      "Ps.51.14",
+      "Isa.4.4",
+      "Lam.4.14",
+      "Ezek.3.18",
+      "Ezek.3.20",
+      "Ezek.18.13",
+      "Ezek.33.4",
+      "Ezek.33.5",
+      "Ezek.33.8",
+      "Ezek.35.6",
+      "Hos.12.14",
+      "Jonah.1.14",
+      "Acts.5.28",
+      "Acts.20.26"
+     ],
+     "eg": [
+      {
+       "id": "Num.35.33",
+       "ref": "Numbers 35:33",
+       "text": "Do not pollute the land where you live, for bloodshed pollutes the land, and no atonement can be made for the land on which the blood is shed, except by the blood of the one who shed it.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Josh.2.19",
+       "ref": "Joshua 2:19",
+       "text": "If anyone goes out the door of your house into the street, his blood will be on his own head, and we will be innocent. But if a hand is laid on anyone with you in the house, his blood will be on our heads.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.33.6",
+       "ref": "Ezekiel 33:6",
+       "text": "But if the watchman sees the sword coming and fails to blow the horn to warn the people, and the sword comes and takes away a life, then that one will be taken away in his iniquity, but I will hold the watchman accountable for his blood.'",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Acts.18.6",
+       "ref": "Acts 18:6",
+       "text": "But when they opposed and insulted him, he shook out his garments and told them, “Your blood be on your own heads! I am innocent of it. From now on I will go to the Gentiles.”",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blood avenged and required: the avenger of blood; “How long ... until You ... avenge our blood?”",
+     "note": "Who answers for spilled blood: the LORD says “I will demand an accounting” (Gen 9:5); “The avenger of blood is to put the murderer to death” (Num 35:19) and the cities shelter the one who killed without intent (Num 35; Deut 19; Josh 20); “the Avenger of bloodshed remembers” (Ps 9:12); the souls ask, “How long, O Lord, holy and true, until You judge those who dwell upon the earth and avenge our blood?” (Rev 6:10); and the judgment on the great prostitute: “He has avenged the blood of His servants” (Rev 19:2). Ps 72:14 says of the king that “their blood is precious in his sight”. Readers part on how these stand to one another and to the New Testament's word on vengeance; the page lays the verses side by side and takes no side. Gen 9:4-6 is one speech: the life in the blood (9:4) is in “The life is in the blood” and the shedding of blood (9:6) in “Shedding blood”.",
+     "doors": [],
+     "n": 25,
+     "verses": [
+      "Gen.9.5",
+      "Num.35.19",
+      "Ps.9.12",
+      "Rev.6.10",
+      "Luke.11.50",
+      "Num.35.21",
+      "Num.35.24",
+      "Num.35.25",
+      "Num.35.27",
+      "Deut.19.6",
+      "Deut.19.12",
+      "Deut.32.43",
+      "Josh.20.3",
+      "Josh.20.5",
+      "Josh.20.9",
+      "2Sam.3.27",
+      "2Sam.14.11",
+      "2Kgs.9.7",
+      "2Chr.24.25",
+      "Ps.72.14",
+      "Ps.79.10",
+      "Jer.51.35",
+      "Joel.3.21",
+      "Rev.16.6",
+      "Rev.19.2"
+     ],
+     "eg": [
+      {
+       "id": "Gen.9.5",
+       "ref": "Genesis 9:5",
+       "text": "And surely I will require the life of any man or beast by whose hand your lifeblood is shed. I will demand an accounting from anyone who takes the life of his fellow man:",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Num.35.19",
+       "ref": "Numbers 35:19",
+       "text": "The avenger of blood is to put the murderer to death; when he finds him, he is to kill him.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.9.12",
+       "ref": "Psalms 9:12",
+       "text": "For the Avenger of bloodshed remembers; He does not ignore the cry of the afflicted.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Rev.6.10",
+       "ref": "Revelation 6:10",
+       "text": "And they cried out in a loud voice, “How long, O Lord, holy and true, until You judge those who dwell upon the earth and avenge our blood?”",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blood in war and in the LORD's judgment: the slain, arrows drunk with blood, blood as high as the bridles",
+     "note": "“I will make My arrows drunk with blood” (Deut 32:42), “The sword of the LORD is bathed in blood” in Edom (Isa 34:6), the sword that devours “until it is quenched with their blood” (Jer 46:10), the day of the LORD pictured as a sacrifice and a feast for the birds and beasts (Isa 34:6; Jer 46:10; Ezek 39:17-19), blood on the road and on the ground where kings and the wicked fell (1 Kgs 22:35, 38; 2 Kgs 9:33), the Moabites' cry, “This is blood! The kings have clashed swords and slaughtered one another” (2 Kgs 3:23), “the blood that flowed from it rose as high as the bridles of the horses” (Rev 14:20), and “a robe dipped in blood” on the one whose name is The Word of God (Rev 19:13). Readers part on whose blood is on that robe (His own, the enemies', or the martyrs'), and the page takes no side.",
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 29,
+     "verses": [
+      "Deut.32.42",
+      "Isa.34.6",
+      "Jer.46.10",
+      "Rev.14.20",
+      "Num.23.24",
+      "1Kgs.21.19",
+      "1Kgs.22.35",
+      "1Kgs.22.38",
+      "2Kgs.3.23",
+      "2Kgs.9.33",
+      "Ps.58.10",
+      "Ps.68.23",
+      "Isa.9.5",
+      "Isa.15.9",
+      "Isa.34.3",
+      "Isa.34.7",
+      "Isa.49.26",
+      "Jer.48.10",
+      "Ezek.5.17",
+      "Ezek.14.19",
+      "Ezek.21.32",
+      "Ezek.28.23",
+      "Ezek.32.6",
+      "Ezek.38.22",
+      "Ezek.39.17",
+      "Ezek.39.18",
+      "Ezek.39.19",
+      "Zeph.1.17",
+      "Rev.19.13"
+     ],
+     "eg": [
+      {
+       "id": "Deut.32.42",
+       "ref": "Deuteronomy 32:42",
+       "text": "I will make My arrows drunk with blood, while My sword devours flesh-the blood of the slain and captives, the heads of the enemy leaders.”",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Isa.34.6",
+       "ref": "Isaiah 34:6",
+       "text": "The sword of the LORD is bathed in blood. It drips with fat-with the blood of lambs and goats, with the fat of the kidneys of rams. For the LORD has a sacrifice in Bozrah, a great slaughter in the land of Edom.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Jer.46.10",
+       "ref": "Jeremiah 46:10",
+       "text": "For that day belongs to the Lord GOD of Hosts, a day of vengeance against His foes. The sword will devour until it is satisfied, until it is quenched with their blood. For the Lord GOD of Hosts will hold a sacrifice in the land of the north by the River Euphrates.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Rev.14.20",
+       "ref": "Revelation 14:20",
+       "text": "And the winepress was trodden outside the city, and the blood that flowed from it rose as high as the bridles of the horses for a distance of 1,600 stadia.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Water turned to blood, the moon turned to blood: in the plagues, in the prophets, in Revelation; and water that looked like blood",
+     "note": "The Nile and the water of Egypt become blood (“all the water was turned to blood”, Exod 7:20; Ps 78:44; 105:29), Moses is given the sign of water that becomes blood (Exod 4:9), the water before the Moabites “looked as red as blood” (2 Kgs 3:22: an appearance, taken for blood in 3:23, which is in the war row), “the sun will be turned to darkness and the moon to blood” before the day of the LORD (Joel 2:31, quoted at Acts 2:20), and in Revelation “the whole moon turned blood red” (6:12), a third of the sea (8:8), the rivers and springs, “they turned to blood” (16:4), the two witnesses' power over the waters (11:6). The page connects the verses and does not read the visions. The “bridegroom of blood” of Exod 4:25-26 comes a few verses after the sign of Exod 4:9; it is in “Every other use”.",
+     "doors": [],
+     "n": 19,
+     "verses": [
+      "Exod.7.20",
+      "Joel.2.31",
+      "Rev.6.12",
+      "Rev.16.4",
+      "Exod.4.9",
+      "Acts.2.19",
+      "Exod.7.17",
+      "Exod.7.19",
+      "Exod.7.21",
+      "2Kgs.3.22",
+      "Ps.78.44",
+      "Ps.105.29",
+      "Joel.2.30",
+      "Acts.2.20",
+      "Rev.8.7",
+      "Rev.8.8",
+      "Rev.11.6",
+      "Rev.16.3",
+      "Rev.16.6"
+     ],
+     "eg": [
+      {
+       "id": "Exod.7.20",
+       "ref": "Exodus 7:20",
+       "text": "Moses and Aaron did just as the LORD had commanded; in the presence of Pharaoh and his officials, Aaron raised the staff and struck the water of the Nile, and all the water was turned to blood.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Joel.2.31",
+       "ref": "Joel 2:31",
+       "text": "The sun will be turned to darkness and the moon to blood before the coming of the great and awesome Day of the LORD.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Rev.6.12",
+       "ref": "Revelation 6:12",
+       "text": "And I watched as the Lamb opened the sixth seal, and there was a great earthquake, and the sun became black like sackcloth of goat hair, and the whole moon turned blood red,",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Rev.16.4",
+       "ref": "Revelation 16:4",
+       "text": "And the third angel poured out his bowl into the rivers and springs of water, and they turned to blood.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Passover: blood on the doorposts",
+     "note": "“The blood on the houses where you are staying will be a sign; when I see the blood, I will pass over you” (Exod 12:13); the blood on the sides and tops of the doorframes; and “By faith he kept the Passover and the sprinkling of blood” (Heb 11:28). How the Passover and the death of Christ are related, readers take differently; the page sets the verses side by side (see sacrifice) and takes no side.",
+     "doors": [
+      {
+       "id": "passover",
+       "name": "the passover",
+       "type": "observance",
+       "missing": false
+      },
+      {
+       "id": "event_passover",
+       "name": "Passover",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r4",
+       "name": "The Passover lamb",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Exod.12.7",
+      "Exod.12.13",
+      "Exod.12.23",
+      "Heb.11.28",
+      "Exod.12.22"
+     ],
+     "eg": [
+      {
+       "id": "Exod.12.7",
+       "ref": "Exodus 12:7",
+       "text": "They are to take some of the blood and put it on the sides and tops of the doorframes of the houses where they eat the lambs.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Exod.12.13",
+       "ref": "Exodus 12:13",
+       "text": "The blood on the houses where you are staying will be a sign; when I see the blood, I will pass over you. No plague will fall on you to destroy you when I strike the land of Egypt.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Exod.12.23",
+       "ref": "Exodus 12:23",
+       "text": "When the LORD passes through to strike down the Egyptians, He will see the blood on the top and sides of the doorframe and will pass over that doorway; so He will not allow the destroyer to enter your houses and strike you down.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.28",
+       "ref": "Hebrews 11:28",
+       "text": "By faith he kept the Passover and the sprinkling of blood, so that the destroyer of the firstborn would not touch Israel's own firstborn.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blood in the rites of sacrifice: at the altar, sprinkled, poured out at its base",
+     "note": "The rites of Exodus, Leviticus and Numbers: the priest takes the blood, “splatters it on all sides of the altar” (Lev 1:5), puts it on the horns, and pours the rest out “at the base of the altar” (Lev 4:7); the blood of the other sacrifices “must be poured out beside the altar” (Deut 12:27). The LORD says through Isaiah that He takes no pleasure in the blood of bulls, lambs and goats (Isa 1:11), and Hebrews speaks of “the blood of goats and bulls” (9:13) and of the high priest who enters “with blood that is not his own” (9:25). What the blood does in these rites is the question of the rows that follow, and the page takes no side. Ezek 44:7 is the foreigners offering “food, fat and blood” while the covenant is broken.",
+     "doors": [
+      {
+       "id": "sacrifice",
+       "name": "sacrifice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "altar",
+       "name": "altar",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 59,
+     "verses": [
+      "Lev.4.7",
+      "Lev.1.5",
+      "Deut.12.27",
+      "Lev.4.18",
+      "Exod.23.18",
+      "Heb.9.7",
+      "Exod.24.6",
+      "Exod.29.12",
+      "Exod.29.16",
+      "Exod.29.20",
+      "Exod.29.21",
+      "Exod.34.25",
+      "Lev.1.11",
+      "Lev.1.15",
+      "Lev.3.2",
+      "Lev.3.8",
+      "Lev.3.13",
+      "Lev.4.5",
+      "Lev.4.6",
+      "Lev.4.16",
+      "Lev.4.17",
+      "Lev.4.25",
+      "Lev.4.30",
+      "Lev.4.34",
+      "Lev.5.9",
+      "Lev.6.27",
+      "Lev.6.30",
+      "Lev.7.2",
+      "Lev.7.14",
+      "Lev.7.33",
+      "Lev.8.15",
+      "Lev.8.19",
+      "Lev.8.24",
+      "Lev.8.30",
+      "Lev.9.9",
+      "Lev.9.12",
+      "Lev.9.18",
+      "Lev.10.18",
+      "Lev.16.18",
+      "Lev.17.4",
+      "Lev.17.6",
+      "Lev.17.11",
+      "Num.18.17",
+      "Num.19.4",
+      "Num.19.5",
+      "2Kgs.16.13",
+      "2Kgs.16.15",
+      "2Chr.29.22",
+      "2Chr.29.24",
+      "2Chr.30.16",
+      "Ps.50.13",
+      "Isa.1.11",
+      "Ezek.43.18",
+      "Ezek.44.7",
+      "Ezek.44.15",
+      "Ezek.45.19",
+      "Heb.9.21",
+      "Heb.9.25",
+      "Heb.10.4"
+     ],
+     "eg": [
+      {
+       "id": "Lev.4.7",
+       "ref": "Leviticus 4:7",
+       "text": "The priest must then put some of the blood on the horns of the altar of fragrant incense that is before the LORD in the Tent of Meeting. And he is to pour out the rest of the bull's blood at the base of the altar of burnt offering at the entrance to the Tent of Meeting.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Lev.1.5",
+       "ref": "Leviticus 1:5",
+       "text": "And he shall slaughter the young bull before the LORD, and Aaron's sons the priests are to present the blood and splatter it on all sides of the altar at the entrance to the Tent of Meeting.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Deut.12.27",
+       "ref": "Deuteronomy 12:27",
+       "text": "Present the meat and blood of your burnt offerings on the altar of the LORD your God. The blood of your other sacrifices must be poured out beside the altar of the LORD your God, but you may eat the meat.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Lev.4.18",
+       "ref": "Leviticus 4:18",
+       "text": "He is also to put some of the blood on the horns of the altar that is before the LORD in the Tent of Meeting, and he must pour out the rest of the blood at the base of the altar of burnt offering at the entrance to the Tent of Meeting.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blood put on or sprinkled over: the people, the ear, the thumb and the toe, the house, the tent, the scroll",
+     "note": "The blood is put on the person or the thing: on Aaron's right earlobe, thumb and big toe (Exod 29:20; Lev 8:23-24), on “the one to be cleansed” (Lev 14:14, 17, 25, 28), “splattered ... on the people” (Exod 24:8), on the house (Lev 14:51-52), on the tent (Heb 9:21), “the scroll and all the people” (Heb 9:19), and “sprinkling by His blood” (1 Pet 1:2).",
+     "doors": [
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Exod.24.8",
+      "Exod.29.20",
+      "Lev.14.14",
+      "Heb.9.19",
+      "Lev.8.23",
+      "Lev.8.24",
+      "Lev.8.30",
+      "Lev.14.6",
+      "Lev.14.17",
+      "Lev.14.25",
+      "Lev.14.28",
+      "Lev.14.51",
+      "Lev.14.52",
+      "Heb.9.21",
+      "1Pet.1.2"
+     ],
+     "eg": [
+      {
+       "id": "Exod.24.8",
+       "ref": "Exodus 24:8",
+       "text": "So Moses took the blood, splattered it on the people, and said, “This is the blood of the covenant that the LORD has made with you in accordance with all these words.”",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Exod.29.20",
+       "ref": "Exodus 29:20",
+       "text": "Slaughter the ram, take some of its blood, and put it on the right earlobes of Aaron and his sons, on the thumbs of their right hands, and on the big toes of their right feet. Splatter the remaining blood on all sides of the altar.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Lev.14.14",
+       "ref": "Leviticus 14:14",
+       "text": "The priest is to take some of the blood from the guilt offering and put it on the right earlobe of the one to be cleansed, on the thumb of his right hand, and on the big toe of his right foot.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.19",
+       "ref": "Hebrews 9:19",
+       "text": "For when Moses had proclaimed every commandment of the law to all the people, he took the blood of calves and goats, along with water, scarlet wool, and hyssop, and sprinkled the scroll and all the people,",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Day of Atonement: blood taken in before the LORD, on the mercy seat",
+     "note": "The blood taken inside the veil once a year: “sprinkle it with his finger on the east side of the mercy seat” (Lev 16:14), the goat's blood “behind the veil” (16:15), on the altar (16:18-19), the animals burned outside the camp (Lev 16:27; Heb 13:11). Hebrews speaks of the high priest who entered “only once a year, and never without blood” (9:7), of One who “entered the Most Holy Place once for all by His own blood” (9:12), and of the high priest who enters “every year with blood that is not his own” (9:25). How the Day of Atonement and the death of Christ are related, readers take differently, and the page takes no side.",
+     "doors": [
+      {
+       "id": "day_of_atonement",
+       "name": "the day of atonement",
+       "type": "observance",
+       "missing": false
+      },
+      {
+       "id": "atonement",
+       "name": "reconciliation",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Lev.16.14",
+      "Lev.16.15",
+      "Heb.9.7",
+      "Heb.9.25",
+      "Exod.30.10",
+      "Lev.16.18",
+      "Lev.16.19",
+      "Lev.16.27",
+      "Heb.9.12",
+      "Heb.13.11"
+     ],
+     "eg": [
+      {
+       "id": "Lev.16.14",
+       "ref": "Leviticus 16:14",
+       "text": "And he is to take some of the bull's blood and sprinkle it with his finger on the east side of the mercy seat; then he shall sprinkle some of it with his finger seven times before the mercy seat.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Lev.16.15",
+       "ref": "Leviticus 16:15",
+       "text": "Aaron shall then slaughter the goat for the sin offering for the people and bring its blood behind the veil, and with its blood he must do as he did with the bull's blood: He is to sprinkle it against the mercy seat and in front of it.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.7",
+       "ref": "Hebrews 9:7",
+       "text": "But only the high priest entered the second room, and then only once a year, and never without blood, which he offered for himself and for the sins the people had committed in ignorance.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.25",
+       "ref": "Hebrews 9:25",
+       "text": "Nor did He enter heaven to offer Himself again and again, as the high priest enters the Most Holy Place every year with blood that is not his own.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blood in the worship of other gods: “libations of blood”, sons and daughters, the prophets of Baal, pig's blood",
+     "note": "The blood given to other gods: the prophets of Baal cutting themselves on Carmel, “until the blood gushed over them” (1 Kgs 18:28), “I will not pour out their libations of blood” (Ps 16:4), the blood of sons and daughters sacrificed to the idols of Canaan (Ps 106:38; Ezek 16:36; 23:37), and the pig's blood of Isa 66:3. That verse is a series of comparisons (“whoever presents a grain offering is like one who offers pig's blood”) said of those who “have chosen their own ways and delighted in their abominations”; it names an idol only in “blesses an idol” and does not name another god's altar. See the sacrifice page for the sons and daughters given in sacrifice.",
+     "doors": [
+      {
+       "id": "idolatry",
+       "name": "idolatry",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Ps.16.4",
+      "Ps.106.38",
+      "1Kgs.18.28",
+      "Ezek.16.36",
+      "Isa.66.3",
+      "Ezek.23.37"
+     ],
+     "eg": [
+      {
+       "id": "Ps.16.4",
+       "ref": "Psalms 16:4",
+       "text": "Sorrows will multiply to those who chase other gods. I will not pour out their libations of blood, or speak their names with my lips.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Ps.106.38",
+       "ref": "Psalms 106:38",
+       "text": "They shed innocent blood-the blood of their sons and daughters, whom they sacrificed to the idols of Canaan, and the land was polluted with blood.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.18.28",
+       "ref": "1 Kings 18:28",
+       "text": "So they shouted louder and cut themselves with knives and lances, as was their custom, until the blood gushed over them.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.16.36",
+       "ref": "Ezekiel 16:36",
+       "text": "This is what the Lord GOD says: Because you poured out your wealth and exposed your nakedness in your promiscuity with your lovers and with all your detestable idols, and because of the blood of your children which you gave to them,",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Atonement and forgiveness beside blood: “it is the blood that makes atonement”, “without the shedding of blood there is no forgiveness”",
+     "note": "The text's own words: “it is the blood that makes atonement for the soul” (Lev 17:11); “without the shedding of blood there is no forgiveness” (Heb 9:22); “This is My blood of the covenant, which is poured out for many for the forgiveness of sins” (Matt 26:28); “God presented Him as an atoning sacrifice in His blood” (Rom 3:25). In Rom 3:25 the Greek word ἱλαστήριον is one readers translate “atoning sacrifice”, “propitiation”, “expiation” or “mercy seat”; it is the word for the mercy seat in Heb 9:5. Heb 10:4 is in this row for its words about taking away sins, and it denies the taking away of sins to the blood of bulls and goats: “it is impossible for the blood of bulls and goats to take away sins”; the page takes no side on what that implies. What the blood does -- covers, pays, cleanses, turns wrath away, gives a life for a life -- readers take differently, and the page takes no side. The Hebrew כִּפֶּר is a different word from the one for forgive (see forgiveness, where the two are set side by side). Atonement is also named beside the blood of the slain (Num 35:33; Deut 21:8; 32:43) and of birth (Lev 12:7). This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "atonement",
+       "name": "reconciliation",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "sacrifice",
+       "name": "sacrifice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r14",
+       "name": "To make atonement",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Lev.17.11",
+      "Heb.9.22",
+      "Matt.26.28",
+      "Rom.3.25",
+      "Exod.30.10",
+      "Lev.6.30",
+      "Lev.8.15",
+      "Lev.12.7",
+      "Lev.16.14",
+      "Lev.16.15",
+      "Lev.16.18",
+      "Lev.16.27",
+      "Num.35.33",
+      "Deut.21.8",
+      "Deut.32.43",
+      "2Chr.29.24",
+      "Ezek.43.20",
+      "Eph.1.7",
+      "Heb.10.4"
+     ],
+     "eg": [
+      {
+       "id": "Lev.17.11",
+       "ref": "Leviticus 17:11",
+       "text": "For the life of the flesh is in the blood, and I have given it to you to make atonement for your souls upon the altar; for it is the blood that makes atonement for the soul.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.22",
+       "ref": "Hebrews 9:22",
+       "text": "According to the law, in fact, nearly everything must be purified with blood, and without the shedding of blood there is no forgiveness.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        },
+        {
+         "key": "g130",
+         "lemma": "αἱματεκχυσία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.28",
+       "ref": "Matthew 26:28",
+       "text": "This is My blood of the covenant, which is poured out for many for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.25",
+       "ref": "Romans 3:25",
+       "text": "God presented Him as an atoning sacrifice in His blood through faith, in order to demonstrate His righteousness, because in His forbearance He had passed over the sins committed beforehand.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Cleansed, purified, sanctified, washed: with blood",
+     "note": "The altar is purified and made holy with blood (“purifying the altar”, Lev 8:15; “to cleanse it and consecrate it”, Lev 16:19; Ezek 43:20); blood is put on “the one to be cleansed” (Lev 14:14). Hebrews sets “the blood of goats and bulls” that “sanctify them so that their bodies are clean” (9:13) beside “the blood of Christ” that will “purify our consciences from works of death” (9:14); “nearly everything must be purified with blood” (9:22); “the blood of the covenant that sanctified him” (10:29), where readers part on whom “him” is and what the sanctifying was; “to sanctify the people by His own blood” (13:12); “the blood of Jesus His Son cleanses us from all sin” (1 John 1:7); and robes “washed ... and made ... white in the blood of the Lamb” (Rev 7:14). What is cleansed -- the flesh, the conscience, the sin -- and how, readers take differently, and the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "sacrifice",
+       "name": "sacrifice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "holiness",
+       "name": "holiness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Lev.16.19",
+      "Heb.9.14",
+      "1John.1.7",
+      "Rev.7.14",
+      "Lev.8.15",
+      "Lev.14.14",
+      "Ezek.43.20",
+      "Heb.9.13",
+      "Heb.9.22",
+      "Heb.10.29",
+      "Heb.13.12",
+      "1Pet.1.2"
+     ],
+     "eg": [
+      {
+       "id": "Lev.16.19",
+       "ref": "Leviticus 16:19",
+       "text": "He is to sprinkle some of the blood on it with his finger seven times to cleanse it and consecrate it from the uncleanness of the Israelites.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.14",
+       "ref": "Hebrews 9:14",
+       "text": "how much more will the blood of Christ, who through the eternal Spirit offered Himself unblemished to God, purify our consciences from works of death, so that we may serve the living God!",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "1John.1.7",
+       "ref": "1 John 1:7",
+       "text": "But if we walk in the light as He is in the light, we have fellowship with one another, and the blood of Jesus His Son cleanses us from all sin.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Rev.7.14",
+       "ref": "Revelation 7:14",
+       "text": "“Sir,” I answered, “you know.” So he replied, “These are the ones who have come out of the great tribulation; they have washed their robes and made them white in the blood of the Lamb.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Justified, at peace, brought near, given access, overcoming: “by the blood”",
+     "note": "The text's own phrases: “since we have now been justified by His blood” (Rom 5:9), “making peace through the blood of His cross” (Col 1:20), “brought near through the blood of Christ” (Eph 2:13), “confidence to enter the Most Holy Place by the blood of Jesus” (Heb 10:19), “They have conquered him by the blood of the Lamb and by the word of their testimony” (Rev 12:11), and “an atoning sacrifice in His blood” (Rom 3:25). What the blood accomplishes in each and how the verses stand to one another, readers take differently, and the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "peace",
+       "name": "peace",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Rom.5.9",
+      "Col.1.20",
+      "Eph.2.13",
+      "Rev.12.11",
+      "Rom.3.25",
+      "Heb.10.19"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.9",
+       "ref": "Romans 5:9",
+       "text": "Therefore, since we have now been justified by His blood, how much more shall we be saved from wrath through Him!",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.20",
+       "ref": "Colossians 1:20",
+       "text": "and through Him to reconcile to Himself all things, whether things on earth or things in heaven, by making peace through the blood of His cross.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.13",
+       "ref": "Ephesians 2:13",
+       "text": "But now in Christ Jesus you who once were far away have been brought near through the blood of Christ.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Rev.12.11",
+       "ref": "Revelation 12:11",
+       "text": "They have conquered him by the blood of the Lamb and by the word of their testimony. And they did not love their lives so as to shy away from death.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Redeemed, purchased, released: “by Your blood You purchased for God”",
+     "note": "Ps 72:14, the king “will redeem them from oppression and violence, for their blood is precious in his sight”; the blood there is the poor's own, precious to the king, and the verse does not name blood as a price paid (its Hebrew verb is יִגְאַל, from גָּאַל “redeem”, the root of the avenger's word in Num 35; the page does not make the two words one). And in the New Testament, “redemption through His blood” (Eph 1:7), “securing eternal redemption” (Heb 9:12), “the precious blood of Christ, a lamb without blemish or spot” (1 Pet 1:19), “has released us from our sins by His blood” (Rev 1:5), “by Your blood You purchased for God” (Rev 5:9), “which He purchased with His own blood” (Acts 20:28). In Acts 20:28 the Greek reads “through the blood the own” and can be taken as “His own blood” or “the blood of His Own”; readers part on it, and on whom the verse means by God, and the page does not choose. Who is paid, from what, and what the price is, readers take differently, and the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "redemption",
+       "name": "redemption",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "lamb_of_god",
+       "name": "the Lamb of God",
+       "type": "title",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Rev.5.9",
+      "Eph.1.7",
+      "1Pet.1.19",
+      "Acts.20.28",
+      "Ps.72.14",
+      "Heb.9.12",
+      "Rev.1.5"
+     ],
+     "eg": [
+      {
+       "id": "Rev.5.9",
+       "ref": "Revelation 5:9",
+       "text": "And they sang a new song: “Worthy are You to take the scroll and open its seals, because You were slain, and by Your blood You purchased for God those from every tribe and tongue and people and nation.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.7",
+       "ref": "Ephesians 1:7",
+       "text": "In Him we have redemption through His blood, the forgiveness of our trespasses, according to the riches of His grace",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.1.19",
+       "ref": "1 Peter 1:19",
+       "text": "but with the precious blood of Christ, a lamb without blemish or spot.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Acts.20.28",
+       "ref": "Acts 20:28",
+       "text": "Keep watch over yourselves and the entire flock of which the Holy Spirit has made you overseers. Be shepherds of the church of God, which He purchased with His own blood.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The blood of the covenant",
+     "note": "“This is the blood of the covenant that the LORD has made with you” (Exod 24:8), “because of the blood of My covenant, I will release your prisoners from the waterless pit” (Zech 9:11), “This is My blood of the covenant” (Matt 26:28; Mark 14:24), “the new covenant in My blood” (Luke 22:20; 1 Cor 11:25), “This is the blood of the covenant, which God has commanded you to keep” (Heb 9:20), “the first covenant was not put into effect without blood” (Heb 9:18), “the blood of the covenant that sanctified him” (Heb 10:29) and “the blood of the eternal covenant” (13:20). Exod 24:6 puts half of the blood in bowls and half on the altar, before the covenant is named. How the covenants relate (one in many forms, or several; the old and the new) and how the cup stands to them, readers take differently, and the page takes no side (see covenant).",
+     "doors": [
+      {
+       "id": "covenant",
+       "name": "covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r13",
+       "name": "The blood of the covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_last_supper",
+       "name": "Last Supper",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Exod.24.8",
+      "Matt.26.28",
+      "Luke.22.20",
+      "Heb.10.29",
+      "Exod.24.6",
+      "1Cor.11.25",
+      "Zech.9.11",
+      "Mark.14.24",
+      "Heb.9.18",
+      "Heb.9.20",
+      "Heb.12.24",
+      "Heb.13.20"
+     ],
+     "eg": [
+      {
+       "id": "Exod.24.8",
+       "ref": "Exodus 24:8",
+       "text": "So Moses took the blood, splattered it on the people, and said, “This is the blood of the covenant that the LORD has made with you in accordance with all these words.”",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.28",
+       "ref": "Matthew 26:28",
+       "text": "This is My blood of the covenant, which is poured out for many for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Luke.22.20",
+       "ref": "Luke 22:20",
+       "text": "In the same way, after supper He took the cup, saying, “This cup is the new covenant in My blood, which is poured out for you.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.29",
+       "ref": "Hebrews 10:29",
+       "text": "How much more severely do you think one deserves to be punished who has trampled on the Son of God, profaned the blood of the covenant that sanctified him, and insulted the Spirit of grace?",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The cup: “This is My blood”, “the cup of blessing”, “a participation in the blood of Christ”",
+     "note": "The words of the Last Supper (Matt 26:28; Mark 14:24; Luke 22:20) and of Paul on the cup (“This cup is the new covenant in My blood; do this, as often as you drink it, in remembrance of Me”, 1 Cor 11:25; “guilty of sinning against the body and blood of the Lord”, 11:27; “Is not the cup of blessing that we bless a participation in the blood of Christ?”, 10:16). Where Christian traditions part on what the cup is -- the blood of Christ really present, a memorial, a participation in Christ, or something more -- and on how the cup stands to sacrifice (see sacrifice), the page takes no side. The saying at Capernaum (John 6:53-56), which readers part on whether it speaks of the Supper, is in the row after this one. The Berean notes that some manuscripts do not include Luke 22:20; the page takes no side on that either.",
+     "doors": [
+      {
+       "id": "event_last_supper",
+       "name": "Last Supper",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "covenant",
+       "name": "covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Matt.26.28",
+      "Luke.22.20",
+      "1Cor.10.16",
+      "1Cor.11.25",
+      "Mark.14.24",
+      "1Cor.11.27"
+     ],
+     "eg": [
+      {
+       "id": "Matt.26.28",
+       "ref": "Matthew 26:28",
+       "text": "This is My blood of the covenant, which is poured out for many for the forgiveness of sins.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Luke.22.20",
+       "ref": "Luke 22:20",
+       "text": "In the same way, after supper He took the cup, saying, “This cup is the new covenant in My blood, which is poured out for you.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.10.16",
+       "ref": "1 Corinthians 10:16",
+       "text": "Is not the cup of blessing that we bless a participation in the blood of Christ? And is not the bread that we break a participation in the body of Christ?",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.11.25",
+       "ref": "1 Corinthians 11:25",
+       "text": "In the same way, after supper He took the cup, saying, “This cup is the new covenant in My blood; do this, as often as you drink it, in remembrance of Me.”",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Eating the flesh and drinking the blood: the saying at Capernaum (John 6)",
+     "note": "Jesus at Capernaum: “unless you eat the flesh and drink the blood of the Son of Man, you have no life in you” (John 6:53), “Whoever eats My flesh and drinks My blood has eternal life” (6:54), “My blood is real drink” (6:55), and 6:56. These verses name no cup and no Supper; they stand here for the words “drink the blood”. Readers part on whether the saying speaks of the Lord's Supper or of something else, and the page takes no side. The cup of the Supper (Matt 26:28; 1 Cor 10:16; 11:25) is in the row before this one.",
+     "doors": [],
+     "n": 4,
+     "verses": [
+      "John.6.53",
+      "John.6.54",
+      "John.6.55",
+      "John.6.56"
+     ],
+     "eg": [
+      {
+       "id": "John.6.53",
+       "ref": "John 6:53",
+       "text": "So Jesus said to them, “Truly, truly, I tell you, unless you eat the flesh and drink the blood of the Son of Man, you have no life in you.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "John.6.54",
+       "ref": "John 6:54",
+       "text": "Whoever eats My flesh and drinks My blood has eternal life, and I will raise him up at the last day.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "John.6.55",
+       "ref": "John 6:55",
+       "text": "For My flesh is real food, and My blood is real drink.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "John.6.56",
+       "ref": "John 6:56",
+       "text": "Whoever eats My flesh and drinks My blood remains in Me, and I in him.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The blood of Christ, of Jesus, of the Son, of the Lamb",
+     "note": "Each verse names him: “the blood of Christ” (1 Cor 10:16; Eph 2:13; Heb 9:14; 1 Pet 1:19), “the blood of Jesus” (Heb 10:19), “the Son of God ... the blood of the covenant” (Heb 10:29), “Jesus ... His own blood” (Heb 13:12), “the blood of the eternal covenant” of “our Lord Jesus” (13:20), “sprinkling by His blood” for “Jesus Christ” (1 Pet 1:2), “the blood of Jesus His Son” (1 John 1:7), “Jesus Christ ... by water and blood” (1 John 5:6), “Jesus Christ ... by His blood” (Rev 1:5), “the blood of the Lamb” (Rev 7:14; 12:11). Five verses say only “His blood”, “His own blood” or “Your blood”; each is shown here with the verse beside it that answers the pronoun: Rom 3:25, “God presented Him as an atoning sacrifice in His blood”, after Rom 3:24, “the redemption that is in Christ Jesus”; Rom 5:9, “justified by His blood”, after Rom 5:8, “Christ died for us”; Eph 1:7, “redemption through His blood”, after Eph 1:6, “in the Beloved One”; Heb 9:12, “His own blood”, after Heb 9:11, “Christ came as high priest”; Rev 5:9, “by Your blood You purchased for God”, after Rev 5:8, “fell down before the Lamb”. Every verse in this row names him, or the verse beside it does. Col 1:20 and Acts 20:28 are in the next row. The cup of the Supper (“My blood”) is in the cup row.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "lamb_of_god",
+       "name": "the Lamb of God",
+       "type": "title",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Heb.9.14",
+      "1John.1.7",
+      "1Pet.1.19",
+      "Rev.7.14",
+      "Rom.3.24",
+      "Rom.3.25",
+      "Rom.5.8",
+      "Rom.5.9",
+      "1Cor.10.16",
+      "Eph.1.6",
+      "Eph.1.7",
+      "Eph.2.13",
+      "Heb.9.11",
+      "Heb.9.12",
+      "Heb.10.19",
+      "Heb.10.29",
+      "Heb.12.24",
+      "Heb.13.12",
+      "Heb.13.20",
+      "1Pet.1.2",
+      "1John.5.6",
+      "Rev.1.5",
+      "Rev.5.8",
+      "Rev.5.9",
+      "Rev.12.11"
+     ],
+     "eg": [
+      {
+       "id": "Heb.9.14",
+       "ref": "Hebrews 9:14",
+       "text": "how much more will the blood of Christ, who through the eternal Spirit offered Himself unblemished to God, purify our consciences from works of death, so that we may serve the living God!",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "1John.1.7",
+       "ref": "1 John 1:7",
+       "text": "But if we walk in the light as He is in the light, we have fellowship with one another, and the blood of Jesus His Son cleanses us from all sin.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.1.19",
+       "ref": "1 Peter 1:19",
+       "text": "but with the precious blood of Christ, a lamb without blemish or spot.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Rev.7.14",
+       "ref": "Revelation 7:14",
+       "text": "“Sir,” I answered, “you know.” So he replied, “These are the ones who have come out of the great tribulation; they have washed their robes and made them white in the blood of the Lamb.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“The blood of His cross”, “His own blood”: the verse beside Col 1:20 does not name him; Acts 20:28 names God",
+     "note": "Two verses. Col 1:20 says “by making peace through the blood of His cross”; the verse beside it, Col 1:19, “For God was pleased to have all His fullness dwell in Him”, says only “Him” and does not name the one whose cross it is. Acts 20:28 reads “Be shepherds of the church of God, which He purchased with His own blood”: it names God. In the Greek it is “through the blood the own”, and it can be taken as “His own blood” or “the blood of His Own”; readers part on it, and on whom the verse means by God, and the page does not choose. The other verses that say “His blood”, “His own blood” or “Your blood” are in the row about the blood of Christ, each with the verse beside it that names him.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Col.1.20",
+      "Acts.20.28"
+     ],
+     "eg": [
+      {
+       "id": "Col.1.20",
+       "ref": "Colossians 1:20",
+       "text": "and through Him to reconcile to Himself all things, whether things on earth or things in heaven, by making peace through the blood of His cross.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Acts.20.28",
+       "ref": "Acts 20:28",
+       "text": "Keep watch over yourselves and the entire flock of which the Holy Spirit has made you overseers. Be shepherds of the church of God, which He purchased with His own blood.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "In the passion: Gethsemane, innocent blood, “blood money”, the Field of Blood, “His blood be on us”, blood and water",
+     "note": "Judas, “I have sinned by betraying innocent blood” (Matt 27:4), the chief priests who say it is “blood money” (27:6) and buy the field called the Field of Blood (27:8; Acts 1:19), Pilate who washes his hands, “I am innocent of this man's blood” (27:24), the people's answer, “His blood be on us and on our children!” (27:25), the council's charge that “you ... are determined to make us responsible for this man's blood” (Acts 5:28), “His sweat became like drops of blood” (Luke 22:44, which some manuscripts do not include), the spear and “blood and water” (John 19:34), and “the One who came by water and blood” (1 John 5:6, 8). Matt 27:25 has been read against the Jewish people; readers part sharply on what the verse says of anyone beyond those who spoke it, and the page sets it in the text's own words with Pilate's and says no more. What the water and the blood mean in John 19:34 and 1 John 5:6, readers also take differently.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "event_crucifixion",
+       "name": "Crucifixion",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Matt.27.4",
+      "Matt.27.24",
+      "John.19.34",
+      "Acts.1.19",
+      "1John.5.6",
+      "Matt.27.6",
+      "Matt.27.8",
+      "Matt.27.25",
+      "Luke.22.44",
+      "Acts.5.28",
+      "1John.5.8"
+     ],
+     "eg": [
+      {
+       "id": "Matt.27.4",
+       "ref": "Matthew 27:4",
+       "text": "“I have sinned by betraying innocent blood,” he said. “What is that to us?” they replied. “You bear the responsibility.”",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Matt.27.24",
+       "ref": "Matthew 27:24",
+       "text": "When Pilate saw that he was accomplishing nothing, but that instead a riot was breaking out, he took water and washed his hands before the crowd. “I am innocent of this man's blood,” he said. “You bear the responsibility.”",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "John.19.34",
+       "ref": "John 19:34",
+       "text": "Instead, one of the soldiers pierced His side with a spear, and immediately blood and water flowed out.",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      },
+      {
+       "id": "Acts.1.19",
+       "ref": "Acts 1:19",
+       "text": "This became known to all who lived in Jerusalem, so they called that field in their own language Akeldama, that is, Field of Blood.)",
+       "words": [
+        {
+         "key": "g129",
+         "lemma": "αἷμα"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Among them, Joseph's robe, where they “dipped the robe in its blood” (Gen 37:31), Zipporah's “bridegroom of blood” (Exod 4:25-26), “his robes in the blood of grapes” (Gen 49:11), the bird whose “young ones feast on blood” (Job 39:30), “What gain is there in my bloodshed, in my descent to the Pit?” (Ps 30:9), and “the twisting of the nose draws blood” (Prov 30:33). Three verses where the Berean's English has no “blood”: Deut 32:14 (“the juice of the finest grapes”; the Hebrew is “blood of the grape”), Lev 19:16 (“endanger the life of your neighbor”; the Hebrew says “the blood of your neighbor”) and Ezek 19:10, where the Berean reads “vineyard” and notes that most Hebrew manuscripts read “in your bloodline”.",
+     "doors": [],
+     "n": 10,
+     "verses": [
+      "Gen.37.31",
+      "Gen.49.11",
+      "Exod.4.25",
+      "Exod.4.26",
+      "Lev.19.16",
+      "Deut.32.14",
+      "Job.39.30",
+      "Ps.30.9",
+      "Prov.30.33",
+      "Ezek.19.10"
+     ],
+     "eg": [
+      {
+       "id": "Gen.37.31",
+       "ref": "Genesis 37:31",
+       "text": "Then they took Joseph's robe, slaughtered a young goat, and dipped the robe in its blood.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Gen.49.11",
+       "ref": "Genesis 49:11",
+       "text": "He ties his donkey to the vine, his colt to the choicest branch. He washes his garments in wine, his robes in the blood of grapes.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Exod.4.25",
+       "ref": "Exodus 4:25",
+       "text": "But Zipporah took a flint knife, cut off her son's foreskin, and touched it to Moses' feet. “Surely you are a bridegroom of blood to me,” she said.",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      },
+      {
+       "id": "Exod.4.26",
+       "ref": "Exodus 4:26",
+       "text": "So the LORD let him alone. (When she said, “bridegroom of blood,” she was referring to the circumcision.)",
+       "words": [
+        {
+         "key": "h1818",
+         "lemma": "דָּם"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “blood”, “bloodshed”, “bleeding”",
+  "words": [
+   {
+    "key": "h6106",
+    "lemma": "עֶצֶם",
+    "translit": "e.tsem",
+    "gloss": "bone: body",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "2Sam.5.1"
+    ],
+    "note": "עֶצֶם “bone” is the Hebrew of kinship in 2 Sam 5:1, where the tribes say to David “your bone and your flesh”; the Berean prints “your own flesh and blood”, and the page does not make it the word דָּם.",
+    "eg": [
+     {
+      "id": "2Sam.5.1",
+      "ref": "2 Samuel 5:1",
+      "text": "Then all the tribes of Israel came to David at Hebron and said, “Here we are, your own flesh and blood."
+     }
+    ]
+   },
+   {
+    "key": "h4578",
+    "lemma": "מֵעִים",
+    "translit": "me.eh",
+    "gloss": "belly",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "2Sam.16.11"
+    ],
+    "note": "מֵעִים “inward parts” is the Hebrew in 2 Sam 16:11, where David says his son came out of his inward parts; the Berean prints “my own flesh and blood”, and the page does not make it the word דָּם.",
+    "eg": [
+     {
+      "id": "2Sam.16.11",
+      "ref": "2 Samuel 16:11",
+      "text": "Then David said to Abishai and to all his servants, “Behold, my own son, my own flesh and blood, seeks my life. How much more, then, this Benjamite! Leave him alone and let him curse me, for the LORD has told him so."
+     }
+    ]
+   },
+   {
+    "key": "h4939",
+    "lemma": "מִשְׂפָּח",
+    "translit": "mis.pach",
+    "gloss": "bloodshed",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Isa.5.7"
+    ],
+    "note": "מִשְׂפָּח (found only here) is the Berean's “bloodshed” in “He looked for justice, but saw bloodshed”; the Hebrew sets it beside מִשְׁפָּט “justice”, and the page does not make it the word דָּם.",
+    "eg": [
+     {
+      "id": "Isa.5.7",
+      "ref": "Isaiah 5:7",
+      "text": "For the vineyard of the LORD of Hosts is the house of Israel, and the men of Judah are the plant of His delight. He looked for justice, but saw bloodshed; for righteousness, but heard a cry of distress."
+     }
+    ]
+   },
+   {
+    "key": "g131",
+    "lemma": "αἱμορροέω",
+    "translit": "ahimorroeō",
+    "gloss": "to bleed",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Matt.9.20"
+    ],
+    "note": "αἱμορροέω means “to have a flow of blood”; the Berean prints “bleeding”. It is the verb of the story Mark 5:25 and Luke 8:43-44 tell with the noun αἷμα, which is in this hub's “A flow of blood”; the page does not make the two words one.",
+    "eg": [
+     {
+      "id": "Matt.9.20",
+      "ref": "Matthew 9:20",
+      "text": "Suddenly a woman who had suffered from bleeding for twelve years came up behind Him and touched the fringe of His cloak."
+     }
+    ]
+   },
+   {
+    "key": "h5332",
+    "lemma": "נֵצַח",
+    "translit": "ne.tsach",
+    "gloss": "lifeblood",
+    "lang": "Hebrew",
+    "verses": [
+     "Isa.63.3"
+    ],
+    "n": 1,
+    "note": "נֵצַח (“juice”) is a different Hebrew word from דָּם; the Berean prints it “blood” in the winepress of Isa 63:3, “their blood spattered My garments”. Readers set it beside Rev 14:20 and 19:13 (the winepress; a robe dipped in blood), and the page does not make it the word דָּם.",
+    "eg": [
+     {
+      "id": "Isa.63.3",
+      "ref": "Isaiah 63:3",
+      "text": "“I have trodden the winepress alone, and no one from the nations was with Me. I trampled them in My anger and trod them down in My fury; their blood spattered My garments, and all My clothes were stained."
+     }
+    ]
+   }
+  ]
+ }
+}

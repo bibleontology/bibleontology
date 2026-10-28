@@ -245,7 +245,7 @@
  "forms": [
   {
    "form": "verb",
-   "verses": 101,
+   "verses": 106,
    "rows": [
     {
      "label": "The LORD, God, the Father forgives",
@@ -396,6 +396,64 @@
         {
          "key": "h5545",
          "lemma": "סָלַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sins removed, cast out, put behind: “as far as the east is from the west”, “into the depths of the sea”, “behind Your back”",
+     "note": "Only Mic 7:18 names the act (“who pardons iniquity”); Ps 103:12, Mic 7:19 and Isa 38:17 picture sins put away (“so far has He removed our transgressions from us”, “You will cast out all our sins into the depths of the sea”, “You have cast all my sins behind Your back”), and Ps 103:10-11 stand with them in their passage. Ps 103:1 and 103:8 name the LORD, and Mic 7:17 speaks of “the LORD our God”; Isa 38:17 is in a writing of Hezekiah (Isa 38:9). The Hebrew words stand side by side, as in Exod 34:7: transgression (פֶּשַׁע, Ps 103:12; Mic 7:18), iniquity (עָוֺן, Mic 7:18-19), sin (חַטָּאת, Mic 7:19; חֵטְא, Isa 38:17).",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Ps.103.12",
+      "Mic.7.19",
+      "Isa.38.17",
+      "Mic.7.18",
+      "Ps.103.10",
+      "Ps.103.11"
+     ],
+     "eg": [
+      {
+       "id": "Ps.103.12",
+       "ref": "Psalms 103:12",
+       "text": "As far as the east is from the west, so far has He removed our transgressions from us.",
+       "words": []
+      },
+      {
+       "id": "Mic.7.19",
+       "ref": "Micah 7:19",
+       "text": "He will again have compassion on us; He will vanquish our iniquities. You will cast out all our sins into the depths of the sea.",
+       "words": []
+      },
+      {
+       "id": "Isa.38.17",
+       "ref": "Isaiah 38:17",
+       "text": "Surely for my own welfare I had such great anguish; but Your love has delivered me from the pit of oblivion, for You have cast all my sins behind Your back.",
+       "words": []
+      },
+      {
+       "id": "Mic.7.18",
+       "ref": "Micah 7:18",
+       "text": "Who is a God like You, who pardons iniquity and passes over the transgression of the remnant of His inheritance-who does not retain His anger forever, because He delights in loving devotion?",
+       "words": [
+        {
+         "key": "h5375",
+         "lemma": "נָשָׂא"
         }
        ]
       }

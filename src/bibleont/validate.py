@@ -367,6 +367,13 @@ def validate(
                 )
             )
 
+    # THE TRADITIONS LAYER (ontology/traditions/, 2026-10-26): what the traditions have written, each node and
+    # edge on the verses of the readings it supports. Read from disk only when the graph was.
+    if from_disk:
+        from . import traditions
+        for level, code, msg, subj in traditions.problems(corpus):
+            add(Issue(level, code, msg, subj))
+
     return issues
 
 

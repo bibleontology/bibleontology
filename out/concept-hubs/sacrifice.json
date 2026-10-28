@@ -1,0 +1,4000 @@
+{
+ "id": "sacrifice",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h2077",
+   "lemma": "זֶבַח",
+   "form": "noun",
+   "translit": "ze.vach",
+   "gloss": "sacrifice",
+   "lang": "Hebrew",
+   "uses": 152,
+   "other_sense": 1
+  },
+  {
+   "key": "h2076",
+   "lemma": "זָבַח",
+   "form": "verb",
+   "translit": "za.vach",
+   "gloss": "to sacrifice",
+   "lang": "Hebrew",
+   "uses": 118,
+   "other_sense": 9
+  },
+  {
+   "key": "h5930",
+   "lemma": "עֹלָה",
+   "form": "noun",
+   "translit": "ʿōlāh",
+   "gloss": "burnt offering",
+   "lang": "Hebrew",
+   "uses": 259,
+   "other_sense": 1
+  },
+  {
+   "key": "h1685",
+   "lemma": "דְּבַח",
+   "form": "noun",
+   "translit": "de.vach",
+   "gloss": "sacrifice",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "h1684",
+   "lemma": "דְּבַח",
+   "form": "verb",
+   "translit": "de.vach",
+   "gloss": "to sacrifice",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "h5928",
+   "lemma": "עַלְוָה",
+   "form": "noun",
+   "translit": "a.lah",
+   "gloss": "burnt offering",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g2378",
+   "lemma": "θυσία",
+   "form": "noun",
+   "translit": "thusia",
+   "gloss": "sacrifice",
+   "lang": "Greek",
+   "uses": 28,
+   "other_sense": 0
+  },
+  {
+   "key": "g2380",
+   "lemma": "θύω",
+   "form": "verb",
+   "translit": "thuō",
+   "gloss": "to sacrifice",
+   "lang": "Greek",
+   "uses": 6,
+   "other_sense": 7
+  },
+  {
+   "key": "g3646",
+   "lemma": "ὁλοκαύτωμα",
+   "form": "noun",
+   "translit": "holokautōma",
+   "gloss": "burnt offering",
+   "lang": "Greek",
+   "uses": 3,
+   "other_sense": 0
+  },
+  {
+   "key": "g4376",
+   "lemma": "προσφορά",
+   "form": "noun",
+   "translit": "prosphora",
+   "gloss": "offering",
+   "lang": "Greek",
+   "uses": 9,
+   "other_sense": 0
+  },
+  {
+   "key": "g4374",
+   "lemma": "προσφέρω",
+   "form": "verb",
+   "translit": "prospherō",
+   "gloss": "to bring to",
+   "lang": "Greek",
+   "uses": 25,
+   "other_sense": 19
+  },
+  {
+   "key": "g399",
+   "lemma": "ἀναφέρω",
+   "form": "verb",
+   "translit": "anapherō",
+   "gloss": "to carry up",
+   "lang": "Greek",
+   "uses": 4,
+   "other_sense": 5
+  },
+  {
+   "key": "g1494",
+   "lemma": "εἰδωλόθυτος",
+   "form": "noun",
+   "translit": "eidōlothutos",
+   "gloss": "sacrificed to idols",
+   "lang": "Greek",
+   "uses": 10,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of sacrifice",
+  "verb": "Who sacrifices, to whom, and where"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "blood",
+   "name": "blood",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "atonement",
+   "name": "reconciliation",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "altar",
+   "name": "altar",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "priests",
+   "name": "the priests",
+   "type": "group",
+   "missing": false
+  },
+  {
+   "id": "passover",
+   "name": "the passover",
+   "type": "observance",
+   "missing": false
+  },
+  {
+   "id": "lamb_of_god",
+   "name": "the Lamb of God",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "covenant",
+   "name": "covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin_offering",
+   "name": "sin offering",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "temple",
+   "name": "The Temple",
+   "type": "place",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "i_desired_mercy_and_not_sacrifice",
+   "name": "I desire mercy, not sacrifice",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_sacrifices_of_god_are_a_broken_spirit",
+   "name": "the sacrifices of God are a broken spirit",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "a_living_sacrifice",
+   "name": "as living sacrifices",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "to_obey_is_better_than_sacrifice",
+   "name": "obedience is better than sacrifice",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "behold_the_lamb_of_god",
+   "name": "Look, the Lamb of God",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r4",
+   "name": "The Passover lamb",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r11",
+   "name": "A sin offering, a guilt offering",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r14",
+   "name": "To make atonement",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r30",
+   "name": "Once for all",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r24",
+   "name": "Sacrifice and offering You did not desire",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_sacrifice_r13",
+   "name": "The blood is the life",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Lev.17.11",
+   "ref": "Leviticus 17:11",
+   "text": "For the life of the flesh is in the blood, and I have given it to you to make atonement for your souls upon the altar; for it is the blood that makes atonement for the soul."
+  },
+  {
+   "id": "Hos.6.6",
+   "ref": "Hosea 6:6",
+   "text": "For I desire mercy, not sacrifice, and the knowledge of God rather than burnt offerings."
+  },
+  {
+   "id": "Ps.51.17",
+   "ref": "Psalms 51:17",
+   "text": "The sacrifices of God are a broken spirit; a broken and a contrite heart, O God, You will not despise."
+  },
+  {
+   "id": "Heb.10.10",
+   "ref": "Hebrews 10:10",
+   "text": "And by that will, we have been sanctified through the sacrifice of the body of Jesus Christ once for all."
+  },
+  {
+   "id": "Rom.12.1",
+   "ref": "Romans 12:1",
+   "text": "Therefore I urge you, brothers, on account of God's mercy, to offer your bodies as living sacrifices, holy and pleasing to God, which is your spiritual service of worship."
+  },
+  {
+   "id": "Gen.22.8",
+   "ref": "Genesis 22:8",
+   "text": "Abraham answered, “God Himself will provide the lamb for the burnt offering, my son.” And the two walked on together."
+  },
+  {
+   "id": "1Sam.15.22",
+   "ref": "1 Samuel 15:22",
+   "text": "But Samuel declared: “Does the LORD delight in burnt offerings and sacrifices as much as in obedience to His voice? Behold, obedience is better than sacrifice, and attentiveness is better than the fat of rams."
+  },
+  {
+   "id": "Heb.9.22",
+   "ref": "Hebrews 9:22",
+   "text": "According to the law, in fact, nearly everything must be purified with blood, and without the shedding of blood there is no forgiveness."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 446,
+   "rows": [
+    {
+     "label": "A pleasing aroma; a fragrant offering",
+     "note": "The text's own phrase: “a pleasing aroma to the LORD” in the laws of Exodus, Leviticus and Numbers, the first time at Gen 8:21 after Noah's burnt offerings, and taken up at Eph 5:2 and Phil 4:18 (“a fragrant offering”). What the aroma means -- the LORD's pleasure, His acceptance of the worshiper, His anger turned away -- readers take differently, and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r2",
+       "name": "A pleasing aroma",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Gen.8.21",
+      "Lev.1.9",
+      "Eph.5.2",
+      "Phil.4.18",
+      "Exod.29.18",
+      "Exod.29.25",
+      "Lev.1.13",
+      "Lev.1.17",
+      "Lev.3.5",
+      "Lev.4.31",
+      "Lev.8.21",
+      "Lev.8.28",
+      "Lev.23.18",
+      "Num.15.3",
+      "Num.15.24",
+      "Num.28.6",
+      "Num.28.13",
+      "Num.28.24",
+      "Num.28.27",
+      "Num.29.2",
+      "Num.29.6",
+      "Num.29.8",
+      "Num.29.13",
+      "Num.29.36",
+      "Ezek.20.28"
+     ],
+     "eg": [
+      {
+       "id": "Gen.8.21",
+       "ref": "Genesis 8:21",
+       "text": "When the LORD smelled the pleasing aroma, He said in His heart, “Never again will I curse the ground because of man, even though every inclination of his heart is evil from his youth. And never again will I destroy all living creatures as I have done.",
+       "words": []
+      },
+      {
+       "id": "Lev.1.9",
+       "ref": "Leviticus 1:9",
+       "text": "The entrails and legs must be washed with water, and the priest shall burn all of it on the altar as a burnt offering, a food offering, a pleasing aroma to the LORD.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Eph.5.2",
+       "ref": "Ephesians 5:2",
+       "text": "and walk in love, just as Christ loved us and gave Himself up for us as a fragrant sacrificial offering to God.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        },
+        {
+         "key": "g4376",
+         "lemma": "προσφορά"
+        }
+       ]
+      },
+      {
+       "id": "Phil.4.18",
+       "ref": "Philippians 4:18",
+       "text": "I have all I need and more, now that I have received your gifts from Epaphroditus. They are a fragrant offering, an acceptable sacrifice, well-pleasing to God.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Isaac: “offer him as a burnt offering”, “the lamb for the burnt offering”",
+     "note": "Genesis 22 as the verses have it: the word to Abraham to offer Isaac as a burnt offering, “God Himself will provide the lamb for the burnt offering”, and the ram offered “in place of his son”. Heb 11:17 and Jas 2:21 take it up, the second inside an argument about faith and works (see the faith page). Readers part on what the story shows -- a test of Abraham, a substitute provided, a picture of a later sacrifice -- and the page takes no side. The children given to other gods are the row further down.",
+     "doors": [
+      {
+       "id": "event_binding_of_isaac",
+       "name": "Binding of Isaac (Akedah)",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r3",
+       "name": "Abraham offered Isaac",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "isaac",
+       "name": "Isaac",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "abraham",
+       "name": "Abraham",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Gen.22.2",
+      "Gen.22.7",
+      "Gen.22.13",
+      "Heb.11.17",
+      "Gen.22.3",
+      "Gen.22.6",
+      "Gen.22.8",
+      "Jas.2.21"
+     ],
+     "eg": [
+      {
+       "id": "Gen.22.2",
+       "ref": "Genesis 22:2",
+       "text": "“Take your son,” God said, “your only son Isaac, whom you love, and go to the land of Moriah. Offer him there as a burnt offering on one of the mountains, which I will show you.”",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Gen.22.7",
+       "ref": "Genesis 22:7",
+       "text": "Then Isaac said to his father Abraham, “My father!” “Here I am, my son,” he replied. “The fire and the wood are here,” said Isaac, “but where is the lamb for the burnt offering?”",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Gen.22.13",
+       "ref": "Genesis 22:13",
+       "text": "Then Abraham looked up and saw behind him a ram in a thicket, caught by its horns. So he went and took the ram and offered it as a burnt offering in place of his son.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.17",
+       "ref": "Hebrews 11:17",
+       "text": "By faith Abraham, when he was tested, offered up Isaac on the altar. He who had received the promises was ready to offer his one and only son,",
+       "words": [
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Bull, ram, lamb, goat, dove; “without blemish”",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_sacrifice_r5",
+       "name": "Without blemish",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r12",
+       "name": "Two turtledoves or two young pigeons",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "lamb",
+       "name": "the lamb",
+       "type": "creature",
+       "missing": false
+      }
+     ],
+     "n": 113,
+     "verses": [
+      "Gen.22.7",
+      "Lev.1.3",
+      "Luke.2.24",
+      "Mic.6.6",
+      "Gen.22.8",
+      "Gen.22.13",
+      "Exod.20.24",
+      "Exod.24.5",
+      "Exod.29.18",
+      "Lev.1.10",
+      "Lev.1.14",
+      "Lev.3.1",
+      "Lev.3.6",
+      "Lev.3.9",
+      "Lev.4.7",
+      "Lev.4.10",
+      "Lev.4.24",
+      "Lev.5.7",
+      "Lev.8.18",
+      "Lev.8.21",
+      "Lev.9.2",
+      "Lev.9.3",
+      "Lev.9.18",
+      "Lev.12.6",
+      "Lev.12.8",
+      "Lev.14.13",
+      "Lev.14.22",
+      "Lev.16.3",
+      "Lev.16.5",
+      "Lev.17.7",
+      "Lev.22.21",
+      "Lev.23.12",
+      "Lev.23.18",
+      "Lev.23.19",
+      "Num.6.14",
+      "Num.6.17",
+      "Num.7.15",
+      "Num.7.17",
+      "Num.7.21",
+      "Num.7.23",
+      "Num.7.27",
+      "Num.7.29",
+      "Num.7.33",
+      "Num.7.35",
+      "Num.7.39",
+      "Num.7.41",
+      "Num.7.45",
+      "Num.7.47",
+      "Num.7.51",
+      "Num.7.53",
+      "Num.7.57",
+      "Num.7.59",
+      "Num.7.63",
+      "Num.7.65",
+      "Num.7.69",
+      "Num.7.71",
+      "Num.7.75",
+      "Num.7.77",
+      "Num.7.81",
+      "Num.7.83",
+      "Num.7.87",
+      "Num.7.88",
+      "Num.8.12",
+      "Num.15.3",
+      "Num.15.5",
+      "Num.15.8",
+      "Num.15.24",
+      "Num.28.3",
+      "Num.28.11",
+      "Num.28.13",
+      "Num.28.14",
+      "Num.28.15",
+      "Num.28.19",
+      "Num.28.27",
+      "Num.28.31",
+      "Num.29.2",
+      "Num.29.8",
+      "Num.29.11",
+      "Num.29.13",
+      "Num.29.16",
+      "Num.29.19",
+      "Num.29.22",
+      "Num.29.25",
+      "Num.29.28",
+      "Num.29.31",
+      "Num.29.34",
+      "Num.29.36",
+      "Num.29.38",
+      "Deut.12.6",
+      "Deut.18.3",
+      "Judg.6.26",
+      "1Sam.15.22",
+      "2Sam.24.22",
+      "2Sam.24.24",
+      "1Kgs.8.63",
+      "1Chr.21.23",
+      "1Chr.29.21",
+      "2Chr.7.5",
+      "2Chr.29.32",
+      "2Chr.35.12",
+      "Ezra.6.9",
+      "Ezra.8.35",
+      "Job.42.8",
+      "Ps.51.19",
+      "Ps.66.15",
+      "Isa.1.11",
+      "Isa.34.6",
+      "Isa.43.23",
+      "Ezek.45.15",
+      "Ezek.45.23",
+      "Ezek.46.4",
+      "Ezek.46.13",
+      "Ezek.46.15"
+     ],
+     "eg": [
+      {
+       "id": "Gen.22.7",
+       "ref": "Genesis 22:7",
+       "text": "Then Isaac said to his father Abraham, “My father!” “Here I am, my son,” he replied. “The fire and the wood are here,” said Isaac, “but where is the lamb for the burnt offering?”",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Lev.1.3",
+       "ref": "Leviticus 1:3",
+       "text": "If his offering is a burnt offering from the herd, he is to present an unblemished male. He must bring it to the entrance to the Tent of Meeting for its acceptance before the LORD.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.24",
+       "ref": "Luke 2:24",
+       "text": "and to offer the sacrifice specified in the Law of the Lord: “A pair of turtledoves or two young pigeons.”",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      },
+      {
+       "id": "Mic.6.6",
+       "ref": "Micah 6:6",
+       "text": "With what shall I come before the LORD when I bow before the God on high? Should I come to Him with burnt offerings, with year-old calves?",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Eating from the sacrifice",
+     "note": "Where worshipers, priests or guests eat of a sacrifice (Gen 31:54; Lev 7:15; Deut 12:27), and where the New Testament speaks of eating food sacrificed to idols (1 Cor 8:10; Rev 2:14) and of “those who eat the sacrifices” as “fellow partakers in the altar” (1 Cor 10:18). What the shared meal means -- fellowship with the LORD, a gift received from Him, a sharing in what is offered -- readers take differently, and the page takes no side. The LORD's own “sacrificial feast” for the birds and beasts is here too (Ezek 39:17-19). The fire that consumes a sacrifice is not here; it is under “Every other use”.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r10",
+       "name": "Those who eat the sacrifices",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 29,
+     "verses": [
+      "Gen.31.54",
+      "Lev.7.15",
+      "1Cor.10.18",
+      "1Cor.8.10",
+      "1Cor.8.7",
+      "Exod.18.12",
+      "Exod.32.6",
+      "Exod.34.15",
+      "Lev.7.16",
+      "Lev.7.18",
+      "Lev.7.20",
+      "Lev.7.21",
+      "Lev.10.14",
+      "Lev.10.19",
+      "Lev.19.6",
+      "Num.25.2",
+      "Deut.12.27",
+      "Deut.32.38",
+      "Judg.13.16",
+      "1Sam.9.13",
+      "2Chr.30.22",
+      "Ps.106.28",
+      "Jer.7.21",
+      "Ezek.39.17",
+      "Ezek.39.19",
+      "Hos.8.13",
+      "Hos.9.4",
+      "Rev.2.14",
+      "Rev.2.20"
+     ],
+     "eg": [
+      {
+       "id": "Gen.31.54",
+       "ref": "Genesis 31:54",
+       "text": "Then Jacob offered a sacrifice on the mountain and invited his relatives to eat a meal. And after they had eaten, they spent the night on the mountain.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "Lev.7.15",
+       "ref": "Leviticus 7:15",
+       "text": "The meat of the sacrifice of his peace offering of thanksgiving must be eaten on the day he offers it; none of it may be left until morning.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.10.18",
+       "ref": "1 Corinthians 10:18",
+       "text": "Consider the people of Israel: Are not those who eat the sacrifices fellow partakers in the altar?",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.8.10",
+       "ref": "1 Corinthians 8:10",
+       "text": "For if someone with a weak conscience sees you who are well informed eating in an idol's temple, will he not be encouraged to eat food sacrificed to idols?",
+       "words": [
+        {
+         "key": "g1494",
+         "lemma": "εἰδωλόθυτος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Passover",
+     "note": "The text calls it a sacrifice (Exod 12:27; 34:25; Deut 16:2), names the day “when the Passover lamb was sacrificed” (Mark 14:12; Luke 22:7), and Paul writes “Christ our Passover lamb has been sacrificed” (1 Cor 5:7). How the Passover and the death of Christ are related, readers take differently; the page sets the verses side by side and takes no side.",
+     "doors": [
+      {
+       "id": "passover",
+       "name": "the passover",
+       "type": "observance",
+       "missing": false
+      },
+      {
+       "id": "event_passover",
+       "name": "Passover",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r4",
+       "name": "The Passover lamb",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "lamb",
+       "name": "the lamb",
+       "type": "creature",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Exod.12.27",
+      "Deut.16.2",
+      "Mark.14.12",
+      "1Cor.5.7",
+      "Exod.34.25",
+      "Deut.16.5",
+      "Deut.16.6",
+      "2Chr.30.15",
+      "2Chr.35.16",
+      "Luke.22.7"
+     ],
+     "eg": [
+      {
+       "id": "Exod.12.27",
+       "ref": "Exodus 12:27",
+       "text": "you are to reply, ‘It is the Passover sacrifice to the LORD, who passed over the houses of the Israelites in Egypt when He struck down the Egyptians and spared our homes.'” Then the people bowed down and worshiped.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "Deut.16.2",
+       "ref": "Deuteronomy 16:2",
+       "text": "You are to offer to the LORD your God the Passover sacrifice from the herd or flock in the place the LORD will choose as a dwelling for His Name.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "Mark.14.12",
+       "ref": "Mark 14:12",
+       "text": "On the first day of the Feast of Unleavened Bread, when the Passover lamb was to be sacrificed, Jesus' disciples asked Him, “Where do You want us to prepare for You to eat the Passover?”",
+       "words": [
+        {
+         "key": "g2380",
+         "lemma": "θύω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.5.7",
+       "ref": "1 Corinthians 5:7",
+       "text": "Get rid of the old leaven, that you may be a new unleavened batch, as you really are. For Christ, our Passover lamb, has been sacrificed.",
+       "words": [
+        {
+         "key": "g2380",
+         "lemma": "θύω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Peace offering, thank offering, vow, freewill offering",
+     "note": null,
+     "doors": [
+      {
+       "id": "peace_offering",
+       "name": "peace offering",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r8",
+       "name": "The peace offering",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r21",
+       "name": "Thank offerings and the sacrifice of praise",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 96,
+     "verses": [
+      "Exod.20.24",
+      "Lev.7.12",
+      "Lev.22.18",
+      "Ps.116.17",
+      "Exod.24.5",
+      "Exod.29.28",
+      "Exod.32.6",
+      "Lev.3.1",
+      "Lev.3.3",
+      "Lev.3.6",
+      "Lev.3.9",
+      "Lev.4.10",
+      "Lev.4.26",
+      "Lev.4.31",
+      "Lev.4.35",
+      "Lev.6.12",
+      "Lev.7.11",
+      "Lev.7.13",
+      "Lev.7.15",
+      "Lev.7.16",
+      "Lev.7.18",
+      "Lev.7.20",
+      "Lev.7.21",
+      "Lev.7.29",
+      "Lev.7.32",
+      "Lev.7.34",
+      "Lev.7.37",
+      "Lev.9.18",
+      "Lev.9.22",
+      "Lev.10.14",
+      "Lev.17.5",
+      "Lev.19.5",
+      "Lev.22.21",
+      "Lev.22.29",
+      "Lev.23.19",
+      "Num.6.14",
+      "Num.6.17",
+      "Num.6.18",
+      "Num.7.17",
+      "Num.7.23",
+      "Num.7.29",
+      "Num.7.35",
+      "Num.7.41",
+      "Num.7.47",
+      "Num.7.53",
+      "Num.7.59",
+      "Num.7.65",
+      "Num.7.71",
+      "Num.7.77",
+      "Num.7.83",
+      "Num.7.88",
+      "Num.10.10",
+      "Num.15.3",
+      "Num.15.8",
+      "Num.29.39",
+      "Deut.12.6",
+      "Deut.12.11",
+      "Josh.8.31",
+      "Josh.22.23",
+      "Josh.22.27",
+      "Judg.20.26",
+      "Judg.21.4",
+      "1Sam.1.21",
+      "1Sam.10.8",
+      "1Sam.11.15",
+      "1Sam.13.9",
+      "2Sam.6.17",
+      "2Sam.6.18",
+      "2Sam.24.25",
+      "1Kgs.3.15",
+      "1Kgs.8.63",
+      "1Kgs.8.64",
+      "1Kgs.9.25",
+      "2Kgs.16.13",
+      "1Chr.16.1",
+      "1Chr.16.2",
+      "1Chr.21.26",
+      "2Chr.7.7",
+      "2Chr.29.31",
+      "2Chr.29.35",
+      "2Chr.30.22",
+      "2Chr.31.2",
+      "2Chr.33.16",
+      "Ezra.3.5",
+      "Ps.66.13",
+      "Ps.107.22",
+      "Prov.7.14",
+      "Isa.19.21",
+      "Jer.17.26",
+      "Ezek.43.27",
+      "Ezek.45.15",
+      "Ezek.45.17",
+      "Ezek.46.2",
+      "Ezek.46.12",
+      "Amos.5.22",
+      "Jonah.1.16"
+     ],
+     "eg": [
+      {
+       "id": "Exod.20.24",
+       "ref": "Exodus 20:24",
+       "text": "You are to make for Me an altar of earth, and sacrifice on it your burnt offerings and peace offerings, your sheep and goats and cattle. In every place where I cause My name to be remembered, I will come to you and bless you.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Lev.7.12",
+       "ref": "Leviticus 7:12",
+       "text": "If he offers it in thanksgiving, then along with the sacrifice of thanksgiving he shall offer unleavened cakes mixed with olive oil, unleavened wafers coated with oil, and well-kneaded cakes of fine flour mixed with oil.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "Lev.22.18",
+       "ref": "Leviticus 22:18",
+       "text": "“Speak to Aaron and his sons and all the Israelites and tell them, ‘Any man of the house of Israel or any foreign resident who presents a gift for a burnt offering to the LORD, whether to fulfill a vow or as a freewill offering,",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.116.17",
+       "ref": "Psalms 116:17",
+       "text": "I will offer to You a sacrifice of thanksgiving and call on the name of the LORD.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        },
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Blood beside sacrifice",
+     "note": "Blood is named in the same verse as the sacrifice: put on the altar (Lev 4:7), sprinkled (Ezek 43:18), not to be offered with leaven (Exod 23:18), and in the Council's letter forbidden to eat (Acts 15:29). The prophets also picture a day of judgment as the LORD's own sacrifice, “bathed in blood” (Isa 34:6; Jer 46:10; Ezek 39:17-19). What the blood does -- covers, cleanses, ransoms, gives a life for a life -- readers take differently, and the page takes no side. Lev 17:11 and Heb 9:22, which have no word for sacrifice, are among the verses at the head of the page.",
+     "doors": [
+      {
+       "id": "blood",
+       "name": "blood",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r13",
+       "name": "The blood is the life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r29",
+       "name": "By His blood",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "Lev.4.7",
+      "Exod.23.18",
+      "Isa.1.11",
+      "Ezek.43.18",
+      "Luke.13.1",
+      "Exod.34.25",
+      "Lev.4.18",
+      "Lev.4.25",
+      "Lev.4.30",
+      "Lev.4.34",
+      "Lev.7.2",
+      "Lev.9.12",
+      "Lev.9.18",
+      "Deut.12.27",
+      "2Kgs.16.13",
+      "2Kgs.16.15",
+      "2Chr.29.24",
+      "Isa.34.6",
+      "Jer.46.10",
+      "Ezek.39.17",
+      "Ezek.39.19",
+      "Acts.15.29",
+      "Acts.21.25"
+     ],
+     "eg": [
+      {
+       "id": "Lev.4.7",
+       "ref": "Leviticus 4:7",
+       "text": "The priest must then put some of the blood on the horns of the altar of fragrant incense that is before the LORD in the Tent of Meeting. And he is to pour out the rest of the bull's blood at the base of the altar of burnt offering at the entrance to the Tent of Meeting.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Exod.23.18",
+       "ref": "Exodus 23:18",
+       "text": "You must not offer the blood of My sacrifices with anything leavened, nor may the fat of My feast remain until morning.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "Isa.1.11",
+       "ref": "Isaiah 1:11",
+       "text": "“What good to Me is your multitude of sacrifices?” says the LORD. “I am full from the burnt offerings of rams and the fat of well-fed cattle; I take no delight in the blood of bulls and lambs and goats.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        },
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.43.18",
+       "ref": "Ezekiel 43:18",
+       "text": "Then He said to me: “Son of man, this is what the Lord GOD says: ‘These are the statutes for the altar on the day it is constructed, so that burnt offerings may be sacrificed on it and blood may be splattered on it:",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Daily, Sabbath, New Moon and festival offerings",
+     "note": null,
+     "doors": [
+      {
+       "id": "burnt_offerings",
+       "name": "burnt offerings",
+       "type": "object",
+       "missing": false
+      }
+     ],
+     "n": 41,
+     "verses": [
+      "Num.28.3",
+      "Num.28.10",
+      "Num.28.11",
+      "Exod.23.18",
+      "Exod.29.42",
+      "Exod.34.25",
+      "Lev.23.37",
+      "Num.10.10",
+      "Num.15.3",
+      "Num.28.6",
+      "Num.28.14",
+      "Num.28.15",
+      "Num.28.23",
+      "Num.28.24",
+      "Num.28.31",
+      "Num.29.6",
+      "Num.29.11",
+      "Num.29.16",
+      "Num.29.19",
+      "Num.29.22",
+      "Num.29.25",
+      "Num.29.28",
+      "Num.29.31",
+      "Num.29.34",
+      "Num.29.38",
+      "1Chr.16.40",
+      "1Chr.23.31",
+      "2Chr.2.4",
+      "2Chr.24.14",
+      "2Chr.30.15",
+      "2Chr.31.3",
+      "Ezra.3.4",
+      "Ezra.3.5",
+      "Ezra.3.6",
+      "Neh.10.33",
+      "Ezek.45.17",
+      "Ezek.45.23",
+      "Ezek.45.25",
+      "Ezek.46.4",
+      "Ezek.46.12",
+      "Ezek.46.15"
+     ],
+     "eg": [
+      {
+       "id": "Num.28.3",
+       "ref": "Numbers 28:3",
+       "text": "And tell them that this is the food offering you are to present to the LORD as a regular burnt offering each day: two unblemished year-old male lambs.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Num.28.10",
+       "ref": "Numbers 28:10",
+       "text": "This is the burnt offering for every Sabbath, in addition to the regular burnt offering and its drink offering.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Num.28.11",
+       "ref": "Numbers 28:11",
+       "text": "At the beginning of every month, you are to present to the LORD a burnt offering of two young bulls, one ram, and seven male lambs a year old, all unblemished,",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Exod.23.18",
+       "ref": "Exodus 23:18",
+       "text": "You must not offer the blood of My sacrifices with anything leavened, nor may the fat of My feast remain until morning.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Atonement made; a hand laid on the head",
+     "note": "The text says the priest “will make atonement” for the offerer with the offering, and in Lev 4:26 and 5:10 “he will be forgiven”; it says the offerer “lays his hand on the head” of the offering (Lev 1:4; 4:24). What atonement does -- covers, cleanses, ransoms, turns away wrath -- and what the hand laid on the head does -- identifies, dedicates, transfers -- readers take differently, and the page takes no side. The Hebrew is כִּפֶּר, a different word from the one for forgive (see forgiveness, where the two are set side by side). The sin offering of Lev 4-5 is also under “Sacrifice and sin”, below.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r14",
+       "name": "To make atonement",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "day_of_atonement",
+       "name": "the day of atonement",
+       "type": "observance",
+       "missing": false
+      },
+      {
+       "id": "atonement",
+       "name": "reconciliation",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r7",
+       "name": "Lay his hand on the head",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r33",
+       "name": "And he will be forgiven",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Lev.1.4",
+      "Lev.4.26",
+      "Lev.5.10",
+      "Lev.4.24",
+      "Lev.4.29",
+      "Lev.4.31",
+      "Lev.4.33",
+      "Lev.4.35",
+      "Lev.8.18",
+      "Lev.9.7",
+      "Lev.12.8",
+      "Lev.14.19",
+      "Lev.14.20",
+      "Lev.14.31",
+      "Lev.15.15",
+      "Lev.15.30",
+      "Lev.16.24",
+      "Num.6.11",
+      "Num.8.12",
+      "1Sam.3.14",
+      "1Chr.6.49",
+      "2Chr.29.24",
+      "Neh.10.33",
+      "Ezek.45.15",
+      "Ezek.45.17"
+     ],
+     "eg": [
+      {
+       "id": "Lev.1.4",
+       "ref": "Leviticus 1:4",
+       "text": "He is to lay his hand on the head of the burnt offering, so it can be accepted on his behalf to make atonement for him.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Lev.4.26",
+       "ref": "Leviticus 4:26",
+       "text": "He must burn all its fat on the altar, like the fat of the peace offerings; thus the priest will make atonement for that man's sin, and he will be forgiven.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "Lev.5.10",
+       "ref": "Leviticus 5:10",
+       "text": "And the priest must prepare the second bird as a burnt offering according to the ordinance. In this way the priest will make atonement for him for the sin he has committed, and he will be forgiven.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Lev.4.24",
+       "ref": "Leviticus 4:24",
+       "text": "He is to lay his hand on the head of the goat and slaughter it at the place where the burnt offering is slaughtered before the LORD. It is a sin offering.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sacrifice and sin: the sin offering, the guilt offering, “for sins”",
+     "note": "In Hebrew חַטָּאת is both 'sin' and 'sin offering'; the Berean prints 'sin offering' where the verse is about the offering, and the verse reads 'sins' where it is not (Isa 43:24; Hos 8:13). Heb 10:26 (“no further sacrifice for sins remains”) stands here with Heb 10:12 and 10:18; where Christian traditions part on whether a believer can fall away, and on what Heb 10:26 says of it, the page takes no side. The sin offering's ritual in Lev 4-5 is also in the row “Atonement made; a hand laid on the head”, above.",
+     "doors": [
+      {
+       "id": "sin_offering",
+       "name": "sin offering",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "guilt_offering",
+       "name": "guilt offering",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r11",
+       "name": "A sin offering, a guilt offering",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 62,
+     "verses": [
+      "Lev.4.24",
+      "Lev.5.7",
+      "Heb.5.1",
+      "Heb.10.12",
+      "Lev.4.25",
+      "Lev.4.26",
+      "Lev.4.29",
+      "Lev.4.33",
+      "Lev.4.34",
+      "Lev.4.35",
+      "Lev.5.10",
+      "Lev.6.25",
+      "Lev.7.2",
+      "Lev.7.37",
+      "Lev.9.2",
+      "Lev.9.3",
+      "Lev.9.7",
+      "Lev.9.22",
+      "Lev.10.19",
+      "Lev.12.6",
+      "Lev.12.8",
+      "Lev.14.13",
+      "Lev.14.19",
+      "Lev.14.22",
+      "Lev.14.31",
+      "Lev.15.15",
+      "Lev.15.30",
+      "Lev.16.3",
+      "Lev.16.5",
+      "Lev.23.19",
+      "Num.6.11",
+      "Num.6.14",
+      "Num.6.16",
+      "Num.7.87",
+      "Num.8.12",
+      "Num.15.24",
+      "Num.28.15",
+      "Num.29.11",
+      "Num.29.16",
+      "Num.29.19",
+      "Num.29.22",
+      "Num.29.25",
+      "Num.29.28",
+      "Num.29.31",
+      "Num.29.34",
+      "Num.29.38",
+      "2Chr.29.24",
+      "Ezra.8.35",
+      "Neh.10.33",
+      "Isa.43.24",
+      "Ezek.40.39",
+      "Ezek.45.17",
+      "Ezek.45.23",
+      "Ezek.45.25",
+      "Hos.8.13",
+      "Heb.7.27",
+      "Heb.9.26",
+      "Heb.10.6",
+      "Heb.10.8",
+      "Heb.10.11",
+      "Heb.10.18",
+      "Heb.10.26"
+     ],
+     "eg": [
+      {
+       "id": "Lev.4.24",
+       "ref": "Leviticus 4:24",
+       "text": "He is to lay his hand on the head of the goat and slaughter it at the place where the burnt offering is slaughtered before the LORD. It is a sin offering.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Lev.5.7",
+       "ref": "Leviticus 5:7",
+       "text": "If, however, he cannot afford a lamb, he may bring to the LORD as restitution for his sin two turtledoves or two young pigeons-one as a sin offering and the other as a burnt offering.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Heb.5.1",
+       "ref": "Hebrews 5:1",
+       "text": "Every high priest is appointed from among men to represent them in matters relating to God, to offer gifts and sacrifices for sins.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.12",
+       "ref": "Hebrews 10:12",
+       "text": "But when this Priest had offered for all time one sacrifice for sins, He sat down at the right hand of God.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        },
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sacrifice set beside what the LORD asks: not desired, not accepted, “mercy, not sacrifice”",
+     "note": "Set side by side as the text has them: “obedience is better than sacrifice” (1 Sam 15:22), “Sacrifice and offering You did not desire” (Ps 40:6; Heb 10:5, 8), “I desire mercy, not sacrifice” (Hos 6:6; Matt 9:13; 12:7), and the sacrifices He does not accept (Isa 1:11; Jer 6:20; 14:12; Amos 5:22; Hos 8:13). Readers part on whether these verses set the sacrifices of the law aside, or reject only a sacrifice offered without mercy, justice and obedience; and on how Ps 40:6 (“my ears You have opened”) stands to Heb 10:5 (“a body You prepared for Me”), which the Berean prints differently. In Jer 7:22 the Berean reads “did not merely command them”; the Hebrew has no word for “merely”. Amos 5:25 (“Did you bring Me sacrifices and offerings forty years in the wilderness?”), quoted at Acts 7:42, is a question and stands under “Every other use”; readers part on what answer it expects. The page takes no side.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r23",
+       "name": "Better than sacrifice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r24",
+       "name": "Sacrifice and offering You did not desire",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r25",
+       "name": "I will not accept them",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "i_desired_mercy_and_not_sacrifice",
+       "name": "I desire mercy, not sacrifice",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "to_obey_is_better_than_sacrifice",
+       "name": "obedience is better than sacrifice",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "msg_love_mercy",
+       "name": "Message: Love mercy",
+       "type": "pattern",
+       "missing": false
+      }
+     ],
+     "n": 26,
+     "verses": [
+      "Hos.6.6",
+      "1Sam.15.22",
+      "Ps.40.6",
+      "Jer.6.20",
+      "Ps.51.16",
+      "Prov.15.8",
+      "Prov.21.3",
+      "Prov.21.27",
+      "Eccl.5.1",
+      "Isa.1.11",
+      "Isa.1.13",
+      "Isa.66.3",
+      "Jer.7.22",
+      "Jer.7.23",
+      "Jer.14.12",
+      "Hos.8.13",
+      "Amos.5.22",
+      "Amos.5.24",
+      "Mic.6.6",
+      "Mic.6.8",
+      "Matt.9.13",
+      "Matt.12.7",
+      "Mark.12.33",
+      "Heb.10.5",
+      "Heb.10.6",
+      "Heb.10.8"
+     ],
+     "eg": [
+      {
+       "id": "Hos.6.6",
+       "ref": "Hosea 6:6",
+       "text": "For I desire mercy, not sacrifice, and the knowledge of God rather than burnt offerings.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        },
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.15.22",
+       "ref": "1 Samuel 15:22",
+       "text": "But Samuel declared: “Does the LORD delight in burnt offerings and sacrifices as much as in obedience to His voice? Behold, obedience is better than sacrifice, and attentiveness is better than the fat of rams.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        },
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.40.6",
+       "ref": "Psalms 40:6",
+       "text": "Sacrifice and offering You did not desire, but my ears You have opened. Burnt offerings and sin offerings You did not require.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        },
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.6.20",
+       "ref": "Jeremiah 6:20",
+       "text": "What use to Me is frankincense from Sheba or sweet cane from a distant land? Your burnt offerings are not acceptable; your sacrifices do not please Me.”",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        },
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A son or daughter given in sacrifice",
+     "note": "The text records it as the act of the king of Moab (2 Kgs 3:27), as Israel's sin (Ps 106:37-38; Ezek 16:20; Hos 13:2 says “They offer human sacrifice”, in the verb row for other gods) and as the worship of Baal, “something I never commanded or mentioned, nor did it even enter My mind” (Jer 19:5). Isaac, whom the LORD tells Abraham to offer, is the row above. Jephthah's vow (Judg 11:31), “I will offer it up as a burnt offering”, is under “Every other use: sacrifice, offering”; that verse says only “whatever comes out of the door”, and says nothing of approval.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r27",
+       "name": "They sacrificed their sons and their daughters",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Ps.106.37",
+      "Ezek.16.20",
+      "2Kgs.3.27",
+      "Jer.19.5",
+      "Ps.106.38"
+     ],
+     "eg": [
+      {
+       "id": "Ps.106.37",
+       "ref": "Psalms 106:37",
+       "text": "They sacrificed their sons and their daughters to demons.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.16.20",
+       "ref": "Ezekiel 16:20",
+       "text": "You even took the sons and daughters you bore to Me and sacrificed them as food to idols. Was your prostitution not enough?",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.3.27",
+       "ref": "2 Kings 3:27",
+       "text": "So he took his firstborn son, who was to succeed him, and offered him as a burnt offering on the city wall. And there was great fury against the Israelites, so they withdrew and returned to their own land.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.19.5",
+       "ref": "Jeremiah 19:5",
+       "text": "They have built high places to Baal on which to burn their children in the fire as offerings to Baal-something I never commanded or mentioned, nor did it even enter My mind.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Other gods, idols and demons",
+     "note": "Verses where a sacrifice is named beside another god, an idol or a demon: Naaman's vow (2 Kgs 5:17), Jehu's sacrifice to Baal (2 Kgs 10:19), the golden calf (Acts 7:41), Paul on food sacrificed to idols (1 Cor 8; 10:19), the Council's letter (Acts 15:29) and the letters to Pergamum and Thyatira (Rev 2:14, 20). The verbs are in the next form, under “Other gods, idols and demons”.",
+     "doors": [
+      {
+       "id": "idolatry",
+       "name": "idolatry",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "2Kgs.5.17",
+      "Acts.7.41",
+      "1Cor.8.1",
+      "2Kgs.10.19",
+      "2Kgs.10.25",
+      "Jer.19.5",
+      "Acts.15.29",
+      "Acts.21.25",
+      "1Cor.8.4",
+      "1Cor.8.7",
+      "1Cor.8.10",
+      "1Cor.10.19",
+      "Rev.2.14",
+      "Rev.2.20"
+     ],
+     "eg": [
+      {
+       "id": "2Kgs.5.17",
+       "ref": "2 Kings 5:17",
+       "text": "“If you will not,” said Naaman, “please let me, your servant, be given as much soil as a pair of mules can carry. For your servant will never again make a burnt offering or a sacrifice to any other god but the LORD.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        },
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Acts.7.41",
+       "ref": "Acts 7:41",
+       "text": "At that time they made a calf and offered a sacrifice to the idol, rejoicing in the works of their hands.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.8.1",
+       "ref": "1 Corinthians 8:1",
+       "text": "Now about food sacrificed to idols: We know that we all have knowledge. Knowledge puffs up, but love builds up.",
+       "words": [
+        {
+         "key": "g1494",
+         "lemma": "εἰδωλόθυτος"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.10.19",
+       "ref": "2 Kings 10:19",
+       "text": "Now, therefore, summon to me all the prophets of Baal, all his servants, and all his priests. See that no one is missing, for I have a great sacrifice for Baal. Whoever is missing will not live.” But Jehu was acting deceptively in order to destroy the servants of Baal.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Thanksgiving, praise, a broken spirit, bodies and lives as sacrifices",
+     "note": "Sacrifices that are not animals: a thank offering (Ps 50:14), “the sacrifices of God are a broken spirit” (Ps 51:17), “living sacrifices” (Rom 12:1), “a sacrifice of praise” (Heb 13:15), “spiritual sacrifices” (1 Pet 2:5), gifts as “a fragrant offering” (Phil 4:18), and the apostle “poured out like a drink offering” (Phil 2:17; 2 Tim 4:6). Readers part on whether these replace the offerings of the law or stand beside them; the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r21",
+       "name": "Thank offerings and the sacrifice of praise",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r22",
+       "name": "A broken and a contrite heart",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r31",
+       "name": "The sacrifice and service of your faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "a_living_sacrifice",
+       "name": "as living sacrifices",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "the_sacrifices_of_god_are_a_broken_spirit",
+       "name": "the sacrifices of God are a broken spirit",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Ps.50.14",
+      "Ps.51.17",
+      "Rom.12.1",
+      "Heb.13.15",
+      "2Chr.33.16",
+      "Ps.50.23",
+      "Ps.107.22",
+      "Ps.116.17",
+      "Jonah.2.9",
+      "Rom.15.16",
+      "Phil.2.17",
+      "Phil.4.18",
+      "2Tim.4.6",
+      "Heb.13.16",
+      "1Pet.2.5"
+     ],
+     "eg": [
+      {
+       "id": "Ps.50.14",
+       "ref": "Psalms 50:14",
+       "text": "Sacrifice a thank offering to God, and fulfill your vows to the Most High.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "Ps.51.17",
+       "ref": "Psalms 51:17",
+       "text": "The sacrifices of God are a broken spirit; a broken and a contrite heart, O God, You will not despise.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "Rom.12.1",
+       "ref": "Romans 12:1",
+       "text": "Therefore I urge you, brothers, on account of God's mercy, to offer your bodies as living sacrifices, holy and pleasing to God, which is your spiritual service of worship.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      },
+      {
+       "id": "Heb.13.15",
+       "ref": "Hebrews 13:15",
+       "text": "Through Jesus, therefore, let us continually offer to God a sacrifice of praise, the fruit of lips that confess His name.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        },
+        {
+         "key": "g399",
+         "lemma": "ἀναφέρω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sacrifice in days to come: offered, or absent",
+     "note": "The text sets both beside each other: burnt offerings and sacrifices “accepted on My altar” (Isa 56:7), the Egyptians worshiping “with sacrifices and offerings” (Isa 19:21), “then bulls will be offered on Your altar” (Ps 51:19), priests who will “never fail to have a man ... to offer burnt offerings” (Jer 33:18), the sacrifices at the temple Ezekiel is shown (Ezek 40-46: 40:39; 43:18, 27; 44:11; 45:17; 46:2, 24 here), all who sacrifice coming to cook in the pots of Jerusalem (Zech 14:21); and, on the other side, Israel “many days without king or prince, without sacrifice or sacred pillar” (Hos 3:4; 3:5 goes on to their return), and one who “will put an end to sacrifice and offering” (Dan 9:27). Ps 51:19 comes after a prayer for Zion's walls (51:18), “then” bulls will be offered. Readers part on whether these are sacrifices still to be offered, pictures of worship in the new covenant, or already fulfilled; on who “he” is in Dan 9:27 and when; and on how Heb 10:18 (“an offering for sin is no longer needed”) stands to them. The page takes no side.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r32",
+       "name": "Accepted on My altar",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "temple",
+       "name": "The Temple",
+       "type": "place",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Isa.56.7",
+      "Ezek.43.27",
+      "Hos.3.4",
+      "Dan.9.27",
+      "Ps.51.19",
+      "Isa.19.21",
+      "Jer.33.18",
+      "Ezek.40.39",
+      "Ezek.43.18",
+      "Ezek.44.11",
+      "Ezek.45.17",
+      "Ezek.46.2",
+      "Ezek.46.24",
+      "Zech.14.21"
+     ],
+     "eg": [
+      {
+       "id": "Isa.56.7",
+       "ref": "Isaiah 56:7",
+       "text": "I will bring them to My holy mountain and make them joyful in My house of prayer. Their burnt offerings and sacrifices will be accepted on My altar, for My house will be called a house of prayer for all the nations.”",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        },
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.43.27",
+       "ref": "Ezekiel 43:27",
+       "text": "At the end of these days, from the eighth day on, the priests are to present your burnt offerings and peace offerings on the altar. Then I will accept you, declares the Lord GOD.'”",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Hos.3.4",
+       "ref": "Hosea 3:4",
+       "text": "For the Israelites must live many days without king or prince, without sacrifice or sacred pillar, and without ephod or idol.",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "Dan.9.27",
+       "ref": "Daniel 9:27",
+       "text": "And he will confirm a covenant with many for one week, but in the middle of the week he will put an end to sacrifice and offering. And on the wing of the temple will come the abomination that causes desolation, until the decreed destruction is poured out upon him.”",
+       "words": [
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Lord's table: “This is My body”, blood “poured out”, “in remembrance of Me”, “a participation”",
+     "note": "The words of the Last Supper and Paul on the table: “Take and eat; this is My body” (Matt 26:26; Mark 14:22), “This is My blood of the covenant, which is poured out for many for the forgiveness of sins” (Matt 26:28; Mark 14:24 has “which is poured out for many”), “do this in remembrance of Me” (Luke 22:19; 1 Cor 11:24-25), “a participation in the blood of Christ” (1 Cor 10:16), “those who eat the sacrifices ... fellow partakers in the altar” (1 Cor 10:18), “the table of the Lord and the table of demons” (1 Cor 10:21). Only 1 Cor 10:18 has a word for sacrifice; the others are here because they speak of the body, the blood, the covenant and the meal. The covenant sealed with burnt and peace offerings and “the blood of the covenant” is at Exod 24:5-8 (Exod 24:5 is under “Sacrificed to the LORD”, in the verb form). The other words of the tellings of the Supper (Matt 26:27; 1 Cor 11:23, 26) are not set here, having no word for sacrifice. Readers part on whether the Lord's Supper is itself a sacrifice, a memorial, a participation in Christ's body and blood, or more than one of these; the page takes no side.",
+     "doors": [
+      {
+       "id": "event_last_supper",
+       "name": "Last Supper",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "covenant",
+       "name": "covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r13",
+       "name": "The blood of the covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Matt.26.28",
+      "Luke.22.19",
+      "1Cor.10.16",
+      "1Cor.10.18",
+      "Matt.26.26",
+      "Mark.14.22",
+      "Mark.14.24",
+      "Luke.22.20",
+      "1Cor.10.21",
+      "1Cor.11.24",
+      "1Cor.11.25"
+     ],
+     "eg": [
+      {
+       "id": "Matt.26.28",
+       "ref": "Matthew 26:28",
+       "text": "This is My blood of the covenant, which is poured out for many for the forgiveness of sins.",
+       "words": []
+      },
+      {
+       "id": "Luke.22.19",
+       "ref": "Luke 22:19",
+       "text": "And He took the bread, gave thanks and broke it, and gave it to them, saying, “This is My body, given for you; do this in remembrance of Me.”",
+       "words": []
+      },
+      {
+       "id": "1Cor.10.16",
+       "ref": "1 Corinthians 10:16",
+       "text": "Is not the cup of blessing that we bless a participation in the blood of Christ? And is not the bread that we break a participation in the body of Christ?",
+       "words": []
+      },
+      {
+       "id": "1Cor.10.18",
+       "ref": "1 Corinthians 10:18",
+       "text": "Consider the people of Israel: Are not those who eat the sacrifices fellow partakers in the altar?",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hebrews: offered again and again, unable to cleanse; once for all",
+     "note": "Hebrews on the sacrifices of the law and the sacrifice of Christ: “the same sacrifices offered year after year” (10:1), “again and again the same sacrifices, which can never take away sins” (10:11), “gifts and sacrifices being offered were unable to cleanse the conscience” (9:9); and “once for all ... by the sacrifice of Himself” (9:26), “the sacrifice of the body of Jesus Christ once for all” (10:10), “one sacrifice for sins” (10:12), “a single offering” (10:14). Heb 9:26 names Christ, and 10:10 Jesus Christ; 7:27, 10:12 and 10:14 say “He” or “this Priest” inside the same argument. Readers part on whether the sacrifices of the law are fulfilled in Christ's, ended by it, or continue in some form, and on how “once for all” stands to the Lord's table; the page takes no side. The rows above say what the law's offerings were given for, for example the priest “will make atonement for that man's sin, and he will be forgiven” (Lev 4:26); the page says nothing on how that stands to Heb 9:9 or 10:1.",
+     "doors": [
+      {
+       "id": "theme_sacrifice_r30",
+       "name": "Once for all",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "lamb_of_god",
+       "name": "the Lamb of God",
+       "type": "title",
+       "missing": false
+      },
+      {
+       "id": "behold_the_lamb_of_god",
+       "name": "Look, the Lamb of God",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Heb.10.1",
+      "Heb.10.11",
+      "Heb.9.26",
+      "Heb.10.12",
+      "Heb.7.27",
+      "Heb.9.9",
+      "Heb.10.10",
+      "Heb.10.14"
+     ],
+     "eg": [
+      {
+       "id": "Heb.10.1",
+       "ref": "Hebrews 10:1",
+       "text": "For the law is only a shadow of the good things to come, not the realities themselves. It can never, by the same sacrifices offered year after year, make perfect those who draw near to worship.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        },
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.11",
+       "ref": "Hebrews 10:11",
+       "text": "Day after day every priest stands to minister and to offer again and again the same sacrifices, which can never take away sins.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        },
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.26",
+       "ref": "Hebrews 9:26",
+       "text": "Otherwise, Christ would have had to suffer repeatedly since the foundation of the world. But now He has appeared once for all at the end of the ages to do away with sin by the sacrifice of Himself.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.12",
+       "ref": "Hebrews 10:12",
+       "text": "But when this Priest had offered for all time one sacrifice for sins, He sat down at the right hand of God.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        },
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: sacrifice, offering",
+     "note": "Among them: Noah's burnt offerings after the flood (Gen 8:20); the fire from the LORD that consumed the offering (Lev 9:24; 1 Kgs 18:38; 2 Chr 7:1); the dedications, of the altar (“the dedication offering for the altar after it was anointed”, Num 7:88) and of the house (“the king and all the Israelites dedicated the house of the LORD”, 1 Kgs 8:63; “the king and all the people dedicated the house of God”, 2 Chr 7:5; see also 2 Chr 7); Abel's sacrifice (Heb 11:4); Ps 50:8 (“I do not rebuke you for your sacrifices”); and Amos 5:25 with Acts 7:42, the question “Did you bring Me sacrifices and offerings forty years in the wilderness?”",
+     "doors": [],
+     "n": 100,
+     "verses": [
+      "Gen.8.20",
+      "1Kgs.18.38",
+      "Acts.7.42",
+      "Heb.11.4",
+      "Heb.8.3",
+      "Gen.46.1",
+      "Exod.10.25",
+      "Exod.30.9",
+      "Exod.30.28",
+      "Exod.31.9",
+      "Exod.35.16",
+      "Exod.38.1",
+      "Exod.40.6",
+      "Exod.40.10",
+      "Exod.40.29",
+      "Lev.1.6",
+      "Lev.6.9",
+      "Lev.6.10",
+      "Lev.7.8",
+      "Lev.7.17",
+      "Lev.9.13",
+      "Lev.9.14",
+      "Lev.9.16",
+      "Lev.9.17",
+      "Lev.9.24",
+      "Lev.17.8",
+      "Num.23.3",
+      "Num.23.6",
+      "Num.23.15",
+      "Num.23.17",
+      "Deut.12.13",
+      "Deut.12.14",
+      "Deut.27.6",
+      "Deut.33.19",
+      "Josh.22.26",
+      "Josh.22.28",
+      "Josh.22.29",
+      "Judg.11.31",
+      "Judg.13.23",
+      "Judg.16.23",
+      "1Sam.2.13",
+      "1Sam.2.19",
+      "1Sam.2.29",
+      "1Sam.6.14",
+      "1Sam.6.15",
+      "1Sam.7.9",
+      "1Sam.7.10",
+      "1Sam.9.12",
+      "1Sam.13.10",
+      "1Sam.13.12",
+      "1Sam.16.3",
+      "1Sam.16.5",
+      "1Sam.20.6",
+      "1Sam.20.29",
+      "2Sam.15.12",
+      "1Kgs.3.4",
+      "1Kgs.8.62",
+      "1Kgs.10.5",
+      "1Kgs.12.27",
+      "1Kgs.18.34",
+      "2Kgs.10.24",
+      "1Chr.21.24",
+      "1Chr.21.29",
+      "1Chr.22.1",
+      "2Chr.1.6",
+      "2Chr.4.6",
+      "2Chr.7.1",
+      "2Chr.7.4",
+      "2Chr.7.12",
+      "2Chr.8.12",
+      "2Chr.13.11",
+      "2Chr.23.18",
+      "2Chr.29.7",
+      "2Chr.29.18",
+      "2Chr.29.27",
+      "2Chr.29.28",
+      "2Chr.29.34",
+      "2Chr.35.14",
+      "Ezra.3.2",
+      "Ezra.3.3",
+      "Neh.12.43",
+      "Job.1.5",
+      "Ps.4.5",
+      "Ps.20.3",
+      "Ps.27.6",
+      "Ps.50.5",
+      "Ps.50.8",
+      "Isa.40.16",
+      "Isa.57.7",
+      "Ezek.40.38",
+      "Ezek.40.42",
+      "Ezek.43.24",
+      "Hos.4.19",
+      "Amos.4.4",
+      "Amos.5.25",
+      "Zeph.1.7",
+      "Zeph.1.8",
+      "Acts.21.26",
+      "Acts.24.17",
+      "Heb.9.23"
+     ],
+     "eg": [
+      {
+       "id": "Gen.8.20",
+       "ref": "Genesis 8:20",
+       "text": "Then Noah built an altar to the LORD. And taking from every kind of clean animal and clean bird, he offered burnt offerings on the altar.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.18.38",
+       "ref": "1 Kings 18:38",
+       "text": "Then the fire of the LORD fell and consumed the sacrifice, the wood, the stones, and the dust, and it licked up the water in the trench.",
+       "words": [
+        {
+         "key": "h5930",
+         "lemma": "עֹלָה"
+        }
+       ]
+      },
+      {
+       "id": "Acts.7.42",
+       "ref": "Acts 7:42",
+       "text": "But God turned away from them and gave them over to the worship of the host of heaven, as it is written in the book of the prophets: ‘Did you bring Me sacrifices and offerings forty years in the wilderness, O house of Israel?",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.4",
+       "ref": "Hebrews 11:4",
+       "text": "By faith Abel offered God a better sacrifice than Cain did. By faith he was commended as righteous when God gave approval to his gifts. And by faith he still speaks, even though he is dead.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 153,
+   "rows": [
+    {
+     "label": "Sacrificed to the LORD, before the LORD",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "altar",
+       "name": "altar",
+       "type": "object",
+       "missing": false
+      }
+     ],
+     "n": 37,
+     "verses": [
+      "Exod.3.18",
+      "Exod.5.3",
+      "Lev.19.5",
+      "Jonah.1.16",
+      "Gen.46.1",
+      "Exod.5.8",
+      "Exod.5.17",
+      "Exod.8.8",
+      "Exod.8.25",
+      "Exod.8.26",
+      "Exod.8.27",
+      "Exod.8.28",
+      "Exod.8.29",
+      "Exod.13.15",
+      "Exod.24.5",
+      "Lev.9.4",
+      "Lev.17.5",
+      "Lev.22.29",
+      "Deut.15.21",
+      "Deut.16.2",
+      "Deut.17.1",
+      "Judg.2.5",
+      "1Sam.1.3",
+      "1Sam.1.21",
+      "1Sam.6.15",
+      "1Sam.11.15",
+      "1Sam.15.15",
+      "1Sam.15.21",
+      "1Sam.16.2",
+      "1Sam.16.5",
+      "1Kgs.8.62",
+      "1Kgs.8.63",
+      "1Chr.29.21",
+      "2Chr.7.4",
+      "2Chr.11.16",
+      "2Chr.15.11",
+      "Mal.1.14"
+     ],
+     "eg": [
+      {
+       "id": "Exod.3.18",
+       "ref": "Exodus 3:18",
+       "text": "The elders of Israel will listen to what you say, and you must go with them to the king of Egypt and tell him, ‘The LORD, the God of the Hebrews, has met with us. Now please let us take a three-day journey into the wilderness, so that we may sacrifice to the LORD our God.'",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "Exod.5.3",
+       "ref": "Exodus 5:3",
+       "text": "“The God of the Hebrews has met with us,” they answered. “Please let us go on a three-day journey into the wilderness to sacrifice to the LORD our God, or He may strike us with plagues or with the sword.”",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "Lev.19.5",
+       "ref": "Leviticus 19:5",
+       "text": "When you sacrifice a peace offering to the LORD, you shall offer it for your acceptance.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        },
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.1.16",
+       "ref": "Jonah 1:16",
+       "text": "Then the men feared the LORD greatly, and they offered a sacrifice to the LORD and made vows to Him.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        },
+        {
+         "key": "h2077",
+         "lemma": "זֶבַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Other gods, idols and demons",
+     "note": "Exod 22:20 and 2 Kgs 17:35 forbid it; the others record it: the golden calf (Exod 32:8), the goat demons (Lev 17:7), the calves at Bethel (1 Kgs 12:32), Dagon (Judg 16:23), the gods of Damascus (2 Chr 28:23), the Baals (Hos 11:2), Zeus (Acts 14:13), and “the sacrifices of pagans are offered to demons, not to God” (1 Cor 10:20).",
+     "doors": [
+      {
+       "id": "idolatry",
+       "name": "idolatry",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Exod.22.20",
+      "Deut.32.17",
+      "Hos.11.2",
+      "1Cor.10.20",
+      "Exod.32.8",
+      "Exod.34.15",
+      "Lev.17.7",
+      "Judg.16.23",
+      "1Kgs.11.8",
+      "1Kgs.12.32",
+      "2Kgs.17.35",
+      "2Chr.28.23",
+      "2Chr.33.22",
+      "2Chr.34.4",
+      "Ps.106.37",
+      "Ps.106.38",
+      "Hos.13.2",
+      "Acts.14.13",
+      "Acts.14.18"
+     ],
+     "eg": [
+      {
+       "id": "Exod.22.20",
+       "ref": "Exodus 22:20",
+       "text": "If anyone sacrifices to any god other than the LORD alone, he must be set apart for destruction.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "Deut.32.17",
+       "ref": "Deuteronomy 32:17",
+       "text": "They sacrificed to demons, not to God, to gods they had not known, to newly arrived gods, which your fathers did not fear.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "Hos.11.2",
+       "ref": "Hosea 11:2",
+       "text": "But the more I called Israel, the farther they departed from Me. They sacrificed to the Baals and burned incense to carved images.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.10.20",
+       "ref": "1 Corinthians 10:20",
+       "text": "No, but the sacrifices of pagans are offered to demons, not to God. And I do not want you to be participants with demons.",
+       "words": [
+        {
+         "key": "g2380",
+         "lemma": "θύω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "At the high places, on the hills, under the trees",
+     "note": "1 Kgs 3:2 gives a reason (“because a house had not yet been built for the name of the LORD”); 2 Chr 33:17 says the people “still sacrificed on the high places, but only to the LORD their God”; the kings of Judah who did right are told, “the high places were not removed” (1 Kgs 22:43; 2 Kgs 12:3; 14:4; 15:4, 35); 1 Kgs 12:32 and 13:2 are Jeroboam's altar and the word against it.",
+     "doors": [
+      {
+       "id": "high_places",
+       "name": "heights of heaven",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "1Kgs.3.2",
+      "1Kgs.22.43",
+      "2Chr.33.17",
+      "2Kgs.12.3",
+      "1Kgs.3.3",
+      "1Kgs.3.4",
+      "1Kgs.12.32",
+      "1Kgs.13.2",
+      "2Kgs.14.4",
+      "2Kgs.15.4",
+      "2Kgs.15.35",
+      "2Kgs.16.4",
+      "2Chr.28.4",
+      "Isa.57.7",
+      "Ezek.20.28",
+      "Hos.4.13"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.3.2",
+       "ref": "1 Kings 3:2",
+       "text": "The people, however, were still sacrificing on the high places because a house for the Name of the LORD had not yet been built.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.22.43",
+       "ref": "1 Kings 22:43",
+       "text": "And Jehoshaphat walked in all the ways of his father Asa; he did not turn away from them, but did what was right in the eyes of the LORD. The high places, however, were not removed; the people still sacrificed and burned incense on the high places.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.33.17",
+       "ref": "2 Chronicles 33:17",
+       "text": "Nevertheless, the people still sacrificed at the high places, but only to the LORD their God.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.12.3",
+       "ref": "2 Kings 12:3",
+       "text": "Nevertheless, the high places were not removed; the people continued sacrificing and burning incense there.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The gift offered at the altar and by the priest, “according to the law”",
+     "note": "The Gospels, Acts and Hebrews speak of offerings made under the law: “if you are offering your gift at the altar” (Matt 5:23-24), “offer the gift that Moses commanded” (Matt 8:4; Mark 1:44; Luke 5:14), “until the offering for each of them was made” (Acts 21:26), priests “who offer gifts according to the law” (Heb 8:4) and the high priest who offers for himself and for the people (Heb 5:1, 3; 9:7). Readers part on whether these sacrifices are fulfilled, ended or continue; the page takes no side.",
+     "doors": [
+      {
+       "id": "altar",
+       "name": "altar",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Matt.5.23",
+      "Matt.8.4",
+      "Acts.21.26",
+      "Heb.8.4",
+      "Matt.5.24",
+      "Mark.1.44",
+      "Luke.5.14",
+      "Heb.5.1",
+      "Heb.5.3",
+      "Heb.8.3",
+      "Heb.9.7"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.23",
+       "ref": "Matthew 5:23",
+       "text": "So if you are offering your gift at the altar and there remember that your brother has something against you,",
+       "words": [
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.8.4",
+       "ref": "Matthew 8:4",
+       "text": "Then Jesus instructed him, “See that you don't tell anyone. But go, show yourself to the priest and offer the gift prescribed by Moses, as a testimony to them.”",
+       "words": [
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.21.26",
+       "ref": "Acts 21:26",
+       "text": "So the next day Paul took the men and purified himself along with them. Then he entered the temple to give notice of the date when their purification would be complete and the offering would be made for each of them.",
+       "words": [
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        },
+        {
+         "key": "g4376",
+         "lemma": "προσφορά"
+        }
+       ]
+      },
+      {
+       "id": "Heb.8.4",
+       "ref": "Hebrews 8:4",
+       "text": "Now if He were on earth, He would not be a priest, since there are already priests who offer gifts according to the law.",
+       "words": [
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Christ offered Himself; Christ our Passover lamb has been sacrificed",
+     "note": "Heb 9:14 (“the blood of Christ, who through the eternal Spirit offered Himself unblemished to God”), 9:28 (“Christ was offered once to bear the sins of many”) and 1 Cor 5:7 name Christ; Heb 7:27, 9:25 and 10:12 say “He”, “Himself” or “this Priest” in the argument of the same letter, where Jesus is named (7:24; 10:10). What this sacrifice does -- atones, redeems, substitutes, conquers, shows God's love -- readers take differently, and the page takes no side.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "lamb_of_god",
+       "name": "the Lamb of God",
+       "type": "title",
+       "missing": false
+      },
+      {
+       "id": "theme_sacrifice_r30",
+       "name": "Once for all",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Heb.9.14",
+      "Heb.9.28",
+      "1Cor.5.7",
+      "Heb.7.27",
+      "Heb.9.25",
+      "Heb.10.12"
+     ],
+     "eg": [
+      {
+       "id": "Heb.9.14",
+       "ref": "Hebrews 9:14",
+       "text": "how much more will the blood of Christ, who through the eternal Spirit offered Himself unblemished to God, purify our consciences from works of death, so that we may serve the living God!",
+       "words": [
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.28",
+       "ref": "Hebrews 9:28",
+       "text": "so also Christ was offered once to bear the sins of many; and He will appear a second time, not to bear sin, but to bring salvation to those who eagerly await Him.",
+       "words": [
+        {
+         "key": "g399",
+         "lemma": "ἀναφέρω"
+        },
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.5.7",
+       "ref": "1 Corinthians 5:7",
+       "text": "Get rid of the old leaven, that you may be a new unleavened batch, as you really are. For Christ, our Passover lamb, has been sacrificed.",
+       "words": [
+        {
+         "key": "g2380",
+         "lemma": "θύω"
+        }
+       ]
+      },
+      {
+       "id": "Heb.7.27",
+       "ref": "Hebrews 7:27",
+       "text": "Unlike the other high priests, He does not need to offer daily sacrifices, first for His own sins and then for the sins of the people; He sacrificed for sin once for all when He offered up Himself.",
+       "words": [
+        {
+         "key": "g2378",
+         "lemma": "θυσία"
+        },
+        {
+         "key": "g399",
+         "lemma": "ἀναφέρω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: sacrificed, offered",
+     "note": "Among them: the verb of sacrifice said of something that is not an animal, “offered up prayers and petitions” (Heb 5:7) and “offering service to God” (John 16:2); and David's and Solomon's sacrifices at the ark and the temple (2 Sam 6:13; 1 Kgs 8:5). Abraham offering Isaac (Heb 11:17; Jas 2:21) is also here in the verb, and is set in the Isaac row of the first form.",
+     "doors": [],
+     "n": 65,
+     "verses": [
+      "Heb.5.7",
+      "John.16.2",
+      "2Sam.6.13",
+      "1Kgs.8.5",
+      "Gen.31.54",
+      "Mark.14.12",
+      "Exod.20.24",
+      "Exod.23.18",
+      "Num.22.40",
+      "Deut.16.4",
+      "Deut.16.5",
+      "Deut.16.6",
+      "Deut.18.3",
+      "Deut.27.7",
+      "Deut.33.19",
+      "Josh.8.31",
+      "1Sam.1.4",
+      "1Sam.2.13",
+      "1Sam.2.19",
+      "1Sam.10.8",
+      "2Sam.15.12",
+      "1Kgs.1.9",
+      "1Kgs.1.19",
+      "1Kgs.1.25",
+      "2Kgs.17.36",
+      "1Chr.15.26",
+      "1Chr.21.28",
+      "2Chr.5.6",
+      "2Chr.7.5",
+      "2Chr.18.2",
+      "2Chr.30.22",
+      "2Chr.33.16",
+      "Ezra.4.2",
+      "Ezra.6.3",
+      "Neh.4.2",
+      "Neh.12.43",
+      "Ps.4.5",
+      "Ps.27.6",
+      "Ps.50.14",
+      "Ps.50.23",
+      "Ps.54.6",
+      "Ps.107.22",
+      "Ps.116.17",
+      "Eccl.9.2",
+      "Isa.65.3",
+      "Isa.66.3",
+      "Ezek.16.20",
+      "Hos.4.14",
+      "Hos.8.13",
+      "Hos.12.11",
+      "Jonah.2.9",
+      "Hab.1.16",
+      "Mal.1.8",
+      "Luke.22.7",
+      "Acts.7.42",
+      "Heb.9.9",
+      "Heb.10.1",
+      "Heb.10.2",
+      "Heb.10.8",
+      "Heb.10.11",
+      "Heb.11.4",
+      "Heb.11.17",
+      "Heb.13.15",
+      "Jas.2.21",
+      "1Pet.2.5"
+     ],
+     "eg": [
+      {
+       "id": "Heb.5.7",
+       "ref": "Hebrews 5:7",
+       "text": "During the days of Jesus' earthly life, He offered up prayers and petitions with loud cries and tears to the One who could save Him from death, and He was heard because of His reverence.",
+       "words": [
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      },
+      {
+       "id": "John.16.2",
+       "ref": "John 16:2",
+       "text": "They will put you out of the synagogues. In fact, a time is coming when anyone who kills you will think he is offering a service to God.",
+       "words": [
+        {
+         "key": "g4374",
+         "lemma": "προσφέρω"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.6.13",
+       "ref": "2 Samuel 6:13",
+       "text": "When those carrying the ark of the LORD had advanced six paces, he sacrificed an ox and a fattened calf.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.5",
+       "ref": "1 Kings 8:5",
+       "text": "There, before the ark, King Solomon and the whole congregation of Israel who had assembled with him sacrificed so many sheep and oxen that they could not be counted or numbered.",
+       "words": [
+        {
+         "key": "h2076",
+         "lemma": "זָבַח"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “sacrifice” and “offering”",
+  "words": [
+   {
+    "key": "h4503",
+    "lemma": "מִנְחָה",
+    "translit": "min.chah",
+    "gloss": "offering: tribute",
+    "lang": "Hebrew",
+    "n": 158,
+    "verses": [
+     "Gen.4.3",
+     "Gen.4.4",
+     "Lev.2.1",
+     "Gen.4.5",
+     "Exod.29.41",
+     "Exod.30.9",
+     "Exod.40.29",
+     "Lev.2.3",
+     "Lev.2.5",
+     "Lev.2.6",
+     "Lev.2.7",
+     "Lev.2.8",
+     "Lev.2.9",
+     "Lev.2.10",
+     "Lev.2.11",
+     "Lev.2.13",
+     "Lev.2.14",
+     "Lev.2.15",
+     "Lev.5.13",
+     "Lev.6.14",
+     "Lev.6.15",
+     "Lev.6.20",
+     "Lev.6.21",
+     "Lev.6.23",
+     "Lev.7.9",
+     "Lev.7.10",
+     "Lev.7.37",
+     "Lev.9.4",
+     "Lev.9.17",
+     "Lev.10.12",
+     "Lev.14.10",
+     "Lev.14.20",
+     "Lev.14.21",
+     "Lev.14.31",
+     "Lev.23.13",
+     "Lev.23.16",
+     "Lev.23.18",
+     "Lev.23.37",
+     "Num.4.16",
+     "Num.5.15",
+     "Num.5.18",
+     "Num.5.25",
+     "Num.5.26",
+     "Num.6.15",
+     "Num.6.17",
+     "Num.7.13",
+     "Num.7.19",
+     "Num.7.25",
+     "Num.7.31",
+     "Num.7.37",
+     "Num.7.43",
+     "Num.7.49",
+     "Num.7.55",
+     "Num.7.61",
+     "Num.7.67",
+     "Num.7.73",
+     "Num.7.79",
+     "Num.7.87",
+     "Num.8.8",
+     "Num.15.4",
+     "Num.15.6",
+     "Num.15.9",
+     "Num.15.24",
+     "Num.16.15",
+     "Num.18.9",
+     "Num.28.5",
+     "Num.28.8",
+     "Num.28.9",
+     "Num.28.12",
+     "Num.28.13",
+     "Num.28.20",
+     "Num.28.26",
+     "Num.28.28",
+     "Num.28.31",
+     "Num.29.3",
+     "Num.29.6",
+     "Num.29.9",
+     "Num.29.11",
+     "Num.29.14",
+     "Num.29.16",
+     "Num.29.18",
+     "Num.29.19",
+     "Num.29.21",
+     "Num.29.22",
+     "Num.29.24",
+     "Num.29.25",
+     "Num.29.27",
+     "Num.29.28",
+     "Num.29.30",
+     "Num.29.31",
+     "Num.29.33",
+     "Num.29.34",
+     "Num.29.37",
+     "Num.29.38",
+     "Num.29.39",
+     "Josh.22.23",
+     "Josh.22.29",
+     "Judg.13.19",
+     "Judg.13.23",
+     "1Sam.2.17",
+     "1Sam.2.29",
+     "1Sam.3.14",
+     "1Sam.26.19",
+     "1Kgs.8.64",
+     "1Kgs.18.29",
+     "2Kgs.3.20",
+     "2Kgs.16.13",
+     "2Kgs.16.15",
+     "1Chr.16.29",
+     "1Chr.21.23",
+     "1Chr.23.29",
+     "2Chr.7.7",
+     "Ezra.9.4",
+     "Ezra.9.5",
+     "Neh.10.33",
+     "Neh.13.5",
+     "Neh.13.9",
+     "Ps.20.3",
+     "Ps.40.6",
+     "Ps.96.8",
+     "Ps.141.2",
+     "Isa.1.13",
+     "Isa.19.21",
+     "Isa.43.23",
+     "Isa.57.6",
+     "Isa.66.3",
+     "Isa.66.20",
+     "Jer.14.12",
+     "Jer.17.26",
+     "Jer.33.18",
+     "Jer.41.5",
+     "Ezek.42.13",
+     "Ezek.44.29",
+     "Ezek.45.15",
+     "Ezek.45.17",
+     "Ezek.45.24",
+     "Ezek.45.25",
+     "Ezek.46.5",
+     "Ezek.46.7",
+     "Ezek.46.11",
+     "Ezek.46.14",
+     "Ezek.46.15",
+     "Ezek.46.20",
+     "Dan.9.21",
+     "Dan.9.27",
+     "Joel.1.9",
+     "Joel.1.13",
+     "Joel.2.14",
+     "Amos.5.22",
+     "Amos.5.25",
+     "Zeph.3.10",
+     "Mal.1.10",
+     "Mal.1.11",
+     "Mal.1.13",
+     "Mal.2.12",
+     "Mal.2.13",
+     "Mal.3.3",
+     "Mal.3.4"
+    ],
+    "note": "מִנְחָה means a gift, tribute or grain offering. Cain's and Abel's offerings (Gen 4:3-5) are this word; the word for sacrifice, זֶבַח, is not used there. Heb 11:4 calls Abel's offering a θυσία, a sacrifice.",
+    "eg": [
+     {
+      "id": "Gen.4.3",
+      "ref": "Genesis 4:3",
+      "text": "So in the course of time, Cain brought some of the fruit of the soil as an offering to the LORD,"
+     },
+     {
+      "id": "Gen.4.4",
+      "ref": "Genesis 4:4",
+      "text": "while Abel brought the best portions of the firstborn of his flock. And the LORD looked with favor on Abel and his offering,"
+     }
+    ]
+   },
+   {
+    "key": "h2403",
+    "lemma": "חַטָּאת",
+    "translit": "ḥaṭṭāʾṯ",
+    "gloss": "sin",
+    "lang": "Hebrew",
+    "n": 109,
+    "verses": [
+     "Exod.29.14",
+     "Lev.4.3",
+     "Exod.29.36",
+     "Exod.30.10",
+     "Lev.4.8",
+     "Lev.4.14",
+     "Lev.4.20",
+     "Lev.4.21",
+     "Lev.4.24",
+     "Lev.4.25",
+     "Lev.4.29",
+     "Lev.4.32",
+     "Lev.4.33",
+     "Lev.4.34",
+     "Lev.5.6",
+     "Lev.5.7",
+     "Lev.5.8",
+     "Lev.5.9",
+     "Lev.5.11",
+     "Lev.5.12",
+     "Lev.6.17",
+     "Lev.6.25",
+     "Lev.6.30",
+     "Lev.7.7",
+     "Lev.7.37",
+     "Lev.8.2",
+     "Lev.8.14",
+     "Lev.9.2",
+     "Lev.9.3",
+     "Lev.9.7",
+     "Lev.9.8",
+     "Lev.9.10",
+     "Lev.9.15",
+     "Lev.9.22",
+     "Lev.10.16",
+     "Lev.10.17",
+     "Lev.10.19",
+     "Lev.12.6",
+     "Lev.12.8",
+     "Lev.14.13",
+     "Lev.14.19",
+     "Lev.14.22",
+     "Lev.14.31",
+     "Lev.15.15",
+     "Lev.15.30",
+     "Lev.16.3",
+     "Lev.16.5",
+     "Lev.16.6",
+     "Lev.16.9",
+     "Lev.16.11",
+     "Lev.16.15",
+     "Lev.16.25",
+     "Lev.16.27",
+     "Lev.23.19",
+     "Num.6.11",
+     "Num.6.14",
+     "Num.6.16",
+     "Num.7.16",
+     "Num.7.22",
+     "Num.7.28",
+     "Num.7.34",
+     "Num.7.40",
+     "Num.7.46",
+     "Num.7.52",
+     "Num.7.58",
+     "Num.7.64",
+     "Num.7.70",
+     "Num.7.76",
+     "Num.7.82",
+     "Num.7.87",
+     "Num.8.8",
+     "Num.8.12",
+     "Num.15.24",
+     "Num.15.25",
+     "Num.15.27",
+     "Num.18.9",
+     "Num.19.17",
+     "Num.28.15",
+     "Num.28.22",
+     "Num.29.5",
+     "Num.29.11",
+     "Num.29.16",
+     "Num.29.19",
+     "Num.29.22",
+     "Num.29.25",
+     "Num.29.28",
+     "Num.29.31",
+     "Num.29.34",
+     "Num.29.38",
+     "2Kgs.12.16",
+     "2Chr.29.21",
+     "2Chr.29.23",
+     "2Chr.29.24",
+     "Ezra.8.35",
+     "Neh.10.33",
+     "Ezek.40.39",
+     "Ezek.42.13",
+     "Ezek.43.19",
+     "Ezek.43.21",
+     "Ezek.43.22",
+     "Ezek.43.25",
+     "Ezek.44.27",
+     "Ezek.44.29",
+     "Ezek.45.17",
+     "Ezek.45.19",
+     "Ezek.45.22",
+     "Ezek.45.23",
+     "Ezek.45.25",
+     "Ezek.46.20"
+    ],
+    "note": "חַטָּאת is one Hebrew word for 'sin' and for the 'sin offering'; the Berean prints 'sin offering' where the verse is about the offering. It is a different word from זֶבַח.",
+    "eg": [
+     {
+      "id": "Exod.29.14",
+      "ref": "Exodus 29:14",
+      "text": "But burn the flesh of the bull and its hide and dung outside the camp; it is a sin offering."
+     },
+     {
+      "id": "Lev.4.3",
+      "ref": "Leviticus 4:3",
+      "text": "If the anointed priest sins, bringing guilt on the people, he must bring to the LORD a young bull without blemish as a sin offering for the sin he has committed."
+     }
+    ]
+   },
+   {
+    "key": "h5927",
+    "lemma": "עָלָה",
+    "translit": "a.lah",
+    "gloss": "to ascend: regurgitate",
+    "lang": "Hebrew",
+    "n": 80,
+    "verses": [
+     "Gen.8.20",
+     "Gen.22.13",
+     "Gen.22.2",
+     "Exod.24.5",
+     "Exod.30.9",
+     "Exod.32.6",
+     "Exod.40.29",
+     "Lev.2.12",
+     "Lev.14.20",
+     "Lev.17.8",
+     "Num.23.2",
+     "Num.23.4",
+     "Num.23.14",
+     "Num.23.30",
+     "Deut.12.13",
+     "Deut.12.14",
+     "Deut.27.6",
+     "Josh.8.31",
+     "Josh.22.23",
+     "Judg.6.26",
+     "Judg.6.28",
+     "Judg.11.31",
+     "Judg.13.16",
+     "Judg.13.19",
+     "Judg.20.26",
+     "Judg.21.4",
+     "1Sam.6.14",
+     "1Sam.6.15",
+     "1Sam.7.9",
+     "1Sam.7.10",
+     "1Sam.13.9",
+     "1Sam.13.10",
+     "1Sam.13.12",
+     "2Sam.6.17",
+     "2Sam.6.18",
+     "2Sam.24.22",
+     "2Sam.24.24",
+     "2Sam.24.25",
+     "1Kgs.3.4",
+     "1Kgs.3.15",
+     "1Kgs.9.25",
+     "1Kgs.10.5",
+     "1Kgs.12.32",
+     "1Kgs.18.29",
+     "1Kgs.18.36",
+     "2Kgs.3.20",
+     "2Kgs.3.27",
+     "2Kgs.17.4",
+     "1Chr.16.2",
+     "1Chr.16.40",
+     "1Chr.21.24",
+     "1Chr.21.26",
+     "1Chr.23.31",
+     "1Chr.29.21",
+     "2Chr.1.6",
+     "2Chr.8.12",
+     "2Chr.8.13",
+     "2Chr.9.4",
+     "2Chr.23.18",
+     "2Chr.24.14",
+     "2Chr.29.7",
+     "2Chr.29.21",
+     "2Chr.29.27",
+     "2Chr.29.29",
+     "2Chr.35.14",
+     "2Chr.35.16",
+     "Ezra.3.2",
+     "Ezra.3.3",
+     "Ezra.3.6",
+     "Job.1.5",
+     "Job.42.8",
+     "Ps.51.19",
+     "Ps.66.15",
+     "Isa.66.3",
+     "Jer.14.12",
+     "Jer.33.18",
+     "Jer.48.35",
+     "Ezek.43.18",
+     "Ezek.43.24",
+     "Amos.5.22"
+    ],
+    "note": "עָלָה is the verb 'go up'; the Berean prints 'offered up' where the thing that goes up is the burnt offering. The noun עֹלָה is one of the hub's own words.",
+    "eg": [
+     {
+      "id": "Gen.8.20",
+      "ref": "Genesis 8:20",
+      "text": "Then Noah built an altar to the LORD. And taking from every kind of clean animal and clean bird, he offered burnt offerings on the altar."
+     },
+     {
+      "id": "Gen.22.13",
+      "ref": "Genesis 22:13",
+      "text": "Then Abraham looked up and saw behind him a ram in a thicket, caught by its horns. So he went and took the ram and offered it as a burnt offering in place of his son."
+     }
+    ]
+   },
+   {
+    "key": "h7133",
+    "lemma": "קׇרְבָּן",
+    "translit": "qorban",
+    "gloss": "offering",
+    "lang": "Hebrew",
+    "n": 78,
+    "verses": [
+     "Lev.1.2",
+     "Lev.1.3",
+     "Lev.1.10",
+     "Lev.1.14",
+     "Lev.2.1",
+     "Lev.2.4",
+     "Lev.2.5",
+     "Lev.2.7",
+     "Lev.2.12",
+     "Lev.2.13",
+     "Lev.3.1",
+     "Lev.3.2",
+     "Lev.3.6",
+     "Lev.3.7",
+     "Lev.3.8",
+     "Lev.3.12",
+     "Lev.3.14",
+     "Lev.4.23",
+     "Lev.4.28",
+     "Lev.4.32",
+     "Lev.5.11",
+     "Lev.6.20",
+     "Lev.7.13",
+     "Lev.7.14",
+     "Lev.7.15",
+     "Lev.7.16",
+     "Lev.7.29",
+     "Lev.7.38",
+     "Lev.9.7",
+     "Lev.9.15",
+     "Lev.17.4",
+     "Lev.22.18",
+     "Lev.22.27",
+     "Lev.23.14",
+     "Lev.27.9",
+     "Lev.27.11",
+     "Num.5.15",
+     "Num.6.14",
+     "Num.6.21",
+     "Num.7.3",
+     "Num.7.10",
+     "Num.7.11",
+     "Num.7.12",
+     "Num.7.13",
+     "Num.7.17",
+     "Num.7.19",
+     "Num.7.23",
+     "Num.7.25",
+     "Num.7.29",
+     "Num.7.31",
+     "Num.7.35",
+     "Num.7.37",
+     "Num.7.41",
+     "Num.7.43",
+     "Num.7.47",
+     "Num.7.49",
+     "Num.7.53",
+     "Num.7.55",
+     "Num.7.59",
+     "Num.7.61",
+     "Num.7.65",
+     "Num.7.67",
+     "Num.7.71",
+     "Num.7.73",
+     "Num.7.77",
+     "Num.7.79",
+     "Num.7.83",
+     "Num.9.7",
+     "Num.9.13",
+     "Num.15.4",
+     "Num.15.25",
+     "Num.18.9",
+     "Num.28.2",
+     "Num.31.50",
+     "Neh.10.34",
+     "Neh.13.31",
+     "Ezek.20.28",
+     "Ezek.40.43"
+    ],
+    "eg": [
+     {
+      "id": "Lev.1.2",
+      "ref": "Leviticus 1:2",
+      "text": "“Speak to the Israelites and tell them: When any of you brings an offering to the LORD, you may bring as your offering an animal from the herd or the flock."
+     },
+     {
+      "id": "Lev.1.3",
+      "ref": "Leviticus 1:3",
+      "text": "If his offering is a burnt offering from the herd, he is to present an unblemished male. He must bring it to the entrance to the Tent of Meeting for its acceptance before the LORD."
+     }
+    ]
+   },
+   {
+    "key": "h801",
+    "lemma": "אִשֶּׁה",
+    "translit": "ish.shah",
+    "gloss": "food offering",
+    "lang": "Hebrew",
+    "n": 64,
+    "verses": [
+     "Exod.29.18",
+     "Exod.29.25",
+     "Exod.29.41",
+     "Exod.30.20",
+     "Lev.1.9",
+     "Lev.1.13",
+     "Lev.1.17",
+     "Lev.2.2",
+     "Lev.2.3",
+     "Lev.2.9",
+     "Lev.2.10",
+     "Lev.2.11",
+     "Lev.2.16",
+     "Lev.3.3",
+     "Lev.3.5",
+     "Lev.3.9",
+     "Lev.3.11",
+     "Lev.3.14",
+     "Lev.3.16",
+     "Lev.4.35",
+     "Lev.5.12",
+     "Lev.6.17",
+     "Lev.6.18",
+     "Lev.7.5",
+     "Lev.7.25",
+     "Lev.7.30",
+     "Lev.7.35",
+     "Lev.8.21",
+     "Lev.8.28",
+     "Lev.10.12",
+     "Lev.10.13",
+     "Lev.10.15",
+     "Lev.21.6",
+     "Lev.21.21",
+     "Lev.22.22",
+     "Lev.22.27",
+     "Lev.23.8",
+     "Lev.23.13",
+     "Lev.23.18",
+     "Lev.23.25",
+     "Lev.23.27",
+     "Lev.23.36",
+     "Lev.23.37",
+     "Lev.24.7",
+     "Lev.24.9",
+     "Num.15.3",
+     "Num.15.10",
+     "Num.15.13",
+     "Num.15.14",
+     "Num.15.25",
+     "Num.18.17",
+     "Num.28.2",
+     "Num.28.3",
+     "Num.28.6",
+     "Num.28.8",
+     "Num.28.13",
+     "Num.28.19",
+     "Num.28.24",
+     "Num.29.6",
+     "Num.29.13",
+     "Num.29.36",
+     "Deut.18.1",
+     "Josh.13.14",
+     "1Sam.2.28"
+    ],
+    "eg": [
+     {
+      "id": "Exod.29.18",
+      "ref": "Exodus 29:18",
+      "text": "Then burn the entire ram on the altar; it is a burnt offering to the LORD, a pleasing aroma, a food offering to the LORD."
+     },
+     {
+      "id": "Exod.29.25",
+      "ref": "Exodus 29:25",
+      "text": "Then take them from their hands and burn them on the altar atop the burnt offering as a pleasing aroma before the LORD; it is a food offering to the LORD."
+     }
+    ]
+   },
+   {
+    "key": "h5262",
+    "lemma": "נֶסֶךְ",
+    "translit": "ne.sekh",
+    "gloss": "drink offering",
+    "lang": "Hebrew",
+    "n": 58,
+    "verses": [
+     "Gen.35.14",
+     "Exod.29.40",
+     "Exod.29.41",
+     "Exod.30.9",
+     "Lev.23.13",
+     "Lev.23.18",
+     "Lev.23.37",
+     "Num.4.7",
+     "Num.6.15",
+     "Num.6.17",
+     "Num.15.5",
+     "Num.15.7",
+     "Num.15.10",
+     "Num.15.24",
+     "Num.28.7",
+     "Num.28.8",
+     "Num.28.9",
+     "Num.28.10",
+     "Num.28.14",
+     "Num.28.15",
+     "Num.28.24",
+     "Num.28.31",
+     "Num.29.6",
+     "Num.29.11",
+     "Num.29.16",
+     "Num.29.18",
+     "Num.29.19",
+     "Num.29.21",
+     "Num.29.22",
+     "Num.29.24",
+     "Num.29.25",
+     "Num.29.27",
+     "Num.29.28",
+     "Num.29.30",
+     "Num.29.31",
+     "Num.29.33",
+     "Num.29.34",
+     "Num.29.37",
+     "Num.29.38",
+     "Num.29.39",
+     "2Kgs.16.13",
+     "2Kgs.16.15",
+     "1Chr.29.21",
+     "2Chr.29.35",
+     "Ps.16.4",
+     "Isa.57.6",
+     "Jer.7.18",
+     "Jer.19.13",
+     "Jer.32.29",
+     "Jer.44.17",
+     "Jer.44.18",
+     "Jer.44.19",
+     "Jer.44.25",
+     "Ezek.20.28",
+     "Ezek.45.17",
+     "Joel.1.9",
+     "Joel.1.13",
+     "Joel.2.14"
+    ],
+    "eg": [
+     {
+      "id": "Gen.35.14",
+      "ref": "Genesis 35:14",
+      "text": "So Jacob set up a pillar in the place where God had spoken with him-a stone marker-and he poured out a drink offering on it and anointed it with oil."
+     },
+     {
+      "id": "Exod.29.40",
+      "ref": "Exodus 29:40",
+      "text": "With the first lamb offer a tenth of an ephah of fine flour, mixed with a quarter hin of oil from pressed olives, and a drink offering of a quarter hin of wine."
+     }
+    ]
+   },
+   {
+    "key": "h8002",
+    "lemma": "שֶׁלֶם",
+    "translit": "she.lem",
+    "gloss": "peace offering",
+    "lang": "Hebrew",
+    "n": 57,
+    "verses": [
+     "Exod.20.24",
+     "Lev.7.13",
+     "Exod.32.6",
+     "Lev.4.10",
+     "Lev.6.12",
+     "Lev.7.14",
+     "Lev.7.29",
+     "Lev.7.33",
+     "Lev.9.4",
+     "Lev.9.22",
+     "Lev.17.5",
+     "Lev.23.19",
+     "Num.6.14",
+     "Num.6.18",
+     "Num.7.17",
+     "Num.7.23",
+     "Num.7.29",
+     "Num.7.35",
+     "Num.7.41",
+     "Num.7.47",
+     "Num.7.53",
+     "Num.7.59",
+     "Num.7.65",
+     "Num.7.71",
+     "Num.7.77",
+     "Num.7.83",
+     "Num.7.88",
+     "Num.10.10",
+     "Num.15.8",
+     "Num.29.39",
+     "Deut.27.7",
+     "Josh.8.31",
+     "Josh.22.27",
+     "Judg.20.26",
+     "Judg.21.4",
+     "1Sam.13.9",
+     "2Sam.6.17",
+     "2Sam.6.18",
+     "2Sam.24.25",
+     "1Kgs.3.15",
+     "1Kgs.8.63",
+     "1Kgs.8.64",
+     "1Kgs.9.25",
+     "2Kgs.16.13",
+     "1Chr.16.1",
+     "1Chr.16.2",
+     "1Chr.21.26",
+     "2Chr.7.7",
+     "2Chr.29.35",
+     "2Chr.31.2",
+     "Prov.7.14",
+     "Ezek.43.27",
+     "Ezek.45.15",
+     "Ezek.45.17",
+     "Ezek.46.2",
+     "Ezek.46.12",
+     "Amos.5.22"
+    ],
+    "note": "שֶׁלֶם (plural שְׁלָמִים) is the 'peace offering', a kind of זֶבַח in Lev 3 and 7; it is a different word.",
+    "eg": [
+     {
+      "id": "Exod.20.24",
+      "ref": "Exodus 20:24",
+      "text": "You are to make for Me an altar of earth, and sacrifice on it your burnt offerings and peace offerings, your sheep and goats and cattle. In every place where I cause My name to be remembered, I will come to you and bless you."
+     },
+     {
+      "id": "Lev.7.13",
+      "ref": "Leviticus 7:13",
+      "text": "Along with his peace offering of thanksgiving he is to present an offering with cakes of leavened bread."
+     }
+    ]
+   },
+   {
+    "key": "h7126",
+    "lemma": "קָרַב",
+    "translit": "qa.rav",
+    "gloss": "to present: bring",
+    "lang": "Hebrew",
+    "n": 45,
+    "verses": [
+     "Lev.1.3",
+     "Lev.1.13",
+     "Lev.2.13",
+     "Lev.3.1",
+     "Lev.3.6",
+     "Lev.3.7",
+     "Lev.4.3",
+     "Lev.4.14",
+     "Lev.5.8",
+     "Lev.7.3",
+     "Lev.7.9",
+     "Lev.7.12",
+     "Lev.7.16",
+     "Lev.7.18",
+     "Lev.7.33",
+     "Lev.10.1",
+     "Lev.12.7",
+     "Lev.14.12",
+     "Lev.16.6",
+     "Lev.21.8",
+     "Lev.21.17",
+     "Lev.21.21",
+     "Lev.22.20",
+     "Lev.22.21",
+     "Lev.22.22",
+     "Lev.22.24",
+     "Lev.22.25",
+     "Num.3.4",
+     "Num.7.2",
+     "Num.7.18",
+     "Num.15.7",
+     "Num.16.35",
+     "Num.18.15",
+     "Num.26.61",
+     "Num.28.3",
+     "1Chr.16.1",
+     "2Chr.35.12",
+     "Ezra.8.35",
+     "Ezek.43.22",
+     "Ezek.43.23",
+     "Ezek.44.7",
+     "Ezek.44.15",
+     "Ezek.44.27",
+     "Ezek.46.4",
+     "Hag.2.14"
+    ],
+    "eg": [
+     {
+      "id": "Lev.1.3",
+      "ref": "Leviticus 1:3",
+      "text": "If his offering is a burnt offering from the herd, he is to present an unblemished male. He must bring it to the entrance to the Tent of Meeting for its acceptance before the LORD."
+     },
+     {
+      "id": "Lev.1.13",
+      "ref": "Leviticus 1:13",
+      "text": "The entrails and legs must be washed with water, and the priest shall present all of it and burn it on the altar; it is a burnt offering, a food offering, a pleasing aroma to the LORD."
+     }
+    ]
+   },
+   {
+    "key": "h817",
+    "lemma": "אָשָׁם",
+    "translit": "a.sham",
+    "gloss": "guilt (offering)",
+    "lang": "Hebrew",
+    "n": 34,
+    "verses": [
+     "Lev.5.15",
+     "Isa.53.10",
+     "Lev.5.16",
+     "Lev.5.18",
+     "Lev.5.19",
+     "Lev.6.6",
+     "Lev.6.17",
+     "Lev.7.1",
+     "Lev.7.2",
+     "Lev.7.5",
+     "Lev.7.7",
+     "Lev.7.37",
+     "Lev.14.12",
+     "Lev.14.13",
+     "Lev.14.14",
+     "Lev.14.17",
+     "Lev.14.21",
+     "Lev.14.24",
+     "Lev.14.25",
+     "Lev.14.28",
+     "Lev.19.21",
+     "Lev.19.22",
+     "Num.6.12",
+     "Num.18.9",
+     "1Sam.6.3",
+     "1Sam.6.4",
+     "1Sam.6.8",
+     "1Sam.6.17",
+     "2Kgs.12.16",
+     "Prov.14.9",
+     "Ezek.40.39",
+     "Ezek.42.13",
+     "Ezek.44.29",
+     "Ezek.46.20"
+    ],
+    "note": "אָשָׁם is the 'guilt offering' (and 'guilt'); a different word from זֶבַח.",
+    "eg": [
+     {
+      "id": "Lev.5.15",
+      "ref": "Leviticus 5:15",
+      "text": "“If someone acts unfaithfully and sins unintentionally against any of the LORD's holy things, he must bring his guilt offering to the LORD: an unblemished ram from the flock, of proper value in silver shekels according to the sanctuary shekel; it is a guilt offering."
+     },
+     {
+      "id": "Isa.53.10",
+      "ref": "Isaiah 53:10",
+      "text": "Yet it was the LORD's will to crush Him and to cause Him to suffer; and when His soul is made a guilt offering, He will see His offspring, He will prolong His days, and the good pleasure of the LORD will prosper in His hand."
+     }
+    ]
+   },
+   {
+    "key": "h8573",
+    "lemma": "תְּנוּפָה",
+    "translit": "te.nu.phah",
+    "gloss": "wave offering",
+    "lang": "Hebrew",
+    "n": 24,
+    "verses": [
+     "Exod.29.24",
+     "Exod.29.26",
+     "Exod.29.27",
+     "Exod.35.22",
+     "Exod.38.24",
+     "Exod.38.29",
+     "Lev.7.30",
+     "Lev.8.27",
+     "Lev.8.29",
+     "Lev.9.21",
+     "Lev.10.15",
+     "Lev.14.12",
+     "Lev.14.21",
+     "Lev.14.24",
+     "Lev.23.15",
+     "Lev.23.17",
+     "Lev.23.20",
+     "Num.6.20",
+     "Num.8.11",
+     "Num.8.13",
+     "Num.8.15",
+     "Num.8.21",
+     "Num.18.11",
+     "Num.18.18"
+    ],
+    "eg": [
+     {
+      "id": "Exod.29.24",
+      "ref": "Exodus 29:24",
+      "text": "Put all these in the hands of Aaron and his sons and wave them before the LORD as a wave offering."
+     },
+     {
+      "id": "Exod.29.26",
+      "ref": "Exodus 29:26",
+      "text": "Take the breast of the ram of Aaron's ordination and wave it before the LORD as a wave offering, and it will be your portion."
+     }
+    ]
+   },
+   {
+    "key": "h5071",
+    "lemma": "נְדָבָה",
+    "translit": "ne.da.vah",
+    "gloss": "voluntariness",
+    "lang": "Hebrew",
+    "n": 21,
+    "verses": [
+     "Exod.35.29",
+     "Exod.36.3",
+     "Lev.7.16",
+     "Lev.22.18",
+     "Lev.22.21",
+     "Lev.22.23",
+     "Lev.23.38",
+     "Num.15.3",
+     "Num.29.39",
+     "Deut.12.6",
+     "Deut.12.17",
+     "Deut.16.10",
+     "2Chr.31.14",
+     "2Chr.35.8",
+     "Ezra.1.4",
+     "Ezra.3.5",
+     "Ezra.8.28",
+     "Ps.54.6",
+     "Ps.119.108",
+     "Ezek.46.12",
+     "Amos.4.5"
+    ],
+    "eg": [
+     {
+      "id": "Exod.35.29",
+      "ref": "Exodus 35:29",
+      "text": "So all the men and women of the Israelites whose hearts prompted them brought a freewill offering to the LORD for all the work that the LORD through Moses had commanded them to do."
+     },
+     {
+      "id": "Exod.36.3",
+      "ref": "Exodus 36:3",
+      "text": "They received from Moses all the contributions that the Israelites had brought to carry out the service of constructing the sanctuary. Meanwhile, the people continued to bring freewill offerings morning after morning,"
+     }
+    ]
+   },
+   {
+    "key": "h8641",
+    "lemma": "תְּרוּמָה",
+    "translit": "te.ru.mah",
+    "gloss": "contribution",
+    "lang": "Hebrew",
+    "n": 19,
+    "verses": [
+     "Exod.25.2",
+     "Exod.35.5",
+     "Exod.35.21",
+     "Exod.35.24",
+     "Exod.36.6",
+     "Num.18.8",
+     "Num.18.24",
+     "Num.18.26",
+     "Num.18.27",
+     "Num.18.28",
+     "Num.18.29",
+     "2Sam.1.21",
+     "Ezra.8.25",
+     "Neh.10.37",
+     "Isa.40.20",
+     "Ezek.44.30",
+     "Ezek.45.13",
+     "Ezek.45.16",
+     "Mal.3.8"
+    ],
+    "eg": [
+     {
+      "id": "Exod.25.2",
+      "ref": "Exodus 25:2",
+      "text": "“Tell the Israelites to bring Me an offering. You are to receive My offering from every man whose heart compels him."
+     },
+     {
+      "id": "Exod.35.5",
+      "ref": "Exodus 35:5",
+      "text": "Take from among you an offering to the LORD. Let everyone whose heart is willing bring an offering to the LORD: gold, silver, and bronze;"
+     }
+    ]
+   },
+   {
+    "key": "h6999",
+    "lemma": "קָטַר",
+    "translit": "hiqṭiyr",
+    "gloss": "burn incense",
+    "lang": "Hebrew",
+    "n": 18,
+    "verses": [
+     "1Kgs.12.33",
+     "1Kgs.13.1",
+     "1Kgs.22.43",
+     "2Kgs.12.3",
+     "2Kgs.14.4",
+     "2Kgs.15.35",
+     "2Kgs.16.13",
+     "2Kgs.16.15",
+     "1Chr.6.49",
+     "2Chr.13.11",
+     "Jer.1.16",
+     "Jer.19.4",
+     "Jer.32.29",
+     "Jer.44.18",
+     "Hos.4.13",
+     "Hos.11.2",
+     "Amos.4.5",
+     "Hab.1.16"
+    ],
+    "eg": [
+     {
+      "id": "1Kgs.12.33",
+      "ref": "1 Kings 12:33",
+      "text": "On the fifteenth day of the eighth month, a month of his own choosing, Jeroboam offered sacrifices on the altar he had set up in Bethel. So he ordained a feast for the Israelites, offered sacrifices on the altar, and burned incense."
+     },
+     {
+      "id": "1Kgs.13.1",
+      "ref": "1 Kings 13:1",
+      "text": "Suddenly, as Jeroboam was standing beside the altar to burn incense, there came a man of God from Judah to Bethel by the word of the LORD."
+     }
+    ]
+   },
+   {
+    "key": "h4504",
+    "lemma": "מִנְחָה",
+    "translit": "min.chah",
+    "gloss": "offering",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Ezra.7.17",
+     "Dan.2.46"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.7.17",
+      "ref": "Ezra 7:17",
+      "text": "With this money, therefore, you are to buy as many bulls, rams, and lambs as needed, together with their grain offerings and drink offerings, and offer them on the altar at the house of your God in Jerusalem."
+     },
+     {
+      "id": "Dan.2.46",
+      "ref": "Daniel 2:46",
+      "text": "At this, King Nebuchadnezzar fell on his face, paid homage to Daniel, and ordered that an offering and incense be presented to him."
+     }
+    ]
+   },
+   {
+    "key": "h5069",
+    "lemma": "נְדַב",
+    "translit": "ne.dav",
+    "gloss": "be willing",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Ezra.7.15",
+     "Ezra.7.16"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.7.15",
+      "ref": "Ezra 7:15",
+      "text": "Moreover, you are to take with you the silver and gold that the king and his counselors have freely offered to the God of Israel, whose dwelling is in Jerusalem,"
+     },
+     {
+      "id": "Ezra.7.16",
+      "ref": "Ezra 7:16",
+      "text": "together with all the silver and gold you may find in all the province of Babylon, as well as the freewill offerings of the people and priests to the house of their God in Jerusalem."
+     }
+    ]
+   },
+   {
+    "key": "h2409",
+    "lemma": "חַטָּאָה",
+    "translit": "cha.t.ta.ya",
+    "gloss": "sin offering",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezra.6.17"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.6.17",
+      "ref": "Ezra 6:17",
+      "text": "For the dedication of the house of God they offered a hundred bulls, two hundred rams, four hundred lambs, and a sin offering for all Israel of twelve male goats, one for each tribe of Israel."
+     }
+    ]
+   },
+   {
+    "key": "h5261",
+    "lemma": "נְסַךְ",
+    "translit": "ne.sakh",
+    "gloss": "drink offering",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezra.7.17"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.7.17",
+      "ref": "Ezra 7:17",
+      "text": "With this money, therefore, you are to buy as many bulls, rams, and lambs as needed, together with their grain offerings and drink offerings, and offer them on the altar at the house of your God in Jerusalem."
+     }
+    ]
+   }
+  ]
+ }
+}

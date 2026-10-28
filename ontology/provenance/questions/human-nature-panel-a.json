@@ -1,0 +1,58 @@
+{"id": "human-nature",
+ "seats": ["Lutheran", "Reformed", "Wesleyan", "Baptist / free church", "Pentecostal / Charismatic", "Catholic", "Eastern Orthodox", "the rabbi", "the young African American believer", "Anabaptist"],
+ "overall": "ship after fixes",
+ "quotes_checked": "35 of 35 exact",
+ "fixes": [
+  {"where": "reading 1 / answers", "kind": "wording", "readers": ["Pentecostal / Charismatic", "Baptist / free church", "Catholic"],
+   "why": "Hebrews 4:12 names two things, soul and spirit, not three. The answer as written says the verses that name three include it.",
+   "fix": "Replace 'Holders of this reading take the verses that name three (1 Thessalonians 5:23, Hebrews 4:12) to describe the one soul in its powers, or the whole person from different sides, and not a third part.' with 'Holders of this reading take 1 Thessalonians 5:23, the verse that names three, to describe the one soul in its powers, or the whole person from different sides, and not a third part; they take Hebrews 4:12, which speaks of soul and spirit as divided, to describe the whole person reached by the word.'"},
+
+  {"where": "reading 4 / summary", "kind": "wording", "readers": ["Pentecostal / Charismatic", "Baptist / free church"],
+   "why": "Hebrews 4:12 is cited as naming three distinct parts, which it does not. The sentence about 'several other traditions' names none, so a reader cannot check it.",
+   "fix": "Replace 'Readers who hold this take 1 Thessalonians 5:23 and Hebrews 4:12 to name three distinct parts of a person' with 'Readers who hold this take 1 Thessalonians 5:23 to name three distinct parts of a person, and Hebrews 4:12 to show soul and spirit as divisible'. Replace 'Members of several other traditions hold three parts while holding another reading's account of the fall.' with 'Reading 1 notes that some early writers named three parts.'"},
+
+  {"where": "reading 3 / held_by and summary", "kind": "held_by", "readers": ["Wesleyan / Methodist"],
+   "why": "The Methodist articles state that original sin in every person born into the world deserves God's wrath and damnation, which is the inherited guilt of reading 2, not reading 3's 'each person answers only for his own sin'. Placing Wesleyans in both 2 and 3 with the clause 'Christ's work covers children' does not show the difference. The Wesleyan seat should confirm the wording.",
+   "fix": "Remove 'Wesleyan / Methodist' from reading 3 held_by. In reading 3 summary replace 'Wesleyan readers hold the inherited corruption described in the previous reading and hold also that Christ's work covers children.' with 'Wesleyan members differ: some hold the inherited guilt described in the previous reading, and others, with this reading, hold that Christ's work covers children who have not yet sinned.'"},
+
+  {"where": "reading 3 / summary", "kind": "unfair statement", "readers": ["Baptist / free church"],
+   "why": "'Baptist and free-church readers commonly hold this account' overstates it. Reformed Baptists, following the 1689 London Baptist Confession, hold that Adam's sin is imputed to his posterity, which is reading 2's account. The panel note says Baptists lean conservative, which makes this more likely to be heard as a misplacement.",
+   "fix": "Replace 'Baptist and free-church readers commonly hold this account of the fall and call the time before answering the age of accountability, and their members differ on whether a person is two parts, three, or one.' with 'Many Baptist and free-church readers hold this account of the fall and call the time before answering the age of accountability. Reformed Baptists, following the 1689 London Baptist Confession, hold the imputation of Adam's sin described in the previous reading. Baptist members differ on whether a person is two parts, three, or one.'"},
+
+  {"where": "agreed / summary", "kind": "unfair statement", "readers": ["the rabbi", "Eastern Orthodox"],
+   "why": "'All the readings' and 'Every reading below' include only the Christian readings. The claims that all have sinned, that death comes to all in Adam, and that life comes in Christ are Christian readings of Romans and 1 Corinthians, which a rabbi would not hold the text to say. The phrase 'the words about shedding blood and about cursing' is also vague about which verses are meant.",
+   "fix": "Replace 'All the readings take the text to say that all have sinned, that death comes to all in Adam, and that life comes in Christ.' with 'The Christian readings below all take the text to say that all have sinned, that death comes to all in Adam, and that life comes in Christ.' Replace 'in the words about shedding blood and about cursing' with 'in Genesis 9:6 and James 3:9'."},
+
+  {"where": "reading 2 / passages, note on Job 14:4", "kind": "OT framing", "readers": ["the rabbi"],
+   "why": "Job 14:4 is Job's lament over human frailty, spoken before any Christian reading. The note gives it the sense of the fall without saying that this is the reading's own use, which rule 8 requires.",
+   "fix": "Change the note to: 'Read by this reading as saying that those born of the fallen are not born clean. Job's lament is about human frailty; this is the reading's own use of it.'"},
+
+  {"where": "reading 2 / summary", "kind": "wording", "readers": ["Lutheran", "Reformed"],
+   "why": "'The image of God is marred and remains' states one position for all of reading 2. The Reformed confessions speak of the image as defaced but remaining; the Lutheran confessions speak of it as lost in the fall. The Lutheran seat must confirm the wording.",
+   "fix": "Replace 'The image of God is marred and remains, which is why Genesis 9:6 and James 3:9 still speak of it.' with 'Reformed readers hold the image of God marred but remaining, which is why Genesis 9:6 and James 3:9 still speak of it; Lutheran readers speak of the image as lost in the fall, and hold that these verses name the dignity of human beings.'"},
+
+  {"where": "reading 2 / answers", "kind": "tilt", "readers": ["Baptist / free church", "Anabaptist", "Wesleyan / Methodist"],
+   "why": "'and not of their freedom from Adam's condition' is the reader's gloss on the other reading's use of Matthew 19:14, and it implies that the opposing holders claim children are free of Adam's condition. The reading's own holders would not put it that way.",
+   "fix": "Replace 'to speak of God's mercy to children and not of their freedom from Adam's condition' with 'to speak of God's mercy toward children, whatever their condition.'"},
+
+  {"where": "reading 2 / answers", "kind": "missing verse", "readers": ["Reformed", "Lutheran"],
+   "why": "Reading 4 cites Ephesians 2:1 ('And you were dead in your trespasses and sins,') and reading 2 gives it no answer. The Reformed seat will ask how this reading takes the verse, and the _why says the reviewers should say whether it needs one.",
+   "fix": "Append to reading 2 answers: 'Holders of this reading take Ephesians 2:1 as the state of the whole person in trespasses and sins, shared by all in Adam; reading 4 takes it as the death of the spirit toward God. How far that death reaches into the will is left to the card on total depravity.'"},
+
+  {"where": "reading 1 / answers", "kind": "missing verse", "readers": ["Eastern Orthodox", "Catholic"],
+   "why": "Reading 1 cites Romans 5:12 for 'death passed on to all' but its answers do not say how its holders read the clause 'because all sinned', which reading 2 and reading 3 treat differently. The Eastern Orthodox and Catholic seats should confirm.",
+   "fix": "Append to reading 1 answers: 'Eastern Orthodox members take the clause because all sinned in Romans 5:12 to mean each person's own sin, with the inherited mortality named before it; Catholic members read the clause as in Adam all sinned, following the Council of Trent.'"},
+
+  {"where": "reading 1 / summary and label", "kind": "wording", "readers": ["Catholic", "Eastern Orthodox"],
+   "why": "'These traditions hold the number with some latitude' does not say which traditions are meant. The label's 'wounded the nature' is Catholic vocabulary, and Eastern Orthodox readers speak of corruption and mortality.",
+   "fix": "In the summary replace 'and these traditions hold the number with some latitude' with 'and Catholic and Eastern Orthodox writers allow the number with some latitude'. In the label replace 'wounded the nature it did not destroy' with 'left a corrupted or wounded nature' and let the Eastern Orthodox seat confirm."},
+
+  {"where": "reading 1 / answers", "kind": "wording", "readers": ["Catholic"],
+   "why": "The answer on image and likeness says many take the two as separate things, but does not say how Catholic teaching takes them. Catholic teaching is commonly stated as the image kept after the fall and the likeness lost through original sin and restored by grace. The Catholic seat should confirm.",
+   "fix": "Append to reading 1 answers: 'Catholic members hold the image of God kept after the fall, and the likeness, lost through original sin, restored by grace.'"},
+
+  {"where": "reading 3 / answers", "kind": "wording", "readers": ["Lutheran", "Reformed"],
+   "why": "'A poet's and an apostle's confession of a sinful world and a lifelong inclination' lowers the force of 'by nature' in Ephesians 2:3 and Psalm 51:5 as the reading 2 holders would hear it. The reading 3 holders must say it in their own words.",
+   "fix": "Replace the phrase with 'as confessions of the sinful world around a person and of a lifelong inclination, not of a condition received at birth', and let the reading 3 holders confirm."}
+ ],
+ "summary": "The card quotes check out exactly against the Berean, and the readings are stated fairly, but the Wesleyan placement in reading 3, the Baptist claim, and a few answers that misdescribe Hebrews 4:12 or lean on a gloss need correction before release. The agreed block also speaks for Christian readings only, which the rabbi seat will notice."}

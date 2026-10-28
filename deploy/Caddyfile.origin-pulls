@@ -165,7 +165,7 @@ bibleontology.org {
 	# from that folder. One more exact file (2026-10-07): the IndexNow key,
 	# public by design -- Bing fetches it to confirm a submission comes from
 	# the site's owner (tools/indexnow.py). An exact name, never a pattern.
-	@seo path /robots.txt /sitemap.xml /sitemap-pages.xml /sitemap-cards.xml /sitemap-chapters.xml /sitemap-verses.xml /70f78dc8d33c4d598e6c2ca90519b6ce.txt
+	@seo path /robots.txt /sitemap.xml /sitemap-pages.xml /sitemap-cards.xml /sitemap-chapters.xml /sitemap-verses.xml /sitemap-words.xml /70f78dc8d33c4d598e6c2ca90519b6ce.txt
 	handle @seo {
 		root * /srv/bibleontology/deploy/www
 		file_server

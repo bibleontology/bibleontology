@@ -174,7 +174,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   display:inline-block; font-size:14px}
 .wc .wcchip[data-sense]{cursor:pointer}
 .wc .wcchip[data-sense]:hover{border-color:var(--ochre)}
-.wc .wcnote{color:var(--muted); font-size:13.5px; max-width:62ch; margin:8px 0 0}
+.wc .wcnote{color:var(--muted); font-size:13.5px; margin:8px 0 0}
 .wcgraph{margin-top:22px; border-top:1px solid var(--rule); padding-top:14px}
 .wcgraph .wch{font-size:13px; letter-spacing:.08em; text-transform:uppercase;
   color:var(--muted); font-weight:600; margin:0 0 6px}
@@ -293,19 +293,34 @@ body.withcol .vchips .tgv.orig{display:none}
    never hidden, and coloured ochre while their panel is open. */
 .vchips{display:inline; margin:0 4px 0 6px; white-space:nowrap}
 /* Revelation's connections: one line each, opening to the words (6.22) */
+/* ONE WORD, TWO CARDS (plan 8.4g): the temple's two cards and their theme, drawn in About beside "Structure, not
+   doctrine"; plain HTML, so /about and /llms.txt lift it as text. Side by side on a wide screen, stacked on a phone. */
+.twocards{margin:10px 0 18px; display:grid; gap:10px; font-size:15px}
+.twocards .tc-row{display:grid; grid-template-columns:1fr auto 1fr; gap:10px; align-items:center}
+.twocards .tc-card{border:1px solid var(--rule); border-radius:8px; padding:12px 14px; background:var(--surface); min-width:0}
+.twocards .tc-place{border-color:var(--ochre)} .twocards .tc-figure{border-color:var(--slate)}
+.twocards .tc-name{font-size:20px; font-weight:600; color:var(--ink); text-decoration:none}
+.twocards .tc-name:hover{text-decoration:underline}
+.twocards .tc-sub{color:var(--muted); font-size:13px; margin:2px 0 8px}
+.twocards .tc-rel{margin:3px 0} .twocards .tc-place b{color:var(--ochre)} .twocards .tc-figure b{color:var(--slate)}
+.twocards .tc-link{color:var(--muted); font-size:13px; text-align:center}
+.twocards .tc-open{border:1px dashed var(--rule); border-radius:8px; padding:8px 12px; background:var(--surface)}
+.twocards .tc-theme{border:1px solid var(--rule); border-radius:8px; padding:8px 12px; background:var(--surface)}
+.twocards figcaption{color:var(--muted); font-size:14px}
+@media (max-width:720px){ .twocards .tc-row{grid-template-columns:1fr} .twocards .tc-link{text-align:left} }
 /* A THEME'S FRONT PAGE AND ITS IMAGERY (plan 7.6b) */
-.hubhero{display:block; width:100%; max-width:720px; text-align:left; margin:14px 0 6px; padding:16px 18px;
+.hubhero{display:block; width:100%; text-align:left; margin:14px 0 6px; padding:16px 18px;
   border:0; border-radius:10px; background:var(--slate); color:var(--surface); cursor:pointer; font:inherit}
 .hubhero .hk{display:block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; opacity:.85}
 .hubhero b{display:block; font-size:22px; margin:3px 0 4px} .hubhero span{font-size:15px}
 /* a card the theme hinges on: the same door, outlined, so the heart stays first */
 .hubhero.link{background:var(--surface); color:var(--slate); border:1px solid var(--slate); margin-top:8px}
 .hubhero.link:hover{background:var(--paper)}
-.hubdoors{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; max-width:760px}
+.hubdoors{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px}
 .hubdoor{display:flex; flex-direction:column; justify-content:flex-start; text-align:left; padding:10px 12px; border:1px solid var(--rule); border-radius:8px; background:var(--surface);
   color:var(--ink); cursor:pointer; font:inherit}
 .hubdoor b{display:block; color:var(--slate); margin-bottom:3px} .hubdoor span{font-size:13px; color:var(--muted)}
-.hubq{margin:6px 0; padding-left:10px; border-left:3px solid var(--ochre); max-width:62ch}
+.hubq{margin:6px 0; padding-left:10px; border-left:3px solid var(--ochre)}
 .hubchips{display:flex; flex-wrap:wrap; gap:6px}
 .hubchip,.imgb{padding:3px 10px; border:1px solid var(--rule); border-radius:12px; background:var(--surface);
   color:var(--slate); cursor:pointer; font-size:14px}
@@ -315,7 +330,7 @@ body.withcol .vchips .tgv.orig{display:none}
    sections did not match the styling of the front page theme
    cards): each core concept a card, its passages as quotations */
 /* A CONCEPT HUB (plan 7.6f): the same cards, a leads-to strip, the words */
-.chub{max-width:760px; margin:6px 0 18px}
+.chub{margin:6px 0 18px}
 .chubk{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:12px 0 4px}
 .chubleads{display:flex; flex-wrap:wrap; gap:4px 16px; font-size:16px}
 .chubdoors{font-size:14px; color:var(--muted); margin:-2px 0 6px} .chubdoors .link{margin-right:12px}
@@ -340,7 +355,7 @@ body.withcol .vchips .tgv.orig{display:none}
   border-radius:14px; padding:3px 11px; cursor:pointer}
 .bookchip .g{font-size:12.5px}
 .bookchip.on{border-color:var(--ochre); background:var(--ochre-soft)}
-#etpanel{margin-top:6px; max-width:880px}
+#etpanel{margin-top:6px}
 .chubtail > details.sec, .pane .chubtail > details.sec{border:1px solid var(--rule); border-radius:8px; background:var(--surface);
   padding:2px 14px; margin:8px 0}
 .chubtail > details.sec > summary, .pane .chubtail > details.sec > summary{font-family:Spectral, serif; font-size:19px;
@@ -352,7 +367,7 @@ body.withcol .vchips .tgv.orig{display:none}
   padding:10px 14px; margin:8px 0; max-width:none; color:var(--ink)}
 .chubtag{font-size:14px; margin-left:8px; padding:0 6px; border:1px solid var(--rule); border-radius:10px; white-space:nowrap}
 .chubfew{display:block; margin:4px 0} .chubfew .g{font-size:13px}
-.otl{display:grid; gap:10px; max-width:760px; margin:6px 0 4px}
+.otl{display:grid; gap:10px; margin:6px 0 4px}
 .otlc{border:1px solid var(--rule); border-radius:8px; background:var(--surface); padding:12px 14px}
 .otln{font-family:Spectral, serif; font-size:19px; color:var(--ink); margin:0 0 4px}
 .otln .link{color:var(--slate)}
@@ -372,7 +387,7 @@ details.imgrow > summary{cursor:pointer; color:var(--ochre); font-weight:600; pa
 .imgcells{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin:6px 0}
 .imgcol{font-size:12px; color:var(--muted); font-weight:600; margin-bottom:2px}
 .imgq{margin:0 0 6px; font-size:14px}
-.imgcmp{background:var(--slate-soft); padding:8px 10px; border-radius:4px; font-size:14px; max-width:80ch}
+.imgcmp{background:var(--slate-soft); padding:8px 10px; border-radius:4px; font-size:14px}
 details.revc{margin:2px 0}
 details.revc > summary{cursor:pointer; padding:3px 0; font-size:15px; color:var(--slate); list-style:none}
 details.revc > summary::before{content:"▸ "; color:var(--slate)}
@@ -787,6 +802,42 @@ button.move{font-size:13px; padding:2px 0; border:0; background:none;
   font-size:.9em}
 .moreinl > summary::-webkit-details-marker{display:none}
 .moreinl[open] > summary{display:none}
+/* a fold that closes again (a question card's "In its holders' own words"): the label stays, its arrow turns */
+.qown > summary{cursor:pointer; color:var(--ochre-text, var(--ochre)); list-style:none}
+.qown > summary::-webkit-details-marker{display:none}
+.qown > summary::before{content:"▸ "} .qown[open] > summary::before{content:"▾ "}
+/* THE TRADITIONS' OWN WORDS (2026-10-26): a door to a tradition's page and to a question's card, outlined like the
+   theme bridges' door (.hubhero.link) but quiet: a name and an arrow, no fill, no badge */
+.tdoor{display:inline-block; max-width:100%; text-align:left; padding:6px 12px; border:1px solid var(--slate); border-radius:8px;
+  background:var(--surface); color:var(--slate); cursor:pointer; font:inherit; font-weight:600; line-height:1.35}
+.tdoor:hover{background:var(--paper)}
+.tdoor:focus-visible{outline:2px solid var(--slate); outline-offset:2px}
+/* the invitation to correct a question card or a tradition's page (2026-10-26: "a prominent place for readers to
+   provide feedback"): a ruled box, quiet, the button the only weight in it */
+.qfair{margin:22px 0; padding:12px 16px; border:1px solid var(--rule); border-left:3px solid var(--slate);
+  border-radius:8px; background:var(--surface)}
+.qfair p{margin:0 0 10px}
+/* a quoted verse read with the verses around it, folded under the quote */
+.qctx{margin:4px 0 2px 2px}
+.qctx > summary{cursor:pointer; color:var(--ochre-text); font-size:13.5px}
+.qctx[open]{padding:6px 10px; border-left:2px solid var(--rule); background:var(--surface)}
+.qctxv{margin:4px 0; font-size:15px}
+/* a reading's own account, folded above its verses */
+.qwhy{margin:2px 0 8px}
+.qwhy > summary{cursor:pointer; color:var(--ochre-text); font-size:14px; padding:2px 0}
+.qwhy[open] > summary{margin-bottom:6px}
+.qtrad{margin:14px 0 18px}
+.qtrad-h{display:flex; flex-wrap:wrap; align-items:center; gap:4px 12px; margin-bottom:4px}
+.qdocs{list-style:none; margin:4px 0 0; padding:0 0 0 10px; border-left:2px solid var(--rule)}
+.qdocs li{margin:7px 0; font-size:15px; overflow-wrap:anywhere}
+.qdocs li .g{font-size:13px}
+.tpos{margin:0 0 20px}
+.tread{margin:10px 0 0 12px}
+.tread > .link{font-weight:600}
+.tdoors{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px}
+.tdoor-row{display:flex; flex-direction:column; gap:2px; font-weight:400}
+.tdoor-row b{color:var(--slate)}
+.tdoor-row .g{font-size:13px; color:var(--muted)}
 .shapechips .moreinl[open]{display:contents}
 .patform{margin:.4em 0 .2em}
 .slot{display:inline-block; border:1px solid var(--rule); border-radius:3px;
@@ -1002,18 +1053,26 @@ button.move{font-size:13px; padding:2px 0; border:0; background:none;
   border-color:var(--rule); font-weight:600}
 .tab .x{font-size:15px; line-height:1; color:var(--muted); padding:0 2px}
 .tab .x:hover{color:var(--ochre)}
-/* Fill a wide screen, shrink to a phone -- but never stretch running text.
-   The content widens on a big screen and shrinks to fit a phone. So the PANE grows and the reading measure does not: prose stays
-   near 65 characters, while diagrams, strips, tables and lists take the room. */
+/* Fill a wide screen, shrink to a phone. The pane grows to 1500px, and since 2026-10-26 its text runs the pane's
+   full width too: a rule here capped every paragraph at 70 characters ("throughout the site there are a lot of
+   columns that have these introductory descriptions that don't take advantage of the width available - audit the
+   whole app for this"), undoing the 2026-10-25 lift below. The whole app was audited the same day: every text cap
+   in a class or a style is gone; dialogs, the search box, tooltips, table cells, diagrams and the reader's own
+   verse column keep theirs. */
 .paneinner{max-width:1500px; margin:0 auto; width:100%}
 .vline{max-width:42em}
-.pane .lead, .pane p{max-width:70ch}
 .paneinner .readerinner{max-width:none}
 
 .pane h1{font-size:27px; font-weight:600; letter-spacing:-.015em; margin:0 0 4px}
 .pane .kind{font-family:"IBM Plex Mono",monospace; font-size:10.5px;
   letter-spacing:.16em; text-transform:uppercase; color:var(--ochre); margin:0 0 10px}
-.pane .lead{color:var(--muted); margin:0 0 22px; max-width:60ch}
+.pane .lead{color:var(--muted); margin:0 0 22px}
+/* TEXT RUNS THE PANE'S FULL WIDTH (2026-10-25: the summaries "don't use the whole width of the page like the text
+   above and the verses below do. This is something that I really would like to fix across the site to get to the
+   verses more quickly"). About 150 paragraphs carried a reading-width cap of 60-80 characters in their own style;
+   this lifts every such cap in one place, so the verses come sooner. Short caps (labels, badges) are left alone. */
+.pane [style*="max-width:6"], .pane [style*="max-width: 6"], .pane [style*="max-width:7"],
+.pane [style*="max-width:80ch"], .card [style*="max-width:6"], .card [style*="max-width:7"]{max-width:none !important}
 .pane h3{font-size:13px; font-family:"IBM Plex Mono",monospace; letter-spacing:.1em;
   text-transform:uppercase; color:var(--muted); margin:28px 0 12px; font-weight:400}
 .fillbar{display:flex; align-items:center; gap:10px; padding:6px 0;
@@ -1071,11 +1130,11 @@ button.move{font-size:13px; padding:2px 0; border:0; background:none;
   padding:1px 8px}
 .idrow{padding:7px 0; border-bottom:1px solid var(--rule)}
 .idrow:last-child{border-bottom:0}
-.idnote{font-size:13.5px; color:var(--muted); margin-top:3px; max-width:64ch}
+.idnote{font-size:13.5px; color:var(--muted); margin-top:3px}
 .apart{margin-top:14px; padding-top:12px; border-top:2px solid var(--slate)}
 .aparthead{font-family:"IBM Plex Mono",monospace; font-size:11px;
   letter-spacing:.12em; text-transform:uppercase; color:var(--slate); margin:0 0 6px}
-.idfoot{font-size:13px; color:var(--muted); margin:10px 0 0; max-width:64ch}
+.idfoot{font-size:13px; color:var(--muted); margin:10px 0 0}
 .alsobox{background:var(--slate-soft); border:1px solid var(--rule);
   border-left:3px solid var(--slate); border-radius:3px; padding:15px 18px;
   margin:0 0 20px}
@@ -1124,7 +1183,7 @@ button.move{font-size:13px; padding:2px 0; border:0; background:none;
 .phrase b{color:var(--ochre); font-weight:600}
 .phrase .use{flex:none}
 .translit{font-style:italic; color:var(--ochre)}
-.lexdef{font-size:15px; color:var(--muted); max-width:62ch; line-height:1.6;
+.lexdef{font-size:15px; color:var(--muted); line-height:1.6;
   border-left:2px solid var(--rule); padding-left:14px; margin:0}
 .bookgrp .bname{font-size:13px; color:var(--ink); margin:0 0 6px; font-weight:600}
 
@@ -1132,7 +1191,7 @@ button.move{font-size:13px; padding:2px 0; border:0; background:none;
   flex-wrap:wrap}
 .chaptitle{flex:1 1 320px; min-width:0}
 .chaphead h1{font-size:30px; font-weight:600; letter-spacing:-.015em; margin:0}
-.chaphead .hint{margin:5px 0 0; max-width:52ch}
+.chaphead .hint{margin:5px 0 0}
 .chaphead .chapnav{flex:0 0 auto; padding-top:7px}
 /* Tree mode. The caret only exists where there is something to fold, so a
    verse with no dependents shows none and the eye is not asked to scan
@@ -1423,7 +1482,7 @@ details.sub{margin:0}
   font:400 var(--fs-meta)/1.4 var(--ff-text); color:var(--muted)}
 .secbar button{font:inherit; color:var(--slate); background:none; border:0; padding:0; cursor:pointer}
 .secbar button:hover{text-decoration:underline}
-.facekin{margin:-6px 0 18px; font-size:var(--fs-small); line-height:1.55; max-width:62ch; color:var(--ink)}
+.facekin{margin:-6px 0 18px; font-size:var(--fs-small); line-height:1.55; color:var(--ink)}
 .facekin .g{font-size:inherit}
 @media (pointer:coarse){details.sec > summary{padding:13px 0} details.sec details.sec > summary, details.sub > summary{padding:11px 0}}
 details.sec > summary:hover, details.sub > summary:hover{color:var(--slate)}
@@ -1867,6 +1926,11 @@ function baseAddress(tb){
   if(tb.id.startsWith('mimagery:')) { const t = tb.id.split(':')[1];
     return IMG_PATH[t] || '/theme/' + encodeURIComponent(t) + '/side-by-side'; }
   if(tb.id.startsWith('about:')) return '/about';
+  // a question card (plan 8.4h) at /questions/<id>
+  if(tb.id.startsWith('question:')) return '/questions/' + encodeURIComponent(tb.id.split(':')[1]);
+  // a tradition or a school of reading (2026-10-26) at /traditions/<slug>, and their list at /traditions
+  if(tb.id.startsWith('tradition:')) return '/traditions/' + encodeURIComponent(tb.id.split(':')[1]);
+  if(tb.id.startsWith('traditions:')) return '/traditions';
   // a tab with no page of its own: after the # (DEEP, above)
   if(tb.deep) return '/#' + tb.deep;
   // a word card at its Strong's number (2026-10-16: "deeplinks for the
@@ -2932,6 +2996,12 @@ function wireReaderClicks(){
     // every link on them is handled here and never by its own onclick
     const mt = e.target.closest('[data-mtheme]');
     if(mt && !mt.onclick){ e.stopPropagation(); openMajorTheme(mt.dataset.mtheme); return; }
+    const qn = e.target.closest('[data-question]');
+    if(qn && !qn.onclick){ e.stopPropagation(); openQuestion(qn.dataset.question, +qn.dataset.reading || 0); return; }
+    const tr = e.target.closest('[data-tradition]');
+    if(tr && !tr.onclick){ e.stopPropagation(); openTradition(tr.dataset.tradition); return; }
+    const trs = e.target.closest('[data-traditions]');
+    if(trs && !trs.onclick){ e.stopPropagation(); openTraditions(); return; }
     const tgo = e.target.closest('[data-tgo]');
     if(tgo){ e.stopPropagation(); peekAt(tgo, tgo.dataset.tgo); return; }
     // A THEME'S IMAGERY SIDE BY SIDE (plan 7.6b): its door, an image to
@@ -4109,6 +4179,14 @@ async function openSense(key, word){
     <p class="lead">${d.translit ? `<span class="translit">${esc(d.translit)}</span>` : ''}${
       d.gloss && d.short && d.gloss !== d.short
         ? ` · most often rendered “${esc(d.gloss)}”` : ''}</p>
+    ${/* BOTH FORMS, THE NUMBER'S OWN FIRST (2026-10-27: G2411 was headed ἱερός, the adjective, because MACULA
+          files the temple and "sacred" under one lemma; "both forms can be listed but I want to lead with the
+          correct one"). server.headwords() decides which leads; the other is named here with its source. */''}
+    ${d.lemma_also ? `<p class="hint" style="margin:-4px 0 10px;max-width:64ch">${d.lemma_also.source === 'macula'
+        ? `MACULA files it under <span class="heb">${esc(d.lemma_also.form)}</span>${
+            (d.lemma_also.with || []).length ? `, with ${d.lemma_also.with.map(k =>
+              `<span class="link" data-key="${esc(k)}">Strong’s ${esc(k.slice(0,1).toUpperCase() + k.slice(1))}</span>`).join(', ')}` : ''}`
+        : `Strong’s dictionary form: <span class="heb">${esc(d.lemma_also.form)}</span>`}</p>` : ''}
     ${/* A WORD'S NOTE, where how it is used needs saying first (the words for
           "Jew", 2026-10-10), with the card it belongs to */''}
     ${d.note ? `<p class="lead" style="max-width:64ch;color:var(--ink)">${esc(d.note.text)}</p>${
@@ -4190,7 +4268,16 @@ async function openSense(key, word){
           Entry is the first collapsible entry. It had been kept last
           on purpose (2026-09-15); this reverses that. */''}
     ${d.definition ? sec('w-lex', 'Lexicon entry',
-      `<p class="lexdef">${esc(d.definition)}</p>
+      `<div class="lexdef">${/* THE ENTRY WHOLE, ONE SENSE TO A LINE, indented by its
+            outline ("1a4a)" sits three in), where it was one run cut off
+            mid-entry (2026-10-26) */''}${d.definition.split(' · ').map(l => {
+          /* a number STEP holds as several entries heads each with its own sense */
+          if(/^Entry \([a-z]\) — /.test(l))
+            return `<div style="margin-top:8px"><b>${esc(l)}</b></div>`;
+          const m = /^(\d+)([a-z]*)(\d*)([a-z]*)\)/.exec(l);
+          const depth = m ? [m[2], m[3], m[4]].filter(Boolean).length : 0;
+          return `<div style="padding-left:${depth * 16}px">${esc(l)}</div>`;
+        }).join('')}</div>
        <p style="color:var(--muted);font-size:13px;margin:6px 0 0">Written for
        lexicographers. Everything below it is derived from how this Bible
        actually uses the word.</p>
@@ -4202,9 +4289,38 @@ async function openSense(key, word){
        ${/* the credit in the form their repository asks: "Credit it to 'STEP
              Bible' linked to www.STEPBible.org" (STEPBible-Data README, CC BY
              4.0; read 2026-10-04) */''}
-       <p style="color:var(--muted);font-size:12px;margin:4px 0 0">From the
-       Translators Brief lexicons of <a href="https://www.STEPBible.org" target="_blank"
-       rel="noopener">STEP Bible</a>, CC BY 4.0.</p>`) : ''}
+       <p style="color:var(--muted);font-size:12px;margin:4px 0 0">From ${
+       esc(d.definition_credit || "STEP Bible's Translators Brief lexicons, CC BY 4.0.")}
+       <a href="https://www.STEPBible.org" target="_blank"
+       rel="noopener">www.STEPBible.org</a></p>`) : ''}
+    ${/* HOW THE BEREAN RENDERS IT, ADDED UP (2026-10-26): every use carried
+          its English and no card summed them. Each rendering opens its own
+          verses, in canonical order. The counts are of uses and sum to the
+          total stated; the card's own count of uses is the interlinear's,
+          which is larger for a few words, and the line says so. */''}
+    ${(d.renderings && (d.renderings.rows || []).length) ? sec('w-render', 'How the Berean renders it',
+      `<p class="hint" style="margin:0 0 8px">What the English text puts for this
+        word, counted over ${plural(d.renderings.total, 'use')}${
+        d.renderings.total !== d.observations
+          ? ` (the interlinear counts ${(d.observations || 0).toLocaleString()}; the rest
+             carry no separate rendering in the data)` : ''} &mdash; open one for its verses.</p>`
+      + d.renderings.rows.map(r => `<details class="sub"><summary>${esc(r.gloss)}<span class="ct">${
+          r.n.toLocaleString()}</span></summary><div class="subbody vex">${
+          listBlock(r.refs.map(ref => ({ref})), x =>
+            `<button class="occ" data-ref="${esc(x.ref)}" data-key="${esc(key)}"
+              >${esc(prettyRef(x.ref))}</button>`, r.verses, 'chips')}
+          <div class="occshow" hidden></div></div></details>`).join(''),
+      d.renderings.rows.length) : ''}
+    ${(d.grouped || []).length ? sec('w-grouped', 'Words the site groups it with',
+      d.grouped.map(g => `<p class="hint" style="margin:8px 0 4px"><b>${esc(g.name)}</b></p>${
+        g.members.map(k => `<div class="rowline"><span class="link" data-key="${esc(k.key)}"
+          data-word="${esc(k.gloss || k.lemma)}"><span class="orig">${esc(k.lemma)}</span>${
+          k.gloss ? ' &ldquo;' + esc(k.gloss) + '&rdquo;' : ''}</span>
+          <span class="g">${plural(k.uses, 'verse')}</span></div>`).join('')}`).join('')
+      + `<p style="color:var(--muted);font-size:13px;margin:8px 0 0;max-width:60ch">A grouping
+         made by hand to find passages by their words. It does not say the words share
+         a root.</p>`,
+      d.grouped.reduce((a, g) => a + g.members.length, 0)) : ''}
     ${/* THE WORD FAMILY (plan 5.10). 2026-10-01: a bridge between Phil 4:11 and 1 Tim 6:8 and
           1 Tim 6:6 -- αὐτάρκης,
           ἀρκέω, αὐτάρκεια, whose cards never named each other. One step of
@@ -6845,6 +6961,10 @@ async function openEntity(id){
       // the reading note above already says whose map a sub-theme is part of
       : d.reading && /^A sub-theme of the major theme/.test(d.desc || '') ? '' : leadHtml(d.desc)}
     ${faceKin(d)}
+    ${/* THE THEME IT STANDS AT THE CENTRE OF (2026-10-25: "when the relationship is
+          particularly close there should be a strong bridge to the theme"; "wisdom and law
+          are strong examples"). The theme's own door, outlined; pairs listed by hand. */''}
+    ${(d.theme_bridge || []).map(t => `<button class="hubhero link" type="button" data-mtheme="${esc(t.id)}"><span class="hk">The theme</span><b>${esc(t.title)}</b><span>${esc(t.subtitle)}: its passages set side by side</span></button>`).join('')}
     ${conceptHubBlock(d.concept_hub, d.concept_hub ? connBlock(drawEntityGraph(d, {all: true}), groups) : '')}
     ${d.face ? conceptFaceBlock(d, connBlock(drawEntityGraph(d, {all: true}), groups)) : ''}
     ${hubBlock(d.hub)}
@@ -7405,9 +7525,11 @@ async function openAbout(focus){
         canon. Each person, place, event, idea and saying is a card, joined to
         others by what the text says of them: who is whose child, who said what
         to whom, where a story is told again.</p>
-      <p><b>Where it comes from.</b> The structure of every verse is read from
-        the Hebrew, Aramaic and Greek, and shown in the Berean Standard Bible.
-        Every link carries the verse it rests on. Where the words are a
+      <p><b>Where it comes from.</b> The Bible, explicitly: the whole graph and
+        every page built from it are sourced from the text. The structure of
+        every verse is read from the Hebrew, Aramaic and Greek, and shown in the
+        Berean Standard Bible. Every card and every link carries the verse it
+        rests on. Where the words are a
         character's, it says whose. Anything the text does not state is marked
         as a reading, with how it was reached. AI tools helped draft parts of
         it; who and how is under Who built it.</p>
@@ -7422,7 +7544,9 @@ async function openAbout(focus){
         family, and the events a person is in. Set the stories the Bible tells
         twice side by side. Browse the major themes. Explore the connections in
         the Knowledge Graph Navigator. Search by name, word, phrase or verse
-        reference.</p>
+        reference; by the words of a verse you half remember, in any order; or
+        by a Hebrew or Greek word, in any form the text writes it, or its
+        Strong&rsquo;s number (H157, G26).</p>
       <p><b>What it is not.</b> Not a commentary. It shows what the text says
         and where, and aims to take no side where its readers differ: among
         Christian traditions (Orthodox, Catholic and Protestant alike), and
@@ -7436,6 +7560,16 @@ async function openAbout(focus){
         Corrections are welcome through <b>Something wrong or missing?</b> in
         the ⋯ menu.</p>
     </div>
+    ${/* THE ONE EXCEPTION (2026-10-26: "the entire graph and all the pages are sourced explicitly from the Bible
+          with the notable exception of the what does the Bible say and traditions place as I wanted to provide a
+          place where the positions of the traditions could be examined next to the scriptures"). Outside the
+          at-a-glance block, which is lifted as plain text, because it is shown only once a question page is: the
+          About describes only what a reader can open. */''}${d.traditions ? `
+    <p style="max-width:64ch;margin:12px 0 0"><b>The one exception.</b> The question pages ("What does the Bible say
+      about…") and the traditions' pages also set out what Christian traditions, and the scholars of a way of reading,
+      have written: a place where the traditions' positions can be examined next to the Scriptures they cite. Those
+      statements are the traditions' own, credited to them, each set beside the verses of the reading it states; they
+      are never this site's claims, and nothing else on the site rests on anything but the text.</p>` : ''}
     ${/* HOW IT IS BUILT, IN PICTURES (2026-10-20, of the schema map
           mock: it belongs in the About, grouped with the appropriate text,
           with the user made to know it
@@ -7574,7 +7708,7 @@ async function openAbout(focus){
       Bible</a>, given to the public domain, with the section headings, quotation notes and
       parallels its editors wrote. <a href="https://www.STEPBible.org" rel="noopener"
       target="_blank">STEP Bible</a> and the scholars of <b>Tyndale House, Cambridge</b>,
-      for the Translators Brief lexicons behind every word card's lexicon entry, and
+      for the Translators Brief lexicons behind the word cards' lexicon entries, and
       for the index of proper names that tells which James a verse means — and,
       behind the lexicons, <b>Francis Brown, S. R. Driver and Charles Briggs</b> (1906) and
       <b>G. Abbott-Smith</b> (1922), whose lexicons they abridge. <b>James Strong</b>,
@@ -7608,6 +7742,36 @@ async function openAbout(focus){
         traditions divide. Where readers of the text disagree, it shows the
         verses each side reads and does not decide between them; a tension the
         text leaves open is left open.</p>
+      <figure class="twocards" aria-label="One word, two cards: the temple">
+        <div class="tc-row">
+          <div class="tc-card tc-place">
+            <a class="tc-name" href="/e/temple">The Temple</a>
+            <div class="tc-sub">a place: the house in Jerusalem</div>
+            <div class="tc-rel"><b>built by</b> Solomon · 1 Kings 6:14</div>
+            <div class="tc-rel"><b>built by</b> Zerubbabel and Jeshua · Ezra 5:2</div>
+            <div class="tc-rel"><b>destroyed by</b> the Babylonians · 2 Kings 25:9</div>
+            <div class="tc-rel"><b>repaired by</b> Joash, Hezekiah, Josiah</div>
+          </div>
+          <div class="tc-link">← <b>drawn from</b> · John 2:20</div>
+          <div class="tc-card tc-figure">
+            <a class="tc-name" href="/e/image_temple">temple</a>
+            <div class="tc-sub">the word used as a figure: what the text itself identifies it with</div>
+            <div class="tc-rel"><b>signifies</b> God · “a sanctuary”, Ezekiel 11:16; “the Lord God Almighty and the Lamb are its temple”, Revelation 21:22</div>
+            <div class="tc-rel"><b>signifies</b> Jesus · John 2:21</div>
+            <div class="tc-rel"><b>signifies</b> the church at Corinth · 1 Corinthians 3:16</div>
+            <div class="tc-rel"><b>signifies</b> the church at Ephesus · Ephesians 2:21</div>
+            <div class="tc-rel"><b>signifies</b> the body · “your body is a temple of the Holy Spirit”, 1 Corinthians 6:19</div>
+          </div>
+        </div>
+        <div class="tc-open"><b>2 Thessalonians 2:3–4</b>: readers differ on which temple is meant;
+          the verse is named on both cards, with the readings it has been given, and decided on neither.</div>
+        <div class="tc-theme"><a href="/themes/temple-presence">Temple / Presence</a>: the theme both cards belong to.</div>
+        <figcaption>One word, two cards. The temple of stone and the temple as a figure are kept apart and linked,
+          each link with its verse. Kept as one record, Paul's “you yourselves are God's temple” (1 Corinthians 3:16)
+          would make the church at Corinth the house the Babylonians burned; kept apart, each says only what its
+          verses say. The words in bold are the graph's own names for its links; each link's verse says it in the
+          text's words.</figcaption>
+      </figure>
       <p style="max-width:64ch"><b>Readings are marked as readings.</b>
         Anything beyond what the grammar shows — a map of major themes, a
         judgment that two verses say the same thing — is shown as a reading,
@@ -7686,7 +7850,18 @@ async function openAbout(focus){
         verses say the same thing. Only words used 30 times or fewer, in families
         used 40 times or fewer, take part; common words would list half the
         New Testament. A word's card names its family. Hebrew is not covered
-        yet: its lexicon records meanings, not derivations.</p>
+        yet: its lexicon records meanings, not derivations. A word's card
+        also lists the words this site has grouped with it by hand under a
+        theme (love, grace, faith ...), for finding passages by their words:
+        that is not a claim that the words share a root.</p>
+      <p style="max-width:64ch;margin:12px 0 0">A word's card shows its
+        lexicon entry whole (with the renderings of the King James Version
+        left out of it, and any entry that still names them withheld; the
+        Hebrew entries are withheld for now, since their source asks that
+        permission be sought from the Online Bible, whose work they abridge) and
+        adds up how the Berean Standard Bible renders the word, each rendering
+        opening its verses in canonical order. A word's page, the one a search
+        engine reads, holds the same.</p>
       <p style="max-width:64ch;margin:12px 0 0">A card's <b>Where the text speaks of it</b>
         lists every verse with the thing's word, or words of the same root, or a
         Greek word the lexicon records as made from it (δόξα "glory" brings
@@ -7897,13 +8072,36 @@ async function openAbout(focus){
         Sonnet worker from the same rules, which also read sixteen of its verses against their rows,
         and each was read row by row by the eleven readers below. Every hub was changed where the
         readers found a row tilted, a note that said more than its verses, or an example that did
-        not show its label, and the site's owner approved it before it was shown. The concept's graph comes after the texts' own words, and
+        not show its label; from the sixteenth hub on, a change was made only where every reader could
+        accept it, and one they disagreed on, or one touching a row about God, the Father, Jesus or the
+        Holy Spirit, was held for the site's owner. The owner approved each hub before it was shown. The concept's graph comes after the texts' own words, and
         everything else the card records is kept below. Every other concept card, and every card
         for a group (a people, a party, an order), is laid out the same way by rule, without rows: its words, the words of the same root (by the lexicon's
         links and, for Greek, the spelling), its own verses quoted, its graph, and the other words
         English renders as its words are rendered — found from MACULA's glosses verse by verse, a
         word counting where that rendering is its usual one — set apart with their verses.</p>`)
       : ''}
+
+    ${d.traditions ? sec('a-traditions', "The traditions' own words", `
+      <p style="max-width:64ch">The question pages ("What does the Bible say about…") set out each reading of a
+        question beside the verses its holders cite. Behind them is a layer of the graph that records what the
+        traditions themselves have written: ${n(d.traditions.documents)} documents — confessions, catechisms,
+        adopted standards, a founder's or a scholar's work — from ${n(d.traditions.traditions)}
+        ${d.traditions.traditions === 1 ? 'tradition' : 'traditions'}${d.traditions.schools
+          ? ` and ${n(d.traditions.schools)} ${d.traditions.schools === 1 ? 'school' : 'schools'} of reading` : ''}, on
+        ${n(d.traditions.questions)} ${d.traditions.questions === 1 ? 'question' : 'questions'}.
+        Each tradition, church body and school of reading is a node, as is each document; a document is joined to
+        whose it is, to the question it speaks on, and to each reading it states. Every one of those nodes and edges
+        carries the Bible verses of the readings it supports, and the checker fails any that carries none.</p>
+      <p style="max-width:64ch">These are the traditions' statements, never this site's claims. An edge says that a
+        document says something; it does not say the thing is true, and it does not say that every member of the
+        tradition holds it. A scholar's work is credited to the school of reading it stands for, never to a church,
+        and a founder's work is marked as one. A document's link goes to the document on another site, where it
+        may move or change. Each tradition has a page of its own, listing its documents with their standing and its
+        positions question by question, each reading linking back to the question. This layer is kept apart from the
+        counts above, which are of the text's own people, places and things.</p>
+      <p style="max-width:64ch">The layer is derived from the question pages by one script, so a change to a page
+        flows through, and a test fails when the two disagree.</p>`) : ''}
 
     ${evk ? sec('a-events', 'The events', `
       <p style="max-width:64ch">The ${n(evk.count)} events at the top of Explore's
@@ -8401,6 +8599,15 @@ async function openAbout(focus){
         and an asterisk (*) at a word marks where the Hebrew or Greek reads
         otherwise, with this site's note, checked against MACULA (${n(d.findings || 0)}
         so far).</p>
+      ${/* WORD CARDS' HEADWORDS (2026-10-27): a reader found G2411, the temple, headed by the adjective ἱερός;
+            server.headwords() and tools/audit_headwords.py. The Hebrew limit is the audit's own finding, stated
+            because it is true now, not as a promise. */''}
+      <p style="max-width:64ch">A word card is one Strong's number, headed by its dictionary form as MACULA
+        gives it, or by STEP's headword where MACULA files two numbers under one form (the temple, ἱερόν, and
+        "sacred", ἱερός); where the two differ, the other is named beside it. In the Hebrew, MACULA files pronoun
+        suffixes and some particles under a Strong's number with a letter added, and a card is keyed by the
+        number alone, so on 25 cards (Dothan's among them) the counts and renderings are mostly the suffix's,
+        not the word's.</p>
       ${/* QUOTATIONS IN THE GRAPH'S OWN TEXT. 2026-10-02: a
             blanket statement in the About states that while BSB is the
             primary interpretation, WEB and ASV may be used interchangeably
@@ -8473,7 +8680,8 @@ async function openAbout(focus){
         each word card is from the Translators Brief lexicons of
         <a href="https://www.STEPBible.org" rel="noopener" target="_blank">STEP Bible</a>
         (CC BY 4.0; based on work by scholars at Tyndale House, Cambridge; the
-        Hebrew after Brown-Driver-Briggs, the Greek after Abbott-Smith), fetched
+        Hebrew after the abridged Brown-Driver-Briggs of the Online Bible, &copy; Larry Pierce, and
+        withheld until the permission it asks for is settled; the Greek after Abbott-Smith), fetched
         from their repository, as is their index of proper names (TIPNR, CC BY
         4.0), used to tell people of one name apart; the verb classes in the claims are from
         WordNet 3.0, under its own licence (its notice is in this project's NOTICE); and the ASV,
@@ -8626,7 +8834,9 @@ function isDark(){
    no email (one-way, as the old notes design chose). The note carries the
    page it was sent from and nothing about the sender. `website` is a field a
    person never sees: a bot that fills it is thanked and dropped. */
-function openFeedback(){
+// `lead`, where a page asks for something particular (a question card, a tradition's page), replaces the opening
+// line of the note's dialog
+function openFeedback(lead){
   if($('#fbdlg')) return;
   const page = location.pathname || '/';
   const about = document.title.replace(/ · Bible Ontology$/, '');
@@ -8634,8 +8844,8 @@ function openFeedback(){
   w.className = 'welcome'; w.id = 'fbdlg';
   w.innerHTML = `<div class="wcard" role="dialog" aria-modal="true" aria-labelledby="fbtitle">
     <h2 id="fbtitle">Something wrong or missing?</h2>
-    <p class="wlead">Tell us what you noticed on <b>${esc(about)}</b>. A sentence is plenty;
-      if a verse says otherwise, name it.</p>
+    <p class="wlead">${lead ? esc(lead) : `Tell us what you noticed on <b>${esc(about)}</b>. A sentence is plenty;
+      if a verse says otherwise, name it.`}</p>
     <textarea id="fbtext" maxlength="1000" rows="6" style="width:100%;margin-top:12px;
       font:inherit;padding:8px 10px;border:1px solid var(--rule);border-radius:8px;
       background:var(--paper);color:var(--ink)" aria-label="Your note"></textarea>
@@ -8680,8 +8890,15 @@ function openFeedback(){
 }
 // the link at the foot of every card, and anywhere else that carries data-fb
 document.addEventListener('click', e => {
-  if(e.target.closest && e.target.closest('[data-fb]')) openFeedback();
+  const b = e.target.closest && e.target.closest('[data-fb]');
+  if(b) openFeedback(b.dataset.fblead);
 });
+// THE INVITATION TO CORRECT (2026-10-26): on a question card and a tradition's page, where a reader who holds a
+// position is the best judge of whether it is stated fairly. No "we": the page says what it means to do.
+const QFAIR_LEAD = 'Which reading is not stated as its holders would state it, or which verse or source is wrong or '
+  + 'missing? A sentence is plenty; name the verse or the document if you can.';
+const fairBox = (text, lead) => `<div class="qfair"><p>${esc(text)}</p>
+  <button class="tdoor" type="button" data-fb data-fblead="${esc(lead)}">Suggest a correction</button></div>`;
 
 function showWelcome(){
   if($('#welcome')) return;
@@ -8702,7 +8919,7 @@ function showWelcome(){
         language, <b>struct</b> for the verse's structure, and, where it has any,
         <b>links</b> for its connections to the rest of Scripture. Tap an underlined word or
         name to open its card.</li>
-      <li><b>Search</b> takes a reference (Jn 3:16), a name (Ahithophel) or a word (mercy).</li>
+      <li><b>Search</b> takes a reference (Jn 3:16), a name (Ahithophel) or a word (mercy), the words of a verse in any order (take every thought), or a Hebrew or Greek word or its Strong&rsquo;s number (G26).</li>
     </ul>
     <h3>Try this</h3>
     <div class="wtry">
@@ -8931,6 +9148,164 @@ async function openRecur(key){
         ? ` <span class="g">— ${esc(x.how)}</span>` : ''}</div>`).join(''),
       null, d.books.length <= 8)).join('')}
   </div>`, () => {});
+}
+
+/* A QUESTION CARD (plan 8.4h, 2026-10-25): "What does the Bible say about ...?" One question Christians read the
+   text on in more than one way: what every reading agrees the text says, then each reading with its own verses,
+   credited to the traditions that hold it, in the order they were articulated, none taken. Each verse opens in
+   place. After the readings, the traditions' own words (2026-10-26): they are in the graph, each document pointing
+   at the verses of the readings it states, and each tradition has a page of its own to go to and come back from.
+   `reading` (1-based) scrolls to that reading, so a tradition's page can link to the reading itself. */
+async function openQuestion(id, reading){
+  const q = await api('/api/question', {id});
+  if(!q.found) return;
+  const vbtn = p => p.go ? `<button class="refmore" data-go="${esc(p.go)}">${esc(p.ref)}</button>` : esc(p.ref || '');
+  const plist = ps => (ps || []).length ? `<div class="qpass">${ps.map(p =>
+    `<div class="echo">${vbtn(p)} “${esc(p.quote || '')}”${p.note ? ` <span class="g">— ${esc(p.note)}</span>` : ''}${
+      /* THE VERSES AROUND IT (2026-10-26: "they are owed the opportunity to show the context if it is needed ...
+         but only if the context is truly needed"): folded, read in place, each verse opening as the rest do */
+      (p.context_verses || []).length ? `<details class="qctx"><summary>Read it with the verses around it (${
+        esc(p.context)})</summary>${p.context_note ? `<p class="hint">${esc(p.context_note)}</p>` : ''}${
+        p.context_verses.map(c => `<div class="qctxv"><button class="refmore" data-go="${esc(c.go)}">${
+          esc(prettyRef(c.go))}</button> ${esc(c.text)}</div>`).join('')}</details>` : ''}</div>`
+  ).join('')}</div>` : '';
+  const ag = q.agreed || {};
+  /* EACH TRADITION IN ITS OWN WORDS: a reading links the statements behind what it says each tradition holds, and
+     the card then sets all of them out by tradition. A tradition's name opens its page here; a document's own
+     link goes to another site (an arrow marks it). */
+  const FR = q.further_reading || [];
+  const tname = f => f.tslug ? `<span class="link" data-tradition="${esc(f.tslug)}">${esc(f.tname)}</span>` : esc(f.tname || '');
+  const frName = f => tname(f) + (f.bname ? ` (${esc(f.bname)})` : '');
+  // how the document stands: a confession, a catechism, an adopted standard, a founder's or a scholar's work
+  const frLink = f => `<a href="${esc(f.url)}" target="_blank" rel="noopener external" title="Opens another site">${esc(f.title)} ↗</a>${
+    f.standing ? ` <span class="g">(${esc(f.standing)})</span>` : ''}`;
+  // WHAT A READING STARTS FROM (2026-10-27: "when I read pre-trib rapture it should clearly state the futurist
+  // assumption is a pre-requisite"): the readings of other cards it takes as given, each a door to that card, and
+  // a line saying how it stands to them; shown, not folded, so the reader meets it with the heading
+  const assumes = r => {
+    const a = r.assumes || [];
+    if (!a.length && !r.assumes_note) return '';
+    const items = a.map(x => x.question ? `<span class="link" data-question="${esc(x.question)}">${esc(x.text)}</span>`
+      : esc(x.text)).join(' and ');
+    return `<p class="hint qassumes">${items ? `<b>Assumes</b> ${items}. ` : ''}${esc(r.assumes_note || '')}</p>`;
+  };
+  // folded: a click opens it, and the verses come right after the summary (2026-10-25: "can be expandable")
+  const own = r => {
+    const s = (r.sources || []).filter(i => FR[i] && FR[i].url);
+    return s.length ? `<details class="qown"><summary class="hint">In its holders' own words (${s.length})</summary>
+      <ul class="hint">${s.map(i => `<li>${frName(FR[i])}: ${frLink(FR[i])}</li>`).join('')}</ul></details>` : '';
+  };
+  const grp = g => `<div class="qtrad"><div class="qtrad-h">${g.slug
+      ? `<button class="tdoor" type="button" data-tradition="${esc(g.slug)}">${esc(g.name)} <span aria-hidden="true">→</span></button>`
+      : `<b>${esc(g.name)}</b>`}<span class="g">${g.docs.length} statement${g.docs.length === 1 ? '' : 's'}</span></div>
+    <ul class="qdocs">${g.docs.map(i => { const f = FR[i]; return `<li>${f.url ? frLink(f) : esc(f.title)}${
+      f.bname ? ` <span class="g">· ${esc(f.bname)}</span>` : ''}${f.says ? `<div class="g">${esc(f.says)}</div>` : ''}</li>`; }).join('')}</ul></div>`;
+  const TG = q.traditions || [];
+  // NESTED QUESTIONS (2026-10-26: "Maybe the rapture hangs off of the end time card as a drill in"): the broader
+  // question this one sits within, as a way back; the narrower ones within it, as doors
+  const within = q.within ? `<p class="hint" style="margin:0 0 6px">Part of <span class="link" data-question="${
+    esc(q.within.id)}">${esc(q.within.question)}</span></p>` : '';
+  const parts = (q.parts || []).length ? `<div class="tdoors" style="margin:4px 0 14px">${q.parts.map(p =>
+    `<button class="tdoor" type="button" data-question="${esc(p.id)}">${esc(p.question)} <span aria-hidden="true">→</span></button>`
+  ).join('')}</div>` : '';
+  const html = `<div class="pane"><div class="kicker">A question · every reading shown, none taken</div>
+    ${within}<h1>${esc(q.question || '')}</h1>
+    <p class="lead" style="max-width:64ch">${esc(q.intro || '')}</p>
+    ${parts ? `<p class="kind" style="margin:0 0 4px">Questions within this one</p>${parts}` : ''}
+    <p class="hint" style="margin-top:-4px">Is a reading not stated as its holders would state it?
+      <button class="wlink" data-fb data-fblead="${esc(QFAIR_LEAD)}">Suggest a correction</button></p>
+    ${ag.summary || (ag.passages || []).length ? sec('q-agreed', 'What every reading agrees the text says',
+      `<p style="max-width:64ch">${esc(ag.summary || '')}</p>${plist(ag.passages)}`, null, true) : ''}
+    ${(q.readings || []).map((r, i) => sec('q-r' + i, r.label || '',
+      `${(r.held_by || []).length ? `<p class="hint">Held by: ${esc(r.held_by.join(', '))}</p>` : ''}${assumes(r)}
+       ${/* the reading's own account, folded (2026-10-26: "these cards can be overwhelming - make the text intros
+             under each position collapsible ... so if someone just wants to look at the supporting verses for each
+             they can"): the verses come first, the account and its answers a click away */''}
+       ${r.summary || r.answers ? `<details class="qwhy"><summary>How its holders read these verses${r.answers
+         ? ', and the other readings’ verses' : ''}</summary>${r.summary ? `<p>${esc(r.summary)}</p>` : ''}${
+         r.answers ? `<p class="hint">${esc(r.answers)}</p>` : ''}</details>` : ''}${own(r)}${plist(r.passages)}`, null, true)).join('')}
+    ${fairBox('Every effort is made to state each reading as its own holders would, with the verses they cite first, '
+      + 'and to favor none. Your feedback is valued: if a reading you hold is not stated as you would state it, a '
+      + 'verse is missing, or a source is credited with more than it says, please say so.', QFAIR_LEAD)}
+    ${/* THE TRADITIONS' OWN WORDS, in the graph (2026-10-26: "these links are part of the knowledge graph"):
+          grouped by tradition, each name a door to its page; the scholars' works are their own group */''}
+    ${FR.length ? sec('q-words', "In the traditions' own words",
+      `<p class="hint" style="max-width:64ch">What each tradition has itself written on this question, set beside the
+        verses of the readings it states. These are the traditions' statements, not this site's claims. A tradition's
+        name opens its page; ↗ marks a link to another site.</p>
+       ${TG.filter(g => !g.school).map(grp).join('')}
+       ${TG.some(g => g.school) ? `<div class="vp-h2">Schools of reading, in their scholars' works</div>${
+         TG.filter(g => g.school).map(grp).join('')}` : ''}`, FR.length, true) : ''}
+    ${(q.terms || []).length ? sec('q-terms', 'Terms the traditions use',
+      `<ul>${q.terms.map(t => `<li><b>${esc(t.term || '')}</b>: ${esc(t.note || '')}</li>`).join('')}</ul>`,
+      q.terms.length, false) : ''}
+    ${(q.themes || []).length || (q.cards || []).length ? `<p class="hint">In the graph: ${[
+      ...(q.themes || []).map(t => `<span class="link" data-mtheme="${esc(t.id)}">${esc(t.title)}</span>`),
+      ...(q.cards || []).map(c => `<span class="link" data-ent="${esc(c.id)}">${esc(c.name)}</span>`)].join(' · ')}</p>` : ''}
+  </div>`;
+  openTab('question:' + q.id, q.short || q.question, html, null, q.id);
+  // arriving at a reading (from a tradition's page, or /questions/<id>#reading-2): it comes into view
+  if(reading) setTimeout(() => {
+    const d = document.querySelector(`#paneinner details[data-sec="q-r${reading - 1}"]`);
+    if(d){ d.open = true; d.scrollIntoView({block: 'start'}); }
+  }, 350);
+}
+
+/* A TRADITION, OR A SCHOOL OF READING (2026-10-26): what it has itself written, in the graph, each document on the
+   verses of the readings it states. Positions come first, question by question, each reading a door back to its
+   question card; the documents follow, by church body. Only what shown question cards reach is here. */
+async function openTradition(slug){
+  const t = await api('/api/tradition', {id: slug});
+  if(!t.found) return;
+  const school = t.level === 'school';
+  const allT = (await api('/api/traditions', {}).catch(() => ({traditions: []}))).traditions || [];
+  const frLink = f => `<a href="${esc(f.url)}" target="_blank" rel="noopener external" title="Opens another site">${esc(f.title)} ↗</a> <span class="g">(${
+    esc(f.standing)}${f.body ? '; ' + esc(f.body) : ''})</span>`;
+  const docs = ds => `<ul class="qdocs">${ds.map(x => `<li>${frLink(x)}${x.says ? `<div class="g">${esc(x.says)}</div>` : ''}</li>`).join('')}</ul>`;
+  const nq = t.positions.length, nd = t.documents.length;
+  const lead = school
+    ? "Readers who share a way of reading these texts, and whose reading no church's own document states. Here are the scholars' works cited for it, each beside the reading it states and the verses that reading rests on. They are the scholars' words, not this site's claims; the site takes none of them."
+    : `One of nine traditions this site sets side by side. Here is what the ${t.name} tradition has itself written on the questions the site sets out, each beside the reading it states and the verses that reading rests on. They are the tradition's own statements, not this site's claims; the site takes none of them.`;
+  const bodies = (t.bodies || []).length ? `<p class="hint" style="max-width:64ch">${t.bodies.length === 1 ? 'Church body' : 'Church bodies'}: ${
+    t.bodies.map(b => `${esc(b.name)} (${b.documents})`).join(' · ')}</p>` : '';
+  const positions = t.positions.map(p => `<div class="tpos"><button class="tdoor" type="button" data-question="${esc(p.id)}">${
+    esc(p.question || p.short)} <span aria-hidden="true">→</span></button>
+    ${p.readings.map(r => `<div class="tread"><span class="link" data-question="${esc(p.id)}" data-reading="${r.index}">${esc(r.label)}</span>${
+      docs(r.docs)}</div>`).join('')}
+    ${p.also.length ? `<div class="tread"><span class="g">Speaks on the question without stating one of its readings</span>${docs(p.also)}</div>` : ''}
+    ${/* the way to the other side (2026-10-26: "maybe the link back mentions across traditions or how traditions
+          differ"): the card sets every reading side by side, so this page need not list the others */''}
+    <div class="tread"><span class="link" data-question="${esc(p.id)}">How the traditions differ on this question: every reading side by side, each with its own verses →</span></div></div>`).join('');
+  const byBody = [...new Set(t.documents.map(x => x.body || ''))].map(b => `${b ? `<div class="vp-h2">${esc(b)}</div>` : ''}<ul class="qdocs">${
+    t.documents.filter(x => (x.body || '') === b).map(x => `<li>${frLink(x)}<div class="g">${
+      x.questions.map(q => `<span class="link" data-question="${esc(q.id)}">${esc(q.short)}</span>`).join(' · ')}</div></li>`).join('')}</ul>`).join('');
+  const html = `<div class="pane"><div class="kicker">${school ? "A school of reading · its scholars' works" : 'A tradition · its own words'}</div>
+    <h1>${esc(t.name)}</h1>
+    <p class="lead" style="max-width:64ch">${esc(lead)}</p>${bodies}
+    ${fairBox(`Every effort is made to set out what ${school ? 'these scholars have' : 'the ' + t.name + ' tradition has'} written accurately, `
+      + 'in its own words, and to favor no tradition. Your feedback is valued: if a position is misstated, a document '
+      + 'is credited with more than it says, or one is missing, please say so.',
+      `What is misstated or missing on the page for ${t.name}? Name the document or the question if you can; a sentence is plenty.`)}
+    ${sec('t-positions', 'Where it stands, question by question', positions, nq, true)}
+    ${sec('t-docs', 'Its documents', byBody, nd, nd <= 12)}
+    <p class="hint"><span class="link" data-traditions="1">All the traditions${allT.some(m => m.level === 'school') ? ' and schools of reading' : ''}</span></p>
+  </div>`;
+  openTab('tradition:' + t.slug, t.name, html, null, t.slug);
+}
+
+async function openTraditions(){
+  const d = await api('/api/traditions', {});
+  if(!(d.traditions || []).length) return;
+  const row = m => `<button class="tdoor tdoor-row" type="button" data-tradition="${esc(m.slug)}"><b>${esc(m.name)}</b>
+    <span class="g">${m.documents} document${m.documents === 1 ? '' : 's'} on ${m.questions} question${m.questions === 1 ? '' : 's'}</span></button>`;
+  const T = d.traditions.filter(m => m.level === 'tradition'), SC = d.traditions.filter(m => m.level === 'school');
+  const html = `<div class="pane"><div class="kicker">Their own words, beside the verses they rest on</div>
+    <h1>Traditions${SC.length ? ' and schools of reading' : ''}</h1>
+    <p class="lead" style="max-width:64ch">What each tradition${SC.length ? ', and each school of reading,' : ''} has itself written on the questions the Bible is read on in more than one way, each beside the reading it states. They are the traditions' statements${SC.length ? " and the scholars' works" : ''}, not this site's claims.</p>
+    ${T.length ? `<div class="vp-h2">Traditions</div><div class="tdoors">${T.map(row).join('')}</div>` : ''}
+    ${SC.length ? `<div class="vp-h2">Schools of reading, in their scholars' works</div><div class="tdoors">${SC.map(row).join('')}</div>` : ''}
+  </div>`;
+  openTab('traditions', 'Traditions', html, null, 'all');
 }
 
 async function openMajorTheme(id){
@@ -9272,7 +9647,7 @@ async function buildExplore(){
      explaining that these are topical groupings for viewers to see related
      content grouped together. Since 10-04 they sat under Patterns; every
      theme now has a front page and a table setting its passages side by
-     side, which is what makes them the way in. Shown open, in their five
+     side, which is what makes them the way in. Shown (closed at first), in their five
      groups, each row naming its table. Addresses unchanged. */
   const mtBy = Object.fromEntries((mthemes.themes || []).map(t => [t.id, t]));
   const themesSec = () => (mthemes.themes||[]).length ? sec('x-themes', `Themes`,
@@ -9284,7 +9659,41 @@ async function buildExplore(){
           .filter(id => mtBy[id]).map(id => { const t = mtBy[id];
             return row(`data-mtheme="${esc(t.id)}"`, t.title,
               t.door ? `${t.door.title} · ${t.door.n} rows` : (t.subtitle || '')); }).join('')).join(''),
-      mthemes.themes.length, true) : '';
+      // closed at first (2026-10-26: "now that we are adding this content - themes can start collapsed"):
+      // the questions and the traditions follow, and an open list of every theme pushed them out of sight
+      mthemes.themes.length, false) : '';
+  /* QUESTIONS, RIGHT AFTER THE THEMES (plan 8.4h; 2026-10-25: "What does the
+     Bible say about gets its own section on explore right after themes").
+     Only shown questions come back, so with none shown the section is absent. */
+  const quests = await api('/api/questions', {}).catch(() => ({questions: []}));
+  const questionsSec = () => (quests.questions||[]).length ? sec('x-questions', `What does the Bible say about…`,
+      `<p class="hint" style="margin:0 0 10px;max-width:62ch">Questions Christians answer differently. Each
+        page sets out what every reading agrees the text says, then each reading with the verses its
+        holders cite, side by side, and takes none of them.</p>`
+      // in a few groups (2026-10-26: "the whole list can be organized into a few groups"), a question nested
+      // within another listed under it, indented
+      + (() => {
+          const byId = Object.fromEntries(quests.questions.map(q => [q.id, q]));
+          const line = q => row(`data-question="${esc(q.id)}"`, q.within ? `↳ ${q.question}` : q.question, '');
+          const groups = (quests.groups || []).length ? quests.groups : [{name: '', questions: quests.questions.map(q => q.id)}];
+          return groups.map(g => (g.name ? `<div class="vp-h2">${esc(g.name)}</div>` : '')
+            + g.questions.filter(id => byId[id]).map(id => line(byId[id])).join('')).join('');
+        })(),
+      // closed at first, like the themes (2026-10-27: "start with what does the Bible say about collapsed in the
+      // Explore")
+      quests.questions.length, false) : '';
+  /* THE TRADITIONS, RIGHT AFTER THE QUESTIONS (2026-10-26): what each has itself written on them. Only
+     traditions a shown question reaches come back, so with none shown the section is absent. */
+  const trads = await api('/api/traditions', {}).catch(() => ({traditions: []}));
+  // schools of reading named only while one is listed (2026-10-27: every school came from the held last-things
+  // cards, and Doug: "remove it for next release")
+  const tSchools = (trads.traditions||[]).some(m => m.level === 'school');
+  const traditionsSec = () => (trads.traditions||[]).length ? sec('x-traditions', `Traditions${tSchools ? ' and schools of reading' : ''}`,
+      `<p class="hint" style="margin:0 0 10px;max-width:62ch">What each tradition${tSchools ? ', and each school of reading,' : ''} has
+        itself written on those questions, beside the verses of the readings it states.</p>`
+      + trads.traditions.map(m => row(`data-tradition="${esc(m.slug)}"`, m.name,
+          `${m.documents} document${m.documents === 1 ? '' : 's'} on ${m.questions} question${m.questions === 1 ? '' : 's'}`)).join(''),
+      trads.traditions.length, false) : '';
   const recurs = await api('/api/recurs', {}).catch(() => ({groups: []}));
   /* Every Explore list goes through the block, so filter + paging arrive
      everywhere at once rather than being added per list. */
@@ -9357,6 +9766,8 @@ async function buildExplore(){
       things, events, and patterns the text repeats. Everything here opens as a card or a
       page, the same you get by tapping a word in the reader.</p>
     ${themesSec()}
+    ${questionsSec()}
+    ${traditionsSec()}
     ${/* The note is not decoration. Without it the first question a reader has
           is "why isn't the commonest one first", and the answer -- that the
           commonest ones are grammar -- is the most useful thing on the page. */''}
@@ -9517,6 +9928,9 @@ async function buildExplore(){
                       : l.dataset.recur ? openRecur(l.dataset.recur)
                       : l.dataset.go ? peekAt(l, l.dataset.go)
                       : l.dataset.mtheme ? openMajorTheme(l.dataset.mtheme)
+                      : l.dataset.question ? openQuestion(l.dataset.question)
+                      // the traditions' rows (2026-10-27: they fell through to openSense and opened nothing)
+                      : l.dataset.tradition ? openTradition(l.dataset.tradition)
                       : l.dataset.theme ? openTheme(l.dataset.theme)
                       : l.dataset.layer
                         ? openLayerItem(l.dataset.layer, l.dataset.lkey)
@@ -10233,6 +10647,10 @@ function setExplore(html, wire){
     : path.startsWith('/theme/') ? path.slice(7).replace(/\/$/, '') : null;
   // the Navigator centred on a record (A.21): it starts from KGN.center
   const graphId = path.startsWith('/graph/') ? path.slice(7).replace(/\/$/, '') : null;
+  // a question card at its own address (plan 8.4h)
+  const questionId = path.startsWith('/questions/') ? path.slice(11).replace(/\/$/, '') : null;
+  // a tradition or a school of reading (2026-10-26), and their list
+  const traditionId = path.startsWith('/traditions/') ? path.slice(12).replace(/\/$/, '') : null;
   // an Explore group's own address (/explore/told-again, /explore/shared):
   // Explore, with that group open and in view (2026-10-04: it might work if
   // consolidated on the Explore page)
@@ -10256,6 +10674,9 @@ function setExplore(html, wire){
   else if(themeId && themeId.includes('/'))   // a theme's table: /theme/<id>/<slug>
     openImagery(themeId.split('/')[0], {row: (bootHash.match(/^#row-(\d+)$/) || [])[1]});
   else if(themeId) openMajorTheme(themeId);
+  else if(questionId) openQuestion(questionId, +(bootHash.match(/^#reading-(\d+)$/) || [])[1] || 0);
+  else if(traditionId) openTradition(traditionId);
+  else if(path.replace(/\/$/, '') === '/traditions') openTraditions();
   else if(exploreId){
     await buildExplore();
     // every section has an address (2026-10-11): a Patterns group by its

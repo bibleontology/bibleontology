@@ -1,0 +1,11 @@
+{
+  "_what": "How the question cards are grouped and nested (Doug, 2026-10-26: 'the rapture hangs off of the end time card as a drill in - the other thing here is that the whole list can be organized into a few groups'). 'baptism goes with sacraments - baptism, communion, other'; named 'Sacraments and ordinances' because traditions differ on the word itself. A grouping of the site's own, for finding the questions, not a claim about the text. 'within' nests a narrower question inside a broader one: it is listed under it and opened from it.",
+  "groups": [
+    {"name": "Salvation", "questions": ["faith-and-works", "can-salvation-be-lost", "election"]},
+    {"name": "The human person", "questions": ["human-nature", "total-depravity", "free-will"]},
+    {"name": "Sacraments and ordinances", "questions": ["baptism", "communion"]},
+    {"name": "Church life", "questions": ["sabbath", "tithing", "speaking-in-tongues"]},
+    {"name": "Last things", "questions": ["after-death", "hell", "end-times", "millennium", "rapture"]}
+  ],
+  "within": {"millennium": "end-times", "rapture": "end-times"}
+}

@@ -13,6 +13,11 @@ What is listed, and why:
     quotation, echo, parallel or judged shared wording (ontology/
     allusions.jsonl); a verse page with only its text is thin,
     and a site with many thin pages is discounted
+  - the word cards (/word/H157), at the address word_page answers 200 to
+    and never a spelling it redirects, and only those whose page holds
+    something: it quotes WORD_MIN_VERSES verses and has WORD_MIN_WORDS words
+    of text, both measured on the page as it is built each time this runs, so
+    a richer page passes more words in and nothing here goes stale
   - never /graph/<id>: those name the card as the page to keep (the graph
     view is not to be the dominant mode that search engines use)
 
@@ -50,6 +55,35 @@ TRAINING = ["GPTBot", "ClaudeBot", "anthropic-ai", "CCBot", "Google-Extended",
 # (their crawlers are Googlebot and Applebot, which search with the same visit)
 TOKENS_ONLY = {"Google-Extended", "Applebot-Extended"}
 SPEECH = re.compile(r"^.+ at (?:[1-3] ?)?[A-Z][a-z]+\.? \d+:\d+$")
+# a word card's page is listed when it is substantial, measured on its body as
+# word_page builds it now (2026-10-26: 13,424 pages; 6,098 pass). Of the rest,
+# 1,021 quote no verse and 4,215 quote one; "a site with many thin pages is
+# discounted". Re-run after the pages change: the counts follow the pages.
+WORD_MIN_VERSES, WORD_MIN_WORDS = 3, 100
+
+
+def word_substance(body):
+    """(words of text, verses quoted) in a word page's body."""
+    return len(re.sub(r"<[^>]+>", " ", body).split()), len(re.findall(r'href="/p/', body))
+
+
+def word_listing(d, only=None):
+    """(addresses to list, every page's (words, verses)): each word card whose
+    canonical page is substantial. The address is the one word_page names
+    itself, so a redirecting spelling is never listed."""
+    keys = sorted(k for k in set(d["lex"]) | set(d["profiles"]) | set(d.get("lemmas") or {})
+                  if re.match(r"^[hg]\d+$", k) and (only is None or k in only))
+    listed, measured = [], []
+    for k in keys:
+        spelt = k[:1].upper() + k[1:]
+        got = S.word_page(spelt)
+        if not got or got[2] != spelt:
+            continue
+        w, v = word_substance(got[1])
+        measured.append((w, v))
+        if v >= WORD_MIN_VERSES and w >= WORD_MIN_WORDS:
+            listed.append(f"/word/{got[2]}")
+    return listed, measured
 
 
 def urlset(urls, today):
@@ -73,6 +107,13 @@ def main():
               if (S.OUT / "ns" / f).exists()]
     # (a theme's imagery side by side, plan 7.6b: its own page, shown once
     # the site's owner has seen it)
+    # the traditions (2026-10-26): a page for each that a SHOWN question card reaches, and their list; with no
+    # card shown there are none, so nothing derived from an unshown card is listed
+    trad = S._traditions()
+    if trad:
+        pages += ["/traditions"] + [m["path"] for m in trad.values()]
+    # the question cards themselves, each once shown (_questions() holds only the shown ones outside the preview)
+    pages += [f"/questions/{qid}" for qid in sorted(S._questions())]
     # the blog (2026-10-05: included in the sitemap as well): its list and
     # every post built by tools/blog_build.py
     blog = ROOT / "app2" / "static" / "blog"
@@ -144,9 +185,11 @@ def main():
             chapters.append(f"/p/{b}.{c}")
         if (b, c, v) in cited or (b, c, v) in echoed:
             verses.append(f"/p/{b}.{c}.{v}")
+    words, wmeasured = word_listing(d)
     OUT.mkdir(parents=True, exist_ok=True)
     files = {"sitemap-pages.xml": pages, "sitemap-cards.xml": cards,
-             "sitemap-chapters.xml": chapters, "sitemap-verses.xml": verses}
+             "sitemap-chapters.xml": chapters, "sitemap-verses.xml": verses,
+             "sitemap-words.xml": words}
     for name, urls in files.items():
         assert len(urls) <= 50000, name          # the protocol's limit per file
         (OUT / name).write_text(urlset(urls, today), encoding="utf-8", newline="\n")
@@ -170,7 +213,8 @@ def main():
     n_verses = len(d["verses"])
     print(f"pages {len(pages)}, cards {len(cards)} (left out {skipped}), chapters {len(chapters)}, "
           f"verses {len(verses)} of {n_verses} ({len(cited)} cited by a card, {len(echoed)} with "
-          f"quotation, echo or parallel) -> {OUT}")
+          f"quotation, echo or parallel), word cards {len(words)} of {len(wmeasured)} "
+          f"(>= {WORD_MIN_VERSES} verses and >= {WORD_MIN_WORDS} words) -> {OUT}")
 
 
 if __name__ == "__main__":

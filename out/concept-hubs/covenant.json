@@ -1,0 +1,2558 @@
+{
+ "id": "covenant",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h1285",
+   "lemma": "בְּרִית",
+   "form": "noun",
+   "translit": "be.rit",
+   "gloss": "covenant",
+   "lang": "Hebrew",
+   "uses": 263,
+   "other_sense": 0
+  },
+  {
+   "key": "g1242",
+   "lemma": "διαθήκη",
+   "form": "noun",
+   "translit": "diathēkē",
+   "gloss": "covenant",
+   "lang": "Greek",
+   "uses": 30,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of the covenant"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "abraham",
+   "name": "Abraham",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "noah",
+   "name": "Noah",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "david",
+   "name": "David",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "blood",
+   "name": "blood",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "children_of_israel",
+   "name": "the sons of Israel",
+   "type": "group",
+   "missing": false
+  },
+  {
+   "id": "sabbath",
+   "name": "the sabbath",
+   "type": "observance",
+   "missing": false
+  },
+  {
+   "id": "priests",
+   "name": "the priests",
+   "type": "group",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "theme_covenant_r1",
+   "name": "I will establish My covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r2",
+   "name": "The covenant with Noah",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r4",
+   "name": "The covenant with Abraham",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r8",
+   "name": "The covenant at Sinai",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r13",
+   "name": "The blood of the covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r16",
+   "name": "The covenant with David",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r19",
+   "name": "His covenant of loving devotion",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r22",
+   "name": "The covenants of the promise",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_covenant_r32",
+   "name": "A new covenant",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "event_covenant_with_noah",
+   "name": "Covenant with Noah",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "event_covenant_cutting",
+   "name": "Covenant cutting (Genesis 15)",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "event_the_covenant_of_circumcision",
+   "name": "The Covenant of Circumcision",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "event_the_covenant_sealed",
+   "name": "The Covenant Sealed",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "event_davidic_covenant",
+   "name": "Davidic covenant",
+   "type": "event",
+   "missing": false
+  },
+  {
+   "id": "event_last_supper",
+   "name": "Last Supper",
+   "type": "event",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.9.12",
+   "ref": "Genesis 9:12",
+   "text": "And God said, “This is the sign of the covenant I am making between Me and you and every living creature with you, a covenant for all generations to come:"
+  },
+  {
+   "id": "Gen.17.7",
+   "ref": "Genesis 17:7",
+   "text": "I will establish My covenant as an everlasting covenant between Me and you and your descendants after you, to be your God and the God of your descendants after you."
+  },
+  {
+   "id": "Exod.24.8",
+   "ref": "Exodus 24:8",
+   "text": "So Moses took the blood, splattered it on the people, and said, “This is the blood of the covenant that the LORD has made with you in accordance with all these words.”"
+  },
+  {
+   "id": "2Sam.23.5",
+   "ref": "2 Samuel 23:5",
+   "text": "Is not my house right with God? For He has established with me an everlasting covenant, ordered and secured in every part. Will He not bring about my full salvation and my every desire?"
+  },
+  {
+   "id": "Jer.31.31",
+   "ref": "Jeremiah 31:31",
+   "text": "Behold, the days are coming, declares the LORD, when I will make a new covenant with the house of Israel and with the house of Judah."
+  },
+  {
+   "id": "Luke.22.20",
+   "ref": "Luke 22:20",
+   "text": "In the same way, after supper He took the cup, saying, “This cup is the new covenant in My blood, which is poured out for you."
+  },
+  {
+   "id": "Gal.3.17",
+   "ref": "Galatians 3:17",
+   "text": "What I mean is this: The law that came 430 years later does not revoke the covenant previously established by God, so as to nullify the promise."
+  },
+  {
+   "id": "Heb.8.13",
+   "ref": "Hebrews 8:13",
+   "text": "By speaking of a new covenant, He has made the first one obsolete; and what is obsolete and aging will soon disappear."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 293,
+   "rows": [
+    {
+     "label": "With Noah and every living creature",
+     "note": "Gen 6:18 and 9:9 say “you”: God's speech to Noah, who is named in Gen 6:8 and 9:8.",
+     "doors": [
+      {
+       "id": "noah",
+       "name": "Noah",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r2",
+       "name": "The covenant with Noah",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_covenant_with_noah",
+       "name": "Covenant with Noah",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Gen.6.18",
+      "Gen.9.9",
+      "Gen.9.12",
+      "Gen.9.16",
+      "Gen.9.11",
+      "Gen.9.13",
+      "Gen.9.15",
+      "Gen.9.17"
+     ],
+     "eg": [
+      {
+       "id": "Gen.6.18",
+       "ref": "Genesis 6:18",
+       "text": "But I will establish My covenant with you, and you will enter the ark-you and your sons and your wife and your sons' wives with you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.9.9",
+       "ref": "Genesis 9:9",
+       "text": "“Behold, I now establish My covenant with you and your descendants after you,",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.9.12",
+       "ref": "Genesis 9:12",
+       "text": "And God said, “This is the sign of the covenant I am making between Me and you and every living creature with you, a covenant for all generations to come:",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.9.16",
+       "ref": "Genesis 9:16",
+       "text": "And whenever the rainbow appears in the clouds, I will see it and remember the everlasting covenant between God and every living creature of every kind that is on the earth.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "With the day and the night, the beasts, the stones, one's eyes, death",
+     "note": "Isa 28:15 and 28:18 are the words of leaders who say “We have made a covenant with death”; 28:18 says “Your covenant with death will be dissolved”. The page says no more of them.",
+     "doors": [
+      {
+       "id": "theme_covenant_r3",
+       "name": "The covenant between Me and the earth",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Jer.33.20",
+      "Hos.2.18",
+      "Job.5.23",
+      "Job.31.1",
+      "Job.41.4",
+      "Isa.28.15",
+      "Isa.28.18",
+      "Jer.33.25"
+     ],
+     "eg": [
+      {
+       "id": "Jer.33.20",
+       "ref": "Jeremiah 33:20",
+       "text": "“This is what the LORD says: If you can break My covenant with the day and My covenant with the night, so that day and night cease to occupy their appointed time,",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Hos.2.18",
+       "ref": "Hosea 2:18",
+       "text": "On that day I will make a covenant for them with the beasts of the field and the birds of the air and the creatures that crawl on the ground. And I will abolish bow and sword and battle in the land, and will make them lie down in safety.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Job.5.23",
+       "ref": "Job 5:23",
+       "text": "For you will have a covenant with the stones of the field, and the wild animals will be at peace with you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Job.31.1",
+       "ref": "Job 31:1",
+       "text": "“I have made a covenant with my eyes. How then could I gaze with desire at a virgin?",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "With Abram, Abraham, Isaac and Jacob",
+     "note": "Gen 17:2-14 is God's speech to Abram, named in 17:1 and renamed Abraham in 17:5; the verses of it that say covenant are here though they say “you”, not the name. Jacob is named with them in Exod 2:24, Lev 26:42, 2 Kgs 13:23, 1 Chr 16:17 and Ps 105:10.",
+     "doors": [
+      {
+       "id": "abraham",
+       "name": "Abraham",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r4",
+       "name": "The covenant with Abraham",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_covenant_cutting",
+       "name": "Covenant cutting (Genesis 15)",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "event_the_covenant_of_circumcision",
+       "name": "The Covenant of Circumcision",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Gen.15.18",
+      "Gen.17.7",
+      "Exod.2.24",
+      "Acts.3.25",
+      "Gen.17.2",
+      "Gen.17.4",
+      "Gen.17.9",
+      "Gen.17.10",
+      "Gen.17.11",
+      "Gen.17.13",
+      "Gen.17.14",
+      "Gen.17.19",
+      "Gen.17.21",
+      "Exod.6.4",
+      "Lev.26.42",
+      "2Kgs.13.23",
+      "1Chr.16.17",
+      "Ps.105.10",
+      "Acts.7.8"
+     ],
+     "eg": [
+      {
+       "id": "Gen.15.18",
+       "ref": "Genesis 15:18",
+       "text": "On that day the LORD made a covenant with Abram, saying, “To your descendants I have given this land-from the river of Egypt to the great River Euphrates-",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.17.7",
+       "ref": "Genesis 17:7",
+       "text": "I will establish My covenant as an everlasting covenant between Me and you and your descendants after you, to be your God and the God of your descendants after you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Exod.2.24",
+       "ref": "Exodus 2:24",
+       "text": "So God heard their groaning, and He remembered His covenant with Abraham, Isaac, and Jacob.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Acts.3.25",
+       "ref": "Acts 3:25",
+       "text": "And you are sons of the prophets and of the covenant God made with your fathers when He said to Abraham, ‘Through your offspring all the families of the earth will be blessed.'",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Egypt, Sinai, Horeb and Moses",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_covenant_r8",
+       "name": "The covenant at Sinai",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_the_covenant_sealed",
+       "name": "The Covenant Sealed",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "event_the_lord_renews_the_covenant",
+       "name": "The LORD Renews the Covenant",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 26,
+     "verses": [
+      "Exod.24.8",
+      "Exod.34.28",
+      "Deut.5.2",
+      "Judg.2.1",
+      "Exod.6.5",
+      "Heb.8.9",
+      "Exod.19.5",
+      "Exod.24.7",
+      "Exod.34.10",
+      "Exod.34.27",
+      "Lev.26.45",
+      "Num.14.44",
+      "Deut.4.13",
+      "Deut.9.9",
+      "Deut.9.11",
+      "Deut.9.15",
+      "Deut.29.1",
+      "Deut.29.25",
+      "Deut.31.9",
+      "Deut.31.16",
+      "Deut.31.25",
+      "Josh.8.33",
+      "1Kgs.8.21",
+      "2Kgs.18.12",
+      "Jer.31.32",
+      "Jer.34.13"
+     ],
+     "eg": [
+      {
+       "id": "Exod.24.8",
+       "ref": "Exodus 24:8",
+       "text": "So Moses took the blood, splattered it on the people, and said, “This is the blood of the covenant that the LORD has made with you in accordance with all these words.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Exod.34.28",
+       "ref": "Exodus 34:28",
+       "text": "So Moses was there with the LORD forty days and forty nights without eating bread or drinking water. He wrote on the tablets the words of the covenant-the Ten Commandments.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Deut.5.2",
+       "ref": "Deuteronomy 5:2",
+       "text": "The LORD our God made a covenant with us at Horeb.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Judg.2.1",
+       "ref": "Judges 2:1",
+       "text": "Now the angel of the LORD went up from Gilgal to Bochim and said, “I brought you up out of Egypt and led you into the land that I had promised to your fathers, and I said, ‘I will never break My covenant with you,",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Covenants made in Moab, at Shechem and in the days of Jehoiada, Asa, Hezekiah, Josiah and Ezra",
+     "note": "Several of these verses say “the king” or “they”, not the name: 2 Kgs 23:3 is Josiah's (named in 23:1), 2 Chr 15:12 is Asa's (named in 15:8), and 2 Chr 29:10 is Hezekiah's (named in 29:1).",
+     "doors": [
+      {
+       "id": "event_the_covenant_in_moab",
+       "name": "The Covenant in Moab",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "event_covenant_renewal_at_shechem",
+       "name": "Covenant renewal at Shechem",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "event_josiahs_reforms",
+       "name": "Josiah’s reforms",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r27",
+       "name": "Made a covenant before the LORD",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Deut.29.1",
+      "Josh.24.25",
+      "2Kgs.23.3",
+      "2Chr.15.12",
+      "Deut.29.12",
+      "Deut.29.14",
+      "2Kgs.11.17",
+      "2Chr.23.1",
+      "2Chr.23.3",
+      "2Chr.23.16",
+      "2Chr.29.10",
+      "2Chr.34.31",
+      "Ezra.10.3"
+     ],
+     "eg": [
+      {
+       "id": "Deut.29.1",
+       "ref": "Deuteronomy 29:1",
+       "text": "These are the words of the covenant that the LORD commanded Moses to make with the Israelites in the land of Moab, in addition to the covenant He had made with them at Horeb.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Josh.24.25",
+       "ref": "Joshua 24:25",
+       "text": "On that day Joshua made a covenant for the people, and there at Shechem he established for them a statute and ordinance.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.23.3",
+       "ref": "2 Kings 23:3",
+       "text": "So the king stood by the pillar and made a covenant before the LORD to follow the LORD and to keep His commandments, decrees, and statutes with all his heart and all his soul, and to carry out the words of the covenant that were written in this book. And all the people entered into the covenant.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.15.12",
+       "ref": "2 Chronicles 15:12",
+       "text": "Then they entered into a covenant to seek the LORD, the God of their fathers, with all their heart and soul.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "David",
+     "note": "2 Sam 23:5 says “my house” and “me”: it is David's own speech, his last words, named in 23:1.",
+     "doors": [
+      {
+       "id": "david",
+       "name": "David",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r16",
+       "name": "The covenant with David",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_davidic_covenant",
+       "name": "Davidic covenant",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "2Sam.23.5",
+      "Ps.89.3",
+      "Isa.55.3",
+      "2Chr.21.7",
+      "2Chr.13.5",
+      "Ps.89.28",
+      "Ps.89.34",
+      "Ps.89.39",
+      "Ps.132.12",
+      "Jer.33.21"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.23.5",
+       "ref": "2 Samuel 23:5",
+       "text": "Is not my house right with God? For He has established with me an everlasting covenant, ordered and secured in every part. Will He not bring about my full salvation and my every desire?",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Ps.89.3",
+       "ref": "Psalms 89:3",
+       "text": "You said, “I have made a covenant with My chosen one, I have sworn to David My servant:",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Isa.55.3",
+       "ref": "Isaiah 55:3",
+       "text": "Incline your ear and come to Me; listen, so that your soul may live. I will make with you an everlasting covenant-My loving devotion promised to David.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.21.7",
+       "ref": "2 Chronicles 21:7",
+       "text": "Yet the LORD was unwilling to destroy the house of David, because of the covenant He had made with David, and since He had promised to maintain a lamp for David and his descendants forever.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Levi, Phinehas and the priests",
+     "note": "Several of these verses say “him” or “you”, not the name: Num 25:12-13 speak of Phinehas (named in 25:11), Mal 2:5 of Levi (named in 2:4), Deut 33:9 is Moses' blessing of Levi (33:8), and Num 18:19 is said to Aaron and his sons (18:1).",
+     "doors": [
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "levites",
+       "name": "the Levites",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r17",
+       "name": "The covenant of peace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Num.25.12",
+      "Mal.2.4",
+      "Neh.13.29",
+      "Deut.33.9",
+      "Num.18.19",
+      "Num.25.13",
+      "Jer.33.21",
+      "Mal.2.5",
+      "Mal.2.8"
+     ],
+     "eg": [
+      {
+       "id": "Num.25.12",
+       "ref": "Numbers 25:12",
+       "text": "Declare, therefore, that I am granting him My covenant of peace.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Mal.2.4",
+       "ref": "Malachi 2:4",
+       "text": "Then you will know that I have sent you this commandment so that My covenant with Levi may continue,” says the LORD of Hosts.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Neh.13.29",
+       "ref": "Nehemiah 13:29",
+       "text": "Remember them, O my God, because they have defiled the priesthood and the covenant of the priesthood and of the Levites.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Deut.33.9",
+       "ref": "Deuteronomy 33:9",
+       "text": "He said of his father and mother, ‘I do not consider them.' He disregarded his brothers and did not know his own sons, for he kept Your word and maintained Your covenant.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A new covenant; the first covenant, the old covenant",
+     "note": "The text's own phrases: “a new covenant” in the Hebrew (Jer 31:31) and in the Greek that quotes it (Heb 8:8, 9:15, 12:24), in the words over the cup (Luke 22:20; 1 Cor 11:25) and in Paul's ministry (2 Cor 3:6); and “the first covenant” (Heb 9:15) and “the old covenant” (2 Cor 3:14). In Heb 8:7, 8:13, 9:1 and 9:18 the Berean prints “covenant” where the Greek says only “the first” or “new” and has no noun, so those verses are not counted in this hub; Heb 8:13 is among its key verses. The Hebrew text says “a new covenant” only at Jer 31:31; “the old covenant” (2 Cor 3:14) and “the first covenant” (Heb 9:15) are phrases of Paul and of Hebrews, not of the Hebrew Scriptures. Jer 31:31-33 also stands in the rows on Egypt, Israel, the law, the heart, and making and breaking the covenant, so the passage can be read in sequence. How the new covenant stands to the covenants before it -- one covenant renewed, or another -- and to whom it is made, Israel or the church, is a point on which Christian traditions part, and the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "theme_covenant_r32",
+       "name": "A new covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Jer.31.31",
+      "Luke.22.20",
+      "Heb.9.15",
+      "2Cor.3.14",
+      "1Cor.11.25",
+      "2Cor.3.6",
+      "Heb.8.8",
+      "Heb.12.24"
+     ],
+     "eg": [
+      {
+       "id": "Jer.31.31",
+       "ref": "Jeremiah 31:31",
+       "text": "Behold, the days are coming, declares the LORD, when I will make a new covenant with the house of Israel and with the house of Judah.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Luke.22.20",
+       "ref": "Luke 22:20",
+       "text": "In the same way, after supper He took the cup, saying, “This cup is the new covenant in My blood, which is poured out for you.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.15",
+       "ref": "Hebrews 9:15",
+       "text": "Therefore Christ is the mediator of a new covenant, so that those who are called may receive the promised eternal inheritance, now that He has died to redeem them from the transgressions committed under the first covenant.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.3.14",
+       "ref": "2 Corinthians 3:14",
+       "text": "But their minds were closed. For to this day the same veil remains at the reading of the old covenant. It has not been lifted, because only in Christ can it be removed.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "An everlasting covenant; a covenant of peace",
+     "note": "The text's own phrases: “an everlasting covenant” of Noah, of Abraham, of David, of the priests, of the LORD with His people, and in Heb 13:20 “the blood of the eternal covenant”; and “My covenant of peace”. These are two phrases, not one: “everlasting” is the Hebrew עוֹלָם, “peace” is שָׁלוֹם, and the row holds the verses of either. Heb 13:20 is in Greek, and its word for “eternal” is αἰώνιος, a different word from the Hebrew. Where Christian traditions part on how the covenants that are called everlasting stand to one another and to the new covenant, the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "theme_covenant_r18",
+       "name": "An everlasting covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r17",
+       "name": "The covenant of peace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Gen.9.16",
+      "Gen.17.7",
+      "Isa.54.10",
+      "Heb.13.20",
+      "Gen.17.13",
+      "Gen.17.19",
+      "Exod.31.16",
+      "Lev.24.8",
+      "Num.18.19",
+      "Num.25.12",
+      "2Sam.23.5",
+      "1Chr.16.15",
+      "1Chr.16.17",
+      "Ps.105.8",
+      "Ps.105.10",
+      "Ps.111.9",
+      "Isa.24.5",
+      "Isa.55.3",
+      "Isa.61.8",
+      "Jer.32.40",
+      "Jer.50.5",
+      "Ezek.16.60",
+      "Ezek.34.25",
+      "Ezek.37.26",
+      "Mal.2.5"
+     ],
+     "eg": [
+      {
+       "id": "Gen.9.16",
+       "ref": "Genesis 9:16",
+       "text": "And whenever the rainbow appears in the clouds, I will see it and remember the everlasting covenant between God and every living creature of every kind that is on the earth.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.17.7",
+       "ref": "Genesis 17:7",
+       "text": "I will establish My covenant as an everlasting covenant between Me and you and your descendants after you, to be your God and the God of your descendants after you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Isa.54.10",
+       "ref": "Isaiah 54:10",
+       "text": "Though the mountains may be removed and the hills may be shaken, My loving devotion will not depart from you, and My covenant of peace will not be broken,” says the LORD, who has compassion on you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Heb.13.20",
+       "ref": "Hebrews 13:20",
+       "text": "Now may the God of peace, who through the blood of the eternal covenant brought back from the dead our Lord Jesus, that great Shepherd of the sheep,",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The covenant and foreigners, strangers, the nations",
+     "note": "The verses that name the foreigner, the stranger or the nations beside the covenant: the many nations of Abraham (Gen 17:4), foreigners who “hold fast to My covenant” (Isa 56:6), the foreigner as well as the native-born at Ebal (Josh 8:33), foreigners brought into the sanctuary (Ezek 44:7), and “strangers to the covenants of promise” (Eph 2:12). Where Christian traditions part on how the nations and Israel stand to the covenants, the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "theme_covenant_r29",
+       "name": "Foreigners who hold fast to My covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Gen.17.4",
+      "Isa.56.6",
+      "Josh.8.33",
+      "Eph.2.12",
+      "Exod.34.10",
+      "Lev.26.45",
+      "2Kgs.17.15",
+      "Ezek.44.7"
+     ],
+     "eg": [
+      {
+       "id": "Gen.17.4",
+       "ref": "Genesis 17:4",
+       "text": "“As for Me, this is My covenant with you: You will be the father of many nations.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Isa.56.6",
+       "ref": "Isaiah 56:6",
+       "text": "And the foreigners who join themselves to the LORD to minister to Him, to love the name of the LORD, and to be His servants-all who keep the Sabbath without profaning it and who hold fast to My covenant-",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Josh.8.33",
+       "ref": "Joshua 8:33",
+       "text": "All Israel, foreigners and citizens alike, with their elders, officers, and judges, stood on both sides of the ark of the covenant of the LORD facing the Levitical priests who carried it. Half of the people stood in front of Mount Gerizim and half of them in front of Mount Ebal, as Moses the servant of the LORD had commanded earlier, to bless the people of Israel.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.12",
+       "ref": "Ephesians 2:12",
+       "text": "remember that at that time you were separate from Christ, alienated from the commonwealth of Israel, and strangers to the covenants of the promise, without hope and without God in the world.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The covenant and Israel, Judah",
+     "note": "The verses that name Israel or Judah beside the covenant, among them the covenant made “with the house of Israel and with the house of Judah” (Jer 31:31, quoted at Heb 8:8) and the covenants that “belong to the Israelites” (Rom 9:4). Where Christian traditions part on whom the covenants are with, and how Israel and the church stand to them, the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 52,
+     "verses": [
+      "Exod.6.5",
+      "Jer.31.31",
+      "Rom.9.4",
+      "Heb.8.8",
+      "Exod.31.16",
+      "Exod.34.27",
+      "Lev.24.8",
+      "Num.18.19",
+      "Num.25.13",
+      "Deut.29.1",
+      "Deut.29.21",
+      "Deut.31.9",
+      "Josh.3.17",
+      "Josh.4.7",
+      "Josh.7.11",
+      "Josh.7.15",
+      "Josh.8.33",
+      "Josh.9.6",
+      "Josh.9.7",
+      "Judg.2.20",
+      "Judg.20.27",
+      "1Sam.4.3",
+      "1Sam.4.5",
+      "2Sam.3.12",
+      "2Sam.3.21",
+      "2Sam.5.3",
+      "1Kgs.8.1",
+      "1Kgs.8.23",
+      "1Kgs.15.19",
+      "1Kgs.19.10",
+      "1Kgs.19.14",
+      "2Kgs.23.2",
+      "1Chr.11.3",
+      "1Chr.15.25",
+      "1Chr.15.28",
+      "1Chr.16.17",
+      "2Chr.5.2",
+      "2Chr.6.11",
+      "2Chr.6.14",
+      "2Chr.13.5",
+      "2Chr.16.3",
+      "2Chr.29.10",
+      "2Chr.34.30",
+      "Ps.105.10",
+      "Jer.11.2",
+      "Jer.11.3",
+      "Jer.11.6",
+      "Jer.11.10",
+      "Jer.31.33",
+      "Jer.34.13",
+      "Eph.2.12",
+      "Heb.8.10"
+     ],
+     "eg": [
+      {
+       "id": "Exod.6.5",
+       "ref": "Exodus 6:5",
+       "text": "Furthermore, I have heard the groaning of the Israelites, whom the Egyptians are enslaving, and I have remembered My covenant.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Jer.31.31",
+       "ref": "Jeremiah 31:31",
+       "text": "Behold, the days are coming, declares the LORD, when I will make a new covenant with the house of Israel and with the house of Judah.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.4",
+       "ref": "Romans 9:4",
+       "text": "the people of Israel. Theirs is the adoption as sons; theirs the divine glory and the covenants; theirs the giving of the law, the temple worship, and the promises.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Heb.8.8",
+       "ref": "Hebrews 8:8",
+       "text": "But God found fault with the people and said: “Behold, the days are coming, declares the Lord, when I will make a new covenant with the house of Israel and with the house of Judah.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The covenant and the law, the commandments, the promise",
+     "note": "The verses that name the law, the commandments, the statutes or the promise beside the covenant, among them Gal 3:17 (“The law that came 430 years later does not revoke the covenant previously established by God, so as to nullify the promise”) and Eph 2:12 (“the covenants of promise”). Where Christian traditions part on how the law and the promise stand to the covenants, the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "commandments",
+       "name": "the commandments",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r11",
+       "name": "Keep My covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 33,
+     "verses": [
+      "Ps.78.10",
+      "Gal.3.17",
+      "Eph.2.12",
+      "Lev.26.15",
+      "Rom.9.4",
+      "Num.18.19",
+      "Deut.7.9",
+      "Deut.29.21",
+      "Deut.31.9",
+      "Deut.31.26",
+      "Josh.24.25",
+      "1Kgs.11.11",
+      "2Kgs.17.15",
+      "2Kgs.23.3",
+      "1Chr.16.17",
+      "2Chr.34.31",
+      "Ezra.10.3",
+      "Neh.1.5",
+      "Ps.25.10",
+      "Ps.50.16",
+      "Ps.105.10",
+      "Ps.132.12",
+      "Isa.24.5",
+      "Jer.31.33",
+      "Jer.33.25",
+      "Dan.9.4",
+      "Hos.8.1",
+      "Mal.2.4",
+      "Mal.2.8",
+      "Heb.8.6",
+      "Heb.8.10",
+      "Heb.9.15",
+      "Heb.10.16"
+     ],
+     "eg": [
+      {
+       "id": "Ps.78.10",
+       "ref": "Psalms 78:10",
+       "text": "They failed to keep God's covenant and refused to live by His law.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.17",
+       "ref": "Galatians 3:17",
+       "text": "What I mean is this: The law that came 430 years later does not revoke the covenant previously established by God, so as to nullify the promise.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.12",
+       "ref": "Ephesians 2:12",
+       "text": "remember that at that time you were separate from Christ, alienated from the commonwealth of Israel, and strangers to the covenants of the promise, without hope and without God in the world.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Lev.26.15",
+       "ref": "Leviticus 26:15",
+       "text": "and if you reject My statutes, despise My ordinances, and neglect to carry out all My commandments, and so break My covenant,",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The covenants, two covenants, a better covenant; Jesus its guarantor and mediator",
+     "note": "The plural and the comparative, in the text's own words: “the covenants” (Rom 9:4), “the covenants of promise” (Eph 2:12), “two covenants” (Gal 4:24), “a better covenant” (Heb 7:22, 8:6), “the mediator of a new covenant” (Heb 9:15, 12:24). Heb 7:22, 8:6 and 12:24 name Jesus, Heb 9:15 Christ. Gal 4:24 gives “two covenants” in what the Berean calls illustrations (the Greek is ἀλληγορούμενα) of Hagar and Sinai, not as a count of the covenants; the plural in Rom 9:4 and Eph 2:12 gives no number. “Guarantor” is Heb 7:22 only; “mediator” is Heb 8:6, 9:15, 12:24. How many covenants the Bible holds, and how they relate, is a point on which Christian traditions part, and the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "theme_covenant_r22",
+       "name": "The covenants of the promise",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Rom.9.4",
+      "Gal.4.24",
+      "Heb.7.22",
+      "Heb.12.24",
+      "Eph.2.12",
+      "Heb.8.6",
+      "Heb.9.15"
+     ],
+     "eg": [
+      {
+       "id": "Rom.9.4",
+       "ref": "Romans 9:4",
+       "text": "the people of Israel. Theirs is the adoption as sons; theirs the divine glory and the covenants; theirs the giving of the law, the temple worship, and the promises.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Gal.4.24",
+       "ref": "Galatians 4:24",
+       "text": "These things serve as illustrations, for the women represent two covenants. One covenant is from Mount Sinai and bears children into slavery: This is Hagar.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Heb.7.22",
+       "ref": "Hebrews 7:22",
+       "text": "Because of this oath, Jesus has become the guarantee of a better covenant.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.24",
+       "ref": "Hebrews 12:24",
+       "text": "to Jesus the mediator of a new covenant, and to the sprinkled blood that speaks a better word than the blood of Abel.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Written on the heart; My Spirit and My words; the Spirit, not the letter",
+     "note": "Three things, each in its own verses. “I will put My laws in their minds and inscribe them on their hearts” (Jer 31:33; Heb 8:10; 10:16) says nothing of the Spirit. “My Spirit who is upon you, and My words that I have put in your mouth” (Isa 59:21) says nothing of the heart. “Not of the letter but of the Spirit” (2 Cor 3:6) sets the Spirit against the letter. Where Christian traditions part on how these stand to the other covenants and to whom they are made, the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "theme_covenant_r31",
+       "name": "This is My covenant with them",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r32",
+       "name": "A new covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Jer.31.33",
+      "Heb.8.10",
+      "Isa.59.21",
+      "2Cor.3.6",
+      "Heb.10.16"
+     ],
+     "eg": [
+      {
+       "id": "Jer.31.33",
+       "ref": "Jeremiah 31:33",
+       "text": "“But this is the covenant I will make with the house of Israel after those days, declares the LORD. I will put My law in their minds and inscribe it on their hearts. And I will be their God, and they will be My people.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Heb.8.10",
+       "ref": "Hebrews 8:10",
+       "text": "For this is the covenant I will make with the house of Israel after those days, declares the Lord. I will put My laws in their minds and inscribe them on their hearts. And I will be their God, and they will be My people.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Isa.59.21",
+       "ref": "Isaiah 59:21",
+       "text": "“As for Me, this is My covenant with them,” says the LORD. “My Spirit will not depart from you, and My words that I have put in your mouth will not depart from your mouth or from the mouths of your children and grandchildren, from now on and forevermore,” says the LORD.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.3.6",
+       "ref": "2 Corinthians 3:6",
+       "text": "And He has qualified us as ministers of a new covenant, not of the letter but of the Spirit; for the letter kills, but the Spirit gives life.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The blood of the covenant, the cup, the sacrifice",
+     "note": "The Hebrew verses first: “Behold the blood of the covenant” (Exod 24:8), “because of the blood of My covenant” (Zech 9:11), “a covenant with Me by sacrifice” (Ps 50:5). Then the Greek: “My blood of the covenant, which is poured out for many” (Matt 26:28), “This cup is the new covenant in My blood” (Luke 22:20; 1 Cor 11:25). What a sacrifice does, and whether the Lord's Supper is a sacrifice or a memorial, are points on which Christian traditions part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_covenant_r13",
+       "name": "The blood of the covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "blood",
+       "name": "blood",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_last_supper",
+       "name": "Last Supper",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Exod.24.8",
+      "Ps.50.5",
+      "Luke.22.20",
+      "Heb.10.29",
+      "Matt.26.28",
+      "1Cor.11.25",
+      "Zech.9.11",
+      "Mark.14.24",
+      "Heb.9.20",
+      "Heb.12.24",
+      "Heb.13.20"
+     ],
+     "eg": [
+      {
+       "id": "Exod.24.8",
+       "ref": "Exodus 24:8",
+       "text": "So Moses took the blood, splattered it on the people, and said, “This is the blood of the covenant that the LORD has made with you in accordance with all these words.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Ps.50.5",
+       "ref": "Psalms 50:5",
+       "text": "“Gather to Me My saints, who made a covenant with Me by sacrifice.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Luke.22.20",
+       "ref": "Luke 22:20",
+       "text": "In the same way, after supper He took the cup, saying, “This cup is the new covenant in My blood, which is poured out for you.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.29",
+       "ref": "Hebrews 10:29",
+       "text": "How much more severely do you think one deserves to be punished who has trampled on the Son of God, profaned the blood of the covenant that sanctified him, and insulted the Spirit of grace?",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The sign of the covenant: the rainbow and circumcision",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_covenant_r6",
+       "name": "A sign of the covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_the_covenant_of_circumcision",
+       "name": "The Covenant of Circumcision",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Gen.9.12",
+      "Gen.17.11",
+      "Gen.17.14",
+      "Acts.7.8",
+      "Gen.9.13",
+      "Gen.9.17",
+      "Gen.17.10",
+      "Gen.17.13"
+     ],
+     "eg": [
+      {
+       "id": "Gen.9.12",
+       "ref": "Genesis 9:12",
+       "text": "And God said, “This is the sign of the covenant I am making between Me and you and every living creature with you, a covenant for all generations to come:",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.17.11",
+       "ref": "Genesis 17:11",
+       "text": "You are to circumcise the flesh of your foreskin, and this will be a sign of the covenant between Me and you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.17.14",
+       "ref": "Genesis 17:14",
+       "text": "But if any male is not circumcised, he will be cut off from his people; he has broken My covenant.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Acts.7.8",
+       "ref": "Acts 7:8",
+       "text": "Then God gave Abraham the covenant of circumcision, and Abraham became the father of Isaac and circumcised him on the eighth day. And Isaac became the father of Jacob, and Jacob of the twelve patriarchs.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The ark, the tablets and the book of the covenant",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_covenant_r10",
+       "name": "The ark and the tablets of the covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r9",
+       "name": "The words of this covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 49,
+     "verses": [
+      "Num.10.33",
+      "Deut.9.11",
+      "Exod.24.7",
+      "Heb.9.4",
+      "Num.14.44",
+      "Deut.9.9",
+      "Deut.9.15",
+      "Deut.10.8",
+      "Deut.31.9",
+      "Deut.31.25",
+      "Deut.31.26",
+      "Josh.3.3",
+      "Josh.3.6",
+      "Josh.3.8",
+      "Josh.3.11",
+      "Josh.3.14",
+      "Josh.3.17",
+      "Josh.4.7",
+      "Josh.4.9",
+      "Josh.4.18",
+      "Josh.6.6",
+      "Josh.6.8",
+      "Josh.8.33",
+      "Judg.20.27",
+      "1Sam.4.3",
+      "1Sam.4.4",
+      "1Sam.4.5",
+      "2Sam.15.24",
+      "1Kgs.3.15",
+      "1Kgs.6.19",
+      "1Kgs.8.1",
+      "1Kgs.8.6",
+      "2Kgs.23.2",
+      "2Kgs.23.21",
+      "1Chr.15.25",
+      "1Chr.15.26",
+      "1Chr.15.28",
+      "1Chr.15.29",
+      "1Chr.16.6",
+      "1Chr.16.37",
+      "1Chr.17.1",
+      "1Chr.22.19",
+      "1Chr.28.2",
+      "1Chr.28.18",
+      "2Chr.5.2",
+      "2Chr.5.7",
+      "2Chr.34.30",
+      "Jer.3.16",
+      "Rev.11.19"
+     ],
+     "eg": [
+      {
+       "id": "Num.10.33",
+       "ref": "Numbers 10:33",
+       "text": "So they set out on a three-day journey from the mountain of the LORD, with the ark of the covenant of the LORD traveling ahead of them for those three days to seek a resting place for them.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Deut.9.11",
+       "ref": "Deuteronomy 9:11",
+       "text": "And at the end of forty days and forty nights, the LORD gave me the two stone tablets, the tablets of the covenant.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Exod.24.7",
+       "ref": "Exodus 24:7",
+       "text": "Then he took the Book of the Covenant and read it to the people, who replied, “All that the LORD has spoken we will do, and we will be obedient.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.4",
+       "ref": "Hebrews 9:4",
+       "text": "containing the golden altar of incense and the gold-covered ark of the covenant. Inside the ark were the gold jar of manna, Aaron's staff that had budded, and the stone tablets of the covenant.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The covenant and loving devotion, mercy",
+     "note": "In Neh 9:32 the Hebrew has “the covenant and the steadfast love” (בְּרִית and חֶסֶד), and the Berean prints “gracious covenant”.",
+     "doors": [
+      {
+       "id": "theme_covenant_r19",
+       "name": "His covenant of loving devotion",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Deut.7.9",
+      "1Kgs.8.23",
+      "Neh.9.32",
+      "Luke.1.72",
+      "Deut.7.12",
+      "1Sam.20.8",
+      "2Chr.6.14",
+      "Neh.1.5",
+      "Ps.25.10",
+      "Ps.89.28",
+      "Ps.106.45",
+      "Isa.54.10",
+      "Isa.55.3",
+      "Dan.9.4"
+     ],
+     "eg": [
+      {
+       "id": "Deut.7.9",
+       "ref": "Deuteronomy 7:9",
+       "text": "Know therefore that the LORD your God is God, the faithful God who keeps His covenant of loving devotion for a thousand generations of those who love Him and keep His commandments.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.8.23",
+       "ref": "1 Kings 8:23",
+       "text": "and said: “O LORD, God of Israel, there is no God like You in heaven above or on earth below, keeping Your covenant of loving devotion with Your servants who walk before You with all their hearts.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Neh.9.32",
+       "ref": "Nehemiah 9:32",
+       "text": "So now, our God, the great and mighty and awesome God who keeps His gracious covenant, do not view lightly all the hardship that has come upon us, and upon our kings and leaders, our priests and prophets, our ancestors and all Your people, from the days of the kings of Assyria until today.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.72",
+       "ref": "Luke 1:72",
+       "text": "to show mercy to our fathers and to remember His holy covenant,",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The covenant with an oath or a curse",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_covenant_r20",
+       "name": "By Myself I have sworn",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Deut.29.12",
+      "Gen.26.28",
+      "Deut.4.31",
+      "Deut.29.21",
+      "Deut.7.12",
+      "Deut.8.18",
+      "Deut.29.14",
+      "Deut.31.20",
+      "Josh.9.15",
+      "Judg.2.1",
+      "2Kgs.11.4",
+      "Ps.89.3",
+      "Ezek.16.8",
+      "Ezek.16.59",
+      "Ezek.17.13",
+      "Ezek.17.16",
+      "Ezek.17.18",
+      "Ezek.17.19",
+      "Hos.10.4"
+     ],
+     "eg": [
+      {
+       "id": "Deut.29.12",
+       "ref": "Deuteronomy 29:12",
+       "text": "so that you may enter into the covenant of the LORD your God, which He is making with you today, and into His oath,",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.26.28",
+       "ref": "Genesis 26:28",
+       "text": "“We can plainly see that the LORD has been with you,” they replied. “We recommend that there should now be an oath between us and you. Let us make a covenant with you",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Deut.4.31",
+       "ref": "Deuteronomy 4:31",
+       "text": "For the LORD your God is a merciful God; He will not abandon you or destroy you or forget the covenant with your fathers, which He swore to them by oath.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Deut.29.21",
+       "ref": "Deuteronomy 29:21",
+       "text": "and single him out from all the tribes of Israel for disaster, according to all the curses of the covenant written in this Book of the Law.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Between people and nations: made, sworn and forbidden",
+     "note": "One Hebrew word, בְּרִית, which the Berean prints “covenant”, “treaty” or “alliance”. Exod 23:32 and Deut 7:2 name the peoples of the land (Canaan) as those with whom no covenant, no treaty, is to be made; Josh 9 is the Gibeonites' covenant, and Joshua says to them “Why did you deceive us” (9:22). Ps 83:5 is a covenant formed against God. The verses are set as the text states them.",
+     "doors": [
+      {
+       "id": "theme_covenant_r23",
+       "name": "Covenants between people",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r24",
+       "name": "You shall make no covenant with them",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_david_jonathan_covenant",
+       "name": "David & Jonathan covenant",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 40,
+     "verses": [
+      "Gen.21.27",
+      "1Sam.18.3",
+      "1Kgs.5.12",
+      "Exod.23.32",
+      "Gen.14.13",
+      "Gen.21.32",
+      "Gen.26.28",
+      "Gen.31.44",
+      "Exod.34.12",
+      "Exod.34.15",
+      "Deut.7.2",
+      "Josh.9.6",
+      "Josh.9.7",
+      "Josh.9.11",
+      "Josh.9.15",
+      "Josh.9.16",
+      "Judg.2.2",
+      "1Sam.11.1",
+      "1Sam.20.8",
+      "1Sam.23.18",
+      "2Sam.3.12",
+      "2Sam.3.13",
+      "2Sam.3.21",
+      "2Sam.5.3",
+      "1Kgs.15.19",
+      "1Kgs.20.34",
+      "2Chr.16.3",
+      "Ps.83.5",
+      "Isa.33.8",
+      "Jer.34.8",
+      "Jer.34.10",
+      "Jer.34.15",
+      "Jer.34.18",
+      "Ezek.17.13",
+      "Ezek.17.14",
+      "Ezek.17.15",
+      "Hos.10.4",
+      "Hos.12.1",
+      "Amos.1.9",
+      "Obad.1.7"
+     ],
+     "eg": [
+      {
+       "id": "Gen.21.27",
+       "ref": "Genesis 21:27",
+       "text": "So Abraham brought sheep and cattle and gave them to Abimelech, and the two men made a covenant.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.18.3",
+       "ref": "1 Samuel 18:3",
+       "text": "Then Jonathan made a covenant with David because he loved him as himself.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.5.12",
+       "ref": "1 Kings 5:12",
+       "text": "And the LORD gave Solomon wisdom, as He had promised him. There was peace between Hiram and Solomon, and the two of them made a treaty.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Exod.23.32",
+       "ref": "Exodus 23:32",
+       "text": "You shall make no covenant with them or with their gods.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Where the Berean prints “will”",
+     "note": "The same Greek word, διαθήκη, that the Berean prints “covenant” in the rest of its verses, among them Gal 3:15 (“Even a human covenant, once it is ratified, cannot be canceled or amended”) and Heb 9:15 and 9:18 just before and after. In Heb 9:16-17 it prints “will” (“In the case of a will, it is necessary to establish the death of the one who made it”). Whether the Greek means a will, a covenant, or both in these verses is a question translators answer differently, and the page does not choose.",
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "Heb.9.16",
+      "Heb.9.17"
+     ],
+     "eg": [
+      {
+       "id": "Heb.9.16",
+       "ref": "Hebrews 9:16",
+       "text": "In the case of a will, it is necessary to establish the death of the one who made it,",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Heb.9.17",
+       "ref": "Hebrews 9:17",
+       "text": "because a will does not take effect until the one who made it has died; it cannot be executed while he is still alive.",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Make, establish, give a covenant",
+     "note": "The Hebrew idiom for making a covenant is literally “cut” (כָּרַת); the Berean prints “make”. The other verbs are “establish”, “give”, “set”, and the Greek διατίθημι. Many of these verses also stand under the named covenants above (Noah, Abraham, Sinai and the rest), so the two sets overlap; 87 is a count of verses, not of covenants.",
+     "doors": [
+      {
+       "id": "theme_covenant_r1",
+       "name": "I will establish My covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_covenant_cutting",
+       "name": "Covenant cutting (Genesis 15)",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 87,
+     "verses": [
+      "Gen.15.18",
+      "Gen.17.2",
+      "Exod.34.10",
+      "Gen.9.12",
+      "Gen.17.7",
+      "Gen.17.19",
+      "Gen.17.21",
+      "Gen.21.27",
+      "Gen.21.32",
+      "Gen.26.28",
+      "Gen.31.44",
+      "Exod.6.4",
+      "Exod.23.32",
+      "Exod.24.8",
+      "Exod.34.12",
+      "Exod.34.15",
+      "Exod.34.27",
+      "Lev.26.9",
+      "Num.25.12",
+      "Deut.4.23",
+      "Deut.5.2",
+      "Deut.5.3",
+      "Deut.7.2",
+      "Deut.8.18",
+      "Deut.9.9",
+      "Deut.29.1",
+      "Deut.29.14",
+      "Deut.29.25",
+      "Deut.31.16",
+      "Josh.9.6",
+      "Josh.9.7",
+      "Josh.9.11",
+      "Josh.9.15",
+      "Josh.9.16",
+      "Josh.24.25",
+      "Judg.2.2",
+      "1Sam.18.3",
+      "1Sam.23.18",
+      "2Sam.3.12",
+      "2Sam.3.13",
+      "2Sam.3.21",
+      "2Sam.5.3",
+      "1Kgs.5.12",
+      "1Kgs.8.21",
+      "1Kgs.20.34",
+      "2Kgs.11.4",
+      "2Kgs.11.17",
+      "2Kgs.17.15",
+      "2Kgs.17.35",
+      "2Kgs.17.38",
+      "2Kgs.23.3",
+      "1Chr.11.3",
+      "2Chr.6.11",
+      "2Chr.21.7",
+      "2Chr.23.1",
+      "2Chr.23.3",
+      "2Chr.23.16",
+      "2Chr.29.10",
+      "2Chr.34.31",
+      "Ezra.10.3",
+      "Neh.9.8",
+      "Job.31.1",
+      "Job.41.4",
+      "Ps.50.5",
+      "Ps.83.5",
+      "Ps.89.3",
+      "Isa.28.15",
+      "Isa.49.8",
+      "Isa.55.3",
+      "Isa.61.8",
+      "Jer.11.10",
+      "Jer.31.31",
+      "Jer.31.33",
+      "Jer.32.40",
+      "Jer.34.8",
+      "Jer.34.13",
+      "Jer.34.15",
+      "Jer.34.18",
+      "Ezek.16.60",
+      "Ezek.16.62",
+      "Ezek.17.13",
+      "Ezek.34.25",
+      "Ezek.37.26",
+      "Hos.2.18",
+      "Hos.10.4",
+      "Hos.12.1",
+      "Zech.11.10"
+     ],
+     "eg": [
+      {
+       "id": "Gen.15.18",
+       "ref": "Genesis 15:18",
+       "text": "On that day the LORD made a covenant with Abram, saying, “To your descendants I have given this land-from the river of Egypt to the great River Euphrates-",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.17.2",
+       "ref": "Genesis 17:2",
+       "text": "I will establish My covenant between Me and you, and I will multiply you exceedingly.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Exod.34.10",
+       "ref": "Exodus 34:10",
+       "text": "And the LORD said, “Behold, I am making a covenant. Before all your people I will perform wonders that have never been done in any nation in all the world. All the people among whom you live will see the LORD's work, for it is an awesome thing that I am doing with you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Gen.9.12",
+       "ref": "Genesis 9:12",
+       "text": "And God said, “This is the sign of the covenant I am making between Me and you and every living creature with you, a covenant for all generations to come:",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Keep, observe, hold fast to the covenant",
+     "note": "The text's own verbs: “keep My covenant” (Gen 17:9; Exod 19:5), “observe” (Deut 33:9), “hold fast” (Isa 56:4, 56:6), and in the negative “they did not keep” (Ps 78:10). The page says nothing of what keeping earns or whether it can be lost; the verses are set as they stand.",
+     "doors": [
+      {
+       "id": "theme_covenant_r11",
+       "name": "Keep My covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "commandments",
+       "name": "the commandments",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 20,
+     "verses": [
+      "Gen.17.9",
+      "Exod.19.5",
+      "Deut.7.9",
+      "Isa.56.6",
+      "Gen.17.10",
+      "Deut.7.12",
+      "Deut.29.9",
+      "Deut.33.9",
+      "1Kgs.8.23",
+      "1Kgs.11.11",
+      "2Chr.6.14",
+      "Neh.1.5",
+      "Neh.9.32",
+      "Ps.25.10",
+      "Ps.78.10",
+      "Ps.103.18",
+      "Ps.132.12",
+      "Isa.56.4",
+      "Ezek.17.14",
+      "Dan.9.4"
+     ],
+     "eg": [
+      {
+       "id": "Gen.17.9",
+       "ref": "Genesis 17:9",
+       "text": "God also said to Abraham, “You must keep My covenant-you and your descendants in the generations after you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Exod.19.5",
+       "ref": "Exodus 19:5",
+       "text": "Now if you will indeed obey My voice and keep My covenant, you will be My treasured possession out of all the nations-for the whole earth is Mine.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Deut.7.9",
+       "ref": "Deuteronomy 7:9",
+       "text": "Know therefore that the LORD your God is God, the faithful God who keeps His covenant of loving devotion for a thousand generations of those who love Him and keep His commandments.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Isa.56.6",
+       "ref": "Isaiah 56:6",
+       "text": "And the foreigners who join themselves to the LORD to minister to Him, to love the name of the LORD, and to be His servants-all who keep the Sabbath without profaning it and who hold fast to My covenant-",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Remember, forget the covenant",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_covenant_r21",
+       "name": "He remembers His covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Gen.9.15",
+      "Exod.2.24",
+      "Deut.4.23",
+      "Luke.1.72",
+      "Gen.9.16",
+      "Exod.6.5",
+      "Lev.26.42",
+      "Lev.26.45",
+      "Deut.4.31",
+      "2Kgs.17.38",
+      "1Chr.16.15",
+      "Ps.105.8",
+      "Ps.106.45",
+      "Ps.111.5",
+      "Prov.2.17",
+      "Jer.14.21",
+      "Jer.50.5",
+      "Ezek.16.60",
+      "Amos.1.9"
+     ],
+     "eg": [
+      {
+       "id": "Gen.9.15",
+       "ref": "Genesis 9:15",
+       "text": "I will remember My covenant between Me and you and every living creature of every kind. Never again will the waters become a flood to destroy all life.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Exod.2.24",
+       "ref": "Exodus 2:24",
+       "text": "So God heard their groaning, and He remembered His covenant with Abraham, Isaac, and Jacob.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Deut.4.23",
+       "ref": "Deuteronomy 4:23",
+       "text": "Be careful that you do not forget the covenant of the LORD your God that He made with you; do not make an idol for yourselves in the form of anything He has forbidden you.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.72",
+       "ref": "Luke 1:72",
+       "text": "to show mercy to our fathers and to remember His holy covenant,",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Broken, transgressed, forsaken, despised, profaned, corrupted; “did not continue in”",
+     "note": "Hos 6:7 says “like Adam, have transgressed the covenant”; the page does not decide who or what Adam is there.",
+     "doors": [
+      {
+       "id": "theme_covenant_r26",
+       "name": "They broke My covenant",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_covenant_r33",
+       "name": "I will never break My covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 39,
+     "verses": [
+      "Gen.17.14",
+      "Lev.26.15",
+      "Judg.2.1",
+      "Hos.8.1",
+      "Heb.8.9",
+      "Lev.26.44",
+      "Deut.17.2",
+      "Deut.29.25",
+      "Deut.31.16",
+      "Deut.31.20",
+      "Josh.7.11",
+      "Josh.23.16",
+      "Judg.2.20",
+      "1Kgs.19.10",
+      "1Kgs.19.14",
+      "2Kgs.17.15",
+      "Ps.44.17",
+      "Ps.55.20",
+      "Ps.89.34",
+      "Ps.89.39",
+      "Isa.24.5",
+      "Isa.33.8",
+      "Jer.11.10",
+      "Jer.22.9",
+      "Jer.31.32",
+      "Jer.33.21",
+      "Jer.34.18",
+      "Ezek.16.59",
+      "Ezek.17.15",
+      "Ezek.17.16",
+      "Ezek.17.18",
+      "Ezek.17.19",
+      "Ezek.44.7",
+      "Dan.11.30",
+      "Dan.11.32",
+      "Hos.6.7",
+      "Zech.11.10",
+      "Mal.2.8",
+      "Mal.2.10"
+     ],
+     "eg": [
+      {
+       "id": "Gen.17.14",
+       "ref": "Genesis 17:14",
+       "text": "But if any male is not circumcised, he will be cut off from his people; he has broken My covenant.”",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Lev.26.15",
+       "ref": "Leviticus 26:15",
+       "text": "and if you reject My statutes, despise My ordinances, and neglect to carry out all My commandments, and so break My covenant,",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Judg.2.1",
+       "ref": "Judges 2:1",
+       "text": "Now the angel of the LORD went up from Gilgal to Bochim and said, “I brought you up out of Egypt and led you into the land that I had promised to your fathers, and I said, ‘I will never break My covenant with you,",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Hos.8.1",
+       "ref": "Hosea 8:1",
+       "text": "Put the ram's horn to your lips! An eagle looms over the house of the LORD, because the people have transgressed My covenant and rebelled against My law.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "What no other row takes, among it Rom 11:27, “And this is My covenant with them when I take away their sins”, the verse after “all Israel will be saved” (Rom 11:26). Where Christian traditions part on whom “them” is, and on how this stands to the covenants, the page takes no side. Also here: Mal 2:14, “your wife by covenant”, and Mal 3:1, “the Messenger of the covenant”; the page says no more of either. Dan 9:27 names a covenant confirmed with many and an end put to sacrifice and offering; readers part on who “he” is, and the page does not choose. The Hebrew word בְּרִית stands beside words of marriage in Mal 2:14 (“your wife by covenant”), in Prov 2:17 (“the covenant of her God”, said of a woman who abandons “the partner of her youth”) and in Ezek 16:8 (the LORD “entered into a covenant with you, and you became Mine”). Mal 2:14 is here; Prov 2:17 shows in “Remember, forget the covenant” and Ezek 16:8 in “The covenant with an oath or a curse”. The page does not say whether Prov 2:17 means a marriage or the covenant with God.",
+     "doors": [],
+     "n": 17,
+     "verses": [
+      "Lev.2.13",
+      "Rom.11.27",
+      "Lev.26.25",
+      "2Chr.34.32",
+      "Ps.25.14",
+      "Ps.74.20",
+      "Ps.78.37",
+      "Jer.11.8",
+      "Ezek.16.61",
+      "Ezek.20.37",
+      "Ezek.30.5",
+      "Dan.9.27",
+      "Dan.11.22",
+      "Dan.11.28",
+      "Mal.2.14",
+      "Mal.3.1",
+      "Gal.3.15"
+     ],
+     "eg": [
+      {
+       "id": "Lev.2.13",
+       "ref": "Leviticus 2:13",
+       "text": "And you shall season each of your grain offerings with salt. You must not leave the salt of the covenant of your God out of your grain offering; you are to add salt to each of your offerings.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "Rom.11.27",
+       "ref": "Romans 11:27",
+       "text": "And this is My covenant with them when I take away their sins.”",
+       "words": [
+        {
+         "key": "g1242",
+         "lemma": "διαθήκη"
+        }
+       ]
+      },
+      {
+       "id": "Lev.26.25",
+       "ref": "Leviticus 26:25",
+       "text": "And I will bring a sword against you to execute the vengeance of the covenant. Though you withdraw into your cities, I will send a plague among you, and you will be delivered into the hand of the enemy.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.34.32",
+       "ref": "2 Chronicles 34:32",
+       "text": "Then he had everyone in Jerusalem and Benjamin take a stand in agreement to it. So all the people of Jerusalem carried out the covenant of God, the God of their fathers.",
+       "words": [
+        {
+         "key": "h1285",
+         "lemma": "בְּרִית"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “covenant”, “treaty”, “alliance”",
+  "words": [
+   {
+    "key": "h3772",
+    "lemma": "כָּרַת",
+    "translit": "ka.rat",
+    "gloss": "to cut: lack",
+    "lang": "Hebrew",
+    "n": 5,
+    "verses": [
+     "1Sam.20.16",
+     "1Sam.22.8",
+     "1Sam.11.2",
+     "1Kgs.8.9",
+     "2Chr.5.10"
+    ],
+    "note": "כָּרַת means “cut”, the verb of the idiom “cut a covenant”. In these five verses it stands alone, with no word for covenant, and the Berean supplies “covenant” or “treaty”; so they are not in the rows, which stand on the noun בְּרִית.",
+    "eg": [
+     {
+      "id": "1Sam.20.16",
+      "ref": "1 Samuel 20:16",
+      "text": "So Jonathan made a covenant with the house of David, saying, “May the LORD hold David's enemies accountable.”"
+     },
+     {
+      "id": "1Sam.22.8",
+      "ref": "1 Samuel 22:8",
+      "text": "Is that why all of you have conspired against me? Not one of you told me that my own son had made a covenant with the son of Jesse. Not one of you has shown concern for me or revealed to me that my son has stirred up my own servant to lie in wait against me, as is the case today.”"
+     }
+    ]
+   }
+  ]
+ }
+}

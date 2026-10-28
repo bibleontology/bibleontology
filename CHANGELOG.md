@@ -6,6 +6,40 @@ Two things carry versions here:
 - **The graph's exports** in `out/export/`, which carry a date-shaped version of their own (`ontology/ns-version.json`,
   `data`; `out/export/void.ttl`).
 
+## Data 2026.10.27: 2026-10-27
+
+**Questions Christians read the text on differently, side by side.**
+- Ten "What does the Bible say about ...?" cards, in four groups (Salvation; The human person; Sacraments and
+  ordinances; Church life): what every reading agrees the text says, then each reading with the verses its own
+  holders cite first, and no side taken. The cards on last things (the end times, the thousand years, the rapture,
+  what happens after death, and the end of the lost) and the card on tithing are held back and are not in this
+  release.
+- Each reading's verses were audited against what at least three of that position's own sources cite. Every quote is
+  the Berean Standard Bible's exact words.
+- Each card was read by a panel holding each of its readings and by readers of nine traditions; every linked document
+  was fetched and judged for agreement with what the card says of it.
+- Where a quoted verse reads differently without the verses around it, the card can show them in place (13 places).
+- The traditions' own documents (confessions, catechisms, adopted standards; a founder's work, a committee's report
+  and a teacher's answer each marked as such) are listed and linked. A tradition is named as holding a reading only
+  where its own document states it.
+
+**The traditions' own words, as a layer** (`ontology/traditions/`, built from the shown cards by
+`tools/traditions/build.py`): nine traditions, 23 church bodies, 248 documents; 939 edges (`issued_by`, `speaks_on`,
+`states_reading`), each carrying the verses of the reading it supports. The statements are the traditions', never the
+site's claims. Each tradition has a page.
+
+**The tree of the knowledge of good and evil:** its name joined to the cards for knowledge, good and evil
+(`composed_of`, Gen 2:9, 2:17), and the serpent's words at Gen 3:5 to the tree (`speaks_of`).
+
+**Word cards:** how the Berean renders each word (counted), verses in canonical order (they were in alphabetical
+order of book), the Greek lexicon entry whole (Abbott-Smith, via STEP), and the site's word groupings. The Hebrew
+lexicon entries are withheld for now: their source asks that permission be sought from the Online Bible, whose
+abridged Brown-Driver-Briggs they follow. 9,501 word cards are listed in `sitemap-words.xml`.
+
+**Claims:** 21,451 (21,440 before).
+
+**Vocabularies:** unchanged at 1.2.1.
+
 ## Data 2026.10.25: 2026-10-25
 
 **Claims:** 21,440 (21,394 before), of them **8,089 asserted** (8,119).

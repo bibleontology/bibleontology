@@ -70,6 +70,8 @@ PUBLIC: tuple[str, ...] = (
     "app2/*", "src/*", "tools/*", "tests/*", "deploy/*", "pyproject.toml",
     "ontology/entities/*", "ontology/relations/*", "ontology/schema/*", "ontology/meaning/*",
     "ontology/claim/*", "ontology/align/*", "ontology/themes/*", "ontology/concept-hubs/*",
+    # the question cards and the traditions' own words (2026-10-26), each only once shown: see unshown()
+    "ontology/questions/*", "ontology/traditions/*",
     "ontology/numbers/*", "ontology/versions/*", "ontology/events/*.json", "ontology/provenance/*",
     "ontology/*.json", "ontology/*.jsonl", "ontology/*.yaml", "ontology/EXTRACTION_GUIDE.md",
     "out/ns/*", "out/export/*",
@@ -172,12 +174,61 @@ def runtime_inputs() -> set[str]:
     return {x.strip() for x in p.read_text(encoding="utf-8").splitlines() if x.strip() and not x.startswith("#")}
 
 
+def unshown(root: Path = ROOT) -> set[str]:
+    """WHAT THE SITE DOES NOT YET SHOW, NEVER PUBLISHED IN THE DATA (2026-10-26). A concept hub or a question card
+    with "shown": false is a draft the owner has not read; so are its panel trails (they quote it nearly whole) and
+    the traditions layer derived from the cards. The copy carries only what a reader of the site can already open:
+    a hub's spec and build, a card, the hub trails named for it, and the question-card trails only once every card
+    is shown (each trail file covers several cards). The traditions layer is published while cards are held, but
+    rebuilt from the shown cards alone (shown_layer, 2026-10-27: three end-times cards held from the release)."""
+    out, hubs = set(), set()
+    for spec in sorted((root / "ontology" / "concept-hubs").glob("*.json")):
+        if not json.loads(spec.read_text(encoding="utf-8")).get("shown"):
+            hubs.add(spec.stem)
+            out |= {f"ontology/concept-hubs/{spec.name}", f"out/concept-hubs/{spec.name}"}
+    prov = root / "ontology" / "provenance" / "concept-hubs"
+    for f in sorted(prov.glob("*")) if prov.exists() else []:
+        if any(f.name.startswith(h + "-") for h in hubs):
+            out.add(f.relative_to(root).as_posix())
+    cards = sorted((root / "ontology" / "questions").glob("*.json"))
+    hidden = [c for c in cards if not json.loads(c.read_text(encoding="utf-8")).get("shown")]
+    out |= {c.relative_to(root).as_posix() for c in hidden}
+    if hidden:
+        for d in sorted((root / "ontology" / "provenance").glob("question-cards-*")):
+            out |= {f.relative_to(root).as_posix() for f in d.rglob("*") if f.is_file()}
+        # the earlier panel trails (2026-10-25), one pair per card, and a cross-check over every card: a trail goes
+        # out only when it is named for a shown card (2026-10-27: end-times, hell and tithing trails were in the cut)
+        shown = [c.stem for c in cards if c not in hidden]
+        pq = root / "ontology" / "provenance" / "questions"
+        for f in sorted(pq.rglob("*")) if pq.exists() else []:
+            if f.is_file() and not any(f.name.startswith(s + "-") for s in shown):
+                out.add(f.relative_to(root).as_posix())
+    return out
+
+
+def shown_layer(root: Path = ROOT) -> dict[str, bytes]:
+    """The traditions layer as the public copy carries it: built from the shown cards only, so a held card's
+    readings, documents and edges stay out. Empty when every card is shown (the committed layer is then exact)."""
+    qdir = root / "ontology" / "questions"
+    if all(json.loads(c.read_text(encoding="utf-8")).get("shown") for c in qdir.glob("*.json")):
+        return {}
+    sys.path.insert(0, str(ROOT / "tools" / "traditions"))
+    import build as tb
+    nodes, edges, problems = tb.build(qdir, shown_only=True)
+    if problems:
+        raise SystemExit("the traditions layer cannot be built from the shown cards: " + "; ".join(problems))
+    return {"ontology/traditions/nodes.jsonl": tb.lines(nodes).encode("utf-8"),
+            "ontology/traditions/edges.jsonl": tb.lines(edges).encode("utf-8")}
+
+
 def selected() -> list[str]:
     files = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT, capture_output=True, check=True).stdout
     run = runtime_inputs()
+    hide = unshown()
     out = []
     for f in files.decode("utf-8").split("\0"):
-        if f and (matches(f, PUBLIC) or f in run) and not matches(f, NEVER) and "__pycache__" not in f:
+        if f and (matches(f, PUBLIC) or f in run) and not matches(f, NEVER) and "__pycache__" not in f \
+                and f not in hide:
             out.append(f)
     return sorted(out)
 
@@ -449,6 +500,9 @@ def build(check_only: bool, dest: Path | None) -> int:
         out[f] = data
         if text is not None:
             texts[f] = text
+    for f, data in shown_layer().items():          # a held card's part of the layer stays out
+        out[f] = data
+        texts[f] = data.decode("utf-8")
     ids, names = private_readers()
     found = scan(texts, (kjv_only_runs(6), kjv_only_runs(8)), ids, names)
     if found:
@@ -527,6 +581,40 @@ def selftest() -> int:
     got = clean_text("b.jsonl", '{"_built": "2026-09-12T08:10:16+00:00", "on": "2026-09-12"}')
     if "08:10" in got or '"2026-09-12"' not in got:
         fails.append(f"a time of day survived in the data, or its date was lost: {got}")
+    # an unshown hub, an unshown card and their trails stay out (2026-10-26)
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:
+        r = Path(tmp)
+        for sub in ("ontology/concept-hubs", "ontology/questions", "ontology/provenance/concept-hubs",
+                    "ontology/provenance/question-cards-x", "ontology/traditions", "ontology/provenance/questions"):
+            (r / sub).mkdir(parents=True, exist_ok=True)
+        (r / "ontology/concept-hubs/seen.json").write_text('{"shown": true}', encoding="utf-8")
+        (r / "ontology/concept-hubs/draft.json").write_text('{"shown": false}', encoding="utf-8")
+        (r / "ontology/provenance/concept-hubs/draft-panel.json").write_text("{}", encoding="utf-8")
+        (r / "ontology/questions/q.json").write_text('{"shown": false}', encoding="utf-8")
+        (r / "ontology/provenance/question-cards-x/scholar.json").write_text("{}", encoding="utf-8")
+        (r / "ontology/traditions/nodes.jsonl").write_text("{}", encoding="utf-8")
+        (r / "ontology/questions/seen.json").write_text('{"shown": true}', encoding="utf-8")
+        for n in ("q-panel-a.json", "seen-panel-a.json", "cross-check.json"):
+            (r / "ontology/provenance/questions" / n).write_text("{}", encoding="utf-8")
+        hid = unshown(r)
+        want = {"ontology/concept-hubs/draft.json", "out/concept-hubs/draft.json",
+                "ontology/provenance/concept-hubs/draft-panel.json", "ontology/questions/q.json",
+                "ontology/provenance/question-cards-x/scholar.json", "ontology/provenance/questions/q-panel-a.json",
+                "ontology/provenance/questions/cross-check.json"}
+        keep = {"ontology/concept-hubs/seen.json", "ontology/questions/seen.json",
+                "ontology/provenance/questions/seen-panel-a.json"}
+        if not want <= hid or keep & hid:
+            fails.append(f"unshown work would be published, or shown work withheld: {sorted(want - hid)}, "
+                         f"{sorted(keep & hid)}")
+        # the layer goes out rebuilt from the shown cards: a held card's question and readings are not in it
+        (r / "ontology/questions/seen.json").write_text(json.dumps(
+            {"id": "seen-q", "shown": True, "question": "Seen?", "readings": [{"label": "A"}]}), encoding="utf-8")
+        (r / "ontology/questions/q.json").write_text(json.dumps(
+            {"id": "held-q", "shown": False, "question": "Held?", "readings": [{"label": "B"}]}), encoding="utf-8")
+        layer = b"".join(shown_layer(r).values()).decode("utf-8")
+        if "held-q" in layer or "held_q" in layer or "seen_q" not in layer:
+            fails.append("the public traditions layer carries a held card, or lost a shown one")
     if not _ADDR:
         fails.append("the server's address is unknown here: git config --local bibleont.server <address>")
     elif "<server>" not in clean_text("x.md", f"ssh admin@{_ADDR}"):

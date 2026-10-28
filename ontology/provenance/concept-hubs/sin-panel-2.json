@@ -1,0 +1,112 @@
+{
+  "id": "sin",
+  "seats": ["Lutheran", "Reformed", "Wesleyan", "Baptist / free church", "Pentecostal / Charismatic", "Catholic", "Eastern Orthodox", "secular academic scholar", "biblical-theological teacher", "rabbi", "young African American believer"],
+  "overall": "ship after fixes",
+  "fixes": [
+    {
+      "row": "Iniquity, transgression and sin side by side; trespass, lawlessness, wickedness",
+      "kind": "note",
+      "verses": ["Exod.34.7", "Ps.32.5", "Eph.2.1", "1John.3.4"],
+      "readers": ["secular academic scholar", "rabbi", "biblical-theological teacher"],
+      "why": "Two sentences say more than the verses do. 'The Hebrew has three main words for wrongdoing' is a claim about the language, not something the text says (the Hebrew Scriptures have many more words for wrongdoing); the hub is built on the text setting three of them side by side in Exod 34:7. And the Greek sentence ends 'the rest set the words beside each other (Exod 34:7; Ps 32:5; Eph 2:1)': two of those three are Hebrew verses, so the sentence is wrong where it stands. On the owner's 'close to interchangeable': the note is neither too strong nor too weak. It does not assert it, it quotes Exod 34:7, and it says the page does not call them one word; that is the right strength.",
+      "fix": "Open with 'The text sets three Hebrew words for wrongdoing side by side: ...' instead of 'The Hebrew has three main words'. In the Greek sentence cite only Greek verses (Eph 2:1; Rom 4:7; Heb 8:12) and keep Exod 34:7 and Ps 32:5 in the Hebrew sentence. No verse moves."
+    },
+    {
+      "row": "Iniquity, transgression and sin side by side; trespass, lawlessness, wickedness",
+      "kind": "OT framing",
+      "verses": ["1John.3.4", "Exod.34.7"],
+      "readers": ["rabbi", "secular academic scholar", "biblical-theological teacher"],
+      "why": "The rework made this row the place where the Hebrew words for iniquity and transgression are heard, yet its first example is 1 John 3:4, put there in the first round to stop the row being read as a synonym list. The note now says that itself, so the first thing a reader sees about iniquity, transgression and sin is a New Testament sentence. Exod 34:7 is the verse that actually sets the three words in one list.",
+      "fix": "Lead order: Exod 34:7, Ps 32:5, 1 John 3:4, Eph 2:1 (1 John 3:4 stays among the four; the note keeps its sentence that it is the one verse that says one word is the other)."
+    },
+    {
+      "row": "Iniquity, transgression and sin forgiven, atoned for, covered, wiped away, cleansed, taken away, removed, passed over, not counted against",
+      "kind": "note",
+      "verses": ["Isa.22.14", "1Sam.3.14", "Jer.18.23", "Ps.109.14", "Mark.3.29", "Matt.12.31", "Prov.17.9", "Prov.10.12", "Prov.20.9", "Josh.22.17"],
+      "readers": ["secular academic scholar", "rabbi", "biblical-theological teacher"],
+      "why": "The label and note say each verse holds a word of wrongdoing and a word for putting it away, but several verses say it is NOT put away (Isa 22:14 'will not be atoned for', 1 Sam 3:14, Jer 18:23, Ps 109:14, Mark 3:29, Matt 12:31, Josh 22:17 'we have not cleansed ourselves'), one is a question denying self-cleansing (Prov 20:9, 'Who can say ... I am cleansed from my sin'), and two are one person covering another's offense (Prov 10:12, 17:9). The note names only Heb 10:4 and 10:11. A reader who counts the 153 as 'forgiven' is misled by the label; a reader who checks Isa 22:14 finds the opposite. The report says the hard verses 'say not' but the page does not.",
+      "fix": "Add to the note: 'A few verses in the row say the opposite or ask: Isa 22:14, 1 Sam 3:14, Jer 18:23, Ps 109:14, Josh 22:17, Matt 12:31 and Mark 3:29 say it is not atoned for, wiped out or forgiven; Prov 20:9 asks who can say he is cleansed from sin; Prov 10:12 and 17:9 are one person covering another's offense.' Move nothing."
+    },
+    {
+      "row": "Sin carried or lifted: “bear his iniquity”, “forgiving iniquity”, “bore the sin of many”, “takes away the sin of the world”",
+      "kind": "different words",
+      "verses": ["Isa.53.6", "Isa.53.11", "Lam.5.7", "Heb.9.28", "1Pet.2.24"],
+      "readers": ["secular academic scholar", "rabbi", "biblical-theological teacher"],
+      "why": "The report and note build the row on the verb נָשָׂא (and αἴρω), but five verses in it use other verbs, checked in the original: Isa 53:6 הִפְגִּיעַ 'laid on', Isa 53:11 יִסְבֹּל 'bear' (סָבַל), Lam 5:7 סָבָלְנוּ 'we bear' (סָבַל), Heb 9:28 ἀνενεγκεῖν 'to bear' and 1 Pet 2:24 ἀνήνεγκεν 'bore' (ἀναφέρω). The note admits only Isa 53:6, and it says 'the Greek αἴρω is John 1:29 and 1 John 3:5', which leaves Heb 9:28 and 1 Pet 2:24 unexplained. Rule 4: the row reads as though 'bear' were one word. Two of the five carry Isa 53 and the NT verses that bear on it, so the Reformed, Lutheran and Catholic seats would not want them removed, and the rabbi would not want them silently joined.",
+      "fix": "Keep the verses; add to the note: 'Five verses use other words for bearing: Isa 53:11 and Lam 5:7 have סָבַל, Isa 53:6 has הִפְגִּיעַ, “laid”, and Heb 9:28 and 1 Pet 2:24 have the Greek ἀναφέρω, “bear”, not αἴρω; they are here because the verse says the sin is borne or laid, and the page does not say these words are the one verb.' Alternatively relabel the row from the idea (not the verb) and drop the 'the verb נָשָׂא' claim."
+    },
+    {
+      "row": "Sin carried or lifted: “bear his iniquity”, “forgiving iniquity”, “bore the sin of many”, “takes away the sin of the world”",
+      "kind": "OT framing",
+      "verses": ["Isa.53.12", "John.1.29", "Lev.5.1", "Exod.34.7", "Lev.16.22", "Num.14.34"],
+      "readers": ["rabbi", "secular academic scholar", "biblical-theological teacher"],
+      "why": "The label closes on 'bore the sin of many', 'takes away the sin of the world', and the four examples run Lev 5:1, Exod 34:7, Isa 53:12, John 1:29. Read down, the row's headline is a path from Isa 53:12 to John 1:29, which is the very link the note says the page does not make. The Torah idiom (the goat bearing all their iniquities, Lev 16:22; Num 14:34 'you shall bear your guilt'; the priests bearing the iniquity of the sanctuary) is what the verb is, and Lev 16:22 is the sharpest of it; it is in the 47 but not among the examples.",
+      "fix": "Examples: Lev 5:1, Exod 34:7, Lev 16:22, John 1:29 (Isa 53:12 stays in the row, third in the verse list). Label: “bear his iniquity”, “forgiving iniquity”, “the goat will carry on itself all their iniquities”, “bore the sin of many”, “takes away the sin of the world”."
+    },
+    {
+      "row": "Sin carried or lifted: “bear his iniquity”, “forgiving iniquity”, “bore the sin of many”, “takes away the sin of the world”",
+      "kind": "note",
+      "verses": ["Exod.28.38", "Num.18.1", "Num.18.23", "Num.18.22", "Num.5.31"],
+      "readers": ["rabbi", "secular academic scholar", "biblical-theological teacher"],
+      "why": "The worker asked whether Aaron and the priests bearing the iniquity of the holy things and the sanctuary is clear. It is not: the note never mentions it. A reader finds Exod 28:38 ('he may bear the iniquity of the holy things'), Num 18:1 and 18:23 under 'Sin carried or lifted' with no word that this is a priestly duty in the sanctuary's service, not forgiveness and not punishment. Checked in the Berean: all three print 'bear the iniquity'.",
+      "fix": "Add one sentence: 'In the Law the priests bear iniquity as part of their service: Aaron “the iniquity of the holy things” (Exod 28:38), and Aaron, his sons and the Levites the iniquity of the sanctuary and their priesthood (Num 18:1, 18:23); the page does not say what the text means by it.'"
+    },
+    {
+      "row": "Sin and its consequence: “die in your sin”, “the wages of sin is death”, “sevenfold for your sins”, “bear the consequences of his sin”",
+      "kind": "misfit",
+      "verses": ["Heb.9.15"],
+      "readers": ["secular academic scholar", "biblical-theological teacher"],
+      "why": "The worker's own weak pass, confirmed: Heb 9:15 says Christ 'has died to redeem them from the transgressions committed under the first covenant'. The death in the verse is a redemption from transgressions (ἀπολύτρωσιν τῶν ... παραβάσεων), not a consequence of sin; here it sits beside 'die in your sin' and 'the wages of sin is death' and reads as one. A Christ-death verse in a row of 'what comes of sin' reads a later frame into the row.",
+      "fix": "Move Heb 9:15 out of the consequence row into the forgiven row (the 'redemption' door is already there) or the Christ row; if it stays, add to the consequence note that Heb 9:15 is a death that redeems from transgressions. No other verse moves."
+    },
+    {
+      "row": "Sin and its consequence: “die in your sin”, “the wages of sin is death”, “sevenfold for your sins”, “bear the consequences of his sin”",
+      "kind": "note",
+      "verses": ["Isa.53.8", "Isa.53.12", "Isa.53.6"],
+      "readers": ["rabbi", "Reformed", "Catholic"],
+      "why": "Isa 53:8 ('stricken for the transgression of My people') and 53:12 are filed under 'consequence', and the note is silent about them, whereas the carried row's note says Isa 53:11-12 name no one and the page takes no side. A rabbi reads the Servant as Israel, and the Christian seats as Christ or in other ways; listing 'stricken for transgression' under 'what comes of sin' presents one reading of whose consequence it is. Isa 53:12 'bore the sin of many' in a consequence row also contradicts the carried row's careful 'does not say'.",
+      "fix": "Add to the consequence note: 'Isa 53:8 and 53:12 are here and in the row for sin carried or lifted; they name no one, and where traditions part on whom they speak of, the page takes no side.' (Or move Isa 53:8 and 53:12 to the carried row only.)"
+    },
+    {
+      "row": "Sin and the law, the commandment",
+      "kind": "OT framing",
+      "verses": ["Num.15.31", "Dan.9.13", "Amos.2.4", "Mal.2.6", "2Kgs.10.31", "Rom.3.20", "Rom.7.7", "1Cor.15.56", "Jas.2.9"],
+      "readers": ["rabbi", "secular academic scholar", "biblical-theological teacher"],
+      "why": "The Hebrew iniquity and transgression verses joined a row whose label, note and four examples are all Pauline and one from James (Rom 3:20, Rom 7:7, 1 Cor 15:56, Jas 2:9): 'the law brings awareness of sin', 'the power of sin is the law'. Num 15:31 (despising the word of the LORD and breaking his commandment), Dan 9:13, Amos 2:4 (rejecting the Law of the LORD), Mal 2:6 (true instruction turned many from iniquity) say something different: sin is breaking or rejecting the law, and the law's instruction turns people from iniquity. The note speaks only of the Greek words, so these Hebrew verses are filed under a New Testament heading without a word of their own (rule 5).",
+      "fix": "Add to the note: 'The Hebrew verses here say what the law forbids and what breaking it is: breaking the commandment (Num 15:31), rejecting the Law of the LORD (Amos 2:4), not turning from iniquity as the Law of Moses is written (Dan 9:13); in Mal 2:6 true instruction turned many from iniquity.' Make two of the four examples Hebrew: Num 15:31, Rom 7:7, Mal 2:6, Rom 3:20 (or Dan 9:13 in place of Mal 2:6)."
+    },
+    {
+      "row": "“I have sinned”, “we have sinned”, “we have transgressed”",
+      "kind": "label",
+      "verses": ["Lam.3.42", "Dan.9.11", "Ps.51.4", "Exod.9.27"],
+      "readers": ["secular academic scholar", "biblical-theological teacher", "rabbi"],
+      "why": "The label's third quote, 'we have transgressed', is not in any verse's English: Lam 3:42, the verse the note ties to פָּשַׁע, prints 'We have sinned and rebelled' in the Berean (פָשַׁעְנוּ 'we have transgressed' is rendered 'sinned', checked in the Hebrew), and the only Berean 'transgressed' in the row is Dan 9:11 'All Israel has transgressed Your law', which is עָבַר, a different Hebrew word that is not one of the hub's words (the verse is in the row for 'we have sinned against You'). None of the four examples shows it either. Rule 1 (label in the text's words) and rule 6. The note's sentence on Lam 3:42 is also garbled ('is in the Hebrew פָּשַׁע, “we have transgressed”, and rebelled').",
+      "fix": "Relabel: “I have sinned”, “we have sinned”, “we have sinned and rebelled”, and make Lam 3:42 one of the four examples (Exod 9:27, 2 Sam 12:13, Lam 3:42, Luke 15:21). Rewrite the note sentence: 'Lam 3:42, “We have sinned and rebelled; You have not forgiven”, is the people's word; the Berean's “sinned” there is the Hebrew פָּשַׁע, “transgressed”.'"
+    },
+    {
+      "row": "Christ and our sins: “save His people from their sins”, “died for”, “bore”, “takes away”, “knew no sin”",
+      "kind": "note",
+      "verses": ["1Pet.2.24", "John.1.29", "Heb.9.28", "1John.3.5", "Isa.53.12", "Lev.16.22"],
+      "readers": ["secular academic scholar", "biblical-theological teacher", "rabbi"],
+      "why": "The note's pointer is now stale and incomplete. It says Isa 53:12 'shows in the row “Sin and its consequence”' and Lev 16:21 in two others, but since the rework Isa 53:12 and Lev 16:22 are also in 'Sin carried or lifted', the row that exists for exactly this, and 1 Pet 2:24, John 1:29, Heb 9:28 and 1 John 3:5 are in both rows with the same quotes ('bore', 'takes away') in both labels. A reader cannot tell why the same four verses stand twice.",
+      "fix": "Change the note's last sentence to name the carried row first ('Isa 53:12 and Lev 16:22 are in the row “Sin carried or lifted”, Isa 53:12 also in “Sin and its consequence”, Lev 16:21 in ...') and say here and in the carried row's note that 1 Pet 2:24, John 1:29, Heb 9:28 and 1 John 3:5 stand in both: this row for the person they speak of, that row for the verb."
+    }
+  ],
+  "worker_points": [
+    {"point": "First row: is the note too strong or too weak on 'interchangeable'? Exod 34:7 is quoted; the owner's phrase only in the review entry.", "verdict": "fine", "why": "The strength is right: it quotes Exod 34:7, says the three words stand together, says the page does not call them one word, and keeps 1 John 3:4 as the one verse that says one is the other. Two wording slips (the 'three main words' claim, Hebrew verses in the Greek sentence) and the lead order are in the fixes."},
+    {"point": "Forgiven row (153): hard verses stay and say 'not'; 'passed over, not counted against' is the text's; the row also holds the sin-offering verses.", "verdict": "fix", "why": "The phrase is the text's (Mic 7:18; Ps 32:2; Ezek 18:22; Rom 4:8 checked). The sin-offering verses are the owner's ruling. But the note does not say that the row also holds verses saying it is not forgiven, or two verses of one person covering another's offense; see the note fix."},
+    {"point": "Carried or lifted (47): נָשָׂא's two senses together; Isa 53:6, 53:12 in it and 53:8 in the consequence row; Exod 28:38 and Num 18:1, 18:23: is that clear?", "verdict": "fix", "why": "The two senses are shown well (Exod 23:21 'will not forgive rebellion' sits fairly beside Exod 34:7). But five verses use other verbs (Isa 53:6, 53:11, Lam 5:7, Heb 9:28, 1 Pet 2:24) and the note names only one; the priestly bearing is not explained; and the label and examples lean on Isa 53:12 to John 1:29. Three fixes above."},
+    {"point": "Consequence row (112): broadest; 37 added by hand, 17 by rule; the Amos formula (7 verses) is there as 'judgment announced for transgressions'.", "verdict": "fix", "why": "The Hebrew verses are on label (Ps 89:32, Isa 50:1, Ps 107:17, Ezek 18:30, Lev 26:39, Amos 3:2 and 3:14 checked, all say sin or iniquity with its result in one verse) and the Amos oracles are 'for three transgressions ... I will not revoke My judgment', which fits. Two things do not: Heb 9:15 is a redemption, not a consequence, and Isa 53:8/53:12 carry a contested attribution with no note. The 'judgment announced for transgressions' phrase is the worker's, not the label's; the note carries it correctly in the text's words."},
+    {"point": "Fathers' row (18) and 'each dies' row (12): does the swelling tip the balance of the three original-sin rows?", "verdict": "fine", "why": "Both swelled with Hebrew verses on the same question from opposite sides (visiting the fathers' iniquity: Exod 20:5, Num 14:18, Jer 32:18 'lay the iniquity of the fathers into the laps of their children'; each dying for his own: Jer 31:30, Ezek 18:17 and 18:20), and the fathers' row grew more (7 to 18) than the 'each dies' row (9 to 12). Row 1 stays at five Rom 5 / Ps 51:5 verses, but the notes already say the page takes no side and ranks none of the three, and the Hebrew verses are heard on their own terms. Ezek 18:19 (the people's question) is in both rows and says so. No change."},
+    {"point": "Heb 9:15 (weak pass) and the Greek Christ row (held request).", "verdict": "fix", "why": "Heb 9:15 is a redemption from transgressions, not a consequence: move it (see fix). The Christ row itself is unchanged; its note's pointer to where Isa 53:12 and Lev 16:21 appear is stale (see fix)."},
+    {"point": "Isa 1:2, Jer 2:29, Jer 3:13, Isa 59:13 in the LORD row; Ezek 2:3, Hos 7:13, Hos 8:1, Isa 43:27, Jer 2:8 in More.", "verdict": "fine", "why": "The verse itself names the LORD in each of the four (Isa 1:2 'the LORD has spoken ... rebelled against Me', Jer 2:29 'declares the LORD', Jer 3:13 'the LORD your God', Isa 59:13 'denying the LORD'), the note says so, and the rule 'place only where the verse names him' is applied consistently. Exod 32:33 and Deut 9:16, the calf's verbs, are also here and also fine."},
+    {"point": "The new golden-calf row 'The calf at Sinai' (7).", "verdict": "fine", "why": "Exod 32:21, 32:30, 32:31, 32:32, 32:34, Deut 9:18 and 9:21 checked: 'so great a sin', 'a great sin', 'forgive their sin', 'that sinful thing' are all the Berean's words, the four examples show the label, and the note says which verses are also in the forgiven and consequence rows. It names only the sin and not who is blamed; that is right."}
+  ],
+  "missing": [
+    {"what": "God redeeming from iniquity and counting iniquity, now in More: Ps 130:8 ('He will redeem Israel from all iniquity') and Isa 59:20 ('to those in Jacob who turn from transgression', redeemer) belong in the forgiven row, which has the redemption door; Ps 130:3 and Ps 90:8 (iniquities kept in record) are the other half of the Exod 34:7 pairing and want a place.", "verses": ["Ps.130.8", "Isa.59.20", "Ps.130.3", "Ps.90.8"]},
+    {"what": "The 'transgressors' and 'rebels' participles of פָּשַׁע, in no row and not even in More: Ps 51:13 ('I will teach transgressors Your ways'), Isa 1:28, Isa 48:8, Prov 28:21, Dan 8:23, Hos 14:9, Ezek 20:38, Ps 37:38. The worker says a pick row cannot be added; a line in the adjective More or a short 'Called a transgressor' row would carry them.", "verses": ["Ps.51.13", "Isa.1.28", "Isa.48.8", "Ezek.20.38"]},
+    {"what": "Iniquity as a stumbling block (Ezek 7:19, 14:3-7, 18:30) and Job's iniquity verses: left in More as clusters; Ezek 18:30 already sits in the consequence row with the phrase and its repentance call, so the others are the ones a reader of Ezekiel would look for.", "verses": ["Ezek.14.3", "Ezek.14.7", "Ezek.7.19"]}
+  ],
+  "examples_checked": "12 of 12 changed or new rows' examples read in the Berean show their label, with one partial: in the 'I have sinned' row the label's 'we have transgressed' is in no example or verse's English (see fix). The other 11 rows' examples show their labels (the carried row's lead examples show it, and are reordered for balance, not for fit).",
+  "summary": "The rework is sound in its core: the Hebrew words for iniquity and transgression are heard on their own terms, the first row's note keeps the right strength on 'interchangeable', the golden-calf row and the three original-sin rows are fair, and the hard verses are in. The fixes are to rule 1 and rule 4: a label quoting words no verse prints, five verses in the 'carried' row that use other verbs than the row claims, a misfit (Heb 9:15), a forgiven row whose note hides that some of its verses say 'not', Hebrew verses in a Pauline law row without a word of their own, a stale pointer in the Christ row's note, and two Isa 53 placements with no note."
+}

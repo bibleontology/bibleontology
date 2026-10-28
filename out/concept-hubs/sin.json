@@ -1,0 +1,3665 @@
+{
+ "id": "sin",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h2403",
+   "lemma": "חַטָּאת",
+   "form": "noun",
+   "translit": "ḥaṭṭāʾṯ",
+   "gloss": "sin",
+   "lang": "Hebrew",
+   "uses": 264,
+   "other_sense": 4
+  },
+  {
+   "key": "h2399",
+   "lemma": "חֵטְא",
+   "form": "noun",
+   "translit": "chet",
+   "gloss": "sin",
+   "lang": "Hebrew",
+   "uses": 29,
+   "other_sense": 4
+  },
+  {
+   "key": "h2401",
+   "lemma": "חֲטָאָה",
+   "form": "noun",
+   "translit": "cha.ta.ah",
+   "gloss": "sin",
+   "lang": "Hebrew",
+   "uses": 8,
+   "other_sense": 0
+  },
+  {
+   "key": "h2402",
+   "lemma": "חַטָּאָה",
+   "form": "noun",
+   "translit": "chat.ta.ah",
+   "gloss": "sin offering",
+   "lang": "Hebrew",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "h2408",
+   "lemma": "חֲטָא",
+   "form": "noun",
+   "translit": "cha.ti",
+   "gloss": "sin",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "h2409",
+   "lemma": "חַטָּאָה",
+   "form": "noun",
+   "translit": "cha.t.ta.ya",
+   "gloss": "sin offering",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "h5771",
+   "lemma": "עָוֺן",
+   "form": "noun",
+   "translit": "a.van",
+   "gloss": "iniquity",
+   "lang": "Hebrew",
+   "uses": 197,
+   "other_sense": 15
+  },
+  {
+   "key": "h6588",
+   "lemma": "פֶּשַׁע",
+   "form": "noun",
+   "translit": "pe.sah",
+   "gloss": "transgression",
+   "lang": "Hebrew",
+   "uses": 88,
+   "other_sense": 1
+  },
+  {
+   "key": "g266",
+   "lemma": "ἁμαρτία",
+   "form": "noun",
+   "translit": "hamartia",
+   "gloss": "sin",
+   "lang": "Greek",
+   "uses": 150,
+   "other_sense": 0
+  },
+  {
+   "key": "g265",
+   "lemma": "ἁμάρτημα",
+   "form": "noun",
+   "translit": "hamartēma",
+   "gloss": "sin",
+   "lang": "Greek",
+   "uses": 4,
+   "other_sense": 0
+  },
+  {
+   "key": "g3847",
+   "lemma": "παράβασις",
+   "form": "noun",
+   "translit": "parabasis",
+   "gloss": "transgression",
+   "lang": "Greek",
+   "uses": 7,
+   "other_sense": 0
+  },
+  {
+   "key": "g3848",
+   "lemma": "παραβάτης",
+   "form": "noun",
+   "translit": "parabatēs",
+   "gloss": "transgresor",
+   "lang": "Greek",
+   "uses": 5,
+   "other_sense": 0
+  },
+  {
+   "key": "h2398",
+   "lemma": "חָטָא",
+   "form": "verb",
+   "translit": "cha.ta",
+   "gloss": "to sin",
+   "lang": "Hebrew",
+   "uses": 156,
+   "other_sense": 63
+  },
+  {
+   "key": "h6586",
+   "lemma": "פָּשַׁע",
+   "form": "verb",
+   "translit": "pa.sah",
+   "gloss": "to transgress",
+   "lang": "Hebrew",
+   "uses": 24,
+   "other_sense": 13
+  },
+  {
+   "key": "g264",
+   "lemma": "ἁμαρτάνω",
+   "form": "verb",
+   "translit": "hamartanō",
+   "gloss": "to sin",
+   "lang": "Greek",
+   "uses": 37,
+   "other_sense": 0
+  },
+  {
+   "key": "g4258",
+   "lemma": "προαμαρτάνω",
+   "form": "verb",
+   "translit": "proamartanō",
+   "gloss": "to sin beforehand",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "h2400",
+   "lemma": "חַטָּא",
+   "form": "adjective",
+   "translit": "chat.ta",
+   "gloss": "sinner",
+   "lang": "Hebrew",
+   "uses": 19,
+   "other_sense": 1
+  },
+  {
+   "key": "g268",
+   "lemma": "ἁμαρτωλός",
+   "form": "adjective",
+   "translit": "hamartōlos",
+   "gloss": "sinful",
+   "lang": "Greek",
+   "uses": 45,
+   "other_sense": 0
+  },
+  {
+   "key": "g361",
+   "lemma": "ἀναμάρτητος",
+   "form": "adjective",
+   "translit": "anamartētos",
+   "gloss": "sinless",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of sin, iniquity and transgression",
+  "verb": "Who sins, and against whom",
+  "adjective": "Called a sinner"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "iniquity",
+   "name": "iniquity",
+   "type": "assessment",
+   "missing": false
+  },
+  {
+   "id": "transgression",
+   "name": "rebellion",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "repentance",
+   "name": "repentance",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sacrifice",
+   "name": "sacrifice",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "death",
+   "name": "death",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "righteousness",
+   "name": "righteousness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "grace",
+   "name": "grace",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "all_have_sinned",
+   "name": "all have sinned",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_wages_of_sin_is_death",
+   "name": "the wages of sin is death",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "if_we_confess_our_sins",
+   "name": "if we confess our sins",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "made_him_to_be_sin_for_us",
+   "name": "made Him to be sin on our behalf",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "is_the_law_sin",
+   "name": "Is the law sin?",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "vocabulary_of_sin",
+   "name": "the words for sin",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "behold_the_lamb_of_god",
+   "name": "Look, the Lamb of God",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "repent_and_be_baptized",
+   "name": "repent, and be baptized",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "remission_of_sins",
+   "name": "forgiveness of sins",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.4.7",
+   "ref": "Genesis 4:7",
+   "text": "If you do what is right, will you not be accepted? But if you refuse to do what is right, sin is crouching at your door; it desires you, but you must master it.”"
+  },
+  {
+   "id": "Ps.51.5",
+   "ref": "Psalms 51:5",
+   "text": "Surely I was brought forth in iniquity; I was sinful when my mother conceived me."
+  },
+  {
+   "id": "Ps.32.1",
+   "ref": "Psalms 32:1",
+   "text": "Of David. A Maskil. Blessed is he whose transgressions are forgiven, whose sins are covered."
+  },
+  {
+   "id": "Ezek.18.20",
+   "ref": "Ezekiel 18:20",
+   "text": "The soul who sins is the one who will die. A son will not bear the iniquity of his father, and a father will not bear the iniquity of his son. The righteousness of the righteous man will fall upon him, and the wickedness of the wicked man will fall upon him."
+  },
+  {
+   "id": "Rom.3.23",
+   "ref": "Romans 3:23",
+   "text": "for all have sinned and fall short of the glory of God,"
+  },
+  {
+   "id": "Rom.5.12",
+   "ref": "Romans 5:12",
+   "text": "Therefore, just as sin entered the world through one man, and death through sin, so also death was passed on to all men, because all sinned."
+  },
+  {
+   "id": "Rom.6.23",
+   "ref": "Romans 6:23",
+   "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+  },
+  {
+   "id": "1John.1.9",
+   "ref": "1 John 1:9",
+   "text": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 686,
+   "rows": [
+    {
+     "label": "Iniquity, transgression and sin side by side; trespass, lawlessness, wickedness",
+     "note": "The text sets three Hebrew words for wrongdoing side by side; this page shows them together.עָוֺן is the Berean's “iniquity” (and, in some verses, “guilt”); פֶּשַׁע is “transgression” or “rebellion”; חַטָּאת and its kin are “sin”. Exod 34:7 sets them in one list, “forgiving iniquity, transgression, and sin” (עָוֺן, פֶּשַׁע, חַטָּאָה); Ps 32:1-5 and Ps 51:1-3 run through them again, and in Lev 16:21 the high priest confesses “all the iniquities and rebellious acts of the Israelites in regard to all their sins”. Each example is marked with the word it stands on, and a row whose label rests on one of the words says so; the Berean's English does not always follow the Hebrew word (Deut 19:15 has three Hebrew words for wrongdoing in one verse, עָוֺן, חַטָּאת and חֵטְא, and the Berean prints “wrongdoing or sin ... offense”). The page does not say that the three are one word. In Greek the pairing is ἁμαρτία “sin” beside ἀνομία “lawlessness”, παράπτωμα “trespass”, ἀδικία “unrighteousness” and παράβασις “transgression”: in 1 John 3:4 the text itself says “sin is lawlessness”, the one verse that says one word is the other; the other Greek verses set the words beside each other (Eph 2:1; Rom 4:7; Heb 8:12), as the Hebrew verses do (Exod 34:7; Ps 32:5).",
+     "doors": [
+      {
+       "id": "iniquity",
+       "name": "iniquity",
+       "type": "assessment",
+       "missing": false
+      },
+      {
+       "id": "transgression",
+       "name": "rebellion",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 90,
+     "verses": [
+      "Exod.34.7",
+      "Ps.32.5",
+      "1John.3.4",
+      "Eph.2.1",
+      "Gen.31.36",
+      "Rom.4.7",
+      "Gen.50.17",
+      "Exod.34.9",
+      "Lev.10.17",
+      "Lev.16.16",
+      "Lev.16.21",
+      "Lev.26.40",
+      "Num.14.18",
+      "Deut.9.27",
+      "Deut.19.15",
+      "Josh.24.19",
+      "1Sam.20.1",
+      "Neh.4.5",
+      "Neh.9.2",
+      "Job.7.21",
+      "Job.10.6",
+      "Job.13.23",
+      "Job.14.17",
+      "Job.31.33",
+      "Job.34.37",
+      "Ps.25.7",
+      "Ps.32.1",
+      "Ps.38.18",
+      "Ps.51.2",
+      "Ps.51.3",
+      "Ps.51.5",
+      "Ps.51.9",
+      "Ps.59.3",
+      "Ps.65.3",
+      "Ps.85.2",
+      "Ps.89.32",
+      "Ps.103.10",
+      "Ps.107.17",
+      "Ps.109.14",
+      "Prov.5.22",
+      "Prov.13.6",
+      "Isa.6.7",
+      "Isa.27.9",
+      "Isa.40.2",
+      "Isa.43.24",
+      "Isa.43.25",
+      "Isa.44.22",
+      "Isa.50.1",
+      "Isa.53.5",
+      "Isa.58.1",
+      "Isa.59.2",
+      "Isa.59.12",
+      "Isa.65.7",
+      "Jer.5.25",
+      "Jer.14.10",
+      "Jer.14.20",
+      "Jer.16.10",
+      "Jer.16.18",
+      "Jer.18.23",
+      "Jer.30.14",
+      "Jer.30.15",
+      "Jer.31.34",
+      "Jer.33.8",
+      "Jer.36.3",
+      "Jer.50.20",
+      "Lam.4.6",
+      "Lam.4.13",
+      "Lam.4.22",
+      "Ezek.18.30",
+      "Ezek.33.10",
+      "Dan.9.16",
+      "Dan.9.24",
+      "Hos.4.8",
+      "Hos.8.13",
+      "Hos.9.9",
+      "Hos.12.8",
+      "Hos.13.12",
+      "Amos.5.12",
+      "Mic.1.5",
+      "Mic.1.13",
+      "Mic.3.8",
+      "Mic.6.7",
+      "Mic.7.18",
+      "Mic.7.19",
+      "Rom.5.20",
+      "Rom.6.13",
+      "Heb.8.12",
+      "Heb.10.17",
+      "1John.1.9",
+      "1John.5.17"
+     ],
+     "eg": [
+      {
+       "id": "Exod.34.7",
+       "ref": "Exodus 34:7",
+       "text": "maintaining loving devotion to a thousand generations, forgiving iniquity, transgression, and sin. Yet He will by no means leave the guilty unpunished; He will visit the iniquity of the fathers on their children and grandchildren to the third and fourth generations.”",
+       "words": [
+        {
+         "key": "h2402",
+         "lemma": "חַטָּאָה"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        },
+        {
+         "key": "h6588",
+         "lemma": "פֶּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.32.5",
+       "ref": "Psalms 32:5",
+       "text": "Then I acknowledged my sin to You and did not hide my iniquity. I said, “I will confess my transgressions to the LORD,” and You forgave the guilt of my sin. Selah",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        },
+        {
+         "key": "h6588",
+         "lemma": "פֶּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "1John.3.4",
+       "ref": "1 John 3:4",
+       "text": "Everyone who practices sin practices lawlessness as well. Indeed, sin is lawlessness.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.1",
+       "ref": "Ephesians 2:1",
+       "text": "And you were dead in your trespasses and sins,",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Confessing sin, iniquity, transgression",
+     "note": "The verses where sin is confessed, in the Law, the Psalms, Proverbs, the prayers of Nehemiah and Daniel, the baptism of John and the letters. Lev 16:21 is the high priest confessing the Israelites' iniquities, rebellious acts and sins over the live goat; Lev 26:40 is “confess their iniquity and that of their fathers”; Ps 32:5 has all three words (“my sin”, “my iniquity”, “my transgressions”); Prov 28:13 sets the one who “conceals his sins” (פֶּשַׁע, transgressions) beside the one who “confesses and renounces them”; Jer 3:13 asks Israel to “acknowledge your guilt” (the Berean's word for עָוֺן there). Where traditions part on how confessing stands to forgiveness (Ps 32:5; 1 John 1:9), the page takes no side.",
+     "doors": [
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "if_we_confess_our_sins",
+       "name": "if we confess our sins",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Lev.5.5",
+      "Ps.32.5",
+      "Matt.3.6",
+      "1John.1.9",
+      "Lev.16.21",
+      "Lev.26.40",
+      "Num.5.7",
+      "Neh.1.6",
+      "Neh.9.2",
+      "Ps.38.18",
+      "Prov.28.13",
+      "Jer.3.13",
+      "Dan.9.20",
+      "Mark.1.5",
+      "Jas.5.16"
+     ],
+     "eg": [
+      {
+       "id": "Lev.5.5",
+       "ref": "Leviticus 5:5",
+       "text": "If someone incurs guilt in one of these ways, he must confess the sin he has committed,",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      },
+      {
+       "id": "Ps.32.5",
+       "ref": "Psalms 32:5",
+       "text": "Then I acknowledged my sin to You and did not hide my iniquity. I said, “I will confess my transgressions to the LORD,” and You forgave the guilt of my sin. Selah",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        },
+        {
+         "key": "h6588",
+         "lemma": "פֶּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Matt.3.6",
+       "ref": "Matthew 3:6",
+       "text": "Confessing their sins, they were baptized by him in the Jordan River.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "1John.1.9",
+       "ref": "1 John 1:9",
+       "text": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The sin offering; a sacrifice for sin",
+     "note": "The Hebrew חַטָּאת is both “sin” and “sin offering”, and the Berean prints “sin offering” in these verses. Rom 8:3 (“as an offering for sin”) and Hebrews 5-13 (“a sacrifice for sin”) speak of an offering for sin in the same words in English. Rom 8:3 is here because the Berean prints “as an offering for sin”; the Greek there is περὶ ἁμαρτίας, “concerning sin”, the phrase the Greek Old Testament also uses for the sin offering, and translations differ on whether to render it as an offering. Where traditions part on what such a sacrifice does, and on whether the Old Testament sacrifices are fulfilled, ended or continued, the page takes no side and the Sacrifice page holds the longer account. The offering is for חַטָּאת only; עָוֺן and פֶּשַׁע are not words for an offering, and their verses stand in the other rows.",
+     "doors": [
+      {
+       "id": "sin_offering",
+       "name": "sin offering",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "guilt_offering",
+       "name": "guilt offering",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "sacrifice",
+       "name": "sacrifice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "atonement",
+       "name": "reconciliation",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 121,
+     "verses": [
+      "Lev.4.3",
+      "Lev.16.3",
+      "Ps.40.6",
+      "Heb.10.6",
+      "Exod.29.14",
+      "Exod.29.36",
+      "Exod.30.10",
+      "Lev.4.8",
+      "Lev.4.14",
+      "Lev.4.20",
+      "Lev.4.21",
+      "Lev.4.24",
+      "Lev.4.25",
+      "Lev.4.29",
+      "Lev.4.32",
+      "Lev.4.33",
+      "Lev.4.34",
+      "Lev.5.6",
+      "Lev.5.7",
+      "Lev.5.8",
+      "Lev.5.9",
+      "Lev.5.11",
+      "Lev.5.12",
+      "Lev.6.17",
+      "Lev.6.25",
+      "Lev.6.28",
+      "Lev.6.30",
+      "Lev.7.7",
+      "Lev.7.37",
+      "Lev.8.2",
+      "Lev.8.14",
+      "Lev.9.2",
+      "Lev.9.3",
+      "Lev.9.7",
+      "Lev.9.8",
+      "Lev.9.10",
+      "Lev.9.15",
+      "Lev.9.22",
+      "Lev.10.16",
+      "Lev.10.17",
+      "Lev.10.19",
+      "Lev.12.6",
+      "Lev.12.8",
+      "Lev.14.13",
+      "Lev.14.19",
+      "Lev.14.22",
+      "Lev.14.31",
+      "Lev.15.15",
+      "Lev.15.30",
+      "Lev.16.5",
+      "Lev.16.6",
+      "Lev.16.9",
+      "Lev.16.11",
+      "Lev.16.15",
+      "Lev.16.25",
+      "Lev.16.27",
+      "Lev.23.19",
+      "Num.6.11",
+      "Num.6.14",
+      "Num.6.16",
+      "Num.7.16",
+      "Num.7.22",
+      "Num.7.28",
+      "Num.7.34",
+      "Num.7.40",
+      "Num.7.46",
+      "Num.7.52",
+      "Num.7.58",
+      "Num.7.64",
+      "Num.7.70",
+      "Num.7.76",
+      "Num.7.82",
+      "Num.7.87",
+      "Num.8.8",
+      "Num.8.12",
+      "Num.15.24",
+      "Num.15.25",
+      "Num.15.27",
+      "Num.18.9",
+      "Num.19.17",
+      "Num.28.15",
+      "Num.28.22",
+      "Num.29.5",
+      "Num.29.11",
+      "Num.29.16",
+      "Num.29.19",
+      "Num.29.22",
+      "Num.29.25",
+      "Num.29.28",
+      "Num.29.31",
+      "Num.29.34",
+      "Num.29.38",
+      "2Kgs.12.16",
+      "2Chr.29.21",
+      "2Chr.29.23",
+      "2Chr.29.24",
+      "Ezra.6.17",
+      "Ezra.8.35",
+      "Neh.10.33",
+      "Ezek.40.39",
+      "Ezek.42.13",
+      "Ezek.43.19",
+      "Ezek.43.21",
+      "Ezek.43.22",
+      "Ezek.43.25",
+      "Ezek.44.27",
+      "Ezek.44.29",
+      "Ezek.45.17",
+      "Ezek.45.19",
+      "Ezek.45.22",
+      "Ezek.45.23",
+      "Ezek.45.25",
+      "Ezek.46.20",
+      "Rom.8.3",
+      "Heb.5.1",
+      "Heb.5.3",
+      "Heb.7.27",
+      "Heb.10.8",
+      "Heb.10.12",
+      "Heb.10.18",
+      "Heb.13.11"
+     ],
+     "eg": [
+      {
+       "id": "Lev.4.3",
+       "ref": "Leviticus 4:3",
+       "text": "If the anointed priest sins, bringing guilt on the people, he must bring to the LORD a young bull without blemish as a sin offering for the sin he has committed.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Lev.16.3",
+       "ref": "Leviticus 16:3",
+       "text": "This is how Aaron is to enter the Holy Place: with a young bull for a sin offering and a ram for a burnt offering.",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.40.6",
+       "ref": "Psalms 40:6",
+       "text": "Sacrifice and offering You did not desire, but my ears You have opened. Burnt offerings and sin offerings You did not require.",
+       "words": [
+        {
+         "key": "h2401",
+         "lemma": "חֲטָאָה"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.6",
+       "ref": "Hebrews 10:6",
+       "text": "In burnt offerings and sin offerings You took no delight.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Iniquity, transgression and sin forgiven, atoned for, covered, wiped away, cleansed, taken away, removed, passed over, not counted against",
+     "note": "Each verse holds a word of wrongdoing and one of the text's words for putting it away: forgive, make atonement, cover, wipe away, cleanse, wash, take away, remove, pass over, not count or hold against. The Hebrew nouns are three: Ps 32:1 sets “transgressions” (פֶּשַׁע) forgiven beside “sins” covered, and Ps 32:2 “the man whose iniquity (עָוֺן) the LORD does not count against him”; Ps 103:12 is “so far has He removed our transgressions from us” (פֶּשַׁע; the Hebrew verb is “make far”, רָחַק), and the forgiveness page holds it with its neighbours in the row “Sins put away”; Zech 3:4 is “I have removed your iniquity” (עָוֺן) and Zech 3:9 “I will remove the iniquity of this land in a single day”; Isa 6:7 and Ps 65:3 have atonement for iniquity and transgression; Mic 7:18 “passes over the transgression” and Ezek 18:22 “None of the transgressions he has committed will be held against him” (פֶּשַׁע). Isa 1:18 and Zech 13:1 are “sins” made white and “cleansed” (חַטָּאת). Heb 10:4 and 10:11 say what the sacrifices can never do. The verbs “forgive” (Gen 50:17; Exod 34:7; Mic 7:18; Isa 33:24) and “take away” (Hos 14:2) are the Hebrew נָשָׂא, “lift, bear”; the row for that verb is below. Heb 9:15 is here for its redemption: “now that He has died to redeem them from the transgressions committed under the first covenant” (the Greek is ἀπολύτρωσις, “redemption”, from παράβασις, “transgression”). A few verses in the row say the opposite or ask: Isa 22:14 (“this sin of yours will never be atoned for”), 1 Sam 3:14 (“shall never be atoned for by sacrifice or offering”), Matt 12:31 and Mark 3:29 (“will not be forgiven”, “will never be forgiven”) say it is not put away; Jer 18:23 (“Do not wipe out their guilt or blot out their sin”) and Ps 109:14 (“never be blotted out”) ask that it not be; Josh 22:17 says “we have not cleansed ourselves”; Prov 20:9 asks “Who can say ... I am cleansed from my sin?”; and Prov 10:12 (“love covers all transgressions”) and Prov 17:9 (“conceals an offense”) are one person covering another's offense. Where traditions part on what an offering does for sin (covers, atones, appeases, cleanses), the page takes no side.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sacrifice",
+       "name": "sacrifice",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "redemption",
+       "name": "redemption",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 154,
+     "verses": [
+      "Ps.32.1",
+      "Ps.103.12",
+      "Mark.2.5",
+      "1John.1.7",
+      "Gen.50.17",
+      "Matt.9.2",
+      "Rom.3.25",
+      "Exod.29.36",
+      "Exod.30.10",
+      "Exod.32.30",
+      "Exod.32.32",
+      "Exod.34.7",
+      "Exod.34.9",
+      "Lev.4.8",
+      "Lev.4.20",
+      "Lev.4.26",
+      "Lev.4.35",
+      "Lev.5.6",
+      "Lev.5.10",
+      "Lev.5.13",
+      "Lev.6.30",
+      "Lev.7.7",
+      "Lev.9.7",
+      "Lev.10.17",
+      "Lev.12.8",
+      "Lev.14.19",
+      "Lev.14.31",
+      "Lev.15.15",
+      "Lev.15.30",
+      "Lev.16.6",
+      "Lev.16.11",
+      "Lev.16.16",
+      "Lev.16.27",
+      "Lev.16.30",
+      "Lev.16.34",
+      "Lev.19.22",
+      "Num.6.11",
+      "Num.8.12",
+      "Num.12.11",
+      "Num.14.18",
+      "Num.14.19",
+      "Num.15.25",
+      "Num.28.22",
+      "Num.29.5",
+      "Josh.22.17",
+      "1Sam.3.14",
+      "1Sam.25.28",
+      "2Sam.12.13",
+      "2Sam.24.10",
+      "1Kgs.8.34",
+      "1Kgs.8.36",
+      "1Kgs.8.50",
+      "1Chr.21.8",
+      "2Chr.6.25",
+      "2Chr.6.27",
+      "2Chr.7.14",
+      "2Chr.29.24",
+      "Neh.4.5",
+      "Neh.10.33",
+      "Job.7.21",
+      "Ps.25.11",
+      "Ps.25.18",
+      "Ps.32.2",
+      "Ps.32.5",
+      "Ps.51.1",
+      "Ps.51.2",
+      "Ps.51.9",
+      "Ps.65.3",
+      "Ps.78.38",
+      "Ps.79.9",
+      "Ps.85.2",
+      "Ps.103.3",
+      "Ps.109.14",
+      "Prov.10.12",
+      "Prov.16.6",
+      "Prov.17.9",
+      "Prov.20.9",
+      "Isa.1.18",
+      "Isa.6.7",
+      "Isa.22.14",
+      "Isa.27.9",
+      "Isa.33.24",
+      "Isa.38.17",
+      "Isa.40.2",
+      "Isa.43.25",
+      "Isa.44.22",
+      "Isa.64.9",
+      "Jer.18.23",
+      "Jer.31.34",
+      "Jer.33.8",
+      "Jer.36.3",
+      "Jer.50.20",
+      "Ezek.18.22",
+      "Ezek.33.16",
+      "Ezek.36.33",
+      "Ezek.37.23",
+      "Ezek.45.17",
+      "Dan.9.24",
+      "Hos.14.2",
+      "Mic.7.18",
+      "Mic.7.19",
+      "Zech.3.4",
+      "Zech.3.9",
+      "Zech.13.1",
+      "Matt.9.5",
+      "Matt.9.6",
+      "Matt.12.31",
+      "Matt.26.28",
+      "Mark.1.4",
+      "Mark.2.7",
+      "Mark.2.9",
+      "Mark.2.10",
+      "Mark.3.28",
+      "Mark.3.29",
+      "Luke.1.77",
+      "Luke.3.3",
+      "Luke.5.20",
+      "Luke.5.21",
+      "Luke.5.23",
+      "Luke.5.24",
+      "Luke.7.47",
+      "Luke.7.48",
+      "Luke.7.49",
+      "Luke.11.4",
+      "Luke.24.47",
+      "John.1.29",
+      "John.20.23",
+      "Acts.2.38",
+      "Acts.3.19",
+      "Acts.5.31",
+      "Acts.7.60",
+      "Acts.10.43",
+      "Acts.13.38",
+      "Acts.22.16",
+      "Acts.26.18",
+      "Rom.4.7",
+      "Rom.4.8",
+      "Rom.11.27",
+      "Col.1.14",
+      "Heb.1.3",
+      "Heb.2.17",
+      "Heb.9.15",
+      "Heb.10.2",
+      "Heb.10.4",
+      "Heb.10.11",
+      "Heb.10.18",
+      "Jas.5.15",
+      "1Pet.4.8",
+      "2Pet.1.9",
+      "1John.1.9",
+      "1John.2.2",
+      "1John.2.12",
+      "1John.3.5",
+      "1John.4.10"
+     ],
+     "eg": [
+      {
+       "id": "Ps.32.1",
+       "ref": "Psalms 32:1",
+       "text": "Of David. A Maskil. Blessed is he whose transgressions are forgiven, whose sins are covered.",
+       "words": [
+        {
+         "key": "h2401",
+         "lemma": "חֲטָאָה"
+        },
+        {
+         "key": "h6588",
+         "lemma": "פֶּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.103.12",
+       "ref": "Psalms 103:12",
+       "text": "As far as the east is from the west, so far has He removed our transgressions from us.",
+       "words": [
+        {
+         "key": "h6588",
+         "lemma": "פֶּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Mark.2.5",
+       "ref": "Mark 2:5",
+       "text": "When Jesus saw their faith, He said to the paralytic, “Son, your sins are forgiven.”",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "1John.1.7",
+       "ref": "1 John 1:7",
+       "text": "But if we walk in the light as He is in the light, we have fellowship with one another, and the blood of Jesus His Son cleanses us from all sin.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The sins of the kings: “the sin Jeroboam caused Israel to commit”, “caused Judah to sin”; Baasha, Manasseh",
+     "note": "The same phrase, “the sins of Jeroboam” or “the sin he caused Israel to commit”, closes the verdict on a king of Israel again and again in Kings, in the noun (“his sin”) and in the verb (“caused Israel to sin”); 1 Kgs 12:30 says where it began, and 1 Kgs 16:13 and 2 Kgs 21:16 are the sins of Baasha and Manasseh, who “caused Judah to sin” (2 Kgs 21:11). Jer 32:35 says the same of Judah. The word is חַטָּאת, “sin”, throughout; the verses are listed as written.",
+     "doors": [],
+     "n": 35,
+     "verses": [
+      "1Kgs.14.16",
+      "1Kgs.15.34",
+      "1Kgs.16.2",
+      "2Kgs.21.11",
+      "1Kgs.12.30",
+      "1Kgs.13.34",
+      "1Kgs.14.22",
+      "1Kgs.15.3",
+      "1Kgs.15.26",
+      "1Kgs.15.30",
+      "1Kgs.16.13",
+      "1Kgs.16.19",
+      "1Kgs.16.26",
+      "1Kgs.16.31",
+      "1Kgs.21.22",
+      "1Kgs.22.52",
+      "2Kgs.3.3",
+      "2Kgs.10.29",
+      "2Kgs.10.31",
+      "2Kgs.13.2",
+      "2Kgs.13.6",
+      "2Kgs.13.11",
+      "2Kgs.14.24",
+      "2Kgs.15.9",
+      "2Kgs.15.18",
+      "2Kgs.15.24",
+      "2Kgs.15.28",
+      "2Kgs.17.21",
+      "2Kgs.17.22",
+      "2Kgs.21.16",
+      "2Kgs.21.17",
+      "2Kgs.23.15",
+      "2Kgs.24.3",
+      "2Chr.33.19",
+      "Jer.32.35"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.14.16",
+       "ref": "1 Kings 14:16",
+       "text": "So He will give Israel over on account of the sins Jeroboam has committed and has caused Israel to commit.”",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.15.34",
+       "ref": "1 Kings 15:34",
+       "text": "And Baasha did evil in the sight of the LORD and walked in the way of Jeroboam and in his sin, which he had caused Israel to commit.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.16.2",
+       "ref": "1 Kings 16:2",
+       "text": "“Even though I lifted you out of the dust and made you ruler over My people Israel, you have walked in the way of Jeroboam and have caused My people Israel to sin and to provoke Me to anger by their sins.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.21.11",
+       "ref": "2 Kings 21:11",
+       "text": "“Since Manasseh king of Judah has committed all these abominations, acting more wickedly than the Amorites who preceded him, and with his idols has caused Judah to sin,",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The calf at Sinai: “a great sin”, “their sin”, “that sinful thing”",
+     "note": "The verses that name the sin of the golden calf. Moses asks Aaron “that you have led them into so great a sin?” (Exod 32:21), tells the people “You have committed a great sin” (32:30) and says to the LORD “Oh, what a great sin these people have committed!” (32:31); 32:32 is “if You would only forgive their sin”, and 32:34 “I will punish them for their sin”. Retelling it, Moses speaks of “all the sin you had committed” (Deut 9:18) and of “that sinful thing, the calf you had made” (Deut 9:21). Exod 32:30 and 32:32 are also in the row for sin forgiven and atoned for, and Exod 32:34 in the row for sin and its consequence.",
+     "doors": [],
+     "n": 7,
+     "verses": [
+      "Exod.32.30",
+      "Exod.32.31",
+      "Exod.32.32",
+      "Deut.9.21",
+      "Exod.32.21",
+      "Exod.32.34",
+      "Deut.9.18"
+     ],
+     "eg": [
+      {
+       "id": "Exod.32.30",
+       "ref": "Exodus 32:30",
+       "text": "The next day Moses said to the people, “You have committed a great sin. Now I will go up to the LORD; perhaps I can make atonement for your sin.”",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2401",
+         "lemma": "חֲטָאָה"
+        },
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Exod.32.31",
+       "ref": "Exodus 32:31",
+       "text": "So Moses returned to the LORD and said, “Oh, what a great sin these people have committed! They have made gods of gold for themselves.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2401",
+         "lemma": "חֲטָאָה"
+        }
+       ]
+      },
+      {
+       "id": "Exod.32.32",
+       "ref": "Exodus 32:32",
+       "text": "Yet now, if You would only forgive their sin.... But if not, please blot me out of the book that You have written.”",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Deut.9.21",
+       "ref": "Deuteronomy 9:21",
+       "text": "And I took that sinful thing, the calf you had made, and burned it in the fire. Then I crushed it and ground it to powder as fine as dust, and I cast it into the stream that came down from the mountain.",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sin and its consequence: “die in your sin”, “the wages of sin is death”, “sevenfold for your sins”, “bear the consequences of his sin”",
+     "note": "The text puts sin and what comes of it in one verse in several ways: death (“die in your sin”, “the wages of sin is death”, “died to sin”, “they will incur guilt and die”) and punishment (“sevenfold for your sins”, plunder, being swept away, bearing it). The Hebrew verses now include iniquity and transgression: “will waste away in their iniquity” (Lev 26:39), “I will attend to their transgression with the rod, and to their iniquity with stripes” (Ps 89:32), “you were sold for your iniquities, and for your transgressions your mother was sent away” (Isa 50:1), “through their iniquities, suffered affliction” (Ps 107:17), “so that your iniquity will not become your downfall” (Ezek 18:30). Amos 1:3-2:6 has the formula “For three transgressions of Damascus, even four, I will not revoke My judgment” (פֶּשַׁע, “transgression”, seven times), and Amos 3:2 and 3:14 “I will punish you for all your iniquities”, “the day I punish Israel for their transgressions”. Lam 1:5 (“grief because of her many transgressions”), Isa 64:7 (“delivered us into the hand of our iniquity”), Ezek 39:23-24, Ezra 9:7 and 9:13 (“punished us less than our iniquities deserve”), Hos 9:7 and Josh 22:20 (“it was not only Achan who perished because of his sin”) say the same of a people or a man. The page lists them and does not say how they relate. In Num 18:22 the Berean prints “incur guilt”; the Hebrew words there are “bear”, “sin” and “die”. Rom 8:10 (“your body is dead because of sin”) is here too. Isa 53:8 (“stricken for the transgression of My people”) and Isa 53:12 (“He bore the sin of many”) are here, and Isa 53:12 is also in the row for sin carried or lifted; they name no one, and where traditions part on whom they speak of, the page takes no side. The sin that is forgiven is in the row for forgiveness.",
+     "doors": [
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 111,
+     "verses": [
+      "Ezek.18.24",
+      "2Sam.12.13",
+      "Rom.6.23",
+      "Jas.1.15",
+      "Exod.10.17",
+      "John.8.21",
+      "Rom.5.12",
+      "Exod.28.43",
+      "Exod.32.34",
+      "Lev.20.20",
+      "Lev.24.15",
+      "Lev.26.18",
+      "Lev.26.21",
+      "Lev.26.24",
+      "Lev.26.28",
+      "Lev.26.39",
+      "Num.9.13",
+      "Num.16.26",
+      "Num.18.22",
+      "Num.18.32",
+      "Num.27.3",
+      "Num.32.23",
+      "Deut.21.22",
+      "Deut.22.26",
+      "Deut.24.16",
+      "Josh.22.20",
+      "1Sam.12.19",
+      "1Sam.20.8",
+      "2Sam.14.32",
+      "1Kgs.17.18",
+      "2Kgs.14.6",
+      "2Kgs.24.3",
+      "2Chr.25.4",
+      "Ezra.9.7",
+      "Ezra.9.13",
+      "Neh.9.37",
+      "Ps.38.3",
+      "Ps.89.32",
+      "Ps.107.17",
+      "Isa.13.11",
+      "Isa.22.14",
+      "Isa.50.1",
+      "Isa.53.8",
+      "Isa.53.12",
+      "Isa.64.6",
+      "Isa.64.7",
+      "Jer.13.22",
+      "Jer.15.13",
+      "Jer.17.3",
+      "Jer.25.12",
+      "Jer.31.30",
+      "Lam.1.5",
+      "Lam.1.22",
+      "Lam.3.39",
+      "Ezek.3.18",
+      "Ezek.3.19",
+      "Ezek.3.20",
+      "Ezek.4.17",
+      "Ezek.18.17",
+      "Ezek.18.18",
+      "Ezek.18.20",
+      "Ezek.18.21",
+      "Ezek.18.28",
+      "Ezek.18.30",
+      "Ezek.18.31",
+      "Ezek.24.23",
+      "Ezek.33.6",
+      "Ezek.33.8",
+      "Ezek.33.9",
+      "Ezek.33.14",
+      "Ezek.39.23",
+      "Ezek.39.24",
+      "Hos.5.5",
+      "Hos.8.13",
+      "Hos.9.7",
+      "Hos.9.9",
+      "Hos.14.1",
+      "Amos.1.3",
+      "Amos.1.6",
+      "Amos.1.9",
+      "Amos.1.11",
+      "Amos.1.13",
+      "Amos.2.1",
+      "Amos.2.6",
+      "Amos.3.2",
+      "Amos.3.14",
+      "Mic.6.13",
+      "John.8.24",
+      "Rom.5.14",
+      "Rom.5.21",
+      "Rom.6.2",
+      "Rom.6.7",
+      "Rom.6.10",
+      "Rom.6.11",
+      "Rom.6.13",
+      "Rom.6.16",
+      "Rom.7.5",
+      "Rom.7.8",
+      "Rom.7.13",
+      "Rom.8.2",
+      "Rom.8.10",
+      "1Cor.15.3",
+      "1Cor.15.56",
+      "Eph.2.1",
+      "Heb.2.2",
+      "Jas.5.20",
+      "1Pet.3.18",
+      "1John.5.16",
+      "1John.5.17",
+      "Rev.18.4",
+      "Rev.18.5"
+     ],
+     "eg": [
+      {
+       "id": "Ezek.18.24",
+       "ref": "Ezekiel 18:24",
+       "text": "But if a righteous man turns from his righteousness and practices iniquity, committing the same abominations as the wicked, will he live? None of the righteous acts he did will be remembered. Because of the unfaithfulness and sin he has committed, he will die.",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.12.13",
+       "ref": "2 Samuel 12:13",
+       "text": "Then David said to Nathan, “I have sinned against the LORD.” “The LORD has taken away your sin,” Nathan replied. “You will not die.",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.23",
+       "ref": "Romans 6:23",
+       "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Jas.1.15",
+       "ref": "James 1:15",
+       "text": "Then after desire has conceived, it gives birth to sin; and sin, when it is full-grown, gives birth to death.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sin and the law, the commandment",
+     "note": "Rom 7:7 asks “Is the law sin?” and answers in the verse; Rom 3:20 and 1 Cor 15:56 say the law brings awareness of sin and gives sin its power; 1 John 3:4 says “sin is lawlessness”. The Greek words for “transgression” (παράβασις, Rom 2:23; 4:15; Gal 3:19) and “transgressor” (παραβάτης, Rom 2:25, 27; Jas 2:9, 11) are here where the verse names the law; the Berean prints some of them “breaking the law” and “lawbreaker”, and the example is marked with the Greek word it stands on. The verses are set out as written. The Hebrew verses here say what the law forbids and what breaking it is: breaking the commandment (Num 15:31, “he has despised the word of the LORD and broken His commandment”), rejecting the Law of the LORD (Amos 2:4), and not turning from iniquities, though “it is written in the Law of Moses” (Dan 9:13); in Mal 2:6 the Berean's “true instruction” (תּוֹרָה) turned many from iniquity. Two of the examples are Hebrew (Num 15:31; Dan 9:13) and two Greek.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "commandments",
+       "name": "the commandments",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 31,
+     "verses": [
+      "Num.15.31",
+      "Rom.7.7",
+      "Dan.9.13",
+      "Rom.3.20",
+      "Rom.2.23",
+      "2Kgs.10.31",
+      "2Kgs.14.6",
+      "2Chr.25.4",
+      "Amos.2.4",
+      "Mal.2.6",
+      "Rom.2.25",
+      "Rom.2.27",
+      "Rom.4.15",
+      "Rom.5.13",
+      "Rom.5.20",
+      "Rom.6.14",
+      "Rom.7.5",
+      "Rom.7.8",
+      "Rom.7.9",
+      "Rom.7.11",
+      "Rom.7.13",
+      "Rom.7.14",
+      "Rom.7.23",
+      "Rom.7.25",
+      "Rom.8.2",
+      "Rom.8.3",
+      "1Cor.15.56",
+      "Gal.3.19",
+      "Heb.10.8",
+      "Jas.2.9",
+      "Jas.2.11"
+     ],
+     "eg": [
+      {
+       "id": "Num.15.31",
+       "ref": "Numbers 15:31",
+       "text": "He shall certainly be cut off, because he has despised the word of the LORD and broken His commandment; his guilt remains on him.”",
+       "words": [
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.7",
+       "ref": "Romans 7:7",
+       "text": "What then shall we say? Is the law sin? Certainly not! Indeed, I would not have been mindful of sin if not for the law. For I would not have been aware of coveting if the law had not said, “Do not covet.”",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Dan.9.13",
+       "ref": "Daniel 9:13",
+       "text": "Just as it is written in the Law of Moses, all this disaster has come upon us, yet we have not sought the favor of the LORD our God by turning from our iniquities and giving attention to Your truth.",
+       "words": [
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.20",
+       "ref": "Romans 3:20",
+       "text": "Therefore no one will be justified in His sight by works of the law. For the law merely brings awareness of sin.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sin through one man; sinful from conception",
+     "note": "One of three rows set side by side with the two after it. Where Christian traditions part on original sin and inherited guilt, the page takes no side and ranks none of the three above another. Adam is named in Rom 5:14, where the word is παράβασις, “transgression”, the Berean's “the likeness of the transgression of Adam”; Ps 51:5 is David's own confession, and the Hebrew there is עָוֺן, “iniquity” (“I was brought forth in iniquity”), beside חֵטְא, “sinful”. The two rows after this one hold Old Testament verses on who bears a person's sin, and the disciples' question about the man born blind with the Pharisees' answer to him (John 9:2-3, 9:34); they are set beside this row because readers bring them to it, not because they ask the question of original sin themselves. Gen 8:21, Job 14:4, Ps 58:3 and Eph 2:3 are often read with these and hold none of this hub's words, so they are not shown.",
+     "doors": [
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Rom.5.12",
+      "Ps.51.5",
+      "Rom.5.19",
+      "Rom.5.14",
+      "Rom.5.16"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.12",
+       "ref": "Romans 5:12",
+       "text": "Therefore, just as sin entered the world through one man, and death through sin, so also death was passed on to all men, because all sinned.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        },
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Ps.51.5",
+       "ref": "Psalms 51:5",
+       "text": "Surely I was brought forth in iniquity; I was sinful when my mother conceived me.",
+       "words": [
+        {
+         "key": "h2399",
+         "lemma": "חֵטְא"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.19",
+       "ref": "Romans 5:19",
+       "text": "For just as through the disobedience of the one man the many were made sinners, so also through the obedience of the one man the many will be made righteous.",
+       "words": [
+        {
+         "key": "g268",
+         "lemma": "ἁμαρτωλός"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.14",
+       "ref": "Romans 5:14",
+       "text": "Nevertheless, death reigned from Adam until Moses, even over those who did not sin in the way that Adam transgressed. He is a pattern of the One to come.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        },
+        {
+         "key": "g3847",
+         "lemma": "παράβασις"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Each is to die for his own sin”; the son does not bear the father's; “who sinned, this man or his parents?”",
+     "note": "The second of three rows set side by side; the page takes no side. The text asks who bears a person's sin: the one who sinned, or his father or his children (Deut 24:16; 2 Kgs 14:6; Ezek 18:4, 18:20). Num 27:3 is a man who “died because of his own sin”. Jer 31:30 (“each will die for his own iniquity”) and Ezek 18:17-20 (“will not die for his father's iniquity”; “Why shouldn't the son bear the iniquity of his father?”) say it in the Hebrew עָוֺן, “iniquity”, which the Berean prints “iniquity” and, in Ezek 18:19, as the people's question. John 9:2-3 is the disciples' question and Jesus' answer about a man born blind, and John 9:34 is the Pharisees' retort to the man, which follows Jesus' answer. Ezek 18:14, a son who does not do as his father did, is in the next row.",
+     "doors": [
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Deut.24.16",
+      "Ezek.18.20",
+      "John.9.3",
+      "2Kgs.14.6",
+      "Num.27.3",
+      "2Chr.25.4",
+      "Jer.31.30",
+      "Ezek.18.4",
+      "Ezek.18.17",
+      "Ezek.18.19",
+      "John.9.2",
+      "John.9.34"
+     ],
+     "eg": [
+      {
+       "id": "Deut.24.16",
+       "ref": "Deuteronomy 24:16",
+       "text": "Fathers shall not be put to death for their children, nor children for their fathers; each is to die for his own sin.",
+       "words": [
+        {
+         "key": "h2399",
+         "lemma": "חֵטְא"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.18.20",
+       "ref": "Ezekiel 18:20",
+       "text": "The soul who sins is the one who will die. A son will not bear the iniquity of his father, and a father will not bear the iniquity of his son. The righteousness of the righteous man will fall upon him, and the wickedness of the wicked man will fall upon him.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "John.9.3",
+       "ref": "John 9:3",
+       "text": "Jesus answered, “Neither this man nor his parents sinned, but this happened so that the works of God would be displayed in him.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.14.6",
+       "ref": "2 Kings 14:6",
+       "text": "Yet he did not put the sons of the murderers to death, but acted according to what is written in the Book of the Law of Moses, where the LORD commanded: “Fathers must not be put to death for their children, and children must not be put to death for their fathers; each is to die for his own sin.”",
+       "words": [
+        {
+         "key": "h2399",
+         "lemma": "חֵטְא"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The fathers' sins, and the children",
+     "note": "The third of three rows set side by side; the page takes no side. Exod 34:7, Exod 20:5, Deut 5:9, Num 14:18 and Jer 32:18 say the LORD visits (“punishes”, “repays”) the iniquity of the fathers on their children, the Hebrew עָוֺן, “iniquity”, which the Berean prints “iniquity” and in Jer 32:18 “iniquity” too. The generations confess their fathers' sins with their own (Lev 26:40; Jer 14:20; Neh 9:2; Dan 9:16; Ps 106:6) and ask that they not be remembered (Ps 79:8; Ps 109:14 asks the opposite of an enemy); Jer 11:10 and Isa 65:7 name the fathers' iniquities beside the people's own; in Lam 5:7 they say “we bear their punishment”; Ezek 18:14 is a son who sees his father's sins and does not do likewise, and Ezek 18:19 is the people's question about it.",
+     "doors": [
+      {
+       "id": "iniquity",
+       "name": "iniquity",
+       "type": "assessment",
+       "missing": false
+      },
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "Exod.34.7",
+      "Lam.5.7",
+      "Jer.14.20",
+      "Ezek.18.14",
+      "Exod.20.5",
+      "Lev.26.39",
+      "Lev.26.40",
+      "Num.14.18",
+      "Deut.5.9",
+      "Ps.79.8",
+      "Ps.106.6",
+      "Ps.109.14",
+      "Isa.65.7",
+      "Jer.11.10",
+      "Jer.32.18",
+      "Neh.9.2",
+      "Dan.9.16",
+      "Ezek.18.19"
+     ],
+     "eg": [
+      {
+       "id": "Exod.34.7",
+       "ref": "Exodus 34:7",
+       "text": "maintaining loving devotion to a thousand generations, forgiving iniquity, transgression, and sin. Yet He will by no means leave the guilty unpunished; He will visit the iniquity of the fathers on their children and grandchildren to the third and fourth generations.”",
+       "words": [
+        {
+         "key": "h2402",
+         "lemma": "חַטָּאָה"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        },
+        {
+         "key": "h6588",
+         "lemma": "פֶּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Lam.5.7",
+       "ref": "Lamentations 5:7",
+       "text": "Our fathers sinned and are no more, but we bear their punishment.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "Jer.14.20",
+       "ref": "Jeremiah 14:20",
+       "text": "We acknowledge our wickedness, O LORD, the guilt of our fathers; indeed, we have sinned against You.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.18.14",
+       "ref": "Ezekiel 18:14",
+       "text": "Now suppose this son has a son who sees all the sins his father has committed, considers them, and does not do likewise:",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“All under sin”, “slaves to sin”, “dead in your trespasses and sins”",
+     "note": "The first of three rows on how sin holds a person and how the text speaks of resisting it, set side by side with the next two; readers sometimes call this question total depravity, and the page takes no side on it. Rom 7:14 is also in the Romans 7 row, where readers part on who the “I” is. Rom 8:10 (“your body is dead because of sin”) is in the row on sin and its consequence.",
+     "doors": [
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Rom.3.9",
+      "John.8.34",
+      "Rom.6.20",
+      "Eph.2.1",
+      "Gal.3.22",
+      "Rom.6.6",
+      "Rom.6.16",
+      "Rom.6.17",
+      "Rom.7.14"
+     ],
+     "eg": [
+      {
+       "id": "Rom.3.9",
+       "ref": "Romans 3:9",
+       "text": "What then? Are we any better? Not at all. For we have already made the charge that Jews and Greeks alike are all under sin.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "John.8.34",
+       "ref": "John 8:34",
+       "text": "Jesus replied, “Truly, truly, I tell you, everyone who sins is a slave to sin.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.20",
+       "ref": "Romans 6:20",
+       "text": "For when you were slaves to sin, you were free of obligation to righteousness.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.1",
+       "ref": "Ephesians 2:1",
+       "text": "And you were dead in your trespasses and sins,",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sin to be mastered, resisted, thrown off: “you must master it”, “sin shall not be your master”, “set free from sin”, “dead to sin”",
+     "note": "The second of three rows on how sin holds a person and how the text speaks of resisting it. The row before has the verses of sin as a master; this row has the verses that speak of mastering it (Gen 4:7: “sin is crouching at your door ... you must master it”), of not letting it reign, of being set free from it, and of resisting it and throwing it off (Heb 12:1, 12:4). Gen 4:7 is the LORD's word to Cain, and Rom 6 and Heb 12 are written to the readers of those letters; the verbs are of the same kind (master, reign, free), and the text does not say that they are one act. The page takes no side on how the two fit together.",
+     "doors": [
+      {
+       "id": "redemption",
+       "name": "redemption",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Gen.4.7",
+      "Rom.6.14",
+      "Rom.6.18",
+      "Heb.12.4",
+      "Rom.6.2",
+      "Rom.6.7",
+      "Rom.6.11",
+      "Rom.6.12",
+      "Rom.6.13",
+      "Rom.6.22",
+      "Rom.8.2",
+      "Heb.12.1",
+      "1Pet.2.24",
+      "1Pet.4.1"
+     ],
+     "eg": [
+      {
+       "id": "Gen.4.7",
+       "ref": "Genesis 4:7",
+       "text": "If you do what is right, will you not be accepted? But if you refuse to do what is right, sin is crouching at your door; it desires you, but you must master it.”",
+       "words": [
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.14",
+       "ref": "Romans 6:14",
+       "text": "For sin shall not be your master, because you are not under law, but under grace.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.18",
+       "ref": "Romans 6:18",
+       "text": "You have been set free from sin and have become slaves to righteousness.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Heb.12.4",
+       "ref": "Hebrews 12:4",
+       "text": "In your struggle against sin, you have not yet resisted to the point of shedding your blood.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Sin living in me”: Romans 7",
+     "note": "The third of three rows on how sin holds a person and how the text speaks of resisting it. Readers part on who the “I” of Rom 7:14-25 is: Paul before he knew Christ, Paul as a believer, or a person under the law whom the passage does not name; the page takes no side. Rom 8:2 (“set you free from the law of sin and death”) is in the row before.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Rom.7.17",
+      "Rom.7.14",
+      "Rom.7.20",
+      "Rom.7.25",
+      "Rom.7.8",
+      "Rom.7.9",
+      "Rom.7.11",
+      "Rom.7.13",
+      "Rom.7.23"
+     ],
+     "eg": [
+      {
+       "id": "Rom.7.17",
+       "ref": "Romans 7:17",
+       "text": "In that case, it is no longer I who do it, but it is sin living in me that does it.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.14",
+       "ref": "Romans 7:14",
+       "text": "We know that the law is spiritual; but I am unspiritual, sold as a slave to sin.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.20",
+       "ref": "Romans 7:20",
+       "text": "And if I do what I do not want, it is no longer I who do it, but it is sin living in me that does it.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.7.25",
+       "ref": "Romans 7:25",
+       "text": "Thanks be to God, through Jesus Christ our Lord! So then, with my mind I serve the law of God, but with my flesh I serve the law of sin.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A sin that leads to death; a sin that is not forgiven",
+     "note": "1 John 5:16-17 speaks of “a sin that leads to death” and “sin that does not lead to death”; Mark 3:28-29 and Matt 12:31 set all sins and blasphemies forgiven beside blasphemy against the Spirit, which “will not be forgiven”. What the sin to death is, whether the death is bodily or of the soul, and what the blasphemy is, readers take differently, and the page takes no side. Heb 10:26 (sinning deliberately after receiving the knowledge of the truth) is in the verb form.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "blasphemy",
+       "name": "blasphemy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "1John.5.16",
+      "Mark.3.29",
+      "Matt.12.31",
+      "1John.5.17",
+      "Mark.3.28"
+     ],
+     "eg": [
+      {
+       "id": "1John.5.16",
+       "ref": "1 John 5:16",
+       "text": "If anyone sees his brother committing a sin not leading to death, he should ask God, who will give life to those who commit this kind of sin. There is a sin that leads to death; I am not saying he should ask regarding that sin.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        },
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Mark.3.29",
+       "ref": "Mark 3:29",
+       "text": "But whoever blasphemes against the Holy Spirit will never be forgiven; he is guilty of eternal sin.”",
+       "words": [
+        {
+         "key": "g265",
+         "lemma": "ἁμάρτημα"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.31",
+       "ref": "Matthew 12:31",
+       "text": "Therefore I tell you, every sin and blasphemy will be forgiven men, but the blasphemy against the Spirit will not be forgiven.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "1John.5.17",
+       "ref": "1 John 5:17",
+       "text": "All unrighteousness is sin, yet there is sin that does not lead to death.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Christ and our sins: “save His people from their sins”, “died for”, “bore”, “takes away”, “knew no sin”",
+     "note": "Each verse speaks of Jesus and sin, and the text names him in it or in the sentence it belongs to: Matt 1:21 and John 1:29 by name, Heb 1:3 as “the Son”, John 8:46 and Matt 26:28 in his own words (“Me”, “My blood”), and the rest by “Christ” or “He” (1 Pet 2:24; Gal 1:4). The verses say he “died for”, “bore”, “takes away”, “was made” sin, “knew no sin”, “was without sin”. Where traditions part on what his death does about sin, the page takes no side. 1 Pet 2:24 says He “bore our sins”; Isa 53:12 says “He bore the sin of many” and Lev 16:21 puts the sins “on the goat's head”; Isa 53:12 and Lev 16:22 are in the row “Sin carried or lifted”, Isa 53:12 also in “Sin and its consequence”, and Lev 16:21 in the rows “Confessing sin, iniquity, transgression” and “Iniquity, transgression and sin side by side”; 1 Pet 2:24, John 1:29, Heb 9:28 and 1 John 3:5 stand in both this row and “Sin carried or lifted”, this row for the person they speak of and that row for the verb. The page does not say how the three relate.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "redemption",
+       "name": "redemption",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "blood",
+       "name": "blood",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "made_him_to_be_sin_for_us",
+       "name": "made Him to be sin on our behalf",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 20,
+     "verses": [
+      "Matt.1.21",
+      "1Cor.15.3",
+      "Heb.4.15",
+      "1Pet.2.24",
+      "Matt.26.28",
+      "John.1.29",
+      "John.8.46",
+      "2Cor.5.21",
+      "Gal.1.4",
+      "Heb.1.3",
+      "Heb.2.17",
+      "Heb.9.26",
+      "Heb.9.28",
+      "1Pet.2.22",
+      "1Pet.3.18",
+      "1John.1.7",
+      "1John.2.2",
+      "1John.3.5",
+      "1John.4.10",
+      "Rev.1.5"
+     ],
+     "eg": [
+      {
+       "id": "Matt.1.21",
+       "ref": "Matthew 1:21",
+       "text": "She will give birth to a Son, and you are to give Him the name Jesus, because He will save His people from their sins.”",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.3",
+       "ref": "1 Corinthians 15:3",
+       "text": "For what I received I passed on to you as of first importance: that Christ died for our sins according to the Scriptures,",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "Heb.4.15",
+       "ref": "Hebrews 4:15",
+       "text": "For we do not have a high priest who is unable to sympathize with our weaknesses, but we have one who was tempted in every way that we are, yet was without sin.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.2.24",
+       "ref": "1 Peter 2:24",
+       "text": "He Himself bore our sins in His body on the tree, so that we might die to sin and live to righteousness. “By His stripes you are healed.”",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sin carried or lifted: “bear his iniquity”, “forgiving iniquity”, “the goat will carry on itself all their iniquities”, “bore the sin of many”, “takes away the sin of the world”",
+     "note": "The Hebrew נָשָׂא is “lift, carry, bear”, and the text uses it of sin in two ways the English has to choose between: to bear it (Lev 5:1, “he shall bear the iniquity”; Lev 16:22, “The goat will carry on itself all their iniquities”; Num 14:34; Ezek 4:4-6; Isa 53:12, “He bore the sin of many”) and to lift it from someone, which the Berean prints “forgive” or “pardon” (Exod 34:7, “forgiving iniquity, transgression, and sin”; Mic 7:18; Ps 32:5, “You forgave the guilt of my sin”; Isa 33:24; 1 Sam 25:28, “Please forgive your servant's offense”; Exod 23:21, “he will not forgive rebellion”). In the Law the priests bear iniquity as part of their service: the plate on Aaron's forehead, “so that he may bear the iniquity of the holy things” (Exod 28:38); Aaron, his sons and his father's house “must bear the iniquity involving the sanctuary”, and Aaron and his sons “the iniquity involving your priesthood” (Num 18:1); the Levites “must bear their iniquity” (Num 18:23). The page does not say what the text means by it. Five verses use other words for bearing: Isa 53:11 (“He will bear their iniquities”) and Lam 5:7 (“we bear their punishment”) have the Hebrew סָבַל, “bear”; Isa 53:6 (“the LORD has laid upon Him the iniquity of us all”) has הִפְגִּיעַ, “laid”, and is here with the verses that speak of sin as carried by another; Heb 9:28 (“to bear the sins of many”) and 1 Pet 2:24 (“bore our sins”) have the Greek ἀναφέρω, “bear”. They are here because the verse says sin is borne or laid, and the page does not say these words are the one verb. The Greek αἴρω, “lift, take away”, is John 1:29 and 1 John 3:5. John 1:29, 1 John 3:5, Heb 9:28 and 1 Pet 2:24 are also in the row “Christ and our sins”: there for the person they speak of, here for the verb. The page sets the verses together under the verb and does not decide, in any verse, which of the two the Hebrew means; where the Berean decides, the verse is also in the row for forgiveness. Isa 53:11-12 name no one, and where traditions part on whom they speak of, the page takes no side.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "atonement",
+       "name": "reconciliation",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 47,
+     "verses": [
+      "Lev.5.1",
+      "Exod.34.7",
+      "Lev.16.22",
+      "John.1.29",
+      "Gen.50.17",
+      "Heb.9.28",
+      "Exod.10.17",
+      "Exod.23.21",
+      "Exod.28.38",
+      "Exod.28.43",
+      "Exod.32.32",
+      "Lev.7.18",
+      "Lev.10.17",
+      "Lev.17.16",
+      "Lev.19.8",
+      "Lev.20.17",
+      "Lev.20.19",
+      "Lev.20.20",
+      "Lev.22.16",
+      "Lev.24.15",
+      "Num.5.31",
+      "Num.9.13",
+      "Num.14.18",
+      "Num.14.34",
+      "Num.18.1",
+      "Num.18.22",
+      "Num.18.23",
+      "Num.18.32",
+      "Num.30.15",
+      "1Sam.15.25",
+      "1Sam.25.28",
+      "Job.7.21",
+      "Ps.32.5",
+      "Ps.85.2",
+      "Isa.53.6",
+      "Isa.53.11",
+      "Isa.53.12",
+      "Lam.5.7",
+      "Ezek.4.4",
+      "Ezek.4.5",
+      "Ezek.4.6",
+      "Ezek.23.49",
+      "Ezek.44.12",
+      "Hos.14.2",
+      "Mic.7.18",
+      "1Pet.2.24",
+      "1John.3.5"
+     ],
+     "eg": [
+      {
+       "id": "Lev.5.1",
+       "ref": "Leviticus 5:1",
+       "text": "“If someone sins by failing to testify when he hears a public charge about something he has witnessed, whether he has seen it or learned of it, he shall bear the iniquity.",
+       "words": [
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "Exod.34.7",
+       "ref": "Exodus 34:7",
+       "text": "maintaining loving devotion to a thousand generations, forgiving iniquity, transgression, and sin. Yet He will by no means leave the guilty unpunished; He will visit the iniquity of the fathers on their children and grandchildren to the third and fourth generations.”",
+       "words": [
+        {
+         "key": "h2402",
+         "lemma": "חַטָּאָה"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        },
+        {
+         "key": "h6588",
+         "lemma": "פֶּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Lev.16.22",
+       "ref": "Leviticus 16:22",
+       "text": "The goat will carry on itself all their iniquities into a solitary place, and the man will release it into the wilderness.",
+       "words": [
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "John.1.29",
+       "ref": "John 1:29",
+       "text": "The next day John saw Jesus coming toward him and said, “Look, the Lamb of God, who takes away the sin of the world!",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 147,
+    "verses": [
+     "1Cor.15.17",
+     "1Cor.6.18",
+     "1John.1.8",
+     "1John.3.8",
+     "1John.3.9",
+     "1Kgs.8.35",
+     "1Sam.14.38",
+     "1Sam.15.23",
+     "1Sam.2.17",
+     "1Sam.24.11",
+     "1Sam.25.24",
+     "1Sam.3.13",
+     "1Thess.2.16",
+     "1Tim.2.14",
+     "1Tim.5.22",
+     "1Tim.5.24",
+     "2Chr.28.13",
+     "2Chr.6.26",
+     "2Cor.11.7",
+     "2Pet.2.14",
+     "2Sam.14.9",
+     "2Sam.22.24",
+     "2Sam.3.8",
+     "2Tim.3.6",
+     "Dan.4.27",
+     "Dan.8.12",
+     "Dan.8.13",
+     "Deut.15.9",
+     "Deut.23.21",
+     "Deut.23.22",
+     "Deut.24.15",
+     "Ezek.14.11",
+     "Ezek.14.3",
+     "Ezek.14.4",
+     "Ezek.14.7",
+     "Ezek.16.49",
+     "Ezek.16.51",
+     "Ezek.16.52",
+     "Ezek.21.23",
+     "Ezek.28.18",
+     "Ezek.29.16",
+     "Ezek.33.12",
+     "Ezek.36.31",
+     "Ezek.43.10",
+     "Ezek.7.13",
+     "Ezek.7.16",
+     "Ezek.7.19",
+     "Ezek.9.9",
+     "Ezra.9.6",
+     "Gal.2.17",
+     "Gal.2.18",
+     "Gen.15.16",
+     "Gen.18.20",
+     "Gen.20.9",
+     "Gen.44.16",
+     "Heb.10.26",
+     "Heb.10.3",
+     "Heb.11.25",
+     "Heb.3.13",
+     "Hos.10.10",
+     "Hos.10.8",
+     "Hos.7.1",
+     "Isa.1.4",
+     "Isa.14.21",
+     "Isa.24.20",
+     "Isa.26.21",
+     "Isa.3.9",
+     "Isa.30.1",
+     "Isa.30.13",
+     "Isa.31.7",
+     "Isa.5.18",
+     "Isa.57.17",
+     "Isa.57.4",
+     "Isa.59.20",
+     "Isa.59.3",
+     "Jas.4.17",
+     "Jer.14.7",
+     "Jer.16.17",
+     "Jer.17.1",
+     "Jer.2.22",
+     "Jer.36.31",
+     "Jer.5.6",
+     "Jer.51.6",
+     "Job.10.14",
+     "Job.11.6",
+     "Job.13.26",
+     "Job.14.16",
+     "Job.15.5",
+     "Job.20.27",
+     "Job.22.5",
+     "Job.31.11",
+     "Job.31.28",
+     "Job.33.9",
+     "Job.34.6",
+     "Job.35.3",
+     "Job.35.6",
+     "Job.36.9",
+     "Job.8.4",
+     "John.15.22",
+     "John.15.24",
+     "John.16.8",
+     "John.16.9",
+     "John.19.11",
+     "John.9.41",
+     "Lam.1.14",
+     "Lam.1.8",
+     "Lam.2.14",
+     "Lev.18.25",
+     "Lev.26.41",
+     "Lev.26.43",
+     "Lev.4.23",
+     "Lev.4.28",
+     "Num.19.9",
+     "Num.5.15",
+     "Num.5.6",
+     "Prov.10.19",
+     "Prov.12.13",
+     "Prov.14.34",
+     "Prov.17.19",
+     "Prov.19.11",
+     "Prov.21.4",
+     "Prov.24.9",
+     "Prov.28.2",
+     "Prov.28.24",
+     "Prov.29.16",
+     "Prov.29.22",
+     "Prov.29.6",
+     "Ps.106.43",
+     "Ps.109.7",
+     "Ps.130.3",
+     "Ps.130.8",
+     "Ps.18.23",
+     "Ps.19.13",
+     "Ps.31.10",
+     "Ps.36.1",
+     "Ps.36.2",
+     "Ps.38.4",
+     "Ps.39.11",
+     "Ps.39.8",
+     "Ps.40.12",
+     "Ps.49.5",
+     "Ps.5.10",
+     "Ps.59.12",
+     "Ps.69.27",
+     "Ps.90.8",
+     "Rom.14.23",
+     "Rom.6.1"
+    ]
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 201,
+   "rows": [
+    {
+     "label": "“There is no one who does not sin”; “all have sinned”; “if we say we have not sinned”",
+     "note": "The first of three rows on whether a believer sins, set beside the two after it. In the Hebrew Scriptures “no one without sin” is said of every human being (1 Kgs 8:46; Eccl 7:20; Prov 20:9). 1 John 1:8-10 speak to believers (“we”); Jer 2:35 is a people who say “I have not sinned”. Where Christian traditions part on whether a believer sins, and how 1 John 1:8 and 3:9 fit together, the page takes no side. 1 John 2:1 is in the commands row.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "1Kgs.8.46",
+      "Rom.3.23",
+      "1John.1.8",
+      "1John.1.10",
+      "2Chr.6.36",
+      "Eccl.7.20",
+      "Prov.20.9",
+      "Jer.2.35",
+      "Rom.5.12"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.8.46",
+       "ref": "1 Kings 8:46",
+       "text": "When they sin against You-for there is no one who does not sin-and You become angry with them and deliver them to an enemy who takes them as captives to his own land, whether far or near,",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      },
+      {
+       "id": "Rom.3.23",
+       "ref": "Romans 3:23",
+       "text": "for all have sinned and fall short of the glory of God,",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      },
+      {
+       "id": "1John.1.8",
+       "ref": "1 John 1:8",
+       "text": "If we say we have no sin, we deceive ourselves, and the truth is not in us.",
+       "words": [
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "1John.1.10",
+       "ref": "1 John 1:10",
+       "text": "If we say we have not sinned, we make Him out to be a liar, and His word is not in us.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Anyone born of God ... cannot go on sinning”",
+     "note": "The second of three rows on whether a believer sins. The Berean reads 1 John 3:6 “keeps on sinning”, 3:9 “cannot go on sinning” and 5:18 “does not keep on sinning”; the Greek verb is in the present tense, and readers part on whether this means a continuing practice or no sin at all, and on whether it describes every believer. The page takes no side and sets it beside 1 John 1:8-10 in the row before and the commands in the row after.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "1John.3.9",
+      "1John.5.18",
+      "1John.3.6"
+     ],
+     "eg": [
+      {
+       "id": "1John.3.9",
+       "ref": "1 John 3:9",
+       "text": "Anyone born of God refuses to practice sin, because God's seed abides in him; he cannot go on sinning, because he has been born of God.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        },
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      },
+      {
+       "id": "1John.5.18",
+       "ref": "1 John 5:18",
+       "text": "We know that anyone born of God does not keep on sinning; the One who was born of God protects him, and the evil one cannot touch him.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      },
+      {
+       "id": "1John.3.6",
+       "ref": "1 John 3:6",
+       "text": "No one who remains in Him keeps on sinning. No one who continues to sin has seen Him or known Him.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Do not sin”, “sin no more”, “stop sinning”",
+     "note": "The third of three rows on whether a believer sins: the commands. In the Hebrew Scriptures they are said to the people (Exod 20:20) and in the Psalms (Ps 4:4; 119:11); in the Gospels and letters to those addressed (John 5:14; 8:11; Eph 4:26; 1 John 2:1). Ps 4:4 and Eph 4:26 are the same words (“be angry, yet do not sin”); John 8:11 is said to the woman taken in adultery (John 7:53-8:11 is a passage the earliest manuscripts lack, and the site marks it wherever it is shown). The page takes no side on how the commands and the two rows before them stand to each other.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Exod.20.20",
+      "John.8.11",
+      "Eph.4.26",
+      "1John.2.1",
+      "Ps.4.4",
+      "Ps.119.11",
+      "Ezek.3.21",
+      "John.5.14",
+      "Rom.6.15",
+      "1Cor.15.34"
+     ],
+     "eg": [
+      {
+       "id": "Exod.20.20",
+       "ref": "Exodus 20:20",
+       "text": "“Do not be afraid,” Moses replied. “For God has come to test you, so that the fear of Him may be before you, to keep you from sinning.”",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      },
+      {
+       "id": "John.8.11",
+       "ref": "John 8:11",
+       "text": "“No one, Lord,” she answered. “Then neither do I condemn you,” Jesus declared. “Now go and sin no more.”",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      },
+      {
+       "id": "Eph.4.26",
+       "ref": "Ephesians 4:26",
+       "text": "“Be angry, yet do not sin.” Do not let the sun set upon your anger,",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      },
+      {
+       "id": "1John.2.1",
+       "ref": "1 John 2:1",
+       "text": "My little children, I am writing these things to you so that you will not sin. But if anyone does sin, we have an advocate before the Father-Jesus Christ, the Righteous One.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sinned, transgressed, rebelled against the LORD, against God",
+     "note": "The verses where the text itself names the LORD, God or the Most High as the one sinned against: “I have sinned against the LORD”, “sin against God”, “the LORD, against whom we have sinned”. Isa 1:2 (“the LORD has spoken: ... they have rebelled against Me”), Jer 2:29 (“You have all rebelled against Me,” declares the LORD) and Jer 3:13 (“you have rebelled against the LORD your God”) are the Hebrew פָּשַׁע, “rebel, transgress”, a word beside חָטָא, “sin”; Isa 59:13 has “rebelling and denying the LORD”. Three verses say only “against You” and have the name close by: Ps 51:4 (“Against You, You only, have I sinned”) in the same prayer as “O God” (Ps 51:1, “Have mercy on me, O God”), Ps 119:11 (“that I might not sin against You”) beside “Blessed are You, O LORD” (Ps 119:12), and 1 Kgs 8:46 (“When they sin against You”) two verses after “they pray to the LORD” (1 Kgs 8:44); each is here beside the verse that names him and also stays in its other row. Verses that say only “against You” where the name is further off (1 Kgs 8:33; 2 Chr 6:24, with “O LORD my God” in 1 Kgs 8:28 and 2 Chr 6:19) or “against Me” (Exod 23:33; Hos 4:7; Ezek 14:13) are in the other rows or under More: the page names no one where the verse does not.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 36,
+     "verses": [
+      "Gen.39.9",
+      "2Sam.12.13",
+      "Isa.1.2",
+      "Mic.7.9",
+      "Gen.20.6",
+      "Exod.10.16",
+      "Exod.32.33",
+      "Num.32.23",
+      "Deut.1.41",
+      "Deut.9.16",
+      "Deut.20.18",
+      "Josh.7.20",
+      "Judg.10.10",
+      "1Sam.2.25",
+      "1Sam.7.6",
+      "1Sam.12.23",
+      "1Sam.14.33",
+      "2Kgs.17.7",
+      "Ps.41.4",
+      "Ps.78.17",
+      "Isa.42.24",
+      "Isa.59.13",
+      "Jer.2.29",
+      "Jer.3.13",
+      "Jer.3.25",
+      "Jer.8.14",
+      "Jer.14.7",
+      "Jer.14.20",
+      "Jer.40.3",
+      "Jer.44.23",
+      "Jer.50.7",
+      "Jer.50.14",
+      "Dan.9.8",
+      "Ps.51.4",
+      "Ps.119.11",
+      "1Kgs.8.46"
+     ],
+     "eg": [
+      {
+       "id": "Gen.39.9",
+       "ref": "Genesis 39:9",
+       "text": "No one in this house is greater than I am. He has withheld nothing from me except you, because you are his wife. So how could I do such a great evil and sin against God?”",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.12.13",
+       "ref": "2 Samuel 12:13",
+       "text": "Then David said to Nathan, “I have sinned against the LORD.” “The LORD has taken away your sin,” Nathan replied. “You will not die.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Isa.1.2",
+       "ref": "Isaiah 1:2",
+       "text": "Listen, O heavens, and give ear, O earth, for the LORD has spoken: “I have raised children and brought them up, but they have rebelled against Me.",
+       "words": [
+        {
+         "key": "h6586",
+         "lemma": "פָּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Mic.7.9",
+       "ref": "Micah 7:9",
+       "text": "Because I have sinned against Him, I must endure the rage of the LORD, until He argues my case and executes justice for me. He will bring me into the light; I will see His righteousness.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sinned against another: a neighbor, a brother, one's own body",
+     "note": "People sinning against people, in the Law and Prophets, the Gospels and the letters. In Luke 15:18 and 15:21 the son says “against heaven and against you”, and the page lets the words stand. 1 Cor 8:12 adds “you sin against Christ”, and 1 Cor 6:18 sins “against his own body”.",
+     "doors": [
+      {
+       "id": "brother",
+       "name": "brother",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Gen.42.22",
+      "Matt.18.15",
+      "Luke.17.4",
+      "1Cor.8.12",
+      "Gen.20.9",
+      "Judg.11.27",
+      "1Sam.2.25",
+      "1Sam.19.4",
+      "1Sam.19.5",
+      "1Sam.20.1",
+      "1Sam.24.11",
+      "1Kgs.8.31",
+      "2Chr.6.22",
+      "Jer.37.18",
+      "Matt.18.21",
+      "Luke.11.4",
+      "Luke.15.18",
+      "Luke.15.21",
+      "1Cor.6.18"
+     ],
+     "eg": [
+      {
+       "id": "Gen.42.22",
+       "ref": "Genesis 42:22",
+       "text": "And Reuben responded, “Didn't I tell you not to sin against the boy? But you would not listen. Now we must account for his blood!”",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      },
+      {
+       "id": "Matt.18.15",
+       "ref": "Matthew 18:15",
+       "text": "If your brother sins against you, go and confront him privately. If he listens to you, you have won your brother over.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.4",
+       "ref": "Luke 17:4",
+       "text": "Even if he sins against you seven times in a day, and seven times returns to say, ‘I repent,' you must forgive him.”",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.8.12",
+       "ref": "1 Corinthians 8:12",
+       "text": "By sinning against your brothers in this way and wounding their weak conscience, you sin against Christ.",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“I have sinned”, “we have sinned”, “we have sinned and rebelled”",
+     "note": "The words a person or a people say of themselves. They are said by Pharaoh (Exod 9:27), Balaam (Num 22:34), Saul (1 Sam 15:24), David (2 Sam 12:13; 24:10), Judas (Matt 27:4) and the prodigal son (Luke 15:21), and by the people together; the page lists them and does not say which of them were heard. Lam 3:42, “We have sinned and rebelled; You have not forgiven”, is the people's word; the Berean's “sinned” there is the Hebrew פָּשַׁע, “transgressed”.",
+     "doors": [
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "if_we_confess_our_sins",
+       "name": "if we confess our sins",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 44,
+     "verses": [
+      "Exod.9.27",
+      "2Sam.12.13",
+      "Lam.3.42",
+      "Luke.15.21",
+      "Exod.10.16",
+      "Num.14.40",
+      "Num.21.7",
+      "Num.22.34",
+      "Deut.1.41",
+      "Josh.7.20",
+      "Judg.10.10",
+      "Judg.10.15",
+      "1Sam.7.6",
+      "1Sam.12.10",
+      "1Sam.15.24",
+      "1Sam.15.30",
+      "1Sam.26.21",
+      "2Sam.19.20",
+      "2Sam.24.10",
+      "2Sam.24.17",
+      "1Kgs.8.47",
+      "1Chr.21.8",
+      "1Chr.21.17",
+      "2Chr.6.37",
+      "Neh.1.6",
+      "Job.7.20",
+      "Job.33.27",
+      "Ps.41.4",
+      "Ps.51.4",
+      "Ps.106.6",
+      "Isa.42.24",
+      "Isa.64.5",
+      "Jer.3.25",
+      "Jer.8.14",
+      "Jer.14.7",
+      "Jer.14.20",
+      "Lam.5.16",
+      "Dan.9.5",
+      "Dan.9.8",
+      "Dan.9.11",
+      "Dan.9.15",
+      "Mic.7.9",
+      "Matt.27.4",
+      "Luke.15.18"
+     ],
+     "eg": [
+      {
+       "id": "Exod.9.27",
+       "ref": "Exodus 9:27",
+       "text": "Then Pharaoh summoned Moses and Aaron. “This time I have sinned,” he said. “The LORD is righteous, and I and my people are wicked.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.12.13",
+       "ref": "2 Samuel 12:13",
+       "text": "Then David said to Nathan, “I have sinned against the LORD.” “The LORD has taken away your sin,” Nathan replied. “You will not die.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Lam.3.42",
+       "ref": "Lamentations 3:42",
+       "text": "“We have sinned and rebelled; You have not forgiven.”",
+       "words": [
+        {
+         "key": "h6586",
+         "lemma": "פָּשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Luke.15.21",
+       "ref": "Luke 15:21",
+       "text": "The son declared, ‘Father, I have sinned against heaven and against you. I am no longer worthy to be called your son.'",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“If someone sins”: the Law's cases, sinning unintentionally; sinning defiantly (Num 15:30); sinning deliberately (Heb 10:26)",
+     "note": "The Law's cases begin “If someone sins”: Lev 4:2, 4:22, 4:27 and 5:15 “sins unintentionally”, Lev 5:1 by failing to testify, 5:17 “even though he was unaware”, 6:2-4 by deceiving his neighbor, Lev 4:3 the anointed priest. Num 15:30 speaks of the person who “sins defiantly”, the Hebrew “does with a high hand”, and is shown here although the Hebrew verb there is not חָטָא. Heb 10:26 speaks of those who “deliberately go on sinning after we have received the knowledge of the truth”; it is a verse of Hebrews and not one of the Law's cases, and the page does not say that Hebrews applies Num 15:30. Readers part on whether Heb 10:26-27 describes a believer who falls away or one who never believed, and the page takes no side.",
+     "doors": [
+      {
+       "id": "sin_offering",
+       "name": "sin offering",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Lev.4.2",
+      "Lev.5.1",
+      "Num.15.27",
+      "Heb.10.26",
+      "Lev.4.3",
+      "Lev.4.22",
+      "Lev.4.27",
+      "Lev.5.15",
+      "Lev.5.17",
+      "Lev.6.2",
+      "Lev.6.3",
+      "Lev.6.4",
+      "Num.15.30"
+     ],
+     "eg": [
+      {
+       "id": "Lev.4.2",
+       "ref": "Leviticus 4:2",
+       "text": "“Tell the Israelites to do as follows with one who sins unintentionally against any of the LORD's commandments and does what is forbidden by them:",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        }
+       ]
+      },
+      {
+       "id": "Lev.5.1",
+       "ref": "Leviticus 5:1",
+       "text": "“If someone sins by failing to testify when he hears a public charge about something he has witnessed, whether he has seen it or learned of it, he shall bear the iniquity.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h5771",
+         "lemma": "עָוֺן"
+        }
+       ]
+      },
+      {
+       "id": "Num.15.27",
+       "ref": "Numbers 15:27",
+       "text": "Also, if one person sins unintentionally, he is to present a year-old female goat as a sin offering.",
+       "words": [
+        {
+         "key": "h2398",
+         "lemma": "חָטָא"
+        },
+        {
+         "key": "h2403",
+         "lemma": "חַטָּאת"
+        }
+       ]
+      },
+      {
+       "id": "Heb.10.26",
+       "ref": "Hebrews 10:26",
+       "text": "If we deliberately go on sinning after we have received the knowledge of the truth, no further sacrifice for sins remains,",
+       "words": [
+        {
+         "key": "g264",
+         "lemma": "ἁμαρτάνω"
+        },
+        {
+         "key": "g266",
+         "lemma": "ἁμαρτία"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 87,
+    "verses": [
+     "1Cor.7.28",
+     "1Cor.7.36",
+     "1John.3.8",
+     "1John.5.16",
+     "1Kgs.16.2",
+     "1Kgs.18.9",
+     "1Kgs.21.22",
+     "1Kgs.22.52",
+     "1Kgs.8.33",
+     "1Kgs.8.35",
+     "1Kgs.8.50",
+     "1Pet.2.20",
+     "2Chr.29.24",
+     "2Chr.6.24",
+     "2Chr.6.26",
+     "2Chr.6.39",
+     "2Kgs.13.11",
+     "2Kgs.13.2",
+     "2Kgs.13.6",
+     "2Kgs.14.24",
+     "2Kgs.15.18",
+     "2Kgs.15.24",
+     "2Kgs.15.28",
+     "2Kgs.15.9",
+     "2Kgs.21.11",
+     "2Kgs.21.16",
+     "2Kgs.23.15",
+     "2Pet.2.4",
+     "Acts.25.8",
+     "Amos.4.4",
+     "Deut.24.4",
+     "Eccl.5.6",
+     "Exod.23.33",
+     "Exod.9.34",
+     "Ezek.14.13",
+     "Ezek.18.20",
+     "Ezek.18.4",
+     "Ezek.2.3",
+     "Ezek.28.16",
+     "Ezek.33.12",
+     "Ezek.37.23",
+     "Ezra.10.13",
+     "Hab.2.10",
+     "Heb.3.17",
+     "Hos.10.9",
+     "Hos.13.2",
+     "Hos.4.7",
+     "Hos.7.13",
+     "Hos.8.1",
+     "Hos.8.11",
+     "Isa.1.4",
+     "Isa.43.27",
+     "Isa.46.8",
+     "Isa.66.24",
+     "Jer.2.8",
+     "Jer.32.35",
+     "Jer.33.8",
+     "Job.1.22",
+     "Job.1.5",
+     "Job.10.14",
+     "Job.2.10",
+     "Job.31.30",
+     "Job.35.6",
+     "Job.8.4",
+     "John.9.2",
+     "John.9.3",
+     "Josh.7.11",
+     "Lam.1.8",
+     "Lam.5.7",
+     "Lev.5.11",
+     "Lev.5.16",
+     "Lev.5.5",
+     "Lev.5.7",
+     "Lev.9.15",
+     "Luke.17.3",
+     "Neh.13.26",
+     "Neh.6.13",
+     "Neh.9.29",
+     "Num.16.22",
+     "Num.6.11",
+     "Prov.14.21",
+     "Ps.39.1",
+     "Ps.78.32",
+     "Rom.2.12",
+     "Rom.5.16",
+     "Titus.3.11",
+     "Zeph.3.11"
+    ]
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 65,
+   "rows": [
+    {
+     "label": "Sinners, often set beside the righteous or the wicked",
+     "note": "The text sets sinners beside the righteous: “sinners will not stand in the assembly of the righteous”, “I have not come to call the righteous, but sinners”, “the many were made sinners ... the many will be made righteous” (Rom 5:19, which is also in the row on sin through one man, where the page takes no side). In the Law and the Psalms the sinners are also named beside the wicked: the men of Sodom “wicked, sinning greatly against the LORD” (Gen 13:13), “May sinners vanish from the earth and the wicked be no more” (Ps 104:35).",
+     "doors": [
+      {
+       "id": "the_righteous",
+       "name": "the righteous",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_wicked",
+       "name": "the wicked",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Ps.1.1",
+      "Prov.13.21",
+      "Gen.13.13",
+      "Luke.15.7",
+      "Matt.9.13",
+      "Rom.5.19",
+      "Num.16.38",
+      "Ps.1.5",
+      "Ps.26.9",
+      "Ps.104.35",
+      "Prov.1.10",
+      "Isa.33.14",
+      "Mark.2.17",
+      "Luke.5.32",
+      "1Tim.1.9",
+      "1Pet.4.18"
+     ],
+     "eg": [
+      {
+       "id": "Ps.1.1",
+       "ref": "Psalms 1:1",
+       "text": "Blessed is the man who does not walk in the counsel of the wicked, or set foot on the path of sinners, or sit in the seat of mockers.",
+       "words": [
+        {
+         "key": "h2400",
+         "lemma": "חַטָּא"
+        }
+       ]
+      },
+      {
+       "id": "Prov.13.21",
+       "ref": "Proverbs 13:21",
+       "text": "Disaster pursues sinners, but prosperity is the reward of the righteous.",
+       "words": [
+        {
+         "key": "h2400",
+         "lemma": "חַטָּא"
+        }
+       ]
+      },
+      {
+       "id": "Gen.13.13",
+       "ref": "Genesis 13:13",
+       "text": "But the men of Sodom were wicked, sinning greatly against the LORD.",
+       "words": [
+        {
+         "key": "h2400",
+         "lemma": "חַטָּא"
+        }
+       ]
+      },
+      {
+       "id": "Luke.15.7",
+       "ref": "Luke 15:7",
+       "text": "I tell you that in the same way there will be more joy in heaven over one sinner who repents than over ninety-nine righteous ones who do not need to repent.",
+       "words": [
+        {
+         "key": "g268",
+         "lemma": "ἁμαρτωλός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Christ Jesus and sinners: tax collectors and sinners, “came into the world to save sinners”",
+     "note": "By hand, the verses where a sinner or the sinners are named beside Jesus or Christ in the verse or the scene: he eats with them and is called their friend, he comes to call them, he is delivered into their hands, he died for them, he is set apart from them. Where the verse says “the Son of Man” or “Me” the scene names Jesus (Matt 9:10; Mark 14:41).",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Matt.9.13",
+      "Luke.15.2",
+      "Rom.5.8",
+      "1Tim.1.15",
+      "Matt.9.10",
+      "Matt.9.11",
+      "Matt.11.19",
+      "Matt.26.45",
+      "Mark.2.15",
+      "Mark.2.16",
+      "Mark.2.17",
+      "Mark.14.41",
+      "Luke.5.8",
+      "Luke.5.30",
+      "Luke.5.32",
+      "Luke.7.34",
+      "Luke.7.37",
+      "Luke.7.39",
+      "Luke.15.1",
+      "Luke.19.7",
+      "Luke.24.7",
+      "1Tim.1.16",
+      "Heb.7.26",
+      "Heb.12.3"
+     ],
+     "eg": [
+      {
+       "id": "Matt.9.13",
+       "ref": "Matthew 9:13",
+       "text": "But go and learn what this means: ‘I desire mercy, not sacrifice.' For I have not come to call the righteous, but sinners.”",
+       "words": [
+        {
+         "key": "g268",
+         "lemma": "ἁμαρτωλός"
+        }
+       ]
+      },
+      {
+       "id": "Luke.15.2",
+       "ref": "Luke 15:2",
+       "text": "So the Pharisees and scribes began to grumble: “This man welcomes sinners and eats with them.”",
+       "words": [
+        {
+         "key": "g268",
+         "lemma": "ἁμαρτωλός"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.8",
+       "ref": "Romans 5:8",
+       "text": "But God proves His love for us in this: While we were still sinners, Christ died for us.",
+       "words": [
+        {
+         "key": "g268",
+         "lemma": "ἁμαρτωλός"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.1.15",
+       "ref": "1 Timothy 1:15",
+       "text": "This is a trustworthy saying, worthy of full acceptance: Christ Jesus came into the world to save sinners, of whom I am the worst.",
+       "words": [
+        {
+         "key": "g268",
+         "lemma": "ἁμαρτωλός"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 28,
+    "verses": [
+     "1Sam.15.18",
+     "Amos.9.10",
+     "Amos.9.8",
+     "Gal.2.15",
+     "Gal.2.17",
+     "Isa.1.28",
+     "Isa.13.9",
+     "Jas.4.8",
+     "Jas.5.20",
+     "John.8.7",
+     "John.9.16",
+     "John.9.24",
+     "John.9.25",
+     "John.9.31",
+     "Jude.1.15",
+     "Luke.13.2",
+     "Luke.15.10",
+     "Luke.18.13",
+     "Luke.6.32",
+     "Luke.6.33",
+     "Luke.6.34",
+     "Mark.8.38",
+     "Num.32.14",
+     "Prov.23.17",
+     "Ps.25.8",
+     "Ps.51.13",
+     "Rom.3.7",
+     "Rom.7.13"
+    ]
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “sin”, and the words beside it",
+  "words": [
+   {
+    "key": "g4624",
+    "lemma": "σκανδαλίζω",
+    "translit": "skandalizō",
+    "gloss": "to cause to stumble",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "Matt.18.8",
+     "2Cor.11.29",
+     "Matt.18.9"
+    ],
+    "eg": [
+     {
+      "id": "Matt.18.8",
+      "ref": "Matthew 18:8",
+      "text": "If your hand or your foot causes you to sin, cut it off and throw it away. It is better for you to enter life crippled or lame than to have two hands and two feet and be thrown into the eternal fire."
+     },
+     {
+      "id": "2Cor.11.29",
+      "ref": "2 Corinthians 11:29",
+      "text": "Who is weak, and I am not weak? Who is led into sin, and I do not burn with grief?"
+     }
+    ]
+   },
+   {
+    "key": "h7686",
+    "lemma": "שָׁגָה",
+    "translit": "sha.gah",
+    "gloss": "to wander",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Lev.4.13",
+     "Num.15.22",
+     "Ezek.45.20"
+    ],
+    "eg": [
+     {
+      "id": "Lev.4.13",
+      "ref": "Leviticus 4:13",
+      "text": "Now if the whole congregation of Israel strays unintentionally and the matter escapes the notice of the assembly so that they violate any of the LORD's commandments and incur guilt by doing what is forbidden,"
+     },
+     {
+      "id": "Num.15.22",
+      "ref": "Numbers 15:22",
+      "text": "Now if you stray unintentionally and do not obey all these commandments that the LORD has spoken to Moses-"
+     }
+    ]
+   },
+   {
+    "key": "g458",
+    "lemma": "ἀνομία",
+    "translit": "anomia",
+    "gloss": "lawlessness",
+    "lang": "Greek",
+    "verses": [
+     "1John.3.4",
+     "Rom.4.7",
+     "Heb.10.17"
+    ],
+    "n": 3,
+    "note": "ἀνομία is the Greek “lawlessness”, a different word from ἁμαρτία. 1 John 3:4 says “sin is lawlessness”, in the text's own words, and the page does not say more than that.",
+    "eg": [
+     {
+      "id": "1John.3.4",
+      "ref": "1 John 3:4",
+      "text": "Everyone who practices sin practices lawlessness as well. Indeed, sin is lawlessness."
+     },
+     {
+      "id": "Rom.4.7",
+      "ref": "Romans 4:7",
+      "text": "“Blessed are they whose lawless acts are forgiven, whose sins are covered."
+     }
+    ]
+   },
+   {
+    "key": "g3900",
+    "lemma": "παράπτωμα",
+    "translit": "paraptōma",
+    "gloss": "trespass",
+    "lang": "Greek",
+    "verses": [
+     "Eph.2.1",
+     "Rom.5.16",
+     "Rom.5.20"
+    ],
+    "n": 3,
+    "note": "παράπτωμα is “trespass”, a different word from ἁμαρτία; Eph 2:1 sets them side by side (“trespasses and sins”).",
+    "eg": [
+     {
+      "id": "Eph.2.1",
+      "ref": "Ephesians 2:1",
+      "text": "And you were dead in your trespasses and sins,"
+     },
+     {
+      "id": "Rom.5.16",
+      "ref": "Romans 5:16",
+      "text": "Again, the gift is not like the result of the one man's sin: The judgment that followed one sin brought condemnation, but the gift that followed many trespasses brought justification."
+     }
+    ]
+   },
+   {
+    "key": "g4625",
+    "lemma": "σκάνδαλον",
+    "translit": "skandalon",
+    "gloss": "stumbling block",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Matt.13.41",
+     "Matt.18.7"
+    ],
+    "eg": [
+     {
+      "id": "Matt.13.41",
+      "ref": "Matthew 13:41",
+      "text": "The Son of Man will send out His angels, and they will weed out of His kingdom every cause of sin and all who practice lawlessness."
+     },
+     {
+      "id": "Matt.18.7",
+      "ref": "Matthew 18:7",
+      "text": "Woe to the world for the causes of sin. These stumbling blocks must come, but woe to the man through whom they come!"
+     }
+    ]
+   },
+   {
+    "key": "h4604",
+    "lemma": "מַעַל",
+    "translit": "ma.al",
+    "gloss": "unfaithfulness",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Num.5.6"
+    ],
+    "eg": [
+     {
+      "id": "Num.5.6",
+      "ref": "Numbers 5:6",
+      "text": "“Tell the Israelites that when a man or woman acts unfaithfully against the LORD by committing any sin against another, that person is guilty"
+     }
+    ]
+   },
+   {
+    "key": "h4603",
+    "lemma": "מָעַל",
+    "translit": "ma.al",
+    "gloss": "be unfaithful",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Prov.16.10"
+    ],
+    "eg": [
+     {
+      "id": "Prov.16.10",
+      "ref": "Proverbs 16:10",
+      "text": "A divine verdict is on the lips of a king; his mouth must not betray justice."
+     }
+    ]
+   },
+   {
+    "key": "h819",
+    "lemma": "אַשְׁמָה",
+    "translit": "ash.mah",
+    "gloss": "guiltiness",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "2Chr.28.10"
+    ],
+    "eg": [
+     {
+      "id": "2Chr.28.10",
+      "ref": "2 Chronicles 28:10",
+      "text": "And now you intend to reduce to slavery the men and women of Judah and Jerusalem. But are you not also guilty before the LORD your God?"
+     }
+    ]
+   },
+   {
+    "key": "g4203",
+    "lemma": "πορνεύω",
+    "translit": "porneuō",
+    "gloss": "to sin sexually",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "1Cor.6.18"
+    ],
+    "eg": [
+     {
+      "id": "1Cor.6.18",
+      "ref": "1 Corinthians 6:18",
+      "text": "Flee from sexual immorality. Every other sin a man can commit is outside his body, but he who sins sexually sins against his own body."
+     }
+    ]
+   },
+   {
+    "key": "h7684",
+    "lemma": "שְׁגָגָה",
+    "translit": "she.ga.gah",
+    "gloss": "unintentionally",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Num.15.25"
+    ],
+    "eg": [
+     {
+      "id": "Num.15.25",
+      "ref": "Numbers 15:25",
+      "text": "The priest is to make atonement for the whole congregation of Israel, so that they may be forgiven; for the sin was unintentional and they have brought to the LORD a food offering and a sin offering, presented before the LORD for their unintentional sin."
+     }
+    ]
+   },
+   {
+    "key": "g51",
+    "lemma": "ἀγνόημα",
+    "translit": "agnoēma",
+    "gloss": "error",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Heb.9.7"
+    ],
+    "eg": [
+     {
+      "id": "Heb.9.7",
+      "ref": "Hebrews 9:7",
+      "text": "But only the high priest entered the second room, and then only once a year, and never without blood, which he offered for himself and for the sins the people had committed in ignorance."
+     }
+    ]
+   },
+   {
+    "key": "h2086",
+    "lemma": "זֵד",
+    "translit": "zed",
+    "gloss": "arrogant",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ps.19.13"
+    ],
+    "eg": [
+     {
+      "id": "Ps.19.13",
+      "ref": "Psalms 19:13",
+      "text": "Keep Your servant also from willful sins; may they not rule over me. Then I will be blameless and cleansed of great transgression."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,2876 @@
+{
+ "id": "kingdom",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h4467",
+   "lemma": "מַמְלָכָה",
+   "form": "noun",
+   "translit": "mam.la.khah",
+   "gloss": "kingdom",
+   "lang": "Hebrew",
+   "uses": 110,
+   "other_sense": 0
+  },
+  {
+   "key": "g932",
+   "lemma": "βασιλεία",
+   "form": "noun",
+   "translit": "basileia",
+   "gloss": "kingdom",
+   "lang": "Greek",
+   "uses": 154,
+   "other_sense": 0
+  },
+  {
+   "key": "h4438",
+   "lemma": "מַלְכוּת",
+   "form": "noun",
+   "translit": "mal.khut",
+   "gloss": "royalty",
+   "lang": "Hebrew",
+   "uses": 82,
+   "other_sense": 0
+  },
+  {
+   "key": "h4437",
+   "lemma": "מַלְכוּ",
+   "form": "noun",
+   "translit": "mal.khu",
+   "gloss": "kingdom",
+   "lang": "Hebrew",
+   "uses": 43,
+   "other_sense": 0
+  },
+  {
+   "key": "h4410",
+   "lemma": "מְלוּכָה",
+   "form": "noun",
+   "translit": "me.lu.khah",
+   "gloss": "kingship",
+   "lang": "Hebrew",
+   "uses": 23,
+   "other_sense": 0
+  },
+  {
+   "key": "h4468",
+   "lemma": "מַמְלָכוּת",
+   "form": "noun",
+   "translit": "mam.la.khut",
+   "gloss": "kingdom",
+   "lang": "Hebrew",
+   "uses": 9,
+   "other_sense": 0
+  },
+  {
+   "key": "g936",
+   "lemma": "βασιλεύω",
+   "form": "noun",
+   "translit": "basileuō",
+   "gloss": "to reign",
+   "lang": "Greek",
+   "uses": 18,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of the kingdom"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "david",
+   "name": "David",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "the_kingdom_of_god",
+   "name": "the kingdom of God",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "children_of_israel",
+   "name": "the sons of Israel",
+   "type": "group",
+   "missing": false
+  },
+  {
+   "id": "throne",
+   "name": "throne",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "gospel",
+   "name": "gospel",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "priests",
+   "name": "the priests",
+   "type": "group",
+   "missing": false
+  },
+  {
+   "id": "righteousness",
+   "name": "righteousness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "salvation",
+   "name": "salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "eternal_life",
+   "name": "eternal life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "covenant",
+   "name": "covenant",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "theme_kingdom_r1",
+   "name": "The LORD reigns",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r4",
+   "name": "An everlasting kingdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r5",
+   "name": "The Most High rules over the kingdom of mankind",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r6",
+   "name": "Kingdoms that will arise from the earth",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r9",
+   "name": "A kingdom of priests",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r13",
+   "name": "The kingdom taken away from you",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r14",
+   "name": "The throne of David established forever",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r19",
+   "name": "The kingdom of God is near",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r21",
+   "name": "The kingdom of God has come",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r22",
+   "name": "The kingdom of heaven is like",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r23",
+   "name": "Your kingdom come; seek His kingdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r24",
+   "name": "Theirs is the kingdom of heaven",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r25",
+   "name": "Enter the kingdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r26",
+   "name": "The kingdom is not ...",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r27",
+   "name": "Inherit the kingdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r28",
+   "name": "A banquet, a feast, a supper",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_kingdom_r29",
+   "name": "The kingdom of the world has become the kingdom of our Lord",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "msg_the_kingdom_of_god_is_at_hand",
+   "name": "Message: The kingdom of God is at hand",
+   "type": "pattern",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Dan.2.44",
+   "ref": "Daniel 2:44",
+   "text": "In the days of those kings, the God of heaven will set up a kingdom that will never be destroyed, nor will it be left to another people. It will shatter all these kingdoms and bring them to an end, but will itself stand forever."
+  },
+  {
+   "id": "2Sam.7.16",
+   "ref": "2 Samuel 7:16",
+   "text": "Your house and kingdom will endure forever before Me, and your throne will be established forever.”"
+  },
+  {
+   "id": "Ps.145.13",
+   "ref": "Psalms 145:13",
+   "text": "Your kingdom is an everlasting kingdom, and Your dominion endures through all generations. The LORD is faithful in all His words and kind in all His actions."
+  },
+  {
+   "id": "Matt.6.10",
+   "ref": "Matthew 6:10",
+   "text": "Your kingdom come, Your will be done, on earth as it is in heaven."
+  },
+  {
+   "id": "Mark.1.15",
+   "ref": "Mark 1:15",
+   "text": "“The time is fulfilled,” He said, “and the kingdom of God is near. Repent and believe in the gospel!”"
+  },
+  {
+   "id": "Luke.17.21",
+   "ref": "Luke 17:21",
+   "text": "Nor will people say, ‘Look, here it is,' or ‘There it is.' For you see, the kingdom of God is in your midst.”"
+  },
+  {
+   "id": "John.18.36",
+   "ref": "John 18:36",
+   "text": "Jesus answered, “My kingdom is not of this world; if it were, My servants would fight to prevent My arrest by the Jews. But now My kingdom is not of this realm.”"
+  },
+  {
+   "id": "Rev.11.15",
+   "ref": "Revelation 11:15",
+   "text": "Then the seventh angel sounded his trumpet, and loud voices called out in heaven: “The kingdom of the world has become the kingdom of our Lord and of His Christ, and He will reign forever and ever.”"
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 438,
+   "rows": [
+    {
+     "label": "Kingdoms of the earth, in the plural: “all the kingdoms of the earth”, “kingdom against kingdom”, “the kingdoms of the world”",
+     "note": null,
+     "doors": [
+      {
+       "id": "theme_kingdom_r7",
+       "name": "The kings of the earth",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r6",
+       "name": "Kingdoms that will arise from the earth",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 62,
+     "verses": [
+      "Deut.28.25",
+      "Isa.37.16",
+      "Matt.4.8",
+      "Mark.13.8",
+      "Josh.11.10",
+      "1Sam.10.18",
+      "1Kgs.4.21",
+      "1Kgs.4.24",
+      "1Kgs.18.10",
+      "2Kgs.19.15",
+      "2Kgs.19.19",
+      "1Chr.16.20",
+      "1Chr.29.30",
+      "2Chr.17.10",
+      "2Chr.20.6",
+      "2Chr.20.29",
+      "2Chr.32.15",
+      "2Chr.36.23",
+      "Ezra.1.2",
+      "Neh.9.22",
+      "Ps.46.6",
+      "Ps.68.32",
+      "Ps.79.6",
+      "Ps.102.22",
+      "Ps.105.13",
+      "Isa.10.10",
+      "Isa.13.4",
+      "Isa.13.19",
+      "Isa.14.16",
+      "Isa.19.2",
+      "Isa.23.11",
+      "Isa.23.17",
+      "Isa.37.20",
+      "Isa.47.5",
+      "Isa.60.12",
+      "Jer.1.10",
+      "Jer.1.15",
+      "Jer.10.7",
+      "Jer.15.4",
+      "Jer.18.7",
+      "Jer.18.9",
+      "Jer.24.9",
+      "Jer.25.26",
+      "Jer.27.8",
+      "Jer.28.8",
+      "Jer.29.18",
+      "Jer.34.1",
+      "Jer.34.17",
+      "Jer.49.28",
+      "Jer.51.20",
+      "Jer.51.27",
+      "Deut.3.21",
+      "2Chr.12.8",
+      "Amos.6.2",
+      "Nah.3.5",
+      "Zeph.3.8",
+      "Hag.2.22",
+      "Matt.24.7",
+      "Luke.4.5",
+      "Luke.4.6",
+      "Luke.21.10",
+      "Heb.11.33"
+     ],
+     "eg": [
+      {
+       "id": "Deut.28.25",
+       "ref": "Deuteronomy 28:25",
+       "text": "The LORD will cause you to be defeated before your enemies. You will march out against them in one direction but flee from them in seven. You will be an object of horror to all the kingdoms of the earth.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.37.16",
+       "ref": "Isaiah 37:16",
+       "text": "“O LORD of Hosts, God of Israel, enthroned above the cherubim, You alone are God over all the kingdoms of the earth. You made the heavens and the earth.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Matt.4.8",
+       "ref": "Matthew 4:8",
+       "text": "Again, the devil took Him to a very high mountain and showed Him all the kingdoms of the world and their glory.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Mark.13.8",
+       "ref": "Mark 13:8",
+       "text": "Nation will rise against nation, and kingdom against kingdom. There will be earthquakes in various places, as well as famines. These are the beginning of birth pains.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "One king's kingdom, realm or sovereignty: Nimrod's, Og's and Sihon's, Xerxes’, Nebuchadnezzar’s, Darius’, Egypt’s, the king of the South’s, the beast’s",
+     "note": "Earthly kingdoms, kept apart from the kingdom of God: Esth 5:3, 5:6, 7:2 and Mark 6:23 (“up to half the kingdom”, “half my kingdom”) are what a king offers; Rev 16:10, 17:12 and 17:17 are the beast’s. Ps 45:6 (“Your throne, O God ... the scepter of Your kingdom”) is addressed to a king; Heb 1:8 quotes it “about the Son”, it is also in the row of the LORD’s kingdom, and readers part on whom the psalm addresses; the page does not choose. Dan 4:26 (“until you acknowledge that Heaven rules”), Dan 4:31 and the “sovereignty” of Dan 2:37 and 5:18 (given to Nebuchadnezzar by “the God of heaven”, “the Most High God”) are also in the row of the LORD over every kingdom. Ps 135:11 reads “all the kings of Canaan”, Isa 17:3 “the sovereignty from Damascus”, Ezra 7:23 “the realm of the king”, Dan 11:9 “the realm of the king of the South”: words that elsewhere in the hub are printed “kingdom”; each example shows its own word.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r7",
+       "name": "The kings of the earth",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 66,
+     "verses": [
+      "Gen.10.10",
+      "Deut.3.4",
+      "Esth.1.4",
+      "Dan.5.28",
+      "Gen.20.9",
+      "Num.32.33",
+      "Deut.3.10",
+      "Deut.3.13",
+      "Josh.13.12",
+      "Josh.13.21",
+      "Josh.13.27",
+      "Josh.13.30",
+      "1Kgs.3.13",
+      "1Kgs.10.20",
+      "2Chr.9.19",
+      "2Kgs.15.19",
+      "2Chr.36.20",
+      "2Chr.36.22",
+      "Ezra.1.1",
+      "Ezra.7.13",
+      "Esth.1.14",
+      "Esth.1.20",
+      "Esth.1.22",
+      "Esth.2.3",
+      "Esth.3.6",
+      "Esth.3.8",
+      "Esth.4.14",
+      "Esth.5.3",
+      "Esth.5.6",
+      "Esth.7.2",
+      "Esth.9.30",
+      "Eccl.4.14",
+      "Dan.1.20",
+      "Dan.4.18",
+      "Dan.4.26",
+      "Dan.4.31",
+      "Dan.4.36",
+      "Dan.5.7",
+      "Dan.5.11",
+      "Dan.5.16",
+      "Dan.5.29",
+      "Dan.5.31",
+      "Dan.6.1",
+      "Dan.6.3",
+      "Dan.6.4",
+      "Dan.9.1",
+      "Dan.10.13",
+      "Dan.11.2",
+      "Dan.11.4",
+      "Dan.11.5",
+      "Dan.11.17",
+      "Dan.11.20",
+      "Dan.11.21",
+      "Ezek.29.14",
+      "Ezek.29.15",
+      "Ps.135.11",
+      "Isa.17.3",
+      "Ezra.7.23",
+      "Dan.2.37",
+      "Dan.5.18",
+      "Dan.11.9",
+      "Mark.6.23",
+      "Rev.16.10",
+      "Rev.17.12",
+      "Rev.17.17",
+      "Ps.45.6"
+     ],
+     "eg": [
+      {
+       "id": "Gen.10.10",
+       "ref": "Genesis 10:10",
+       "text": "His kingdom began in Babylon, Erech, Accad, and Calneh, in the land of Shinar.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Deut.3.4",
+       "ref": "Deuteronomy 3:4",
+       "text": "At that time we captured all sixty of his cities. There was not a single city we failed to take-the entire region of Argob, the kingdom of Og in Bashan.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Esth.1.4",
+       "ref": "Esther 1:4",
+       "text": "And for a full 180 days he displayed the glorious riches of his kingdom and the magnificent splendor of his greatness.",
+       "words": [
+        {
+         "key": "h4438",
+         "lemma": "מַלְכוּת"
+        }
+       ]
+      },
+      {
+       "id": "Dan.5.28",
+       "ref": "Daniel 5:28",
+       "text": "PERES means that your kingdom has been divided and given over to the Medes and Persians.”",
+       "words": [
+        {
+         "key": "h4437",
+         "lemma": "מַלְכוּ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Israel’s and Judah’s own kingdom: Saul’s torn away, David’s and Solomon’s, Rehoboam’s, the kingdom divided",
+     "note": "The human kingdom of Israel and of Judah, as the books of Samuel, Kings and Chronicles tell it. Exod 19:6 (“a kingdom of priests”) is the word to Israel at Sinai, a covenant word and not a verse about a monarchy; it is here as Israel’s own, and Rev 1:6 and 5:10, which say “a kingdom” and “priests” of others, are in the row of the kingdom given, taken away and restored.",
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r13",
+       "name": "The kingdom taken away from you",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_kingdom_divided",
+       "name": "Kingdom divided",
+       "type": "event",
+       "missing": false
+      },
+      {
+       "id": "event_sauls_disobedience_rejection",
+       "name": "Saul’s disobedience & rejection",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 50,
+     "verses": [
+      "1Sam.15.28",
+      "2Sam.5.12",
+      "1Kgs.11.31",
+      "Ezek.37.22",
+      "Exod.19.6",
+      "Num.24.7",
+      "Deut.17.20",
+      "1Sam.13.13",
+      "1Sam.13.14",
+      "1Sam.18.8",
+      "1Sam.20.31",
+      "1Sam.24.20",
+      "1Sam.28.17",
+      "2Sam.3.10",
+      "2Sam.3.28",
+      "2Sam.16.3",
+      "2Sam.16.8",
+      "1Kgs.2.12",
+      "1Kgs.2.22",
+      "1Kgs.2.46",
+      "1Kgs.11.11",
+      "1Kgs.11.13",
+      "1Kgs.11.34",
+      "1Kgs.11.35",
+      "1Kgs.12.21",
+      "1Kgs.12.26",
+      "1Kgs.14.8",
+      "2Kgs.14.5",
+      "1Chr.10.14",
+      "1Chr.11.10",
+      "1Chr.12.23",
+      "1Chr.14.2",
+      "2Chr.1.1",
+      "2Chr.11.1",
+      "2Chr.11.17",
+      "2Chr.14.5",
+      "2Chr.17.5",
+      "2Chr.20.30",
+      "2Chr.21.3",
+      "2Chr.21.4",
+      "2Chr.22.9",
+      "2Chr.25.3",
+      "2Chr.29.21",
+      "2Chr.33.13",
+      "Neh.9.35",
+      "Hos.1.4",
+      "Amos.7.13",
+      "Amos.9.8",
+      "Lam.2.2",
+      "Ezek.17.14"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.15.28",
+       "ref": "1 Samuel 15:28",
+       "text": "So Samuel said to him, “The LORD has torn the kingdom of Israel from you today and has given it to your neighbor who is better than you.",
+       "words": [
+        {
+         "key": "h4468",
+         "lemma": "מַמְלָכוּת"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.5.12",
+       "ref": "2 Samuel 5:12",
+       "text": "And David realized that the LORD had established him as king over Israel and had exalted his kingdom for the sake of His people Israel.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.11.31",
+       "ref": "1 Kings 11:31",
+       "text": "and said to Jeroboam, “Take ten pieces for yourself, for this is what the LORD, the God of Israel, says: ‘Behold, I will tear the kingdom out of the hand of Solomon, and I will give you ten tribes.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.37.22",
+       "ref": "Ezekiel 37:22",
+       "text": "I will make them one nation in the land, on the mountains of Israel, and one king will rule over all of them. Then they will no longer be two nations and will never again be divided into two kingdoms.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The kingdom of David and of his descendant: “established forever”",
+     "note": "The promise to David (2 Sam 7:12-16; 1 Chr 17:11-14), its repeat to Solomon (1 Chr 22:10; 28:5-7), Isaiah’s “throne of David and ... his kingdom” (Isa 9:7), and the words of Gabriel in Luke 1:32-33 and of the crowd in Mark 11:10. How this kingdom stands to the kingdom of God, to Jesus’ kingdom and to Israel is a point on which Christian traditions and the Jewish reading part, and the page takes no side. 1 Chr 28:7 adds a condition (“if he resolutely carries out My commandments”).",
+     "doors": [
+      {
+       "id": "david",
+       "name": "David",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r14",
+       "name": "The throne of David established forever",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_davidic_covenant",
+       "name": "Davidic covenant",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "2Sam.7.16",
+      "Isa.9.7",
+      "Luke.1.33",
+      "Mark.11.10",
+      "2Sam.7.12",
+      "2Sam.7.13",
+      "1Chr.17.11",
+      "1Chr.17.14",
+      "1Chr.22.10",
+      "1Chr.28.5",
+      "1Chr.28.7",
+      "2Chr.13.5",
+      "2Chr.13.8"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.7.16",
+       "ref": "2 Samuel 7:16",
+       "text": "Your house and kingdom will endure forever before Me, and your throne will be established forever.”",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.9.7",
+       "ref": "Isaiah 9:7",
+       "text": "Of the increase of His government and peace there will be no end. He will reign on the throne of David and over his kingdom, to establish and sustain it with justice and righteousness from that time and forevermore. The zeal of the LORD of Hosts will accomplish this.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.33",
+       "ref": "Luke 1:33",
+       "text": "and He will reign over the house of Jacob forever. His kingdom will never end!”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        },
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      },
+      {
+       "id": "Mark.11.10",
+       "ref": "Mark 11:10",
+       "text": "“Blessed is the coming kingdom of our father David!” “Hosanna in the highest!”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD’s kingdom, and the LORD over every kingdom: “Yours, O LORD, is the kingdom”, “His kingdom rules over all”, “gives it to whom He wishes”",
+     "note": "The kingdom said to be the LORD’s (1 Chr 28:5; 29:11; Ps 103:19; 145:11-13; Obad 21; Dan 4:3; 6:26; 7:14) and the LORD named over the kingdoms of the earth (2 Chr 20:6; Isa 37:16; Dan 4:17). In Ps 45:6 the words “Your throne, O God ... the scepter of Your kingdom” are addressed to a king; readers part on whom the psalm addresses, and Heb 1:8 quotes them “about the Son”; the page does not choose. In Dan 4 and 5 the words are Nebuchadnezzar’s, Daniel’s and the voice’s. Ps 22:28 and Dan 2:37 and 5:18 print “dominion” and “sovereignty” for the same words. In Ezra 1:2 and 2 Chr 36:23 it is Cyrus who says the LORD gave him “all the kingdoms of the earth”. The Hebrew verb מָלַךְ “reigns” (“The LORD reigns”, Ps 93:1; 97:1; 99:1) is a different word from the nouns on this page, is not on it, and stands on the page “The LORD reigns”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r1",
+       "name": "The LORD reigns",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r4",
+       "name": "An everlasting kingdom",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r5",
+       "name": "The Most High rules over the kingdom of mankind",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r3",
+       "name": "The LORD on His throne",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 44,
+     "verses": [
+      "1Chr.29.11",
+      "Ps.103.19",
+      "Ps.145.13",
+      "Dan.4.17",
+      "1Chr.28.5",
+      "2Chr.13.8",
+      "2Chr.20.6",
+      "2Chr.20.29",
+      "2Chr.36.23",
+      "Ezra.1.2",
+      "Neh.9.22",
+      "Ps.45.6",
+      "Ps.46.6",
+      "Ps.68.32",
+      "Ps.102.22",
+      "Ps.145.11",
+      "Ps.145.12",
+      "Isa.13.4",
+      "Isa.23.11",
+      "Isa.37.16",
+      "Isa.37.20",
+      "2Kgs.19.15",
+      "2Kgs.19.19",
+      "Jer.1.10",
+      "Jer.10.7",
+      "Jer.18.7",
+      "Jer.18.9",
+      "Jer.51.20",
+      "Obad.1.21",
+      "Ps.22.28",
+      "Dan.2.37",
+      "Dan.2.44",
+      "Dan.4.3",
+      "Dan.4.25",
+      "Dan.4.26",
+      "Dan.4.31",
+      "Dan.4.32",
+      "Dan.4.34",
+      "Dan.5.18",
+      "Dan.5.21",
+      "Dan.6.26",
+      "Dan.7.14",
+      "Hag.2.22",
+      "Zeph.3.8"
+     ],
+     "eg": [
+      {
+       "id": "1Chr.29.11",
+       "ref": "1 Chronicles 29:11",
+       "text": "Yours, O LORD, is the greatness and the power and the glory and the splendor and the majesty, for everything in heaven and on earth belongs to You. Yours, O LORD, is the kingdom, and You are exalted as head over all.",
+       "words": [
+        {
+         "key": "h4467",
+         "lemma": "מַמְלָכָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.103.19",
+       "ref": "Psalms 103:19",
+       "text": "The LORD has established His throne in heaven, and His kingdom rules over all.",
+       "words": [
+        {
+         "key": "h4438",
+         "lemma": "מַלְכוּת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.145.13",
+       "ref": "Psalms 145:13",
+       "text": "Your kingdom is an everlasting kingdom, and Your dominion endures through all generations. The LORD is faithful in all His words and kind in all His actions.",
+       "words": [
+        {
+         "key": "h4438",
+         "lemma": "מַלְכוּת"
+        }
+       ]
+      },
+      {
+       "id": "Dan.4.17",
+       "ref": "Daniel 4:17",
+       "text": "This decision is the decree of the watchers, the verdict declared by the holy ones, so that the living will know that the Most High rules over the kingdom of mankind and gives it to whom He wishes, setting over it the lowliest of men.'",
+       "words": [
+        {
+         "key": "h4437",
+         "lemma": "מַלְכוּ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Daniel’s kingdoms: four that arise, then a kingdom that “will never be destroyed”, given to “the saints of the Most High”",
+     "note": "The statue of Dan 2, the four beasts of Dan 7 and the ram and goat of Dan 8. Readings part on which kingdoms the four are (Babylon, Media, Persia and Greece on one reading; Babylon, Persia, Greece and Rome on another), on when the kingdom “that will never be destroyed” is set up (in the days of those kings), and on who “the saints of the Most High” are and when they possess it. Jewish, historical and Christian readings differ, and among Christian readings some place it at Christ’s first coming, some in the church age, some in a millennium and some at the end; the page takes no side. Rev 20:4 and 20:6, the thousand years, are in the row of “reign” below.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r6",
+       "name": "Kingdoms that will arise from the earth",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r29",
+       "name": "The kingdom of the world has become the kingdom of our Lord",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_daniel_interprets_dreams",
+       "name": "Daniel interprets dreams",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Dan.2.44",
+      "Dan.7.14",
+      "Dan.7.18",
+      "Dan.7.23",
+      "Dan.2.39",
+      "Dan.2.40",
+      "Dan.2.41",
+      "Dan.2.42",
+      "Dan.7.22",
+      "Dan.7.24",
+      "Dan.7.27",
+      "Dan.8.22"
+     ],
+     "eg": [
+      {
+       "id": "Dan.2.44",
+       "ref": "Daniel 2:44",
+       "text": "In the days of those kings, the God of heaven will set up a kingdom that will never be destroyed, nor will it be left to another people. It will shatter all these kingdoms and bring them to an end, but will itself stand forever.",
+       "words": [
+        {
+         "key": "h4437",
+         "lemma": "מַלְכוּ"
+        }
+       ]
+      },
+      {
+       "id": "Dan.7.14",
+       "ref": "Daniel 7:14",
+       "text": "And He was given dominion, glory, and kingship, that the people of every nation and language should serve Him. His dominion is an everlasting dominion that will not pass away, and His kingdom is one that will never be destroyed.",
+       "words": [
+        {
+         "key": "h4437",
+         "lemma": "מַלְכוּ"
+        }
+       ]
+      },
+      {
+       "id": "Dan.7.18",
+       "ref": "Daniel 7:18",
+       "text": "But the saints of the Most High will receive the kingdom and possess it forever-yes, forever and ever.'",
+       "words": [
+        {
+         "key": "h4437",
+         "lemma": "מַלְכוּ"
+        }
+       ]
+      },
+      {
+       "id": "Dan.7.23",
+       "ref": "Daniel 7:23",
+       "text": "This is what he said: ‘The fourth beast is a fourth kingdom that will appear on the earth, different from all the other kingdoms, and it will devour the whole earth, trample it down, and crush it.",
+       "words": [
+        {
+         "key": "h4437",
+         "lemma": "מַלְכוּ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The kingdom of heaven",
+     "note": "The text’s own phrase, in Matthew alone. Matt 19:23 reads “the kingdom of heaven” and 19:24, the next verse, “the kingdom of God”, and Matt 13:11 is the saying that Mark 4:11 and Luke 8:10 give as “the kingdom of God”. Whether the two phrases name one kingdom or two is a point on which readers part (dispensational and covenant readings among them), and the page takes no side and does not say they are one.",
+     "doors": [
+      {
+       "id": "the_kingdom_of_god",
+       "name": "the kingdom of God",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r22",
+       "name": "The kingdom of heaven is like",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r24",
+       "name": "Theirs is the kingdom of heaven",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 31,
+     "verses": [
+      "Matt.3.2",
+      "Matt.5.3",
+      "Matt.13.24",
+      "Matt.19.23",
+      "Matt.4.17",
+      "Matt.5.10",
+      "Matt.5.19",
+      "Matt.5.20",
+      "Matt.7.21",
+      "Matt.8.11",
+      "Matt.10.7",
+      "Matt.11.11",
+      "Matt.11.12",
+      "Matt.13.11",
+      "Matt.13.31",
+      "Matt.13.33",
+      "Matt.13.44",
+      "Matt.13.45",
+      "Matt.13.47",
+      "Matt.13.52",
+      "Matt.16.19",
+      "Matt.18.1",
+      "Matt.18.3",
+      "Matt.18.4",
+      "Matt.18.23",
+      "Matt.19.12",
+      "Matt.19.14",
+      "Matt.20.1",
+      "Matt.22.2",
+      "Matt.23.13",
+      "Matt.25.1"
+     ],
+     "eg": [
+      {
+       "id": "Matt.3.2",
+       "ref": "Matthew 3:2",
+       "text": "and saying, “Repent, for the kingdom of heaven is near.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.5.3",
+       "ref": "Matthew 5:3",
+       "text": "“Blessed are the poor in spirit, for theirs is the kingdom of heaven.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.13.24",
+       "ref": "Matthew 13:24",
+       "text": "Jesus put before them another parable: “The kingdom of heaven is like a man who sowed good seed in his field.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.19.23",
+       "ref": "Matthew 19:23",
+       "text": "Then Jesus said to His disciples, “Truly I tell you, it is hard for a rich man to enter the kingdom of heaven.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The kingdom of God",
+     "note": "The text’s own phrase: in Mark and Luke throughout, in John 3:3 and 3:5, in Acts, in Paul’s letters and in Revelation, and in Matt 12:28, 19:24, 21:31 and 21:43. Matt 19:23-24 sets “the kingdom of heaven” and “the kingdom of God” in two verses together; whether the phrases name one kingdom or two is a point on which readers part, and the page takes no side. Eph 5:5 (“the kingdom of Christ and of God”) stands in the rows beside, where the verse’s own words are not “kingdom of God” as one phrase. Matt 6:33 is in the row of the kingdom sought: the Berean prints “the kingdom of God and His righteousness”, and the Greek this page reads has “the kingdom and His righteousness” with no “of God” beside the word, which is why the rule that builds this row did not take it.",
+     "doors": [
+      {
+       "id": "the_kingdom_of_god",
+       "name": "the kingdom of God",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r19",
+       "name": "The kingdom of God is near",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r21",
+       "name": "The kingdom of God has come",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 66,
+     "verses": [
+      "Mark.1.15",
+      "Luke.17.21",
+      "Rom.14.17",
+      "Rev.12.10",
+      "Matt.12.28",
+      "Matt.19.24",
+      "Matt.21.31",
+      "Matt.21.43",
+      "Mark.4.11",
+      "Mark.4.26",
+      "Mark.4.30",
+      "Mark.9.1",
+      "Mark.9.47",
+      "Mark.10.14",
+      "Mark.10.15",
+      "Mark.10.23",
+      "Mark.10.24",
+      "Mark.10.25",
+      "Mark.12.34",
+      "Mark.14.25",
+      "Mark.15.43",
+      "Luke.4.43",
+      "Luke.6.20",
+      "Luke.7.28",
+      "Luke.8.1",
+      "Luke.8.10",
+      "Luke.9.2",
+      "Luke.9.11",
+      "Luke.9.27",
+      "Luke.9.60",
+      "Luke.9.62",
+      "Luke.10.9",
+      "Luke.10.11",
+      "Luke.11.20",
+      "Luke.13.18",
+      "Luke.13.20",
+      "Luke.13.28",
+      "Luke.13.29",
+      "Luke.14.15",
+      "Luke.16.16",
+      "Luke.17.20",
+      "Luke.18.16",
+      "Luke.18.17",
+      "Luke.18.24",
+      "Luke.18.25",
+      "Luke.18.29",
+      "Luke.19.11",
+      "Luke.21.31",
+      "Luke.22.16",
+      "Luke.22.18",
+      "Luke.23.51",
+      "John.3.3",
+      "John.3.5",
+      "Acts.1.3",
+      "Acts.8.12",
+      "Acts.14.22",
+      "Acts.19.8",
+      "Acts.28.23",
+      "Acts.28.31",
+      "1Cor.4.20",
+      "1Cor.6.9",
+      "1Cor.15.24",
+      "1Cor.15.50",
+      "Gal.5.21",
+      "Col.4.11",
+      "2Thess.1.5"
+     ],
+     "eg": [
+      {
+       "id": "Mark.1.15",
+       "ref": "Mark 1:15",
+       "text": "“The time is fulfilled,” He said, “and the kingdom of God is near. Repent and believe in the gospel!”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.21",
+       "ref": "Luke 17:21",
+       "text": "Nor will people say, ‘Look, here it is,' or ‘There it is.' For you see, the kingdom of God is in your midst.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.14.17",
+       "ref": "Romans 14:17",
+       "text": "For the kingdom of God is not a matter of eating and drinking, but of righteousness, peace, and joy in the Holy Spirit.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Rev.12.10",
+       "ref": "Revelation 12:10",
+       "text": "And I heard a loud voice in heaven saying: “Now have come the salvation and the power and the kingdom of our God, and the authority of His Christ. For the accuser of our brothers has been thrown down-he who accuses them day and night before our God.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Of the Son, of Christ: “His kingdom”, “My kingdom”, “Your kingdom”, “the kingdom of His beloved Son”",
+     "note": "Where the verse itself names the Son of Man, Jesus, the Son or Christ, or is Jesus’ own “My”. In Luke 1:33 (“His kingdom will never end”) the name is in 1:31. In 2 Tim 4:18 the verse says “the Lord” and “His heavenly kingdom”; readers take it of Christ or of the Father, and the page does not choose. Heb 1:8 reads “But about the Son He says” and quotes Ps 45:6, which is also in the rows of one king’s kingdom and the LORD’s kingdom; readers part on whom the psalm is spoken to, and the page does not choose.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r16",
+       "name": "The King of the Jews, the King of Israel",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Matt.16.28",
+      "Luke.23.42",
+      "John.18.36",
+      "Col.1.13",
+      "Matt.13.41",
+      "Matt.20.21",
+      "Luke.22.30",
+      "2Tim.4.1",
+      "Heb.1.8",
+      "Eph.5.5",
+      "2Pet.1.11",
+      "Rev.11.15"
+     ],
+     "eg": [
+      {
+       "id": "Matt.16.28",
+       "ref": "Matthew 16:28",
+       "text": "Truly I tell you, some who are standing here will not taste death before they see the Son of Man coming in His kingdom.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.23.42",
+       "ref": "Luke 23:42",
+       "text": "Then he said, “Jesus, remember me when You come into Your kingdom!”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "John.18.36",
+       "ref": "John 18:36",
+       "text": "Jesus answered, “My kingdom is not of this world; if it were, My servants would fight to prevent My arrest by the Jews. But now My kingdom is not of this realm.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.13",
+       "ref": "Colossians 1:13",
+       "text": "He has rescued us from the dominion of darkness and brought us into the kingdom of His beloved Son,",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The Father’s kingdom: “the kingdom of their Father”, “your Father is pleased to give you the kingdom”, “hands over the kingdom to God the Father”",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r27",
+       "name": "Inherit the kingdom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Matt.13.43",
+      "Luke.12.32",
+      "Matt.26.29",
+      "1Cor.15.24",
+      "Matt.25.34",
+      "Luke.22.29"
+     ],
+     "eg": [
+      {
+       "id": "Matt.13.43",
+       "ref": "Matthew 13:43",
+       "text": "Then the righteous will shine like the sun in the kingdom of their Father. He who has ears, let him hear.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.12.32",
+       "ref": "Luke 12:32",
+       "text": "Do not be afraid, little flock, for your Father is pleased to give you the kingdom.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.29",
+       "ref": "Matthew 26:29",
+       "text": "I tell you, I will not drink of this fruit of the vine from now on until that day when I drink it anew with you in My Father's kingdom.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.24",
+       "ref": "1 Corinthians 15:24",
+       "text": "Then the end will come, when He hands over the kingdom to God the Father after He has destroyed all dominion, authority, and power.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Prayed for, and sought first: “Your kingdom come”, “seek first the kingdom of God”, “seek His kingdom”",
+     "note": "The Lord’s Prayer asks that the kingdom come; Matt 6:33 and Luke 12:31 say to seek it. Whether this kingdom is here, still to come or both is a point on which Christian traditions part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r23",
+       "name": "Your kingdom come; seek His kingdom",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Matt.6.10",
+      "Luke.11.2",
+      "Matt.6.33",
+      "Luke.12.31"
+     ],
+     "eg": [
+      {
+       "id": "Matt.6.10",
+       "ref": "Matthew 6:10",
+       "text": "Your kingdom come, Your will be done, on earth as it is in heaven.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.2",
+       "ref": "Luke 11:2",
+       "text": "So Jesus told them, “When you pray, say: ‘Father, hallowed be Your name. Your kingdom come.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.33",
+       "ref": "Matthew 6:33",
+       "text": "But seek first the kingdom of God and His righteousness, and all these things will be added unto you.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.12.31",
+       "ref": "Luke 12:31",
+       "text": "But seek His kingdom, and these things will be added unto you.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Said as near, or as here: “is near”, “has come upon you”, “in your midst”, “brought us into”, “is being preached”",
+     "note": "Set beside the next row as the text has them, with nothing reconciled. Heb 12:28 (“we are receiving an unshakable kingdom”) is in the present tense; Col 1:13 (“brought us into”) in the past. Rev 11:15 (“has become the kingdom of our Lord”) and Rev 12:10 (“Now have come ... the kingdom of our God”) are the same sort of heavenly announcement, a completed verb inside a vision of the end; Rev 11:15 is also in the row of the kingdom said as still ahead. Matt 11:12 (“has been subject to violence”) and Luke 16:16 (“is being preached, and everyone is forcing his way into it”) are among the hardest verses of the word; the Greek verbs can be read as the kingdom acting or as being pressed upon, and the page does not choose. Luke 21:31 says “near” of the events Jesus has just described. Luke 17:21 reads “is in your midst” (the Berean’s word; “within you” is another reading of the same Greek ἐντός, and the page does not choose). Whether the kingdom is here, still to come or both is a point on which Christian traditions part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r19",
+       "name": "The kingdom of God is near",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r21",
+       "name": "The kingdom of God has come",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "msg_the_kingdom_of_god_is_at_hand",
+       "name": "Message: The kingdom of God is at hand",
+       "type": "pattern",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Mark.1.15",
+      "Matt.12.28",
+      "Luke.17.21",
+      "Col.1.13",
+      "Matt.3.2",
+      "Matt.4.17",
+      "Matt.10.7",
+      "Matt.11.12",
+      "Luke.10.9",
+      "Luke.10.11",
+      "Luke.11.20",
+      "Luke.16.16",
+      "Luke.21.31",
+      "Heb.12.28",
+      "Rev.11.15",
+      "Rev.12.10"
+     ],
+     "eg": [
+      {
+       "id": "Mark.1.15",
+       "ref": "Mark 1:15",
+       "text": "“The time is fulfilled,” He said, “and the kingdom of God is near. Repent and believe in the gospel!”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.28",
+       "ref": "Matthew 12:28",
+       "text": "But if I drive out demons by the Spirit of God, then the kingdom of God has come upon you.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.21",
+       "ref": "Luke 17:21",
+       "text": "Nor will people say, ‘Look, here it is,' or ‘There it is.' For you see, the kingdom of God is in your midst.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.13",
+       "ref": "Colossians 1:13",
+       "text": "He has rescued us from the dominion of darkness and brought us into the kingdom of His beloved Son,",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Said as still ahead: “until that day”, “until the kingdom of God comes”, “will not taste death before they see”, “inherit the kingdom prepared”, “the coming kingdom”",
+     "note": "Set beside the row above. Matt 16:28, Mark 9:1 and Luke 9:27 (“some who are standing here will not taste death before they see”) are read of the Transfiguration, the resurrection, Pentecost, the fall of Jerusalem and the return of Christ, and the page takes no side. Mark 15:43 and Luke 23:51 say what Joseph of Arimathea was looking for (“waiting for the kingdom of God”), with no claim about when. Luke 19:11, which says what the people thought, is with the parable in the row of a king’s reign. Whether the kingdom is here, still to come or both is a point on which Christian traditions part, and the page takes no side. Verses that say only “enter” are in their own row.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r19",
+       "name": "The kingdom of God is near",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r27",
+       "name": "Inherit the kingdom",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r29",
+       "name": "The kingdom of the world has become the kingdom of our Lord",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Luke.22.18",
+      "Matt.25.34",
+      "Mark.9.1",
+      "1Cor.15.24",
+      "Matt.8.11",
+      "Matt.13.41",
+      "Matt.13.43",
+      "Matt.16.28",
+      "Matt.26.29",
+      "Mark.11.10",
+      "Mark.14.25",
+      "Luke.9.27",
+      "Luke.13.28",
+      "Luke.13.29",
+      "Luke.14.15",
+      "Luke.22.16",
+      "Luke.23.42",
+      "Mark.15.43",
+      "Luke.23.51",
+      "1Cor.15.50",
+      "2Thess.1.5",
+      "2Tim.4.1",
+      "2Pet.1.11",
+      "Rev.11.15"
+     ],
+     "eg": [
+      {
+       "id": "Luke.22.18",
+       "ref": "Luke 22:18",
+       "text": "For I tell you that I will not drink of the fruit of the vine from now on until the kingdom of God comes.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.25.34",
+       "ref": "Matthew 25:34",
+       "text": "Then the King will say to those on His right, ‘Come, you who are blessed by My Father, inherit the kingdom prepared for you from the foundation of the world.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Mark.9.1",
+       "ref": "Mark 9:1",
+       "text": "Then Jesus said to them, “Truly I tell you, there are some standing here who will not taste death before they see the kingdom of God arrive with power.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.24",
+       "ref": "1 Corinthians 15:24",
+       "text": "Then the end will come, when He hands over the kingdom to God the Father after He has destroyed all dominion, authority, and power.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "What the text says the kingdom is not: “not with observable signs”, “not of this world”, “not eating and drinking”, “not talk but power”",
+     "note": "The verses that say what the kingdom is not. “My kingdom is not of this world” (John 18:36) is Jesus before Pilate; “not of this realm” is the Berean’s second phrase for the same Greek κόσμος. What “not of this world” means for the kingdom now and still to come is a point on which Christian traditions part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r26",
+       "name": "The kingdom is not ...",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Luke.17.20",
+      "John.18.36",
+      "Rom.14.17",
+      "1Cor.4.20"
+     ],
+     "eg": [
+      {
+       "id": "Luke.17.20",
+       "ref": "Luke 17:20",
+       "text": "When asked by the Pharisees when the kingdom of God would come, Jesus replied, “The kingdom of God will not come with observable signs.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "John.18.36",
+       "ref": "John 18:36",
+       "text": "Jesus answered, “My kingdom is not of this world; if it were, My servants would fight to prevent My arrest by the Jews. But now My kingdom is not of this realm.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.14.17",
+       "ref": "Romans 14:17",
+       "text": "For the kingdom of God is not a matter of eating and drinking, but of righteousness, peace, and joy in the Holy Spirit.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.4.20",
+       "ref": "1 Corinthians 4:20",
+       "text": "For the kingdom of God is not a matter of talk but of power.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“The kingdom of heaven is like ...”: the parables",
+     "note": "Matt 13:38 is the explanation of the weeds (“the good seed represents the sons of the kingdom”). The same comparisons stand under “the kingdom of heaven” in Matthew and “the kingdom of God” in Mark and Luke (Mark 4:30 and Luke 13:18 ask, “To what can we compare the kingdom of God?”); the page does not say whether the phrases are one.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r22",
+       "name": "The kingdom of heaven is like",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Matt.13.24",
+      "Mark.4.26",
+      "Luke.13.18",
+      "Matt.20.1",
+      "Matt.13.31",
+      "Matt.13.33",
+      "Matt.13.44",
+      "Matt.13.45",
+      "Matt.13.47",
+      "Matt.13.52",
+      "Matt.18.23",
+      "Matt.22.2",
+      "Matt.25.1",
+      "Matt.13.38",
+      "Mark.4.30",
+      "Luke.13.20"
+     ],
+     "eg": [
+      {
+       "id": "Matt.13.24",
+       "ref": "Matthew 13:24",
+       "text": "Jesus put before them another parable: “The kingdom of heaven is like a man who sowed good seed in his field.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Mark.4.26",
+       "ref": "Mark 4:26",
+       "text": "Jesus also said, “The kingdom of God is like a man who scatters seed on the ground.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.13.18",
+       "ref": "Luke 13:18",
+       "text": "Then Jesus asked, “What is the kingdom of God like? To what can I compare it?",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.20.1",
+       "ref": "Matthew 20:1",
+       "text": "“For the kingdom of heaven is like a landowner who went out early in the morning to hire workers for his vineyard.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Preached, proclaimed, taught, argued: “the gospel of the kingdom”, “the message of the kingdom”",
+     "note": null,
+     "doors": [
+      {
+       "id": "gospel",
+       "name": "gospel",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r20",
+       "name": "Proclaiming the kingdom of God",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Matt.4.23",
+      "Luke.4.43",
+      "Acts.8.12",
+      "Acts.28.31",
+      "Matt.9.35",
+      "Matt.13.19",
+      "Matt.24.14",
+      "Luke.8.1",
+      "Luke.9.2",
+      "Luke.9.11",
+      "Luke.9.60",
+      "Luke.16.16",
+      "Acts.1.3",
+      "Acts.19.8",
+      "Acts.20.25",
+      "Acts.28.23"
+     ],
+     "eg": [
+      {
+       "id": "Matt.4.23",
+       "ref": "Matthew 4:23",
+       "text": "Jesus went throughout Galilee, teaching in their synagogues, preaching the gospel of the kingdom, and healing every disease and sickness among the people.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.4.43",
+       "ref": "Luke 4:43",
+       "text": "But Jesus told them, “I must preach the good news of the kingdom of God to the other towns as well, because that is why I was sent.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Acts.8.12",
+       "ref": "Acts 8:12",
+       "text": "But when they believed Philip as he preached the gospel of the kingdom of God and the name of Jesus Christ, they were baptized, both men and women.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Acts.28.31",
+       "ref": "Acts 28:31",
+       "text": "Boldly and freely he proclaimed the kingdom of God and taught about the Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Theirs is the kingdom”, and the little child as the pattern: the poor in spirit, the persecuted, the poor, and the little children",
+     "note": "Matt 5:3 reads “theirs is the kingdom of heaven” and Luke 6:20 “yours is the kingdom of God”; the page does not say whether “the poor in spirit” and “you who are poor” are the same. Jas 2:5 reads “Has not God chosen the poor of this world ... to inherit the kingdom He promised those who love Him?”.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r24",
+       "name": "Theirs is the kingdom of heaven",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r25",
+       "name": "Enter the kingdom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Matt.5.3",
+      "Luke.6.20",
+      "Mark.10.14",
+      "Jas.2.5",
+      "Matt.5.10",
+      "Matt.18.3",
+      "Matt.18.4",
+      "Matt.19.14",
+      "Mark.10.15",
+      "Luke.18.16",
+      "Luke.18.17"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.3",
+       "ref": "Matthew 5:3",
+       "text": "“Blessed are the poor in spirit, for theirs is the kingdom of heaven.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.6.20",
+       "ref": "Luke 6:20",
+       "text": "Looking up at His disciples, Jesus said: “Blessed are you who are poor, for yours is the kingdom of God.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Mark.10.14",
+       "ref": "Mark 10:14",
+       "text": "But when Jesus saw this, He was indignant and told them, “Let the little children come to Me, and do not hinder them! For the kingdom of God belongs to such as these.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.5",
+       "ref": "James 2:5",
+       "text": "Listen, my beloved brothers: Has not God chosen the poor of this world to be rich in faith and to inherit the kingdom He promised those who love Him?",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Enter the kingdom: who will, and how hard",
+     "note": "The verses that say “enter”: “unless your righteousness exceeds that of the scribes and Pharisees” (Matt 5:20), “only he who does the will of My Father in heaven” (Matt 7:21), “unless you change and become like little children” (Matt 18:3), the camel and the needle (Matt 19:24; Mark 10:25; Luke 18:25), and “no one can enter the kingdom of God unless he is born of water and the Spirit” (John 3:5; with 3:3, “see”). Readers part on what “born of water” is (baptism, birth, the word, the Spirit), on what these verses ask of the person who would enter and how that stands to faith and grace, and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r25",
+       "name": "Enter the kingdom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Matt.5.20",
+      "Matt.7.21",
+      "Matt.19.24",
+      "Acts.14.22",
+      "Matt.18.3",
+      "Matt.19.23",
+      "Matt.23.13",
+      "Mark.9.47",
+      "Mark.10.15",
+      "Mark.10.23",
+      "Mark.10.24",
+      "Mark.10.25",
+      "Luke.18.17",
+      "Luke.18.24",
+      "Luke.18.25",
+      "John.3.5"
+     ],
+     "eg": [
+      {
+       "id": "Matt.5.20",
+       "ref": "Matthew 5:20",
+       "text": "For I tell you that unless your righteousness exceeds that of the scribes and Pharisees, you will never enter the kingdom of heaven.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.7.21",
+       "ref": "Matthew 7:21",
+       "text": "Not everyone who says to Me, ‘Lord, Lord,' will enter the kingdom of heaven, but only he who does the will of My Father in heaven.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.19.24",
+       "ref": "Matthew 19:24",
+       "text": "Again I tell you, it is easier for a camel to pass through the eye of a needle than for a rich man to enter the kingdom of God.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Acts.14.22",
+       "ref": "Acts 14:22",
+       "text": "strengthening the souls of the disciples and encouraging them to continue in the faith. “We must endure many hardships to enter the kingdom of God,” they said.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Receive it, inherit it, be given it, be a partner in it; and “will not inherit”",
+     "note": "Set side by side: those who inherit (Matt 25:34; Jas 2:5), those who receive it (Mark 10:15; Heb 12:28), the one who is a “partner in the tribulation and kingdom and perseverance that are in Jesus” (Rev 1:9, in the present tense) and those of whom the letters say they “will not inherit the kingdom of God” (1 Cor 6:9-10; Gal 5:21; Eph 5:5; 1 Cor 15:50, “flesh and blood cannot inherit”). Where Christian traditions part on whether a person who has been saved can fall short of the kingdom, and on what these lists say of believers, the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r27",
+       "name": "Inherit the kingdom",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "inheritance",
+       "name": "inheritance",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Matt.25.34",
+      "Jas.2.5",
+      "1Cor.6.9",
+      "Gal.5.21",
+      "Mark.10.15",
+      "Luke.12.32",
+      "Luke.18.17",
+      "Luke.22.29",
+      "Heb.12.28",
+      "Rev.1.9",
+      "Dan.7.18",
+      "Dan.7.22",
+      "Dan.7.27",
+      "2Pet.1.11",
+      "1Cor.6.10",
+      "1Cor.15.50",
+      "Eph.5.5"
+     ],
+     "eg": [
+      {
+       "id": "Matt.25.34",
+       "ref": "Matthew 25:34",
+       "text": "Then the King will say to those on His right, ‘Come, you who are blessed by My Father, inherit the kingdom prepared for you from the foundation of the world.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.5",
+       "ref": "James 2:5",
+       "text": "Listen, my beloved brothers: Has not God chosen the poor of this world to be rich in faith and to inherit the kingdom He promised those who love Him?",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.6.9",
+       "ref": "1 Corinthians 6:9",
+       "text": "Do you not know that the wicked will not inherit the kingdom of God? Do not be deceived: Neither the sexually immoral, nor idolaters, nor adulterers, nor men who submit to or perform homosexual acts,",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Gal.5.21",
+       "ref": "Galatians 5:21",
+       "text": "and envy; drunkenness, orgies, and the like. I warn you, as I did before, that those who practice such things will not inherit the kingdom of God.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The keys of the kingdom, and the kingdom shut",
+     "note": "Matt 16:19 gives the keys of the kingdom of heaven (“Whatever you bind on earth will be bound in heaven”) in the answer to Peter; Matt 23:13 says the scribes and Pharisees “shut the kingdom of heaven in men’s faces”. Readers part on to whom the keys are given and what binding and loosing are, and the page takes no side.",
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "Matt.16.19",
+      "Matt.23.13"
+     ],
+     "eg": [
+      {
+       "id": "Matt.16.19",
+       "ref": "Matthew 16:19",
+       "text": "I will give you the keys of the kingdom of heaven. Whatever you bind on earth will be bound in heaven, and whatever you loose on earth will be loosed in heaven.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.23.13",
+       "ref": "Matthew 23:13",
+       "text": "Woe to you, scribes and Pharisees, you hypocrites! You shut the kingdom of heaven in men's faces. You yourselves do not enter, nor will you let in those who wish to enter.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Given, taken away, thrown out, restored: “taken away from you and given to a people”, “restore the kingdom to Israel”, “a kingdom, priests”",
+     "note": "Matt 21:43 (“will be taken away from you and given to a people who will produce its fruit”), Matt 8:11-12 (“the sons of the kingdom will be thrown into the outer darkness”), Luke 22:30 (“judging the twelve tribes of Israel”) and Acts 1:6 (“will You at this time restore the kingdom to Israel?”, asked after Jesus “spoke about the kingdom of God”, 1:3) stand beside “a kingdom” and “priests” in Rev 1:6 and 5:10 (the Sinai word, Exod 19:6, is in the row of Israel’s own kingdom). Readers part on who “a people who will produce its fruit” is, on whether the kingdom promised to Israel and the kingdom of God are one, and on whether “a kingdom” in Rev 1:6 and 5:10 is the church or Israel; the page takes no side.",
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "priests",
+       "name": "the priests",
+       "type": "group",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r9",
+       "name": "A kingdom of priests",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r13",
+       "name": "The kingdom taken away from you",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "1Sam.15.28",
+      "Matt.21.43",
+      "Acts.1.6",
+      "Matt.8.12",
+      "1Kgs.11.11",
+      "1Kgs.11.31",
+      "1Kgs.14.8",
+      "Dan.5.28",
+      "Matt.8.11",
+      "Luke.13.28",
+      "Luke.13.29",
+      "Luke.22.30",
+      "Acts.1.3",
+      "Rev.1.6",
+      "Rev.5.10"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.15.28",
+       "ref": "1 Samuel 15:28",
+       "text": "So Samuel said to him, “The LORD has torn the kingdom of Israel from you today and has given it to your neighbor who is better than you.",
+       "words": [
+        {
+         "key": "h4468",
+         "lemma": "מַמְלָכוּת"
+        }
+       ]
+      },
+      {
+       "id": "Matt.21.43",
+       "ref": "Matthew 21:43",
+       "text": "Therefore I tell you that the kingdom of God will be taken away from you and given to a people who will produce its fruit.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Acts.1.6",
+       "ref": "Acts 1:6",
+       "text": "So when they came together, they asked Him, “Lord, will You at this time restore the kingdom to Israel?”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.8.12",
+       "ref": "Matthew 8:12",
+       "text": "But the sons of the kingdom will be thrown into the outer darkness, where there will be weeping and gnashing of teeth.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "At table in the kingdom: “share the banquet”, “recline at the table”, “drink it anew”, “eat and drink at My table”",
+     "note": "The feast and the table, as the text has them. Matt 26:29, Mark 14:25 and Luke 22:16-18 are said at the Last Supper (“until that day when I drink it anew with you in My Father’s kingdom”). What the Lord’s Supper is, and how it looks ahead, is a point on which Christian traditions part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r28",
+       "name": "A banquet, a feast, a supper",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "event_last_supper",
+       "name": "Last Supper",
+       "type": "event",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Matt.8.11",
+      "Luke.14.15",
+      "Matt.26.29",
+      "Luke.22.30",
+      "Matt.22.2",
+      "Mark.14.25",
+      "Luke.13.29",
+      "Luke.22.16",
+      "Luke.22.18"
+     ],
+     "eg": [
+      {
+       "id": "Matt.8.11",
+       "ref": "Matthew 8:11",
+       "text": "I say to you that many will come from the east and the west to share the banquet with Abraham, Isaac, and Jacob in the kingdom of heaven.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.14.15",
+       "ref": "Luke 14:15",
+       "text": "When one of those reclining with Him heard this, he said to Jesus, “Blessed is everyone who will eat at the feast in the kingdom of God.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.29",
+       "ref": "Matthew 26:29",
+       "text": "I tell you, I will not drink of this fruit of the vine from now on until that day when I drink it anew with you in My Father's kingdom.”",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.22.30",
+       "ref": "Luke 22:30",
+       "text": "so that you may eat and drink at My table in My kingdom and sit on thrones, judging the twelve tribes of Israel.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A kingdom divided against itself: “cannot stand”; Satan’s kingdom",
+     "note": "Jesus’ answer to the charge that He drives out demons by Beelzebul, in three Gospels; in Matt 12:26 and Luke 11:18 “his kingdom” is Satan’s.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r21",
+       "name": "The kingdom of God has come",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Matt.12.25",
+      "Mark.3.24",
+      "Luke.11.17",
+      "Matt.12.26",
+      "Luke.11.18"
+     ],
+     "eg": [
+      {
+       "id": "Matt.12.25",
+       "ref": "Matthew 12:25",
+       "text": "Knowing their thoughts, Jesus said to them, “Every kingdom divided against itself will be laid waste, and every city or household divided against itself will not stand.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Mark.3.24",
+       "ref": "Mark 3:24",
+       "text": "If a kingdom is divided against itself, it cannot stand.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.11.17",
+       "ref": "Luke 11:17",
+       "text": "Knowing their thoughts, Jesus said to them, “Every kingdom divided against itself will be laid waste, and a house divided against a house will fall.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.26",
+       "ref": "Matthew 12:26",
+       "text": "If Satan drives out Satan, he is divided against himself. How then can his kingdom stand?",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Reign and kingship: “He must reign”, “He will reign”, “they will reign upon the earth”, “for a thousand years”",
+     "note": "The Greek verb βασιλεύω, “reign”. Rev 20:4 and 20:6 say those raised “reigned with Christ for a thousand years” and “will reign with Him for a thousand years”. Pre-, post- and amillennial readings part on whether the thousand years are a period after Christ’s return, a period before it, or the present, and on what “the first resurrection” is; the page takes no side and names no scheme. 1 Cor 15:25 (“He must reign until He has put all His enemies under His feet”) and Rev 11:15 (“He will reign forever and ever”) are set beside it. The parable of Luke 19:12-27, which has no thousand years, is in the row of a king’s reign. In 1 Cor 4:8 Paul says to the Corinthians, “you have begun to reign without us”. 2 Tim 2:12 (“we will also reign with Him”) uses a different verb, συμβασιλεύω, and is not in the hub. In 1 Tim 6:15 the Berean prints “the King of kings”, where the Greek says “of those who reign”.",
+     "doors": [
+      {
+       "id": "theme_kingdom_r29",
+       "name": "The kingdom of the world has become the kingdom of our Lord",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_kingdom_r1",
+       "name": "The LORD reigns",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "1Cor.15.25",
+      "Rev.20.4",
+      "Rev.20.6",
+      "Rev.22.5",
+      "Luke.1.33",
+      "1Cor.4.8",
+      "1Tim.6.15",
+      "Rev.5.10",
+      "Rev.11.15",
+      "Rev.11.17",
+      "Rev.19.6"
+     ],
+     "eg": [
+      {
+       "id": "1Cor.15.25",
+       "ref": "1 Corinthians 15:25",
+       "text": "For He must reign until He has put all His enemies under His feet.",
+       "words": [
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.20.4",
+       "ref": "Revelation 20:4",
+       "text": "Then I saw the thrones, and those seated on them had been given authority to judge. And I saw the souls of those who had been beheaded for their testimony of Jesus and for the word of God, and those who had not worshiped the beast or its image and had not received its mark on their foreheads or hands. And they came to life and reigned with Christ for a thousand years.",
+       "words": [
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.20.6",
+       "ref": "Revelation 20:6",
+       "text": "Blessed and holy are those who share in the first resurrection! The second death has no power over them, but they will be priests of God and of Christ and will reign with Him for a thousand years.",
+       "words": [
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      },
+      {
+       "id": "Rev.22.5",
+       "ref": "Revelation 22:5",
+       "text": "There will be no more night in the city, and they will have no need for the light of a lamp or of the sun. For the Lord God will shine on them, and they will reign forever and ever.",
+       "words": [
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Death, sin and grace “reign”",
+     "note": "The same Greek verb βασιλεύω as the row above: “death reigned from Adam to Moses”, “grace might reign through righteousness”, “do not let sin reign in your mortal body”. Not the kingdom of God; the word is the one. How these verses stand to sin and to the first man is a point on which Christian traditions part, and the page takes no side.",
+     "doors": [
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "grace",
+       "name": "grace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Rom.5.14",
+      "Rom.5.17",
+      "Rom.5.21",
+      "Rom.6.12"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.14",
+       "ref": "Romans 5:14",
+       "text": "Nevertheless, death reigned from Adam until Moses, even over those who did not sin in the way that Adam transgressed. He is a pattern of the One to come.",
+       "words": [
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.17",
+       "ref": "Romans 5:17",
+       "text": "For if, by the trespass of the one man, death reigned through that one man, how much more will those who receive the abundance of grace and of the gift of righteousness reign in life through the one man, Jesus Christ!",
+       "words": [
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.21",
+       "ref": "Romans 5:21",
+       "text": "so that, just as sin reigned in death, so also grace might reign through righteousness to bring eternal life through Jesus Christ our Lord.",
+       "words": [
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.12",
+       "ref": "Romans 6:12",
+       "text": "Therefore do not let sin reign in your mortal body so that you obey its desires.",
+       "words": [
+        {
+         "key": "g936",
+         "lemma": "βασιλεύω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A king’s reign, his kingship and what is “royal”: “in the third year of his reign”, “assumed the kingship”, the royal throne, palace, crown and robes",
+     "note": "Words that elsewhere in the hub are printed “kingdom”, in a sense of their own; each example shows its own word: the length of a reign (“in the first year of the reign of ...”), the office (“the rights of kingship”, “the kingship was mine”) and what belongs to it, which the Berean prints “royal”. Not the kingdom of God. Luke 19:11-27 is a parable (the people thought the kingdom “would appear imminently”; “a man of noble birth went to a distant country to lay claim to his kingship and then return”; “We do not want this man to reign over us”); the page does not say whom the nobleman stands for. Rev 17:18 says of the woman, “the great city that rules over the kings of the earth” (the Greek has “kingship over the kings”). In Isa 62:3 the LORD’s people are “a royal diadem in the palm of your God”. 2 Chr 13:5 (“given the kingship of Israel to David and his descendants forever by a covenant of salt”) is also in the row of David’s kingdom.",
+     "doors": [],
+     "n": 72,
+     "verses": [
+      "1Sam.10.25",
+      "1Kgs.2.15",
+      "Esth.1.2",
+      "Jer.26.1",
+      "Josh.10.2",
+      "Josh.13.31",
+      "1Sam.10.16",
+      "1Sam.11.14",
+      "1Sam.14.47",
+      "1Sam.27.5",
+      "2Sam.12.26",
+      "1Kgs.1.46",
+      "1Kgs.21.7",
+      "2Kgs.11.1",
+      "2Kgs.25.25",
+      "1Chr.26.31",
+      "1Chr.29.25",
+      "2Chr.2.1",
+      "2Chr.2.12",
+      "2Chr.3.2",
+      "2Chr.7.18",
+      "2Chr.12.1",
+      "2Chr.13.5",
+      "2Chr.15.10",
+      "2Chr.15.19",
+      "2Chr.16.1",
+      "2Chr.16.12",
+      "2Chr.22.10",
+      "2Chr.23.20",
+      "2Chr.29.19",
+      "2Chr.35.19",
+      "Ezra.4.5",
+      "Ezra.4.6",
+      "Ezra.4.24",
+      "Ezra.6.15",
+      "Ezra.7.1",
+      "Ezra.8.1",
+      "Neh.12.22",
+      "Esth.1.7",
+      "Esth.1.9",
+      "Esth.1.11",
+      "Esth.1.19",
+      "Esth.2.16",
+      "Esth.2.17",
+      "Esth.5.1",
+      "Esth.6.8",
+      "Esth.8.15",
+      "Isa.34.12",
+      "Isa.62.3",
+      "Jer.41.1",
+      "Jer.49.34",
+      "Jer.52.31",
+      "Ezek.16.13",
+      "Ezek.17.13",
+      "Dan.1.1",
+      "Dan.1.3",
+      "Dan.2.1",
+      "Dan.4.29",
+      "Dan.4.30",
+      "Dan.5.20",
+      "Dan.5.26",
+      "Dan.6.7",
+      "Dan.6.28",
+      "Dan.8.1",
+      "Dan.8.23",
+      "Matt.2.22",
+      "Luke.19.11",
+      "Luke.19.12",
+      "Luke.19.14",
+      "Luke.19.15",
+      "Luke.19.27",
+      "Rev.17.18"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.10.25",
+       "ref": "1 Samuel 10:25",
+       "text": "Then Samuel explained to the people the rights of kingship. He wrote them on a scroll and laid it up before the LORD. And Samuel sent all the people away, each to his own home.",
+       "words": [
+        {
+         "key": "h4410",
+         "lemma": "מְלוּכָה"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.2.15",
+       "ref": "1 Kings 2:15",
+       "text": "“You know that the kingship was mine,” he said. “All Israel expected that I should reign, but the kingship has turned to my brother, for it has come to him from the LORD.",
+       "words": [
+        {
+         "key": "h4410",
+         "lemma": "מְלוּכָה"
+        }
+       ]
+      },
+      {
+       "id": "Esth.1.2",
+       "ref": "Esther 1:2",
+       "text": "In those days King Xerxes sat on his royal throne in the citadel of Susa.",
+       "words": [
+        {
+         "key": "h4438",
+         "lemma": "מַלְכוּת"
+        }
+       ]
+      },
+      {
+       "id": "Jer.26.1",
+       "ref": "Jeremiah 26:1",
+       "text": "At the beginning of the reign of Jehoiakim son of Josiah king of Judah, this word came from the LORD:",
+       "words": [
+        {
+         "key": "h4468",
+         "lemma": "מַמְלָכוּת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "What no other row takes: 2 Tim 4:18 and 1 Thess 2:12. 2 Tim 4:18 reads “the Lord will rescue me from every evil action and bring me safely into His heavenly kingdom”; the verse says “the Lord”, and readers take it of Christ or of the Father; the page does not choose. 1 Thess 2:12 says God “calls you into His own kingdom and glory”.",
+     "doors": [],
+     "n": 2,
+     "verses": [
+      "1Thess.2.12",
+      "2Tim.4.18"
+     ],
+     "eg": [
+      {
+       "id": "1Thess.2.12",
+       "ref": "1 Thessalonians 2:12",
+       "text": "encouraging you, comforting you, and urging you to walk in a manner worthy of God, who calls you into His own kingdom and glory.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.4.18",
+       "ref": "2 Timothy 4:18",
+       "text": "And the Lord will rescue me from every evil action and bring me safely into His heavenly kingdom. To Him be the glory forever and ever. Amen.",
+       "words": [
+        {
+         "key": "g932",
+         "lemma": "βασιλεία"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “kingdom”, “kingship”, “realm”, “dominion”",
+  "words": [
+   {
+    "key": "h4475",
+    "lemma": "מֶמְשֶׁלֶת",
+    "translit": "mem.sha.lah",
+    "gloss": "dominion",
+    "lang": "Hebrew",
+    "n": 11,
+    "verses": [
+     "1Kgs.9.19",
+     "2Kgs.20.13",
+     "2Chr.8.6",
+     "Ps.103.22",
+     "Ps.114.2",
+     "Ps.145.13",
+     "Isa.39.2",
+     "Jer.34.1",
+     "Jer.51.28",
+     "Dan.11.5",
+     "Mic.4.8"
+    ],
+    "eg": [
+     {
+      "id": "1Kgs.9.19",
+      "ref": "1 Kings 9:19",
+      "text": "as well as all the store cities that Solomon had for his chariots and horses-whatever he desired to build in Jerusalem, Lebanon, and throughout the land of his dominion."
+     },
+     {
+      "id": "2Kgs.20.13",
+      "ref": "2 Kings 20:13",
+      "text": "And Hezekiah received the envoys and showed them all that was in his treasure house-the silver, the gold, the spices, and the precious oil, as well as his armory-all that was found in his storehouses. There was nothing in his palace or in all his dominion that Hezekiah did not show them."
+     }
+    ]
+   },
+   {
+    "key": "h7985",
+    "lemma": "שׇׁלְטָן",
+    "translit": "shol.tan",
+    "gloss": "dominion",
+    "lang": "Hebrew",
+    "n": 9,
+    "verses": [
+     "Dan.4.3",
+     "Dan.6.26",
+     "Dan.7.14",
+     "Dan.7.27",
+     "Dan.4.22",
+     "Dan.4.34",
+     "Dan.7.6",
+     "Dan.7.12",
+     "Dan.7.26"
+    ],
+    "note": "שׇׁלְטָן means dominion, rule: a different word from the Aramaic מַלְכוּ “kingdom”. In Dan 4:3, 6:26, 7:14 and 7:27 the two stand together (“His dominion is an everlasting dominion ... His kingdom ...”) and the page does not make them one.",
+    "eg": [
+     {
+      "id": "Dan.4.3",
+      "ref": "Daniel 4:3",
+      "text": "How great are His signs, how mighty His wonders! His kingdom is an eternal kingdom; His dominion endures from generation to generation."
+     },
+     {
+      "id": "Dan.6.26",
+      "ref": "Daniel 6:26",
+      "text": "I hereby decree that in every part of my kingdom, men are to tremble in fear before the God of Daniel: For He is the living God, and He endures forever; His kingdom will never be destroyed, and His dominion will never end."
+     }
+    ]
+   },
+   {
+    "key": "g2904",
+    "lemma": "κράτος",
+    "translit": "kratos",
+    "gloss": "power",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "1Tim.6.16",
+     "Jude.1.25",
+     "Rev.1.6"
+    ],
+    "eg": [
+     {
+      "id": "1Tim.6.16",
+      "ref": "1 Timothy 6:16",
+      "text": "He alone is immortal and dwells in unapproachable light. No one has ever seen Him, nor can anyone see Him. To Him be honor and eternal dominion! Amen."
+     },
+     {
+      "id": "Jude.1.25",
+      "ref": "Jude 1:25",
+      "text": "to the only God our Savior be glory, majesty, dominion, and authority through Jesus Christ our Lord before all time, and now, and for all eternity. Amen."
+     }
+    ]
+   },
+   {
+    "key": "h4474",
+    "lemma": "מִמְשָׁל",
+    "translit": "mim.shal",
+    "gloss": "dominion",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Dan.11.3",
+     "Dan.11.5"
+    ],
+    "eg": [
+     {
+      "id": "Dan.11.3",
+      "ref": "Daniel 11:3",
+      "text": "Then a mighty king will arise, who will rule with great authority and do as he pleases."
+     },
+     {
+      "id": "Dan.11.5",
+      "ref": "Daniel 11:5",
+      "text": "The king of the South will grow strong, but one of his commanders will grow even stronger and will rule his own kingdom with great authority."
+     }
+    ]
+   },
+   {
+    "key": "h4915",
+    "lemma": "מֹשֶׁל",
+    "translit": null,
+    "gloss": "dominion",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Dan.11.4",
+     "Zech.9.10"
+    ],
+    "eg": [
+     {
+      "id": "Dan.11.4",
+      "ref": "Daniel 11:4",
+      "text": "But as soon as he is established, his kingdom will be broken up and parceled out toward the four winds of heaven. It will not go to his descendants, nor will it have the authority with which he ruled, because his kingdom will be uprooted and given to others."
+     },
+     {
+      "id": "Zech.9.10",
+      "ref": "Zechariah 9:10",
+      "text": "And I will cut off the chariot from Ephraim and the horse from Jerusalem, and the bow of war will be broken. Then He will proclaim peace to the nations. His dominion will extend from sea to sea, and from the Euphrates to the ends of the earth."
+     }
+    ]
+   },
+   {
+    "key": "g2963",
+    "lemma": "κυριότης",
+    "translit": "kuriotēs",
+    "gloss": "lordship",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Eph.1.21"
+    ],
+    "eg": [
+     {
+      "id": "Eph.1.21",
+      "ref": "Ephesians 1:21",
+      "text": "far above all rule and authority, power and dominion, and every name that is named, not only in the present age but also in the one to come."
+     }
+    ]
+   }
+  ]
+ }
+}

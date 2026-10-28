@@ -58,8 +58,9 @@ def live_ok(k):
 
 def sitemap_urls():
     out = []
-    # the site's own pages first, then chapters, verses and cards
-    for name in ("pages", "chapters", "verses", "cards"):
+    # the site's own pages first, then chapters, verses, cards and word cards (words added 2026-10-27: the 9,501
+    # in sitemap-words.xml had to be sent by --file on the day they went live)
+    for name in ("pages", "chapters", "verses", "cards", "words"):
         f = WWW / f"sitemap-{name}.xml"
         if f.exists():
             out += re.findall(r"<loc>([^<]+)</loc>", f.read_text(encoding="utf-8"))

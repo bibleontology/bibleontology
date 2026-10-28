@@ -1,0 +1,3540 @@
+{
+ "id": "death",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h4194",
+   "lemma": "מָוֶת",
+   "form": "noun",
+   "translit": "ma.vet",
+   "gloss": "death",
+   "lang": "Hebrew",
+   "uses": 147,
+   "other_sense": 1
+  },
+  {
+   "key": "g2288",
+   "lemma": "θάνατος",
+   "form": "noun",
+   "translit": "thanatos",
+   "gloss": "death",
+   "lang": "Greek",
+   "uses": 105,
+   "other_sense": 1
+  },
+  {
+   "key": "h4191",
+   "lemma": "מוּת",
+   "form": "verb",
+   "translit": "mut",
+   "gloss": "to die",
+   "lang": "Hebrew",
+   "uses": 700,
+   "other_sense": 1
+  },
+  {
+   "key": "g599",
+   "lemma": "ἀποθνῄσκω",
+   "form": "verb",
+   "translit": "apothnēskō",
+   "gloss": "to die",
+   "lang": "Greek",
+   "uses": 100,
+   "other_sense": 1
+  },
+  {
+   "key": "g2348",
+   "lemma": "θνῄσκω",
+   "form": "verb",
+   "translit": "thnēskō",
+   "gloss": "to die/be dead",
+   "lang": "Greek",
+   "uses": 9,
+   "other_sense": 0
+  },
+  {
+   "key": "g2289",
+   "lemma": "θανατόω",
+   "form": "verb",
+   "translit": "thanatoō",
+   "gloss": "to kill",
+   "lang": "Greek",
+   "uses": 11,
+   "other_sense": 0
+  },
+  {
+   "key": "g3498",
+   "lemma": "νεκρός",
+   "form": "adjective",
+   "translit": "nekros",
+   "gloss": "dead",
+   "lang": "Greek",
+   "uses": 120,
+   "other_sense": 0
+  },
+  {
+   "key": "g2286",
+   "lemma": "θανάσιμος",
+   "form": "adjective",
+   "translit": "thanasimos",
+   "gloss": "deadly",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g2287",
+   "lemma": "θανατηφόρος",
+   "form": "adjective",
+   "translit": "thanatēphoros",
+   "gloss": "deadly",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g1935",
+   "lemma": "ἐπιθανάτιος",
+   "form": "adjective",
+   "translit": "epithanatios",
+   "gloss": "condemned to death",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of death",
+  "verb": "Dying, and being put to death",
+  "adjective": "The dead"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "life",
+   "name": "life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_resurrection",
+   "name": "the resurrection",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "hell",
+   "name": "Sheol",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "judgment",
+   "name": "judgment",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "adam",
+   "name": "Adam",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "atonement",
+   "name": "reconciliation",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "eternal_life",
+   "name": "eternal life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sleep",
+   "name": "sleep",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "grave",
+   "name": "grave",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "the_wages_of_sin_is_death",
+   "name": "the wages of sin is death",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "passed_from_death_unto_life",
+   "name": "crossed over from death to life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "yea_though_i_walk_through_the_valley_of_the_shadow_of_death",
+   "name": "Even though I walk through the valley of the shadow of death",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "dead_to_the_law",
+   "name": "died to the law",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "buried_with_him_by_baptism",
+   "name": "buried with Him through baptism",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.2.17",
+   "ref": "Genesis 2:17",
+   "text": "but you must not eat from the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”"
+  },
+  {
+   "id": "Ezek.33.11",
+   "ref": "Ezekiel 33:11",
+   "text": "Say to them: ‘As surely as I live, declares the Lord GOD, I take no pleasure in the death of the wicked, but rather that the wicked should turn from their ways and live. Turn! Turn from your evil ways! For why should you die, O house of Israel?'"
+  },
+  {
+   "id": "John.11.25",
+   "ref": "John 11:25",
+   "text": "Jesus said to her, “I am the resurrection and the life. Whoever believes in Me will live, even though he dies."
+  },
+  {
+   "id": "Rom.5.12",
+   "ref": "Romans 5:12",
+   "text": "Therefore, just as sin entered the world through one man, and death through sin, so also death was passed on to all men, because all sinned."
+  },
+  {
+   "id": "Rom.6.23",
+   "ref": "Romans 6:23",
+   "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+  },
+  {
+   "id": "1Cor.15.26",
+   "ref": "1 Corinthians 15:26",
+   "text": "The last enemy to be destroyed is death."
+  },
+  {
+   "id": "Heb.9.27",
+   "ref": "Hebrews 9:27",
+   "text": "Just as man is appointed to die once, and after that to face judgment,"
+  },
+  {
+   "id": "Rev.21.4",
+   "ref": "Revelation 21:4",
+   "text": "‘He will wipe away every tear from their eyes,' and there will be no more death or mourning or crying or pain, for the former things have passed away.”"
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 255,
+   "rows": [
+    {
+     "label": "Death with sin and the law",
+     "note": "Set side by side with “Each will die for his own sin” and “In Adam all die” in the verb list: “death was passed on to all men, because all sinned” (Rom 5:12), “The soul who sins is the one who will die” (Ezek 18:4). Where Christian traditions part on whether guilt and death pass from the first man to all, on what is meant by a sin “that leads to death” and one that does not (1 John 5:16-17), the page takes no side.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_wages_of_sin_is_death",
+       "name": "the wages of sin is death",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Deut.21.22",
+      "Rom.6.23",
+      "Rom.5.12",
+      "1Cor.15.56",
+      "Exod.10.17",
+      "Acts.23.29",
+      "Deut.22.26",
+      "Prov.8.36",
+      "Prov.13.14",
+      "Eccl.7.26",
+      "Isa.53.12",
+      "Jer.18.23",
+      "Rom.5.14",
+      "Rom.5.17",
+      "Rom.5.21",
+      "Rom.6.16",
+      "Rom.7.5",
+      "Rom.7.10",
+      "Rom.7.13",
+      "Rom.8.2",
+      "Jas.1.15",
+      "Jas.5.20",
+      "1John.5.16",
+      "1John.5.17"
+     ],
+     "eg": [
+      {
+       "id": "Deut.21.22",
+       "ref": "Deuteronomy 21:22",
+       "text": "If a man has committed a sin worthy of death, and he is executed, and you hang his body on a tree,",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        },
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.23",
+       "ref": "Romans 6:23",
+       "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.12",
+       "ref": "Romans 5:12",
+       "text": "Therefore, just as sin entered the world through one man, and death through sin, so also death was passed on to all men, because all sinned.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.56",
+       "ref": "1 Corinthians 15:56",
+       "text": "The sting of death is sin, and the power of sin is the law.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Death and life",
+     "note": null,
+     "doors": [
+      {
+       "id": "life",
+       "name": "life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "eternal_life",
+       "name": "eternal life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "passed_from_death_unto_life",
+       "name": "crossed over from death to life",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 42,
+     "verses": [
+      "Deut.30.19",
+      "Prov.18.21",
+      "John.5.24",
+      "1John.3.14",
+      "Deut.30.15",
+      "Rom.5.10",
+      "Josh.2.13",
+      "Judg.16.30",
+      "2Sam.1.23",
+      "2Sam.15.21",
+      "Ps.33.19",
+      "Ps.56.13",
+      "Ps.89.48",
+      "Prov.11.19",
+      "Prov.12.28",
+      "Prov.13.14",
+      "Prov.14.27",
+      "Jer.8.3",
+      "Jer.21.8",
+      "Jer.52.34",
+      "Ezek.18.23",
+      "Ezek.18.32",
+      "Ezek.33.11",
+      "Jonah.4.3",
+      "Rom.5.17",
+      "Rom.5.21",
+      "Rom.6.4",
+      "Rom.6.23",
+      "Rom.7.10",
+      "Rom.8.2",
+      "Rom.8.6",
+      "Rom.8.38",
+      "1Cor.3.22",
+      "2Cor.2.16",
+      "2Cor.4.11",
+      "2Cor.4.12",
+      "Phil.1.20",
+      "2Tim.1.10",
+      "Heb.2.15",
+      "1John.5.16",
+      "Rev.1.18",
+      "Rev.2.10"
+     ],
+     "eg": [
+      {
+       "id": "Deut.30.19",
+       "ref": "Deuteronomy 30:19",
+       "text": "I call heaven and earth as witnesses against you today that I have set before you life and death, blessing and cursing. Therefore choose life, so that you and your descendants may live,",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Prov.18.21",
+       "ref": "Proverbs 18:21",
+       "text": "Life and death are in the power of the tongue, and those who love it will eat its fruit.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "John.5.24",
+       "ref": "John 5:24",
+       "text": "Truly, truly, I tell you, whoever hears My word and believes Him who sent Me has eternal life and will not come under judgment. Indeed, he has crossed over from death to life.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "1John.3.14",
+       "ref": "1 John 3:14",
+       "text": "We know that we have passed from death to life, because we love our brothers. The one who does not love remains in death.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“The second death”",
+     "note": "The text's own phrase. Rev 20:14 says “This is the second death—the lake of fire” and Rev 21:8 “the lake that burns with fire and sulfur”. Where Christian traditions part on what the second death is (an ending, or a lasting suffering) and who comes to it, the page takes no side.",
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Rev.2.11",
+      "Rev.20.6",
+      "Rev.20.14",
+      "Rev.21.8"
+     ],
+     "eg": [
+      {
+       "id": "Rev.2.11",
+       "ref": "Revelation 2:11",
+       "text": "He who has an ear, let him hear what the Spirit says to the churches. The one who overcomes will not be harmed by the second death.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Rev.20.6",
+       "ref": "Revelation 20:6",
+       "text": "Blessed and holy are those who share in the first resurrection! The second death has no power over them, but they will be priests of God and of Christ and will reign with Him for a thousand years.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Rev.20.14",
+       "ref": "Revelation 20:14",
+       "text": "Then Death and Hades were thrown into the lake of fire. This is the second death-the lake of fire.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Rev.21.8",
+       "ref": "Revelation 21:8",
+       "text": "But to the cowardly and unbelieving and abominable and murderers and sexually immoral and sorcerers and idolaters and all liars, their place will be in the lake that burns with fire and sulfur. This is the second death.”",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Death beside Sheol, Hades, the grave, the pit",
+     "note": "The Hebrew שְׁאוֹל (Sheol) and the Greek ᾅδης (Hades) are different words and the page does not make them one. Where readers part on whether they name the grave, the place of all the dead, or a place of reward or of punishment, the page takes no side; the verses are set as written.",
+     "doors": [
+      {
+       "id": "hell",
+       "name": "Sheol",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "grave",
+       "name": "grave",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_grave",
+       "name": "the grave",
+       "type": "place",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Ps.18.5",
+      "Ps.49.14",
+      "Hos.13.14",
+      "Rev.20.14",
+      "2Sam.22.6",
+      "Rev.1.18",
+      "2Chr.32.33",
+      "Job.38.17",
+      "Ps.6.5",
+      "Ps.9.13",
+      "Ps.55.15",
+      "Ps.89.48",
+      "Ps.107.18",
+      "Ps.116.3",
+      "Prov.5.5",
+      "Prov.7.27",
+      "Song.8.6",
+      "Isa.28.15",
+      "Isa.28.18",
+      "Isa.38.18",
+      "Isa.53.9",
+      "Ezek.31.14",
+      "Hab.2.5",
+      "Rev.6.8",
+      "Rev.20.13"
+     ],
+     "eg": [
+      {
+       "id": "Ps.18.5",
+       "ref": "Psalms 18:5",
+       "text": "The cords of Sheol entangled me; the snares of death confronted me.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.49.14",
+       "ref": "Psalms 49:14",
+       "text": "Like sheep they are destined for Sheol. Death will be their shepherd. The upright will rule them in the morning, and their form will decay in Sheol, far from their lofty abode.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Hos.13.14",
+       "ref": "Hosea 13:14",
+       "text": "I will ransom them from the power of Sheol; I will redeem them from Death. Where, O Death, are your plagues? Where, O Sheol, is your sting? Compassion is hidden from My eyes.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Rev.20.14",
+       "ref": "Revelation 20:14",
+       "text": "Then Death and Hades were thrown into the lake of fire. This is the second death-the lake of fire.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Death and the resurrection",
+     "note": "Where Christian traditions part on what follows dying and when (the resurrection of the body at the end, an interval before it), the page takes no side. The verb list sets the verses on what follows dying side by side, in the rows “What the text says follows dying, side by side” and “Asleep”. Isa 26:19, Dan 12:2 and Ezek 37:12-13 are the Hebrew Scriptures' words on waking from the dust and being brought up from the graves; readers differ on whether Isa 26:19 and Ezek 37:12-13 speak of the dead rising or of the people's restoration, and the page takes no side. See also “Jesus Christ raised from the dead” in the list of the dead.",
+     "doors": [
+      {
+       "id": "the_resurrection",
+       "name": "the resurrection",
+       "type": "title",
+       "missing": false
+      },
+      {
+       "id": "resurrection_of_christ",
+       "name": "the resurrection of Christ",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Isa.26.19",
+      "Dan.12.2",
+      "Acts.2.24",
+      "1Cor.15.21",
+      "Ezek.37.12",
+      "Ezek.37.13",
+      "Rom.6.5",
+      "Phil.3.10",
+      "Rom.6.4",
+      "Rom.6.9",
+      "2Cor.1.9",
+      "Rev.20.6"
+     ],
+     "eg": [
+      {
+       "id": "Isa.26.19",
+       "ref": "Isaiah 26:19",
+       "text": "Your dead will live; their bodies will rise. Awake and sing, you who dwell in the dust! For your dew is like the dew of the morning, and the earth will bring forth her dead.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Dan.12.2",
+       "ref": "Daniel 12:2",
+       "text": "And many who sleep in the dust of the earth will awake, some to everlasting life, but others to shame and everlasting contempt.",
+       "words": []
+      },
+      {
+       "id": "Acts.2.24",
+       "ref": "Acts 2:24",
+       "text": "But God raised Him from the dead, releasing Him from the agony of death, because it was impossible for death to keep Him in its grip.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.21",
+       "ref": "1 Corinthians 15:21",
+       "text": "For since death came through a man, the resurrection of the dead comes also through a man.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        },
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Death as ruler and enemy: it reigns, stings, is swallowed up, destroyed, no more",
+     "note": "The text has death as a ruler and an enemy, and has its end both as done (2 Tim 1:10 “has abolished death”) and as still to come (1 Cor 15:26 “the last enemy to be destroyed is death”; Rev 21:4). How the two fit is a question readers answer differently and the page takes no side. Rev 22:2-3 takes up the tree of life again; it has no word for death and is not in this hub.",
+     "doors": [
+      {
+       "id": "the_resurrection",
+       "name": "the resurrection",
+       "type": "title",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Rom.5.14",
+      "1Cor.15.55",
+      "Isa.25.8",
+      "Rev.21.4",
+      "Rom.5.17",
+      "Rom.5.21",
+      "1Cor.15.26",
+      "1Cor.15.54",
+      "1Cor.15.56",
+      "2Tim.1.10",
+      "Heb.2.14",
+      "Heb.2.15",
+      "Hos.13.14",
+      "Rev.1.18",
+      "Rev.6.8",
+      "Rev.20.14"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.14",
+       "ref": "Romans 5:14",
+       "text": "Nevertheless, death reigned from Adam until Moses, even over those who did not sin in the way that Adam transgressed. He is a pattern of the One to come.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.55",
+       "ref": "1 Corinthians 15:55",
+       "text": "“Where, O Death, is your victory? Where, O Death, is your sting?”",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Isa.25.8",
+       "ref": "Isaiah 25:8",
+       "text": "He will swallow up death forever. The Lord GOD will wipe away the tears from every face and remove the disgrace of His people from the whole earth. For the LORD has spoken.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Rev.21.4",
+       "ref": "Revelation 21:4",
+       "text": "‘He will wipe away every tear from their eyes,' and there will be no more death or mourning or crying or pain, for the former things have passed away.”",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The death of Christ",
+     "note": "The text speaks of His death as reconciling (Rom 5:10; Col 1:22), as tasted for everyone (Heb 2:9), as dying “to redeem them from the transgressions committed under the first covenant” (Heb 9:15), as proclaimed at the table (1 Cor 11:26), and as a death into which one is baptized (Rom 6:3). Where Christian traditions part on what the death does (atones, covers, appeases, ransoms, unites us to Him) and on whether the Lord's Supper is a sacrifice or a memorial, the page takes no side. See also “Christ died” (in the list of dying) and “Jesus Christ raised from the dead” (in the list of the dead).",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "atonement",
+       "name": "reconciliation",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "blood",
+       "name": "blood",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Rom.5.10",
+      "Heb.2.9",
+      "Col.1.22",
+      "1Cor.11.26",
+      "Rom.6.3",
+      "Phil.3.10",
+      "Heb.5.7",
+      "Heb.9.15",
+      "John.18.32"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.10",
+       "ref": "Romans 5:10",
+       "text": "For if, when we were enemies of God, we were reconciled to Him through the death of His Son, how much more, having been reconciled, shall we be saved through His life!",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Heb.2.9",
+       "ref": "Hebrews 2:9",
+       "text": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Col.1.22",
+       "ref": "Colossians 1:22",
+       "text": "But now He has reconciled you by Christ's physical body through death to present you holy, unblemished, and blameless in His presence-",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.11.26",
+       "ref": "1 Corinthians 11:26",
+       "text": "For as often as you eat this bread and drink this cup, you proclaim the Lord's death until He comes.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Delivered from death",
+     "note": "Heb 5:7 speaks of prayers “to the One who could save Him from death” and says “He was heard because of His reverence”; the verse does not say how the prayer was answered, and the page takes no side on whether the cross or the resurrection is meant.",
+     "doors": [
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "ransom",
+       "name": "ransom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Ps.56.13",
+      "Prov.10.2",
+      "2Cor.1.10",
+      "Josh.2.13",
+      "Rom.5.10",
+      "Job.5.20",
+      "Ps.33.19",
+      "Ps.89.48",
+      "Ps.116.8",
+      "Prov.11.4",
+      "Prov.24.11",
+      "Eccl.8.8",
+      "Hos.13.14",
+      "Rom.7.24",
+      "Heb.2.15",
+      "Heb.5.7",
+      "Jas.5.20"
+     ],
+     "eg": [
+      {
+       "id": "Ps.56.13",
+       "ref": "Psalms 56:13",
+       "text": "For You have delivered my soul from death, and my feet from stumbling, that I may walk before God in the light of life.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Prov.10.2",
+       "ref": "Proverbs 10:2",
+       "text": "Ill-gotten treasures profit nothing, but righteousness brings deliverance from death.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.1.10",
+       "ref": "2 Corinthians 1:10",
+       "text": "He has delivered us from such a deadly peril, and He will deliver us. In Him we have placed our hope that He will yet again deliver us,",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Josh.2.13",
+       "ref": "Joshua 2:13",
+       "text": "that you will spare the lives of my father and mother, my brothers and sisters, and all who belong to them, and that you will deliver us from death.”",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Worthy of death, sentenced to death, or found not worthy",
+     "note": "The verses are verdicts and accusations in law courts, Hebrew and Roman. Some find a person worthy of death; others find nothing worthy of it (Luke 23:15, 23:22; Acts 23:29; 25:25; 26:31; 28:18), so the trials of Jesus and of Paul stand on both sides. The verdicts are those of the speakers in each verse (a council, a governor, a crowd); the page takes no side on whether any was just, and it reads no verdict on any people. See also “The death of Christ”.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 22,
+     "verses": [
+      "Deut.21.22",
+      "Matt.26.66",
+      "Acts.25.11",
+      "Rom.1.32",
+      "Deut.19.6",
+      "Deut.22.26",
+      "1Sam.20.31",
+      "1Sam.26.16",
+      "2Sam.12.5",
+      "1Kgs.2.26",
+      "Jer.26.11",
+      "Jer.26.16",
+      "Matt.20.18",
+      "Mark.10.33",
+      "Mark.14.64",
+      "Luke.23.15",
+      "Luke.23.22",
+      "Acts.13.28",
+      "Acts.23.29",
+      "Acts.25.25",
+      "Acts.26.31",
+      "Acts.28.18"
+     ],
+     "eg": [
+      {
+       "id": "Deut.21.22",
+       "ref": "Deuteronomy 21:22",
+       "text": "If a man has committed a sin worthy of death, and he is executed, and you hang his body on a tree,",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        },
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Matt.26.66",
+       "ref": "Matthew 26:66",
+       "text": "What do you think?” “He deserves to die,” they answered.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "Acts.25.11",
+       "ref": "Acts 25:11",
+       "text": "If, however, I am guilty of anything worthy of death, I do not refuse to die. But if there is no truth to their accusations against me, no one has the right to hand me over to them. I appeal to Caesar!”",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        },
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.32",
+       "ref": "Romans 1:32",
+       "text": "Although they know God's righteous decree that those who do such things are worthy of death, they not only continue to do these things, but also approve of those who practice them.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The death of the wicked, of the righteous, of His saints",
+     "note": null,
+     "doors": [],
+     "n": 8,
+     "verses": [
+      "Ezek.33.11",
+      "Num.23.10",
+      "Ps.116.15",
+      "Prov.14.32",
+      "Ezek.18.23",
+      "Ezek.18.32",
+      "Ps.73.4",
+      "Prov.11.7"
+     ],
+     "eg": [
+      {
+       "id": "Ezek.33.11",
+       "ref": "Ezekiel 33:11",
+       "text": "Say to them: ‘As surely as I live, declares the Lord GOD, I take no pleasure in the death of the wicked, but rather that the wicked should turn from their ways and live. Turn! Turn from your evil ways! For why should you die, O house of Israel?'",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        },
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Num.23.10",
+       "ref": "Numbers 23:10",
+       "text": "Who can count the dust of Jacob or number even a fourth of Israel? Let me die the death of the righteous; let my end be like theirs!”",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        },
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Ps.116.15",
+       "ref": "Psalms 116:15",
+       "text": "Precious in the sight of the LORD is the death of His saints.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      },
+      {
+       "id": "Prov.14.32",
+       "ref": "Proverbs 14:32",
+       "text": "The wicked man is thrown down by his own sin, but the righteous man has a refuge even in death.",
+       "words": [
+        {
+         "key": "h4194",
+         "lemma": "מָוֶת"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 115,
+    "verses": [
+     "1Chr.2.24",
+     "1Chr.22.5",
+     "1Kgs.11.40",
+     "1Sam.15.32",
+     "1Sam.15.35",
+     "1Sam.20.3",
+     "1Sam.5.11",
+     "2Chr.22.4",
+     "2Chr.24.15",
+     "2Chr.24.17",
+     "2Chr.25.25",
+     "2Chr.26.21",
+     "2Cor.11.23",
+     "2Cor.3.7",
+     "2Cor.7.10",
+     "2Kgs.1.1",
+     "2Kgs.14.17",
+     "2Kgs.15.5",
+     "2Kgs.2.21",
+     "2Kgs.4.40",
+     "2Sam.1.1",
+     "2Sam.19.28",
+     "2Sam.22.5",
+     "2Sam.3.33",
+     "2Sam.6.23",
+     "Acts.22.4",
+     "Deut.31.27",
+     "Deut.31.29",
+     "Deut.33.1",
+     "Eccl.10.1",
+     "Eccl.3.19",
+     "Eccl.7.1",
+     "Esth.2.7",
+     "Ezek.28.10",
+     "Gen.21.16",
+     "Gen.25.11",
+     "Gen.26.18",
+     "Gen.27.10",
+     "Gen.27.2",
+     "Gen.27.7",
+     "Gen.50.16",
+     "Heb.11.5",
+     "Heb.7.23",
+     "Heb.9.16",
+     "Isa.14.28",
+     "Isa.6.1",
+     "Jer.15.2",
+     "Jer.18.21",
+     "Jer.43.11",
+     "Jer.52.11",
+     "Jer.9.21",
+     "Job.18.13",
+     "Job.28.22",
+     "Job.3.21",
+     "Job.30.23",
+     "Job.7.15",
+     "John.11.13",
+     "John.11.4",
+     "John.12.33",
+     "John.21.19",
+     "John.8.51",
+     "John.8.52",
+     "Jonah.4.9",
+     "Josh.1.1",
+     "Josh.20.6",
+     "Judg.1.1",
+     "Judg.13.7",
+     "Lam.1.20",
+     "Lev.11.31",
+     "Lev.11.32",
+     "Lev.16.1",
+     "Luke.1.79",
+     "Luke.2.26",
+     "Luke.22.33",
+     "Luke.24.20",
+     "Luke.9.27",
+     "Mark.13.12",
+     "Mark.14.34",
+     "Mark.7.10",
+     "Mark.9.1",
+     "Matt.10.21",
+     "Matt.15.4",
+     "Matt.16.28",
+     "Matt.26.38",
+     "Matt.4.16",
+     "Num.16.29",
+     "Num.35.25",
+     "Num.35.28",
+     "Num.35.32",
+     "Phil.2.27",
+     "Phil.2.30",
+     "Phil.2.8",
+     "Prov.14.12",
+     "Prov.16.14",
+     "Prov.16.25",
+     "Prov.2.18",
+     "Prov.21.6",
+     "Prov.26.18",
+     "Ps.118.18",
+     "Ps.13.3",
+     "Ps.18.4",
+     "Ps.22.15",
+     "Ps.49.17",
+     "Ps.55.4",
+     "Ps.68.20",
+     "Ps.7.13",
+     "Ps.78.50",
+     "Rev.12.11",
+     "Rev.13.3",
+     "Rev.18.8",
+     "Rev.2.23",
+     "Rev.9.6",
+     "Rom.6.21",
+     "Ruth.1.17",
+     "Ruth.2.11"
+    ]
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 764,
+   "rows": [
+    {
+     "label": "The LORD brings death and gives life",
+     "note": "The verses where the text names the LORD as the one who brings death: He puts to death (Gen 38:7), strikes (1 Sam 25:38; 2 Sam 6:7), sends (Num 21:6), or has said they will die (Num 14:35; 26:65; Jer 28:16). 1 Sam 2:6 and Deut 32:39 set it beside “gives life”. Ezek 18:23 and 33:11, where the LORD speaks of the death of the wicked, are in the row “The death of the wicked, of the righteous, of His saints”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "1Sam.2.6",
+      "Deut.32.39",
+      "Gen.38.7",
+      "Lev.10.2",
+      "Gen.38.10",
+      "1Sam.25.38",
+      "2Sam.6.7",
+      "1Chr.13.10",
+      "Num.14.35",
+      "Num.26.65",
+      "Num.21.6",
+      "Jer.28.16"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.2.6",
+       "ref": "1 Samuel 2:6",
+       "text": "The LORD brings death and gives life; He brings down to Sheol and raises up.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Deut.32.39",
+       "ref": "Deuteronomy 32:39",
+       "text": "See now that I am He; there is no God besides Me. I bring death and I give life; I wound and I heal, and there is no one who can deliver from My hand.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Gen.38.7",
+       "ref": "Genesis 38:7",
+       "text": "But Er, Judah's firstborn, was wicked in the sight of the LORD; so the LORD put him to death.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Lev.10.2",
+       "ref": "Leviticus 10:2",
+       "text": "So fire came out from the presence of the LORD and consumed them, and they died in the presence of the LORD.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“You will surely die”: the sentence spoken",
+     "note": "Gen 2:17 is God's word to the man, Gen 3:3 the woman's report of it, and Gen 3:4 the serpent's reply, “You will not surely die”. Where readers part on what “die” means in Gen 2:17 (the death of the body, a separation from God, or both), the page takes no side. The story goes on at Gen 3:19 and Gen 3:22-24 (the return to dust, the way to the tree of life); those verses have no word for death and are not in this hub.",
+     "doors": [
+      {
+       "id": "adam",
+       "name": "Adam",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Gen.2.17",
+      "Gen.3.3",
+      "Gen.3.4",
+      "1Sam.14.44",
+      "Gen.20.7",
+      "1Sam.22.16",
+      "1Kgs.2.37",
+      "1Kgs.2.42",
+      "Jer.26.8"
+     ],
+     "eg": [
+      {
+       "id": "Gen.2.17",
+       "ref": "Genesis 2:17",
+       "text": "but you must not eat from the tree of the knowledge of good and evil; for in the day that you eat of it, you will surely die.”",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Gen.3.3",
+       "ref": "Genesis 3:3",
+       "text": "but about the fruit of the tree in the middle of the garden, God has said, ‘You must not eat of it or touch it, or you will die.'”",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Gen.3.4",
+       "ref": "Genesis 3:4",
+       "text": "“You will not surely die,” the serpent told the woman.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.14.44",
+       "ref": "1 Samuel 14:44",
+       "text": "And Saul declared, “May God punish me, and ever so severely, if you, Jonathan, do not surely die!”",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Each will die for his own sin”",
+     "note": "In their own settings these verses speak of who is held liable for a wrong (Deut 24:16; 2 Kgs 14:6) and of the proverb that children bear their fathers' sin (Ezek 18; Jer 31:30); they do not mention Adam. They are set beside “In Adam all die” in the next row, and beside Rom 5:12 in the noun list, as the text has them. Where Christian traditions part on whether the first man's death and guilt pass to all, or each dies for his own sin, the page takes no side. Ps 51:5 (“I was sinful when my mother conceived me”) and Ps 58:3 (“the liars go astray from birth”) carry no word for death, so they are not in this hub.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Ezek.18.4",
+      "Ezek.18.20",
+      "Deut.24.16",
+      "Jer.31.30",
+      "Ezek.3.18",
+      "Ezek.3.19",
+      "Ezek.3.20",
+      "Ezek.18.13",
+      "Ezek.18.17",
+      "Ezek.18.18",
+      "Ezek.18.24",
+      "Ezek.33.8",
+      "Ezek.33.9",
+      "2Kgs.14.6",
+      "Num.27.3"
+     ],
+     "eg": [
+      {
+       "id": "Ezek.18.4",
+       "ref": "Ezekiel 18:4",
+       "text": "Behold, every soul belongs to Me; both father and son are Mine. The soul who sins is the one who will die.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.18.20",
+       "ref": "Ezekiel 18:20",
+       "text": "The soul who sins is the one who will die. A son will not bear the iniquity of his father, and a father will not bear the iniquity of his son. The righteousness of the righteous man will fall upon him, and the wickedness of the wicked man will fall upon him.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Deut.24.16",
+       "ref": "Deuteronomy 24:16",
+       "text": "Fathers shall not be put to death for their children, nor children for their fathers; each is to die for his own sin.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Jer.31.30",
+       "ref": "Jeremiah 31:30",
+       "text": "Instead, each will die for his own iniquity. If anyone eats the sour grapes, his own teeth will be set on edge.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Adam died; “as in Adam all die”",
+     "note": "Rom 5:12 and 5:14, which join sin to death, are in the noun list, in “Death with sin and the law”. Genesis 5 ends each name's years with his death (Gen 5:8 and the rest, under More); Gen 5:5 says only that Adam died. Set side by side with the row above; the page takes no side.",
+     "doors": [
+      {
+       "id": "adam",
+       "name": "Adam",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 3,
+     "verses": [
+      "Gen.5.5",
+      "1Cor.15.22",
+      "Rom.5.15"
+     ],
+     "eg": [
+      {
+       "id": "Gen.5.5",
+       "ref": "Genesis 5:5",
+       "text": "So Adam lived a total of 930 years, and then he died.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.22",
+       "ref": "1 Corinthians 15:22",
+       "text": "For as in Adam all die, so in Christ all will be made alive.",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.15",
+       "ref": "Romans 5:15",
+       "text": "But the gift is not like the trespass. For if the many died by the trespass of the one man, how much more did God's grace and the gift that came by the grace of the one man, Jesus Christ, abound to the many!",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Christ died",
+     "note": "The text says Christ died “for the ungodly” (Rom 5:6), “for us” (Rom 5:8), “for our sins” (1 Cor 15:3), for “all” (2 Cor 5:14), and Rom 14:15 and 1 Cor 8:11 for “your brother”. Where Christian traditions part on how this death works, the page takes no side. See also “The death of Christ” (in the list of death) and “Jesus Christ raised from the dead” (in the list of the dead).",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "atonement",
+       "name": "reconciliation",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "ransom",
+       "name": "ransom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "Rom.5.6",
+      "1Cor.15.3",
+      "Gal.2.21",
+      "John.11.51",
+      "Rom.5.8",
+      "Rom.6.9",
+      "Rom.8.34",
+      "Rom.14.9",
+      "Rom.14.15",
+      "1Cor.8.11",
+      "2Cor.5.14",
+      "1Thess.4.14"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.6",
+       "ref": "Romans 5:6",
+       "text": "For at just the right time, while we were still powerless, Christ died for the ungodly.",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.3",
+       "ref": "1 Corinthians 15:3",
+       "text": "For what I received I passed on to you as of first importance: that Christ died for our sins according to the Scriptures,",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.21",
+       "ref": "Galatians 2:21",
+       "text": "I do not set aside the grace of God. For if righteousness comes through the law, then Christ died for nothing.",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "John.11.51",
+       "ref": "John 11:51",
+       "text": "Caiaphas did not say this on his own. Instead, as high priest that year, he was prophesying that Jesus would die for the nation,",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Died to sin, died to the law, died with Christ",
+     "note": "Rom 6:3-4 joins this dying to baptism (“baptized into His death”, in the noun list). Where Christian traditions part on what baptism does, the page takes no side. Other words carry the same theme and are under Other words: συναποθνῄσκω (2 Tim 2:11), ἀπογίνομαι (1 Pet 2:24) and νεκρόω (Col 3:5).",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "baptism",
+       "name": "baptism",
+       "type": "observance",
+       "missing": false
+      },
+      {
+       "id": "dead_to_the_law",
+       "name": "died to the law",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Rom.6.2",
+      "Rom.6.8",
+      "Gal.2.19",
+      "Col.3.3",
+      "Rom.6.10",
+      "Rom.7.4",
+      "Rom.7.6",
+      "Col.2.20",
+      "2Cor.5.14"
+     ],
+     "eg": [
+      {
+       "id": "Rom.6.2",
+       "ref": "Romans 6:2",
+       "text": "Certainly not! How can we who died to sin live in it any longer?",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.8",
+       "ref": "Romans 6:8",
+       "text": "Now if we died with Christ, we believe that we will also live with Him.",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.19",
+       "ref": "Galatians 2:19",
+       "text": "For through the law I died to the law so that I might live to God.",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "Col.3.3",
+       "ref": "Colossians 3:3",
+       "text": "For you died, and your life is now hidden with Christ in God.",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "What the text says follows dying, side by side",
+     "note": "The verses are set side by side and ranked in none: “the dead know nothing” (Eccl 9:5); “When a man dies, will he live again?” (Job 14:14); “I will go to him, but he will not return to me” (2 Sam 12:23); “the beggar died and was carried by the angels to Abraham's side” (Luke 16:22); “to die is gain” (Phil 1:21); “appointed to die once, and after that to face judgment” (Heb 9:27); “whether we live or die, we belong to the Lord” (Rom 14:8); “Whoever believes in Me will live, even though he dies” (John 11:25). Whether the dead know nothing, wait asleep, are present with the Lord, or are in Hades, and whether judgment comes at death or at the last day, is a question readers answer differently; the page takes no side. Each verse is the word of its own speaker or writer in its own book (the Teacher in Eccl 9, Job in Job 14, David in 2 Sam 12, Jesus in John 11, Paul in Rom 14 and Phil 1, and the rest), and the verses are set in the Bible's order. See also the rows Asleep (below) and, in the noun list, Sheol and Hades.",
+     "doors": [
+      {
+       "id": "soul",
+       "name": "soul",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "eternal_life",
+       "name": "eternal life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "grave",
+       "name": "grave",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 12,
+     "verses": [
+      "2Sam.12.23",
+      "Job.14.10",
+      "Job.14.14",
+      "Eccl.9.4",
+      "Eccl.9.5",
+      "Luke.16.22",
+      "John.11.25",
+      "John.11.26",
+      "Rom.14.8",
+      "Phil.1.21",
+      "Heb.9.27",
+      "Rev.14.13"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.12.23",
+       "ref": "2 Samuel 12:23",
+       "text": "But now that he is dead, why should I fast? Can I bring him back again? I will go to him, but he will not return to me.”",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Job.14.10",
+       "ref": "Job 14:10",
+       "text": "But a man dies and is laid low; he breathes his last, and where is he?",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Job.14.14",
+       "ref": "Job 14:14",
+       "text": "When a man dies, will he live again? All the days of my hard service I will wait, until my renewal comes.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.9.4",
+       "ref": "Ecclesiastes 9:4",
+       "text": "There is hope, however, for anyone who is among the living; for even a live dog is better than a dead lion.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Asleep: “not dead but asleep”, “rested with his fathers”",
+     "note": "Jesus says of the girl, “The child is not dead, but asleep” (Mark 5:39; also Matt 9:24, Luke 8:52). Of Lazarus the text says the disciples “thought that Jesus was talking about actual sleep, but He was speaking about the death of Lazarus” (John 11:13). Paul writes of “those who have fallen asleep in Him” (1 Thess 4:14), and Asa “died and rested with his fathers” (2 Chr 16:13). These are different words in the original: καθεύδω in Mark 5:39, κοιμάομαι in John 11:13 (with ὕπνος, “sleep”, beside it) and 1 Thess 4:14, and in 2 Chr 16:13 the Hebrew שָׁכַב, “lay down”. The page does not make them one. Whether the dead are conscious in this sleep is a question readers answer differently and the page takes no side.",
+     "doors": [
+      {
+       "id": "sleep",
+       "name": "sleep",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "Mark.5.39",
+      "John.11.13",
+      "1Thess.4.14",
+      "2Chr.16.13",
+      "Matt.9.24",
+      "Luke.8.52"
+     ],
+     "eg": [
+      {
+       "id": "Mark.5.39",
+       "ref": "Mark 5:39",
+       "text": "He went inside and asked, “Why all this commotion and weeping? The child is not dead, but asleep.”",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "John.11.13",
+       "ref": "John 11:13",
+       "text": "They thought that Jesus was talking about actual sleep, but He was speaking about the death of Lazarus.",
+       "words": [
+        {
+         "key": "g2288",
+         "lemma": "θάνατος"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.4.14",
+       "ref": "1 Thessalonians 4:14",
+       "text": "For since we believe that Jesus died and rose again, we also believe that God will bring with Jesus those who have fallen asleep in Him.",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.16.13",
+       "ref": "2 Chronicles 16:13",
+       "text": "So in the forty-first year of his reign, Asa died and rested with his fathers.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The law's penalty: “must surely be put to death”, “stone them to death”",
+     "note": "These are statutes in the Covenant, Holiness and Deuteronomic collections. The text itself sets limits beside them: the testimony of two or three witnesses (Deut 17:6), no ransom for a murderer (Num 35:31), the cities of refuge for the manslayer (Num 35), and no death for another's sin (Deut 24:16, in “Each will die for his own sin”). The page does not say how often, or whether, they were carried out.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 42,
+     "verses": [
+      "Exod.21.12",
+      "Lev.24.17",
+      "Deut.17.6",
+      "Deut.13.5",
+      "Exod.19.12",
+      "Exod.21.14",
+      "Exod.21.15",
+      "Exod.21.16",
+      "Exod.21.17",
+      "Exod.22.19",
+      "Exod.31.14",
+      "Exod.31.15",
+      "Exod.35.2",
+      "Lev.20.2",
+      "Lev.20.9",
+      "Lev.20.10",
+      "Lev.20.11",
+      "Lev.20.12",
+      "Lev.20.13",
+      "Lev.20.15",
+      "Lev.20.16",
+      "Lev.20.27",
+      "Lev.24.16",
+      "Lev.24.21",
+      "Lev.27.29",
+      "Num.15.35",
+      "Num.35.16",
+      "Num.35.17",
+      "Num.35.18",
+      "Num.35.21",
+      "Num.35.30",
+      "Num.35.31",
+      "Deut.13.10",
+      "Deut.17.5",
+      "Deut.17.12",
+      "Deut.18.20",
+      "Deut.21.21",
+      "Deut.22.21",
+      "Deut.22.22",
+      "Deut.22.24",
+      "Deut.22.25",
+      "Deut.24.7"
+     ],
+     "eg": [
+      {
+       "id": "Exod.21.12",
+       "ref": "Exodus 21:12",
+       "text": "Whoever strikes and kills a man must surely be put to death.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Lev.24.17",
+       "ref": "Leviticus 24:17",
+       "text": "And if a man takes the life of anyone else, he must surely be put to death.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Deut.17.6",
+       "ref": "Deuteronomy 17:6",
+       "text": "On the testimony of two or three witnesses a man shall be put to death, but he shall not be executed on the testimony of a lone witness.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Deut.13.5",
+       "ref": "Deuteronomy 13:5",
+       "text": "Such a prophet or dreamer must be put to death, because he has advocated rebellion against the LORD your God, who brought you out of the land of Egypt and redeemed you from the house of slavery; he has tried to turn you from the way in which the LORD your God has commanded you to walk. So you must purge the evil from among you.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Buried, mourned, “gathered to his people”, full of years",
+     "note": null,
+     "doors": [
+      {
+       "id": "grave",
+       "name": "grave",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "mourning",
+       "name": "mourning",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 51,
+     "verses": [
+      "Gen.25.8",
+      "Gen.35.29",
+      "Judg.8.32",
+      "Job.42.17",
+      "Gen.23.2",
+      "Mark.5.39",
+      "Gen.25.17",
+      "Gen.35.8",
+      "Gen.35.19",
+      "Gen.42.38",
+      "Gen.44.31",
+      "Gen.47.29",
+      "Gen.48.7",
+      "Gen.50.5",
+      "Lev.10.6",
+      "Num.20.1",
+      "Num.20.26",
+      "Deut.10.6",
+      "Deut.32.50",
+      "Josh.24.33",
+      "Judg.10.2",
+      "Judg.10.5",
+      "Judg.12.7",
+      "Judg.12.10",
+      "Judg.12.12",
+      "Judg.12.15",
+      "Ruth.1.17",
+      "1Sam.25.1",
+      "1Sam.28.3",
+      "2Sam.11.26",
+      "2Sam.12.21",
+      "2Sam.17.23",
+      "2Sam.18.33",
+      "1Kgs.2.34",
+      "1Kgs.13.31",
+      "1Kgs.22.37",
+      "2Kgs.12.21",
+      "2Kgs.13.14",
+      "2Kgs.13.20",
+      "2Kgs.23.30",
+      "1Chr.29.28",
+      "2Chr.22.9",
+      "2Chr.24.15",
+      "2Chr.24.25",
+      "2Chr.35.24",
+      "Jer.16.4",
+      "Jer.16.6",
+      "Jer.20.6",
+      "Jer.34.5",
+      "Luke.8.52",
+      "Luke.16.22"
+     ],
+     "eg": [
+      {
+       "id": "Gen.25.8",
+       "ref": "Genesis 25:8",
+       "text": "And at a ripe old age he breathed his last and died, old and contented, and was gathered to his people.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Gen.35.29",
+       "ref": "Genesis 35:29",
+       "text": "Then he breathed his last and died and was gathered to his people, old and full of years. And his sons Esau and Jacob buried him.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Judg.8.32",
+       "ref": "Judges 8:32",
+       "text": "Later, Gideon son of Joash died at a ripe old age and was buried in the tomb of his father Joash in Ophrah of the Abiezrites.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Job.42.17",
+       "ref": "Job 42:17",
+       "text": "And so Job died, old and full of years.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Struck down, killed, fallen by the sword",
+     "note": "These verses tell of killing in war, in murder and manslaughter, in executions, and in what the text says the LORD struck down. Statute verses appear again in “The law's penalty”, and verses where the LORD is named in “The LORD brings death and gives life”.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 107,
+     "verses": [
+      "1Sam.17.50",
+      "2Kgs.25.21",
+      "Judg.9.54",
+      "Heb.11.37",
+      "Exod.21.12",
+      "Exod.21.14",
+      "Exod.21.15",
+      "Exod.21.18",
+      "Exod.21.20",
+      "Exod.22.2",
+      "Lev.20.15",
+      "Lev.20.16",
+      "Lev.24.17",
+      "Lev.24.21",
+      "Num.35.12",
+      "Num.35.16",
+      "Num.35.17",
+      "Num.35.18",
+      "Num.35.19",
+      "Num.35.21",
+      "Num.35.30",
+      "Num.35.31",
+      "Deut.13.9",
+      "Deut.19.11",
+      "Deut.20.5",
+      "Deut.20.6",
+      "Deut.20.7",
+      "Josh.10.11",
+      "Josh.10.26",
+      "Josh.11.17",
+      "Josh.20.9",
+      "Judg.20.5",
+      "1Sam.15.3",
+      "1Sam.17.35",
+      "1Sam.17.51",
+      "1Sam.19.5",
+      "1Sam.20.33",
+      "1Sam.26.10",
+      "1Sam.31.5",
+      "2Sam.1.4",
+      "2Sam.1.15",
+      "2Sam.2.23",
+      "2Sam.2.31",
+      "2Sam.3.27",
+      "2Sam.3.30",
+      "2Sam.4.7",
+      "2Sam.4.10",
+      "2Sam.6.7",
+      "2Sam.8.2",
+      "2Sam.10.18",
+      "2Sam.11.15",
+      "2Sam.11.21",
+      "2Sam.13.28",
+      "2Sam.14.6",
+      "2Sam.14.7",
+      "2Sam.18.15",
+      "2Sam.19.10",
+      "2Sam.20.10",
+      "2Sam.21.17",
+      "1Kgs.1.51",
+      "1Kgs.2.8",
+      "1Kgs.16.10",
+      "1Kgs.19.17",
+      "1Kgs.22.35",
+      "2Kgs.9.27",
+      "2Kgs.11.15",
+      "2Kgs.11.20",
+      "2Kgs.12.21",
+      "2Kgs.14.6",
+      "2Kgs.15.10",
+      "2Kgs.15.14",
+      "2Kgs.15.25",
+      "2Kgs.15.30",
+      "2Kgs.19.35",
+      "2Kgs.25.25",
+      "1Chr.10.5",
+      "1Chr.13.10",
+      "1Chr.19.18",
+      "2Chr.18.34",
+      "2Chr.23.14",
+      "2Chr.23.21",
+      "2Chr.24.22",
+      "2Chr.24.25",
+      "Job.5.2",
+      "Isa.11.4",
+      "Isa.14.30",
+      "Isa.37.36",
+      "Jer.11.22",
+      "Jer.16.4",
+      "Jer.21.6",
+      "Jer.21.9",
+      "Jer.27.13",
+      "Jer.34.4",
+      "Jer.38.2",
+      "Jer.38.4",
+      "Jer.41.2",
+      "Jer.42.16",
+      "Jer.42.17",
+      "Jer.42.22",
+      "Jer.44.12",
+      "Jer.52.27",
+      "Ezek.5.12",
+      "Ezek.6.12",
+      "Hos.9.16",
+      "Amos.7.11",
+      "Amos.7.17",
+      "Amos.9.10"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.17.50",
+       "ref": "1 Samuel 17:50",
+       "text": "Thus David prevailed over the Philistine with a sling and a stone; without a sword in his hand he struck down the Philistine and killed him.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "2Kgs.25.21",
+       "ref": "2 Kings 25:21",
+       "text": "There at Riblah in the land of Hamath, the king of Babylon struck them down and put them to death. So Judah was taken into exile, away from its own land.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Judg.9.54",
+       "ref": "Judges 9:54",
+       "text": "He quickly called his armor-bearer, saying, “Draw your sword and kill me, lest they say of me, ‘A woman killed him.'” So Abimelech's armor-bearer ran his sword through him, and he died.",
+       "words": [
+        {
+         "key": "h4191",
+         "lemma": "מוּת"
+        }
+       ]
+      },
+      {
+       "id": "Heb.11.37",
+       "ref": "Hebrews 11:37",
+       "text": "They were stoned, they were sawed in two, they were put to death by the sword. They went around in sheepskins and goatskins, destitute, oppressed, and mistreated.",
+       "words": [
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 510,
+    "verses": [
+     "1Chr.1.44",
+     "1Chr.1.45",
+     "1Chr.1.46",
+     "1Chr.1.47",
+     "1Chr.1.48",
+     "1Chr.1.49",
+     "1Chr.1.50",
+     "1Chr.1.51",
+     "1Chr.10.13",
+     "1Chr.10.14",
+     "1Chr.10.6",
+     "1Chr.10.7",
+     "1Chr.19.1",
+     "1Chr.2.19",
+     "1Chr.2.3",
+     "1Chr.2.30",
+     "1Chr.2.32",
+     "1Chr.23.22",
+     "1Chr.24.2",
+     "1Cor.15.31",
+     "1Cor.15.36",
+     "1Cor.9.15",
+     "1Kgs.1.52",
+     "1Kgs.11.21",
+     "1Kgs.11.40",
+     "1Kgs.12.18",
+     "1Kgs.13.24",
+     "1Kgs.13.26",
+     "1Kgs.14.12",
+     "1Kgs.14.17",
+     "1Kgs.15.28",
+     "1Kgs.16.18",
+     "1Kgs.16.22",
+     "1Kgs.17.12",
+     "1Kgs.17.18",
+     "1Kgs.17.20",
+     "1Kgs.18.9",
+     "1Kgs.19.4",
+     "1Kgs.2.1",
+     "1Kgs.2.24",
+     "1Kgs.2.25",
+     "1Kgs.2.26",
+     "1Kgs.2.30",
+     "1Kgs.2.46",
+     "1Kgs.21.10",
+     "1Kgs.21.13",
+     "1Kgs.21.14",
+     "1Kgs.21.15",
+     "1Kgs.21.16",
+     "1Kgs.3.19",
+     "1Kgs.3.20",
+     "1Kgs.3.21",
+     "1Kgs.3.26",
+     "1Kgs.3.27",
+     "1Pet.3.18",
+     "1Sam.11.12",
+     "1Sam.11.13",
+     "1Sam.12.19",
+     "1Sam.14.13",
+     "1Sam.14.39",
+     "1Sam.14.43",
+     "1Sam.14.45",
+     "1Sam.19.1",
+     "1Sam.19.11",
+     "1Sam.19.15",
+     "1Sam.19.17",
+     "1Sam.19.2",
+     "1Sam.19.6",
+     "1Sam.2.25",
+     "1Sam.2.33",
+     "1Sam.2.34",
+     "1Sam.20.14",
+     "1Sam.20.2",
+     "1Sam.20.32",
+     "1Sam.20.8",
+     "1Sam.22.17",
+     "1Sam.22.18",
+     "1Sam.24.14",
+     "1Sam.25.37",
+     "1Sam.25.39",
+     "1Sam.28.9",
+     "1Sam.30.15",
+     "1Sam.30.2",
+     "1Sam.31.6",
+     "1Sam.31.7",
+     "1Sam.4.11",
+     "1Sam.4.17",
+     "1Sam.4.18",
+     "1Sam.4.19",
+     "1Sam.4.20",
+     "1Sam.5.10",
+     "1Sam.5.11",
+     "1Sam.5.12",
+     "1Thess.5.10",
+     "1Tim.5.6",
+     "2Chr.10.18",
+     "2Chr.13.20",
+     "2Chr.15.13",
+     "2Chr.21.19",
+     "2Chr.22.10",
+     "2Chr.22.11",
+     "2Chr.23.15",
+     "2Chr.23.7",
+     "2Chr.25.27",
+     "2Chr.25.4",
+     "2Chr.32.11",
+     "2Chr.32.24",
+     "2Chr.33.24",
+     "2Cor.5.15",
+     "2Cor.6.9",
+     "2Kgs.1.16",
+     "2Kgs.1.17",
+     "2Kgs.1.4",
+     "2Kgs.1.6",
+     "2Kgs.11.1",
+     "2Kgs.11.16",
+     "2Kgs.11.2",
+     "2Kgs.11.8",
+     "2Kgs.13.24",
+     "2Kgs.14.19",
+     "2Kgs.16.9",
+     "2Kgs.17.26",
+     "2Kgs.18.32",
+     "2Kgs.20.1",
+     "2Kgs.21.23",
+     "2Kgs.23.29",
+     "2Kgs.23.34",
+     "2Kgs.3.5",
+     "2Kgs.4.1",
+     "2Kgs.4.20",
+     "2Kgs.4.32",
+     "2Kgs.5.7",
+     "2Kgs.7.17",
+     "2Kgs.7.20",
+     "2Kgs.7.3",
+     "2Kgs.7.4",
+     "2Kgs.8.10",
+     "2Kgs.8.15",
+     "2Sam.1.10",
+     "2Sam.1.16",
+     "2Sam.1.5",
+     "2Sam.1.9",
+     "2Sam.10.1",
+     "2Sam.11.17",
+     "2Sam.11.24",
+     "2Sam.12.13",
+     "2Sam.12.14",
+     "2Sam.12.18",
+     "2Sam.12.19",
+     "2Sam.13.32",
+     "2Sam.13.33",
+     "2Sam.13.39",
+     "2Sam.14.14",
+     "2Sam.14.32",
+     "2Sam.14.5",
+     "2Sam.18.20",
+     "2Sam.18.3",
+     "2Sam.19.21",
+     "2Sam.19.22",
+     "2Sam.19.23",
+     "2Sam.19.37",
+     "2Sam.19.6",
+     "2Sam.2.7",
+     "2Sam.20.3",
+     "2Sam.21.1",
+     "2Sam.21.4",
+     "2Sam.21.9",
+     "2Sam.24.15",
+     "2Sam.3.33",
+     "2Sam.3.37",
+     "2Sam.4.1",
+     "2Sam.9.8",
+     "Acts.14.19",
+     "Acts.21.13",
+     "Acts.25.11",
+     "Acts.25.19",
+     "Acts.7.4",
+     "Acts.9.37",
+     "Amos.2.2",
+     "Amos.6.9",
+     "Deut.17.7",
+     "Deut.18.16",
+     "Deut.19.12",
+     "Deut.19.5",
+     "Deut.2.16",
+     "Deut.21.22",
+     "Deut.24.3",
+     "Deut.25.5",
+     "Deut.25.6",
+     "Deut.31.14",
+     "Deut.33.6",
+     "Deut.34.5",
+     "Deut.34.7",
+     "Deut.4.22",
+     "Deut.5.25",
+     "Deut.9.28",
+     "Eccl.2.16",
+     "Eccl.4.2",
+     "Eccl.7.17",
+     "Esth.4.11",
+     "Exod.1.16",
+     "Exod.1.6",
+     "Exod.10.28",
+     "Exod.11.5",
+     "Exod.12.33",
+     "Exod.14.11",
+     "Exod.14.12",
+     "Exod.14.30",
+     "Exod.16.3",
+     "Exod.17.3",
+     "Exod.2.23",
+     "Exod.20.19",
+     "Exod.21.28",
+     "Exod.21.29",
+     "Exod.21.34",
+     "Exod.21.35",
+     "Exod.21.36",
+     "Exod.22.10",
+     "Exod.22.14",
+     "Exod.28.35",
+     "Exod.28.43",
+     "Exod.30.20",
+     "Exod.30.21",
+     "Exod.4.19",
+     "Exod.4.24",
+     "Exod.7.18",
+     "Exod.7.21",
+     "Exod.8.13",
+     "Exod.9.19",
+     "Exod.9.4",
+     "Exod.9.6",
+     "Exod.9.7",
+     "Ezek.11.13",
+     "Ezek.12.13",
+     "Ezek.13.19",
+     "Ezek.17.16",
+     "Ezek.18.21",
+     "Ezek.18.26",
+     "Ezek.18.28",
+     "Ezek.18.31",
+     "Ezek.24.18",
+     "Ezek.28.10",
+     "Ezek.28.8",
+     "Ezek.33.11",
+     "Ezek.33.15",
+     "Ezek.33.18",
+     "Gen.11.28",
+     "Gen.11.32",
+     "Gen.18.25",
+     "Gen.19.19",
+     "Gen.20.3",
+     "Gen.25.32",
+     "Gen.26.11",
+     "Gen.26.9",
+     "Gen.27.4",
+     "Gen.30.1",
+     "Gen.33.13",
+     "Gen.35.18",
+     "Gen.36.33",
+     "Gen.36.34",
+     "Gen.36.35",
+     "Gen.36.36",
+     "Gen.36.37",
+     "Gen.36.38",
+     "Gen.36.39",
+     "Gen.37.18",
+     "Gen.38.11",
+     "Gen.38.12",
+     "Gen.42.2",
+     "Gen.42.20",
+     "Gen.42.37",
+     "Gen.43.8",
+     "Gen.44.20",
+     "Gen.44.22",
+     "Gen.44.9",
+     "Gen.45.28",
+     "Gen.46.12",
+     "Gen.46.30",
+     "Gen.47.15",
+     "Gen.47.19",
+     "Gen.48.21",
+     "Gen.5.11",
+     "Gen.5.14",
+     "Gen.5.17",
+     "Gen.5.20",
+     "Gen.5.27",
+     "Gen.5.31",
+     "Gen.5.8",
+     "Gen.50.15",
+     "Gen.50.24",
+     "Gen.50.26",
+     "Gen.7.22",
+     "Gen.9.29",
+     "Hab.1.12",
+     "Heb.10.28",
+     "Heb.11.13",
+     "Heb.11.21",
+     "Heb.11.4",
+     "Heb.7.8",
+     "Hos.13.1",
+     "Hos.2.3",
+     "Isa.22.13",
+     "Isa.22.14",
+     "Isa.22.18",
+     "Isa.38.1",
+     "Isa.50.2",
+     "Isa.51.12",
+     "Isa.51.14",
+     "Isa.51.6",
+     "Isa.59.5",
+     "Isa.65.15",
+     "Isa.65.20",
+     "Isa.66.24",
+     "Jer.11.21",
+     "Jer.20.17",
+     "Jer.22.12",
+     "Jer.22.26",
+     "Jer.26.15",
+     "Jer.26.19",
+     "Jer.26.21",
+     "Jer.26.24",
+     "Jer.28.17",
+     "Jer.37.20",
+     "Jer.38.10",
+     "Jer.38.15",
+     "Jer.38.16",
+     "Jer.38.24",
+     "Jer.38.25",
+     "Jer.38.26",
+     "Jer.38.9",
+     "Jer.41.4",
+     "Jer.41.8",
+     "Jer.43.3",
+     "Job.1.19",
+     "Job.12.2",
+     "Job.14.8",
+     "Job.2.9",
+     "Job.21.23",
+     "Job.21.25",
+     "Job.3.11",
+     "Job.34.20",
+     "Job.36.14",
+     "Job.4.21",
+     "Job.9.23",
+     "John.11.14",
+     "John.11.16",
+     "John.11.21",
+     "John.11.32",
+     "John.11.37",
+     "John.11.44",
+     "John.11.50",
+     "John.12.24",
+     "John.12.33",
+     "John.18.14",
+     "John.18.32",
+     "John.19.33",
+     "John.19.7",
+     "John.21.23",
+     "John.4.47",
+     "John.4.49",
+     "John.6.49",
+     "John.6.50",
+     "John.6.58",
+     "John.8.21",
+     "John.8.24",
+     "John.8.52",
+     "John.8.53",
+     "Jonah.4.8",
+     "Josh.1.18",
+     "Josh.1.2",
+     "Josh.2.14",
+     "Josh.24.29",
+     "Josh.5.4",
+     "Jude.1.12",
+     "Judg.1.7",
+     "Judg.13.22",
+     "Judg.13.23",
+     "Judg.15.13",
+     "Judg.15.18",
+     "Judg.16.16",
+     "Judg.16.30",
+     "Judg.2.19",
+     "Judg.2.21",
+     "Judg.2.8",
+     "Judg.20.13",
+     "Judg.21.5",
+     "Judg.3.11",
+     "Judg.3.25",
+     "Judg.4.1",
+     "Judg.4.21",
+     "Judg.4.22",
+     "Judg.5.18",
+     "Judg.6.23",
+     "Judg.6.30",
+     "Judg.6.31",
+     "Judg.8.33",
+     "Judg.9.49",
+     "Judg.9.55",
+     "Lev.10.7",
+     "Lev.10.9",
+     "Lev.11.39",
+     "Lev.15.31",
+     "Lev.16.1",
+     "Lev.16.13",
+     "Lev.16.2",
+     "Lev.19.20",
+     "Lev.20.20",
+     "Lev.20.4",
+     "Lev.22.9",
+     "Lev.8.35",
+     "Luke.20.28",
+     "Luke.20.29",
+     "Luke.20.31",
+     "Luke.20.32",
+     "Luke.20.36",
+     "Luke.21.16",
+     "Luke.7.12",
+     "Luke.8.42",
+     "Luke.8.49",
+     "Luke.8.53",
+     "Mark.12.19",
+     "Mark.12.20",
+     "Mark.12.21",
+     "Mark.12.22",
+     "Mark.13.12",
+     "Mark.14.55",
+     "Mark.15.44",
+     "Mark.5.35",
+     "Mark.9.26",
+     "Matt.10.21",
+     "Matt.2.20",
+     "Matt.22.24",
+     "Matt.22.27",
+     "Matt.26.35",
+     "Matt.26.59",
+     "Matt.27.1",
+     "Matt.8.32",
+     "Num.1.51",
+     "Num.14.15",
+     "Num.14.2",
+     "Num.14.37",
+     "Num.15.36",
+     "Num.16.13",
+     "Num.16.29",
+     "Num.16.41",
+     "Num.16.49",
+     "Num.17.10",
+     "Num.17.13",
+     "Num.18.22",
+     "Num.18.3",
+     "Num.18.7",
+     "Num.19.13",
+     "Num.19.14",
+     "Num.20.28",
+     "Num.20.4",
+     "Num.21.5",
+     "Num.23.10",
+     "Num.26.11",
+     "Num.26.19",
+     "Num.26.61",
+     "Num.27.8",
+     "Num.3.10",
+     "Num.3.38",
+     "Num.3.4",
+     "Num.33.38",
+     "Num.33.39",
+     "Num.35.20",
+     "Num.35.23",
+     "Num.4.15",
+     "Num.4.19",
+     "Num.4.20",
+     "Num.6.6",
+     "Num.6.7",
+     "Num.6.9",
+     "Prov.10.21",
+     "Prov.15.10",
+     "Prov.19.16",
+     "Prov.19.18",
+     "Prov.21.25",
+     "Prov.23.13",
+     "Prov.30.7",
+     "Prov.5.23",
+     "Ps.105.29",
+     "Ps.109.16",
+     "Ps.118.17",
+     "Ps.34.21",
+     "Ps.37.32",
+     "Ps.41.5",
+     "Ps.48.14",
+     "Ps.49.10",
+     "Ps.59.1",
+     "Ps.82.7",
+     "Rev.16.3",
+     "Rev.3.2",
+     "Rev.8.11",
+     "Rev.8.9",
+     "Rev.9.6",
+     "Rom.14.7",
+     "Rom.5.7",
+     "Rom.7.10",
+     "Rom.7.2",
+     "Rom.7.3",
+     "Rom.8.13",
+     "Rom.8.36",
+     "Ruth.1.3",
+     "Ruth.1.5",
+     "Ruth.1.8",
+     "Ruth.4.10",
+     "Ruth.4.5",
+     "Zech.11.9"
+    ]
+   }
+  },
+  {
+   "form": "adjective",
+   "verses": 122,
+   "rows": [
+    {
+     "label": "Jesus Christ raised from the dead",
+     "note": "See also “The death of Christ” (in the list of death) and “Christ died” (in the list of dying).",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "resurrection_of_christ",
+       "name": "the resurrection of Christ",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Matt.17.9",
+      "Rom.4.24",
+      "1Cor.15.20",
+      "Rev.1.5",
+      "Mark.9.9",
+      "Luke.24.46",
+      "John.20.9",
+      "John.21.14",
+      "Acts.4.10",
+      "Acts.17.3",
+      "Acts.26.23",
+      "Rom.1.4",
+      "Rom.6.4",
+      "Rom.6.9",
+      "Rom.7.4",
+      "Rom.8.11",
+      "Rom.10.7",
+      "Rom.10.9",
+      "1Cor.15.12",
+      "Gal.1.1",
+      "Eph.1.20",
+      "1Thess.1.10",
+      "2Tim.2.8",
+      "Heb.13.20",
+      "1Pet.1.3"
+     ],
+     "eg": [
+      {
+       "id": "Matt.17.9",
+       "ref": "Matthew 17:9",
+       "text": "As they were coming down the mountain, Jesus commanded them, “Do not tell anyone about this vision until the Son of Man has been raised from the dead.”",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "Rom.4.24",
+       "ref": "Romans 4:24",
+       "text": "but also for us, to whom righteousness will be credited-for us who believe in Him who raised Jesus our Lord from the dead.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.20",
+       "ref": "1 Corinthians 15:20",
+       "text": "But Christ has indeed been raised from the dead, the firstfruits of those who have fallen asleep.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "Rev.1.5",
+       "ref": "Revelation 1:5",
+       "text": "and from Jesus Christ, the faithful witness, the firstborn from the dead, and the ruler of the kings of the earth. To Him who loves us and has released us from our sins by His blood,",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The resurrection of the dead; the dead raised; God “of the living”",
+     "note": "Rev 20:4-6 speaks of “the first resurrection” and of a thousand years; where Christian traditions part on how that is read, and on the order and timing of the resurrection, the page takes no side. Some verses tell of someone raised to this life (Luke 7:15; John 12:1), others of the resurrection at the end (1 Cor 15:42; 1 Thess 4:16); the page keeps them in one row and does not say which a verse means beyond what it says. The Sadducees' question and the answer to it (Matt 22:23-33; Mark 12:18-27; Luke 20:27-40) stand here whole, including “He is not the God of the dead, but of the living”. The Hebrew Scriptures' verses on waking from the dust and rising from the graves (Isa 26:19; Dan 12:2; Ezek 37:12-13) are in “Death and the resurrection” in the noun list.",
+     "doors": [
+      {
+       "id": "the_resurrection",
+       "name": "the resurrection",
+       "type": "title",
+       "missing": false
+      }
+     ],
+     "n": 38,
+     "verses": [
+      "Matt.22.31",
+      "1Cor.15.42",
+      "Matt.11.5",
+      "1Thess.4.16",
+      "Matt.10.8",
+      "Rom.1.4",
+      "Matt.22.32",
+      "Mark.9.10",
+      "Mark.12.25",
+      "Mark.12.26",
+      "Mark.12.27",
+      "Luke.7.15",
+      "Luke.7.22",
+      "Luke.16.30",
+      "Luke.16.31",
+      "Luke.20.35",
+      "Luke.20.37",
+      "Luke.20.38",
+      "John.5.21",
+      "John.5.25",
+      "John.12.1",
+      "Acts.4.2",
+      "Acts.17.32",
+      "Acts.23.6",
+      "Acts.24.21",
+      "Acts.26.8",
+      "Acts.26.23",
+      "Rom.4.17",
+      "1Cor.15.12",
+      "1Cor.15.13",
+      "1Cor.15.21",
+      "1Cor.15.52",
+      "2Cor.1.9",
+      "Phil.3.11",
+      "Heb.11.19",
+      "Heb.11.35",
+      "1Pet.1.3",
+      "Rev.20.5"
+     ],
+     "eg": [
+      {
+       "id": "Matt.22.31",
+       "ref": "Matthew 22:31",
+       "text": "But concerning the resurrection of the dead, have you not read what God said to you:",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.42",
+       "ref": "1 Corinthians 15:42",
+       "text": "So will it be with the resurrection of the dead: What is sown is perishable; it is raised imperishable.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "Matt.11.5",
+       "ref": "Matthew 11:5",
+       "text": "The blind receive sight, the lame walk, the lepers are cleansed, the deaf hear, the dead are raised, and the good news is preached to the poor.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.4.16",
+       "ref": "1 Thessalonians 4:16",
+       "text": "For the Lord Himself will descend from heaven with a loud command, with the voice of an archangel, and with the trumpet of God, and the dead in Christ will be the first to rise.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Lord of the dead”; the dead judged",
+     "note": "Set side by side as the text has them. Where Christian traditions part on what follows death (an interval before the resurrection, a presence with the Lord, the dead awaiting judgment), the page takes no side; 1 Pet 4:6 (“the gospel was preached even to those who are now dead”) is read in more than one way and is kept as written. “He is not the God of the dead, but of the living” (Matt 22:32; Mark 12:27; Luke 20:38) stands with the rest of that exchange in “The resurrection of the dead; the dead raised”.",
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Rom.14.9",
+      "Acts.10.42",
+      "2Tim.4.1",
+      "Rev.20.12",
+      "1Pet.4.5",
+      "1Pet.4.6",
+      "Rev.11.18",
+      "Rev.20.13"
+     ],
+     "eg": [
+      {
+       "id": "Rom.14.9",
+       "ref": "Romans 14:9",
+       "text": "For this reason Christ died and returned to life, that He might be the Lord of both the dead and the living.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        },
+        {
+         "key": "g599",
+         "lemma": "ἀποθνῄσκω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.10.42",
+       "ref": "Acts 10:42",
+       "text": "And He commanded us to preach to the people and to testify that He is the One appointed by God to judge the living and the dead.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.4.1",
+       "ref": "2 Timothy 4:1",
+       "text": "I charge you in the presence of God and of Christ Jesus, who will judge the living and the dead, and in view of His appearing and His kingdom:",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "Rev.20.12",
+       "ref": "Revelation 20:12",
+       "text": "And I saw the dead, great and small, standing before the throne. And books were opened, and one of them was the Book of Life. And the dead were judged according to their deeds, as recorded in the books.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Dead” said of people who are alive: in trespasses, faith without deeds, dead works",
+     "note": "Here “dead” is said of people alive in the body. Jas 2:17 and 2:26 (“faith without deeds is dead”) stand beside Rom 3:28 in the faith hub; where Christian traditions part on how faith and works stand to each other, the page takes no side. Jas 2:26 compares faith without deeds to a body without the spirit, which is dead. Where Christian traditions part on what “dead in trespasses” means for a person's ability to respond (Eph 2:1, 2:5; Col 2:13), the page takes no side.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Luke.15.24",
+      "Eph.2.1",
+      "Jas.2.26",
+      "Rev.3.1",
+      "Luke.15.32",
+      "Rom.6.11",
+      "Rom.6.13",
+      "Rom.8.10",
+      "Eph.2.5",
+      "Eph.5.14",
+      "Col.2.13",
+      "Heb.6.1",
+      "Heb.9.14",
+      "Jas.2.17"
+     ],
+     "eg": [
+      {
+       "id": "Luke.15.24",
+       "ref": "Luke 15:24",
+       "text": "For this son of mine was dead and is alive again! He was lost and is found!' So they began to celebrate.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.1",
+       "ref": "Ephesians 2:1",
+       "text": "And you were dead in your trespasses and sins,",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.26",
+       "ref": "James 2:26",
+       "text": "As the body without the spirit is dead, so faith without deeds is dead.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      },
+      {
+       "id": "Rev.3.1",
+       "ref": "Revelation 3:1",
+       "text": "“To the angel of the church in Sardis write: These are the words of the One who holds the seven spirits of God and the seven stars. I know your deeds; you have a reputation for being alive, yet you are dead.",
+       "words": [
+        {
+         "key": "g3498",
+         "lemma": "νεκρός"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 41,
+    "verses": [
+     "1Cor.15.15",
+     "1Cor.15.16",
+     "1Cor.15.29",
+     "1Cor.15.32",
+     "1Cor.15.35",
+     "1Cor.4.9",
+     "1Pet.1.21",
+     "Acts.10.41",
+     "Acts.13.30",
+     "Acts.13.34",
+     "Acts.17.31",
+     "Acts.20.9",
+     "Acts.28.6",
+     "Acts.3.15",
+     "Acts.5.10",
+     "Col.1.18",
+     "Col.2.12",
+     "Heb.9.17",
+     "Jas.3.8",
+     "John.12.17",
+     "John.12.9",
+     "John.2.22",
+     "Luke.24.5",
+     "Luke.9.60",
+     "Luke.9.7",
+     "Mark.16.18",
+     "Mark.6.14",
+     "Mark.9.26",
+     "Matt.14.2",
+     "Matt.23.27",
+     "Matt.27.64",
+     "Matt.28.4",
+     "Matt.28.7",
+     "Matt.8.22",
+     "Rev.1.17",
+     "Rev.1.18",
+     "Rev.14.13",
+     "Rev.16.3",
+     "Rev.2.8",
+     "Rom.11.15",
+     "Rom.7.8"
+    ]
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “death”, “dead”, “die”",
+  "words": [
+   {
+    "key": "h5038",
+    "lemma": "נְבֵלָה",
+    "translit": "ne.ve.lah",
+    "gloss": "carcass",
+    "lang": "Hebrew",
+    "n": 11,
+    "verses": [
+     "Lev.7.24",
+     "Lev.17.15",
+     "Lev.22.8",
+     "Jer.7.33",
+     "Jer.16.4",
+     "Jer.19.7",
+     "Jer.26.23",
+     "Jer.34.20",
+     "Jer.36.30",
+     "Ezek.4.14",
+     "Ezek.44.31"
+    ],
+    "eg": [
+     {
+      "id": "Lev.7.24",
+      "ref": "Leviticus 7:24",
+      "text": "The fat of an animal found dead or mauled by wild beasts may be used for any other purpose, but you must not eat it."
+     },
+     {
+      "id": "Lev.17.15",
+      "ref": "Leviticus 17:15",
+      "text": "And any person, whether native or foreigner, who eats anything found dead or mauled by wild beasts must wash his clothes and bathe with water, and he will be unclean until evening; then he will be clean."
+     }
+    ]
+   },
+   {
+    "key": "g337",
+    "lemma": "ἀναιρέω",
+    "translit": "anaireō",
+    "gloss": "to kill",
+    "lang": "Greek",
+    "n": 11,
+    "verses": [
+     "Matt.2.16",
+     "Luke.22.2",
+     "Luke.23.32",
+     "Acts.2.23",
+     "Acts.5.33",
+     "Acts.5.36",
+     "Acts.7.28",
+     "Acts.10.39",
+     "Acts.12.2",
+     "Acts.13.28",
+     "Acts.26.10"
+    ],
+    "eg": [
+     {
+      "id": "Matt.2.16",
+      "ref": "Matthew 2:16",
+      "text": "When Herod saw that he had been outwitted by the Magi, he was filled with rage. Sending orders, he put to death all the boys in Bethlehem and its vicinity who were two years old and under, according to the time he had learned from the Magi."
+     },
+     {
+      "id": "Luke.22.2",
+      "ref": "Luke 22:2",
+      "text": "and the chief priests and scribes were looking for a way to put Jesus to death, for they feared the people."
+     }
+    ]
+   },
+   {
+    "key": "g5053",
+    "lemma": "τελευτάω",
+    "translit": "teleutaō",
+    "gloss": "to decease",
+    "lang": "Greek",
+    "n": 9,
+    "verses": [
+     "Matt.2.19",
+     "Heb.11.22",
+     "Matt.9.18",
+     "Matt.22.25",
+     "Mark.9.48",
+     "Luke.7.2",
+     "John.11.39",
+     "Acts.2.29",
+     "Acts.7.15"
+    ],
+    "eg": [
+     {
+      "id": "Matt.2.19",
+      "ref": "Matthew 2:19",
+      "text": "After Herod died, an angel of the Lord appeared in a dream to Joseph in Egypt."
+     },
+     {
+      "id": "Heb.11.22",
+      "ref": "Hebrews 11:22",
+      "text": "By faith Joseph, when his end was near, spoke about the exodus of the Israelites and gave instructions about his bones."
+     }
+    ]
+   },
+   {
+    "key": "h1478",
+    "lemma": "גָּוַע",
+    "translit": "ga.va",
+    "gloss": "to die",
+    "lang": "Hebrew",
+    "n": 9,
+    "verses": [
+     "Num.20.3",
+     "Num.20.29",
+     "Job.10.18",
+     "Job.13.19",
+     "Job.27.5",
+     "Job.29.18",
+     "Job.36.12",
+     "Ps.88.15",
+     "Ps.104.29"
+    ],
+    "eg": [
+     {
+      "id": "Num.20.3",
+      "ref": "Numbers 20:3",
+      "text": "The people quarreled with Moses and said, “If only we had perished with our brothers before the LORD!"
+     },
+     {
+      "id": "Num.20.29",
+      "ref": "Numbers 20:29",
+      "text": "When the whole congregation saw that Aaron had died, the entire house of Israel mourned for him thirty days."
+     }
+    ]
+   },
+   {
+    "key": "h7496",
+    "lemma": "רְפָאִים",
+    "translit": "ra.pah",
+    "gloss": "shade",
+    "lang": "Hebrew",
+    "n": 5,
+    "verses": [
+     "Job.26.5",
+     "Prov.2.18",
+     "Prov.9.18",
+     "Prov.21.16",
+     "Isa.26.19"
+    ],
+    "eg": [
+     {
+      "id": "Job.26.5",
+      "ref": "Job 26:5",
+      "text": "The dead tremble-those beneath the waters and those who dwell in them."
+     },
+     {
+      "id": "Prov.2.18",
+      "ref": "Proverbs 2:18",
+      "text": "For her house sinks down to death, and her tracks to the departed spirits."
+     }
+    ]
+   },
+   {
+    "key": "g4880",
+    "lemma": "συναποθνῄσκω",
+    "translit": "sunapothnēskō",
+    "gloss": "to die with",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "Mark.14.31",
+     "2Cor.7.3",
+     "2Tim.2.11"
+    ],
+    "eg": [
+     {
+      "id": "Mark.14.31",
+      "ref": "Mark 14:31",
+      "text": "But Peter kept insisting, “Even if I have to die with You, I will never deny You.” And all the others said the same thing."
+     },
+     {
+      "id": "2Cor.7.3",
+      "ref": "2 Corinthians 7:3",
+      "text": "I do not say this to condemn you. I have said before that you so occupy our hearts that we live and die together with you."
+     }
+    ]
+   },
+   {
+    "key": "g3499",
+    "lemma": "νεκρόω",
+    "translit": "nekroō",
+    "gloss": "to put to death",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "Rom.4.19",
+     "Col.3.5",
+     "Heb.11.12"
+    ],
+    "eg": [
+     {
+      "id": "Rom.4.19",
+      "ref": "Romans 4:19",
+      "text": "Without weakening in his faith, he acknowledged the decrepitness of his body (since he was about a hundred years old) and the lifelessness of Sarah's womb."
+     },
+     {
+      "id": "Col.3.5",
+      "ref": "Colossians 3:5",
+      "text": "Put to death, therefore, the components of your earthly nature: sexual immorality, impurity, lust, evil desires, and greed, which is idolatry."
+     }
+    ]
+   },
+   {
+    "key": "h6757",
+    "lemma": "צַלְמָוֶת",
+    "translit": "tsal.ma.vet",
+    "gloss": "shadow",
+    "lang": "Hebrew",
+    "verses": [
+     "Ps.23.4",
+     "Ps.107.10",
+     "Isa.9.2"
+    ],
+    "n": 3,
+    "note": "צַלְמָוֶת is spelled like “shadow” and “death” run together; many take it as “deep darkness”. The Berean prints “the shadow of death” in these three verses and “gloom” or “darkness” in others (Job 10:21: “a land of darkness and gloom”). The page does not decide which the Hebrew word means, and does not make it the word מָוֶת.",
+    "eg": [
+     {
+      "id": "Ps.23.4",
+      "ref": "Psalms 23:4",
+      "text": "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff, they comfort me."
+     },
+     {
+      "id": "Ps.107.10",
+      "ref": "Psalms 107:10",
+      "text": "Some sat in darkness and in the shadow of death, prisoners in affliction and chains,"
+     }
+    ]
+   },
+   {
+    "key": "h8546",
+    "lemma": "תְּמוּתָה",
+    "translit": "te.mu.tah",
+    "gloss": "death",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Ps.79.11",
+     "Ps.102.20"
+    ],
+    "eg": [
+     {
+      "id": "Ps.79.11",
+      "ref": "Psalms 79:11",
+      "text": "May the groans of the captives reach You; by the strength of Your arm preserve those condemned to death."
+     },
+     {
+      "id": "Ps.102.20",
+      "ref": "Psalms 102:20",
+      "text": "to hear a prisoner's groaning, to release those condemned to death,"
+     }
+    ]
+   },
+   {
+    "key": "g581",
+    "lemma": "ἀπογίνομαι",
+    "translit": "apogenomenos",
+    "gloss": "to cease to be",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "1Pet.2.24"
+    ],
+    "eg": [
+     {
+      "id": "1Pet.2.24",
+      "ref": "1 Peter 2:24",
+      "text": "He Himself bore our sins in His body on the tree, so that we might die to sin and live to righteousness. “By His stripes you are healed.”"
+     }
+    ]
+   },
+   {
+    "key": "g3500",
+    "lemma": "νέκρωσις",
+    "translit": "nekrōsis",
+    "gloss": "death",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "2Cor.4.10"
+    ],
+    "eg": [
+     {
+      "id": "2Cor.4.10",
+      "ref": "2 Corinthians 4:10",
+      "text": "We always carry around in our body the death of Jesus, so that the life of Jesus may also be revealed in our body."
+     }
+    ]
+   },
+   {
+    "key": "h4463",
+    "lemma": "מְמֹותִים",
+    "translit": "ma.mot",
+    "gloss": "death",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezek.28.8"
+    ],
+    "eg": [
+     {
+      "id": "Ezek.28.8",
+      "ref": "Ezekiel 28:8",
+      "text": "They will bring you down to the Pit, and you will die a violent death in the heart of the seas."
+     }
+    ]
+   },
+   {
+    "key": "h4193",
+    "lemma": "מוֹת",
+    "translit": "mot",
+    "gloss": "death",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezra.7.26"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.7.26",
+      "ref": "Ezra 7:26",
+      "text": "If anyone does not keep the law of your God and the law of the king, let a strict judgment be executed against him, whether death, banishment, confiscation of property, or imprisonment."
+     }
+    ]
+   },
+   {
+    "key": "g2253",
+    "lemma": "ἡμιθανής",
+    "translit": "hēmithanēs",
+    "gloss": "half-dead",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.10.30"
+    ],
+    "eg": [
+     {
+      "id": "Luke.10.30",
+      "ref": "Luke 10:30",
+      "text": "Jesus took up this question and said, “A man was going down from Jerusalem to Jericho when he fell into the hands of robbers. They stripped him, beat him, and went away, leaving him half dead."
+     }
+    ]
+   },
+   {
+    "key": "g5054",
+    "lemma": "τελευτή",
+    "translit": "teleutē",
+    "gloss": "death",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Matt.2.15"
+    ],
+    "eg": [
+     {
+      "id": "Matt.2.15",
+      "ref": "Matthew 2:15",
+      "text": "where he stayed until the death of Herod. This fulfilled what the Lord had spoken through the prophet: “Out of Egypt I called My Son.”"
+     }
+    ]
+   }
+  ]
+ }
+}

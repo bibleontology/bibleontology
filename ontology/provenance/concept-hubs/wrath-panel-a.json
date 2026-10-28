@@ -1,0 +1,80 @@
+{"id": "wrath",
+ "seats": ["Lutheran", "Reformed", "Wesleyan", "Baptist / free church", "Pentecostal / Charismatic", "Catholic", "Eastern Orthodox", "the rabbi", "the young African American believer"],
+ "overall": "ship after fixes",
+ "fixes": [
+  {"row": "The day of wrath; wrath to come, and shelter from it",
+   "kind": "OT framing",
+   "verses": ["Zeph.1.15", "Zeph.1.18", "Zeph.2.2", "Zeph.2.3", "Lam.1.12", "Lam.2.1", "Lam.2.21", "Lam.2.22", "Ezek.7.19", "Ezek.22.24", "Isa.13.13", "Isa.26.20", "Job.14.13", "Job.20.28", "Job.21.30"],
+   "readers": ["the rabbi"],
+   "why": "Under the heading 'wrath to come, and shelter from it' sit fifteen Hebrew Scripture verses (Zephaniah, Lamentations, Ezekiel, Isaiah, Job) about the LORD's judgment on Judah and the nations in their own time. Rule 5 says an OT verse is not filed under a NT heading as if it belonged there. The label's quote 'hide until His wrath has passed' is itself Isa 26:20, an OT verse, so the heading reads the OT as eschatological.",
+   "fix": "Split the row. Keep the NT verses (Matt 3:7; Luke 3:7; Rom 2:5; Rom 5:9; 1 Thess 1:10; 1 Thess 2:16; 1 Thess 5:9; Rev 6:16-17; Luke 21:23) under 'wrath to come, and shelter from it', with the label's quote taken from an NT verse (for example 'flee from the coming wrath', Matt 3:7). Move the OT verses to a new row labelled from their own words, e.g. 'the day of His wrath: the LORD's judgment on Judah and the nations' (Zeph 1:15, 1:18, 2:2-3; Lam 2:21-22; Ezek 7:19), and keep the note on when the coming wrath comes only on the NT row."},
+
+  {"row": "What stands between wrath and the people: an intercessor, a priest, a zealous man, the blood, the atoning sacrifice",
+   "kind": "tilt",
+   "verses": ["Rom.3.25", "Rom.5.9", "Heb.2.17", "1John.2.2", "1John.4.10"],
+   "readers": ["Wesleyan", "Catholic", "Eastern Orthodox"],
+   "why": "The label asserts that the sacrifice stands between wrath and the people, which is the propitiation reading. The row's own note says that reading is one of two that readers part on (propitiation or expiation), so the label takes the side the note says is open. Four of the five NT verses have no word for wrath, so the label says more than those verses say. Readers who hold expiation, or who hold the atonement as a sacrifice that removes sin without being the turning aside of anger, would be misled by the heading.",
+   "fix": "Relabel the first row to what its verses show: 'Intercession and zeal turn the LORD's anger aside: an intercessor, a priest, a zealous man' (Exod 32:12; Num 16:46; Num 25:11; Ps 106:23; Ps 78:38; Jer 18:20; Dan 9:16). Move Rom 3:25, Rom 5:9, Heb 2:17, 1 John 2:2 and 1 John 4:10 into a new row labelled 'The atoning sacrifice: the Berean's atoning sacrifice and make atonement' with the existing note, so the propitiation/expiation question stays in the note and not in the heading. Rom 5:9 may stay in the wrath-to-come row as well."},
+
+  {"row": "Children of wrath, vessels of wrath",
+   "kind": "note",
+   "verses": ["Eph.2.3"],
+   "readers": ["Catholic", "Eastern Orthodox"],
+   "why": "The note offers two readings of 'by nature': 'the sin each person inherits' or 'what each person does in following its course'. The Catholic doctrine of original sin and the Eastern Orthodox teaching of ancestral sin are neither of those two as stated, so the note frames the question in a way a Catholic or Orthodox reader would see as a Western, Augustinian-or-Pelagian choice.",
+   "fix": "Replace the note with: 'Eph 2:3 reads \"by nature children of wrath\" (the Greek phrase is φύσει). Readers part on what \"by nature\" says and where the condition comes from: a nature received at birth, or a course each person takes. Traditions answer this differently within themselves. The page takes no side.'"},
+
+  {"row": "Wrath and judgment, vengeance; the ruler who brings wrath on the wrongdoer",
+   "kind": "label",
+   "verses": ["Rom.13.4"],
+   "readers": ["Lutheran", "Baptist / free church"],
+   "why": "I read Rom 13:4 in the Berean: it reads 'He is God's servant, an agent of retribution to the wrongdoer'. The label 'brings wrath on the wrongdoer', and the note's quotation of it, come from a different translation, not the Berean, and the example does not show the label's word. A Lutheran reader (two kingdoms) and a Baptist reader (church and state) would both take 'brings wrath' as a claim about the state's authority that the Berean does not make in those words. The Greek ὀργή is there, so 'wrath' is a defensible rendering, but the page's own text is the Berean's.",
+   "fix": "Relabel to 'Wrath and judgment, vengeance; the ruler as God's agent of retribution to the wrongdoer', and change the note to quote the Berean: Rom 12:19 'leave room for God's wrath', and Rom 13:4 'an agent of retribution to the wrongdoer', with the note that the Greek word for wrath stands in Rom 13:4 and that the page does not say more."},
+
+  {"row": "Anger that burns, is kindled, flares like fire",
+   "kind": "misfit",
+   "verses": ["Gen.30.2"],
+   "readers": ["the rabbi"],
+   "why": "Rule 6 is that every example shows its label. The fourth example, Gen 30:2, reads in the Berean 'Jacob became angry with Rachel', with no burning or kindling in the English. The label's 'burns' is the Hebrew verb חָרָה, which a reader of the English cannot see in that verse.",
+   "fix": "Replace Gen 30:2 in the four examples with a verse whose Berean reading shows burning or kindling (for example Exod 22:24, 'My anger will burn', if the Berean prints it so; verify before swapping), and leave Gen 30:2 in the 'Every other use' row or in the verb row for 'a person angry'."},
+
+  {"row": "Anger turned away, or not turned away; restrained, quenched, spent",
+   "kind": "misfit",
+   "verses": ["Jer.4.4"],
+   "readers": ["the rabbi"],
+   "why": "Jer 4:4 is in this row's verse list because the clause matched the turning-away verb סוּר. In the Berean the verb is 'remove the foreskins of your hearts' (הָסִירוּ), and the verse says the LORD's wrath will break out like fire, not that it is turned away. A reader checking the row would find the verse does not show its label.",
+   "fix": "Remove Jer 4:4 from the 'Anger turned away' row (it already belongs in 'Anger that burns, is kindled, flares like fire'). Add it to the not_verses list of this row with the note: 'remove' is said of the foreskins of the heart, not of the anger."},
+
+  {"row": "The rod and the weapons of His wrath: Assyria, an army from a far land, a stormy wind",
+   "kind": "label",
+   "verses": ["Jer.50.25", "Isa.13.5", "Lam.3.1", "Ezek.13.13"],
+   "readers": ["the rabbi"],
+   "why": "The label names Assyria, but the verse that names a nation in the Berean's wording for this row is Jer 50:25, which says 'the land of the Chaldeans' (Babylon), and Isa 13:5 names no nation. Only Isa 10:5 is Assyria. A reader who checks the label against the verse would find it says more than the verses do.",
+   "fix": "Relabel to 'The rod and the weapons of His wrath: Assyria (Isa 10:5), the Chaldeans (Jer 50:25), an army from a far land (Isa 13:5), a stormy wind (Ezek 13:13)', or drop the nation names and keep 'the rod and weapons of His wrath: an army, a nation, a stormy wind'."},
+
+  {"row": "An oath sworn in anger: “they shall never enter My rest”",
+   "kind": "note",
+   "verses": ["Deut.1.34", "Num.32.10", "Ps.95.11", "Heb.3.11", "Heb.4.3"],
+   "readers": ["Reformed", "Wesleyan"],
+   "why": "The worker's report lists this row among the contested points and says readers part on what Hebrews 3-4 does with 'My rest'. The row has no note, so a reader meets Hebrews's use of the rest as settled. Rule 2 asks for a note wherever traditions part.",
+   "fix": "Add the note: 'Hebrews 3:7-4:11 reads \"My rest\" as the rest God promised and the people did not enter. Readers take that rest differently: the land, God's own rest, or the rest of the believer. The page sets the verses and takes no side.'"}
+ ],
+ "worker_points": [
+  {"point": "The twin card anger: show this hub on both cards, merge only by Doug's per-record decision", "verdict": "fine", "why": "The rows are the same text on both cards; the merge is Doug's call and not a panel question for these seats."},
+  {"point": "What turns wrath away (row 17): whether four verses with no wrath word are acceptable", "verdict": "fix", "why": "Heading asserts the propitiation reading. Split as in fix 2."},
+  {"point": "Children of wrath (row 18): the note must not rule on original sin", "verdict": "fix", "why": "The two-reading framing of 'by nature' misstates the Catholic and Orthodox positions. Fix 3 rewords the note."},
+  {"point": "What the wrath of God is (row 1 note)", "verdict": "fine", "why": "Two readings stated neutrally with the Berean's own 'gave them over'. The note cites Rom 1:24, 26, 28, which are in no row: see missing."},
+  {"point": "Wrath to come and the oath sworn in anger", "verdict": "fix", "why": "OT verses under the wrath-to-come heading (fix 1); the oath row lacks the Hebrews note (fix 8)."},
+  {"point": "Jesus and wrath (row 19)", "verdict": "fine", "why": "Each example shows the label and the rows are Jesus's own; the Lamb reading is the text's own phrase. Rev 6:16-17 and 1 Thess 1:10 overlap the wrath-to-come row, which is acceptable."},
+  {"point": "Imprecatory verses (row 15)", "verdict": "fine", "why": "Hard verses kept and labelled in the text's words; no seat here needs a change."},
+  {"point": "Human anger (rows 20-22, verb row 25)", "verdict": "fine", "why": "Kept apart from God's anger, as the brief asks; examples show their labels."},
+  {"point": "Rom 13:4-5 (row 12)", "verdict": "fix", "why": "The label and note quote a translation other than the Berean (fix 4)."},
+  {"point": "Ps 2:12 left in the verb catch-all", "verdict": "fine", "why": "The page does not choose whom 'He' means, and the catch-all says so."},
+  {"point": "Rev 14:8 and 18:3 (the Berean's passion for theta-mos)", "verdict": "fine", "why": "Kept out of the wrath rows and named in the catch-all note; they are not shown as wrath."},
+  {"point": "Translation findings (1 Sam 15:11, Deut 9:22, Job 19:29, Prov 25:15, Rev 14:8)", "verdict": "fine", "why": "Candidates for the findings file, not a panel question; no seat here is misled by the hub on them."}
+ ],
+ "missing": [
+  {"what": "Rom 1:24, 26, 28 are cited by the note on the wrath of God (God 'gave them over') but appear in no row, so the reading the note describes has no verses on the page", "verses": ["Rom.1.24", "Rom.1.26", "Rom.1.28"]}
+ ],
+ "examples_checked": "24 of 26 rows' examples show their label (the two 'Every other use' rows have no label to show); Gen 30:2 in 'Anger that burns' and Rom 13:4 in 'Wrath and judgment' do not",
+ "summary": "The hub is faithful to the text and its word-level work is sound, but four rows need repair for the seats: an OT verse group sits under a wrath-to-come heading (rabbi's rule 5), the atonement heading asserts the propitiation reading, the 'by nature' note frames the Catholic and Orthodox positions wrongly, and two examples and one label do not show or match the Berean. The eight fixes and one missing item are small and do not favour any one seat."
+}

@@ -1,0 +1,52 @@
+{
+ "_what": "The kinds of node and the relation types of the traditions layer (ontology/traditions/), declared once. The layer is derived from the question cards (ontology/questions/*.json) by tools/traditions/build.py: what each tradition, church body and school of reading has itself written, and which reading of which question it states. It is kept apart from ontology/entities/ and ontology/relations/ on purpose: a record there is a thing the text names, and these are what later readers have said about it; and a node that came from a question card must not be served until that card is shown (app2/server.py gates every page and every count on the card), which the shared entity store would not do. bibleont.validate reads this file and the layer, and fails on any node, edge or type it does not declare.",
+ "_rules": [
+  "NOTHING WITHOUT SCRIPTURE. Every node and every edge carries refs: the Bible verses of the readings it supports. A document points at the verses it speaks to, never at itself.",
+  "THE TRADITIONS' WORDS, NOT THE SITE'S. A document edge records that a tradition or a scholar said something; it does not say the thing is true, and it does not say every member of the tradition holds it. Nothing here is a claim of this site's own.",
+  "DERIVED, ONE SOURCE OF TRUTH. Nothing in the layer is edited by hand; edit the card and run tools/traditions/build.py. tests/test_traditions.py fails when the layer no longer matches the cards."
+ ],
+ "node_kinds": {
+  "tradition": {
+   "definition": "A family of churches that share one line of teaching and worship (this site names nine), a church body inside one that has adopted statements of its own, or a school of reading whose scholars share a way of reading a text and have no church document of their own. The node stands only for what it has itself written down, never for what its members are said to believe. attrs.level says which: tradition, body or school.",
+   "by": "drafted by Claude Sonnet, proposed 2026-10-26; awaiting Doug Egge's approval of the wording"
+  },
+  "document": {
+   "definition": "A work a tradition, body or school has put its name to, or a scholar's or founder's work cited for it: a confession, a catechism, a doctrinal standard, a founder's writing. One node for each distinct title and address, with its standing (attrs.standing) said in plain words: a confession of faith, a catechism, adopted as a doctrinal standard, a founder's work that is no church's statement, a scholar's work that is no church's statement.",
+   "by": "drafted by Claude Sonnet, proposed 2026-10-26; awaiting Doug Egge's approval of the wording"
+  },
+  "reading": {
+   "definition": "One of the ways a question's page sets out that the text may be read: the label it is given, and the verses its holders cite. A reading names no one's belief by itself; the documents that state it do.",
+   "by": "drafted by Claude Sonnet, proposed 2026-10-26; awaiting Doug Egge's approval of the wording"
+  },
+  "question": {
+   "definition": "A question the Bible is read on in more than one way (\"What does the Bible say about what happens after death?\"), as its page sets it out, with the verses every reading agrees on and the verses of each reading.",
+   "by": "drafted by Claude Sonnet, proposed 2026-10-26; awaiting Doug Egge's approval of the wording"
+  }
+ },
+ "relation_types": {
+  "issued_by": {
+   "src": ["document"],
+   "dst": ["tradition"],
+   "label": "is issued by",
+   "inverse": "has issued",
+   "definition": "That a document is the statement of a tradition, a church body or a school of reading, or the work of someone cited for it: the Westminster Confession of Faith is issued by the Reformed tradition and, where a body adopted it, by that body. Its evidence is the verses of the readings the document is cited for. The edge says whose words they are. It does not say the document is right, or that every member of the tradition holds what it says.",
+   "by": "drafted by Claude Sonnet, proposed 2026-10-26; awaiting Doug Egge's approval of the wording"
+  },
+  "speaks_on": {
+   "src": ["document"],
+   "dst": ["question"],
+   "label": "speaks on",
+   "inverse": "is spoken to by",
+   "definition": "That a document, in its own words, addresses a question the Bible is read on in more than one way: the Catechism of the Catholic Church, 1021-1022, speaks on what happens after death. Its evidence is the verses the question's page sets out. What the document says is carried as the edge's note, as the card summarises it, and is the document's statement, never a claim of this site's.",
+   "by": "drafted by Claude Sonnet, proposed 2026-10-26; awaiting Doug Egge's approval of the wording"
+  },
+  "states_reading": {
+   "src": ["document"],
+   "dst": ["reading"],
+   "label": "states the reading",
+   "inverse": "is stated in",
+   "definition": "That a document states what one reading of a question takes the text to say: the Heidelberg Catechism, question 57, states the reading that the faithful are with Christ at once. The reading's own verses are its evidence. The statement is the document's; whether the reading is right is not asked.",
+   "by": "drafted by Claude Sonnet, proposed 2026-10-26; awaiting Doug Egge's approval of the wording"
+  }
+ }
+}

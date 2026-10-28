@@ -1,0 +1,3264 @@
+{
+ "id": "heart",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h3820",
+   "lemma": "לֵב",
+   "form": "noun",
+   "translit": "lēḇ",
+   "gloss": "heart",
+   "lang": "Hebrew",
+   "uses": 563,
+   "other_sense": 0
+  },
+  {
+   "key": "h3824",
+   "lemma": "לֵבָב",
+   "form": "noun",
+   "translit": "le.vav",
+   "gloss": "heart",
+   "lang": "Hebrew",
+   "uses": 228,
+   "other_sense": 0
+  },
+  {
+   "key": "h3826",
+   "lemma": "לִבָּה",
+   "form": "noun",
+   "translit": "lib.bah",
+   "gloss": "heart",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "h3825",
+   "lemma": "לְבַב",
+   "form": "noun",
+   "translit": "le.vav",
+   "gloss": "heart",
+   "lang": "Hebrew",
+   "uses": 6,
+   "other_sense": 0
+  },
+  {
+   "key": "g2588",
+   "lemma": "καρδία",
+   "form": "noun",
+   "translit": "kardia",
+   "gloss": "heart",
+   "lang": "Greek",
+   "uses": 149,
+   "other_sense": 0
+  },
+  {
+   "key": "g4641",
+   "lemma": "σκληροκαρδία",
+   "form": "noun",
+   "translit": "sklērokardia",
+   "gloss": "hardness of heart",
+   "lang": "Greek",
+   "uses": 3,
+   "other_sense": 0
+  },
+  {
+   "key": "g2589",
+   "lemma": "καρδιογνώστης",
+   "form": "noun",
+   "translit": "kardiognōstēs",
+   "gloss": "heart-knower",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of the heart"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "holy_ghost",
+   "name": "the Holy Spirit",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "soul",
+   "name": "soul",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "spirit",
+   "name": "spirit",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "mind",
+   "name": "mind",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "wisdom",
+   "name": "wisdom",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "love",
+   "name": "love",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "commandments",
+   "name": "the commandments",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "joy",
+   "name": "joy",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "repentance",
+   "name": "repentance",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "righteousness",
+   "name": "righteousness",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "a_new_heart_will_i_give_you",
+   "name": "I will give you a new heart",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "create_in_me_a_clean_heart",
+   "name": "create in me a clean heart",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "love_the_lord_with_all_your_heart",
+   "name": "with all your heart, soul, mind and strength",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "broken_heart",
+   "name": "broken heart",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "you_shall_love_the_lord_your_god",
+   "name": "you shall love the LORD your God",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.8.21",
+   "ref": "Genesis 8:21",
+   "text": "When the LORD smelled the pleasing aroma, He said in His heart, “Never again will I curse the ground because of man, even though every inclination of his heart is evil from his youth. And never again will I destroy all living creatures as I have done."
+  },
+  {
+   "id": "Jer.17.9",
+   "ref": "Jeremiah 17:9",
+   "text": "The heart is deceitful above all things and beyond cure. Who can understand it?"
+  },
+  {
+   "id": "Ezek.36.26",
+   "ref": "Ezekiel 36:26",
+   "text": "I will give you a new heart and put a new spirit within you; I will remove your heart of stone and give you a heart of flesh."
+  },
+  {
+   "id": "Ps.51.10",
+   "ref": "Psalms 51:10",
+   "text": "Create in me a clean heart, O God, and renew a right spirit within me."
+  },
+  {
+   "id": "1Sam.16.7",
+   "ref": "1 Samuel 16:7",
+   "text": "But the LORD said to Samuel, “Do not consider his appearance or height, for I have rejected him; the LORD does not see as man does. For man sees the outward appearance, but the LORD sees the heart.”"
+  },
+  {
+   "id": "Prov.4.23",
+   "ref": "Proverbs 4:23",
+   "text": "Guard your heart with all diligence, for from it flow springs of life."
+  },
+  {
+   "id": "Matt.5.8",
+   "ref": "Matthew 5:8",
+   "text": "Blessed are the pure in heart, for they will see God."
+  },
+  {
+   "id": "Deut.6.5",
+   "ref": "Deuteronomy 6:5",
+   "text": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 935,
+   "rows": [
+    {
+     "label": "The LORD, God, searches, tests and knows the heart",
+     "note": "The verses that themselves name the LORD or God as the one who looks at, searches, tests, weighs or knows the heart: “the LORD sees the heart” (1 Sam 16:7), “the LORD searches every heart” (1 Chr 28:9), “Search me, O God, and know my heart” (Ps 139:23), “God knows your hearts” (Luke 16:15). In Ps 7:9 and Jer 11:20 the Berean prints “hearts and minds”, “heart and mind” for the Hebrew words for kidneys and heart, two words; the page does not make them one (see “Other words translated heart”).",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "1Sam.16.7",
+      "1Chr.28.9",
+      "Ps.139.23",
+      "Jer.17.10",
+      "Deut.8.2",
+      "Luke.16.15",
+      "1Thess.2.4",
+      "1Kgs.8.39",
+      "1Chr.29.17",
+      "2Chr.6.30",
+      "2Chr.32.31",
+      "Ps.7.9",
+      "Ps.17.3",
+      "Ps.26.2",
+      "Ps.44.21",
+      "Prov.15.11",
+      "Prov.17.3",
+      "Prov.21.2",
+      "Prov.24.12",
+      "Jer.11.20",
+      "Jer.12.3",
+      "Jer.20.12",
+      "Acts.15.8"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.16.7",
+       "ref": "1 Samuel 16:7",
+       "text": "But the LORD said to Samuel, “Do not consider his appearance or height, for I have rejected him; the LORD does not see as man does. For man sees the outward appearance, but the LORD sees the heart.”",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.28.9",
+       "ref": "1 Chronicles 28:9",
+       "text": "As for you, Solomon my son, know the God of your father and serve Him wholeheartedly and with a willing mind, for the LORD searches every heart and understands the intent of every thought. If you seek Him, He will be found by you; but if you forsake Him, He will reject you forever.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        },
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.139.23",
+       "ref": "Psalms 139:23",
+       "text": "Search me, O God, and know my heart; test me and know my concerns.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Jer.17.10",
+       "ref": "Jeremiah 17:10",
+       "text": "I, the LORD, search the heart; I examine the mind to reward a man according to his way, by what his deeds deserve.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus knows their hearts: “I am the One who searches minds and hearts”",
+     "note": "Each verse names Jesus as the one who knows what is in their hearts or, in Rev 2:23, speaks as the Son of God (Rev 2:18): “Jesus knew in His spirit that they were thinking this way within themselves” (Mark 2:8), “I am the One who searches minds and hearts” (Rev 2:23). In Rev 2:23 the Greek is “kidneys and hearts” (νεφροὺς καὶ καρδίας) where the Berean prints “minds and hearts”; see “Other words translated heart”.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Mark.2.8",
+      "Luke.5.22",
+      "Luke.9.47",
+      "Rev.2.23",
+      "Matt.9.4"
+     ],
+     "eg": [
+      {
+       "id": "Mark.2.8",
+       "ref": "Mark 2:8",
+       "text": "At once Jesus knew in His spirit that they were thinking this way within themselves. “Why are you thinking these things in your hearts?” He asked.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.5.22",
+       "ref": "Luke 5:22",
+       "text": "Knowing what they were thinking, Jesus replied, “Why are you thinking these things in your hearts?",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.9.47",
+       "ref": "Luke 9:47",
+       "text": "But Jesus, knowing the thoughts of their hearts, had a little child stand beside Him.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Rev.2.23",
+       "ref": "Revelation 2:23",
+       "text": "Then I will strike her children dead, and all the churches will know that I am the One who searches minds and hearts, and I will repay each of you according to your deeds.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“The Lord”, “He”, no name in the verse: knowing, opening, directing the heart",
+     "note": "These verses say “the Lord” (Acts 1:24, 16:14; 1 Cor 4:5; 2 Thess 3:5) or “He who searches our hearts” (Rom 8:27) and give no name. Readers take “the Lord” of Jesus or of the Father, and in Rom 8:27 the Searcher stands beside the Spirit; the page does not choose.",
+     "doors": [],
+     "n": 5,
+     "verses": [
+      "Acts.1.24",
+      "Acts.16.14",
+      "Rom.8.27",
+      "2Thess.3.5",
+      "1Cor.4.5"
+     ],
+     "eg": [
+      {
+       "id": "Acts.1.24",
+       "ref": "Acts 1:24",
+       "text": "And they prayed, “Lord, You know everyone's heart. Show us which of these two You have chosen",
+       "words": [
+        {
+         "key": "g2589",
+         "lemma": "καρδιογνώστης"
+        }
+       ]
+      },
+      {
+       "id": "Acts.16.14",
+       "ref": "Acts 16:14",
+       "text": "Among those listening was a woman named Lydia, a dealer in purple cloth from the city of Thyatira, who was a worshiper of God. The Lord opened her heart to respond to Paul's message.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.27",
+       "ref": "Romans 8:27",
+       "text": "And He who searches our hearts knows the mind of the Spirit, because the Spirit intercedes for the saints according to the will of God.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "2Thess.3.5",
+       "ref": "2 Thessalonians 3:5",
+       "text": "May the Lord direct your hearts into God's love and Christ's perseverance.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Evil, deceitful, foolish, devising, proud",
+     "note": "The heart as the text describes it: “every inclination of the thoughts of his heart was altogether evil all the time” (Gen 6:5), “every inclination of his heart is evil from his youth” (Gen 8:21), “The heart is deceitful above all things and beyond cure” (Jer 17:9), “out of the heart come evil thoughts” (Matt 15:19; Mark 7:21 has “from within the hearts of men”), “Foolishness is bound up in the heart of a child” (Prov 22:15), and the heart proud (Prov 16:5, “proud in heart”; Ezek 28:5; Dan 5:20). Passages the rows keep apart are one speech or one pair in the text: Jer 17:9 is answered at once by Jer 17:10 (“I, the LORD, search the heart”); Gen 6:5 is followed by Gen 6:6 (“He was grieved in His heart”); Jer 17:1 (the sin of Judah “engraved ... on the tablets of their hearts”) and Jer 31:33 (“inscribe it on their hearts”) are the text's own pair. Set beside the rows below on the heart that is pure and upright, on the heart that is hardened, and on what God does and what a person is told to do. Where Christian traditions part on how far sin reaches in the heart (what is called total depravity), and on whether God's work on the heart comes before a person's turning (what is called prevenient grace), the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 83,
+     "verses": [
+      "Gen.8.21",
+      "Jer.17.9",
+      "Mark.7.21",
+      "Prov.21.4",
+      "Gen.6.5",
+      "Matt.15.18",
+      "Rom.1.21",
+      "Deut.8.14",
+      "Deut.17.20",
+      "1Sam.17.28",
+      "1Kgs.2.44",
+      "2Kgs.14.10",
+      "2Chr.25.19",
+      "2Chr.26.16",
+      "2Chr.32.25",
+      "2Chr.32.26",
+      "Esth.7.5",
+      "Job.36.13",
+      "Ps.12.2",
+      "Ps.28.3",
+      "Ps.36.1",
+      "Ps.41.6",
+      "Ps.55.21",
+      "Ps.58.2",
+      "Ps.64.6",
+      "Ps.66.18",
+      "Ps.73.7",
+      "Ps.101.4",
+      "Ps.101.5",
+      "Ps.131.1",
+      "Ps.140.2",
+      "Prov.6.14",
+      "Prov.6.18",
+      "Prov.7.10",
+      "Prov.11.20",
+      "Prov.12.8",
+      "Prov.12.20",
+      "Prov.14.14",
+      "Prov.16.5",
+      "Prov.17.20",
+      "Prov.18.12",
+      "Prov.19.3",
+      "Prov.22.15",
+      "Prov.26.23",
+      "Prov.26.25",
+      "Eccl.7.26",
+      "Eccl.8.11",
+      "Eccl.9.3",
+      "Isa.9.9",
+      "Isa.32.6",
+      "Isa.44.20",
+      "Isa.59.13",
+      "Jer.14.14",
+      "Jer.17.1",
+      "Jer.23.26",
+      "Jer.48.29",
+      "Jer.49.16",
+      "Ezek.13.2",
+      "Ezek.13.17",
+      "Ezek.16.30",
+      "Ezek.28.2",
+      "Ezek.28.5",
+      "Ezek.28.6",
+      "Ezek.28.17",
+      "Ezek.31.10",
+      "Dan.5.20",
+      "Dan.5.22",
+      "Dan.11.12",
+      "Dan.11.27",
+      "Hos.7.6",
+      "Hos.10.2",
+      "Hos.13.6",
+      "Obad.1.3",
+      "Zech.7.10",
+      "Matt.15.19",
+      "Luke.1.51",
+      "Luke.6.45",
+      "John.13.2",
+      "Acts.5.3",
+      "Acts.8.21",
+      "Acts.8.22",
+      "Heb.3.12",
+      "Jas.3.14"
+     ],
+     "eg": [
+      {
+       "id": "Gen.8.21",
+       "ref": "Genesis 8:21",
+       "text": "When the LORD smelled the pleasing aroma, He said in His heart, “Never again will I curse the ground because of man, even though every inclination of his heart is evil from his youth. And never again will I destroy all living creatures as I have done.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Jer.17.9",
+       "ref": "Jeremiah 17:9",
+       "text": "The heart is deceitful above all things and beyond cure. Who can understand it?",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Mark.7.21",
+       "ref": "Mark 7:21",
+       "text": "For from within the hearts of men come evil thoughts, sexual immorality, theft, murder, adultery,",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Prov.21.4",
+       "ref": "Proverbs 21:4",
+       "text": "Haughty eyes and a proud heart-the guides of the wicked-are sin.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Hardened, stubborn, calloused, uncircumcised",
+     "note": "The text says the LORD hardens a heart (Exod 4:21; 9:12; 10:1; Josh 11:20; Isa 63:17), that Pharaoh hardened his own (Exod 8:15, 8:32; 9:34), and that a heart “was hardened” with no one named (Exod 7:13, 7:22); the hardened heart is also the people's (Ps 95:8; Heb 3:8; Zech 7:12) and Jesus looked at them “with anger and sorrow at their hardness of heart” (Mark 3:5). “Uncircumcised in heart” is Lev 26:41, Jer 9:26, Ezek 44:7 and Acts 7:51; the circumcising of the heart is also in Deut 10:16, Deut 30:6, Jer 4:4 and Rom 2:29, in the rows beside this one. 2 Cor 3:15 says “a veil covers their hearts”; the verse before has the Greek “were hardened” of their minds (νοήματα), which the Berean prints “were closed”. Rom 9:18 (“He hardens whom He wants to harden”) has no word for heart in the verse and is not in this hub. Where Christian traditions part on how God's hardening and a person's own stand to each other, and on how far sin reaches in the heart, the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [],
+     "n": 63,
+     "verses": [
+      "Exod.4.21",
+      "Exod.8.15",
+      "Ps.95.8",
+      "Mark.3.5",
+      "Matt.13.15",
+      "Rom.2.5",
+      "Exod.7.3",
+      "Exod.7.13",
+      "Exod.7.14",
+      "Exod.7.22",
+      "Exod.8.19",
+      "Exod.8.32",
+      "Exod.9.7",
+      "Exod.9.12",
+      "Exod.9.34",
+      "Exod.9.35",
+      "Exod.10.1",
+      "Exod.10.20",
+      "Exod.10.27",
+      "Exod.11.10",
+      "Exod.14.4",
+      "Exod.14.8",
+      "Exod.14.17",
+      "Lev.26.41",
+      "Deut.2.30",
+      "Deut.15.7",
+      "Deut.29.19",
+      "Josh.11.20",
+      "1Sam.6.6",
+      "2Chr.36.13",
+      "Ps.81.12",
+      "Prov.5.12",
+      "Prov.28.14",
+      "Isa.6.10",
+      "Isa.46.12",
+      "Isa.63.17",
+      "Jer.3.17",
+      "Jer.5.23",
+      "Jer.7.24",
+      "Jer.9.14",
+      "Jer.9.26",
+      "Jer.11.8",
+      "Jer.13.10",
+      "Jer.16.12",
+      "Jer.18.12",
+      "Jer.23.17",
+      "Ezek.2.4",
+      "Ezek.3.7",
+      "Ezek.44.9",
+      "Zech.7.12",
+      "Matt.19.8",
+      "Mark.6.52",
+      "Mark.8.17",
+      "Mark.10.5",
+      "Mark.16.14",
+      "John.12.40",
+      "Acts.7.51",
+      "Acts.28.27",
+      "2Cor.3.15",
+      "Eph.4.18",
+      "Heb.3.8",
+      "Heb.3.15",
+      "Heb.4.7"
+     ],
+     "eg": [
+      {
+       "id": "Exod.4.21",
+       "ref": "Exodus 4:21",
+       "text": "The LORD instructed Moses, “When you go back to Egypt, see that you perform before Pharaoh all the wonders that I have put within your power. But I will harden his heart so that he will not let the people go.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Exod.8.15",
+       "ref": "Exodus 8:15",
+       "text": "When Pharaoh saw that there was relief, however, he hardened his heart and would not listen to Moses and Aaron, just as the LORD had said.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.95.8",
+       "ref": "Psalms 95:8",
+       "text": "do not harden your hearts as you did at Meribah, in the day at Massah in the wilderness,",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Mark.3.5",
+       "ref": "Mark 3:5",
+       "text": "Jesus looked around at them with anger and sorrow at their hardness of heart. Then He said to the man, “Stretch out your hand.” So he stretched it out, and it was restored.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Pure, clean, upright, whole, blameless; and not whole",
+     "note": "The heart the text calls pure, clean, upright, blameless or sincere (Ps 24:4, 73:1, 101:2; Matt 5:8; 1 Tim 1:5), “a man after His own heart” (1 Sam 13:14; Acts 13:22), “integrity of heart” (Gen 20:5; 1 Kgs 9:4), and, with them, the heart said not to be whole (1 Kgs 11:4; 2 Chr 25:2; Ps 78:37) and the question “Who can say, I have kept my heart pure; I am cleansed from my sin?” (Prov 20:9). Ps 73:13 (“in vain have I kept my heart pure”) stays. Set beside the row on the heart that is evil and deceitful and the rows on what God does and what a person does. Where Christian traditions part on how far sin reaches in the heart (what is called total depravity) and on how a pure heart comes about, the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 50,
+     "verses": [
+      "Ps.24.4",
+      "Ps.73.1",
+      "Matt.5.8",
+      "Prov.20.9",
+      "Gen.20.5",
+      "Eph.6.5",
+      "Gen.20.6",
+      "Deut.9.5",
+      "Josh.14.8",
+      "1Sam.13.14",
+      "1Kgs.3.6",
+      "1Kgs.8.61",
+      "1Kgs.9.4",
+      "1Kgs.11.4",
+      "1Kgs.15.3",
+      "1Kgs.15.14",
+      "2Kgs.20.3",
+      "2Chr.15.17",
+      "2Chr.19.9",
+      "2Chr.25.2",
+      "2Chr.29.34",
+      "Neh.9.8",
+      "Job.27.6",
+      "Ps.7.10",
+      "Ps.11.2",
+      "Ps.15.2",
+      "Ps.32.11",
+      "Ps.36.10",
+      "Ps.44.18",
+      "Ps.64.10",
+      "Ps.73.13",
+      "Ps.78.37",
+      "Ps.78.72",
+      "Ps.94.15",
+      "Ps.97.11",
+      "Ps.101.2",
+      "Ps.119.7",
+      "Ps.125.4",
+      "Prov.22.11",
+      "Isa.38.3",
+      "Luke.8.15",
+      "Acts.2.46",
+      "Acts.4.32",
+      "Acts.13.22",
+      "Col.3.22",
+      "1Thess.3.13",
+      "1Tim.1.5",
+      "2Tim.2.22",
+      "1Pet.1.22",
+      "1Pet.3.4"
+     ],
+     "eg": [
+      {
+       "id": "Ps.24.4",
+       "ref": "Psalms 24:4",
+       "text": "He who has clean hands and a pure heart, who does not lift up his soul to an idol or swear deceitfully.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.73.1",
+       "ref": "Psalms 73:1",
+       "text": "A Psalm of Asaph. Surely God is good to Israel, to those who are pure in heart.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.5.8",
+       "ref": "Matthew 5:8",
+       "text": "Blessed are the pure in heart, for they will see God.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Prov.20.9",
+       "ref": "Proverbs 20:9",
+       "text": "Who can say, “I have kept my heart pure; I am cleansed from my sin”?",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "What a person does with the heart, or is told to do: set, prepare, turn, guard, give, circumcise, make new",
+     "note": "What the text puts in a person's hands: “circumcise your hearts” (Deut 10:16; Jer 4:4), “Wash the evil from your heart, O Jerusalem” (Jer 4:14), “fashion for yourselves a new heart and a new spirit” (Ezek 18:31), “rend your hearts and not your garments” (Joel 2:13), “Guard your heart with all diligence” (Prov 4:23), “My son, give me your heart” (Prov 23:26), “purify your hearts” (Jas 4:8), and the hearts that did, or did not, set themselves to seek the LORD (1 Chr 22:19; 2 Chr 12:14; Ezra 7:10). The circumcising of the heart is also in Lev 26:41, Deut 30:6, Jer 9:26, Ezek 44:7, Acts 7:51 and Rom 2:29, in the rows beside this one. Ezek 18:31 (“fashion for yourselves a new heart”) stands beside Ezek 36:26 (“I will give you a new heart”) and both are the text's. Where Christian traditions part on how a person's turning and God's giving stand to each other (what is called prevenient grace), the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 41,
+     "verses": [
+      "Deut.10.16",
+      "Prov.4.23",
+      "Ezek.18.31",
+      "Joel.2.13",
+      "Lev.19.17",
+      "Jas.4.8",
+      "Deut.4.9",
+      "Deut.4.39",
+      "Deut.11.16",
+      "Josh.24.23",
+      "1Sam.7.3",
+      "1Kgs.8.47",
+      "1Chr.22.19",
+      "1Chr.29.18",
+      "2Chr.6.37",
+      "2Chr.11.16",
+      "2Chr.12.14",
+      "2Chr.19.3",
+      "2Chr.20.33",
+      "2Chr.30.19",
+      "Ezra.7.10",
+      "Job.11.13",
+      "Ps.4.4",
+      "Ps.62.10",
+      "Ps.78.8",
+      "Prov.2.2",
+      "Prov.7.25",
+      "Prov.22.17",
+      "Prov.23.12",
+      "Prov.23.17",
+      "Prov.23.19",
+      "Prov.23.26",
+      "Eccl.11.10",
+      "Isa.46.8",
+      "Jer.4.4",
+      "Jer.4.14",
+      "Lam.3.41",
+      "Ezek.40.4",
+      "Joel.2.12",
+      "Mal.2.2",
+      "Jas.5.8"
+     ],
+     "eg": [
+      {
+       "id": "Deut.10.16",
+       "ref": "Deuteronomy 10:16",
+       "text": "Circumcise your hearts, therefore, and stiffen your necks no more.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Prov.4.23",
+       "ref": "Proverbs 4:23",
+       "text": "Guard your heart with all diligence, for from it flow springs of life.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.18.31",
+       "ref": "Ezekiel 18:31",
+       "text": "Cast away from yourselves all the transgressions you have committed, and fashion for yourselves a new heart and a new spirit. Why should you die, O house of Israel?",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Joel.2.13",
+       "ref": "Joel 2:13",
+       "text": "So rend your hearts and not your garments, and return to the LORD your God. For He is gracious and compassionate, slow to anger, abounding in loving devotion. And He relents from sending disaster.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "What God does to the heart, or is asked to do: gives, creates, changes, turns, opens, writes on it, humbles, makes faint; gives over",
+     "note": "The verses that name the LORD or God as the one who acts on the heart, or who is asked to: “I will give you a new heart ... I will remove your heart of stone and give you a heart of flesh” (Ezek 36:26), “Create in me a clean heart, O God” (Ps 51:10), “I will give them a heart to know Me” (Jer 24:7), “I will put My law in their minds and inscribe it on their hearts” (Jer 31:33; Heb 8:10 has “laws”), “The LORD your God will circumcise your hearts” (Deut 30:6), “God changed Saul's heart” (1 Sam 10:9), “the LORD has not given you a mind to understand, eyes to see, or ears to hear” (Deut 29:4, where the Berean prints “mind” for the Hebrew heart), “God gave them over in the desires of their hearts” (Rom 1:24), “whose hearts He turned to hate His people” (Ps 105:25), “I will send a faintness into their hearts” (Lev 26:36), “God has made my heart faint” (Job 23:16), “He humbled their hearts with hard labor” (Ps 107:12), “The LORD will afflict you with madness, blindness, and confusion of mind” (Deut 28:28), and “He has also set eternity in the hearts of men” (Eccl 3:11). A few verses say only “He” or “You” in a prayer or speech whose passage names the LORD (1 Kgs 8:58; Ps 33:15; 105:25; 107:12; 119:32, 36, 80; 141:4; Eccl 3:11). God's hardening of hearts (Exod 4:21; Josh 11:20; Isa 63:17) is in the row on the hardened heart. Where Christian traditions part on whether God's work on the heart comes before a person's turning (what is called prevenient grace), and on how far sin reaches in the heart, the page takes no side. This row and the rows beside it are listed in the alphabetical order of their labels and carry no ranking.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "a_new_heart_will_i_give_you",
+       "name": "I will give you a new heart",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "create_in_me_a_clean_heart",
+       "name": "create in me a clean heart",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 45,
+     "verses": [
+      "Ezek.36.26",
+      "Ps.51.10",
+      "Jer.31.33",
+      "Deut.30.6",
+      "Exod.31.6",
+      "Rom.1.24",
+      "Exod.35.34",
+      "Exod.36.2",
+      "Lev.26.36",
+      "Deut.28.28",
+      "Deut.29.4",
+      "1Sam.10.9",
+      "1Sam.10.26",
+      "1Kgs.3.9",
+      "1Kgs.3.12",
+      "1Kgs.4.29",
+      "1Kgs.8.58",
+      "1Kgs.10.24",
+      "1Kgs.18.37",
+      "2Chr.30.12",
+      "Ezra.6.22",
+      "Ezra.7.27",
+      "Neh.2.12",
+      "Neh.7.5",
+      "Job.23.16",
+      "Ps.33.15",
+      "Ps.86.11",
+      "Ps.105.25",
+      "Ps.107.12",
+      "Ps.119.32",
+      "Ps.119.36",
+      "Ps.119.80",
+      "Ps.141.4",
+      "Prov.21.1",
+      "Eccl.3.11",
+      "Jer.24.7",
+      "Jer.32.39",
+      "Jer.32.40",
+      "Ezek.11.19",
+      "2Cor.3.3",
+      "2Cor.4.6",
+      "2Cor.8.16",
+      "Heb.8.10",
+      "Heb.10.16",
+      "Rev.17.17"
+     ],
+     "eg": [
+      {
+       "id": "Ezek.36.26",
+       "ref": "Ezekiel 36:26",
+       "text": "I will give you a new heart and put a new spirit within you; I will remove your heart of stone and give you a heart of flesh.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.51.10",
+       "ref": "Psalms 51:10",
+       "text": "Create in me a clean heart, O God, and renew a right spirit within me.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Jer.31.33",
+       "ref": "Jeremiah 31:33",
+       "text": "“But this is the covenant I will make with the house of Israel after those days, declares the LORD. I will put My law in their minds and inscribe it on their hearts. And I will be their God, and they will be My people.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Deut.30.6",
+       "ref": "Deuteronomy 30:6",
+       "text": "The LORD your God will circumcise your hearts and the hearts of your descendants, and you will love Him with all your heart and with all your soul, so that you may live.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A willing heart: resolved, moved, given freely, obeyed “from the heart”",
+     "note": "The heart that resolves and gives: “every man whose heart compels him” (Exod 25:2), “everyone whose heart stirred him” (Exod 35:21), “Daniel made up his mind” (Dan 1:8, where the Hebrew puts it “on his heart”), “Each one should give what he has decided in his heart to give” (2 Cor 9:7), “you wholeheartedly obeyed” (Rom 6:17), “forgive your brother from your heart” (Matt 18:35). In these verses the heart is where a person resolves and gives.",
+     "doors": [
+      {
+       "id": "obedience",
+       "name": "obedience",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 21,
+     "verses": [
+      "Exod.35.21",
+      "Dan.1.8",
+      "2Cor.9.7",
+      "Rom.6.17",
+      "Exod.25.2",
+      "Matt.18.35",
+      "Exod.35.5",
+      "Exod.35.22",
+      "Exod.35.29",
+      "Judg.5.9",
+      "Judg.5.15",
+      "2Kgs.12.4",
+      "1Chr.12.38",
+      "1Chr.29.9",
+      "2Chr.17.6",
+      "2Chr.29.31",
+      "Neh.4.6",
+      "Ps.84.5",
+      "Jer.30.21",
+      "Acts.11.23",
+      "1Cor.7.37"
+     ],
+     "eg": [
+      {
+       "id": "Exod.35.21",
+       "ref": "Exodus 35:21",
+       "text": "And everyone whose heart stirred him and whose spirit prompted him came and brought an offering to the LORD for the work on the Tent of Meeting, for all its services, and for the holy garments.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Dan.1.8",
+       "ref": "Daniel 1:8",
+       "text": "But Daniel made up his mind that he would not defile himself with the king's food or wine. So he asked the chief official for permission not to defile himself.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.9.7",
+       "ref": "2 Corinthians 9:7",
+       "text": "Each one should give what he has decided in his heart to give, not out of regret or compulsion. For God loves a cheerful giver.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.17",
+       "ref": "Romans 6:17",
+       "text": "But thanks be to God that, though you once were slaves to sin, you wholeheartedly obeyed the form of teaching to which you were committed.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "In believers' hearts: the Spirit, Christ, the peace of God; cleansed by faith",
+     "note": "Each verse names the Spirit, Christ, God or the peace of God with the hearts of those who believe: “God has poured out His love into our hearts through the Holy Spirit” (Rom 5:5), “God sent the Spirit of His Son into our hearts” (Gal 4:6), “so that Christ may dwell in your hearts through faith” (Eph 3:17), “the peace of God ... will guard your hearts and your minds in Christ Jesus” (Phil 4:7), “He cleansed their hearts by faith” (Acts 15:9). Rom 2:29 says who is a Jew inwardly, and that circumcision is of the heart, by the Spirit, not by the written code; it speaks of the Jew and of the written code, and the page takes no side on how Paul's words apply to believers.",
+     "doors": [
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Rom.5.5",
+      "Gal.4.6",
+      "Eph.3.17",
+      "Phil.4.7",
+      "Acts.15.9",
+      "Rom.2.29",
+      "2Cor.1.22",
+      "Eph.5.19",
+      "Col.3.15",
+      "Col.3.16",
+      "2Thess.2.17",
+      "Heb.10.22",
+      "1Pet.3.15",
+      "2Pet.1.19"
+     ],
+     "eg": [
+      {
+       "id": "Rom.5.5",
+       "ref": "Romans 5:5",
+       "text": "And hope does not disappoint us, because God has poured out His love into our hearts through the Holy Spirit, whom He has given us.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Gal.4.6",
+       "ref": "Galatians 4:6",
+       "text": "And because you are sons, God sent the Spirit of His Son into our hearts, crying out, “Abba, Father!”",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Eph.3.17",
+       "ref": "Ephesians 3:17",
+       "text": "so that Christ may dwell in your hearts through faith. Then you, being rooted and grounded in love,",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Phil.4.7",
+       "ref": "Philippians 4:7",
+       "text": "And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“All the heart”: with all the heart, every heart, a whole heart",
+     "note": "The text's own phrase: “with all your heart” (Deut 6:5; 10:12; 30:10), “with all your heart and with all your soul and with all your strength” (Deut 6:5), “with all your heart and with all your soul and with all your mind and with all your strength” (Mark 12:30), and, in the Hebrew, loving, seeking, serving, returning, trusting and giving thanks with all the heart (Deut 4:29; 1 Sam 12:20; Ps 9:1; Prov 3:5; Joel 2:12). The Greek of Mark 12:30 puts “mind” (διάνοια) beside “heart” as a second word, the Hebrew of Deut 6:5 “soul” and “strength”; the page does not make them one.",
+     "doors": [
+      {
+       "id": "love_the_lord_with_all_your_heart",
+       "name": "with all your heart, soul, mind and strength",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "you_shall_love_the_lord_your_god",
+       "name": "you shall love the LORD your God",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "love",
+       "name": "love",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 59,
+     "verses": [
+      "Deut.6.5",
+      "Jer.29.13",
+      "Prov.3.5",
+      "Mark.12.30",
+      "Deut.4.29",
+      "Matt.22.37",
+      "Deut.10.12",
+      "Deut.11.13",
+      "Deut.13.3",
+      "Deut.26.16",
+      "Deut.30.2",
+      "Deut.30.6",
+      "Deut.30.10",
+      "Josh.22.5",
+      "Josh.23.14",
+      "Judg.16.17",
+      "Judg.16.18",
+      "1Sam.7.3",
+      "1Sam.12.20",
+      "1Sam.12.24",
+      "1Kgs.2.4",
+      "1Kgs.8.23",
+      "1Kgs.8.39",
+      "1Kgs.8.48",
+      "1Kgs.14.8",
+      "2Kgs.10.31",
+      "2Kgs.23.3",
+      "2Kgs.23.25",
+      "1Chr.28.9",
+      "1Chr.29.19",
+      "2Chr.6.14",
+      "2Chr.6.38",
+      "2Chr.15.12",
+      "2Chr.15.15",
+      "2Chr.22.9",
+      "2Chr.30.19",
+      "2Chr.31.21",
+      "2Chr.34.31",
+      "Ps.9.1",
+      "Ps.86.12",
+      "Ps.111.1",
+      "Ps.119.2",
+      "Ps.119.10",
+      "Ps.119.34",
+      "Ps.119.58",
+      "Ps.119.69",
+      "Ps.119.145",
+      "Ps.138.1",
+      "Isa.1.5",
+      "Isa.13.7",
+      "Jer.3.10",
+      "Jer.24.7",
+      "Jer.32.41",
+      "Ezek.21.7",
+      "Joel.2.12",
+      "Zeph.3.14",
+      "Mark.12.33",
+      "Luke.10.27",
+      "Acts.1.24"
+     ],
+     "eg": [
+      {
+       "id": "Deut.6.5",
+       "ref": "Deuteronomy 6:5",
+       "text": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Jer.29.13",
+       "ref": "Jeremiah 29:13",
+       "text": "You will seek Me and find Me when you search for Me with all your heart.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Prov.3.5",
+       "ref": "Proverbs 3:5",
+       "text": "Trust in the LORD with all your heart, and lean not on your own understanding;",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Mark.12.30",
+       "ref": "Mark 12:30",
+       "text": "Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength.'",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Beside loving, seeking, praying, praising and giving thanks",
+     "note": "The verses that set the heart beside loving, seeking, praying, singing or giving thanks: “My heart said, Seek His face” (Ps 27:8), “pour out your hearts before Him” (Ps 62:8), “May the words of my mouth and the meditation of my heart be pleasing in Your sight” (Ps 19:14), “love one another deeply, from a pure heart” (1 Pet 1:22), “Sing and make music in your hearts to the Lord” (Eph 5:19).",
+     "doors": [
+      {
+       "id": "love",
+       "name": "love",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "praise",
+       "name": "praise",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 73,
+     "verses": [
+      "Deut.6.5",
+      "Ps.9.1",
+      "Ps.27.8",
+      "Ps.62.8",
+      "Gen.34.3",
+      "Matt.22.37",
+      "Rom.5.5",
+      "Deut.4.29",
+      "Deut.10.12",
+      "Deut.11.13",
+      "Deut.13.3",
+      "Deut.30.6",
+      "Josh.22.5",
+      "Judg.16.15",
+      "1Sam.1.13",
+      "1Sam.2.1",
+      "2Sam.7.27",
+      "1Kgs.8.38",
+      "1Kgs.8.48",
+      "1Kgs.9.3",
+      "1Kgs.11.2",
+      "1Chr.16.10",
+      "1Chr.22.19",
+      "1Chr.28.9",
+      "2Chr.6.38",
+      "2Chr.12.14",
+      "2Chr.15.12",
+      "2Chr.19.3",
+      "2Chr.22.9",
+      "2Chr.30.19",
+      "2Chr.30.22",
+      "2Chr.31.21",
+      "2Chr.32.31",
+      "Ezra.7.10",
+      "Ps.10.13",
+      "Ps.19.14",
+      "Ps.22.26",
+      "Ps.28.7",
+      "Ps.45.1",
+      "Ps.57.7",
+      "Ps.69.32",
+      "Ps.84.2",
+      "Ps.86.12",
+      "Ps.108.1",
+      "Ps.111.1",
+      "Ps.119.2",
+      "Ps.119.7",
+      "Ps.119.10",
+      "Ps.138.1",
+      "Prov.22.11",
+      "Eccl.1.13",
+      "Song.8.6",
+      "Jer.29.13",
+      "Lam.2.19",
+      "Ezek.14.3",
+      "Ezek.14.7",
+      "Hos.7.14",
+      "Mark.12.30",
+      "Mark.12.33",
+      "Luke.10.27",
+      "Acts.1.24",
+      "Rom.10.1",
+      "1Cor.2.9",
+      "2Cor.2.4",
+      "2Cor.9.7",
+      "Eph.3.17",
+      "Eph.5.19",
+      "Col.2.2",
+      "Col.3.16",
+      "2Thess.3.5",
+      "1Tim.1.5",
+      "2Tim.2.22",
+      "1Pet.1.22"
+     ],
+     "eg": [
+      {
+       "id": "Deut.6.5",
+       "ref": "Deuteronomy 6:5",
+       "text": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.9.1",
+       "ref": "Psalms 9:1",
+       "text": "For the choirmaster. To the tune of “The Death of the Son.” A Psalm of David. I will give thanks to the LORD with all my heart; I will recount all Your wonders.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.27.8",
+       "ref": "Psalms 27:8",
+       "text": "My heart said, “Seek His face.” Your face, O LORD, I will seek.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.62.8",
+       "ref": "Psalms 62:8",
+       "text": "Trust in Him at all times, O people; pour out your hearts before Him. God is our refuge. Selah",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Beside the law, the commandments and the word; the word kept in the heart",
+     "note": "The word on the heart, kept in it, written on it: “These words I am commanding you today are to be upon your hearts” (Deut 6:6), “I have hidden Your word in my heart” (Ps 119:11), “write them on the tablet of your heart” (Prov 3:3), “the work of the law is written on their hearts” (Rom 2:15), and “Mary treasured up all these things and pondered them in her heart” (Luke 2:19). In Proverbs the Hebrew תּוֹרָה and מִצְוָה are a father's “teaching” and “commands” (Prov 3:1; 4:4; 7:2); the Torah itself is read on its own terms in the law hub. In Heb 4:12 it is the word of God that “judges the thoughts and intentions of the heart”.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "commandments",
+       "name": "the commandments",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "word_of_god",
+       "name": "the word of God",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 65,
+     "verses": [
+      "Deut.6.6",
+      "Ps.119.11",
+      "Prov.3.3",
+      "Rom.2.15",
+      "Deut.5.29",
+      "Matt.13.19",
+      "Deut.8.2",
+      "Deut.11.13",
+      "Deut.11.18",
+      "Deut.17.20",
+      "Deut.26.16",
+      "Deut.30.10",
+      "Deut.30.14",
+      "Deut.32.46",
+      "Josh.22.5",
+      "1Kgs.8.58",
+      "1Kgs.8.61",
+      "1Kgs.9.4",
+      "1Kgs.14.8",
+      "2Kgs.10.31",
+      "2Kgs.23.3",
+      "2Kgs.23.25",
+      "1Chr.29.19",
+      "2Chr.30.12",
+      "2Chr.31.21",
+      "2Chr.34.31",
+      "Ezra.7.10",
+      "Job.22.22",
+      "Ps.19.8",
+      "Ps.37.31",
+      "Ps.40.10",
+      "Ps.119.2",
+      "Ps.119.10",
+      "Ps.119.32",
+      "Ps.119.34",
+      "Ps.119.36",
+      "Ps.119.58",
+      "Ps.119.70",
+      "Ps.119.80",
+      "Ps.119.111",
+      "Ps.119.112",
+      "Ps.119.145",
+      "Prov.3.1",
+      "Prov.4.4",
+      "Prov.4.21",
+      "Prov.6.21",
+      "Prov.7.3",
+      "Prov.10.8",
+      "Eccl.8.5",
+      "Isa.29.13",
+      "Isa.51.7",
+      "Jer.31.33",
+      "Ezek.20.16",
+      "Ezek.44.5",
+      "Zech.7.12",
+      "Mark.10.5",
+      "Luke.2.19",
+      "Luke.2.51",
+      "Luke.8.12",
+      "Luke.8.15",
+      "Rom.10.8",
+      "2Cor.3.2",
+      "Heb.4.12",
+      "Heb.8.10",
+      "Heb.10.16"
+     ],
+     "eg": [
+      {
+       "id": "Deut.6.6",
+       "ref": "Deuteronomy 6:6",
+       "text": "These words I am commanding you today are to be upon your hearts.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.11",
+       "ref": "Psalms 119:11",
+       "text": "I have hidden Your word in my heart that I might not sin against You.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Prov.3.3",
+       "ref": "Proverbs 3:3",
+       "text": "Never let loving devotion or faithfulness leave you; bind them around your neck, write them on the tablet of your heart.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.15",
+       "ref": "Romans 2:15",
+       "text": "So they show that the work of the law is written on their hearts, their consciences also bearing witness, and their thoughts either accusing or defending them",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wisdom, understanding, sense, knowledge: a wise or discerning heart; the heart that does not understand",
+     "note": "Where the text puts understanding and wisdom: “give Your servant an understanding heart” (1 Kgs 3:9), “direct your heart to understanding” (Prov 2:2), “the eyes of your heart” enlightened (Eph 1:18), and the heart that does not understand (Isa 6:10, “understand with their hearts”; Deut 29:4; Matt 13:15; Mark 8:17). The Berean often prints “judgment”, “sense” or “mind” where the Hebrew says “heart” (Prov 6:32, 7:7 and 10:13 are “lacks judgment”, “lacking judgment”; Prov 19:8 “acquires wisdom”). “Wise of heart” is also the craftsmen of the tabernacle (Exod 28:3; 31:6; 35:10, 25, 35; 36:1-2, 8), skill the text says is given to the craftsmen. The text uses the one word for the heart that understands and the heart that does not; the page does not sort it into mind, will and feeling.",
+     "doors": [
+      {
+       "id": "wisdom",
+       "name": "wisdom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 109,
+     "verses": [
+      "1Kgs.3.9",
+      "Prov.2.2",
+      "Isa.6.10",
+      "Eph.1.18",
+      "Exod.28.3",
+      "Matt.13.15",
+      "Rom.1.21",
+      "Exod.31.6",
+      "Exod.35.10",
+      "Exod.35.25",
+      "Exod.35.26",
+      "Exod.35.35",
+      "Exod.36.1",
+      "Exod.36.2",
+      "Exod.36.8",
+      "Deut.29.4",
+      "1Kgs.3.12",
+      "1Kgs.4.29",
+      "1Kgs.10.24",
+      "1Chr.28.9",
+      "2Chr.1.11",
+      "2Chr.9.23",
+      "2Chr.30.22",
+      "Job.9.4",
+      "Job.12.3",
+      "Job.12.24",
+      "Job.17.4",
+      "Job.33.3",
+      "Job.34.10",
+      "Job.34.34",
+      "Job.37.24",
+      "Ps.49.3",
+      "Ps.78.72",
+      "Ps.90.12",
+      "Ps.101.2",
+      "Ps.119.34",
+      "Prov.2.10",
+      "Prov.3.5",
+      "Prov.6.32",
+      "Prov.7.7",
+      "Prov.8.5",
+      "Prov.9.4",
+      "Prov.9.16",
+      "Prov.10.8",
+      "Prov.10.13",
+      "Prov.11.12",
+      "Prov.11.29",
+      "Prov.12.11",
+      "Prov.12.23",
+      "Prov.14.33",
+      "Prov.15.7",
+      "Prov.15.14",
+      "Prov.15.21",
+      "Prov.15.32",
+      "Prov.16.21",
+      "Prov.16.23",
+      "Prov.17.16",
+      "Prov.17.18",
+      "Prov.18.2",
+      "Prov.18.15",
+      "Prov.19.8",
+      "Prov.20.5",
+      "Prov.22.17",
+      "Prov.23.12",
+      "Prov.23.15",
+      "Prov.23.19",
+      "Prov.24.12",
+      "Prov.24.30",
+      "Prov.27.11",
+      "Prov.28.26",
+      "Eccl.1.13",
+      "Eccl.1.16",
+      "Eccl.1.17",
+      "Eccl.2.3",
+      "Eccl.2.15",
+      "Eccl.7.4",
+      "Eccl.7.7",
+      "Eccl.7.25",
+      "Eccl.8.5",
+      "Eccl.8.16",
+      "Eccl.9.1",
+      "Eccl.10.2",
+      "Eccl.10.3",
+      "Isa.32.4",
+      "Isa.44.18",
+      "Isa.44.19",
+      "Isa.47.10",
+      "Isa.57.1",
+      "Jer.3.15",
+      "Jer.5.21",
+      "Jer.23.20",
+      "Jer.30.24",
+      "Ezek.28.5",
+      "Ezek.28.17",
+      "Dan.2.30",
+      "Dan.10.12",
+      "Hos.4.11",
+      "Hos.7.11",
+      "Matt.13.19",
+      "Mark.6.52",
+      "Mark.8.17",
+      "Mark.12.33",
+      "Luke.24.25",
+      "John.12.40",
+      "Acts.28.27",
+      "2Cor.4.6",
+      "Eph.4.18",
+      "Col.2.2",
+      "Col.3.16"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.3.9",
+       "ref": "1 Kings 3:9",
+       "text": "Therefore give Your servant an understanding heart to judge Your people and to discern between good and evil. For who is able to govern this great people of Yours?”",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Prov.2.2",
+       "ref": "Proverbs 2:2",
+       "text": "if you incline your ear to wisdom and direct your heart to understanding,",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Isa.6.10",
+       "ref": "Isaiah 6:10",
+       "text": "Make the hearts of this people calloused; deafen their ears and close their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn and be healed.”",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        },
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Eph.1.18",
+       "ref": "Ephesians 1:18",
+       "text": "I ask that the eyes of your heart may be enlightened, so that you may know the hope of His calling, the riches of His glorious inheritance in the saints,",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Says, thinks, plans, reasons and ponders in the heart; takes it to heart, considers",
+     "note": "The text puts speech, thought and purpose in the heart: “The fool says in his heart, There is no God” (Ps 14:1), “Abraham ... laughed and said to himself” (Gen 17:17, the Hebrew “said in his heart”), “A man's heart plans his course, but the LORD determines his steps” (Prov 16:9), “some of the scribes were sitting there and thinking in their hearts” (Mark 2:6), “Mary treasured up all these things and pondered them in her heart” (Luke 2:19). To “take it to heart” or “set the heart on” a thing is to attend to it: Pharaoh “did not take any of this to heart” (Exod 7:23), “Have you considered My servant Job?” (Job 1:8, the Hebrew “set your heart on”), “Consider carefully your ways” (Hag 1:5). In these verses the heart is where a person thinks, says and decides. The text uses the one word for all of these and for the glad and the broken heart in other rows; the page does not sort it into mind, will and feeling.",
+     "doors": [],
+     "n": 126,
+     "verses": [
+      "Ps.14.1",
+      "Mark.2.6",
+      "Prov.16.9",
+      "Luke.2.19",
+      "Gen.17.17",
+      "Matt.24.48",
+      "Rom.10.6",
+      "Gen.24.45",
+      "Gen.27.41",
+      "Exod.7.23",
+      "Exod.9.21",
+      "Deut.7.17",
+      "Deut.8.5",
+      "Deut.8.17",
+      "Deut.9.4",
+      "Deut.18.21",
+      "Deut.30.1",
+      "Deut.32.46",
+      "Josh.14.7",
+      "Judg.5.16",
+      "1Sam.1.13",
+      "1Sam.4.20",
+      "1Sam.9.19",
+      "1Sam.9.20",
+      "1Sam.14.7",
+      "1Sam.21.12",
+      "1Sam.25.25",
+      "1Sam.27.1",
+      "2Sam.6.16",
+      "2Sam.7.3",
+      "2Sam.13.20",
+      "2Sam.13.33",
+      "2Sam.18.3",
+      "2Sam.19.19",
+      "1Kgs.8.17",
+      "1Kgs.8.18",
+      "1Kgs.10.2",
+      "1Kgs.12.26",
+      "1Kgs.12.33",
+      "1Chr.15.29",
+      "1Chr.17.2",
+      "1Chr.22.7",
+      "1Chr.28.2",
+      "2Chr.1.11",
+      "2Chr.6.7",
+      "2Chr.6.8",
+      "2Chr.7.11",
+      "2Chr.9.1",
+      "2Chr.24.4",
+      "2Chr.29.10",
+      "Neh.5.7",
+      "Neh.6.8",
+      "Esth.6.6",
+      "Job.1.5",
+      "Job.1.8",
+      "Job.2.3",
+      "Job.7.17",
+      "Job.8.10",
+      "Job.34.14",
+      "Job.36.5",
+      "Ps.10.6",
+      "Ps.10.11",
+      "Ps.10.13",
+      "Ps.35.25",
+      "Ps.48.13",
+      "Ps.53.1",
+      "Ps.74.8",
+      "Ps.77.6",
+      "Ps.83.5",
+      "Prov.15.28",
+      "Prov.16.1",
+      "Prov.19.21",
+      "Prov.20.5",
+      "Prov.23.7",
+      "Prov.24.32",
+      "Prov.25.3",
+      "Prov.27.19",
+      "Prov.27.23",
+      "Eccl.2.1",
+      "Eccl.2.15",
+      "Eccl.3.17",
+      "Eccl.3.18",
+      "Eccl.7.2",
+      "Eccl.7.21",
+      "Eccl.7.22",
+      "Eccl.8.9",
+      "Isa.10.7",
+      "Isa.14.13",
+      "Isa.33.18",
+      "Isa.41.22",
+      "Isa.42.25",
+      "Isa.47.7",
+      "Isa.47.8",
+      "Isa.47.10",
+      "Isa.49.21",
+      "Isa.57.11",
+      "Isa.65.17",
+      "Jer.3.16",
+      "Jer.5.24",
+      "Jer.12.11",
+      "Jer.13.22",
+      "Jer.31.21",
+      "Jer.51.50",
+      "Lam.3.21",
+      "Ezek.38.10",
+      "Dan.8.25",
+      "Hos.7.2",
+      "Zeph.1.12",
+      "Zeph.2.15",
+      "Hag.1.5",
+      "Hag.1.7",
+      "Hag.2.15",
+      "Hag.2.18",
+      "Zech.8.17",
+      "Zech.12.5",
+      "Luke.1.66",
+      "Luke.2.35",
+      "Luke.2.51",
+      "Luke.3.15",
+      "Luke.12.45",
+      "Luke.21.14",
+      "Acts.5.4",
+      "Acts.7.23",
+      "1Cor.14.25",
+      "2Cor.5.12",
+      "Rev.18.7"
+     ],
+     "eg": [
+      {
+       "id": "Ps.14.1",
+       "ref": "Psalms 14:1",
+       "text": "For the choirmaster. Of David. The fool says in his heart, “There is no God.” They are corrupt; their acts are vile. There is no one who does good.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Mark.2.6",
+       "ref": "Mark 2:6",
+       "text": "But some of the scribes were sitting there and thinking in their hearts,",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Prov.16.9",
+       "ref": "Proverbs 16:9",
+       "text": "A man's heart plans his course, but the LORD determines his steps.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Luke.2.19",
+       "ref": "Luke 2:19",
+       "text": "But Mary treasured up all these things and pondered them in her heart.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Where the heart goes: desire, craving, treasure, loyalty; and the heart turned away",
+     "note": "What the heart wants and where it goes: “Delight yourself in the LORD, and He will give you the desires of your heart” (Ps 37:4), “where your treasure is, there your heart will be also” (Matt 6:21), “my heart's desire and prayer to God for the Israelites is for their salvation” (Rom 10:1), “Do not lust in your heart for her beauty” (Prov 6:25), “He must not take many wives for himself, lest his heart go astray” (Deut 17:17), “turns his heart from the LORD” (Jer 17:5), “the hearts of the men of Israel are with Absalom” (2 Sam 15:13), “I have you in my heart” (Phil 1:7). Rom 1:24 is here as well as in the row on what God does; Ps 37:4 is a promise to the one who delights in the LORD, and the page says no more than the verse does.",
+     "doors": [],
+     "n": 53,
+     "verses": [
+      "Ps.37.4",
+      "Matt.6.21",
+      "Prov.6.25",
+      "Deut.17.17",
+      "Deut.11.16",
+      "Matt.5.28",
+      "Rom.1.24",
+      "Deut.29.18",
+      "Deut.30.17",
+      "Judg.9.3",
+      "Judg.16.15",
+      "2Sam.14.1",
+      "2Sam.15.6",
+      "2Sam.15.13",
+      "2Sam.19.14",
+      "1Kgs.11.3",
+      "1Kgs.11.9",
+      "1Kgs.12.27",
+      "2Kgs.5.26",
+      "2Kgs.10.15",
+      "1Chr.12.17",
+      "1Chr.12.33",
+      "Job.17.11",
+      "Job.31.7",
+      "Job.31.9",
+      "Job.31.27",
+      "Ps.20.4",
+      "Ps.21.2",
+      "Ps.78.18",
+      "Ps.95.10",
+      "Prov.13.12",
+      "Eccl.2.10",
+      "Eccl.11.9",
+      "Isa.57.17",
+      "Jer.17.5",
+      "Ezek.6.9",
+      "Ezek.11.21",
+      "Ezek.14.3",
+      "Ezek.14.4",
+      "Ezek.14.5",
+      "Ezek.14.7",
+      "Ezek.20.16",
+      "Ezek.33.31",
+      "Dan.11.28",
+      "Luke.12.34",
+      "Acts.7.39",
+      "Rom.10.1",
+      "2Cor.7.3",
+      "Phil.1.7",
+      "1Thess.2.17",
+      "Heb.3.10",
+      "Jas.5.5",
+      "2Pet.2.14"
+     ],
+     "eg": [
+      {
+       "id": "Ps.37.4",
+       "ref": "Psalms 37:4",
+       "text": "Delight yourself in the LORD, and He will give you the desires of your heart.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.21",
+       "ref": "Matthew 6:21",
+       "text": "For where your treasure is, there your heart will be also.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Prov.6.25",
+       "ref": "Proverbs 6:25",
+       "text": "Do not lust in your heart for her beauty or let her captivate you with her eyes.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Deut.17.17",
+       "ref": "Deuteronomy 17:17",
+       "text": "He must not take many wives for himself, lest his heart go astray. He must not accumulate for himself large amounts of silver and gold.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The heart of God, and of Jesus: “after My own heart”, “grieved in His heart”, “gentle and humble in heart”",
+     "note": "The text says “heart” of the LORD and, in Matt 11:29, of Jesus in His own words: “He was grieved in His heart” (Gen 6:6), “the LORD has sought a man after His own heart” (1 Sam 13:14), “My heart is turned within Me” (Hos 11:8), “the purposes of His heart to all generations” (Ps 33:11), “I am gentle and humble in heart” (Matt 11:29). In a few the Berean prints “mind” or another word for the Hebrew heart: “He does not willingly afflict” is the Hebrew “from His heart” (Lam 3:33). It is set down as written; the page does not say how literally readers take it.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Gen.6.6",
+      "1Sam.13.14",
+      "Hos.11.8",
+      "Matt.11.29",
+      "Gen.8.21",
+      "1Sam.2.35",
+      "2Sam.7.21",
+      "1Kgs.9.3",
+      "2Kgs.10.30",
+      "1Chr.17.19",
+      "2Chr.7.16",
+      "Job.7.17",
+      "Job.10.13",
+      "Job.34.14",
+      "Ps.33.11",
+      "Isa.63.4",
+      "Jer.3.15",
+      "Jer.7.31",
+      "Jer.19.5",
+      "Jer.23.20",
+      "Jer.30.24",
+      "Jer.32.35",
+      "Jer.44.21",
+      "Lam.3.33",
+      "Acts.13.22"
+     ],
+     "eg": [
+      {
+       "id": "Gen.6.6",
+       "ref": "Genesis 6:6",
+       "text": "And the LORD regretted that He had made man on the earth, and He was grieved in His heart.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.13.14",
+       "ref": "1 Samuel 13:14",
+       "text": "But now your kingdom will not endure; the LORD has sought a man after His own heart and appointed him ruler over His people, because you have not kept the command of the LORD.”",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Hos.11.8",
+       "ref": "Hosea 11:8",
+       "text": "How could I give you up, O Ephraim? How could I surrender you, O Israel? How could I make you like Admah? How could I treat you like Zeboiim? My heart is turned within Me; My compassion is stirred!",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.11.29",
+       "ref": "Matthew 11:29",
+       "text": "Take My yoke upon you and learn from Me, for I am gentle and humble in heart, and you will find rest for your souls.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Beside the mouth, lips, tongue, eyes and ears",
+     "note": "The verses that name a body part beside the heart: “These people honor Me with their lips, but their hearts are far from Me” (Matt 15:8; Isa 29:13), “out of the overflow of the heart the mouth speaks” (Luke 6:45), “May the words of my mouth and the meditation of my heart be pleasing in Your sight” (Ps 19:14), and eyes and ears (“the LORD has not given you a mind to understand, eyes to see, or ears to hear”, Deut 29:4; “the eyes of your heart”, Eph 1:18). Where the Hebrew says “in the eyes of” and the Berean prints “in the sight of”, the verse is not in this row.",
+     "doors": [],
+     "n": 89,
+     "verses": [
+      "Ps.19.14",
+      "Matt.15.8",
+      "Luke.6.45",
+      "Rom.10.9",
+      "Deut.4.9",
+      "Matt.12.34",
+      "Rom.10.8",
+      "Deut.15.9",
+      "Deut.28.65",
+      "Deut.28.67",
+      "Deut.29.4",
+      "Deut.30.14",
+      "1Sam.1.13",
+      "1Sam.2.1",
+      "2Sam.7.27",
+      "1Kgs.4.29",
+      "1Kgs.9.3",
+      "2Chr.7.16",
+      "2Chr.16.9",
+      "Job.15.12",
+      "Job.22.22",
+      "Job.31.7",
+      "Job.31.27",
+      "Job.33.3",
+      "Ps.10.17",
+      "Ps.12.2",
+      "Ps.17.3",
+      "Ps.19.8",
+      "Ps.21.2",
+      "Ps.38.10",
+      "Ps.39.3",
+      "Ps.45.1",
+      "Ps.49.3",
+      "Ps.55.21",
+      "Ps.101.5",
+      "Ps.131.1",
+      "Prov.2.2",
+      "Prov.10.8",
+      "Prov.10.13",
+      "Prov.10.20",
+      "Prov.10.21",
+      "Prov.15.7",
+      "Prov.15.14",
+      "Prov.15.28",
+      "Prov.16.1",
+      "Prov.16.21",
+      "Prov.16.23",
+      "Prov.17.20",
+      "Prov.18.15",
+      "Prov.21.4",
+      "Prov.22.11",
+      "Prov.22.17",
+      "Prov.23.12",
+      "Prov.23.26",
+      "Prov.23.33",
+      "Prov.24.2",
+      "Prov.26.23",
+      "Eccl.2.10",
+      "Eccl.5.2",
+      "Eccl.11.9",
+      "Isa.6.10",
+      "Isa.10.12",
+      "Isa.29.13",
+      "Isa.32.4",
+      "Isa.44.18",
+      "Jer.5.21",
+      "Jer.7.24",
+      "Jer.11.8",
+      "Jer.22.17",
+      "Jer.23.16",
+      "Lam.2.18",
+      "Ezek.3.10",
+      "Ezek.6.9",
+      "Ezek.33.31",
+      "Ezek.40.4",
+      "Ezek.44.5",
+      "Matt.13.15",
+      "Matt.15.18",
+      "Mark.7.6",
+      "John.12.40",
+      "Acts.2.26",
+      "Acts.7.51",
+      "Acts.28.27",
+      "Rom.10.10",
+      "1Cor.2.9",
+      "2Cor.6.11",
+      "Eph.1.18",
+      "Jas.1.26",
+      "2Pet.2.14"
+     ],
+     "eg": [
+      {
+       "id": "Ps.19.14",
+       "ref": "Psalms 19:14",
+       "text": "May the words of my mouth and the meditation of my heart be pleasing in Your sight, O LORD, my Rock and my Redeemer.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.15.8",
+       "ref": "Matthew 15:8",
+       "text": "‘These people honor Me with their lips, but their hearts are far from Me.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Luke.6.45",
+       "ref": "Luke 6:45",
+       "text": "The good man brings good things out of the good treasure of his heart, and the evil man brings evil things out of the evil treasure of his heart. For out of the overflow of the heart the mouth speaks.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.10.9",
+       "ref": "Romans 10:9",
+       "text": "that if you confess with your mouth, “Jesus is Lord,” and believe in your heart that God raised Him from the dead, you will be saved.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Believing, trusting and doubting in the heart",
+     "note": "The verses that name believing, trusting or doubting with the heart: “Trust in the LORD with all your heart” (Prov 3:5), “my heart trusts in Him” (Ps 28:7), “has no doubt in his heart but believes” (Mark 11:23), “with your heart you believe and are justified” (Rom 10:10), “a wicked heart of unbelief” (Heb 3:12). How believing and the heart stand to being saved is in the salvation and faith hubs, where the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 31,
+     "verses": [
+      "Prov.3.5",
+      "Ps.28.7",
+      "Mark.11.23",
+      "Rom.10.10",
+      "Gen.45.26",
+      "Rom.10.8",
+      "Ps.13.5",
+      "Ps.27.3",
+      "Ps.33.21",
+      "Ps.62.8",
+      "Ps.62.10",
+      "Ps.64.10",
+      "Ps.112.7",
+      "Prov.26.25",
+      "Prov.28.26",
+      "Prov.31.11",
+      "Isa.47.10",
+      "Jer.17.5",
+      "Mark.16.14",
+      "Luke.8.12",
+      "Luke.24.25",
+      "Luke.24.38",
+      "John.14.1",
+      "Acts.4.32",
+      "Acts.15.9",
+      "Rom.10.9",
+      "Eph.3.17",
+      "1Tim.1.5",
+      "2Tim.2.22",
+      "Heb.3.12",
+      "Heb.10.22"
+     ],
+     "eg": [
+      {
+       "id": "Prov.3.5",
+       "ref": "Proverbs 3:5",
+       "text": "Trust in the LORD with all your heart, and lean not on your own understanding;",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.28.7",
+       "ref": "Psalms 28:7",
+       "text": "The LORD is my strength and my shield; my heart trusts in Him, and I am helped. Therefore my heart rejoices, and I give thanks to Him with my song.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Mark.11.23",
+       "ref": "Mark 11:23",
+       "text": "“Truly I tell you that if anyone says to this mountain, ‘Be lifted up and thrown into the sea,' and has no doubt in his heart but believes that it will happen, it will be done for him.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.10.10",
+       "ref": "Romans 10:10",
+       "text": "For with your heart you believe and are justified, and with your mouth you confess and are saved.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Glad, joyful, merry",
+     "note": "“My heart rejoices in the LORD” (1 Sam 2:1), “my heart is glad and my tongue rejoices” (Ps 16:9), “A joyful heart is good medicine” (Prov 17:22), “your hearts will rejoice, and no one will take away your joy” (John 16:22); wine that “gladdens the heart of man” (Ps 104:15) and Aaron who “will be glad in his heart” to see Moses (Exod 4:14) are in the same word.",
+     "doors": [
+      {
+       "id": "joy",
+       "name": "joy",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 67,
+     "verses": [
+      "1Sam.2.1",
+      "Ps.16.9",
+      "Prov.17.22",
+      "John.16.22",
+      "Exod.4.14",
+      "Deut.28.47",
+      "Judg.16.25",
+      "Judg.18.20",
+      "Judg.19.6",
+      "Judg.19.9",
+      "Ruth.3.7",
+      "1Sam.25.36",
+      "2Sam.13.28",
+      "1Kgs.8.66",
+      "1Kgs.21.7",
+      "1Chr.16.10",
+      "1Chr.29.9",
+      "1Chr.29.17",
+      "2Chr.7.10",
+      "2Chr.15.15",
+      "Ezra.6.22",
+      "Esth.1.10",
+      "Esth.5.9",
+      "Job.29.13",
+      "Ps.4.7",
+      "Ps.13.5",
+      "Ps.19.8",
+      "Ps.32.11",
+      "Ps.33.21",
+      "Ps.64.10",
+      "Ps.69.32",
+      "Ps.97.11",
+      "Ps.104.15",
+      "Ps.105.3",
+      "Ps.119.111",
+      "Prov.12.20",
+      "Prov.12.25",
+      "Prov.14.10",
+      "Prov.14.13",
+      "Prov.15.13",
+      "Prov.15.15",
+      "Prov.15.21",
+      "Prov.15.30",
+      "Prov.23.15",
+      "Prov.24.17",
+      "Prov.27.9",
+      "Prov.27.11",
+      "Eccl.2.1",
+      "Eccl.2.10",
+      "Eccl.5.20",
+      "Eccl.7.4",
+      "Eccl.9.7",
+      "Eccl.11.9",
+      "Song.3.11",
+      "Isa.24.7",
+      "Isa.30.29",
+      "Isa.60.5",
+      "Isa.65.14",
+      "Isa.66.14",
+      "Jer.15.16",
+      "Jer.32.41",
+      "Zeph.3.14",
+      "Zech.10.7",
+      "Acts.2.26",
+      "Acts.2.46",
+      "Acts.11.23",
+      "Acts.14.17"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.2.1",
+       "ref": "1 Samuel 2:1",
+       "text": "At that time Hannah prayed: “My heart rejoices in the LORD; my horn is exalted in the LORD. My mouth speaks boldly against my enemies, for I rejoice in Your salvation.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.16.9",
+       "ref": "Psalms 16:9",
+       "text": "Therefore my heart is glad and my tongue rejoices; my body also will dwell securely.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Prov.17.22",
+       "ref": "Proverbs 17:22",
+       "text": "A joyful heart is good medicine, but a broken spirit dries up the bones.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "John.16.22",
+       "ref": "John 16:22",
+       "text": "So also you have sorrow now, but I will see you again and your hearts will rejoice, and no one will take away your joy.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Troubled, broken, faint or afraid; cut to the heart, burning, weighed down; and strengthened, comforted, spoken to kindly, steady",
+     "note": "The heart in trouble and in comfort: hearts that “melted” (Josh 2:11), “The LORD is near to the brokenhearted” (Ps 34:18), “My flesh and my heart may fail, but God is the strength of my heart” (Ps 73:26), “Do not let your hearts be troubled” (John 14:1), “unceasing anguish in my heart” (Rom 9:2), “be strong and courageous” (Ps 27:14, where the Hebrew has “let your heart take courage”), “because your heart was tender and you humbled yourself” (2 Kgs 22:19). Joseph “spoke kindly to them” (Gen 50:21), Hezekiah “encouraged all the Levites” (2 Chr 30:22) and “Speak tenderly to Jerusalem” (Isa 40:2) are the Hebrew idiom “speak to the heart”; “Refresh your heart with a morsel of bread” (Judg 19:5) and “Please refresh your heart” (Judg 19:8) are the heart given food. The heart struck and stirred is here too: “Were not our hearts burning within us” (Luke 24:32), “your hearts will be weighed down” (Luke 21:34), and the Greek “cut in the heart” (Acts 2:37; in Acts 7:54 the Berean prints “enraged”). 1 John 3:19-21 is the heart that is assured and the heart that condemns: “if our hearts do not condemn us, we have confidence before God” (3:21).",
+     "doors": [
+      {
+       "id": "peace",
+       "name": "peace",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 118,
+     "verses": [
+      "Ps.34.18",
+      "Ps.73.26",
+      "John.14.1",
+      "Rom.9.2",
+      "Gen.18.5",
+      "Luke.21.34",
+      "Gen.42.28",
+      "Gen.50.21",
+      "Num.32.7",
+      "Num.32.9",
+      "Deut.1.28",
+      "Deut.15.10",
+      "Deut.19.6",
+      "Deut.20.3",
+      "Deut.20.8",
+      "Deut.28.65",
+      "Deut.28.67",
+      "Josh.2.11",
+      "Josh.5.1",
+      "Josh.7.5",
+      "Judg.19.5",
+      "Judg.19.8",
+      "Ruth.2.13",
+      "1Sam.1.8",
+      "1Sam.4.13",
+      "1Sam.17.32",
+      "1Sam.24.5",
+      "1Sam.25.31",
+      "1Sam.28.5",
+      "2Sam.17.10",
+      "2Sam.19.7",
+      "2Sam.24.10",
+      "2Kgs.6.11",
+      "2Kgs.22.19",
+      "2Chr.13.7",
+      "2Chr.30.22",
+      "2Chr.32.6",
+      "2Chr.34.27",
+      "Neh.2.2",
+      "Job.37.1",
+      "Ps.10.17",
+      "Ps.13.2",
+      "Ps.22.14",
+      "Ps.25.17",
+      "Ps.27.3",
+      "Ps.27.14",
+      "Ps.31.24",
+      "Ps.38.8",
+      "Ps.38.10",
+      "Ps.40.12",
+      "Ps.51.17",
+      "Ps.55.4",
+      "Ps.57.7",
+      "Ps.61.2",
+      "Ps.69.20",
+      "Ps.73.21",
+      "Ps.102.4",
+      "Ps.108.1",
+      "Ps.109.16",
+      "Ps.109.22",
+      "Ps.112.7",
+      "Ps.112.8",
+      "Ps.119.161",
+      "Ps.143.4",
+      "Ps.147.3",
+      "Prov.12.25",
+      "Prov.14.10",
+      "Prov.14.13",
+      "Prov.14.30",
+      "Prov.25.20",
+      "Eccl.2.20",
+      "Eccl.2.22",
+      "Eccl.2.23",
+      "Eccl.7.3",
+      "Isa.7.2",
+      "Isa.7.4",
+      "Isa.13.7",
+      "Isa.15.5",
+      "Isa.19.1",
+      "Isa.21.4",
+      "Isa.35.4",
+      "Isa.40.2",
+      "Isa.57.15",
+      "Jer.4.9",
+      "Jer.8.18",
+      "Jer.23.9",
+      "Jer.48.36",
+      "Jer.48.41",
+      "Jer.49.22",
+      "Jer.51.46",
+      "Lam.1.20",
+      "Lam.1.22",
+      "Lam.3.65",
+      "Lam.5.15",
+      "Lam.5.17",
+      "Ezek.13.22",
+      "Ezek.21.7",
+      "Ezek.21.15",
+      "Ezek.22.14",
+      "Ezek.32.9",
+      "Dan.11.25",
+      "Hos.2.14",
+      "Amos.2.16",
+      "Nah.2.10",
+      "Luke.24.32",
+      "John.14.27",
+      "John.16.6",
+      "Acts.2.37",
+      "Acts.7.54",
+      "Acts.21.13",
+      "2Cor.2.4",
+      "Eph.6.22",
+      "Col.4.8",
+      "2Thess.2.17",
+      "Heb.13.9",
+      "1John.3.19",
+      "1John.3.20",
+      "1John.3.21"
+     ],
+     "eg": [
+      {
+       "id": "Ps.34.18",
+       "ref": "Psalms 34:18",
+       "text": "The LORD is near to the brokenhearted; He saves the contrite in spirit.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Ps.73.26",
+       "ref": "Psalms 73:26",
+       "text": "My flesh and my heart may fail, but God is the strength of my heart and my portion forever.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "John.14.1",
+       "ref": "John 14:1",
+       "text": "“Do not let your hearts be troubled. You believe in God; believe in Me as well.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.2",
+       "ref": "Romans 9:2",
+       "text": "I have deep sorrow and unceasing anguish in my heart.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The middle: the heart of the sea, of the earth, of the heavens",
+     "note": "The word for heart for the middle of a thing: “the depths congealed in the heart of the sea” (Exod 15:8), “into the heart of the seas” (Jonah 2:3), “in the heart of the earth” (Matt 12:40). In some of these the Berean prints another word for the Hebrew heart: Deut 4:11 is “blazing with fire to the heavens”, the Hebrew “to the heart of the heavens”.",
+     "doors": [],
+     "n": 13,
+     "verses": [
+      "Exod.15.8",
+      "Jonah.2.3",
+      "Ezek.27.4",
+      "Matt.12.40",
+      "Deut.4.11",
+      "Ps.46.2",
+      "Prov.23.34",
+      "Prov.30.19",
+      "Ezek.27.25",
+      "Ezek.27.26",
+      "Ezek.27.27",
+      "Ezek.28.2",
+      "Ezek.28.8"
+     ],
+     "eg": [
+      {
+       "id": "Exod.15.8",
+       "ref": "Exodus 15:8",
+       "text": "At the blast of Your nostrils the waters piled up; like a wall the currents stood firm; the depths congealed in the heart of the sea.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.2.3",
+       "ref": "Jonah 2:3",
+       "text": "For You cast me into the deep, into the heart of the seas, and the current swirled about me; all Your breakers and waves swept over me.",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.27.4",
+       "ref": "Ezekiel 27:4",
+       "text": "Your borders are in the heart of the seas; your builders perfected your beauty.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Matt.12.40",
+       "ref": "Matthew 12:40",
+       "text": "For as Jonah was three days and three nights in the belly of the great fish, so the Son of Man will be three days and three nights in the heart of the earth.",
+       "words": [
+        {
+         "key": "g2588",
+         "lemma": "καρδία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The body: pierced, struck, over the heart",
+     "note": "The heart as a part of the body: the three spears Joab “thrust through the heart of Absalom” (2 Sam 18:14), the names borne “over his heart” (Exod 28:29), “Set me as a seal over your heart” (Song 8:6), Nabal whose “heart failed within him” (1 Sam 25:37). In Nah 2:7 the Berean prints “beat upon their breasts”.",
+     "doors": [],
+     "n": 14,
+     "verses": [
+      "2Sam.18.14",
+      "Exod.28.29",
+      "Song.8.6",
+      "1Sam.25.37",
+      "Exod.28.30",
+      "2Kgs.9.24",
+      "Ps.37.15",
+      "Ps.39.3",
+      "Ps.45.5",
+      "Jer.4.18",
+      "Jer.4.19",
+      "Jer.20.9",
+      "Hos.13.8",
+      "Nah.2.7"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.18.14",
+       "ref": "2 Samuel 18:14",
+       "text": "But Joab declared, “I am not going to wait like this with you!” And he took three spears in his hand and thrust them through the heart of Absalom while he was still alive in the oak tree.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Exod.28.29",
+       "ref": "Exodus 28:29",
+       "text": "Whenever Aaron enters the Holy Place, he shall bear the names of the sons of Israel over his heart on the breastpiece of judgment, as a continual reminder before the LORD.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Song.8.6",
+       "ref": "Song of Solomon 8:6",
+       "text": "Set me as a seal over your heart, as a seal upon your arm. For love is as strong as death, its jealousy as unrelenting as Sheol. Its sparks are fiery flames, the fiercest blaze of all.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.25.37",
+       "ref": "1 Samuel 25:37",
+       "text": "In the morning when Nabal was sober, his wife told him about these events, and his heart failed within him, and he became like a stone.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use: idioms, and where the Berean prints another word for the heart",
+     "note": "What no row takes, and the Berean often hides the word: Jacob “deceived Laban the Aramean” is the Hebrew “stole the heart of” Laban (Gen 31:20, 26); “it was not my own doing” and “of my own accord” are the Hebrew “not from my own heart” (Num 16:28; 24:13); Pharaoh and his officials “changed their minds” (Exod 14:5); “I will send all My plagues against you” is the Hebrew “to your heart” (Exod 9:14); “out of mind” (Ps 31:12); the “mind” of a man changed to a beast's and a beast given “the mind of a man” (Dan 4:16; 5:21; 7:4, in the Aramaic of Daniel); “he will turn the hearts of the fathers to their children” (Mal 4:6; Luke 1:17); food that “does not enter his heart” (Mark 7:19); “they deceive the hearts of the naive” (Rom 16:18); “the valiant” of Ps 76:5, the Hebrew “stout of heart”; Judg 19:22 has the Hebrew “making their hearts glad”, which the Berean prints “While they were enjoying themselves”, and the sentence goes on to the wicked men of the city who surround the house and demand the guest; “His chest is as hard as a rock” (Job 41:24), where the Berean prints no heart; “I sleep, but my heart is awake” (Song 5:2).",
+     "doors": [],
+     "n": 18,
+     "verses": [
+      "Gen.31.20",
+      "Exod.14.5",
+      "Num.16.28",
+      "Dan.4.16",
+      "Mark.7.19",
+      "Rom.16.18",
+      "Gen.31.26",
+      "Exod.9.14",
+      "Num.24.13",
+      "Judg.19.22",
+      "Job.41.24",
+      "Ps.31.12",
+      "Ps.76.5",
+      "Song.5.2",
+      "Dan.5.21",
+      "Dan.7.4",
+      "Mal.4.6",
+      "Luke.1.17"
+     ],
+     "eg": [
+      {
+       "id": "Gen.31.20",
+       "ref": "Genesis 31:20",
+       "text": "Moreover, Jacob deceived Laban the Aramean by not telling him that he was running away.",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Exod.14.5",
+       "ref": "Exodus 14:5",
+       "text": "When the king of Egypt was told that the people had fled, Pharaoh and his officials changed their minds about them and said, “What have we done? We have released Israel from serving us.”",
+       "words": [
+        {
+         "key": "h3824",
+         "lemma": "לֵבָב"
+        }
+       ]
+      },
+      {
+       "id": "Num.16.28",
+       "ref": "Numbers 16:28",
+       "text": "Then Moses said, “This is how you will know that the LORD has sent me to do all these things, for it was not my own doing:",
+       "words": [
+        {
+         "key": "h3820",
+         "lemma": "לֵב"
+        }
+       ]
+      },
+      {
+       "id": "Dan.4.16",
+       "ref": "Daniel 4:16",
+       "text": "Let his mind be changed from that of a man, and let him be given the mind of a beast till seven times pass him by.",
+       "words": [
+        {
+         "key": "h3825",
+         "lemma": "לְבַב"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “heart”",
+  "words": [
+   {
+    "key": "h5315",
+    "lemma": "נֶפֶשׁ",
+    "translit": "ne.phesh",
+    "gloss": "soul: neck",
+    "lang": "Hebrew",
+    "n": 12,
+    "verses": [
+     "Ps.10.3",
+     "2Sam.3.21",
+     "Gen.34.8",
+     "Num.21.5",
+     "Deut.14.26",
+     "1Sam.2.33",
+     "Prov.19.18",
+     "Eccl.6.2",
+     "Song.5.6",
+     "Isa.19.10",
+     "Jer.15.1",
+     "Ezek.24.25"
+    ],
+    "note": "נֶפֶשׁ means soul, life, self, appetite. MACULA glosses it “heart” in about a dozen verses, and the Berean prints “heart” in some (Ps 10:3, “the cravings of his heart”; 2 Sam 3:21, “all that your heart desires”). In others the Berean prints no heart (Gen 34:8, “longs for your daughter”; Deut 14:26, “anything you desire”) and only the gloss says it. Deut 6:5 names both words side by side, “heart” (לֵבָב) and “soul” (נֶפֶשׁ). The page does not make the two one.",
+    "eg": [
+     {
+      "id": "Ps.10.3",
+      "ref": "Psalms 10:3",
+      "text": "For the wicked man boasts in the cravings of his heart; he blesses the greedy and reviles the LORD."
+     },
+     {
+      "id": "2Sam.3.21",
+      "ref": "2 Samuel 3:21",
+      "text": "Then Abner said to David, “Let me go at once, and I will gather all Israel to my lord the king, that they may make a covenant with you, and that you may rule over all that your heart desires.” So David dismissed Abner, and he went in peace."
+     }
+    ]
+   },
+   {
+    "key": "h3629",
+    "lemma": "כִּלְיָה",
+    "translit": "kil.yah",
+    "gloss": "kidney",
+    "lang": "Hebrew",
+    "n": 8,
+    "verses": [
+     "Ps.7.9",
+     "Jer.11.20",
+     "Job.19.27",
+     "Ps.16.7",
+     "Ps.26.2",
+     "Ps.73.21",
+     "Jer.12.2",
+     "Jer.20.12"
+    ],
+    "note": "כִּלְיָה means kidneys, the Hebrew word for the inmost self. Beside לֵב the Berean prints “hearts and minds” (Ps 7:9) and “heart and mind” (Jer 11:20); in Jer 11:20 the Berean's “heart” is the kidneys and its “mind” is לֵב. The page does not make the two words one.",
+    "eg": [
+     {
+      "id": "Ps.7.9",
+      "ref": "Psalms 7:9",
+      "text": "Put an end to the evil of the wicked, but establish the righteous, O righteous God who searches hearts and minds."
+     },
+     {
+      "id": "Jer.11.20",
+      "ref": "Jeremiah 11:20",
+      "text": "O LORD of Hosts, who judges righteously, who examines the heart and mind, let me see Your vengeance upon them, for to You I have committed my cause."
+     }
+    ]
+   },
+   {
+    "key": "g4698",
+    "lemma": "σπλάγχνον",
+    "translit": "splagchnon",
+    "gloss": "affection/entrails",
+    "lang": "Greek",
+    "n": 5,
+    "verses": [
+     "1John.3.17",
+     "Phlm.1.7",
+     "Col.3.12",
+     "Phlm.1.12",
+     "Phlm.1.20"
+    ],
+    "note": "σπλάγχνον means the inward parts, the seat of pity. The Berean prints “compassion” at 1 John 3:17, where the Greek is σπλάγχνα. Elsewhere it prints “heart” (Phlm 1:7) or “compassion”. καρδία is a different word and stands in the rows.",
+    "eg": [
+     {
+      "id": "1John.3.17",
+      "ref": "1 John 3:17",
+      "text": "If anyone with earthly possessions sees his brother in need, but withholds his compassion from him, how can the love of God abide in him?"
+     },
+     {
+      "id": "Phlm.1.7",
+      "ref": "Philemon 1:7",
+      "text": "I take great joy and encouragement in your love, because you, brother, have refreshed the hearts of the saints."
+     }
+    ]
+   },
+   {
+    "key": "h4578",
+    "lemma": "מֵעִים",
+    "translit": "me.eh",
+    "gloss": "belly",
+    "lang": "Hebrew",
+    "n": 4,
+    "verses": [
+     "Ps.40.8",
+     "Isa.16.11",
+     "Isa.63.15",
+     "Jer.31.20"
+    ],
+    "eg": [
+     {
+      "id": "Ps.40.8",
+      "ref": "Psalms 40:8",
+      "text": "I delight to do Your will, O my God; Your law is within my heart.”"
+     },
+     {
+      "id": "Isa.16.11",
+      "ref": "Isaiah 16:11",
+      "text": "Therefore my heart laments for Moab like a harp, my inmost being for Kir-heres."
+     }
+    ]
+   },
+   {
+    "key": "g1573",
+    "lemma": "ἐγκακέω",
+    "translit": "ekkakeō",
+    "gloss": "to lose heart",
+    "lang": "Greek",
+    "n": 4,
+    "verses": [
+     "Luke.18.1",
+     "2Cor.4.1",
+     "2Cor.4.16",
+     "Eph.3.13"
+    ],
+    "note": "ἐγκακέω means to give up, grow weary. The English “lose heart” has the word heart in it, but the Greek has no word for heart.",
+    "eg": [
+     {
+      "id": "Luke.18.1",
+      "ref": "Luke 18:1",
+      "text": "Then Jesus told them a parable about their need to pray at all times and not lose heart:"
+     },
+     {
+      "id": "2Cor.4.1",
+      "ref": "2 Corinthians 4:1",
+      "text": "Therefore, since God in His mercy has given us this ministry, we do not lose heart."
+     }
+    ]
+   },
+   {
+    "key": "g1271",
+    "lemma": "διάνοια",
+    "translit": "dianoia",
+    "gloss": "mind",
+    "lang": "Greek",
+    "verses": [
+     "Mark.12.30",
+     "Luke.10.27",
+     "Heb.8.10",
+     "Heb.10.16"
+    ],
+    "n": 4,
+    "note": "διάνοια means mind, understanding. Mark 12:30 and Luke 10:27 name it beside καρδία as a second word (“with all your heart ... and with all your mind”), and Heb 8:10 and 10:16 write the laws on the mind and on the hearts. The page does not make the two words one, and does not say how they differ.",
+    "eg": [
+     {
+      "id": "Mark.12.30",
+      "ref": "Mark 12:30",
+      "text": "Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength.'"
+     },
+     {
+      "id": "Luke.10.27",
+      "ref": "Luke 10:27",
+      "text": "He answered, “‘Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind' and ‘Love your neighbor as yourself.'”"
+     }
+    ]
+   },
+   {
+    "key": "g2155",
+    "lemma": "εὔσπλαγχνος",
+    "translit": "eusplagchnos",
+    "gloss": "compassionate",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Eph.4.32",
+     "1Pet.3.8"
+    ],
+    "eg": [
+     {
+      "id": "Eph.4.32",
+      "ref": "Ephesians 4:32",
+      "text": "Be kind and tenderhearted to one another, forgiving each other just as in Christ God forgave you."
+     },
+     {
+      "id": "1Pet.3.8",
+      "ref": "1 Peter 3:8",
+      "text": "Finally, all of you, be like-minded and sympathetic, love as brothers, be tenderhearted and humble."
+     }
+    ]
+   },
+   {
+    "key": "h5034",
+    "lemma": "נָבֵל",
+    "translit": "yibôl",
+    "gloss": null,
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "2Sam.22.46",
+     "Ps.18.45"
+    ],
+    "eg": [
+     {
+      "id": "2Sam.22.46",
+      "ref": "2 Samuel 22:46",
+      "text": "Foreigners lose heart and come trembling from their strongholds."
+     },
+     {
+      "id": "Ps.18.45",
+      "ref": "Psalms 18:45",
+      "text": "Foreigners lose heart and come trembling from their strongholds."
+     }
+    ]
+   },
+   {
+    "key": "h3823",
+    "lemma": "לִבֵּב",
+    "translit": "ṯəlabbēḇ",
+    "gloss": null,
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Song.4.9"
+    ],
+    "eg": [
+     {
+      "id": "Song.4.9",
+      "ref": "Song of Solomon 4:9",
+      "text": "You have captured my heart, my sister, my bride; you have stolen my heart with one glance of your eyes, with one jewel of your neck."
+     }
+    ]
+   },
+   {
+    "key": "h3512",
+    "lemma": "כָּאָה",
+    "translit": "niḵʾēh",
+    "gloss": null,
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.11.30"
+    ],
+    "eg": [
+     {
+      "id": "Dan.11.30",
+      "ref": "Daniel 11:30",
+      "text": "Ships of Kittim will come against him, and he will lose heart. Then he will turn back and rage against the holy covenant and do damage. So he will return and show favor to those who forsake the holy covenant."
+     }
+    ]
+   },
+   {
+    "key": "h3821",
+    "lemma": "לֵב",
+    "translit": "lev",
+    "gloss": "heart",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.7.28"
+    ],
+    "note": "The Berean prints “But I kept the matter to myself” at Dan 7:28 and no word heart. The Aramaic reads “in my heart”: it is לֵב, spelled like the Hebrew לֵב, once. It is named here and in no row because the builder keys a word by its spelling and the two cannot stand in the rows together; the page does not make the Aramaic a different word from the Hebrew's.",
+    "eg": [
+     {
+      "id": "Dan.7.28",
+      "ref": "Daniel 7:28",
+      "text": "Thus ends the matter. As for me, Daniel, my thoughts troubled me greatly, and my face turned pale. But I kept the matter to myself.”"
+     }
+    ]
+   },
+   {
+    "key": "h2910",
+    "lemma": "טֻחוֹת",
+    "translit": "tu.chah",
+    "gloss": "inner parts",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Job.38.36"
+    ],
+    "eg": [
+     {
+      "id": "Job.38.36",
+      "ref": "Job 38:36",
+      "text": "Who has put wisdom in the heart or given understanding to the mind?"
+     }
+    ]
+   },
+   {
+    "key": "g3510",
+    "lemma": "νεφρός",
+    "translit": "nephros",
+    "gloss": "mind",
+    "lang": "Greek",
+    "verses": [
+     "Rev.2.23"
+    ],
+    "n": 1,
+    "note": "νεφρός means kidneys, the Greek word for the Hebrew כִּלְיָה. Rev 2:23 has “kidneys and hearts” (νεφροὺς καὶ καρδίας), which the Berean prints “minds and hearts”; the Hebrew pair is in Ps 7:9 and Jer 11:20. The page does not make kidneys and heart one word.",
+    "eg": [
+     {
+      "id": "Rev.2.23",
+      "ref": "Revelation 2:23",
+      "text": "Then I will strike her children dead, and all the churches will know that I am the One who searches minds and hearts, and I will repay each of you according to your deeds."
+     }
+    ]
+   }
+  ]
+ }
+}

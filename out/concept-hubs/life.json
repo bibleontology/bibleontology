@@ -1,0 +1,3941 @@
+{
+ "id": "life",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h2417",
+   "lemma": "חַי",
+   "form": "noun",
+   "translit": "chay",
+   "gloss": "living",
+   "lang": "Hebrew",
+   "uses": 7,
+   "other_sense": 0
+  },
+  {
+   "key": "h2416",
+   "lemma": "חַי",
+   "form": "noun",
+   "translit": "ḥayyiym",
+   "gloss": "life",
+   "lang": "Hebrew",
+   "uses": 353,
+   "other_sense": 94
+  },
+  {
+   "key": "h2465",
+   "lemma": "חֶלֶד",
+   "form": "noun",
+   "translit": "che.led",
+   "gloss": "lifetime/world",
+   "lang": "Hebrew",
+   "uses": 2,
+   "other_sense": 3
+  },
+  {
+   "key": "g2222",
+   "lemma": "ζωή",
+   "form": "noun",
+   "translit": "zōē",
+   "gloss": "life",
+   "lang": "Greek",
+   "uses": 127,
+   "other_sense": 0
+  },
+  {
+   "key": "g979",
+   "lemma": "βίος",
+   "form": "noun",
+   "translit": "bios",
+   "gloss": "life",
+   "lang": "Greek",
+   "uses": 7,
+   "other_sense": 2
+  },
+  {
+   "key": "h5315",
+   "lemma": "נֶפֶשׁ",
+   "form": "noun",
+   "translit": "ne.phesh",
+   "gloss": "soul: neck",
+   "lang": "Hebrew",
+   "uses": 201,
+   "other_sense": 482
+  },
+  {
+   "key": "g5590",
+   "lemma": "ψυχή",
+   "form": "noun",
+   "translit": "psuchē",
+   "gloss": "soul: animal",
+   "lang": "Greek",
+   "uses": 33,
+   "other_sense": 59
+  },
+  {
+   "key": "h2421",
+   "lemma": "חָיָה",
+   "form": "verb",
+   "translit": "cha.yah",
+   "gloss": "to live",
+   "lang": "Hebrew",
+   "uses": 243,
+   "other_sense": 16
+  },
+  {
+   "key": "g2198",
+   "lemma": "ζάω",
+   "form": "verb",
+   "translit": "zaō",
+   "gloss": "to live",
+   "lang": "Greek",
+   "uses": 123,
+   "other_sense": 1
+  },
+  {
+   "key": "g2227",
+   "lemma": "ζῳοποιέω",
+   "form": "verb",
+   "translit": "zōopoieō",
+   "gloss": "to make alive",
+   "lang": "Greek",
+   "uses": 10,
+   "other_sense": 0
+  },
+  {
+   "key": "g2225",
+   "lemma": "ζῳογονέω",
+   "form": "verb",
+   "translit": "zōogoneō",
+   "gloss": "to give life",
+   "lang": "Greek",
+   "uses": 3,
+   "other_sense": 0
+  },
+  {
+   "key": "g4806",
+   "lemma": "συζωοποιέω",
+   "form": "verb",
+   "translit": "suzōopoieō",
+   "gloss": "to make alive with",
+   "lang": "Greek",
+   "uses": 2,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of life",
+  "verb": "Living, and making alive"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "eternal_life",
+   "name": "eternal life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "death",
+   "name": "death",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_resurrection",
+   "name": "the resurrection",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "holy_ghost",
+   "name": "the Holy Spirit",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "blood",
+   "name": "blood",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "soul",
+   "name": "soul",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "breath_of_life",
+   "name": "breath of life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "tree_of_life",
+   "name": "the tree of life",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "law",
+   "name": "instruction",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "salvation",
+   "name": "salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "born_again",
+   "name": "you must be born again",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "oath",
+   "name": "swore",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "length_of_days",
+   "name": "long life",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "eternal_life",
+   "name": "eternal life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "image_life",
+   "name": "life, as a figure",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "tree_of_life",
+   "name": "the tree of life",
+   "type": "object",
+   "missing": false
+  },
+  {
+   "id": "image_tree_of_life",
+   "name": "tree of life",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "breath_of_life",
+   "name": "breath of life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "passed_from_death_unto_life",
+   "name": "crossed over from death to life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_life_was_the_light_of_men",
+   "name": "that life was the light of men",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "this_is_life_eternal",
+   "name": "this is eternal life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_law_of_the_spirit_of_life",
+   "name": "the law of the Spirit of life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "hope_of_eternal_life",
+   "name": "the hope of eternal life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "promise_of_eternal_life",
+   "name": "God's promise of eternal life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "the_wages_of_sin_is_death_but_the_gift_of_god_is_eternal_life",
+   "name": "the wages of sin is death; but the gift of God is eternal life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "preserve_life",
+   "name": "save lives",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "image_living_water",
+   "name": "living water",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "the_bread_of_life",
+   "name": "the bread of life",
+   "type": "title",
+   "missing": false
+  },
+  {
+   "id": "the_fear_of_the_lord_is_a_fountain_of_life",
+   "name": "The fear of the Lord is a fountain of life",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "whosoever_will_save_his_life_shall_lose_it",
+   "name": "whoever wants to save his life will lose it",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "laid_down_his_life_for_us",
+   "name": "Jesus laid down His life for us",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "living_creature",
+   "name": "living creature",
+   "type": "creature",
+   "missing": false
+  },
+  {
+   "id": "length_of_days",
+   "name": "long life",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Gen.2.7",
+   "ref": "Genesis 2:7",
+   "text": "Then the LORD God formed man from the dust of the ground and breathed the breath of life into his nostrils, and the man became a living being."
+  },
+  {
+   "id": "Deut.30.19",
+   "ref": "Deuteronomy 30:19",
+   "text": "I call heaven and earth as witnesses against you today that I have set before you life and death, blessing and cursing. Therefore choose life, so that you and your descendants may live,"
+  },
+  {
+   "id": "Ps.16.11",
+   "ref": "Psalms 16:11",
+   "text": "You have made known to me the path of life; You will fill me with joy in Your presence, with eternal pleasures at Your right hand."
+  },
+  {
+   "id": "John.3.16",
+   "ref": "John 3:16",
+   "text": "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life."
+  },
+  {
+   "id": "John.11.25",
+   "ref": "John 11:25",
+   "text": "Jesus said to her, “I am the resurrection and the life. Whoever believes in Me will live, even though he dies."
+  },
+  {
+   "id": "John.14.6",
+   "ref": "John 14:6",
+   "text": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me."
+  },
+  {
+   "id": "Rom.6.23",
+   "ref": "Romans 6:23",
+   "text": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord."
+  },
+  {
+   "id": "1John.5.11",
+   "ref": "1 John 5:11",
+   "text": "And this is that testimony: God has given us eternal life, and this life is in His Son."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 711,
+   "rows": [
+    {
+     "label": "The breath of life; the Spirit of life",
+     "note": "In Gen 2:7 (“the breath of life”), Gen 7:22 (“the breath of life in its nostrils”) and Job 12:10 (“the breath of all mankind”) the word is breath, and the page does not say it is the Spirit. Rom 8:2 (“the law of the Spirit of life”), Rom 8:6 (“the mind of the Spirit is life and peace”) and John 6:63 (“The Spirit gives life”) name the Spirit, and the Holy Spirit door is for those.",
+     "doors": [
+      {
+       "id": "breath_of_life",
+       "name": "breath of life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Gen.2.7",
+      "Gen.7.22",
+      "Rev.11.11",
+      "Rom.8.2",
+      "Gen.6.17",
+      "Gen.7.15",
+      "Job.12.10",
+      "Acts.17.25",
+      "Rom.8.6",
+      "John.6.63"
+     ],
+     "eg": [
+      {
+       "id": "Gen.2.7",
+       "ref": "Genesis 2:7",
+       "text": "Then the LORD God formed man from the dust of the ground and breathed the breath of life into his nostrils, and the man became a living being.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.7.22",
+       "ref": "Genesis 7:22",
+       "text": "Of all that was on dry land, everything that had the breath of life in its nostrils died.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Rev.11.11",
+       "ref": "Revelation 11:11",
+       "text": "But after the three and a half days, the breath of life from God entered the two witnesses, and they stood on their feet, and great fear fell upon those who saw them.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Rom.8.2",
+       "ref": "Romans 8:2",
+       "text": "For in Christ Jesus the law of the Spirit of life set you free from the law of sin and death.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The tree of life",
+     "note": null,
+     "doors": [
+      {
+       "id": "tree_of_life",
+       "name": "the tree of life",
+       "type": "object",
+       "missing": false
+      },
+      {
+       "id": "image_tree_of_life",
+       "name": "tree of life",
+       "type": "image",
+       "missing": false
+      }
+     ],
+     "n": 11,
+     "verses": [
+      "Gen.2.9",
+      "Prov.3.18",
+      "Rev.2.7",
+      "Rev.22.2",
+      "Gen.3.22",
+      "Gen.3.24",
+      "Prov.11.30",
+      "Prov.13.12",
+      "Prov.15.4",
+      "Rev.22.14",
+      "Rev.22.19"
+     ],
+     "eg": [
+      {
+       "id": "Gen.2.9",
+       "ref": "Genesis 2:9",
+       "text": "Out of the ground the LORD God gave growth to every tree that is pleasing to the eye and good for food. And in the middle of the garden were the tree of life and the tree of the knowledge of good and evil.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Prov.3.18",
+       "ref": "Proverbs 3:18",
+       "text": "She is a tree of life to those who embrace her, and those who lay hold of her are blessed.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Rev.2.7",
+       "ref": "Revelation 2:7",
+       "text": "He who has an ear, let him hear what the Spirit says to the churches. To the one who overcomes, I will grant the right to eat from the tree of life in the Paradise of God.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Rev.22.2",
+       "ref": "Revelation 22:2",
+       "text": "down the middle of the main street of the city. On either side of the river stood a tree of life, bearing twelve kinds of fruit and yielding a fresh crop for each month. And the leaves of the tree are for the healing of the nations.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A fountain, water, bread, light “of life”; and things called “living”",
+     "note": "“Of life” (חַיִּים, ζωή) and “living” (חַי, ζῶν) are different words, and the page does not make them one.",
+     "doors": [
+      {
+       "id": "image_living_water",
+       "name": "living water",
+       "type": "image",
+       "missing": false
+      },
+      {
+       "id": "the_bread_of_life",
+       "name": "the bread of life",
+       "type": "title",
+       "missing": false
+      },
+      {
+       "id": "the_fear_of_the_lord_is_a_fountain_of_life",
+       "name": "The fear of the Lord is a fountain of life",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 30,
+     "verses": [
+      "Ps.36.9",
+      "John.4.10",
+      "John.6.51",
+      "Rom.12.1",
+      "Prov.10.11",
+      "Prov.13.14",
+      "Prov.14.27",
+      "Prov.16.22",
+      "Prov.4.23",
+      "Jer.2.13",
+      "Jer.17.13",
+      "Zech.14.8",
+      "John.4.11",
+      "John.4.14",
+      "John.6.33",
+      "John.6.35",
+      "John.6.48",
+      "John.7.38",
+      "John.8.12",
+      "Rev.7.17",
+      "Rev.21.6",
+      "Rev.22.1",
+      "Rev.22.17",
+      "1Pet.1.3",
+      "1Pet.1.23",
+      "1Pet.2.4",
+      "1Pet.2.5",
+      "Heb.4.12",
+      "Heb.10.20",
+      "Acts.7.38"
+     ],
+     "eg": [
+      {
+       "id": "Ps.36.9",
+       "ref": "Psalms 36:9",
+       "text": "For with You is the fountain of life; in Your light we see light.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "John.4.10",
+       "ref": "John 4:10",
+       "text": "Jesus answered, “If you knew the gift of God and who is asking you for a drink, you would have asked Him, and He would have given you living water.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "John.6.51",
+       "ref": "John 6:51",
+       "text": "I am the living bread that came down from heaven. If anyone eats of this bread, he will live forever. And this bread, which I will give for the life of the world, is My flesh.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        },
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Rom.12.1",
+       "ref": "Romans 12:1",
+       "text": "Therefore I urge you, brothers, on account of God's mercy, to offer your bodies as living sacrifices, holy and pleasing to God, which is your spiritual service of worship.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The book of life; “recorded among the living”",
+     "note": "Ps 69:28 asks that the wicked be “blotted out of the Book of Life” and Rev 3:5 says “I will never blot out his name from the Book of Life”; Rev 13:8 and 17:8 speak of names “written ... from the foundation of the world in the Book of Life”. Where Christian traditions part on whether a name once written can be removed, and on what “from the foundation of the world” says of who is written, the page takes no side.",
+     "doors": [
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Ps.69.28",
+      "Phil.4.3",
+      "Rev.3.5",
+      "Rev.13.8",
+      "Isa.4.3",
+      "Rev.17.8",
+      "Rev.20.12",
+      "Rev.20.15",
+      "Rev.21.27"
+     ],
+     "eg": [
+      {
+       "id": "Ps.69.28",
+       "ref": "Psalms 69:28",
+       "text": "May they be blotted out of the Book of Life and not listed with the righteous.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Phil.4.3",
+       "ref": "Philippians 4:3",
+       "text": "Yes, and I ask you, my true yokefellow, to help these women who have contended at my side for the gospel, along with Clement and the rest of my fellow workers, whose names are in the Book of Life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Rev.3.5",
+       "ref": "Revelation 3:5",
+       "text": "Like them, he who overcomes will be dressed in white. And I will never blot out his name from the Book of Life, but I will confess his name before My Father and His angels.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Rev.13.8",
+       "ref": "Revelation 13:8",
+       "text": "And all who dwell on the earth will worship the beast-all whose names have not been written from the foundation of the world in the Book of Life belonging to the Lamb who was slain.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Life set beside death",
+     "note": null,
+     "doors": [
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "passed_from_death_unto_life",
+       "name": "crossed over from death to life",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "the_wages_of_sin_is_death_but_the_gift_of_god_is_eternal_life",
+       "name": "the wages of sin is death; but the gift of God is eternal life",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Deut.30.19",
+      "Prov.18.21",
+      "2Cor.4.12",
+      "1John.3.14",
+      "Deut.30.15",
+      "Jer.21.8",
+      "Prov.11.19",
+      "Rom.5.17",
+      "Rom.5.21",
+      "Rom.6.23",
+      "Rom.7.10",
+      "Rom.8.6",
+      "Rom.8.38",
+      "1Cor.3.22",
+      "2Cor.2.16",
+      "Phil.1.20",
+      "John.5.24"
+     ],
+     "eg": [
+      {
+       "id": "Deut.30.19",
+       "ref": "Deuteronomy 30:19",
+       "text": "I call heaven and earth as witnesses against you today that I have set before you life and death, blessing and cursing. Therefore choose life, so that you and your descendants may live,",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.18.21",
+       "ref": "Proverbs 18:21",
+       "text": "Life and death are in the power of the tongue, and those who love it will eat its fruit.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.4.12",
+       "ref": "2 Corinthians 4:12",
+       "text": "So then, death is at work in us, but life is at work in you.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "1John.3.14",
+       "ref": "1 John 3:14",
+       "text": "We know that we have passed from death to life, because we love our brothers. The one who does not love remains in death.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The life is in the blood",
+     "note": "Where the Berean prints “lifeblood” (Gen 9:4, 9:5) the Hebrew word is נֶפֶשׁ, here in its sense of “life”. Lev 17:11 goes on to say what the blood is given for on the altar; the blood and sacrifice cards read that verse in full, and the page takes no side here on what the blood does.",
+     "doors": [
+      {
+       "id": "blood",
+       "name": "blood",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Lev.17.11",
+      "Lev.17.14",
+      "Deut.12.23",
+      "Gen.9.4",
+      "Gen.9.5"
+     ],
+     "eg": [
+      {
+       "id": "Lev.17.11",
+       "ref": "Leviticus 17:11",
+       "text": "For the life of the flesh is in the blood, and I have given it to you to make atonement for your souls upon the altar; for it is the blood that makes atonement for the soul.",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Lev.17.14",
+       "ref": "Leviticus 17:14",
+       "text": "For the life of all flesh is its blood. Therefore I have told the Israelites, ‘You must not eat the blood of any living thing, because the life of all flesh is its blood; whoever eats it must be cut off.'",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Deut.12.23",
+       "ref": "Deuteronomy 12:23",
+       "text": "Only be sure not to eat the blood, because the blood is the life, and you must not eat the life with the meat.",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.9.4",
+       "ref": "Genesis 9:4",
+       "text": "But you must not eat meat with its lifeblood still in it.",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Living creatures, every living thing",
+     "note": "The same Hebrew word is the living creatures of the sea and the earth (Gen 1) and the four “living creatures” of Ezekiel's vision (Ezek 1:5; 10:15).",
+     "doors": [
+      {
+       "id": "living_creature",
+       "name": "living creature",
+       "type": "creature",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Gen.1.20",
+      "Gen.9.10",
+      "Ps.145.16",
+      "Ezek.1.5",
+      "Gen.1.21",
+      "Gen.1.24",
+      "Gen.2.19",
+      "Gen.6.19",
+      "Gen.7.4",
+      "Gen.9.12",
+      "Gen.9.15",
+      "Gen.9.16",
+      "Lev.11.46",
+      "Ps.104.25",
+      "Ezek.1.13",
+      "Ezek.1.15",
+      "Ezek.10.15"
+     ],
+     "eg": [
+      {
+       "id": "Gen.1.20",
+       "ref": "Genesis 1:20",
+       "text": "And God said, “Let the waters teem with living creatures, and let birds fly above the earth in the open expanse of the sky.”",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Gen.9.10",
+       "ref": "Genesis 9:10",
+       "text": "and with every living creature that was with you-the birds, the livestock, and every beast of the earth-every living thing that came out of the ark.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Ps.145.16",
+       "ref": "Psalms 145:16",
+       "text": "You open Your hand and satisfy the desire of every living thing.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.1.5",
+       "ref": "Ezekiel 1:5",
+       "text": "and within it was the form of four living creatures. And this was their appearance: They had a human form,",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The living God; He who lives forever",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 37,
+     "verses": [
+      "Deut.5.26",
+      "Ps.42.2",
+      "Dan.6.26",
+      "Matt.16.16",
+      "Josh.3.10",
+      "1Sam.17.26",
+      "1Sam.17.36",
+      "2Sam.22.47",
+      "Ps.18.46",
+      "2Kgs.19.4",
+      "2Kgs.19.16",
+      "Ps.84.2",
+      "Isa.37.4",
+      "Isa.37.17",
+      "Jer.10.10",
+      "Jer.23.36",
+      "Dan.4.34",
+      "Dan.6.20",
+      "Dan.12.7",
+      "Hos.1.10",
+      "Matt.26.63",
+      "Acts.14.15",
+      "Rom.9.26",
+      "2Cor.3.3",
+      "2Cor.6.16",
+      "1Thess.1.9",
+      "1Tim.3.15",
+      "1Tim.4.10",
+      "Heb.3.12",
+      "Heb.9.14",
+      "Heb.10.31",
+      "Heb.12.22",
+      "Rev.4.9",
+      "Rev.4.10",
+      "Rev.7.2",
+      "Rev.10.6",
+      "Rev.15.7"
+     ],
+     "eg": [
+      {
+       "id": "Deut.5.26",
+       "ref": "Deuteronomy 5:26",
+       "text": "For who of all flesh has heard the voice of the living God speaking out of the fire, as we have, and survived?",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.42.2",
+       "ref": "Psalms 42:2",
+       "text": "My soul thirsts for God, the living God. When shall I come and appear in God's presence?",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Dan.6.26",
+       "ref": "Daniel 6:26",
+       "text": "I hereby decree that in every part of my kingdom, men are to tremble in fear before the God of Daniel: For He is the living God, and He endures forever; His kingdom will never be destroyed, and His dominion will never end.",
+       "words": [
+        {
+         "key": "h2417",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Matt.16.16",
+       "ref": "Matthew 16:16",
+       "text": "Simon Peter answered, “You are the Christ, the Son of the living God.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "An oath by a life: “As surely as the LORD lives”, “as surely as I live”, “as surely as you live”, “as surely as Pharaoh lives”",
+     "note": "Amos 8:14 has those who swear by the guilt of Samaria say “As surely as your god lives, O Dan”, an oath by another god; Hos 4:15 says “do not journey to Gilgal, do not go up to Beth-aven, and do not swear on oath, ‘As surely as the LORD lives!’”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "oath",
+       "name": "swore",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 75,
+     "verses": [
+      "Judg.8.19",
+      "1Sam.14.39",
+      "Num.14.28",
+      "Ezek.33.11",
+      "Gen.42.15",
+      "Gen.42.16",
+      "Num.14.21",
+      "Deut.32.40",
+      "Ruth.3.13",
+      "1Sam.1.26",
+      "1Sam.14.45",
+      "1Sam.17.55",
+      "1Sam.19.6",
+      "1Sam.20.3",
+      "1Sam.20.21",
+      "1Sam.25.26",
+      "1Sam.25.34",
+      "1Sam.26.10",
+      "1Sam.26.16",
+      "1Sam.28.10",
+      "1Sam.29.6",
+      "2Sam.2.27",
+      "2Sam.4.9",
+      "2Sam.11.11",
+      "2Sam.12.5",
+      "2Sam.14.11",
+      "2Sam.14.19",
+      "2Sam.15.21",
+      "1Kgs.1.29",
+      "1Kgs.2.24",
+      "1Kgs.17.1",
+      "1Kgs.17.12",
+      "1Kgs.18.10",
+      "1Kgs.18.15",
+      "1Kgs.22.14",
+      "2Kgs.2.2",
+      "2Kgs.2.4",
+      "2Kgs.2.6",
+      "2Kgs.3.14",
+      "2Kgs.4.30",
+      "2Kgs.5.16",
+      "2Kgs.5.20",
+      "2Chr.18.13",
+      "Job.27.2",
+      "Isa.49.18",
+      "Jer.4.2",
+      "Jer.5.2",
+      "Jer.12.16",
+      "Jer.16.14",
+      "Jer.16.15",
+      "Jer.22.24",
+      "Jer.23.7",
+      "Jer.23.8",
+      "Jer.38.16",
+      "Jer.44.26",
+      "Jer.46.18",
+      "Ezek.5.11",
+      "Ezek.14.16",
+      "Ezek.14.18",
+      "Ezek.14.20",
+      "Ezek.16.48",
+      "Ezek.17.16",
+      "Ezek.17.19",
+      "Ezek.18.3",
+      "Ezek.20.3",
+      "Ezek.20.31",
+      "Ezek.20.33",
+      "Ezek.33.27",
+      "Ezek.34.8",
+      "Ezek.35.6",
+      "Ezek.35.11",
+      "Hos.4.15",
+      "Amos.8.14",
+      "Zeph.2.9",
+      "Rom.14.11"
+     ],
+     "eg": [
+      {
+       "id": "Judg.8.19",
+       "ref": "Judges 8:19",
+       "text": "“They were my brothers,” Gideon replied, “the sons of my mother! As surely as the LORD lives, if you had let them live, I would not kill you.”",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.14.39",
+       "ref": "1 Samuel 14:39",
+       "text": "As surely as the LORD who saves Israel lives, even if it is my son Jonathan, he must die!” But not one of the troops said a word.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Num.14.28",
+       "ref": "Numbers 14:28",
+       "text": "So tell them: As surely as I live, declares the LORD, I will do to you exactly as I heard you say.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.33.11",
+       "ref": "Ezekiel 33:11",
+       "text": "Say to them: ‘As surely as I live, declares the Lord GOD, I take no pleasure in the death of the wicked, but rather that the wicked should turn from their ways and live. Turn! Turn from your evil ways! For why should you die, O house of Israel?'",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Alive, and the living: “still alive”, “taken alive”, “the living child”, “the land of the living”, “the living and the dead”, “as long as he lives”",
+     "note": null,
+     "doors": [
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 66,
+     "verses": [
+      "Gen.45.28",
+      "Ps.27.13",
+      "Eccl.9.4",
+      "Matt.22.32",
+      "Gen.3.20",
+      "Gen.43.7",
+      "Gen.43.27",
+      "Gen.43.28",
+      "Gen.45.3",
+      "Gen.45.26",
+      "Gen.46.30",
+      "Exod.4.18",
+      "Lev.16.10",
+      "Num.16.30",
+      "Num.16.33",
+      "Num.16.48",
+      "Deut.4.4",
+      "Deut.5.3",
+      "Deut.31.27",
+      "Josh.8.23",
+      "Ruth.2.20",
+      "1Sam.15.8",
+      "2Sam.12.18",
+      "2Sam.12.21",
+      "2Sam.12.22",
+      "2Sam.18.14",
+      "1Kgs.3.22",
+      "1Kgs.3.23",
+      "1Kgs.3.25",
+      "1Kgs.3.26",
+      "1Kgs.3.27",
+      "1Kgs.20.18",
+      "1Kgs.21.15",
+      "2Kgs.7.12",
+      "2Kgs.10.14",
+      "2Chr.25.12",
+      "Job.28.13",
+      "Job.30.23",
+      "Ps.52.5",
+      "Ps.55.15",
+      "Ps.116.9",
+      "Ps.124.3",
+      "Ps.142.5",
+      "Ps.143.2",
+      "Prov.1.12",
+      "Isa.8.19",
+      "Isa.38.11",
+      "Isa.53.8",
+      "Jer.11.19",
+      "Ezek.26.20",
+      "Ezek.32.23",
+      "Ezek.32.32",
+      "Eccl.4.2",
+      "Eccl.7.2",
+      "Eccl.9.5",
+      "Mark.12.27",
+      "Luke.20.38",
+      "Luke.24.5",
+      "Rom.7.1",
+      "Rom.7.2",
+      "Rom.7.3",
+      "Rom.7.9",
+      "Rom.14.9",
+      "Acts.10.42",
+      "2Tim.4.1",
+      "1Pet.4.5"
+     ],
+     "eg": [
+      {
+       "id": "Gen.45.28",
+       "ref": "Genesis 45:28",
+       "text": "“Enough!” declared Israel. “My son Joseph is still alive! I will go to see him before I die.”",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Ps.27.13",
+       "ref": "Psalms 27:13",
+       "text": "Still I am certain to see the goodness of the LORD in the land of the living.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.9.4",
+       "ref": "Ecclesiastes 9:4",
+       "text": "There is hope, however, for anyone who is among the living; for even a live dog is better than a dead lion.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Matt.22.32",
+       "ref": "Matthew 22:32",
+       "text": "‘I am the God of Abraham, the God of Isaac, and the God of Jacob'? He is not the God of the dead, but of the living.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The path of life; what leads to life or is life: wisdom, instruction, the fear of the LORD, righteousness",
+     "note": "Prov 8:35 (“whoever finds me finds life”) is the voice of wisdom in Prov 8; readers differ on whom that voice is, and the wisdom card reads the chapter. Here the verse is listed as written.",
+     "doors": [
+      {
+       "id": "wisdom",
+       "name": "wisdom",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Ps.16.11",
+      "Prov.4.22",
+      "Prov.19.23",
+      "Matt.7.14",
+      "Prov.2.19",
+      "Prov.3.2",
+      "Prov.3.22",
+      "Prov.4.10",
+      "Prov.4.13",
+      "Prov.5.6",
+      "Prov.6.23",
+      "Prov.8.35",
+      "Prov.9.11",
+      "Prov.10.16",
+      "Prov.10.17",
+      "Prov.12.28",
+      "Prov.15.24",
+      "Prov.15.31",
+      "Prov.21.21",
+      "Prov.22.4",
+      "Acts.2.28",
+      "Acts.11.18",
+      "Deut.30.20",
+      "Deut.32.47"
+     ],
+     "eg": [
+      {
+       "id": "Ps.16.11",
+       "ref": "Psalms 16:11",
+       "text": "You have made known to me the path of life; You will fill me with joy in Your presence, with eternal pleasures at Your right hand.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Prov.4.22",
+       "ref": "Proverbs 4:22",
+       "text": "For they are life to those who find them, and health to the whole body.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Prov.19.23",
+       "ref": "Proverbs 19:23",
+       "text": "The fear of the LORD leads to life, that one may rest content, without visitation from harm.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Matt.7.14",
+       "ref": "Matthew 7:14",
+       "text": "But small is the gate and narrow the way that leads to life, and only a few find it.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Eternal life, said as had or given now: “has eternal life”, “you have eternal life”, “I give them eternal life”, “passed from death to life”",
+     "note": "Set beside the next two rows as the text has them. Where Christian traditions part on whether eternal life is a present possession, a gift still to come, or both, the page takes no side. John 3:15-16, 5:40, 6:40 and 20:31 (“may have”, “shall have”) are not placed in any of these three but in the row “Having life, eternal life”: whether “have” there is now or later is the question.",
+     "doors": [
+      {
+       "id": "eternal_life",
+       "name": "eternal life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "passed_from_death_unto_life",
+       "name": "crossed over from death to life",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "John.3.36",
+      "John.5.24",
+      "1John.5.13",
+      "John.10.28",
+      "John.6.47",
+      "1John.3.14",
+      "1John.3.15",
+      "1John.5.11",
+      "1John.5.12"
+     ],
+     "eg": [
+      {
+       "id": "John.3.36",
+       "ref": "John 3:36",
+       "text": "Whoever believes in the Son has eternal life. Whoever rejects the Son will not see life. Instead, the wrath of God remains on him.”",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "John.5.24",
+       "ref": "John 5:24",
+       "text": "Truly, truly, I tell you, whoever hears My word and believes Him who sent Me has eternal life and will not come under judgment. Indeed, he has crossed over from death to life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "1John.5.13",
+       "ref": "1 John 5:13",
+       "text": "I have written these things to you who believe in the name of the Son of God, so that you may know that you have eternal life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "John.10.28",
+       "ref": "John 10:28",
+       "text": "I give them eternal life, and they will never perish. No one can snatch them out of My hand.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Eternal life, said as still to come: “will inherit”, “enter life”, “in the age to come”, “in hope of”, “will reap”, “appointed for”, “the resurrection of life”",
+     "note": "Matt 25:46 sets eternal life beside eternal punishment; what that punishment is, readers part on, and the judgment card reads it. Acts 13:48 (“all who were appointed for eternal life believed”) is set among these as written; readers differ on what “appointed” says (God's choice, or those disposed to believe), and the page takes no side. Where Christian traditions part on whether eternal life is now or to come, the page takes no side. The verses that say “may have”, “shall not perish but have” and “shall have” are in the row “Having life, eternal life”.",
+     "doors": [
+      {
+       "id": "eternal_life",
+       "name": "eternal life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "hope_of_eternal_life",
+       "name": "the hope of eternal life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "promise_of_eternal_life",
+       "name": "God's promise of eternal life",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 25,
+     "verses": [
+      "Dan.12.2",
+      "Matt.19.29",
+      "Rom.2.7",
+      "Titus.1.2",
+      "Matt.19.16",
+      "Matt.19.17",
+      "Matt.25.46",
+      "Matt.18.8",
+      "Matt.18.9",
+      "Mark.9.43",
+      "Mark.9.45",
+      "Mark.10.17",
+      "Luke.10.25",
+      "Luke.18.18",
+      "John.5.29",
+      "Acts.13.46",
+      "Acts.13.48",
+      "Rom.5.21",
+      "Gal.6.8",
+      "1Tim.1.16",
+      "1Tim.6.19",
+      "Titus.3.7",
+      "Jude.1.21",
+      "John.4.36",
+      "John.6.27"
+     ],
+     "eg": [
+      {
+       "id": "Dan.12.2",
+       "ref": "Daniel 12:2",
+       "text": "And many who sleep in the dust of the earth will awake, some to everlasting life, but others to shame and everlasting contempt.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Matt.19.29",
+       "ref": "Matthew 19:29",
+       "text": "And everyone who has left houses or brothers or sisters or father or mother or wife or children or fields for the sake of My name will receive a hundredfold and will inherit eternal life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.7",
+       "ref": "Romans 2:7",
+       "text": "To those who by perseverance in doing good seek glory, honor, and immortality, He will give eternal life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Titus.1.2",
+       "ref": "Titus 1:2",
+       "text": "in the hope of eternal life, which God, who cannot lie, promised before time began.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Now and later in the same verse: “has eternal life, and I will raise him up at the last day”; “in this age ... in the age to come”",
+     "note": "Set beside the two rows above. Where Christian traditions part on whether eternal life is now, to come, or both, the page takes no side; these are the verses that name both in one sentence. The verses that say “may have”, “shall not perish but have” and “shall have” are in the row “Having life, eternal life”.",
+     "doors": [
+      {
+       "id": "eternal_life",
+       "name": "eternal life",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "the_resurrection",
+       "name": "the resurrection",
+       "type": "title",
+       "missing": false
+      }
+     ],
+     "n": 6,
+     "verses": [
+      "John.6.54",
+      "Mark.10.30",
+      "John.12.25",
+      "1Tim.4.8",
+      "Luke.18.30",
+      "Rom.6.22"
+     ],
+     "eg": [
+      {
+       "id": "John.6.54",
+       "ref": "John 6:54",
+       "text": "Whoever eats My flesh and drinks My blood has eternal life, and I will raise him up at the last day.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Mark.10.30",
+       "ref": "Mark 10:30",
+       "text": "will fail to receive a hundredfold in the present age-houses and brothers and sisters and mothers and children and fields, along with persecutions-and in the age to come, eternal life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "John.12.25",
+       "ref": "John 12:25",
+       "text": "Whoever loves his life will lose it, but whoever hates his life in this world will keep it for eternal life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        },
+        {
+         "key": "g5590",
+         "lemma": "ψυχή"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.4.8",
+       "ref": "1 Timothy 4:8",
+       "text": "For physical exercise is of limited value, but godliness is valuable in every way, holding promise for the present life and for the one to come.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Having life, eternal life: “may have eternal life”, “shall not perish but have eternal life”, “to have life”, “you may have life in His name”",
+     "note": "Set beside the three rows above. These verses say “may have”, “shall not perish but have” and “shall have”, and whether that “have” is now or to come is the question; where Christian traditions part on whether eternal life is a present possession, a gift still to come, or both, the page takes no side.",
+     "doors": [
+      {
+       "id": "eternal_life",
+       "name": "eternal life",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "John.3.16",
+      "John.3.15",
+      "John.5.40",
+      "John.20.31",
+      "John.6.40"
+     ],
+     "eg": [
+      {
+       "id": "John.3.16",
+       "ref": "John 3:16",
+       "text": "For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "John.3.15",
+       "ref": "John 3:15",
+       "text": "that everyone who believes in Him may have eternal life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "John.5.40",
+       "ref": "John 5:40",
+       "text": "yet you refuse to come to Me to have life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "John.20.31",
+       "ref": "John 20:31",
+       "text": "But these are written so that you may believe that Jesus is the Christ, the Son of God, and that by believing you may have life in His name.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Christ and life: “I am the life”, “the resurrection and the life”, “the Author of life”, “Christ, who is your life”, “newness of life”, “life in His Son”",
+     "note": "John 6:53 (“unless you eat the flesh and drink the blood of the Son of Man, you have no life in you”) is read by Christian traditions as the Eucharist (the Lord's Supper), as faith in Christ, or as both; the page takes no side and shows the words as written, beside 6:35, 6:51 and 6:54.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "the_bread_of_life",
+       "name": "the bread of life",
+       "type": "title",
+       "missing": false
+      },
+      {
+       "id": "resurrection_of_christ",
+       "name": "the resurrection of Christ",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 31,
+     "verses": [
+      "John.14.6",
+      "John.11.25",
+      "Acts.3.15",
+      "Col.3.4",
+      "John.5.26",
+      "John.6.35",
+      "John.6.48",
+      "John.6.51",
+      "John.6.53",
+      "John.6.68",
+      "John.8.12",
+      "John.10.10",
+      "John.12.50",
+      "John.17.2",
+      "John.17.3",
+      "John.3.36",
+      "John.5.40",
+      "John.20.31",
+      "Rom.5.10",
+      "Rom.5.21",
+      "Rom.6.4",
+      "Rom.6.23",
+      "Col.3.3",
+      "2Cor.4.10",
+      "2Cor.4.11",
+      "2Tim.1.1",
+      "2Tim.1.10",
+      "1John.5.11",
+      "1John.5.12",
+      "1John.5.20",
+      "1Tim.1.16"
+     ],
+     "eg": [
+      {
+       "id": "John.14.6",
+       "ref": "John 14:6",
+       "text": "Jesus answered, “I am the way and the truth and the life. No one comes to the Father except through Me.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "John.11.25",
+       "ref": "John 11:25",
+       "text": "Jesus said to her, “I am the resurrection and the life. Whoever believes in Me will live, even though he dies.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        },
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Acts.3.15",
+       "ref": "Acts 3:15",
+       "text": "You killed the Author of life, but God raised Him from the dead, and we are witnesses of this fact.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Col.3.4",
+       "ref": "Colossians 3:4",
+       "text": "When Christ, who is your life, appears, then you also will appear with Him in glory.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The days of life, the years of life, a lifetime, a long life",
+     "note": null,
+     "doors": [
+      {
+       "id": "length_of_days",
+       "name": "long life",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 48,
+     "verses": [
+      "Gen.3.17",
+      "Gen.47.28",
+      "Ps.23.6",
+      "Eccl.5.18",
+      "Gen.3.14",
+      "Gen.11.28",
+      "Gen.43.9",
+      "Gen.44.32",
+      "Gen.48.15",
+      "Num.3.4",
+      "Num.22.30",
+      "Deut.6.2",
+      "Deut.16.3",
+      "Deut.17.19",
+      "Josh.1.5",
+      "Josh.4.14",
+      "1Sam.1.11",
+      "1Sam.7.15",
+      "2Sam.18.18",
+      "2Sam.19.34",
+      "1Kgs.4.21",
+      "1Kgs.11.12",
+      "1Kgs.11.34",
+      "1Kgs.12.6",
+      "1Kgs.15.5",
+      "2Kgs.20.19",
+      "2Kgs.25.29",
+      "2Kgs.25.30",
+      "2Chr.10.6",
+      "Ps.27.4",
+      "Ps.30.5",
+      "Ps.49.18",
+      "Ps.104.33",
+      "Ps.128.5",
+      "Ps.146.2",
+      "Prov.4.10",
+      "Prov.31.12",
+      "Eccl.2.3",
+      "Eccl.5.20",
+      "Eccl.8.15",
+      "Isa.38.20",
+      "Isa.39.8",
+      "Jer.22.30",
+      "Jer.52.33",
+      "Jer.52.34",
+      "Luke.1.75",
+      "Luke.16.25",
+      "Eph.6.3"
+     ],
+     "eg": [
+      {
+       "id": "Gen.3.17",
+       "ref": "Genesis 3:17",
+       "text": "And to Adam He said: “Because you have listened to the voice of your wife and have eaten from the tree of which I commanded you not to eat, cursed is the ground because of you; through toil you will eat of it all the days of your life.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Gen.47.28",
+       "ref": "Genesis 47:28",
+       "text": "And Jacob lived in the land of Egypt seventeen years, and the length of his life was 147 years.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.23.6",
+       "ref": "Psalms 23:6",
+       "text": "Surely goodness and mercy will follow me all the days of my life, and I will dwell in the house of the LORD forever.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Eccl.5.18",
+       "ref": "Ecclesiastes 5:18",
+       "text": "Here is what I have seen to be good and fitting: to eat and drink, and to find satisfaction in all the labor one does under the sun during the few days of life that God has given him-for this is his lot.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The present life: how short it is; “Is not life more than food?”, “the pleasures of this life”, “the pride of life”, “this life alone”; and what one has to live on: “all she had to live on”, “all her money”, “his property”, “earthly possessions”",
+     "note": "The last six verses (Mark 12:44; Luke 8:43; 15:12; 15:30; 21:4; 1 John 3:17) use the Greek βίος in its sense of the means of living, which the Berean prints “all she had to live on”, “all her money”, “property”, “your wealth” and “earthly possessions”. That is a different sense from the length or the span of a life, listed here beside it, and the page does not make the two one.",
+     "doors": [],
+     "n": 19,
+     "verses": [
+      "Job.7.7",
+      "Jas.4.14",
+      "Matt.6.25",
+      "Mark.12.44",
+      "Ps.39.5",
+      "Ps.89.47",
+      "Eccl.6.12",
+      "Luke.8.14",
+      "Luke.12.15",
+      "Luke.12.22",
+      "Luke.12.23",
+      "1Cor.15.19",
+      "1Tim.4.8",
+      "1John.2.16",
+      "Luke.8.43",
+      "Luke.15.12",
+      "Luke.15.30",
+      "Luke.21.4",
+      "1John.3.17"
+     ],
+     "eg": [
+      {
+       "id": "Job.7.7",
+       "ref": "Job 7:7",
+       "text": "Remember that my life is but a breath. My eyes will never again see happiness.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Jas.4.14",
+       "ref": "James 4:14",
+       "text": "You do not even know what will happen tomorrow! What is your life? You are a mist that appears for a little while and then vanishes.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Matt.6.25",
+       "ref": "Matthew 6:25",
+       "text": "Therefore I tell you, do not worry about your life, what you will eat or drink; or about your body, what you will wear. Is not life more than food, and the body more than clothes?",
+       "words": [
+        {
+         "key": "g5590",
+         "lemma": "ψυχή"
+        }
+       ]
+      },
+      {
+       "id": "Mark.12.44",
+       "ref": "Mark 12:44",
+       "text": "For they all contributed out of their surplus, but she out of her poverty has put in all she had to live on.”",
+       "words": [
+        {
+         "key": "g979",
+         "lemma": "βίος"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Weary of life: “I am weary of my life”, “I despise my own life”, “I hated life”, “better for me to die than to live”",
+     "note": null,
+     "doors": [
+      {
+       "id": "i_would_despise_my_life",
+       "name": "I despise my own life",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Gen.27.46",
+      "Job.9.21",
+      "Jonah.4.3",
+      "1Kgs.19.4",
+      "Job.3.20",
+      "Job.10.1",
+      "Eccl.2.17",
+      "Jonah.4.8"
+     ],
+     "eg": [
+      {
+       "id": "Gen.27.46",
+       "ref": "Genesis 27:46",
+       "text": "Then Rebekah said to Isaac, “I am weary of my life because of these Hittite women. If Jacob takes a Hittite wife from among them, what good is my life?”",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "Job.9.21",
+       "ref": "Job 9:21",
+       "text": "Though I am blameless, I have no concern for myself; I despise my own life.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.4.3",
+       "ref": "Jonah 4:3",
+       "text": "And now, O LORD, please take my life from me, for it is better for me to die than to live.”",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "1Kgs.19.4",
+       "ref": "1 Kings 19:4",
+       "text": "while he himself went a day's journey into the wilderness. He sat down under a broom tree and prayed that he might die. “I have had enough, LORD,” he said. “Take my life, for I am no better than my fathers.”",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A life laid down, lost, saved, sought, spared or loved",
+     "note": null,
+     "doors": [
+      {
+       "id": "laid_down_his_life_for_us",
+       "name": "Jesus laid down His life for us",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "whosoever_will_save_his_life_shall_lose_it",
+       "name": "whoever wants to save his life will lose it",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "preserve_life",
+       "name": "save lives",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 53,
+     "verses": [
+      "1Kgs.19.10",
+      "1Sam.22.23",
+      "Ps.35.4",
+      "John.10.11",
+      "Gen.12.13",
+      "Matt.2.20",
+      "Rom.11.3",
+      "Gen.32.30",
+      "Exod.4.19",
+      "1Sam.20.1",
+      "1Sam.23.15",
+      "1Sam.25.29",
+      "1Sam.26.21",
+      "2Sam.16.11",
+      "1Kgs.19.14",
+      "Esth.7.3",
+      "Job.2.4",
+      "Job.2.6",
+      "Ps.38.12",
+      "Ps.40.14",
+      "Ps.54.3",
+      "Ps.63.9",
+      "Ps.70.2",
+      "Ps.86.14",
+      "Prov.29.10",
+      "Jer.4.30",
+      "Jer.11.21",
+      "Jer.19.7",
+      "Jer.19.9",
+      "Jer.21.7",
+      "Jer.22.25",
+      "Jer.34.20",
+      "Jer.34.21",
+      "Jer.44.30",
+      "Jer.46.26",
+      "Jer.49.37",
+      "Matt.10.39",
+      "Matt.16.25",
+      "Mark.3.4",
+      "Mark.8.35",
+      "Luke.6.9",
+      "Luke.9.24",
+      "Luke.14.26",
+      "Luke.17.33",
+      "John.10.15",
+      "John.10.17",
+      "John.12.25",
+      "John.13.37",
+      "John.13.38",
+      "John.15.13",
+      "1Pet.3.10",
+      "1John.3.16",
+      "Rev.12.11"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.19.10",
+       "ref": "1 Kings 19:10",
+       "text": "“I have been very zealous for the LORD, the God of Hosts,” he replied, “but the Israelites have forsaken Your covenant, torn down Your altars, and killed Your prophets with the sword. I am the only one left, and they are seeking my life as well.”",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.22.23",
+       "ref": "1 Samuel 22:23",
+       "text": "Stay with me; do not be afraid, for he who seeks your life is seeking mine as well. You will be safe with me.”",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Ps.35.4",
+       "ref": "Psalms 35:4",
+       "text": "May those who seek my life be disgraced and put to shame; may those who plan to harm me be driven back and confounded.",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "John.10.11",
+       "ref": "John 10:11",
+       "text": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+       "words": [
+        {
+         "key": "g5590",
+         "lemma": "ψυχή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A life for a life: “life for life”, “a ransom for his life”, “atonement for your lives”, “to give His life as a ransom for many”, “lays down His life”",
+     "note": "The law asks a life for a life (Exod 21:23; Lev 24:18; Deut 19:21), refuses a ransom for a murderer's life (Num 35:31) and takes a ransom for each life in the census (Exod 30:12). Matt 20:28 and Mark 10:45 say the Son of Man came “to give His life as a ransom for many”, and John 10:11-18 that He lays down His life “of My own accord”. Where Christian traditions part on what the giving of His life does (a ransom paid, a penalty borne in place of others, a victory, an example, a covering), the page takes no side; the sacrifice, atonement and blood cards read these verses further. Jewish readers of the rabbinic period take Exod 21:23-25 (“a life for a life”) as payment of compensation, and the page takes no side.",
+     "doors": [
+      {
+       "id": "laid_down_his_life_for_us",
+       "name": "Jesus laid down His life for us",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "blood",
+       "name": "blood",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 18,
+     "verses": [
+      "Exod.21.23",
+      "Exod.30.12",
+      "Matt.20.28",
+      "John.10.11",
+      "Exod.21.30",
+      "Exod.30.15",
+      "Exod.30.16",
+      "Lev.24.18",
+      "Num.35.31",
+      "Deut.19.21",
+      "Isa.43.4",
+      "Isa.53.12",
+      "Mark.10.45",
+      "John.10.15",
+      "John.10.17",
+      "John.10.18",
+      "John.15.13",
+      "1John.3.16"
+     ],
+     "eg": [
+      {
+       "id": "Exod.21.23",
+       "ref": "Exodus 21:23",
+       "text": "But if a serious injury results, then you must require a life for a life-",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Exod.30.12",
+       "ref": "Exodus 30:12",
+       "text": "“When you take a census of the Israelites to number them, each man must pay the LORD a ransom for his life when he is counted. Then no plague will come upon them when they are numbered.",
+       "words": [
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Matt.20.28",
+       "ref": "Matthew 20:28",
+       "text": "just as the Son of Man did not come to be served, but to serve, and to give His life as a ransom for many.”",
+       "words": [
+        {
+         "key": "g5590",
+         "lemma": "ψυχή"
+        }
+       ]
+      },
+      {
+       "id": "John.10.11",
+       "ref": "John 10:11",
+       "text": "I am the good shepherd. The good shepherd lays down His life for the sheep.",
+       "words": [
+        {
+         "key": "g5590",
+         "lemma": "ψυχή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Phrases with “life”: “the promise: eternal life”, “the crown of life”, “the word of life”, “the full message of this new life”, “the gracious gift of life”, “the life of God”",
+     "note": null,
+     "doors": [
+      {
+       "id": "promise_of_eternal_life",
+       "name": "God's promise of eternal life",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "1John.2.25",
+      "Jas.1.12",
+      "Phil.2.16",
+      "Acts.5.20",
+      "Eph.4.18",
+      "1Pet.3.7",
+      "2Pet.1.3",
+      "1Tim.6.12",
+      "Rev.2.10"
+     ],
+     "eg": [
+      {
+       "id": "1John.2.25",
+       "ref": "1 John 2:25",
+       "text": "And this is the promise that He Himself made to us: eternal life.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Jas.1.12",
+       "ref": "James 1:12",
+       "text": "Blessed is the man who perseveres under trial, because when he has stood the test, he will receive the crown of life that God has promised to those who love Him.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Phil.2.16",
+       "ref": "Philippians 2:16",
+       "text": "as you hold forth the word of life, in order that I may boast on the day of Christ that I did not run or labor in vain.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Acts.5.20",
+       "ref": "Acts 5:20",
+       "text": "“Go, stand in the temple courts and tell the people the full message of this new life.”",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Among them John 1:4 (“In Him was life, and that life was the light of men”) and 1 John 1:1-2 (“the Word of life”, “the eternal life that was with the Father”), which say “Him” and “the Word”; readers take them of Christ from the passage around them (John 1:1, 1:14), and the page lists them as written. Rom 5:18 (“justification and life for all men”) is here as well: readers part on what “all men” takes in, and the page takes no side.",
+     "doors": [],
+     "n": 201,
+     "verses": [
+      "Gen.8.21",
+      "John.1.4",
+      "Rom.5.18",
+      "Gen.9.3",
+      "Gen.19.17",
+      "Gen.19.19",
+      "Gen.19.20",
+      "Gen.25.6",
+      "Gen.37.21",
+      "Gen.44.30",
+      "Exod.21.35",
+      "Exod.22.4",
+      "Lev.11.10",
+      "Lev.14.4",
+      "Lev.14.6",
+      "Lev.14.7",
+      "Lev.14.51",
+      "Lev.14.53",
+      "Lev.16.20",
+      "Lev.16.21",
+      "Lev.24.17",
+      "Lev.26.16",
+      "Num.16.38",
+      "Num.23.10",
+      "Num.31.35",
+      "Deut.4.10",
+      "Deut.12.1",
+      "Deut.24.6",
+      "Deut.24.15",
+      "Deut.31.13",
+      "Josh.2.13",
+      "Josh.2.14",
+      "Josh.9.24",
+      "Josh.23.11",
+      "Judg.5.18",
+      "Judg.9.17",
+      "Judg.12.3",
+      "Judg.16.30",
+      "Ruth.4.15",
+      "1Sam.19.5",
+      "1Sam.19.11",
+      "1Sam.20.14",
+      "1Sam.20.17",
+      "1Sam.22.22",
+      "1Sam.24.11",
+      "1Sam.25.6",
+      "1Sam.26.24",
+      "1Sam.28.9",
+      "1Sam.28.21",
+      "2Sam.1.9",
+      "2Sam.4.8",
+      "2Sam.14.7",
+      "2Sam.14.14",
+      "2Sam.18.13",
+      "2Sam.19.5",
+      "2Sam.19.6",
+      "2Sam.23.17",
+      "1Kgs.1.12",
+      "1Kgs.2.23",
+      "1Kgs.8.40",
+      "1Kgs.17.21",
+      "1Kgs.17.22",
+      "1Kgs.17.23",
+      "1Kgs.19.2",
+      "1Kgs.19.3",
+      "1Kgs.20.31",
+      "1Kgs.20.32",
+      "1Kgs.20.39",
+      "1Kgs.20.42",
+      "2Kgs.1.13",
+      "2Kgs.1.14",
+      "2Kgs.7.7",
+      "2Kgs.10.24",
+      "1Chr.5.21",
+      "1Chr.11.19",
+      "2Chr.6.31",
+      "Esth.4.13",
+      "Esth.7.7",
+      "Esth.8.11",
+      "Esth.9.16",
+      "Job.11.17",
+      "Job.11.20",
+      "Job.13.14",
+      "Job.27.8",
+      "Job.28.21",
+      "Job.30.16",
+      "Job.31.30",
+      "Ps.6.4",
+      "Ps.17.9",
+      "Ps.17.13",
+      "Ps.22.20",
+      "Ps.25.20",
+      "Ps.31.13",
+      "Ps.34.22",
+      "Ps.35.7",
+      "Ps.35.17",
+      "Ps.49.8",
+      "Ps.54.4",
+      "Ps.56.6",
+      "Ps.59.3",
+      "Ps.71.10",
+      "Ps.72.13",
+      "Ps.72.14",
+      "Ps.74.19",
+      "Ps.86.2",
+      "Ps.94.21",
+      "Ps.97.10",
+      "Ps.109.20",
+      "Ps.109.31",
+      "Ps.116.4",
+      "Ps.119.109",
+      "Ps.120.2",
+      "Ps.121.7",
+      "Prov.1.18",
+      "Prov.1.19",
+      "Prov.6.26",
+      "Prov.7.23",
+      "Prov.12.10",
+      "Prov.13.3",
+      "Prov.13.8",
+      "Prov.14.25",
+      "Prov.16.17",
+      "Prov.19.16",
+      "Prov.20.2",
+      "Prov.21.23",
+      "Prov.22.23",
+      "Prov.29.24",
+      "Prov.31.6",
+      "Eccl.4.15",
+      "Eccl.10.19",
+      "Song.4.15",
+      "Isa.38.17",
+      "Isa.38.19",
+      "Isa.53.10",
+      "Jer.2.34",
+      "Jer.4.31",
+      "Jer.17.21",
+      "Jer.18.20",
+      "Jer.20.13",
+      "Jer.21.9",
+      "Jer.31.12",
+      "Jer.38.2",
+      "Jer.38.17",
+      "Jer.38.20",
+      "Jer.39.18",
+      "Jer.40.14",
+      "Jer.40.15",
+      "Jer.42.20",
+      "Jer.45.5",
+      "Jer.48.6",
+      "Jer.51.6",
+      "Jer.51.45",
+      "Lam.2.12",
+      "Lam.2.19",
+      "Lam.3.39",
+      "Lam.5.9",
+      "Ezek.3.19",
+      "Ezek.3.21",
+      "Ezek.13.18",
+      "Ezek.14.14",
+      "Ezek.17.17",
+      "Ezek.18.4",
+      "Ezek.18.27",
+      "Ezek.22.27",
+      "Ezek.27.13",
+      "Ezek.32.10",
+      "Ezek.32.24",
+      "Ezek.32.25",
+      "Ezek.32.26",
+      "Ezek.32.27",
+      "Ezek.33.5",
+      "Ezek.33.6",
+      "Ezek.33.9",
+      "Ezek.47.9",
+      "Amos.2.14",
+      "Amos.2.15",
+      "Jonah.1.14",
+      "Jonah.2.7",
+      "Hab.2.10",
+      "John.5.39",
+      "Acts.8.33",
+      "Acts.15.26",
+      "Acts.20.10",
+      "Acts.20.24",
+      "Acts.27.10",
+      "Acts.27.22",
+      "Rom.8.10",
+      "Rom.11.15",
+      "Rom.16.4",
+      "2Cor.5.4",
+      "Phil.2.30",
+      "1Thess.2.8",
+      "1Tim.2.2",
+      "2Tim.2.4",
+      "Heb.7.3",
+      "Heb.7.16",
+      "1John.1.1",
+      "1John.1.2",
+      "1John.5.16",
+      "Rev.8.9",
+      "Rev.16.3"
+     ],
+     "eg": [
+      {
+       "id": "Gen.8.21",
+       "ref": "Genesis 8:21",
+       "text": "When the LORD smelled the pleasing aroma, He said in His heart, “Never again will I curse the ground because of man, even though every inclination of his heart is evil from his youth. And never again will I destroy all living creatures as I have done.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      },
+      {
+       "id": "John.1.4",
+       "ref": "John 1:4",
+       "text": "In Him was life, and that life was the light of men.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.18",
+       "ref": "Romans 5:18",
+       "text": "So then, just as one trespass brought condemnation for all men, so also one act of righteousness brought justification and life for all men.",
+       "words": [
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Gen.9.3",
+       "ref": "Genesis 9:3",
+       "text": "Everything that lives and moves will be food for you; just as I gave you the green plants, I now give you all things.",
+       "words": [
+        {
+         "key": "h2416",
+         "lemma": "חַי"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 2,
+    "verses": [
+     "1Kgs.3.11",
+     "2Chr.1.11"
+    ]
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 375,
+   "rows": [
+    {
+     "label": "God makes alive, revives, gives life: “I put to death and I bring to life”; “revive me”, “give me life”, “He will revive us”; “made alive with Christ”; “the Spirit gives life”",
+     "note": "The Greek ζῳοποιέω is said of the dead raised (Rom 4:17; 8:11; 1 Cor 15:22) and of the living made alive (Eph 2:5; Col 2:13; John 6:63). Where readers part on “all” in 1 Cor 15:22 (“in Christ all will be made alive”), and on whether Eph 2:5 and Col 2:13 speak of a new life now or only of the resurrection, the page takes no side. The Old Testament verses (Deut 32:39; 1 Sam 2:6; Ps 119; Ps 85:6; Isa 57:15) say the LORD brings to life and revives, in the same Hebrew verb חָיָה that the Greek Old Testament renders by ζῳοποιέω and ζάω; the page lists them together as the text has them and does not read the New Testament's “made alive” back into them. Hos 6:2 (“After two days He will revive us; on the third day He will raise us up”) is Israel's word about the LORD; readers take it of Israel's restoration, of the resurrection, or of both, and the page lists it as written and takes no side.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "the_resurrection",
+       "name": "the resurrection",
+       "type": "title",
+       "missing": false
+      },
+      {
+       "id": "preserve_life",
+       "name": "save lives",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 34,
+     "verses": [
+      "Deut.32.39",
+      "Ps.119.25",
+      "John.5.21",
+      "Eph.2.5",
+      "1Sam.2.6",
+      "2Kgs.5.7",
+      "Neh.9.6",
+      "Job.33.4",
+      "Ps.71.20",
+      "Ps.80.18",
+      "Ps.85.6",
+      "Ps.119.37",
+      "Ps.119.40",
+      "Ps.119.50",
+      "Ps.119.88",
+      "Ps.119.93",
+      "Ps.119.107",
+      "Ps.119.149",
+      "Ps.119.154",
+      "Ps.119.156",
+      "Ps.119.159",
+      "Ps.143.11",
+      "Hab.3.2",
+      "Hos.6.2",
+      "Isa.57.15",
+      "John.6.63",
+      "Rom.4.17",
+      "Rom.8.11",
+      "1Cor.15.22",
+      "1Cor.15.45",
+      "2Cor.3.6",
+      "1Tim.6.13",
+      "1Pet.3.18",
+      "Col.2.13"
+     ],
+     "eg": [
+      {
+       "id": "Deut.32.39",
+       "ref": "Deuteronomy 32:39",
+       "text": "See now that I am He; there is no God besides Me. I bring death and I give life; I wound and I heal, and there is no one who can deliver from My hand.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.119.25",
+       "ref": "Psalms 119:25",
+       "text": "My soul cleaves to the dust; revive me according to Your word.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "John.5.21",
+       "ref": "John 5:21",
+       "text": "For just as the Father raises the dead and gives them life, so also the Son gives life to whom He wishes.",
+       "words": [
+        {
+         "key": "g2227",
+         "lemma": "ζῳοποιέω"
+        }
+       ]
+      },
+      {
+       "id": "Eph.2.5",
+       "ref": "Ephesians 2:5",
+       "text": "made us alive with Christ even when we were dead in our trespasses. It is by grace you have been saved!",
+       "words": [
+        {
+         "key": "g4806",
+         "lemma": "συζωοποιέω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Live by the commandments: “the man who does these things will live by them”, “Do this and you will live”, “live by every word”",
+     "note": "In Lev 18:5, Deut 4:1, 5:33, 8:1 and 30:16 the commandments are given that Israel may live. Paul quotes Lev 18:5 in Gal 3:12, just after Hab 2:4 in 3:11, and in Rom 10:5. Set beside the next row, as Gal 3:11-12 sets them. Where Christian traditions part on how living by the commandments and living by faith stand to each other (the law as a way of life, as a guide, as a schoolmaster to Christ, as ended), the page takes no side.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Lev.18.5",
+      "Deut.8.3",
+      "Luke.10.28",
+      "Gal.3.12",
+      "Deut.4.1",
+      "Deut.5.33",
+      "Deut.8.1",
+      "Deut.30.16",
+      "Neh.9.29",
+      "Prov.4.4",
+      "Prov.7.2",
+      "Ezek.20.11",
+      "Ezek.20.13",
+      "Ezek.20.21",
+      "Matt.4.4",
+      "Luke.4.4",
+      "Rom.10.5"
+     ],
+     "eg": [
+      {
+       "id": "Lev.18.5",
+       "ref": "Leviticus 18:5",
+       "text": "Keep My statutes and My judgments, for the man who does these things will live by them. I am the LORD.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Deut.8.3",
+       "ref": "Deuteronomy 8:3",
+       "text": "He humbled you, and in your hunger He gave you manna to eat, which neither you nor your fathers had known, so that you might understand that man does not live on bread alone, but on every word that comes from the mouth of the LORD.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.10.28",
+       "ref": "Luke 10:28",
+       "text": "“You have answered correctly,” Jesus said. “Do this and you will live.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.12",
+       "ref": "Galatians 3:12",
+       "text": "The law, however, is not based on faith; on the contrary, “The man who does these things will live by them.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Live by faith: “the righteous will live by faith”",
+     "note": "Set beside the row above. The Berean prints Hab 2:4 as “the righteous will live by faith” (the Hebrew word is faithfulness, or steadfastness), and the New Testament verses quote it as “by faith”; Heb 10:38 reads “My righteous one will live by faith”. The page takes no side on how the two rows relate.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 5,
+     "verses": [
+      "Hab.2.4",
+      "Rom.1.17",
+      "Gal.3.11",
+      "Gal.2.20",
+      "Heb.10.38"
+     ],
+     "eg": [
+      {
+       "id": "Hab.2.4",
+       "ref": "Habakkuk 2:4",
+       "text": "Look at the proud one; his soul is not upright-but the righteous will live by faith-",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.17",
+       "ref": "Romans 1:17",
+       "text": "For the gospel reveals the righteousness of God that comes by faith from start to finish, just as it is written: “The righteous will live by faith.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.3.11",
+       "ref": "Galatians 3:11",
+       "text": "Now it is clear that no one is justified before God by the law, because, “The righteous will live by faith.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.20",
+       "ref": "Galatians 2:20",
+       "text": "I have been crucified with Christ, and I no longer live, but Christ lives in me. The life I live in the body, I live by faith in the Son of God, who loved me and gave Himself up for me.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Look and live”, “seek Me and live”, “turn and live”, “repent and live”",
+     "note": null,
+     "doors": [
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Num.21.8",
+      "Ezek.18.32",
+      "Amos.5.4",
+      "Isa.55.3",
+      "Num.21.9",
+      "Ezek.18.9",
+      "Ezek.18.17",
+      "Ezek.18.19",
+      "Ezek.18.21",
+      "Ezek.18.22",
+      "Ezek.18.23",
+      "Ezek.18.28",
+      "Ezek.33.11",
+      "Ezek.33.15",
+      "Ezek.33.19",
+      "Amos.5.6",
+      "Amos.5.14"
+     ],
+     "eg": [
+      {
+       "id": "Num.21.8",
+       "ref": "Numbers 21:8",
+       "text": "Then the LORD said to Moses, “Make a fiery serpent and mount it on a pole. When anyone who is bitten looks at it, he will live.”",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.18.32",
+       "ref": "Ezekiel 18:32",
+       "text": "For I take no pleasure in anyone's death, declares the Lord GOD. So repent and live!",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Amos.5.4",
+       "ref": "Amos 5:4",
+       "text": "For this is what the LORD says to the house of Israel: “Seek Me and live!",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.55.3",
+       "ref": "Isaiah 55:3",
+       "text": "Incline your ear and come to Me; listen, so that your soul may live. I will make with you an everlasting covenant-My loving devotion promised to David.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The dead live again: “will live”, “came to life”, “was dead and has come to life”, “alive”",
+     "note": "Ezek 37 is the valley of dry bones, which the chapter itself interprets (37:11-14: “these bones are the whole house of Israel”); readers take it of Israel's return, of the resurrection, or of both, and the page takes no side. Rev 20:4-5 says of those who reigned with Christ “they came to life” and of the rest that they “did not come back to life until the thousand years were complete”; readers part on whether that is a resurrection of the body, of the soul, or a figure, and on the thousand years, and the page takes no side. Job 14:14 is a question (“When a man dies, will he live again?”) and is kept as one. Rev 13:14 speaks of the beast “that had been wounded by the sword and yet had lived” (the same Greek verb, ἔζησεν, as in Rev 2:8), and the page says no more. Luke 15:24 and 15:32 are a father's words of his son in a parable (“was dead and is alive again”).",
+     "doors": [
+      {
+       "id": "the_resurrection",
+       "name": "the resurrection",
+       "type": "title",
+       "missing": false
+      },
+      {
+       "id": "resurrection_of_christ",
+       "name": "the resurrection of Christ",
+       "type": "text",
+       "missing": false
+      },
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 30,
+     "verses": [
+      "1Kgs.17.22",
+      "Ezek.37.5",
+      "John.11.25",
+      "Rev.1.18",
+      "2Kgs.13.21",
+      "Job.14.14",
+      "Isa.26.19",
+      "Ezek.37.3",
+      "Ezek.37.6",
+      "Ezek.37.9",
+      "Ezek.37.10",
+      "Ezek.37.14",
+      "Matt.9.18",
+      "Mark.5.23",
+      "Luke.15.24",
+      "Luke.15.32",
+      "Luke.24.5",
+      "Luke.24.23",
+      "John.5.25",
+      "John.11.26",
+      "Acts.1.3",
+      "Acts.9.41",
+      "Acts.20.12",
+      "Acts.25.19",
+      "Rom.14.9",
+      "2Cor.13.4",
+      "Rev.2.8",
+      "Rev.13.14",
+      "Rev.20.4",
+      "Rev.20.5"
+     ],
+     "eg": [
+      {
+       "id": "1Kgs.17.22",
+       "ref": "1 Kings 17:22",
+       "text": "And the LORD listened to the voice of Elijah, and the child's life returned to him, and he lived.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        },
+        {
+         "key": "h5315",
+         "lemma": "נֶפֶשׁ"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.37.5",
+       "ref": "Ezekiel 37:5",
+       "text": "This is what the Lord GOD says to these bones: I will cause breath to enter you, and you will come to life.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "John.11.25",
+       "ref": "John 11:25",
+       "text": "Jesus said to her, “I am the resurrection and the life. Whoever believes in Me will live, even though he dies.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        },
+        {
+         "key": "g2222",
+         "lemma": "ζωή"
+        }
+       ]
+      },
+      {
+       "id": "Rev.1.18",
+       "ref": "Revelation 1:18",
+       "text": "the Living One. I was dead, and behold, now I am alive forever and ever! And I hold the keys of Death and of Hades.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "To live to God, to righteousness, for the Lord, with Christ, by the Spirit: “because I live, you also will live”",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      },
+      {
+       "id": "holy_ghost",
+       "name": "the Holy Spirit",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "Rom.6.11",
+      "Gal.2.19",
+      "John.14.19",
+      "1Thess.5.10",
+      "John.6.57",
+      "John.6.58",
+      "Rom.6.8",
+      "Rom.6.10",
+      "Rom.8.13",
+      "Rom.14.7",
+      "Rom.14.8",
+      "2Cor.5.15",
+      "Gal.5.25",
+      "Phil.1.21",
+      "Phil.1.22",
+      "2Tim.2.11",
+      "2Tim.3.12",
+      "Titus.2.12",
+      "Heb.12.9",
+      "1Pet.2.24",
+      "1Pet.4.2",
+      "1Pet.4.6",
+      "1John.4.9"
+     ],
+     "eg": [
+      {
+       "id": "Rom.6.11",
+       "ref": "Romans 6:11",
+       "text": "So you too must count yourselves dead to sin, but alive to God in Christ Jesus.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "Gal.2.19",
+       "ref": "Galatians 2:19",
+       "text": "For through the law I died to the law so that I might live to God.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "John.14.19",
+       "ref": "John 14:19",
+       "text": "In a little while the world will see Me no more, but you will see Me. Because I live, you also will live.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.5.10",
+       "ref": "1 Thessalonians 5:10",
+       "text": "He died for us so that, whether we are awake or asleep, we may live together with Him.",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The years one lived: “lived 140 years”, “was 90 years old”",
+     "note": null,
+     "doors": [
+      {
+       "id": "length_of_days",
+       "name": "long life",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 44,
+     "verses": [
+      "Gen.5.5",
+      "Gen.47.28",
+      "Job.42.16",
+      "Gen.5.3",
+      "Gen.5.6",
+      "Gen.5.7",
+      "Gen.5.9",
+      "Gen.5.10",
+      "Gen.5.12",
+      "Gen.5.13",
+      "Gen.5.15",
+      "Gen.5.16",
+      "Gen.5.18",
+      "Gen.5.19",
+      "Gen.5.21",
+      "Gen.5.25",
+      "Gen.5.26",
+      "Gen.5.28",
+      "Gen.5.30",
+      "Gen.9.28",
+      "Gen.11.11",
+      "Gen.11.12",
+      "Gen.11.13",
+      "Gen.11.14",
+      "Gen.11.15",
+      "Gen.11.16",
+      "Gen.11.17",
+      "Gen.11.18",
+      "Gen.11.19",
+      "Gen.11.20",
+      "Gen.11.21",
+      "Gen.11.22",
+      "Gen.11.23",
+      "Gen.11.24",
+      "Gen.11.25",
+      "Gen.11.26",
+      "Gen.25.7",
+      "Gen.50.22",
+      "Josh.14.10",
+      "2Kgs.14.17",
+      "2Chr.25.25",
+      "Eccl.6.3",
+      "Eccl.6.6",
+      "Eccl.11.8"
+     ],
+     "eg": [
+      {
+       "id": "Gen.5.5",
+       "ref": "Genesis 5:5",
+       "text": "So Adam lived a total of 930 years, and then he died.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Gen.47.28",
+       "ref": "Genesis 47:28",
+       "text": "And Jacob lived in the land of Egypt seventeen years, and the length of his life was 147 years.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Job.42.16",
+       "ref": "Job 42:16",
+       "text": "After this, Job lived 140 years and saw his children and their children to the fourth generation.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Gen.5.3",
+       "ref": "Genesis 5:3",
+       "text": "When Adam was 130 years old, he had a son in his own likeness, after his own image; and he named him Seth.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Verses with the word “living” are listed in the noun rows. Among them 'live' and 'let live' in the narratives (Gen 12:12; 20:7; 42:2; 45:7; 47:19; 50:20; Exod 1:17; Josh 6:25), Jer 27:17 and 38:20 (“serve the king of Babylon and live”; “obey ... and you will live”), Deut 30:6 (“so that you may live”), Heb 7:25 (“He always lives to intercede”) and 1 Cor 15:36 (the seed that is not made alive unless it dies).",
+     "doors": [],
+     "n": 205,
+     "verses": [
+      "Gen.3.22",
+      "Matt.16.16",
+      "Rom.6.2",
+      "Gen.6.19",
+      "Gen.6.20",
+      "Gen.7.3",
+      "Gen.12.12",
+      "Gen.12.13",
+      "Gen.17.18",
+      "Gen.19.32",
+      "Gen.19.34",
+      "Gen.20.7",
+      "Gen.27.40",
+      "Gen.31.32",
+      "Gen.42.2",
+      "Gen.42.18",
+      "Gen.43.8",
+      "Gen.45.7",
+      "Gen.45.27",
+      "Gen.47.19",
+      "Gen.47.25",
+      "Gen.50.20",
+      "Exod.1.16",
+      "Exod.1.17",
+      "Exod.1.18",
+      "Exod.1.22",
+      "Exod.19.13",
+      "Exod.22.18",
+      "Exod.33.20",
+      "Lev.25.35",
+      "Lev.25.36",
+      "Num.4.19",
+      "Num.14.38",
+      "Num.22.33",
+      "Num.24.23",
+      "Num.31.15",
+      "Num.31.18",
+      "Deut.4.33",
+      "Deut.4.42",
+      "Deut.5.24",
+      "Deut.5.26",
+      "Deut.6.24",
+      "Deut.16.20",
+      "Deut.19.4",
+      "Deut.19.5",
+      "Deut.20.16",
+      "Deut.30.19",
+      "Deut.33.6",
+      "Josh.2.13",
+      "Josh.6.17",
+      "Josh.6.25",
+      "Josh.9.15",
+      "Josh.9.20",
+      "Josh.9.21",
+      "Judg.8.19",
+      "Judg.15.19",
+      "Judg.21.14",
+      "1Sam.10.24",
+      "1Sam.20.31",
+      "1Sam.27.9",
+      "1Sam.27.11",
+      "2Sam.1.10",
+      "2Sam.8.2",
+      "2Sam.12.22",
+      "2Sam.16.16",
+      "1Kgs.1.25",
+      "1Kgs.1.31",
+      "1Kgs.1.34",
+      "1Kgs.1.39",
+      "1Kgs.18.5",
+      "1Kgs.20.31",
+      "1Kgs.20.32",
+      "2Kgs.4.7",
+      "2Kgs.7.4",
+      "2Kgs.8.1",
+      "2Kgs.8.5",
+      "2Kgs.10.19",
+      "2Kgs.11.12",
+      "2Kgs.18.32",
+      "1Chr.11.8",
+      "2Chr.23.11",
+      "Neh.2.3",
+      "Neh.4.2",
+      "Neh.5.2",
+      "Esth.4.11",
+      "Job.7.16",
+      "Job.21.7",
+      "Job.36.6",
+      "Ps.22.26",
+      "Ps.22.29",
+      "Ps.30.3",
+      "Ps.33.19",
+      "Ps.41.2",
+      "Ps.49.9",
+      "Ps.69.32",
+      "Ps.72.15",
+      "Ps.89.48",
+      "Ps.118.17",
+      "Ps.119.17",
+      "Ps.119.77",
+      "Ps.119.116",
+      "Ps.119.144",
+      "Ps.119.175",
+      "Ps.138.7",
+      "Prov.9.6",
+      "Prov.15.27",
+      "Eccl.7.12",
+      "Isa.7.21",
+      "Isa.26.14",
+      "Isa.38.16",
+      "Jer.21.9",
+      "Jer.27.12",
+      "Jer.27.17",
+      "Jer.35.7",
+      "Jer.38.2",
+      "Jer.38.17",
+      "Jer.38.20",
+      "Jer.49.11",
+      "Lam.4.20",
+      "Ezek.3.18",
+      "Ezek.3.21",
+      "Ezek.13.18",
+      "Ezek.13.19",
+      "Ezek.13.22",
+      "Ezek.16.6",
+      "Ezek.18.13",
+      "Ezek.18.24",
+      "Ezek.20.25",
+      "Ezek.33.10",
+      "Ezek.33.12",
+      "Ezek.33.16",
+      "Ezek.47.9",
+      "Zech.1.5",
+      "Zech.10.9",
+      "Zech.13.3",
+      "Matt.26.63",
+      "Matt.27.63",
+      "Mark.16.11",
+      "Luke.2.36",
+      "Luke.15.13",
+      "Luke.17.33",
+      "Luke.20.38",
+      "John.4.10",
+      "John.4.11",
+      "John.4.50",
+      "John.4.51",
+      "John.4.53",
+      "John.6.51",
+      "John.7.38",
+      "Acts.7.19",
+      "Acts.7.38",
+      "Acts.14.15",
+      "Acts.17.28",
+      "Acts.22.22",
+      "Acts.25.24",
+      "Acts.26.5",
+      "Acts.28.4",
+      "Rom.6.13",
+      "Rom.7.1",
+      "Rom.7.2",
+      "Rom.7.3",
+      "Rom.7.9",
+      "Rom.8.12",
+      "Rom.9.26",
+      "Rom.12.1",
+      "Rom.14.11",
+      "1Cor.7.39",
+      "1Cor.9.14",
+      "1Cor.15.36",
+      "2Cor.1.8",
+      "2Cor.3.3",
+      "2Cor.4.11",
+      "2Cor.6.9",
+      "2Cor.6.16",
+      "Gal.2.14",
+      "Gal.3.21",
+      "Col.2.20",
+      "Col.3.7",
+      "1Thess.1.9",
+      "1Thess.3.8",
+      "1Thess.4.15",
+      "1Thess.4.17",
+      "1Tim.3.15",
+      "1Tim.4.10",
+      "1Tim.5.6",
+      "Heb.4.12",
+      "Heb.7.8",
+      "Heb.7.25",
+      "Heb.9.14",
+      "Heb.9.17",
+      "Heb.10.20",
+      "Heb.10.31",
+      "Heb.12.22",
+      "Jas.4.15",
+      "1Pet.1.3",
+      "1Pet.1.23",
+      "1Pet.2.4",
+      "1Pet.2.5",
+      "Rev.3.1",
+      "Rev.4.9",
+      "Rev.4.10",
+      "Rev.7.2",
+      "Rev.10.6",
+      "Rev.15.7",
+      "Rev.19.20"
+     ],
+     "eg": [
+      {
+       "id": "Gen.3.22",
+       "ref": "Genesis 3:22",
+       "text": "Then the LORD God said, “Behold, the man has become like one of Us, knowing good and evil. And now, lest he reach out his hand and take also from the tree of life, and eat, and live forever...”",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      },
+      {
+       "id": "Matt.16.16",
+       "ref": "Matthew 16:16",
+       "text": "Simon Peter answered, “You are the Christ, the Son of the living God.”",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.6.2",
+       "ref": "Romans 6:2",
+       "text": "Certainly not! How can we who died to sin live in it any longer?",
+       "words": [
+        {
+         "key": "g2198",
+         "lemma": "ζάω"
+        }
+       ]
+      },
+      {
+       "id": "Gen.6.19",
+       "ref": "Genesis 6:19",
+       "text": "And you are to bring two of every living creature into the ark-male and female-to keep them alive with you.",
+       "words": [
+        {
+         "key": "h2421",
+         "lemma": "חָיָה"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “life”, “living”, “alive”",
+  "words": [
+   {
+    "key": "h3117",
+    "lemma": "יוֹם",
+    "translit": "yom",
+    "gloss": "day: today",
+    "lang": "Hebrew",
+    "n": 17,
+    "verses": [
+     "1Kgs.3.11",
+     "2Chr.1.11",
+     "Job.12.12",
+     "Ps.91.16",
+     "Gen.43.9",
+     "Gen.44.32",
+     "1Sam.1.28",
+     "1Kgs.11.12",
+     "2Kgs.20.6",
+     "Job.38.12",
+     "Ps.61.6",
+     "Ps.102.24",
+     "Prov.3.16",
+     "Prov.10.27",
+     "Eccl.7.15",
+     "Isa.38.5",
+     "Isa.38.10"
+    ],
+    "note": "יוֹם means day; the Berean prints “long life” for “length of days” (1 Kgs 3:11; 2 Chr 1:11; Job 12:12; Ps 91:16). It is a different word from חַי, and the page does not make the two one.",
+    "eg": [
+     {
+      "id": "1Kgs.3.11",
+      "ref": "1 Kings 3:11",
+      "text": "So God said to him, “Since you have asked for this instead of requesting long life or wealth for yourself or death for your enemies-but you have asked for discernment to administer justice-"
+     },
+     {
+      "id": "2Chr.1.11",
+      "ref": "2 Chronicles 1:11",
+      "text": "God said to Solomon, “Since this was in your heart instead of requesting riches or wealth or honor for yourself or death for your enemies-and since you have not even requested long life but have asked for wisdom and knowledge to govern My people over whom I have made you king-"
+     }
+    ]
+   },
+   {
+    "key": "g2226",
+    "lemma": "ζῷον",
+    "translit": "zōon",
+    "gloss": "living thing",
+    "lang": "Greek",
+    "n": 17,
+    "verses": [
+     "Rev.4.6",
+     "Rev.4.8",
+     "Rev.5.14",
+     "Rev.4.7",
+     "Rev.4.9",
+     "Rev.5.6",
+     "Rev.5.8",
+     "Rev.5.11",
+     "Rev.6.1",
+     "Rev.6.3",
+     "Rev.6.5",
+     "Rev.6.6",
+     "Rev.6.7",
+     "Rev.7.11",
+     "Rev.14.3",
+     "Rev.15.7",
+     "Rev.19.4"
+    ],
+    "note": "ζῷον, “living creature”, is a different word from the Hebrew חַי that the Berean also prints “living creatures” in Ezek 1:5 and 10:15; the four living creatures of Revelation 4 and 5 and those of Ezekiel are set side by side in the lists, and the page does not say the words, or the figures, are one.",
+    "eg": [
+     {
+      "id": "Rev.4.6",
+      "ref": "Revelation 4:6",
+      "text": "And before the throne was something like a sea of glass, as clear as crystal. In the center, around the throne, were four living creatures, covered with eyes in front and back."
+     },
+     {
+      "id": "Rev.4.8",
+      "ref": "Revelation 4:8",
+      "text": "And each of the four living creatures had six wings and was covered with eyes all around and within. Day and night they never stop saying: “Holy, Holy, Holy, is the Lord God Almighty, who was and is and is to come!”"
+     }
+    ]
+   },
+   {
+    "key": "g391",
+    "lemma": "ἀναστροφή",
+    "translit": "anastrophē",
+    "gloss": "behaviour",
+    "lang": "Greek",
+    "n": 5,
+    "verses": [
+     "Gal.1.13",
+     "Eph.4.22",
+     "Heb.13.7",
+     "1Pet.1.18",
+     "1Pet.3.16"
+    ],
+    "eg": [
+     {
+      "id": "Gal.1.13",
+      "ref": "Galatians 1:13",
+      "text": "For you have heard of my former way of life in Judaism, how severely I persecuted the church of God and tried to destroy it."
+     },
+     {
+      "id": "Eph.4.22",
+      "ref": "Ephesians 4:22",
+      "text": "to put off your former way of life, your old self, which is being corrupted by its deceitful desires;"
+     }
+    ]
+   },
+   {
+    "key": "g982",
+    "lemma": "βιωτικός",
+    "translit": "biōtikos",
+    "gloss": "of this life",
+    "lang": "Greek",
+    "n": 3,
+    "verses": [
+     "Luke.21.34",
+     "1Cor.6.3",
+     "1Cor.6.4"
+    ],
+    "eg": [
+     {
+      "id": "Luke.21.34",
+      "ref": "Luke 21:34",
+      "text": "But watch yourselves, or your hearts will be weighed down by dissipation, drunkenness, and the worries of life-and that day will spring upon you suddenly like a snare."
+     },
+     {
+      "id": "1Cor.6.3",
+      "ref": "1 Corinthians 6:3",
+      "text": "Do you not know that we will judge angels? How much more the things of this life!"
+     }
+    ]
+   },
+   {
+    "key": "h3351",
+    "lemma": "יְקוּם",
+    "translit": "ye.qum",
+    "gloss": "existence",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Gen.7.4",
+     "Gen.7.23",
+     "Deut.11.6"
+    ],
+    "eg": [
+     {
+      "id": "Gen.7.4",
+      "ref": "Genesis 7:4",
+      "text": "For seven days from now I will send rain on the earth for forty days and forty nights, and I will wipe from the face of the earth every living thing I have made.”"
+     },
+     {
+      "id": "Gen.7.23",
+      "ref": "Genesis 7:23",
+      "text": "And every living thing on the face of the earth was destroyed-man and livestock, crawling creatures and birds of the air; they were blotted out from the earth, and only Noah and those with him in the ark remained."
+     }
+    ]
+   },
+   {
+    "key": "h4241",
+    "lemma": "מִחְיָה",
+    "translit": "mich.yah",
+    "gloss": "recovery",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Gen.45.5",
+     "Ezra.9.9"
+    ],
+    "eg": [
+     {
+      "id": "Gen.45.5",
+      "ref": "Genesis 45:5",
+      "text": "And now, do not be distressed or angry with yourselves that you sold me into this place, because it was to save lives that God sent me before you."
+     },
+     {
+      "id": "Ezra.9.9",
+      "ref": "Ezra 9:9",
+      "text": "Though we are slaves, our God has not forsaken us in our bondage, but He has extended to us grace in the sight of the kings of Persia, giving us new life to rebuild the house of our God and repair its ruins, and giving us a wall of protection in Judah and Jerusalem."
+     }
+    ]
+   },
+   {
+    "key": "g1514",
+    "lemma": "εἰρηνεύω",
+    "translit": "eirēneuō",
+    "gloss": "be at peace",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Rom.12.18"
+    ],
+    "eg": [
+     {
+      "id": "Rom.12.18",
+      "ref": "Romans 12:18",
+      "text": "If it is possible on your part, live at peace with everyone."
+     }
+    ]
+   },
+   {
+    "key": "g1236",
+    "lemma": "διάγω",
+    "translit": "diagō",
+    "gloss": "to live",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Titus.3.3"
+    ],
+    "eg": [
+     {
+      "id": "Titus.3.3",
+      "ref": "Titus 3:3",
+      "text": "For at one time we too were foolish, disobedient, misled, and enslaved to all sorts of desires and pleasures-living in malice and envy, being hated and hating one another."
+     }
+    ]
+   },
+   {
+    "key": "g4684",
+    "lemma": "σπαταλάω",
+    "translit": "spatalaō",
+    "gloss": "to indulge",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "1Tim.5.6"
+    ],
+    "eg": [
+     {
+      "id": "1Tim.5.6",
+      "ref": "1 Timothy 5:6",
+      "text": "But she who lives for pleasure is dead even while she is still alive."
+     }
+    ]
+   },
+   {
+    "key": "h2424",
+    "lemma": "חַיּוּת",
+    "translit": "chay.yut",
+    "gloss": "living",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "2Sam.20.3"
+    ],
+    "eg": [
+     {
+      "id": "2Sam.20.3",
+      "ref": "2 Samuel 20:3",
+      "text": "When David returned to his palace in Jerusalem, he took the ten concubines he had left to take care of the palace, and he placed them in a house under guard. He provided for them, but he no longer slept with them. They were confined until the day of their death, living as widows."
+     }
+    ]
+   },
+   {
+    "key": "g981",
+    "lemma": "βίωσις",
+    "translit": "biōsis",
+    "gloss": "lifestyle",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Acts.26.4"
+    ],
+    "eg": [
+     {
+      "id": "Acts.26.4",
+      "ref": "Acts 26:4",
+      "text": "Surely all the Jews know how I have lived from my earliest childhood among my own people, and also in Jerusalem."
+     }
+    ]
+   },
+   {
+    "key": "h5396",
+    "lemma": "נִשְׁמָה",
+    "translit": "nish.ma",
+    "gloss": "breath",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.5.23"
+    ],
+    "eg": [
+     {
+      "id": "Dan.5.23",
+      "ref": "Daniel 5:23",
+      "text": "Instead, you have exalted yourself against the Lord of heaven. The vessels from His house were brought to you, and as you drank wine from them with your nobles, wives, and concubines, you praised your gods of silver and gold, bronze and iron, wood and stone, which cannot see or hear or understand. But you have failed to glorify the God who holds in His hand your very breath and all your ways."
+     }
+    ]
+   },
+   {
+    "key": "g326",
+    "lemma": "ἀναζάω",
+    "translit": "anazaō",
+    "gloss": "to revive",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.15.24"
+    ],
+    "eg": [
+     {
+      "id": "Luke.15.24",
+      "ref": "Luke 15:24",
+      "text": "For this son of mine was dead and is alive again! He was lost and is found!' So they began to celebrate."
+     }
+    ]
+   }
+  ]
+ }
+}

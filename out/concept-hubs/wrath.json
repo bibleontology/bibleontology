@@ -1,0 +1,3358 @@
+{
+ "id": "wrath",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "noun",
+ "words": [
+  {
+   "key": "h639",
+   "lemma": "אַף",
+   "form": "noun",
+   "translit": "aph",
+   "gloss": "face",
+   "lang": "Hebrew",
+   "uses": 217,
+   "other_sense": 52
+  },
+  {
+   "key": "g2372",
+   "lemma": "θυμός",
+   "form": "noun",
+   "translit": "thumos",
+   "gloss": "wrath",
+   "lang": "Greek",
+   "uses": 18,
+   "other_sense": 0
+  },
+  {
+   "key": "g3709",
+   "lemma": "ὀργή",
+   "form": "noun",
+   "translit": "orgē",
+   "gloss": "wrath",
+   "lang": "Greek",
+   "uses": 34,
+   "other_sense": 0
+  },
+  {
+   "key": "h2534",
+   "lemma": "חֵמָה",
+   "form": "noun",
+   "translit": "che.mah",
+   "gloss": "rage",
+   "lang": "Hebrew",
+   "uses": 109,
+   "other_sense": 6
+  },
+  {
+   "key": "h2740",
+   "lemma": "חָרוֹן",
+   "form": "noun",
+   "translit": "cha.ron",
+   "gloss": "burning anger",
+   "lang": "Hebrew",
+   "uses": 39,
+   "other_sense": 1
+  },
+  {
+   "key": "h2195",
+   "lemma": "זַעַם",
+   "form": "noun",
+   "translit": "za.am",
+   "gloss": "indignation",
+   "lang": "Hebrew",
+   "uses": 21,
+   "other_sense": 1
+  },
+  {
+   "key": "h7110",
+   "lemma": "קֶצֶף",
+   "form": "noun",
+   "translit": "qeṣep̄",
+   "gloss": "wrath",
+   "lang": "Hebrew",
+   "uses": 28,
+   "other_sense": 1
+  },
+  {
+   "key": "h5678",
+   "lemma": "עֶבְרָה",
+   "form": "noun",
+   "translit": "ev.rah",
+   "gloss": "fury",
+   "lang": "Hebrew",
+   "uses": 30,
+   "other_sense": 4
+  },
+  {
+   "key": "h2528",
+   "lemma": "חֲמָה",
+   "form": "noun",
+   "translit": "che.ma",
+   "gloss": "rage",
+   "lang": "Hebrew",
+   "uses": 2,
+   "other_sense": 0
+  },
+  {
+   "key": "h2734",
+   "lemma": "חָרָה",
+   "form": "verb",
+   "translit": "cha.rah",
+   "gloss": "to be incensed",
+   "lang": "Hebrew",
+   "uses": 61,
+   "other_sense": 30
+  },
+  {
+   "key": "h599",
+   "lemma": "אָנַף",
+   "form": "verb",
+   "translit": "a.naph",
+   "gloss": "be angry",
+   "lang": "Hebrew",
+   "uses": 14,
+   "other_sense": 0
+  },
+  {
+   "key": "h7107",
+   "lemma": "קָצַף",
+   "form": "verb",
+   "translit": "qa.tsaph",
+   "gloss": "be angry",
+   "lang": "Hebrew",
+   "uses": 32,
+   "other_sense": 0
+  },
+  {
+   "key": "h2194",
+   "lemma": "זָעַם",
+   "form": "verb",
+   "translit": "za.am",
+   "gloss": "be indignant",
+   "lang": "Hebrew",
+   "uses": 7,
+   "other_sense": 4
+  },
+  {
+   "key": "g3710",
+   "lemma": "ὀργίζω",
+   "form": "verb",
+   "translit": "orgizō",
+   "gloss": "to anger",
+   "lang": "Greek",
+   "uses": 8,
+   "other_sense": 0
+  },
+  {
+   "key": "g2373",
+   "lemma": "θυμόω",
+   "form": "verb",
+   "translit": "thumoō",
+   "gloss": "to anger",
+   "lang": "Greek",
+   "uses": 1,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "noun": "What the text says of wrath and anger",
+  "verb": "Who is angry, and with whom"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "anger",
+   "name": "anger",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "judgment",
+   "name": "judgment",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "mercy",
+   "name": "mercy",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "idolatry",
+   "name": "idolatry",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "salvation",
+   "name": "salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "atonement",
+   "name": "reconciliation",
+   "type": "text",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "justice",
+   "name": "justice",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "the_wicked",
+   "name": "the wicked",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "anger",
+   "name": "anger",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "fury",
+   "name": "fury",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "wroth",
+   "name": "angry",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_judgment_r5",
+   "name": "The LORD is slow to anger",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_mercy_restoration_r1",
+   "name": "Compassionate and gracious, slow to anger",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "if_god_will_not_withdraw_his_anger",
+   "name": "God does not restrain His anger",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Rom.1.18",
+   "ref": "Romans 1:18",
+   "text": "The wrath of God is being revealed from heaven against all the godlessness and wickedness of men who suppress the truth by their wickedness."
+  },
+  {
+   "id": "Exod.34.6",
+   "ref": "Exodus 34:6",
+   "text": "Then the LORD passed in front of Moses and called out: “The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion and faithfulness,"
+  },
+  {
+   "id": "Ps.30.5",
+   "ref": "Psalms 30:5",
+   "text": "For His anger is fleeting, but His favor lasts a lifetime. Weeping may stay the night, but joy comes in the morning."
+  },
+  {
+   "id": "Eph.2.3",
+   "ref": "Ephesians 2:3",
+   "text": "All of us also lived among them at one time, fulfilling the cravings of our flesh and indulging its desires and thoughts. Like the rest, we were by nature children of wrath."
+  },
+  {
+   "id": "Jas.1.20",
+   "ref": "James 1:20",
+   "text": "for man's anger does not bring about the righteousness that God desires."
+  },
+  {
+   "id": "Eph.4.26",
+   "ref": "Ephesians 4:26",
+   "text": "“Be angry, yet do not sin.” Do not let the sun set upon your anger,"
+  },
+  {
+   "id": "Prov.15.1",
+   "ref": "Proverbs 15:1",
+   "text": "A gentle answer turns away wrath, but a harsh word stirs up anger."
+  },
+  {
+   "id": "Rom.3.25",
+   "ref": "Romans 3:25",
+   "text": "God presented Him as an atoning sacrifice in His blood through faith, in order to demonstrate His righteousness, because in His forbearance He had passed over the sins committed beforehand."
+  }
+ ],
+ "forms": [
+  {
+   "form": "noun",
+   "verses": 409,
+   "rows": [
+    {
+     "label": "The anger of the LORD, the wrath of God",
+     "note": "The text's own phrase, kept as written. Rom 1:18 reads \"The wrath of God is being revealed\"; the verses after it read \"God gave them over\" (1:24, 26) and \"He gave them up\" (1:28), the same Greek verb each time, and have no word for wrath. Readers part on what the wrath of God is -- God's own response to evil, or what sin brings with it -- and the page takes no side.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 68,
+     "verses": [
+      "Exod.4.14",
+      "Num.25.3",
+      "Josh.7.1",
+      "Rom.1.18",
+      "John.3.36",
+      "Num.11.10",
+      "Num.11.33",
+      "Num.12.9",
+      "Num.22.22",
+      "Num.25.4",
+      "Num.32.10",
+      "Num.32.13",
+      "Num.32.14",
+      "Deut.6.15",
+      "Deut.7.4",
+      "Deut.11.17",
+      "Deut.29.20",
+      "Deut.29.27",
+      "Josh.23.16",
+      "Judg.2.14",
+      "Judg.2.20",
+      "Judg.3.8",
+      "Judg.10.7",
+      "2Sam.6.7",
+      "2Sam.24.1",
+      "2Kgs.13.3",
+      "2Kgs.22.13",
+      "2Kgs.24.20",
+      "1Chr.13.10",
+      "2Chr.12.12",
+      "2Chr.25.15",
+      "2Chr.28.9",
+      "2Chr.28.11",
+      "2Chr.29.8",
+      "2Chr.32.26",
+      "2Chr.34.21",
+      "2Chr.36.16",
+      "Ezra.10.14",
+      "Ps.78.31",
+      "Ps.106.40",
+      "Isa.5.25",
+      "Isa.9.19",
+      "Isa.13.13",
+      "Isa.51.20",
+      "Jer.4.8",
+      "Jer.6.11",
+      "Jer.12.13",
+      "Jer.23.19",
+      "Jer.23.20",
+      "Jer.25.37",
+      "Jer.30.23",
+      "Jer.30.24",
+      "Jer.50.13",
+      "Jer.51.45",
+      "Jer.52.3",
+      "Lam.2.22",
+      "Ezek.7.19",
+      "Zeph.1.18",
+      "Zeph.2.2",
+      "Zeph.2.3",
+      "Eph.5.6",
+      "Col.3.6",
+      "Rev.14.10",
+      "Rev.14.19",
+      "Rev.15.1",
+      "Rev.15.7",
+      "Rev.16.1",
+      "Rev.19.15"
+     ],
+     "eg": [
+      {
+       "id": "Exod.4.14",
+       "ref": "Exodus 4:14",
+       "text": "Then the anger of the LORD burned against Moses, and He said, “Is not Aaron the Levite your brother? I know that he can speak well, and he is now on his way to meet you. When he sees you, he will be glad in his heart.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Num.25.3",
+       "ref": "Numbers 25:3",
+       "text": "So Israel joined in worshiping Baal of Peor, and the anger of the LORD burned against them.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Josh.7.1",
+       "ref": "Joshua 7:1",
+       "text": "The Israelites, however, acted unfaithfully regarding the things devoted to destruction. Achan son of Carmi, the son of Zabdi, the son of Zerah, of the tribe of Judah, took some of what was set apart. So the anger of the LORD burned against the Israelites.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Rom.1.18",
+       "ref": "Romans 1:18",
+       "text": "The wrath of God is being revealed from heaven against all the godlessness and wickedness of men who suppress the truth by their wickedness.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Slow to anger, abounding in loving devotion; anger beside mercy, compassion, favor, forgiveness",
+     "note": "The words of Exod 34:6 come back in Num 14:18, Neh 9:17, Ps 86:15, 103:8, 145:8, Joel 2:13 and Jonah 4:2; in Jonah 4:2 Jonah says them to the LORD after his own anger (Jonah 4:1, 4, under \"A person angry\"). The text sets the anger beside mercy in its own pairs, and the page does not say how they are reconciled.",
+     "doors": [
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "theme_judgment_r5",
+       "name": "The LORD is slow to anger",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 20,
+     "verses": [
+      "Exod.34.6",
+      "Ps.30.5",
+      "Isa.54.8",
+      "Mic.7.18",
+      "Rom.9.22",
+      "Num.14.18",
+      "Deut.13.17",
+      "Deut.29.20",
+      "Neh.9.17",
+      "Ps.77.9",
+      "Ps.78.38",
+      "Ps.86.15",
+      "Ps.103.8",
+      "Ps.145.8",
+      "Isa.60.10",
+      "Jer.15.15",
+      "Joel.2.13",
+      "Amos.1.11",
+      "Jonah.4.2",
+      "Nah.1.3"
+     ],
+     "eg": [
+      {
+       "id": "Exod.34.6",
+       "ref": "Exodus 34:6",
+       "text": "Then the LORD passed in front of Moses and called out: “The LORD, the LORD God, is compassionate and gracious, slow to anger, abounding in loving devotion and faithfulness,",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Ps.30.5",
+       "ref": "Psalms 30:5",
+       "text": "For His anger is fleeting, but His favor lasts a lifetime. Weeping may stay the night, but joy comes in the morning.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Isa.54.8",
+       "ref": "Isaiah 54:8",
+       "text": "In a surge of anger I hid My face from you for a moment, but with everlasting kindness I will have compassion on you,” says the LORD your Redeemer.",
+       "words": [
+        {
+         "key": "h7110",
+         "lemma": "קֶצֶף"
+        }
+       ]
+      },
+      {
+       "id": "Mic.7.18",
+       "ref": "Micah 7:18",
+       "text": "Who is a God like You, who pardons iniquity and passes over the transgression of the remnant of His inheritance-who does not retain His anger forever, because He delights in loving devotion?",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The day of wrath, the day of His anger: “That day will be a day of wrath”, “in the day of His anger”",
+     "note": "The verses are set as they stand, in the prophets' and poets' own words. The page does not say when any of these days falls.",
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Zeph.1.15",
+      "Lam.2.1",
+      "Isa.13.13",
+      "Ezek.7.19",
+      "Zeph.1.18",
+      "Zeph.2.2",
+      "Zeph.2.3",
+      "Lam.1.12",
+      "Lam.2.21",
+      "Lam.2.22",
+      "Isa.26.20",
+      "Job.14.13",
+      "Job.20.28",
+      "Job.21.30",
+      "Ps.110.5",
+      "Prov.11.4",
+      "Ezek.22.24"
+     ],
+     "eg": [
+      {
+       "id": "Zeph.1.15",
+       "ref": "Zephaniah 1:15",
+       "text": "That day will be a day of wrath, a day of trouble and distress, a day of destruction and desolation, a day of darkness and gloom, a day of clouds and blackness,",
+       "words": [
+        {
+         "key": "h5678",
+         "lemma": "עֶבְרָה"
+        }
+       ]
+      },
+      {
+       "id": "Lam.2.1",
+       "ref": "Lamentations 2:1",
+       "text": "How the Lord has covered the Daughter of Zion with the cloud of His anger! He has cast the glory of Israel from heaven to earth. He has abandoned His footstool in the day of His anger.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Isa.13.13",
+       "ref": "Isaiah 13:13",
+       "text": "Therefore I will make the heavens tremble, and the earth will be shaken from its place at the wrath of the LORD of Hosts on the day of His burning anger.",
+       "words": [
+        {
+         "key": "h2740",
+         "lemma": "חָרוֹן"
+        },
+        {
+         "key": "h5678",
+         "lemma": "עֶבְרָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.7.19",
+       "ref": "Ezekiel 7:19",
+       "text": "They will throw their silver into the streets, and their gold will seem unclean. Their silver and gold cannot save them in the day of the wrath of the LORD. They cannot satisfy their appetites or fill their stomachs with wealth, for it became the stumbling block that brought their iniquity.",
+       "words": [
+        {
+         "key": "h5678",
+         "lemma": "עֶבְרָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The coming wrath, and being saved from it: “flee from the coming wrath”, “saved from wrath”, “not appointed us to suffer wrath”",
+     "note": "Where Christian traditions part on when the coming wrath comes and who passes through it, the page takes no side; it sets the verses as they stand. Two verses that speak of wrath as already come or as against a people, 1 Thess 2:16 (\"the utmost wrath has come upon them\") and Luke 21:23 (\"wrath against this people\"), are not set here.",
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "salvation",
+       "name": "salvation",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Matt.3.7",
+      "Rom.2.5",
+      "Rom.5.9",
+      "1Thess.5.9",
+      "Luke.3.7",
+      "1Thess.1.10",
+      "Rev.6.16",
+      "Rev.6.17"
+     ],
+     "eg": [
+      {
+       "id": "Matt.3.7",
+       "ref": "Matthew 3:7",
+       "text": "But when John saw many of the Pharisees and Sadducees coming to his place of baptism, he said to them, “You brood of vipers, who warned you to flee from the coming wrath?",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Rom.2.5",
+       "ref": "Romans 2:5",
+       "text": "But because of your hard and unrepentant heart, you are storing up wrath against yourself for the day of wrath, when God's righteous judgment will be revealed.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.9",
+       "ref": "Romans 5:9",
+       "text": "Therefore, since we have now been justified by His blood, how much more shall we be saved from wrath through Him!",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.5.9",
+       "ref": "1 Thessalonians 5:9",
+       "text": "For God has not appointed us to suffer wrath, but to obtain salvation through our Lord Jesus Christ.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wrath poured out; the cup of wrath, the winepress of wrath",
+     "note": null,
+     "doors": [],
+     "n": 35,
+     "verses": [
+      "Ps.79.6",
+      "Ezek.7.8",
+      "Rev.16.1",
+      "Isa.51.17",
+      "Job.21.20",
+      "Rev.14.10",
+      "Ps.69.24",
+      "Isa.42.25",
+      "Isa.51.22",
+      "Isa.63.3",
+      "Isa.63.6",
+      "Jer.7.20",
+      "Jer.10.25",
+      "Jer.25.15",
+      "Jer.42.18",
+      "Jer.44.6",
+      "Lam.2.4",
+      "Lam.4.11",
+      "Ezek.9.8",
+      "Ezek.14.19",
+      "Ezek.20.8",
+      "Ezek.20.13",
+      "Ezek.20.21",
+      "Ezek.20.33",
+      "Ezek.20.34",
+      "Ezek.21.31",
+      "Ezek.22.22",
+      "Ezek.22.31",
+      "Ezek.30.15",
+      "Ezek.36.18",
+      "Hos.5.10",
+      "Zeph.3.8",
+      "Rev.14.19",
+      "Rev.16.19",
+      "Rev.19.15"
+     ],
+     "eg": [
+      {
+       "id": "Ps.79.6",
+       "ref": "Psalms 79:6",
+       "text": "Pour out Your wrath on the nations that do not acknowledge You, on the kingdoms that refuse to call on Your name,",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.7.8",
+       "ref": "Ezekiel 7:8",
+       "text": "Very soon I will pour out My wrath upon you and vent My anger against you; I will judge you according to your ways and repay you for all your abominations.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Rev.16.1",
+       "ref": "Revelation 16:1",
+       "text": "Then I heard a loud voice from the temple saying to the seven angels, “Go, pour out on the earth the seven bowls of God's wrath.”",
+       "words": [
+        {
+         "key": "g2372",
+         "lemma": "θυμός"
+        }
+       ]
+      },
+      {
+       "id": "Isa.51.17",
+       "ref": "Isaiah 51:17",
+       "text": "Awake, awake! Rise up, O Jerusalem, you who have drunk from the hand of the LORD the cup of His fury; you who have drained the goblet to the dregs-the cup that makes men stagger.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Anger that burns, is kindled, flares like fire",
+     "note": "These rows hold both the LORD's anger and people's; each verse shows whose.",
+     "doors": [],
+     "n": 74,
+     "verses": [
+      "Jer.4.4",
+      "Nah.1.6",
+      "Ezek.22.21",
+      "Isa.30.30",
+      "Gen.30.2",
+      "Rev.14.10",
+      "Gen.39.19",
+      "Gen.44.18",
+      "Exod.4.14",
+      "Exod.22.24",
+      "Exod.32.10",
+      "Exod.32.11",
+      "Exod.32.19",
+      "Exod.32.22",
+      "Num.11.1",
+      "Num.11.10",
+      "Num.11.33",
+      "Num.12.9",
+      "Num.22.22",
+      "Num.22.27",
+      "Num.24.10",
+      "Num.25.3",
+      "Num.32.10",
+      "Num.32.13",
+      "Deut.6.15",
+      "Deut.7.4",
+      "Deut.11.17",
+      "Deut.29.27",
+      "Deut.31.17",
+      "Deut.32.22",
+      "Josh.7.1",
+      "Josh.23.16",
+      "Judg.2.14",
+      "Judg.2.20",
+      "Judg.3.8",
+      "Judg.6.39",
+      "Judg.9.30",
+      "Judg.10.7",
+      "Judg.14.19",
+      "1Sam.11.6",
+      "1Sam.17.28",
+      "1Sam.20.30",
+      "2Sam.6.7",
+      "2Sam.12.5",
+      "2Sam.24.1",
+      "2Kgs.13.3",
+      "2Kgs.22.13",
+      "2Kgs.22.17",
+      "2Kgs.23.26",
+      "1Chr.13.10",
+      "2Chr.25.10",
+      "2Chr.25.15",
+      "Esth.1.12",
+      "Job.19.11",
+      "Job.32.2",
+      "Job.32.3",
+      "Job.32.5",
+      "Job.42.7",
+      "Ps.2.12",
+      "Ps.89.46",
+      "Ps.106.40",
+      "Ps.124.3",
+      "Isa.5.25",
+      "Isa.30.27",
+      "Isa.66.15",
+      "Jer.15.14",
+      "Jer.17.4",
+      "Jer.21.12",
+      "Lam.2.4",
+      "Ezek.21.31",
+      "Ezek.22.31",
+      "Ezek.38.19",
+      "Hos.8.5",
+      "Zech.10.3"
+     ],
+     "eg": [
+      {
+       "id": "Jer.4.4",
+       "ref": "Jeremiah 4:4",
+       "text": "Circumcise yourselves to the LORD, and remove the foreskins of your hearts, O men of Judah and people of Jerusalem. Otherwise, My wrath will break out like fire and burn with no one to extinguish it, because of your evil deeds.”",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Nah.1.6",
+       "ref": "Nahum 1:6",
+       "text": "Who can withstand His indignation? Who can endure His burning anger? His wrath is poured out like fire; even rocks are shattered before Him.",
+       "words": [
+        {
+         "key": "h2195",
+         "lemma": "זַעַם"
+        },
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h2740",
+         "lemma": "חָרוֹן"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.22.21",
+       "ref": "Ezekiel 22:21",
+       "text": "Yes, I will gather you together and blow on you with the fire of My wrath, and you will be melted within the city.",
+       "words": [
+        {
+         "key": "h5678",
+         "lemma": "עֶבְרָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.30.30",
+       "ref": "Isaiah 30:30",
+       "text": "And the LORD will cause His majestic voice to be heard and His mighty arm to be revealed, striking in angry wrath with a flame of consuming fire, and with cloudburst, storm, and hailstones.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Anger turned away, or not turned away; restrained, quenched, spent",
+     "note": "These rows hold both the LORD's anger and people's; each verse shows whose.",
+     "doors": [],
+     "n": 47,
+     "verses": [
+      "Exod.32.12",
+      "Num.25.11",
+      "Ps.78.38",
+      "Prov.15.1",
+      "Gen.27.44",
+      "Gen.27.45",
+      "Num.25.4",
+      "Deut.13.17",
+      "Josh.7.26",
+      "2Kgs.22.17",
+      "2Kgs.23.26",
+      "2Chr.12.12",
+      "2Chr.29.10",
+      "2Chr.30.8",
+      "2Chr.34.25",
+      "Ezra.10.14",
+      "Esth.2.1",
+      "Esth.7.10",
+      "Job.9.13",
+      "Job.14.13",
+      "Ps.37.8",
+      "Ps.85.3",
+      "Ps.106.23",
+      "Prov.24.18",
+      "Prov.29.8",
+      "Isa.5.25",
+      "Isa.9.12",
+      "Isa.9.17",
+      "Isa.9.21",
+      "Isa.10.4",
+      "Isa.12.1",
+      "Isa.48.9",
+      "Jer.2.35",
+      "Jer.4.8",
+      "Jer.18.20",
+      "Jer.21.12",
+      "Jer.23.20",
+      "Jer.30.24",
+      "Ezek.5.13",
+      "Ezek.6.12",
+      "Ezek.13.15",
+      "Ezek.16.42",
+      "Ezek.24.13",
+      "Dan.9.16",
+      "Hos.11.9",
+      "Hos.14.4",
+      "Jonah.3.9"
+     ],
+     "eg": [
+      {
+       "id": "Exod.32.12",
+       "ref": "Exodus 32:12",
+       "text": "Why should the Egyptians declare, ‘He brought them out with evil intent, to kill them in the mountains and wipe them from the face of the earth'? Turn from Your fierce anger and relent from doing harm to Your people.",
+       "words": [
+        {
+         "key": "h2740",
+         "lemma": "חָרוֹן"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Num.25.11",
+       "ref": "Numbers 25:11",
+       "text": "“Phinehas son of Eleazar, the son of Aaron the priest, has turned My wrath away from the Israelites; for he was zealous for My sake among them, so that I did not consume the Israelites in My zeal.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.78.38",
+       "ref": "Psalms 78:38",
+       "text": "And yet He was compassionate; He forgave their iniquity and did not destroy them. He often restrained His anger and did not unleash His full wrath.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Prov.15.1",
+       "ref": "Proverbs 15:1",
+       "text": "A gentle answer turns away wrath, but a harsh word stirs up anger.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Anger and sin, idols, unfaithfulness",
+     "note": null,
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "idolatry",
+       "name": "idolatry",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 30,
+     "verses": [
+      "Rom.1.18",
+      "Lev.26.28",
+      "Deut.7.4",
+      "Eph.5.6",
+      "Num.14.18",
+      "Deut.29.28",
+      "Deut.31.17",
+      "Josh.7.1",
+      "Josh.22.20",
+      "Josh.23.16",
+      "2Kgs.22.17",
+      "2Kgs.24.20",
+      "2Chr.24.18",
+      "2Chr.28.13",
+      "2Chr.34.25",
+      "Ezra.8.22",
+      "Neh.9.17",
+      "Ps.38.3",
+      "Ps.78.38",
+      "Jer.18.23",
+      "Jer.52.3",
+      "Ezek.7.19",
+      "Ezek.20.8",
+      "Ezek.36.18",
+      "Dan.9.16",
+      "Amos.1.11",
+      "Mic.7.18",
+      "Rom.2.8",
+      "Rom.3.5",
+      "1Thess.2.16"
+     ],
+     "eg": [
+      {
+       "id": "Rom.1.18",
+       "ref": "Romans 1:18",
+       "text": "The wrath of God is being revealed from heaven against all the godlessness and wickedness of men who suppress the truth by their wickedness.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Lev.26.28",
+       "ref": "Leviticus 26:28",
+       "text": "then I will walk in fury against you, and I, even I, will punish you sevenfold for your sins.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Deut.7.4",
+       "ref": "Deuteronomy 7:4",
+       "text": "because they will turn your sons away from following Me to serve other gods. Then the anger of the LORD will burn against you, and He will swiftly destroy you.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Eph.5.6",
+       "ref": "Ephesians 5:6",
+       "text": "Let no one deceive you with empty words, for because of such things the wrath of God is coming on the sons of disobedience.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Anger against the nations, enemies and the wicked",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_wicked",
+       "name": "the wicked",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Ps.79.6",
+      "Isa.34.2",
+      "Isa.59.18",
+      "Jer.10.10",
+      "Jer.10.25",
+      "Jer.23.19",
+      "Jer.30.23",
+      "Ezek.5.15",
+      "Ezek.36.6",
+      "Mic.5.15",
+      "Hab.3.12",
+      "Zeph.3.8",
+      "Zech.1.15"
+     ],
+     "eg": [
+      {
+       "id": "Ps.79.6",
+       "ref": "Psalms 79:6",
+       "text": "Pour out Your wrath on the nations that do not acknowledge You, on the kingdoms that refuse to call on Your name,",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.34.2",
+       "ref": "Isaiah 34:2",
+       "text": "The LORD is angry with all the nations and furious with all their armies. He will devote them to destruction; He will give them over to slaughter.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h7110",
+         "lemma": "קֶצֶף"
+        }
+       ]
+      },
+      {
+       "id": "Isa.59.18",
+       "ref": "Isaiah 59:18",
+       "text": "So He will repay according to their deeds: fury to His enemies, retribution to His foes, and recompense to the islands.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.10.10",
+       "ref": "Jeremiah 10:10",
+       "text": "But the LORD is the true God; He is the living God and eternal King. The earth quakes at His wrath, and the nations cannot endure His indignation.",
+       "words": [
+        {
+         "key": "h2195",
+         "lemma": "זַעַם"
+        },
+        {
+         "key": "h7110",
+         "lemma": "קֶצֶף"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Anger against Israel, Judah and Jerusalem",
+     "note": "In 2 Kgs 3:27 the verse does not say whose wrath it is.",
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 35,
+     "verses": [
+      "Num.1.53",
+      "Num.25.3",
+      "Josh.7.1",
+      "Judg.2.14",
+      "Luke.21.23",
+      "Num.18.5",
+      "Num.25.4",
+      "Num.25.11",
+      "Num.32.13",
+      "Num.32.14",
+      "Josh.22.20",
+      "Judg.2.20",
+      "Judg.3.8",
+      "Judg.10.7",
+      "2Sam.24.1",
+      "2Kgs.3.27",
+      "2Kgs.13.3",
+      "2Kgs.23.26",
+      "2Kgs.24.20",
+      "1Chr.27.24",
+      "2Chr.24.18",
+      "2Chr.25.10",
+      "2Chr.28.9",
+      "2Chr.28.13",
+      "2Chr.29.8",
+      "2Chr.32.25",
+      "Neh.13.18",
+      "Ps.78.21",
+      "Jer.52.3",
+      "Lam.2.1",
+      "Lam.2.2",
+      "Lam.2.3",
+      "Lam.2.4",
+      "Ezek.9.8",
+      "Zech.8.2"
+     ],
+     "eg": [
+      {
+       "id": "Num.1.53",
+       "ref": "Numbers 1:53",
+       "text": "But the Levites are to camp around the tabernacle of the Testimony and watch over it, so that no wrath will fall on the congregation of Israel. So the Levites are responsible for the tabernacle of the Testimony.”",
+       "words": [
+        {
+         "key": "h7110",
+         "lemma": "קֶצֶף"
+        }
+       ]
+      },
+      {
+       "id": "Num.25.3",
+       "ref": "Numbers 25:3",
+       "text": "So Israel joined in worshiping Baal of Peor, and the anger of the LORD burned against them.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Josh.7.1",
+       "ref": "Joshua 7:1",
+       "text": "The Israelites, however, acted unfaithfully regarding the things devoted to destruction. Achan son of Carmi, the son of Zabdi, the son of Zerah, of the tribe of Judah, took some of what was set apart. So the anger of the LORD burned against the Israelites.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Judg.2.14",
+       "ref": "Judges 2:14",
+       "text": "Then the anger of the LORD burned against Israel, and He delivered them into the hands of those who plundered them. He sold them into the hands of their enemies all around, whom they were no longer able to resist.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Anger and the law, the covenant, the commandments, “this book”",
+     "note": "In Deut 29:20, 2 Chr 34:21 and 2 Kgs 22:13 the Berean reads \"every curse written in this book\", \"all that is written in this book\" and \"the words of this book\"; the English does not say \"law\" or \"covenant\" there.",
+     "doors": [
+      {
+       "id": "law",
+       "name": "instruction",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "covenant",
+       "name": "covenant",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 9,
+     "verses": [
+      "Rom.4.15",
+      "Deut.29.20",
+      "Josh.23.16",
+      "2Chr.34.21",
+      "Judg.2.20",
+      "2Kgs.22.13",
+      "2Chr.19.10",
+      "2Chr.29.10",
+      "Zech.7.12"
+     ],
+     "eg": [
+      {
+       "id": "Rom.4.15",
+       "ref": "Romans 4:15",
+       "text": "because the law brings wrath. And where there is no law, there is no transgression.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Deut.29.20",
+       "ref": "Deuteronomy 29:20",
+       "text": "The LORD will never be willing to forgive him. Instead, His anger and jealousy will burn against that man, and every curse written in this book will fall upon him. The LORD will blot out his name from under heaven",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Josh.23.16",
+       "ref": "Joshua 23:16",
+       "text": "If you transgress the covenant of the LORD your God, which He commanded you, and go and serve other gods and bow down to them, then the anger of the LORD will burn against you, and you will quickly perish from this good land He has given you.”",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "2Chr.34.21",
+       "ref": "2 Chronicles 34:21",
+       "text": "“Go and inquire of the LORD for me and for those remaining in Israel and Judah concerning the words in the book that has been found. For great is the wrath of the LORD that has been poured out on us because our fathers have not kept the word of the LORD by doing all that is written in this book.”",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wrath and judgment, vengeance",
+     "note": "Rom 12:19 reads \"leave room for God's wrath\" and quotes \"Vengeance is Mine\". Of the governing authority Rom 13:4 reads \"an agent of retribution to the wrongdoer\" and 13:5 \"to avoid punishment\"; the Greek word in both is ὀργή, wrath. The page sets the words and does not say more.",
+     "doors": [
+      {
+       "id": "judgment",
+       "name": "judgment",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "justice",
+       "name": "justice",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 21,
+     "verses": [
+      "Rom.12.19",
+      "Ezek.7.3",
+      "Zeph.3.8",
+      "Prov.6.34",
+      "2Chr.19.10",
+      "Ezra.10.14",
+      "Ps.7.6",
+      "Jer.2.35",
+      "Jer.10.24",
+      "Jer.15.15",
+      "Jer.21.12",
+      "Ezek.7.8",
+      "Ezek.16.38",
+      "Ezek.20.13",
+      "Ezek.20.21",
+      "Mic.5.15",
+      "Nah.1.2",
+      "Zeph.2.3",
+      "Rom.13.4",
+      "Rom.13.5",
+      "Rev.11.18"
+     ],
+     "eg": [
+      {
+       "id": "Rom.12.19",
+       "ref": "Romans 12:19",
+       "text": "Do not avenge yourselves, beloved, but leave room for God's wrath. For it is written: “Vengeance is Mine; I will repay, says the Lord.”",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Ezek.7.3",
+       "ref": "Ezekiel 7:3",
+       "text": "The end is now upon you, and I will unleash My anger against you. I will judge you according to your ways and repay you for all your abominations.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Zeph.3.8",
+       "ref": "Zephaniah 3:8",
+       "text": "Therefore wait for Me,” declares the LORD, “until the day I rise to testify. For My decision is to gather nations, to assemble kingdoms, to pour out upon them My indignation-all My burning anger. For all the earth will be consumed by the fire of My jealousy.",
+       "words": [
+        {
+         "key": "h2195",
+         "lemma": "זַעַם"
+        },
+        {
+         "key": "h2740",
+         "lemma": "חָרוֹן"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Prov.6.34",
+       "ref": "Proverbs 6:34",
+       "text": "For jealousy enrages a husband, and he will show no mercy in the day of vengeance.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "An oath sworn in anger: that generation shall not enter the land; “they shall never enter My rest”",
+     "note": "Hebrews 3:7-4:11 takes up Psalm 95 and speaks of the rest God promised and the people did not enter. Readers take \"My rest\" differently: the land, God's own rest, or the rest of the believer. The page sets the verses and takes no side.",
+     "doors": [],
+     "n": 5,
+     "verses": [
+      "Deut.1.34",
+      "Ps.95.11",
+      "Heb.3.11",
+      "Heb.4.3",
+      "Num.32.10"
+     ],
+     "eg": [
+      {
+       "id": "Deut.1.34",
+       "ref": "Deuteronomy 1:34",
+       "text": "When the LORD heard your words, He grew angry and swore an oath, saying,",
+       "words": [
+        {
+         "key": "h7107",
+         "lemma": "קָצַף"
+        }
+       ]
+      },
+      {
+       "id": "Ps.95.11",
+       "ref": "Psalms 95:11",
+       "text": "So I swore on oath in My anger, “They shall never enter My rest.”",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Heb.3.11",
+       "ref": "Hebrews 3:11",
+       "text": "So I swore on oath in My anger, ‘They shall never enter My rest.'”",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Heb.4.3",
+       "ref": "Hebrews 4:3",
+       "text": "Now we who have believed enter that rest. As for the others, it is just as God has said: “So I swore on oath in My anger, ‘They shall never enter My rest.'” And yet His works have been finished since the foundation of the world.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Cries to the LORD about His anger: “do not rebuke me in Your anger”, “How long?”, “In Your wrath, remember mercy”",
+     "note": "In Hab 3:2 the Hebrew word for \"wrath\" is רֹגֶז, which is one of the other words, listed below.",
+     "doors": [
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 15,
+     "verses": [
+      "Ps.6.1",
+      "Ps.90.7",
+      "Ps.79.5",
+      "Hab.3.2",
+      "Ps.38.1",
+      "Ps.74.1",
+      "Ps.85.5",
+      "Ps.88.7",
+      "Ps.88.16",
+      "Ps.90.9",
+      "Ps.90.11",
+      "Ps.102.10",
+      "Isa.64.9",
+      "Jer.10.24",
+      "Lam.3.43"
+     ],
+     "eg": [
+      {
+       "id": "Ps.6.1",
+       "ref": "Psalms 6:1",
+       "text": "For the choirmaster. With stringed instruments, according to Sheminith. A Psalm of David. O LORD, do not rebuke me in Your anger or discipline me in Your wrath.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Ps.90.7",
+       "ref": "Psalms 90:7",
+       "text": "For we are consumed by Your anger and terrified by Your wrath.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Ps.79.5",
+       "ref": "Psalms 79:5",
+       "text": "How long, O LORD? Will You be angry forever? Will Your jealousy burn like fire?",
+       "words": [
+        {
+         "key": "h599",
+         "lemma": "אָנַף"
+        }
+       ]
+      },
+      {
+       "id": "Hab.3.2",
+       "ref": "Habakkuk 3:2",
+       "text": "O LORD, I have heard the report of You; I stand in awe, O LORD, of Your deeds. Revive them in these years; make them known in these years. In Your wrath, remember mercy!",
+       "words": []
+      }
+     ]
+    },
+    {
+     "label": "Asked of God against enemies: “consume them in wrath”, “Pour out Your wrath on the nations”",
+     "note": null,
+     "doors": [
+      {
+       "id": "the_wicked",
+       "name": "the wicked",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Ps.59.13",
+      "Ps.69.24",
+      "Jer.10.25",
+      "Lam.3.66",
+      "Ps.7.6",
+      "Ps.56.7",
+      "Ps.79.6",
+      "Jer.18.23"
+     ],
+     "eg": [
+      {
+       "id": "Ps.59.13",
+       "ref": "Psalms 59:13",
+       "text": "Consume them in wrath; consume them till they are no more, so it may be known to the ends of the earth that God rules over Jacob. Selah",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.69.24",
+       "ref": "Psalms 69:24",
+       "text": "Pour out Your wrath upon them, and let Your burning anger overtake them.",
+       "words": [
+        {
+         "key": "h2195",
+         "lemma": "זַעַם"
+        },
+        {
+         "key": "h2740",
+         "lemma": "חָרוֹן"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Jer.10.25",
+       "ref": "Jeremiah 10:25",
+       "text": "Pour out Your wrath on the nations that do not acknowledge You, and on the families that do not call on Your name. For they have devoured Jacob; they have consumed him and finished him off; they have devastated his homeland.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Lam.3.66",
+       "ref": "Lamentations 3:66",
+       "text": "You will pursue them in anger and exterminate them from under Your heavens, O LORD.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The rod and the weapons of His wrath: Assyria, the land of the Chaldeans, an army from faraway lands, a stormy wind",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Isa.10.5",
+      "Isa.13.5",
+      "Jer.50.25",
+      "Lam.3.1",
+      "Isa.10.6",
+      "Isa.13.3",
+      "Ezek.13.13"
+     ],
+     "eg": [
+      {
+       "id": "Isa.10.5",
+       "ref": "Isaiah 10:5",
+       "text": "Woe to Assyria, the rod of My anger; the staff in their hands is My wrath.",
+       "words": [
+        {
+         "key": "h2195",
+         "lemma": "זַעַם"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Isa.13.5",
+       "ref": "Isaiah 13:5",
+       "text": "They are coming from faraway lands, from the ends of the heavens-the LORD and the weapons of His wrath-to destroy the whole country.",
+       "words": [
+        {
+         "key": "h2195",
+         "lemma": "זַעַם"
+        }
+       ]
+      },
+      {
+       "id": "Jer.50.25",
+       "ref": "Jeremiah 50:25",
+       "text": "The LORD has opened His armory and brought out His weapons of wrath, for this is the work of the Lord GOD of Hosts in the land of the Chaldeans.",
+       "words": [
+        {
+         "key": "h2195",
+         "lemma": "זַעַם"
+        }
+       ]
+      },
+      {
+       "id": "Lam.3.1",
+       "ref": "Lamentations 3:1",
+       "text": "I am the man who has seen affliction under the rod of God's wrath.",
+       "words": [
+        {
+         "key": "h5678",
+         "lemma": "עֶבְרָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Wrath turned aside: Moses stands in the breach, Aaron's censer, Phinehas' zeal, Jeremiah's and Daniel's prayer; “saved from wrath through Him”",
+     "note": "The verses are set as they stand. Rom 5:9 is the one New Testament verse here; the page does not say how it relates to the others.",
+     "doors": [
+      {
+       "id": "forgiveness",
+       "name": "forgiveness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 7,
+     "verses": [
+      "Exod.32.12",
+      "Num.25.11",
+      "Ps.106.23",
+      "Jer.18.20",
+      "Num.16.46",
+      "Dan.9.16",
+      "Rom.5.9"
+     ],
+     "eg": [
+      {
+       "id": "Exod.32.12",
+       "ref": "Exodus 32:12",
+       "text": "Why should the Egyptians declare, ‘He brought them out with evil intent, to kill them in the mountains and wipe them from the face of the earth'? Turn from Your fierce anger and relent from doing harm to Your people.",
+       "words": [
+        {
+         "key": "h2740",
+         "lemma": "חָרוֹן"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Num.25.11",
+       "ref": "Numbers 25:11",
+       "text": "“Phinehas son of Eleazar, the son of Aaron the priest, has turned My wrath away from the Israelites; for he was zealous for My sake among them, so that I did not consume the Israelites in My zeal.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.106.23",
+       "ref": "Psalms 106:23",
+       "text": "So He said He would destroy them-had not Moses His chosen one stood before Him in the breach to divert His wrath from destroying them.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Jer.18.20",
+       "ref": "Jeremiah 18:20",
+       "text": "Should good be repaid with evil? Yet they have dug a pit for me. Remember how I stood before You to speak good on their behalf, to turn Your wrath from them.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The atoning sacrifice: the Berean's “atoning sacrifice” and “make atonement”",
+     "note": "The Berean prints the Greek ἱλαστήριον, ἱλασμός and ἱλάσκομαι as \"atoning sacrifice\" and \"make atonement\" (Rom 3:25; 1 John 2:2, 4:10; Heb 2:17), and none of those four verses has a word for wrath. Readers part on what the word says: a sacrifice that turns God's wrath aside (propitiation), one that removes sin (expiation), or both. The page sets the words and takes no side.",
+     "doors": [
+      {
+       "id": "atonement",
+       "name": "reconciliation",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Rom.3.25",
+      "Heb.2.17",
+      "1John.2.2",
+      "1John.4.10"
+     ],
+     "eg": [
+      {
+       "id": "Rom.3.25",
+       "ref": "Romans 3:25",
+       "text": "God presented Him as an atoning sacrifice in His blood through faith, in order to demonstrate His righteousness, because in His forbearance He had passed over the sins committed beforehand.",
+       "words": []
+      },
+      {
+       "id": "Heb.2.17",
+       "ref": "Hebrews 2:17",
+       "text": "For this reason He had to be made like His brothers in every way, so that He might become a merciful and faithful high priest in service to God, in order to make atonement for the sins of the people.",
+       "words": []
+      },
+      {
+       "id": "1John.2.2",
+       "ref": "1 John 2:2",
+       "text": "He Himself is the atoning sacrifice for our sins, and not only for ours but also for the sins of the whole world.",
+       "words": []
+      },
+      {
+       "id": "1John.4.10",
+       "ref": "1 John 4:10",
+       "text": "And love consists in this: not that we loved God, but that He loved us and sent His Son as the atoning sacrifice for our sins.",
+       "words": []
+      }
+     ]
+    },
+    {
+     "label": "Children of wrath, vessels of wrath",
+     "note": "Eph 2:3 reads \"All of us also lived among them at one time, fulfilling the cravings of our flesh and indulging its desires and thoughts. Like the rest, we were by nature children of wrath\" (the Greek for \"by nature\" is φύσει). Readers part on what \"by nature\" says and where the condition comes from, and traditions answer this differently within themselves. In Rom 9:22 readers part on who prepared the vessels for destruction, God or those who are in them. The page takes no side.",
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Eph.2.3",
+      "Eph.5.6",
+      "Col.3.6",
+      "Rom.9.22"
+     ],
+     "eg": [
+      {
+       "id": "Eph.2.3",
+       "ref": "Ephesians 2:3",
+       "text": "All of us also lived among them at one time, fulfilling the cravings of our flesh and indulging its desires and thoughts. Like the rest, we were by nature children of wrath.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Eph.5.6",
+       "ref": "Ephesians 5:6",
+       "text": "Let no one deceive you with empty words, for because of such things the wrath of God is coming on the sons of disobedience.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Col.3.6",
+       "ref": "Colossians 3:6",
+       "text": "Because of these, the wrath of God is coming on the sons of disobedience.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.22",
+       "ref": "Romans 9:22",
+       "text": "What if God, intending to show His wrath and make His power known, bore with great patience the vessels of His wrath, prepared for destruction?",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus and wrath: “the wrath of the Lamb”, “who rescues us from the coming wrath”, “looked around at them with anger”",
+     "note": null,
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Mark.3.5",
+      "Rev.6.16",
+      "Rev.6.17",
+      "1Thess.1.10"
+     ],
+     "eg": [
+      {
+       "id": "Mark.3.5",
+       "ref": "Mark 3:5",
+       "text": "Jesus looked around at them with anger and sorrow at their hardness of heart. Then He said to the man, “Stretch out your hand.” So he stretched it out, and it was restored.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Rev.6.16",
+       "ref": "Revelation 6:16",
+       "text": "And they said to the mountains and the rocks, “Fall on us and hide us from the face of the One seated on the throne, and from the wrath of the Lamb.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Rev.6.17",
+       "ref": "Revelation 6:17",
+       "text": "For the great day of Their wrath has come, and who is able to withstand it?”",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.1.10",
+       "ref": "1 Thessalonians 1:10",
+       "text": "and to await His Son from heaven, whom He raised from the dead-Jesus our deliverer from the coming wrath.",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A person's anger: “A gentle answer turns away wrath”, “refrain from anger”, “Cursed be their anger”",
+     "note": null,
+     "doors": [],
+     "n": 24,
+     "verses": [
+      "Prov.12.16",
+      "Prov.14.29",
+      "Prov.15.1",
+      "Prov.15.18",
+      "Prov.16.32",
+      "Prov.19.11",
+      "Prov.19.19",
+      "Prov.22.24",
+      "Prov.27.3",
+      "Prov.27.4",
+      "Prov.29.8",
+      "Prov.29.11",
+      "Prov.29.22",
+      "Prov.30.33",
+      "Prov.14.17",
+      "Prov.21.14",
+      "Prov.22.8",
+      "Eccl.5.17",
+      "Eccl.7.9",
+      "Ps.37.8",
+      "Job.5.2",
+      "Job.36.13",
+      "Gen.49.6",
+      "Gen.49.7"
+     ],
+     "eg": [
+      {
+       "id": "Prov.12.16",
+       "ref": "Proverbs 12:16",
+       "text": "A fool's anger is known at once, but a prudent man overlooks an insult.",
+       "words": []
+      },
+      {
+       "id": "Prov.14.29",
+       "ref": "Proverbs 14:29",
+       "text": "A patient man has great understanding, but a quick-tempered man promotes folly.",
+       "words": [
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Prov.15.1",
+       "ref": "Proverbs 15:1",
+       "text": "A gentle answer turns away wrath, but a harsh word stirs up anger.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Prov.15.18",
+       "ref": "Proverbs 15:18",
+       "text": "A hot-tempered man stirs up strife, but he who is slow to anger calms dispute.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "What Jesus and the letters say of a person's anger: “anyone who is angry with his brother”, “Be angry, yet do not sin”, “man's anger does not bring about the righteousness that God desires”, “Get rid of all bitterness, rage and anger”",
+     "note": "Eph 4:26 quotes Psalm 4:4, which is listed below with the other words.",
+     "doors": [],
+     "n": 9,
+     "verses": [
+      "Eph.4.26",
+      "Eph.4.31",
+      "Col.3.8",
+      "Jas.1.19",
+      "Jas.1.20",
+      "1Tim.2.8",
+      "Gal.5.20",
+      "2Cor.12.20",
+      "Matt.5.22"
+     ],
+     "eg": [
+      {
+       "id": "Eph.4.26",
+       "ref": "Ephesians 4:26",
+       "text": "“Be angry, yet do not sin.” Do not let the sun set upon your anger,",
+       "words": [
+        {
+         "key": "g3710",
+         "lemma": "ὀργίζω"
+        }
+       ]
+      },
+      {
+       "id": "Eph.4.31",
+       "ref": "Ephesians 4:31",
+       "text": "Get rid of all bitterness, rage and anger, outcry and slander, along with every form of malice.",
+       "words": [
+        {
+         "key": "g2372",
+         "lemma": "θυμός"
+        },
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Col.3.8",
+       "ref": "Colossians 3:8",
+       "text": "But now you must put aside all such things as these: anger, rage, malice, slander, and filthy language from your lips.",
+       "words": [
+        {
+         "key": "g2372",
+         "lemma": "θυμός"
+        },
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      },
+      {
+       "id": "Jas.1.19",
+       "ref": "James 1:19",
+       "text": "My beloved brothers, understand this: Everyone should be quick to listen, slow to speak, and slow to anger,",
+       "words": [
+        {
+         "key": "g3709",
+         "lemma": "ὀργή"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Anger in the stories, and a king's wrath: a brother, a master, a king, Haman, a crowd, the devil",
+     "note": null,
+     "doors": [],
+     "n": 26,
+     "verses": [
+      "Gen.27.44",
+      "Gen.39.19",
+      "Esth.3.5",
+      "Luke.4.28",
+      "Prov.14.35",
+      "Prov.16.14",
+      "Gen.27.45",
+      "Gen.30.2",
+      "Exod.11.8",
+      "1Sam.20.30",
+      "1Sam.20.34",
+      "2Sam.11.20",
+      "2Kgs.5.12",
+      "Esth.1.12",
+      "Esth.1.18",
+      "Esth.2.1",
+      "Esth.5.9",
+      "Esth.7.7",
+      "Esth.7.10",
+      "Dan.3.13",
+      "Dan.3.19",
+      "Dan.11.44",
+      "Acts.19.28",
+      "Heb.11.27",
+      "Rev.12.12",
+      "Isa.14.6"
+     ],
+     "eg": [
+      {
+       "id": "Gen.27.44",
+       "ref": "Genesis 27:44",
+       "text": "Stay with him for a while, until your brother's fury subsides-",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Gen.39.19",
+       "ref": "Genesis 39:19",
+       "text": "When his master heard the story his wife told him, saying, “This is what your slave did to me,” he burned with anger.",
+       "words": [
+        {
+         "key": "h2734",
+         "lemma": "חָרָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Esth.3.5",
+       "ref": "Esther 3:5",
+       "text": "When Haman saw that Mordecai would not bow down or pay him homage, he was filled with rage.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.4.28",
+       "ref": "Luke 4:28",
+       "text": "On hearing this, all the people in the synagogue were enraged.",
+       "words": [
+        {
+         "key": "g2372",
+         "lemma": "θυμός"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Among them: the LORD's own words (\"My anger\", \"My wrath\") and the prophets' and psalmists' words of His anger, where the verse names neither the LORD nor a companion word of the rows above (Exod 15:7; Isa 13:9; Jer 21:5; Ezek 7:12, 25:14; Zech 1:2); Job's and his friends' speeches (Job 4:9; 9:5; 16:9; 21:17); Moses' fear of the anger (Deut 9:19); \"the wrath of man shall praise You\" (Ps 76:10); \"the time of wrath is completed\" (Dan 11:36); \"the utmost wrath has come upon them\" (1 Thess 2:16). Rev 14:8 and 18:3 read \"the wine of the passion of her immorality\": the Greek θυμός, which the Berean prints \"passion\" there and \"wrath\" in 14:10.",
+     "doors": [],
+     "n": 68,
+     "verses": [
+      "Exod.15.7",
+      "Rev.14.8",
+      "Deut.9.19",
+      "Deut.29.23",
+      "Deut.29.24",
+      "Josh.9.20",
+      "1Sam.28.18",
+      "2Chr.12.7",
+      "2Chr.19.2",
+      "Job.4.9",
+      "Job.9.5",
+      "Job.16.9",
+      "Job.18.4",
+      "Job.19.29",
+      "Job.20.23",
+      "Job.21.17",
+      "Job.35.15",
+      "Job.36.18",
+      "Job.40.11",
+      "Ps.2.5",
+      "Ps.21.9",
+      "Ps.27.9",
+      "Ps.55.3",
+      "Ps.76.7",
+      "Ps.76.10",
+      "Ps.78.49",
+      "Ps.78.50",
+      "Ps.138.7",
+      "Prov.11.23",
+      "Prov.25.15",
+      "Isa.7.4",
+      "Isa.10.25",
+      "Isa.13.9",
+      "Isa.27.4",
+      "Isa.51.13",
+      "Isa.63.5",
+      "Jer.4.26",
+      "Jer.7.29",
+      "Jer.15.17",
+      "Jer.21.5",
+      "Jer.25.38",
+      "Jer.32.31",
+      "Jer.32.37",
+      "Jer.33.5",
+      "Jer.36.7",
+      "Jer.49.37",
+      "Lam.2.6",
+      "Ezek.3.14",
+      "Ezek.7.12",
+      "Ezek.7.14",
+      "Ezek.8.18",
+      "Ezek.19.12",
+      "Ezek.21.17",
+      "Ezek.22.20",
+      "Ezek.23.25",
+      "Ezek.25.14",
+      "Ezek.25.17",
+      "Ezek.38.18",
+      "Ezek.43.8",
+      "Dan.8.6",
+      "Dan.8.19",
+      "Dan.11.20",
+      "Dan.11.36",
+      "Hos.13.11",
+      "Hab.2.15",
+      "Hab.3.8",
+      "Zech.1.2",
+      "Rev.18.3"
+     ],
+     "eg": [
+      {
+       "id": "Exod.15.7",
+       "ref": "Exodus 15:7",
+       "text": "You overthrew Your adversaries by Your great majesty. You unleashed Your burning wrath; it consumed them like stubble.",
+       "words": [
+        {
+         "key": "h2740",
+         "lemma": "חָרוֹן"
+        }
+       ]
+      },
+      {
+       "id": "Rev.14.8",
+       "ref": "Revelation 14:8",
+       "text": "Then a second angel followed, saying, “Fallen, fallen is Babylon the great, who has made all the nations drink the wine of the passion of her immorality.”",
+       "words": [
+        {
+         "key": "g2372",
+         "lemma": "θυμός"
+        }
+       ]
+      },
+      {
+       "id": "Deut.9.19",
+       "ref": "Deuteronomy 9:19",
+       "text": "For I was afraid of the anger and wrath that the LORD had directed against you, enough to destroy you. But the LORD listened to me this time as well.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Deut.29.23",
+       "ref": "Deuteronomy 29:23",
+       "text": "All its soil will be a burning waste of sulfur and salt, unsown and unproductive, with no plant growing on it, just like the destruction of Sodom and Gomorrah, Admah and Zeboiim, which the LORD overthrew in His fierce anger.",
+       "words": [
+        {
+         "key": "h2534",
+         "lemma": "חֵמָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 0,
+    "verses": []
+   }
+  },
+  {
+   "form": "verb",
+   "verses": 118,
+   "rows": [
+    {
+     "label": "God angry: “the LORD was angry with you”, “the anger of the LORD burned against”, “Will You be angry forever?”",
+     "note": "Not in this row, by choice: Ps 2:12 (\"lest He be angry\"), where readers take differently whom \"He\" means and the page does not choose; Deut 9:22 (\"You continued to provoke the LORD\"), the Hebrew verb קָצַף in its causing form, \"provoke to wrath\", which the Berean prints only as \"provoke\"; and 1 Sam 15:11, which reads \"Samuel was distressed\" in the Berean where the Hebrew verb is חָרָה, \"burned, became angry\" (a finding; the verse is in no row because its English does not show the label).",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 68,
+     "verses": [
+      "Exod.4.14",
+      "Deut.1.34",
+      "Isa.12.1",
+      "Zech.1.2",
+      "Gen.18.30",
+      "Gen.18.32",
+      "Exod.22.24",
+      "Exod.32.10",
+      "Exod.32.11",
+      "Lev.10.6",
+      "Num.11.1",
+      "Num.11.10",
+      "Num.11.33",
+      "Num.12.9",
+      "Num.16.22",
+      "Num.22.22",
+      "Num.25.3",
+      "Num.32.10",
+      "Num.32.13",
+      "Deut.1.37",
+      "Deut.4.21",
+      "Deut.6.15",
+      "Deut.7.4",
+      "Deut.9.7",
+      "Deut.9.8",
+      "Deut.9.19",
+      "Deut.9.20",
+      "Deut.11.17",
+      "Deut.29.27",
+      "Josh.7.1",
+      "Josh.22.18",
+      "Josh.23.16",
+      "Judg.2.14",
+      "Judg.2.20",
+      "Judg.3.8",
+      "Judg.6.39",
+      "Judg.10.7",
+      "2Sam.6.7",
+      "2Sam.24.1",
+      "1Kgs.8.46",
+      "1Kgs.11.9",
+      "2Kgs.17.18",
+      "2Kgs.23.26",
+      "1Chr.13.10",
+      "2Chr.6.36",
+      "2Chr.25.15",
+      "Ezra.9.14",
+      "Ps.7.11",
+      "Ps.60.1",
+      "Ps.79.5",
+      "Ps.85.5",
+      "Ps.106.32",
+      "Eccl.5.6",
+      "Isa.47.6",
+      "Isa.54.9",
+      "Isa.57.16",
+      "Isa.57.17",
+      "Isa.64.5",
+      "Isa.64.9",
+      "Isa.66.14",
+      "Hos.8.5",
+      "Lam.5.22",
+      "Hab.3.8",
+      "Zech.1.12",
+      "Zech.1.15",
+      "Zech.8.14",
+      "Zech.10.3",
+      "Mal.1.4"
+     ],
+     "eg": [
+      {
+       "id": "Exod.4.14",
+       "ref": "Exodus 4:14",
+       "text": "Then the anger of the LORD burned against Moses, and He said, “Is not Aaron the Levite your brother? I know that he can speak well, and he is now on his way to meet you. When he sees you, he will be glad in his heart.",
+       "words": [
+        {
+         "key": "h2734",
+         "lemma": "חָרָה"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Deut.1.34",
+       "ref": "Deuteronomy 1:34",
+       "text": "When the LORD heard your words, He grew angry and swore an oath, saying,",
+       "words": [
+        {
+         "key": "h7107",
+         "lemma": "קָצַף"
+        }
+       ]
+      },
+      {
+       "id": "Isa.12.1",
+       "ref": "Isaiah 12:1",
+       "text": "In that day you will say: “O LORD, I will praise You. Although You were angry with me, Your anger has turned away, and You have comforted me.",
+       "words": [
+        {
+         "key": "h599",
+         "lemma": "אָנַף"
+        },
+        {
+         "key": "h639",
+         "lemma": "אַף"
+        }
+       ]
+      },
+      {
+       "id": "Zech.1.2",
+       "ref": "Zechariah 1:2",
+       "text": "“The LORD was very angry with your fathers.",
+       "words": [
+        {
+         "key": "h7107",
+         "lemma": "קָצַף"
+        },
+        {
+         "key": "h7110",
+         "lemma": "קֶצֶף"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A person angry: Cain, Jacob, Moses, Saul, David, Naaman, Jonah, the elder brother, a king in a parable; “Why are you angry?”",
+     "note": null,
+     "doors": [],
+     "n": 48,
+     "verses": [
+      "Gen.4.5",
+      "Jonah.4.4",
+      "Luke.15.28",
+      "Eph.4.26",
+      "Gen.4.6",
+      "Gen.31.36",
+      "Gen.34.7",
+      "Gen.39.19",
+      "Gen.40.2",
+      "Gen.41.10",
+      "Gen.44.18",
+      "Gen.45.5",
+      "Gen.30.2",
+      "Exod.16.20",
+      "Exod.32.19",
+      "Exod.32.22",
+      "Lev.10.16",
+      "Num.24.10",
+      "Num.31.14",
+      "Judg.14.19",
+      "1Sam.17.28",
+      "1Sam.18.8",
+      "1Sam.29.4",
+      "2Sam.3.8",
+      "2Sam.6.8",
+      "2Sam.13.21",
+      "2Sam.19.42",
+      "2Kgs.5.11",
+      "2Kgs.13.19",
+      "2Chr.25.10",
+      "Neh.5.6",
+      "Esth.1.12",
+      "Esth.2.21",
+      "Job.32.2",
+      "Job.32.3",
+      "Job.32.5",
+      "Prov.25.23",
+      "Jer.37.15",
+      "Jonah.4.1",
+      "Jonah.4.9",
+      "Dan.11.30",
+      "Matt.2.16",
+      "Matt.5.22",
+      "Matt.18.34",
+      "Matt.22.7",
+      "Luke.14.21",
+      "Rev.11.18",
+      "Rev.12.17"
+     ],
+     "eg": [
+      {
+       "id": "Gen.4.5",
+       "ref": "Genesis 4:5",
+       "text": "but He had no regard for Cain and his offering. So Cain became very angry, and his countenance fell.",
+       "words": [
+        {
+         "key": "h2734",
+         "lemma": "חָרָה"
+        }
+       ]
+      },
+      {
+       "id": "Jonah.4.4",
+       "ref": "Jonah 4:4",
+       "text": "But the LORD replied, “Have you any right to be angry?”",
+       "words": [
+        {
+         "key": "h2734",
+         "lemma": "חָרָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.15.28",
+       "ref": "Luke 15:28",
+       "text": "The older son became angry and refused to go in. So his father came out and pleaded with him.",
+       "words": [
+        {
+         "key": "g3710",
+         "lemma": "ὀργίζω"
+        }
+       ]
+      },
+      {
+       "id": "Eph.4.26",
+       "ref": "Ephesians 4:26",
+       "text": "“Be angry, yet do not sin.” Do not let the sun set upon your anger,",
+       "words": [
+        {
+         "key": "g3710",
+         "lemma": "ὀργίζω"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 2,
+    "verses": [
+     "Deut.9.22",
+     "Ps.2.12"
+    ]
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “anger”, “wrath”, “fury”",
+  "words": [
+   {
+    "key": "h3707",
+    "lemma": "כָּעַס",
+    "translit": "ka.as",
+    "gloss": "to provoke",
+    "lang": "Hebrew",
+    "n": 49,
+    "verses": [
+     "Deut.32.16",
+     "1Kgs.14.9",
+     "Ps.78.58",
+     "Deut.4.25",
+     "Deut.9.18",
+     "Deut.31.29",
+     "Deut.32.21",
+     "Judg.2.12",
+     "1Sam.1.6",
+     "1Sam.1.7",
+     "1Kgs.14.15",
+     "1Kgs.15.30",
+     "1Kgs.16.2",
+     "1Kgs.16.7",
+     "1Kgs.16.13",
+     "1Kgs.16.26",
+     "1Kgs.16.33",
+     "1Kgs.21.22",
+     "1Kgs.22.53",
+     "2Kgs.17.11",
+     "2Kgs.17.17",
+     "2Kgs.21.6",
+     "2Kgs.21.15",
+     "2Kgs.22.17",
+     "2Kgs.23.19",
+     "2Kgs.23.26",
+     "2Chr.16.10",
+     "2Chr.28.25",
+     "2Chr.33.6",
+     "2Chr.34.25",
+     "Neh.4.1",
+     "Neh.4.5",
+     "Ps.106.29",
+     "Eccl.7.9",
+     "Isa.65.3",
+     "Jer.7.18",
+     "Jer.7.19",
+     "Jer.8.19",
+     "Jer.11.17",
+     "Jer.25.6",
+     "Jer.25.7",
+     "Jer.32.29",
+     "Jer.32.30",
+     "Jer.32.32",
+     "Jer.44.3",
+     "Jer.44.8",
+     "Ezek.8.17",
+     "Ezek.16.26",
+     "Ezek.16.42"
+    ],
+    "note": "כָּעַס means to vex, provoke to anger: what Israel does to the LORD with idols (Deut 32:16, 1 Kgs 14:9). A different word from אַף; the page does not make the two one.",
+    "eg": [
+     {
+      "id": "Deut.32.16",
+      "ref": "Deuteronomy 32:16",
+      "text": "They provoked His jealousy with foreign gods; they enraged Him with abominations."
+     },
+     {
+      "id": "1Kgs.14.9",
+      "ref": "1 Kings 14:9",
+      "text": "You have done more evil than all who came before you. You have proceeded to make for yourself other gods and molten images to provoke Me, and you have flung Me behind your back."
+     }
+    ]
+   },
+   {
+    "key": "h2197",
+    "lemma": "זַעַף",
+    "translit": "za.aph",
+    "gloss": "rage",
+    "lang": "Hebrew",
+    "n": 5,
+    "verses": [
+     "2Chr.16.10",
+     "2Chr.28.9",
+     "Prov.19.12",
+     "Isa.30.30",
+     "Mic.7.9"
+    ],
+    "eg": [
+     {
+      "id": "2Chr.16.10",
+      "ref": "2 Chronicles 16:10",
+      "text": "Asa was angry with the seer and became so enraged over this matter that he put the man in prison. And at the same time Asa oppressed some of the people."
+     },
+     {
+      "id": "2Chr.28.9",
+      "ref": "2 Chronicles 28:9",
+      "text": "But a prophet of the LORD named Oded was there, and he went out to meet the army that returned to Samaria. “Look,” he said to them, “because of His wrath against Judah, the LORD, the God of your fathers, has delivered them into your hand. But you have slaughtered them in a rage that reaches up to heaven."
+     }
+    ]
+   },
+   {
+    "key": "g3863",
+    "lemma": "παραζηλόω",
+    "translit": "parazēloō",
+    "gloss": "to make envious",
+    "lang": "Greek",
+    "n": 4,
+    "verses": [
+     "Rom.10.19",
+     "Rom.11.11",
+     "Rom.11.14",
+     "1Cor.10.22"
+    ],
+    "eg": [
+     {
+      "id": "Rom.10.19",
+      "ref": "Romans 10:19",
+      "text": "I ask instead, did Israel not understand? First, Moses says: “I will make you jealous by those who are not a nation; I will make you angry by a nation without understanding.”"
+     },
+     {
+      "id": "Rom.11.11",
+      "ref": "Romans 11:11",
+      "text": "I ask then, did they stumble so as to fall beyond recovery? Certainly not! However, because of their trespass, salvation has come to the Gentiles to make Israel jealous."
+     }
+    ]
+   },
+   {
+    "key": "h5201",
+    "lemma": "נָטַר",
+    "translit": "na.tar",
+    "gloss": "to keep",
+    "lang": "Hebrew",
+    "n": 4,
+    "verses": [
+     "Ps.103.9",
+     "Jer.3.5",
+     "Jer.3.12",
+     "Nah.1.2"
+    ],
+    "eg": [
+     {
+      "id": "Ps.103.9",
+      "ref": "Psalms 103:9",
+      "text": "He will not always accuse us, nor harbor His anger forever."
+     },
+     {
+      "id": "Jer.3.5",
+      "ref": "Jeremiah 3:5",
+      "text": "Will He be angry forever? Will He be indignant to the end?' This you have spoken, but you keep doing all the evil you can.”"
+     }
+    ]
+   },
+   {
+    "key": "h2196",
+    "lemma": "זָעַף",
+    "translit": "za.aph",
+    "gloss": "to enrage",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "2Chr.26.19",
+     "Prov.19.3",
+     "Jonah.1.15"
+    ],
+    "eg": [
+     {
+      "id": "2Chr.26.19",
+      "ref": "2 Chronicles 26:19",
+      "text": "Uzziah, with a censer in his hand to offer incense, was enraged. But while he raged against the priests in their presence in the house of the LORD before the altar of incense, leprosy broke out on his forehead."
+     },
+     {
+      "id": "Prov.19.3",
+      "ref": "Proverbs 19:3",
+      "text": "A man's own folly subverts his way, yet his heart rages against the LORD."
+     }
+    ]
+   },
+   {
+    "key": "g3947",
+    "lemma": "παροξύνω",
+    "translit": "paroxunō",
+    "gloss": "to provoke",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Acts.17.16",
+     "1Cor.13.5"
+    ],
+    "eg": [
+     {
+      "id": "Acts.17.16",
+      "ref": "Acts 17:16",
+      "text": "While Paul was waiting for them in Athens, he was deeply disturbed in his spirit to see that the city was full of idols."
+     },
+     {
+      "id": "1Cor.13.5",
+      "ref": "1 Corinthians 13:5",
+      "text": "It is not rude, it is not self-seeking, it is not easily angered, it keeps no account of wrongs."
+     }
+    ]
+   },
+   {
+    "key": "h2198",
+    "lemma": "זָעֵף",
+    "translit": "za.eph",
+    "gloss": "vexed",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "1Kgs.20.43",
+     "1Kgs.21.4"
+    ],
+    "eg": [
+     {
+      "id": "1Kgs.20.43",
+      "ref": "1 Kings 20:43",
+      "text": "Sullen and angry, the king of Israel went home to Samaria."
+     },
+     {
+      "id": "1Kgs.21.4",
+      "ref": "1 Kings 21:4",
+      "text": "So Ahab went to his palace, sullen and angry because Naboth the Jezreelite had told him, “I will not give you the inheritance of my fathers.” He lay down on his bed, turned his face away, and refused to eat."
+     }
+    ]
+   },
+   {
+    "key": "g2042",
+    "lemma": "ἐρεθίζω",
+    "translit": "erethizō",
+    "gloss": "to provoke/irritate",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "2Cor.9.2",
+     "Col.3.21"
+    ],
+    "eg": [
+     {
+      "id": "2Cor.9.2",
+      "ref": "2 Corinthians 9:2",
+      "text": "For I know your eagerness to help, and I have been boasting to the Macedonians that since last year you in Achaia were prepared to give. And your zeal has stirred most of them to do likewise."
+     },
+     {
+      "id": "Col.3.21",
+      "ref": "Colossians 3:21",
+      "text": "Fathers, do not provoke your children, so they will not become discouraged."
+     }
+    ]
+   },
+   {
+    "key": "g3949",
+    "lemma": "παροργίζω",
+    "translit": "parorgizō",
+    "gloss": "to anger",
+    "lang": "Greek",
+    "n": 2,
+    "verses": [
+     "Rom.10.19",
+     "Eph.6.4"
+    ],
+    "eg": [
+     {
+      "id": "Rom.10.19",
+      "ref": "Romans 10:19",
+      "text": "I ask instead, did Israel not understand? First, Moses says: “I will make you jealous by those who are not a nation; I will make you angry by a nation without understanding.”"
+     },
+     {
+      "id": "Eph.6.4",
+      "ref": "Ephesians 6:4",
+      "text": "Fathers, do not provoke your children to wrath; instead, bring them up in the discipline and instruction of the Lord."
+     }
+    ]
+   },
+   {
+    "key": "h7267",
+    "lemma": "רֹגֶז",
+    "translit": "ro.gez",
+    "gloss": "turmoil",
+    "lang": "Hebrew",
+    "n": 2,
+    "verses": [
+     "Job.39.24",
+     "Hab.3.2"
+    ],
+    "eg": [
+     {
+      "id": "Job.39.24",
+      "ref": "Job 39:24",
+      "text": "Trembling with excitement, he devours the distance; he cannot stand still when the ram's horn sounds."
+     },
+     {
+      "id": "Hab.3.2",
+      "ref": "Habakkuk 3:2",
+      "text": "O LORD, I have heard the report of You; I stand in awe, O LORD, of Your deeds. Revive them in these years; make them known in these years. In Your wrath, remember mercy!"
+     }
+    ]
+   },
+   {
+    "key": "h4834",
+    "lemma": "מָרַץ",
+    "translit": "ma.rats",
+    "gloss": "be sick",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Job.16.3"
+    ],
+    "eg": [
+     {
+      "id": "Job.16.3",
+      "ref": "Job 16:3",
+      "text": "Is there no end to your long-winded speeches? What provokes you to continue testifying?"
+     }
+    ]
+   },
+   {
+    "key": "g24",
+    "lemma": "ἀγανάκτησις",
+    "translit": "aganaktēsis",
+    "gloss": "indignation",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "2Cor.7.11"
+    ],
+    "eg": [
+     {
+      "id": "2Cor.7.11",
+      "ref": "2 Corinthians 7:11",
+      "text": "Consider what this godly sorrow has produced in you: what earnestness, what eagerness to clear yourselves, what indignation, what alarm, what longing, what zeal, what vindication! In every way you have proved yourselves to be innocent in this matter."
+     }
+    ]
+   },
+   {
+    "key": "g454",
+    "lemma": "ἄνοια",
+    "translit": "anoia",
+    "gloss": "folly",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.6.11"
+    ],
+    "eg": [
+     {
+      "id": "Luke.6.11",
+      "ref": "Luke 6:11",
+      "text": "But the scribes and Pharisees were filled with rage and began to discuss with one another what they might do to Jesus."
+     }
+    ]
+   },
+   {
+    "key": "g2371",
+    "lemma": "θυμομαχέω",
+    "translit": "thumomacheō",
+    "gloss": "to quarrel",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Acts.12.20"
+    ],
+    "eg": [
+     {
+      "id": "Acts.12.20",
+      "ref": "Acts 12:20",
+      "text": "Now Herod was in a furious dispute with the people of Tyre and Sidon, and they convened before him. Having secured the support of Blastus, the king's chamberlain, they asked for peace, because their region depended on the king's country for food."
+     }
+    ]
+   },
+   {
+    "key": "g1693",
+    "lemma": "ἐμμαίνομαι",
+    "translit": "emmainomai",
+    "gloss": "be enraged",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Acts.26.11"
+    ],
+    "eg": [
+     {
+      "id": "Acts.26.11",
+      "ref": "Acts 26:11",
+      "text": "I frequently had them punished in the synagogues, and I tried to make them blaspheme. In my raging fury against them, I even went to foreign cities to persecute them."
+     }
+    ]
+   },
+   {
+    "key": "g5433",
+    "lemma": "φρυάσσω",
+    "translit": "phruassomai",
+    "gloss": "to rage",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Acts.4.25"
+    ],
+    "eg": [
+     {
+      "id": "Acts.4.25",
+      "ref": "Acts 4:25",
+      "text": "You spoke by the Holy Spirit through the mouth of Your servant, our father David: ‘Why do the nations rage and the peoples plot in vain?"
+     }
+    ]
+   },
+   {
+    "key": "h1149",
+    "lemma": "בְּנַס",
+    "translit": "be.nas",
+    "gloss": "be angry",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.2.12"
+    ],
+    "eg": [
+     {
+      "id": "Dan.2.12",
+      "ref": "Daniel 2:12",
+      "text": "This response made the king so angry and furious that he gave orders to destroy all the wise men of Babylon."
+     }
+    ]
+   },
+   {
+    "key": "h7108",
+    "lemma": "קְצַף",
+    "translit": "qe.tsaph",
+    "gloss": "be angry",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.2.12"
+    ],
+    "eg": [
+     {
+      "id": "Dan.2.12",
+      "ref": "Daniel 2:12",
+      "text": "This response made the king so angry and furious that he gave orders to destroy all the wise men of Babylon."
+     }
+    ]
+   },
+   {
+    "key": "h7266",
+    "lemma": "רְגַז",
+    "translit": "re.gaz",
+    "gloss": "rage",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Dan.3.13"
+    ],
+    "eg": [
+     {
+      "id": "Dan.3.13",
+      "ref": "Daniel 3:13",
+      "text": "Then Nebuchadnezzar, furious with rage, summoned Shadrach, Meshach, and Abednego. So these men were brought before the king,"
+     }
+    ]
+   },
+   {
+    "key": "g3950",
+    "lemma": "παροργισμός",
+    "translit": "parorgismos",
+    "gloss": "anger",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Eph.4.26"
+    ],
+    "eg": [
+     {
+      "id": "Eph.4.26",
+      "ref": "Ephesians 4:26",
+      "text": "“Be angry, yet do not sin.” Do not let the sun set upon your anger,"
+     }
+    ]
+   },
+   {
+    "key": "h7265",
+    "lemma": "רְגַז",
+    "translit": "re.gaz",
+    "gloss": "to enrage",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezra.5.12"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.5.12",
+      "ref": "Ezra 5:12",
+      "text": "But since our fathers angered the God of heaven, He delivered them into the hand of Nebuchadnezzar king of Babylon, the Chaldean who destroyed this temple and carried away the people to Babylon."
+     }
+    ]
+   },
+   {
+    "key": "h7109",
+    "lemma": "קְצַף",
+    "translit": "qe.tsaph",
+    "gloss": "wrath",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ezra.7.23"
+    ],
+    "eg": [
+     {
+      "id": "Ezra.7.23",
+      "ref": "Ezra 7:23",
+      "text": "Whatever is commanded by the God of heaven must be done diligently for His house. For why should wrath fall on the realm of the king and his sons?"
+     }
+    ]
+   },
+   {
+    "key": "g4292",
+    "lemma": "προκαλέω",
+    "translit": "prokaleō",
+    "gloss": "to provoke",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Gal.5.26"
+    ],
+    "eg": [
+     {
+      "id": "Gal.5.26",
+      "ref": "Galatians 5:26",
+      "text": "Let us not become conceited, provoking and envying one another."
+     }
+    ]
+   },
+   {
+    "key": "g4360",
+    "lemma": "προσοχθίζω",
+    "translit": "prosochthizō",
+    "gloss": "be angry",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Heb.3.10"
+    ],
+    "eg": [
+     {
+      "id": "Heb.3.10",
+      "ref": "Hebrews 3:10",
+      "text": "Therefore I was angry with that generation, and I said, ‘Their hearts are always going astray, and they have not known My ways.'"
+     }
+    ]
+   },
+   {
+    "key": "h4062",
+    "lemma": "מַדְהֵבָה",
+    "translit": "mad.he.vah",
+    "gloss": "insolence",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Isa.14.4"
+    ],
+    "eg": [
+     {
+      "id": "Isa.14.4",
+      "ref": "Isaiah 14:4",
+      "text": "you will sing this song of contempt against the king of Babylon: How the oppressor has ceased, and how his fury has ended!"
+     }
+    ]
+   },
+   {
+    "key": "h5807",
+    "lemma": "עֱזוּז",
+    "translit": "e.zuz",
+    "gloss": "strength",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Isa.42.25"
+    ],
+    "eg": [
+     {
+      "id": "Isa.42.25",
+      "ref": "Isaiah 42:25",
+      "text": "So He poured out on them His furious anger and the fierceness of battle. It enveloped them in flames, but they did not understand; it consumed them, but they did not take it to heart."
+     }
+    ]
+   },
+   {
+    "key": "g2830",
+    "lemma": "κλύδων",
+    "translit": "kludōn",
+    "gloss": "waves",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.8.24"
+    ],
+    "eg": [
+     {
+      "id": "Luke.8.24",
+      "ref": "Luke 8:24",
+      "text": "The disciples went and woke Him, saying, “Master, Master, we are perishing!” Then Jesus got up and rebuked the wind and the raging waters, and they subsided, and all was calm."
+     }
+    ]
+   },
+   {
+    "key": "g5520",
+    "lemma": "χολάω",
+    "translit": "cholaō",
+    "gloss": "be angry",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "John.7.23"
+    ],
+    "eg": [
+     {
+      "id": "John.7.23",
+      "ref": "John 7:23",
+      "text": "If a boy can be circumcised on the Sabbath so that the law of Moses will not be broken, why are you angry with Me for making the whole man well on the Sabbath?"
+     }
+    ]
+   },
+   {
+    "key": "h2152",
+    "lemma": "זַלְעָפָה",
+    "translit": "zal.a.phah",
+    "gloss": "scorching",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ps.119.53"
+    ],
+    "eg": [
+     {
+      "id": "Ps.119.53",
+      "ref": "Psalms 119:53",
+      "text": "Rage has taken hold of me because of the wicked who reject Your law."
+     }
+    ]
+   },
+   {
+    "key": "h2121",
+    "lemma": "זֵידוֹן",
+    "translit": "ze.don",
+    "gloss": "raging",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ps.124.5"
+    ],
+    "eg": [
+     {
+      "id": "Ps.124.5",
+      "ref": "Psalms 124:5",
+      "text": "then the raging waters would have swept us away."
+     }
+    ]
+   },
+   {
+    "key": "h8428",
+    "lemma": "תָּוָה",
+    "translit": "ta.vah",
+    "gloss": "to wound",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Ps.78.41"
+    ],
+    "eg": [
+     {
+      "id": "Ps.78.41",
+      "ref": "Psalms 78:41",
+      "text": "Again and again they tested God and provoked the Holy One of Israel."
+     }
+    ]
+   },
+   {
+    "key": "h7264",
+    "lemma": "רָגַז",
+    "translit": "ra.gaz",
+    "gloss": "to tremble",
+    "lang": "Hebrew",
+    "verses": [
+     "Ps.4.4"
+    ],
+    "n": 1,
+    "note": "רָגַז means to be agitated, to tremble, to be angry. Eph 4:26 (“Be angry, yet do not sin”) quotes this verse. A different word from אַף; the page does not make the two one.",
+    "eg": [
+     {
+      "id": "Ps.4.4",
+      "ref": "Psalms 4:4",
+      "text": "Be angry, yet do not sin; on your bed, search your heart and be still. Selah"
+     }
+    ]
+   }
+  ]
+ }
+}

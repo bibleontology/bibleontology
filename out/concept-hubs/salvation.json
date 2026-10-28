@@ -1,0 +1,3448 @@
+{
+ "id": "salvation",
+ "built": "tools/concepts/hub_build.py",
+ "lead": "verb",
+ "words": [
+  {
+   "key": "h3467",
+   "lemma": "יָשַׁע",
+   "form": "verb",
+   "translit": "ya.sah",
+   "gloss": "to save",
+   "lang": "Hebrew",
+   "uses": 194,
+   "other_sense": 4
+  },
+  {
+   "key": "g4982",
+   "lemma": "σῴζω",
+   "form": "verb",
+   "translit": "sōzō",
+   "gloss": "to save",
+   "lang": "Greek",
+   "uses": 99,
+   "other_sense": 0
+  },
+  {
+   "key": "h3444",
+   "lemma": "יְשׁוּעָה",
+   "form": "noun",
+   "translit": "ye.shu.ah",
+   "gloss": "salvation",
+   "lang": "Hebrew",
+   "uses": 76,
+   "other_sense": 1
+  },
+  {
+   "key": "h3468",
+   "lemma": "יֵשַׁע",
+   "form": "noun",
+   "translit": "ye.sah",
+   "gloss": "salvation",
+   "lang": "Hebrew",
+   "uses": 35,
+   "other_sense": 0
+  },
+  {
+   "key": "h8668",
+   "lemma": "תְּשׁוּעָה",
+   "form": "noun",
+   "translit": "te.shu.ah",
+   "gloss": "deliverance: victory",
+   "lang": "Hebrew",
+   "uses": 32,
+   "other_sense": 0
+  },
+  {
+   "key": "h4190",
+   "lemma": "מֹושָׁעֹות",
+   "form": "noun",
+   "translit": "mo.sha.ah",
+   "gloss": "salvation",
+   "lang": "Hebrew",
+   "uses": 1,
+   "other_sense": 0
+  },
+  {
+   "key": "g4991",
+   "lemma": "σωτηρία",
+   "form": "noun",
+   "translit": "sōtēria",
+   "gloss": "salvation",
+   "lang": "Greek",
+   "uses": 44,
+   "other_sense": 1
+  },
+  {
+   "key": "g4990",
+   "lemma": "σωτήρ",
+   "form": "noun",
+   "translit": "sōtēr",
+   "gloss": "savior",
+   "lang": "Greek",
+   "uses": 24,
+   "other_sense": 0
+  },
+  {
+   "key": "g4992",
+   "lemma": "σωτήριος",
+   "form": "noun",
+   "translit": "sōtērion",
+   "gloss": "saving",
+   "lang": "Greek",
+   "uses": 5,
+   "other_sense": 0
+  }
+ ],
+ "titles": {
+  "verb": "Saving, and being saved",
+  "noun": "What the text says of salvation"
+ },
+ "by_rule": false,
+ "leads": [
+  {
+   "id": "god",
+   "name": "God",
+   "type": "being",
+   "missing": false
+  },
+  {
+   "id": "jesus",
+   "name": "Jesus",
+   "type": "person",
+   "missing": false
+  },
+  {
+   "id": "faith",
+   "name": "faith",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "grace",
+   "name": "grace",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "works",
+   "name": "works",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "baptism",
+   "name": "baptism",
+   "type": "observance",
+   "missing": false
+  },
+  {
+   "id": "redemption",
+   "name": "redemption",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "justification",
+   "name": "justification",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "forgiveness",
+   "name": "forgiveness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "eternal_life",
+   "name": "eternal life",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "sin",
+   "name": "sin",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "hope",
+   "name": "hope",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "righteousness",
+   "name": "righteousness",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "repentance",
+   "name": "repentance",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "obedience",
+   "name": "obedience",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "healing",
+   "name": "healing",
+   "type": "concept",
+   "missing": false
+  }
+ ],
+ "gather": [
+  {
+   "id": "theme_deliverance",
+   "name": "Deliverance / Salvation (major theme)",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r20",
+   "name": "Salvation belongs to the LORD",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r62",
+   "name": "The salvation ready to be revealed in the last time",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r19",
+   "name": "My rock and my salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r61",
+   "name": "I wait for Your salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r60",
+   "name": "I rejoice in Your salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r6",
+   "name": "My strength and my song; He has become my salvation",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "theme_deliverance_r59",
+   "name": "All the ends of the earth will see the salvation of our God",
+   "type": "concept",
+   "missing": false
+  },
+  {
+   "id": "image_helmet_of_salvation",
+   "name": "the helmet of salvation",
+   "type": "image",
+   "missing": false
+  },
+  {
+   "id": "by_grace_you_have_been_saved",
+   "name": "it is by grace you have been saved through faith",
+   "type": "text",
+   "missing": false
+  }
+ ],
+ "own_words": [
+  {
+   "id": "Eph.2.8",
+   "ref": "Ephesians 2:8",
+   "text": "For it is by grace you have been saved through faith, and this not from yourselves; it is the gift of God,"
+  },
+  {
+   "id": "Acts.4.12",
+   "ref": "Acts 4:12",
+   "text": "Salvation exists in no one else, for there is no other name under heaven given to men by which we must be saved.”"
+  },
+  {
+   "id": "Rom.10.9",
+   "ref": "Romans 10:9",
+   "text": "that if you confess with your mouth, “Jesus is Lord,” and believe in your heart that God raised Him from the dead, you will be saved."
+  },
+  {
+   "id": "Rom.10.13",
+   "ref": "Romans 10:13",
+   "text": "for, “Everyone who calls on the name of the Lord will be saved.”"
+  },
+  {
+   "id": "1Sam.17.47",
+   "ref": "1 Samuel 17:47",
+   "text": "And all those assembled here will know that it is not by sword or spear that the LORD saves; for the battle is the LORD's, and He will give all of you into our hands.”"
+  },
+  {
+   "id": "Isa.52.7",
+   "ref": "Isaiah 52:7",
+   "text": "How beautiful on the mountains are the feet of those who bring good news, who proclaim peace, who bring good tidings, who proclaim salvation, who say to Zion, “Your God reigns!”"
+  },
+  {
+   "id": "Exod.15.2",
+   "ref": "Exodus 15:2",
+   "text": "The LORD is my strength and my song, and He has become my salvation. He is my God, and I will praise Him, my father's God, and I will exalt Him."
+  },
+  {
+   "id": "Isa.45.22",
+   "ref": "Isaiah 45:22",
+   "text": "Turn to Me and be saved, all the ends of the earth; for I am God, and there is no other."
+  }
+ ],
+ "forms": [
+  {
+   "form": "verb",
+   "verses": 307,
+   "rows": [
+    {
+     "label": "The LORD saves his people and gives them victory",
+     "note": "Exod 14:30: “That day the LORD saved Israel from the hand of the Egyptians”. The song that follows says “He has become my salvation” (Exod 15:2, in “Images of salvation”). Ps 106:8-10 says “He saved them”, “He rebuked the Red Sea” and “He saved them from the hand that hated them”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 52,
+     "verses": [
+      "Exod.14.30",
+      "Deut.33.29",
+      "Isa.63.9",
+      "Zeph.3.17",
+      "Num.10.9",
+      "Deut.20.4",
+      "Judg.10.12",
+      "1Sam.10.19",
+      "1Sam.14.6",
+      "1Sam.14.23",
+      "1Sam.14.39",
+      "1Sam.17.47",
+      "2Sam.3.18",
+      "2Sam.8.6",
+      "2Sam.8.14",
+      "1Chr.11.14",
+      "1Chr.18.6",
+      "1Chr.18.13",
+      "2Kgs.14.27",
+      "2Kgs.19.34",
+      "2Chr.32.22",
+      "Ps.20.6",
+      "Ps.44.3",
+      "Ps.44.7",
+      "Ps.69.35",
+      "Ps.98.1",
+      "Ps.106.8",
+      "Ps.106.10",
+      "Ps.107.13",
+      "Ps.107.19",
+      "Isa.25.9",
+      "Isa.33.22",
+      "Isa.35.4",
+      "Isa.37.35",
+      "Isa.45.17",
+      "Isa.49.25",
+      "Isa.59.1",
+      "Isa.59.16",
+      "Isa.63.1",
+      "Isa.63.5",
+      "Jer.30.10",
+      "Jer.30.11",
+      "Jer.46.27",
+      "Ezek.34.22",
+      "Ezek.36.29",
+      "Ezek.37.23",
+      "Zeph.3.19",
+      "Zech.8.7",
+      "Zech.8.13",
+      "Zech.9.16",
+      "Zech.10.6",
+      "Zech.12.7"
+     ],
+     "eg": [
+      {
+       "id": "Exod.14.30",
+       "ref": "Exodus 14:30",
+       "text": "That day the LORD saved Israel from the hand of the Egyptians, and Israel saw the Egyptians dead on the shore.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Deut.33.29",
+       "ref": "Deuteronomy 33:29",
+       "text": "Blessed are you, O Israel! Who is like you, a people saved by the LORD? He is the shield that protects you, the sword in which you boast. Your enemies will cower before you, and you shall trample their high places.”",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Isa.63.9",
+       "ref": "Isaiah 63:9",
+       "text": "In all their distress, He too was afflicted, and the Angel of His Presence saved them. In His love and compassion He redeemed them; He lifted them up and carried them all the days of old.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Zeph.3.17",
+       "ref": "Zephaniah 3:17",
+       "text": "The LORD your God is among you; He is mighty to save. He will rejoice over you with gladness; He will quiet you with His love; He will rejoice over you with singing.”",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "The LORD saves the afflicted, the needy, the upright, those who take refuge in Him: “He saved me”",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 24,
+     "verses": [
+      "Job.5.15",
+      "Ps.34.6",
+      "Ps.116.6",
+      "Ps.145.19",
+      "2Sam.22.3",
+      "2Sam.22.4",
+      "2Sam.22.28",
+      "Job.22.29",
+      "Ps.7.10",
+      "Ps.17.7",
+      "Ps.18.3",
+      "Ps.18.27",
+      "Ps.34.18",
+      "Ps.37.40",
+      "Ps.55.16",
+      "Ps.57.3",
+      "Ps.76.9",
+      "Ps.109.31",
+      "Ps.138.7",
+      "Prov.20.22",
+      "Isa.38.20",
+      "Isa.43.12",
+      "Jer.15.20",
+      "Jer.42.11"
+     ],
+     "eg": [
+      {
+       "id": "Job.5.15",
+       "ref": "Job 5:15",
+       "text": "He saves the needy from the sword in their mouth and from the clutches of the powerful.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.34.6",
+       "ref": "Psalms 34:6",
+       "text": "This poor man called out, and the LORD heard him; He saved him from all his troubles.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.116.6",
+       "ref": "Psalms 116:6",
+       "text": "The LORD preserves the simplehearted; I was helpless, and He saved me.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.145.19",
+       "ref": "Psalms 145:19",
+       "text": "He fulfills the desires of those who fear Him; He hears their cry and saves them.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Asked of God: “Save me”, “Save us”, “Help, O LORD”",
+     "note": "In John 12:27 the request is weighed and set aside (“No, it is for this purpose that I have come to this hour”); Heb 5:7 says of Jesus that He offered prayers “to the One who could save Him from death”. “Lord, save me” (Matt 14:30) is in the row for “the Lord”.",
+     "doors": [
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 36,
+     "verses": [
+      "Ps.6.4",
+      "Ps.118.25",
+      "1Chr.16.35",
+      "Jer.17.14",
+      "1Sam.7.8",
+      "2Chr.20.9",
+      "2Kgs.19.19",
+      "Ps.3.7",
+      "Ps.7.1",
+      "Ps.12.1",
+      "Ps.20.9",
+      "Ps.22.21",
+      "Ps.28.9",
+      "Ps.31.2",
+      "Ps.31.16",
+      "Ps.54.1",
+      "Ps.59.2",
+      "Ps.60.5",
+      "Ps.69.1",
+      "Ps.71.2",
+      "Ps.71.3",
+      "Ps.80.3",
+      "Ps.80.7",
+      "Ps.80.19",
+      "Ps.86.2",
+      "Ps.86.16",
+      "Ps.106.47",
+      "Ps.108.6",
+      "Ps.109.26",
+      "Ps.119.94",
+      "Ps.119.117",
+      "Ps.119.146",
+      "Isa.37.20",
+      "Jer.31.7",
+      "John.12.27",
+      "Heb.5.7"
+     ],
+     "eg": [
+      {
+       "id": "Ps.6.4",
+       "ref": "Psalms 6:4",
+       "text": "Turn, O LORD, and deliver my soul; save me because of Your loving devotion.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.118.25",
+       "ref": "Psalms 118:25",
+       "text": "O LORD, save us, we pray. We beseech You, O LORD, cause us to prosper!",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "1Chr.16.35",
+       "ref": "1 Chronicles 16:35",
+       "text": "Then cry out: ‘Save us, O God of our salvation; gather and deliver us from the nations, that we may give thanks to Your holy name, that we may glory in Your praise.'",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        },
+        {
+         "key": "h3468",
+         "lemma": "יֵשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Jer.17.14",
+       "ref": "Jeremiah 17:14",
+       "text": "Heal me, O LORD, and I will be healed; save me, and I will be saved, for You are my praise.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“Savior”: “there is no Savior but Me”",
+     "note": "The Hebrew is the participle of the same verb as the rows above (“the one who saves”); the Berean prints “Savior”. The New Testament’s noun σωτήρ is a different word and is in the noun form.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Isa.43.11",
+      "Hos.13.4",
+      "Isa.45.21",
+      "Ps.106.21",
+      "Isa.43.3",
+      "Isa.45.15",
+      "Isa.49.26",
+      "Isa.60.16",
+      "Isa.63.8",
+      "Jer.14.8"
+     ],
+     "eg": [
+      {
+       "id": "Isa.43.11",
+       "ref": "Isaiah 43:11",
+       "text": "I, yes I, am the LORD, and there is no Savior but Me.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Hos.13.4",
+       "ref": "Hosea 13:4",
+       "text": "Yet I am the LORD your God ever since the land of Egypt; you know no God but Me, for there is no Savior besides Me.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Isa.45.21",
+       "ref": "Isaiah 45:21",
+       "text": "Speak up and present your case-yes, let them take counsel together. Who foretold this long ago? Who announced it from ancient times? Was it not I, the LORD? There is no other God but Me, a righteous God and Savior; there is none but Me.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.106.21",
+       "ref": "Psalms 106:21",
+       "text": "They forgot God their Savior, who did great things in Egypt,",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus, the Son, Christ saves",
+     "note": "Where the verse says “I” or “Me” (John 5:34, 10:9, 12:47) it is Jesus speaking. Where it says “Him” or “no other name”, it is shown with the verse before, which names him: Acts 4:11–12, Rom 5:8–9, Heb 7:24–25; Rom 5:10 names “His Son”. “Lord, save us!” (Matt 8:25) and “Lord, save me!” (Matt 14:30) are cried to Jesus in the boat and on the water, shown with the verse before. Jude 5 reads “after Jesus had delivered His people out of the land of Egypt, He destroyed those who did not believe”. In Jude 5 the Greek word on this page is κύριος, “Lord”; the Berean prints “Jesus”, and manuscripts differ.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 21,
+     "verses": [
+      "Matt.1.21",
+      "Luke.19.10",
+      "1Tim.1.15",
+      "John.12.47",
+      "Matt.8.24",
+      "Matt.8.25",
+      "Matt.14.29",
+      "Matt.14.30",
+      "John.3.17",
+      "John.5.34",
+      "John.10.9",
+      "Acts.4.11",
+      "Acts.4.12",
+      "Acts.15.11",
+      "Acts.16.31",
+      "Rom.5.8",
+      "Rom.5.9",
+      "Rom.5.10",
+      "Heb.7.24",
+      "Heb.7.25",
+      "Jude.1.5"
+     ],
+     "eg": [
+      {
+       "id": "Matt.1.21",
+       "ref": "Matthew 1:21",
+       "text": "She will give birth to a Son, and you are to give Him the name Jesus, because He will save His people from their sins.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.19.10",
+       "ref": "Luke 19:10",
+       "text": "For the Son of Man came to seek and to save the lost.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "1Tim.1.15",
+       "ref": "1 Timothy 1:15",
+       "text": "This is a trustworthy saying, worthy of full acceptance: Christ Jesus came into the world to save sinners, of whom I am the worst.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "John.12.47",
+       "ref": "John 12:47",
+       "text": "As for anyone who hears My words and does not keep them, I do not judge him. For I have not come to judge the world, but to save the world.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Saved by “the Lord”, “the One who is able”",
+     "note": "The text says “the Lord” and “the One who is able”; readers take these of the Father or of Christ (Acts 2:21 and Rom 10:13 quote “everyone who calls on the name of the LORD”, and Rom 10:9 says “Jesus is Lord”), and the page does not choose.",
+     "doors": [],
+     "n": 5,
+     "verses": [
+      "Acts.2.21",
+      "Jas.4.12",
+      "Rom.10.13",
+      "2Tim.4.18",
+      "Acts.2.47"
+     ],
+     "eg": [
+      {
+       "id": "Acts.2.21",
+       "ref": "Acts 2:21",
+       "text": "And everyone who calls on the name of the Lord will be saved.'",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Jas.4.12",
+       "ref": "James 4:12",
+       "text": "There is only one Lawgiver and Judge, the One who is able to save and destroy. But who are you to judge your neighbor?",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.10.13",
+       "ref": "Romans 10:13",
+       "text": "for, “Everyone who calls on the name of the Lord will be saved.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.4.18",
+       "ref": "2 Timothy 4:18",
+       "text": "And the Lord will rescue me from every evil action and bring me safely into His heavenly kingdom. To Him be the glory forever and ever. Amen.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "A person saves, is asked to, or will not: a deliverer raised up, a king, a rescuer, a believer",
+     "note": null,
+     "doors": [
+      {
+       "id": "children_of_israel",
+       "name": "the sons of Israel",
+       "type": "group",
+       "missing": false
+      }
+     ],
+     "n": 41,
+     "verses": [
+      "Judg.3.9",
+      "Judg.6.14",
+      "1Sam.23.5",
+      "1Cor.9.22",
+      "Judg.2.16",
+      "Judg.2.18",
+      "Judg.3.15",
+      "Judg.3.31",
+      "Judg.6.15",
+      "Judg.6.36",
+      "Judg.6.37",
+      "Judg.7.7",
+      "Judg.8.22",
+      "Judg.10.1",
+      "Judg.12.2",
+      "Judg.12.3",
+      "Judg.13.5",
+      "1Sam.9.16",
+      "1Sam.10.27",
+      "1Sam.23.2",
+      "2Kgs.13.5",
+      "Neh.9.27",
+      "Obad.1.21",
+      "Isa.19.20",
+      "Exod.2.17",
+      "Josh.10.6",
+      "2Sam.10.11",
+      "2Sam.10.19",
+      "2Sam.14.4",
+      "2Kgs.16.7",
+      "1Chr.19.12",
+      "1Chr.19.19",
+      "Ps.72.4",
+      "Ps.72.13",
+      "Job.26.2",
+      "1Cor.7.16",
+      "1Cor.10.33",
+      "Rom.11.14",
+      "1Tim.4.16",
+      "Jas.5.20",
+      "Jude.1.23"
+     ],
+     "eg": [
+      {
+       "id": "Judg.3.9",
+       "ref": "Judges 3:9",
+       "text": "But when the Israelites cried out to the LORD, He raised up Othniel son of Caleb's younger brother Kenaz as a deliverer to save them.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Judg.6.14",
+       "ref": "Judges 6:14",
+       "text": "The LORD turned to him and said, “Go in the strength you have and save Israel from the hand of Midian. Am I not sending you?”",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "1Sam.23.5",
+       "ref": "1 Samuel 23:5",
+       "text": "Then David and his men went to Keilah, fought against the Philistines, and carried off their livestock, striking them with a mighty blow. So David saved the people of Keilah.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.9.22",
+       "ref": "1 Corinthians 9:22",
+       "text": "To the weak I became weak, to win the weak. I have become all things to all people so that by all possible means I might save some.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Not saved: “no one to save”, “I will no longer save you”, “You do not save?”; and what cannot save: sword, horse, king, idol",
+     "note": "Some of these are the LORD's own words (Judg 10:13), some a complaint put to Him (Hab 1:2; Jer 14:9), the rest say that a king, a bow, a sword, an idol or a nation cannot save. Hos 1:7 and 1 Sam 17:47 (“not by sword or spear that the LORD saves”) are also in the LORD's row. The nouns (“so far from saving me”, “the help of man is worthless”) are in the noun form's “No salvation”.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 30,
+     "verses": [
+      "Judg.10.13",
+      "Ps.33.16",
+      "Isa.46.7",
+      "Hab.1.2",
+      "Deut.22.27",
+      "Deut.28.29",
+      "Deut.28.31",
+      "Judg.6.31",
+      "Judg.7.2",
+      "Judg.10.14",
+      "1Sam.11.3",
+      "1Sam.17.47",
+      "2Sam.22.42",
+      "2Kgs.6.26",
+      "2Kgs.6.27",
+      "Job.40.14",
+      "Ps.18.41",
+      "Ps.44.6",
+      "Isa.45.20",
+      "Isa.47.13",
+      "Isa.47.15",
+      "Jer.2.27",
+      "Jer.2.28",
+      "Jer.8.20",
+      "Jer.11.12",
+      "Jer.14.9",
+      "Hos.1.7",
+      "Hos.13.10",
+      "Hos.14.3",
+      "Lam.4.17"
+     ],
+     "eg": [
+      {
+       "id": "Judg.10.13",
+       "ref": "Judges 10:13",
+       "text": "But you have forsaken Me and served other gods, so I will no longer save you.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.33.16",
+       "ref": "Psalms 33:16",
+       "text": "No king is saved by his vast army; no warrior is delivered by his great strength.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Isa.46.7",
+       "ref": "Isaiah 46:7",
+       "text": "They lift it to their shoulder and carry it along; they set it in its place, and there it stands, not budging from that spot. They cry out to it, but it does not answer; it saves no one from his troubles.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Hab.1.2",
+       "ref": "Habakkuk 1:2",
+       "text": "How long, O LORD, must I call for help but You do not hear, or cry out to You, “Violence!” but You do not save?",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "“He saved others; He cannot save Himself”: said to Jesus on the cross",
+     "note": "The words of the passers-by, the chief priests and scribes, the soldiers and one of the criminals, as the Gospels give them.",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 8,
+     "verses": [
+      "Matt.27.42",
+      "Mark.15.31",
+      "Luke.23.35",
+      "Luke.23.39",
+      "Matt.27.40",
+      "Matt.27.49",
+      "Mark.15.30",
+      "Luke.23.37"
+     ],
+     "eg": [
+      {
+       "id": "Matt.27.42",
+       "ref": "Matthew 27:42",
+       "text": "“He saved others, but He cannot save Himself. He is the King of Israel! Let Him come down now from the cross, and we will believe in Him.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Mark.15.31",
+       "ref": "Mark 15:31",
+       "text": "In the same way, the chief priests and scribes mocked Him among themselves, saying, “He saved others, but He cannot save Himself!",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.23.35",
+       "ref": "Luke 23:35",
+       "text": "The people stood watching, and the rulers sneered at Him, saying, “He saved others; let Him save Himself if He is the Christ of God, the Chosen One.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.23.39",
+       "ref": "Luke 23:39",
+       "text": "One of the criminals who hung there heaped abuse on Him. “Are You not the Christ?” he said. “Save Yourself and us!”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Saved from uncleanness, sins, death, wrath; a life, a soul",
+     "note": null,
+     "doors": [
+      {
+       "id": "sin",
+       "name": "sin",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "death",
+       "name": "death",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Ezek.36.29",
+      "Jas.5.20",
+      "Rom.5.9",
+      "Matt.16.25",
+      "Ezek.37.23",
+      "Ps.68.20",
+      "Ps.72.13",
+      "Ps.109.31",
+      "Matt.1.21",
+      "Mark.3.4",
+      "Mark.8.35",
+      "Luke.6.9",
+      "Luke.9.24",
+      "Acts.2.40",
+      "Heb.5.7",
+      "Jas.1.21"
+     ],
+     "eg": [
+      {
+       "id": "Ezek.36.29",
+       "ref": "Ezekiel 36:29",
+       "text": "I will save you from all your uncleanness. I will summon the grain and make it plentiful, and I will not bring famine upon you.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Jas.5.20",
+       "ref": "James 5:20",
+       "text": "consider this: Whoever turns a sinner from the error of his way will save his soul from death and cover over a multitude of sins.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.5.9",
+       "ref": "Romans 5:9",
+       "text": "Therefore, since we have now been justified by His blood, how much more shall we be saved from wrath through Him!",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.16.25",
+       "ref": "Matthew 16:25",
+       "text": "For whoever wants to save his life will lose it, but whoever loses his life for My sake will find it.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Where the Berean says “healed”, “made well”, “restore”: the same Greek word",
+     "note": "The Greek verb is σῴζω, the same as “saved” in the other rows; the Berean prints “healed”, “made well”, “get better”, “restore”. The page does not say which is meant where the English chose. Jesus’ “your faith has healed you” or “made you well” (Matt 9:22; Mark 5:34, 10:52; Luke 8:48, 17:19, 18:42) is here; Luke 7:50 and Luke 17:19 have the same Greek words (“your faith has ... you”), and the Berean prints “saved” in Luke 7:50 (in “Saved, and faith”) and “made well” in Luke 17:19.",
+     "doors": [
+      {
+       "id": "healing",
+       "name": "healing",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 16,
+     "verses": [
+      "Mark.5.34",
+      "Luke.8.48",
+      "Luke.17.19",
+      "Acts.14.9",
+      "Matt.9.21",
+      "Matt.9.22",
+      "Mark.5.23",
+      "Mark.5.28",
+      "Mark.6.56",
+      "Mark.10.52",
+      "Luke.8.36",
+      "Luke.8.50",
+      "Luke.18.42",
+      "John.11.12",
+      "Acts.4.9",
+      "Jas.5.15"
+     ],
+     "eg": [
+      {
+       "id": "Mark.5.34",
+       "ref": "Mark 5:34",
+       "text": "“Daughter,” said Jesus, “your faith has healed you. Go in peace and be free of your affliction.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.8.48",
+       "ref": "Luke 8:48",
+       "text": "“Daughter,” said Jesus, “your faith has healed you. Go in peace.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Luke.17.19",
+       "ref": "Luke 17:19",
+       "text": "Then Jesus said to him, “Rise and go; your faith has made you well!”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.14.9",
+       "ref": "Acts 14:9",
+       "text": "This man was listening to the words of Paul, who looked intently at him and saw that he had faith to be healed.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Saved, and faith, believing, trust, refuge",
+     "note": "Set side by side with the rows on works, on grace and on baptism, as the text has them: a verse that names more than one stands in each. Where Christian traditions part on how faith, works and grace stand to being saved, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 17,
+     "verses": [
+      "Eph.2.8",
+      "Acts.16.31",
+      "Rom.10.9",
+      "2Sam.22.3",
+      "Mark.16.16",
+      "Ps.7.1",
+      "Ps.37.40",
+      "Ps.44.6",
+      "Ps.86.2",
+      "Luke.7.50",
+      "Luke.8.12",
+      "Acts.15.11",
+      "1Cor.1.21",
+      "1Cor.15.2",
+      "1Tim.2.15",
+      "Jas.2.14",
+      "Jude.1.5"
+     ],
+     "eg": [
+      {
+       "id": "Eph.2.8",
+       "ref": "Ephesians 2:8",
+       "text": "For it is by grace you have been saved through faith, and this not from yourselves; it is the gift of God,",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.16.31",
+       "ref": "Acts 16:31",
+       "text": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.10.9",
+       "ref": "Romans 10:9",
+       "text": "that if you confess with your mouth, “Jesus is Lord,” and believe in your heart that God raised Him from the dead, you will be saved.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.22.3",
+       "ref": "2 Samuel 22:3",
+       "text": "My God is my rock, in whom I take refuge, my shield, and the horn of my salvation. My stronghold, my refuge, and my Savior, You save me from violence.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        },
+        {
+         "key": "h3468",
+         "lemma": "יֵשַׁע"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Saved, and works, deeds",
+     "note": "Few verses with a word for “saved” also name works. Verses on works and being justified that have no such word are not shown here: Jas 2:24 (“a man is justified by his deeds and not by faith alone”), Rom 3:28 (“a man is justified by faith apart from works of the law”) and Gal 2:16. Eph 2:8, in the row above, is followed by “not by works, so that no one can boast” (2:9) and “created in Christ Jesus to do good works” (2:10); neither contains a word for “saved”, so they are named here and not shown. In 1 Cor 3:15 the Greek says “if anyone’s work is burned up”, and the Berean prints “If it is burned up”. Where Christian traditions part on how works stand to being saved, the page takes no side.",
+     "doors": [
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 4,
+     "verses": [
+      "Titus.3.5",
+      "2Tim.1.9",
+      "Jas.2.14",
+      "1Cor.3.15"
+     ],
+     "eg": [
+      {
+       "id": "Titus.3.5",
+       "ref": "Titus 3:5",
+       "text": "He saved us, not by the righteous deeds we had done, but according to His mercy, through the washing of new birth and renewal by the Holy Spirit.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.1.9",
+       "ref": "2 Timothy 1:9",
+       "text": "He has saved us and called us to a holy calling, not because of our works, but by His own purpose and by the grace He granted us in Christ Jesus before time began.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Jas.2.14",
+       "ref": "James 2:14",
+       "text": "What good is it, my brothers, if someone claims to have faith, but has no deeds? Can such faith save him?",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.3.15",
+       "ref": "1 Corinthians 3:15",
+       "text": "If it is burned up, he will suffer loss. He himself will be saved, but only as if through the flames.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Saved, and grace, mercy, compassion, loving devotion",
+     "note": null,
+     "doors": [
+      {
+       "id": "grace",
+       "name": "grace",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "mercy",
+       "name": "mercy",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 14,
+     "verses": [
+      "Eph.2.8",
+      "Titus.3.5",
+      "Ps.6.4",
+      "Acts.15.11",
+      "Neh.9.27",
+      "Eph.2.5",
+      "Ps.31.16",
+      "Ps.57.3",
+      "Ps.86.16",
+      "Ps.109.26",
+      "Hos.1.7",
+      "Hos.14.3",
+      "Zech.10.6",
+      "2Tim.1.9"
+     ],
+     "eg": [
+      {
+       "id": "Eph.2.8",
+       "ref": "Ephesians 2:8",
+       "text": "For it is by grace you have been saved through faith, and this not from yourselves; it is the gift of God,",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Titus.3.5",
+       "ref": "Titus 3:5",
+       "text": "He saved us, not by the righteous deeds we had done, but according to His mercy, through the washing of new birth and renewal by the Holy Spirit.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.6.4",
+       "ref": "Psalms 6:4",
+       "text": "Turn, O LORD, and deliver my soul; save me because of Your loving devotion.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Acts.15.11",
+       "ref": "Acts 15:11",
+       "text": "On the contrary, we believe it is through the grace of the Lord Jesus that we are saved, just as they are.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Saved, and baptism",
+     "note": "Mark 16:16 stands in the longer ending (16:9-20) that the earliest manuscripts lack. A verse stands here only where being saved and baptism are in the same verse; verses side by side in the text (Acts 2:38-41; Acts 16:30-33) are not joined, and Titus 3:5 speaks of “the washing of new birth”, which readers take differently. Where Christian traditions part on what baptism has to do with being saved, the page takes no side.",
+     "doors": [
+      {
+       "id": "baptism",
+       "name": "baptism",
+       "type": "observance",
+       "missing": false
+      }
+     ],
+     "n": 2,
+     "verses": [
+      "Mark.16.16",
+      "1Pet.3.21"
+     ],
+     "eg": [
+      {
+       "id": "Mark.16.16",
+       "ref": "Mark 16:16",
+       "text": "Whoever believes and is baptized will be saved, but whoever does not believe will be condemned.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "1Pet.3.21",
+       "ref": "1 Peter 3:21",
+       "text": "And this water symbolizes the baptism that now saves you also-not the removal of dirt from the body, but the pledge of a clear conscience toward God-through the resurrection of Jesus Christ,",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Said as done, or going on: “you have been saved”, “He saved us”, “those who are being saved”",
+     "note": "Set beside the next row as the text has them. How many verses stand in this row and the next follows which verses carry these verb forms, not the weight of either side. Rom 8:24 reads “For in this hope we were saved”; the verses of waiting for salvation (Gen 49:18; Lam 3:26) are in the noun form’s “Salvation: rejoicing, singing, waiting, longing, asking for it”. Where Christian traditions part on whether a person who has been saved can fall away, the page takes no side.",
+     "doors": [
+      {
+       "id": "by_grace_you_have_been_saved",
+       "name": "it is by grace you have been saved through faith",
+       "type": "text",
+       "missing": false
+      }
+     ],
+     "n": 10,
+     "verses": [
+      "Eph.2.8",
+      "2Tim.1.9",
+      "1Cor.1.18",
+      "Acts.2.47",
+      "Eph.2.5",
+      "Titus.3.5",
+      "Rom.8.24",
+      "Luke.7.50",
+      "1Cor.15.2",
+      "2Cor.2.15"
+     ],
+     "eg": [
+      {
+       "id": "Eph.2.8",
+       "ref": "Ephesians 2:8",
+       "text": "For it is by grace you have been saved through faith, and this not from yourselves; it is the gift of God,",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.1.9",
+       "ref": "2 Timothy 1:9",
+       "text": "He has saved us and called us to a holy calling, not because of our works, but by His own purpose and by the grace He granted us in Christ Jesus before time began.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.1.18",
+       "ref": "1 Corinthians 1:18",
+       "text": "For the message of the cross is foolishness to those who are perishing, but to us who are being saved it is the power of God.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Acts.2.47",
+       "ref": "Acts 2:47",
+       "text": "praising God and enjoying the favor of all the people. And the Lord added to their number daily those who were being saved.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Said as still to come, or to the end: “will be saved”, “if you hold firmly”, “to the end”",
+     "note": "Set beside the row above. How many verses stand in this row and the one above follows which verses carry these verb forms, not the weight of either side. Jer 23:6 and 33:16 (“Judah will be saved”) and Jer 30:7 (“Jacob’s distress, but he will be saved out of it”) are promises to Judah, Israel and Jacob; they stand here for the form of the verb and are not part of the question of falling away. Verses that speak of keeping or of falling away without a word for “saved” are not in this hub: “they will never perish. No one can snatch them out of My hand” (John 10:28), “and then have fallen away” (Heb 6:6). Where Christian traditions part on whether a person who has been saved can fall away, the page takes no side.",
+     "doors": [
+      {
+       "id": "endurance",
+       "name": "endure",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "eternal_life",
+       "name": "eternal life",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 23,
+     "verses": [
+      "Matt.24.13",
+      "Rom.10.13",
+      "1Cor.15.2",
+      "1Cor.3.15",
+      "Jer.23.6",
+      "Jer.30.7",
+      "Jer.33.16",
+      "Matt.10.22",
+      "Mark.13.13",
+      "Mark.16.16",
+      "John.10.9",
+      "Acts.2.21",
+      "Acts.11.14",
+      "Acts.16.31",
+      "Rom.5.9",
+      "Rom.5.10",
+      "Rom.9.27",
+      "Rom.10.9",
+      "Rom.11.26",
+      "1Cor.5.5",
+      "1Tim.2.15",
+      "1Tim.4.16",
+      "2Tim.4.18"
+     ],
+     "eg": [
+      {
+       "id": "Matt.24.13",
+       "ref": "Matthew 24:13",
+       "text": "But the one who perseveres to the end will be saved.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.10.13",
+       "ref": "Romans 10:13",
+       "text": "for, “Everyone who calls on the name of the Lord will be saved.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.15.2",
+       "ref": "1 Corinthians 15:2",
+       "text": "By this gospel you are saved, if you hold firmly to the word I preached to you. Otherwise, you have believed in vain.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "1Cor.3.15",
+       "ref": "1 Corinthians 3:15",
+       "text": "If it is burned up, he will suffer loss. He himself will be saved, but only as if through the flames.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Asked, and what is said in reply: “Who then can be saved?”, “What must I do to be saved?”, “Turn to Me and be saved”, “Believe”",
+     "note": "The questions, then what the text says to do. Acts 15:1 is what some men from Judea were teaching (“Unless you are circumcised according to the custom of Moses, you cannot be saved”), and Acts 15:11 (“through the grace of the Lord Jesus that we are saved”) answers it. Jesus' answer to “Who then can be saved?” is in the next verse (Matt 19:26, “With man this is impossible, but with God all things are possible”), which has no word for “saved”. Where Christian traditions part on faith, works, repentance and baptism, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Acts.16.30",
+      "Matt.19.25",
+      "Isa.45.22",
+      "Acts.16.31",
+      "Isa.64.5",
+      "Mark.10.26",
+      "Luke.13.23",
+      "Luke.18.26",
+      "1Pet.4.18",
+      "Isa.30.15",
+      "Jer.4.14",
+      "Mark.16.16",
+      "Acts.2.21",
+      "Acts.2.40",
+      "Rom.10.9",
+      "Rom.10.13",
+      "1Cor.15.2",
+      "1Tim.2.15",
+      "Jas.1.21"
+     ],
+     "eg": [
+      {
+       "id": "Acts.16.30",
+       "ref": "Acts 16:30",
+       "text": "Then he brought them out and asked, “Sirs, what must I do to be saved?”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Matt.19.25",
+       "ref": "Matthew 19:25",
+       "text": "When the disciples heard this, they were greatly astonished and asked, “Who then can be saved?”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Isa.45.22",
+       "ref": "Isaiah 45:22",
+       "text": "Turn to Me and be saved, all the ends of the earth; for I am God, and there is no other.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Acts.16.31",
+       "ref": "Acts 16:31",
+       "text": "They replied, “Believe in the Lord Jesus and you will be saved, you and your household.”",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Who is saved, in the Bible's order: “all the ends of the earth” (Isa 45:22), “the elect” (Matt 24:22), “a few” (Luke 13:23), “the world” (John 3:17), “the remnant” (Rom 9:27), “all Israel” (Rom 11:26), “God chose you” (2 Thess 2:13), “everyone” (1 Tim 2:4)",
+     "note": "One list, in the Bible's order, and no reading first. “Chosen” (Mark 13:20; 2 Thess 2:13; 2 Tim 2:10) and “appointed” (1 Thess 5:9) stand beside “everyone” (1 Tim 2:4; Titus 2:11) and “the world” (John 3:17). Rom 9:27 and Rom 11:26 are Paul’s two statements about Israel, one verse each. Where Christian traditions part on election, free choice and who is saved, the page takes no side.",
+     "doors": [],
+     "n": 18,
+     "verses": [
+      "Isa.45.22",
+      "Matt.24.22",
+      "John.3.17",
+      "Rom.9.27",
+      "Mark.13.20",
+      "Luke.3.6",
+      "Luke.13.23",
+      "John.4.42",
+      "John.12.47",
+      "Rom.11.26",
+      "1Cor.10.33",
+      "1Thess.5.9",
+      "2Thess.2.13",
+      "1Tim.2.4",
+      "1Tim.4.10",
+      "2Tim.2.10",
+      "Titus.2.11",
+      "1John.4.14"
+     ],
+     "eg": [
+      {
+       "id": "Isa.45.22",
+       "ref": "Isaiah 45:22",
+       "text": "Turn to Me and be saved, all the ends of the earth; for I am God, and there is no other.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Matt.24.22",
+       "ref": "Matthew 24:22",
+       "text": "If those days had not been cut short, nobody would be saved. But for the sake of the elect, those days will be cut short.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "John.3.17",
+       "ref": "John 3:17",
+       "text": "For God did not send His Son into the world to condemn the world, but to save the world through Him.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Rom.9.27",
+       "ref": "Romans 9:27",
+       "text": "Isaiah cries out concerning Israel: “Though the number of the Israelites is like the sand of the sea, only the remnant will be saved.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": "Acts 27:20 and 27:31 are the ship in the storm (“we abandoned all hope of being saved”; “you cannot be saved”); 1 Sam 4:3 is the ark of the covenant (“so that it may go with us to save us”); 2 Thess 2:10 is “the love of the truth that would have saved them”. In Zech 9:9 the King comes “righteous and victorious”; whom the verse means the page does not say.",
+     "doors": [],
+     "n": 8,
+     "verses": [
+      "1Sam.4.3",
+      "Acts.27.20",
+      "1Thess.2.16",
+      "Ps.36.6",
+      "Prov.28.18",
+      "Zech.9.9",
+      "Acts.27.31",
+      "2Thess.2.10"
+     ],
+     "eg": [
+      {
+       "id": "1Sam.4.3",
+       "ref": "1 Samuel 4:3",
+       "text": "When the troops returned to the camp, the elders of Israel asked, “Why has the LORD brought defeat on us before the Philistines today? Let us bring the ark of the covenant of the LORD from Shiloh, so that it may go with us to save us from the hand of our enemies.”",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Acts.27.20",
+       "ref": "Acts 27:20",
+       "text": "When neither sun nor stars appeared for many days and the great storm continued to batter us, we abandoned all hope of being saved.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "1Thess.2.16",
+       "ref": "1 Thessalonians 2:16",
+       "text": "hindering us from telling the Gentiles how they may be saved. As a result, they continue to heap up their sins to full capacity; the utmost wrath has come upon them.",
+       "words": [
+        {
+         "key": "g4982",
+         "lemma": "σῴζω"
+        }
+       ]
+      },
+      {
+       "id": "Ps.36.6",
+       "ref": "Psalms 36:6",
+       "text": "Your righteousness is like the highest mountains; Your judgments are like the deepest sea. O LORD, You preserve man and beast.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 1,
+    "verses": [
+     "Acts.15.1"
+    ]
+   }
+  },
+  {
+   "form": "noun",
+   "verses": 219,
+   "rows": [
+    {
+     "label": "God and salvation: “the salvation of the LORD”, “the God of my salvation”, “belongs to the LORD”, “God our Savior”",
+     "note": "The text's own phrases, kept as written. Rev 7:10 reads “Salvation to our God, who sits on the throne, and to the Lamb!” Titus 2:13 (“our great God and Savior Jesus Christ”) and 2 Pet 1:1 (“our God and Savior Jesus Christ”) stand in both this row and “Jesus called Savior; salvation in Christ” because the phrase “God and Savior” is read of one person or of two; the page does not choose. In Titus the title Savior is given to God (1:3) and to Christ Jesus (1:4).",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 52,
+     "verses": [
+      "Exod.14.13",
+      "Ps.25.5",
+      "Ps.3.8",
+      "Titus.2.10",
+      "Luke.1.47",
+      "1Tim.1.1",
+      "1Sam.11.13",
+      "2Sam.22.47",
+      "2Kgs.13.17",
+      "1Chr.16.35",
+      "2Chr.20.17",
+      "Ps.18.46",
+      "Ps.24.5",
+      "Ps.27.9",
+      "Ps.35.3",
+      "Ps.37.39",
+      "Ps.38.22",
+      "Ps.42.5",
+      "Ps.42.11",
+      "Ps.43.5",
+      "Ps.50.23",
+      "Ps.51.14",
+      "Ps.62.1",
+      "Ps.65.5",
+      "Ps.68.19",
+      "Ps.68.20",
+      "Ps.74.12",
+      "Ps.79.9",
+      "Ps.85.4",
+      "Ps.88.1",
+      "Ps.98.3",
+      "Ps.118.21",
+      "Isa.17.10",
+      "Isa.45.17",
+      "Isa.52.10",
+      "Jer.3.23",
+      "Lam.3.26",
+      "Jonah.2.9",
+      "Mic.7.7",
+      "Hab.3.18",
+      "Luke.3.6",
+      "Acts.28.28",
+      "1Tim.2.3",
+      "1Tim.4.10",
+      "Titus.1.3",
+      "Titus.2.13",
+      "Titus.3.4",
+      "2Pet.1.1",
+      "Jude.1.25",
+      "Rev.7.10",
+      "Rev.12.10",
+      "Rev.19.1"
+     ],
+     "eg": [
+      {
+       "id": "Exod.14.13",
+       "ref": "Exodus 14:13",
+       "text": "But Moses told the people, “Do not be afraid. Stand firm and you will see the LORD's salvation, which He will accomplish for you today; for the Egyptians you see today, you will never see again.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.25.5",
+       "ref": "Psalms 25:5",
+       "text": "Guide me in Your truth and teach me, for You are the God of my salvation; all day long I wait for You.",
+       "words": [
+        {
+         "key": "h3468",
+         "lemma": "יֵשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Ps.3.8",
+       "ref": "Psalms 3:8",
+       "text": "Salvation belongs to the LORD; may Your blessing be on Your people. Selah",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Titus.2.10",
+       "ref": "Titus 2:10",
+       "text": "not stealing from them, but showing all good faith, so that in every respect they will adorn the teaching about God our Savior.",
+       "words": [
+        {
+         "key": "g4990",
+         "lemma": "σωτήρ"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Images of salvation: “my strength and my song”, “my light and my salvation”, “my rock”, “my shield”, “the horn of my salvation”",
+     "note": "“The LORD is my strength and my song, and He has become my salvation” is said in Exod 15:2 and again in Ps 118:14; Isa 12:2 has it as “the LORD GOD is my strength and my song, and He also has become my salvation”. The row also holds the storehouse, the helmet, the garments, the cup, the walls and the wells of salvation.",
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      },
+      {
+       "id": "image_helmet_of_salvation",
+       "name": "the helmet of salvation",
+       "type": "image",
+       "missing": false
+      }
+     ],
+     "n": 34,
+     "verses": [
+      "Exod.15.2",
+      "Isa.12.2",
+      "Ps.27.1",
+      "2Sam.22.3",
+      "Deut.32.15",
+      "1Sam.2.1",
+      "2Sam.22.36",
+      "2Sam.22.47",
+      "2Chr.6.41",
+      "Ps.18.2",
+      "Ps.18.35",
+      "Ps.18.46",
+      "Ps.28.8",
+      "Ps.62.2",
+      "Ps.62.6",
+      "Ps.62.7",
+      "Ps.89.26",
+      "Ps.95.1",
+      "Ps.116.13",
+      "Ps.118.14",
+      "Ps.132.16",
+      "Ps.140.7",
+      "Ps.149.4",
+      "Isa.12.3",
+      "Isa.17.10",
+      "Isa.26.1",
+      "Isa.33.6",
+      "Isa.59.17",
+      "Isa.60.18",
+      "Isa.61.10",
+      "Hab.3.8",
+      "Luke.1.69",
+      "Eph.6.17",
+      "1Thess.5.8"
+     ],
+     "eg": [
+      {
+       "id": "Exod.15.2",
+       "ref": "Exodus 15:2",
+       "text": "The LORD is my strength and my song, and He has become my salvation. He is my God, and I will praise Him, my father's God, and I will exalt Him.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.12.2",
+       "ref": "Isaiah 12:2",
+       "text": "Surely God is my salvation; I will trust and not be afraid. For the LORD GOD is my strength and my song, and He also has become my salvation.”",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.27.1",
+       "ref": "Psalms 27:1",
+       "text": "Of David. The LORD is my light and my salvation-whom shall I fear? The LORD is the stronghold of my life-whom shall I dread?",
+       "words": [
+        {
+         "key": "h3468",
+         "lemma": "יֵשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "2Sam.22.3",
+       "ref": "2 Samuel 22:3",
+       "text": "My God is my rock, in whom I take refuge, my shield, and the horn of my salvation. My stronghold, my refuge, and my Savior, You save me from violence.",
+       "words": [
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        },
+        {
+         "key": "h3468",
+         "lemma": "יֵשַׁע"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Proclaimed, revealed, sent to the nations; near and coming: “the day of salvation”",
+     "note": null,
+     "doors": [
+      {
+       "id": "gospel",
+       "name": "gospel",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 37,
+     "verses": [
+      "Isa.52.7",
+      "Ps.98.2",
+      "Acts.13.47",
+      "2Cor.6.2",
+      "Ps.9.14",
+      "Ps.40.10",
+      "Ps.65.5",
+      "Ps.67.2",
+      "Ps.71.15",
+      "Ps.85.9",
+      "Ps.91.16",
+      "Ps.96.2",
+      "Ps.98.3",
+      "1Chr.16.23",
+      "Isa.46.13",
+      "Isa.49.6",
+      "Isa.49.8",
+      "Isa.51.5",
+      "Isa.52.10",
+      "Isa.56.1",
+      "Isa.62.1",
+      "Isa.62.11",
+      "Luke.1.77",
+      "Luke.2.30",
+      "Luke.3.6",
+      "Acts.13.26",
+      "Acts.16.17",
+      "Acts.28.28",
+      "Rom.1.16",
+      "Rom.11.11",
+      "Rom.13.11",
+      "Eph.1.13",
+      "Titus.2.11",
+      "Heb.2.3",
+      "Heb.9.28",
+      "1Pet.1.5",
+      "1Pet.1.10"
+     ],
+     "eg": [
+      {
+       "id": "Isa.52.7",
+       "ref": "Isaiah 52:7",
+       "text": "How beautiful on the mountains are the feet of those who bring good news, who proclaim peace, who bring good tidings, who proclaim salvation, who say to Zion, “Your God reigns!”",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.98.2",
+       "ref": "Psalms 98:2",
+       "text": "The LORD has proclaimed His salvation and revealed His righteousness to the nations.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Acts.13.47",
+       "ref": "Acts 13:47",
+       "text": "For this is what the Lord has commanded us: ‘I have made you a light for the Gentiles, to bring salvation to the ends of the earth.'”",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.6.2",
+       "ref": "2 Corinthians 6:2",
+       "text": "For He says: “In the time of favor I heard you, and in the day of salvation I helped you.” Behold, now is the time of favor; now is the day of salvation!",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Salvation, and works, obedience, repentance, the commandments: worked out, inherited, obtained, neglected",
+     "note": "Set beside the next row's faith, as the text has them: Phil 2:12 says “work out your salvation with fear and trembling”; Heb 5:9 “the source of eternal salvation to all who obey Him”; 2 Cor 7:10 “repentance that leads to salvation”; Heb 2:3 “how shall we escape if we neglect such a great salvation?”. Where Christian traditions part on how works stand to being saved, the page takes no side.",
+     "doors": [
+      {
+       "id": "works",
+       "name": "works",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "obedience",
+       "name": "obedience",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "repentance",
+       "name": "repentance",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 13,
+     "verses": [
+      "Phil.2.12",
+      "Heb.5.9",
+      "2Cor.7.10",
+      "Heb.2.3",
+      "Ps.50.23",
+      "Ps.119.166",
+      "Isa.56.1",
+      "Acts.5.31",
+      "Heb.1.14",
+      "1Thess.5.9",
+      "2Tim.2.10",
+      "1Pet.1.9",
+      "1Pet.2.2"
+     ],
+     "eg": [
+      {
+       "id": "Phil.2.12",
+       "ref": "Philippians 2:12",
+       "text": "Therefore, my beloved, just as you have always obeyed, not only in my presence, but now even more in my absence, continue to work out your salvation with fear and trembling.",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "Heb.5.9",
+       "ref": "Hebrews 5:9",
+       "text": "And having been made perfect, He became the source of eternal salvation to all who obey Him",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.7.10",
+       "ref": "2 Corinthians 7:10",
+       "text": "Godly sorrow brings repentance that leads to salvation without regret, but worldly sorrow brings death.",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "Heb.2.3",
+       "ref": "Hebrews 2:3",
+       "text": "how shall we escape if we neglect such a great salvation? This salvation was first announced by the Lord, was confirmed to us by those who heard Him,",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Salvation, and faith, believing, trust, refuge",
+     "note": "Set side by side with the previous row, as the text has them. Where Christian traditions part on how faith and works stand to being saved, the page takes no side.",
+     "doors": [
+      {
+       "id": "faith",
+       "name": "faith",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Rom.1.16",
+      "Rom.10.10",
+      "2Tim.3.15",
+      "Ps.13.5",
+      "2Sam.22.3",
+      "John.4.42",
+      "Ps.18.2",
+      "Ps.78.22",
+      "Isa.12.2",
+      "Rom.13.11",
+      "Eph.1.13",
+      "1Thess.5.8",
+      "2Thess.2.13",
+      "Titus.1.4",
+      "Heb.11.7",
+      "1Pet.1.5",
+      "1Pet.1.9",
+      "2Pet.1.1",
+      "Jude.1.3"
+     ],
+     "eg": [
+      {
+       "id": "Rom.1.16",
+       "ref": "Romans 1:16",
+       "text": "I am not ashamed of the gospel, because it is the power of God for salvation to everyone who believes, first to the Jew, then to the Greek.",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "Rom.10.10",
+       "ref": "Romans 10:10",
+       "text": "For with your heart you believe and are justified, and with your mouth you confess and are saved.",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.3.15",
+       "ref": "2 Timothy 3:15",
+       "text": "From infancy you have known the Holy Scriptures, which are able to make you wise for salvation through faith in Christ Jesus.",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "Ps.13.5",
+       "ref": "Psalms 13:5",
+       "text": "But I have trusted in Your loving devotion; my heart will rejoice in Your salvation.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Salvation and righteousness",
+     "note": "Rom 1:16, in “Salvation, and faith”, is followed by Rom 1:17: “the righteousness of God that comes by faith from start to finish”. Rom 1:17 has no word for salvation, so it is named here and not shown.",
+     "doors": [
+      {
+       "id": "righteousness",
+       "name": "righteousness",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "Ps.98.2",
+      "Isa.51.6",
+      "Isa.56.1",
+      "Isa.62.1",
+      "Ps.24.5",
+      "Rom.10.10",
+      "Ps.40.10",
+      "Ps.51.14",
+      "Ps.65.5",
+      "Ps.71.15",
+      "Ps.119.123",
+      "Isa.45.8",
+      "Isa.46.13",
+      "Isa.51.5",
+      "Isa.51.8",
+      "Isa.59.17",
+      "Isa.61.10",
+      "Heb.11.7",
+      "2Pet.1.1"
+     ],
+     "eg": [
+      {
+       "id": "Ps.98.2",
+       "ref": "Psalms 98:2",
+       "text": "The LORD has proclaimed His salvation and revealed His righteousness to the nations.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.51.6",
+       "ref": "Isaiah 51:6",
+       "text": "Lift up your eyes to the heavens, and look at the earth below; for the heavens will vanish like smoke, the earth will wear out like a garment, and its people will die like gnats. But My salvation will last forever, and My righteousness will never fail.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.56.1",
+       "ref": "Isaiah 56:1",
+       "text": "This is what the LORD says: “Maintain justice and do what is right, for My salvation is coming soon, and My righteousness will be revealed.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.62.1",
+       "ref": "Isaiah 62:1",
+       "text": "For Zion's sake I will not keep silent, and for Jerusalem's sake I will not keep still, until her righteousness shines like a bright light, her salvation like a blazing torch.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Salvation: rejoicing, singing, waiting, longing, asking for it",
+     "note": null,
+     "doors": [
+      {
+       "id": "joy",
+       "name": "joy",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "hope",
+       "name": "hope",
+       "type": "concept",
+       "missing": false
+      },
+      {
+       "id": "prayer",
+       "name": "prayer",
+       "type": "concept",
+       "missing": false
+      }
+     ],
+     "n": 39,
+     "verses": [
+      "Ps.13.5",
+      "Isa.25.9",
+      "Gen.49.18",
+      "Lam.3.26",
+      "1Sam.2.1",
+      "1Sam.11.9",
+      "1Sam.19.5",
+      "2Sam.23.5",
+      "2Chr.6.41",
+      "Ps.9.14",
+      "Ps.14.7",
+      "Ps.20.5",
+      "Ps.21.1",
+      "Ps.25.5",
+      "Ps.35.9",
+      "Ps.40.16",
+      "Ps.51.12",
+      "Ps.53.6",
+      "Ps.69.13",
+      "Ps.69.29",
+      "Ps.70.4",
+      "Ps.80.2",
+      "Ps.85.7",
+      "Ps.106.4",
+      "Ps.118.15",
+      "Ps.119.41",
+      "Ps.119.81",
+      "Ps.119.123",
+      "Ps.119.166",
+      "Ps.119.174",
+      "Ps.132.16",
+      "Isa.12.3",
+      "Isa.33.2",
+      "Isa.51.5",
+      "Isa.61.10",
+      "Mic.7.7",
+      "Hab.3.18",
+      "Luke.1.47",
+      "Rom.10.1"
+     ],
+     "eg": [
+      {
+       "id": "Ps.13.5",
+       "ref": "Psalms 13:5",
+       "text": "But I have trusted in Your loving devotion; my heart will rejoice in Your salvation.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.25.9",
+       "ref": "Isaiah 25:9",
+       "text": "And in that day it will be said, “Surely this is our God; we have waited for Him, and He has saved us. This is the LORD for whom we have waited. Let us rejoice and be glad in His salvation.”",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        },
+        {
+         "key": "h3467",
+         "lemma": "יָשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "Gen.49.18",
+       "ref": "Genesis 49:18",
+       "text": "I await Your salvation, O LORD.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Lam.3.26",
+       "ref": "Lamentations 3:26",
+       "text": "It is good to wait quietly for the salvation of the LORD.",
+       "words": [
+        {
+         "key": "h8668",
+         "lemma": "תְּשׁוּעָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Victory and deliverance from enemies: “a great victory”, “a great deliverance”",
+     "note": null,
+     "doors": [
+      {
+       "id": "god",
+       "name": "God",
+       "type": "being",
+       "missing": false
+      }
+     ],
+     "n": 19,
+     "verses": [
+      "2Sam.23.10",
+      "Ps.144.10",
+      "Prov.21.31",
+      "Luke.1.71",
+      "Judg.15.18",
+      "1Sam.14.45",
+      "2Sam.19.2",
+      "2Sam.22.51",
+      "2Sam.23.12",
+      "1Chr.11.14",
+      "2Kgs.5.1",
+      "2Kgs.13.17",
+      "Ps.18.50",
+      "Ps.20.6",
+      "Ps.21.5",
+      "Ps.44.4",
+      "Prov.24.6",
+      "Acts.7.25",
+      "Hab.3.13"
+     ],
+     "eg": [
+      {
+       "id": "2Sam.23.10",
+       "ref": "2 Samuel 23:10",
+       "text": "but Eleazar stood his ground and struck the Philistines until his hand grew weary and stuck to his sword. The LORD brought about a great victory that day. Then the troops returned to him, but only to plunder the dead.",
+       "words": [
+        {
+         "key": "h8668",
+         "lemma": "תְּשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.144.10",
+       "ref": "Psalms 144:10",
+       "text": "to Him who gives victory to kings, who frees His servant David from the deadly sword.",
+       "words": [
+        {
+         "key": "h8668",
+         "lemma": "תְּשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Prov.21.31",
+       "ref": "Proverbs 21:31",
+       "text": "A horse is prepared for the day of battle, but victory is of the LORD.",
+       "words": [
+        {
+         "key": "h8668",
+         "lemma": "תְּשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Luke.1.71",
+       "ref": "Luke 1:71",
+       "text": "salvation from our enemies and from the hand of all who hate us,",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "No salvation: “God will not deliver him”, “so far from saving me”, “salvation is far”, “the help of man is worthless”",
+     "note": "Ps 22:1 begins “My God, my God, why have You forsaken me?”; the Gospels give those words as Jesus’ cry (Matt 27:46; Mark 15:34). The page draws nothing further.",
+     "doors": [],
+     "n": 9,
+     "verses": [
+      "Ps.3.2",
+      "Ps.22.1",
+      "Ps.146.3",
+      "Isa.59.11",
+      "Ps.33.17",
+      "Ps.60.11",
+      "Ps.108.12",
+      "Ps.119.155",
+      "Isa.26.18"
+     ],
+     "eg": [
+      {
+       "id": "Ps.3.2",
+       "ref": "Psalms 3:2",
+       "text": "Many say of me, “God will not deliver him.” Selah",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.22.1",
+       "ref": "Psalms 22:1",
+       "text": "For the choirmaster. To the tune of “The Doe of the Dawn.” A Psalm of David. My God, my God, why have You forsaken me? Why are You so far from saving me, so far from my words of groaning?",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Ps.146.3",
+       "ref": "Psalms 146:3",
+       "text": "Put not your trust in princes, in mortal man, who cannot save.",
+       "words": [
+        {
+         "key": "h8668",
+         "lemma": "תְּשׁוּעָה"
+        }
+       ]
+      },
+      {
+       "id": "Isa.59.11",
+       "ref": "Isaiah 59:11",
+       "text": "We all growl like bears and moan like doves. We hope for justice, but find none, for salvation, but it is far from us.",
+       "words": [
+        {
+         "key": "h3444",
+         "lemma": "יְשׁוּעָה"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Jesus called Savior; salvation in Christ",
+     "note": "Acts 4:12 (“Salvation exists in no one else”) follows “This Jesus is ‘the stone you builders rejected’” (4:11), and Acts 5:31 (“God exalted Him … as Prince and Savior”) follows “The God of our fathers raised up Jesus” (5:30); each is shown with the verse that names him. Titus 2:13 (“our great God and Savior Jesus Christ”) and 2 Pet 1:1 (“our God and Savior Jesus Christ”) stand in both this row and “God and salvation” because the phrase “God and Savior” is read of one person or of two; the page does not choose. In Titus the title Savior is given to God (1:3) and to Christ Jesus (1:4).",
+     "doors": [
+      {
+       "id": "jesus",
+       "name": "Jesus",
+       "type": "person",
+       "missing": false
+      }
+     ],
+     "n": 21,
+     "verses": [
+      "Luke.2.11",
+      "Acts.13.23",
+      "Titus.3.6",
+      "2Tim.2.10",
+      "Luke.19.9",
+      "John.4.42",
+      "Acts.4.11",
+      "Acts.4.12",
+      "Acts.5.30",
+      "Acts.5.31",
+      "Eph.5.23",
+      "Phil.3.20",
+      "2Tim.1.10",
+      "Titus.1.4",
+      "Titus.2.13",
+      "1Thess.5.9",
+      "2Pet.1.1",
+      "2Pet.1.11",
+      "2Pet.2.20",
+      "2Pet.3.18",
+      "1John.4.14"
+     ],
+     "eg": [
+      {
+       "id": "Luke.2.11",
+       "ref": "Luke 2:11",
+       "text": "Today in the city of David a Savior has been born to you. He is Christ the Lord!",
+       "words": [
+        {
+         "key": "g4990",
+         "lemma": "σωτήρ"
+        }
+       ]
+      },
+      {
+       "id": "Acts.13.23",
+       "ref": "Acts 13:23",
+       "text": "From the descendants of this man, God has brought to Israel the Savior Jesus, as He promised.",
+       "words": [
+        {
+         "key": "g4990",
+         "lemma": "σωτήρ"
+        }
+       ]
+      },
+      {
+       "id": "Titus.3.6",
+       "ref": "Titus 3:6",
+       "text": "This is the Spirit He poured out on us abundantly through Jesus Christ our Savior,",
+       "words": [
+        {
+         "key": "g4990",
+         "lemma": "σωτήρ"
+        }
+       ]
+      },
+      {
+       "id": "2Tim.2.10",
+       "ref": "2 Timothy 2:10",
+       "text": "For this reason I endure all things for the sake of the elect, so that they too may obtain the salvation that is in Christ Jesus, with eternal glory.",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Every other use",
+     "note": null,
+     "doors": [],
+     "n": 14,
+     "verses": [
+      "Job.5.4",
+      "John.4.22",
+      "2Cor.1.6",
+      "Job.5.11",
+      "Job.13.16",
+      "Ps.12.5",
+      "Prov.11.14",
+      "Acts.27.34",
+      "Phil.1.19",
+      "Phil.1.28",
+      "Heb.2.10",
+      "Heb.6.9",
+      "2Pet.3.2",
+      "2Pet.3.15"
+     ],
+     "eg": [
+      {
+       "id": "Job.5.4",
+       "ref": "Job 5:4",
+       "text": "His sons are far from safety, crushed in court without a defender.",
+       "words": [
+        {
+         "key": "h3468",
+         "lemma": "יֵשַׁע"
+        }
+       ]
+      },
+      {
+       "id": "John.4.22",
+       "ref": "John 4:22",
+       "text": "You worship what you do not know; we worship what we do know, for salvation is from the Jews.",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "2Cor.1.6",
+       "ref": "2 Corinthians 1:6",
+       "text": "If we are afflicted, it is for your comfort and salvation; if we are comforted, it is for your comfort, which accomplishes in you patient endurance of the same sufferings we experience.",
+       "words": [
+        {
+         "key": "g4991",
+         "lemma": "σωτηρία"
+        }
+       ]
+      },
+      {
+       "id": "Job.5.11",
+       "ref": "Job 5:11",
+       "text": "He sets the lowly on high, so that mourners are lifted to safety.",
+       "words": [
+        {
+         "key": "h3468",
+         "lemma": "יֵשַׁע"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "more": {
+    "n": 2,
+    "verses": [
+     "1Chr.19.12",
+     "2Sam.10.11"
+    ]
+   }
+  }
+ ],
+ "others": {
+  "title": "Other words translated “save”, “deliver”, “rescue”",
+  "words": [
+   {
+    "key": "h5337",
+    "lemma": "נָצַל",
+    "translit": "na.tsal",
+    "gloss": "to rescue",
+    "lang": "Hebrew",
+    "n": 172,
+    "verses": [
+     "Exod.3.8",
+     "Ps.18.48",
+     "Ps.22.8",
+     "Gen.32.11",
+     "Gen.37.21",
+     "Gen.37.22",
+     "Exod.2.19",
+     "Exod.5.23",
+     "Exod.6.6",
+     "Exod.18.4",
+     "Exod.18.8",
+     "Exod.18.9",
+     "Exod.18.10",
+     "Deut.23.14",
+     "Deut.25.11",
+     "Deut.32.39",
+     "Josh.2.13",
+     "Josh.9.26",
+     "Josh.22.31",
+     "Josh.24.10",
+     "Judg.6.9",
+     "Judg.8.34",
+     "Judg.9.17",
+     "Judg.10.15",
+     "Judg.18.28",
+     "1Sam.4.8",
+     "1Sam.7.3",
+     "1Sam.7.14",
+     "1Sam.10.18",
+     "1Sam.12.10",
+     "1Sam.12.11",
+     "1Sam.12.21",
+     "1Sam.14.48",
+     "1Sam.17.35",
+     "1Sam.17.37",
+     "1Sam.26.24",
+     "1Sam.30.8",
+     "1Sam.30.18",
+     "2Sam.12.7",
+     "2Sam.14.16",
+     "2Sam.19.9",
+     "2Sam.22.1",
+     "2Sam.22.18",
+     "2Sam.22.49",
+     "2Kgs.17.39",
+     "2Kgs.18.29",
+     "2Kgs.18.30",
+     "2Kgs.18.32",
+     "2Kgs.18.33",
+     "2Kgs.18.34",
+     "2Kgs.18.35",
+     "2Kgs.19.11",
+     "2Kgs.19.12",
+     "2Kgs.20.6",
+     "1Chr.16.35",
+     "2Chr.25.15",
+     "2Chr.32.11",
+     "2Chr.32.13",
+     "2Chr.32.14",
+     "2Chr.32.15",
+     "2Chr.32.17",
+     "Ezra.8.31",
+     "Neh.9.28",
+     "Job.5.4",
+     "Job.5.19",
+     "Job.10.7",
+     "Ps.7.1",
+     "Ps.7.2",
+     "Ps.18.1",
+     "Ps.18.17",
+     "Ps.22.20",
+     "Ps.25.20",
+     "Ps.31.2",
+     "Ps.31.15",
+     "Ps.33.16",
+     "Ps.33.19",
+     "Ps.34.4",
+     "Ps.34.17",
+     "Ps.34.19",
+     "Ps.35.10",
+     "Ps.39.8",
+     "Ps.40.13",
+     "Ps.50.22",
+     "Ps.51.14",
+     "Ps.54.7",
+     "Ps.56.13",
+     "Ps.59.1",
+     "Ps.59.2",
+     "Ps.69.14",
+     "Ps.70.1",
+     "Ps.71.2",
+     "Ps.71.11",
+     "Ps.72.12",
+     "Ps.79.9",
+     "Ps.82.4",
+     "Ps.86.13",
+     "Ps.91.3",
+     "Ps.97.10",
+     "Ps.106.43",
+     "Ps.107.6",
+     "Ps.109.21",
+     "Ps.119.170",
+     "Ps.120.2",
+     "Ps.142.6",
+     "Ps.143.9",
+     "Ps.144.7",
+     "Ps.144.11",
+     "Prov.2.12",
+     "Prov.2.16",
+     "Prov.6.3",
+     "Prov.6.5",
+     "Prov.10.2",
+     "Prov.11.4",
+     "Prov.11.6",
+     "Prov.12.6",
+     "Prov.14.25",
+     "Prov.19.19",
+     "Prov.23.14",
+     "Prov.24.11",
+     "Isa.5.29",
+     "Isa.19.20",
+     "Isa.20.6",
+     "Isa.31.5",
+     "Isa.36.14",
+     "Isa.36.15",
+     "Isa.36.18",
+     "Isa.36.19",
+     "Isa.36.20",
+     "Isa.37.11",
+     "Isa.37.12",
+     "Isa.38.6",
+     "Isa.42.22",
+     "Isa.43.13",
+     "Isa.44.17",
+     "Isa.44.20",
+     "Isa.47.14",
+     "Isa.50.2",
+     "Isa.57.13",
+     "Jer.1.8",
+     "Jer.1.19",
+     "Jer.15.20",
+     "Jer.15.21",
+     "Jer.20.13",
+     "Jer.21.12",
+     "Jer.22.3",
+     "Jer.39.17",
+     "Jer.42.11",
+     "Ezek.3.19",
+     "Ezek.3.21",
+     "Ezek.7.19",
+     "Ezek.13.21",
+     "Ezek.13.23",
+     "Ezek.14.14",
+     "Ezek.14.16",
+     "Ezek.14.18",
+     "Ezek.14.20",
+     "Ezek.33.9",
+     "Ezek.33.12",
+     "Ezek.34.10",
+     "Ezek.34.12",
+     "Ezek.34.27",
+     "Dan.8.4",
+     "Dan.8.7",
+     "Hos.2.10",
+     "Hos.5.14",
+     "Amos.3.12",
+     "Jonah.4.6",
+     "Mic.4.10",
+     "Mic.5.6",
+     "Mic.5.8",
+     "Zeph.1.18",
+     "Zech.11.6"
+    ],
+    "note": "נָצַל means rescue, snatch away: a different word from יָשַׁע. The Berean prints “rescue” and “deliver” for it, and “save” in a few verses (Prov 14:25, “A truthful witness saves lives”). The page does not make the two words one.",
+    "eg": [
+     {
+      "id": "Exod.3.8",
+      "ref": "Exodus 3:8",
+      "text": "I have come down to rescue them from the hand of the Egyptians and to bring them up out of that land to a good and spacious land, a land flowing with milk and honey-the home of the Canaanites, Hittites, Amorites, Perizzites, Hivites, and Jebusites."
+     },
+     {
+      "id": "Ps.18.48",
+      "ref": "Psalms 18:48",
+      "text": "who delivers me from my enemies. You exalt me above my foes; You rescue me from violent men."
+     }
+    ]
+   },
+   {
+    "key": "h4422",
+    "lemma": "מָלַט",
+    "translit": "ma.lat",
+    "gloss": "to escape",
+    "lang": "Hebrew",
+    "n": 31,
+    "verses": [
+     "1Sam.19.11",
+     "2Sam.19.5",
+     "2Sam.19.9",
+     "1Kgs.1.12",
+     "Job.6.23",
+     "Job.22.30",
+     "Job.29.12",
+     "Ps.22.5",
+     "Ps.33.17",
+     "Ps.41.1",
+     "Ps.89.48",
+     "Ps.107.20",
+     "Ps.116.4",
+     "Prov.28.26",
+     "Eccl.8.8",
+     "Eccl.9.15",
+     "Isa.31.5",
+     "Isa.46.2",
+     "Isa.46.4",
+     "Isa.49.24",
+     "Isa.49.25",
+     "Isa.66.7",
+     "Jer.39.18",
+     "Jer.48.6",
+     "Jer.51.6",
+     "Jer.51.45",
+     "Ezek.33.5",
+     "Dan.12.1",
+     "Joel.2.32",
+     "Amos.2.14",
+     "Amos.2.15"
+    ],
+    "eg": [
+     {
+      "id": "1Sam.19.11",
+      "ref": "1 Samuel 19:11",
+      "text": "Then Saul sent messengers to David's house to watch him and kill him in the morning. But David's wife Michal warned him, “If you do not run for your life tonight, tomorrow you will be dead!”"
+     },
+     {
+      "id": "2Sam.19.5",
+      "ref": "2 Samuel 19:5",
+      "text": "Then Joab went into the house and said to the king, “Today you have disgraced all your servants who have saved your life and the lives of your sons and daughters, of your wives, and of your concubines."
+     }
+    ]
+   },
+   {
+    "key": "h6403",
+    "lemma": "פָּלַט",
+    "translit": "pa.lat",
+    "gloss": "to escape",
+    "lang": "Hebrew",
+    "n": 20,
+    "verses": [
+     "2Sam.22.2",
+     "2Sam.22.44",
+     "Ps.17.13",
+     "Ps.18.2",
+     "Ps.18.43",
+     "Ps.18.48",
+     "Ps.22.4",
+     "Ps.22.8",
+     "Ps.31.1",
+     "Ps.32.7",
+     "Ps.37.40",
+     "Ps.40.17",
+     "Ps.43.1",
+     "Ps.70.5",
+     "Ps.71.2",
+     "Ps.71.4",
+     "Ps.82.4",
+     "Ps.91.14",
+     "Ps.144.2",
+     "Mic.6.14"
+    ],
+    "eg": [
+     {
+      "id": "2Sam.22.2",
+      "ref": "2 Samuel 22:2",
+      "text": "He said: “The LORD is my rock, my fortress, and my deliverer."
+     },
+     {
+      "id": "2Sam.22.44",
+      "ref": "2 Samuel 22:44",
+      "text": "You have delivered me from the strife of my people; You have preserved me as the head of nations; a people I had not known shall serve me."
+     }
+    ]
+   },
+   {
+    "key": "h2502",
+    "lemma": "חָלַץ",
+    "translit": "ḥālûṣ",
+    "gloss": "armed",
+    "lang": "Hebrew",
+    "n": 15,
+    "verses": [
+     "2Sam.22.20",
+     "Job.36.15",
+     "Ps.6.4",
+     "Ps.18.19",
+     "Ps.34.7",
+     "Ps.50.15",
+     "Ps.60.5",
+     "Ps.81.7",
+     "Ps.91.15",
+     "Ps.108.6",
+     "Ps.116.8",
+     "Ps.119.153",
+     "Ps.140.1",
+     "Prov.11.8",
+     "Prov.11.9"
+    ],
+    "eg": [
+     {
+      "id": "2Sam.22.20",
+      "ref": "2 Samuel 22:20",
+      "text": "He brought me out into the open; He rescued me because He delighted in me."
+     },
+     {
+      "id": "Job.36.15",
+      "ref": "Job 36:15",
+      "text": "God rescues the afflicted by their affliction and opens their ears in oppression."
+     }
+    ]
+   },
+   {
+    "key": "g4506",
+    "lemma": "ῥύομαι",
+    "translit": "rhuomai",
+    "gloss": "to rescue",
+    "lang": "Greek",
+    "n": 15,
+    "verses": [
+     "Matt.6.13",
+     "Col.1.13",
+     "2Cor.1.10",
+     "Rom.11.26",
+     "Rom.7.24",
+     "Matt.27.43",
+     "Luke.1.74",
+     "Rom.15.31",
+     "1Thess.1.10",
+     "2Thess.3.2",
+     "2Tim.3.11",
+     "2Tim.4.17",
+     "2Tim.4.18",
+     "2Pet.2.7",
+     "2Pet.2.9"
+    ],
+    "note": "ῥύομαι means rescue, draw out of danger: a different word from σῴζω. The Berean prints “deliver” and “rescue” (“deliver us from the evil one”, Matt 6:13; “rescued us from the dominion of darkness”, Col 1:13), and “the Deliverer” at Rom 11:26. The page does not make the two words one.",
+    "eg": [
+     {
+      "id": "Matt.6.13",
+      "ref": "Matthew 6:13",
+      "text": "And lead us not into temptation, but deliver us from the evil one.'"
+     },
+     {
+      "id": "Col.1.13",
+      "ref": "Colossians 1:13",
+      "text": "He has rescued us from the dominion of darkness and brought us into the kingdom of His beloved Son,"
+     }
+    ]
+   },
+   {
+    "key": "h7804",
+    "lemma": "יזב",
+    "translit": "she.zav",
+    "gloss": "to rescue",
+    "lang": "Hebrew",
+    "n": 7,
+    "verses": [
+     "Dan.3.15",
+     "Dan.3.17",
+     "Dan.3.28",
+     "Dan.6.14",
+     "Dan.6.16",
+     "Dan.6.20",
+     "Dan.6.27"
+    ],
+    "eg": [
+     {
+      "id": "Dan.3.15",
+      "ref": "Daniel 3:15",
+      "text": "Now when you hear the sound of the horn, flute, zither, lyre, harp, pipes, and all kinds of music, if you are ready to fall down and worship the statue I have made, very good. But if you refuse to worship, you will be thrown at once into the blazing fiery furnace. Then what god will be able to deliver you from my hands?”"
+     },
+     {
+      "id": "Dan.3.17",
+      "ref": "Daniel 3:17",
+      "text": "If the God whom we serve exists, then He is able to deliver us from the blazing fiery furnace and from your hand, O king."
+     }
+    ]
+   },
+   {
+    "key": "g1807",
+    "lemma": "ἐξαιρέω",
+    "translit": "exaireō",
+    "gloss": "to take out/select",
+    "lang": "Greek",
+    "n": 6,
+    "verses": [
+     "Acts.7.10",
+     "Gal.1.4",
+     "Acts.7.34",
+     "Acts.12.11",
+     "Acts.23.27",
+     "Acts.26.17"
+    ],
+    "eg": [
+     {
+      "id": "Acts.7.10",
+      "ref": "Acts 7:10",
+      "text": "and rescued him from all his troubles. He granted Joseph favor and wisdom in the sight of Pharaoh king of Egypt, who appointed him ruler over Egypt and all his household."
+     },
+     {
+      "id": "Gal.1.4",
+      "ref": "Galatians 1:4",
+      "text": "who gave Himself for our sins to rescue us from the present evil age, according to the will of our God and Father,"
+     }
+    ]
+   },
+   {
+    "key": "g1295",
+    "lemma": "διασῴζω",
+    "translit": "diasōzō",
+    "gloss": "to save",
+    "lang": "Greek",
+    "n": 5,
+    "verses": [
+     "Luke.7.3",
+     "1Pet.3.20",
+     "Acts.27.43",
+     "Acts.28.1",
+     "Acts.28.4"
+    ],
+    "eg": [
+     {
+      "id": "Luke.7.3",
+      "ref": "Luke 7:3",
+      "text": "When the centurion heard about Jesus, he sent some Jewish elders to ask Him to come and heal his servant."
+     },
+     {
+      "id": "1Pet.3.20",
+      "ref": "1 Peter 3:20",
+      "text": "who disobeyed long ago when God waited patiently in the days of Noah while the ark was being built. In the ark a few people, only eight souls, were saved through water."
+     }
+    ]
+   },
+   {
+    "key": "h5338",
+    "lemma": "נְצַל",
+    "translit": "ne.tsal",
+    "gloss": "to rescue",
+    "lang": "Hebrew",
+    "n": 3,
+    "verses": [
+     "Dan.3.29",
+     "Dan.6.14",
+     "Dan.6.27"
+    ],
+    "eg": [
+     {
+      "id": "Dan.3.29",
+      "ref": "Daniel 3:29",
+      "text": "Therefore I decree that the people of any nation or language who say anything offensive against the God of Shadrach, Meshach, and Abednego will be cut into pieces and their houses reduced to rubble. For there is no other god who can deliver in this way.”"
+     },
+     {
+      "id": "Dan.6.14",
+      "ref": "Daniel 6:14",
+      "text": "As soon as the king heard this, he was deeply distressed and set his mind on delivering Daniel, and he labored until sundown to rescue him."
+     }
+    ]
+   },
+   {
+    "key": "g4046",
+    "lemma": "περιποιέω",
+    "translit": "peripoieō",
+    "gloss": "to gain",
+    "lang": "Greek",
+    "n": 1,
+    "verses": [
+     "Luke.17.33"
+    ],
+    "eg": [
+     {
+      "id": "Luke.17.33",
+      "ref": "Luke 17:33",
+      "text": "Whoever tries to save his life will lose it, but whoever loses his life will preserve it."
+     }
+    ]
+   },
+   {
+    "key": "h2020",
+    "lemma": "הַצָּלָה",
+    "translit": "hats.tsa.lah",
+    "gloss": "deliverance",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Esth.4.14"
+    ],
+    "eg": [
+     {
+      "id": "Esth.4.14",
+      "ref": "Esther 4:14",
+      "text": "For if you remain silent at this time, relief and deliverance for the Jews will arise from another place, but you and your father's house will perish. And who knows if perhaps you have come to the kingdom for such a time as this?”"
+     }
+    ]
+   },
+   {
+    "key": "h6308",
+    "lemma": "פָּדַע",
+    "translit": "pa.da",
+    "gloss": "to deliver",
+    "lang": "Hebrew",
+    "n": 1,
+    "verses": [
+     "Job.33.24"
+    ],
+    "eg": [
+     {
+      "id": "Job.33.24",
+      "ref": "Job 33:24",
+      "text": "to be gracious to him and say, ‘Spare him from going down to the Pit; I have found his ransom,'"
+     }
+    ]
+   }
+  ]
+ }
+}
