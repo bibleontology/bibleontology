@@ -69,6 +69,17 @@ bor:answered a owl:ObjectProperty ;
         "person",
         "text" .
 
+bor:answered_in a owl:ObjectProperty ;
+    rdfs:label "is answered in" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    rdfs:range <https://bibleontology.org/ns/meaning#Saying> ;
+    skos:definition "A part of a story is taken up in a part of its explanation, in the same place in the telling; it records where the text's explanation answers the story and not that the two are the same thing, which is what signifies records when the text says so outright." ;
+    bor:category "Images & figures" ;
+    bor:inverseLabel "answers" ;
+    bor:sourceKind "image",
+        "text" ;
+    bor:targetKind "text" .
+
 bor:appeared_to a owl:ObjectProperty ;
     rdfs:label "appeared to" ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
@@ -218,11 +229,11 @@ bor:baptized a owl:ObjectProperty ;
         "person" .
 
 bor:based_at a owl:ObjectProperty ;
-    rdfs:label "centred on" ;
+    rdfs:label "centered on" ;
     rdfs:domain <https://bibleontology.org/ns/meaning#Group> ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
     rdfs:range <https://bibleontology.org/ns/meaning#Place> ;
-    skos:definition "A group is centred on a place, so that a church, household or tribe is a group with a location and not a synonym for the place." ;
+    skos:definition "A group is centered on a place, so that a church, household or tribe is a group with a location and not a synonym for the place." ;
     bor:category "Places" ;
     bor:inverseLabel "was the centre of" ;
     bor:sourceKind "group" ;
@@ -1384,6 +1395,7 @@ bor:signifies a owl:ObjectProperty ;
         "person",
         "place" ;
     bor:targetKind "being",
+        "concept",
         "covenant",
         "creature",
         "group",

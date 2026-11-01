@@ -48,17 +48,23 @@ ENT = ROOT / "ontology" / "entities" / "theme-map.jsonl"
 REL = ROOT / "ontology" / "relations" / "theme-map.jsonl"
 MAP = ROOT / "ontology" / "themes" / "theme-nodes.json"
 RETIRED = ROOT / "ontology" / "themes" / "retired-concept-nodes.json"
-# cards whose name a redone sub-theme shares but whose sense it does not
-NOT_THE_SAME = {"firstborn"}
+# cards whose name a redone sub-theme shares but whose sense it does not; and sacrifice, whose card carries "burnt
+# offering" as another name: the sub-theme "The burnt offering" is a kind of sacrifice, not the concept (the concept
+# panel, 2026-10-28: the theme reached the card through "The burnt offering"; it now opens it as "The words for
+# sacrifice", ontology/concept-theme-bridges.json)
+NOT_THE_SAME = {"firstborn", "sacrifice"}
 SOURCE = "copilot-theme-map"
 sys.path.insert(0, str(ROOT / "tools" / "themes"))
 from node_proposal import head, norm  # noqa: E402
 from theme_map import node_index  # noqa: E402
 
 # The choice: "The 6 plain ones"
+# ("sacrifice:9" was the Day of Atonement in Copilot's outline; in the redone one it is "A vow or a freewill offering",
+# and the merge put the Day of Atonement on the card twice, once citing Lev 7:16, 22:18 and Num 15:3 (the concept
+# panel, 2026-10-28, FAULTS #12). The redone outline's Day of Atonement, sacrifice:15, finds the card by its name.)
 MERGE = {"theme:covenant": "covenant", "theme:kingdom": "kingdom",
          "theme:sacrifice": "sacrifice", "theme:image_of_god": "image_of_god",
-         "sacrifice:9": "day_of_atonement", "mercy_restoration:3": "remission_of_sins",
+         "mercy_restoration:3": "remission_of_sins",
          # A.34, 2026-10-07: two cards were confusing -- the
          # Spiritual Warfare concept "The full armor of God" is Ephesians
          # 6:10-18, which the graph already holds as the armor's card

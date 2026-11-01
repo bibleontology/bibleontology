@@ -32,6 +32,11 @@ bor:anointed_subjectShape a sh:NodeShape ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:anointed .
 
+bor:answered_in_subjectShape a sh:NodeShape ;
+    sh:message "The subject of answered_in must be one of: Image, Saying" ;
+    sh:or ( [ sh:class bom:Image ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:answered_in .
+
 bor:answered_objectShape a sh:NodeShape ;
     sh:message "The object of answered must be one of: Animal, Group, PersonalBeing, Saying" ;
     sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
@@ -603,8 +608,8 @@ bor:servant_of_subjectShape a sh:NodeShape ;
     sh:targetSubjectsOf bor:servant_of .
 
 bor:signifies_objectShape a sh:NodeShape ;
-    sh:message "The object of signifies must be one of: Animal, Artifact, Communication, Event, Group, PersonalBeing, Place, Saying, Title" ;
-    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:message "The object of signifies must be one of: Animal, Artifact, Communication, Concept, Event, Group, PersonalBeing, Place, Saying, Title" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
     sh:targetObjectsOf bor:signifies .
 
 bor:signifies_subjectShape a sh:NodeShape ;

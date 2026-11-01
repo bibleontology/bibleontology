@@ -32,6 +32,9 @@ def tests_in(tree: Path) -> list[str]:
 
 
 def main() -> int:
+    # a test's output can hold Greek or Hebrew, which Windows' console code page cannot print (2026-11-01: the
+    # report crashed on its first FAIL line and showed none of them)
+    sys.stdout.reconfigure(encoding="utf-8")
     if len(sys.argv) != 2:
         sys.exit(__doc__)
     tree = Path(sys.argv[1]).resolve()
@@ -81,6 +84,11 @@ def main() -> int:
     else:
         print("  note gitleaks is not installed here; its scan was skipped")
     for t in tests_in(tree):
+        # a test on the exporter's NEVER list does not travel (test_worker, test_header): preflight still names it, the
+        # copy has no file to run (2026-11-01: both failed as "can't open file")
+        if not (tree / "tests" / t).exists():
+            print(f"  skip {t}: not in the copy (the exporter leaves it out)")
+            continue
         p = subprocess.run([sys.executable, f"tests/{t}"], cwd=tree, env=env, capture_output=True, text=True,
                            encoding="utf-8", timeout=1800)
         last = (p.stdout.strip().splitlines() or [""])[-1][:150]

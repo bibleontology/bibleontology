@@ -189,6 +189,55 @@ for slug, m in ts.items():
     for p in m["positions"]:
         check(f"{slug}: its page links back to {p['id']}", f'href="/questions/{p["id"]}"' in page[1])
 
+# --- a position is a reading the card says the tradition holds (2026-10-28) ---------------------------------------
+# The layer joins a document to every reading the card cites it under, caveats too: the Catholic page listed
+# unconditional election on CCC 1037 ("God predestines no one to go to hell") beside conditional election. A reading
+# stands under "Where it stands" only where the card's own held_by names the tradition; the rest are shown apart.
+def position_faults(ts, qs):
+    out = []
+    for slug, m in ts.items():
+        if m["level"] == "school":
+            continue
+        for p in m["positions"]:
+            for r in p["readings"]:
+                if m["name"] not in (qs[p["id"]]["readings"][r["index"] - 1].get("held_by") or []):
+                    out.append(f"{slug}: reading {r['index']} of {p['id']} stands as its position; the card's "
+                               f"held_by does not name it")
+    return out
+
+
+def where_it_stands(body):
+    """the served page's "Where it stands" section, up to the next h2"""
+    part = body.split("<h2>Where it stands, question by question</h2>", 1)
+    return part[1].split("<h2>", 1)[0] if len(part) > 1 else ""
+
+
+reset(shown_now)
+ts, qs = S._traditions(), S._questions()
+for f in position_faults(ts, qs):
+    check(f, False)
+if "election" in qs and "catholic" in ts:
+    cat = S.traditions_page("catholic")[1]
+    check("catholic: CCC 1037 is not a Catholic position under unconditional election",
+          "1037" not in where_it_stands(cat))
+    check("catholic: CCC 1037 is shown apart, cited under a reading not credited to it",
+          "1037" in cat.split("Cited under readings the question page does not credit to it", 1)[-1]
+          and "Cited under readings the question page does not credit to it" in cat)
+    api = S.api_tradition(None, {"id": ["catholic"]})
+    el = next(p for p in api["positions"] if p["id"] == "election")
+    check("catholic: /api/tradition holds unconditional election apart",
+          2 not in [r["index"] for r in el["readings"]] and 2 in [r["index"] for r in el["cited"]])
+    # planted: the old join back under "Where it stands", in the model and on the page
+    bad = copy.deepcopy(ts)
+    bel = next(p for p in bad["catholic"]["positions"] if p["id"] == "election")
+    bel["readings"] += bel["cited"]
+    check("planted: unconditional election back as a Catholic position was not caught",
+          any("catholic" in f and "election" in f for f in position_faults(bad, qs)))
+    planted = cat.replace("<h2>Where it stands, question by question</h2>",
+                          "<h2>Where it stands, question by question</h2><ul><li>Catechism of the Catholic Church, "
+                          "1037 (Hell)</li></ul>", 1)
+    check("planted: CCC 1037 under Where it stands on the page was not caught", "1037" in where_it_stands(planted))
+
 # --- the old words ---------------------------------------------------------------------------------------------
 OLD = "not part of this site's knowledge graph"
 for f in (ROOT / "app2" / "server.py", ROOT / "app2" / "static" / "index.html"):

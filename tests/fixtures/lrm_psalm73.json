@@ -1,0 +1,165 @@
+{
+ "_note": "The Psalm 73 LRM/LRMoo pilot (P-2026-10-31-2), 2026-10-31. Every modeling decision is in this file; the generator only maps it to triples. LRMoo terms to be verified against the normative LRMoo 1.0 release before adoption (Claude's review step). Verified 2026-10-31 against LRMoo 1.0 (cidoc-crm.org RDFS and HTML): F1, F2, F3, F27, R3, R4, R16 and the namespace as used; R10 is 'is member of' (F1 to E28 Conceptual Object), not Work to Work, so the Psalter's containing Psalm 73 is R67 'has part' (F1 to F1). The current release is 1.1.1: check it before adoption.",
+ "site": "https://bibleontology.org",
+ "base": "https://bibleontology.org/r/",
+ "ns": {
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "xsd": "http://www.w3.org/2001/XMLSchema#",
+  "dcterms": "http://purl.org/dc/terms/",
+  "lrmoo": "http://iflastandards.info/ns/lrm/lrmoo/",
+  "biblio": "https://bibleontology.org/ns/biblio#",
+  "claim": "https://bibleontology.org/ns/claim#"
+ },
+ "terms": {
+  "Work": "lrmoo:F1_Work",
+  "Expression": "lrmoo:F2_Expression",
+  "Manifestation": "lrmoo:F3_Manifestation",
+  "WorkCreation": "lrmoo:F27_Work_Creation",
+  "is_realised_in": "lrmoo:R3_is_realised_in",
+  "embodies": "lrmoo:R4_embodies",
+  "has_member": "lrmoo:R67_has_part",
+  "created": "lrmoo:R16_created",
+  "translationOf": "biblio:translationOf",
+  "Segment": "biblio:Segment",
+  "segmentOf": "biblio:segmentOf",
+  "segmentNumber": "biblio:segmentNumber",
+  "alignedWith": "biblio:alignedWith",
+  "Arrangement": "biblio:Arrangement",
+  "arrangementOf": "biblio:arrangementOf",
+  "Section": "biblio:Section",
+  "sectionOf": "biblio:sectionOf",
+  "firstPosition": "biblio:firstPosition",
+  "lastPosition": "biblio:lastPosition",
+  "ArrangementEntry": "biblio:ArrangementEntry",
+  "member": "biblio:member",
+  "inArrangement": "biblio:inArrangement",
+  "position": "biblio:position",
+  "inSection": "biblio:inSection",
+  "positionInSection": "biblio:positionInSection",
+  "superscriptionNames": "biblio:superscriptionNames",
+  "composedBy": "biblio:composedBy",
+  "Claim": "claim:Claim",
+  "subject": "claim:subject",
+  "relation": "claim:relation",
+  "object": "claim:object",
+  "verse": "claim:verse",
+  "certainty": "claim:certainty",
+  "voice": "claim:voice",
+  "label": "rdfs:label",
+  "language": "dcterms:language",
+  "source": "dcterms:source"
+ },
+ "works": [
+  {
+   "id": "work/psalm-73",
+   "label": "Psalm 73"
+  },
+  {
+   "id": "work/psalter",
+   "label": "The Psalter"
+  }
+ ],
+ "members": [
+  {
+   "whole": "work/psalter",
+   "part": "work/psalm-73"
+  }
+ ],
+ "expressions": [
+  {
+   "id": "expr/psalm-73-hebrew",
+   "label": "Psalm 73 in Hebrew (MACULA Hebrew, after the Westminster Leningrad Codex)",
+   "realises": "work/psalm-73",
+   "language": "hbo"
+  },
+  {
+   "id": "expr/psalm-73-bsb",
+   "label": "Psalm 73 in English (the Berean Standard Bible)",
+   "realises": "work/psalm-73",
+   "language": "en",
+   "translationOf": "expr/psalm-73-hebrew"
+  }
+ ],
+ "manifestations": [
+  {
+   "id": "man/macula-hebrew",
+   "label": "MACULA Hebrew, the dataset release by Biblica",
+   "embodies": [
+    "expr/psalm-73-hebrew"
+   ],
+   "source": "https://github.com/Clear-Bible/macula-hebrew"
+  },
+  {
+   "id": "man/bsb",
+   "label": "The Berean Standard Bible, the public-domain text",
+   "embodies": [
+    "expr/psalm-73-bsb"
+   ],
+   "source": "https://berean.bible"
+  }
+ ],
+ "segments": {
+  "verses": 28,
+  "hebrew": {
+   "expression": "expr/psalm-73-hebrew",
+   "id": "seg/hebrew/Ps.73.{n}"
+  },
+  "english": {
+   "expression": "expr/psalm-73-bsb",
+   "iri": "https://bibleontology.org/p/Ps.73.{n}"
+  },
+  "_note": "The two texts number Psalm 73 alike (the superscription is in verse 1 in both), so segment n aligns with n. They are still separate segments of separate Expressions: the same numbering is a fact about these two texts, not an identity."
+ },
+ "workCreation": {
+  "id": "event/psalm-73-creation",
+  "created": "work/psalm-73",
+  "_note": "No agent, no date and no place: the text gives none for certain. Who composed it is a reading (below)."
+ },
+ "arrangement": {
+  "id": "arr/psalter-mt",
+  "label": "The order of the Psalms in the Masoretic Text, as the Berean prints it",
+  "of": "work/psalter",
+  "sections": [
+   {
+    "id": "arr/psalter-mt/book-3",
+    "label": "Book III",
+    "first": 73,
+    "last": 89
+   }
+  ],
+  "entries": [
+   {
+    "id": "arr/psalter-mt/entry-73",
+    "member": "work/psalm-73",
+    "position": 73,
+    "section": "arr/psalter-mt/book-3",
+    "positionInSection": 1
+   }
+  ]
+ },
+ "claims": [
+  {
+   "id": "claim/psalm-73-superscription",
+   "subject": "work/psalm-73",
+   "relation": "superscriptionNames",
+   "object": "https://bibleontology.org/e/asaph_singer",
+   "verse": "https://bibleontology.org/p/Ps.73.1",
+   "certainty": "claim:conjectured",
+   "voice": "https://bibleontology.org/voice/reader/editors",
+   "label": "The superscription names Asaph; that he is the Levite singer of 1 Chronicles is the editors' identification",
+   "_note": "Described, never stated: the text names an Asaph, and the graph holds three."
+  },
+  {
+   "id": "claim/psalm-73-composer",
+   "subject": "work/psalm-73",
+   "relation": "composedBy",
+   "object": "https://bibleontology.org/e/asaph_singer",
+   "verse": "https://bibleontology.org/p/Ps.73.1",
+   "certainty": "claim:disputed",
+   "voice": "https://bibleontology.org/voice/reader/editors",
+   "label": "Asaph composed Psalm 73: a reading of the superscription, which may name an author, a collection or a guild",
+   "_note": "Described, never stated. Never an lrmoo agent on the Work Creation."
+  }
+ ]
+}

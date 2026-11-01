@@ -247,6 +247,26 @@ def family_of(lab):
 
 def main():
     kept = [json.loads(x) for x in (ROOT / "out/meaning/lift/relations-final.jsonl").read_text(encoding="utf-8").splitlines()]
+    # LIFTED LATER (2026-10-27): statements two judges kept from clauses whose
+    # subject a later pass resolved, kept in the repository so a rebuild from
+    # the 10-19 lift alone does not drop them; a row already lifted is not doubled
+    have = {(x["id"], x["subject"], x["object"]) for x in kept}
+    for p_ in sorted((ROOT / "ontology" / "provenance" / "meaning").glob("lifted-additions-*.jsonl")):
+        for line in p_.read_text(encoding="utf-8").splitlines():
+            x = json.loads(line)
+            if (x["id"], x["subject"], x["object"]) not in have:
+                kept.append(x)
+    # WITHDRAWN BY A LATER JUDGMENT (2026-10-27, the Mac's whole-graph check):
+    # a statement both lift judges kept, which the local model then flagged and
+    # two Claude judges found has a wrong end (1 Chr 13:11's Perez-uzzah, a
+    # place, had resolved to Perez the man). Matched on the clause AND both
+    # ends, so a statement re-resolved to the right record is not caught
+    withdrawn = set()
+    for p_ in sorted((ROOT / "ontology" / "provenance" / "meaning").glob("statement-withdrawals-*.json")):
+        withdrawn |= {(w["clause"], w["subject"], w["object"])
+                      for w in json.loads(p_.read_text(encoding="utf-8"))["withdrawn"]}
+    n_kept = len(kept)
+    kept = [x for x in kept if (x["id"], x["subject"], x["object"]) not in withdrawn]
     recs = {json.loads(x)["clause"]: json.loads(x)
             for x in (ROOT / "out/meaning/clause-records.jsonl").read_text(encoding="utf-8").splitlines()}
     # the hand-built relations, by their two ends IN ORDER, with their verb.
@@ -286,10 +306,10 @@ def main():
             voices[v["clause"]] = (("held", v["held"]) if "held" in v else
                                    ("speaker", v["speaker"]) if "speaker" in v else ("narrator",))
     # THE TIME READING (plan 2.19a, tools/meaning/statement_time.py): clause ->
-    # the answer both judges gave
-    tp = ROOT / "ontology" / "provenance" / "meaning" / "statement-time-2026-10-20.jsonl"
+    # the answer both judges gave (2026-10-27: and the later readings of the
+    # statements lifted since, each in its own dated file)
     time_read = {}
-    if tp.exists():
+    for tp in sorted((ROOT / "ontology" / "provenance" / "meaning").glob("statement-time-*.jsonl")):
         for line in tp.read_text(encoding="utf-8").splitlines():
             t_ = json.loads(line)
             if t_.get("answer"):
@@ -314,6 +334,8 @@ def main():
     st, out, seen, evidence = collections.Counter(), [], {}, []
     if parallel_split:
         st["parallel passages read differently (their readings not applied)"] = parallel_split
+    if n_kept - len(kept):
+        st["withdrawn by a later judgment (statement-withdrawals-*.json)"] = n_kept - len(kept)
     for x in kept:
         # a reflexive ("Elizabeth hid herself", "serve one another") is not a
         # relation between two records: another shape, not written

@@ -26,8 +26,11 @@ out; search engines and AI search and answer fetchers in. Since 2026-10-05 it
 is the only place that says it -- Cloudflare's training block also blocked
 Googlebot, and was set to Allow.
 
-    python tools/sitemap.py          -> deploy/www/{robots.txt, sitemap*.xml}
+    python tools/sitemap.py                      -> deploy/www/{robots.txt, sitemap*.xml}
+    python tools/sitemap.py --lastmod 2026-10-29 -> the same, with that date as every page's lastmod
+                                                    (default: today)
 """
+import argparse
 import datetime
 import re
 import sys
@@ -86,17 +89,28 @@ def word_listing(d, only=None):
     return listed, measured
 
 
-def urlset(urls, today):
-    # no per-page lastmod: stamping every page "today" on each build is the
-    # kind of date Google learns to ignore
-    rows = "".join(f"<url><loc>{escape(SITE + u)}</loc></url>\n" for u in urls)
+def urlset(urls, lastmod):
+    # lastmod is W3C date format (YYYY-MM-DD), the form Google accepts. Stamping
+    # every page with one date is honest only when every page changed in that
+    # release (2026-10-29: Google's renderer had seen empty pages, and every
+    # page's visible content changed for Google); otherwise it is the kind of
+    # date Google learns to ignore. TO STAMP PER PAGE LATER: make `lastmod` a
+    # dict {url: date} (or a callable on the url), built from what changed
+    # since the last release, and use .get(u, previous date) below; the
+    # previous run's dates are in git (deploy/www/sitemap-*.xml).
+    rows = "".join(f"<url><loc>{escape(SITE + u)}</loc><lastmod>{lastmod}</lastmod></url>\n" for u in urls)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + rows + "</urlset>\n")
 
 
 def main():
+    ap = argparse.ArgumentParser(description="write robots.txt and the sitemaps to deploy/www/")
+    ap.add_argument("--lastmod", default=datetime.date.today().isoformat(), metavar="YYYY-MM-DD",
+                    help="the date stamped on every <url> and in the index (default: today)")
+    today = ap.parse_args().lastmod
+    datetime.date.fromisoformat(today)          # refuse anything but a real date
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", today), today   # and only in YYYY-MM-DD form
     d = S.load()
-    today = datetime.date.today().isoformat()
     pages = ["/", "/about", "/faq", "/graph"] + [S.theme_path(t["id"]) for t in S._theme_map().get("themes", [])] \
         + [S._side_path(t) for t in S._theme_hubs() if S._imagery(t)] \
         + [f"/explore/{g}" for g in (*S.EXPLORE_PAGES, *S.EXPLORE_GROUPS, *S.EXPLORE_SECTIONS)] \
@@ -119,7 +133,7 @@ def main():
     blog = ROOT / "app2" / "static" / "blog"
     if (blog / "index.html").exists():
         pages += ["/blog/"] + [f"/blog/{p.stem}" for p in sorted(blog.glob("*.html")) if p.stem != "index"]
-    cards, skipped = [], 0
+    cards, skipped, thin = [], 0, 0
     for eid, e in sorted(d["ents"].items()):
         attrs = e.get("attrs") or {}
         # a record consolidated into an event (ontology/aliases.jsonl) answers
@@ -128,6 +142,22 @@ def main():
                 or attrs.get("kind") == "major_theme" or e.get("alias_of"):
             skipped += 1
             continue
+        # AN IMAGE CARD'S PAGE IS LISTED WHEN IT IS ASKED TO BE INDEXED (2026-10-30, ruling IM-E): 3 verse links and
+        # 100 words, measured on the page as it is built now; the rest carry noindex, follow and are not listed. A
+        # card returns to the list the day its page qualifies.
+        if e["type"] == "image":
+            got = S.card_page(eid)
+            if not got or not S.image_indexable(got[1])[2]:
+                thin += 1
+                continue
+        # AN OBJECT-FAMILY OR GROUP CARD'S PAGE LIKEWISE (2026-10-30/31, rulings OB-D and GR-E): the page's own robots tag
+        # decides (own cited verses and 100 words; a covenant's or observance's telling counts); the Jews are held and
+        # keep the page they had. A card the new faces do not cover (a divine title) has no tag and is listed.
+        if e["type"] in S.OB_KINDS or e["type"] == "group":
+            got = S.card_page(eid)
+            if got and 'name="robots" content="noindex' in got[0]:
+                thin += 1
+                continue
         # the card's own address: a name-made one where the id misleads
         # (tools/card_slugs.py), never an address that only redirects
         cards.append(f"/e/{S.quote(S._addr(eid))}")
@@ -211,7 +241,7 @@ def main():
               f"Sitemap: {SITE}/sitemap.xml\n")
     (OUT / "robots.txt").write_text(robots, encoding="utf-8", newline="\n")
     n_verses = len(d["verses"])
-    print(f"pages {len(pages)}, cards {len(cards)} (left out {skipped}), chapters {len(chapters)}, "
+    print(f"pages {len(pages)}, cards {len(cards)} (left out {skipped}; {thin} thin cards noindexed), chapters {len(chapters)}, "
           f"verses {len(verses)} of {n_verses} ({len(cited)} cited by a card, {len(echoed)} with "
           f"quotation, echo or parallel), word cards {len(words)} of {len(wmeasured)} "
           f"(>= {WORD_MIN_VERSES} verses and >= {WORD_MIN_WORDS} words) -> {OUT}")

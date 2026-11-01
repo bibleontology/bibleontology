@@ -1,0 +1,169 @@
+{
+ "what": "verb-statements withdrawn: both lift judges had kept them; the Mac's whole-graph structure check (gemma4:26b, 452 of 452 planted faults caught) flagged them; a Haiku judge and then a Sonnet judge, blind to each other, each found the same wrong end. Read by tools/meaning/write_statements.py",
+ "pass": "3-structure-all, judged 2026-10-27 (the 165 flags on records behind a shown statement: 152 upheld by Haiku, 13 escalated; 10 agreed, 2 split, 1 unsure, all three left as they are)",
+ "withdrawn": [
+  {
+   "clause": "1Ch.13.11#cl2",
+   "ref": "1Ch.13.11",
+   "subject": "david",
+   "object": "pharez",
+   "shown_as": [
+    "david -called-> pharez"
+   ],
+   "finding": "wrong_receiver",
+   "the_verse_means": "the place Perez-uzzah (named by David after the LORD's outburst against Uzzah), not Perez the ancestor",
+   "words": "So he named that place Perez-uzzah, as it is called to this day.",
+   "local_model": {
+    "answer": "no",
+    "reason": "the text says 'he named that place Perez-uzzah', not that he called it 'Perez'"
+   }
+  },
+  {
+   "clause": "1Sa.7.15#cl0",
+   "ref": "1Sa.7.15",
+   "subject": "samuel",
+   "object": "israel_united_kingdom",
+   "shown_as": [
+    "samuel -judged-> israel_united_kingdom"
+   ],
+   "finding": "wrong_receiver",
+   "the_verse_means": "Israel, the people (the Israelites) in Samuel's day, before any king reigned; not the kingdom under Saul, David and Solomon",
+   "words": "So Samuel judged Israel all the days of his life.",
+   "local_model": {
+    "answer": "wrong_who",
+    "reason": "Samuel judged Israel, but the record specifies 'the kingdom of Israel under Saul, David and Solomon' which is a specific political structure not mentioned in the text."
+   }
+  },
+  {
+   "clause": "1Sa.7.16#cl2",
+   "ref": "1Sa.7.16",
+   "subject": "samuel",
+   "object": "israel_united_kingdom",
+   "shown_as": [
+    "samuel -judged-> israel_united_kingdom"
+   ],
+   "finding": "wrong_receiver",
+   "the_verse_means": "Israel, the people (the Israelites) in Samuel's day, before any king reigned; not the kingdom under Saul, David and Solomon",
+   "words": "judging Israel in all these places.",
+   "local_model": {
+    "answer": "wrong_who",
+    "reason": "the text says he was 'judging Israel', not the specific kingdom under Saul, David and Solomon"
+   }
+  },
+  {
+   "clause": "1Sa.7.17#cl2",
+   "ref": "1Sa.7.17",
+   "subject": "samuel",
+   "object": "israel_united_kingdom",
+   "shown_as": [
+    "samuel -judged-> israel_united_kingdom"
+   ],
+   "finding": "wrong_receiver",
+   "the_verse_means": "Israel, the people (the Israelites) in Samuel's day, before any king reigned; not the kingdom under Saul, David and Solomon",
+   "words": "and there he judged Israel and built an altar to the LORD.",
+   "local_model": {
+    "answer": "wrong_who",
+    "reason": "the text says 'there he judged Israel', not the specific kingdom under Saul, David and Solomon"
+   }
+  },
+  {
+   "clause": "1Sa.8.8#cl3",
+   "ref": "1Sa.8.8",
+   "subject": "israel_united_kingdom",
+   "object": "god",
+   "shown_as": [
+    "israel_united_kingdom -forsook-> god"
+   ],
+   "finding": "wrong_doer",
+   "the_verse_means": "the people of Israel, the Israelites brought up out of Egypt (and the people asking for a king), not the monarchy under Saul, David and Solomon",
+   "words": "from the day I brought them up out of Egypt until this day, forsaking Me and serving other gods",
+   "local_model": {
+    "answer": "wrong_who",
+    "reason": "the text says 'they' (the people) have rejected/forsaken God, not the kingdom under Saul, David and Solomon"
+   }
+  },
+  {
+   "clause": "2Ki.17.36#cl1",
+   "ref": "2Ki.17.36",
+   "subject": "god",
+   "object": "israel_northern_kingdom",
+   "shown_as": [
+    "god -brought-> israel_northern_kingdom"
+   ],
+   "finding": "wrong_receiver",
+   "the_verse_means": "the Israelites, the people of Israel whom the LORD brought out of Egypt; not the northern kingdom of Israel",
+   "words": "worship the LORD, who brought you out of the land of Egypt with great power and an outstretched arm.",
+   "local_model": {
+    "answer": "wrong_who",
+    "reason": "the LORD... brought you out of the land of Egypt\", \"note\": \"The action 'brought' is correct, but the receiver is 'you' (the people/Israelites), not 'the kingdom of Israel' as a distinct entity/object in this context, though more importantly, the verse describes God bringing the people out of Egypt, not bringing the kingdom itself.\"}\n```\n\nWait, looking at the instructions again: \"the temple may be 'a house for My Name', 'the house of the LORD' or 'it'\". The record says \"the kingdom of Israel\". In 2 Kings 17:36, God brought \"you\" (the people) out of Egypt. While the people constitute the kingdom, the verse specifically identifies the receiver of the action \"brought\" as \"you\" (the people). However, in many theological contexts, \"the kingdom\" and \"the people\" are synonymous. Let's re-evaluate.\n\nActually, looking at the prompt's strictness: \"the doer and the receiver are the ones the verse means\". The verse says \"brought **you** out\". \"You\" refers to the people. \"The kingdom of Israel\" is a political entity. In the context of 2 Kings 17, this is the period of the Assyrian captivity. \n\nLet's look at the \"wrong_who\" definition: \"the doer or the receiver is a DIFFERENT person or thing than the verse means (another house, another person, a part instead of the whole)\". \n\nThe verse says: \"the LORD... brought **you** out of the land of Egypt\".\nThe record says: \"God -brought-> **the kingdom of Israel**\".\n\nIs \"the kingdom of Israel\" the same as \"you\" (the people)? In the context of 2 Kings 17, the people are being addressed. The record is likely \"wrong_who\" because the action is directed at the people/Israelites, and \"the kingdom\" is a different concept than the people themselves, or more simply, the verse identifies the receiver as \"you\".\n\nActually, looking at the provided example: `2 Kgs 11:18 \"the people of the land went to the temple of Baal and tore it down\", record: unnamed -tore down-> The Temple -> wrong_who: \"it\" is the temple of Baal, not the LORD's temple.`\n\nIn 2 Ki 17:36, the receiver is \"you\" (the people). \"The kingdom of Israel\" is the entity. This is a subtle distinction. However, usually, in these tasks, if the verse says \"you\" and the record says \"the kingdom\", it's a mismatch of the specific receiver.\n\nLet's try again.\nAction: brought.\nDoer: the LORD (God).\nReceiver: you (the people).\nRecord: God -brought-> the kingdom of Israel.\n\nThe verse says \"brought **you** out\". \"You\" are the people. The record names the receiver as \"the kingdom of Israel\". This is a \"wrong_who\" because the receiver is the people.\n\n```json\n{\"answer\": \"wrong_who\", \"doer\": \"\", \"reason\": \"the LORD... brought you out of the land of Egypt"
+   }
+  },
+  {
+   "clause": "Deu.26.14#cl5",
+   "ref": "Deu.26.14",
+   "subject": "god",
+   "object": "children_of_israel",
+   "shown_as": [
+    "god -commanded-> children_of_israel"
+   ],
+   "finding": "wrong_receiver",
+   "the_verse_means": "the individual Israelite making the declaration (the speaker, 'me'), not the sons of Israel as a group",
+   "words": "I have done everything You commanded me.",
+   "local_model": {
+    "answer": "no",
+    "reason": "I have obeyed the LORD my God; I have done everything You commanded me."
+   }
+  },
+  {
+   "clause": "Jdg.11.32#cl2",
+   "ref": "Jdg.11.32",
+   "subject": "god",
+   "object": "ammon_region",
+   "shown_as": [
+    "god -gave-> ammon_region"
+   ],
+   "finding": "wrong_receiver",
+   "the_verse_means": "the Ammonites, the people of Ammon, not the territory",
+   "words": "Jephthah crossed over to the Ammonites to fight against them, and the LORD delivered them into his hand.",
+   "local_model": {
+    "answer": "no",
+    "reason": "the LORD delivered them [the Ammonites] into his [Jephthah's] hand"
+   }
+  },
+  {
+   "clause": "Jhn.7.27#cl0",
+   "ref": "Jhn.7.27",
+   "subject": "jerusalem",
+   "object": "jesus",
+   "shown_as": [
+    "jerusalem -knew-> jesus"
+   ],
+   "finding": "wrong_doer",
+   "the_verse_means": "the people speaking, 'some of the people of Jerusalem' (John 7:25), not the city of Jerusalem",
+   "words": "But we know where this man is from.",
+   "local_model": {
+    "answer": "wrong_who",
+    "reason": "the text says 'we know where this man is from', where 'we' refers to the people/crowd, not the city of Jerusalem itself"
+   }
+  }
+ ],
+ "not_withdrawn": [
+  {
+   "clause": "Exo.1.21#cl2",
+   "why": "the shown statement is 'God gave household' (family), which is right; the judges objected to the clause record as it now resolves, to keepers_at_home ('managers of their households', Titus 2:5): a fault in the clause layer, not in the statement"
+  },
+  {
+   "clause": "1Ki.16.26#cl3",
+   "why": "Haiku: wrong doer; Sonnet: yes. Split, left as it is"
+  },
+  {
+   "clause": "Psa.37.30#cl0",
+   "why": "Haiku: wrong doer; Sonnet: yes. Split, left as it is"
+  },
+  {
+   "clause": "1Ch.2.11#cl0",
+   "why": "both unsure whether Salma of 2:11 is 'the father of Bethlehem' (2:51); left as it is"
+  }
+ ],
+ "seen": "Doug, 2026-10-27 (ruling 5 of docs/review/weak-nodes-2026-10-27.md, \"Rulings 2 to 5 as recommended\"): the four withdrawals with God at one end seen and accepted"
+}

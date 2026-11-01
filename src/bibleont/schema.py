@@ -355,6 +355,37 @@ class Relation:
     # never does. The citation is what separates them, so the citation is part
     # of a claim's identity.
     claimed_by: str = ""
+    # SCOPE: WHICH OF A GROUP THE VERSE IS ABOUT (the owner's ruling of
+    # 2026-10-29 on the Jewish people's card: "do not remove relationships that
+    # are clearly stated; annotate them to distinguish the Jews as a whole from
+    # a representation within the group").
+    #
+    # `scope` is "" (not annotated), "people" (the verse speaks of the group as
+    # a whole, or of someone's membership in it), "part" (the verse, or the
+    # scene it sits in, narrows the group) or "sense" (the word is used in
+    # another sense). A "part" says which part in `scope_party`, in the
+    # Berean's own words and nothing the Berean lacks ("the Jews living in
+    # Damascus", never "the authorities"). `scope_ref` names the verses the
+    # party is read from when it is not the cited verse itself, and
+    # `scope_basis` says how: "verse" (the cited verse names the party),
+    # "neighbor" (a verse in `scope_ref` does) or "pronoun" (the cited verse
+    # says "they" or "you" and the party is read back from `scope_ref`).
+    # `scope_gloss` is the bracketed referent a card prints beside a word the
+    # verse leaves open ("there" in John 7:1 is "in Judea"; "them" in Acts
+    # 23:13 is "the Jews of 23:12"). Certainty is a separate fact: a relation
+    # the verse states outright stays explicit even when its party is read
+    # from the scene.
+    #
+    # `held` is declared here for the same reason as the rest: the exporters
+    # read raw JSON and skip a held row, but a load-then-save through this
+    # class erased it. None, not False, so a re-save does not write
+    # `"held": false` on every row (_clean drops None).
+    scope: str = ""
+    scope_party: str = ""
+    scope_ref: list[str] = field(default_factory=list)
+    scope_basis: str = ""
+    scope_gloss: str = ""
+    held: bool | None = None
 
     def key(self) -> tuple[str, str, str]:
         return (self.src, self.type, self.dst)

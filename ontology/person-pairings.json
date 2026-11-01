@@ -1,0 +1,10 @@
+{
+  "_about": "A person whose verse later scripture sets passages beside, and those passages, each shown whole on the person's card under 'Later scripture' (the person card of the design panel, approved 2026-10-28: docs/review/card-panel-appeal/person/designer-notes.md, same-day item 6). Listed by hand, one row at a time, as the theme bridges are (ontology/concept-theme-bridges.json): no rule on words picks them. The card shows each passage and, under it, only the relations whose own verses fall inside it; it says nothing about how the passages are read. When the relation 'quotes' exists (Rom 4:3, Gal 3:6, Jas 2:23 -> Gen 15:6), the source and its passages come from the graph instead and this file goes.",
+  "pairings": {
+    "abraham": {
+      "source": "Gen 15:6",
+      "passages": ["Rom 4:2-5", "Gal 3:6-9", "Jas 2:21-24"],
+      "approved": "2026-10-28, on the person card's mockup"
+    }
+  }
+}

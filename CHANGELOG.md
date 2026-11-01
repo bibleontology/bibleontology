@@ -6,6 +6,41 @@ Two things carry versions here:
 - **The graph's exports** in `out/export/`, which carry a date-shaped version of their own (`ontology/ns-version.json`,
   `data`; `out/export/void.ttl`).
 
+## Data 2026.11.01: 2026-11-01
+
+**Every kind of card has a face of its own.** Each was designed on mockups and read by a Bible scholar, a
+BibleProject-style reader and a search reviewer before it was built; each has a test with planted faults.
+- **People:** who they are, each with its verse (son of, husband of, called), the name in the original, the family as
+  a figure, and every relation in drawers by kind of evidence. God, the Father and the Holy Spirit now use this face
+  too, with drawers titled for what they hold ("People and peoples", "Places"), never "Family and kin".
+- **Places, events, objects and groups:** a place's story and what is inside it; an event's neighbors, its passage
+  and a cast whose verses name who did what; an object's or a group's members and the verses that name them.
+- **The 18 parables** as showcase cards: the story and its explanation side by side, with what each part of the story
+  is said to stand for, where the text says it (`answered_in`, a new relation type).
+- **Images:** a simple line sketch of the thing named, never of a divine person.
+- **I AM:** the 56 places where the original has the words, grouped, led by Exodus 3:14.
+- **Every other record** has a fallback face: what the text says of it, the verses in the Berean's words, where its
+  Hebrew and Greek words stand.
+
+**Questions, side by side.** All ten shown question cards now compare their readings item by item: free will, can
+salvation be lost, total depravity, human nature, election, faith and works, baptism, communion, the Sabbath and
+speaking in tongues. Each comparison was passed by a panel of readers from the traditions it names. The six held
+cards stay off the site, and a test keeps them off.
+
+**A relation can say whether a verse is of a whole people or a part of it.** The Jewish people's card is the first:
+its 18 relations became 25, each marked whole or part, with the part named in the verse's own words. The claims export
+does not yet carry this; a part's relation is still exported as the narrator's triple.
+
+**The original prints in the verse's order** wherever the text is shown.
+
+**Claims:** 21,795 (21,451 before). **Records:** 11,555. **Ties:** 19,296. **Card words:** 7,018 on 1,883 cards.
+
+**How some of the code is now written:** `docs/a-cheap-model-as-a-contractor.md` describes a cheap model writing code
+to a specification and a test written first, in a contained worker, with Claude reading every change before it is
+committed.
+
+**Vocabularies:** unchanged at 1.2.1.
+
 ## Data 2026.10.27: 2026-10-27
 
 **Questions Christians read the text on differently, side by side.**

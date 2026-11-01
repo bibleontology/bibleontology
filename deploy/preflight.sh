@@ -161,6 +161,15 @@ else
 	bad "readings text failed -- python tests/test_readings_text.py"
 	grep -E "^FAIL" <<<"$out" | head -8
 fi
+# The coding worker's rules (2026-10-31): an export with docs/, a patch that edits the protected tests or reaches the
+# verifier, a proxy asked for another host, a cap overshot by concurrency, a forged lock, a symlink the main user
+# would follow. Every one planted. Reads no machine state and no key.
+if out="$($PY tests/test_worker.py 2>&1)"; then
+	ok "coding worker: $(tail -1 <<<"$out")"
+else
+	bad "coding worker failed -- python tests/test_worker.py"
+	grep -E "^  FAIL" <<<"$out" | head -8
+fi
 # The theme tags in the reader (2026-10-08): exactly the verses each theme's
 # own table and front page set out, brackets opening the table at the row,
 # and none of the retired September theme stamps. Three planted faults caught.
@@ -214,6 +223,16 @@ if out="$($PY tests/test_explore_links.py 2>&1)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "an Explore link opens nothing -- python tests/test_explore_links.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# Every question card's comparison rests on the card's own words and verses
+# (8.4h, 2026-10-28): each cell's snippet found in its reading's text, each
+# verse the reading's own, "in part" only where a document states the
+# reading. Four planted checks.
+if out="$($PY tests/test_question_tables.py 2>&1)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "a question card's comparison -- python tests/test_question_tables.py"
 	grep -E "^FAIL" <<<"$out" | head -8
 fi
 # The declared lists (A.34, 2026-10-07): one card each, every member a node,
@@ -346,6 +365,16 @@ else
 	bad "verse marks failed -- python tests/test_verse_marks.py"
 	grep -E "FAIL" <<<"$out" | head -8
 fi
+# The original in the verse's order (FAULTS #51, 2026-10-30): MACULA's syntax
+# tree stands a postpositive at the head of its clause, and the strip walked
+# the tree, so John 3:16 read "γὰρ Οὕτως" and 5,189 verses came out of order.
+# The built file carries each word's own place (w); a planted fault proves it.
+if out="$($PY tests/test_word_order.py 2>&1)"; then
+	ok "word order: $(head -1 <<<"$out")"
+else
+	bad "the original is out of the verse's order -- python tests/test_word_order.py (rebuild: tools/interlinear.py)"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
 # Coordination members (plan 2.15, 2026-10-17): a coordination's members are
 # its conjuncts, never the conjunction ("Peter and and", Luke 22:8, and 2,188
 # Greek coordinations like it). The builder on Luke 22:8 and the graph served;
@@ -407,6 +436,16 @@ else
 	bad "stylesheet broken -- python tests/test_css.py"
 	grep -E "^FAIL" <<<"$out" | head -8
 fi
+# The compact phone header (2026-10-31): one row of 52px, the strip without
+# its blank band, search opening in place, the chapter row on one line,
+# desktop untouched, the rulings equal their record -- each with its fault
+# planted and caught. Static, seconds
+if out="$($PY tests/test_header.py 2>&1)"; then
+	ok "phone header: $(tail -1 <<<"$out")"
+else
+	bad "phone header -- python tests/test_header.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
 # The crawler line (2026-10-05): robots.txt and the Caddyfile's @training
 # refuse the same training crawlers, and the rule lets Googlebot, Bingbot and
 # the AI search fetchers through -- Cloudflare's own training block once
@@ -415,6 +454,18 @@ if out="$($PY tests/test_crawlers.py 2>&1)"; then
 	ok "crawlers: $(tail -1 <<<"$out")"
 else
 	bad "crawler line broken -- python tests/test_crawlers.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# A card's page does not depend on /api/ (2026-10-29): Search Console's URL
+# Inspection showed every card EMPTY, because the app hid the server's copy as
+# soon as its script ran and then fetched the card from /api/, which
+# robots.txt disallows. The copy now goes only after a successful draw, and a
+# failed request leaves it. Proven by 16 planted faults (the old rule, the
+# class added before the fetch, an error notice over a copy, ...). Seconds
+if out="$($PY tests/test_render_without_api.py 2>&1)"; then
+	ok "render without /api/: $(tail -1 <<<"$out")"
+else
+	bad "a card's server copy is hidden before the app draws it -- python tests/test_render_without_api.py"
 	grep -E "^FAIL" <<<"$out" | head -8
 fi
 # The blog (2026-10-05): every post's page built from its current text, so
@@ -455,6 +506,241 @@ if [ -z "$range" ] || has '^app2/'; then
 		ok "card pages: $(tail -1 <<<"$out")"
 	else
 		bad "card pages link redirecting addresses -- python tests/test_card_links.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE PERSON CARD (2026-10-28): a verdict, title or likeness named in its
+	# verse's Berean words; every name and verse in a person page's title and
+	# description a link in its article; the JSON-LD on /ns/relation#, naming
+	# only what the page links; the approved face's known answers -- each with
+	# its fault planted and caught. ~2 minutes, in process
+	if out="$($PY tests/test_person_cards.py 2>&1)"; then
+		ok "person cards: $(tail -1 <<<"$out")"
+	else
+		bad "person cards -- python tests/test_person_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE CONCEPT CARD (2026-10-28): every number in a concept page's title and
+	# description in its article, no hub title counting more than its verses
+	# with words, folded transliterations; the JSON-LD on /ns/relation#, only
+	# defined terms, naming only what the page links; the face's known answers
+	# (sacrifice's one count, Ezra's Aramaic, the Day of Atonement once, the
+	# Berean's name for Mark 13:5-8, the three rulings) and the two-way links --
+	# each with its fault planted and caught. ~2 minutes, in process
+	if out="$($PY tests/test_concept_cards.py 2>&1)"; then
+		ok "concept cards: $(tail -1 <<<"$out")"
+	else
+		bad "concept cards -- python tests/test_concept_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE VERSE PAGE (2026-10-28, the design panel's verse page): Genesis 1:1 is
+	# 7 words in 11 parts and 19 linked passages, the three quoted by the verb
+	# rule (Isaiah 42:5, not Nehemiah 9:6); every number and passage in a
+	# title and description in the article, the title's count the count of
+	# printed passages and of relatedLink, every JSON-LD id an href in the
+	# article, each passage once -- over 46 verses, each check with its fault
+	# planted and caught. ~2 minutes, in process
+	if out="$($PY tests/test_verse_page.py 2>&1)"; then
+		ok "verse pages: $(tail -1 <<<"$out")"
+	else
+		bad "verse pages -- python tests/test_verse_page.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE ORIGINAL BY THE VERSE MAP (FAULTS #24, 2026-10-28): an English verse
+	# is paired with the Hebrew holding its words, never by number (Joel 2:28
+	# is Hebrew 3:1; Psalm 40:6 is not the Hebrew of 40:5; Malachi 4:1 has its
+	# Hebrew) -- the pairing by number planted and caught. ~1 minute
+	if out="$($PY tests/test_verse_pairing.py 2>&1)"; then
+		ok "$(tail -2 <<<"$out" | head -1)"
+	else
+		bad "verse pairing -- python tests/test_verse_pairing.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE PARABLE CARD (2026-10-29): 22 events at one address each, the older
+	# records answering 301; the sower's 13 "is" marks and none from a ground
+	# image; a mapping drawn only where an explained relation stands; the
+	# three divine-persons rows in by the owner's decision and a held one not
+	# drawn; no "great price" or "tares" in the site's voice; the title, the
+	# description and the JSON-LD in what the article links; the story and the
+	# explanation labeled on a phone -- each with its fault planted and
+	# caught. ~2 minutes, in process
+	if out="$($PY tests/test_parable_card.py 2>&1)"; then
+		ok "parable cards: $(tail -1 <<<"$out")"
+	else
+		bad "parable cards -- python tests/test_parable_card.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE STORY CARDS OF THE OTHER 18 PARABLES (2026-10-30): the story, the
+	# narrator's setting and what Jesus says it means, each the Berean's words
+	# cut by ontology/parable-cards.json; a meaning only where it is Jesus's
+	# own speech (not a narrator, not a figure of the story, not a setting,
+	# not the site's voice); a held telling shows the story alone; the served
+	# page carries the same blocks and links every verse; the old "No one ...
+	# resolved" line gone; Explore's front door leads with the 22 cards and the
+	# machine-stamped kinds follow, folded -- 26 planted faults, each caught.
+	# ~2 minutes, in process
+	if out="$($PY tests/test_parable_story_cards.py 2>&1)"; then
+		ok "parable story cards: $(tail -1 <<<"$out")"
+	else
+		bad "parable story cards -- python tests/test_parable_story_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE JEWISH PEOPLE'S CARD SAYS WHICH OF THE PEOPLE (2026-10-29, the
+	# owner's ruling: annotate, don't remove): every relation on `jews` is
+	# the whole people or a part, a part names its party in the Berean's own
+	# words and never prints "the Jews" bare on any card or page; John 8:44
+	# held off the card, the JSON-LD and every end; Romans 11:28 one sentence;
+	# the validator refuses a part with no party, a party not in its verse, a
+	# bare-pronoun party and an unscoped relation -- each with its fault
+	# planted and caught. ~1 minute, in process
+	if out="$($PY tests/test_group_scope.py 2>&1)"; then
+		ok "group scope: $(tail -1 <<<"$out")"
+	else
+		bad "group scope (the Jewish people's card) -- python tests/test_group_scope.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE PLACE CARD (2026-10-29): no place page serves a passage it neither
+	# cites nor names (303 of 776 served the Joshua 13 block); a place with
+	# no relation quotes its own verses; the six relations a verse contradicts
+	# held on every card and printed beside their verses; Jerusalem's story
+	# from events whose telling holds a relation of the city or a place
+	# inside it, never a roster, every actor with a relation and a verse
+	# behind him; every verse that names it served; the page printing what
+	# the app shows and linking every verse of its title and description --
+	# each with its fault planted and caught. ~1 minute, in process
+	if out="$($PY tests/test_place_cards.py 2>&1)"; then
+		ok "place cards: $(tail -1 <<<"$out")"
+	else
+		bad "place cards -- python tests/test_place_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE FALLBACK CARD (2026-10-31): the face of every card no other face
+	# applies to -- rows are stored relations, explicit or implied, never held,
+	# each with its verse; the verse's own verb wins; no text record's name; the
+	# panel's verses the Berean's and cited by a row; word and book counts sum to
+	# the card's verses; the drawer keeps every relation; no note_kjv; American
+	# spelling; ruling F-A; the title at most 60 and the description at most 155
+	# characters with every name and verse linked; no divine person in a title;
+	# the page complete without /api/ -- each with its fault planted and caught.
+	# ~2 minutes, in process
+	if out="$($PY tests/test_fallback_card.py 2>&1)"; then
+		ok "fallback cards: $(tail -1 <<<"$out")"
+	else
+		bad "fallback cards -- python tests/test_fallback_card.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE I AM CARD (2026-10-31): every place the original has the words is
+	# placed (ontology/iam-card.json) and the face's fixture is today's data;
+	# the face (app2/iam_face.py, by the DeepSeek worker) shows all of it,
+	# escaped, with no link but to its verses and words and no figure drawn
+	if out="$($PY tests/test_iam_card.py 2>&1)"; then
+		ok "I AM card: $(tail -1 <<<"$out")"
+	else
+		bad "I AM card -- python tests/test_iam_card.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	if out="$($PY tests/test_iam_face.py 2>&1)"; then
+		ok "I AM face: $(tail -1 <<<"$out")"
+	else
+		bad "I AM face -- python tests/test_iam_face.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE FOUR DIVINE-PERSON CARDS' HEADER (2026-10-31): the header itself
+	# (app2/deity_face.py, by the DeepSeek worker: escaped, one frame for all
+	# four, the sketch verbatim) and its wiring (the four carry it, no other
+	# card does, each with its verse from the graph)
+	if out="$($PY tests/test_deity_plate.py 2>&1)"; then
+		ok "deity header: $(tail -1 <<<"$out")"
+	else
+		bad "deity header -- python tests/test_deity_plate.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	if out="$($PY tests/test_deity_cards.py 2>&1)"; then
+		ok "deity cards: $(tail -1 <<<"$out")"
+	else
+		bad "deity cards -- python tests/test_deity_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE EVENT CARD (2026-10-29): the cast is relations whose verse lies in
+	# the telling, in the text's order, never a mention count; the neighbors
+	# are tellings in canon order with the Berean editors' headings in the
+	# gaps; the quotations are the editors' own notes, "quotes" only where the
+	# Berean prints quotation marks; the owner's open rulings (E-A, E-B) not
+	# applied (no came_upon row, nothing at Acts 2:36, no relation on a divine
+	# person touched); the page printing the cast, the neighbors and the
+	# pairs -- each with its fault planted and caught. ~2 minutes, in process
+	if out="$($PY tests/test_event_cards.py 2>&1)"; then
+		ok "event cards: $(tail -1 <<<"$out")"
+	else
+		bad "event cards -- python tests/test_event_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE IMAGE CARD, ITS SKETCHES AND THE TWO SHOWCASES (2026-10-30): every
+	# line of every row a relation the card holds, "Means" only on an explicit
+	# signifies, the marks computed (a draws_on, drawn_from or speaks_of never
+	# makes one), rows in canon order; Revelation 22:16 held out of the vine,
+	# the three King-James-worded addresses answering 301 to Berean ones; a
+	# description's quote a piece of its verse; the page linking what its
+	# JSON-LD names and what its title and description cite; the index rule
+	# (3 verse links and 100 words) the sitemap's too; every sketch a symbol,
+	# stroke only by attribute, none of the dove, God's hand, arm or eyes, and
+	# none of the lamb, the lion or the serpent on a card keyed to a divine
+	# person (SK-A); the armor's six pieces the hub's members, labeled in the
+	# verse's words, image_feet not linked; the fruit's nine around one fruit,
+	# in the text's order -- each with its fault planted and caught. ~1 minute,
+	# in process
+	if out="$($PY tests/test_image_cards.py 2>&1)"; then
+		ok "image cards: $(tail -1 <<<"$out")"
+	else
+		bad "image cards -- python tests/test_image_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE OBJECT CARD AND THE MINOR KINDS (2026-10-31): every row a relation the
+	# card holds with a verse it cites, "the text says it" only on an explicit
+	# one, a row whose explicit person/group/place no cited verse names HELD (the
+	# ark "carried by Moses" and "by David"), no face for God, the Father or a
+	# title with a divine holder, the Levites cited at Deut 31:25, the rainbow
+	# and the renamed addresses the Berean's, a description's quote a piece of
+	# its verse, the JSON-LD naming only what the page links, the index rule the
+	# page's robots tag -- each with its fault planted and caught. ~2 minutes
+	if out="$($PY tests/test_object_cards.py 2>&1)"; then
+		ok "object cards: $(tail -1 <<<"$out")"
+	else
+		bad "object cards -- python tests/test_object_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE GROUP CARD (2026-10-31): the Jews held (no face, relations untouched),
+	# every row a passage whose printed verses its lines cite, the quoted words
+	# a piece of the verse, a member's mark only where the verse holds both
+	# names, the record's own description off the face, the name word one a
+	# cited verse holds, the JSON-LD and robots rules -- planted and caught.
+	# ~2 minutes
+	if out="$($PY tests/test_group_cards.py 2>&1)"; then
+		ok "group cards: $(tail -1 <<<"$out")"
+	else
+		bad "group cards -- python tests/test_group_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE QUESTION CARD (2026-10-28): the first line says the shape and no
+	# verdict; one order (alphabetical by name) on the app and the page;
+	# passages in canonical order; the credit the card's own held_by until the
+	# reader panel passes the comparison, then the graph's; find your
+	# tradition; the page's description and JSON-LD (/ns/relation#, no
+	# accepted answer, only what it links); one reading at a time on a phone --
+	# each with its fault planted and caught. ~1 minute, in process
+	if out="$($PY tests/test_question_cards.py 2>&1)"; then
+		ok "question cards: $(tail -2 <<<"$out" | head -1)"
+	else
+		bad "question cards -- python tests/test_question_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# the six question cards the owner holds off the site until he rules
+	# (2026-10-29): each file says shown false, no page, no link from a shown
+	# question or a tradition, no sitemap, no preview switch in the live unit;
+	# 8 planted faults. ~1 minute, in process
+	if out="$($PY tests/test_held_questions.py 2>&1)"; then
+		ok "held questions: $(tail -1 <<<"$out")"
+	else
+		bad "held questions -- python tests/test_held_questions.py"
 		grep -E "^FAIL" <<<"$out" | head -8
 	fi
 	# NO TOOL NAMED, NO AI POINTED AT, OUTSIDE ABOUT (2026-10-16: make
@@ -523,7 +809,11 @@ if [ -n "$range" ] && has '^(src/|app2?/|deploy/|ontology/)' ; then
 	fi
 fi
 
-if [ -n "$range" ] && has '^deploy/'; then
+# What tools write into deploy/ is output, not configuration (2026-10-27: one
+# sitemap line, the merged Asaph of Neh 11:17, failed this): the sitemaps
+# (tools/sitemap.py) and the list of files the server reads (tools/runtime_inputs.py)
+config="$(grep -vE '^deploy/(www/sitemap[^/]*\.xml|runtime-inputs\.txt)$' <<<"$changed")"
+if [ -n "$range" ] && grep -qE '^deploy/' <<<"$config"; then
 	if has '^(docs/OPERATIONS\.md|deploy/README\.md)$'; then
 		ok "runbook updated alongside the config change"
 	else

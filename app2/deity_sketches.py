@@ -1,0 +1,16 @@
+"""The divine-person cards' sketches (2026-10-31): drawn by DeepSeek Flash in thinking mode, checked by Claude
+(paths only, no figure, no link or script), chosen by Doug. A sketch never draws a divine person: each draws a
+thing the text itself names.
+
+    rock    God (Deuteronomy 32:4)
+    cross   Jesus (a plain cross, ruling SK-B)
+    wind    the Holy Spirit (John 3:8)
+    throne  the Father, empty (Revelation 3:21)
+"""
+
+SKETCHES = {
+    'rock': '<svg viewBox="0 0 96 96" role="img" aria-label="A great rock" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M8 84 L88 84"/> <path d="M12 84 L16 70 L20 58 L26 50 L32 38 L38 30 L44 24 L52 38 L58 32 L66 46 L72 62 L78 72 L84 84"/> <path d="M52 38 L58 32 L66 46 L72 62 L78 72 L84 84 L60 84 L56 62 L52 46 Z" fill="var(--ochre-soft)"/> <path d="M22 58 L28 70 L27 84"/> <path d="M64 50 L68 66"/> <path d="M22 68 L34 64 L48 66 L60 62 L70 66"/> <path d="M16 78 L30 76 L46 78 L62 76 L76 78"/> <path d="M44 24 L40 40 L44 56 L41 74"/> <path d="M58 34 L62 48 L59 62"/> <path d="M28 48 L32 58 L29 70"/> <path d="M34 72 L38 84"/> <path d="M34 34 L40 31"/> </svg>',
+    'cross': '<svg viewBox="0 0 96 96" role="img" aria-label="An empty cross" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M30 84 Q48 60 66 84 Z" fill="var(--ochre-soft)"/> <path d="M12 84 H84"/> <path d="M44.5 72.5 L44.5 38 L27 38 L27 31 L44.5 31 L44.5 10 L51.5 10 L51.5 31 L69 31 L69 38 L51.5 38 L51.5 72.5"/> <path d="M46.6 13 L46.6 20.5"/> <path d="M49.4 18.5 L49.4 26"/> <path d="M46.6 43 L46.6 51"/> <path d="M49.4 47.5 L49.4 56"/> <path d="M29.5 33.2 L35.5 33.2"/> <path d="M34 35.8 L40.5 35.8"/> <path d="M53 33.2 L59 33.2"/> <path d="M57.5 35.8 L64 35.8"/> </svg>',
+    'wind': '<svg viewBox="0 0 96 96" role="img" aria-label="The wind blowing" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M14 16C24 10.5 36 10.5 46 15.5C51 18 56 18.5 60 16.5"/> <path d="M9 31C19 23 30 22 41 28C52 34 63 35 71 30.5C75 28.2 79 27.6 81.5 29.6C84.2 31.8 83 35.6 79.8 35C77 34.5 76.6 31 79 29.8"/> <path d="M9 50C20 42 32 42 43 48C54 54 65 54.5 73 49.5C77 47 80.5 46.6 83 48.8C85.6 51.1 84.2 54.8 81 54.2C78.2 53.7 77.8 50.2 80.2 49"/> <path d="M8 66C19 58 32 57.5 43 62.5C54 67.5 66 67.5 76 63C79 61.6 82 60.8 84.5 60"/> <path d="M41 40Q45 31 52 34Q47 41 41 40ZM23 40Q26 33.5 31 35.5Q27 41 23 40ZM58 60Q62 52 68 55Q63.5 61 58 60Z" fill="var(--ochre-soft)"/> <path d="M22 87C21 81 23 76 28 71"/> <path d="M36 87C35 80 38 74 44 70.5"/> <path d="M50 87C49 81 52 77 58 73.5"/> <path d="M64 87C63 81 65 77 70 74"/> </svg>',
+    'throne': '<svg viewBox="0 0 96 96" role="img" aria-label="An empty throne" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M36 13 L64 14 L68 49 L32 49 Z"/> <path d="M38 21 L62 22"/> <path d="M34 43 L66 43"/> <path d="M34 35 L26 40 L26 55"/> <path d="M67 36 L74 41 L74 55"/> <path d="M32 49 L68 49 L74 55 L26 55 Z" fill="var(--ochre-soft)"/> <path d="M31 55 L31 69"/> <path d="M69 55 L69 69"/> <path d="M31 63 L69 63"/> <path d="M22 69 L78 69 L82 77 L18 77 Z"/> <path d="M18 77 L82 77 L86 83 L14 83 Z"/> </svg>',
+}

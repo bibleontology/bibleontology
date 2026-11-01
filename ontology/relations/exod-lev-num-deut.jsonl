@@ -3,7 +3,7 @@
 {"certainty": "explicit", "dst": "miriam", "refs": ["Exod 15:20"], "source": "exod-lev-num-deut", "src": "aaron", "type": "sibling_of"}
 {"certainty": "explicit", "dst": "moses", "refs": ["Exod 4:14"], "source": "exod-lev-num-deut", "src": "aaron", "type": "sibling_of"}
 {"certainty": "explicit", "dst": "elisheba", "refs": ["Exod 6:23"], "source": "exod-lev-num-deut", "src": "aaron", "type": "spouse_of"}
-{"certainty": "explicit", "dst": "aholiab", "refs": ["Exod 31:6"], "source": "exod-lev-num-deut", "src": "ahisamach", "type": "father_of", "held": "inside quoted speech (the Berean's quotation marks), speaker not on record"}
+{"certainty": "explicit", "dst": "aholiab", "refs": ["Exod 31:6"], "source": "exod-lev-num-deut", "src": "ahisamach", "type": "father_of"}
 {"certainty": "explicit", "dst": "elishama_son_of_ammihud", "note": "named in the roll of Num 1 and again as captain in Num 2", "refs": ["Num 1:10", "Num 2:18", "Num 10:22", "Num 7:48", "Num 7:53"], "source": "exod-lev-num-deut,tribal-princes", "src": "ammihud", "type": "father_of", "narrator_refs_from": "kinship_narrative_refs: the narrator states it in Num 10:22, Num 7:48, Num 7:53"}
 {"certainty": "explicit", "dst": "elisheba", "refs": ["Exod 6:23"], "source": "exod-lev-num-deut", "src": "amminadab", "type": "father_of"}
 {"certainty": "explicit", "dst": "nahshon", "note": "named in the roll of Num 1 and again as captain in Num 2", "refs": ["Num 1:7", "Ruth 4:19", "Luke 3:32-33", "Matt 1:4", "Num 2:3"], "source": "exod-lev-num-deut,josh-judg-ruth,mark-luke-john,matt,tribal-princes", "src": "amminadab", "type": "father_of"}
@@ -31,7 +31,7 @@
 {"certainty": "explicit", "dst": "zelophehad", "refs": ["Num 27:1", "Josh 17:3"], "source": "exod-lev-num-deut,josh-judg-ruth", "src": "hepher", "type": "father_of"}
 {"certainty": "explicit", "dst": "shaphat_son_of_hori", "refs": ["Num 13:5"], "source": "exod-lev-num-deut", "src": "hori", "type": "father_of"}
 {"certainty": "explicit", "dst": "moses", "note": "Hur and Aaron held up Moses' hands at Rephidim, and Hur was left in charge with Aaron while Moses was on the mount (Exod 24:14).", "refs": ["Exod 17:10", "Exod 17:12"], "source": "exod-lev-num-deut", "src": "hur", "type": "companion_of"}
-{"certainty": "explicit", "dst": "uri_son_of_hur", "refs": ["Exod 31:2"], "source": "exod-lev-num-deut", "src": "hur", "type": "father_of", "held": "inside quoted speech (the Berean's quotation marks), speaker not on record"}
+{"certainty": "explicit", "dst": "uri_son_of_hur", "refs": ["Exod 31:2"], "source": "exod-lev-num-deut", "src": "hur", "type": "father_of"}
 {"certainty": "explicit", "dst": "korah_son_of_izhar", "refs": ["Num 16:1"], "source": "exod-lev-num-deut", "src": "izhar", "type": "father_of"}
 {"certainty": "explicit", "dst": "caleb", "refs": ["Num 13:6", "Josh 14:6"], "source": "exod-lev-num-deut,josh-judg-ruth", "src": "jephunneh", "type": "father_of"}
 {"certainty": "explicit", "dst": "hobab", "refs": ["Num 10:29"], "source": "exod-lev-num-deut", "src": "jethro", "type": "father_of"}
@@ -62,7 +62,7 @@
 {"certainty": "explicit", "dst": "elizur", "note": "named in the roll of Num 1 and again as captain in Num 2", "refs": ["Num 1:5", "Num 2:10", "Num 10:18", "Num 7:30", "Num 7:35"], "source": "exod-lev-num-deut,tribal-princes", "src": "shedeur", "type": "father_of", "narrator_refs_from": "kinship_narrative_refs: the narrator states it in Num 10:18, Num 7:30, Num 7:35"}
 {"certainty": "explicit", "dst": "gaddiel", "refs": ["Num 13:10"], "source": "exod-lev-num-deut", "src": "sodi", "type": "father_of"}
 {"certainty": "explicit", "dst": "gaddi", "refs": ["Num 13:11"], "source": "exod-lev-num-deut", "src": "susi", "type": "father_of"}
-{"certainty": "explicit", "dst": "bezaleel", "refs": ["Exod 31:2"], "source": "exod-lev-num-deut", "src": "uri_son_of_hur", "type": "father_of", "held": "inside quoted speech (the Berean's quotation marks), speaker not on record"}
+{"certainty": "explicit", "dst": "bezaleel", "refs": ["Exod 31:2"], "source": "exod-lev-num-deut", "src": "uri_son_of_hur", "type": "father_of"}
 {"certainty": "explicit", "dst": "elzaphan", "refs": ["Exod 6:22", "Lev 10:4"], "source": "exod-lev-num-deut,leviticus", "src": "uzziel", "type": "father_of"}
 {"certainty": "explicit", "dst": "mishael_son_of_uzziel", "refs": ["Exod 6:22", "Lev 10:4"], "source": "exod-lev-num-deut,leviticus", "src": "uzziel", "type": "father_of"}
 {"certainty": "explicit", "dst": "nahbi", "refs": ["Num 13:14"], "source": "exod-lev-num-deut", "src": "vophsi", "type": "father_of"}

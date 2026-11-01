@@ -1627,8 +1627,11 @@ types:
     # covenant is from Mount Sinai ... This is Hagar" (Gal 4:24). That verse is the
     # only place in the corpus that calls itself an allegory, so the type has
     # to reach it.
+    # And a concept. "The field is the world" (Matt 13:38) and "The harvest is
+    # the end of the age" (Matt 13:39) key an image to a concept, and nothing
+    # else in the type could take them.
     dst_type: [object, place, creature, observance, person, group, title,
-               being, covenant, text]
+               being, covenant, text, concept]
     label: "signifies"
     inverse: "is signified by"
     category: artifact
@@ -1652,6 +1655,30 @@ types:
       reads the rock at Horeb as Christ; that says nothing about every other
       rock in the corpus, and the physical rock keeps its own verses and its
       own place in Exodus 17 either way.
+
+  answered_in:
+    # A part of a story and the part of its explanation that answers it. Not
+    # an equation: `signifies` is the text's own "this is that"; this is the
+    # weaker neighbour that records where the explanation takes the story's
+    # part up, by the text's own weight (the relation's `answer_kind`):
+    #   as_so            the text joins them with "as ... so" (Matt 13:40)
+    #   same_word        the same original word in both (root, Mark 4:6/4:17)
+    #   in_its_place     the explanation names the same turn of the story
+    #                    without the same word (the birds and Satan)
+    #   explanation_only the explanation has it and the story does not
+    src_type: [image, text]
+    dst_type: text
+    label: "is answered in"
+    inverse: "answers"
+    category: imagery
+    weight: 3
+    group: "Answered in the explanation"
+    notes: >
+      **Position, not identity.** The story's part and the explanation's part
+      stand in the same place, and the citation is the explanation's verse.
+      A card shows the mark by its `answer_kind` and never as an equals sign.
+      Where the text itself says "the seed is ..." the relation is
+      `signifies`, not this.
 
   bought:
     src_type: [person, group]
@@ -2699,7 +2726,7 @@ types:
     # label has to work for a plural subject and a singular one alike, since the
     # sentence is built as src + label + dst, so it is a past-tense verb with no
     # number of its own.
-    label: "centred on"
+    label: "centered on"
     inverse: "was the centre of"
     category: geography
     weight: 4

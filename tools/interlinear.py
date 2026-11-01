@@ -23,11 +23,14 @@ rather than a dependency.
 ## What one line holds
 
     ref     Gen.1.1
-    words   [{t: surface form, g: gloss, l: lemma, s: Strong's, p: pos}, …]
+    words   [{t: surface form, g: gloss, l: lemma, s: Strong's, p: pos,
+              x: how to say it, w: the word's place in the verse}, …]
 
 Word order is the ORIGINAL order, which is the point -- Hebrew puts the verb
 first and English does not, and seeing that is most of what a reader gets from
-looking at the original at all.
+looking at the original at all. `w` is that place: 1, 2, 3 … through the verse,
+and the parts of one Hebrew word (the prefix בְּ and its noun רֵאשִׁית) share a
+number, so a reader can join them back into the word they are.
 
     python tools/interlinear.py
 """
@@ -144,15 +147,29 @@ def main() -> int:
                 if ref not in byverse:
                     byverse[ref] = []
                     order.append(ref)
+                # THE VERSE'S ORDER, NOT THE TREE'S (FAULTS #51, 2026-10-30).
+                # root.iter walks MACULA's syntax tree, and the tree lifts a
+                # postpositive (γάρ, δέ, οὖν) to the head of its clause, so John
+                # 3:16 printed "γὰρ Οὕτως" where the text reads "Οὕτως γὰρ".
+                # Measured against each word's xml:id, 4,408 of 7,943 Greek
+                # verses and 781 of 23,213 Hebrew verses came out of order. Each
+                # word's `ref` ("JHN 3:16!2") carries its place in the verse; the
+                # parts of one Hebrew word share it, and the xml:id orders the
+                # parts. So keep the place as `w` and sort on it below.
+                place = (w.get("ref") or "").rpartition("!")[2]
                 byverse[ref].append({
-                    "t": (w.get("unicode") or w.get("text") or "").strip(),
+                    "_id": w.get("{http://www.w3.org/XML/1998/namespace}id") or "",
+                    "w": int(place) if place.isdigit() else 0,
+                    "t":(w.get("unicode") or w.get("text") or "").strip(),
                     "g": _text(w),
                     "l": (w.get("lemma") or "").strip(),
                     "s": (w.get("strongnumberx") or w.get("strong") or ""),
                     "p": _pos(w),
                     # How to say it. Hebrew supplies its own; Greek is
                     # generated, since MACULA Greek carries no such attribute.
-                    "x": ((w.get("transliteration") or "").strip()
+                    # the sof pasuq (the Hebrew full stop MACULA writes as ":" after a verse's
+                    # last word) is punctuation, not a sound: hāʾāreṣ, not hāʾāreṣ: (FAULTS #19)
+                    "x": ((w.get("transliteration") or "").strip().rstrip(":")
                           or translit_greek(w.get("unicode")
                                             or w.get("text") or "")),
                 })
@@ -160,6 +177,9 @@ def main() -> int:
                 ws = [w for w in byverse[ref] if w["t"] or w["g"]]
                 if not ws:
                     continue
+                ws.sort(key=lambda w: (w["w"], w["_id"]))
+                for w in ws:
+                    del w["_id"]
                 fh.write(json.dumps({"ref": ref, "words": ws},
                                     ensure_ascii=False) + "\n")
                 verses += 1

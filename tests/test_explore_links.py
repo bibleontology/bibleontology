@@ -23,8 +23,8 @@ ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "app2" / "static" / "index.html").read_text(encoding="utf-8")
 
 # read by a branch beside its own attribute (data-lkey with data-layer, data-cb
-# with data-ca, data-word with data-key), or not a link at all (data-sec)
-SECONDARY = {"lkey", "cb", "word", "sec"}
+# with data-ca, data-word with data-key), or not a link at all (data-sec, data-pzx: a gospel switch on the parables)
+SECONDARY = {"lkey", "cb", "word", "sec", "pzx"}
 FALLBACK = "key"           # openSense(l.dataset.key, ...), the chain's last branch
 
 

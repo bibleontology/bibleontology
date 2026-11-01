@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<!-- THE SKETCH LIBRARY (image cards, the armor of God and the fruit of the Spirit). docs/review/card-panel-appeal/image/sketches/sketch-style.md.
+     One shared filter and one symbol per THING the text names, never a person and never a divine person. Every shape is
+     stroke only by attribute (fill="none" on the symbol, the group and each shape; vector-effect on each shape), because a
+     <use> clone is out of reach of page selectors and would otherwise inherit the default black fill. One pen: 1.6 px.
+
+     Lucide icons (the grain, trees, water, sky, house, jar, scales, crown, anchor, boat, target, bird, flame, mountain,
+     fortress, tent and flower keys, and parts of the vine and the seed) are used under the ISC License:
+
+       ISC License. Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as part of Feather (MIT).
+       All other copyright (c) for Lucide are held by Lucide Contributors 2022. Permission to use, copy, modify, and/or
+       distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright
+       notice and this permission notice appear in all copies. THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR
+       DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+       FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
+       ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+       OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+     The rest are hand-drawn on the same 24-unit grid. -->
+<defs>
+<filter id="sk-rough" filterUnits="userSpaceOnUse" x="-2" y="-2" width="28" height="28" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="2" seed="7" result="n1"/>
+  <feDisplacementMap in="SourceGraphic" in2="n1" scale="0.55" xChannelSelector="R" yChannelSelector="G" result="line"/>
+  <feTurbulence type="fractalNoise" baseFrequency="0.28" numOctaves="1" seed="19" result="n2"/>
+  <feDisplacementMap in="SourceGraphic" in2="n2" scale="0.9" xChannelSelector="G" yChannelSelector="R" result="ghost"/>
+  <feComponentTransfer in="ghost" result="ghost2"><feFuncA type="linear" slope="0.28"/></feComponentTransfer>
+  <feMerge><feMergeNode in="ghost2"/><feMergeNode in="line"/></feMerge>
+</filter>
+<!-- sketch "vine": grape cluster after Lucide "grape" (lucide-static 0.452.0, ISC); cane, leaf and tendril hand-drawn -->
+<symbol id="sk-vine" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2.4 5.3c2.6-1.4 5.2-1.5 7.8-.9 2.6.6 5.4.4 8.2-1.1 1.2-.6 2.4-.9 3.3-.8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M18.7 3.5c.6 1.3.2 2.6-.9 2.9-.9.2-1.4-.6-1-1.2.4-.5 1-.3 1.1.2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M5.4 4.8C3.6 5 2.2 6.4 2.2 8.2c.9-.4 1.7-.2 2.2.4-.6 1-.5 2.2.3 3 .5-.9 1.4-1.4 2.4-1.3-.1-1 .4-1.9 1.3-2.3-.6-1.2-1.6-2.1-3-3.2z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M5.4 4.8 4.9 9.6"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12.8 4.5v2.6"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="9.9" cy="8.8" r="1.6"/><circle fill="none" vector-effect="non-scaling-stroke" cx="12.8" cy="8.8" r="1.6"/><circle fill="none" vector-effect="non-scaling-stroke" cx="15.7" cy="8.8" r="1.6"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="11.35" cy="11.5" r="1.6"/><circle fill="none" vector-effect="non-scaling-stroke" cx="14.25" cy="11.5" r="1.6"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="11.35" cy="14.2" r="1.6"/><circle fill="none" vector-effect="non-scaling-stroke" cx="14.25" cy="14.2" r="1.6"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12.8" cy="16.9" r="1.6"/>
+</g></symbol>
+<!-- sketch "seed": the parable cards' seed glyph (three ovals) on a ground line; young leaves after Lucide "sprout" (ISC) -->
+<symbol id="sk-seed" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2.4 19c3.2-.7 6.4-.7 9.6 0s6.2.7 9.6 0"/>
+  <ellipse fill="none" vector-effect="non-scaling-stroke" cx="5.6" cy="17.1" rx="1.1" ry="1.7" transform="rotate(-62 5.6 17.1)"/>
+  <ellipse fill="none" vector-effect="non-scaling-stroke" cx="9.9" cy="17.4" rx="1.1" ry="1.7" transform="rotate(70 9.9 17.4)"/>
+  <ellipse fill="none" vector-effect="non-scaling-stroke" cx="16" cy="18.2" rx="1.2" ry="1.7" transform="rotate(-12 16 18.2)"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M16.1 16.6c-.2-2 .2-3.7 1.1-5.2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M17.2 11.4c.3-1.6 1.5-2.6 3.6-2.8-.1 2-1.1 3.1-2.7 3.4-.4.1-.7-.1-.9-.6z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M16.6 13.1c-.9-1.1-2.3-1.7-4.1-1.4.6 1.7 1.9 2.5 3.5 2.5.4 0 .6-.4.6-1.1z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M15.7 19.6l-.5 1.5M16.4 19.7l.4 1.3"/>
+</g></symbol>
+<!-- sketch "lamp": hand-drawn clay oil lamp; Lucide's lamp is a table lamp. The flame is the one accent part -->
+<symbol id="sk-lamp" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3.5 14.6c0-2 3.5-3.4 8-3.4 2.6 0 4.6.4 6.2 1.2l2.9-.6c.6-.1.9.5.5.9l-2.4 2.3c-1.5 1.5-4.3 2.4-7.6 2.4-4.4 0-7.6-1.2-7.6-2.8z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M10 12.5c.9.5 2.6.5 3.5 0"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3.7 14.1c-1.5-.3-2.1-1.7-1.2-2.6.7-.7 1.8-.4 2.2.4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M8.6 17.3l-.4 1.5h6.4l-.4-1.5"/>
+  <path fill="none" vector-effect="non-scaling-stroke" class="a" d="M20.9 10.9c-1-.8-1.1-2.2-.2-3.6.5 1 1.4 1.3 1.4 2.4 0 .8-.5 1.3-1.2 1.2z"/>
+</g></symbol>
+<!-- sketch "belt": hand-drawn (the armor set) -->
+<symbol id="sk-belt" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2.6 8.6c3.1 1.3 6.2 1.9 9.4 1.9s6.3-.6 9.4-1.9"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2.6 11.8c3.1 1.3 6.2 1.9 9.4 1.9s6.3-.6 9.4-1.9"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2.6 8.6v3.2M21.4 8.6v3.2M6 9.6v3.1M18 9.6v3.1"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M10.2 10.1h3.6v4.2h-3.6z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 10.1v4.2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M9.6 14v5.8M12 14.3v6.4M14.4 14v5.8"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="9.6" cy="20.5" r=".7"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="21.4" r=".7"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="14.4" cy="20.5" r=".7"/>
+</g></symbol>
+<!-- sketch "breastplate": hand-drawn (the armor set) -->
+<symbol id="sk-breastplate" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M8.6 3.4c.8 1.4 2 2.1 3.4 2.1s2.6-.7 3.4-2.1l3 1.4c.2 1.9-.4 3.4-1.6 4.3v8.4c0 1.7-2.2 3.1-4.8 3.1s-4.8-1.4-4.8-3.1V9.1c-1.2-.9-1.8-2.4-1.6-4.3z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M8.6 8.6c1.1.6 2.2.8 3.4.8s2.3-.2 3.4-.8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7.2 12c3.1.8 6.5.8 9.6 0M7.2 14.9c3.1.8 6.5.8 9.6 0"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 5.5v3.9"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M9.2 20.2v1.8M12 20.6v1.9M14.8 20.2v1.8"/>
+</g></symbol>
+<!-- sketch "sandal": hand-drawn (the armor set) -->
+<symbol id="sk-sandal" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3 19.2h14.6c2.3 0 4.2-.7 4.2-1.8 0-.9-1-1.5-2.4-1.7"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3 19.2v1.4h14.6c2.6 0 4.4-1 4.4-2.6"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3.1 19.2c-.5-2-.3-3.9.6-5.4l.6-6.6"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M8.2 7.2c-.1 2.6.6 4.8 2.2 6.6l4.4 1.6 4.6.3"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M4.3 8.4c1.3.5 2.6.5 3.9 0M4.1 10.9c1.5.5 3 .5 4.4-.1"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3.8 13.4l5.4 5.6M9.6 12.6l-3.2 6.4M12.6 14.6l-2.4 4.4M15.6 15.4l-1.2 3.6"/>
+</g></symbol>
+<!-- sketch "shield": hand-drawn (the armor set) -->
+<symbol id="sk-shield" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M6.4 2.6h11.2c1 0 1.8.8 1.8 1.8v15.2c0 1-.8 1.8-1.8 1.8H6.4c-1 0-1.8-.8-1.8-1.8V4.4c0-1 .8-1.8 1.8-1.8z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7.1 4.1h9.8c.5 0 .9.4.9.9v14c0 .5-.4.9-.9.9H7.1c-.5 0-.9-.4-.9-.9V5c0-.5.4-.9.9-.9z"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="12" r="2.4"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="12" r=".9"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 4.1v5.5M12 14.4v5.5"/>
+</g></symbol>
+<!-- sketch "helmet": hand-drawn (the armor set) -->
+<symbol id="sk-helmet" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M5 13.4C5 8.4 8.2 5.2 12.2 5.2s7.2 3.2 7.2 8.2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M4.4 13.4h15.6M5.3 11.6c4.6-.8 9.2-.8 13.8 0"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M19.4 13.4c1 .4 2 1.1 2.6 2.1h-3.2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7.4 13.4v5.2c0 .7.5 1.2 1.2 1.2h1.8c.6 0 1-.4 1.1-1l.6-5.4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M8.6 15.6h2.4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12.2 5.2V3.9M7.6 6.6c1.8-2.6 7-3.2 10.2-.6"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M9.4 5l-.5-1.2M11.6 4.2l-.2-1.3M14 4.1l.3-1.2M16.2 4.7l.6-1.1"/>
+</g></symbol>
+<!-- sketch "sword": hand-drawn (the armor set) -->
+<symbol id="sk-sword" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M9.4 13.2l8.8-8.8c.7-.7 1.6-1.1 2.6-1.2-.1 1-.5 1.9-1.2 2.6l-8.8 8.8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M10.6 13.4l8.2-8.2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7.6 12.2l.8-.8 4.4 4.4-.8.8z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M9.4 14l-3.2 3.2M10.4 15l-3.2 3.2"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="5.8" cy="18.6" r="1.4"/>
+</g></symbol>
+<!-- sketch "fruit": hand-drawn, a leafy branch bearing one tall oval fruit of no named kind; the fruit is the accent part -->
+<symbol id="sk-fruit" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2.8 8.4c4-1.6 8.4-1.8 12.6-.6 2 .6 3.8 1.4 5.6 2.6"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M6.4 7.6c.4-2.2 2.2-3.6 4.6-3.6-.4 2.2-2.2 3.4-4.6 3.6z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M15 7.6c1-1.8 2.8-2.6 5-2.2-1 1.8-2.8 2.6-5 2.2z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M4.6 8c-.6 1.8-.2 3.4 1.4 4.6.6-1.8.2-3.4-1.4-4.6z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M18.4 9.8c.2 1.8-.4 3.2-1.8 4.2-.4-1.8.2-3.2 1.8-4.2z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 7.3v3.4"/>
+  <ellipse class="a" fill="none" vector-effect="non-scaling-stroke" cx="12" cy="15.5" rx="3.3" ry="4.7"/>
+  <path class="a" fill="none" vector-effect="non-scaling-stroke" d="M10.1 13.4c.3-1 .9-1.8 1.6-2.2"/>
+</g></symbol>
+<!-- sketch "grain": Lucide "wheat" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-grain" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 22 16 8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/>
+</g></symbol>
+<!-- sketch "tree": Lucide "tree-deciduous" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-tree" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M8 19a4 4 0 0 1-2.24-7.32A3.5 3.5 0 0 1 9 6.03V6a3 3 0 1 1 6 0v.04a3.5 3.5 0 0 1 3.24 5.65A4 4 0 0 1 16 19Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 19v3"/>
+</g></symbol>
+<!-- sketch "cedar": Lucide "tree-pine" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-cedar" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 22v-3"/>
+</g></symbol>
+<!-- sketch "leaf": Lucide "leaf" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-leaf" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+</g></symbol>
+<!-- sketch "flower": Lucide "flower" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-flower" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="12" r="3"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 7.5V9"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7.5 12H9"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M16.5 12H15"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 16.5V15"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m8 8 1.88 1.88"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M14.12 9.88 16 8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m8 16 1.88-1.88"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M14.12 14.12 16 16"/>
+</g></symbol>
+<!-- sketch "water": Lucide "droplets" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-water" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
+</g></symbol>
+<!-- sketch "river": Lucide "waves" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-river" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+</g></symbol>
+<!-- sketch "sun": Lucide "sun" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-sun" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="12" r="4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 2v2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 20v2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m4.93 4.93 1.41 1.41"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m17.66 17.66 1.41 1.41"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 12h2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M20 12h2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m6.34 17.66-1.41 1.41"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m19.07 4.93-1.41 1.41"/>
+</g></symbol>
+<!-- sketch "dawn": Lucide "sunrise" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-dawn" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 2v8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m4.93 10.93 1.41 1.41"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 18h2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M20 18h2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m19.07 10.93-1.41 1.41"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M22 22H2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m8 6 4-4 4 4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M16 18a4 4 0 0 0-8 0"/>
+</g></symbol>
+<!-- sketch "cloud": Lucide "cloud" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-cloud" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+</g></symbol>
+<!-- sketch "storm": Lucide "cloud-lightning" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-storm" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m13 12-3 5h4l-3 5"/>
+</g></symbol>
+<!-- sketch "lightning": Lucide "zap" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-lightning" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+</g></symbol>
+<!-- sketch "wind": Lucide "wind" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-wind" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+</g></symbol>
+<!-- sketch "snow": Lucide "snowflake" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-snow" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <line fill="none" vector-effect="non-scaling-stroke" x1="2" x2="22" y1="12" y2="12"/>
+  <line fill="none" vector-effect="non-scaling-stroke" x1="12" x2="12" y1="2" y2="22"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m20 16-4-4 4-4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m4 8 4 4-4 4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m16 4-4 4-4-4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m8 20 4-4 4 4"/>
+</g></symbol>
+<!-- sketch "stars": Lucide "sparkles" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-stars" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M20 3v4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M22 5h-4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M4 17v2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M5 18H3"/>
+</g></symbol>
+<!-- sketch "flame": Lucide "flame" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-flame" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+</g></symbol>
+<!-- sketch "mountain": Lucide "mountain" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-mountain" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+</g></symbol>
+<!-- sketch "fortress": Lucide "castle" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-fortress" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M22 20v-9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M18 11V4H6v7"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M15 22v-4a3 3 0 0 0-3-3a3 3 0 0 0-3 3v4"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M22 11V9"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 11V9"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M6 4V2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M18 4V2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M10 4V2"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M14 4V2"/>
+</g></symbol>
+<!-- sketch "house": Lucide "house" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-house" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+</g></symbol>
+<!-- sketch "tent": Lucide "tent" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-tent" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3.5 21 14 3"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M20.5 21 10 3"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M15.5 21 12 15l-3.5 6"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M2 21h20"/>
+</g></symbol>
+<!-- sketch "jar": Lucide "amphora" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-jar" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M10 5H8a2 2 0 0 0 0 4h.68"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M14 5h2a2 2 0 0 1 0 4h-.68"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M18 22H6"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M9 2h6"/>
+</g></symbol>
+<!-- sketch "scales": Lucide "scale" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-scales" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7 21h10"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 3v18"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+</g></symbol>
+<!-- sketch "crown": Lucide "crown" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-crown" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M5 21h14"/>
+</g></symbol>
+<!-- sketch "anchor": Lucide "anchor" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-anchor" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M12 22V8"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M5 12H2a10 10 0 0 0 20 0h-3"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="5" r="3"/>
+</g></symbol>
+<!-- sketch "boat": Lucide "sailboat" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-boat" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M21 14 10 2 3 14h18Z"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M10 2v16"/>
+</g></symbol>
+<!-- sketch "target": Lucide "target" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-target" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="12" r="10"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="12" r="6"/>
+  <circle fill="none" vector-effect="non-scaling-stroke" cx="12" cy="12" r="2"/>
+</g></symbol>
+<!-- sketch "bird": Lucide "bird" (lucide-static 0.452.0, ISC) -->
+<symbol id="sk-bird" viewBox="0 0 24 24" fill="none"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#sk-rough)">
+  <path fill="none" vector-effect="non-scaling-stroke" d="M16 7h.01"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="m20 7 2 .5-2 .5"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M10 18v3"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M14 17.75V21"/>
+  <path fill="none" vector-effect="non-scaling-stroke" d="M7 18a6 6 0 0 0 3.84-10.61"/>
+</g></symbol>
+</defs>
+</svg>

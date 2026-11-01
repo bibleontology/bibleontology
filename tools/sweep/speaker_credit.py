@@ -372,6 +372,18 @@ def main():
                         "turns": sorted(set(ts)), "how": sorted({h for _, h in found}),
                         "by": "sweep (automated analysis): the turn's sender"
                               + (", inside the reporting speaker's turn" if reported else "")})
+    # CREDITS BY JUDGMENT (2026-10-27): relations held as speech whose turn had
+    # no sender on record ("educated at the feet of Gamaliel", Acts 22:3, is
+    # Paul's own speech from 21:40), the speaker named by one judge, pinned to
+    # the record named nearby and confirmed by a second. Never one the sweep
+    # credits already
+    have = {(x["src"], x["type"], x["dst"]) for x in out}
+    for p_ in sorted((ROOT / "ontology" / "provenance" / "sweep").glob("speaker-credits-judged-*.jsonl")):
+        for line in p_.read_text(encoding="utf-8").splitlines():
+            x = json.loads(line)
+            if (x["src"], x["type"], x["dst"]) not in have and x["speaker"] in ents:
+                out.append(x)
+                stats["credited by judgment (speaker-credits-judged-*.jsonl)"] += 1
     dest = ROOT / "out" / "sweep" / "speaker-credits.jsonl"
     dest.write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in out), encoding="utf-8")
     # each statement clause's voice (plan 2.19), read by

@@ -160,11 +160,24 @@ def main():
     # recommended". A wrong link is never written (the structure view applies
     # a removal only to the builder's own links, so a sweep link must not be
     # written at all), a builder link is disputed, and a corrected link is
-    # written where two judges agreed and the words were found
+    # written where two judges agreed and the words were found.
+    # 2026-10-27: unnamed subjects the Mac named and a judge confirmed, with no
+    # wrong pointer to replace ("wrong": null); each file carries its own credit
+    BY = {"pointer-corrections-2026-10-19.json":
+          "the panel of eleven, two passes, then two judges; Doug's ruling, 2026-10-19",
+          "pointer-corrections-2026-10-27.json":
+          "the Mac's structure check (gemma4:26b), the name found nearby, then a Claude Haiku judge; plan 2.17 step 1",
+          "pointer-corrections-divine-2026-10-27.json":
+          "the Mac's structure check (gemma4:26b), the name found nearby, a Claude Haiku judge, then Doug's ruling "
+          "on each record, 2026-10-27"}
     corrections = []
     for p_ in sorted((ROOT / "ontology" / "provenance" / "sweep").glob("pointer-corrections-*.json")):
-        corrections += json.loads(p_.read_text(encoding="utf-8"))["corrections"]
-    wrong = {(c["src"], c["wrong"]) for c in corrections}
+        corrections += [{**c, "_by": BY[p_.name]} for c in json.loads(p_.read_text(encoding="utf-8"))["corrections"]]
+    wrong = {(c["src"], c["wrong"]) for c in corrections if c.get("wrong")}
+    # A LATER RULING ON THE SAME RECORD (Doug, 2026-10-27, on four 10-19 pointers
+    # whose objections had read another word in the verse): a correction naming
+    # the ruling it supersedes may write the pointer the earlier one called wrong
+    wrong -= {(c["src"], c["dst"]) for c in corrections if c.get("supersedes")}
 
     with gzip.open(DEST, "wt", encoding="utf-8") as fh:
         def put(rec):
@@ -436,14 +449,13 @@ def main():
             else:
                 st["link:to a group the sweep did not make (dropped)"] += 1
         for c in corrections:
-            if refers.get(c["src"]) == c["wrong"]:
+            if c.get("wrong") and refers.get(c["src"]) == c["wrong"]:
                 put({"ref": c["ref"], "reading": "sweep", "by": "Doug's ruling, 2026-10-19", "type": "refers_to",
                      "src": c["src"], "dst": c["wrong"], "action": "remove"})
                 st["correction: the builder's pointer disputed"] += 1
             if c.get("dst") and exists(c["dst"]):
                 put({"ref": c["ref"], "reading": "sweep", "type": "refers_to", "src": c["src"], "dst": c["dst"],
-                     "by": "the panel of eleven, two passes, then two judges; Doug's ruling, 2026-10-19",
-                     "correction": True})
+                     "by": c["_by"], "correction": True})
                 st["correction: the corrected pointer written"] += 1
     stats = {"_what": "tools/sweep/import_layer.py: what the import wrote, kept and held",
              "counts": dict(sorted(st.items())),

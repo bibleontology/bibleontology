@@ -11,6 +11,7 @@ in step). Google does not use IndexNow.
     python tools/indexnow.py --new --dry-run   what would be sent
     python tools/indexnow.py --new             every sitemap address not yet sent
     python tools/indexnow.py --urls a b c      these, changed (e.g. a theme's page)
+    python tools/indexnow.py --file F --batch-size 500 --pause 2   in small groups (Bing prefers small, frequent sends)
 
 Nothing is sent unless the live key file answers with the key. What was sent,
 and when, is kept in out/indexnow-sent.json, so --new sends only what is new.
@@ -22,6 +23,7 @@ import datetime
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -89,7 +91,12 @@ def main():
     # week's site-wide card changes): one address per line
     g.add_argument("--file")
     ap.add_argument("--dry-run", action="store_true")
+    # 2026-10-31: Bing prefers small, frequent sends to one large one
+    ap.add_argument("--batch-size", type=int, default=BATCH)
+    ap.add_argument("--pause", type=float, default=0.0)
     a = ap.parse_args()
+    if a.batch_size < 1:
+        ap.error("--batch-size must be at least 1")
     if a.file:
         a.urls = [l.strip() for l in Path(a.file).read_text(encoding="utf-8").splitlines() if l.strip()]
     k = key()
@@ -97,6 +104,7 @@ def main():
     print(f"key file live: {'yes' if ok else 'NO'} ({why})")
     if a.check:
         sys.exit(0 if ok else 1)
+    SENT.parent.mkdir(parents=True, exist_ok=True)
     sent = json.loads(SENT.read_text(encoding="utf-8")) if SENT.exists() else {}
     if a.new:
         urls = [u for u in sitemap_urls() if u not in sent]
@@ -110,10 +118,12 @@ def main():
     if not ok:
         sys.exit("not sending: the key file is not live with the key (push, then reload Caddy)")
     stamp = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
-    for i in range(0, len(urls), BATCH):
-        part = urls[i:i + BATCH]
+    groups = [urls[i:i + a.batch_size] for i in range(0, len(urls), a.batch_size)]
+    for n, part in enumerate(groups, 1):
+        if n > 1 and a.pause:
+            time.sleep(a.pause)
         st = send(k, part)
-        print(f"batch {i // BATCH + 1}: {len(part)} addresses -> {st}")
+        print(f"batch {n}: {len(part)} addresses -> {st}")
         if st not in (200, 202):
             sys.exit(f"stopped at HTTP {st} (403: key not found; 422: address not on the host; "
                      f"429: too many)")

@@ -113,6 +113,71 @@ def _mentions(corpus: Corpus, ref_text: str, names: set[str]) -> bool:
     return any(n.lower() in blob for n in names)
 
 
+SCOPES = {"", "people", "part", "sense"}
+SCOPE_BASES = {"", "verse", "neighbor", "pronoun"}
+# A party that is only one of these says nothing about who it is: the pass of
+# 2026-10-29 found three of 26 proposed parties were "they" or "you", which pass
+# a substring check without meaning anything (jews-scopes-judge.md)
+BARE_PRONOUNS = {"i", "me", "we", "us", "you", "he", "him", "she", "her", "it", "they", "them", "those", "these"}
+
+
+def _fold(s: str) -> str:
+    """Lowercase, curly quotes and dashes to ASCII, one space: so a party copied from the Berean compares with the
+    Berean's own text however either was typed."""
+    for a, b in (("’", "'"), ("‘", "'"), ("“", '"'), ("”", '"'),
+                 ("–", "-"), ("—", "-"), (" ", " ")):
+        s = s.replace(a, b)
+    return " ".join(s.lower().split())
+
+
+def _text_of(corpus: Corpus, refs) -> str:
+    out = []
+    for r in refs or ():
+        try:
+            out.extend(corpus.text(v) or "" for v in corpus.expand(parse_ref(r)))
+        except RefError:
+            pass
+    return _fold(" ".join(out))
+
+
+def scope_problems(scope, party, scope_ref, basis, refs, held, corpus: Corpus) -> list[tuple[str, str]]:
+    """(code, message) for one scope annotation: a relation's, or one of the group's quoted verses (attrs.verse_scopes).
+
+    "Nothing without scripture" applied to the annotation: the party is the Berean's own words, found in a verse the
+    record cites (basis `verse`) or in a verse it names as the place the party is read from (`neighbor`, `pronoun`)."""
+    out: list[tuple[str, str]] = []
+    if scope not in SCOPES:
+        out.append(("rel.bad_scope", f"scope {scope!r} is not one of people, part, sense"))
+    if basis not in SCOPE_BASES:
+        out.append(("rel.bad_scope", f"scope_basis {basis!r} is not one of verse, neighbor, pronoun"))
+    if scope == "part" and not party:
+        out.append(("rel.part_without_party", "scope is part but names no scope_party"))
+    if scope == "part" and party and not basis:
+        out.append(("rel.part_without_basis", "scope is part but scope_basis says nowhere the party was read from"))
+    for r in scope_ref or ():
+        try:
+            if not corpus.ref_exists(parse_ref(r)):
+                out.append(("rel.dead_ref", f"scope_ref {r} resolves to no verse"))
+        except RefError as exc:
+            out.append(("rel.bad_ref", f"scope_ref: {exc}"))
+    if party:
+        p = _fold(party)
+        if p in BARE_PRONOUNS and not held:
+            out.append(("rel.party_is_pronoun",
+                        f"scope_party {party!r} is a pronoun alone; name the party in the verse's own words"))
+        if basis in ("neighbor", "pronoun"):
+            where, label = scope_ref, "its scope_ref verses"
+            if not scope_ref:
+                out.append(("rel.party_not_in_verse", f"scope_basis {basis} but no scope_ref names the verse"))
+        else:
+            where, label = refs, "its cited verses"
+        # always the Berean's text, whatever corpus the caller validates against: a party is the Berean's own words
+        # (the old reader validates against the KJV, and 'the Jews who had believed Him' is not the KJV's)
+        if where and p not in _text_of(_berean(), where):
+            out.append(("rel.party_not_in_verse", f"scope_party {party!r} is not a part of the Berean's text of {label}"))
+    return out
+
+
 @lru_cache(maxsize=1)
 def _berean() -> Corpus:
     return Corpus.load(BSB_JSONL)
@@ -167,6 +232,22 @@ def validate(
                     add(Issue(ERROR, "person.dead_ref", f"{ref} resolves to no verse", pid))
             except RefError as exc:
                 add(Issue(ERROR, "person.bad_ref", str(exc), pid))
+        # the verses a scoped group quotes that hold no relation (attrs.verse_scopes: "Rom 11:28", "Rev 2:9"),
+        # each annotated the way a relation is, and held to the same checks
+        for vs in (person.attrs or {}).get("verse_scopes") or []:
+            subj = f"{pid} {vs.get('ref')}"
+            if not vs.get("scope"):
+                add(Issue(ERROR, "rel.unscoped", "a quoted verse of a scoped group carries no scope", subj))
+            for code, msg in scope_problems(vs.get("scope", ""), vs.get("party", ""), vs.get("scope_ref") or [],
+                                            vs.get("scope_basis", ""), [vs.get("ref", "")], False, corpus):
+                add(Issue(ERROR, code, msg, subj))
+            # the verses printed beside it, unglossed (Rom 11:28's companions) must be verses
+            for cref in vs.get("companions") or []:
+                try:
+                    if not corpus.ref_exists(parse_ref(cref)):
+                        add(Issue(ERROR, "rel.dead_ref", f"companion {cref} resolves to no verse", subj))
+                except RefError as exc:
+                    add(Issue(ERROR, "rel.bad_ref", f"companion: {exc}", subj))
         for name in person.names():
             seen_names[name.lower()].append(pid)
 
@@ -199,6 +280,9 @@ def validate(
         k = rel.key()
         if rel.claimed_by:
             k = k + (rel.claimed_by, tuple(rel.refs or ()))
+        # a relation split by SCOPE (one record per party, 2026-10-29): the party and the verses are its identity
+        if rel.scope_party:
+            k = k + (rel.scope_party, tuple(rel.refs or ()))
         # a STATEMENT is told apart by its verses (plan 2.19): God "spoke to"
         # Moses and God "sent" Moses are two statements, not two copies. The
         # same verb in several verses is already one row (write_statements.py),
@@ -221,6 +305,16 @@ def validate(
         # of eliphaz", lowercase and linking nowhere (2026-10-13)
         if rel.claimed_by and rel.claimed_by not in people:
             add(Issue(ERROR, "rel.unknown_claimant", f"claimed_by {rel.claimed_by!r} not defined", subject))
+        # SCOPE (2026-10-29): which of a group the verse is about. An entity flagged attrs.scope_required (the Jewish
+        # people's) takes no relation without one, so the next relation added there cannot silently be read of the
+        # whole people; and every party is the Berean's own words, found in the verse
+        for code, msg in scope_problems(rel.scope, rel.scope_party, rel.scope_ref, rel.scope_basis, rel.refs,
+                                        rel.held, corpus):
+            add(Issue(ERROR, code, msg, subject))
+        for end in (rel.src, rel.dst):
+            if end in people and (people[end].attrs or {}).get("scope_required") and not rel.scope:
+                add(Issue(ERROR, "rel.unscoped",
+                          f"{end!r} requires every relation to say whether it is of the whole group or a part", subject))
         if rel.src == rel.dst:
             add(Issue(ERROR, "rel.self_loop", "relation points at itself", subject))
         if rtype:

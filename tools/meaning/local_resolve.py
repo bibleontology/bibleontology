@@ -189,5 +189,118 @@ def report():
     print("real, how:", dict(c), f"| mapped to exactly one record: {len(mapped)}")
 
 
+# THE PRONOUN RE-ASK (2026-10-27). The first asking answered 294 of its 754 planted subjects, and 4,614 real ones,
+# with the pronoun itself ("you" 1,845, "they" 959, "I" 668): it named the WORD, not the person. So the same
+# clauses are asked again with eight verses before instead of three (a speech's "you" is often named where the
+# speech begins), and a brief in which a pronoun is not an answer. The 294 planted ones go in again as its score.
+PRONOUN = re.compile(r"^(he|she|they|i|you|we|him|her|them|me|us|it|his|ye|you all|the speaker|speaker|"
+                     r"the one speaking)$", re.I)
+PNAME = "4-resolve-pronouns"
+BRIEF_PRONOUN = """You read one Bible verse, with the verses before it, and answer ONE question about one action in \
+it: WHO does this action? The verse is from the Berean Standard Bible.
+
+A pronoun is NOT an answer. "he", "they", "you", "I", "we" are the words to be explained: say WHO they are, by the \
+name or group the text gives. For "I" or "we", find who is speaking: look back for "X said", "the word of the LORD \
+came to X", "X answered", or the start of the letter or song. For "you", find who is spoken to: "said to X", "X, \
+...", "to the Israelites". For "he" or "they", find the last person or group named before who fits.
+
+Answer with the name or group exactly as the text gives it ("Abraham", "the Israelites", "the LORD", "Jesus", \
+"the disciples", "Pharaoh's daughter"). Then say how you know:
+- "this verse": the verse itself names them.
+- "nearby": a verse shown names them.
+- "general": not one person but anyone of a kind ("whoever digs a pit"): give the words.
+- "not stated": the text shown does not name them. Say this rather than guess or repeat the pronoun.
+If two people could be meant, answer "not stated".
+
+Worked examples:
+- Gen 22:2 "Then God said, 'Take your son, your only son Isaac, whom you love'", ACTION "love" -> {"who": \
+"Abraham", "how": "nearby", "words": "God tested Abraham and said to him, 'Abraham!'"} (22:1 names who "you" is)
+- Exod 3:5 "'Do not come any closer,' God said. 'Take off your sandals'", ACTION "take off" (3:4 "God called to \
+him from within the bush, 'Moses, Moses!'") -> {"who": "Moses", "how": "nearby", "words": "Moses, Moses!"}
+- Ps 23:4 "Even though I walk through the valley of the shadow of death", ACTION "walk" (23:1 heading "A Psalm of \
+David") -> {"who": "David", "how": "nearby", "words": "A Psalm of David"}
+- Ps 12:2 "They speak falsehood to one another", with no one named before -> {"who": "", "how": "not stated", \
+"words": ""}
+
+Answer with ONLY a JSON object, nothing before or after it: {"who": "...", "how": "this verse" | "nearby" | \
+"general" | "not stated", "words": "<the words that name them, quoted from the text shown>"}"""
+
+
+def pronoun_items():
+    """the first asking's pronoun answers (real and planted), with the wider context"""
+    ctx = context(k_before=8)
+    out = []
+    for ln in open(OUT / "answers.jsonl", encoding="utf-8"):
+        r = json.loads(ln)
+        if not PRONOUN.match((r.get("who") or "").strip()):
+            continue
+        c = ctx(r["ref"])
+        if not c:
+            continue
+        it = {"key": r["key"], "ref": r["ref"], "action": r["action"], **c, "first_who": r["who"]}
+        if "answer" in r:
+            it.update(answer=r["answer"], answer_name=r["answer_name"])
+        out.append(it)
+    return out
+
+
+def pronoun_msg(it):
+    msg = {"verse": f"{it['ref']} {it['text']}", "before": it["before"], "after": it["after"], "ACTION": it["action"]}
+    return [{"role": "system", "content": BRIEF_PRONOUN}, {"role": "user", "content": json.dumps(msg, ensure_ascii=False)}]
+
+
+def pronoun_score(rows):
+    _, alias = names()
+    plant = [r for r in rows if "answer" in r]
+    hit = [r for r in plant if r["answer"] in alias.get(norm(r["who"]), ()) or norm(r["who"]) == norm(r["answer_name"])]
+    still = [r for r in rows if PRONOUN.match((r.get("who") or "").strip())]
+    print(f"{len(rows)} answered ({len(plant)} planted): planted right {len(hit)} of {len(plant)}; "
+          f"still a pronoun {len(still)}; not stated {sum(r['how'] == 'not stated' for r in rows)}")
+    for r in [r for r in plant if r not in hit][:12]:
+        print(f"   missed {r['ref']:12} {r['action']:14} said {r['who']!r:28} record {r['answer_name']!r}")
+
+
+def pronouns(cmd, n=None):
+    """export: the job (planted first in a shuffled order, so a partial run still scores); try N: N planted ones
+    asked now through the tunnel, scored; report: after grunt.py pull"""
+    import urllib.request
+    its = pronoun_items()
+    rnd = random.Random(27)
+    rnd.shuffle(its)
+    if cmd == "try":
+        rows = []
+        for it in [i for i in its if "answer" in i][:int(n)]:
+            body = {"model": "gemma4:26b", "stream": False, "think": False, "options": OPTIONS,
+                    "messages": pronoun_msg(it)}
+            req = urllib.request.Request("http://localhost:11434/api/chat", json.dumps(body).encode(),
+                                         {"Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=900) as r:
+                p = parse(json.load(r)["message"]["content"])
+            if p:
+                rows.append({**it, **p})
+        pronoun_score(rows)
+    elif cmd == "export":
+        with open(JOBS / f"{PNAME}.jsonl", "w", encoding="utf-8", newline="\n") as f, \
+                open(JOBS / f"{PNAME}.items.jsonl", "w", encoding="utf-8") as g:
+            f.write(json.dumps({"_job": {"model": "gemma4:26b", "options": OPTIONS, "pass": "who: the pronouns"}}) + "\n")
+            for it in its:
+                f.write(json.dumps({"key": it["key"], "messages": pronoun_msg(it)}, ensure_ascii=False) + "\n")
+                g.write(json.dumps(it, ensure_ascii=False) + "\n")
+        print(f"{len(its)} asked ({sum('answer' in i for i in its)} planted) -> {JOBS / (PNAME + '.jsonl')}")
+    elif cmd == "report":
+        its = {i["key"]: i for i in its}
+        done = sorted((ROOT / "out" / "grunt" / "done").glob(f"*{PNAME}.jsonl"))
+        rows = []
+        for ln in open(done[-1], encoding="utf-8"):
+            d = json.loads(ln)
+            p = parse(d.get("content"))
+            if p and d["key"] in its:
+                rows.append({**its[d["key"]], **p})
+        pronoun_score(rows)
+
+
 if __name__ == "__main__":
-    {"export": export, "report": report}[sys.argv[1]]()
+    if sys.argv[1] == "pronouns":
+        pronouns(*sys.argv[2:])
+    else:
+        {"export": export, "report": report}[sys.argv[1]]()

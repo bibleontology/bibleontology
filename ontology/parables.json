@@ -1,0 +1,39 @@
+{
+ "_what": "The parable cards (2026-10-29): the 22 events that are one parable each, their addresses and the few facts a card cannot take from the graph. The title is the Berean's heading at the telling's first verse, kept as the editors wrote it, except where the heading names two parables (Matt 13:44-46, 'The Parables of the Treasure and the Pearl'): there `name` says it. The address is the event's id without event_ unless `address` says otherwise (the pearl: the heading, not the King James 'of great price', ruling PB-A). `hero` is the image whose key is the card's one sentence (the sower's seed, the weeds' field). `likened_to` is the word the frame is likened to, in MACULA's Greek; `steps` are what the pearl's merchant does, each a part of its verse with MACULA's Greek word (tests/test_parable_card.py checks every part against the Berean's verse and every word against MACULA's). The older records of these parables are folded into their events by aliases.jsonl.",
+ "events": [
+  {"id": "event_parable_of_the_sower", "hero": "image_seed",
+   "hero_other": {"Matt": "Matthew does not say what the seed is; it says the seed sown on each ground is the one who hears."}},
+  {"id": "event_parable_of_the_weeds", "hero": "image_field_in_the_weeds"},
+  {"id": "event_parable_of_the_mustard_seed"},
+  {"id": "event_parable_of_the_leaven"},
+  {"id": "event_parable_of_the_hidden_treasure", "name": "The Parable of the Hidden Treasure", "no_explanation": true,
+   "likened_to": {"word": "θησαυρῷ", "strong": "G2344", "gloss": "treasure", "ref": "Matt 13:44"}},
+  {"id": "event_parable_of_the_pearl_of_great_price", "address": "parable_of_the_pearl", "name": "The Parable of the Pearl", "no_explanation": true,
+   "likened_to": {"word": "ἐμπόρῳ", "strong": "G1713", "gloss": "a merchant", "ref": "Matt 13:45"},
+   "steps": [
+    {"text": "in search of fine pearls", "ref": "Matt 13:45", "word": "ζητοῦντι", "strong": "G2212"},
+    {"text": "When he found one very precious pearl", "ref": "Matt 13:46", "word": "εὑρὼν", "strong": "G2147"},
+    {"text": "he went away", "ref": "Matt 13:46", "word": "ἀπελθὼν", "strong": "G565"},
+    {"text": "sold all he had", "ref": "Matt 13:46", "word": "πέπρακεν", "strong": "G4097"},
+    {"text": "bought it", "ref": "Matt 13:46", "word": "ἠγόρασεν", "strong": "G59"}],
+   "things": [
+    {"word": "ἐμπόρῳ", "strong": "G1713", "gloss": "a merchant", "ref": "Matt 13:45"},
+    {"word": "μαργαρίτην", "strong": "G3135", "gloss": "a pearl", "ref": "Matt 13:46"}]},
+  {"id": "event_parable_of_the_net"},
+  {"id": "event_parable_of_the_lost_sheep"},
+  {"id": "event_parable_of_the_unforgiving_servant"},
+  {"id": "event_parable_of_the_workers_in_the_vineyard"},
+  {"id": "event_parable_of_the_two_sons"},
+  {"id": "event_parable_of_the_wicked_tenants"},
+  {"id": "event_parable_of_the_wedding_banquet"},
+  {"id": "event_parable_of_the_ten_virgins"},
+  {"id": "event_parable_of_the_talents"},
+  {"id": "event_parable_of_the_rich_fool"},
+  {"id": "event_parable_of_the_lost_coin"},
+  {"id": "event_parable_of_the_shrewd_manager"},
+  {"id": "event_parable_of_the_good_shepherd"},
+  {"id": "event_good_samaritan", "address": "parable_of_the_good_samaritan"},
+  {"id": "event_prodigal_son", "address": "parable_of_the_prodigal_son"},
+  {"id": "event_rich_man_and_lazarus", "address": "rich_man_and_lazarus"}
+ ]
+}

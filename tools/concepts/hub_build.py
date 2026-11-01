@@ -149,7 +149,8 @@ def build(d, hid, frames, clauses, speaker):
         words.append({"key": k, "lemma": d["lemmas"].get(k) or lx.get("word"), "form": form,
                       "translit": lx.get("translit") or S._first(meta, "transliteration"),
                       "gloss": lx.get("gloss") or (d["profiles"].get(k) or {}).get("gloss"),
-                      "lang": "Hebrew" if k.startswith("h") else "Greek", "uses": len(keep), "other_sense": drop})
+                      # Hebrew, Aramaic or Greek as the word card says (h1684, Ezra 6, was labeled Hebrew: FAULTS #16)
+                      "lang": S._lang_of(d, k), "uses": len(keep), "other_sense": drop})
     # OTHER WORDS THE ENGLISH RENDERS THE SAME WAY (2026-10-09: focus on
     # agape love and then have a section at the bottom for other uses of the
     # English word love). The rows stand on the concept's own words and their
@@ -179,7 +180,7 @@ def build(d, hid, frames, clauses, speaker):
             others.append({"key": k, "lemma": d["lemmas"].get(k) or lx.get("word"),
                            "translit": lx.get("translit") or S._first(meta, "transliteration"),
                            "gloss": lx.get("gloss") or (d["profiles"].get(k) or {}).get("gloss"),
-                           "lang": "Hebrew" if k.startswith("h") else "Greek", "n": len(refs), "verses": refs})
+                           "lang": S._lang_of(d, k), "n": len(refs), "verses": refs})
         # BY HAND (the mercy panel, 2026-10-10): "add" {key: {verses, note}}
         # puts verses the gloss rule cannot reach (Hos 6:6 and Mic 6:8 are
         # חֶסֶד, and the Berean prints "mercy" there) first, so they are the
@@ -197,7 +198,7 @@ def build(d, hid, frames, clauses, speaker):
                 o = by_key[k] = {"key": k, "lemma": lemma,
                                  "translit": lx.get("translit") or S._first(meta, "transliteration"),
                                  "gloss": lx.get("gloss") or (d["profiles"].get(k) or {}).get("gloss"),
-                                 "lang": "Hebrew" if k.startswith("h") else "Greek", "verses": []}
+                                 "lang": S._lang_of(d, k), "verses": []}
                 others.append(o)
             added = list(a.get("verses") or [])
             o["verses"] = added + [v for v in o["verses"] if v not in added]

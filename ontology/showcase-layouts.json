@@ -1,0 +1,167 @@
+{
+ "_note": "A laid-out picture is placed by hand (coordinates from docs/review/card-panel-appeal/armor/mockup-armor.html), keyed by the hub's id in ontology/aggregate-hubs.json. Each member names its card (a member of that hub), the pieces' own Greek words, and the lines its label breaks into (joined by single spaces they are the label's own words, found in the verse). The ring is computed by angle, clockwise from the top.",
+ "armor_of_god": {
+  "kind": "worn",
+  "card": "the_full_armor_of_god",
+  "viewbox": [
+   340,
+   312
+  ],
+  "title": "The Full Armor of God (Ephesians 6:10–18): the six pieces",
+  "lede_ref": "Eph 6:11",
+  "lede_tail": "Six pieces follow.",
+  "passage": "Eph 6:10-18",
+  "whole": {
+   "key": "g3833"
+  },
+  "members": [
+   {
+    "card": "image_belt_of_truth",
+    "x": 132,
+    "y": 124,
+    "size": 76,
+    "lead": "M208 160l18 54",
+    "label": {
+     "x": 230,
+     "y": 222,
+     "anchor": "start",
+     "lines": [
+      "the belt",
+      "of truth"
+     ]
+    },
+    "words": [
+     "g4024",
+     "g225"
+    ],
+    "note": "The Greek has the verb περιζώννυμι, “having girded”; the BSB’s “belt” renders it."
+   },
+   {
+    "card": "image_breastplate_of_righteousness",
+    "x": 128,
+    "y": 58,
+    "size": 84,
+    "lead": "M126 96h-6",
+    "label": {
+     "x": 116,
+     "y": 88,
+     "anchor": "end",
+     "lines": [
+      "the breastplate",
+      "of righteousness"
+     ]
+    },
+    "words": [
+     "g2382",
+     "g1343"
+    ]
+   },
+   {
+    "card": "image_readiness_of_the_gospel_of_peace",
+    "x": 146,
+    "y": 232,
+    "size": 64,
+    "lead": "M148 280h-8",
+    "label": {
+     "x": 136,
+     "y": 266,
+     "anchor": "end",
+     "lines": [
+      "feet fitted with",
+      "the readiness of the",
+      "gospel of peace"
+     ]
+    },
+    "words": [
+     "g5265",
+     "g2091",
+     "g2098",
+     "g1515"
+    ],
+    "note": "No sandal is named; the verb is ὑποδέω, “having shod.”"
+   },
+   {
+    "card": "image_shield_of_faith",
+    "x": 14,
+    "y": 116,
+    "size": 90,
+    "label": {
+     "x": 59,
+     "y": 222,
+     "anchor": "middle",
+     "lines": [
+      "the shield",
+      "of faith"
+     ]
+    },
+    "words": [
+     "g2375",
+     "g4102"
+    ],
+    "quote": "with which you can extinguish all the flaming arrows of the evil one."
+   },
+   {
+    "card": "image_helmet_of_salvation",
+    "x": 140,
+    "y": 2,
+    "size": 60,
+    "lead": "M200 34h12",
+    "label": {
+     "x": 216,
+     "y": 30,
+     "anchor": "start",
+     "lines": [
+      "the helmet",
+      "of salvation"
+     ]
+    },
+    "words": [
+     "g4030",
+     "g4992"
+    ]
+   },
+   {
+    "card": "image_sword_of_the_spirit",
+    "x": 246,
+    "y": 58,
+    "size": 76,
+    "full": "the sword of the Spirit, which is the word of God",
+    "label": {
+     "x": 284,
+     "y": 146,
+     "anchor": "middle",
+     "lines": [
+      "the sword",
+      "of the Spirit,",
+      "which is the word",
+      "of God"
+     ]
+    },
+    "words": [
+     "g3162",
+     "g4151",
+     "g4487"
+    ]
+   }
+  ]
+ },
+ "fruit_of_the_spirit": {
+  "kind": "ring",
+  "card": "fruit_of_the_spirit",
+  "viewbox": [
+   360,
+   300
+  ],
+  "cx": 180,
+  "cy": 152,
+  "label_r": 100,
+  "spoke": [
+   50,
+   90
+  ],
+  "size": 88,
+  "passage": "Gal 5:16-25",
+  "lede_tail": "One fruit, and {n} named.",
+  "title": "The Fruit of the Spirit (Galatians 5:22–23): the nine the text names"
+ }
+}

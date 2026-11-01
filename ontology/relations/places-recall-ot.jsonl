@@ -61,7 +61,7 @@
 {"certainty": "explicit", "dst": "gilgal", "note": "Made king before the LORD in Gilgal.", "refs": ["1Sam 11:14-15"], "source": "places-recall-ot", "src": "saul", "type": "traveled_to"}
 {"certainty": "explicit", "dst": "nineveh", "refs": ["2Kgs 19:36"], "source": "places-recall-ot", "src": "sennacherib", "type": "dwelt_at"}
 {"certainty": "explicit", "dst": "assyria", "refs": ["2Kgs 18:13"], "source": "places-recall-ot", "src": "sennacherib", "type": "ruled_from"}
-{"certainty": "explicit", "dst": "jerusalem", "refs": ["2Kgs 18:13", "2Kgs 18:17"], "source": "places-recall-ot", "src": "sennacherib", "type": "traveled_to"}
+{"certainty": "explicit", "dst": "jerusalem", "held": "2 Kgs 18:17 sends his officials and army up to Jerusalem; 2 Kgs 19:32 says he 'will not enter this city'. The graph keeps it and does not show it as a fact.", "held_beside": true, "refs": ["2Kgs 18:13", "2Kgs 18:17"], "source": "places-recall-ot", "src": "sennacherib", "type": "traveled_to"}
 {"certainty": "explicit", "dst": "assyria", "refs": ["2Kgs 17:3"], "source": "places-recall-ot", "src": "shalmaneser_king_of_assyria", "type": "ruled_from"}
 {"certainty": "explicit", "dst": "samaria", "note": "Besieged and, in the ninth year of Hoshea, took Samaria.", "refs": ["2Kgs 17:5"], "source": "places-recall-ot", "src": "shalmaneser_king_of_assyria", "type": "traveled_to"}
 {"certainty": "explicit", "dst": "ephraim_region", "note": "Named explicitly as 'Shechem in mount Ephraim'; also granted to the Kohathites as a Levitical city of refuge out of Ephraim.", "refs": ["Josh 20:7", "Josh 21:21"], "source": "places-recall-ot", "src": "shechem_city", "type": "located_in"}

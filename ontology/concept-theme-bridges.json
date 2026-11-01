@@ -12,5 +12,10 @@
     "sin": ["sin_exile_death"],
     "death": ["sin_exile_death"],
     "mercy": ["mercy_restoration"]
+  },
+  "_phrases": "A concept card and the theme map's sub-theme that holds its phrase, linked both ways by hand (the concept panel, 2026-10-28: 'beginning' and 'In the beginning', which holds Gen 1:1 and John 1:1). The card leaves the phrase's search to the sub-theme's page, which answers to `title`; `anchor` is the card's link to it.",
+  "phrases": {
+    "beginning": {"id": "theme_creation_r2", "anchor": "“In the beginning”, the phrase: its own card",
+                  "title": "In the Beginning (Gen 1:1, John 1:1): Meaning and Verses"}
   }
 }

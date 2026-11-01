@@ -1,0 +1,64 @@
+{
+ "what": "asaph_neh11 and asaph_singer: one man recorded twice? Two judges, blind, from the verses alone (consolidation: two judges, then Doug). Nothing merged",
+ "ruling": "Doug, 2026-10-27, ruling 2 of docs/review/weak-nodes-2026-10-27.md, \"Rulings 2 to 5 as recommended\": send it to two judges, then back to him",
+ "brief": "# Consolidation brief: one person recorded twice?\n\nA Bible knowledge graph merges two records only when they are one thing recorded twice: the same person, not two\npeople who share a name. Similarity is not enough. You get two records named Asaph, what each one holds, and the\nBerean text of every verse that bears on them (exact text).\n\nDecide from the verses only:\n  \"same\"       the text makes them one man (the same line, the same office, the same descendants), so that keeping\n               two records says the Bible names two men where it names one\n  \"different\"  the text distinguishes them, or the line or the period cannot be his\n  \"unsure\"     the verses leave it open\n\nWeigh: does the genealogy at Neh 11:17 run back to the singer (compare 1 Chr 9:15, the same list, and Neh 11:22,\nwhich says whose descendants the singers were)? Is anything in the verses against it (a different father, a period\nthat cannot be his)? Note that \"son of\" in a genealogy can skip generations. Take no position the text does not\ngive.\n\nWrite ONLY the output file you are told to, a JSON object:\n{\"verdict\": \"same\" | \"different\" | \"unsure\", \"words\": \"<the verse words that decide it, quoted exactly, with refs>\",\n \"against\": \"<anything in the verses that cuts the other way, or empty>\", \"why\": \"<two sentences>\"}\n",
+ "item": {
+  "question": "Are these two records the same man, recorded twice?",
+  "record_A": {
+   "id": "asaph_neh11",
+   "name": "Asaph",
+   "about": "named in a genealogy at Nehemiah 11:17; the chapter gives him only as an ancestor",
+   "verses": [
+    "Neh.11.17"
+   ],
+   "relations": [
+    "Asaph father_of Zabdi (Neh 11:17)"
+   ]
+  },
+  "record_B": {
+   "id": "asaph_singer",
+   "name": "Asaph",
+   "about": "Levite, chief of David's temple singers, son of Berechiah",
+   "verses": [
+    "1Ch.15.17",
+    "1Ch.16.5",
+    "1Ch.25.1"
+   ],
+   "relations": [
+    "Berechiah father_of Asaph (1 Chr 15:17)",
+    "David appointed Asaph chief of the Levites ministering before the ark (1 Chr 16:4-5)",
+    "Asaph member_of the Levitical singers (1 Chr 25:1)"
+   ]
+  },
+  "verses": {
+   "Neh.11.17": "Mattaniah son of Mica, the son of Zabdi, the son of Asaph, who led in thanksgiving and prayer; Bakbukiah, second among his associates; and Abda son of Shammua, the son of Galal, the son of Jeduthun.",
+   "Neh.11.22": "Now the overseer of the Levites in Jerusalem was Uzzi son of Bani, the son of Hashabiah, the son of Mattaniah, the son of Mica. He was one of Asaph's descendants, who were the singers in charge of the service of the house of God.",
+   "Neh.12.35": "and some of the priests with trumpets, and also Zechariah son of Jonathan, the son of Shemaiah, the son of Mattaniah, the son of Micaiah, the son of Zaccur, the son of Asaph,",
+   "Neh.12.46": "For long ago, in the days of David and Asaph, there were directors for the singers and for the songs of praise and thanksgiving to God.",
+   "1Ch.9.15": "Bakbakkar, Heresh, Galal, and Mattaniah son of Mica, the son of Zichri, the son of Asaph;",
+   "1Ch.15.17": "So the Levites appointed Heman son of Joel; from his brothers, Asaph son of Berechiah; from their brothers the Merarites, Ethan son of Kushaiah;",
+   "1Ch.16.5": "Asaph was the chief, Zechariah was second, then Jeiel, Shemiramoth, Jehiel, Mattithiah, Eliab, Benaiah, Obed-edom, and Jeiel. They were to play the harps and lyres, while Asaph sounded the cymbals",
+   "1Ch.25.1": "Additionally, David and the commanders of the army set apart some of the sons of Asaph, Heman, and Jeduthun to prophesy with the accompaniment of lyres, harps, and cymbals. The following is the list of the men who performed this service:",
+   "1Ch.25.2": "From the sons of Asaph: Zaccur, Joseph, Nethaniah, and Asarelah. These sons of Asaph were under the direction of Asaph, who prophesied under the direction of the king.",
+   "Ezr.2.41": "The singers: the descendants of Asaph, 128.",
+   "2Ch.29.13": "Shimri and Jeuel from the Elizaphanites; Zechariah and Mattaniah from the Asaphites;",
+   "2Ch.35.15": "The singers, the descendants of Asaph, were at their stations according to the command of David, Asaph, Heman, and Jeduthun the king's seer. And the gatekeepers at each gate did not need to leave their posts, because their fellow Levites made preparations for them."
+  }
+ },
+ "judges": {
+  "claude-haiku-5-5": {
+   "verdict": "unsure",
+   "words": "Neh 11:22: \"He was one of Asaph's descendants, who were the singers in charge of the service of the house of God.\" Neh 11:17: \"Mattaniah son of Mica, the son of Zabdi, the son of Asaph, who led in thanksgiving and prayer\" 1 Chr 15:17: \"from his brothers, Asaph son of Berechiah\" 1 Chr 25:2: \"These sons of Asaph were under the direction of Asaph, who prophesied under the direction of the king.\" Neh 12:46: \"For long ago, in the days of David and Asaph, there were directors for the singers\"",
+   "against": "Neh 12:46 sets Asaph 'long ago, in the days of David and Asaph', while the Neh 11:17 line runs only three generations (Zabdi, Mica, Mattaniah) from him to a man in the later lists, a gap the verses do not explain. The two lists disagree on the name below Asaph: 1 Chr 9:15 reads \"Mattaniah son of Mica, the son of Zichri, the son of Asaph\" where Neh 11:17 reads \"the son of Zabdi, the son of Asaph\". Neh 11:17 gives this Asaph no father, so nothing in these verses gives him a father other than Berechiah, but nothing ties him to Berechiah either.",
+   "why": "Neh 11:22 says the singers were Asaph's descendants, and Neh 11:17 presents Mattaniah, who led in thanksgiving and prayer, as descended from Asaph, which points toward the same Asaph as the David-era singer chief and leans slightly toward 'same'. But the chain covers a long gap that 'son of' may or may not skip, and the verses do not say whether the genealogical Asaph is the singer himself or an eponymous ancestor of the singers' line, so the verses leave it open."
+  },
+  "claude-sonnet-5-5": {
+   "verdict": "same",
+   "words": "Neh 11:17 \"Mattaniah son of Mica, the son of Zabdi, the son of Asaph, who led in thanksgiving and prayer\"; 1 Chr 9:15 \"Mattaniah son of Mica, the son of Zichri, the son of Asaph\"; Neh 11:22 \"He was one of Asaph's descendants, who were the singers in charge of the service of the house of God.\"; Neh 12:46 \"in the days of David and Asaph, there were directors for the singers\"; 1 Chr 25:1 \"some of the sons of Asaph, Heman, and Jeduthun\".",
+   "against": "The father of Mica is Zabdi in Neh 11:17 but Zichri in 1 Chr 9:15 (a name variant in parallel lists, not a different line). 'Son of' can skip generations, and no verse states outright that the Neh 11:17 Asaph is the Asaph son of Berechiah (1 Chr 15:17).",
+   "why": "The same Mattaniah-son-of-Mica-son-of-Zabdi/Zichri-son-of-Asaph line appears in Neh 11:17 and 1 Chr 9:15, and Neh 11:22 ties Mica's line to 'Asaph's descendants, who were the singers', while Neh 12:46 and 2 Chr 35:15 place Asaph with David as the singers' head. Nothing in the verses gives a second Asaph or a period that cannot be the singer's, so one Asaph recorded twice is the plain reading."
+  }
+ },
+ "outcome": "split: Sonnet same, Haiku unsure (leaning same). Back to Doug, who ruled it merged",
+ "decided": "Doug, 2026-10-27: \"Both as recommended: resolve the four, hold Isa 11:12, merge Asaph.\" asaph_neh11 is an alias of asaph_singer (ontology/aliases.jsonl); the old address still lands"
+}

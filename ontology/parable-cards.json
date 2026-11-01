@@ -1,0 +1,78 @@
+{
+ "_what": "The story cards of the 18 parables that have no part-by-part mapping (2026-10-29). Each parable is told in one or more passages; each passage is a tab with the blocks the TEXT gives and nothing else. `story` is the parable itself, in the Berean's words. `setting` is the narrator's own words saying to whom or why it was told (a setting is not a meaning). `meaning` is only where Jesus's own words state the point or apply the story; a tab with none shows 'The text gives the story without an explanation.' `jesus` lists the verses (whole or in part) where the text has Jesus himself speaking, and every `meaning` item must lie inside them and outside the story. `figures` are the story's own actors, each a phrase of its verse; no figure is ever said to be someone. An item is a verse or a range of verses (`ref`), cut by `from` (the first verse starts at that phrase) and `to` (the last verse ends after that phrase). `held` removes a tab's meaning block: the story shows alone. tests/test_parable_story_cards.py checks every item against the Berean's verses.",
+ "cards": {
+  "event_parable_of_the_mustard_seed": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 13:31-32", "from": "The kingdom of heaven"}], "setting": [], "meaning": [], "jesus": ["Matt 13:31-32"],
+    "figures": [{"name": "a man", "ref": "Matt 13:31"}]},
+   {"b": "Mark", "story": [{"ref": "Mark 4:30-32", "from": "To what can we compare"}], "setting": [], "meaning": [], "jesus": ["Mark 4:30-32"], "figures": []},
+   {"b": "Luke", "story": [{"ref": "Luke 13:18-19", "from": "What is the kingdom of God like"}], "setting": [], "meaning": [], "jesus": ["Luke 13:18-19"],
+    "figures": [{"name": "a man", "ref": "Luke 13:19"}]}]},
+  "event_parable_of_the_leaven": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 13:33", "from": "The kingdom of heaven"}], "setting": [], "meaning": [], "jesus": ["Matt 13:33"],
+    "figures": [{"name": "a woman", "ref": "Matt 13:33"}]},
+   {"b": "Luke", "story": [{"ref": "Luke 13:20-21", "from": "To what can I compare"}], "setting": [], "meaning": [], "jesus": ["Luke 13:20-21"],
+    "figures": [{"name": "a woman", "ref": "Luke 13:21"}]}]},
+  "event_parable_of_the_net": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 13:47-48", "from": "the kingdom of heaven"}], "setting": [], "meaning": [{"ref": "Matt 13:49-50"}], "jesus": ["Matt 13:47-50"],
+    "figures": [{"name": "the men", "ref": "Matt 13:48"}]}]},
+  "event_parable_of_the_lost_sheep": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 18:12-13"}], "setting": [{"ref": "Matt 18:1-2"}], "meaning": [{"ref": "Matt 18:14"}], "jesus": ["Matt 18:12-14"],
+    "figures": [{"name": "a man", "ref": "Matt 18:12"}]},
+   {"b": "Luke", "story": [{"ref": "Luke 15:4-6"}], "setting": [{"ref": "Luke 15:1-3"}], "meaning": [{"ref": "Luke 15:7"}], "jesus": ["Luke 15:4-7"],
+    "figures": [{"name": "man", "ref": "Luke 15:4"}, {"name": "his friends and neighbors", "ref": "Luke 15:6"}]}]},
+  "event_parable_of_the_unforgiving_servant": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 18:23-34", "from": "the kingdom of heaven"}], "setting": [{"ref": "Matt 18:21"}], "meaning": [{"ref": "Matt 18:35"}], "jesus": ["Matt 18:22-35"],
+    "figures": [{"name": "a king", "ref": "Matt 18:23"}, {"name": "a debtor", "ref": "Matt 18:24"}, {"name": "his fellow servants", "ref": "Matt 18:28"}, {"name": "the jailers", "ref": "Matt 18:34"}]}]},
+  "event_parable_of_the_workers_in_the_vineyard": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 20:1-15", "from": "the kingdom of heaven"}], "setting": [], "meaning": [{"ref": "Matt 20:16"}], "jesus": ["Matt 20:1-16"],
+    "figures": [{"name": "a landowner", "ref": "Matt 20:1"}, {"name": "his foreman", "ref": "Matt 20:8"}, {"name": "the workers", "ref": "Matt 20:9"}]}]},
+  "event_parable_of_the_two_sons": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 21:28-31", "to": "they answered."}], "setting": [{"ref": "Matt 21:23"}],
+    "meaning": [{"ref": "Matt 21:31-32", "from": "Truly I tell you"}], "jesus": ["Matt 21:28-32"],
+    "figures": [{"name": "a man", "ref": "Matt 21:28"}, {"name": "the first one", "ref": "Matt 21:28"}, {"name": "the second son", "ref": "Matt 21:30"}]}]},
+  "event_parable_of_the_wicked_tenants": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 21:33-41"}], "setting": [{"ref": "Matt 21:45", "after": true}], "meaning": [{"ref": "Matt 21:43", "from": "I tell you"}], "jesus": ["Matt 21:33-44"],
+    "figures": [{"name": "a landowner", "ref": "Matt 21:33"}, {"name": "the tenants", "ref": "Matt 21:34"}, {"name": "his servants", "ref": "Matt 21:34"}, {"name": "his son", "ref": "Matt 21:37"}]},
+   {"b": "Mark", "story": [{"ref": "Mark 12:1-9", "from": "A man planted"}], "setting": [{"ref": "Mark 12:12", "after": true}], "meaning": [], "jesus": ["Mark 12:1-11"],
+    "figures": [{"name": "the tenants", "ref": "Mark 12:2"}, {"name": "one beloved son", "ref": "Mark 12:6"}]},
+   {"b": "Luke", "story": [{"ref": "Luke 20:9-16", "from": "A man planted", "to": "give the vineyard to others."}],
+    "setting": [{"ref": "Luke 20:9", "to": "this parable:"}, {"ref": "Luke 20:19", "after": true}], "meaning": [], "jesus": ["Luke 20:10-18"],
+    "figures": [{"name": "the tenants", "ref": "Luke 20:10"}, {"name": "my beloved son", "ref": "Luke 20:13"}]}]},
+  "event_parable_of_the_wedding_banquet": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 22:2-13"}], "setting": [], "meaning": [{"ref": "Matt 22:14"}], "jesus": ["Matt 22:2-14"],
+    "figures": [{"name": "a king", "ref": "Matt 22:2"}, {"name": "his servants", "ref": "Matt 22:3"}, {"name": "his troops", "ref": "Matt 22:7"}]},
+   {"b": "Luke", "story": [{"ref": "Luke 14:16-24", "from": "A certain man"}], "setting": [{"ref": "Luke 14:15"}], "meaning": [], "jesus": ["Luke 14:16-24"],
+    "figures": [{"name": "A certain man", "ref": "Luke 14:16"}, {"name": "his servant", "ref": "Luke 14:17"}]}]},
+  "event_parable_of_the_ten_virgins": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 25:1-12"}], "setting": [], "meaning": [{"ref": "Matt 25:13"}], "jesus": ["Matt 25:1-13"],
+    "figures": [{"name": "ten virgins", "ref": "Matt 25:1"}, {"name": "the bridegroom", "ref": "Matt 25:5"}, {"name": "The foolish ones", "ref": "Matt 25:3"}, {"name": "the wise ones", "ref": "Matt 25:4"}]}]},
+  "event_parable_of_the_talents": {"tabs": [
+   {"b": "Matt", "story": [{"ref": "Matt 25:14-30", "from": "it is just like a man"}], "setting": [], "meaning": [], "jesus": ["Matt 25:14-30"],
+    "figures": [{"name": "a man", "ref": "Matt 25:14"}, {"name": "his servants", "ref": "Matt 25:14"}]},
+   {"b": "Luke", "story": [{"ref": "Luke 19:12-27", "from": "A man of noble birth"}], "setting": [{"ref": "Luke 19:11"}], "meaning": [], "jesus": ["Luke 19:12-27"],
+    "figures": [{"name": "A man of noble birth", "ref": "Luke 19:12"}, {"name": "ten of his servants", "ref": "Luke 19:13"}, {"name": "his subjects", "ref": "Luke 19:14"}]}]},
+  "event_parable_of_the_rich_fool": {"tabs": [
+   {"b": "Luke", "story": [{"ref": "Luke 12:16-20", "from": "The ground of"}], "setting": [{"ref": "Luke 12:13"}], "meaning": [{"ref": "Luke 12:21"}], "jesus": ["Luke 12:14-21"],
+    "figures": [{"name": "a certain rich man", "ref": "Luke 12:16"}]}]},
+  "event_parable_of_the_lost_coin": {"tabs": [
+   {"b": "Luke", "story": [{"ref": "Luke 15:8-9"}], "setting": [{"ref": "Luke 15:1-2"}], "meaning": [{"ref": "Luke 15:10"}], "jesus": ["Luke 15:8-10"],
+    "figures": [{"name": "woman", "ref": "Luke 15:8"}, {"name": "her friends and neighbors", "ref": "Luke 15:9"}]}]},
+  "event_parable_of_the_shrewd_manager": {"tabs": [
+   {"b": "Luke", "story": [{"ref": "Luke 16:1-8", "from": "There was a rich man", "to": "he had acted shrewdly."}], "setting": [{"ref": "Luke 16:1", "to": "to His disciples,"}],
+    "meaning": [{"ref": "Luke 16:8", "from": "For the sons of this age"}, {"ref": "Luke 16:9-13"}], "jesus": ["Luke 16:2-13"],
+    "figures": [{"name": "a rich man", "ref": "Luke 16:1"}, {"name": "manager", "ref": "Luke 16:1"}, {"name": "his master's debtors", "ref": "Luke 16:5"}]}]},
+  "event_parable_of_the_good_shepherd": {"tabs": [
+   {"b": "John", "story": [{"ref": "John 10:1-5"}], "setting": [{"ref": "John 10:6", "after": true}], "meaning": [{"ref": "John 10:7-16", "from": "Truly, truly"}], "jesus": ["John 10:1-5", "John 10:7-18"],
+    "figures": [{"name": "the shepherd of the sheep", "ref": "John 10:2"}, {"name": "The gatekeeper", "ref": "John 10:3"}, {"name": "a stranger", "ref": "John 10:5"}]}]},
+  "event_good_samaritan": {"tabs": [
+   {"b": "Luke", "story": [{"ref": "Luke 10:30-35", "from": "A man was going down"}], "setting": [{"ref": "Luke 10:25"}, {"ref": "Luke 10:29"}],
+    "meaning": [{"ref": "Luke 10:36"}, {"ref": "Luke 10:37", "from": "Go and do likewise."}], "jesus": ["Luke 10:30-36", "Luke 10:37"],
+    "figures": [{"name": "robbers", "ref": "Luke 10:30"}, {"name": "a priest", "ref": "Luke 10:31"}, {"name": "a Levite", "ref": "Luke 10:32"}, {"name": "a Samaritan", "ref": "Luke 10:33"}, {"name": "the innkeeper", "ref": "Luke 10:35"}]}]},
+  "event_prodigal_son": {"tabs": [
+   {"b": "Luke", "story": [{"ref": "Luke 15:11-32", "from": "There was a man who had two sons"}], "setting": [{"ref": "Luke 15:1-2"}], "meaning": [], "jesus": ["Luke 15:11-32"],
+    "figures": [{"name": "a man who had two sons", "ref": "Luke 15:11"}, {"name": "The younger son", "ref": "Luke 15:12"}, {"name": "a citizen of that country", "ref": "Luke 15:15"}, {"name": "the older son", "ref": "Luke 15:25"}, {"name": "his servants", "ref": "Luke 15:22"}]}]},
+  "event_rich_man_and_lazarus": {"tabs": [
+   {"b": "Luke", "story": [{"ref": "Luke 16:19-31"}], "setting": [], "meaning": [], "jesus": ["Luke 16:19-31"],
+    "figures": [{"name": "a rich man", "ref": "Luke 16:19"}, {"name": "Lazarus", "ref": "Luke 16:20"}, {"name": "Abraham", "ref": "Luke 16:22"}]}]}
+ }
+}

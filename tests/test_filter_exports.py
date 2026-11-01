@@ -84,10 +84,10 @@ def test_floors_follow_the_rule_and_planted_change_is_caught():
     assert abs(floor_for("david", planted, rank) - floors["david"]) > 1e-5, "planted ties did not move the floor"
 
 
-def unbacked_statement_ties(text, shown):
-    """'states' ties whose two ends no shown statement joins."""
+def unbacked_statement_ties(text, shown, one=lambda x: x):
+    """'states' ties whose two ends no shown statement joins (`one` resolves an alias to its record)."""
     pairs = re.findall(rf"bom:source <{SITE}/e/([^>]+)> ; bom:relation bor:states ; bom:target <{SITE}/e/([^>]+)>", text)
-    return [(a, b) for a, b in pairs if (a, b) not in shown and (b, a) not in shown]
+    return [(a, b) for a, b in pairs if (one(a), one(b)) not in shown and (one(b), one(a)) not in shown]
 
 
 def test_statement_ties_rest_on_what_is_shown():
@@ -100,9 +100,14 @@ def test_statement_ties_rest_on_what_is_shown():
     import json
     rows = [json.loads(x) for x in (ROOT / "ontology" / "relations" / "verb-statements.jsonl").read_text(
         encoding="utf-8").splitlines() if x.strip()]
-    shown = {(r["src"], r["dst"]) for r in rows if not r.get("held") and not r.get("described")}
+    # a record merged into another (ontology/aliases.jsonl) is that one, as the server and so the ties export read
+    # it (2026-10-27: "fish" is fish_of_the_sea, and three new statements about it read as unbacked ties)
+    alias = {a["id"]: a["alias_of"] for a in (json.loads(x) for x in (ROOT / "ontology" / "aliases.jsonl").read_text(
+        encoding="utf-8").splitlines() if x.strip())}
+    one = lambda x: alias.get(x, x)  # noqa: E731
+    shown = {(one(r["src"]), one(r["dst"])) for r in rows if not r.get("held") and not r.get("described")}
     text = gzip.open(EXP / "ties.trig.gz", "rt", encoding="utf-8").read()
-    bad = unbacked_statement_ties(text, shown)
+    bad = unbacked_statement_ties(text, shown, one)
     assert not bad, f"{len(bad)} statement ties rest on no shown statement, e.g. {bad[:3]}"
     held = next((r["src"], r["dst"]) for r in rows if r.get("held")
                 and (r["src"], r["dst"]) not in shown and (r["dst"], r["src"]) not in shown)

@@ -39,10 +39,13 @@ import passages as P  # noqa: E402
 
 # The desktop app is a packaged (MSIX) app: its Roaming folder is virtualised,
 # and Store Python sees the real one under Packages, not %APPDATA%.
-CLI = next(p for p in (
+# 2026-10-27: that version is gone, and a lookup that raised at import made every
+# tool importing this module unusable, even to list its items; a missing CLI now
+# fails only a call (judging since then runs through agents, as the evidence cards do)
+CLI = next((p / "Claude" / "claude-code" / "2.1.295" / "d2e29494ec83" / "claude.exe" for p in (
     Path(os.environ["LOCALAPPDATA"]) / "Packages" / "Claude_pzs8sxrjxfjjc" / "LocalCache" / "Roaming",
-    Path(os.environ["APPDATA"])) if (p / "Claude" / "claude-code" / "2.1.295").exists()) \
-    / "Claude" / "claude-code" / "2.1.295" / "d2e29494ec83" / "claude.exe"
+    Path(os.environ["APPDATA"])) if (p / "Claude" / "claude-code" / "2.1.295").exists()),
+    Path("claude.exe (no Claude Code CLI installed)"))
 MODEL = "claude-haiku-5-5"
 # 4 at a time judged ~860 verses an hour; the whole Bible overnight needs
 # ~4x that (2026-10-16: the whole Bible done

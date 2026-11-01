@@ -82,7 +82,7 @@ PUBLIC: tuple[str, ...] = (
     "data/macula-clauses.jsonl.gz", "data/macula-manifest.json", "data/translation-manifest.json",
     "data/bible/verses.bsb.jsonl", "data/bible/verses.asv.jsonl", "data/bible/verses.web.jsonl",
     "data/bible/verses.ylt.jsonl",
-    "docs/PRINCIPLES.md", "docs/rdf-1.2-in-practice.md",
+    "docs/PRINCIPLES.md", "docs/rdf-1.2-in-practice.md", "docs/a-cheap-model-as-a-contractor.md",
     "README.md", "LICENSE", "LICENSE-DATA", "LICENSING.md", "NOTICE", "SOURCES.md", "CITATION.cff",
     "CONTRIBUTING.md", "CHANGELOG.md", "SECURITY.md", ".github/ISSUE_TEMPLATE/*",
     # line endings and binaries: without it a Windows clone's git add corrupts
@@ -119,6 +119,13 @@ NEVER: tuple[str, ...] = (
     # approved leaving it out). The tools that called it record how a pass
     # was run, and need a key a contributor would not have in any case
     "src/bibleont/delegate.py",
+    # the contained DeepSeek coding worker, the local-model runner and the security scan (2026-10-31): they name
+    # the worker machine, its accounts and paths, and the daily scan's checks; the published article
+    # (docs/a-cheap-model-as-a-contractor.md) gives the approach instead. Their tests go with them
+    "tools/worker/*", "tools/security/*", "tools/grunt/*", "tools/meaning/local_reader_bench.py",
+    "tools/meaning/local_structure_check.py", "tests/test_worker.py", "tests/test_security*",
+    # holds the served header switches equal to the card panel's private ruling record, which it reads on load
+    "tests/test_header.py",
 )
 
 LOCAL_PATH = re.compile(r"(?:[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s\"'`]+|/c/Users/[^/\s\"'`]+)[^\s\"'`)]*")
@@ -133,6 +140,19 @@ def _server_address() -> str | None:
 
 _ADDR = _server_address()
 SERVER = re.compile(r"\b" + re.escape(_ADDR) + r"\b") if _ADDR else None
+
+
+def _private_names() -> list[str]:
+    """Names of this setup that must never be published (the worker machine's host alias, its accounts, its
+    proxy), from this machine's git config (bibleont.private-names, comma-separated), never from this file, for the
+    same reason as the server's address: the cut publishes this file (2026-10-31, before the first cut after the
+    DeepSeek worker: the article about it gives the approach, never the hostnames, accounts or paths)."""
+    r = subprocess.run(["git", "config", "--get", "bibleont.private-names"], cwd=ROOT, capture_output=True, text=True)
+    return [x.strip() for x in r.stdout.split(",") if x.strip()]
+
+
+_PRIV = _private_names()
+PRIVATE_SETUP = re.compile(r"\b(" + "|".join(map(re.escape, _PRIV)) + r")\b", re.I) if _PRIV else None
 DATETIME = re.compile(r"\b(20\d\d-\d\d-\d\d)[T ]\d\d:\d\d(?::\d\d(?:\.\d+)?)?(?:Z|[+-]\d\d:?\d\d)?\b")
 # Any public IPv4 address left after the scrub refuses the cut: a new server
 # address after a move is caught without this file knowing it.
@@ -372,8 +392,11 @@ def kjv_only_runs(n: int = 6) -> set[tuple]:
     # The structure nodes' text is the same glosses joined across clause
     # boundaries; the Berean's text as aligned from its USFM edition differs from
     # verses.bsb.jsonl in places; and the Berean's own footnotes quote other
-    # manuscript traditions. None of them is the KJV.
+    # manuscript traditions. None of them is the KJV. The sentence file's gloss is
+    # the same glosses joined per sentence (2026-11-01: 5 runs, e.g. John 18:10
+    # "then Simon Peter having a sword drew it", 2 Tim 4:5 "endure afflictions").
     for name, field in (("data/macula-clauses.jsonl.gz", "gloss"), ("out/interlinear.jsonl.gz", None),
+                        ("out/sentences.jsonl.gz", "gloss"),
                         ("out/placeholder-nodes.jsonl.gz", "text"), ("out/bsb-align.jsonl.gz", "text"),
                         ("out/quotenotes.jsonl.gz", "source")):
         p = ROOT / name
@@ -415,6 +438,8 @@ PRIVATE_NAMES_OK = {
     # asserts the server never serves these (server.PUBLIC_FILES)
     "tests/test_extraction_contract.py": {"JOURNAL.md", "DISCIPLINE.md", "ROADMAP.md", "NOTES-BACKLOG",
                                           "FOUNDER-NOTES"},
+    # knows the public copy by the journal's absence, so the held question cards stay held in both (2026-11-01)
+    "tests/test_held_questions.py": {"JOURNAL.md"},
 }
 CODE = (".py", ".js", ".html", ".sh", ".css", ".service")
 FULL = False
@@ -444,6 +469,8 @@ def scan(texts: dict[str, str], kjv_runs, ids: set, names: set, emails_ok=EMAIL_
                 found["email"].append(f"{f}: {e}")
         if PERSONAL.search(t):
             found["personal"].append(f)
+        if PRIVATE_SETUP and PRIVATE_SETUP.search(t):
+            found["private setup named"].append(f)
         if any(i in t for i in ids):
             found["reader note id"].append(f)
         if names_re and names_re.search(t):

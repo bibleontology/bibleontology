@@ -1,0 +1,44 @@
+{
+ "what": "Doug's rulings on docs/review/weak-nodes-2026-10-27.md and docs/review/divine-doers-2026-10-27.html, in his words, and what each did",
+ "rulings": [
+  {
+   "n": 1,
+   "words": "for the first section my rule was too tight - resolve all because they are clear. the second list I approve as recommended",
+   "kind": "his per-record decision on each row of the divine sheet (divine persons are resolved by hand, never by rule)",
+   "applied": {
+    "doers": "137 of 142 resolved (pointer-corrections-divine-2026-10-27.json, divine-releases-2026-10-27.json); 5 not applied, back to him: he had ruled those five pointers wrong on 2026-10-19 and the sheet did not show it",
+    "speakers": "all 51 credited (speaker-credits-judged-divine-2026-10-27.jsonl)",
+    "lift": "133 completed clauses to two lift judges; 90 kept by both (lifted-additions-2026-10-27.jsonl; trail divine-ruling-lift-2026-10-27.jsonl.gz)"
+   }
+  },
+  {
+   "n": 2,
+   "words": "Rulings 2 to 5 as recommended",
+   "applied": "Asaph to two judges, not merged: split (Sonnet same, Haiku unsure); back to him (ontology/provenance/consolidation/asaph-2026-10-27.json)"
+  },
+  {
+   "n": 3,
+   "words": "Rulings 2 to 5 as recommended",
+   "applied": "white_of_an_egg: רִיר (h7388) named to Job 6:6 only (ontology/card-repairs.jsonl); 1 Sam 21:13 off the card"
+  },
+  {
+   "n": 4,
+   "words": "Rulings 2 to 5 as recommended",
+   "applied": "the 29 statements of God acting on His own hand or eyes stay out (marked in structure-check-2026-10-27.jsonl.gz, left_out)"
+  },
+  {
+   "n": 5,
+   "words": "Rulings 2 to 5 as recommended",
+   "applied": "the four withdrawals with God at one end stand as applied; seen and accepted (statement-withdrawals-2026-10-27.json)"
+  },
+  {
+   "n": "open 1 and 2",
+   "words": "Both as recommended: resolve the four, hold Isa 11:12, merge Asaph.",
+   "applied": {
+    "doers": "Ezek 40:3 (God), Judg 7:2 (God), Luke 6:8 (Jesus), Ruth 4:14 (the LORD) resolved; this ruling supersedes his 2026-10-19 ruling for these four (pointer-corrections-divine-2026-10-27.json, \"supersedes\"); Isa 11:12 held",
+    "lift": "3 of the 4 clauses liftable (Ruth 4:14's is negated): both judges kept Ezek 40:3 and Luke 6:8; Judg 7:2 split (Sonnet unsure: God's aim, not stated as done)",
+    "asaph": "asaph_neh11 is an alias of asaph_singer (ontology/aliases.jsonl); the old address shows the singer's card"
+   }
+  }
+ ]
+}

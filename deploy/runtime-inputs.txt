@@ -45,6 +45,7 @@ ontology/entities/entities.jsonl
 ontology/entities/event-templates.jsonl
 ontology/entities/events-copilot.jsonl
 ontology/entities/messages.jsonl
+ontology/entities/parable-mapping.jsonl
 ontology/entities/role-patterns.jsonl
 ontology/entities/significant-numbers.jsonl
 ontology/entities/speech-act-types.jsonl
@@ -54,11 +55,14 @@ ontology/event-links.jsonl
 ontology/event-references.jsonl
 ontology/event-summaries.jsonl
 ontology/history-links.jsonl
+ontology/iam-card.json
 ontology/interest-taxonomy.json
 ontology/kinds.json
 ontology/letter-references.jsonl
-ontology/lexicon.json
 ontology/pair-verdicts.jsonl
+ontology/parable-cards.json
+ontology/parables.json
+ontology/person-pairings.json
 ontology/poem-references.jsonl
 ontology/prophet-references.jsonl
 ontology/question-groups.json
@@ -222,6 +226,7 @@ ontology/relations/new-creature.jsonl
 ontology/relations/nicodemus.jsonl
 ontology/relations/objects-observances.jsonl
 ontology/relations/olivet-and-farewell.jsonl
+ontology/relations/parable-mapping.jsonl
 ontology/relations/parables.jsonl
 ontology/relations/paths-and-leading.jsonl
 ontology/relations/places-allotments.jsonl
@@ -305,6 +310,7 @@ ontology/relations/zion-corner-stone.jsonl
 ontology/revelation-links.jsonl
 ontology/schema/relationship_types.yaml
 ontology/schema/salience.json
+ontology/showcase-layouts.json
 ontology/stamp-verdicts.jsonl
 ontology/tag-crosswalk.json
 ontology/themes/apocalyptic-imagery.json
@@ -341,8 +347,11 @@ ontology/traditions/edges.jsonl
 ontology/traditions/nodes.jsonl
 ontology/translation-findings.json
 ontology/verse-senses.jsonl
+ontology/versions/labels.jsonl
+ontology/word-cards.json
 ontology/word-families.json
 ontology/word-notes.json
+ontology/word-partners.json
 out/aligned-verses.jsonl.gz
 out/aligned.jsonl.gz
 out/bsb-align.jsonl.gz

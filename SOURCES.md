@@ -287,6 +287,11 @@ it.
 
 - **Cytoscape.js** (MIT licence) draws the Knowledge Graph Navigator;
   <https://js.cytoscape.org>. Its notice is kept in the file served.
+- **Lucide** (ISC licence) icons, version 0.452.0 (<https://lucide.dev>), are the starting point of the line sketches on
+  the image cards (the grain, trees, water, sky, house, jar, scales, crown, anchor, boat, target, bird, flame, mountain,
+  fortress, tent and flower drawings, and parts of the vine and the seed). The rest of the drawings are made by hand on
+  the same grid, and all are roughened by one filter. Lucide's ISC notice is kept at the top of
+  `app2/static/sketches.svg`, the file served.
 - **Mermaid** (MIT licence) draws the verse-structure diagrams;
   <https://mermaid.js.org>. Its bundled file does not carry its own notice,
   so its LICENSE, fetched from their repository at the release shipped (tag

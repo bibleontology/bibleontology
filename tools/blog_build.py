@@ -47,10 +47,25 @@ def inline(s: str) -> str:
 def render(md: str) -> tuple[str, str]:
     """(title, body html)"""
     lines = md.replace("\r\n", "\n").split("\n")
-    title, out, para, items, quote = "", [], [], [], []
+    title, out, para, items, quote, table = "", [], [], [], [], []
+
+    def cells(row: str) -> list[str]:
+        return [c.strip() for c in row.strip().strip("|").split("|")]
 
     def flush():
-        nonlocal para, items, quote
+        nonlocal para, items, quote, table
+        # A TABLE (2026-11-01: the Job post's speaker table came out as one paragraph of pipes): a header row, the
+        # |---|---:| row (a colon on the right aligns that column right), then the rows
+        if table:
+            head = cells(table[0])
+            seps = cells(table[1]) if len(table) > 1 and re.fullmatch(r"[\s|:-]+", table[1]) else None
+            right = [s.endswith(":") for s in seps] if seps else [False] * len(head)
+            rows = table[2:] if seps else table[1:]
+            rcls = ' class="r"'
+            td = lambda tag, c, i: f"<{tag}{rcls if i < len(right) and right[i] else ''}>{inline(c)}</{tag}>"
+            out.append("<table><thead><tr>" + "".join(td("th", c, i) for i, c in enumerate(head)) + "</tr></thead><tbody>"
+                       + "".join("<tr>" + "".join(td("td", c, i) for i, c in enumerate(cells(r))) + "</tr>" for r in rows)
+                       + "</tbody></table>")
         if para:
             out.append(f"<p>{inline(' '.join(x.strip() for x in para))}</p>")
         if items:
@@ -64,9 +79,16 @@ def render(md: str) -> tuple[str, str]:
                     ps.append(f"<p>{inline(' '.join(cur))}</p>")
                     cur = []
             out.append("<blockquote>" + "".join(ps) + "</blockquote>")
-        para, items, quote = [], [], []
+        para, items, quote, table = [], [], [], []
 
     for ln in lines:
+        if ln.startswith("|"):
+            if para or items or quote:
+                flush()
+            table.append(ln)
+            continue
+        if table:
+            flush()
         if ln.startswith("# ") and not title:
             title = ln[2:].strip()
             continue
@@ -114,6 +136,9 @@ h1{font-size:2rem;line-height:1.2;margin:.4em 0 .1em}
 .date{color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:13px;margin:0 0 1.6em}
 h2{font-size:1.3rem;margin:1.8em 0 .4em}
 a{color:var(--slate)}
+table{border-collapse:collapse;margin:1.2em 0;font-size:16px;width:100%}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--rule)}th{font-weight:600;border-bottom-color:var(--ink)}
+th.r,td.r{text-align:right;font-variant-numeric:tabular-nums}
 blockquote{margin:1.2em 0;padding:.2em 1.2em;border-left:3px solid var(--ochre);color:var(--ink);font-style:italic}
 blockquote b{font-style:italic}
 ul{padding-left:1.3em}li{margin:.3em 0}

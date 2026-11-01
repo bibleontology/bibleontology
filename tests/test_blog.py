@@ -40,6 +40,14 @@ for name, text in built.items():
         fails.append(f"{name}: no reply box")
 for name in set(have) - set(built):
     fails.append(f"{name}: a page with no post")
+# A TABLE IS A TABLE (2026-11-01: the Job post's speaker table went live as one paragraph of pipes): rendered, a
+# right-aligned column, and no pipe row left in a paragraph on any page
+_, t = B.render("| A | B |\n|---|---:|\n| x | **1** |\n\nafter")
+if "<table>" not in t or '<td class="r"><b>1</b></td>' not in t or "<p>after</p>" not in t:
+    fails.append("render: a markdown table is not a table")
+for name, text in built.items():
+    if re.search(r"<p>\|[^<]*\|", text):
+        fails.append(f"{name}: a table row printed as a paragraph")
 print(f"{len(built) - 1} post(s), {len(fails)} failures")
 for f in fails:
     print("FAIL", f)
