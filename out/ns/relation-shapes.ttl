@@ -1,4 +1,4 @@
-# Bible Ontology -- the relations' 'one of' shapes, version 1.2.1 (2026-10-22). Merged into /ns/shapes.
+# Bible Ontology -- the relations' 'one of' shapes, version 1.3.0 (2026-11-01). Merged into /ns/shapes.
 # (c) 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org).
 # Licence: https://creativecommons.org/licenses/by/4.0/
 
@@ -307,6 +307,16 @@ bor:draws_on_subjectShape a sh:NodeShape ;
     sh:or ( [ sh:class bom:Image ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
     sh:targetSubjectsOf bor:draws_on .
 
+bor:dwells_in_objectShape a sh:NodeShape ;
+    sh:message "The object of dwells_in must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:dwells_in .
+
+bor:dwells_in_subjectShape a sh:NodeShape ;
+    sh:message "The subject of dwells_in must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:dwells_in .
+
 bor:dwelt_at_subjectShape a sh:NodeShape ;
     sh:message "The subject of dwelt_at must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
@@ -327,6 +337,16 @@ bor:explained_subjectShape a sh:NodeShape ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:explained .
 
+bor:forgives_objectShape a sh:NodeShape ;
+    sh:message "The object of forgives must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:forgives .
+
+bor:forgives_subjectShape a sh:NodeShape ;
+    sh:message "The subject of forgives must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:forgives .
+
 bor:fought_objectShape a sh:NodeShape ;
     sh:message "The object of fought must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
@@ -346,6 +366,16 @@ bor:gave_subjectShape a sh:NodeShape ;
     sh:message "The subject of gave must be one of: Artifact, Concept, Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:gave .
+
+bor:glorifies_objectShape a sh:NodeShape ;
+    sh:message "The object of glorifies must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:glorifies .
+
+bor:glorifies_subjectShape a sh:NodeShape ;
+    sh:message "The subject of glorifies must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:glorifies .
 
 bor:grounds_objectShape a sh:NodeShape ;
     sh:message "The object of grounds must be one of: Concept, Image, Predication, Saying, Title" ;
@@ -371,6 +401,26 @@ bor:heard_subjectShape a sh:NodeShape ;
     sh:message "The subject of heard must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:heard .
+
+bor:hides_objectShape a sh:NodeShape ;
+    sh:message "The object of hides must be one of: Artifact, Concept, Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:hides .
+
+bor:hides_subjectShape a sh:NodeShape ;
+    sh:message "The subject of hides must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:hides .
+
+bor:honors_objectShape a sh:NodeShape ;
+    sh:message "The object of honors must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:honors .
+
+bor:honors_subjectShape a sh:NodeShape ;
+    sh:message "The subject of honors must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:honors .
 
 bor:imprisoned_objectShape a sh:NodeShape ;
     sh:message "The object of imprisoned must be one of: Concept, Group, PersonalBeing" ;
@@ -432,6 +482,16 @@ bor:killed_subjectShape a sh:NodeShape ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:killed .
 
+bor:knows_objectShape a sh:NodeShape ;
+    sh:message "The object of knows must be one of: Concept, Event, Group, PersonalBeing, Place, Saying" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:knows .
+
+bor:knows_subjectShape a sh:NodeShape ;
+    sh:message "The subject of knows must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:knows .
+
 bor:led_objectShape a sh:NodeShape ;
     sh:message "The object of led must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
@@ -456,6 +516,16 @@ bor:located_in_subjectShape a sh:NodeShape ;
     sh:message "The subject of located_in must be one of: Artifact, Place" ;
     sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Place ] ) ;
     sh:targetSubjectsOf bor:located_in .
+
+bor:loves_objectShape a sh:NodeShape ;
+    sh:message "The object of loves must be one of: Concept, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:loves .
+
+bor:loves_subjectShape a sh:NodeShape ;
+    sh:message "The subject of loves must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:loves .
 
 bor:made_objectShape a sh:NodeShape ;
     sh:message "The object of made must be one of: Animal, Artifact, Concept, Group, PersonalBeing, Place" ;
@@ -582,10 +652,40 @@ bor:repaired_subjectShape a sh:NodeShape ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:repaired .
 
+bor:reveals_objectShape a sh:NodeShape ;
+    sh:message "The object of reveals must be one of: Concept, Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:reveals .
+
+bor:reveals_subjectShape a sh:NodeShape ;
+    sh:message "The subject of reveals must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:reveals .
+
+bor:rewards_objectShape a sh:NodeShape ;
+    sh:message "The object of rewards must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:rewards .
+
+bor:rewards_subjectShape a sh:NodeShape ;
+    sh:message "The subject of rewards must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:rewards .
+
 bor:ruler_of_objectShape a sh:NodeShape ;
     sh:message "The object of ruler_of must be one of: Group, Place" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:Place ] ) ;
     sh:targetObjectsOf bor:ruler_of .
+
+bor:sees_objectShape a sh:NodeShape ;
+    sh:message "The object of sees must be one of: Artifact, Concept, Event, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:sees .
+
+bor:sees_subjectShape a sh:NodeShape ;
+    sh:message "The subject of sees must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:sees .
 
 bor:sent_objectShape a sh:NodeShape ;
     sh:message "The object of sent must be one of: Animal, Group, PersonalBeing" ;
@@ -656,6 +756,16 @@ bor:stationed_at_subjectShape a sh:NodeShape ;
     sh:message "The subject of stationed_at must be one of: Animal, PersonalBeing" ;
     sh:or ( [ sh:class bom:Animal ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:stationed_at .
+
+bor:testifies_about_objectShape a sh:NodeShape ;
+    sh:message "The object of testifies_about must be one of: Concept, Event, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:testifies_about .
+
+bor:testifies_about_subjectShape a sh:NodeShape ;
+    sh:message "The subject of testifies_about must be one of: Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:testifies_about .
 
 bor:token_of_subjectShape a sh:NodeShape ;
     sh:message "The subject of token_of must be one of: Animal, Artifact, Event, Place" ;

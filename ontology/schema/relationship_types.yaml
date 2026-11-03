@@ -976,6 +976,102 @@ types:
     weight: 3
     group: "Hearing"
 
+  # THE FATHER'S CARD'S WORDS (Doug, 2026-11-01, ruling the Father's sheet: "I will go with your recommendations on
+  # all, including adding the new relation words"; docs/review/father-card/RULING.md). 101 of 171 candidates needed a
+  # verb the graph lacked; these are the eight families they fall into, eleven types. Each is what a verse says one
+  # does to another, and each was wanted by many verses: "your Father knows what you need" (Matt 6:8), "the Father
+  # Himself loves you" (John 16:27), "your Father, who sees what is done in secret, will reward you" (Matt 6:4).
+  knows:
+    src_type: [person, being, group]
+    dst_type: [person, being, group, concept, text, event, place]
+    label: "knows"
+    inverse: "is known by"
+    category: encounter
+    weight: 3
+    group: "Knowing"
+  loves:
+    src_type: [person, being, group]
+    dst_type: [person, being, group, concept, place]
+    label: "loves"
+    inverse: "is loved by"
+    category: encounter
+    weight: 3
+    group: "Love"
+  sees:
+    src_type: [person, being, group]
+    dst_type: [person, being, group, concept, event, object, place]
+    label: "sees"
+    inverse: "is seen by"
+    category: encounter
+    weight: 2
+    group: "Seeing"
+  rewards:
+    src_type: [person, being, group]
+    dst_type: [person, being, group]
+    label: "rewards"
+    inverse: "is rewarded by"
+    category: encounter
+    weight: 2
+    group: "Reward and forgiveness"
+  forgives:
+    src_type: [person, being, group]
+    dst_type: [person, being, group, concept]
+    label: "forgives"
+    inverse: "is forgiven by"
+    category: encounter
+    weight: 3
+    group: "Reward and forgiveness"
+  reveals:
+    src_type: [person, being, group]
+    dst_type: [person, being, group, concept, text]
+    label: "reveals"
+    inverse: "is revealed by"
+    category: encounter
+    weight: 3
+    group: "Revealing and hiding"
+  hides:
+    src_type: [person, being, group]
+    dst_type: [person, being, group, concept, text, object]
+    label: "hides"
+    inverse: "is hidden by"
+    category: encounter
+    weight: 2
+    group: "Revealing and hiding"
+  glorifies:
+    src_type: [person, being, group]
+    dst_type: [person, being, group]
+    label: "glorifies"
+    inverse: "is glorified by"
+    category: encounter
+    weight: 3
+    group: "Glory and honor"
+  honors:
+    src_type: [person, being, group]
+    dst_type: [person, being, group]
+    label: "honors"
+    inverse: "is honored by"
+    category: encounter
+    weight: 2
+    group: "Glory and honor"
+  testifies_about:
+    src_type: [person, being, group, text]
+    dst_type: [person, being, group, event, concept]
+    label: "testifies about"
+    inverse: "is testified about by"
+    category: language
+    weight: 3
+    group: "Testimony"
+  dwells_in:
+    # "is in", "dwells in", "remain in", "come to and make a home with", "has fellowship with" (John 10:38; 14:10;
+    # 14:23; 1 John 1:3; 2:24). The text's own preposition; the relation says nothing beyond the verse it cites.
+    src_type: [person, being, group]
+    dst_type: [person, being, group]
+    label: "is in"
+    inverse: "has in him"
+    category: deity
+    weight: 3
+    group: "Indwelling"
+
   answered:
     # H6030, 182 occurrences, 32nd. One speech replying to another, which is
     # the entire structure of Job: thirty-five chapters of reply and counter-

@@ -10343,7 +10343,9 @@ EVENT_WITHHELD_KINDS = frozenset(("came_upon",))              # E-A
 EVENT_WITHHELD_VERSES = frozenset((("Acts", 2, 36),))         # E-B
 EVENT_READ_NOTE = ("The site reports what the quoting text says. It does not say what a prophecy meant, whom it was about, "
                    "or whether it was fulfilled; readers and traditions differ on these.")
-EVENT_VERB = {"persecuted": "sought to kill"}
+# "taught / ministered to" said its first reading, "taught", of the angels at Mark 1:13, where the verse says they
+# ministered (the scholar seat, 2026-11-01); "ministered to" is true of both readings
+EVENT_VERB = {"persecuted": "sought to kill", "ministered_to": "ministered to"}
 EVENT_WHOLE_VERSES = 12     # a telling of this many verses or fewer is the story, quoted whole on the face
 EVENT_HEART_VERSES = 12     # a longer one: the heart section, this many of its verses (the reader reads on)
 EVENT_OPEN_VERSES = 4       # a longer one whose book has no editors' headings: its first verses
@@ -10635,7 +10637,12 @@ def _ev_quotes(d, eid, e, spans, shown):
     for b, c, v, ks in sorted(notes, key=lambda n: (ORDER.index(n[0]), n[1], n[2])):
         tb, tc = ks[0].split(".")[0], ks[0].split(".")[1]
         g = groups[-1] if groups else None
-        if g and g["b"] == b and g["c"] == c and g["tb"] == tb and g["tc"] == tc and v - g["v2"] <= 6:
+        # ...and only where the verses noted overlap or touch (Acts 2:17 and 2:21 both note Joel 2:28-32): Matt 4:7
+        # (Deut 6:16) and Matt 4:10 (Deut 6:13) are two quotations, and were printed as one, "Matthew 4:7-10 quotes
+        # Deuteronomy 6:13-16" (the scholar seat, 2026-11-01)
+        near = g and any(abs(int(k.split(".")[2]) - int(x.split(".")[2])) <= 1 and k.split(".")[:2] == x.split(".")[:2]
+                         for k in ks for x in g["to"])
+        if g and g["b"] == b and g["c"] == c and g["tb"] == tb and g["tc"] == tc and v - g["v2"] <= 6 and near:
             g["v2"] = max(g["v2"], v)
             g["to"] |= set(ks)
         else:

@@ -660,6 +660,12 @@ if [ -z "$range" ] || has '^app2/'; then
 		bad "deity cards -- python tests/test_deity_cards.py"
 		grep -E "^FAIL" <<<"$out" | head -8
 	fi
+	if out="$($PY tests/test_event_lead.py 2>&1)"; then
+		ok "event lead: $(tail -1 <<<"$out")"
+	else
+		bad "event lead -- python tests/test_event_lead.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
 	# THE EVENT CARD (2026-10-29): the cast is relations whose verse lies in
 	# the telling, in the text's order, never a mention count; the neighbors
 	# are tellings in canon order with the Berean editors' headings in the

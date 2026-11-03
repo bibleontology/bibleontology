@@ -2137,6 +2137,16 @@ html:not(.drawn) .ssr ~ .app{position:absolute; left:0; right:0; top:0; height:1
   border:1px solid color-mix(in srgb,var(--ochre) 26%,var(--rule))}
 .pc-hk{font:500 10px/1.5 var(--ff-data);letter-spacing:.12em;text-transform:uppercase;color:var(--ochre-text);margin:0 0 6px 30px}
 .pc-hk .pc-rf{text-transform:none;letter-spacing:0}
+/* the event card's lead: echoes that passed the story-echo standard, as their paired words (2026-11-01) */
+.pc-echo{background:var(--surface)}
+.pc-echo .pc-hk{margin-left:4px}
+.pc-eg{padding:8px 4px 10px;border-top:1px solid var(--rule)}
+.pc-eg:first-of-type{border-top:0}
+.pc-et{font:600 17px var(--ff-text);margin:0 0 4px}
+.pc-ep{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;font:400 15px/1.5 var(--ff-text);margin:2px 0}
+.pc-ea{color:var(--muted)}
+.pc-echo>.pc-note{margin:6px 4px 0}
+@media (max-width:560px){.pc-ep{grid-template-columns:1fr;gap:0;margin:0 0 8px}.pc-ea{display:none}}
 .pc-tv{position:relative;margin:0;padding:0 0 0 30px;font:400 18px/1.66 var(--ff-text);color:var(--ink);text-wrap:pretty}
 .pc-tv + .pc-tv{margin-top:7px}
 .pc-tv .pc-rf{position:absolute;left:0;top:.45em;width:24px;margin:0;padding:3px 0;border:0;background:none;text-align:center;
@@ -8954,10 +8964,21 @@ function eventFace(d){
         q.from.length > 2 || q.to.length > 2 ? pcOpen('pc-act', 'the whole passage ›',
           `<h3>${esc(q.from_ref)} · ${esc(q.to_ref)}</h3><div class="pc-pcols two"><div class="pc-pcol">${vlist(q.from)}</div><div class="pc-pcol">${vlist(q.to)}</div></div>`) + ' ' : ''}${readch(q.to_go, 'read ' + esc(q.to_ref.replace(/:.*$/, '')) + ' in the reader →')}</div>`).join('')}${
     E.quotes.some(q => q.nt) ? `<p class="pc-note">The site reports what the quoting text says. It does not say what a prophecy meant, whom it was about, or whether it was fulfilled; readers and traditions differ on these.</p>` : ''}` : '';
+  /* THE LEAD (2026-11-01; docs/review/card-panel-appeal/event/temptation-lead-2026-11-01/): what only the graph knows
+     comes first. Doug: "see if we buried the lead by making the graph findings an afterthought"; both seats found the
+     temptation's three echoes of Israel's wilderness on the fourth screen, below a closed drawer. Echoes that passed
+     the story-echo standard (`re_enacts`, each with its paired words) lead, always marked a reading; then the passage,
+     the Scriptures it quotes, who did what, and the neighbors. */
+  const echoes = (d.groups || []).flatMap(g => g.items).filter(i => i.type === 're_enacts' && i.dir === 'out' && (i.pairs || []).length);
+  const quoteW = s => `“${esc(s)}”`;
+  const echo = echoes.length ? `<div class="pc-tale pc-echo pc-host"><div class="pc-hk">${echoes.length === 1 ? 'An earlier story' : 'Earlier stories'} it is read beside · a reading the graph marks implied</div>${
+    echoes.map(i => `<div class="pc-eg"><div class="pc-et">${pcLink(i.other, i.name)}</div>${
+      i.pairs.map(([[lr, lw], [er, ew]]) => `<div class="pc-ep"><span>${quoteW(lw)} ${[].concat(lr).map(r => pcRf(r)).join('')}</span><span class="pc-ea">·</span><span>${quoteW(ew)} ${pcRf(er)}</span></div>`).join('')}</div>`).join('')}
+    <p class="pc-note">Each echo rests on the paired words shown, the Berean’s on both sides. The pairing is a reading: the text does not say it.</p></div>` : '';
   return {
     kind,
     h1: `<h1 class="pc-hero"><span>${esc(d.label || d.name)}</span></h1>${deck}`,
-    lead: `${told}${strip}${par}${open}${outline}${cast}${pairs}`,
+    lead: `${told}${echo}${open}${pairs}${cast}${strip}${par}${outline}`,
   };
 }
 
@@ -10475,7 +10496,9 @@ async function openAbout(focus){
       <p style="max-width:64ch"><b>The original language decides.</b> Where
         English translations differ, the Hebrew, Aramaic or Greek settles it,
         and a connection that rests on one translation's wording alone is not
-        kept.</p>
+        kept. "The original" means a particular text, since more than one
+        survives: the Westminster Leningrad Codex for the Hebrew and Aramaic,
+        and the Nestle 1904 Greek New Testament, both as MACULA gives them.</p>
       <p style="max-width:64ch"><b>Structure, not doctrine.</b> It groups and
         connects what the text says — who, where, what is said of whom, which
         verses echo which — and aims to take no position where Christian

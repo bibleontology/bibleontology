@@ -83,6 +83,7 @@ PUBLIC: tuple[str, ...] = (
     "data/bible/verses.bsb.jsonl", "data/bible/verses.asv.jsonl", "data/bible/verses.web.jsonl",
     "data/bible/verses.ylt.jsonl",
     "docs/PRINCIPLES.md", "docs/rdf-1.2-in-practice.md", "docs/a-cheap-model-as-a-contractor.md",
+    "docs/a-bible-knowledge-graph-ai-assistants-can-ask.md",       # the MCP flagship (plan 8.7; Doug, 2026-11-02)
     "README.md", "LICENSE", "LICENSE-DATA", "LICENSING.md", "NOTICE", "SOURCES.md", "CITATION.cff",
     "CONTRIBUTING.md", "CHANGELOG.md", "SECURITY.md", ".github/ISSUE_TEMPLATE/*",
     # line endings and binaries: without it a Windows clone's git add corrupts

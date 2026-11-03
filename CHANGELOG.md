@@ -6,6 +6,14 @@ Two things carry versions here:
 - **The graph's exports** in `out/export/`, which carry a date-shaped version of their own (`ontology/ns-version.json`,
   `data`; `out/export/void.ttl`).
 
+## Vocabularies 1.3.0: 2026-11-01
+
+Eleven relation types added, none removed or deprecated: `knows`, `loves`, `sees`, `rewards`, `forgives`, `reveals`,
+`hides`, `glorifies`, `honors`, `testifies_about`, `dwells_in`. They came from reading the 184 verses that name the
+Father and were cited by none of his card's relations: 101 of 171 candidate relations needed a verb the graph lacked.
+The Father's card gains 47 relations, each with its verse and, where a speaker says it, credited to the speaker
+(most to Jesus). About 120 candidates are held, most because their other end ("you", "what you need") has no record.
+
 ## Data 2026.11.01: 2026-11-01
 
 **Every kind of card has a face of its own.** Each was designed on mockups and read by a Bible scholar, a

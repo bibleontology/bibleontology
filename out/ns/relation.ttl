@@ -685,6 +685,19 @@ bor:draws_on a owl:ObjectProperty ;
         "text",
         "title" .
 
+bor:dwells_in a owl:ObjectProperty ;
+    rdfs:label "is in" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "One is in another, or dwells or remains in another, in the words the text uses; the relation says nothing beyond the verse it cites." ;
+    bor:category "Father, Son & Spirit" ;
+    bor:inverseLabel "has in him" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
+
 bor:dwelt_at a owl:ObjectProperty ;
     rdfs:label "lived at" ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
@@ -727,6 +740,20 @@ bor:father_of a owl:ObjectProperty ;
     skos:definition "A person is the father of another, as a direct generation; a wider descent is recorded as ancestry instead." ;
     bor:category "Kinship" ;
     bor:inverseLabel "is the son/daughter of" .
+
+bor:forgives a owl:ObjectProperty ;
+    rdfs:label "forgives" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group forgives another, or a wrong, where the text says it does or will." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is forgiven by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "group",
+        "person" .
 
 bor:fought a owl:ObjectProperty ;
     rdfs:label "made war on" ;
@@ -777,6 +804,19 @@ bor:gave a owl:ObjectProperty ;
         "observance",
         "person",
         "place" .
+
+bor:glorifies a owl:ObjectProperty ;
+    rdfs:label "glorifies" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group glorifies another, where the text says so." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is glorified by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
 
 bor:grounds a owl:ObjectProperty ;
     rdfs:label "is the ground for" ;
@@ -830,6 +870,35 @@ bor:heard a owl:ObjectProperty ;
         "group",
         "person",
         "text" .
+
+bor:hides a owl:ObjectProperty ;
+    rdfs:label "hides" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group hides or keeps something from another, where the text says so." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is hidden by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "group",
+        "object",
+        "person",
+        "text" .
+
+bor:honors a owl:ObjectProperty ;
+    rdfs:label "honors" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group honors another, where the text says so." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is honored by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
 
 bor:imprisoned a owl:ObjectProperty ;
     rdfs:label "imprisoned" ;
@@ -960,6 +1029,23 @@ bor:killed a owl:ObjectProperty ;
         "group",
         "person" .
 
+bor:knows a owl:ObjectProperty ;
+    rdfs:label "knows" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group knows another, or knows something, where the text says so." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is known by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "event",
+        "group",
+        "person",
+        "place",
+        "text" .
+
 bor:led a owl:ObjectProperty ;
     rdfs:label "led" ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
@@ -1010,6 +1096,21 @@ bor:located_in a owl:ObjectProperty ;
     bor:sourceKind "object",
         "place" ;
     bor:targetKind "place" .
+
+bor:loves a owl:ObjectProperty ;
+    rdfs:label "loves" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group loves another, where the text says so." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is loved by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "group",
+        "person",
+        "place" .
 
 bor:made a owl:ObjectProperty ;
     rdfs:label "made" ;
@@ -1300,6 +1401,34 @@ bor:repaired a owl:ObjectProperty ;
     bor:targetKind "object",
         "place" .
 
+bor:reveals a owl:ObjectProperty ;
+    rdfs:label "reveals" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group makes something known to another, where the text says so." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is revealed by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "group",
+        "person",
+        "text" .
+
+bor:rewards a owl:ObjectProperty ;
+    rdfs:label "rewards" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group rewards another, where the text says it does or will." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is rewarded by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
+
 bor:ruled_from a owl:ObjectProperty ;
     rdfs:label "ruled from" ;
     rdfs:domain <https://bibleontology.org/ns/meaning#PersonalBeing> ;
@@ -1333,6 +1462,23 @@ bor:same_steps_as a owl:ObjectProperty ;
     bor:targetKind "event",
         "passage",
         "text" .
+
+bor:sees a owl:ObjectProperty ;
+    rdfs:label "sees" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group sees another or something done, where the text says so." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "is seen by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "event",
+        "group",
+        "object",
+        "person",
+        "place" .
 
 bor:self_designated_as a owl:ObjectProperty ;
     rdfs:label "calls himself" ;
@@ -1551,6 +1697,22 @@ bor:takes_up a owl:ObjectProperty ;
 bor:targetKind a owl:AnnotationProperty ;
     rdfs:label "the kind of record a relation points to" .
 
+bor:testifies_about a owl:ObjectProperty ;
+    rdfs:label "testifies about" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being, group or text testifies about another, where the text says so." ;
+    bor:category "Language" ;
+    bor:inverseLabel "is testified about by" ;
+    bor:sourceKind "being",
+        "group",
+        "person",
+        "text" ;
+    bor:targetKind "being",
+        "concept",
+        "event",
+        "group",
+        "person" .
+
 bor:titled a owl:ObjectProperty ;
     rdfs:label "is called" ;
     rdfs:domain <https://bibleontology.org/ns/meaning#PersonalBeing> ;
@@ -1676,7 +1838,7 @@ bor:wrote_to a owl:ObjectProperty ;
     dcterms:created "2026-10-11"^^xsd:date ;
     dcterms:creator "Doug Egge" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-10-22"^^xsd:date ;
+    dcterms:modified "2026-11-01"^^xsd:date ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:title "Bible Ontology — relations" ;
     vann:preferredNamespacePrefix "bor" ;
@@ -1684,7 +1846,7 @@ bor:wrote_to a owl:ObjectProperty ;
     rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and nothing about the records of God, the Father, Jesus or the Holy Spirit is derived by inference: they change only by a recorded editorial decision, as the accounts give them. The policy forbids derivations, not descriptions. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred.",
         "The controlled vocabulary of relations the Bible Ontology graph may assert: each reads '<source> <label> <target>', and every relation in the graph uses one of these types. Companion to https://bibleontology.org/ns/meaning.",
         "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
-    owl:priorVersion <https://bibleontology.org/ns/relation/2026-10-21> ;
-    owl:versionIRI <https://bibleontology.org/ns/relation/2026-10-22> ;
-    owl:versionInfo "1.2.1" .
+    owl:priorVersion <https://bibleontology.org/ns/relation/2026-10-22> ;
+    owl:versionIRI <https://bibleontology.org/ns/relation/2026-11-01> ;
+    owl:versionInfo "1.3.0" .
 
