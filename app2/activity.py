@@ -149,6 +149,8 @@ PAGE_PREFIXES = ("/e/", "/p/", "/theme/", "/tag/", "/blog")
 MAX_KEYS = 500
 KEEP_RECENT = 20
 SEEN_MAX = 50_000     # distinct visitors counted in a day, at most
+PENDING_MAX = 20_000   # visitors whose actions wait for their first tap, at most
+PENDING_PER = 8        # actions kept for each until then
 SOURCES_MAX = 3       # distinct sites one reader can be counted as coming from in a day
 
 
@@ -215,6 +217,7 @@ class Activity:
         # the day's file, so a restart does not count a reader twice, and the
         # count continues from what the day already holds
         self.engaged = self._read_engaged(day)
+        self.pending = {}                                    # visitor -> actions before their first tap (memory only)
         self.base_engaged = max(0, self.c.get("engaged", 0) - len(self.engaged))
         # (reader, site) pairs already counted today, in memory: a restart may
         # count a pair twice, which is the lesser fault
@@ -329,6 +332,16 @@ class Activity:
             self.engaged.add(h)
             c["engaged"] = self.base_engaged + len(self.engaged)
             self._bump(c.setdefault("engaged_devices", {}), _first(DEVICE, ua, "desktop"))
+            for act in self.pending.pop(h, []):           # what they did before their first tap counts now
+                self._act(c, act)
+
+    def _act(self, c, act):
+        """One reader's action: a counter bumped by its key, or a plain count (structure, connections)."""
+        name, key = act
+        if key is None:
+            c[name] = c.get(name, 0) + 1
+        else:
+            self._bump(c.setdefault(name, {}), key)
 
     def record(self, path, query, status, ms, ip, ua, referer, own_host):
         """One answered request. Never raises: counting must not break serving."""
@@ -457,27 +470,39 @@ class Activity:
                 c["pages"] += 1
                 if path.startswith("/blog"):
                     self._bump(c.setdefault("blog", {}), path.rstrip("/")[:100] or "/blog")
-            elif path == "/api/entity" and q.get("id"):
-                self._bump(c["cards"], q["id"][:80])
+            # WHAT READERS DID, COUNTED FOR READERS ONLY (2026-11-03): the farm runs the page and calls the API too
+            # (Gen 1 119 times; 576 searches shaped "1chr.1.27"), so a card, chapter or search counts once its
+            # visitor is an engaged reader. Until then it waits in `pending` (a few per visitor, in memory only), so
+            # the card a reader landed on still counts when they tap.
+            act = None
+            if path == "/api/entity" and q.get("id"):
+                act = ("cards", q["id"][:80])
             elif path == "/api/majortheme" and q.get("id"):
-                self._bump(c["themes"], q["id"][:80])
+                act = ("themes", q["id"][:80])
             elif path == "/api/tag" and q.get("id"):
-                self._bump(c["tags"], q["id"][:80])
+                act = ("tags", q["id"][:80])
             elif path == "/api/chapter" and q.get("b"):
-                self._bump(c["chapters"], f'{q["b"][:12]} {q.get("c", "")[:4]}')
+                act = ("chapters", f'{q["b"][:12]} {q.get("c", "")[:4]}')
             elif path == "/api/search" and q.get("q"):
                 # the term, never who typed it
-                self._bump(c["searches"], " ".join(q["q"].lower().split())[:60])
+                act = ("searches", " ".join(q["q"].lower().split())[:60])
             elif path == "/api/seen" and q.get("s"):
                 # a card section a reader opened, by the section's id alone --
                 # not which card, not who (2026-10-13, the card-sections
                 # review: approved as a counter with no per-card, per-visitor or
                 # personal data)
-                self._bump(c.setdefault("sections", {}), q["s"][:60])
+                act = ("sections", q["s"][:60])
             elif path == "/api/structure":
-                c["structure"] += 1
+                act = ("structure", None)
             elif path == "/api/echoes":
-                c["connections"] += 1
+                act = ("connections", None)
+            if act:
+                if h in self.engaged:
+                    self._act(c, act)
+                elif len(self.pending) < PENDING_MAX:
+                    waiting = self.pending.setdefault(h, [])
+                    if len(waiting) < PENDING_PER:
+                        waiting.append(act)
             # (Where readers came from is counted from /api/open's `r`, above,
             # from 2026-10-22: the page that carried the Referer header is
             # mostly answered by Cloudflare's cache and never reached here.)

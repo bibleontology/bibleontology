@@ -183,11 +183,9 @@ code, raw = post({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {
 check(code == 200 and json.loads(raw)["result"]["protocolVersion"] == "2025-06-18", "7: initialize over HTTP %s" % code)
 check(post({"jsonrpc": "2.0", "method": "notifications/initialized"})[0] == 202, "7: a notification is not 202")
 check(post({"jsonrpc": "2.0", "id": 1, "method": "ping"}, {"Origin": "https://evil.example"})[0] == 403, "7: a foreign Origin passed")
-try:
-    urllib.request.urlopen(url, timeout=30)
-    check(False, "7: GET /mcp answered")
-except urllib.error.HTTPError as e:
-    check(e.code == 405, "7: GET /mcp gave %s, not 405" % e.code)
+# a crawler's GET ("*/*", as Google's inspection tool sends) gets the page, never cached (Cloudflare ignores Accept)
+with urllib.request.urlopen(urllib.request.Request(url, headers={"Accept": "*/*"}), timeout=30) as r:
+    check(r.status == 200 and r.headers.get("Cache-Control") == "no-store", "7: a */* GET got %s, %s" % (r.status, r.headers.get("Cache-Control")))
 # a person's browser gets the how-to page the flagship article promised; an event-stream probe still gets 405
 with urllib.request.urlopen(urllib.request.Request(url, headers={"Accept": "text/html,application/xhtml+xml"}), timeout=30) as r:
     page = r.read().decode("utf-8")

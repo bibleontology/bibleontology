@@ -334,6 +334,14 @@ else
 	bad "readers on /ops failed -- python tests/test_activity_readers.py"
 	grep -E "FAIL" <<<"$out" | head -8
 fi
+# the Google queue (2026-11-03: /e/apostles was queued and Search Console said "Excluded by 'noindex' tag"): every
+# page still waiting in docs/review/google-submissions.md renders without noindex
+if out="$($PY tests/test_google_queue.py 2>&1)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "a queued page cannot be indexed -- python tests/test_google_queue.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
 # the MCP server (plan 8.7, 2026-11-03): the protocol and its rules against a fake (fast), then the adapter over the
 # real graph (held questions, divine persons as the site shows them, every hop with its verse, HTTP's guards)
 for t in test_mcp test_mcp_backend; do

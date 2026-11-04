@@ -32,6 +32,7 @@ THE INTERFACE (app2/activity.py; change nothing else in its behavior):
     python tests/test_activity_engaged.py
 """
 
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -115,9 +116,35 @@ def main():
         b._roll("2099-01-01")
         check(b.c.get("engaged") == 0 and not b.engaged, "4: a new day did not start at 0")
         check(not Path(tmp, "activity", f".{day}.engaged").exists(), "4: the old day's engaged file was kept")
+        # 5. what readers did, counted for readers only (2026-11-03: the farm's Gen 1 119 times and 576 "1chr.1.27"
+        # searches had filled the lists): a farm client's card, chapter and search are not counted; a reader's
+        # actions before their first tap count when they tap; after it, at once
+        c5 = A.Activity()
+        c5._roll("2099-02-02")
+        for i in range(3):                                   # the farm: runs the page, calls the API, never taps
+            ip = f"10.7.{i}.1"
+            c5.record("/api/open", {}, 200, 1, ip, DESK, "", HOST)
+            c5.record("/api/chapter", {"b": ["Gen"], "c": ["1"]}, 200, 5, ip, DESK, "", HOST)
+            c5.record("/api/search", {"q": ["1chr.1.27"]}, 200, 5, ip, DESK, "", HOST)
+        check(not c5.c.get("chapters") and not c5.c.get("searches"), f"5: the farm's actions counted: {c5.c.get('chapters')} {c5.c.get('searches')}")
+        c5.record("/api/open", {}, 200, 1, "10.8.1.1", PHONE, "", HOST)
+        c5.record("/api/entity", {"id": ["david"]}, 200, 5, "10.8.1.1", PHONE, "", HOST)   # the card they landed on
+        check(not c5.c.get("cards"), "5: a card counted before its reader engaged")
+        c5.record("/api/engaged", {}, 200, 1, "10.8.1.1", PHONE, "", HOST)
+        check(c5.c.get("cards") == {"david": 1}, f"5: the landing card did not count on the first tap: {c5.c.get('cards')}")
+        c5.record("/api/chapter", {"b": ["Ruth"], "c": ["1"]}, 200, 5, "10.8.1.1", PHONE, "", HOST)
+        check(c5.c.get("chapters") == {"Ruth 1": 1}, f"5: an engaged reader's chapter: {c5.c.get('chapters')}")
+        for i in range(30):
+            c5.record("/api/search", {"q": [f"x{i}"]}, 200, 5, "10.9.9.9", DESK, "", HOST)
+        check(len(c5.pending.get(c5._hash("10.9.9.9", DESK), [])) <= A.PENDING_PER, "5: pending grew past its cap")
+        # 6. the page counts real input only: a tap, click, key or wheel, never "scroll", which the browser fires as
+        # trusted when the page scrolls itself (63 desktop "readers" and no phone on the first night)
+        html = (ROOT / "app2" / "static" / "index.html").read_text(encoding="utf-8")
+        m = re.search(r"const evs = \[([^\]]*)\];", html)
+        check(m and "'scroll'" not in m.group(1) and "'wheel'" in m.group(1), f"6: the engagement events {m and m.group(1)}")
     for f in fails:
         print("FAIL", f)
-    print(f"activity engaged: 4 groups of checks; {len(fails)} failures")
+    print(f"activity engaged: 6 groups of checks; {len(fails)} failures")
     return 1 if fails else 0
 
 

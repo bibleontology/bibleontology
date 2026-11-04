@@ -16219,10 +16219,13 @@ class Handler(BaseHTTPRequestHandler):
             # a person's browser gets the page saying how to connect, as the flagship article promised ("when it is
             # live, bibleontology.org/mcp will say how to connect it"); a client asking for an event stream, or
             # anything else, gets the 405 the spec has a server without one answer
+            # Any GET but an event-stream probe gets the page: Google's inspection tool asks with "*/*" and got the
+            # 405 when only "text/html" was served the page (2026-11-03). Never cached: Cloudflare's key ignores Accept,
+            # so a cached page would answer a client's event-stream probe too, and a cached 405 would answer Google.
             acc = self.headers.get("Accept") or ""
-            if "text/html" in acc and "text/event-stream" not in acc:
+            if "text/event-stream" not in acc:
                 return self._send(200, MCP_PAGE.encode("utf-8"), "text/html; charset=utf-8",
-                                  {"Cache-Control": self._public_cache()})
+                                  {"Cache-Control": "no-store"})
             return self._send(405, b'{"error":"POST JSON-RPC to /mcp"}', "application/json", {"Allow": "POST"})
         # THE UPTIME CHECK (2026-10-01: uptime alert first). Outside
         # the gate, so an outside monitor can tell "up" from "down" while the
@@ -23074,12 +23077,13 @@ def ops_page(rep: dict, day: str | None = None, sel: dict | None = None) -> str:
     e_dev = ", ".join(f"{v:,} {e(k)}" for k, v in sorted((t.get("engaged_devices") or {}).items(),
                                                          key=lambda kv: -kv[1]))
     words = (f"<p style='font-size:1.05em'><b>{e(when)}: "
-             + (f"{plural(e_today, 'reader')}</b> who tapped, typed or scrolled" + (f" ({e_dev})" if e_dev else "")
+             + (f"{plural(e_today, 'reader')}</b> who tapped, clicked or typed" + (f" ({e_dev})" if e_dev else "")
                 if e_today is not None else
                 (f"{plural(r_today, 'reader')}</b> (their browser ran the page)" if r_today is not None
                  else "readers are counted from 22 October 2026</b>"))
              + (f". Came from {came}." if came else ".")
-             + (f" Opened, all told (automated ones included): {', '.join(did)}." if did else "")
+             # readers' own actions from 2026-11-03 (app2/activity.py counts them once a visitor engages)
+             + (f" Between them: {', '.join(did)}." if did else "")
              + "</p><p class=g>Not counted as readers: "
              + (f"{max(0, (r_today or 0) - e_today):,} that ran the page and did nothing (mostly automated), "
                 if e_today is not None and r_today is not None else "")
@@ -23112,7 +23116,7 @@ def ops_page(rep: dict, day: str | None = None, sel: dict | None = None) -> str:
             f"<th class=n>automated</th>"
             f"<th class=n>all browser-like</th><th class=n>page loads</th><th class=n>tool requests</th>"
             f"<th class=n>errors</th></tr>{summary}</table>"
-            f"<p class=g>Readers: tapped, typed or scrolled (from 3 November 2026). Ran the page: their browser "
+            f"<p class=g>Readers: tapped, clicked, typed or turned the wheel (from 3 November 2026); what they opened is theirs alone. Ran the page: their browser "
             f"ran its script, which the farm now does too. Automated: looked like a browser, never ran it. "
             f"Page loads include both. Tool requests: crawlers and scripts that say what they are.</p>"
             f"<p class=g>Server memory: {e(str(rep['memory_mb']) + ' MB') if rep.get('memory_mb') else 'not available here'}. "

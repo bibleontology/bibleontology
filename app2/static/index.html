@@ -13674,12 +13674,15 @@ function setExplore(html, wire){
     fetch('/api/open' + (from ? '?r=' + encodeURIComponent(from) : ''),
           {cache: 'no-store', keepalive: true}).catch(() => {});
   }catch(e){}
-  /* and the reader did something: the first real tap, key or scroll, once
-     (2026-11-03). From November a farm runs the page's script too, so it
+  /* and the reader did something: the first real tap, click, key or wheel,
+     once (2026-11-03). From November a farm runs the page's script too, so it
      sends /api/open; it loads a page and leaves, and a person does not.
-     Carries nothing; isTrusted keeps the page's own scrolling out. */
+     Carries nothing. Not `scroll`: the browser fires it as trusted even when
+     the page scrolls itself (to a verse), and on the first night every one of
+     63 "readers" was a desktop and none a phone. A wheel, a tap or a key only
+     a person's hand makes. */
   try{
-    const evs = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+    const evs = ['pointerdown', 'keydown', 'wheel', 'touchstart'];
     const once = ev => {
       if(!ev.isTrusted) return;
       evs.forEach(t => removeEventListener(t, once, true));
