@@ -289,7 +289,38 @@ O.fill_queue(env)
 check(O.queue_hours(env) >= 24, f"20: topped up to {O.queue_hours(env):.1f} h, not a day")
 shutil.rmtree(tmp)
 
+# FROM THE SECURITY SEAT (2026-11-03)
+# 21. a failing call (perhaps billed) is retried at most MAX_FAILS times, then filed as failed; never without end
+class Failing(FakeProxy):
+    def chat(self, job, messages, thinking):
+        self.calls.append({"job": job})
+        raise RuntimeError("timed out")
+
+
+tmp, env = sweep_world(Failing(), ["not_said"])
+r1 = O.second_pass(env, spec)
+for _ in range(4):
+    r2 = O.second_pass(env, spec)
+failed = [json.loads(p.read_text(encoding="utf-8")).get("failed") for p in (env.home / "results" / "sweep").glob("*-run*.json")]
+check(r1.startswith("call failed (1") and r2 == "done" and len(env.proxy.calls) == 2 * O.MAX_FAILS and failed == [True, True],
+      f"21: {r1!r}, then {r2!r}; {len(env.proxy.calls)} calls, filed {failed} (want two runs, each tried {O.MAX_FAILS} times)")
+shutil.rmtree(tmp)
+
+# 22. one pass that raises never stops the cycle or the passes after it
+tmp, env = sweep_world(FakeProxy(answer=lambda m: ""), ["not_said"])
+real = O.second_pass
+O.second_pass = lambda env, spec: (_ for _ in ()).throw(ValueError("bad spec"))
+try:
+    O.cycle(env)
+    st = json.loads((env.home / "status.json").read_text(encoding="utf-8"))
+    check(any("error ValueError" in w for w in st.get("waiting", [])), f"22: the failed pass is not reported: {st}")
+except Exception as exc:                                         # noqa: BLE001
+    check(False, f"22: one pass's error stopped the cycle ({type(exc).__name__})")
+finally:
+    O.second_pass = real
+shutil.rmtree(tmp)
+
 for f in fails:
     print("FAIL", f)
-print(f"orchestrator: 20 acceptance tests; {len(fails)} failures")
+print(f"orchestrator: 22 acceptance tests; {len(fails)} failures")
 sys.exit(1 if fails else 0)

@@ -90,8 +90,13 @@ def main():
             fails.append("the counting signals are kept in the answer cache")
         page = S.ops_page({"days": [{"day": "2026-10-22", **a.c}, {"day": "2026-10-20", "visitors": 207,
                                                                      "pages": 296, "requests_bots": 9}]})
-        if f"{a.c['readers']} readers</b>" not in page:
-            fails.append("/ops does not lead with the day's readers")
+        # from 2026-11-03 the readers who tapped, typed or scrolled lead (tests/test_activity_engaged.py); a day
+        # counted before then still leads with the readers whose browser ran the page
+        if f"{a.c['engaged']} readers</b> who tapped" not in page:
+            fails.append("/ops does not lead with the day's engaged readers")
+        before = {k: v for k, v in a.c.items() if k not in ("engaged", "engaged_devices")}
+        if f"{a.c['readers']} readers</b>" not in S.ops_page({"days": [{"day": "2026-10-22", **before}]}):
+            fails.append("/ops does not lead with the readers on a day before engagement was counted")
         row20 = page[page.find("<td>2026-10-20</td>"):][:120]
         if "<b>—</b>" not in row20:
             fails.append(f"a day before readers were counted does not show a dash: {row20!r}")

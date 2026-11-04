@@ -19,6 +19,7 @@ from pathlib import Path
 TARGET_QUEUE_HOURS = 12.0
 MAX_QUEUE_HOURS = 24.0
 CAP_MARGIN_USD = 0.05
+MAX_FAILS = 2                     # failed calls on one batch run before it is filed as failed
 LOCAL_MODEL = "gemma4:26b"      # the fast reader
 CLOUD_MODEL = "qwen3.8:27b"     # the strong reader; local too, despite the name the worker gave it (kept: tests use it)
 PEAK_WINDOWS = ((1, 4), (6, 10))
@@ -667,7 +668,23 @@ def second_pass(env, pass_spec):
                 {"role": "user", "content": body},
             ]
             # one proxy job per batch run, so the proxy's per-job caps bind each call, not the whole pass
-            answer = env.proxy.chat(job="orch-%s-%d-run%d" % (name, index, run), messages=messages, thinking=False)
+            # A failed call may already be billed (the security seat, 2026-11-03): it is counted in <out>.fail, and
+            # after MAX_FAILS the batch run is filed empty and marked failed, so it is never retried without end.
+            fail = safe_path(env.home, "results", name, "%d-run%d.fail" % (index, run))
+            try:
+                answer = env.proxy.chat(job="orch-%s-%d-run%d" % (name, index, run), messages=messages,
+                                        thinking=False)
+            except Exception as exc:                      # noqa: BLE001
+                try:
+                    count = int(fail.read_text(encoding="utf-8").split()[0]) + 1
+                except (OSError, ValueError, IndexError):
+                    count = 1
+                fail.write_text("%d %s\n" % (count, type(exc).__name__), encoding="utf-8")
+                if count < MAX_FAILS:
+                    return "call failed (%d of %d): %s" % (count, MAX_FAILS, type(exc).__name__)
+                out.write_text(json.dumps({"batch": index, "run": run, "pass": name, "content": "",
+                                           "cost": 0.0, "failed": True}) + "\n", encoding="utf-8")
+                continue
             content = ""
             cost = 0.0
             if isinstance(answer, dict):
@@ -818,7 +835,12 @@ def cycle(env):
         if finished:
             continue
         before = _spent(env, name)
-        result = second_pass(env, spec)
+        # one bad pass never stops the others (the security seat, 2026-11-03)
+        try:
+            result = second_pass(env, spec)
+        except Exception as exc:                          # noqa: BLE001
+            waiting.append("%s: error %s" % (name, type(exc).__name__))
+            continue
         cost += max(0.0, _spent(env, name) - before)
         if result == "done":
             counts = agreement(env, name)

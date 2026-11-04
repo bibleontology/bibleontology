@@ -28,6 +28,17 @@ About and OPERATIONS.md: reader
 data is read by the maintainer and his tools and nobody else, and there is
 nothing here worth reading about any one reader.
 
+2026-11-03: ENGAGED READERS, AND BOTS BY NAME. A farm of desktop "Chrome"
+clients now runs the page's script, so /api/open no longer tells a person from
+a farm. A person does something on the page; the page sends /api/engaged once,
+on a reader's first real tap, key or scroll, and that reader is counted once a
+day -- c["engaged"] and c["engaged_devices"] -- from the same daily one-way
+hash, the day's hashes kept in the day's .engaged file as the readers are in
+.readers. And every bot request is counted under the fetching bot's name
+(BOT_NAMES, c["bots_named"]), "other" past the list, so the AI fetchers that
+cite the site are not lost in one number. The promise at the top holds: counts
+only, and the same 8-byte one-way daily hashes.
+
 The /ops page and /ops.json are served by app2/server.py behind their own
 token (ops_token()), separate from the invite tokens; without it they are a
 plain 404, as if they did not exist.
@@ -57,6 +68,29 @@ BOTS = re.compile(r"(?i)bot|crawl|spider|slurp|curl|wget|python-|httpclient|go-h
 # bot request, not a visitor (2026-10-01: perfect stats are not needed
 # yet).
 LOOKS_LIKE_BROWSER = re.compile(r"^Mozilla/5\.0 \(.*(AppleWebKit|Gecko/|Trident/)")
+# BOTS BY NAME (2026-11-03): the bot requests were one number, with the AI
+# fetchers -- the ones that cite the site -- hidden in it. Every bot request
+# is counted under the first name whose pattern matches its browser string,
+# else "other"; the order of the names here is the order they are tried.
+# Our own checks are counted as checks only and never named here.
+BOT_NAMES = (
+    ("ChatGPT, for a user", re.compile(r"ChatGPT-User", re.I)),
+    ("OpenAI search", re.compile(r"OAI-SearchBot", re.I)),
+    ("OpenAI training", re.compile(r"GPTBot", re.I)),
+    ("Claude, for a user", re.compile(r"Claude-User", re.I)),
+    ("Claude search", re.compile(r"Claude-SearchBot", re.I)),
+    ("Anthropic training", re.compile(r"ClaudeBot", re.I)),
+    ("Perplexity, for a user", re.compile(r"Perplexity-User", re.I)),
+    ("Perplexity search", re.compile(r"PerplexityBot", re.I)),
+    ("Google", re.compile(r"Googlebot|Google-InspectionTool|GoogleOther|Google-Extended", re.I)),
+    ("Bing", re.compile(r"bingbot|BingPreview|msnbot", re.I)),
+    ("DuckDuckGo", re.compile(r"DuckDuckBot|DuckAssistBot", re.I)),
+    ("Apple", re.compile(r"Applebot", re.I)),
+    ("Meta", re.compile(r"meta-externalagent|facebookexternalhit", re.I)),
+    ("Amazon", re.compile(r"Amazonbot", re.I)),
+    ("Common Crawl", re.compile(r"CCBot", re.I)),
+    ("ByteDance", re.compile(r"Bytespider", re.I)),
+)
 # PERFORMANCE BY ACTIVITY (2026-10-01: detailed performance info
 # by activity): each kind of request into time buckets, so the report can
 # give a typical time, the slow tail and the slowest without keeping every
@@ -161,8 +195,9 @@ class Activity:
     def _blank(self):
         # readers start at 0 on a new day, so a day of farm traffic alone shows
         # 0 readers, not the dash kept for days before readers were counted
+        # (engaged, from 2026-11-03, starts at 0 the same way)
         return {"requests_people": 0, "requests_bots": 0, "pages": 0, "visitors": 0, "readers": 0,
-                "cards": {}, "themes": {}, "tags": {}, "chapters": {}, "searches": {},
+                "engaged": 0, "cards": {}, "themes": {}, "tags": {}, "chapters": {}, "searches": {},
                 "structure": 0, "connections": 0, "referrers": {}, "status": {},
                 "errors": [], "slow": [], "perf": {}}
 
@@ -176,6 +211,11 @@ class Activity:
         self.base_visitors = max(0, self.c.get("visitors", 0) - len(self.seen))
         self.readers = self._read_readers(day)
         self.base_readers = max(0, self.c.get("readers", 0) - len(self.readers))
+        # THE ENGAGED ARE KEPT THE SAME WAY (2026-11-03): the day's hashes in
+        # the day's file, so a restart does not count a reader twice, and the
+        # count continues from what the day already holds
+        self.engaged = self._read_engaged(day)
+        self.base_engaged = max(0, self.c.get("engaged", 0) - len(self.engaged))
         # (reader, site) pairs already counted today, in memory: a restart may
         # count a pair twice, which is the lesser fault
         self.sources = {}
@@ -200,6 +240,30 @@ class Activity:
         try:                                        # earlier days' go
             for old in self.dir.glob(".*.readers"):
                 if old.name != self._readers_file(day).name:
+                    old.unlink()
+        except OSError:
+            pass
+        return set()
+
+    # ENGAGED READERS ARE KEPT AS THE READERS ARE (2026-11-03). /api/open no
+    # longer tells a person from a farm that runs the page's script (on 3
+    # November 226 "readers" were desktops and 1 a phone); a person does
+    # something on the page, and the page says so once. The reader's 8-byte
+    # daily hash goes in the day's file, nothing else, and it goes when the
+    # day does.
+    def _engaged_file(self, day):
+        return self.dir / f".{day}.engaged"
+
+    def _read_engaged(self, day):
+        try:
+            raw = self._engaged_file(day).read_bytes()
+            if len(raw) % 8 == 0:
+                return {raw[i:i + 8] for i in range(0, len(raw), 8)}
+        except OSError:
+            pass
+        try:                                        # earlier days' go
+            for old in self.dir.glob(".*.engaged"):
+                if old.name != self._engaged_file(day).name:
                     old.unlink()
         except OSError:
             pass
@@ -247,6 +311,25 @@ class Activity:
         else:
             counter["(other)"] = counter.get("(other)", 0) + n
 
+    def _hash(self, ip, ua):
+        """The day's one-way visitor hash: the masked address and the browser
+        string under the day's key, 8 bytes. Nothing that can be read back.
+        (One place, from 2026-11-03: /api/open and /api/engaged must answer to
+        the same hash, or a reader who taps is a stranger.)"""
+        return hashlib.blake2b((_mask(ip or "") + "|" + (ua or "")).encode(),
+                               key=self.key, digest_size=8).digest()
+
+    # AN ENGAGED READER (2026-11-03): a person's first real sign of life on the
+    # page. Counted only for a hash already a reader today, once a day, with
+    # the same DEVICE rules as the readers' devices; a farm that only opens
+    # and leaves never reaches it. Called with the lock held.
+    def _count_engaged(self, c, ip, ua):
+        h = self._hash(ip, ua)
+        if h in self.readers and h not in self.engaged and len(self.engaged) < SEEN_MAX:
+            self.engaged.add(h)
+            c["engaged"] = self.base_engaged + len(self.engaged)
+            self._bump(c.setdefault("engaged_devices", {}), _first(DEVICE, ua, "desktop"))
+
     def record(self, path, query, status, ms, ip, ua, referer, own_host):
         """One answered request. Never raises: counting must not break serving."""
         try:
@@ -272,7 +355,21 @@ class Activity:
             if ua and ua.startswith("bibleont-check"):
                 c["checks"] = c.get("checks", 0) + 1
                 return
+            # ENGAGED (2026-11-03): taken before anything else, because it is
+            # one thing only -- a reader already counted today who has now
+            # touched the page -- and is not a page, a bot or a visitor of its
+            # own. A bot's or a stranger's /api/engaged is answered and dropped.
+            if path == "/api/engaged":
+                self._count_engaged(c, ip, ua)
+                return
             c["requests_bots" if bot else "requests_people"] += 1
+            if bot:
+                # BOTS BY NAME (2026-11-03): every bot request under the first
+                # name whose pattern matches its browser string, else "other",
+                # so the AI fetchers that cite the site are seen apart (our own
+                # checks returned above and are counted as checks only)
+                self._bump(c.setdefault("bots_named", {}),
+                           next((name for name, rx in BOT_NAMES if rx.search(ua or "")), "other"))
             self._bump(c["status"], str(status))
             at = now.strftime("%H:%M:%S")
             if status >= 500:
@@ -317,8 +414,7 @@ class Activity:
                 self._bump(c.setdefault("ns_tools" if bot else "ns", {}), path.rstrip("/")[:80] or "/ns")
             if bot:
                 return
-            h = hashlib.blake2b((_mask(ip or "") + "|" + (ua or "")).encode(),
-                                key=self.key, digest_size=8).digest()
+            h = self._hash(ip, ua)
             # capped (Fable's final review, L2): a script varying its browser
             # name counts as a new visitor each time and would grow this set
             # without end; past SEEN_MAX the day's count stops rising
@@ -398,6 +494,10 @@ class Activity:
         rtmp = self.dir / f".{self.day}.readers.tmp"
         rtmp.write_bytes(b"".join(sorted(self.readers)))
         os.replace(rtmp, self._readers_file(self.day))
+        # the engaged hashes go the same way, in the same breath (2026-11-03)
+        etmp = self.dir / f".{self.day}.engaged.tmp"
+        etmp.write_bytes(b"".join(sorted(self.engaged)))
+        os.replace(etmp, self._engaged_file(self.day))
 
     def _flusher(self):
         import time

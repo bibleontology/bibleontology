@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- The orchestrator (tools/orchestra/launch.py + orchestra.py), one cycle every 10 minutes, as the Mac's main user,
+     beside the runner and the proxy. Not loaded until the security review has passed it (plan A.41). Undo:
+     launchctl bootout gui/$(id -u)/org.bibleontology.orchestra -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>org.bibleontology.orchestra</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/dougegge/orchestra/launch.py</string>
+        <string>once</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>600</integer>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/dougegge/orchestra/orchestra.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/dougegge/orchestra/orchestra.log</string>
+</dict>
+</plist>

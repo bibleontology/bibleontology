@@ -2116,6 +2116,9 @@ html:not(.drawn) .ssr ~ .app{position:absolute; left:0; right:0; top:0; height:1
 .pc-rr q{font-style:italic}
 .pc-sub{font:500 10px/1.4 var(--ff-data);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:12px 0 2px}
 .pc-note{font-size:13px;color:var(--muted);line-height:1.5}
+/* a verse the Berean leaves empty: the note, then the later manuscripts' reading, set apart (laterText) */
+.lm-note{font-style:italic;color:var(--muted)}
+.lm-text{color:var(--muted)}
 /* THE EVENT CARD'S STRIP (2026-10-29): the neighbors in canon order; equal cells on a phone, wider = more verses from 700px */
 .pc-seq{display:flex;gap:3px;align-items:stretch;margin:10px 0 0;overflow-x:auto}
 /* a word is never broken (2026-10-30, "Resurrecti / on"): a cell is at least as wide as its longest word, and the strip scrolls
@@ -2848,6 +2851,7 @@ async function peek(btn){
     ? `<span class="ptext">${vtext(d.text, d.vmarks)}</span>
        <button class="goto" data-ref="${esc(btn.dataset.ref)}"
          data-label="${esc(btn.textContent)}">view in reader →</button>`
+    : d.later ? `<span class="ptext">${laterText(d.later)}</span>`
     : `<span class="ptext" style="color:var(--muted)">No text for ${
          esc(btn.dataset.ref)}.</span>`;
   wrap.appendChild(el);
@@ -2895,6 +2899,7 @@ async function peekAt(el, ref){
     ? `<span class="ptext"><b>${esc(prettyRef(ref))}</b> ${vtext(d.text, d.vmarks)}</span>
        <button class="goto" data-ref="${esc(ref)}"
          data-label="${esc(el.textContent)}">view in reader →</button>`
+    : d.later ? `<span class="ptext"><b>${esc(prettyRef(ref))}</b> ${laterText(d.later)}</span>`
     : `<span class="ptext" style="color:var(--muted)">No text for ${esc(prettyRef(ref))}.</span>`;
   if(tr){
     const row = document.createElement('tr');
@@ -3406,7 +3411,7 @@ function renderChapter(d){
        through faith" (Heb 11:32-33). 2026-10-05: the Promise chip
        goes after the verse number. */
     html += `<span class="vs" data-ref="${v.ref}" data-c="${v.c}" data-v="${v.v}">${openBr(v.v)}<span class="vn vn-r">${v.v}</span>${storyMark(v.v)}${
-      vtext(v.text, v.vmarks, t => linkify(t, v.links))}${closeBr(v.v)}${vchips}${pchips} </span>`;
+      v.text ? vtext(v.text, v.vmarks, t => linkify(t, v.links)) : laterText(v.later)}${closeBr(v.v)}${vchips}${pchips} </span>`;
   }
   if(open) html += `</p>`;
   html += (cont.after ? `<div class="contin">continues into ${chapter+1}…</div>` : '')
@@ -4080,6 +4085,13 @@ function linkify(text, links){
 const vmarkBtn = (kind, note) => `<button type="button" class="vmark vm-${kind}" data-vkind="${kind}"
   data-vnote="${esc(note)}" aria-label="${kind === 'ms' ? 'The Berean’s note on the manuscripts'
   : 'A note on the original'}" aria-expanded="false">${kind === 'ms' ? '†' : '*'}</button>`;
+/* A VERSE THE BEREAN LEAVES EMPTY (2026-11-03: "give the site's verse pages the same note plus Young's Literal for
+   those 16 verses, so the site and the MCP say the same thing"): the note, then the later manuscripts' reading, set
+   apart and marked as that -- never as the Berean's words. The server sends `later` only where the Berean is empty. */
+function laterText(lm){
+  if(!lm) return '';
+  return `<span class="lm-note">${esc(lm.note)}</span> <span class="lm-text">Later manuscripts read (${esc(lm.source)}): “${esc(lm.text)}”</span>`;
+}
 function vtext(text, marks, fmt){
   fmt = fmt || esc;
   const finds = (marks && Array.isArray(marks.find)) ? marks.find : [];
@@ -11414,6 +11426,22 @@ async function openAbout(focus){
         claims against it has not been contradicted; it has not been read.
         <b>Coverage</b> in this menu is the only honest guide to which is which.</p>`)}
 
+    ${/* FOR AI ASSISTANTS (plan 8.7, live 2026-11-03): what the MCP server is and does, stated as it is now. The
+          releases still to come are in the flagship article and the design, not here: About describes, it does
+          not promise. */''}
+    ${sec('a-mcp', 'For AI assistants', `
+      <p style="max-width:64ch">An AI assistant can ask the graph directly, through a read-only
+        <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">Model Context Protocol</a> server at
+        <code>https://bibleontology.org/mcp</code>, with no sign-in. It answers what the cards answer, and nothing
+        held from the site: a card, a verse, a word, a theme or a question, each with its address on this site to
+        cite.</p>
+      <p style="max-width:64ch">Every answer ends with the places to go next, each a relation that names the verse it
+        rests on, how sure it is (stated, implied, or a reading) and whose words it is in. A relation can itself be
+        opened, to read its definition in the published vocabulary and see other places it holds. Moves lead to the
+        verse before and after, and from an event to its tellings.</p>
+      <p style="max-width:64ch">It changes nothing and stores nothing about who asks: only counts of calls, as for
+        the site.</p>`)}
+
     ${sec('a-source', 'Where the words come from', `
       <p style="max-width:64ch">${esc(d.source)}</p>
       <p style="max-width:64ch">The English shown is the ${esc(d.translation ||
@@ -11430,6 +11458,11 @@ async function openAbout(focus){
         and an asterisk (*) at a word marks where the Hebrew or Greek reads
         otherwise, with this site's note, checked against MACULA (${n(d.findings || 0)}
         so far).</p>
+      ${/* THE VERSES THE BEREAN LEAVES EMPTY (2026-11-03, Doug: "note plus Young's Literal"; later_manuscripts) */''}
+      <p style="max-width:64ch">Sixteen verses the Berean keeps by number but leaves empty, because the earliest
+        manuscripts lack them (Matthew 17:21 and Acts 8:37 among them), are shown with that note and then the later
+        manuscripts' reading in Young's Literal Translation (1898), marked as that and never as the Berean's. The
+        graph is not built from them.</p>
       ${/* WORD CARDS' HEADWORDS (2026-10-27): a reader found G2411, the temple, headed by the adjective ἱερός;
             server.headwords() and tools/audit_headwords.py. The Hebrew limit is the audit's own finding, stated
             because it is true now, not as a promise. */''}
@@ -13640,6 +13673,19 @@ function setExplore(html, wire){
          if(h && h !== location.host) from = h.slice(0, 80); }catch(e){}
     fetch('/api/open' + (from ? '?r=' + encodeURIComponent(from) : ''),
           {cache: 'no-store', keepalive: true}).catch(() => {});
+  }catch(e){}
+  /* and the reader did something: the first real tap, key or scroll, once
+     (2026-11-03). From November a farm runs the page's script too, so it
+     sends /api/open; it loads a page and leaves, and a person does not.
+     Carries nothing; isTrusted keeps the page's own scrolling out. */
+  try{
+    const evs = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+    const once = ev => {
+      if(!ev.isTrusted) return;
+      evs.forEach(t => removeEventListener(t, once, true));
+      fetch('/api/engaged', {cache: 'no-store', keepalive: true}).catch(() => {});
+    };
+    evs.forEach(t => addEventListener(t, once, {capture: true, passive: true}));
   }catch(e){}
   const b = await api('/api/books', {});
   BOOKS = b.books;

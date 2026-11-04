@@ -142,9 +142,13 @@ def main():
         return new_token()
     rep = fetch(a.url, a.days, Path(a.token_file))
     for d in rep.get("days", []):
-        print(f"{d['day']}: {d.get('visitors', 0)} visitors, {d.get('pages', 0)} page loads, "
-              f"{d.get('requests_people', 0)} requests, {d.get('requests_bots', 0)} by bots")
+        # readers who did something lead (2026-11-03); a dash before they were counted
+        eng = f"{d['engaged']} readers" if "engaged" in d else "— readers"
+        print(f"{d['day']}: {eng}, {d.get('readers', '—')} ran the page, {d.get('visitors', 0)} browser-like, "
+              f"{d.get('pages', 0)} page loads, {d.get('requests_bots', 0)} bot requests")
     t = (rep.get("days") or [{}])[0]
+    if t.get("bots_named"):
+        print("  fetched by: " + ", ".join(f"{k} {v}" for k, v in sorted(t["bots_named"].items(), key=lambda kv: -kv[1])))
     # VISITOR-CHOSEN TEXT, FENCED as readers' notes are (the security review,
     # 2026-10-22): a card id, chapter, search or referrer is whatever the
     # request said, so anyone could make "ignore earlier instructions" rank by

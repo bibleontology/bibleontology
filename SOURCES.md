@@ -64,6 +64,11 @@ Public domain. Robert Young, translator.
 Obtained from <https://ebible.org/Scriptures/engylt_vpl.zip>, which lists it as
 Redistributable with copyright "public domain".
 
+**Shown since 2026-11-03, for 16 verses only:** the verses the Berean leaves empty because the earliest manuscripts
+lack them (Matt 17:21, Acts 8:37 and 14 others). The MCP server serves them with the note "Not in the Berean text:
+the earliest manuscripts lack this verse", followed by Young's wording, marked as the later manuscripts' reading.
+The file is `data/bible/later-manuscripts.ylt.json`.
+
 ## World English Bible
 
 Public domain, by the deliberate dedication of its editor, Michael Paul

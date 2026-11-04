@@ -296,9 +296,12 @@ def load() -> dict:
         # to be true. It is now recorded here, where the fact is, rather than
         # written down somewhere that can drift away from it.
         translation = None
-        NAMED = {"verses.jsonl": "King James Version (1769)",
-                 "verses.bsb.jsonl": "Berean Standard Bible"}
-        for name in ("verses.jsonl", "verses.bsb.jsonl"):
+        NAMED = {"verses.bsb.jsonl": "Berean Standard Bible"}
+        # THE KJV IS NOT LOADED (Doug, 2026-11-03, on the MCP security review: "yes", remove the KJV load). It was
+        # read first and overwritten by the Berean, which covers all 31,102 keys, so it never showed; but a verse the
+        # Berean file lost would have shown the KJV's words silently (A.22: no arguable infringement). Live never had
+        # the file (deploy/runtime-inputs.txt ships the Berean only); now nothing can bring it back unnoticed.
+        for name in ("verses.bsb.jsonl",):
             p = ROOT / "data" / "bible" / name
             if not p.exists():
                 continue
@@ -3869,6 +3872,7 @@ def api_chapter(d, q):
             d.get("seams_heb", {}).get(ref)
         at = d.get("attach", {}).get(ref) or {}
         rows.append({"v": v, "c": vc, "ref": ref, "text": text,
+                     "later": None if text else later_manuscripts(b, vc, v),
                      # the Berean's manuscript note and our findings at
                      # the word (verse_marks)
                      "vmarks": verse_marks(b, vc, v),
@@ -12023,6 +12027,8 @@ def api_verse(d, q):
     return {"ref": ref, "book": b, "title": TITLE.get(b, b),
             "chapter": c, "verse": v, "text": text, "found": bool(text),
             "vmarks": verse_marks(b, c, v),
+            # a verse the Berean leaves empty: the note and the later manuscripts' reading, marked (later_manuscripts)
+            "later": None if text else later_manuscripts(b, c, v),
             "orig": orig, "rtl": mac in HEBREW_BOOKS}
 
 
@@ -15576,7 +15582,7 @@ def answer(path, query):
 
 
 # the counting signals answer {} and are never worth keeping
-NOT_KEPT = {"/api/open", "/api/seen"}
+NOT_KEPT = {"/api/open", "/api/engaged", "/api/seen"}
 
 
 def _warm_structure():
@@ -15683,6 +15689,7 @@ ROUTES = {"/api/books": api_books, "/api/chapter": api_chapter,
           # the page's script has started: counts the visitor as a reader
           # (app2/activity.py, 2026-10-22); never cached, so it always arrives
           "/api/open": lambda d, q: {},
+          "/api/engaged": lambda d, q: {},
           "/api/majorthemes": api_majorthemes, "/api/majortheme": api_majortheme,
           "/api/imagery": api_imagery,
           "/api/question": api_question, "/api/questions": api_questions,
@@ -16088,7 +16095,8 @@ class Handler(BaseHTTPRequestHandler):
         self._status = 0
         u = urlparse(self.path)
         try:
-            self._feedback(u)
+            # the MCP server (plan 8.7, app2/mcp.py): read-only JSON-RPC beside the reader feedback
+            self._mcp() if u.path == "/mcp" else self._feedback(u)
         finally:
             if ACTIVITY is not None and not self._uncounted():
                 # the address and the status only -- never the note
@@ -16098,6 +16106,49 @@ class Handler(BaseHTTPRequestHandler):
                                 or self.client_address[0],
                                 self.headers.get("User-Agent") or "", "",
                                 self.headers.get("Host") or "")
+
+    def _mcp(self):
+        """POST /mcp: one JSON-RPC message in, one answer out (stateless Streamable HTTP; a notification is 202 with
+        no body). The protocol and every rule are app2/mcp.py's; the site's answers come through app2/mcp_backend.py.
+        Here only what HTTP must decide: the Origin (the spec's guard against DNS rebinding: a browser page elsewhere
+        cannot drive it), JSON only, a body cap, and a per-address rate."""
+        import mcp
+        origin = self.headers.get("Origin")
+        if origin and (urlparse(origin).hostname or "") not in FEEDBACK_HOSTS:
+            return self._send(403, b'{"error":"origin not allowed"}', "application/json")
+        if not (self.headers.get("Content-Type") or "").startswith("application/json"):
+            return self._send(415, b'{"error":"json only"}', "application/json")
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+        except ValueError:
+            n = -1
+        if n <= 0 or n > MCP_MAX_BODY:
+            return self._send(413, b'{"error":"body size"}', "application/json")
+        raw = self.rfile.read(n)
+        addr = (self.headers.get("CF-Connecting-IP")
+                or (self.headers.get("X-Forwarded-For") or "").split(",")[0]
+                or self.client_address[0])
+        if not mcp_rate_ok(addr):
+            return self._send(429, b'{"error":"too many requests; try again in a minute"}', "application/json")
+        try:
+            msg = json.loads(raw)
+        except (ValueError, UnicodeDecodeError, RecursionError):   # "[" * 60000 is a RecursionError (the security seat)
+            return self._send(400, json.dumps({"jsonrpc": "2.0", "id": None, "error": {
+                "code": -32700, "message": "parse error"}}).encode(), "application/json")
+        # at most MCP_CONCURRENT calls at once, so a burst of heavy calls cannot take every thread from the site
+        if not _MCP["slots"].acquire(blocking=False):
+            return self._send(503, b'{"error":"busy; try again shortly"}', "application/json", {"Retry-After": "5"})
+        try:
+            out = mcp.handle(msg, mcp_backend())
+            body = None if out is None else json.dumps(out, ensure_ascii=False).encode("utf-8")
+        except Exception:                                  # noqa: BLE001 -- never a traceback, never the thread
+            return self._send(500, b'{"error":"internal error"}', "application/json")
+        finally:
+            _MCP["slots"].release()
+        if body is None:
+            return self._send(202, b"", "application/json")
+        return self._send(200, body, "application/json; charset=utf-8",
+                          {"Cache-Control": "no-store", "X-Robots-Tag": "noindex"})
 
     def _feedback(self, u):
         ok = lambda: self._send(200, b'{"ok":true}', "application/json")  # noqa: E731
@@ -16162,6 +16213,17 @@ class Handler(BaseHTTPRequestHandler):
             return
         if u.path in ("/ops", "/ops.json", "/ops/feedback"):
             return self._ops(u)
+        # the MCP server is POST only (stateless Streamable HTTP: no event stream to open), so a GET is 405, as the
+        # spec has a server without one answer it
+        if u.path == "/mcp":
+            # a person's browser gets the page saying how to connect, as the flagship article promised ("when it is
+            # live, bibleontology.org/mcp will say how to connect it"); a client asking for an event stream, or
+            # anything else, gets the 405 the spec has a server without one answer
+            acc = self.headers.get("Accept") or ""
+            if "text/html" in acc and "text/event-stream" not in acc:
+                return self._send(200, MCP_PAGE.encode("utf-8"), "text/html; charset=utf-8",
+                                  {"Cache-Control": self._public_cache()})
+            return self._send(405, b'{"error":"POST JSON-RPC to /mcp"}', "application/json", {"Allow": "POST"})
         # THE UPTIME CHECK (2026-10-01: uptime alert first). Outside
         # the gate, so an outside monitor can tell "up" from "down" while the
         # site is invite-only -- the front page is a 403 either way. It says
@@ -16495,7 +16557,8 @@ class Handler(BaseHTTPRequestHandler):
                 # /api/open must reach the server every time: Cloudflare's rule
                 # follows the answer's own header, and no-store keeps it out
                 return self._send(200, body, "application/json; charset=utf-8",
-                                  {"Cache-Control": "no-store" if u.path == "/api/open" else self._public_cache(),
+                                  {"Cache-Control": "no-store" if u.path in ("/api/open", "/api/engaged")
+                                   else self._public_cache(),
                                    "X-Robots-Tag": "noindex"})
             except BadQuery:
                 # a malformed query ("c=abc", a book that is not one): the
@@ -21639,6 +21702,11 @@ def verse_strings(vc):
     else the verse cut at a word; the description says the same and quotes the passages the page quotes whole."""
     ref, lang, n, txt = vc["label"], vc["lang"], vc["counts"]["n"], vc["text"].rstrip(" ,;:")
     head = f"{ref} in {lang} and English"
+    if not txt:
+        # a verse the Berean leaves empty (later_manuscripts): the title said "...in Greek and English:" and stopped
+        return f"{ref}: not in the earliest manuscripts", (
+            f"{ref} is not in the Berean text: the earliest manuscripts lack this verse. "
+            f"Later manuscripts carry it; the page gives their reading in Young's Literal Translation (1898).")
     title = f"{head}: {txt}"
     if len(title) > 60:
         title = f"{head}: {n} linked passage{'s' * (n != 1)}" if n else None
@@ -21891,8 +21959,36 @@ def _marked(b, c, v, text):
     """A verse for a page with no script (/p/): the Berean's words escaped,
     an asterisk at a word where the original reads otherwise, a dagger for
     the Berean's manuscript note, and each note written out under the verse
-    -- the same marks the reader shows (verse_marks)."""
+    -- the same marks the reader shows (verse_marks). A verse the Berean leaves empty gets the note and the later
+    manuscripts' reading instead (later_manuscripts)."""
+    if not (text or "").strip():
+        lm = later_manuscripts(b, c, v)
+        if lm:
+            return (f'<span class="lm-note">{_esc(lm["note"])}</span> <span class="lm-text">Later manuscripts read '
+                    f'({_esc(lm["source"])}): &ldquo;{_esc(lm["text"])}&rdquo;</span>')
     return _marked_hl(b, c, v, text)
+
+
+# THE VERSES THE BEREAN LEAVES EMPTY (Doug, 2026-11-03: "give the site's verse pages the same note plus Young's
+# Literal for those 16 verses, so the site and the MCP say the same thing"). Matt 17:21, Acts 8:37 and 14 more: the
+# earliest manuscripts lack them, so the Berean keeps the number and no words. The page says so, then gives the later
+# manuscripts' reading in Young's Literal Translation (1898, public domain), marked as that -- never as the Berean's,
+# and never in the verse text the graph is built from (d["verses"] stays empty for them).
+_LATER = {}
+
+
+def later_manuscripts(b, c, v):
+    """{"note", "text", "source"} for a verse the Berean leaves empty and the later manuscripts carry; else None."""
+    if "data" not in _LATER:
+        try:
+            _LATER["data"] = json.loads((ROOT / "data" / "bible" / "later-manuscripts.ylt.json").read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _LATER["data"] = {}
+    data = _LATER["data"]
+    t = (data.get("verses") or {}).get(f"{b}.{c}.{v}")
+    if not t:
+        return None
+    return {"note": data.get("note") or "", "text": t, "source": "Young's Literal Translation, 1898"}
 
 
 def passage_page(ref):
@@ -22543,6 +22639,103 @@ _FB_SALT = os.urandom(16)
 _FB_BUILD = None
 FEEDBACK_HOSTS = ("bibleontology.org", "localhost", "127.0.0.1")
 
+# THE MCP SERVER'S LIMITS (plan 8.7, 2026-11-03). One answer is capped by app2/mcp.py (MAX_BYTES); here the request
+# and the rate: 120 calls a minute an address, enough for an agent walking the graph, not for a crawl.
+# THE PAGE AT /mcp, FOR PEOPLE (2026-11-03): how to connect, what the server answers, what it will not do. Facts as
+# docs/review/mcp/DESIGN.md checked them against Anthropic's and OpenAI's own pages; nothing promised that is not so.
+MCP_PAGE = """<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>Connect an AI assistant · Bible Ontology</title><meta name=description content="Bible Ontology's read-only MCP
+server: how to connect Claude, ChatGPT or another assistant, and what it answers.">
+<link rel=canonical href="https://bibleontology.org/mcp">
+<style>body{font:17px/1.55 Georgia,serif;color:#1a1a19;background:#faf8f3;max-width:40em;margin:6vh auto;padding:0
+16px}h1{font-weight:normal}h2{font-size:1.1em;margin-top:1.6em}code{font:15px ui-monospace,monospace;background:#efece4;
+padding:1px 4px;border-radius:3px}li{margin:.3em 0}.muted{color:#52514e}@media(prefers-color-scheme:dark){body{color:
+#e8e6e1;background:#1c1b19}code{background:#2c2a26}.muted{color:#a8a59c}}</style>
+<h1>Ask the graph from your AI assistant</h1>
+<p>Bible Ontology runs a read-only <a href="https://modelcontextprotocol.io">Model Context Protocol</a> server. Add it
+to an assistant that supports MCP and it can look things up in the graph directly: a person, an event, a verse, a
+Hebrew or Greek word, a theme, a question. Every answer carries its verses, who says it, how sure it is, and the page
+to cite.</p>
+<p><b>The address:</b> <code>https://bibleontology.org/mcp</code>. No account, no sign-in.</p>
+<h2>Claude</h2>
+<p>Add a custom connector with the address above, and choose no sign-in. Custom connectors work on every Claude plan
+(the free plan allows one).</p>
+<h2>ChatGPT</h2>
+<p>Add a custom connector with the address above, where your plan allows it (Pro in developer mode, Business,
+Enterprise and Edu). The server offers the <code>search</code> and <code>fetch</code> tools ChatGPT expects.</p>
+<h2>Any other MCP client</h2>
+<p>Streamable HTTP, stateless: POST JSON-RPC to the address above.</p>
+<h2>What it answers</h2>
+<ul><li><code>start</code>: where to begin, when there is no question yet</li>
+<li><code>search</code>: the cards, verses and themes that match</li>
+<li><code>fetch</code>: one item whole, with where to go next</li>
+<li><code>get_relations</code>: an item's relations, page by page</li>
+<li><code>get_verse</code> and <code>get_word</code>: a verse by reference, a word by Strong's number</li></ul>
+<p>Every answer ends with links: the places to go next, each a relation that names the verse it rests on, how sure it
+is (stated, implied, or a reading) and whose words it is in. A relation can itself be fetched, to read its definition
+in <a href="/ns/relation">the published vocabulary</a> and see other places it holds.</p>
+<h2>What it will not do</h2>
+<ul><li>Interpret. It supplies evidence; the reading is yours.</li>
+<li>Return anything the site holds back.</li>
+<li>Change anything, or store anything about who asks: only counts of calls.</li></ul>
+<p class=muted>The graph is CC BY 4.0: credit "Bible Ontology (bibleontology.org)". Questions:
+bible.ontology@gmail.com. <a href="/">Back to the site</a>.</p>
+"""
+
+MCP_MAX_BODY = 8192                   # a JSON-RPC call is small; Caddy's cap for /mcp matches (the security seat)
+MCP_RATE, MCP_WINDOW = 120, 60.0
+MCP_TOTAL = 1200                       # every address together, a minute: a crawl across many addresses stops here
+MCP_CONCURRENT = 4
+_MCP = {"backend": None, "seen": {}, "total": collections.deque(), "lock": threading.Lock(),
+        "slots": threading.BoundedSemaphore(MCP_CONCURRENT)}
+
+
+def mcp_backend():
+    """The one backend, made once over the loaded graph (under the lock: two first requests made two)."""
+    if _MCP["backend"] is None:
+        with _MCP["lock"]:
+            if _MCP["backend"] is None:
+                import mcp_backend as mb
+                _MCP["backend"] = mb.Backend(sys.modules[__name__], load())
+    return _MCP["backend"]
+
+
+def _mcp_key(addr: str) -> str:
+    """An IPv6 address counts by its /64, as feedback's does: one subscriber holds a whole /64."""
+    import ipaddress
+    try:
+        ip = ipaddress.ip_address((addr or "").strip())
+    except ValueError:
+        return (addr or "")[:64]
+    if ip.version == 6:
+        return str(ipaddress.ip_network(str(ip) + "/64", strict=False))
+    return str(ip)
+
+
+def mcp_rate_ok(addr: str) -> bool:
+    """True, and counted, while this address (an IPv6 /64) is under MCP_RATE calls in the last MCP_WINDOW seconds and
+    all addresses together are under MCP_TOTAL. In memory, under a lock, pruned, so it cannot grow without end."""
+    now = time.time()
+    key = _mcp_key(addr)
+    with _MCP["lock"]:
+        total = _MCP["total"]
+        while total and now - total[0] > MCP_WINDOW:
+            total.popleft()
+        if len(total) >= MCP_TOTAL:
+            return False
+        seen = _MCP["seen"]
+        if len(seen) > 20000:
+            for k in [k for k, v in seen.items() if not v or now - v[-1] > MCP_WINDOW]:
+                seen.pop(k, None)
+        calls = [t for t in seen.get(key, []) if now - t < MCP_WINDOW]
+        if len(calls) >= MCP_RATE:
+            seen[key] = calls
+            return False
+        calls.append(now)
+        seen[key] = calls
+        total.append(now)
+        return True
+
 
 def feedback_rate_ok(addr: str) -> bool:
     """True, and counted, when this address may leave another note now."""
@@ -22831,9 +23024,16 @@ def ops_page(rep: dict, day: str | None = None, sel: dict | None = None) -> str:
     def automated(d):
         r = readers(d)
         return None if r is None else max(0, d.get("visitors", 0) - r)
+
+    # PEOPLE WHO DID SOMETHING LEAD (2026-11-03: "/ops is super annoying at a time when I am trying to watch
+    # growth"). From November the farm runs the page's script too: 226 desktop "readers" to 1 phone on 3 November.
+    # A person taps, types or scrolls (/api/engaged); the farm loads and leaves. Counted from 2026-11-03: earlier
+    # days show a dash, not a guess.
+    def engaged(d):
+        return d["engaged"] if "engaged" in d else None
     dash = lambda v: "—" if v is None else f"{v:,}"   # noqa: E731
     summary = "".join(
-        f"<tr><td>{e(d['day'])}</td><td class=n><b>{dash(readers(d))}</b></td>"
+        f"<tr><td>{e(d['day'])}</td><td class=n><b>{dash(engaged(d))}</b></td><td class=n>{dash(readers(d))}</td>"
         f"<td class=n>{dash(automated(d))}</td><td class=n>{d.get('visitors', 0):,}</td>"
         f"<td class=n>{d.get('pages', 0):,}</td><td class=n>{d.get('requests_bots', 0):,}</td>"
         f"<td class=n>{sum(v for k, v in (d.get('status') or {}).items() if k.startswith('5'))}</td></tr>"
@@ -22870,15 +23070,29 @@ def ops_page(rep: dict, day: str | None = None, sel: dict | None = None) -> str:
         plural(n(t.get("blog")), "blog view") if n(t.get("blog")) else "") if x]
     came = ", ".join(f"{e(k)} ({v})" for k, v in sorted((t.get("referrers") or {}).items(),
                                                        key=lambda kv: -kv[1])[:4])
+    e_today = engaged(t)
+    e_dev = ", ".join(f"{v:,} {e(k)}" for k, v in sorted((t.get("engaged_devices") or {}).items(),
+                                                         key=lambda kv: -kv[1]))
     words = (f"<p style='font-size:1.05em'><b>{e(when)}: "
-             + (f"{plural(r_today, 'reader')}</b> (their browser ran the page)" if r_today is not None
-                else "readers are counted from 22 October 2026</b>")
-             + (f". Between them: {', '.join(did)}." if did else ".")
-             + (f" They came from {came}." if came else "")
-             + "</p><p class=g>Not readers: "
-             + (f"{automated(t):,} browser-like visitors that never ran the page (automated), and "
+             + (f"{plural(e_today, 'reader')}</b> who tapped, typed or scrolled" + (f" ({e_dev})" if e_dev else "")
+                if e_today is not None else
+                (f"{plural(r_today, 'reader')}</b> (their browser ran the page)" if r_today is not None
+                 else "readers are counted from 22 October 2026</b>"))
+             + (f". Came from {came}." if came else ".")
+             + (f" Opened, all told (automated ones included): {', '.join(did)}." if did else "")
+             + "</p><p class=g>Not counted as readers: "
+             + (f"{max(0, (r_today or 0) - e_today):,} that ran the page and did nothing (mostly automated), "
+                if e_today is not None and r_today is not None else "")
+             + (f"{automated(t):,} browser-like visitors that never ran the page, and "
                 if automated(t) is not None else "")
              + f"{t.get('requests_bots', 0):,} requests from tools and crawlers that name themselves.</p>")
+    # WHO FETCHED IT, BY NAME (2026-11-03): the AI assistants and search engines that cite the site, apart from the
+    # rest. Named from the browser string each sends (app2/activity.py BOT_NAMES); counted from 2026-11-03.
+    named = t.get("bots_named") or {}
+    fetchers = ("<h2>Who fetched it, by name</h2><table><tr><th>fetcher</th><th class=n>requests</th></tr>"
+                + top(named, 20) + "</table><p class=g>\"For a user\": an assistant reading a page because a "
+                "person asked it to. Search: building its index. Training: collecting text (refused by robots.txt "
+                "where the crawler honors it).</p>") if named else ""
     recent = lambda xs, k: "".join(  # noqa: E731
         f"<tr><td>{e(x['at'])}</td><td>{e(x['path'])}</td><td class=n>{e(str(x[k]))}</td></tr>"
         for x in reversed(xs or [])) or "<tr><td colspan=3 class=g>none</td></tr>"
@@ -22893,10 +23107,13 @@ def ops_page(rep: dict, day: str | None = None, sel: dict | None = None) -> str:
             f"{words}"
             f"{ops_feedback_line()}"
             f"{ops_charts(day or t.get('day', ''), sel if day else t, days, day or '')}"
-            f"<h2>By day</h2><table><tr><th>day</th><th class=n>readers</th><th class=n>automated</th>"
+            f"{fetchers}"
+            f"<h2>By day</h2><table><tr><th>day</th><th class=n>readers</th><th class=n>ran the page</th>"
+            f"<th class=n>automated</th>"
             f"<th class=n>all browser-like</th><th class=n>page loads</th><th class=n>tool requests</th>"
             f"<th class=n>errors</th></tr>{summary}</table>"
-            f"<p class=g>Readers: their browser ran the page. Automated: looked like a browser, never ran it. "
+            f"<p class=g>Readers: tapped, typed or scrolled (from 3 November 2026). Ran the page: their browser "
+            f"ran its script, which the farm now does too. Automated: looked like a browser, never ran it. "
             f"Page loads include both. Tool requests: crawlers and scripts that say what they are.</p>"
             f"<p class=g>Server memory: {e(str(rep['memory_mb']) + ' MB') if rep.get('memory_mb') else 'not available here'}. "
             f"{e(rep.get('note', ''))}{checks}</p>"

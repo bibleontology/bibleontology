@@ -334,6 +334,24 @@ else
 	bad "readers on /ops failed -- python tests/test_activity_readers.py"
 	grep -E "FAIL" <<<"$out" | head -8
 fi
+# the MCP server (plan 8.7, 2026-11-03): the protocol and its rules against a fake (fast), then the adapter over the
+# real graph (held questions, divine persons as the site shows them, every hop with its verse, HTTP's guards)
+for t in test_mcp test_mcp_backend; do
+	if out="$($PY tests/$t.py 2>&1)"; then
+		ok "$(tail -1 <<<"$out")"
+	else
+		bad "the MCP server failed -- python tests/$t.py"
+		grep -E "FAIL" <<<"$out" | head -8
+	fi
+done
+# readers who did something (2026-11-03): /api/engaged once a day per reader, only
+# after /api/open; bot requests counted by name, the AI fetchers apart.
+if out="$($PY tests/test_activity_engaged.py 2>&1)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "engaged readers on /ops failed -- python tests/test_activity_engaged.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
 # The browsers that open /ops are not counted (2026-10-22): bo_uncounted,
 # site-wide and secretless, set when /ops opens; the token stays on /ops
 if out="$($PY tests/test_ops_uncounted.py 2>&1)"; then

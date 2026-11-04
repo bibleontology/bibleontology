@@ -390,7 +390,14 @@ def relations():
         got = [(a, t) for a, t in got if t]
         if not got:
             continue
-        claim = f"{ents[r['src']]} {labels.get(r['type'], r['type'])} {ents[r['dst']]}"
+        if "kinds" in sys.argv[2:]:
+            # the descriptive kinds as sentences a person could check (2026-11-03): the label triples ("God states
+            # Jesus") cost the Mac 3,340 calls of qwen it answered anyway; kinds with no plain sentence are left out
+            if r["type"] not in KIND_SENTENCE:
+                continue
+            claim = KIND_SENTENCE[r["type"]].format(s=ents[r["src"]], o=ents[r["dst"]])
+        else:
+            claim = f"{ents[r['src']]} {labels.get(r['type'], r['type'])} {ents[r['dst']]}"
         if r.get("claimed_by"):
             claim += f" (in the words of {ents.get(r['claimed_by'], r['claimed_by'])})"
         c = {"key": f"{f}:{i}", "claim": claim, "ref": ", ".join(a for a, _ in got), "verse": " ".join(t for _, t in got),
@@ -409,5 +416,105 @@ def relations():
         print(f"{name}: {len(part)} relations")
 
 
+
+# THE SWEEP'S SECOND READER (2026-11-03; plan A.40): DeepSeek reads, twice and blind, the relations the Mac flagged in
+# a sweep job (not_said or partly), with moved-verse plants. Doug: "make sure DeepSeek wakes at 11 and uses its 2 hour
+# window well". Then deepseek_judge.py run <name> (DSJ_RUN=2 for the second run).
+#     python tools/meaning/verse_reread.py sweep-ds 12a-sweep-cited  -> out/grunt/deepseek-judge/batches-12a-sweep-cited.jsonl
+def sweep_ds():
+    sys.path.insert(0, str(ROOT / "tools" / "meaning"))
+    import deepseek_judge as dj
+    name = sys.argv[2]
+    key = {json.loads(l)["key"]: json.loads(l) for l in open(JOBS / f"{name}.key.jsonl", encoding="utf-8")}
+    flagged = []
+    for l in open(DONE / f"{name}.jsonl", encoding="utf-8"):
+        r = json.loads(l)
+        v = (parse(r.get("content")) or {}).get("verdict")
+        if (v in ("not_said", "partly") or "all" in sys.argv[3:]) and r["key"] in key:    # "all": every relation, not only flags
+            flagged.append(dict(key[r["key"]], mac=v, ask="claim"))
+    # DIVINE PERSONS ARE NEVER SENT TO DEEPSEEK (the owner's rule; deepseek_judge.DIVINE): a relation with God, the
+    # Father, Jesus or the Holy Spirit at either end stays with the Mac's reading and Claude's
+    divine = lambda c: bool(set(c.get("rel", [None, None, None])[::2]) & dj.DIVINE)   # noqa: E731
+    held = [c for c in flagged if divine(c)]
+    flagged = [c for c in flagged if not divine(c)]
+    key = {k: c for k, c in key.items() if not divine(c)}
+    rnd = random.Random(SEED + 7)
+    pool = [c for c in key.values() if c["key"] not in {f["key"] for f in flagged}]
+    rnd.shuffle(pool)
+    plants = [dict(a, key=f"P-moved-{i}", claim=b["claim"], planted="not_said", ask="claim")
+              for i, (a, b) in enumerate(zip(pool[:20], pool[20:40]))]
+    items = flagged + plants
+    rnd.shuffle(items)
+    batches = []
+    for bi in range(0, len(items), dj.BATCH):
+        part = items[bi:bi + dj.BATCH]
+        for n, it in enumerate(part, 1):
+            it["id"] = f"r{n}"
+        batches.append({"batch": f"{name.upper()}-{bi // dj.BATCH + 1:02d}", "items": part,
+                        "task": DS_BRIEF + "\n\nITEMS (" + str(len(part)) + "):\n\n" + "\n\n".join(ds_text(x) for x in part) + "\n"})
+    name = name + ("-all" if "all" in sys.argv[3:] else "")
+    for b in batches:
+        b["batch"] = name.upper() + b["batch"][b["batch"].rindex("-"):]
+    dj.write_batches(name, batches)
+    print(f"{name}: {len(flagged)} flagged by the Mac, {len(held)} divine-person rows kept back, {len(plants)} planted, {len(batches)} batches")
+
+
+
+# THE DESCRIPTIVE KINDS, REBUILT AS SENTENCES (2026-11-03). The first "-kinds" claims were label triples ("David
+# states Uriah"); DeepSeek refused to guess and the Mac guessed. Each kind gets a sentence a person could check
+# against the verse; kinds with no plain sentence (states, conditional_on, grounds) are left out.
+KIND_SENTENCE = {"described_as": "{s} is described as {o}", "likened_to": "{s} is likened to {o}",
+                 "signifies": "{s} signifies {o}", "titled": "{s} is called {o}", "spoken_of_as": "{s} is spoken of as {o}",
+                 "assessed_as": "{s}: {o}", "member_of": "{s} is one of {o}", "located_in": "{s} is in {o}",
+                 "token_of": "{s} is a sign of {o}"}
+
+
+def kinds_ds():
+    """the -kinds jobs' relations, all of them, as sentences, for DeepSeek: name, then optional 'sample'"""
+    sys.path.insert(0, str(ROOT / "tools" / "meaning"))
+    import deepseek_judge as dj
+    name = sys.argv[2]
+    items = []
+    for l in open(JOBS / f"{name}.key.jsonl", encoding="utf-8"):
+        c = json.loads(l)
+        s, t, o = c.get("rel") or [None, None, None]
+        if t not in KIND_SENTENCE or {s, o} & dj.DIVINE:
+            continue
+        sn, on = c["claim"].split(" ", 1)[0], None          # names come from the key's own claim text, rebuilt below
+        items.append(c)
+    import glob
+    names = {}
+    for p in glob.glob(str(ROOT / "ontology" / "entities" / "*.jsonl")):
+        for l in open(p, encoding="utf-8"):
+            if l.strip():
+                e = json.loads(l)
+                names.setdefault(e["id"], e.get("name") or e["id"])
+    for c in items:
+        s, t, o = c["rel"]
+        c["claim"] = KIND_SENTENCE[t].format(s=names.get(s, s), o=names.get(o, o))
+        c["ask"] = "claim"
+    if "sample" in sys.argv[3:]:
+        for c in random.Random(SEED).sample(items, 12):
+            print(f"{c['ref']:<16} {c['claim'][:70]:<72} | {c['verse'][:60]}")
+        print(f"{len(items)} items")
+        return
+    rnd = random.Random(SEED + 9)
+    pool = list(items)
+    rnd.shuffle(pool)
+    plants = [dict(a, key=f"P-moved-{i}", claim=b["claim"], planted="not_said") for i, (a, b) in enumerate(zip(pool[:20], pool[20:40]))]
+    allit = items + plants
+    rnd.shuffle(allit)
+    out = name + "-s"
+    batches = []
+    for bi in range(0, len(allit), dj.BATCH):
+        part = allit[bi:bi + dj.BATCH]
+        for n, it in enumerate(part, 1):
+            it["id"] = f"r{n}"
+        batches.append({"batch": f"{out.upper()}-{bi // dj.BATCH + 1:02d}", "items": part,
+                        "task": DS_BRIEF + "\n\nITEMS (" + str(len(part)) + "):\n\n" + "\n\n".join(ds_text(x) for x in part) + "\n"})
+    dj.write_batches(out, batches)
+    print(f"{out}: {len(items)} relations as sentences, {len(plants)} planted, {len(batches)} batches")
+
+
 if __name__ == "__main__":
-    {"build": build, "report": report, "ds-build": ds_build, "ds-report": ds_report, "objects": objects, "relations": relations}[sys.argv[1]]()
+    {"build": build, "report": report, "ds-build": ds_build, "ds-report": ds_report, "objects": objects, "relations": relations, "sweep-ds": sweep_ds, "kinds-ds": kinds_ds}[sys.argv[1]]()

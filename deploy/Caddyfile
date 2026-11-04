@@ -46,24 +46,25 @@ bibleontology.org {
 	tls /etc/caddy/certs/origin.pem /etc/caddy/certs/origin.key
 	encode zstd gzip
 
-	# The app answers GET and HEAD -- and, since reader feedback (plan A.27,
-	# 2026-10-03), one POST: /api/feedback. Anything else stops here. Bodies
-	# stay at 1 KB everywhere except that one address, which takes up to 8 KB
-	# (the app itself refuses over 4 KB: a note is at most 1,000 characters).
+	# The app answers GET and HEAD -- and two POSTs: /api/feedback, reader
+	# feedback (plan A.27, 2026-10-03), and /mcp, the read-only MCP server (plan
+	# 8.7, 2026-11-03; docs/review/mcp/SECURITY-2026-11-03.md). Anything else
+	# stops here. Bodies stay at 1 KB everywhere except those two, which take up
+	# to 8 KB (the app refuses feedback over 4 KB and a JSON-RPC call over 8 KB).
 	@notread {
 		not method GET HEAD
 		not {
 			method POST
-			path /api/feedback
+			path /api/feedback /mcp
 		}
 	}
 	respond @notread 405
-	@feedback path /api/feedback
-	request_body @feedback {
+	@posted path /api/feedback /mcp
+	request_body @posted {
 		max_size 8KB
 	}
-	@notfeedback not path /api/feedback
-	request_body @notfeedback {
+	@notposted not path /api/feedback /mcp
+	request_body @notposted {
 		max_size 1KB
 	}
 
@@ -129,7 +130,10 @@ bibleontology.org {
 	# here, nor was it by Cloudflare's policy.
 	@training {
 		header_regexp User-Agent (?i)(GPTBot|ClaudeBot|anthropic-ai|CCBot|meta-externalagent|FacebookBot|Bytespider|cohere-training-data-crawler|Diffbot|Omgilibot|PerplexityBot-Training|Amazonbot|Timpibot|TikTokSpider)
-		not path /robots.txt
+		# /mcp is not crawled content but a JSON-RPC endpoint an assistant calls
+		# for a person, and a connector's name is not ours to predict: a training
+		# crawler does not POST JSON-RPC (2026-11-03, the MCP go-live)
+		not path /robots.txt /mcp
 	}
 	handle @training {
 		header Cache-Control "no-store"
@@ -175,6 +179,20 @@ bibleontology.org {
 	# cached by anyone. No script; the policy says so.
 	handle_errors {
 		@down expression `{err.status_code} in [502, 503, 504]`
+		# an MCP client asked for JSON: it gets JSON and a retry, not the page
+		@mcpdown {
+			expression `{err.status_code} in [502, 503, 504]`
+			path /mcp
+		}
+		handle @mcpdown {
+			header {
+				Content-Type "application/json"
+				Cache-Control "no-store"
+				Retry-After "20"
+				-Server
+			}
+			respond `{"error":"the server is restarting; try again shortly"}` 503
+		}
 		handle @down {
 			header {
 				Content-Type "text/html; charset=utf-8"
