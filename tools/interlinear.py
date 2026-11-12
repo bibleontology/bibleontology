@@ -99,6 +99,19 @@ def translit_greek(word):
     return "".join(out)
 
 
+_PARSE_VERB = ("stem", "type", "tense", "voice", "mood", "person", "case", "gender", "number", "state")
+_PARSE_NOUN = ("case", "gender", "number", "state")
+
+
+def parse_of(w):
+    """One use's parsing in words, from MACULA's own attributes: "aorist active indicative third singular", "qal
+    wayyiqtol third masculine singular", "genitive feminine singular", "masculine plural construct". A verb's
+    `type` is its conjugation (Hebrew qatal, wayyiqtol); a noun's `type` (common, proper) is not a parse."""
+    verb = (w.get("class") or w.get("pos") or "") in ("verb", "participle") or bool(w.get("tense") or w.get("stem"))
+    vals = [w.get(a) for a in (_PARSE_VERB if verb else _PARSE_NOUN)]
+    return " ".join(v.strip() for v in vals if v and v.strip() and not v.strip().isdigit())
+
+
 def lemma_meta(root, meta):
     for w in root.iter("w"):
         # Greek MACULA words carry NO `lang` attribute, so keying off it put
@@ -172,6 +185,10 @@ def main() -> int:
                     "x": ((w.get("transliteration") or "").strip().rstrip(":")
                           or translit_greek(w.get("unicode")
                                             or w.get("text") or "")),
+                    # each use's parsing, spelled out as MACULA gives it (2026-11-09, a reviewer: "make sure
+                    # visitors can inspect the actual forms and their grammatical parsing, not just aggregate
+                    # counts"): the card counts forms by it
+                    "m": parse_of(w),
                 })
             for ref in order:
                 ws = [w for w in byverse[ref] if w["t"] or w["g"]]

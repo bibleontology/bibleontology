@@ -240,6 +240,69 @@ read from the repository's `master` branch, so the honest record is the date:
 (The BSD 3-Clause licence on github.com/STEPBible/step is their *software's*,
 not the data's.)
 
+### The UBS dictionaries — United Bible Societies
+
+Licensed **CC BY-SA 4.0** (share-alike). Each is credited as its README asks:
+
+> UBS Dictionary of Biblical Hebrew © United Bible Societies, 2023. Adapted
+> from Semantic Dictionary of Biblical Hebrew © 2000-2023 United Bible
+> Societies.
+
+> UBS Dictionary of New Testament Greek, © United Bible Societies, 2023.
+> Adapted from Semantic Dictionary of Biblical Greek: © United Bible Societies
+> 2018-2023, which is adapted from Greek-English Lexicon of the New Testament:
+> Based on Semantic Domains, Eds. J P Louw, Eugene Albert Nida © United Bible
+> Societies 1988, 1989.
+
+Source: <https://github.com/ubsicap/ubs-open-license>, `dictionaries/hebrew/`
+and `dictionaries/greek/`.
+
+**What is used.** Each word's senses (a short definition, glosses, a semantic
+domain and the verses listed for it) on the word cards and pages, the other
+words a domain holds, and, on a verse's card, the sense a word is listed under
+for that verse.
+
+**The version read, and when.** The Hebrew v0.9.4 and the Greek v1.1, read
+2026-11-02 from commit a15a96cf of that repository. The site's server fetches
+the same files from there (`tools/fetch_ubs.py`), pinned to that commit and to
+each file's SHA-256, and builds one record per Strong's number
+(`tools/lexicon/ubs_extract.py`).
+
+**What this project changed (CC BY-SA 4.0, section 3(a)(1)(B)).**
+- **The definitions are shown in UBS's words.** The dictionary's notation marks
+  (= ► ◄ ≈) and footnote markers are left out, its link codes become the words
+  they name, and its Louw–Nida numbers are written "LN 15.215" (`app2/ubs.py`).
+- **Senses AI-generated or flagged for a human check are left out** (none in
+  these versions).
+- **One entry under several Strong's numbers** is shown under each number with
+  only the senses whose verses have that number.
+
+**Kept apart from the graph.** The UBS text is share-alike and the graph is
+CC BY, so it is never committed here, never part of the graph or its exports,
+and the public repository's build refuses any file that carries it
+(`tools/export_public.py`).
+
+### Strong's Hebrew Dictionary — James Strong (1894), via Open Scriptures
+
+**Public domain.** The electronic text is Open Scriptures' OSIS encoding (David Troidl, after David
+Instone-Brewer), whose header states the work is Public Domain.
+
+Source: <https://github.com/openscriptures/strongs>, `hebrew/StrongHebrewG.xml`, read 2026-11-06 at commit
+0acd2f25 (6,436,400 bytes, SHA-256 `1f9659ea…6061`, pinned in `tools/lexicon/strongs_hebrew.py`).
+
+**What is used.** For each Hebrew Strong's number, Strong's own definition and derivation, as the lexicon entry
+on the Hebrew word cards and pages, one tap below UBS's senses. It stands where STEP's Hebrew lexicon would, since
+that one (the abridged Brown-Driver-Briggs) is withheld. The extract is committed
+(`data/lexicon/strongs-hebrew.json`, 8,674 entries), since the text is public domain.
+
+**What is left out, and why.**
+- **The King James Version's renderings** (the file's `translation` notes), under the rule that no KJV text is
+  shown.
+- **A numbered outline of senses** ("1) to love, 1a) (Qal) ...") that the file also carries. It is not Strong's
+  text but the Brown-Driver-Briggs outline, with senses marked from the Theological Wordbook of the Old Testament
+  (© Moody), and so it is withheld for the same reason as STEP's Hebrew lexicon.
+- **The TWOT numbers and Greek cross-references** attached to each entry.
+
 ## A reference lexicon
 
 Not a text of Scripture and not an original-language dataset, so it sits in its

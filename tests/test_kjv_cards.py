@@ -63,12 +63,27 @@ def main():
             fails.append(f"FAIL planted: the KJV of {what} was not caught")
     if hits('{"says": "death spread to all men, because all sinned (Romans 5:12)"}'):
         fails.append("FAIL planted: the Berean's wording was taken for the KJV")
+    # A CARD'S OTHER NAMES ARE SHORT, so the six-word rule never sees them (2026-11-10, the object-card review: the
+    # basin's "also called" printed "the laver of brass"; five more carried "unto"). A shown alias with an archaic word
+    # is KJV wording; the record keeps it under aka_kjv, which is never shown
+    import json
+    old = re.compile(r"\b(unto|brasen|thee|thou|thy|thine|hath|doth|shew|shewed|ye|lookingglasses)\b", re.I)
+    def alias_faults(rows):
+        return [f"FAIL {r['id']}: also called '{a}' is KJV wording (move it to aka_kjv)"
+                for r in rows for a in r.get("aka") or [] if old.search(a)]
+    rows = [json.loads(x) for p in sorted((ROOT / "ontology" / "entities").glob("*.jsonl"))
+            for x in p.read_text(encoding="utf-8").splitlines() if x.strip()]
+    fails += alias_faults(rows)
+    if not alias_faults([{"id": "planted", "aka": ["render unto Caesar"]}]):
+        fails.append("FAIL planted: the alias 'render unto Caesar' was not caught")
+    if alias_faults([{"id": "planted", "aka": ["the bronze basin"]}]):
+        fails.append("FAIL planted: the Berean's 'the bronze basin' was taken for the KJV")
     for f in fails:
         print(f)
     if fails:
         sys.exit(1)
-    print(f"KJV in cards: {n} files (question cards, concept hubs, traditions layer; shown and held) clean; "
-          f"3 planted checks held")
+    print(f"KJV in cards: {n} files (question cards, concept hubs, traditions layer; shown and held) clean, "
+          f"{sum(len(r.get('aka') or []) for r in rows)} shown aliases clean; 5 planted checks held")
 
 
 if __name__ == "__main__":

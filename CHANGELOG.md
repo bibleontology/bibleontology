@@ -6,6 +6,32 @@ Two things carry versions here:
 - **The graph's exports** in `out/export/`, which carry a date-shaped version of their own (`ontology/ns-version.json`,
   `data`; `out/export/void.ttl`).
 
+## Vocabularies 1.4.0: 2026-11-11
+
+**`/ns/biblio`, the texts vocabulary.** 19 terms: LRMoo 1.1.1's Work, Expression and Manifestation, with only what
+the published data uses beside them (arrangements, sections, verse segments and their alignment, and a heading's two
+claim relations, `superscriptionNames` and `composedBy`). `translationOf` is declared a subproperty of
+`lrmoo:R76_is_derivative_of`. Its shapes join `/ns/shapes`. None removed or deprecated. Released with the data it
+describes. The write-up: `docs/who-wrote-psalm-73.md`.
+
+## Data 2026.11.11: 2026-11-11
+
+**The Psalter as Works** (`out/export/psalter.nt.gz`, 22,431 triples): the 150 psalms as LRMoo Works, each realized
+in its Hebrew (MACULA, after the Westminster Leningrad Codex) and its Berean English, verse by verse and aligned. The
+Psalter's Expressions incorporate the psalms' (`R75`). The Masoretic order is in five books. Every Work has a creation
+event naming no author, date or place. Who a heading names, and who composed the psalm, are claims with their
+certainty and voice; composition is always marked disputed. The sons of Korah (11 psalms) are held, since the graph
+has no record for them. A heading's kind, directions and occasions are counted, not published.
+
+**Cards lead with what the text says most.** Stories told again put their steps side by side first, on the card and
+the served page. Places rank their stories by how much the text tells there. Images open on what the picture stands
+for, in the verse's words. Events say what is spoken in them and the themes they're in, open. Objects show where a
+thing stands and what it is one of.
+
+**Corrections:** relations the cited verses do not say are held or dropped (five Last Supper messages, "Julius
+imprisoned Paul", "Naboth died at Jezreel", three of the lamp's verses that rest on the King James reading), and King
+James wording is out of six cards' "also called".
+
 ## Vocabularies 1.3.0: 2026-11-01
 
 Eleven relation types added, none removed or deprecated: `knows`, `loves`, `sees`, `rewards`, `forgives`, `reveals`,

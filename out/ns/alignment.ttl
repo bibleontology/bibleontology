@@ -21,9 +21,9 @@
     dcterms:title "Bible Ontology — alignment" ;
     rdfs:label "Bible Ontology — alignment" ;
     dcterms:creator "Doug Egge" ;
-    owl:versionInfo "1.3.0" ;
-    owl:versionIRI <https://bibleontology.org/ns/alignment/2026-11-01> ;
-    dcterms:modified "2026-11-01"^^xsd:date ;
+    owl:versionInfo "1.4.0" ;
+    owl:versionIRI <https://bibleontology.org/ns/alignment/2026-11-11> ;
+    dcterms:modified "2026-11-11"^^xsd:date ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     rdfs:comment "Our terms mapped to their nearest equivalents in schema.org, FOAF, CIDOC CRM, OntoLex-Lemon and Web Annotation, as SKOS mapping properties: closeMatch (near enough for most queries, never the same), broadMatch (theirs is broader), narrowMatch (theirs is narrower), relatedMatch (associated, not interchangeable). No exactMatch. A mapping commits a reasoner to nothing beyond typing both ends as skos:Concept, which SKOS entails (punning, permitted in OWL 2); here the four mapping properties are declared as annotation properties. A mapping says how the text presents a person, place or event; none takes a view on historicity. The alignments the vocabularies state themselves (subclasses and subproperties of PROV, OntoLex and SKOS terms; DQV terms are used only as types) are in the vocabularies." ;

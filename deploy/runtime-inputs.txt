@@ -1,7 +1,9 @@
 # The repository files app2/server.py reads at run time, measured by
 # tools/runtime_inputs.py. Do not edit by hand: re-run it.
 app2/static/index.html
+data/bible/later-manuscripts.ylt.json
 data/bible/verses.bsb.jsonl
+data/lexicon/strongs-hebrew.json
 ontology/aggregate-hubs.json
 ontology/aliases.jsonl
 ontology/allusions.jsonl
@@ -45,6 +47,7 @@ ontology/entities/entities.jsonl
 ontology/entities/event-templates.jsonl
 ontology/entities/events-copilot.jsonl
 ontology/entities/messages.jsonl
+ontology/entities/objects-a45.jsonl
 ontology/entities/parable-mapping.jsonl
 ontology/entities/role-patterns.jsonl
 ontology/entities/significant-numbers.jsonl
@@ -224,6 +227,8 @@ ontology/relations/neh11-jerusalem.jsonl
 ontology/relations/neh3-wall.jsonl
 ontology/relations/new-creature.jsonl
 ontology/relations/nicodemus.jsonl
+ontology/relations/object-relations-2026-11-07.jsonl
+ontology/relations/objects-a45.jsonl
 ontology/relations/objects-observances.jsonl
 ontology/relations/olivet-and-farewell.jsonl
 ontology/relations/parable-mapping.jsonl
@@ -271,6 +276,7 @@ ontology/relations/temple-place.jsonl
 ontology/relations/the-christ.jsonl
 ontology/relations/the-divine-names.jsonl
 ontology/relations/the-exchange.jsonl
+ontology/relations/the-father-2026-11-01.jsonl
 ontology/relations/the-father-and-the-god-of-the-letters.jsonl
 ontology/relations/the-fear-of-the-lord.jsonl
 ontology/relations/the-spirit-and-the-son.jsonl
@@ -350,6 +356,7 @@ ontology/verse-senses.jsonl
 ontology/versions/labels.jsonl
 ontology/word-cards.json
 ontology/word-families.json
+ontology/word-name-links.json
 ontology/word-notes.json
 ontology/word-partners.json
 out/aligned-verses.jsonl.gz
@@ -463,4 +470,3 @@ out/word-equivalents.json
 out/word-families.json
 out/wordpage-data.json.gz
 out/xrefs.jsonl.gz
-data/bible/later-manuscripts.ylt.json

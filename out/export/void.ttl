@@ -16,16 +16,16 @@
     dcterms:title "Bible Ontology" ;
     dcterms:description "A knowledge graph of what the text of the Bible says: its people, places, events and claims, each relation resting on its verses and credited to the voice that makes it." ;
     foaf:homepage <https://bibleontology.org/> ;
-    dcterms:modified "2026-11-01"^^xsd:date ;
-    dcat:version "2026.11.01" ;
+    dcterms:modified "2026-11-11"^^xsd:date ;
+    dcat:version "2026.11.11" ;
     void:uriSpace "https://bibleontology.org/e/" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:creator [ a foaf:Person ; foaf:name "Doug Egge" ] ;
     dcterms:publisher [ a foaf:Person ; foaf:name "Doug Egge" ] ;
     dcterms:source <https://github.com/Clear-Bible/macula-hebrew/>, <https://github.com/Clear-Bible/macula-greek/>, <https://www.STEPBible.org>, <https://bereanbible.com> ;
-    void:vocabulary <https://bibleontology.org/ns/claim#>, <https://bibleontology.org/ns/relation#>, <https://bibleontology.org/ns/meaning#>, <https://bibleontology.org/ns/structure#>, <http://www.w3.org/ns/prov#>, <http://www.w3.org/ns/dqv#> ;
-    void:subset <https://bibleontology.org/dataset/claims-rdf12>, <https://bibleontology.org/dataset/claims>, <https://bibleontology.org/dataset/entities>, <https://bibleontology.org/dataset/ties>, <https://bibleontology.org/dataset/card-words> .
+    void:vocabulary <https://bibleontology.org/ns/claim#>, <https://bibleontology.org/ns/relation#>, <https://bibleontology.org/ns/meaning#>, <https://bibleontology.org/ns/structure#>, <http://www.w3.org/ns/prov#>, <http://www.w3.org/ns/dqv#>, <https://bibleontology.org/ns/biblio#>, <http://iflastandards.info/ns/lrm/lrmoo/> ;
+    void:subset <https://bibleontology.org/dataset/claims-rdf12>, <https://bibleontology.org/dataset/claims>, <https://bibleontology.org/dataset/entities>, <https://bibleontology.org/dataset/ties>, <https://bibleontology.org/dataset/card-words>, <https://bibleontology.org/dataset/psalter> .
 
 <https://bibleontology.org/dataset/claims-rdf12> a void:Dataset, dcat:Dataset ;
     dcterms:title "Claims (RDF 1.2)" ;
@@ -91,3 +91,16 @@
     void:vocabulary <https://bibleontology.org/ns/meaning#>, <http://www.w3.org/ns/dqv#> ;
     void:dataDump <https://github.com/bibleontology/bibleontology/raw/main/out/export/card-words.trig.gz> ;
     dcat:distribution [ a dcat:Distribution ; dcterms:title "card-words.trig.gz" ; dcat:mediaType <https://www.iana.org/assignments/media-types/application/trig> ; dcat:compressFormat <https://www.iana.org/assignments/media-types/application/gzip> ; dcat:downloadURL <https://github.com/bibleontology/bibleontology/raw/main/out/export/card-words.trig.gz> ] .
+
+<https://bibleontology.org/dataset/psalter> a void:Dataset, dcat:Dataset ;
+    dcterms:title "The Psalter as Works" ;
+    dcterms:description "The 150 psalms as LRMoo Works, each with its Hebrew and its Berean English, verse by verse and aligned, the Masoretic order in five books, and who each heading names, as a claim." ;
+    dcterms:isPartOf <https://bibleontology.org/dataset> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:creator [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:publisher [ a foaf:Person ; foaf:name "Doug Egge" ] ;
+    dcterms:source <https://github.com/Clear-Bible/macula-hebrew/>, <https://github.com/Clear-Bible/macula-greek/>, <https://www.STEPBible.org>, <https://bereanbible.com> ;
+    void:vocabulary <https://bibleontology.org/ns/biblio#>, <http://iflastandards.info/ns/lrm/lrmoo/>, <https://bibleontology.org/ns/claim#> ;
+    void:dataDump <https://github.com/bibleontology/bibleontology/raw/main/out/export/psalter.nt.gz> ;
+    dcat:distribution [ a dcat:Distribution ; dcterms:title "psalter.nt.gz" ; dcat:mediaType <https://www.iana.org/assignments/media-types/application/n-triples> ; dcat:compressFormat <https://www.iana.org/assignments/media-types/application/gzip> ; dcat:downloadURL <https://github.com/bibleontology/bibleontology/raw/main/out/export/psalter.nt.gz> ] .

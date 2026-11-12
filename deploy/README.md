@@ -106,6 +106,13 @@ cards silently fall back to 135 entries (2026-10-04):
 cd /srv/bibleontology && PYTHONPATH=src python3 tools/fetch_lexicon.py && sudo systemctl restart bibleontology
 ```
 
+Likewise the UBS dictionaries (CC BY-SA, so never committed; pinned by hash): once the site shows their senses,
+fetch them on the server (OPERATIONS, *The UBS dictionaries are fetched on the server*):
+
+```bash
+cd /srv/bibleontology && python3 tools/fetch_ubs.py && sudo systemctl restart bibleontology
+```
+
 ## 6. Point the domain — IN CLOUDFLARE
 
 DNS → Records → Add record, twice:

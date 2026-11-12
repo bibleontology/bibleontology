@@ -134,6 +134,10 @@ def main():
         check(c5.c.get("cards") == {"david": 1}, f"5: the landing card did not count on the first tap: {c5.c.get('cards')}")
         c5.record("/api/chapter", {"b": ["Ruth"], "c": ["1"]}, 200, 5, "10.8.1.1", PHONE, "", HOST)
         check(c5.c.get("chapters") == {"Ruth 1": 1}, f"5: an engaged reader's chapter: {c5.c.get('chapters')}")
+        # the Navigator, its own tab from 2026-11-08: a reader's centring counts, the farm's does not
+        c5.record("/api/graph", {"id": ["stones"]}, 200, 5, "10.8.1.1", PHONE, "", HOST)
+        c5.record("/api/graph", {"id": ["jacob"]}, 200, 5, "10.7.0.1", DESK, "", HOST)
+        check(c5.c.get("navigator") == {"stones": 1}, f"5: the Navigator's views: {c5.c.get('navigator')}")
         for i in range(30):
             c5.record("/api/search", {"q": [f"x{i}"]}, 200, 5, "10.9.9.9", DESK, "", HOST)
         check(len(c5.pending.get(c5._hash("10.9.9.9", DESK), [])) <= A.PENDING_PER, "5: pending grew past its cap")

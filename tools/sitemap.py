@@ -117,7 +117,8 @@ def main():
         + ["/ns/meaning", "/ns/structure", "/ns/relation",    # the published ontology (2026-10-11)
            "/ns/claim"]                                       # the claim vocabulary (1.1.0, plan 8.1a)
     # the alignment file and the map (1.2.0, plan 8.1e): listed once released
-    pages += [p for p, f in (("/ns/alignment", "alignment.ttl"), ("/ns/map", "map.html"))
+    pages += [p for p, f in (("/ns/alignment", "alignment.ttl"), ("/ns/map", "map.html"),
+                             ("/ns/biblio", "biblio.html"))            # the texts (1.4.0, plan 8.1g)
               if (S.OUT / "ns" / f).exists()]
     # (a theme's imagery side by side, plan 7.6b: its own page, shown once
     # the site's owner has seen it)

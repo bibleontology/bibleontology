@@ -151,7 +151,9 @@ def main(argv=None):
     with open(in_path, encoding="utf-8") as handle:
         entries = json.load(handle)
     extracted = extract(entries, lang, version)
-    with open(out_path, "w", encoding="utf-8") as handle:
+    # newline="\n": the server rebuilds this file and checks it against a pinned hash, so its bytes must not depend on
+    # the platform (on Windows the default wrote CRLF, and the hash pinned there never matched on Linux, 2026-11-05)
+    with open(out_path, "w", encoding="utf-8", newline="\n") as handle:
         for key in sorted(extracted):
             handle.write(json.dumps(extracted[key], ensure_ascii=False) + "\n")
     return 0

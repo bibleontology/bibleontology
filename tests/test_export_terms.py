@@ -22,7 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 import ns_common as N  # noqa: E402
 
-EXPORTS = ["claims-rdf12.trig.gz", "claims.trig.gz", "entities.ttl.gz", "ties.trig.gz", "card-words.trig.gz"]
+EXPORTS = ["claims-rdf12.trig.gz", "claims.trig.gz", "entities.ttl.gz", "ties.trig.gz", "card-words.trig.gz",
+           "psalter.nt.gz"]       # the texts layer, from 1.4.0 (plan 8.1g)
 LICENSE = URIRef("http://purl.org/dc/terms/license")
 VOID = URIRef("http://rdfs.org/ns/void#Dataset")
 STALE = "intended once the copyright filing is received"

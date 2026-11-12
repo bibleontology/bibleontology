@@ -1,0 +1,128 @@
+# The checks for /ns/biblio (plan 8.1g step 2): closed-world, run with inference off.
+# A Work is not its text: it is realised in at least one Expression and created by exactly one creation event that
+# names no agent, date or place. A translation is an Expression of the same Work, never a new Work. A collection
+# incorporates its members' Expressions and never has them as parts. A verse is one Expression's segment. Who
+# composed a text is a claim, never a plain triple.
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lrmoo:   <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix biblio:  <https://bibleontology.org/ns/biblio#> .
+@prefix bsh:     <https://bibleontology.org/ns/biblio/shapes#> .
+
+bsh:prefixes a owl:Ontology ;
+    sh:declare [ sh:prefix "lrmoo" ; sh:namespace "http://iflastandards.info/ns/lrm/lrmoo/"^^xsd:anyURI ] ,
+               [ sh:prefix "biblio" ; sh:namespace "https://bibleontology.org/ns/biblio#"^^xsd:anyURI ] .
+
+bsh:WorkShape a sh:NodeShape ;
+    sh:targetClass lrmoo:F1_Work ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:languageIn ( "en" ) ;
+                  sh:message "A Work has an English label." ] ;
+    sh:property [ sh:path lrmoo:R3_is_realised_in ; sh:minCount 1 ; sh:class lrmoo:F2_Expression ;
+                  sh:message "A Work is realised in at least one Expression: a Work is not its text, and has one." ] ;
+    sh:property [ sh:path [ sh:inversePath lrmoo:R16_created ] ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:class lrmoo:F27_Work_Creation ;
+                  sh:message "A Work has exactly one creation event (LRMoo R16: necessary, one)." ] ;
+    sh:property [ sh:path biblio:composedBy ; sh:maxCount 0 ;
+                  sh:message "Who composed a Work is a reading: a claim, never a plain triple." ] ;
+    sh:property [ sh:path biblio:superscriptionNames ; sh:maxCount 0 ;
+                  sh:message "What a heading names is a reading: a claim, never a plain triple." ] ;
+    sh:not [ sh:or ( [ sh:class lrmoo:F2_Expression ] [ sh:class lrmoo:F3_Manifestation ]
+                     [ sh:class biblio:Section ] [ sh:class biblio:Segment ] [ sh:class biblio:Arrangement ] ) ] ;
+    sh:sparql [
+        sh:message "A collected Work is incorporated by its collection's Expression, never one of its parts (R67 is for parts conceived together as one whole)." ;
+        sh:prefixes bsh:prefixes ;
+        sh:select """SELECT $this ?part WHERE {
+            $this lrmoo:R67_has_part ?part .
+            ?entry biblio:member ?part ; biblio:inArrangement ?arr .
+            ?arr biblio:arrangementOf $this .
+        }""" ] .
+
+bsh:ExpressionShape a sh:NodeShape ;
+    sh:targetClass lrmoo:F2_Expression ;
+    sh:property [ sh:path [ sh:inversePath lrmoo:R3_is_realised_in ] ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:class lrmoo:F1_Work ;
+                  sh:message "An Expression realises exactly one Work." ] ;
+    sh:property [ sh:path dcterms:language ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ;
+                  sh:message "An Expression has exactly one language: a second language is a second Expression." ] ;
+    sh:property [ sh:path biblio:translationOf ; sh:maxCount 1 ; sh:class lrmoo:F2_Expression ;
+                  sh:message "A translation is made from one Expression." ] ;
+    sh:property [ sh:path lrmoo:R75_incorporates ; sh:class lrmoo:F2_Expression ] ;
+    sh:sparql [
+        sh:message "A translation realises the same Work as its source: a translation is never a new Work." ;
+        sh:prefixes bsh:prefixes ;
+        sh:select """SELECT $this ?src WHERE {
+            $this biblio:translationOf ?src .
+            FILTER NOT EXISTS { ?w lrmoo:R3_is_realised_in $this , ?src . }
+        }""" ] ;
+    sh:sparql [
+        sh:message "An Expression incorporates another only where that one realises a different Work (LRMoo R75); a part of the same Work is not incorporated." ;
+        sh:prefixes bsh:prefixes ;
+        sh:select """SELECT $this ?inner WHERE {
+            $this lrmoo:R75_incorporates ?inner .
+            ?w lrmoo:R3_is_realised_in $this , ?inner .
+        }""" ] .
+
+bsh:ManifestationShape a sh:NodeShape ;
+    sh:targetClass lrmoo:F3_Manifestation ;
+    sh:property [ sh:path lrmoo:R4_embodies ; sh:minCount 1 ; sh:class lrmoo:F2_Expression ;
+                  sh:message "A Manifestation embodies at least one Expression." ] ;
+    sh:property [ sh:path dcterms:source ; sh:minCount 1 ; sh:nodeKind sh:IRI ;
+                  sh:message "A Manifestation links where it is published." ] .
+
+bsh:WorkCreationShape a sh:NodeShape ;
+    sh:targetClass lrmoo:F27_Work_Creation ;
+    sh:closed true ; sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:path lrmoo:R16_created ; sh:minCount 1 ; sh:class lrmoo:F1_Work ;
+                  sh:message "A creation event says what it created, and nothing the text does not give: no agent, date or place." ] .
+
+bsh:SegmentShape a sh:NodeShape ;
+    sh:targetClass biblio:Segment ;
+    sh:property [ sh:path biblio:segmentOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:class lrmoo:F2_Expression ;
+                  sh:message "A segment is one Expression's: two texts never share a verse." ] ;
+    sh:property [ sh:path biblio:segmentNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path biblio:alignedWith ; sh:class biblio:Segment ] ;
+    sh:sparql [
+        sh:message "Aligned segments are verses of two Expressions of the same Work." ;
+        sh:prefixes bsh:prefixes ;
+        sh:select """SELECT $this ?other WHERE {
+            $this biblio:alignedWith ?other ; biblio:segmentOf ?a .
+            ?other biblio:segmentOf ?b .
+            FILTER (?a = ?b || NOT EXISTS { ?w lrmoo:R3_is_realised_in ?a , ?b . })
+        }""" ] .
+
+bsh:ArrangementShape a sh:NodeShape ;
+    sh:targetClass biblio:Arrangement ;
+    sh:property [ sh:path biblio:arrangementOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:class lrmoo:F1_Work ;
+                  sh:message "An arrangement orders exactly one collection." ] ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ;
+                  sh:message "An arrangement says whose order it is." ] .
+
+bsh:SectionShape a sh:NodeShape ;
+    sh:targetClass biblio:Section ;
+    sh:property [ sh:path biblio:sectionOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:class biblio:Arrangement ] ;
+    sh:property [ sh:path biblio:firstPosition ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ;
+                  sh:lessThanOrEquals biblio:lastPosition ] ;
+    sh:property [ sh:path biblio:lastPosition ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ] .
+
+bsh:ArrangementEntryShape a sh:NodeShape ;
+    sh:targetClass biblio:ArrangementEntry ;
+    sh:property [ sh:path biblio:member ; sh:minCount 1 ; sh:maxCount 1 ; sh:class lrmoo:F1_Work ] ;
+    sh:property [ sh:path biblio:inArrangement ; sh:minCount 1 ; sh:maxCount 1 ; sh:class biblio:Arrangement ] ;
+    sh:property [ sh:path biblio:position ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path biblio:inSection ; sh:maxCount 1 ; sh:class biblio:Section ] ;
+    sh:property [ sh:path biblio:positionInSection ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:sparql [
+        sh:message "An entry's section divides the entry's own arrangement, and its position falls inside the section." ;
+        sh:prefixes bsh:prefixes ;
+        sh:select """SELECT $this ?sec WHERE {
+            $this biblio:inSection ?sec ; biblio:inArrangement ?arr ; biblio:position ?p .
+            ?sec biblio:firstPosition ?f ; biblio:lastPosition ?l .
+            OPTIONAL { ?sec biblio:sectionOf ?of . }
+            FILTER (!BOUND(?of) || ?of != ?arr || ?p < ?f || ?p > ?l)
+        }""" ] .

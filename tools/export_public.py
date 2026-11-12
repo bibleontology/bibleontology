@@ -40,7 +40,9 @@ folder (data/raw/ holds the KJV) never travels (the security seat, finding 1).
 
   KJV         a six-word run found in the KJV and in none of the Berean, ASV,
               WEB or YLT; the KJV files by name
-  secrets     private keys, tokens and keys of the usual formats
+  UBS         an eight-word run of a UBS dictionary definition (CC BY-SA) found
+              in none of those texts, but the named common phrases
+  secrets    private keys, tokens and keys of the usual formats
   personal    the owner's personal mail domain and local user name; any
               email but the project's and the crawler contacts the tests quote
   readers     every note id and reader name in the private notes backlog
@@ -69,7 +71,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC: tuple[str, ...] = (
     "app2/*", "src/*", "tools/*", "tests/*", "deploy/*", "pyproject.toml",
     "ontology/entities/*", "ontology/relations/*", "ontology/schema/*", "ontology/meaning/*",
-    "ontology/claim/*", "ontology/align/*", "ontology/themes/*", "ontology/concept-hubs/*",
+    "ontology/claim/*", "ontology/biblio/*", "ontology/align/*", "ontology/themes/*", "ontology/concept-hubs/*",
     # the question cards and the traditions' own words (2026-10-26), each only once shown: see unshown()
     "ontology/questions/*", "ontology/traditions/*",
     "ontology/numbers/*", "ontology/versions/*", "ontology/events/*.json", "ontology/provenance/*",
@@ -84,6 +86,7 @@ PUBLIC: tuple[str, ...] = (
     "data/bible/verses.ylt.jsonl",
     "docs/PRINCIPLES.md", "docs/rdf-1.2-in-practice.md", "docs/a-cheap-model-as-a-contractor.md",
     "docs/a-bible-knowledge-graph-ai-assistants-can-ask.md",       # the MCP flagship (plan 8.7; Doug, 2026-11-02)
+    "docs/who-wrote-psalm-73.md",       # the LRM write-up, released with 1.4.0 (plan 8.1g step 6; Doug, 2026-11-11)
     "README.md", "LICENSE", "LICENSE-DATA", "LICENSING.md", "NOTICE", "SOURCES.md", "CITATION.cff",
     "CONTRIBUTING.md", "CHANGELOG.md", "SECURITY.md", ".github/ISSUE_TEMPLATE/*",
     # line endings and binaries: without it a Windows clone's git add corrupts
@@ -416,6 +419,53 @@ def kjv_only_runs(n: int = 6) -> set[tuple]:
     return kjv - other
 
 
+UBS_RUN = 8
+UBS_FILES = ("ubs-hebrew.jsonl", "ubs-greek.jsonl")
+
+
+def ubs_only_runs(n: int = UBS_RUN) -> set[tuple]:
+    """Runs of n words in the UBS dictionaries' definitions and in none of the
+    Bible texts published beside them. The UBS text is CC BY-SA 4.0 and the
+    graph is CC BY 4.0: it is shown on the site, credited, and never enters
+    this copy (docs/review/permissions/sdbh-2026-11-02.md). The site reads the
+    same extracts, so they are the detector."""
+    ubs_dir = ROOT / "data" / "raw" / "ubs"
+    missing = [f for f in UBS_FILES if not (ubs_dir / f).exists()]
+    if missing:
+        raise SystemExit(f"data/raw/ubs/{missing[0]} missing: the UBS extracts are the detector for share-alike "
+                         "text and must be on this machine (copy data/raw/ubs/ from a worktree that has it)")
+    ubs = set()
+    for name in UBS_FILES:
+        for line in open(ubs_dir / name, encoding="utf-8"):
+            for s in json.loads(line).get("senses") or []:
+                for text in (s.get("short") or "", s.get("long") or ""):
+                    w = words(text)
+                    ubs.update(tuple(w[i:i + n]) for i in range(len(w) - n + 1))
+    for t in ("bsb", "asv", "web", "ylt"):
+        for line in open(ROOT / "data" / "bible" / f"verses.{t}.jsonl", encoding="utf-8"):
+            r = json.loads(line)
+            if "t" in r:
+                w = words(r["t"])
+                ubs.difference_update(tuple(w[i:i + n]) for i in range(len(w) - n + 1))
+    return ubs - UBS_EXEMPT_RUNS
+
+
+# Eight-word runs a UBS definition shares with the graph's own text, measured 2026-11-04 on the whole copy: each is
+# a common biblical phrase ("at the foot of the Mount of Olives") in files written before the UBS dictionaries were
+# downloaded (2026-11-02), not a definition copied. Named here so the exemption is visible; any other run refuses.
+UBS_EXEMPT_RUNS = frozenset(tuple(r.split()) for r in (
+    "at the foot of the mount of olives", "garden at the foot of the mount of",
+    "his hand to the plow and looks back", "puts his hand to the plow and looks",
+    "of the bread of the presence in the", "table of the bread of the presence in",
+    "the bread of the presence in the tabernacle", "the table of the bread of the presence",
+    "to turn to the right or to the", "who did evil in the sight of the",
+))
+
+
+def ubs_hits(w: list[str], runs: set, n: int = UBS_RUN) -> int:
+    return sum(1 for i in range(len(w) - n + 1) if tuple(w[i:i + n]) in runs)
+
+
 def private_readers() -> tuple[set[str], set[str]]:
     """Note ids and reader names, read from the private backlog at scan time
     (never written into this tool)."""
@@ -448,7 +498,8 @@ REHEARSAL = False
 COMMENT = re.compile(r"(?:#|//|/\*|<!--|\*)(.*)$", re.M)
 
 
-def scan(texts: dict[str, str], kjv_runs, ids: set, names: set, emails_ok=EMAIL_OK) -> dict[str, list]:
+def scan(texts: dict[str, str], kjv_runs, ids: set, names: set, emails_ok=EMAIL_OK,
+         ubs_runs: set = frozenset()) -> dict[str, list]:
     runs6, runs8 = kjv_runs
     found = defaultdict(list)
     names_re = re.compile(r"\b(" + "|".join(map(re.escape, sorted(names))) + r")\b") if names else None
@@ -461,6 +512,10 @@ def scan(texts: dict[str, str], kjv_runs, ids: set, names: set, emails_ok=EMAIL_
         hits = kjv_hits(words(bare), runs6, runs8)
         if hits:
             found["KJV text"].append(f"{f} ({hits} runs)")
+        # the UBS dictionaries are share-alike, the graph is not
+        hits = ubs_hits(words(t), ubs_runs)
+        if hits:
+            found["UBS text (CC BY-SA)"].append(f"{f} ({hits} runs)")
         for rx, why in SECRET:
             if rx.search(t):
                 found["secret: " + why].append(f)
@@ -532,7 +587,7 @@ def build(check_only: bool, dest: Path | None) -> int:
         out[f] = data
         texts[f] = data.decode("utf-8")
     ids, names = private_readers()
-    found = scan(texts, (kjv_only_runs(6), kjv_only_runs(8)), ids, names)
+    found = scan(texts, (kjv_only_runs(6), kjv_only_runs(8)), ids, names, ubs_runs=ubs_only_runs())
     if found:
         print(f"REFUSING: {sum(len(v) for v in found.values())} findings")
         for k, v in sorted(found.items()):
@@ -541,7 +596,7 @@ def build(check_only: bool, dest: Path | None) -> int:
                 print(f"    {x}")
         print("Nothing was written.")
         return 1
-    print("scans clean: KJV, secrets, personal, readers, private documents, family, public IP addresses")
+    print("scans clean: KJV, UBS, secrets, personal, readers, private documents, family, public IP addresses")
     if check_only:
         return 0
     # NO PUBLIC COPY UNTIL THE GRAPH'S LICENCE IS GRANTED (the simulated
@@ -583,8 +638,14 @@ def selftest() -> int:
     """Each scan must catch a planted fault, and each clean must clean."""
     runs = (kjv_only_runs(6), kjv_only_runs(8))
     kjv_sample = " ".join(next(r for r in runs[0] if archaic(r)))
+    ubs = ubs_only_runs()
+    # a whole sense as the site will serve it, the shortest definition that is long enough to be caught
+    with open(ROOT / "data" / "raw" / "ubs" / "ubs-greek.jsonl", encoding="utf-8") as fh:
+        ubs_sense = min((s for line in fh for s in json.loads(line)["senses"] if ubs_hits(words(s["short"]), ubs)),
+                        key=lambda s: len(s["short"]))
     plants = {
         "KJV text": {"a.md": f"as it is written, {kjv_sample}."},
+        "UBS text (CC BY-SA)": {"u.jsonl": json.dumps({"id": "w", "senses": [ubs_sense]}, ensure_ascii=False)},
         "secret: a private key": {"c.txt": "-----BEGIN OPENSSH PRIVATE KEY-----"},
         "email": {"d.md": "write to someone@example.org"},
         "personal": {"e.py": "# by douge"},
@@ -597,9 +658,12 @@ def selftest() -> int:
     }
     fails = []
     for kind, files in plants.items():
-        got = scan(files, runs, {"0123456789"}, {"Zebedina"})
+        got = scan(files, runs, {"0123456789"}, {"Zebedina"}, ubs_runs=ubs)
         if kind not in got:
             fails.append(f"planted {kind} not caught")
+    # the named common phrases pass, and nothing else is exempt
+    if scan({"v.md": " ".join(" ".join(r) for r in UBS_EXEMPT_RUNS)}, runs, set(), set(), ubs_runs=ubs):
+        fails.append("an exempt UBS run was flagged")
     row = json.dumps({"id": "x", "note": "n", "note_kjv": "unto thee", "name_kjv": "Elias", "kjv": "thy own soul"})
     cleaned = json.loads(clean_text("r.jsonl", row))
     if any(k.endswith("_kjv") or k == "kjv" for k in cleaned) or cleaned.get("note") != "n":

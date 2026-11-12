@@ -1,19 +1,185 @@
-# Bible Ontology -- SHACL shapes, version 1.3.0 (2026-11-01).
+# Bible Ontology -- SHACL shapes, version 1.4.0 (2026-11-11).
 # Closed-world checks for the graph: what the vocabularies at /ns/meaning, /ns/structure
 # and /ns/relation describe, checked here rather than inferred. Run with inference off.
 # (c) 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org).
 # Licence: https://creativecommons.org/licenses/by/4.0/
+@prefix biblio: <https://bibleontology.org/ns/biblio#> .
 @prefix bom: <https://bibleontology.org/ns/meaning#> .
 @prefix bor: <https://bibleontology.org/ns/relation#> .
 @prefix bos: <https://bibleontology.org/ns/structure#> .
 @prefix bosh: <https://bibleontology.org/ns/meaning/shapes#> .
 @prefix bow: <https://bibleontology.org/ns/word#> .
+@prefix bsh: <https://bibleontology.org/ns/biblio/shapes#> .
 @prefix claim: <https://bibleontology.org/ns/claim#> .
 @prefix csh: <https://bibleontology.org/ns/claim/shapes#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bsh:ArrangementEntryShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F1_Work ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:member ],
+        [ sh:class biblio:Arrangement ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:inArrangement ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:position ],
+        [ sh:class biblio:Section ;
+            sh:maxCount 1 ;
+            sh:path biblio:inSection ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:path biblio:positionInSection ] ;
+    sh:sparql [ sh:message "An entry's section divides the entry's own arrangement, and its position falls inside the section." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?sec WHERE {
+            $this biblio:inSection ?sec ; biblio:inArrangement ?arr ; biblio:position ?p .
+            ?sec biblio:firstPosition ?f ; biblio:lastPosition ?l .
+            OPTIONAL { ?sec biblio:sectionOf ?of . }
+            FILTER (!BOUND(?of) || ?of != ?arr || ?p < ?f || ?p > ?l)
+        }""" ] ;
+    sh:targetClass biblio:ArrangementEntry .
+
+bsh:ArrangementShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F1_Work ;
+            sh:maxCount 1 ;
+            sh:message "An arrangement orders exactly one collection." ;
+            sh:minCount 1 ;
+            sh:path biblio:arrangementOf ],
+        [ sh:message "An arrangement says whose order it is." ;
+            sh:minCount 1 ;
+            sh:path rdfs:label ] ;
+    sh:targetClass biblio:Arrangement .
+
+bsh:ExpressionShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F1_Work ;
+            sh:maxCount 1 ;
+            sh:message "An Expression realises exactly one Work." ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath lrmoo:R3_is_realised_in ] ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:message "An Expression has exactly one language: a second language is a second Expression." ;
+            sh:minCount 1 ;
+            sh:path dcterms:language ],
+        [ sh:class lrmoo:F2_Expression ;
+            sh:maxCount 1 ;
+            sh:message "A translation is made from one Expression." ;
+            sh:path biblio:translationOf ],
+        [ sh:class lrmoo:F2_Expression ;
+            sh:path lrmoo:R75_incorporates ] ;
+    sh:sparql [ sh:message "A translation realises the same Work as its source: a translation is never a new Work." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?src WHERE {
+            $this biblio:translationOf ?src .
+            FILTER NOT EXISTS { ?w lrmoo:R3_is_realised_in $this , ?src . }
+        }""" ],
+        [ sh:message "An Expression incorporates another only where that one realises a different Work (LRMoo R75); a part of the same Work is not incorporated." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?inner WHERE {
+            $this lrmoo:R75_incorporates ?inner .
+            ?w lrmoo:R3_is_realised_in $this , ?inner .
+        }""" ] ;
+    sh:targetClass lrmoo:F2_Expression .
+
+bsh:ManifestationShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F2_Expression ;
+            sh:message "A Manifestation embodies at least one Expression." ;
+            sh:minCount 1 ;
+            sh:path lrmoo:R4_embodies ],
+        [ sh:message "A Manifestation links where it is published." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path dcterms:source ] ;
+    sh:targetClass lrmoo:F3_Manifestation .
+
+bsh:SectionShape a sh:NodeShape ;
+    sh:property [ sh:class biblio:Arrangement ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:sectionOf ],
+        [ sh:datatype xsd:integer ;
+            sh:lessThanOrEquals biblio:lastPosition ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:firstPosition ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:lastPosition ],
+        [ sh:minCount 1 ;
+            sh:path rdfs:label ] ;
+    sh:targetClass biblio:Section .
+
+bsh:SegmentShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F2_Expression ;
+            sh:maxCount 1 ;
+            sh:message "A segment is one Expression's: two texts never share a verse." ;
+            sh:minCount 1 ;
+            sh:path biblio:segmentOf ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:segmentNumber ],
+        [ sh:class biblio:Segment ;
+            sh:path biblio:alignedWith ] ;
+    sh:sparql [ sh:message "Aligned segments are verses of two Expressions of the same Work." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?other WHERE {
+            $this biblio:alignedWith ?other ; biblio:segmentOf ?a .
+            ?other biblio:segmentOf ?b .
+            FILTER (?a = ?b || NOT EXISTS { ?w lrmoo:R3_is_realised_in ?a , ?b . })
+        }""" ] ;
+    sh:targetClass biblio:Segment .
+
+bsh:WorkCreationShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class lrmoo:F1_Work ;
+            sh:message "A creation event says what it created, and nothing the text does not give: no agent, date or place." ;
+            sh:minCount 1 ;
+            sh:path lrmoo:R16_created ] ;
+    sh:targetClass lrmoo:F27_Work_Creation .
+
+bsh:WorkShape a sh:NodeShape ;
+    sh:not [ sh:or ( [ sh:class lrmoo:F2_Expression ] [ sh:class lrmoo:F3_Manifestation ] [ sh:class biblio:Section ] [ sh:class biblio:Segment ] [ sh:class biblio:Arrangement ] ) ] ;
+    sh:property [ sh:languageIn ( "en" ) ;
+            sh:message "A Work has an English label." ;
+            sh:minCount 1 ;
+            sh:path rdfs:label ],
+        [ sh:class lrmoo:F2_Expression ;
+            sh:message "A Work is realised in at least one Expression: a Work is not its text, and has one." ;
+            sh:minCount 1 ;
+            sh:path lrmoo:R3_is_realised_in ],
+        [ sh:class lrmoo:F27_Work_Creation ;
+            sh:maxCount 1 ;
+            sh:message "A Work has exactly one creation event (LRMoo R16: necessary, one)." ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath lrmoo:R16_created ] ],
+        [ sh:maxCount 0 ;
+            sh:message "Who composed a Work is a reading: a claim, never a plain triple." ;
+            sh:path biblio:composedBy ],
+        [ sh:maxCount 0 ;
+            sh:message "What a heading names is a reading: a claim, never a plain triple." ;
+            sh:path biblio:superscriptionNames ] ;
+    sh:sparql [ sh:message "A collected Work is incorporated by its collection's Expression, never one of its parts (R67 is for parts conceived together as one whole)." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?part WHERE {
+            $this lrmoo:R67_has_part ?part .
+            ?entry biblio:member ?part ; biblio:inArrangement ?arr .
+            ?arr biblio:arrangementOf $this .
+        }""" ] ;
+    sh:targetClass lrmoo:F1_Work .
 
 csh:ClaimShape a sh:NodeShape ;
     sh:property [ sh:maxCount 1 ;
@@ -30,11 +196,11 @@ csh:ClaimShape a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:path claim:readBy ],
         [ sh:maxCount 1 ;
-            sh:message "A claim has exactly one relation, from /ns/relation, or claim:says for a reporting speaker's claim." ;
+            sh:message "A claim has exactly one relation, from /ns/relation, claim:says for a reporting speaker's claim, or a heading's reading from /ns/biblio." ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path claim:relation ;
-            sh:pattern "^https://bibleontology.org/ns/(relation#|claim#says$)" ],
+            sh:pattern "^https://bibleontology.org/ns/(relation#|claim#says$|biblio#(composedBy|superscriptionNames)$)" ],
         [ sh:maxCount 1 ;
             sh:message "A claim has exactly one object." ;
             sh:minCount 1 ;
@@ -752,6 +918,16 @@ bor:killed_subjectShape a sh:NodeShape ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:killed .
 
+bor:kind_of_objectShape a sh:NodeShape ;
+    sh:message "The object of kind_of must be one of: Animal, Artifact" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] ) ;
+    sh:targetObjectsOf bor:kind_of .
+
+bor:kind_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of kind_of must be one of: Animal, Artifact" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] ) ;
+    sh:targetSubjectsOf bor:kind_of .
+
 bor:knows_objectShape a sh:NodeShape ;
     sh:message "The object of knows must be one of: Concept, Event, Group, PersonalBeing, Place, Saying" ;
     sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] ) ;
@@ -977,6 +1153,16 @@ bor:servant_of_subjectShape a sh:NodeShape ;
     sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:servant_of .
 
+bor:served_objectShape a sh:NodeShape ;
+    sh:message "The object of served must be one of: Animal, Artifact, Concept, Image, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:served .
+
+bor:served_subjectShape a sh:NodeShape ;
+    sh:message "The subject of served must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:served .
+
 bor:signifies_objectShape a sh:NodeShape ;
     sh:message "The object of signifies must be one of: Animal, Artifact, Communication, Concept, Event, Group, PersonalBeing, Place, Saying, Title" ;
     sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
@@ -1081,6 +1267,16 @@ bor:wore_subjectShape a sh:NodeShape ;
     sh:message "The subject of wore must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:wore .
+
+bor:worshiped_objectShape a sh:NodeShape ;
+    sh:message "The object of worshiped must be one of: Animal, Artifact, Concept, Image, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:worshiped .
+
+bor:worshiped_subjectShape a sh:NodeShape ;
+    sh:message "The subject of worshiped must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:worshiped .
 
 bos:addressee_objectShape a sh:NodeShape ;
     sh:message "Object of addressee must be one of: Word, Composite" ;
@@ -1196,4 +1392,10 @@ bos:v_objectShape a sh:NodeShape ;
     sh:message "Object of v must be one of: Verb, Composite, Word" ;
     sh:or ( [ sh:class bos:Verb ] [ sh:class bos:Composite ] [ sh:class bos:Word ] ) ;
     sh:targetObjectsOf bos:v .
+
+bsh:prefixes a owl:Ontology ;
+    sh:declare [ sh:namespace "http://iflastandards.info/ns/lrm/lrmoo/"^^xsd:anyURI ;
+            sh:prefix "lrmoo" ],
+        [ sh:namespace "https://bibleontology.org/ns/biblio#"^^xsd:anyURI ;
+            sh:prefix "biblio" ] .
 

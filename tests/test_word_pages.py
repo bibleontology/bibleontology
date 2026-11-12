@@ -114,7 +114,9 @@ check(not [k for k, t in defs.items() if lemma._KJV.search(t)],
       "lexicon entries naming the KJV: " + ", ".join([k for k, t in defs.items() if lemma._KJV.search(t)][:8]))
 colon = [k for k, v in d["lex"].items() if ":" in (v.get("gloss") or "")]
 check(not colon, f"{len(colon)} headline glosses still hold a colon: {colon[:6]}")
-whole = len(defs) > 5000
+# the full Greek lexicon (STEP's, fetched): counted in Greek alone, since Strong's Hebrew (8,674 entries, committed)
+# passed a count of both in the public copy that had no Greek lexicon (the gate, 2026-11-11)
+whole = sum(1 for k in defs if k[:1] == "g") > 3000
 print(f"{len(defs):,} lexicon entries held" + ("" if whole else " (the committed extract only: the full lexicon is not on this machine)"))
 if whole:
     check(c157.get("short") == "to love", f"H157 is headed {c157.get('short')!r}")
@@ -125,11 +127,248 @@ if whole:
               "H157's lexicon entry is cut off")
         check(c430.get("definition_credit"), "an entry with no credit")
     else:
-        # withheld until the owner rules on the Online Bible note (2026-10-26): none may leak
-        check(not c157.get("definition") and not c430.get("definition"), "a withheld Hebrew entry is shown")
+        # the abridged BDB is withheld until the owner rules on the Online Bible note (2026-10-26): none may leak.
+        # Since 2026-11-07 a Hebrew entry is Strong's own dictionary instead (tests/test_strongs_hebrew.py), so the
+        # entry must be exactly Strong's, credited as Strong's, and never the BDB's outline
+        sh = S.strongs_hebrew()
+        for c_, k_ in ((c157, "h157"), (c430, "h430")):
+            check((c_.get("definition") or "").startswith(sh[k_]["definition"]) and "1a)" not in (c_.get("definition") or ""),
+                  f"{k_}: the Hebrew entry is not Strong's: {(c_.get('definition') or '')[:60]!r}")
+            check("Strong's Hebrew Dictionary" in (c_.get("definition_credit") or ""), f"{k_}: not credited as Strong's")
         g26 = S.json.loads(S.answer("/api/sense", S.urlencode({"key": "g26"})))
         check(len(g26.get("definition") or "") > 100 and g26.get("definition_credit"),
               "the Greek entries went with the Hebrew ones")
+    # G2411, THE TEMPLE, HEADED AS THE NOUN (2026-10-27 the headword; 2026-11-07 the rest, Doug: "make sure that
+    # there isn't still a real or perceived G2411 headword issue"). ἱερόν leads on the card and its page, ἱερός
+    # (G2413's adjective, which MACULA files both under) is named beside it, the page says which of Abbott-Smith's
+    # senses are the noun's, and STEP's mis-tagged "I Esd.-4 Mac." no longer reads as Esther 1:1-58
+    g2411 = S.json.loads(S.answer("/api/sense", S.urlencode({"key": "g2411"})))
+    pg = S.word_page("G2411")
+    check(g2411.get("lemma") == "ἱερόν" and (g2411.get("lemma_also") or {}).get("form") == "ἱερός",
+          f"G2411 is headed {g2411.get('lemma')!r}, beside {(g2411.get('lemma_also') or {}).get('form')!r}")
+    check(pg and pg[0].count("<title>ἱερόν ") == 1, "G2411's page is not titled ἱερόν")
+    check(pg and "The senses that cite this word" in pg[1], "G2411's page does not say which senses are the noun's")
+    # A LETTERED CODE THAT IS ANOTHER WORD KEEPS ITS OWN KEY (2026-11-07, A.48 audit round 1): the Aramaic article
+    # (0001b) was counted as H1 "father" (1,314 verses, "O king" among its renderings), "and" (2050b) under H2050, a
+    # verb used once, "like" and suffixes under Jetheth (H3509). Variants Strong's merges stay merged
+    vo = S._verses_of(d)
+    check(len(vo.get("h1", ())) < 1100 and "Dan.2.29" not in vo.get("h1", ()), f"H1 holds {len(vo.get('h1', ()))} verses")
+    check(len(vo.get("h2050", ())) < 10 and len(vo.get("h3509", ())) < 10, "H2050 or H3509 still holds a prefix's or suffix's uses")
+    check({"h1b", "h2050b", "h3509a"} <= S._SPLIT_CODES, "the article, 'and' or 'like' is not split off")
+    check(not {"h1931a", "h7451b", "h859a"} & S._SPLIT_CODES, "a variant Strong's merges (הִיא, רָעָה, אַתֶּם) was split")
+    saved = S._SPLIT_CODES
+    S._SPLIT_CODES = set()
+    try:
+        check(S.sense_key("hebrew", "0001b") == "h1", "planted: the collapse (no split codes) was not reproduced")
+    finally:
+        S._SPLIT_CODES = saved
+    check(S.sense_key("hebrew", "0001b") == "h1b", "the Aramaic article still keys as H1")
+    # A BASE THE SPLIT-OFF CODE OUTNUMBERS KEEPS NOTHING OF ITS DATA (2026-11-10, audit round 7): Dothan read "and"
+    # with the Greek καί beside it, Jetheth "like", light and wailing the article's Septuagint and role rows. H1
+    # "father" outnumbers its split-off article and keeps πατήρ
+    for k, want_g in (("h1886", "Dothan"), ("h3509", "Jetheth"), ("h3641", "Calneh")):
+        c = S.api_sense(d, {"key": [k]})
+        check((c.get("gloss") or "").startswith(want_g) and not c.get("lxx"),
+              f"{k.upper()} reads {c.get('gloss')!r} with {len(c.get('lxx') or [])} Septuagint rows")
+    check(S.api_sense(d, {"key": ["h1"]}).get("lxx"), "H1 father lost its Septuagint rows")
+    # A NAME SAYS WHAT IT NAMES AND LINKS TO ITS CARD (Doug, 2026-11-10, on Dothan: "not immediately clear to me that
+    # it is a town/place ... the word is not connected to a place (meaning) card"), on the card, the served page and
+    # the Navigator, both ways; a word that is not a name says nothing of the kind
+    def name_faults():
+        f = []
+        for k, kind, eid in (("h1886", "a place", "dothan"), ("h3641", "a place", "calneh"),
+                             ("g2491", "a man's name", "john_the_baptist")):
+            c = S.api_sense(d, {"key": [k]})
+            if c.get("name_kind") != kind or eid not in [x["id"] for x in c.get("names") or []]:
+                f.append(f"{k.upper()} reads {c.get('name_kind')!r}, names {[x['id'] for x in c.get('names') or []]}")
+            pg = S.word_page(k.upper())
+            if not pg or f'href="/e/{S._addr(eid)}"' not in pg[1]:
+                f.append(f"{k.upper()}'s page does not link {eid}")
+        if not any(e["target"] == "dothan" for e in S.api_graph(d, {"id": ["word:h1886"]})["edges"]):
+            f.append("the Navigator does not draw Dothan from its word")
+        if not any(e["source"] == "word:h1886" for e in S.api_graph(d, {"id": ["dothan"]})["edges"]):
+            f.append("the Navigator does not draw Dothan's word from its card")
+        if S.api_sense(d, {"key": ["g3485"]}).get("name_kind"):
+            f.append("ναός is called a name")
+        # the judged links (ontology/word-name-links.json): Meshach is Mishael; Nebat, Jeroboam's father, links to no
+        # one (the Mac took him for his son; rejected in the provenance)
+        if "mishael_daniels_friend" not in [x["id"] for x in S.names_of_word(d, "h4335")]:
+            f.append("Meshach does not link Mishael")
+        if S.names_of_word(d, "h5028"):
+            f.append(f"Nebat links {[x['id'] for x in S.names_of_word(d, 'h5028')]}")
+        return f
+    for f in name_faults():
+        check(False, f)
+    # A VERB USED ONLY IN ITS DERIVED STEMS IS HEADED BY ITS ROOT FORM, AND A NAME'S SEPTUAGINT ROW IS THE NAME
+    # (audit round 5): כָּפַר not its Piel כִּפֶּר; Eliam without αξιτοφελ (Ahithophel, the next name in 2 Sam 23:34);
+    # Egypt keeps Αἴγυπτος, a row seen more than once
+    nf = lambda s: S.unicodedata.normalize("NFC", s or "")  # noqa: E731
+    c = S.api_sense(d, {"key": ["h3722"]})
+    check(nf(c.get("lemma")) == nf("כָּפַר") and nf((c.get("lemma_also") or {}).get("form")) == nf("כִּפֶּר"),
+          f"H3722 is headed {c.get('lemma')!r} beside {(c.get('lemma_also') or {}).get('form')!r}")
+    lx = lambda k: [nf(x["word"]) for x in S.lxx_of(d, k)]  # noqa: E731
+    check("αξιτοφελ" not in lx("h463") and "ελιαβ" in lx("h463"), f"Eliam's Septuagint rows: {lx('h463')}")
+    check(any(w.startswith(nf("αἰγύπτ")) for w in lx("h4714")), f"Egypt lost Αἴγυπτος: {lx('h4714')}")
+    saved_k = S.name_kind
+    S.name_kind = lambda d_, k: None
+    try:   # planted: without the name rule, Ahithophel is Eliam's Greek again
+        check("αξιτοφελ" in lx("h463"), "planted: αξιτοφελ under Eliam was not reproduced")
+    finally:
+        S.name_kind = saved_k
+    # SLIPS IN THE FREE LEXICONS (audit round 6): each repair took (its right text is in the entry, its wrong gone);
+    # a repair whose wrong text is not in the source would do nothing, silently
+    for k, pairs in S.SOURCE_SLIPS.items():
+        t = (d["lex"].get(k) or {}).get("definition") or ""
+        for wrong, right in pairs:
+            check(right in t and wrong not in t, f"{k.upper()}: the slip {wrong!r} -> {right!r} did not take")
+    check(S._source_slips("g1715", "ὁμολουεῖν") == "ὁμολογεῖν" and S._source_slips("g26", "ὁμολουεῖν") == "ὁμολουεῖν",
+          "a slip repaired on the wrong entry, or not on its own")
+    saved_n, saved_c = S._WORD_NAMES, S._CARD_WORDS
+    S._WORD_NAMES, S._CARD_WORDS = {"h1886": []}, None
+    try:   # planted: the index without Dothan's link (it had no name-map entry), as before 2026-11-10
+        check(any("H1886" in f for f in name_faults()), "planted: Dothan without its place card was not caught")
+    finally:
+        S._WORD_NAMES, S._CARD_WORDS = saved_n, None
+    saved = S._clean_split_base
+    S._clean_split_base = lambda d, out: None
+    try:   # planted: the cleanup off, Dothan reads the merged code's word again
+        check(not (S.api_sense(d, {"key": ["h1886"]}).get("gloss") or "").startswith("Dothan") or
+              S.api_sense(d, {"key": ["h1886"]}).get("lxx"), "planted: Dothan without the cleanup was not reproduced")
+    finally:
+        S._clean_split_base = saved
+    # A FORM STRONG'S NUMBERS APART SAYS WHERE ITS USES ARE COUNTED (2026-11-07, audit round 1): ἦν, ἐστί, εἶναι
+    # and εἶπον said "used 0 times" over UBS senses with 94 verses. And a spelling that is only accentless-equal is
+    # not the word: ἦ "surely" is not the article, ὅρος "boundary" is not ὄρος "mountain"
+    want = {"g2258": "g1510", "g2076": "g1510", "g1511": "g1510", "g2036": "g3004", "g2400": "g3708", "h1524a": "h1524"}
+    for k, to in want.items():
+        cu = S.api_sense(d, {"key": [k]}).get("counted_under") or {}
+        check(cu.get("key") == to, f"{k.upper()} is not counted under {to.upper()}: {cu}")
+    check((S.counted_under(d, "g2076") or {}).get("n", 0) > 800, "ἐστί does not count its ἐστίν")
+    for k in ("g2229", "g1488", "g5607", "g8554", "g6383"):
+        cu = S.counted_under(d, k)
+        check(not cu or cu["key"] == "g1510", f"{k.upper()} is counted under another word's spelling: {cu}")
+    pg2258 = S.word_page("G2258")
+    check(pg2258 and "used 0 times" not in pg2258[0] and 'href="/word/G1510"' in pg2258[1]
+          and "counts its uses under" in pg2258[1], "G2258's page does not say its uses are counted under εἰμί")
+    saved = S._FORMS
+    S._FORMS = S.collections.defaultdict(S.collections.Counter, {"η": S.collections.Counter({"g3588": 9})})
+    try:   # planted: the accentless match without the entry's word, ἦ under the article
+        defn = d["lex"]["g2229"]["definition"]
+        d["lex"]["g2229"]["definition"] = "ὁ, ἡ, τό, the article"
+        check((S.counted_under(d, "g2229") or {}).get("key") == "g3588", "planted: ἦ under the article was not reproduced")
+    finally:
+        d["lex"]["g2229"]["definition"] = defn
+        S._FORMS = saved
+    # THE TRANSLITERATION IS THE HEADWORD'S (audit round 1): not an inflected use's (אָמַר "yyōʾmer"), the pausal
+    # form's (אֶרֶץ "ʾāreṣ"), Hebrew letters (אָב "אב"), or STEP's Greek ("uhios")
+    tr = {"g5207": "huios", "h559": "ʾāmar", "h776": "ʾereṣ", "h1": "ʾāḇ", "h160": "ʾahăḇāh"}
+    for k, x in tr.items():
+        got = S.api_sense(d, {"key": [k]}).get("translit")
+        check(got == x, f"{k.upper()} is transliterated {got!r}, not {x!r}")
+    hebrew_x = [k for k in list(vo)[:4000] if k[:1] == "h"
+                and re.search(r"[֐-׿]", S._head(d, k, d["lemmas"].get(k), None)[1] or "")]
+    check(not hebrew_x, f"Hebrew letters in the transliteration of {hebrew_x[:5]}")
+    # THE PULL-QUOTE IS A WHOLE CLAUSE (audit round 1, MISLEADING 6): "of the faculty of speech, Luk.24" (cut at
+    # the colon inside Luk.24:19), an unclosed parenthesis under υἱός, "(DCG, ii, 330f.)", ", 7:6, ."
+    quotes = {k: (S.lexicon_senses(d, k, vo[k]) or {}).get("quote") for k in vo if k[:1] == "g"}
+    quotes = {k: q for k, q in quotes.items() if q}
+    def is_torn(q):
+        return q.count("(") != q.count(")") or bool(
+            re.search(r"\b[1-3]?[A-Z][a-z]{1,3}\.\d+|\d+:\d+|,\s*\.|·|,\s*\d+\s*$|\b(?:MM|WH|DCG)\b", q))
+    torn = [k for k, q in quotes.items() if is_torn(q)]
+    check(len(quotes) > 800 and not torn, f"{len(torn)} of {len(quotes)} pull-quotes torn: {torn[:5]}")
+    check("Luk" not in quotes.get("g3056", "") and "ναός" in S.unicodedata.normalize("NFC", quotes.get("g2411", "")),
+          f"G3056 {quotes.get('g3056')!r} / G2411 {quotes.get('g2411')!r}")
+    check(S._quote_clean("a measure of length = 600 Greek feet") == "a measure of length = 600 Greek feet",
+          "a number the sense states was cut")
+    for planted in ("of the faculty of speech, Luk.24", "(a usage mainly due to translation", "peace (DCG, ii, 330f.)"):
+        check(is_torn(planted), f"planted: the torn quote {planted!r} was not caught")
+    # WHAT THE TEXT DOES WITH אֱלָהּ READS AS ENGLISH (audit round 1, MISLEADING 7): "ables", "sents", "caused
+    # todwell", "brought toan end", and τοῦ among its Septuagint words
+    rows = {f["with"] for f in S.api_sense(d, {"key": ["h426"]}).get("features") or []}
+    check({"is able", "sent", "caused to dwell", "brought to an end"} <= rows and not rows & {"ables", "sents", "τοῦ"},
+          f"H426's rows: {sorted(rows)}")
+    # ...and every card's role rows in plain English (2026-11-09: "is what will justified", "is what someone obey")
+    bad_rows = []
+    for k_ in ("g4561", "g1343", "g3341", "g3485", "h157", "g26"):
+        for f in S.api_sense(d, {"key": [k_]}).get("features") or []:
+            w_ = f["with"].split(" ")
+            adjective = len(w_) == 2 and w_[0] == "is"          # "is able", "is diligent": an adjective keeps its "is"
+            if f["kind"] in ("subjof", "objof") and (f["says"].startswith("is what")
+                                                     or (w_[0].lower() in S._VERB_AUX and not adjective)):
+                bad_rows.append((k_, f["says"], f["with"]))
+    check(not bad_rows, f"role rows not in plain English: {bad_rows[:5]}")
+    check(not [f for k_ in ("g1722", "g2532") for f in S.api_sense(d, {"key": [k_]}).get("features") or []
+               if f["kind"] in ("subjof", "objof", "coord")], "a function word (ἐν, καί) still has role rows")
+    check(S._verb_plain("someone i rejoice") == "rejoice" and S._verb_plain("will justified") == "justified",
+          "the verb cleaner")
+    check(S._verb_plain("there would have saved") != "there would have saved", "planted: an auxiliary left on")
+    check(S.gloss_repair("put ~ todeath") == "put ~ to death" and S.gloss_repair("a towel") == "a towel",
+          "the run-together 'to' is not repaired, or a real to- word was split")
+    check(S.gloss_repair("put ~ todeath") != "put ~ todeath", "planted: the unrepaired gloss")
+    # ABBOTT-SMITH'S LABEL (c) IS NOT "(with)" (audit round 2): STEP's expansion of his "c." caught the label
+    pro = (d["lex"].get("g4396") or {}).get("definition") or ""
+    check("__(c)" in pro and "__(with)" not in pro, "G4396's sense label (c) still reads (with)")
+    labelled = [k for k, v in d["lex"].items() if "__(b)" in (v.get("definition") or "")
+                and re.search(r"__\(b\)(?:(?!__\().)*?__\(with\)", v.get("definition") or "", re.S)]
+    check(not labelled, f"{len(labelled)} entries still label a sense (with) after (b): {labelled[:5]}")
+    check(re.search(r"__\(b\)(?:(?!__\().)*?__\(with\)", "__(a) x · __(b) y · __(with) of John", re.S),
+          "planted: the (with) label was not caught")
+    # A FUNCTION WORD KEEPS ITS OWN SMALL WORD (audit round 2): καί printed no "and", ὁ no "the", τίς no "what"
+    for k, w in (("g2532", "and"), ("g3588", "the"), ("g5101", "what"), ("g1161", "and"), ("g1722", "in"),
+                 ("g1519", "into"), ("g575", "from")):
+        top = [r["text"].lower() for r in S.printed_of(d, k, vo[k])["rows"][:3]]
+        check(w in top, f"{k.upper()} does not print {w!r} among its top renderings: {top}")
+    check(not S._function_word(d, "g3004") and S._function_word(d, "g2532"), "λέγω ('to say') counted as a function word")
+    saved_fw = dict(S._FUNCTION_WORDS)
+    S._FUNCTION_WORDS["g2532"] = False
+    try:   # planted: the small-word rule applied to καί again
+        check("and" not in [r["text"].lower() for r in S.printed_of(d, "g2532", vo["g2532"])["rows"][:3]],
+              "planted: καί without its exemption still printed 'and'")
+    finally:
+        S._FUNCTION_WORDS.clear(); S._FUNCTION_WORDS.update(saved_fw)
+    # THE WORD AT THE NAVIGATOR'S CENTRE (Doug, 2026-11-08; PRINCIPLES 54): ἀγαπάω's graph is the word, its meaning
+    # card and its Hebrew equivalent; a word with no card is not found, not a crash
+    g = S.api_graph(d, {"id": ["word:g25"]})
+    ids = {n["id"] for n in g.get("nodes") or []}
+    check(g.get("center") == "word:g25" and {"love", "word:h157"} <= ids and g.get("policy"),
+          f"G25's Navigator graph: {g.get('center')} {sorted(ids)[:8]}")
+    check(S.api_graph(d, {"id": ["word:g999999"]}).get("found") is False, "a word with no card did not answer not-found")
+    # ...and back: a meaning card's graph carries its original words, under their own legend entry (Doug, 2026-11-09)
+    gl = S.api_graph(d, {"id": ["love"]})
+    check("word:g26" in {n["id"] for n in gl.get("nodes") or []} and "wording" in (gl.get("categories") or {}),
+          "the love card's graph has no way back to ἀγάπη, or no 'Original words' legend entry")
+    # EACH FORM WITH ITS PARSING, SUMMING TO THE USES (2026-11-09): ναός's six forms are its 45 uses, ναόν accusative
+    pf = S.word_face(d, "g3485").get("parsed") or []
+    check(sum(r["n"] for r in pf) == 45 and pf and pf[0]["form"] == "ναόν" and pf[0]["parse"].startswith("accusative"),
+          f"ναός's forms: {[(r['form'], r['parse'], r['n']) for r in pf[:3]]}")
+    hf = S.word_face(d, "h157").get("parsed") or []
+    check(sum(r["n"] for r in hf) == len([1 for r in vo["h157"] for w in d["orig"].get(r, ())
+                                           if S.sense_key("hebrew", w.get("s")) == "h157"])
+          and not [r for r in hf if any(0x0591 <= ord(ch) <= 0x05AF for ch in r["form"])],
+          "אָהֵב's forms do not sum to its uses, or a form kept its cantillation")
+    # THE TENS ARE NOT THEIR UNITS: H7970 "thirty" was headed שָׁלֹשׁ "three", as MACULA files it
+    for k, head in (("h7970", "שְׁלֹשִׁים"), ("h705", "אַרְבָּעִים"), ("h2572", "חֲמִשִּׁים")):
+        c_ = S.api_sense(d, {"key": [k]})
+        check(S._pointed(c_.get("lemma")) == S._pointed(head) and (c_.get("lemma_also") or {}).get("source") == "macula",
+              f"{k.upper()} is headed {c_.get('lemma')!r}, not {head}")
+    tens = S.HEBREW_TENS.pop("h7970")
+    try:   # planted: without the list, the unit leads again
+        check(S._pointed(S.headwords({"h7970": "שָׁלֹשׁ"}, {}, d["lex"]).get("h7970", {}).get("lemma", "שָׁלֹשׁ"))
+              == S._pointed("שָׁלֹשׁ"), "planted: thirty headed by three was not reproduced")
+    finally:
+        S.HEBREW_TENS["h7970"] = tens
+    saved = S._LEMMA_X
+    S._LEMMA_X = {("h559", S._pointed("אָמַר")): S.collections.Counter({"yyōʾmer": 3})}
+    try:   # planted: an inflected use's transliteration under the headword
+        check(S.lemma_translit(d, "h559", "אָמַר", "") == "yyōʾmer", "planted: the inflected transliteration was not reproduced")
+    finally:
+        S._LEMMA_X = saved
+    # in the encoding a keyboard types: STEP's oxia (U+1F79) looked the same and compared unequal
+    import unicodedata
+    check(unicodedata.normalize("NFC", g2411.get("lemma") or "") == g2411.get("lemma"), "G2411's headword is not NFC")
+    check("Est.1:1-58" not in (g2411.get("definition") or "") and "I Esd.–4 Mac." in (g2411.get("definition") or ""),
+          "G2411's entry still reads STEP's mis-tag as Esther 1:1-58")
 
 # ---- the Aramaic cognate is the word's own consonants ------------------------------
 check(S._equivalents(d, "h157")["aramaic"] is None, "H157 is offered the Aramaic יהב")

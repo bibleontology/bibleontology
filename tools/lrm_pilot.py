@@ -4,9 +4,9 @@
 
 Every decision is in the fixture (tests/fixtures/lrm_psalm73.json); this module only maps it to triples. A Work is
 not its text: Expressions realise it and Manifestations embody them. A translation is an Expression, never a new
-Work. The two texts' verses are separate segments, aligned, never shared. The Work Creation has no agent or date,
-and who composed the psalm, or which Asaph the superscription names, is described as the editors' claim and never
-stated.
+Work, and a collection incorporates its members' texts, never has them as parts. The two texts' verses are separate
+segments, aligned, never shared. Each Work Creation has no agent or date, and who composed the psalm, or which Asaph
+the superscription names, is described as the editors' claim and never stated.
 """
 import json
 import sys
@@ -54,15 +54,15 @@ def build(fx):
     def add(s, p, o):
         triples.append((s, p, o))
 
-    # ---- Works: a Work is not its text, and the Psalter has the psalm as a member
+    # ---- Works: a Work is not its text
     for work in fx["works"]:
         s = iri(work["id"])
         add(s, rdf_type, term(terms["Work"]))
         add(s, term(terms["label"]), label(work["label"]))
-    for member in fx["members"]:
-        add(iri(member["whole"]), term(terms["has_member"]), iri(member["part"]))
 
-    # ---- Expressions: the text in a language, realising the Work; a translation is still an Expression
+    # ---- Expressions: the text in a language, realising the Work; a translation is still an Expression. A
+    # collection's Expression incorporates its members' (LRMoo R75): each psalm stays its own Work, never a part
+    # (R67) of the Psalter (2026-11-06, the scope notes)
     for expr in fx["expressions"]:
         s = iri(expr["id"])
         add(s, rdf_type, term(terms["Expression"]))
@@ -71,6 +71,8 @@ def build(fx):
         add(iri(expr["realises"]), term(terms["is_realised_in"]), s)
         if expr.get("translationOf"):
             add(s, term(terms["translationOf"]), iri(expr["translationOf"]))
+        for inner in expr.get("incorporates", []):
+            add(s, term(terms["incorporates"]), iri(inner))
 
     # ---- Manifestations: what embodies an Expression
     for man in fx["manifestations"]:
@@ -92,11 +94,11 @@ def build(fx):
             add(s, term(terms["segmentNumber"]), integer(n))
         add(english, term(terms["alignedWith"]), hebrew)
 
-    # ---- the Work Creation: what it created, and nothing else
-    creation = fx["workCreation"]
-    s = iri(creation["id"])
-    add(s, rdf_type, term(terms["WorkCreation"]))
-    add(s, term(terms["created"]), iri(creation["created"]))
+    # ---- the Work Creations, one per Work (LRMoo R16): what each created, and nothing else
+    for creation in fx["workCreations"]:
+        s = iri(creation["id"])
+        add(s, rdf_type, term(terms["WorkCreation"]))
+        add(s, term(terms["created"]), iri(creation["created"]))
 
     # ---- the arrangement: the Psalter's order, its sections and its entries
     arr = fx["arrangement"]

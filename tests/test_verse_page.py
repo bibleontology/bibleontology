@@ -434,6 +434,9 @@ JS = (SRC[SRC.index("function verseCardHtml"):SRC.index("async function fillVers
 
 
 OPTIONAL = {"stored", "faulted"}            # a relation carries these only when the face names the verse's own word
+# a word carries UBS's senses only where app2/ubs.py has its data, which the public copy does not (the card reads
+# `(w.ubs || [])`); the gate, 2026-11-11
+OPTIONAL_WORD = {"ubs"}
 
 
 def contract_faults(vc, js):
@@ -447,7 +450,7 @@ def contract_faults(vc, js):
     for k in sorted(set(re.findall(r"\bvc\.(\w+)", js))):
         if k not in vc:
             out.append(f"{vc['label']}: the card reads vc.{k}, which the object lacks")
-    for k in sorted(set(re.findall(r"\bw\.(\w+)", js)) - {"length"}):
+    for k in sorted(set(re.findall(r"\bw\.(\w+)", js)) - {"length"} - OPTIONAL_WORD):
         if k not in word_keys:
             out.append(f"{vc['label']}: the card reads word.{k}, which the object lacks")
     for k in sorted(set(re.findall(r"\bp\.(\w+)", js))):

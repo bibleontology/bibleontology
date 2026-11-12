@@ -235,7 +235,7 @@ bor:based_at a owl:ObjectProperty ;
     rdfs:range <https://bibleontology.org/ns/meaning#Place> ;
     skos:definition "A group is centered on a place, so that a church, household or tribe is a group with a location and not a synonym for the place." ;
     bor:category "Places" ;
-    bor:inverseLabel "was the centre of" ;
+    bor:inverseLabel "was the center of" ;
     bor:sourceKind "group" ;
     bor:targetKind "place" .
 
@@ -1029,6 +1029,17 @@ bor:killed a owl:ObjectProperty ;
         "group",
         "person" .
 
+bor:kind_of a owl:ObjectProperty ;
+    rdfs:label "is one of the" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A particular object or creature the text follows is one of a kind: the twelve stones from the Jordan are one of the stones, never the same as another instance of that kind." ;
+    bor:category "Things" ;
+    bor:inverseLabel "has among them" ;
+    bor:sourceKind "creature",
+        "object" ;
+    bor:targetKind "creature",
+        "object" .
+
 bor:knows a owl:ObjectProperty ;
     rdfs:label "knows" ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
@@ -1519,6 +1530,20 @@ bor:servant_of a owl:ObjectProperty ;
         "group",
         "person" .
 
+bor:served a owl:ObjectProperty ;
+    rdfs:label "served" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group serves a god, an idol or another object of worship, as the text says of them." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was served by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "creature",
+        "image",
+        "object" .
+
 bor:sibling_of a owl:ObjectProperty,
         owl:SymmetricProperty ;
     rdfs:label "is a sibling of" ;
@@ -1811,6 +1836,20 @@ bor:wore a owl:ObjectProperty ;
         "person" ;
     bor:targetKind "object" .
 
+bor:worshiped a owl:ObjectProperty ;
+    rdfs:label "worshiped" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group worships a god, an idol or another object of worship, as the text says of them." ;
+    bor:category "Prophetic & priestly" ;
+    bor:inverseLabel "was worshiped by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "being",
+        "concept",
+        "creature",
+        "image",
+        "object" .
+
 bor:wrote_letter_to a owl:ObjectProperty ;
     rdfs:label "wrote to" ;
     rdfs:domain <https://bibleontology.org/ns/meaning#PersonalBeing> ;
@@ -1838,7 +1877,7 @@ bor:wrote_to a owl:ObjectProperty ;
     dcterms:created "2026-10-11"^^xsd:date ;
     dcterms:creator "Doug Egge" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-11-01"^^xsd:date ;
+    dcterms:modified "2026-11-11"^^xsd:date ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:title "Bible Ontology — relations" ;
     vann:preferredNamespacePrefix "bor" ;
@@ -1846,7 +1885,7 @@ bor:wrote_to a owl:ObjectProperty ;
     rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and nothing about the records of God, the Father, Jesus or the Holy Spirit is derived by inference: they change only by a recorded editorial decision, as the accounts give them. The policy forbids derivations, not descriptions. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred.",
         "The controlled vocabulary of relations the Bible Ontology graph may assert: each reads '<source> <label> <target>', and every relation in the graph uses one of these types. Companion to https://bibleontology.org/ns/meaning.",
         "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
-    owl:priorVersion <https://bibleontology.org/ns/relation/2026-10-22> ;
-    owl:versionIRI <https://bibleontology.org/ns/relation/2026-11-01> ;
-    owl:versionInfo "1.3.0" .
+    owl:priorVersion <https://bibleontology.org/ns/relation/2026-11-01> ;
+    owl:versionIRI <https://bibleontology.org/ns/relation/2026-11-11> ;
+    owl:versionInfo "1.4.0" .
 

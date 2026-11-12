@@ -102,6 +102,9 @@ def ld_faults(eid, head, body):
                     out.append(f"{eid}: the JSON-LD uses '{k}', which neither vocabulary defines")
                 if k == "@type" and v not in SCHEMA_TYPES:
                     out.append(f"{eid}: the JSON-LD types something '{v}'")
+                if k == "@type" and v == "Dataset" and not 50 <= len(x.get("description") or "") <= 5000:
+                    out.append(f"{eid}: the Dataset '{x.get('name')}' has no description of 50 to 5,000 characters "
+                               "(Google reports it as an invalid item)")
                 if k in ("@id", "item") and isinstance(v, str) and v.startswith(S.SITE):
                     path = v[len(S.SITE):].split("#")[0]
                     if path.startswith(("/e/", "/p/", "/word/")) and path not in hrefs and path != own:
@@ -150,6 +153,10 @@ bad = copy.deepcopy(ld)
 bad["@context"][1]["bor"] = "https://bibleontology.org/ns/"
 bad["@graph"][1]["subjectOf"][0]["bor:offered_to"] = {"@id": f"{S.SITE}/e/god"}
 bad["@graph"][0]["mentions"].append({"@id": f"{S.SITE}/e/melchizedek", "name": "Melchizedek", "attestedIn": "x"})
+# and a Dataset with no description, as Search Console found on every concept page (2026-11-05)
+for g in bad["@graph"]:
+    for ds in g.get("isBasedOn") or []:
+        ds.pop("description", None) if ds.get("@type") == "Dataset" else None
 h_bad = re.sub(r'<script type="application/ld\+json">.*?</script>',
                lambda m: '<script type="application/ld+json">' + json.dumps(bad) + "</script>", h, flags=re.S)
 lf = ld_faults("sacrifice", h_bad, b)
@@ -157,6 +164,7 @@ check(any("ns/relation#" in f for f in lf), "planted: the JSON-LD check did not 
 check(any("offered_to" in f for f in lf), "planted: the JSON-LD check did not catch a relation not built")
 check(any("attestedIn" in f for f in lf), "planted: the JSON-LD check did not catch an undefined term")
 check(any("/e/melchizedek" in f for f in lf), "planted: the JSON-LD check did not catch a card the page does not link")
+check(any("has no description" in f for f in lf), "planted: the JSON-LD check did not catch a Dataset without a description")
 
 
 # ---- 2. the face's known answers ------------------------------------------------------------------------------------

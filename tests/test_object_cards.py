@@ -160,6 +160,11 @@ def page_faults(eid, oc, head, body):
     kjv = re.findall(r'href="[^"]*(?:cesar|laver|fowl|favou?red|shittim)[^"]*"', body, re.I)
     if kjv:
         out.append(f"{eid}: a King James spelling in an href: {kjv[0]}")
+    # an empty face never speaks for the whole graph (2026-11-06: "the graph records no explicit relation" stood on
+    # 333 cards whose drawer held explicit ones, the stones' six among them)
+    if "records no explicit relation" in body and any(r.get("certainty") == "explicit" and r["type"] != "speaks_of"
+                                                      for r in d["rels"].get(eid, ())):
+        out.append(f"{eid}: says the graph records no explicit relation, and it holds one")
     return out
 
 
@@ -292,6 +297,34 @@ pf("JSON-LD naming a verse the article does not link", lambda h, b: (h.replace("
 pf("a robots tag against the index rule", lambda h, b: (h.replace('<link rel="canonical"', '<meta name="robots" content="noindex, follow">\n<link rel="canonical"'), b))
 pf("a King James spelling in an href", lambda h, b: (h, b.replace("</article>", '<a href="/e/cesar_augustus">x</a></article>')))
 pf("JSON-LD carrying a card the article does not link", lambda h, b: (h, b.replace('href="/e/bezalel"', 'href="/e/zzz"')))
+# the stones' face shows its two "took" since 2026-11-07 (offered and took joined the face), so the planted fault is
+# made on the first card whose face is still empty and whose drawer is not
+EMPTY = next(e for e in sorted(pages) if re.search(r"<p>The graph records \d+ relations? for ", pages[e][1]))
+pf("'no explicit relation' on a card that holds some", lambda h, b: (
+    h, re.sub(r"<p>The graph records \d+ relations? for [^<]*</p>",
+              "<p>The graph records no explicit relation for it; the passage and verses below are the Berean’s.</p>", b)),
+   base=EMPTY)
+check("Taken by" in pages["stones"][1], "the stones' page does not show who took them (the face's 'took')")
+# A TITLE NAMES ONLY WHAT THE CARD HOLDS (2026-11-08): every carried, made or kept card was titled "Who Made It",
+# the twelve stones from the Jordan among them; nobody made them
+
+
+def title_claims_unheld(eid):
+    head = pages[eid][0]
+    t = re.search(r"<title>(.*?)</title>", head, re.S).group(1)
+    held = {x["type"] for b in ((cards.get(eid) or {}).get("obcard") or {}).get("boxes", []) for x in b["rows"]}
+    return [w for w, typ in (("Made", "made"), ("Carried", "carried"), ("Offered", "offered"), ("Took", "took"))
+            if re.search(rf"Who\b[^:]*\b{w}\b", t) and typ not in held]
+
+
+claims = [(e, title_claims_unheld(e)) for e in list(pages) if e in cards and title_claims_unheld(e)]
+check(not claims, f"{len(claims)} object titles claim an act the card does not hold: {claims[:5]}")
+check(re.search(r"Who Carried Them", pages.get("the_twelve_stones_from_the_jordan", ("",))[0]),
+      "the Jordan stones' title is not 'Who Carried Them'")
+pages["_planted"] = ("<title>Stones: Who Made It · Bible Ontology</title>", "")
+cards["_planted"] = cards["stones"]
+check(title_claims_unheld("_planted") == ["Made"], "planted: a title claiming 'Made' on a card with no maker")
+del pages["_planted"], cards["_planted"]
 
 # a face for a divine being (the guard removed)
 saved = S.OB_DIVINE

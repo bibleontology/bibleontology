@@ -66,10 +66,10 @@
     dcterms:title "Bible Ontology — meaning" ;
     dcterms:creator "Doug Egge" ;
     dcterms:created "2026-09-28"^^xsd:date ;
-    dcterms:modified "2026-11-01"^^xsd:date ;
-    owl:versionIRI <https://bibleontology.org/ns/meaning/2026-11-01> ;
-    owl:priorVersion <https://bibleontology.org/ns/meaning/2026-10-22> ;
-    owl:versionInfo "1.3.0" ;
+    dcterms:modified "2026-11-11"^^xsd:date ;
+    owl:versionIRI <https://bibleontology.org/ns/meaning/2026-11-11> ;
+    owl:priorVersion <https://bibleontology.org/ns/meaning/2026-11-01> ;
+    owl:versionInfo "1.4.0" ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     <http://purl.org/vocab/vann/preferredNamespacePrefix> "bom" ;
@@ -89,7 +89,7 @@
     rdfs:seeAlso <https://bibleontology.org/ns/meaning> ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    owl:versionInfo "1.3.0" .
+    owl:versionInfo "1.4.0" .
 
 # Status is a fact (kinds.json rule): every term here is proposed until the
 # graph has instances of it.

@@ -14,7 +14,16 @@
 <script>
 /* a theme chosen in the ⋯ menu, applied before anything draws; kept in this
    browser only (2026-10-13) */
-try{var t=JSON.parse(localStorage.getItem('se.theme')||'null');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+try{var t=JSON.parse(localStorage.getItem('se.theme')||'null');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}
+/* A READER DOES NOT SEE THE SERVER'S COPY FLASH (Doug, 2026-11-09: "Can the Google view be visible to Google but
+   not to me?"). A browser that names itself a crawler keeps the copy until a draw, exactly as before (the 2026-10-29
+   rule: Google's renderer, refused /api/, must keep the page). Every other browser starts as a `reader`: the copy is
+   hidden and the app shows; if the app has not finished in 4 seconds the copy comes back, so no one is left with a
+   blank page. Names from the 30-day crawler list (Bing, Claude, Google, Apple, OpenAI, Petal, Perplexity, Baidu, ByteDance,
+   Common Crawl) and the usual others; `applebot`, never `apple` (every browser says AppleWebKit). */
+try{var C=/bot\b|bot\/|crawl|spider|slurp|googlebot|google-inspectiontool|googleother|bingpreview|applebot|claude-|claudebot|anthropic|oai-searchbot|chatgpt-user|gptbot|petalbot|perplexity|baiduspider|bytespider|ccbot|duckduck|yandex|facebookexternalhit|meta-externalagent|twitterbot|linkedinbot|slackbot|discordbot|whatsapp|headlesschrome|lighthouse/i;
+if(!C.test(navigator.userAgent||'')){var H=document.documentElement;H.classList.add('human');
+setTimeout(function(){if(!H.classList.contains('drawn'))H.classList.remove('human')},4000)}}catch(e){}</script>
 <!-- served from here, not Google: no reader's browser contacts anyone else (app2/VENDORED.md) -->
 <link rel="stylesheet" href="/vendor/fonts-2026-10-01/fonts.css">
 <style>
@@ -465,6 +474,26 @@ body.withcol .vchips .tgv.orig{display:none}
 .twocards figcaption{color:var(--muted); font-size:14px}
 @media (max-width:720px){ .twocards .tc-row{grid-template-columns:1fr} .twocards .tc-link{text-align:left} }
 /* A THEME'S FRONT PAGE AND ITS IMAGERY (plan 7.6b) */
+/* SHOW IN NAVIGATOR (A.47; Doug, 2026-11-08: "a button with color labelled 'show in navigator' which just navigates
+   to the fixed navigator tab with the object centered but makes it clear that this is a way to go to a different
+   view", with "a tiny picture of a hub and spoke graph view, un-labeled with multi-colors"). Unlike the card's links:
+   filled, round, the picture in a white disc; full width on a phone. */
+.nav-btn{display:inline-flex; align-items:center; gap:9px; margin:8px 0 12px; padding:7px 16px 7px 8px; border:0;
+  border-radius:999px; background:var(--focus); color:#fff; font:600 14px/1 system-ui,-apple-system,sans-serif;
+  cursor:pointer; box-shadow:0 1px 3px var(--shadow)}
+.nav-btn:hover{filter:brightness(1.08)}
+.nav-btn .hub{display:inline-flex; background:#fff; border-radius:50%; padding:3px}
+@media (max-width:600px){ .nav-btn{display:flex; width:100%; justify-content:center} }
+/* THE NAVIGATOR'S TAB, IN THE BUTTON'S COLOR AND WITH ITS PICTURE (Doug, 2026-11-08: "give it some color/include the
+   icon"). Drawn in CSS so it is there the moment the tab strip paints. */
+.tab[data-id="navigator"]{background:var(--focus); color:#fff; border-color:var(--focus)}
+.tab[data-id="navigator"][aria-selected="true"]{box-shadow:inset 0 -3px 0 #fff}
+.tab[data-id="navigator"] .lbl{display:inline-flex; align-items:center; gap:6px}
+.tab[data-id="navigator"] .lbl::before{content:""; width:16px; height:16px; flex:none; border-radius:50%;
+  background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg stroke='%238a8174' stroke-width='1.4' stroke-linecap='round'%3E%3Cline x1='12' y1='12' x2='12' y2='2.8'/%3E%3Cline x1='12' y1='12' x2='20' y2='7.4'/%3E%3Cline x1='12' y1='12' x2='20' y2='16.6'/%3E%3Cline x1='12' y1='12' x2='12' y2='21.2'/%3E%3Cline x1='12' y1='12' x2='4' y2='16.6'/%3E%3Cline x1='12' y1='12' x2='4' y2='7.4'/%3E%3C/g%3E%3Ccircle cx='12' cy='2.8' r='2.3' fill='%23d1495b'/%3E%3Ccircle cx='20' cy='7.4' r='2.3' fill='%23edae49'/%3E%3Ccircle cx='20' cy='16.6' r='2.3' fill='%233f9e6e'/%3E%3Ccircle cx='12' cy='21.2' r='2.3' fill='%237b5ea7'/%3E%3Ccircle cx='4' cy='16.6' r='2.3' fill='%2300798c'/%3E%3Ccircle cx='4' cy='7.4' r='2.3' fill='%23e07a3f'/%3E%3Ccircle cx='12' cy='12' r='3.6' fill='%23356A8C' stroke='white' stroke-width='1.2'/%3E%3C/svg%3E") center/13px no-repeat}
+.explore-band{margin:22px -12px 0; padding:14px 12px 6px; border-top:1px solid var(--rule-strong);
+  background:color-mix(in srgb, var(--slate-soft) 55%, transparent); border-radius:0 0 8px 8px}
+.wf-region{margin:22px 0 4px; border-top:1px solid var(--rule-strong); padding-top:12px}
 .hubhero{display:block; width:100%; text-align:left; margin:14px 0 6px; padding:16px 18px;
   border:0; border-radius:10px; background:var(--slate); color:var(--surface); cursor:pointer; font:inherit}
 .hubhero .hk{display:block; font-size:12px; letter-spacing:.06em; text-transform:uppercase; opacity:.85}
@@ -1886,6 +1915,18 @@ details.sec > summary:hover, details.sub > summary:hover{color:var(--slate)}
 .rowline:last-child{border-bottom:0}
 .rowline .g{color:var(--muted); font-size:13px}
 .link{color:var(--slate); cursor:pointer; border-bottom:1px solid transparent}
+/* THE TAP, ON A PHONE (2026-11-10, "hit and miss"): no double-tap zoom wait; the pressed link shows at once; a loading
+   bar while the answer comes (api()'s html.busy); inline links and verse buttons a little taller to hit */
+html{touch-action:manipulation; -webkit-tap-highlight-color:rgba(70,100,140,.18)}
+.link:active,.cite:active,button:active,[data-go]:active,[data-ent]:active{background:rgba(70,100,140,.14); border-radius:3px}
+html.busy::before{content:""; position:fixed; z-index:9999; top:0; left:0; height:3px; width:40%;
+  background:var(--slate); animation:busybar 1s ease-in-out infinite}
+@keyframes busybar{0%{left:-40%} 100%{left:100%}}
+@media (prefers-reduced-motion:reduce){html.busy::before{animation:none; width:100%; opacity:.6}}
+@media (pointer:coarse){
+  :where(span.link,span.cite){padding:3px 0}   /* :where: no specificity, so a chip's or a hero's own padding wins */
+  button.occ,button.refmore,button.pat{min-height:34px}
+}
 .link:hover{border-bottom-color:var(--slate)}
 /* A CARD'S OWN PAGE (A.21): what an address like /e/david carries for a
    reader without the app and for a search engine. Hidden once the app has
@@ -2027,7 +2068,11 @@ sup.sc-n{font:600 10px var(--ff-data); color:var(--ochre-text); margin-left:1px}
 .ssr p.heb{font-family:"Noto Serif Hebrew","Ezra SIL",serif;font-size:1.5em;line-height:1.7;margin:.2em 0 .6em}
 .ssr p.heb a{color:var(--ochre-text,var(--slate))}
 .drawn .ssr{display:none}
-html:not(.drawn) .ssr ~ .app{position:absolute; left:0; right:0; top:0; height:100vh; visibility:hidden}
+html:not(.drawn):not(.human) .ssr ~ .app{position:absolute; left:0; right:0; top:0; height:100vh; visibility:hidden}
+html.human .ssr{display:none /* a reader (not a crawler: the first script) sees the app at once, never the copy. The
+  class is `human`, not `reader` (2026-11-11, Doug: "on my desktop the content does not extend to the bottom of the
+  page"): `.reader` is the card pane's own class, and on <html> it gave the whole page the pane's padding (26 px above,
+  120 px below), so the app's frame stopped 120 px short of the window and the card seemed to end there */}
 /* THE PERSON CARD'S FACE (the design panel, 2026-10-28; docs/review/card-panel-appeal/person/mockup-abraham.html) */
 .pc-hero{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px}
 /* the four divine-person cards (2026-10-31): the shared header names the card, so the face's own name is not repeated;
@@ -2411,8 +2456,22 @@ const _restartNote = on => {
     + 'padding:8px 14px;font-size:15px;box-shadow:0 4px 14px var(--shadow)';
   document.body.appendChild(n);
 };
+/* A TAP SAYS IT LANDED (Doug, 2026-11-10, on his phone: "seems a little hit and miss on the clicking of links"). A card
+   takes 0.3-2 s to arrive (H1 "father" 1.95 s live) and nothing showed meanwhile, so a tap that worked looked like one
+   that missed. A thin bar runs along the top while any answer is awaited past 150 ms */
+let _busyN = 0, _busyT = null;
+const _busy = on => {
+  _busyN = Math.max(0, _busyN + (on ? 1 : -1));
+  clearTimeout(_busyT);
+  if(_busyN) _busyT = setTimeout(() => document.documentElement.classList.add('busy'), 150);
+  else document.documentElement.classList.remove('busy');
+};
 const api = async (p, q) => {
   const url = p + '?' + new URLSearchParams(q);
+  _busy(true);
+  try { return await _apiGet(url); } finally { _busy(false); }
+};
+const _apiGet = async url => {
   for(let i = 0; ; i++){
     const r = await fetch(url);
     if((r.status !== 503 && r.status !== 502) || i >= 36){ _restartNote(false); return r.json(); }
@@ -2465,7 +2524,10 @@ const openSecs = new Set(mem.get('open', ['what-the-text-does']));
    place. */
 let state = { book:'Gen', chapter:1,
   tabs:[{id:'explore', kind:'explore', title:'Explore'},
-        {id:'ch:reader', kind:'ch', title:'Scripture'}], active:'explore' };
+        {id:'ch:reader', kind:'ch', title:'Scripture'},
+        // THE NAVIGATOR, A PLACE OF ITS OWN (Doug, 2026-11-08: "Create a separate Navigator tab … give it some
+        // color/include the icon. It is a distinguishing site feature")
+        {id:'navigator', kind:'nav', title:'Navigator'}], active:'explore' };
 
 /* ---------------- tabs ----------------
    The scripture tab is never closable, so however deep a dive goes the
@@ -2473,7 +2535,7 @@ let state = { book:'Gen', chapter:1,
    pattern, a word or a person is just as legitimate a thing to keep open. */
 /* Neither the reader nor Explore can be closed: both are places, and a place
    you cannot get back to is a dead end. */
-const PERM = new Set(['explore', 'ch:reader']);
+const PERM = new Set(['explore', 'ch:reader', 'navigator']);
 function renderTabs(){
   /* BACK, AT THE TOP, ON EVERY TAB. 2026-10-01: a 'back to previous tab'
      button at the higher level, because flexible navigation can make a
@@ -2608,6 +2670,7 @@ function selectTab(id){
   const tb = state.tabs.find(x => x.id === id);
   if(!tb) return;
   if(id === 'explore' && !tb.html){ renderTabs(); showAddress(tb); return buildExplore(); }
+  if(id === 'navigator' && !tb.html){ tb.html = navigatorPane(); tb.wire = () => kgnStart(); }
   renderTabs();
   $('#paneinner').innerHTML = tb.html || '';
   if(tb.wire) tb.wire();
@@ -2729,8 +2792,7 @@ function baseAddress(tb){
   // the Navigator, open and centred: linkable, though search engines are
   // told the card is the page to keep (the Navigator should not be the
   // dominant mode that search engines use)
-  if(tb.id === 'explore' && KGN.center
-     && document.querySelector('details[data-sec="x-kgn"]')?.open)
+  if(tb.id === 'navigator' && KGN.center)
     return '/graph/' + encodeURIComponent(ADDR[KGN.center] || KGN.center);
   if(tb.id === 'ch:reader' && state.book){
     // a verse with its original, structure or links open: that verse, and what is open
@@ -3631,6 +3693,9 @@ function vcWordsHtml(vc, open){
       ${w.parts.length > 1 ? `<p class="vc-rl">${w.parts.length} parts in MACULA: ${w.parts.map(pt =>
           `<span class="vc-hw" lang="${lang}">${esc(pt.t)}</span> “${esc(pt.g)}” (${esc(pt.p || '')})`).join(' + ')}</p>`
         : `<p class="vc-rl">${esc(w.pos || '')}${w.lemma ? ' · dictionary form <span class="vc-hw" lang="' + lang + '">' + esc(w.lemma) + '</span>' : ''}</p>`}
+      ${/* the sense UBS lists this verse under (app2/ubs.py), credited in the drawer below */''}${(w.ubs || []).map(s =>
+        `<p class="vc-rl">Here, in the UBS dictionary: <b>${esc((s.glosses || []).join('; ') || s.short)}</b>${
+          s.domains.length ? ' (' + esc(s.domains.join(', ')) + ')' : ''}</p>`).join('')}
       <div class="vc-acts">${w.card ? `<span class="link" data-sense="${esc(w.card.toLowerCase())}">the word card, ${esc(w.card)} ↗</span>`
         : '<span class="vc-note">a particle or a prefix: no word card is linked from here</span>'}</div>`)).join('');
 }
@@ -4908,10 +4973,50 @@ const prettyRef = r => String(r).replace(/\./g, m => '.').replace(/^([\w]+)\.(\d
    server's word_face(): one count, the canon strip, what the Berean prints,
    the lexicon's own line, the partner word, the scenes. Everything below it
    is the card as it was, in drawers. */
-const WF_LEX = {g: 'Abbott-Smith (1922), via STEP Bible', h: 'Brown-Driver-Briggs (abridged), via STEP Bible'};
+// an older lexicon, said so (2026-11-09: BDAG and LSJ are the standard references, and not free)
+const WF_LEX = {g: 'Abbott-Smith (1922), a free older lexicon; BDAG is the standard modern one · via STEP Bible',
+                h: 'Brown-Driver-Briggs (abridged), via STEP Bible'};
 const wfChips = (refs, key) => `<div class="vex">${listBlock(refs.map(ref => ({ref})), x =>
   `<button class="occ" data-ref="${esc(x.ref)}" data-key="${esc(key)}">${esc(prettyRef(x.ref))}</button>`,
   refs.length, 'chips')}<div class="occshow" hidden></div></div>`;
+
+/* UBS's credit, in its words, with its licence and what was edited (app2/ubs.py). */
+const ubsCredit = u => `<p style="color:var(--muted);font-size:12px;margin:8px 0 0;max-width:64ch">From the ${
+  esc(u.credit)} ${esc(u.version || '')}, <a href="${esc(u.licence_url)}" target="_blank" rel="license noopener">${
+  esc(u.licence)}</a>, <a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.url.split('//')[1] || u.url)}</a>. ${
+  esc(u.edited)}</p>`;
+
+function ubsSensesHtml(u, key){
+  const S = u.senses || [];
+  const one = S.map(s => {
+    const head = (s.glosses || []).join('; ') || s.short;
+    /* the strongest dozen shown, the rest behind a "more" that opens them; a domain too large to send (UBS's names
+       of people, 1,845) is counted, never offered as a "more" that would open nothing */
+    const wl = ws => ws.map(w => `<span class="link" data-key="${esc(w.key)}" data-word="${esc(w.gloss || w.lemma)}"><span
+        class="orig">${esc(w.lemma)}</span></span>${w.gloss ? ' “' + esc(w.gloss) + '”' : ''}`).join(', ');
+    const doms = (s.domains || []).map(dm => {
+      const first = dm.words.slice(0, dm.shown), more = dm.words.slice(dm.shown), unsent = dm.total - dm.words.length;
+      return `<div class="rowline"><span class="g">domain</span><span><b>${esc(dm.label)}</b>${first.length ? ' · '
+        + wl(first) : ''}${more.length ? `, <details class="sub" style="display:inline"><summary style="display:inline">and
+          ${more.length} more</summary> ${wl(more)}</details>` : ''}${unsent > 0 ? ` — of the ${dm.total.toLocaleString()}
+          words UBS files there, those it files there most` : ''}</span></div>`;
+    }).join('');
+    return `<div class="ubs-sense" style="margin:0 0 12px"><div><b>${esc(head)}</b></div>${
+      s.short && s.short !== head ? `<div style="max-width:64ch">${esc(s.short)}</div>` : ''}${doms}${
+      (s.refs || []).length ? `<details class="sub"><summary>Its verses<span class="ct">${s.refs.length}</span></summary>
+        <div class="subbody">${wfChips(s.refs, key)}</div></details>` : ''}</div>`;
+  }).join('');
+  /* filed under another number of the same word (ἱερόν's "temple" under ἱερός, G2413; 2026-11-07): said, linked */
+  const filed = u.filed_under ? `<p class="hint" style="margin:0 0 8px;max-width:64ch">UBS files ${S.length === 1 ? 'this sense'
+    : 'these senses'} under <span class="link" data-key="${esc(u.filed_under.key)}"><span class="orig">${esc(u.filed_under.lemma)}</span></span>
+    (${esc(u.filed_under.key.toUpperCase())}); these are the verses where this word stands.</p>` : '';
+  const shared = (u.shared || []).length ? `<p class="hint" style="margin:0 0 8px;max-width:64ch">UBS gives one entry
+    for this number and ${u.shared.map(k => `<span class="link" data-key="${esc(k)}">Strong’s ${
+    esc(k.slice(0, 1).toUpperCase() + k.slice(1))}</span>`).join(', ')}; shown here are the senses whose verses have
+    this number.</p>` : '';
+  return filed + shared + one + `<p style="color:var(--muted);font-size:13px;margin:6px 0 0;max-width:62ch">Beside each
+    domain, the other words UBS files under it, ordered by how many of their uses it files there.</p>` + ubsCredit(u);
+}
 
 function wfParts(F){
   const ps = (F.parts || []);
@@ -4944,10 +5049,10 @@ function wordFaceHtml(d, key, from){
   const pbar = P.rows.length ? `<div class="wf-pbar">${segs.map(s =>
       `<span style="flex:${s.n};background:${s.c}" title="“${esc(s.text)}” ${s.n}"></span>`).join('')}${
       rest ? `<span style="flex:${rest};background:var(--rule-strong)"></span>` : ''}${
-      P.none ? `<span class="hatch" style="flex:${P.none}" title="no separate word ${P.none}"></span>` : ''}</div>
+      P.none ? `<span class="hatch" style="flex:${P.none}" title="${P.none} not matched to a word of the Berean (the word is in the original; the translation may fold it into a phrase)"></span>` : ''}</div>
     <div class="wf-legend">${segs.map((s, i) => `<button class="wf-leg" data-i="${i}"><i style="background:${s.c}"></i>“${esc(s.text)}” <span class="g">${s.n.toLocaleString()}</span></button>`).join('')}${
       rest ? `<span class="g">${plural(P.rows.length - 6, 'other rendering')} ${rest.toLocaleString()}</span>` : ''}${
-      P.none ? `<button class="wf-leg" data-i="none"><i class="hatch"></i>no separate word <span class="g">${P.none}</span></button>` : ''}</div>
+      P.none ? `<button class="wf-leg" data-i="none"><i class="hatch"></i>not matched <span class="g">${P.none}</span></button>` : ''}</div>
     <div class="wf-legverses"></div>
     <p class="hint wf-note">The Berean&rsquo;s English for each of the ${plural(P.total, 'use')}: the words its editors
       tagged with this word${P.by_gloss ? `, and where they left it untagged (${P.by_gloss}), the word found by its English` : ''}.
@@ -4992,8 +5097,11 @@ function wordFaceHtml(d, key, from){
       ? `Used <b>once</b>, in ${esc(prettyRef(d.occurrences.rows[0].ref))}.`
       : `Used <b>${F.uses.toLocaleString()}</b> times in ${plural(F.verses, 'verse')}${
       nb > 1 ? ` of ${nb} books` : ''}${parts ? `: ${parts}` : ''}.`}${
-      top ? ` The Berean prints ${top}${P.none ? ` · no separate word ${P.none}` : ''}.` : ''}</p>
+      top ? ` The Berean prints ${top}${P.none ? ` · ${P.none} not matched to a word of the Berean` : ''}.` : ''}
+      <span class="hint" style="display:block;font-size:12.5px;margin-top:4px">Counted in the ${side === 'g'
+        ? 'Nestle 1904 Greek New Testament' : 'Westminster Leningrad Codex'} as MACULA analyzes it; other editions count slightly differently.</span></p>
     ${L.quote ? `<blockquote class="wf-quote">“${esc(L.quote)}”<cite>${esc(WF_LEX[side] || 'STEP Bible')} ·
+       the sense that cites the most of its verses ·
        <a href="#" class="wf-open" data-sec="w-lex">the whole entry</a></cite></blockquote>` : ''}
     ${partners}
     ${/* A WORD IN A FEW VERSES SHOWS THE VERSES: a strip of 27 books with one
@@ -5070,7 +5178,8 @@ async function wfVersePage(box, key, page, F){
         <button class="wv-ref" type="button" data-vref="${esc(r.ref)}">view in reader →</button></div>
       <p class="wv-t">${mark(r) || '<span class="hint">No text for this verse.</span>'}</p>${
       r.unaligned ? '<p class="wv-n">The Berean&rsquo;s English is not aligned to the original here.</p>'
-      : r.none ? `<p class="wv-n">The Berean prints no separate word for ${r.none === r.uses ? 'it' : `${r.none} of its ${r.uses} uses`} here.</p>` : ''}</div>`;
+      : r.none ? `<p class="wv-n">${r.none === r.uses ? 'This use is' : `${r.none} of its ${r.uses} uses here are`} not matched to a word of the
+          Berean: the word is in the original, and the translation may fold it into a phrase or leave it untagged.</p>` : ''}</div>`;
   });
   box.dataset.lastbook = last;
   const from = p.page * p.per;
@@ -5294,7 +5403,7 @@ async function openSense(key, word, from){
     vc.size);
 
   openTab('word', d.short || d.gloss || word, `<div class="pane">
-    <p class="kind">${esc(d.lang||'')} · ${d.observations} uses ·
+    <p class="kind">${esc(d.lang||'')} · ${d.counted_under ? `counted under <span class="link heb" data-sense="${esc(d.counted_under.key)}">${esc(d.counted_under.lemma)}</span>` : `${d.observations} uses`} ·
       Strong’s ${esc((d.key||'').slice(0,1).toUpperCase() + (d.strong||''))}</p>
     ${/* THE WORD IS NAMED BY ITS MEANING, not by one of its renderings.
           2026-09-25, on הָיָה: the card was titled "he was" — the
@@ -5305,6 +5414,13 @@ async function openSense(key, word, from){
     <p class="lead">${d.translit ? `<span class="translit">${esc(d.translit)}</span>` : ''}${
       d.gloss && d.short && d.gloss !== d.short
         ? ` · most often rendered “${esc(d.gloss)}”` : ''}</p>
+    ${/* A FORM STRONG'S NUMBERS APART (audit round 1, 2026-11-07): ἦν said "0 uses" while the text counts all
+          its uses under εἰμί. The card says where they are. */''}
+    ${d.counted_under ? `<p class="wf-answer">${d.counted_under.kind === 'entry' ? 'STEP’s lexicon numbers this entry apart.'
+      : 'Strong’s numbers this form apart.'} The text counts its uses under
+      <span class="link heb" data-sense="${esc(d.counted_under.key)}">${esc(d.counted_under.lemma)}</span>
+      (Strong’s ${esc(d.counted_under.key.slice(0,1).toUpperCase() + d.counted_under.key.slice(1))})${
+      d.counted_under.kind === 'entry' ? '' : `: ${d.counted_under.n.toLocaleString()} of the ${d.counted_under.of.toLocaleString()} times this spelling occurs`}.</p>` : ''}
     ${/* BOTH FORMS, THE NUMBER'S OWN FIRST (2026-10-27: G2411 was headed ἱερός, the adjective, because MACULA
           files the temple and "sacred" under one lemma; "both forms can be listed but I want to lead with the
           correct one"). server.headwords() decides which leads; the other is named here with its source. */''}
@@ -5313,6 +5429,20 @@ async function openSense(key, word, from){
           scenes. The "MACULA files it under" line moved into the lexicon
           drawer, where it explains the entry's heading (the BibleProject
           seat: it is a footnote, not a first fact). */''}
+    ${/* THE ON-RAMP, UNDER THE HEADWORD (Doug, 2026-11-08: "a very quick on ramp to connected meaning layer
+          cards"): the cards this word leads to, one line, and the way into the Navigator. The fuller bridge stays
+          below; this is the short way across, before the answer and the chart. */''}
+    ${/* WHAT A NAME NAMES (Doug, 2026-11-10, on Dothan: "it is not immediately clear to me that it is a town/place
+          ... the word is not connected to a place (meaning) card"): the kind STEP's tag gives, and the person or place
+          card, first thing under the headword; same-named people told apart by their own line */''}
+    ${d.name_kind ? `<p class="wf-answer" style="margin:4px 0 0">${esc(d.name_kind.charAt(0).toUpperCase() + d.name_kind.slice(1))}${
+      (d.names || []).length ? `${d.names.length > 1 ? ', in the text for'
+        /* Meshach is Mishael's Babylonian name: "a man's name, for Mishael", not "a man's name: Mishael" */
+        : d.names[0].name.toLowerCase() !== String(d.short || d.gloss || '').toLowerCase() ? ', for' : ':'} ${d.names.map(n =>
+        `<span class="link" data-ent="${esc(n.id)}">${esc(n.name)}</span>${d.names.length > 1 && n.who ? ` <span class="hint">(${esc(n.who)})</span>` : ''}`).join(' · ')}`
+      : ''}.</p>` : ''}
+    ${(d.concepts || []).length ? `<p class="hint" style="margin:2px 0 0">In the meaning layer: ${d.concepts.map(c =>
+        `<span class="link" data-ent="${esc(c.id)}">${esc(c.name)}</span>`).join(' · ')}</p>${navBtn('word:' + key)}` : navBtn('word:' + key)}
     ${wordFaceHtml(d, key, from)}
     ${/* A WORD'S NOTE, where how it is used needs saying first (the words for
           "Jew", 2026-10-10), with the card it belongs to */''}
@@ -5394,22 +5524,26 @@ async function openSense(key, word, from){
     ${/* EVERY VERSE FIRST, THEN WHAT RECURS IN THEM, THEN ITS FORMS (the
           design panel, 2026-10-28). The lexicon entry, first from
           2026-09-27, follows: its line to quote is on the face. */''}
+    ${/* the senses first after the face (the Fable layout review, 2026-11-09): what a researcher came for */''}
+    ${d.ubs && (d.ubs.senses || []).length ? sec('w-ubs', 'Its senses (UBS dictionary)', ubsSensesHtml(d.ubs, key),
+      d.ubs.senses.length) : ''}
     ${sec('w-phrase', 'Every verse', ph, (d.face || {}).verses || (d.occurrences||{}).total)}
-    ${((d.face || {}).recurring || []).length ? sec('w-recur', 'Words that recur in its verses',
-      d.face.recurring.map(r => `<details class="sub"><summary><span class="link" data-key="${esc(r.key)}"
-          data-word="${esc(r.gloss || r.lemma)}"><span class="orig">${esc(r.lemma)}</span></span>${
-          r.gloss ? ' “' + esc(r.gloss) + '”' : ''}<span class="ct">${r.verses}</span></summary>
+    ${(gram || ((d.face || {}).forms || []).length || ((d.face || {}).parsed || []).length) ? sec('w-infl', 'Its forms',
+      /* EACH FORM WITH ITS PARSING (2026-11-09, a reviewer: "inspect the actual forms and their grammatical parsing,
+         not just aggregate counts"): spelling, MACULA's parse, how often; each opens to its verses */
+      `${((d.face || {}).parsed || []).length ? d.face.parsed.slice(0, 40).map(r => `<details class="sub"><summary><span
+          class="orig">${esc(r.form)}</span> <span class="g">${esc(r.parse || 'not parsed')}</span><span class="ct">${r.n}</span></summary>
           <div class="subbody">${wfChips(r.refs, key)}</div></details>`).join('')
-      + `<p style="color:var(--muted);font-size:13px;margin:8px 0 0;max-width:62ch">Counted, not scored: each stands in the
-         same verse as this word in at least three of its verses, at least four times as often as its share of the
-         whole text would give. The number is how many of this word&rsquo;s verses it is in.</p>`,
-      d.face.recurring.length) : ''}
-    ${(gram || ((d.face || {}).forms || []).length) ? sec('w-infl', 'Its forms',
-      `${((d.face || {}).forms || []).length > 1 ? `<div class="rowline"><span class="g">after</span><span>${
+        + (d.face.parsed.length > 40 ? `<p class="hint">and ${d.face.parsed.length - 40} rarer forms</p>` : '') : ''}${
+        ((d.face || {}).forms || []).length > 1 ? `<div class="rowline"><span class="g">after</span><span>${
         d.face.forms.map(f => `${f.prep ? `<span class="orig">${esc(f.prep)}</span>` : 'no preposition'} <span class="g">(${f.n})</span>`).join(' · ')
       }</span></div>` : ''}${gram}
       <p style="color:var(--muted);font-size:13px;margin:8px 0 0;max-width:62ch">From MACULA&rsquo;s parse, counted by use.</p>`) : ''}
-    ${d.definition ? sec('w-lex', 'Lexicon entry',
+    ${/* THE UBS DICTIONARY'S SENSES, LEADING THE LEXICONS (2026-11-04; docs/review/permissions/sdbh-2026-11-02.md):
+          each sense with its domain, the other words UBS files there, and its verses. CC BY-SA, credited in UBS's
+          words under its own licence; STEP's entry stays below in its own drawer. */''}
+    ${/* the Hebrew's second lexicon is Strong's own (2026-11-07): the title says whose entry it is */''}
+    ${d.definition ? sec('w-lex', /openscriptures/.test(d.definition_link || '') ? 'Strong’s dictionary' : 'Lexicon entry',
       `${d.lemma_also ? `<p class="hint" style="margin:0 0 8px;max-width:64ch">${d.lemma_also.source === 'macula'
         ? `MACULA files these uses under <span class="heb">${esc(d.lemma_also.form)}</span>${
             (d.lemma_also.with || []).length ? `, with ${d.lemma_also.with.map(k =>
@@ -5444,8 +5578,8 @@ async function openSense(key, word, from){
              4.0; read 2026-10-04) */''}
        <p style="color:var(--muted);font-size:12px;margin:4px 0 0">From ${
        esc(d.definition_credit || "STEP Bible's Translators Brief lexicons, CC BY 4.0.")}
-       <a href="https://www.STEPBible.org" target="_blank"
-       rel="noopener">www.STEPBible.org</a></p>`) : ''}
+       <a href="${esc(d.definition_link || 'https://www.STEPBible.org')}" target="_blank"
+       rel="noopener">${esc((d.definition_link || 'https://www.STEPBible.org').split('//')[1])}</a></p>`) : ''}
     ${/* HOW THE BEREAN RENDERS IT, ADDED UP (2026-10-26): every use carried
           its English and no card summed them. Each rendering opens its own
           verses, in canonical order. The counts are of uses and sum to the
@@ -5501,12 +5635,46 @@ async function openSense(key, word, from){
           its bulkiest content instead of with what the word IS. Passing no
           `open` lets each section follow `openSecs`, which remembers what the
           reader themselves opened. */''}
+    ${/* TWO REGIONS AFTER THE ESTABLISHED CONTENT (the Fable layout review, 2026-11-09,
+          docs/review/word-card-layout-fable-2026-11-09.md; Doug: "organize around the best content and make some of
+          the exploratory stuff just that with clear delineation"). First the structure, read from the parse: counts
+          of what the text does, framed as such. Then one tinted band of what the site's machinery found, every
+          section closed. The old "Found by machine" line sat after Patterns and so exempted them. */''}
+    ${/* WHERE EACH PART COMES FROM (2026-11-09, a reviewer: "Make sure readers understand what comes from UBS, what
+          comes from Abbott-Smith, what comes from MACULA, and what you calculate independently") */''}
+    <p class="hint" style="max-width:64ch;margin:16px 0 0;font-size:13px">Where this card’s parts come from: the senses
+      from the UBS dictionary; the lexicon entry from ${String(key).startsWith('g') ? 'Abbott-Smith (1922)' : 'Strong’s dictionary'} via
+      STEP Bible; the forms, their parsing and the sentence structure from MACULA (© Biblica, CC BY 4.0); the English from the
+      Berean Standard Bible and its editors’ word tags. The counts, the Navigator’s links and everything under
+      “Exploring from here” are this site’s own work.</p>
+    <p class="kind wf-region">In its sentences · read from the sentence structure (MACULA’s parse): counts of clauses,
+      not interpretations</p>
     ${sec('w-does', 'What the text does with it', feats, d.features.length)}
+    ${/* 2026-09-27: 'Said of it in the structure', 'How it is spoken' and
+          'Where it occurs' are collapsible sections, and the spider graph is
+          always visible but last. Filled by loadConnect after the card opens; a word too rare to
+          measure has them removed. */''}
+    ${sec('w-said', 'Said of it in the structure', `<div class="wc" id="wc-said"></div>`)}
+    ${sec('w-spoken', 'How it is spoken', `<div class="wc" id="wc-spoken"></div>`)}
+    ${sec('w-where', 'Where it occurs', `<div class="wc" id="wc-where"></div>`)}
+    ${/* The graph is collapsible too, but open on arrival, since it is last
+          and interesting (2026-09-27). */''}
+    <div class="explore-band">
+      <p class="kind">Exploring from here</p>
+      <p class="hint" style="max-width:62ch;margin:0 0 10px">Everything below was found by the site’s own machinery, not
+        by a lexicon or an editor. It is here to give you a thread to pull — a pattern to test, a word to put beside
+        this one — and none of it is established. Where a match came through a similar word rather than this one, it
+        says so.</p>
     ${minedSection('w-mined', d.mined)}
-    ${/* FOUND BY MACHINE, SAID SO ONCE (the design panel, 2026-10-28):
-          the similarity lists and the word graph are signals for finding a
-          thread, kept, and kept off the face */''}
-    <p class="kind wf-machine">Found by machine · automatic signals, a thread to follow, not an authority</p>
+    ${((d.face || {}).recurring || []).length ? sec('w-recur', 'Words that recur in its verses',
+      d.face.recurring.map(r => `<details class="sub"><summary><span class="link" data-key="${esc(r.key)}"
+          data-word="${esc(r.gloss || r.lemma)}"><span class="orig">${esc(r.lemma)}</span></span>${
+          r.gloss ? ' “' + esc(r.gloss) + '”' : ''}<span class="ct">${r.verses}</span></summary>
+          <div class="subbody">${wfChips(r.refs, key)}</div></details>`).join('')
+      + `<p style="color:var(--muted);font-size:13px;margin:8px 0 0;max-width:62ch">Counted, not scored: each stands in the
+         same verse as this word in at least three of its verses, at least four times as often as its share of the
+         whole text would give. The number is how many of this word&rsquo;s verses it is in.</p>`,
+      d.face.recurring.length) : ''}
     ${/* THE COLLAPSED SEPTUAGINT SECTION IS GONE. It listed the same words the
           row at the top of the card now shows, and by the rule from the
           pattern card — "what fills each slot serves both purposes" — two
@@ -5519,17 +5687,9 @@ async function openSense(key, word, from){
       are built. A weak signal: good for finding a thread, not an authority.</p>`,
       (d.neighbours||[]).length)}
     ${(d.contrasts || []).length ? sec('w-against', 'What it is set against', contr, d.contrasts.length) : ''}
-    ${/* 2026-09-27: 'Said of it in the structure', 'How it is spoken' and
-          'Where it occurs' are collapsible sections, and the spider graph is
-          always visible but last. Filled by loadConnect after the card opens; a word too rare to
-          measure has them removed. */''}
-    ${sec('w-said', 'Said of it in the structure', `<div class="wc" id="wc-said"></div>`)}
-    ${sec('w-spoken', 'How it is spoken', `<div class="wc" id="wc-spoken"></div>`)}
-    ${sec('w-where', 'Where it occurs', `<div class="wc" id="wc-where"></div>`)}
-    ${/* The graph is collapsible too, but open on arrival, since it is last
-          and interesting (2026-09-27). */''}
     ${sec('w-graph', 'How it connects to other words',
-      `<div class="wc" id="wconnect" data-key="${esc(key)}"><p class="wcnote">Loading…</p></div>`, null, true)}
+      `<div class="wc" id="wconnect" data-key="${esc(key)}"${d.counted_under ? ` data-under="${esc(d.counted_under.lemma)}"` : ''}><p class="wcnote">Loading…</p></div>`)}
+    </div>
   </div>`, () => {
     $('#paneinner').querySelectorAll('.use').forEach(u =>
       u.onclick = () => peek(u));
@@ -5581,7 +5741,9 @@ async function loadConnect(key){
   let d = null;
   try { d = await api('/api/wordspace', {key}); } catch(e) { d = null; }
   if(!d || !d.found){
-    box.innerHTML = '<p class="wcnote">This word is too rare (fewer than five uses) for its connections to be measured.</p>';
+    box.innerHTML = box.dataset.under
+      ? `<p class="wcnote">Its uses are counted under ${esc(box.dataset.under)}, and its connections are measured there.</p>`
+      : '<p class="wcnote">This word is too rare (fewer than five uses) for its connections to be measured.</p>';
     // no data on this server at all (or the request failed): leave the
     // graph out too, rather than call every word too rare
     const gone = !d || d.absent ? ['w-graph'] : [];
@@ -6018,6 +6180,18 @@ function verseCardHtml(vc, reg){
     drawers.push(drawer('Every linked passage, by kind', `${P.length}`,
       VC_GROUP.map(g => [g[2], P.filter(p => p.src === g[0]).length]).filter(x => x[1]).map(([t, k]) => t + ' ' + k).join(' · '),
       VC_GROUP.map(([s, t]) => { const xs = P.filter(p => p.src === s); return xs.length ? `<div class="vc-sub">${esc(t)} · ${xs.length}</div>${xs.map(passageRow).join('')}` : ''; }).join('')));
+  // THE WORDS' SENSES HERE (2026-11-04): where the UBS dictionary lists this verse under one of a word's senses
+  const US = (vc.words || []).filter(w => (w.ubs || []).length);
+  if(US.length && vc.ubs){
+    const lang = vc.rtl ? 'he' : 'grc';
+    drawers.push(drawer('The words’ senses here', `${US.length}`,
+      US.slice(0, 4).map(w => (w.ubs[0].glosses || [])[0] || '').filter(Boolean).join(' · '),
+      `<p class="vc-note">Where the UBS dictionary lists this verse under one of a word’s senses, that sense.</p>`
+      + US.map(w => `<div class="vc-rr"><span class="link" data-sense="${esc(w.card.toLowerCase())}"><span class="vc-hw"
+          lang="${lang}">${esc(w.t)}</span></span> ${w.ubs.map(s => `<b>${esc((s.glosses || []).join('; ') || s.short)}</b>${
+          s.glosses.length && s.short ? ', ' + esc(s.short) : ''}${s.domains.length ? ' <span class="vc-by">' + esc(s.domains.join(', ')) + '</span>' : ''}`).join('; ')}</div>`).join('')
+      + ubsCredit(vc.ubs)));
+  }
   const hasCard = (vc.rels || []).length || P.length || (vc.own_words || []).length;
   return `<div class="vc-card">
     <div class="vc-eyebrow"><nav class="vc-crumb" aria-label="breadcrumb"><button class="vc-chap" data-chap="${esc(vc.book)}.${vc.chapter}">${esc(vc.chapter_label)}</button> › <b>${esc(vc.label)}</b></nav></div>
@@ -7748,7 +7922,8 @@ function eventBlock(ev, faced, pzcard){
      scripture at the cross (the UI committee; cleaned up 2026-10-01).
      They are theme words no node answers to yet, so they are offered as what
      they are -- searches -- and say nothing about the text. */
-  const themes = (MT.length || other.length) ? sec('ev-themes', 'In the major themes',
+  // on an event card the themes are one open line of its face (eventFace's `voices`), so not drawn again here
+  const themes = (MT.length || other.length) && !faced ? sec('ev-themes', 'In the major themes',
       MT.map(m =>
       `<div class="rowline"><span class="link" data-mtheme="${esc(m.theme)}">${esc(m.title)}</span>
        <span class="g">${[m.n_cited ? `the theme cites ${m.n_cited} of its verses` : '',
@@ -7945,7 +8120,8 @@ function actBlock(d){
           ? 'the text names ' + c.instead.map(x => esc(x.replace(/_/g, ' '))).join(', ') + ' there' : ''}</span></div>`).join(''),
       R.length, false);
   }
-  if((d.acts_in || []).length){
+  // ...and an event card says what is spoken in it on its face (eventFace's `voices`)
+  if((d.acts_in || []).length && !d.evcard){
     out += sec('act-here', `Speech acts spoken in it · ${d.acts_in.length}`, d.acts_in.map(m =>
       `<div class="rowline"><span class="link" data-ent="${esc(m.id)}">Speech act: ${esc(m.name)}</span>
         <span class="g">${m.where ? esc(m.where) + ' · ' : ''}${m.first
@@ -7977,7 +8153,7 @@ function msgBlock(d){
       `<div class="refbox">${moreJoin(M.instances, 40, x => ovlRef(x, x.who), ' ')}</div>`,
       M.count, false);
   }
-  if((d.messages_in || []).length){
+  if((d.messages_in || []).length && !d.evcard){
     out += sec('msg-here', `Messages spoken in it · ${d.messages_in.length}`, d.messages_in.map(m =>
       `<div class="rowline"><span class="link" data-ent="${esc(m.id)}">Message: ${esc(m.name)}</span>
         <span class="g">${m.where ? esc(m.where) + ' · ' : ''}${m.first
@@ -8911,7 +9087,7 @@ function eventFace(d){
   const kind = `Event · ${esc(E.label)} · ${E.told > 1 ? 'told ' + E.told + ' times' : 'told once'}`;
   /* the event's name under its title, in the Berean editors' words: the heading of the section that carries it */
   const deck = E.deck ? `<p class="pc-deck">${esc(E.deck.title)} <span class="pc-note">the Berean editors’ heading · ${pcRf(E.deck.go, E.deck.ref)}</span></p>` : '';
-  const told = E.told > 1 ? `<p class="pc-note" style="margin:4px 0 0">Told ${E.told} times: ${
+  const told = E.told > 1 ? `<p class="pc-note" style="margin:4px 0 0">Told in: ${
     [{label: E.label, first: E.opening ? E.opening.verses[0].id : ''}].concat(E.other_tellings).map(t => pcRf(t.first, t.label)).join(' ')}</p>` : '';
   /* the neighbors: two either side, in the canon's order; a gap is the Berean editors' heading */
   const cell = x => {
@@ -8959,6 +9135,14 @@ function eventFace(d){
     /text|passage|assessment/.test(r.object.type || '') ? '“' + pcLink(r.object.id, r.object.name) + '”' : pcLink(r.object.id, r.object.name)} ${
     r.cites.map(c => pcRf(c.go, c.ref)).join(' ')}${r.certainty === 'implied' ? ' <span class="pc-note">implied</span>' : ''}${
     r.claimed_by ? ` <span class="pc-by">— the words of ${esc(r.claimed_by.name)}</span>` : ''}</div>`;
+  /* WHAT IS SAID IN IT AND THE THEMES IT IS IN, OPEN (the event-card review, 2026-11-10: the Last Supper's messages,
+     speech acts and 15 themes sat in closed sections at the bottom). One line each, every item a link; the closed
+     sections are not drawn on an event card (eventBlock's themes, the tail's messages and speech acts) */
+  const saidIn = [...(d.messages_in || []).map(m => pcLink(m.id, m.name)), ...(d.acts_in || []).map(m => pcLink(m.id, m.name))];
+  const mt = [...new Map(((d.event || {}).mthemes || []).map(m => [m.theme, m])).values()];
+  const voices = saidIn.length || mt.length ? `<div class="pc-host">${saidIn.length ? `<div class="pc-rr"><span class="lb">Said in it</span> ${
+    saidIn.join(' · ')}</div>` : ''}${mt.length ? `<div class="pc-rr"><span class="lb">In the major themes</span> ${mt.map(m =>
+    `<span class="link" data-mtheme="${esc(m.theme)}">${esc(m.title)}</span>`).join(' · ')} <span class="pc-note">a reading</span></div>` : ''}</div>` : '';
   const cf = E.cast_face || 6, where = E.told > 1 ? 'its ' + E.told + ' tellings' : E.label;
   const cast = (E.cast || []).length ? `<h2 class="pc-h">Who did what in ${esc(where)}</h2><div class="pc-host pc-cast">${
     E.cast.slice(0, cf).map(row).join('')}${E.cast.length > cf ? `<details class="moreinl"><summary>${E.cast.length - cf} more</summary>${
@@ -8981,16 +9165,26 @@ function eventFace(d){
      temptation's three echoes of Israel's wilderness on the fourth screen, below a closed drawer. Echoes that passed
      the story-echo standard (`re_enacts`, each with its paired words) lead, always marked a reading; then the passage,
      the Scriptures it quotes, who did what, and the neighbors. */
-  const echoes = (d.groups || []).flatMap(g => g.items).filter(i => i.type === 're_enacts' && i.dir === 'out' && (i.pairs || []).length);
-  const quoteW = s => `“${esc(s)}”`;
-  const echo = echoes.length ? `<div class="pc-tale pc-echo pc-host"><div class="pc-hk">${echoes.length === 1 ? 'An earlier story' : 'Earlier stories'} it is read beside · a reading the graph marks implied</div>${
-    echoes.map(i => `<div class="pc-eg"><div class="pc-et">${pcLink(i.other, i.name)}</div>${
-      i.pairs.map(([[lr, lw], [er, ew]]) => `<div class="pc-ep"><span>${quoteW(lw)} ${[].concat(lr).map(r => pcRf(r)).join('')}</span><span class="pc-ea">·</span><span>${quoteW(ew)} ${pcRf(er)}</span></div>`).join('')}</div>`).join('')}
-    <p class="pc-note">Each echo rests on the paired words shown, the Berean’s on both sides. The pairing is a reading: the text does not say it.</p></div>` : '';
+  /* ...and every story told again leads too (the told-again layout review, 2026-11-10: only the 3 `re_enacts` cards got
+     this lead; the 117 `same_steps_as` pairs, the storm and Jonah among them, sat in the closed drawer). The server
+     turns each pair so this card's story is on the left, and sends where they differ and the telling detail */
+  const echoes = (d.groups || []).flatMap(g => g.items).filter(i => (i.pairs || []).length
+    && ((i.type === 're_enacts' && i.dir === 'out') || i.type === 'same_steps_as'));
+  const quoteW = (s, bold) => bold ? `<b>“${esc(s)}”</b>` : `“${esc(s)}”`;
+  const refs = r => [].concat(r).map(x => pcRf(x)).join('');
+  const steps = echoes.some(i => i.type === 'same_steps_as');
+  const echo = echoes.length ? `<div class="pc-tale pc-echo pc-host"><div class="pc-hk">${steps ? 'Told again: the same steps'
+    : echoes.length === 1 ? 'An earlier story' : 'Earlier stories'} · a reading the graph marks implied</div>${
+    echoes.map(i => `<div class="pc-eg"><div class="pc-et">${i.type === 'same_steps_as' ? 'The same steps as ' : ''}${pcLink(i.other, i.name)}</div>${
+      i.pairs.map(([[lr, lw], [er, ew]]) => {
+        const hot = i.distinctive && (String(ew).includes(i.distinctive) || String(lw).includes(i.distinctive));
+        return `<div class="pc-ep"><span>${quoteW(lw, hot)} ${refs(lr)}</span><span class="pc-ea">·</span><span>${quoteW(ew, hot)} ${refs(er)}</span></div>`;
+      }).join('')}${i.differs ? `<details class="moreinl"><summary>Where they differ</summary><p class="pc-note">${esc(i.differs)}</p></details>` : ''}</div>`).join('')}
+    <p class="pc-note">Each pairing rests on the words shown, the Berean’s on both sides. It is a reading: the text does not say one was told with the other in mind.</p></div>` : '';
   return {
     kind,
     h1: `<h1 class="pc-hero"><span>${esc(d.label || d.name)}</span></h1>${deck}`,
-    lead: `${told}${echo}${open}${pairs}${cast}${strip}${par}${outline}`,
+    lead: `${told}${echo}${open}${pairs}${cast}${voices}${strip}${par}${outline}`,
   };
 }
 
@@ -9012,7 +9206,12 @@ function objectFace(d){
   const O = d.obcard;
   const names = g => pcAnd(g.names.map(n => pcLink(n.id, n.name) + (n.ref ? ` (${pcRf(n.go, n.ref)})` : ''))) + (g.more ? ` and ${g.more} more` : '');
   const lede = O.lede.length ? `<p class="lead">${O.lede.map(g => `${esc(g.label)} ${names(g)}`).join(' · ')}</p>`
-    : '<p class="lead">The graph records no explicit relation for this card; the passage and verses below are the Berean’s.</p>';
+    /* TRUE WHEN THE FACE IS EMPTY (2026-11-06). It said "The graph records no explicit relation" on 333 cards whose
+       drawer held explicit ones (stones: 6, each with its verse): the face keeps only its own kinds, and the sentence
+       spoke for the whole graph. Now it says how many the graph holds and where they are. */
+    : O.counts && O.counts.drawer
+      ? `<p class="lead">The graph records ${O.counts.drawer} relation${O.counts.drawer === 1 ? '' : 's'} for this card, each with its verse, under “How it connects” below; the passage and verses here are the Berean’s.</p>`
+      : '<p class="lead">The graph records no explicit relation for this card; the passage and verses below are the Berean’s.</p>';
   const aka = (O.aka || []).length ? `<p class="whois" style="margin:-4px 0 12px;color:var(--muted);font-size:17px">also called ${esc(O.aka.join(', '))}</p>` : '';
   const hub = O.hub ? `<p class="im-key">One of the ${O.hub.n} in ${pcLink(O.hub.card, O.hub.card_name)}${O.hub.passage ? ' (' + esc(O.hub.passage) + ')' : ''}: ${
     O.hub.others.map(o => pcLink(o.id, o.name)).join(', ')}.</p>` : '';
@@ -9086,10 +9285,13 @@ function placeFace(d){
   const said = r => `${esc(r.text)} ${cites(r.cites)}${imp(r)}${r.roster && !r.shared ? ' ' + pcOpen('link pc-more', 'who', `<h3>${esc(r.text)}</h3>` + r.members.map(m => `<p class="pc-rl">${pcLink(m.id, m.name)}</p>`).join('')) : ''}`;
   const evRow = ev => `<div class="pc-evrow pl"><span class="c">${esc(ev.label || '')}</span><span class="nm">${pcLink(ev.id, ev.name)}
       <span class="tl">${ev.rows.filter(r => !(r.roster && r.shared)).map(said).join('; ')}</span>${visitLine(ev)}</span></div>`;
-  const face = P.story.filter(e => e.face), rest = P.story.filter(e => !e.face);
-  const story = P.story.length ? `<h2 class="pc-h">Its story, by its relations</h2><div class="pc-host">${face.map(evRow).join('')}
-      ${rest.length ? `<details class="moreinl" style="margin-top:8px"><summary>Every other event whose telling holds a relation of it · ${rest.length}</summary>${rest.map(evRow).join('')}</details>` : ''}
-      <p class="pc-note">An event is listed when one of its tellings holds a verse that a relation of ${esc(d.name)} (or of a place inside it) cites.</p></div>` : '';
+  /* WHAT THE TEXT TELLS MOST THERE, FIRST (the place-card review, 2026-11-10: Bethel's calf was 16th in canon order,
+     and not in the story at all). The server ranks every event that names the place by how often its telling does;
+     the first four open, the rest one tap away */
+  const face = P.story.slice(0, 4), rest = P.story.slice(4);
+  const story = P.story.length ? `<h2 class="pc-h">Its story, where the text tells most</h2><div class="pc-host">${face.map(evRow).join('')}
+      ${rest.length ? `<details class="moreinl" style="margin-top:8px"><summary>Also told here · ${rest.length}</summary>${rest.map(evRow).join('')}</details>` : ''}
+      <p class="pc-note">Every event whose telling names ${esc(d.name)} (or a place inside it), the one that names it most first.</p></div>` : '';
   const aka = (P.aka || []).length ? `<span class="pc-aka">also called ${P.aka.map(a => `${esc(a.name)} ${pcRf(a.ref)}`).join(' and ')}</span>` : '';
   const names = (P.names || []).length ? `<div class="pc-names">Its name in the original: ${P.names.map(w =>
     `<span><span class="link ${w.lang === 'Greek' ? 'grk' : 'heb'}" data-key="${esc(w.key)}" data-word="${esc(d.name)}">${esc(w.lemma || w.strong)}</span>
@@ -9169,7 +9371,16 @@ function fallbackFace(d, etextSec){
   // the kind's own lead block, unchanged: a saying's words, a sub-theme's own words, a pattern's template
   const lead = (d.said ? textFaceBlock(d) : d.face ? conceptFaceBlock(d, '') : d.event ? eventBlock(d.event) : '') +
     (d.type === 'person' || d.type === 'being' ? '' : templateBlock(d));
-  const top = `<p class="kind">${esc(F.kind)}</p><h1 class="pc-hero"><span>${esc(nm)}</span>${aka}</h1>${deckHtml}${lead}${
+  /* A SUB-THEME LEADS TO ITS THEME (Doug, 2026-11-10, on "The strong man tied up": "given very little context and
+     there isn't even a viable path back to the major theme"): which theme, where it stands in it, the theme's page,
+     and the theme's other sub-themes, before anything else */
+  const T = d.in_theme;
+  const themeHtml = !T ? '' : `<div class="pc-host fb-theme"><p style="margin:0 0 6px">${T.n ? `Sub-theme ${T.n} of ${T.of}` : 'A sub-theme'} of the major theme
+      <span class="link" data-mtheme="${esc(T.theme)}"><b>${esc(T.title)}</b></span>, one reading of how its passages group.</p>
+    <button class="pc-chip" data-mtheme="${esc(T.theme)}">${esc(T.title)}: the theme and its passages side by side →</button>
+    ${(T.others || []).length ? `<details class="moreinl" style="margin-top:8px"><summary>The theme’s other ${T.others.length} sub-themes</summary><div class="pc-chips">${
+      T.others.map(o => `<span class="pc-chip link" data-ent="${esc(o.id)}">${esc(o.name)}</span>`).join('')}</div></details>` : ''}</div>`;
+  const top = `<p class="kind">${esc(F.kind)}</p><h1 class="pc-hero"><span>${esc(nm)}</span>${aka}</h1>${themeHtml}${deckHtml}${lead}${
     rowsHtml}${panelHtml}${wordsHtml}${etextSec}${alsoHtml}`;
   const drawer = inner => `<details class="fb-dr" data-fbdr="1"><summary>As the graph stores it <span class="g">${
     plural(F.total_relations, 'relation')} · the record’s note · themes · tags</span></summary><div class="fb-in">${
@@ -9180,6 +9391,8 @@ function fallbackFace(d, etextSec){
 async function openEntity(id){
   const d = await api('/api/entity', {id});
   if(!d.found) return;
+  // a major theme's record is the theme's page, which holds all it has and more (Doug, 2026-11-10: "a poor fraud")
+  if(d.major_theme){ openMajorTheme(d.major_theme); return; }
   LAST_ENTITY = d;
   if(d.addr && d.addr !== d.id) ADDR[d.id] = d.addr;
   // ON A HUB CARD "Also called" stands under the name, not in the tail (2026-10-09:
@@ -9375,6 +9588,7 @@ async function openEntity(id){
       ` · ${plural(d.scope_card.people, 'relationship')} of the whole people · ${d.scope_card.part} of a part` : ` · ${plural(d.total_relations, 'relationship')} ·
       ${plural(d.types||0, 'kind')} · ${plural(Object.keys(regrouped).length, 'category', 'categories')}`}</p>
     <h1>${esc(d.parable ? d.parable.title : (d.label || d.name))}</h1>`}
+    ${navBtn(d.id)}
     ${/* WHICH ONE. A shared name says on the card which of them this is.
           2026-10-01, after a "Mary" card that never said which Mary: clearer
           disambiguation was needed both in the search and on the
@@ -9570,7 +9784,11 @@ async function openEntity(id){
     ${ccf || evf ? '' : minedSection('e-mined', d.mined)}
     ${/* on a concept card the groups are the diagram's list, toggled in its place */''}
     ${plf ? plf.held : ''}
-    ${obf || grf ? obDrawer(groups) : d.concept_hub || d.face || person || evf ? '' : groups}
+    ${/* THE GRAPH ON THE OBJECT CARD, NOT HIDDEN (A.46; Doug, 2026-11-08: "a lot of real opportunity still with
+          objects such as stones and we [are] still hiding the graph"): the object and group faces drew no picture
+          and closed every relation in a drawer at the bottom. They get the concept card's diagram and list. */''}
+    ${obf || grf ? (groups ? sec('ob-graph', 'How it connects', connBlock(drawEntityGraph(d, {all: true}), groups), null, true) : '')
+      : d.concept_hub || d.face || person || evf ? '' : groups}
     ${/* THE EVENT CARD'S ONE DRAWER (2026-10-30), last: what the machine found and how the graph stores it */''}
     ${evf ? evDrawer(d, groups) : ''}
     ${lifted && !ccf ? etextSec + '</div>' : ''}
@@ -9805,9 +10023,15 @@ function imageFace(d){
     <div class="im-bls">${bls}</div>
     <p class="im-key">${C.verses} verse${C.verses === 1 ? '' : 's'} in ${C.books} book${C.books === 1 ? '' : 's'}: ${C.in_rel} sit in a relation, ${
       C.word_only} hold only the word. The strip is a picture; the names are the links.</p>` : '';
-  const tied = I.tied.length ? `<h2 class="im-sec">Who or what it is tied to</h2><ul class="im-tied">${I.tied.map(t => `<li>${pcLink(t.id, t.name)}${
+  /* WHAT IT STANDS FOR, FIRST, IN THE VERSE'S WORDS (the image-card review, 2026-11-10: the vine's first screen was a
+     computed sentence and fifteen book names, and "I am the true vine" was row 11 of 11; this list sat below the
+     strip and said the same as the rows). Each thing it is tied to, its mark, and the verse that ties it */
+  const tied = I.tied.length ? `<ul class="im-tied im-stands">${I.tied.slice(0, 5).map(t => `<li>${pcLink(t.id, t.name)}${
+    t.quote ? ` — <span class="im-q">“${esc(t.quote)}”</span>` : ''}${
     t.says ? ` <span class="im-tg">${imMk(1)}<span class="im-tw">says it</span> ${pcRf(t.says_go, t.says)}</span>` : ''}${
-    t.reader ? ` <span class="im-tg">${imMk(2)}<span class="im-tw">reader’s link</span> ${pcRf(t.reader_go, t.reader)}</span>` : ''}</li>`).join('')}</ul>` : '';
+    t.reader ? ` <span class="im-tg">${imMk(2)}<span class="im-tw">reader’s link</span> ${pcRf(t.reader_go, t.reader)}</span>` : ''}</li>`).join('')}</ul>${
+    I.tied.length > 5 ? `<details class="moreinl"><summary>${I.tied.length - 5} more it is tied to</summary><ul class="im-tied">${I.tied.slice(5).map(t =>
+      `<li>${pcLink(t.id, t.name)} ${t.says ? pcRf(t.says_go, t.says) : pcRf(t.reader_go, t.reader)}</li>`).join('')}</ul></details>` : ''}` : '';
   const chips = I.chips.length ? `<h2 class="im-sec">One English word, several in the original</h2><div class="im-chipbar" role="group" aria-label="Show the passages for one original word">
     <button type="button" aria-pressed="true" data-w="all">All words</button>${I.chips.map(c => `<button type="button" aria-pressed="false" data-w="${esc(c.key)}"><span class="${
       c.lang === 'grc' ? 'grk' : 'heb'}" lang="${c.lang}">${esc(c.lemma || c.key)}</span> <small>${esc(c.key)} · ${c.n}</small></button>`).join('')}</div>
@@ -9838,8 +10062,8 @@ function imageFace(d){
   const sub = L.cls === 'S' ? 'in the Bible: what the text says it means, and where it only appears' : 'in the Bible: where the text uses the picture';
   const html = `<p class="kind">Figure · a picture the text draws on</p>
     <div class="im-head">${imSketch(d.sketch)}<h1>${esc(I.Name)}<span class="im-h1s">${sub}</span></h1>
-    <p class="lead">${lede}</p></div>
-    ${strip}${tied}${I.rows.length ? `<h2 class="im-sec">${L.cls === 'S' ? 'The passages, in canon order' : 'The passages the graph holds'}</h2>
+    ${tied ? '' : `<p class="lead">${lede}</p>`}</div>
+    ${tied}${navBtn(d.id)}${strip}${I.rows.length ?`<h2 class="im-sec">${L.cls === 'S' ? 'The passages, in canon order' : 'The passages the graph holds'}</h2>
     <div class="im-keyline" aria-label="Key to the marks">${[1, 2, 3].map(m => `<span class="im-k">${imMk(m)}<b>${IM_MARK[m]}</b></span>`).join('')}</div>
     <details class="im-why"><summary>How to read the marks</summary><p><b>The text says it:</b> the passage itself says it. <b>A reader’s link:</b> the passage explains it without saying “is”. <b>The word only:</b> the word appears; no meaning given.</p></details>
     ${chips}<div id="im-rows">${rows}</div>` : chips}${fold}
@@ -10483,7 +10707,11 @@ async function openAbout(focus){
       for the Translators Brief lexicons behind the word cards' lexicon entries, and
       for the index of proper names that tells which James a verse means — and,
       behind the lexicons, <b>Francis Brown, S. R. Driver and Charles Briggs</b> (1906) and
-      <b>G. Abbott-Smith</b> (1922), whose lexicons they abridge. <b>James Strong</b>,
+      <b>G. Abbott-Smith</b> (1922), whose lexicons they abridge. The <b>United Bible
+      Societies</b>, for their open dictionaries of Biblical Hebrew and New Testament Greek behind the
+      senses on the word and verse cards, and the editors of the <b>Semantic Dictionary of Biblical
+      Hebrew</b>; and, behind the Greek, <b>Johannes Louw</b> and
+      <b>Eugene Nida</b>, whose lexicon by semantic domains (1988) it revises. <b>James Strong</b>,
       whose numbering (1890) still lets every one of these datasets speak to the others.
       The translators of the <b>American Standard Version</b>, <b>Robert Young</b> for his
       Literal Translation, and <b>Michael Paul Johnson</b> and the World English Bible's
@@ -10639,12 +10867,27 @@ async function openAbout(focus){
         that is not a claim that the words share a root.</p>
       <p style="max-width:64ch;margin:12px 0 0">A word's card shows its
         lexicon entry whole (with the renderings of the King James Version
-        left out of it, and any entry that still names them withheld; the
-        Hebrew entries are withheld for now, since their source asks that
-        permission be sought from the Online Bible, whose work they abridge) and
+        left out of it, and any entry that still names them withheld; for a
+        Hebrew word that entry is Strong's own dictionary, its definition and
+        derivation, since the abridged Brown-Driver-Briggs is withheld: its
+        source asks that permission be sought from the Online Bible, whose work
+        it abridges) and
         adds up how the Berean Standard Bible renders the word, each rendering
         opening its verses in canonical order. A word's page, the one a search
         engine reads, holds the same.</p>
+      ${/* THE UBS SENSES (2026-11-04). Keep About true: what is shown, how a verse gets its sense, and the measured
+            agreement with MACULA (app2/ubs.py; tests/test_ubs_pages.py). */''}
+      <p style="max-width:64ch;margin:12px 0 0">Ahead of that entry, a word's card shows its
+        <b>senses as the UBS dictionaries give them</b> (the United Bible Societies' dictionaries of Biblical
+        Hebrew and of New Testament Greek): each sense with its semantic domain, the other words UBS files under
+        that domain, and the verses UBS lists for it. This is how the Hebrew cards have definitions at all. A verse's
+        card shows, for each of its words, the sense UBS lists that verse under, and none where UBS lists the verse
+        under no sense; little words (the article, pronouns, prepositions, conjunctions) are left out there. The
+        senses are UBS's, not this site's analysis, and are shown with UBS's credit. Where one UBS entry covers
+        several Strong's numbers, each number's card shows only the senses whose verses have that number, and a
+        number none of whose verses the entry lists shows no senses. Of the word-and-verse pairs UBS lists, about
+        nine in ten (92.5%, measured 2026-11-04) are verses where MACULA has that word; a verse's card shows a sense
+        only where both put the word in the verse.</p>
       <p style="max-width:64ch;margin:12px 0 0">A <b>verse's card</b> (what “links” opens under a verse, and the verse's
         own page for a search engine) is put together from layers the graph holds, each with its verse: the
         Berean's heading over the verse and the event whose telling holds it; the Hebrew or Greek words in
@@ -10726,7 +10969,7 @@ async function openAbout(focus){
       ${/* THE NAVIGATOR'S ONE DERIVED CLAIM (2026-10-01). Keep About true:
             the inferred siblings are drawn there and stored nowhere. */''}
       <p style="max-width:64ch;margin:12px 0 0">The <b>Knowledge Graph
-        Navigator</b> at the foot of Explore (on a larger screen) draws this
+        Navigator</b>, a tab of its own (and a button on every card), draws this
         layer, one step out
         from whatever is at its centre. It adds one thing the layer does not
         store: two children of the same recorded father or mother are drawn as
@@ -11573,13 +11816,25 @@ async function openAbout(focus){
         (listed in this project's NOTICE), and Biblica does not endorse this site; the structure shown is
         derived from MACULA's files, which are read as released and not modified (the versions read, and
         what was derived, are in this project's NOTICE); the lexicon entry on
-        each word card is from the Translators Brief lexicons of
+        each Greek word card is from the Translators Brief lexicons of
         <a href="https://www.STEPBible.org" rel="noopener" target="_blank">STEP Bible</a>
-        (CC BY 4.0; based on work by scholars at Tyndale House, Cambridge; the
-        Hebrew after the abridged Brown-Driver-Briggs of the Online Bible, &copy; Larry Pierce, and
-        withheld until the permission it asks for is settled; the Greek after Abbott-Smith), fetched
+        (CC BY 4.0; based on work by scholars at Tyndale House, Cambridge; the Greek after Abbott-Smith; their
+        Hebrew, after the abridged Brown-Driver-Briggs of the Online Bible, &copy; Larry Pierce, is
+        withheld until the permission it asks for is settled), fetched
         from their repository, as is their index of proper names (TIPNR, CC BY
-        4.0), used to tell people of one name apart; the verb classes in the claims are from
+        4.0), used to tell people of one name apart; the lexicon entry on each Hebrew word card is from Strong's
+        Hebrew Dictionary (James Strong, 1894, public domain; the electronic text by
+        <a href="https://github.com/openscriptures/strongs" rel="noopener" target="_blank">Open Scriptures</a>,
+        its definition and derivation only); the senses on the word and verse cards are from the
+        UBS Dictionary of Biblical Hebrew (© United Bible Societies, 2023, adapted from the Semantic Dictionary of
+        Biblical Hebrew, © 2000-2023 United Bible Societies) and the UBS Dictionary of New Testament Greek
+        (© United Bible Societies, 2023, adapted from the Semantic Dictionary of Biblical Greek and from Louw and
+        Nida's Greek-English Lexicon of the New Testament Based on Semantic Domains), published by the United
+        Bible Societies at <a href="https://github.com/ubsicap/ubs-open-license" rel="noopener"
+        target="_blank">github.com/ubsicap/ubs-open-license</a> under
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" target="_blank">CC BY-SA
+        4.0</a>, with their notation marks left out; they are shown, credited, under that license, and are not
+        part of the graph, its CC BY license or its downloads; the verb classes in the claims are from
         WordNet 3.0, under its own licence (its notice is in this project's NOTICE); and the ASV,
         WEB and YLT that the phrase search reads are in the public domain. The
         typefaces are Spectral, IBM Plex Mono and Noto Serif Hebrew, under the
@@ -11588,12 +11843,14 @@ async function openAbout(focus){
             this since the licence moved here, and nothing was here: found by
             DeepSeek's attribution review (the cite
             string was added to About). The vocabulary line names the release in
-            ontology/ns-version.json; change one, change the other. */''}
+            ontology/ns-version.json; change one, change the other. It said 1.2.1
+            through the 1.3.0 release (found 2026-11-06), so tests/test_about_cite.py
+            now holds the two together. */''}
       <p style="max-width:64ch"><b>How to cite it.</b> Egge, D. (2026).
         <i>Bible Ontology</i>. https://bibleontology.org (accessed on the date
         you read it). To point to one card, verse or word, use the address in
         your browser's address bar: each has its own. The vocabularies:
-        Egge, D. (2026). <i>Bible Ontology vocabularies</i>, version 1.2.1.
+        Egge, D. (2026). <i>Bible Ontology vocabularies</i>, version 1.4.0.
         https://bibleontology.org/ns. The graph's data: Egge, D. (2026). <i>Bible Ontology</i>
         [data set], with the data version you used (in <code>out/export/void.ttl</code>).
         https://github.com/bibleontology/bibleontology. CC BY 4.0. Please credit the sources above as well
@@ -11903,12 +12160,78 @@ async function verseConnections(book, c, v){
   if(b) b.click();
 }
 
-// Explore, with the navigator section open
+/* THE BUTTON ON EVERY CARD (A.47, 2026-11-08): the Navigator tab, centred on this card. Its picture is a hub and six
+   spokes in six colours, unlabelled, drawn inline so it costs no request and stays sharp. */
+const NAV_HUB = `<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><g stroke="#8a8174" stroke-width="1.4"
+  stroke-linecap="round"><line x1="12" y1="12" x2="12" y2="2.8"/><line x1="12" y1="12" x2="20" y2="7.4"/>
+  <line x1="12" y1="12" x2="20" y2="16.6"/><line x1="12" y1="12" x2="12" y2="21.2"/><line x1="12" y1="12" x2="4" y2="16.6"/>
+  <line x1="12" y1="12" x2="4" y2="7.4"/></g><circle cx="12" cy="2.8" r="2.3" fill="#d1495b"/>
+  <circle cx="20" cy="7.4" r="2.3" fill="#edae49"/><circle cx="20" cy="16.6" r="2.3" fill="#3f9e6e"/>
+  <circle cx="12" cy="21.2" r="2.3" fill="#7b5ea7"/><circle cx="4" cy="16.6" r="2.3" fill="#00798c"/>
+  <circle cx="4" cy="7.4" r="2.3" fill="#e07a3f"/><circle cx="12" cy="12" r="3.6" fill="#356A8C" stroke="#fff"
+  stroke-width="1.2"/></svg>`;
+const navBtn = id => id ? `<button class="nav-btn" data-navgo="${esc(id)}" title="Open the Knowledge Graph Navigator, centred here">
+  <span class="hub">${NAV_HUB}</span>Show in Navigator</button>` : '';
+/* AND BACK TO THE CARD, THE SAME ONE (Doug, 2026-11-08: "if I navigate back to the card … look for that card open
+   first and only open a new card if needed"): the tab the button was pressed in is selected again, as it was left;
+   only if it has been closed is the card opened anew. */
+let NAV_FROM = null;
+function showInNavigator(id){
+  const t = state.tabs.find(x => x.id === state.active);
+  NAV_FROM = {tab: state.active, title: t ? t.title : '', id, word: String(state.active).startsWith('word')};
+  KGN.center = id;
+  openNavigator();
+  if(KGN.data) kgnGo(id, true);      // already drawn: centre it here (a first open starts from KGN.center)
+  navBack();
+}
+function navBack(tries){
+  const kd = document.querySelector('details[data-sec="x-kgn"]');
+  if(!kd){ if((tries || 0) < 50) setTimeout(() => navBack((tries || 0) + 1), 200); return; }
+  let bar = kd.querySelector('.nav-back');
+  if(!bar){
+    bar = document.createElement('p');
+    bar.className = 'nav-back';
+    bar.style.margin = '6px 0 10px';
+    (kd.querySelector('.body') || kd).prepend(bar);
+  }
+  if(!NAV_FROM){ bar.remove(); return; }
+  // the page's own listener, not the bar's: a tab comes back from its saved HTML, without its handlers
+  bar.innerHTML = `<a href="#" class="link" data-navback="1">← Back to ${esc(NAV_FROM.title || 'the card')}</a>`;
+}
+document.addEventListener('click', ev => {
+  const a = ev.target.closest && ev.target.closest('[data-navback]');
+  if(!a || !NAV_FROM) return;
+  ev.preventDefault();
+  const f = NAV_FROM;
+  if(state.tabs.find(x => x.id === f.tab)) selectTab(f.tab);
+  else if(!f.word) openEntity(f.id);
+  else history.back();
+});
+document.addEventListener('click', ev => {
+  const b = ev.target.closest && ev.target.closest('[data-navgo]');
+  if(b){ ev.preventDefault(); showInNavigator(b.dataset.navgo); }
+});
+
+// the Navigator tab's page: the section that was Explore's, always open
+function navigatorPane(){
+  return `<div class="pane"><p class="kind">Knowledge Graph Navigator</p>
+    <details class="sec" data-sec="x-kgn" open><summary>The graph, one step out</summary><div class="body">
+      <p class="hint" style="margin:0 0 10px;max-width:62ch">The relations of one person, place, idea, event or
+        passage, one step out, drawn as a graph. Click anything to put it in the middle, or name it in the box on the
+        graph; the line's thickness is how much the text gives the two together. Opens on the last card you looked at.</p>
+      <div class="kgn" id="kgn"></div></div></details></div>`;
+}
+document.addEventListener('click', ev => {
+  const a = ev.target.closest && ev.target.closest('[data-navopen]');
+  if(a){ ev.preventDefault(); openNavigator(); }
+});
+
+// the Navigator tab
 function openNavigator(){
-  // asked for: Explore builds the section already open (a build that lands
-  // after this would otherwise replace an opened section with a shut one)
+  // its own tab since 2026-11-08 (it was Explore's last section): the button, a /graph/ link and the first-visit
+  // page all come here
   KGN.want = true;
-  selectTab('explore');
+  selectTab('navigator');
   /* WAIT FOR THE SECTION. Explore is built by requests of its own, so on a
      cold start -- a /graph link opened fresh (A.21) -- it was not there
      after the fixed 300 ms this waited, and the Navigator stayed shut. It is
@@ -12973,13 +13296,9 @@ async function buildExplore(){
           placed here so it rewards the curious without making
           it the centerpiece of the app. On a phone since 2026-10-02, and
           nothing loads until it is opened (kgnStart). */''}
-    ${sec('x-kgn', 'Knowledge Graph Navigator',
-      `<p class="hint" style="margin:0 0 10px;max-width:62ch">The relations of one
-         person, place, idea, event or passage, one step out, drawn as a graph.
-         Click anything to put it in the middle, or name it in the box on the
-         graph; the line's thickness is how much the text gives the two
-         together. Opens on the last card you looked at.</p>
-       <div class="kgn" id="kgn"></div>`, null, !!KGN.want)}
+    ${/* ...and since 2026-11-08 a tab of its own; Explore points to it */''}
+    <p style="margin:14px 0"><a href="#" class="link" data-navopen="1"><b>The Knowledge Graph Navigator</b> →</a>
+      <span class="hint">its own tab: walk the graph from any card</span></p>
 
     ${/* THE THIRD MAJOR. The stamped event taxonomy -- parables, dreams,
           visions, oracles, things that happen -- which needed no new
@@ -13011,6 +13330,7 @@ async function buildExplore(){
                       : l.dataset.question ? openQuestion(l.dataset.question)
                       // the traditions' rows (2026-10-27: they fell through to openSense and opened nothing)
                       : l.dataset.tradition ? openTradition(l.dataset.tradition)
+                      : l.dataset.navopen ? openNavigator()
                       : l.dataset.theme ? openTheme(l.dataset.theme)
                       : l.dataset.layer
                         ? openLayerItem(l.dataset.layer, l.dataset.lkey)
@@ -13133,7 +13453,8 @@ function kgnStyle(){
     {selector:'node', style:{'background-color':T.surface, 'border-width':1.5, 'border-color':T.muted,
       label:'data(label)', 'font-size':11 * lk, 'font-family':font, color:T.ink,
       'text-valign':'center', 'text-halign':'center', shape:'round-rectangle', padding:'6px',
-      width:'label', height:'label', 'text-wrap':'wrap', 'text-max-width':`${Math.round(120 * lk)}px`}},
+      width:'label', height:'label', 'text-wrap':'wrap', 'text-max-width':`${Math.round(120 * lk)}px`,
+      'text-events':'yes'}},
     // app1's shapes, plain polygons only (its rounded ones throw on reciprocal edges)
     {selector:'node[etype = "place"]', style:{shape:'diamond', 'border-style':'dashed', padding:'10px'}},
     {selector:'node[etype = "group"]', style:{shape:'tag', 'border-width':2, padding:'9px'}},
@@ -13239,8 +13560,13 @@ function kgnInit(){
      under the wheel. Its own zooming is off and the wheel zooms about the
      centre node instead, which stays put while the ring grows or shrinks. */
   const el = document.getElementById('kgnCy');
+  /* A TAP ON A PHONE IS A TAP (Doug, 2026-11-08: "there were times when the satellite node clicks did not work"): a
+     finger moves a few pixels as it taps, which dragged the node or panned the graph and fired no tap. On a touch
+     screen nodes do not drag, and a tap may move 16 px (the library's own default is 8). */
+  const touch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
   const cy = KGN.cy = cytoscape({container: el,
     minZoom:0.2, maxZoom:3, userZoomingEnabled:false, boxSelectionEnabled:false,
+    autoungrabify: touch, touchTapThreshold: 16,
     style: kgnStyle()});
   el.addEventListener('wheel', ev => {
     const n = KGN.center && cy.getElementById(KGN.center);
@@ -13257,7 +13583,24 @@ function kgnInit(){
   // but the menu moved with the mouse and could not be clicked); the details below
   // the graph were out of view
   cy.on('tap', 'edge', e => e.target.hasClass('bundle') ? kgnPick(e) : (kgnSelect(e.target), kgnPopSel(e.renderedPosition)));
-  cy.on('tap', e => { if(e.target === cy){ cy.edges().removeClass('sel'); $('#kgnSel').innerHTML = ''; kgnPickClose(); } });
+  cy.on('tap', e => {
+    if(e.target !== cy) return;
+    /* A NEAR MISS IS A TAP ON A PHONE (Doug, 2026-11-10: hit and miss "when using the Navigator"): fitted to a phone
+       the ring draws at about half zoom, so a satellite's box is small, and a finger landing just beside it hit the
+       canvas, which only clears. Within 24 px of a node's box, the nearest node is the tap */
+    if(touch && e.renderedPosition){
+      const {x, y} = e.renderedPosition;
+      let best = null, bd = 24;
+      cy.nodes().forEach(n => {
+        const b = n.renderedBoundingBox({includeLabels: true});
+        const dx = Math.max(b.x1 - x, 0, x - b.x2), dy = Math.max(b.y1 - y, 0, y - b.y2);
+        const dist = Math.hypot(dx, dy);
+        if(dist < bd){ bd = dist; best = n; }
+      });
+      if(best){ if(best.id() !== KGN.center) kgnGo(best.id(), true); return; }
+    }
+    cy.edges().removeClass('sel'); $('#kgnSel').innerHTML = ''; kgnPickClose();
+  });
   cy.on('mouseover', 'edge', e => { e.target.addClass('hl'); kgnTip(e); });
   cy.on('mousemove', 'edge', kgnTipMove);
   cy.on('mouseout', 'edge', e => { e.target.removeClass('hl'); $('#kgnTip').classList.remove('on'); });
@@ -13280,7 +13623,9 @@ function kgnInit(){
   };
   KGN.lblScale = lblScale;
   cy.on('zoom', () => { if(!lblFrame) lblFrame = requestAnimationFrame(lblScale); });
-  $('#kgnOpen').onclick = () => KGN.center && openEntity(KGN.center);
+  // a word at the centre opens its word card (word:<key>, 2026-11-08), anything else its card
+  $('#kgnOpen').onclick = () => KGN.center && (String(KGN.center).startsWith('word:')
+    ? openSense(KGN.center.slice(5)) : openEntity(KGN.center));
   $('#kgnBack').onclick = () => { const prev = KGN.history.pop(); if(prev) kgnGo(prev, false); };
   const slider = $('#kgnStrength');
   // dragging only thins; the ring is redrawn once a frame at most
@@ -13748,7 +14093,8 @@ function setExplore(html, wire){
   const themeId = path.startsWith('/themes/') ? path.slice(8).replace(/\/$/, '')
     : path.startsWith('/theme/') ? path.slice(7).replace(/\/$/, '') : null;
   // the Navigator centred on a record (A.21): it starts from KGN.center
-  const graphId = path.startsWith('/graph/') ? path.slice(7).replace(/\/$/, '') : null;
+  // decoded: a word's address is /graph/word%3Ag25 (2026-11-08)
+  const graphId = path.startsWith('/graph/') ? decodeURIComponent(path.slice(7).replace(/\/$/, '')) : null;
   // a question card at its own address (plan 8.4h)
   const questionId = path.startsWith('/questions/') ? path.slice(11).replace(/\/$/, '') : null;
   // a tradition or a school of reading (2026-10-26), and their list

@@ -7,6 +7,8 @@ What it holds the pilot to: a Work is not its text (Expressions realise it, Mani
 translation is an Expression, never a new Work; a section of the Psalter's order is not a Work; the two texts'
 verses are separate segments, aligned, never shared; the Work Creation has no agent or date; and who composed the
 psalm, or which Asaph the superscription names, is described as the editors' claim and never stated.
+Corrected 2026-11-06 (docs/review/lrm/scope-notes-2026-11-06.md): the Psalter incorporates the psalm (R75, between
+Expressions), never has it as a part (R67), and every Work has exactly one creation event.
 """
 import copy
 import json
@@ -79,12 +81,17 @@ def faults(fx, text):
     for w in fx["works"]:
         if f'"{w["label"]}"@en' not in objs(I(w["id"]), T(fx["terms"]["label"])):
             f.append(f"{w['id']}: no English label")
-    for m in fx["members"]:
-        if (I(m["whole"]), T(fx["terms"]["has_member"]), I(m["part"])) not in S:
-            f.append(f"{m['whole']} does not have {m['part']} as a member")
+    # a collected psalm is incorporated by the collection's Expressions, never a part of it (LRMoo R67 is for parts
+    # conceived together as one whole; 2026-11-06, the scope notes)
+    if any(b == T("lrmoo:R67_has_part") for (a, b, c) in trs):
+        f.append("R67 has part between Works: a collected psalm is incorporated (R75), not a part")
     exprs = set(subs(TYPE, T(fx["terms"]["Expression"])))
     if exprs != {I(e["id"]) for e in fx["expressions"]}:
-        f.append("the Expressions are not exactly the fixture's two")
+        f.append("the Expressions are not exactly the fixture's")
+    for e in fx["expressions"]:
+        for inner in e.get("incorporates", []):
+            if (I(e["id"]), T(fx["terms"]["incorporates"]), I(inner)) not in S:
+                f.append(f"{e['id']} does not incorporate {inner}")
     for e in fx["expressions"]:
         who = subs(T(fx["terms"]["is_realised_in"]), I(e["id"]))
         if who != [I(e["realises"])]:
@@ -125,11 +132,15 @@ def faults(fx, text):
     al = {(a, c) for (a, b, c) in trs if b == T(fx["terms"]["alignedWith"])}
     if al != set(zip(eng, heb)):
         f.append("the alignment is not exactly English verse n to Hebrew verse n")
-    # ---- the Work Creation: what it created, and nothing else
-    wc = I(fx["workCreation"]["id"])
-    rest = {(b, c) for (a, b, c) in trs if a == wc}
-    if rest != {(TYPE, T(fx["terms"]["WorkCreation"])), (T(fx["terms"]["created"]), I(fx["workCreation"]["created"]))}:
-        f.append(f"the Work Creation says more or less than what it created: {sorted(rest)}")
+    # ---- the Work Creations, one per Work (R16): what each created, and nothing else
+    for cr in fx["workCreations"]:
+        wc = I(cr["id"])
+        rest = {(b, c) for (a, b, c) in trs if a == wc}
+        if rest != {(TYPE, T(fx["terms"]["WorkCreation"])), (T(fx["terms"]["created"]), I(cr["created"]))}:
+            f.append(f"the Work Creation {cr['id']} says more or less than what it created: {sorted(rest)}")
+    for w in works:
+        if len(subs(T(fx["terms"]["created"]), w)) != 1:
+            f.append(f"{w} has not exactly one creation event")
     # ---- the arrangement
     A = fx["arrangement"]
     if (I(A["id"]), TYPE, T(fx["terms"]["Arrangement"])) not in S or \
@@ -201,7 +212,9 @@ for what, bad_text in [
         ("authorship stated", text + f'{w73} {T("biblio:composedBy")} {asaph} .\n'),
         ("Book III typed a Work", text + f'{I("arr/psalter-mt/book-3")} {TYPE} {T("lrmoo:F1_Work")} .\n'),
         ("a date", text + f'{I("event/psalm-73-creation")} {T("dcterms:date")} "-1000"^^<{NS["xsd"]}gYear> .\n'),
-        ("a dropped segment", "\n".join(l for l in lines if "Ps.73.28" not in l) + "\n")]:
+        ("a dropped segment", "\n".join(l for l in lines if "Ps.73.28" not in l) + "\n"),
+        ("the psalm a part of the Psalter (R67)", text + f'{I("work/psalter")} {T("lrmoo:R67_has_part")} {w73} .\n'),
+        ("the Psalter with no creation event", "\n".join(l for l in lines if "psalter-creation" not in l) + "\n")]:
     planted += 1
     srt = "".join(sorted(set(l + "\n" for l in bad_text.split("\n") if l)))
     if not faults(FX, srt):

@@ -320,7 +320,33 @@ finally:
     O.second_pass = real
 shutil.rmtree(tmp)
 
+# 23. the plants are spread through the batches (2026-11-04: appended last, 10 of 12 filled the final batch). The
+# 16-psalm-headings shape: 286 flagged items, 12 plants, batches of 36
+items_ = [{"id": "i%d" % i} for i in range(286)]
+plants_ = [{"id": "p%d" % i} for i in range(12)]
+order = O._spread(items_, plants_, "16-psalm-headings")
+batches_ = [order[i:i + 36] for i in range(0, len(order), 36)]
+per = [sum(1 for x in b if x["id"].startswith("p")) for b in batches_]
+check(len(order) == 298 and sorted(x["id"] for x in order) == sorted(x["id"] for x in items_ + plants_),
+      "23: the spread lost or repeated an item")
+check(max(per) <= 3 and min(per) >= 1, f"23: plants per batch {per} (want every batch some, none more than 3)")
+check(order == O._spread(items_, plants_, "16-psalm-headings"), "23: the order is not the same on every cycle")
+few = O._spread(items_[:5], plants_[:2], "small")
+check([x["id"] for x in few if x["id"].startswith("i")] == ["i0", "i1", "i2", "i3", "i4"],
+      "23: the spread reordered the real items")
+
+# 24. a finished pass is not listed as held at peak (2026-11-04: "16-psalm-headings: held: peak" after it finished)
+tmp, env = sweep_world(FakeProxy(answer=lambda m: ""), ["not_said"])
+(env.home / "results" / "sweep").mkdir(parents=True, exist_ok=True)
+(env.home / "results" / "sweep" / "agreement.jsonl").write_text("", encoding="utf-8")
+env.now = t("2026-11-04T02:00:00")                       # a weekday peak
+O.cycle(env)
+st = json.loads((env.home / "status.json").read_text(encoding="utf-8"))
+check(st.get("peak") and not any(w.startswith("sweep") for w in st.get("waiting", [])),
+      f"24: a finished pass is reported as waiting at peak: {st.get('waiting')}")
+shutil.rmtree(tmp)
+
 for f in fails:
     print("FAIL", f)
-print(f"orchestrator: 22 acceptance tests; {len(fails)} failures")
+print(f"orchestrator: 24 acceptance tests; {len(fails)} failures")
 sys.exit(1 if fails else 0)

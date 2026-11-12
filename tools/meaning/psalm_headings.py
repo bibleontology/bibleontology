@@ -96,7 +96,7 @@ def build():
             "deepseek": {"runs": 2, "batch": 36, "brief": "brief.md", "planted": "planted.jsonl", "budget_usd": 0.15},
             "allowed_fields": ["id", "claim", "ref", "verse", "context"]}
     (OUT / f"{NAME}.pass.json").write_text(json.dumps(spec, indent=2) + "\n", encoding="utf-8")
-    (OUT / "brief.md").write_text(vr.DS_BRIEF + "\n", encoding="utf-8")
+    (OUT / "brief.md").write_text(vr.SLOT_BRIEF + "\n", encoding="utf-8")   # the claims fill a slot: who wrote it
     with open(OUT / "items.jsonl", "w", encoding="utf-8", newline="\n") as f:
         for it in items:
             if not it.get("mac_only"):

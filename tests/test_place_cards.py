@@ -253,9 +253,11 @@ check(any(ct["go"] == "Luke 2:27" for ev in cj["plcard"]["story"] if ev["id"] ==
           for v in ev["visits"] for ct in v["cites"]), "Luke 2:27 is not in the presentation")
 check(not any(v["cites"] and v["cites"][0]["go"] in ("Luke 2:46",) for ev in cj["plcard"]["story"]
               if ev["id"] == "event_cleansing_of_the_temple" for v in ev["visits"]), "Luke 2:46 sits in the cleansing")
+# the first story row with relations (the story runs by mentions since 2026-11-11, so row 2 may have none)
+RI = next(i for i, ev in enumerate(cj["plcard"]["story"]) if ev["rows"])
 # planted: the story built from a roster of kings
 cj4 = copy.deepcopy(cj)
-cj4["plcard"]["story"][2]["rows"].append({"kind": "ruled_from", "other": "david", "name": "David", "via": None,
+cj4["plcard"]["story"][RI]["rows"].append({"kind": "ruled_from", "other": "david", "name": "David", "via": None,
                                            "cites": [{"ref": "2Sam 5:5", "go": "2Sam 5:5"}], "certainty": "explicit"})
 check(story_faults(cj4), "planted: a kings' row in the story was not caught")
 # planted: fifty names listed one by one
@@ -266,10 +268,10 @@ ev5["rows"] = [{"kind": "repaired", "other": f"x{i}", "name": f"x{i}", "via": "w
 check(story_faults(cj5), "planted: a roster listed one by one was not caught")
 # planted: an actor with no relation behind him, and a verse in no telling of the event
 cj6 = copy.deepcopy(cj)
-cj6["plcard"]["story"][2]["rows"][0]["other"] = "pharaoh"
+cj6["plcard"]["story"][RI]["rows"][0]["other"] = "pharaoh"
 check(story_faults(cj6), "planted: an actor with no relation was not caught")
 cj7 = copy.deepcopy(cj)
-cj7["plcard"]["story"][2]["rows"][0]["cites"] = [{"ref": "Gen 1:1", "go": "Gen 1:1"}]
+cj7["plcard"]["story"][RI]["rows"][0]["cites"] = [{"ref": "Gen 1:1", "go": "Gen 1:1"}]
 check(story_faults(cj7), "planted: a verse in no telling of the event was not caught")
 # planted: a face with no event
 cj8 = copy.deepcopy(cj)
@@ -314,7 +316,8 @@ check(set(nj) == {"H3389", "H3390", "G2414", "G2419"}, f"Jerusalem's name words 
 import unicodedata  # noqa: E402
 # Ἰερουσαλήμ apart from Ἱεροσόλυμα is the lexicon's headword; the public copy fetches the lexicon rather than
 # carrying it (README; tools/fetch_lexicon.py), so without it the two share MACULA's lemma (2026-11-01, the gate)
-if sum(1 for v in d["lex"].values() if v.get("definition")) > 5000:
+# counted in Greek alone: Strong's Hebrew's 8,674 committed entries passed a count of both (the gate, 2026-11-11)
+if sum(1 for k, v in d["lex"].items() if k[:1] == "g" and v.get("definition")) > 3000:
     check(unicodedata.normalize("NFC", nj["G2419"]["lemma"] or "").endswith("ήμ"), f"G2419 is shown as {nj['G2419']['lemma']!r}")
     check(nj["G2419"]["lemma"] != nj["G2414"]["lemma"], "G2419 and G2414 carry the same lemma")
 else:

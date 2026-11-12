@@ -209,6 +209,26 @@ DS_BRIEF = BRIEF.replace("Answer with ONE line of JSON:\n{\"verdict\": \"...\", 
 assert '"fix"' not in DS_BRIEF and "fix:" not in DS_BRIEF and all(f'"id": "r{i}"' in DS_BRIEF for i in (1, 2, 3)) \
     and '"id": "...", "verdict"' in DS_BRIEF, "DS_BRIEF: a replacement did not apply"
 
+# FOR CLAIMS THAT FILL A SLOT (who, where, which: "Psalm 50's heading attributes it to Asaph"), 2026-11-05. Under
+# DS_BRIEF a wrong value reads as "a detail differs: who did it", so the 16-psalm-headings pass scored its 12 moved
+# attributions "partly" 22 times in 24, while rejecting every one by its reason ("David, not Asaph"). For a slot the
+# value is the whole claim: the wrong one is "not_said". DS_BRIEF itself is unchanged, since other passes measured
+# on it; a pass whose claims fill slots uses this.
+SLOT_BRIEF = DS_BRIEF.replace(
+    "- \"partly\": the verse says something close, but a detail differs: who did it, to whom, or whether it happened at all\n"
+    "  (asked, intended, promised or threatened is not done).",
+    "- \"partly\": the verse says something close, but less: whether it happened at all (asked, intended, promised or\n"
+    "  threatened is not done), or a detail the claim adds that the verse does not give.\n"
+    "- A claim that names a person, place or thing the verse does not name in that role (the verse names another) is\n"
+    "  \"not_said\", never \"partly\": the name is what the claim says.") \
+    .replace("{\"id\": \"r3\", \"verdict\": \"not_said\", \"words\": \"\", \"why\": \"\"}",
+             "{\"id\": \"r3\", \"verdict\": \"not_said\", \"words\": \"\", \"why\": \"\"}\n\n"
+             "CLAIM: Psalm 3's heading attributes it to Asaph. VERSE (Ps 3:1): \"A Psalm of David, when he fled from his son\n"
+             "Absalom. O LORD, how my foes have increased!\"\n"
+             "{\"id\": \"r4\", \"verdict\": \"not_said\", \"words\": \"A Psalm of David\", \"why\": \"\"}")
+assert SLOT_BRIEF.count("never \"partly\"") == 1 and '"id": "r4"' in SLOT_BRIEF and "who did it, to whom" not in SLOT_BRIEF, \
+    "SLOT_BRIEF: a replacement did not apply"
+
 
 def ds_text(c):
     ctx = "".join(f"  (before) {x}\n" for x in c["context"][-2:])

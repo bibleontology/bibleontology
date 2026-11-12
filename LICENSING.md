@@ -60,6 +60,16 @@ already taken, so it is granted deliberately: the vocabularies once their
 files could be downloaded, the graph and the code when this repository was
 published.
 
+## Shown on the site, not in this repository
+
+The senses on the word and verse cards come from the United Bible Societies'
+dictionaries of Biblical Hebrew and New Testament Greek, under **CC BY-SA 4.0**
+(share-alike). They are shown on the site with UBS's credit and under that
+licence, and are not part of the graph or its CC BY 4.0 licence. They are
+not in this repository: the site's server fetches them from UBS
+(`tools/fetch_ubs.py`), and the repository's build refuses any file that
+carries their text. See [SOURCES.md](SOURCES.md).
+
 ## What is not mine to license at all
 
 Notes and profiles written by readers of the site. Those are theirs, held in

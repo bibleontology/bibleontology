@@ -46,6 +46,16 @@ ontology/entities/entities.jsonl, each credited in its own record; its
 lexicons and TIPNR are fetched from that repository, not redistributed here.
 
 -------------------------------------------------------------------------------
+Strong's Hebrew Dictionary
+
+data/lexicon/strongs-hebrew.json carries the definitions and derivations of
+James Strong's Hebrew Dictionary (1894), public domain, from the electronic
+text by Open Scriptures (https://github.com/openscriptures/strongs), encoded by
+David Troidl after David Instone-Brewer. The King James Version's renderings,
+and a sense outline after Brown-Driver-Briggs that the file also carries, are
+left out.
+
+-------------------------------------------------------------------------------
 WordNet
 
 ontology/relations/verb-statements.jsonl and the claims exports under

@@ -101,7 +101,7 @@ KINDS = {"/api/entity": "card", "/api/chapter": "chapter", "/api/search": "searc
          "/api/majortheme": "theme", "/api/tag": "tag", "/api/entity-verses": "card verses",
          "/api/unit": "unit", "/api/sense": "word page", "/api/recurs": "explore patterns",
          "/api/upper": "explore ontologies", "/api/lists": "explore lists",
-         "/api/events": "explore events", "/api/majorthemes": "explore themes"}
+         "/api/events": "explore events", "/api/majorthemes": "explore themes", "/api/graph": "navigator"}
 # WHAT VISITORS USE (2026-10-01, totals chosen over a row per visitor:
 # country stays with Cloudflare's dashboard, so the site never asks it). Read
 # from the browser string as the request arrives, counted once per visitor
@@ -479,6 +479,10 @@ class Activity:
                 act = ("cards", q["id"][:80])
             elif path == "/api/majortheme" and q.get("id"):
                 act = ("themes", q["id"][:80])
+            elif path == "/api/graph" and q.get("id"):
+                # the Navigator centred on a record (its own tab from 2026-11-08: Doug, "will /ops tell me about
+                # navigator activity?")
+                act = ("navigator", q["id"][:80])
             elif path == "/api/tag" and q.get("id"):
                 act = ("tags", q["id"][:80])
             elif path == "/api/chapter" and q.get("b"):

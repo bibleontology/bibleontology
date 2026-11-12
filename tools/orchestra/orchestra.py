@@ -12,6 +12,7 @@ Python 3.9, standard library only.
 
 import datetime as dt
 import json
+import random
 import re
 import shutil
 from pathlib import Path
@@ -597,8 +598,28 @@ def _budget_ok(env, spec, name):
     return True
 
 
+def _spread(items, plants, seed):
+    """The plants spread through the items, one in each equal stretch at a seeded place. Appended after the items
+    (to 2026-11-04) they filled the last batch: 10 of the 16-psalm-headings pass's 12 plants were in one batch, which
+    a reader could tell from the rest and which scored nothing about the batches the real items were in. Seeded by
+    the pass's name, so every cycle sends the same order and a pass resumed part-way keeps its batches."""
+    if not plants or not items:
+        return list(items) + list(plants)
+    rng = random.Random(seed)
+    stride = float(len(items) + len(plants)) / len(plants)
+    slots = set()
+    for i in range(len(plants)):
+        slots.add(min(int(i * stride + rng.random() * stride), len(items) + len(plants) - 1))
+    while len(slots) < len(plants):                      # a collision at a stretch's edge: the next free place
+        slots.add(min(set(range(len(items) + len(plants))) - slots))
+    out, it, pl = [], iter(items), iter(plants)
+    for pos in range(len(items) + len(plants)):
+        out.append(next(pl) if pos in slots else next(it))
+    return out
+
+
 def _payload(env, name, spec, deep, allowed):
-    """The items to send: those the Mac flagged, then the plants."""
+    """The items to send: those the Mac flagged, with the plants spread among them."""
     mac = _mac_verdicts(env, spec.get("mac_job") or (name + ".jsonl"))
     flag_in = set((spec.get("flag") or {}).get("verdict_in") or [])
     out = []
@@ -614,12 +635,13 @@ def _payload(env, name, spec, deep, allowed):
         out.append(reduce_item(row, allowed))
     plants = _read_jsonl(safe_path(env.home, "passes", name,
                                    deep.get("planted") or "planted.jsonl"))
+    sent = []
     for plant in plants:
         row = dict(plant)
         row.pop("expect", None)
         row.pop("key", None)
-        out.append(reduce_item(row, allowed))
-    return out
+        sent.append(reduce_item(row, allowed))
+    return _spread(out, sent, name)
 
 
 def second_pass(env, pass_spec):
@@ -824,15 +846,16 @@ def cycle(env):
             done = False
         if not done:
             continue
-        if at_peak:
-            if not spec.get("urgent"):
-                waiting.append("%s: held: peak" % name)
-            continue
+        # finished before peak: a finished pass was listed as "held: peak" (16-psalm-headings, 2026-11-04)
         try:
             finished = safe_path(env.home, "results", name, "agreement.jsonl").exists()
         except ValueError:
             finished = False
         if finished:
+            continue
+        if at_peak:
+            if not spec.get("urgent"):
+                waiting.append("%s: held: peak" % name)
             continue
         before = _spent(env, name)
         # one bad pass never stops the others (the security seat, 2026-11-03)

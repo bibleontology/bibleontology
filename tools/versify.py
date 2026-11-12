@@ -300,8 +300,31 @@ def main() -> int:
             continue
         for v_ in range(k + 1, mlen + 1):
             mapping[f"{bk}.{c_}.{v_}"] = f"{bk}.{c_}.{v_ - k}"
+        # THE TITLE ITSELF IS VERSE 1 (2026-11-06). Its verses kept what the alignment gave them, and the alignment,
+        # free to drift, sent Psalm 54:2 (the Ziphites' words to Saul, the second verse of its title) to 53:6, so
+        # the reader showed Psalm 54's heading under "Oh, that the salvation of Israel would come from Zion". The
+        # Berean folds a title into verse 1, as STEP's "verse 0" is the Berean's 1 below. Found building the
+        # Psalter's alignment (tools/lrm_psalter.py), which refuses a verse mapped out of its psalm.
+        for v_ in range(1, k + 1):
+            mapping[f"{bk}.{c_}.{v_}"] = f"{bk}.{c_}.1"
         titled += 1
     print(f"psalm titles offset by verse counts: {titled} psalms")
+
+    # A CHAPTER'S LAST VERSE THE BEREAN FOLDS INTO THE ONE BEFORE (2026-11-07). Revelation 12:18 ("the dragon stood on
+    # the shore of the sea") and 3 John 1:15 end the Berean's 12:17 and 1:14; with no verse of their own number they
+    # mapped to nothing, so a UBS sense listing Rev 12:18 (under ἵστημι) linked to no page. Where MACULA's chapter runs
+    # one verse past the Berean's and nothing else in it moves, its last verse is the Berean's last. (Mark 16:99 is
+    # MACULA's code for the shorter ending, which the site handles apart.)
+    folded = 0
+    for (bk, c_), mlen in sorted(count["m"].items()):
+        if a.book and bk != a.book:
+            continue
+        blen = count["b"].get((bk, c_))
+        last = f"{bk}.{c_}.{mlen}"
+        if blen and mlen == blen + 1 and mlen < 99 and mapping.get(last, last) == last:
+            mapping[last] = f"{bk}.{c_}.{blen}"
+            folded += 1
+    print(f"a chapter's last verse folded into the one before: {folded}")
 
     print(f"{stats['mapped']:,} verses mapped, {stats['unmapped']:,} left "
           f"unmapped (below {MIN_SCORE:.0%} agreement)")

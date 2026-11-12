@@ -1704,6 +1704,42 @@ types:
       6:11). Objects move, so this is expected to be many-valued and each
       resting place carries its own citation.
 
+  worshiped:
+    src_type: [person, group]
+    dst_type: [being, concept, object, creature, image]
+    label: "worshiped"
+    inverse: "was worshiped by"
+    category: religious
+    weight: 3
+    group: "Worship"
+    notes: >
+      The text's own verb and nothing more: "they worshiped other gods" (Judg 2:17), the golden calf (Exod 32:8).
+      Approved by Doug 2026-11-08 (P-2026-11-07-3): other gods' 76 verses all state service or worship, and none
+      could be recorded. Who is worshiped rightly is never this edge's to say.
+  served:
+    src_type: [person, group]
+    dst_type: [being, concept, object, creature, image]
+    label: "served"
+    inverse: "was served by"
+    category: religious
+    weight: 3
+    group: "Worship"
+    notes: >
+      Service as the text means it of gods and idols: "they forsook the LORD and served the Baals" (Judg 2:13).
+      Not a servant's work for a master (servant_of). Approved by Doug 2026-11-08 (P-2026-11-07-3).
+  kind_of:
+    src_type: [object, creature]
+    dst_type: [object, creature]
+    label: "is one of the"
+    inverse: "has among them"
+    category: artifact
+    weight: 1
+    group: "Of a kind"
+    notes: >
+      A particular thing the text follows, linked to the card of its kind (plan A.45, approved 2026-11-06: "a common
+      kind with its instances (oxen, wells), each instance its own card, linked as the same kind, never the same one").
+      The twelve stones from the Jordan are one of the stones; they are not the stones of Stephen's stoning. Added
+      2026-11-08 with the first A.45 nodes.
   carried:
     src_type: [person, group]
     dst_type: [object, concept, creature]
@@ -2823,7 +2859,7 @@ types:
     # sentence is built as src + label + dst, so it is a past-tense verb with no
     # number of its own.
     label: "centered on"
-    inverse: "was the centre of"
+    inverse: "was the center of"
     category: geography
     weight: 4
     group: "Where it met"

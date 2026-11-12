@@ -155,7 +155,7 @@ def main():
     # repeating it. Devices, browsers and systems are the server's own
     # classes, printed plain
     chosen = [(n, sorted((t.get(n) or {}).items(), key=lambda kv: -kv[1])[:8])
-              for n in ("cards", "chapters", "searches", "referrers")]
+              for n in ("cards", "navigator", "chapters", "searches", "referrers")]
     if any(top for _, top in chosen):
         nonce = secrets.token_hex(16)
         fence = re.compile(r"<{2,}\s*/?\s*visitor-text[^>]*>{2,}", re.I)

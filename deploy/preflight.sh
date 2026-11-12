@@ -78,6 +78,53 @@ else
 	fi
 fi
 
+# THE SUITES RUN SIDE BY SIDE (2026-11-05). Doug: "preflight is getting
+# ridiculously slow and I cannot believe that more parallelism isn't possible".
+# One after another they took about 28 minutes. Each suite is its own process,
+# reads the graph and writes only to temporary folders or its own port, so
+# they start here, before the validator and the fingerprints, $PREFLIGHT_JOBS
+# at a time, heaviest first; each block below collects its suite's output with
+# `suite` in place of running it, and still reports in its own order and words.
+# The list is read from this file, so a suite added the usual way
+# (out="$(suite tests/x.py)") runs in parallel with no other change; one not
+# started here runs where it stands. The app's suites (after "Search smoke
+# sweep") start only when the app changed, as that block runs only then. Each
+# suite's seconds are kept, and the slowest are printed before the result.
+has() { grep -qE "$1" <<<"$changed"; }
+PRE="$(mktemp -d)"
+JOBS="${PREFLIGHT_JOBS:-8}"
+listed() { grep -oE '\$\(suite (tests|tools)/[a-z_0-9]+\.py\)' | sed -E 's/^\$\(suite //; s/\)$//'; }
+split="$(grep -n '^head_ "Search smoke sweep"' "$0" | cut -d: -f1)"
+want="$(head -n "$split" "$0" | listed; echo tests/test_mcp.py; echo tests/test_mcp_backend.py)"
+if [ -z "$range" ] || has '^app2/'; then
+	want="$want
+$(tail -n "+$split" "$0" | listed)"
+fi
+# heaviest first (each loads the whole site, 2 to 3 minutes; OPERATIONS)
+heavy='test_filter_exports|test_card_links|test_search_doors|test_no_ai_names|test_theme_tags|search_smoke'
+want="$( (grep -E "$heavy" <<<"$want"; grep -vE "$heavy" <<<"$want") | awk 'NF && !s[$0]++' |
+	while read -r t; do [ -e "$t" ] && echo "$t"; done)"
+key() { tr '/.' '__' <<<"$1"; }
+printf '%s\n' "$want" | xargs -P "$JOBS" -I{} bash -c \
+	'f="$1/$(tr "/." "__" <<<"$3")"; s=$(date +%s); "$2" "$3" >"$f.out" 2>&1; echo $? >"$f.rc.tmp";
+	 echo "$(( $(date +%s) - s )) $3" >"$f.sec"; mv "$f.rc.tmp" "$f.rc"' \
+	_ "$PRE" "$PY" {} &
+XARGS=$!
+trap 'kill "$XARGS" 2>/dev/null; rm -rf "$PRE"' EXIT
+started="$(date +%s)"
+# suite FILE: that suite's output and exit status, waiting for it if it is
+# still running; a suite not started above runs now
+suite() {
+	local f="$PRE/$(key "$1")"
+	if ! grep -qxF "$1" <<<"$want"; then
+		$PY "$1" 2>&1
+		return
+	fi
+	while [ ! -e "$f.rc" ]; do sleep 1; done
+	cat "$f.out"
+	return "$(cat "$f.rc")"
+}
+
 head_ "The graph"
 
 # Always. The data is the product, and validating it costs seconds.
@@ -134,6 +181,7 @@ head_ "Regression suites"
 # both changed -- skipping the suites and the reinstall reminder in silence.
 # `has` reads the list directly, with no pipe.
 has() { grep -qE "$1" <<<"$changed"; }
+# (the suites below were started before "The graph": THE SUITES RUN SIDE BY SIDE)
 
 # Only when the code that could break them has changed. Running them on a
 # data-only change proves nothing and trains you to skim the output.
@@ -155,7 +203,7 @@ fi
 # possible by hand, so the checks must be vigilant now that this
 # is released to the public frequently. Proven by planting one fault
 # of each kind: all six caught.
-if out="$($PY tests/test_readings_text.py 2>&1)"; then
+if out="$(suite tests/test_readings_text.py)"; then
 	ok "readings text: $(head -1 <<<"$out")"
 else
 	bad "readings text failed -- python tests/test_readings_text.py"
@@ -164,7 +212,7 @@ fi
 # The coding worker's rules (2026-10-31): an export with docs/, a patch that edits the protected tests or reaches the
 # verifier, a proxy asked for another host, a cap overshot by concurrency, a forged lock, a symlink the main user
 # would follow. Every one planted. Reads no machine state and no key.
-if out="$($PY tests/test_worker.py 2>&1)"; then
+if out="$(suite tests/test_worker.py)"; then
 	ok "coding worker: $(tail -1 <<<"$out")"
 else
 	bad "coding worker failed -- python tests/test_worker.py"
@@ -173,7 +221,7 @@ fi
 # The theme tags in the reader (2026-10-08): exactly the verses each theme's
 # own table and front page set out, brackets opening the table at the row,
 # and none of the retired September theme stamps. Three planted faults caught.
-if out="$($PY tests/test_theme_tags.py 2>&1)"; then
+if out="$(suite tests/test_theme_tags.py)"; then
 	ok "theme tags: $(head -1 <<<"$out")"
 else
 	bad "theme tags failed -- python tests/test_theme_tags.py"
@@ -183,7 +231,7 @@ fi
 # cards (rebuild: python tools/traditions/build.py), every edge with verses,
 # every cited document with its edge, and nothing from an unshown card served.
 # Three planted faults caught.
-if out="$($PY tests/test_traditions.py 2>&1)"; then
+if out="$(suite tests/test_traditions.py)"; then
 	ok "traditions: $(tail -1 <<<"$out")"
 else
 	bad "traditions failed -- python tests/test_traditions.py"
@@ -192,7 +240,7 @@ fi
 # American spelling (2026-10-27, Doug: "I don't spell favor with a u"): the
 # question cards and the traditions layer, in the site's own words; quotes and
 # document titles left as written. Three planted checks.
-if out="$($PY tests/test_american_spelling.py 2>&1)"; then
+if out="$(suite tests/test_american_spelling.py)"; then
 	ok "spelling: $(tail -1 <<<"$out")"
 else
 	bad "American spelling failed -- python tests/test_american_spelling.py"
@@ -201,7 +249,7 @@ fi
 # No KJV wording in any card, shown or held (2026-10-27): the export scans only
 # what it publishes, so two cards' KJV phrasings were first caught at the public
 # cut, after this preflight had passed. Three planted checks.
-if out="$($PY tests/test_kjv_cards.py 2>&1)"; then
+if out="$(suite tests/test_kjv_cards.py)"; then
 	ok "KJV in cards: $(tail -1 <<<"$out" | sed 's/^KJV in cards: //')"
 else
 	bad "KJV wording in a card -- python tests/test_kjv_cards.py"
@@ -210,7 +258,7 @@ fi
 # Every word card headed by its own number's word (2026-10-27): G2411 was the
 # adjective ἱερός, G689 a stray ἀδμίν, H1886 a suffix. Five known answers, no
 # two Greek cards alike unless STEP heads them alike, two planted checks.
-if out="$($PY tests/test_headwords.py 2>&1)"; then
+if out="$(suite tests/test_headwords.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "a word card's headword -- python tests/test_headwords.py"
@@ -219,7 +267,7 @@ fi
 # Every Explore link opens something (2026-10-27): the traditions' rows had no
 # branch in Explore's own click chain and opened nothing, while the same links
 # worked from the question cards. Two planted checks.
-if out="$($PY tests/test_explore_links.py 2>&1)"; then
+if out="$(suite tests/test_explore_links.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "an Explore link opens nothing -- python tests/test_explore_links.py"
@@ -229,7 +277,7 @@ fi
 # (8.4h, 2026-10-28): each cell's snippet found in its reading's text, each
 # verse the reading's own, "in part" only where a document states the
 # reading. Four planted checks.
-if out="$($PY tests/test_question_tables.py 2>&1)"; then
+if out="$(suite tests/test_question_tables.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "a question card's comparison -- python tests/test_question_tables.py"
@@ -238,11 +286,30 @@ fi
 # The declared lists (A.34, 2026-10-07): one card each, every member a node,
 # every member and move in its verse's words, and the card's links served by
 # the page's delegated listener. Proven by planting nine faults: all caught.
-if out="$($PY tests/test_aggregate_hubs.py 2>&1)"; then
+if out="$(suite tests/test_aggregate_hubs.py)"; then
 	ok "declared lists: $(head -1 <<<"$out")"
 else
 	bad "declared lists failed -- python tests/test_aggregate_hubs.py"
 	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# The UBS fetch's pins (2026-11-04): the server builds the share-alike UBS
+# extracts itself, so the extractor must still build exactly what the pins say.
+# Two planted faults; skipped where data/raw/ubs/ is not on this machine.
+if out="$(suite tests/test_fetch_ubs.py)"; then
+	ok "UBS fetch pins: $(tail -1 <<<"$out")"
+else
+	bad "UBS fetch pins failed -- python tests/test_fetch_ubs.py"
+	grep -E "^FAIL|Error" <<<"$out" | head -8
+fi
+# The UBS senses on the word and verse pages (2026-11-04): a verse shows a
+# sense only where UBS lists that verse, a shared entry is split by where each
+# number stands, every credit exact. Planted wrong verse; part 2 skipped where
+# data/raw/ubs/ is not on this machine.
+if out="$(suite tests/test_ubs_pages.py)"; then
+	ok "UBS senses: $(tail -1 <<<"$out")"
+else
+	bad "UBS senses failed -- python tests/test_ubs_pages.py"
+	grep -E "^FAIL|Error" <<<"$out" | head -8
 fi
 # The marks beside the Berean's words (2026-10-08): the Berean's manuscript
 # note on every verse of Mark 16:9-20 and John 7:53-8:11, and each finding on
@@ -250,7 +317,7 @@ fi
 # A card's words, one definition (plan 4.8 step 0(a), 2026-10-19): the server,
 # the concept audit and the resolution layer all ask tools/meaning/membership.py.
 # Its rules each with a planted case, and no caller keeping its own copy.
-if out="$($PY tests/test_membership.py 2>&1)"; then
+if out="$(suite tests/test_membership.py)"; then
 	ok "$(head -1 <<<"$out")"
 else
 	bad "card membership failed -- python tests/test_membership.py"
@@ -258,7 +325,7 @@ else
 fi
 # The filter policy is the one source (plan 8.1f): ontology/schema/salience.json
 # read by membership.py, served to the navigator, the page's fallbacks equal.
-if out="$($PY tests/test_salience.py 2>&1)"; then
+if out="$(suite tests/test_salience.py)"; then
 	ok "$(head -1 <<<"$out")"
 else
 	bad "filter policy failed -- python tests/test_salience.py"
@@ -267,7 +334,7 @@ fi
 # The filter, published (plan 8.1f): the shown card words pass their SHACL
 # shape and a planted weak word fails; the published CONSTRUCT gives the shown
 # graph; each centre's floor is the policy's rule over the published ties.
-if out="$($PY tests/test_filter_exports.py 2>&1)"; then
+if out="$(suite tests/test_filter_exports.py)"; then
 	ok "$(head -1 <<<"$out")"
 else
 	bad "filter exports failed -- python tests/test_filter_exports.py"
@@ -275,7 +342,7 @@ else
 fi
 # Verb statements keep their rules (plan 2.17 step 3): only a statement made
 # outright is asserted; every family is in the declared scheme. Planted faults.
-if out="$($PY tests/test_statements.py 2>&1)"; then
+if out="$(suite tests/test_statements.py)"; then
 	ok "$(head -1 <<<"$out")"
 else
 	bad "verb statements failed -- python tests/test_statements.py"
@@ -283,7 +350,7 @@ else
 fi
 # About's pictures (the hybrid, 2026-10-20): the four statements it shows keep
 # the standing it claims for them, or About would say something false.
-if out="$($PY tests/test_about_primer.py 2>&1)"; then
+if out="$(suite tests/test_about_primer.py)"; then
 	ok "$(head -1 <<<"$out")"
 else
 	bad "About's pictures failed -- python tests/test_about_primer.py"
@@ -292,7 +359,7 @@ fi
 # The relation vocabulary's "one of" shapes (before 1.2.0): where a relation's
 # end allows several classes, a SHACL list means either; the whole store, typed
 # by kind, conforms, and two planted faults are caught.
-if out="$($PY tests/test_relation_shapes.py 2>&1)"; then
+if out="$(suite tests/test_relation_shapes.py)"; then
 	ok "$(head -1 <<<"$out")"
 else
 	bad "relation shapes failed -- python tests/test_relation_shapes.py"
@@ -301,7 +368,7 @@ fi
 # The schema map (2026-10-20: not all deeplinks worked): every link lands
 # on an entry of the vocabulary page 1.2.0 publishes, or on a picture in the
 # map; the committed map is what tools/ns_map.py draws; a planted bad link fails.
-if out="$($PY tests/test_ns_map.py 2>&1)"; then
+if out="$(suite tests/test_ns_map.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "schema map failed -- python tests/test_ns_map.py"
@@ -310,7 +377,7 @@ fi
 # No character's words stated as the text's own (third sitting, D1): none of
 # the narrator's shown statements inside the Berean's quotation marks, in
 # Psalms, or addressed in the second person; planted releases caught.
-if out="$($PY tests/test_quoted_speech.py 2>&1)"; then
+if out="$(suite tests/test_quoted_speech.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "quoted speech failed -- python tests/test_quoted_speech.py"
@@ -319,7 +386,7 @@ fi
 # The alignment file (plan 8.1e): every mapping's term of ours exists, every
 # target was checked against its specification (ontology/align/targets.json),
 # no exact matches, and the published copy is the generator's.
-if out="$($PY tests/test_alignment.py 2>&1)"; then
+if out="$(suite tests/test_alignment.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "alignment failed -- python tests/test_alignment.py"
@@ -328,7 +395,7 @@ fi
 # Readers on /ops (2026-10-22): a visitor counts as a reader only once the
 # page's script sends /api/open; referrers ride on it; a farm that never runs
 # the page stays out of readers, devices and referrers.
-if out="$($PY tests/test_activity_readers.py 2>&1)"; then
+if out="$(suite tests/test_activity_readers.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "readers on /ops failed -- python tests/test_activity_readers.py"
@@ -336,7 +403,7 @@ else
 fi
 # the Google queue (2026-11-03: /e/apostles was queued and Search Console said "Excluded by 'noindex' tag"): every
 # page still waiting in docs/review/google-submissions.md renders without noindex
-if out="$($PY tests/test_google_queue.py 2>&1)"; then
+if out="$(suite tests/test_google_queue.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "a queued page cannot be indexed -- python tests/test_google_queue.py"
@@ -345,7 +412,7 @@ fi
 # the MCP server (plan 8.7, 2026-11-03): the protocol and its rules against a fake (fast), then the adapter over the
 # real graph (held questions, divine persons as the site shows them, every hop with its verse, HTTP's guards)
 for t in test_mcp test_mcp_backend; do
-	if out="$($PY tests/$t.py 2>&1)"; then
+	if out="$(suite tests/$t.py)"; then
 		ok "$(tail -1 <<<"$out")"
 	else
 		bad "the MCP server failed -- python tests/$t.py"
@@ -354,7 +421,7 @@ for t in test_mcp test_mcp_backend; do
 done
 # readers who did something (2026-11-03): /api/engaged once a day per reader, only
 # after /api/open; bot requests counted by name, the AI fetchers apart.
-if out="$($PY tests/test_activity_engaged.py 2>&1)"; then
+if out="$(suite tests/test_activity_engaged.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "engaged readers on /ops failed -- python tests/test_activity_engaged.py"
@@ -362,7 +429,7 @@ else
 fi
 # The browsers that open /ops are not counted (2026-10-22): bo_uncounted,
 # site-wide and secretless, set when /ops opens; the token stays on /ops
-if out="$($PY tests/test_ops_uncounted.py 2>&1)"; then
+if out="$(suite tests/test_ops_uncounted.py)"; then
 	ok "own browsers uncounted: $(tail -1 <<<"$out")"
 else
 	bad "own browsers on /ops failed -- python tests/test_ops_uncounted.py"
@@ -370,7 +437,7 @@ else
 fi
 # The exports' terms (plan 8.3): every header, the VoID/DCAT description and
 # the graph_license switch say one thing; MACULA credited in its own words.
-if out="$($PY tests/test_export_terms.py 2>&1)"; then
+if out="$(suite tests/test_export_terms.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "export terms failed -- python tests/test_export_terms.py (rebuild: tools/export_*.py)"
@@ -379,13 +446,13 @@ fi
 # The 1.2.0 shape against one worked example of each lift (plan 8.1e item 5):
 # every term declared, the named gaps exactly those proposed, and a command or
 # a prediction described, never stated, by the export's own rule. Planted faults.
-if out="$($PY tests/test_lift_shapes.py 2>&1)"; then
+if out="$(suite tests/test_lift_shapes.py)"; then
 	ok "$(head -1 <<<"$out")"
 else
 	bad "lift shapes failed -- python tests/test_lift_shapes.py"
 	grep -E "FAIL" <<<"$out" | head -8
 fi
-if out="$($PY tests/test_verse_marks.py 2>&1)"; then
+if out="$(suite tests/test_verse_marks.py)"; then
 	ok "verse marks: $(head -1 <<<"$out")"
 else
 	bad "verse marks failed -- python tests/test_verse_marks.py"
@@ -395,7 +462,7 @@ fi
 # tree stands a postpositive at the head of its clause, and the strip walked
 # the tree, so John 3:16 read "γὰρ Οὕτως" and 5,189 verses came out of order.
 # The built file carries each word's own place (w); a planted fault proves it.
-if out="$($PY tests/test_word_order.py 2>&1)"; then
+if out="$(suite tests/test_word_order.py)"; then
 	ok "word order: $(head -1 <<<"$out")"
 else
 	bad "the original is out of the verse's order -- python tests/test_word_order.py (rebuild: tools/interlinear.py)"
@@ -405,7 +472,7 @@ fi
 # its conjuncts, never the conjunction ("Peter and and", Luke 22:8, and 2,188
 # Greek coordinations like it). The builder on Luke 22:8 and the graph served;
 # a planted fault proves it.
-if out="$($PY tests/test_coordination_members.py 2>&1)"; then
+if out="$(suite tests/test_coordination_members.py)"; then
 	ok "coordinations: $(head -1 <<<"$out")"
 else
 	bad "coordinations failed -- python tests/test_coordination_members.py"
@@ -416,7 +483,7 @@ fi
 # undeclared, every edge within its declared ends. It drifted to 84
 # disagreements unseen when the builder was replaced; three planted faults
 # prove it. Reads the whole graph: a few minutes.
-if out="$($PY tests/test_ontology_closed_world.py 2>&1)"; then
+if out="$(suite tests/test_ontology_closed_world.py)"; then
 	ok "closed world: $(head -1 <<<"$out")"
 else
 	bad "closed world failed -- python tests/test_ontology_closed_world.py"
@@ -424,15 +491,66 @@ else
 fi
 # The claim export (plan 8.1a, 2026-10-14): every claim conforms to its
 # shapes, and a planted fault per rule is caught
-if out="$($PY tests/test_claims.py 2>&1)"; then
+if out="$(suite tests/test_claims.py)"; then
 	ok "claims: $(tail -1 <<<"$out")"
 else
 	bad "claim export broken -- python tests/test_claims.py"
 	grep -E "^FAIL" <<<"$out" | head -8
 fi
+# The text and its witnesses (plan 8.1g, 2026-11-06): /ns/biblio defines every
+# term the Psalm 73 pilot uses and nothing more, the pilot conforms to the
+# published shapes, and a planted fault per rule is caught (13). The stdlib
+# acceptance test of the pilot itself runs beside it.
+if out="$(suite tests/test_biblio_shapes.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "/ns/biblio broken -- python tests/test_biblio_shapes.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+if out="$(suite tests/test_lrm_pilot.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the LRM pilot broken -- python tests/test_lrm_pilot.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# The Psalter in /ns/biblio (plan 8.1g step 3, 2026-11-06): 150 psalm Works,
+# their texts and verses aligned, the five books, the heading claims, on the
+# published shapes; seven planted faults. About a minute.
+if out="$(suite tests/test_lrm_psalter.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the Psalter broken -- python tests/test_lrm_psalter.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# Strong's Hebrew Dictionary on the Hebrew word cards (2026-11-07): the
+# committed extract carries no BDB outline and no KJV rendering, matches its
+# pinned source where that is on disk, and is credited as Strong's. Plants.
+if out="$(suite tests/test_strongs_hebrew.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "Strong's Hebrew broken -- python tests/test_strongs_hebrew.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# The verse map (2026-11-06): no psalm's verse maps into another psalm (Ps
+# 54:2's title was shown under 53:6), and the fixes stay fixed, which also
+# catches a map regenerated without STEP's tables. Planted faults prove it.
+if out="$(suite tests/test_versemap.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the verse map is wrong -- python tests/test_versemap.py (rebuild: tools/versify.py --write, with data/raw/stepbible)"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
+# About's citation names the vocabularies' current release (it said 1.2.1
+# through all of 1.3.0; 2026-11-06). A planted old version proves it.
+if out="$(suite tests/test_about_cite.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "About cites the wrong vocabulary version -- python tests/test_about_cite.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
 # The published shapes pass on the published data, and every record a claim
 # names has a label (the code review, 2026-10-22: it failed 2,828 times)
-if out="$($PY tests/test_export_shapes.py 2>&1)"; then
+if out="$(suite tests/test_export_shapes.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "the exports fail their own shapes -- python tests/test_export_shapes.py"
@@ -440,7 +558,7 @@ else
 fi
 # What the export asserts is the narrator's, as the README claims (plan 8.3f,
 # 2026-10-22): counted in the published files, with planted faults
-if out="$($PY tests/test_assertion_policy.py 2>&1)"; then
+if out="$(suite tests/test_assertion_policy.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "the export asserts what the narrator does not state -- python tests/test_assertion_policy.py"
@@ -448,7 +566,7 @@ else
 fi
 # Speech is found in every book (the speech-claims diagnosis, 2026-10-24): the
 # speaker credits look verses up in MACULA's book codes and write the site's
-if out="$($PY tests/test_speaker_credit_codes.py 2>&1)"; then
+if out="$(suite tests/test_speaker_credit_codes.py)"; then
 	ok "$(tail -1 <<<"$out")"
 else
 	bad "speaker credits miss every book whose codes differ -- python tests/test_speaker_credit_codes.py"
@@ -456,7 +574,7 @@ else
 fi
 # The stylesheet (2026-10-13): no CSS line a stray quote has broken -- five
 # had silently deleted rules, unnoticed since they were written
-if out="$($PY tests/test_css.py 2>&1)"; then
+if out="$(suite tests/test_css.py)"; then
 	ok "stylesheet: $(tail -1 <<<"$out")"
 else
 	bad "stylesheet broken -- python tests/test_css.py"
@@ -466,7 +584,7 @@ fi
 # its blank band, search opening in place, the chapter row on one line,
 # desktop untouched, the rulings equal their record -- each with its fault
 # planted and caught. Static, seconds
-if out="$($PY tests/test_header.py 2>&1)"; then
+if out="$(suite tests/test_header.py)"; then
 	ok "phone header: $(tail -1 <<<"$out")"
 else
 	bad "phone header -- python tests/test_header.py"
@@ -476,7 +594,7 @@ fi
 # refuse the same training crawlers, and the rule lets Googlebot, Bingbot and
 # the AI search fetchers through -- Cloudflare's own training block once
 # kept Google out of every page. Proven by planting Googlebot in the rule.
-if out="$($PY tests/test_crawlers.py 2>&1)"; then
+if out="$(suite tests/test_crawlers.py)"; then
 	ok "crawlers: $(tail -1 <<<"$out")"
 else
 	bad "crawler line broken -- python tests/test_crawlers.py"
@@ -488,7 +606,7 @@ fi
 # robots.txt disallows. The copy now goes only after a successful draw, and a
 # failed request leaves it. Proven by 16 planted faults (the old rule, the
 # class added before the fetch, an error notice over a copy, ...). Seconds
-if out="$($PY tests/test_render_without_api.py 2>&1)"; then
+if out="$(suite tests/test_render_without_api.py)"; then
 	ok "render without /api/: $(tail -1 <<<"$out")"
 else
 	bad "a card's server copy is hidden before the app draws it -- python tests/test_render_without_api.py"
@@ -496,7 +614,7 @@ else
 fi
 # The blog (2026-10-05): every post's page built from its current text, so
 # what goes live is what the author wrote -- an edited post not rebuilt fails
-if out="$($PY tests/test_blog.py 2>&1)"; then
+if out="$(suite tests/test_blog.py)"; then
 	ok "blog: $(tail -1 <<<"$out")"
 else
 	bad "blog pages out of date -- python tools/blog_build.py"
@@ -510,7 +628,7 @@ head_ "Search smoke sweep"
 # search. In-process, ~1 minute; proven by reintroducing that bug (60 of 625
 # failed). Only when the app itself changed, like the suites above.
 if [ -z "$range" ] || has '^app2/'; then
-	if out="$($PY tools/search_smoke.py 2>&1)"; then
+	if out="$(suite tools/search_smoke.py)"; then
 		ok "$(grep -E 'searches in' <<<"$out")"
 	else
 		bad "search smoke sweep failed -- python tools/search_smoke.py"
@@ -519,7 +637,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# THE ONE WRITE PATH (A.27): every rule reader feedback holds -- origin,
 	# type, size, the hidden field, the rate limit, escaping on /ops --
 	# against the real handler, writing to a temporary folder
-	if out="$($PY tests/test_feedback_intake.py 2>&1)"; then
+	if out="$(suite tests/test_feedback_intake.py)"; then
 		ok "feedback intake: every rule held"
 	else
 		bad "feedback intake test failed -- python tests/test_feedback_intake.py"
@@ -528,7 +646,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# EVERY LINK A CRAWLER IS GIVEN ANSWERS WITHOUT A REDIRECT (2026-10-05):
 	# card pages linked verses by the dataset's book code and AhrefsBot spent
 	# 926 requests in a few hours on 301s. ~1 minute, in process
-	if out="$($PY tests/test_card_links.py 2>&1)"; then
+	if out="$(suite tests/test_card_links.py)"; then
 		ok "card pages: $(tail -1 <<<"$out")"
 	else
 		bad "card pages link redirecting addresses -- python tests/test_card_links.py"
@@ -539,7 +657,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# description a link in its article; the JSON-LD on /ns/relation#, naming
 	# only what the page links; the approved face's known answers -- each with
 	# its fault planted and caught. ~2 minutes, in process
-	if out="$($PY tests/test_person_cards.py 2>&1)"; then
+	if out="$(suite tests/test_person_cards.py)"; then
 		ok "person cards: $(tail -1 <<<"$out")"
 	else
 		bad "person cards -- python tests/test_person_cards.py"
@@ -552,7 +670,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# (sacrifice's one count, Ezra's Aramaic, the Day of Atonement once, the
 	# Berean's name for Mark 13:5-8, the three rulings) and the two-way links --
 	# each with its fault planted and caught. ~2 minutes, in process
-	if out="$($PY tests/test_concept_cards.py 2>&1)"; then
+	if out="$(suite tests/test_concept_cards.py)"; then
 		ok "concept cards: $(tail -1 <<<"$out")"
 	else
 		bad "concept cards -- python tests/test_concept_cards.py"
@@ -565,7 +683,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# printed passages and of relatedLink, every JSON-LD id an href in the
 	# article, each passage once -- over 46 verses, each check with its fault
 	# planted and caught. ~2 minutes, in process
-	if out="$($PY tests/test_verse_page.py 2>&1)"; then
+	if out="$(suite tests/test_verse_page.py)"; then
 		ok "verse pages: $(tail -1 <<<"$out")"
 	else
 		bad "verse pages -- python tests/test_verse_page.py"
@@ -575,7 +693,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# is paired with the Hebrew holding its words, never by number (Joel 2:28
 	# is Hebrew 3:1; Psalm 40:6 is not the Hebrew of 40:5; Malachi 4:1 has its
 	# Hebrew) -- the pairing by number planted and caught. ~1 minute
-	if out="$($PY tests/test_verse_pairing.py 2>&1)"; then
+	if out="$(suite tests/test_verse_pairing.py)"; then
 		ok "$(tail -2 <<<"$out" | head -1)"
 	else
 		bad "verse pairing -- python tests/test_verse_pairing.py"
@@ -589,7 +707,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# description and the JSON-LD in what the article links; the story and the
 	# explanation labeled on a phone -- each with its fault planted and
 	# caught. ~2 minutes, in process
-	if out="$($PY tests/test_parable_card.py 2>&1)"; then
+	if out="$(suite tests/test_parable_card.py)"; then
 		ok "parable cards: $(tail -1 <<<"$out")"
 	else
 		bad "parable cards -- python tests/test_parable_card.py"
@@ -604,7 +722,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# resolved" line gone; Explore's front door leads with the 22 cards and the
 	# machine-stamped kinds follow, folded -- 26 planted faults, each caught.
 	# ~2 minutes, in process
-	if out="$($PY tests/test_parable_story_cards.py 2>&1)"; then
+	if out="$(suite tests/test_parable_story_cards.py)"; then
 		ok "parable story cards: $(tail -1 <<<"$out")"
 	else
 		bad "parable story cards -- python tests/test_parable_story_cards.py"
@@ -618,7 +736,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# the validator refuses a part with no party, a party not in its verse, a
 	# bare-pronoun party and an unscoped relation -- each with its fault
 	# planted and caught. ~1 minute, in process
-	if out="$($PY tests/test_group_scope.py 2>&1)"; then
+	if out="$(suite tests/test_group_scope.py)"; then
 		ok "group scope: $(tail -1 <<<"$out")"
 	else
 		bad "group scope (the Jewish people's card) -- python tests/test_group_scope.py"
@@ -633,7 +751,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# behind him; every verse that names it served; the page printing what
 	# the app shows and linking every verse of its title and description --
 	# each with its fault planted and caught. ~1 minute, in process
-	if out="$($PY tests/test_place_cards.py 2>&1)"; then
+	if out="$(suite tests/test_place_cards.py)"; then
 		ok "place cards: $(tail -1 <<<"$out")"
 	else
 		bad "place cards -- python tests/test_place_cards.py"
@@ -648,7 +766,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# characters with every name and verse linked; no divine person in a title;
 	# the page complete without /api/ -- each with its fault planted and caught.
 	# ~2 minutes, in process
-	if out="$($PY tests/test_fallback_card.py 2>&1)"; then
+	if out="$(suite tests/test_fallback_card.py)"; then
 		ok "fallback cards: $(tail -1 <<<"$out")"
 	else
 		bad "fallback cards -- python tests/test_fallback_card.py"
@@ -658,13 +776,13 @@ if [ -z "$range" ] || has '^app2/'; then
 	# placed (ontology/iam-card.json) and the face's fixture is today's data;
 	# the face (app2/iam_face.py, by the DeepSeek worker) shows all of it,
 	# escaped, with no link but to its verses and words and no figure drawn
-	if out="$($PY tests/test_iam_card.py 2>&1)"; then
+	if out="$(suite tests/test_iam_card.py)"; then
 		ok "I AM card: $(tail -1 <<<"$out")"
 	else
 		bad "I AM card -- python tests/test_iam_card.py"
 		grep -E "^FAIL" <<<"$out" | head -8
 	fi
-	if out="$($PY tests/test_iam_face.py 2>&1)"; then
+	if out="$(suite tests/test_iam_face.py)"; then
 		ok "I AM face: $(tail -1 <<<"$out")"
 	else
 		bad "I AM face -- python tests/test_iam_face.py"
@@ -674,19 +792,19 @@ if [ -z "$range" ] || has '^app2/'; then
 	# (app2/deity_face.py, by the DeepSeek worker: escaped, one frame for all
 	# four, the sketch verbatim) and its wiring (the four carry it, no other
 	# card does, each with its verse from the graph)
-	if out="$($PY tests/test_deity_plate.py 2>&1)"; then
+	if out="$(suite tests/test_deity_plate.py)"; then
 		ok "deity header: $(tail -1 <<<"$out")"
 	else
 		bad "deity header -- python tests/test_deity_plate.py"
 		grep -E "^FAIL" <<<"$out" | head -8
 	fi
-	if out="$($PY tests/test_deity_cards.py 2>&1)"; then
+	if out="$(suite tests/test_deity_cards.py)"; then
 		ok "deity cards: $(tail -1 <<<"$out")"
 	else
 		bad "deity cards -- python tests/test_deity_cards.py"
 		grep -E "^FAIL" <<<"$out" | head -8
 	fi
-	if out="$($PY tests/test_event_lead.py 2>&1)"; then
+	if out="$(suite tests/test_event_lead.py)"; then
 		ok "event lead: $(tail -1 <<<"$out")"
 	else
 		bad "event lead -- python tests/test_event_lead.py"
@@ -700,7 +818,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# applied (no came_upon row, nothing at Acts 2:36, no relation on a divine
 	# person touched); the page printing the cast, the neighbors and the
 	# pairs -- each with its fault planted and caught. ~2 minutes, in process
-	if out="$($PY tests/test_event_cards.py 2>&1)"; then
+	if out="$(suite tests/test_event_cards.py)"; then
 		ok "event cards: $(tail -1 <<<"$out")"
 	else
 		bad "event cards -- python tests/test_event_cards.py"
@@ -720,7 +838,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# verse's words, image_feet not linked; the fruit's nine around one fruit,
 	# in the text's order -- each with its fault planted and caught. ~1 minute,
 	# in process
-	if out="$($PY tests/test_image_cards.py 2>&1)"; then
+	if out="$(suite tests/test_image_cards.py)"; then
 		ok "image cards: $(tail -1 <<<"$out")"
 	else
 		bad "image cards -- python tests/test_image_cards.py"
@@ -734,7 +852,16 @@ if [ -z "$range" ] || has '^app2/'; then
 	# and the renamed addresses the Berean's, a description's quote a piece of
 	# its verse, the JSON-LD naming only what the page links, the index rule the
 	# page's robots tag -- each with its fault planted and caught. ~2 minutes
-	if out="$($PY tests/test_object_cards.py 2>&1)"; then
+	# THE THEME PATHS (2026-11-10, Doug on a sub-theme reached from search: "there isn't even a viable path back to
+	# the major theme"): every sub-theme names its theme and the theme's page, on the card and the served page; a
+	# major theme's record opens the theme's page; a sub-theme's words stand in its verses. Planted faults. ~2 minutes
+	if out="$(suite tests/test_theme_paths.py)"; then
+		ok "theme paths: $(tail -1 <<<"$out")"
+	else
+		bad "theme paths -- python tests/test_theme_paths.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	if out="$(suite tests/test_object_cards.py)"; then
 		ok "object cards: $(tail -1 <<<"$out")"
 	else
 		bad "object cards -- python tests/test_object_cards.py"
@@ -746,7 +873,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# names, the record's own description off the face, the name word one a
 	# cited verse holds, the JSON-LD and robots rules -- planted and caught.
 	# ~2 minutes
-	if out="$($PY tests/test_group_cards.py 2>&1)"; then
+	if out="$(suite tests/test_group_cards.py)"; then
 		ok "group cards: $(tail -1 <<<"$out")"
 	else
 		bad "group cards -- python tests/test_group_cards.py"
@@ -759,7 +886,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# tradition; the page's description and JSON-LD (/ns/relation#, no
 	# accepted answer, only what it links); one reading at a time on a phone --
 	# each with its fault planted and caught. ~1 minute, in process
-	if out="$($PY tests/test_question_cards.py 2>&1)"; then
+	if out="$(suite tests/test_question_cards.py)"; then
 		ok "question cards: $(tail -2 <<<"$out" | head -1)"
 	else
 		bad "question cards -- python tests/test_question_cards.py"
@@ -769,7 +896,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# (2026-10-29): each file says shown false, no page, no link from a shown
 	# question or a tradition, no sitemap, no preview switch in the live unit;
 	# 8 planted faults. ~1 minute, in process
-	if out="$($PY tests/test_held_questions.py 2>&1)"; then
+	if out="$(suite tests/test_held_questions.py)"; then
 		ok "held questions: $(tail -1 <<<"$out")"
 	else
 		bad "held questions -- python tests/test_held_questions.py"
@@ -778,7 +905,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# NO TOOL NAMED, NO AI POINTED AT, OUTSIDE ABOUT (2026-10-16: make
 	# sure none are in the UI except in the about). ~1 minute, in process;
 	# proven by --plant (the server's rewriting off: 131 replies caught)
-	if out="$($PY tests/test_no_ai_names.py 2>&1)"; then
+	if out="$(suite tests/test_no_ai_names.py)"; then
 		ok "no tool names: $(tail -2 <<<"$out" | head -1)"
 	else
 		bad "a reply names a tool or says 'a model' -- python tests/test_no_ai_names.py"
@@ -786,7 +913,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	fi
 	# A WORD'S ADDRESS IS ITS STRONG'S NUMBER (2026-10-16): /word/H1254, one
 	# spelling, and its verse links answer. ~1 minute, in process
-	if out="$($PY tests/test_word_addresses.py 2>&1)"; then
+	if out="$(suite tests/test_word_addresses.py)"; then
 		ok "word pages: $(tail -2 <<<"$out" | head -1)"
 	else
 		bad "word addresses -- python tests/test_word_addresses.py"
@@ -798,7 +925,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# with its fault planted and caught. A word card that passes the sitemap's
 	# threshold but is not listed fails it: rebuild with tools/sitemap.py after
 	# the word pages change. ~2 minutes, in process
-	if out="$($PY tests/test_search_doors.py 2>&1)"; then
+	if out="$(suite tests/test_search_doors.py)"; then
 		ok "search doors: $(tail -2 <<<"$out" | head -1)"
 	else
 		bad "search doors -- python tests/test_search_doors.py (sitemap stale: python tools/sitemap.py)"
@@ -807,7 +934,7 @@ if [ -z "$range" ] || has '^app2/'; then
 	# THE WORD CARDS (2026-10-26): verses in canonical order, renderings that
 	# add up to the uses, no KJV rendering in a lexicon entry, a withheld
 	# Hebrew entry never shown -- each with its fault planted and caught
-	if out="$($PY tests/test_word_pages.py 2>&1)"; then
+	if out="$(suite tests/test_word_pages.py)"; then
 		ok "word pages: $(tail -2 <<<"$out" | head -1)"
 	else
 		bad "word pages -- python tests/test_word_pages.py"
@@ -863,6 +990,10 @@ cat <<'EOF'
   - Anything here touching external exposure -- the gate, the proxy, the
     headers, the log -- gets a security review before it goes, not after.
 EOF
+
+head_ "Time"
+printf '  the suites side by side, %s at a time: %ss from the first start; the slowest:\n' "$JOBS" "$(( $(date +%s) - started ))"
+cat "$PRE"/*.sec 2>/dev/null | sort -rn | head -6 | sed 's/^/        /'
 
 head_ "Result"
 

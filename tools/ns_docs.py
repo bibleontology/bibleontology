@@ -11,6 +11,7 @@ No scripts, no external files: a plain page, every term an anchor
 
     python tools/ns_docs.py        (after tools/ns_relation.py, tools/ns_structure.py)
 """
+import json
 from html import escape
 from pathlib import Path
 
@@ -24,7 +25,12 @@ SOURCES = {"meaning": ROOT / "out/ns/meaning.ttl",       # the public copy (tool
            "relation": ROOT / "out/ns/relation.ttl",
            "claim": ROOT / "out/ns/claim.ttl"}               # plan 8.1a, from 1.1.0
 SITE = "https://bibleontology.org"
-NAMES = {"meaning": "Meaning", "structure": "Structure", "relation": "Relations", "claim": "Claims"}
+NAMES = {"meaning": "Meaning", "structure": "Structure", "relation": "Relations", "claim": "Claims",
+         "biblio": "Texts"}
+# the text and its witnesses (plan 8.1g) join the family from 1.4.0; before it there is no page and no link to one
+if tuple(int(x) for x in json.loads((ROOT / "ontology" / "ns-version.json").read_text(encoding="utf-8"))
+         ["version"].split(".")) >= (1, 4, 0):
+    SOURCES["biblio"] = ROOT / "out/ns/biblio.ttl"
 
 CSS = """
 :root{--paper:#F3F5F8;--surface:#fff;--ink:#141F2C;--muted:#5C6A7B;--rule:#D9DFE7;--link:#2F5D8A}

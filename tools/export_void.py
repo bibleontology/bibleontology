@@ -28,7 +28,8 @@ RIGHTS = ("© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with cr
           "© 2026 Doug Egge. All rights reserved until the public repository is published, when CC BY 4.0 "
           "is granted.")
 NS = {"claim": f"{SITE}/ns/claim#", "bor": f"{SITE}/ns/relation#", "bom": f"{SITE}/ns/meaning#",
-      "bos": f"{SITE}/ns/structure#", "prov": "http://www.w3.org/ns/prov#", "dqv": "http://www.w3.org/ns/dqv#"}
+      "bos": f"{SITE}/ns/structure#", "prov": "http://www.w3.org/ns/prov#", "dqv": "http://www.w3.org/ns/dqv#",
+      "biblio": f"{SITE}/ns/biblio#", "lrmoo": "http://iflastandards.info/ns/lrm/lrmoo/"}
 # each file with the vocabularies it actually uses (the committee, 2026-10-22)
 FILES = [
     ("claims-rdf12.trig.gz", "Claims (RDF 1.2)", "Every relation as a claim with its verses, certainty and voice: "
@@ -42,6 +43,11 @@ FILES = [
      "centre's floor.", "application/trig", ("bom", "dqv")),
     ("card-words.trig.gz", "Card words", "The words on each card with their strength, and which are shown by "
      "default.", "application/trig", ("bom", "dqv")),
+    # the texts layer (plan 8.1g, from 1.4.0): each psalm a Work, its Hebrew and Berean English two Expressions,
+    # the Psalter's order, and who a heading names as a described claim
+    ("psalter.nt.gz", "The Psalter as Works", "The 150 psalms as LRMoo Works, each with its Hebrew and its Berean "
+     "English, verse by verse and aligned, the Masoretic order in five books, and who each heading names, "
+     "as a claim.", "application/n-triples", ("biblio", "lrmoo", "claim")),
 ]
 IANA = "https://www.iana.org/assignments/media-types/"
 # the public repository's address, once it exists (ns-version.json "repository",

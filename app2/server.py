@@ -272,6 +272,23 @@ KJV_SAYS = {
 }
 
 
+# SLIPS IN THE FREE LEXICONS AS WE RECEIVE THEM (audit round 6, 2026-11-09; applied 2026-11-10): a letter or a number
+# lost in transcription, where the right reading is not in doubt. Each is checked against the verse or the entry it
+# names; a doubtful one (G1715's עֳנִי, G4900's entry) is left as the source has it
+SOURCE_SLIPS = {
+    # Abbott-Smith on ἔμπροσθεν: confessing and denying before men is Matt 10:32-33; 10:36 is "a man's enemies"
+    "g1715": [("ὁμολουεῖν", "ὁμολογεῖν"), ("Mat.10:32, 36 26:70", "Mat.10:32, 33 26:70")],
+    # Strong's on מִסְפֶּרֶת Mispereth, "enumeration": the feminine of מִסְפָּר "number", not of מַלְכוּ "kingdom"
+    "h4559": [("מַלְכוּ (malkûw) [H4437]", "מִסְפָּר (miçpâr) [H4557]")],
+}
+
+
+def _source_slips(k, text):
+    for wrong, right in SOURCE_SLIPS.get(k, ()):
+        text = text.replace(wrong, right)
+    return text
+
+
 def load() -> dict:
     global _data
     with _lock:
@@ -451,7 +468,12 @@ def load() -> dict:
                     for w_ in d["words"]:
                         if (w_.get("x") or "").endswith(":"):
                             w_["x"] = w_["x"].rstrip(":")
+                        if "~" in (w_.get("g") or ""):
+                            w_["g"] = gloss_repair(w_["g"])
                     orig[d["ref"]] = d["words"]
+        # the lettered codes that are another word, known before any index is keyed by sense_key (A.48)
+        global _SPLIT_CODES
+        _SPLIT_CODES = _split_codes(orig)
 
         # Definitions and transliteration. The full lexicon lives under
         # data/raw/, which is gitignored because STEPBible asks that their
@@ -488,6 +510,21 @@ def load() -> dict:
                     continue
                 k = code[0].lower() + re.sub(r"^0+", "", code[1:])
                 defn = _lemma.scrub_translation(v[4] if len(v) > 4 else "")
+                # STEP's markup took Abbott-Smith's "I Esd.–4 Mac." (1 Esdras to 4 Maccabees) for a reference, Esther
+                # 1:1-58, which does not exist; the card printed "very frequently in I Est.1:1-58 -4 Mac" (G2411 and one
+                # other; the card panel saw it 2026-10-28, fixed 2026-11-07). Abbott-Smith's words, restored
+                defn = defn.replace("I Est.1:1-58 -4 Mac", "I Esd.–4 Mac.")
+                if k == "g2461":       # ἱππικόν, "cavalry", is in Rev 9:16; STEP's text says Heb (round 4, 2026-11-09)
+                    defn = defn.replace("Heb.9:16", "Rev.9:16")
+                defn = _source_slips(k, defn)
+                # and STEP's expansion of Abbott-Smith's "c." ("with") caught the sense label "(c)": "(a) … (b) …
+                # (with) of John the Baptist" under προφήτης (181 in the file; audit round 2, 2026-11-07). A label
+                # after a (b) is his (c)
+                while "__(with)" in defn and "__(b)" in defn:
+                    fixed = re.sub(r"(__\(b\)(?:(?!__\().)*?)__\(with\)", r"\1__(c)", defn, flags=re.S)
+                    if fixed == defn:
+                        break
+                    defn = fixed
                 lex.setdefault(k, {"word": v[0], "translit": v[1],
                                    "pos": v[2],
                                    # the word's main sense, never a
@@ -498,6 +535,21 @@ def load() -> dict:
                                        k[0] == "h" and not HEBREW_DEFINITIONS_SHOWN)
                                    else defn})
             break
+        # STRONG'S OWN HEBREW DICTIONARY (1894, public domain; 2026-11-07, the
+        # design of 2026-11-02): where the abridged Brown-Driver-Briggs is
+        # withheld, a Hebrew word's entry is Strong's definition and derivation,
+        # never the KJV's renderings or the BDB outline the source file also
+        # carries (tools/lexicon/strongs_hebrew.py cuts both). Tagged, so its
+        # credit is Strong's and not STEP's.
+        if not HEBREW_DEFINITIONS_SHOWN:
+            for k, e in strongs_hebrew().items():
+                if not e.get("definition"):
+                    continue
+                row = lex.setdefault(k, {"word": e["lemma"], "translit": e["xlit"], "pos": "",
+                                         "gloss": "", "gloss_full": ""})
+                row["definition"] = _source_slips(k, e["definition"] + (" · Derivation: " + e["derivation"]
+                                                                        if e["derivation"] else ""))
+                row["source"] = "strongs"
 
         # Strong's key -> the verses it occurs in, so a word can be shown IN A
         # PHRASE rather than only as a list of properties.
@@ -3721,7 +3773,58 @@ def _rows(path):
 
 def sense_key(lang, strong):
     s = re.sub(r"^0+", "", re.sub(r"[^0-9]", "", strong or ""))
-    return ((lang or "")[:1] + s) if s else None
+    if not s:
+        return None
+    k = (lang or "")[:1] + s
+    # a lettered code that is ANOTHER WORD keeps its letter, and so its own key (no card): _split_codes
+    m = _LETTERED.fullmatch((strong or "").strip().lower()) if _SPLIT_CODES else None
+    if m and k + m.group(1) in _SPLIT_CODES:
+        return k + m.group(1)
+    return k
+
+
+# LETTERED CODES THAT ARE ANOTHER WORD (2026-11-07, A.48 audit round 1). STEP's extended numbers give a prefix,
+# suffix or particle a letter on some number ("0001b"), and sense_key dropped the letter: the Aramaic article ־א
+# (0001b) became H1 אָב "father", whose page counted 1,314 verses (its own 1,208) with "O king" among its renderings;
+# וְ "and" (2050b, 50,272 uses) went under H2050, כְּ and pronoun suffixes (3509a-c, 11,246) under Jetheth (H3509),
+# נ under Mattithiah. Measured: 213 of 973 lettered codes spelled otherwise than their base, 69,006 uses; 18 of them
+# (66,929 uses) another word. A lettered code is another word when it shares no letter with its base number's own
+# lemma, or either is a single letter (a prefix or suffix), or it is a pronoun under a word that is not one. The rest
+# stay merged, as Strong's merges them: הִיא with הוּא, רָעָה with רַע, אַתֶּם with אַתָּה.
+_LETTERED = re.compile(r"0*\d+([a-z])")
+_SPLIT_CODES = set()
+_PRONOUNS = {"הוא", "היא", "הם", "הן", "המה", "הנה", "אני", "אנכי", "אתה", "את", "אתם", "אתן", "אנחנו", "נחנו"}
+
+
+def _split_codes(orig):
+    """The lettered codes in the interlinear that are another word than their base number (see above)."""
+    def letters(x):
+        return "".join(c for c in unicodedata.normalize("NFD", x or "") if unicodedata.category(c)[0] == "L")
+    own, lettered = collections.defaultdict(collections.Counter), collections.defaultdict(collections.Counter)
+    for ws in orig.values():
+        for w in ws:
+            s, lem = str(w.get("s") or "").strip().lower(), w.get("l") or ""
+            if not s or not lem:
+                continue
+            heb = any("֐" <= ch <= "׿" for ch in lem)
+            base = ("h" if heb else "g") + re.sub(r"^0+", "", re.sub(r"[^0-9]", "", s))
+            m = _LETTERED.fullmatch(s)
+            (lettered[base + m.group(1)] if m else own[base])[letters(lem)] += 1
+    out = set()
+    strongs = strongs_hebrew()
+    for code, lc in lettered.items():
+        base = code[:-1]
+        a = lc.most_common(1)[0][0]
+        # the base word is the dictionary's headword (Strong's own, for Hebrew); the number's plain uses where there
+        # is none. H2050 has no plain use in the interlinear, only lettered ones ("and", "he"), and Strong's H2050 is
+        # הוּת, a verb used once (Ps 62:3): compared with its own uses there was nothing to compare, and 50,272 uses of
+        # "and" stayed under it
+        b = letters((strongs.get(base) or {}).get("lemma")) or (own[base].most_common(1)[0][0] if own.get(base) else "")
+        if not a or not b or a == b:
+            continue
+        if not (set(a) & set(b)) or len(a) == 1 or len(b) == 1 or (a in _PRONOUNS and b not in _PRONOUNS):
+            out.add(code)
+    return out
 
 
 def _letters(s):
@@ -3742,6 +3845,59 @@ def _translit_head(word):
     if "̔" in unicodedata.normalize("NFD", first[:2]):
         t = ("rh" + t[1:]) if t[:1] == "r" else ("h" + t)
     return t[:1].upper() + t[1:] if first[:1].isupper() else t
+
+
+# MACULA's gloss of a split phrase runs "to" into the next word: "put ~ todeath", "provoked ~ toanger", "caused ~
+# todwell" (39 glosses, about 120 uses), printed "caused todwell" on אֱלָהּ's card (audit round 1, 2026-11-07)
+_TO_WORDS = {"tooth", "teeth", "total", "totally", "tongs", "totter", "totters", "tottering", "tolerable", "tolerate",
+             "towel", "tools", "tool", "today", "toward", "towards", "together", "token", "tokens", "told", "tomb",
+             "tombs", "tone", "tongue", "tongues", "top", "tops", "torch", "torches", "torn", "toss", "tossed", "touch",
+             "touched", "touches", "tower", "towers", "town", "towns", "toil", "toiled", "toe", "toes", "too", "took",
+             "tomorrow", "tonight", "topaz", "torment", "tormented", "torrent", "tortured", "tow"}
+# past forms without -ed: "sent" + "s" was printed "sents" on אֱלָהּ's card
+_IRREGULAR_PAST = {"sent", "went", "came", "gave", "took", "made", "said", "brought", "bought", "built", "caught",
+                   "fought", "found", "held", "kept", "knew", "led", "left", "lost", "met", "paid", "ran", "rose", "sat",
+                   "saw", "sold", "spoke", "stood", "taught", "told", "thought", "threw", "won", "wrote", "ate", "fell",
+                   "fled", "grew", "heard", "hid", "laid", "lay", "slew", "smote", "struck", "swore", "drew", "drove",
+                   "bore", "began", "became", "broke", "chose", "did", "forgot", "forsook", "gone", "done", "given",
+                   "taken", "seen", "known", "spoken", "written", "risen", "fallen", "slain", "slept", "wept", "kept",
+                   "crept", "dwelt", "felt", "dealt", "meant", "spent", "bent", "lent", "had", "was", "were", "been",
+                   # and the glosses that are no verb at all ("is what theres", "hes", "againsts": 1,500 cards, 2026-11-07)
+                   "there", "here", "he", "she", "it", "they", "we", "you", "i", "against", "like", "is", "are", "be",
+                   "not", "no", "also", "then", "now", "so", "as", "with", "from", "in", "on", "to", "by", "for", "of",
+                   "and", "but", "or", "who", "which", "what", "this", "that", "these", "those", "all", "each", "his",
+                   "her", "their", "them", "him", "me", "my", "your", "our", "us", "one", "upon", "before", "after",
+                   "rebuilt", "overlaid", "shot", "about", "ought"}
+_GLOSS_ADJECTIVES = {"afraid", "alive", "dead", "good", "great", "holy", "righteous", "wise", "strong", "worthy",
+                     "angry", "glad", "sure", "ready", "near", "far", "high", "low", "full", "clean", "unclean",
+                     "kind", "steadfast", "proud", "diligent", "pleasant"}
+
+
+_VERB_AUX = {"will", "shall", "would", "should", "may", "might", "can", "could", "must", "is", "are", "was", "were",
+             "be", "been", "being", "am", "has", "have", "had", "having", "do", "does", "did", "not", "let", "someone",
+             "i", "you", "he", "she", "it", "we", "they", "him", "her", "them", "us", "me", "to", "~", "~s", "there"}
+
+
+def _verb_plain(rest):
+    """The verb of a clause gloss, as a verb: "will justified" -> "justified", "someone i rejoice" -> "rejoice", "dos"
+    -> "do" (MACULA's "~s" marker), "acted hypocritically" stays. Empty when nothing is left."""
+    toks = [t for t in re.sub(r"\s+", " ", (rest or "").replace("~", " ")).strip().split(" ") if t]
+    while toks and toks[0].lower() in _VERB_AUX:
+        toks.pop(0)
+    out = " ".join(toks)
+    return "" if out.lower() in _VERB_AUX else out
+
+
+def gloss_repair(g):
+    return re.sub(r"\bto([a-z]{2,})\b", lambda m: m.group(0) if m.group(0).lower() in _TO_WORDS
+                  else "to " + m.group(1), g or "")
+
+
+# the Hebrew tens (and the -fold numbers) MACULA files under their units: ten -> its unit's number
+HEBREW_TENS = {"h7970": "h7969", "h705": "h702", "h2572": "h2568", "h8346": "h8337", "h7657": "h7651",
+               "h8084": "h8083", "h8673": "h8672", "h7659": "h7651", "h706": "h702",
+               # and a noun MACULA files under its verb's root: חֹם "heat" headed חמם (round 4, 2026-11-09)
+               "h2527": "h2552"}
 
 
 def headwords(common, lemmas, lex):
@@ -3784,9 +3940,29 @@ def headwords(common, lemmas, lex):
                 _translit_head(lem) if k[:1] == "g"
                 else lx.get("translit") if _letters(lx.get("word") or "") == _letters(lem) else "")}
         step = " ".join(((lex.get(k) or {}).get("word") or "").split())
+        if k in HEBREW_TENS and step:
+            # THE TENS ARE NOT THEIR UNITS (2026-11-07, found fixing audit round 1): MACULA files שְׁלֹשִׁים "thirty"
+            # under שָׁלֹשׁ "three" (171 of 172 uses), so H7970's card was headed "three". Named, not ruled: a
+            # Hebrew headword another number owns is a spelling variant (אֵפֹד/אֵפוֹד) as often as not, or STEP's
+            # entry is the odd one (H2428 חַיִל "army", STEP's "Helech")
+            out[k] = {"lemma": unicodedata.normalize("NFC", step.split(",")[0].strip()),
+                      "also": {"form": lem, "source": "macula", "with": [HEBREW_TENS[k]]}}
+            continue
+        # A VERB USED ONLY IN ITS DERIVED STEMS (audit round 5, 2026-11-09): כָּפַר H3722 was headed by its Piel
+        # כִּפֶּר, MACULA's lemma, where STEP's row is blank. A lexicon heads a verb by its root form; Strong's does,
+        # and MACULA's form is named beside it
+        if k[:1] == "h" and not step and ((lex.get(k) or {}).get("pos") or "").startswith("H:V"):
+            sh = unicodedata.normalize("NFC", ((strongs_hebrew() or {}).get(k) or {}).get("lemma") or "")
+            if sh and sh != unicodedata.normalize("NFC", lem) and _letters(sh) == _letters(lem):
+                out[k] = {"lemma": sh, "translit": "", "also": {"form": lem, "source": "macula", "with": []}}
+            continue
         if k[:1] != "g" or not step:
             continue
         step = ", ".join(dict.fromkeys(x.strip() for x in re.split(r"[=,]", step) if x.strip()))
+        # STEP writes its accents as oxia (ό U+1F79), MACULA and keyboards as tonos (ό U+03CC): the same on screen,
+        # but G2411's headword "ἱερόν" was not equal to the "ἱερόν" a reader types, or an agent compares (2026-11-07,
+        # checking G2411 again). Search already normalizes; the headword now does too
+        step = unicodedata.normalize("NFC", step)
         mac = unicodedata.normalize("NFC", lem)
         if mac == unicodedata.normalize("NFC", step):
             continue
@@ -3805,7 +3981,54 @@ def headwords(common, lemmas, lex):
 def _head(d, key, lemma, translit):
     """(lemma, translit, also) as a card shows them: headwords() over MACULA's."""
     h = (d.get("heads") or {}).get(key) or {}
-    return (h.get("lemma") or lemma, h["translit"] if "translit" in h else translit, h.get("also"))
+    lem = h.get("lemma") or lemma
+    return (lem, lemma_translit(d, key, lem, h["translit"] if "translit" in h else translit), h.get("also"))
+
+
+# THE TRANSLITERATION IS OF THE HEADWORD (audit round 1, 2026-11-07). The card took the commonest transliteration of
+# the word's uses, which is of an inflected form: אָמַר "yyōʾmer" (וַיֹּאמֶר's), אֶרֶץ "ʾāreṣ" (the pausal form), and
+# where MACULA's attribute holds Hebrew letters, אָב "אב". Without uses, STEP's, in its own syllable style
+# ("a.do.nai", and Greek "uhios" for υἱός). Greek is now made from the headword, as the uses' always were; Hebrew is
+# read off the text's own uses of the headword's exact pointed form, then of its consonants, and is otherwise left
+# out: none is better than another word's, or another scheme's.
+_LEMMA_X = None
+_HEB_MARKS = dict.fromkeys(list(range(0x0591, 0x05B0)) + [0x05BD, 0x05BE, 0x05C0, 0x05C3, 0x05C4, 0x05C5])
+
+
+def _pointed(s):
+    s = "".join(ch for ch in unicodedata.normalize("NFD", s or "") if unicodedata.category(ch)[0] in "LM")
+    return s.translate(_HEB_MARKS).translate(str.maketrans("ךםןףץ", "כמנפצ"))
+
+
+def lemma_translit(d, key, lemma, fallback):
+    global _LEMMA_X
+    if key[:1] == "g":
+        return _translit_head(lemma) if lemma else fallback
+    if key[:1] != "h":
+        return fallback
+    if _LEMMA_X is None:
+        by = collections.defaultdict(collections.Counter)
+        for ref, ws in (d.get("orig") or {}).items():
+            if ref.split(".")[0] in _NT_BOOKS:
+                continue
+            for w in ws or ():
+                k, x = sense_key("hebrew", w.get("s")), (w.get("x") or "").strip()
+                if k and x and not re.search(r"[֐-׿]", x):
+                    p = _pointed(w.get("t"))
+                    by[(k, p)][x] += 1
+                    by[(k, "#" + _letters(p))][x] += 1
+        _LEMMA_X = by
+    p = _pointed(lemma)
+    # the exact pointed form only: by its consonants alone הָלַךְ took the participle's "hōlēḵ" (round 4, 2026-11-09);
+    # STEP's dotted spelling of the right word is better than a clean one of the wrong form
+    got = _LEMMA_X.get((key, p))
+    if got:
+        return got.most_common(1)[0][0]
+    # a verb's dictionary form seldom stands in the text bare (נָצַל, שָׁלַךְ): STEP's, in its own syllable style,
+    # where STEP's headword is this one (its "she.lo.shim" is not of שָׁלֹשׁ)
+    lx = (d.get("lex") or {}).get(key) or {}
+    same = _letters(_pointed(lx.get("word"))) == _letters(p)
+    return (lx.get("translit") or "") if same and not re.search(r"[֐-׿]", lx.get("translit") or "") else ""
 
 
 # ---------------------------------------------------------------- endpoints
@@ -3989,6 +4212,40 @@ def api_unit(d, q):
             "structural": sorted(STRUCTURAL)}
 
 
+def _clean_split_base(d, out):
+    """A NUMBER WHOSE LETTERED CODE WAS SPLIT OFF KEEPS NONE OF THAT CODE'S DATA (round 7, 2026-11-10). The split
+    (A.48, 2026-11-07) gave Dothan (H1886), Jetheth (H3509), Calneh (H3641) and others back their own verses, but their
+    gloss, Septuagint rows and role rows come from layers built before it, on the merged number: Calneh glossed "you"
+    with ὑμῶν for its Greek, Dothan "the" with τοῦ, and "object of the verb possess (35)". Those are the article's, the
+    pronoun's, the preposition's. On such a card the gloss is the lexicon's, and the Septuagint and role rows go."""
+    key = (out.get("key") or "").lower()
+    split = [c for c in _SPLIT_CODES if c.startswith(key) and c[len(key):].isalpha()] if key else []
+    if not split:
+        return
+    # only where the split-off code outnumbers the word itself, so the merged layers are mostly its: Dothan's 3 uses
+    # under the article's thousands, not אָב "father" (1,210) beside the Aramaic article
+    vo = _verses_of(d)
+    if sum(len(vo.get(c, ())) for c in split) <= len(vo.get(key, ())):
+        return
+    lx = (d.get("lex") or {}).get(key) or {}
+    small = lambda g: not g or (re.findall(r"[a-z]+", g.lower()) or [""])[0] in _RUN_STOP   # noqa: E731
+    # then Strong's own first words ("Calneh or Calno", "to break in upon"), then UBS's first sense, kept short
+    sd = ((strongs_hebrew() or {}).get(key) or {}).get("definition") or ""
+    strong = next((p.strip() for p in re.split(r"[;,()]", sd)
+                   if p.strip() and p.strip().lower() not in ("properly", "a primitive root", "figuratively")), "")
+    ubs = [re.split(r"[;(]", s.get("gloss") or s.get("short") or "")[0].strip()
+           for s in ((out.get("ubs") or {}).get("senses") or [])]
+    gloss = next((g for g in [lx.get("gloss"), strong] + ubs if g and not small(g) and len(g) <= 40), None)
+    if gloss:
+        out["gloss"] = gloss
+        if small(out.get("short")) or out.get("short") == out.get("translit"):
+            out["short"] = gloss
+    out["lxx"] = []
+    if isinstance(out.get("equiv"), dict):
+        out["equiv"] = {**out["equiv"], "greek": []}
+    out["features"] = [f for f in out.get("features") or [] if f.get("kind") not in ("subjof", "objof", "coord", "lxx")]
+
+
 def api_sense(d, q):
     """The word card, with the patterns the word takes part in (2026-09-28:
     what are the most interesting patterns it participates
@@ -3996,13 +4253,31 @@ def api_sense(d, q):
     out = _api_sense(d, q)
     if out.get("found") and out.get("key"):
         out["mined"] = mined_for(d, f"sense:{out['key'].lower()}")
+        # NOT A PATTERN OF ANOTHER WORD (the Fable layout review, 2026-11-09: אָהֵב's card showed eleven patterns
+        # about giving, "Abraham · give · tenth", all "matched through a similar word"): such a match stays only when
+        # the pattern itself holds this word's meaning ("~{love/loving} · ≈woman" does)
+        mean = re.sub(r"^to\s+", "", (out.get("short") or out.get("gloss") or "").lower()).split("/")[0].strip()
+        if mean:
+            out["mined"] = [m for m in out["mined"] or []
+                            if m.get("via") != "a similar word" or mean in (m.get("template") or "").lower()]
         out["family"] = family_of(d, out["key"].lower())      # plan 5.10
         out["concepts"] = concepts_of_word(d, out["key"].lower())
+        nk = name_kind(d, out["key"].lower())                 # "a place", "a man's name" (STEP's tag)
+        out["name_kind"] = nk[1] if nk else None
+        out["names"] = names_of_word(d, out["key"].lower()) if nk else []
         out["note"] = word_notes().get(out["key"].lower())
         _word_card_extras(d, out)
         out["face"] = word_face(d, out["key"].lower())
+        out["ubs"] = ubs_senses(d, out["key"].lower())
+        _clean_split_base(d, out)
         # one count per card: the interlinear's (word_face)
         out["observations"] = out["face"]["uses"] or out.get("observations")
+        cu = None if out["observations"] else counted_under(d, out["key"].lower())
+        if cu:
+            lx = (d.get("lex") or {}).get(cu["key"]) or {}
+            cu["lemma"] = re.split(r"[,;(]", lx.get("word") or "")[0].strip()
+            cu["address"] = word_address(cu["key"])
+        out["counted_under"] = cu
     return out
 
 
@@ -4010,7 +4285,9 @@ def api_sense(d, q):
 # it to 'STEP Bible' linked to www.STEPBible.org") with the work each is
 # based on, as their own field notes name it.
 LEXICON_EDITED = ("Edited here: the renderings of the King James (Authorised) Version "
-                  "and STEP's pointers to its own other entries are left out.")
+                  "and STEP's pointers to its own other entries are left out, and where its markup read "
+                  "Abbott-Smith's \"I Esd.–4 Mac.\" as a verse of Esther, or his sense label (c) as \"(with)\", "
+                  "his words are restored.")
 LEXICON_CREDIT = {
     "hebrew": "STEP Bible's Translators Brief lexicon (Tyndale House, Cambridge), "
               "CC BY 4.0, based on the abridged Brown-Driver-Briggs of the Online "
@@ -4018,7 +4295,24 @@ LEXICON_CREDIT = {
     "greek": "STEP Bible's Translators Brief lexicon (Tyndale House, Cambridge), "
              "CC BY 4.0, based on Abbott-Smith's Manual Greek Lexicon of the New "
              "Testament (1922). " + LEXICON_EDITED,
+    # Strong's own Hebrew dictionary, where the abridged BDB is withheld (2026-11-07)
+    # its definition and derivation only; the credit names no other translation, as no word page may
+    # (tests/test_word_pages.py), and About and SOURCES.md say what is left out
+    "strongs": "Strong's Hebrew Dictionary (James Strong, 1894), public domain; the electronic text by Open "
+               "Scriptures, encoded by David Troidl after David Instone-Brewer. Its definition and derivation only.",
 }
+LEXICON_LINK = {"strongs": "https://github.com/openscriptures/strongs"}
+_STRONGS_DICT = None        # not _STRONGS, the Strong's-number pattern further down (it replaced this cache)
+
+
+def strongs_hebrew():
+    """Strong's Hebrew entries (data/lexicon/strongs-hebrew.json, tools/lexicon/strongs_hebrew.py), read once; {}
+    when the file is missing, which leaves the Hebrew entry empty as before."""
+    global _STRONGS_DICT
+    if _STRONGS_DICT is None:
+        p = ROOT / "data" / "lexicon" / "strongs-hebrew.json"
+        _STRONGS_DICT = json.loads(p.read_text(encoding="utf-8"))["entries"] if p.exists() else {}
+    return _STRONGS_DICT
 
 
 def renderings_of(d, key, per=150):
@@ -4114,7 +4408,11 @@ _RUN_STOP = {"a", "an", "the", "to", "of", "in", "on", "at", "by", "for", "from"
              "you", "i", "him", "her", "them", "us", "me", "his", "its", "their", "our", "your", "my", "is",
              "was", "were", "are", "be", "been", "had", "has", "have", "will", "would", "shall", "should",
              "not", "no", "all", "every", "there", "here", "when", "where", "while", "then", "this", "these",
-             "those", "what", "if", "because", "up", "down", "out", "over", "under", "about", "after", "before"}
+             "those", "what", "if", "because", "up", "down", "out", "over", "under", "about", "after", "before",
+             # the other prepositions (2026-11-10: εἰς's sense is "toward", so it was not counted a function word)
+             "toward", "towards", "among", "through", "upon", "within", "without", "against", "until", "since",
+             "beside", "across", "around", "behind", "below", "beneath", "beyond", "near", "onto", "throughout",
+             "away"}                              # ἀπό's sense is "away from"
 
 
 def _alts(d, key):
@@ -4144,7 +4442,20 @@ def _printed_in(d, key, ref, alts, n, known=None):
         # content words and at most two ("temple courts", never "temple to").
         lang = "hebrew" if key.startswith("h") else "greek"
         gl = [w.get("g") for w in d["orig"].get(ref, ()) if sense_key(lang, w.get("s")) == key]
-        gtok = {t for g in gl for t in re.findall(r"[a-z]+", (g or "").lower()) if len(t) > 2}
+        # A FUNCTION WORD IS FOUND TOO (2026-11-09): ἐν printed no "in" for 2,348 of its 2,743 uses. Its gloss is two
+        # letters, which this skipped, and the editors tag "in Bethlehem" to the noun as one run, which this would not
+        # enter. For a word whose sense is a small word, a two-letter gloss counts, and the FIRST word of another
+        # word's run may be claimed when it is this word's gloss; it never runs on into the noun.
+        fw = _function_word(d, key)
+        # ...but those two new powers only for words of its own sense: the article's verse gloss is "of the", and
+        # claiming "of" gave ὁ "of" 1,522 times; δέ's "and" and "but" are found as before, outside any run
+        own = set()
+        if fw:
+            lx_ = (d.get("lex") or {}).get(key) or {}
+            own = set(re.findall(r"[a-z]+", " ".join(x for x in (lx_.get("gloss"), lx_.get("gloss_full"),
+                                                                  (d["profiles"].get(key) or {}).get("gloss")) if x).lower()))
+            own |= _one_word_glosses(d, key)      # εἰς's "into", "to": its own commonest one-word glosses
+        gtok = {t for g in gl for t in re.findall(r"[a-z]+", (g or "").lower()) if len(t) > 2 or t in own}
         starts = sorted(s for s, _e, _k in spans)
         covered = [(s, e) for s, e, _k in spans]
         for m in re.finditer(r"[A-Za-z][A-Za-z'’-]*", text):
@@ -4153,7 +4464,11 @@ def _printed_in(d, key, ref, alts, n, known=None):
             w = m.group(0).lower()
             if not any(w == t or w.rstrip("s") == t or w == t.rstrip("s") for t in gtok):
                 continue
-            if any(s <= m.start() < e for s, e in covered):
+            if any(s <= m.start() < e and not (w in own and s == m.start()) for s, e in covered):
+                continue
+            if fw:
+                mine.append([m.start(), m.end(), "gloss"])
+                covered.append((m.start(), m.end()))
                 continue
             # ...but only into a phrase the editors themselves tagged for this
             # word in another verse: "temple courts" (13 tagged), never
@@ -4219,9 +4534,51 @@ def _printed_here(d, key, ref, alts, known):
     lang = "hebrew" if key.startswith("h") else "greek"
     u = sum(1 for w in d["orig"].get(ref, ()) if sense_key(lang, w.get("s")) == key)
     got = _printed_in(d, key, ref, alts, u, known)
-    if got is not None:
+    if got is not None and not _function_word(d, key):
         got = [g for g in got if any(t.lower() not in _RUN_STOP for t in g[0].split())]
     return got, u
+
+
+_ONE_WORD = {}
+
+
+def _one_word_glosses(d, key):
+    """A function word's commonest ONE-word MACULA glosses (each at least 5% of its uses): εἰς "into", "to", whose
+    lexicon sense "toward" the Berean seldom prints (2026-11-10). One word only: the article's "of the" is two, and
+    claiming its "of" once gave ὁ "of" 1,522 times."""
+    if key not in _ONE_WORD:
+        lang = "hebrew" if key.startswith("h") else "greek"
+        c = collections.Counter()
+        for ref in _verses_of(d).get(key, ()):
+            for w in d["orig"].get(ref, ()):
+                if sense_key(lang, w.get("s")) == key:
+                    g = (w.get("g") or "").strip().lower()
+                    if re.fullmatch(r"[a-z]+", g):
+                        c[g] += 1
+                    c["#"] += 1
+        tot = c.pop("#", 0) or 1
+        _ONE_WORD[key] = {g for g, n in c.items() if n * 20 >= tot}
+    return _ONE_WORD[key]
+
+
+_FUNCTION_WORDS = {}
+
+
+def _function_word(d, key):
+    """A word whose own meaning is a small word (ἐν "in", καί "and", τίς "who"): its printed run IS the small word,
+    so the small-word rule must not drop it. Audit round 2, 2026-11-07: ἐν showed "no separate word" for 2,512 of
+    its 2,743 uses and its list filled with its neighbors' words ("the truth" 33); καί lacked "and"."""
+    if key not in _FUNCTION_WORDS:
+        lx = (d.get("lex") or {}).get(key) or {}
+        words = re.findall(r"[a-z]+", " ".join(x for x in (lx.get("gloss"), (d["profiles"].get(key) or {}).get("gloss"))
+                                               if x).lower())
+        # its first, primary sense: ἐν is "in, among", καί "and, even, also", ὁ "the, this, who"; a verb's "to"
+        # ("to say", "to come") is the infinitive's, not its sense (λέγω kept "said, tell" without this)
+        gl = re.sub(r"^\s*to\s+(?=[a-z])", "", ((lx.get("gloss") or (d["profiles"].get(key) or {}).get("gloss") or "")
+                                              .lower()))
+        first = re.findall(r"[a-z]+", gl)[:1]
+        _FUNCTION_WORDS[key] = bool(first) and first[0] in _RUN_STOP
+    return _FUNCTION_WORDS[key]
 
 
 # EVERY VERSE, ONE TAP UNDER THE STRIP (the owner, 2026-10-28; the concordance habit Blue Letter Bible and Bible Hub
@@ -4306,6 +4663,78 @@ def printed_of(d, key, verses):
 _LEX_REF = re.compile(r"\b([1-3]?[A-Z][a-z]{1,3})\.(\d+):(\d+)")
 
 
+def _pos_class(d, key):
+    """N, V, ADV … from the lexicon's part of speech ("G:N-M" -> N), or "" when it is not known."""
+    p = ((d.get("lex") or {}).get(key) or {}).get("pos") or ""
+    return p.split(":", 1)[-1].split("-", 1)[0] if ":" in p else ""
+
+
+def _same_kind(d, key, rows):
+    """A word's "behaves most like" list holds its own part of speech: ναός's held "thus" beside altar, scroll and
+    throne (the Fable layout review, 2026-11-09). A row of unknown kind stays."""
+    mine = _pos_class(d, key)
+    return [r for r in rows or [] if not mine or not _pos_class(d, r.get("key")) or _pos_class(d, r.get("key")) == mine]
+
+
+def _lex_refs(seg):
+    """Every verse a lexicon passage cites, as "Mat.23.16", reading its run-on lists as Abbott-Smith writes them:
+    "Mat.23:16-17, 35 27:5, 40, Mrk.14:58 15:29" is Matt 23:16, 23:17, 23:35, 27:5, 27:40, Mark 14:58, 15:29. Only the
+    first of each book was counted before, so ναός's sense (b) cited "16" of its verses where it cites some 36 (the Fable
+    layout review, 2026-11-09)."""
+    out, book, chap = [], None, None
+    for m in re.finditer(r"\b([1-3]?[A-Z][a-z]{1,3})\.(\d+):(\d+)(?:-(\d+))?|(?<![\w.:])(\d+):(\d+)(?:-(\d+))?"
+                         r"|(?<=,\s)(\d+)(?:-(\d+))?(?![\d:])", seg):
+        if m.group(1):
+            book, chap, a, b = m.group(1), m.group(2), int(m.group(3)), m.group(4)
+        elif m.group(5) and book:
+            chap, a, b = m.group(5), int(m.group(6)), m.group(7)
+        elif m.group(8) and book and chap:
+            a, b = int(m.group(8)), m.group(9)
+        else:
+            continue
+        for v in range(a, (int(b) if b and int(b) >= a and int(b) - a < 40 else a) + 1):
+            out.append(f"{book}.{chap}.{v}")
+    return out
+
+
+def _quote_clean(q):
+    """A lexicon clause as a reader can take it: no stray chapter numbers ("Mat.22", ", 7"), no scholar's
+    shorthand ("(DCG, ii, 330f.)", "(MM, Exp., xv)"), no tail of a parenthesis opened before it ("see Cremer,
+    442ff.), of a course of conduct"), and no parenthesis left open at the end."""
+    q = q.split(" · ")[0]                                    # the next part of the entry ("· SYN.: νοῦς …")
+    q = re.sub(r"\b[1-3]?[A-Z][a-z]{1,3}\.\d+\b", "", q)
+    # verse lists without their book ("7:6", "21 ff.", ", 23", "-18"), not a number the sense states ("= 600 Greek
+    # feet", "2 aor.")
+    q = re.sub(r"\b\d+:\d+(?:[-–]\d+)?|\b\d+(?:[-–]\d+)?\s*ff?\.|(?<=[,\s])[-–]\d+\b", "", q)
+    for _ in range(3):      # a number left standing once the references beside it are gone ("18 14:12 17:9")
+        q = re.sub(r"(?<=,)\s*\d+(?:[-–]\d+)?(?=\s*[,.;†]|\s*$)", "", q)
+    q = re.sub(r",(?:\s*,)+", ",", re.sub(r"[\s,]+\.(?=\s|†|$)|†", "", q))
+    # a Greek phrase the clause opens on, before its English ("διὰ (τῆς) π., . By meton., objectively, …")
+    q = re.sub(r"^[^A-Za-z]*[Ͱ-Ͽἀ-῿][^A-Za-z]*?\.\s+(?=[A-Z])", "", q.strip())
+    q = re.sub(r"\((?:[^()]*\d[^()]*|(?:see |cf\. )?[A-Z][A-Za-z]{0,5}\.?,[^()]*"
+               r"|[^()]*(?:\b(?!LXX\b)[A-Z]{2,4}\b|\bsee [A-Z]|\bal\.|Thackeray|Cremer|Thayer)[^()]*)\)", "", q)
+    depth, start = 0, 0
+    for i, ch in enumerate(q):
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            if depth:
+                depth -= 1
+            else:
+                start = i + 1
+    q = q[start:]
+    opened = []
+    for i, ch in enumerate(q):
+        if ch == "(":
+            opened.append(i)
+        elif ch == ")" and opened:
+            opened.pop()
+    if opened:
+        q = q[:opened[0]]
+    q = re.sub(r"(,\s*\d+[a-z]?\.?)+\s*$", "", q.strip())
+    return q.strip(" ,;:·")
+
+
 def lexicon_senses(d, key, verses):
     """The lexicon entry cut at its numbered senses, each with how many of the
     card's own verses it cites, and the one to quote: the sense that cites the
@@ -4324,8 +4753,7 @@ def lexicon_senses(d, key, verses):
         if not seg:
             continue
         cited = []
-        for b, c, v in _LEX_REF.findall(seg):
-            r = f"{b}.{c}.{v}"
+        for r in _lex_refs(seg):           # the run-on lists too (Mat.23:16-17, 35 27:5)
             if r in mine and r not in cited:
                 cited.append(r)
         label = re.match(r"^(\d+\.|\([a-z]\))\s*", seg)
@@ -4340,13 +4768,18 @@ def lexicon_senses(d, key, verses):
     # precincts or some part thereof (as distinct from ὁ ναός, which see, the
     # Sanctuary proper)", not the sense's whole run of abbreviations
     def here(cl):
+        # the clause to quote is chosen by its written-out references, as reviewed (2026-10-28); the run-on reader
+        # counts the senses above but chose list clauses here ("of the temple in the Apocal. visions")
         return sum(1 for b, c, v in _LEX_REF.findall(cl) if f"{b}.{c}.{v}" in mine)
 
     def cut(cl):
-        m = re.search(r":\s*(?=[^:]*" + _LEX_REF.pattern + ")", cl)
+        # not the colon INSIDE a reference: "of the faculty of speech, Luk.24:19" was cut at 24:19 and quoted
+        # "… speech, Luk.24" (audit round 1, 2026-11-07, with the other fragments _quote_clean takes out)
+        m = re.search(r"(?<!\d):\s*(?=[^:]*" + _LEX_REF.pattern + ")", cl)
         q = _LEX_REF.sub("", cl[:m.start()] if m else cl)
+        q = _quote_clean(q)
         q = re.sub(r"\s+([,;:)])", r"\1", re.sub(r"\(\s*\)|,\s*(?=[,;:)])", "", q))
-        return re.sub(r"\s{2,}", " ", q).strip(" ,;:·")
+        return re.sub(r"[\s,;:]+\.\s*$", "", re.sub(r"\s{2,}", " ", q)).strip(" ,;:·")
     # a clause that SAYS something in English: ναός's most-cited clause is
     # "(τοῦ) θεοῦ, Mat.26:61 …", a list of references with a Greek phrase
     clauses = [(here(cl), cut(cl)) for cl in re.split(r";\s*", best["text"])]
@@ -4485,8 +4918,115 @@ def word_face(d, key):
             "lexicon": lexicon_senses(d, key, verses),
             "scenes": scenes,
             "forms": forms_of(d, key, verses),
+            "parsed": parsed_forms(d, key, verses, lang),
             "recurring": recurring_of(d, key, verses),
             "partners": partners, "cards": cards}
+
+
+def parsed_forms(d, key, verses, lang):
+    """EACH FORM AND ITS PARSING, COUNTED (2026-11-09, a reviewer: "make sure visitors can inspect the actual forms and
+    their grammatical parsing, not just aggregate counts. STEP Bible sets a high standard here"): the spelling as
+    printed (accents kept, punctuation off) with MACULA's parse of it, how often, and where; commonest first. They sum
+    to the card's uses."""
+    by = {}
+    for ref in sorted(verses, key=_vkey_macula):
+        for w in d["orig"].get(ref, ()):
+            if sense_key(lang, w.get("s")) != key:
+                continue
+            # one form however the verse accents it: Hebrew without its cantillation (אֹהֵ֣ב and אֹהֵ֥ב are one form),
+            # Greek's grave as the acute it stands for (ναὸν is ναόν)
+            raw = (w.get("t") or "").strip(",.;:·׃־ ’”“‘")
+            nfd = unicodedata.normalize("NFD", raw)
+            nfd = nfd.translate(_HEB_MARKS) if lang == "hebrew" else nfd.replace("̀", "́")
+            form = unicodedata.normalize("NFC", nfd)
+            k = (form, w.get("m") or "")
+            row = by.setdefault(k, {"form": form, "parse": k[1], "n": 0, "refs": []})
+            row["n"] += 1
+            if len(row["refs"]) < 40 and (not row["refs"] or row["refs"][-1] != ref):
+                row["refs"].append(ref)
+    return sorted(by.values(), key=lambda r: (-r["n"], r["form"]))
+
+
+# THE UBS DICTIONARIES' SENSES (2026-11-04; docs/review/permissions/sdbh-2026-11-02.md). CC BY-SA, so read from
+# data/raw/ubs/ (tools/fetch_ubs.py builds it on the server), never committed; absent, every card simply has none.
+_UBS = None
+UBS_DOMAIN_SHOWN = 12          # the other words of a sense's domain, most used first
+UBS_DOMAIN_LISTED = 100        # a larger domain (UBS's names of people: 1,845) is named and counted, not listed
+
+
+def ubs_data(d):
+    global _UBS
+    if _UBS is None:
+        import ubs as _ubs_mod
+        vo = _verses_of(d)
+        at = {}                                    # verse -> the numbers the site has there (a sense's true owner)
+        for k, vs in vo.items():
+            for m in vs:
+                at.setdefault(m, set()).add(k)
+        def letters(s):
+            return "".join(c for c in unicodedata.normalize("NFD", s or "") if not unicodedata.combining(c))
+        _UBS = _ubs_mod.Ubs(TO_MACULA, has=lambda k, mref: mref in vo.get(k, ()), owners=at.get,
+                            kin=lambda k, lemma: bool(lemma) and letters(d["lemmas"].get(k)) == letters(lemma))
+    return _UBS
+
+
+def ubs_senses(d, key):
+    """The word's senses as UBS gives them, each with its domain, the other words UBS files there (linked, the
+    site's words only), its verses as MACULA addresses (the site's verses only) and how many of them are this
+    word's own verses on the site. None where UBS has no entry for the word."""
+    U = ubs_data(d)
+    e = U.entry(key) if U else None
+    if not e or not e["senses"]:
+        return None
+    mine = _verses_of(d).get(key, set())
+    senses = []
+    for s in e["senses"]:
+        doms = []
+        for dm in s["domains"]:
+            others = [k for k in U.domain_keys(key, dm["code"]) if k in d["profiles"]]
+            listed = []
+            for k in others[:None if len(others) <= UBS_DOMAIN_LISTED else UBS_DOMAIN_SHOWN]:
+                lemma, gloss = _word_label(d, k)
+                if lemma == k:                  # no lemma on the site (ἐν, g1722): UBS's own headword
+                    lemma = U.entries[k]["lemma"]
+                listed.append({"key": k, "lemma": lemma, "gloss": gloss, "uses": _uses(d, k)})
+            doms.append({"code": dm["code"], "label": dm["label"], "words": listed, "total": len(others),
+                         "shown": UBS_DOMAIN_SHOWN})
+        refs = sorted((r for r in s["refs"] if r in d["orig"]), key=_vkey_macula)
+        senses.append({"short": s["short"], "glosses": s["glosses"], "domains": doms, "refs": refs,
+                       "here": sum(1 for r in refs if r in mine), "uses": s["uses"]})
+    # one UBS entry for several numbers: said, so a reader knows the senses were split by where each number stands
+    # a sense UBS files under another number of the same word (ἱερόν's "temple" under ἱερός, G2413): said, with a link
+    fu = e.get("filed_under")
+    filed = {"key": fu["key"], "lemma": fu["lemma"], "addr": word_address(fu["key"])} if fu else None
+    return {"lemma": e["lemma"], "senses": senses, "shared": [k for k in e["shared"] if k in d["profiles"]],
+            "filed_under": filed, **U.source(key)}
+
+
+# the words a verse's senses leave out: "the", "he", "and", "in" have one UBS sense each, the same in every verse
+UBS_VERSE_SKIP = ("det", "pronoun", "conj", "prep", "ptcl", "intj",          # MACULA's tags, as measured
+                  "article", "particle", "preposition", "conjunction", "interjection")
+# ...and a word UBS files only under its discourse domains (ἑαυτούς "himself", tagged otherwise, at Jude 12)
+UBS_VERSE_SKIP_DOMAINS = {"Discourse Referentials", "Discourse Markers"}
+
+
+def ubs_in_verse(d, mref, words):
+    """For each content word of a verse that has a card: the senses UBS lists THIS verse under, and nothing where
+    it lists none (a sense is never guessed from the word alone). Written onto the words; the credit, once,
+    returned."""
+    U = ubs_data(d)
+    if not U:
+        return None
+    any_ = False
+    for w in words:
+        got = (U.senses_at(mref, w.get("card"))
+               if w.get("card") and (w.get("pos") or "").lower() not in UBS_VERSE_SKIP else [])
+        if got and all({x["label"] for x in s["domains"]} <= UBS_VERSE_SKIP_DOMAINS for s in got):
+            got = []
+        w["ubs"] = [{"short": s["short"], "glosses": s["glosses"], "domains": [x["label"] for x in s["domains"]]}
+                    for s in got]
+        any_ = any_ or bool(got)
+    return U.source(next((w["card"] for w in words if w.get("ubs")), "")) if any_ else None
 
 
 _WORD_REGISTER = None
@@ -4562,8 +5102,9 @@ def _word_card_extras(d, out):
         out["definition"] = lx.get("definition") or None
     if not out.get("short"):
         out["short"] = lx.get("gloss") or None
-    out["definition_credit"] = (LEXICON_CREDIT["hebrew" if key[:1] == "h" else "greek"]
-                                if out["definition"] else None)
+    src = "strongs" if lx.get("source") == "strongs" else "hebrew" if key[:1] == "h" else "greek"
+    out["definition_credit"] = LEXICON_CREDIT[src] if out["definition"] else None
+    out["definition_link"] = LEXICON_LINK.get(src, "https://www.STEPBible.org") if out["definition"] else None
     if "occurrences" not in out:
         out["occurrences"] = _occ_payload(d, key)
     if "equiv" not in out:
@@ -4605,7 +5146,9 @@ def concepts_of_word(d, key):
     if _WORD_CONCEPTS is None:
         by_name = collections.defaultdict(list)
         for eid, e in d["ents"].items():
-            if e.get("type") == "concept" and not str(eid).startswith("theme_"):
+            # and the things, creatures and images (2026-11-08, the Navigator's on-ramp: אֶבֶן "stone" led to no card,
+            # though the stones and the twelve stones from the Jordan have theirs)
+            if e.get("type") in _BRIDGE_TYPES and not str(eid).startswith("theme_"):
                 for nm in [e.get("name")] + list(e.get("aka") or []):
                     if _slug(nm):
                         by_name[_slug(nm)].append(eid)
@@ -4618,15 +5161,97 @@ def concepts_of_word(d, key):
         vs = _verses_of(d)
         for eid, anchors in _anchors().items():
             e = d["ents"].get(eid) or {}
-            if e.get("type") != "concept" or str(eid).startswith("theme_") or not e.get("refs"):
+            if e.get("type") not in _BRIDGE_TYPES or str(eid).startswith("theme_") or not e.get("refs"):
                 continue
             own = {_macula_ref(d, r) for r in e["refs"]}
             for k, _s in anchors:
                 if vs.get(k, set()) & own and eid not in ix[k]:
                     ix[k].append(eid)
+        # a kind's particular instances follow it (A.45's kind_of): stones, then the twelve stones from the Jordan
+        # ... when the instance's own verses hold this word: אֶבֶן "stone" leads to the Jordan's stones, not to the
+        # stone at the tomb of Jesus, which the Greek λίθος names
+        for k, eids in ix.items():
+            for eid in list(eids):
+                for r in d["rels"].get(eid, ()):
+                    inst = d["ents"].get(r["other"]) or {}
+                    if r.get("type") == "kind_of" and r.get("dir") == "in" and r["other"] not in eids and \
+                            vs.get(k, set()) & {_macula_ref(d, x) for x in inst.get("refs") or ()}:
+                        eids.append(r["other"])
         _WORD_CONCEPTS = ix
-    return [{"id": eid, "name": d["ents"][eid].get("name") or eid}
-            for eid in _WORD_CONCEPTS.get(key, [])[:4] if eid in d["ents"]]
+    return [{"id": eid, "name": d["ents"][eid].get("name") or eid, "type": d["ents"][eid].get("type")}
+            for eid in _WORD_CONCEPTS.get(key, [])[:6] if eid in d["ents"]]
+
+
+_BRIDGE_TYPES = ("concept", "object", "creature", "image")
+
+_WORD_NAMES = None
+_NAMES_BUILDING = False
+# STEP's part of speech says what a name names: N:N--L a place, N:N-M-P a man, N:N--PG a people
+_NAME_KIND = {"L": ("place", "a place"), "LG": ("place", "a place, or the people of it"),
+              # T is STEP's mixed class: gods, angels, months, offices (Artemis, Gabriel, Bul, "zealot")
+              "P": ("person", "a name"), "PG": ("group", "a people"), "T": (None, "a proper name")}
+
+
+def name_kind(d, key):
+    """("place" | "person" | "group" | None, "a place", "a man's name", ...) from STEP's tag, or None for a word
+    that is not a name."""
+    pos = ((d.get("lex") or {}).get(key) or {}).get("pos") or ""
+    m = re.match(r"N:N-([MF]?)-?([A-Z]*)$", pos)
+    if not m or not m.group(2):
+        return None
+    kind, label = _NAME_KIND.get(m.group(2), (None, None)) if m.group(2) != "P" else (
+        "person", {"M": "a man's name", "F": "a woman's name"}.get(m.group(1), "a name"))
+    return (kind, label) if label else None
+
+
+def names_of_word(d, key):
+    """THE PERSON OR PLACE A NAME NAMES (Doug, 2026-11-10, on Dothan's card: "it is not immediately clear to me that it
+    is a town/place and when I click the Navigator - the word is not connected to a place (meaning) card"). The
+    records whose own name word this is (_name_key, _place_name_keys: checked against each record's own verses), then
+    a record named as the word is glossed, of the kind STEP's tag gives, whose verses hold the word (Dothan and Calneh
+    have no name-map entry). Most shared verses first: Joseph the son of Jacob before Joseph of Bani."""
+    global _WORD_NAMES, _NAMES_BUILDING
+    if _WORD_NAMES is None and not _NAMES_BUILDING:
+        _NAMES_BUILDING = True        # _place_name_keys reads this index, and building it calls _place_name_keys
+        vo = _verses_of(d)
+        ix = collections.defaultdict(set)
+        by_name = collections.defaultdict(list)
+        for eid, e in d["ents"].items():
+            if e.get("type") not in ("person", "place", "group"):
+                continue
+            for nm in [e.get("name")] + list(e.get("aka") or []):
+                if _slug(nm):
+                    by_name[_slug(nm)].append(eid)
+            try:
+                ks = _place_name_keys(d, eid, e) if e["type"] == "place" else [_name_key(d, e)]
+            except Exception:
+                ks = []
+            for k in ks:
+                if k:
+                    ix[k].add(eid)
+        for k, lx in (d.get("lex") or {}).items():
+            nk = name_kind(d, k)
+            if k in ix or not nk or not nk[0] or not vo.get(k):
+                continue
+            # the gloss, and the definition's first words (Calneh's row has no gloss: "Calneh or Calno, a place ...")
+            said = (lx.get("gloss") or "") + "," + re.split(r"[,;(·]", lx.get("definition") or "")[0]
+            for part in re.split(r"\s+or\s+|[,;/]", said):
+                for eid in by_name.get(_slug(part.strip()), ()):
+                    e = d["ents"][eid]
+                    if e.get("type") == nk[0] and vo[k] & {_macula_ref(d, r) for r in e.get("refs") or ()}:
+                        ix[k].add(eid)
+        # and the names the rule could not link, each the Mac's pick read by Claude (tools/meaning/name_links.py:
+        # Meshach is Mishael, Jedidiah Solomon; a father taken for his son rejected, with why, in the provenance)
+        p = ROOT / "ontology" / "word-name-links.json"
+        for k, eids in (json.loads(p.read_text(encoding="utf-8")).get("links") or {} if p.exists() else {}).items():
+            ix[k] |= {x for x in eids if x in d["ents"]}
+        own = lambda eid: {_macula_ref(d, r) for r in (d["ents"][eid].get("refs") or ())}  # noqa: E731
+        _WORD_NAMES = {k: sorted(eids, key=lambda x: (-len(vo.get(k, set()) & own(x)), x)) for k, eids in ix.items()}
+        _NAMES_BUILDING = False
+    # same-named records told apart by their own disambiguation (_who: "father of Heli, in Luke's genealogy")
+    return [{"id": eid, "name": d["ents"][eid].get("name") or eid, "type": d["ents"][eid].get("type"),
+             "who": (_who(d["ents"][eid]) or "").split(";")[0].strip() or None}
+            for eid in _WORD_NAMES.get(key, [])[:6] if eid in d["ents"]]
 
 
 def _api_sense(d, q):
@@ -4650,7 +5275,22 @@ def _api_sense(d, q):
         # the feature names carry underscores ("possessed_by"): printed as
         # "possessed_bys" on the page of אֵד (2026-10-26); never the machinery's
         rest = rest.replace("_", " ")
-        if tag == "coord":
+        rest = re.sub(r"\b(\w+) s\b", r"\1’s", rest)        # "father s" is "father’s" (the name lost its apostrophe)
+        rest = gloss_repair(rest) if " " in rest.strip() else rest     # "caused todwell", never "topple"
+        # PLAIN ROLES, THE VERB AS A VERB (2026-11-09: three reviewers read these rows as broken English, "is what will
+        # justified", "is what someone obey", "is what someone i rejoice", on most word cards). The heading names the
+        # word's role in its clause, the item is the verb's English with the clause's auxiliaries and pronouns taken
+        # off, and nothing is bolted on. A function word has no such rows: ἐν "stands beside food" said nothing.
+        if tag in ("coord", "objof", "subjof") and _function_word(d, key):
+            continue
+        if tag in ("objof", "subjof"):
+            says = "subject of the verb" if tag == "subjof" else "object of the verb"
+            quote = _verb_plain(rest)
+            if not quote:
+                continue
+            if " " not in quote and (quote.endswith(("able", "ible", "ful", "ous", "less")) or quote in _GLOSS_ADJECTIVES):
+                quote = "is " + quote                    # יָכִל "able" is "is able", not a verb "able"
+        elif tag == "coord":
             says, quote = "stands beside", rest
         elif tag == "objof":
             says, quote = "is what someone", rest
@@ -4664,11 +5304,13 @@ def _api_sense(d, q):
             # AND NOT A PAST FORM: "issued" + "s" was printed "issueds" (3x, on
             # the page of the Aramaic טְעֵם, 2026-10-26). A word ending -ed is
             # left as it is, but for the bases that end so ("feed" -> "feeds").
-            past = rest.endswith("ed") and rest not in (
+            past = rest in _IRREGULAR_PAST or rest.endswith("ed") and rest not in (
                 "need", "feed", "bleed", "heed", "seed", "speed", "plead", "breed",
                 "weed", "exceed", "proceed", "succeed", "shed")
-            quote = (rest + "s") if (one and not past and not rest.endswith(("s", "ing")))\
-                else rest
+            # AND NOT AN ADJECTIVE: יָכִל "able" was printed "is what ables" under אֱלָהּ (audit round 1)
+            adj = rest.endswith(("able", "ible", "ful", "ous", "less")) or rest in _GLOSS_ADJECTIVES
+            quote = ("is " + rest) if (one and adj) else (rest + "s") \
+                if (one and not past and not rest.endswith(("s", "ing"))) else rest
             says = "is what"
         elif tag == "ofhead":
             # DO NOT INVENT THE CONNECTOR. This read `f"{word} of {rest}"`, so
@@ -4682,14 +5324,16 @@ def _api_sense(d, q):
             # construct templates — and ALL SEVEN turn out not to be "of".
             # So "of" is wrong often and demonstrably, and the honest move is
             # to stop asserting it rather than guess a replacement.
-            says, quote = "in the phrase", _construct(d, word, rest)
+            says, quote = "in the phrase", _construct(d, _as_printed(d, key, f, word), rest)
         elif tag == "ofdep":
-            says, quote = "in the phrase", _construct(d, rest, word)
+            says, quote = "in the phrase", _construct(d, rest, _as_printed(d, key, f, word))
         elif tag == "simile":
             says, quote = "is used as an image", ""
         else:
             says, quote = tag, rest
         if rest.strip().lower() in NOISE_PARTNERS:
+            continue
+        if tag == "lxx" and unicodedata.normalize("NFC", rest.strip()).lower() in _GREEK_ARTICLE:   # as lxx_of
             continue
         # each ref at the verse the word is in: a profile's ref is its
         # clause's first verse, so Anna's "departed" cited Luke 2:36 for 2:37
@@ -4701,6 +5345,12 @@ def _api_sense(d, q):
                       "quoted": tag in ("ofhead", "ofdep"),
                       "count": f["count"], "weight": f["weight"],
                       "refs": frefs})
+    # A ROLE SEEN ONCE IS LEFT OFF WHERE OTHERS ARE SEEN MORE (round 6, 2026-11-09: "object of the verb: member",
+    # Festus "subject of: gone up"; the Fable review: drop single-count rows by default): a word with three or more
+    # repeated role rows keeps those; one with fewer keeps its single ones, as all it has
+    roles = [f for f in feats if f["kind"] in ("subjof", "objof", "coord")]
+    if sum(1 for f in roles if f["count"] > 1) >= 3:
+        feats = [f for f in feats if f["kind"] not in ("subjof", "objof", "coord") or f["count"] > 1]
     lx = d["lex"].get(key, {})
     lemma, translit, also = _head(d, key, d["lemmas"].get(key) or lx.get("word"),
                                   top_of(d, key, "transliteration") or lx.get("translit"))
@@ -4721,7 +5371,7 @@ def _api_sense(d, q):
             # Refs only; the verse arrives from /api/sense-verse on click.
             "occurrences": _occ_payload(d, key),
             "features": feats,
-            "neighbours": neighbours(d, key),
+            "neighbours": _same_kind(d, key, neighbours(d, key)),
             "acts": acts_of(d, key),
             "verb_class": class_of(d, key),
             "contrasts": [c for c in d["contrasts"].get(word, [])][:8]}
@@ -4791,6 +5441,21 @@ def _equivalents(d, key):
                 # would be worse than offering none.
                 "key": None}
     return {"greek": greek, "aramaic": aram, "hebrew": []}
+
+
+def _as_printed(d, key, f, word):
+    """The word in a phrase row, as the Berean prints it where the phrase occurs once: ναός's "temple — of artemis" is
+    "shrines" in Acts 19:24 (round 5, 2026-11-09). A phrase met more often keeps the word's gloss, which its verses
+    may render variously."""
+    refs = f.get("refs") or []
+    if f.get("count") != 1 or len(refs) != 1:
+        return word
+    try:
+        alts = _alts(d, key)
+        got, _u = _printed_here(d, key, refs[0], alts, _known_runs(d, key, None, alts))
+    except Exception:
+        return word
+    return got[0][0] if got else word
 
 
 def _construct(d, head, dep):
@@ -5329,6 +5994,11 @@ def grammar_of(d, key):
     return out
 
 
+_GREEK_ARTICLE = {unicodedata.normalize("NFC", a) for a in
+                  ("ὁ", "ἡ", "τό", "τὸ", "τοῦ", "τῆς", "τῷ", "τῇ", "τόν", "τὸν", "τήν", "τὴν", "οἱ", "αἱ", "τά", "τὰ",
+                   "τῶν", "τοῖς", "ταῖς", "τούς", "τοὺς", "τάς", "τὰς", "τοὺς")}
+
+
 def lxx_of(d, key):
     """The Greek the Septuagint used for a Hebrew word.
 
@@ -5350,11 +6020,26 @@ def lxx_of(d, key):
         v = (w.get("v") or "").strip()
         if not v or not v.strip("’'\""):
             continue
+        # NOR THE ARTICLE: אֱלָהּ "God" listed τοῦ beside θεοῦ (the Greek of "the house of God" split word by word;
+        # audit round 1, 2026-11-07). Kept for the Hebrew article itself
+        if unicodedata.normalize("NFC", v).lower() in _GREEK_ARTICLE and key not in ("h1886", "h1886a", "h1886b"):
+            continue
         gk = None
         for code in codes:
             gk = "g" + re.sub(r"^0+", "", re.sub(r"[^0-9]", "", code))
             break
         # printed corrected where MACULA's column swaps χ and ξ (FAULTS #17: ψυξή for ψυχή); `raw` keeps the column
+        # NOR A STRAY FAR BELOW THE MAIN ROW: שְׁמֹנִים "eighty" listed τριακοσίους, εἴκοσι, πεντήκοντα, the other parts
+        # of compound numbers its verses hold (round 4, 2026-11-09). A row under a tenth of the first is left off
+        if out and w["n"] * 10 < out[0]["n"]:
+            continue
+        # NOR THE NEXT NAME IN THE VERSE (audit round 5): אֱלִיעָם Eliam listed αξιτοφελ, his father Ahithophel. A name's
+        # Greek row seen once must begin as the name does (Eliam, ελιαβ); a row seen more is the Greek's own name for it
+        # (Egypt, Αἴγυπτος)
+        tl = re.sub(r"[^a-z]", "", ((d.get("lex") or {}).get(key) or {}).get("gloss", "").lower())
+        gl = re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", _translit_head(v)).lower())
+        if w["n"] == 1 and name_kind(d, key) and tl and gl and gl[:2] not in (tl[:2], tl[:2].replace("j", "i"), tl[:2].replace("h", "")[:2]):
+            continue
         fixed = _lxx_spell(d, key, v)
         out.append({"word": fixed, "n": w["n"],
                     "key": gk if gk in d["profiles"] else None, **({"raw": v} if fixed != v else {})})
@@ -7132,6 +7817,19 @@ def api_recurs(d, q):
                  "order, each named by an example verse. Mostly the grammar of narrative; "
                  "check each.",
          "rows": dig}]}
+
+
+_TOLD = None
+
+
+def _told_again(a, b):
+    """The ontology/told-again.jsonl record joining two events, whichever is the later, or None."""
+    global _TOLD
+    if _TOLD is None:
+        _TOLD = {frozenset((r.get("later_event"), r.get("earlier_event"))): r
+                 for r in _rows(ROOT / "ontology" / "told-again.jsonl")
+                 if r.get("later_event") and r.get("earlier_event")}
+    return _TOLD.get(frozenset((a, b)))
 
 
 def _told_again_rows(d):
@@ -9707,6 +10405,75 @@ def _quote_ref(d, note, refs):
     return ""
 
 
+_CARD_WORDS = None
+
+
+def _words_for_card(d, eid):
+    """[(key, "lemma “gloss”")] for the words whose card leads to this one (concepts_of_word's index, inverted), most
+    used first."""
+    global _CARD_WORDS
+    if _CARD_WORDS is None:
+        concepts_of_word(d, "g26")                   # builds _WORD_CONCEPTS
+        names_of_word(d, "h1886")                    # and _WORD_NAMES: a person's or place's card leads to its name
+        vo = _verses_of(d)
+        inv = collections.defaultdict(list)
+        for k, eids in list((_WORD_CONCEPTS or {}).items()) + list((_WORD_NAMES or {}).items()):
+            for x in eids:
+                inv[x].append(k)
+        _CARD_WORDS = {x: sorted(ks, key=lambda k: -len(vo.get(k, ()))) for x, ks in inv.items()}
+    out = []
+    for k in _CARD_WORDS.get(eid, ()):
+        lx = (d.get("lex") or {}).get(k) or {}
+        lem = re.split(r"[,;(]", (d.get("lemmas") or {}).get(k) or lx.get("word") or k)[0].strip()
+        gl = (lx.get("gloss") or "").strip()
+        out.append((k, f"{lem} “{gl}”" if gl else lem))
+    return out
+
+
+def _graph_word(d, key):
+    """THE WORD AT THE CENTRE (Doug, 2026-11-08: "I would prefer that the word card itself be centered and then related
+    to one or more meaning cards (concepts, images, objects, etc.) as well as related words cards such as the Hebrew
+    equivalent"; PRINCIPLES 54). One hop around a word: the meaning cards it leads to (concepts_of_word), its
+    equivalents in the other language (the card's own `equiv`, the Septuagint's alignment), and its family. Word nodes
+    are `word:<key>`, so a click centres the next word the same way."""
+    c = api_sense(d, {"key": [key]})      # the whole card: its equivalents and family are added there
+    if not c.get("found"):
+        return {"found": False}
+    wid = f"word:{key}"
+    lemma = c.get("lemma") or key.upper()
+    gloss = (c.get("short") or c.get("gloss") or "").strip()
+    nodes = [{"id": wid, "label": f"{lemma} “{gloss}”" if gloss else lemma, "etype": "word"}]
+    edges = []
+
+    def add(nid, label, etype, typ, elabel, cat, n=None):
+        if any(x["id"] == nid for x in nodes):
+            return
+        nodes.append({"id": nid, "label": label, "etype": etype})
+        edges.append({"id": f"e{len(edges)}", "source": wid, "target": nid, "type": typ, "label": elabel,
+                      "category": cat, "certainty": "explicit", "refs": [], "weight": 3 if n is None else
+                      min(6, 2 + (n or 0) // 20), "symmetric": None, "shared_verses": n or 0, "shared_chapters": 0})
+    for m in c.get("names") or []:                      # the person or place it names (names_of_word)
+        add(m["id"], m["name"], m.get("type") or "person", "names", "is the name of", "meaning")
+    for m in concepts_of_word(d, key):
+        add(m["id"], m["name"], m.get("type") or "concept", "means", "is the word for", "meaning")
+    eq = c.get("equiv") or {}
+    for side in ("hebrew", "greek"):
+        for w in (eq.get(side) or [])[:5]:
+            if w.get("key"):
+                add(f"word:{w['key']}", f"{w.get('t') or w['key']} “{w.get('g') or ''}”", "word", "equivalent",
+                    "stands for" if side == "hebrew" else "stood for", "language", w.get("n"))
+    for f in (c.get("family") or [])[:5]:
+        add(f"word:{f['key']}", f"{f.get('lemma') or f['key']} “{f.get('gloss') or ''}”", "word", "kin",
+            "is of one family with", "derivation", f.get("uses"))
+    import salience
+    nav = salience.entry("navigator_tie_strength")       # the same ranking as a card's graph: a first draw needs it
+    return {"found": True, "drawable": True, "center": wid, "addr": wid, "name": f"{lemma} ({key.upper()})",
+            "nodes": nodes, "edges": edges, "word": True,
+            "policy": {"parameters": nav["parameters"], "rank": nav["rank"]},
+            "categories": {"meaning": "Meaning cards", "language": "Words in the other language",
+                           "derivation": "Source and derivation", "wording": "Original words"}}
+
+
 def api_graph(d, q):
     """One hop around an entity, for the Knowledge Graph Navigator: the
     entity, every drawable thing it is related to, and every relation among
@@ -9714,6 +10481,8 @@ def api_graph(d, q):
     it would read as the narrator's fact, and the card already shows it as
     that speaker's words."""
     eid = (q.get("id") or [""])[0]
+    if eid.startswith("word:"):
+        return _graph_word(d, eid[5:].lower())
     e = d["ents"].get(eid)
     if not e:
         return {"found": False}
@@ -9788,6 +10557,17 @@ def api_graph(d, q):
     # THE NAVIGATOR'S RULE, SERVED FROM THE DECLARED POLICY (plan 8.1f,
     # ontology/schema/salience.json): its tie strength and how many records it
     # draws first, so the page keeps no copy of its own
+    # THE WORDS FOR IT, BACK FROM THE MEANING (Doug, 2026-11-09: "the paths back to the word cards … should be [there]
+    # even if the priority is low - and a legend option should exist for both directions"): the original words that
+    # lead to this card (the word side's own index, read backwards), light, under their own legend entry
+    words = _words_for_card(d, eid)
+    for k, w in words[:6]:
+        nodes.append({"id": f"word:{k}", "label": w, "etype": "word"})
+        named = e.get("type") in ("person", "place", "group")
+        edges.append({"id": f"e{len(edges)}", "source": f"word:{k}", "target": eid, "type": "names" if named else "means",
+                      "label": "is the name of" if named else "is the word for", "category": "wording", "certainty": "explicit", "refs": [],
+                      "weight": 1, "symmetric": None, "shared_verses": 0, "shared_chapters": 0})
+    catlabels["wording"] = "Original words"
     _membership()                                    # puts tools/meaning on the path
     import salience
     nav = salience.entry("navigator_tie_strength")
@@ -9921,16 +10701,25 @@ def _place_name_keys(d, eid, e):
     wrong place's verses)."""
     if e.get("words"):
         return list(e["words"])
+    # the words the name index links to this place (names_of_word: Dothan's H1886 has no name-map entry, so the
+    # place's verse list was empty; the place-card review, 2026-11-10). Read only once that index is built: building
+    # it calls this function
+    if _WORD_NAMES is not None or not _NAMES_BUILDING:
+        if _WORD_NAMES is None:
+            names_of_word(d, "h1886")
+        back = sorted(k for k, ids in (_WORD_NAMES or {}).items() if eid in ids)
+    else:
+        back = []
     if not d["namemap"].get(e["name"]):
-        return []
+        return back
     if any(x != eid and (d["ents"].get(x) or {}).get("type") == "place"
            for x in d["alias_ix"].get(_slug(e["name"]), ())):
-        return []
+        return back
     k = _name_key(d, e)
     own = _own_names(d, e)
     if not k or own is None or k not in own["keys"]:
-        return []
-    return [k]
+        return back
+    return list(dict.fromkeys([k] + back))
 
 
 def _place_names(d, eid, e):
@@ -10137,6 +10926,21 @@ def place_card(d, eid, e, groups):
     names = _place_names(d, eid, e)
     aka, aka_bare = _place_aka(d, eid, e)
     story = _place_story(d, eid)
+    # WHAT THE TEXT TELLS MOST THERE, FIRST (the place-card review, 2026-11-10: Bethel's story held only the 2 events
+    # with a recorded visit, and Jeroboam's calf, named there 19 times, was not in it): every event that names the place
+    # joins the story, and the story runs by how often its telling names the place, the canon's order breaking ties
+    ments = {x["id"]: x.get("n") or 0 for x in events_for(d, eid)}
+    have = {x["id"] for x in story}
+    evs_ = _events(d)["events"]
+    for x in events_for(d, eid):
+        ev = evs_.get(x["id"])
+        if x["id"] in have or not ev:
+            continue
+        tl = (ev.get("tellings") or [{}])[0]
+        story.append({"id": x["id"], "name": ev.get("title") or x.get("name"), "first": tl.get("first"),
+                      "label": tl.get("label"), "face": False, "rows": [], "visits": []})
+    order = {x["id"]: i for i, x in enumerate(story)}
+    story.sort(key=lambda x: (-ments.get(x["id"], 0), _place_event_at(d, x["id"]), order[x["id"]]))
     inside = []
     for r in rows:
         if r["type"] == "located_in" and r["dir"] == "in" and (ents.get(r["other"]) or {}).get("type") == "place":
@@ -10164,7 +10968,9 @@ def place_card(d, eid, e, groups):
                 says.append({"id": it["other"], "name": it.get("name"), "refs": it.get("refs") or [],
                              "verses": _place_quote(d, it.get("refs"))})
     refs_all = set((e.get("refs") or []))
-    thin = not rows
+    # a place with one or two relations is a thin card, and keeps its own verses whole (Dothan: Gen 37:17, and
+    # 2 Kgs 6:13, which the card did not print because its one relation made it "not thin")
+    thin = len(rows) <= 2
     return {
         "thin": thin, "names": names, "aka": aka, "aka_bare": aka_bare, "story": story,
         "story_rows": sum(len(x["rows"]) + len(x["visits"]) for x in story),
@@ -10946,6 +11752,24 @@ def _event_page(d, eid, c):
         return ", ".join(pl(x["go"], x["ref"]) for x in cites)
 
     parts = []
+    # A STORY TOLD AGAIN LEADS (the told-again layout review, 2026-11-10: the storm's page printed none of its five
+    # steps beside Jonah's): each step in this card's words, then the other story's, both linked, and where they differ
+    told = []
+    for r in d["rels"].get(eid, ()):
+        rec = _told_again(eid, r["other"]) if r["type"] == "same_steps_as" else None
+        if not rec or r["other"] in [t[0] for t in told]:
+            continue
+        mine = 0 if rec["later_event"] == eid else 1
+        other = d["ents"].get(r["other"]) or {}
+        told.append((r["other"], other.get("name") or r["other"]))
+        rows = "".join(f'<tr><td>{pl(_verse_addr(d, s[mine][0]), s[mine][0])} {_esc(s[mine][1])}</td>'
+                       f'<td>{pl(_verse_addr(d, s[1 - mine][0]), s[1 - mine][0])} {_esc(s[1 - mine][1])}</td></tr>'
+                       for s in rec["beats"])
+        parts.append(f'<h2>The same steps as {el(r["other"], told[-1][1])}</h2>'
+                     f'<table><tr><th>{_esc(big)}</th><th>{_esc(told[-1][1])}</th></tr>{rows}</table>'
+                     + (f'<p>Where they differ: {_esc(rec["differs"])}</p>' if rec.get("differs") else "")
+                     + "<p>Set side by side in the text’s own words; not a claim that one was told with the other "
+                       "in mind.</p>")
     strip = p["strip"]
     if len(strip) > 1:
         li = []
@@ -11025,6 +11849,15 @@ def _event_page(d, eid, c):
     summary = " ".join(pieces + ([sentence] if sentence else []))
     if len(summary) > 155 and sentence:
         summary = " ".join(pieces + ([f"{who} {names[0]}."] if names else []))
+    # the story it is told beside, named where a searcher reads first: in the description, else the title
+    if told:
+        also = f"Told again beside {told[0][1]}."
+        if len(f"{big} and {told[0][1]}") <= 60:
+            title = f"{big} and {told[0][1]}"
+        # after the editors' heading, which a description opens with (their words first; tests/test_event_cards.py)
+        lead_piece = f"{heading.rstrip('.')}." if heading else ""
+        summary = (f"{lead_piece} {also} {summary[len(lead_piece):].lstrip()}" if lead_piece and
+                   summary.startswith(lead_piece) else f"{also} {summary}")
     summary = _meta_cut(summary, 300)
 
     def ld(page_body, url):
@@ -11120,10 +11953,16 @@ def api_entity(d, q):
                if claim else {}),
             **({"reading": "the major-theme map"} if r.get("map") else
                {"reading": r["reading"], "note": r.get("note")} if r.get("reading") else {}),
-            **({"pairs": r["pairs"]} if r.get("pairs") else {}),
+            # this card's story first in each step: on the earlier story's card the pair turns round (the told-again
+            # layout review, 2026-11-10: Jonah's card read Matthew first)
+            **({"pairs": [[p[1], p[0]] for p in r["pairs"]] if r["dir"] == "in" and r["type"] == "same_steps_as"
+                else r["pairs"]} if r.get("pairs") else {}),
             # a story told again carries its explanation and where the two
             # differ to the card, where it opens under the steps (plan 6.18)
             **({"note": r.get("note")} if r["type"] == "same_steps_as" and r.get("note") else {}),
+            # ... and from its record where they differ and the telling detail, which the card puts first
+            **({k: v for k, v in (_told_again(r["other"], eid) or {}).items() if k in ("differs", "distinctive")}
+               if r["type"] == "same_steps_as" else {}),
         })
     # A stage reaches its pattern through its story (stage part_of arc,
     # arc instance_of pattern); the graph draws that second hop too, named
@@ -11165,6 +12004,15 @@ def api_entity(d, q):
                 # χ and ξ, by the word card's rule (FAULTS #17: Serug's σερουξ is σερουχ)
                 "lxx": [_lxx_spell(d, k, x["v"]) for x in (meta.get("greek") or [])
                         if re.search(r"[Ͱ-Ͽἀ-῿]", x.get("v") or "")][:3]}
+        # A CODE MERGED WITH ANOTHER WORD'S (A.48's split codes): Dothan's H1886 carried the Hebrew article's metadata
+        # ("ha", 35,900 uses, τοῦ/ὁ/τῆς; the place-card review, 2026-11-10). The word card already cleans such a base
+        # (_clean_split_base); the name's word takes its count, transliteration and Septuagint from there
+        if any(c.startswith(k) and c[len(k):].isalpha() for c in _SPLIT_CODES):
+            wc = api_sense(d, {"key": [k]})
+            if wc.get("found"):
+                orig.update(uses=(wc.get("face") or {}).get("uses") or len(_verses_of(d).get(k, ())),
+                            translit=wc.get("translit") or "", lemma=wc.get("lemma") or orig["lemma"],
+                            lxx=[x.get("word") for x in wc.get("lxx") or [] if x.get("word")][:3])
     # A CONCEPT has no single word behind it. "Mercy" is hesed and rachamim and
     # eleos and oiktirmos, and picking one would be a claim the corpus does not
     # make -- so every profiled lemma the text glosses this way is offered,
@@ -11435,6 +12283,19 @@ def api_entity(d, q):
     phr = phrase_of_card(eid)
     res["phrase_of"] = ({"id": phr[0], "name": (d["ents"].get(phr[0]) or {}).get("name") or phr[0]}
                         if phr and phr[0] in d["ents"] else None)
+    # A SUB-THEME LEADS TO ITS THEME (Doug, 2026-11-10, on "The strong man tied up", a search landing: "given very
+    # little context and there isn't even a viable path back to the major theme"; the one in_theme row sat in the
+    # closed drawer). Its theme's page, its place among the theme's sub-themes, the others by name. And its words are
+    # those its own verses hold: the name-matched list gave "strong drink" for the strong man
+    res["in_theme"] = sub_theme_of(d, eid, e)
+    # and the major theme's own record opens the theme's page, which holds everything it has and more (Doug: "is not
+    # the same as /themes/spiritual-warfare and is actually a poor fraud"); its address stays for search engines
+    ea_ = e.get("attrs") or {}
+    res["major_theme"] = ea_.get("theme") if ea_.get("kind") == "major_theme" else None
+    if res["in_theme"] and isinstance(res.get("face"), dict) and res["face"].get("words"):
+        vo_, own_ = _verses_of(d), {_macula_ref(d, r) for r in e.get("refs") or ()}
+        res["face"]["words"] = [w for w in res["face"]["words"] if vo_.get(w.get("key"), set()) & own_]
+        res["face"]["family"] = [w for w in res["face"].get("family") or [] if vo_.get(w.get("key"), set()) & own_]
     # the fallback card (2026-10-31): the face of every card no other face applies to
     res["fbcard"] = fallback_card(d, eid, e, res)
     _with_vmarks(res)
@@ -14982,6 +15843,72 @@ def _verses_of(d):
     return _VERSES_OF
 
 
+# A FORM STRONG'S NUMBERS APART (audit round 1, 2026-11-07): G2258 ἦν, G2076 ἐστί, G1511 εἶναι and G2036 εἶπον are
+# Strong's entries for forms of εἰμί and λέγω, and the interlinear counts every use under the dictionary word, so
+# their cards said "used 0 times" over UBS senses listing 94 verses. Where a card has no uses of its own, the form
+# its headword spells is looked up in the text, and the card names the word that holds it.
+_FORMS = None
+
+
+def _form_letters(s):
+    """Letters alone (not _letters, defined twice above already and called by both meanings)."""
+    return "".join(ch for ch in unicodedata.normalize("NFD", s or "")
+                   if unicodedata.category(ch)[0] == "L").translate(str.maketrans("ךםןףץς", "כמנפצσ")).lower()
+
+
+def counted_under(d, key):
+    """For a word with no uses of its own: the word the text counts its form under, as {"key", "n", "of"} (n uses
+    of the form there, of all its uses in the text), or None. Only where one word holds most of the form's uses,
+    so ἦν goes to εἰμί (315 of 413) and a spelling shared evenly by two words names neither."""
+    global _FORMS
+    vo = _verses_of(d)
+    if vo.get(key):
+        return None
+    # Hebrew spellings without their vowels match other words (חָרֵב "dry" is spelt as חֶרֶב "sword"), so a Hebrew
+    # card is pointed only to its own number: STEP's lettered entry (H1524a) whose uses the text counts under H1524
+    base = re.fullmatch(r"([gh]\d+)[a-z]", key)
+    if base and vo.get(base.group(1)):
+        return {"key": base.group(1), "kind": "entry", "n": len(vo[base.group(1)]), "of": 0}
+    if key[:1] != "g":
+        return None
+    if _FORMS is None:
+        by = collections.defaultdict(collections.Counter)
+        for ref, ws in (d.get("orig") or {}).items():
+            g = ref.split(".")[0] in _NT_BOOKS
+            for w in ws or ():
+                k = sense_key("greek" if g else "hebrew", w.get("s"))
+                if k:
+                    by[_form_letters(w.get("t"))][k] += 1
+        _FORMS = by
+    # Strong's own range only: STEP's extended numbers (G6383 ἄξων "axle") are words of the Septuagint, and a
+    # spelling they share in the New Testament (ἄξων, "leading", Acts 22:5) is another word's
+    if not re.fullmatch(r"g\d+", key) or int(key[1:]) > 5624:
+        return None
+    lx = (d.get("lex") or {}).get(key) or {}
+    own = _form_letters(re.split(r"[,;(]", lx.get("word") or "")[0])
+    form = _FORMS.get(own, collections.Counter())
+    if own[-1:] in ("ι", "ε"):         # the movable nu: ἐστί is printed ἐστίν before a vowel, 1 use against 896
+        form = form + _FORMS.get(own + "ν", collections.Counter())
+    if not form:
+        return None
+    # AND ITS OWN DICTIONARY ENTRY NAMES THE WORD: without accents ἦ "surely" is spelt as the article ἡ, εἶ "you
+    # are" as εἰ "if", ὤν "being" as ὧν "of whom". The entry for a form is its dictionary word's (ἦν, ὤν and εἶ
+    # all carry εἰμί's), or names it ("ἰδού … imperat. 2 aor. mid. of ὁράω"), so the word must be the one it names.
+    defn = lx.get("definition") or ""
+    head = _form_letters(re.split(r"[,;(·]", defn)[0])
+    named = {_form_letters(w) for w in re.findall(r"\w+", defn[:300])}
+    lemma = lambda k: _form_letters(re.split(r"[,;(]", ((d.get("lex") or {}).get(k) or {}).get("word") or "")[0])
+    if head and head != own:
+        fits = [(k, n) for k, n in form.most_common() if k[:1] == "g" and lemma(k) == head]
+    else:
+        fits = [(k, n) for k, n in form.most_common() if k[:1] == "g" and k != key and lemma(k) in named
+                and n * 2 > sum(form.values())]
+    if not fits:
+        return None
+    top, n = fits[0]
+    return {"key": top, "kind": "form", "n": n, "of": sum(form.values())}
+
+
 # ---- word families (plan 5.10) -----------------------------------------------
 # 2026-10-01: a bridge was wanted between Phl 4:11 and 1 Tim 6:8
 # and 1 Tim 6:6 -- αὐτάρκης, ἀρκέω and αὐτάρκεια, which every layer missed
@@ -16277,7 +17204,7 @@ class Handler(BaseHTTPRequestHandler):
     def _ns(self, u):
         """The published ontology at /ns: answers the address if it is one of
         its, else returns False. (Moved out of do_GET so it is counted.)"""
-        nsv = re.fullmatch(r"/ns/(meaning|word|relation|structure|claim|shapes|alignment)/(\d{4}-\d\d-\d\d)(\.ttl|\.txt)?/?",
+        nsv = re.fullmatch(r"/ns/(meaning|word|relation|structure|claim|biblio|shapes|alignment)/(\d{4}-\d\d-\d\d)(\.ttl|\.txt)?/?",
                            u.path)
         if nsv:
             name = "meaning" if nsv.group(1) == "word" else nsv.group(1)
@@ -16309,11 +17236,12 @@ class Handler(BaseHTTPRequestHandler):
                               # edge may keep it: the post sends readers here
                               # (the committee's practitioner, P5)
                               {"Cache-Control": self._public_cache(), "Content-Security-Policy": csp_for(body)})
-        nsm = re.fullmatch(r"/ns/(meaning|word|relation|structure|claim|alignment)(\.ttl|\.html|\.txt)?/?", u.path)
+        nsm = re.fullmatch(r"/ns/(meaning|word|relation|structure|claim|biblio|alignment)(\.ttl|\.html|\.txt)?/?", u.path)
         # both of its files, not only the Turtle: a missing page was a 500
-        # (the committee's practitioner, W8)
-        if nsm and nsm.group(1) == "alignment" and not all(
-                (OUT / "ns" / f"alignment{x}").exists() for x in (".ttl", ".html")):
+        # (the committee's practitioner, W8). /ns/biblio (plan 8.1g) likewise
+        # answers 404 until the 1.4.0 release writes it
+        if nsm and nsm.group(1) in ("alignment", "biblio") and not all(
+                (OUT / "ns" / f"{nsm.group(1)}{x}").exists() for x in (".ttl", ".html")):
             return self._send(404, b"not published yet", "text/plain", {"Cache-Control": "no-store"})
         if nsm:
             name = "meaning" if nsm.group(1) == "word" else nsm.group(1)
@@ -17749,10 +18677,15 @@ def _person_page(d, eid, c):
 # theme map's placings marked as a reading; the breadcrumb shown; links spent theme, words, passages, events; and
 # JSON-LD on the relation vocabulary naming only what the page shows.
 _LD_LANG = {"Hebrew": "he", "Aramaic": "arc", "Greek": "grc"}
+# Google requires a Dataset's "description" (50 to 5,000 characters): without it Search Console reported both as
+# invalid items on every concept page (2026-11-05; tests/test_concept_cards.py now checks it)
 _BASED_ON = [
     {"@type": "Dataset", "name": "MACULA Hebrew Linguistic Datasets", "url": "https://github.com/Clear-Bible/macula-hebrew",
+     "description": "Linguistic data for the Hebrew Bible, word by word: morphology, lemmas, syntax trees and glosses.",
      "creator": {"@type": "Organization", "name": "Biblica, Inc."}, "license": "https://creativecommons.org/licenses/by/4.0/"},
     {"@type": "Dataset", "name": "MACULA Greek Linguistic Datasets", "url": "https://github.com/Clear-Bible/macula-greek",
+     "description": "Linguistic data for the Greek New Testament, word by word: morphology, lemmas, syntax trees and "
+                    "glosses.",
      "creator": {"@type": "Organization", "name": "Biblica, Inc."}, "license": "https://creativecommons.org/licenses/by/4.0/"},
     {"@type": "Book", "name": "Berean Standard Bible"}]
 
@@ -18174,6 +19107,12 @@ def _img_vid(k):
     return f"{k[0]}.{k[1]}.{k[2]}"
 
 
+def _img_quote(d, k, cap=140):
+    """A verse's Berean words for a card's first lines, cut at a word with "…" past `cap` characters."""
+    t = (d["verses"].get(k) or "").strip()
+    return t if len(t) <= cap else t[:cap].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
 def _img_verse(d, k, keys):
     """The verse's Berean text, the words of the Berean's own English that render the card's original words (from the
     editors' alignment, never a guess), and what each original word is: {key: {bsb: [words], gloss}}."""
@@ -18389,7 +19328,10 @@ def image_card(d, eid, e):
                  "says": _img_label(sorted(t["says"], key=canon)) if t["says"] else "",
                  "says_go": _img_vid(min(t["says"], key=canon)) if t["says"] else "",
                  "reader": _img_label(sorted(t["reader"], key=canon)) if t["reader"] else "",
-                 "reader_go": _img_vid(min(t["reader"], key=canon)) if t["reader"] else ""} for t in tied_out]
+                 "reader_go": _img_vid(min(t["reader"], key=canon)) if t["reader"] else "",
+                 # the verse's own words, for the face's first lines (the image-card review, 2026-11-10: "I am the
+                 # true vine" was row 11 of 11); the first verse that says it, else the reader's link's
+                 "quote": _img_quote(d, min(t["says"] or t["reader"], key=canon))} for t in tied_out]
     # ---- the original words as chips (more than one, each in some verse of the card)
     counts = collections.Counter()
     for row in out_rows:
@@ -18691,10 +19633,13 @@ def _image_card_ld(ic, c, eid, body, url, title, desc):
 # Built per request from the relations and verses in memory; no index across the corpus.
 OB_KINDS = ("object", "creature", "being", "covenant", "observance", "title")
 OB_DIVINE = PC_DIVINE | {"holy_ghost"}
-OB_TYPES = ("made", "carried", "kept_at", "stationed_at", "party_to", "token_of", "supersedes", "instituted", "observed",
-            "titled", "self_designated_as")
+OB_TYPES = ("made", "carried", "offered", "took", "kept_at", "stationed_at", "party_to", "token_of", "supersedes", "instituted", "observed",
+            "titled", "self_designated_as",
+            # where it stands and what it is one of (the object-card review, 2026-11-10: the twelve stones' graph holds
+            # Gilgal, Josh 4:20, and "stones", and the face printed neither; one row of three)
+            "located_in", "kind_of")
 OB_BOX = {"party_to": "parties", "token_of": "sign", "supersedes": "follows", "instituted": "began", "observed": "kept",
-          "titled": "held", "self_designated_as": "said", "made": "walk", "carried": "walk", "kept_at": "walk",
+          "titled": "held", "self_designated_as": "said", "made": "walk", "carried": "walk", "offered": "walk", "took": "walk", "kept_at": "walk",
           "stationed_at": "walk"}
 # (key, heading, the line an empty box keeps: an empty box says so, never goes silent and never invents)
 OB_BOXES = {
@@ -18707,12 +19652,14 @@ OB_BOXES = {
 }
 for _k in ("object", "creature", "being"):
     OB_BOXES[_k] = [("walk", "What the text says about it", "")]
-OB_LABEL = {("made", "in"): "Made by", ("carried", "in"): "Carried by", ("kept_at", "out"): "Kept at",
+OB_LABEL = {("made", "in"): "Made by", ("carried", "in"): "Carried by", ("offered", "in"): "Offered by",
+            ("took", "in"): "Taken by", ("kept_at", "out"): "Kept at",
             ("stationed_at", "in"): "Stationed at it", ("stationed_at", "out"): "Stationed at",
             ("party_to", "in"): "Party to it", ("token_of", "in"): "Its sign", ("token_of", "out"): "Sign of",
             ("supersedes", "in"): "Followed by", ("supersedes", "out"): "It follows", ("instituted", "in"): "Instituted by",
             ("observed", "in"): "Kept by", ("titled", "in"): "Held by", ("self_designated_as", "in"): "Used of themselves by",
-            ("signifies", "in"): "Signified by", ("signifies", "out"): "Signifies"}
+            ("signifies", "in"): "Signified by", ("signifies", "out"): "Signifies",
+            ("located_in", "out"): "At", ("kind_of", "out"): "One of the", ("kind_of", "in"): "Among them"}
 OB_LEDE = {("party_to", "in"): "Parties", ("token_of", "in"): "Sign"}
 OB_KIND_LINE = {"object": "Object", "creature": "Creature", "being": "Being", "covenant": "Covenant",
                 "observance": "Observance", "title": "Title"}
@@ -18909,7 +19856,9 @@ def object_card(d, eid, e):
     card = {"kind": kind, "kind_line": OB_KIND_LINE[kind], "name": name, "aka": aka, "lede": lede, "passage": pas,
             "boxes": boxes, "held": held, "reads": reads, "hub": hub,
             "counts": {"face": len(face), "held": len(held), "reads": len(reads), "own": _ob_own(d, e, face + held + reads),
-                       "stored": sum(1 for r in rels if r["type"] != "speaks_of")}}
+                       "stored": sum(1 for r in rels if r["type"] != "speaks_of"),
+                       # what "As the graph stores it" lists, so a sentence pointing there matches what it finds
+                       "drawer": len(rels)}}
     t, ds = _ob_title_desc(d, eid, e, card)
     card["title"], card["desc"] = t, ds
     return card
@@ -18992,8 +19941,17 @@ def _ob_title_desc(d, eid, e, card):
             title = _ob_fit(f"{nm}: Who Held the Title, and Where", f"{nm} in the Bible")
         else:
             title = _ob_fit(f"{nm} in the Bible: Where the Text Uses It", f"{nm} in the Bible")
-    elif types & {"made", "carried", "kept_at"}:
-        title = _ob_fit(f"{nm}: Who Made, Carried and Kept It", f"{nm} in the Bible: Who Made It", f"{nm} in the Bible")
+    elif types & {"made", "carried", "offered", "took", "kept_at"}:
+        # ONLY WHAT THE CARD HOLDS: every such card was titled "Who Made, Carried and Kept It", cut to "Who Made It"
+        # when long, so the twelve stones from the Jordan read "Who Made It" (2026-11-08); nobody made them
+        did = [w for t, w in (("made", "Made"), ("offered", "Offered"), ("carried", "Carried"), ("took", "Took"))
+               if t in types]
+        head = re.split(r"\s+(?:from|of|at|in|under|that|who|where)\s+|\s*\(", nm, maxsplit=1, flags=re.I)[0].strip()
+        it, was = ("Them", "They Were") if re.search(r"[^s]s$", head) else ("It", "It Was")   # "The Twelve Stones from …"
+        who = (f"Who {', '.join(did[:-1])} and {did[-1]} {it}" if len(did) > 1 else f"Who {did[0]} {it}") if did else ""
+        where = f"Where {was} Kept" if "kept_at" in types else ""
+        full = f"{nm}: " + (f"{who}, and {where}" if who and where else who or where)
+        title = _ob_fit(full, f"{nm} in the Bible: {who or where}", f"{nm} in the Bible")
     elif "stationed_at" in types:
         title = _ob_fit(f"{nm} in the Bible: Where the Text Places It", f"{nm} in the Bible")
     else:
@@ -19047,6 +20005,11 @@ def _ob_card_page(d, eid, c):
             ns = [a(f"/e/{n['addr']}", n["name"]) + (f" ({a('/p/' + n['go'], n['ref'])})" if n["go"] else "") for n in g["names"]]
             bits.append(f"{_esc(g['label'])} " + ", ".join(ns) + (f" and {g['more']} more" if g["more"] else ""))
         P.append("<p>" + "; ".join(bits) + ".</p>")
+    elif oc["counts"]["drawer"]:
+        # it said "no explicit relation" where the graph held explicit ones the face does not show (2026-11-06)
+        n = oc["counts"]["drawer"]
+        P.append(f"<p>The graph records {n} relation{'' if n == 1 else 's'} for {_esc(name)}, each with its verse: open "
+                 f"the card to follow them. The passage and verses below are the Berean’s.</p>")
     else:
         P.append(f"<p>The graph records no explicit relation for {_esc(name)}; the passage and verses below are the Berean’s.</p>")
     if oc["aka"]:
@@ -20073,6 +21036,24 @@ def _fb_clause(s, words, budget):
     return s
 
 
+def sub_theme_of(d, eid, e):
+    """{"theme": the major theme's id ("spiritual_warfare"), "title", "path", "n", "of", "others": [{id, name}]} for a
+    sub-theme of the major-theme map, else None. Read from the record's own `attrs.theme` (729 of the 774 point their
+    in_theme relation at a concept, "sacrifice", not at the theme's record)."""
+    a = e.get("attrs") or {}
+    tid = a.get("theme")
+    if a.get("kind") not in ("theme_concept", "theme") or not tid or tid not in _theme_addr()[0]:
+        return None
+    t = d["ents"].get(f"theme_{tid}") or {}
+    sibs = sorted((x for x, v in d["ents"].items() if (v.get("attrs") or {}).get("kind") == "theme_concept"
+                   and (v.get("attrs") or {}).get("theme") == tid),
+                  key=lambda x: ((d["ents"][x].get("attrs") or {}).get("n") or 0, x))
+    title = re.sub(r"\s*\(major theme\)$", "", t.get("name") or "") or tid.replace("_", " ").title()
+    # no "6 of 12": a theme's first core concept may be a card of another kind (the full armor of God)
+    return {"theme": tid, "title": title, "path": theme_path(tid), "n": None, "of": len(sibs),
+            "others": [{"id": x, "name": d["ents"][x].get("name")} for x in sibs if x != eid]}
+
+
 def fallback_card(d, eid, e, res):
     """The fallback card's face as data; None where another face applies."""
     if any(res.get(k) for k in FB_OTHER_FACES):
@@ -20664,6 +21645,12 @@ def card_page(eid):
             + (f'<p class="ssr-sub">In the Bible: every verse and connection · {_esc(c.get("type") or "")}</p>'
                if not person else '<p class="ssr-sub">In the Bible · person</p>')
             + _open_btn(f"/e/{addr}", "Open this card in Bible Ontology")
+            # a sub-theme's theme, first (sub_theme_of; Doug, 2026-11-10)
+            + (lambda T: f'<p>{"Sub-theme " + str(T["n"]) + " of " + str(T["of"]) if T.get("n") else "A sub-theme"} '
+               f'of the major theme <a href="{_esc(T["path"])}">{_esc(T["title"])}</a>, one reading of how its '
+               f'passages group. The theme&rsquo;s other sub-themes: ' + ", ".join(
+                   f'<a href="/e/{_esc(_addr(o["id"]))}">{_esc(o["name"])}</a>' for o in T["others"]) + ".</p>"
+               if T else "")(c.get("in_theme"))
             + (f'<p class="ssr-who">{pp["lede"]}</p>' if pp else "")
             + (pcp["lede"] if pcp else "")
             + (plp["lede"] if plp else "")
@@ -20755,6 +21742,53 @@ def _word_trim(s, n=300):
     return s if len(s) <= n else s[:n].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
+UBS_PAGE_VERSES = 12           # a sense's verses on the served page; the card lists every one
+
+
+def ubs_credit_html(src):
+    """UBS's credit in its own words, its licence linked, and what was edited (app2/ubs.py)."""
+    return (f'<p class="ssr-sub">From the {_esc(src["credit"])} {_esc(src.get("version") or "")}, '
+            f'<a href="{_esc(src["licence_url"])}" rel="license">{_esc(src["licence"])}</a>, '
+            f'<a href="{_esc(src["url"])}">{_esc(src["url"].split("//", 1)[-1])}</a>. {_esc(src["edited"])}</p>')
+
+
+def ubs_word_html(d, u, attr):
+    """The served word page's UBS section: a list of parts for the article, or [] where UBS has no entry."""
+    if not u or not u.get("senses"):
+        return []
+    n = len(u["senses"])
+    fu = u.get("filed_under")
+    out = [f"<h2>Its senses, in the UBS dictionary</h2><p>The United Bible Societies&rsquo; dictionary "
+           + ("gives this word one sense, filed under a semantic domain, with the verses it covers."
+              if n == 1 else f"sorts this word&rsquo;s uses into {n} senses, each filed under a semantic domain, "
+                             f"with the verses it covers.")
+           + (f' UBS files {"it" if n == 1 else "them"} under <a href="{_esc(fu["addr"])}" lang="{attr}">'
+              f'{_esc(fu["lemma"])}</a> ({_esc(fu["key"].upper())}); these are the verses where this word stands.'
+              if fu else "") + "</p>"]
+    for s in u["senses"]:
+        head = "; ".join(s["glosses"]) or s["short"]
+        part = f"<h3>{_esc(head)}</h3>" + (f"<p>{_esc(s['short'])}</p>" if s["short"] and s["short"] != head else "")
+        for dm in s["domains"]:
+            ws = ", ".join(f'<a href="{_esc(word_address(w["key"]))}" lang="{attr}">{_esc(w["lemma"])}</a>'
+                           + (f" “{_esc(w['gloss'])}”" if w.get("gloss") else "") for w in dm["words"][:dm["shown"]])
+            rest = dm["total"] - len(dm["words"][:dm["shown"]])
+            part += (f"<p>Domain: <b>{_esc(dm['label'])}</b>."
+                     + (f" Other words UBS files there: {ws}" + (f", and {rest:,} more" if rest > 0 else "") + "."
+                        if ws else "") + "</p>")
+        vs = []
+        for ref in s["refs"][:UBS_PAGE_VERSES]:
+            v = _word_verse(d, ref)
+            if v:
+                vs.append(f'<a href="/p/{_esc(v[1])}.{_esc(v[2])}">{_esc(v[3])}</a>')
+        more = len(s["refs"]) - UBS_PAGE_VERSES
+        if vs:
+            part += (f"<p>{len(s['refs']):,} verse{'s' * (len(s['refs']) != 1)}: {', '.join(vs)}"
+                     + (f", and {more:,} more in the card" if more > 0 else "") + ".</p>")
+        out.append(part)
+    out.append(ubs_credit_html(u))
+    return out
+
+
 def word_page(spelt):
     """(head, body, canonical address) for a word, or None when there is none.
     The caller compares the address with what was asked and sends a variant
@@ -20784,6 +21818,9 @@ def word_page(spelt):
     n = c.get("observations") or 0
     pos = _word_pos_name(c.get("pos"))
     times = f"{n:,} time{'s' * (n != 1)}"
+    cu = c.get("counted_under")
+    if cu:
+        cu_addr = cu["address"][len("/word/"):]
 
     # ---- every use, in canonical order, one entry to a verse
     rows, _t = occurrences(d, key, cap=10 ** 9)
@@ -20822,6 +21859,9 @@ def word_page(spelt):
     said = f"{lemma} ({translit}), " if translit else f"{lemma}, "
     title = (f"{said}Strong's {addr}: {gloss}, used {times} in the {where}"
              if gloss else f"{said}Strong's {addr}, used {times} in the {where}")
+    if cu:
+        title = (f"{said}Strong's {addr}" + (f": {gloss}" if gloss else "")
+                 + f", a form counted under {cu['lemma']} (Strong's {cu_addr})")
     summary = _word_trim(
         f"The {lang}{kind} {lemma}{f' ({translit})' if translit else ''}, Strong's {addr}"
         + (f", “{gloss}”" if gloss else "")
@@ -20829,6 +21869,14 @@ def word_page(spelt):
           f"{nb} book{'s' * (nb != 1)}"
         + (f"; the Berean Standard Bible prints {quoted(ren, 4)}" if ren else "")
         + ". Every verse, its Septuagint equivalents, family and what the text does with it.")
+    if cu:
+        summary = _word_trim(
+            f"The {lang}{kind} {lemma}{f' ({translit})' if translit else ''}, Strong's {addr}"
+            + (f", “{gloss}”" if gloss else "")
+            + (f". STEP numbers this entry apart; the text counts its uses under {cu['lemma']}, Strong's {cu_addr}."
+               if cu["kind"] == "entry" else
+               f". Strong's numbers this form apart; the text's {cu['n']:,} uses of it are counted under "
+               f"{cu['lemma']}, Strong's {cu_addr}."))
     url = f"{SITE}/word/{addr}"
     termset = {"@type": "DefinedTermSet", "name": "Hebrew and Greek words of the Bible",
                "url": SITE + "/"}
@@ -20837,7 +21885,8 @@ def word_page(spelt):
     if translit:
         ld["alternateName"] = translit
     if gloss:
-        ld["description"] = f"{gloss}. Used {times} in the {where}."
+        ld["description"] = (f"{gloss}. A form counted under {cu['lemma']} (Strong's {cu_addr})." if cu
+                             else f"{gloss}. Used {times} in the {where}.")
     head = (f"<title>{_esc(title)} · Bible Ontology</title>\n"
             f'<meta name="description" content="{_esc(summary)}">\n'
             f'<link rel="canonical" href="{_esc(url)}">\n'
@@ -20851,7 +21900,9 @@ def word_page(spelt):
     # ---- the body
     P = []
     sub = " · ".join(x for x in (_esc(lang + (f" {pos}" if pos else "")), _esc(translit),
-                                  f"Strong&rsquo;s {_esc(addr)}", times) if x)
+                                  f"Strong&rsquo;s {_esc(addr)}",
+                                  f'counted under <a href="{_esc(cu["address"])}" lang="{attr}">{_esc(cu["lemma"])}</a>'
+                                  if cu else times) if x)
     also = c.get("lemma_also") or {}
     if also.get("source") == "macula":
         other = ", ".join(f'<a href="{word_address(k)}">Strong&rsquo;s {_esc(word_address(k)[6:])}</a>'
@@ -20863,21 +21914,59 @@ def word_page(spelt):
     P.append(f'<h1 lang="{attr}">{_esc(lemma)}</h1><p class="ssr-sub">{sub}</p>'
              + _open_btn(f"/word/{addr}", "Open this word in Bible Ontology"))
     lead = (f"<p><b>{_esc(gloss)}</b>. " if gloss else "<p>")
-    lead += (f"The text uses this {_esc(lang)}{_esc(kind)} {times}, in {nv:,} verse{'s' * (nv != 1)} "
-             f"of {nb} book{'s' * (nb != 1)} of the {where}.")
+    if cu and cu["kind"] == "entry":
+        lead += (f"STEP&rsquo;s lexicon numbers this entry apart from Strong&rsquo;s {_esc(cu_addr)}. The text "
+                 f'counts its uses under <a href="{_esc(cu["address"])}" lang="{attr}">{_esc(cu["lemma"])}</a> '
+                 f"(Strong&rsquo;s {_esc(cu_addr)}), where every verse is listed.")
+    elif cu:
+        lead += (f"Strong&rsquo;s numbers this form apart. The text counts its uses under "
+                 f'<a href="{_esc(cu["address"])}" lang="{attr}">{_esc(cu["lemma"])}</a> '
+                 f"(Strong&rsquo;s {_esc(cu_addr)}): {cu['n']:,} of the {cu['of']:,} times this spelling "
+                 f"occurs in the {where}, where every verse is listed.")
+    else:
+        lead += (f"The text uses this {_esc(lang)}{_esc(kind)} {times}, in {nv:,} verse{'s' * (nv != 1)} "
+                 f"of {nb} book{'s' * (nb != 1)} of the {where}.")
     parts = [(name, k) for name, k in face.get("parts") or []]
     if len([1 for _n, k in parts if k]) > 1:
         s_ = ", ".join(f"{k:,} in {_esc(name)}" if k else f"none in {_esc(name)}" for name, k in parts)
         lead += " " + s_[:1].upper() + s_[1:] + "."
     if ren:
+        # THE COUNTS ADD UP ON THE PAGE (2026-11-09, a reviewer of ναός: "temple 42, shrines 1, temples 1 … add up to
+        # 44, not 45"): the uses the alignment could not match to a word of the Berean are counted, and named
+        pr_ = face.get("printed") or {}
+        miss = (pr_.get("none") or 0) + (pr_.get("unaligned") or 0)
+        mref = [_word_verse(d, r) for r in (pr_.get("none_refs") or [])[:2]]
+        mref = [v[3] for v in mref if v]
         lead += (f" The Berean Standard Bible prints {_esc(quoted(ren, 8))}"
-                 + (f", and {len(ren) - 8} other renderings" if len(ren) > 8 else "") + ".")
+                 + (f", and {len(ren) - 8} other rendering{'s' * (len(ren) - 8 != 1)}" if len(ren) > 8 else "")
+                 + (f"; {miss:,} use{'s' * (miss != 1)} not matched to a word of the Berean"
+                    + (f" ({_esc(', '.join(mref))})" if mref and miss <= 2 else "") if miss else "") + ".")
+    # WHICH TEXT IS COUNTED (2026-11-09, a reviewer: "Be explicit about which Greek text supports the word counts …
+    # Strong's numbering is a useful indexing system, not a substitute for identifying the textual basis")
+    lead += (" <span class=\"g\">Counted in the "
+             + ("Nestle 1904 Greek New Testament" if key[:1] == "g" else "Westminster Leningrad Codex")
+             + " as MACULA analyzes it; other editions count slightly differently.</span>")
     P.append(lead + "</p>")
+    # WHAT A NAME NAMES, linked to its card (Doug, 2026-11-10, on Dothan; names_of_word)
+    if c.get("name_kind"):
+        nm_ = c.get("names") or []
+        P.append("<p>" + _esc(c["name_kind"][:1].upper() + c["name_kind"][1:])
+                 + ((", in the text for " if len(nm_) > 1 else ", for " if nm_[0]["name"].lower() !=
+                     (c.get("short") or c.get("gloss") or "").lower() else ": ") + "; ".join(
+                     f'<a href="/e/{_esc(_addr(x["id"]))}">{_esc(x["name"])}</a>'
+                     + (f" ({_esc(x['who'])})" if len(nm_) > 1 and x.get("who") else "") for x in nm_) if nm_ else "")
+                 + ".</p>")
     # the lexicon's own line for this word's uses, quoted and credited (word_face)
     lq = (face.get("lexicon") or {}).get("quote")
     if lq:
-        src = "Abbott-Smith (1922)" if key[:1] == "g" else "Brown-Driver-Briggs (abridged)"
-        P.append(f'<blockquote lang="en">“{_esc(lq)}” <cite>{src}, via STEP Bible</cite></blockquote>')
+        # an older lexicon, said so (2026-11-09, a reviewer: "Abbott-Smith … dates to 1922. Your page should not imply
+        # that it represents the entirety of contemporary Greek scholarship"; BDAG and LSJ are the standard references)
+        src = ("Abbott-Smith (1922), a free older lexicon; BDAG is the standard modern one" if key[:1] == "g"
+               else "Brown-Driver-Briggs (abridged)")
+        # the sense that cites the most of the word's verses, said so: it read as the word's headline meaning
+        # (audit round 1, MISLEADING 6), where λόγος's is its third sense
+        P.append(f'<blockquote lang="en">“{_esc(lq)}” <cite>{src}, via STEP Bible: the sense that cites the most '
+                 f'of these verses</cite></blockquote>')
     for p_ in face.get("partners") or []:
         P.append(f'<p>{_esc(p_.get("why") or "")} Compare <a href="{word_address(p_["key"])}" lang="{attr}">'
                  f'{_esc(p_.get("lemma") or "")}</a> ({p_.get("uses", 0):,} uses).</p>')
@@ -20889,14 +21978,27 @@ def word_page(spelt):
                  + (f"; the text reads it “{_esc(ln['means']['gloss'])}” in all "
                     f"{ln.get('n')} of its occurrences" if ln.get("means") else "") + ".</p>")
 
+    # UBS's senses first, each with its domain's other words and its verses, credited under UBS's own licence
+    P += ubs_word_html(d, c.get("ubs"), attr)
+
     # the lexicon's entry, whole, with its credit
     defn = c.get("definition") or ""
     if defn:
         lines = "".join((f"<li><b>{_esc(x)}</b></li>" if x.startswith("Entry (") else f"<li>{_esc(x)}</li>")
                         for x in defn.split(" · ") if x.strip())
-        P.append(f"<h2>The lexicon entry</h2><ul>{lines}</ul>"
+        link = c.get("definition_link") or "https://www.STEPBible.org"
+        # WHICH SENSES ARE THIS WORD'S, as the card says it (2026-11-07): Abbott-Smith heads ἱερόν under the adjective
+        # ἱερός, so G2411's entry opened "ἱερός, -ά, όν" on its page with nothing to say the noun's senses come later
+        S_ = ((c.get("face") or {}).get("lexicon") or {}).get("senses") or []
+        here = [s for s in S_ if s.get("here")]
+        rest = [s for s in S_ if not s.get("here") and s.get("label")]
+        note = ("<p>The senses that cite this word's own verses: "
+                + ", ".join(f"{_esc(s.get('label') or '')} ({s['here']})" for s in here)
+                + ". The others (" + " ".join(_esc(s["label"]) for s in rest) + ") cite none of them.</p>"
+                if here and rest else "")
+        P.append(f"<h2>The lexicon entry</h2>{note}<ul>{lines}</ul>"
                  f'<p class="ssr-sub">From {_esc(c.get("definition_credit") or "")} '
-                 f'<a href="https://www.STEPBible.org">www.STEPBible.org</a></p>')
+                 f'<a href="{_esc(link)}">{_esc(link.split("//", 1)[1])}</a></p>')
 
     if ren:
         items = []
@@ -20912,10 +22014,18 @@ def word_page(spelt):
                     if tot != n else "") + f".</p><ul>{''.join(items)}</ul>")
 
     gram = c.get("grammar") or []
-    if gram:
-        P.append("<h2>Its forms and stems</h2><ul>" + "".join(
-            f"<li><b>{_esc(g['field'])}</b>: " + ", ".join(
-                f"{_esc(v['v'])} ({v['n']:,})" for v in g["values"]) + "</li>" for g in gram) + "</ul>")
+    parsed = face.get("parsed") or []
+    if gram or parsed:
+        # each form with its parsing, then the totals (2026-11-09: a reviewer asked for the forms, not only the counts)
+        P.append("<h2>Its forms and stems</h2>"
+                 + (f"<p>Each form as the {_esc('Greek' if key[:1] == 'g' else 'Hebrew')} spells it, with MACULA&rsquo;s "
+                    "parsing and how often it occurs.</p><ul>" + "".join(
+                        f'<li><span lang="{attr}">{_esc(r["form"])}</span>, {_esc(r["parse"] or "not parsed")} '
+                        f'({r["n"]:,})</li>' for r in parsed[:40]) + "</ul>" if parsed else "")
+                 + ("<ul>" + "".join(
+                     f"<li><b>{_esc(g['field'])}</b>: " + ", ".join(
+                         f"{_esc(v['v'])} ({v['n']:,})" for v in g["values"]) + "</li>" for g in gram) + "</ul>"
+                    if gram else ""))
 
     if books:
         order = [b for b in ORDER if b in books]
@@ -21012,25 +22122,28 @@ def word_page(spelt):
         P.append("<h2>What the text does with it</h2><p>Counted from the sentences it stands in, "
                  "with how many times and a few of the verses.</p>" + "".join(sec))
     mined = c.get("mined") or []
+    # THE EXPLORATORY BAND (the Fable layout review, 2026-11-09): what the site's machinery found is gathered under one
+    # heading and framing line, after the established content and the verses, as on the card
+    X = []
     sure = [x for x in mined if x.get("tier") == "sure"]
     if sure:
         li = "".join(
             f"<li>{_esc(x['template'])} — {x['instances']:,} accounts in {x['books']} book{'s' * (x['books'] != 1)}"
             + (" (both testaments)" if x.get("testaments") == "OT+NT" else "") + "</li>" for x in sure)
         rest = len(mined) - len(sure)
-        P.append(f"<h2>Patterns it is part of</h2><ul>{li}</ul>"
+        X.append(f"<h2>Patterns it is part of</h2><ul>{li}</ul>"
                  + (f"<p>And {rest} less certain match{'es' * (rest != 1)}, in the app.</p>" if rest else ""))
 
     near = c.get("neighbours") or []
     if near:
-        P.append("<h2>Words it behaves most like</h2><p>Worked out from how the sentences are built, "
+        X.append("<h2>Words it behaves most like</h2><p>Worked out from how the sentences are built, "
                  "not asserted: a weak signal, good for finding a thread and not an authority.</p><ul>"
                  + "".join(f'<li><a href="{_esc(word_address(x["key"]))}">{_esc(x.get("gloss") or x["key"])}</a>'
                            f" — {x['observations']:,} uses</li>" for x in near) + "</ul>")
     con = c.get("contrasts") or []
     if con:
         me = (c.get("gloss") or "").lower()
-        P.append("<h2>What it is set against</h2><ul>" + "".join(
+        X.append("<h2>What it is set against</h2><ul>" + "".join(
             f"<li>{_esc(x['b'] if x['a'] == me else x['a'])} ({_esc(x['kind'])}, {x['count']:,}×)</li>"
             for x in con) + "</ul>")
 
@@ -21043,10 +22156,25 @@ def word_page(spelt):
             for v, g in shown)
         more = nv - len(shown)
         P.append("<h2>Its verses, in canonical order</h2>"
-                 f"<p>{nv:,} verse{'s' * (nv != 1)}; each shows the word as the Berean Standard Bible renders it.</p>"
+                 # MACULA's English for the word in each verse, said so: it claimed the Berean's (the Fable review:
+                 # Luke 23:45 showed "temple" where the Berean tagged no word)
+                 f"<p>{nv:,} verse{'s' * (nv != 1)}; beside each, MACULA&rsquo;s English for the word there.</p>"
                  f"<ul>{li}</ul>"
                  + (f'<p>And {more:,} more, every one in <a href="/word/{_esc(addr)}">the card in '
                     f'Bible Ontology</a>.</p>' if more > 0 else ""))
+    # where each part comes from (2026-11-09, a reviewer: what comes from UBS, Abbott-Smith, MACULA, and "what you
+    # calculate independently"); MACULA credited in the licence's words
+    P.append("<p><em>Where this page&rsquo;s parts come from: the senses from the UBS dictionary; the lexicon entry from "
+             + ("Abbott-Smith (1922)" if key[:1] == "g" else "Strong&rsquo;s dictionary")
+             + " via STEP Bible; the forms, their parsing and the sentence structure from MACULA (&copy; Biblica, CC BY "
+             "4.0); the English from the Berean Standard Bible and its editors&rsquo; word tags. The counts, the "
+             "graph&rsquo;s links and everything under &ldquo;Exploring from here&rdquo; are this site&rsquo;s own "
+             "work.</em></p>")
+    if X:
+        P.append('<section class="ssr-explore"><h2>Exploring from here</h2><p><em>Everything in this part was found by '
+                 "the site&rsquo;s own machinery, not by a lexicon or an editor. It is here to give you a thread to "
+                 "pull, a pattern to test, a word to put beside this one, and none of it is established.</em></p>"
+                 + "".join(X) + "</section>")
     P.append('<p><a href="/">Open Bible Ontology</a> to see every use and what the text does with this word.</p>')
     body = '<article id="ssr" class="ssr">' + "".join(P) + "</article>"
     return head, body, addr
@@ -21681,7 +22809,9 @@ def verse_card(d, b, c, v):
                      "books": len({p["book"] for p in passages})},
           "quoted": _vc_quoted(d, passages, trees, words, text), "rels": rels, "own_words": own, "listed_by": lists,
           "names": _vc_names(d, b, c, v),
-          "line": _vc_line(d, b, c, v, words, (_vc_heading(d, b, c, v) or None))}
+          "line": _vc_line(d, b, c, v, words, (_vc_heading(d, b, c, v) or None)),
+          # each word's sense HERE, where UBS lists this verse under it (written onto the words)
+          "ubs": ubs_in_verse(d, _vc_mref(d, b, c, v), words)}
     _VC_CACHE[key] = vc
     while len(_VC_CACHE) > 48:
         _VC_CACHE.popitem(last=False)
@@ -21765,6 +22895,16 @@ def verse_article(vc):
         P.append(f'<p class="heb"{dirn}>' + " ".join(
             f'<a href="/word/{_esc(w["card"])}">{_esc(w["t"])}</a>' if w["card"] else _esc(w["t"]) for w in vc["words"])
             + "</p>")
+    if vc.get("ubs"):
+        lang = "he" if vc["rtl"] else "grc"
+        lis = "".join(
+            f'<li><a href="/word/{_esc(w["card"])}" lang="{lang}">{_esc(w["t"])}</a>: '
+            + "; ".join(f"“{_esc('; '.join(s['glosses']) or s['short'])}”"
+                        + (f", {_esc(s['short'])}" if s["glosses"] and s["short"] else "")
+                        + (f" ({_esc(', '.join(s['domains']))})" if s["domains"] else "") for s in w["ubs"])
+            + "</li>" for w in vc["words"] if w.get("ubs"))
+        P.append("<h2>The words’ senses here</h2><p>Where the UBS dictionary lists this verse under one of a word’s "
+                 f"senses, that sense.</p><ul>{lis}</ul>" + ubs_credit_html(vc["ubs"]))
     for cl in vc["clauses"]:
         links = {r["an"].lower(): r["a"] for r in vc["rels"]} | {r["bn"].lower(): r["b"] for r in vc["rels"]}
         rows = []
@@ -22507,8 +23647,15 @@ def explore_page(gid):
         for r in _rows(ROOT / "ontology" / "told-again.jsonl"):
             rows = "".join(f"<tr><td>“{_esc(x[1])}” {_esc(x[0])}</td><td>“{_esc(y[1])}” {_esc(y[0])}</td></tr>"
                            for x, y in r["beats"])
-            parts.append(f"<h2>{_esc(r['later'])} and {_esc(r['earlier'])}</h2><table>{rows}</table>"
-                         + (f"<p>{_esc(r['explanation'])}</p>" if r.get("explanation") else "")
+            # headed by the two cards, linked, where both exist (the told-again layout review: 117 of 124 were headed
+            # by verse ranges with no link); the explanation paragraph said the table again, so it goes
+            a, b = d["ents"].get(r.get("later_event") or ""), d["ents"].get(r.get("earlier_event") or "")
+            head_ = (f'<a href="/e/{_esc(_addr(r["later_event"]))}">{_esc(a["name"])}</a> ({_esc(r["later"])}) and '
+                     f'<a href="/e/{_esc(_addr(r["earlier_event"]))}">{_esc(b["name"])}</a> ({_esc(r["earlier"])})'
+                     if a and b and r["later_event"] != r["earlier_event"]
+                     else f"{_esc(r['later'])} and {_esc(r['earlier'])}")
+            parts.append(f"<h2>{head_}</h2><table>{rows}</table>"
+                         + (f"<p>{_esc(r['explanation'])}</p>" if r.get("explanation") and not (a and b) else "")
                          + (f"<p>Where they differ: {_esc(r['differs'])}</p>" if r.get("differs") else ""))
         for x in _rows(ROOT / "ontology" / "allusions.jsonl"):
             if x["kind"] == "story_echo":
@@ -23066,6 +24213,8 @@ def ops_page(rep: dict, day: str | None = None, sel: dict | None = None) -> str:
     r_today = readers(t)
     did = [x for x in (
         plural(n(t.get("cards")), "card") + " opened" if n(t.get("cards")) else "",
+        # the Navigator (its own tab from 2026-11-08): each centring a reader made there
+        plural(n(t.get("navigator")), "Navigator view") if n(t.get("navigator")) else "",
         plural(n(t.get("chapters")), "chapter") + " read" if n(t.get("chapters")) else "",
         plural(n(t.get("searches")), "search", "searches") if n(t.get("searches")) else "",
         plural(n(t.get("themes")) + n(t.get("tags")), "theme or tag", "themes or tags") + " opened"

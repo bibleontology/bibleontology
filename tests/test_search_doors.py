@@ -11,8 +11,9 @@
      each a word the text renders so in a good share of its uses.
   4. Word cards in the sitemap: every page that passes the threshold is in
      deploy/www/sitemap-words.xml, at the address word_page answers 200 to,
-     never a redirecting spelling. Run on a sample of the words (every tenth),
-     so it takes about a minute.
+     never a redirecting spelling. The threshold is checked on a sample of the
+     words (every tenth); every listed page is checked, each built once
+     (2026-11-05: about 4 minutes with 12,281 listed).
 
 Each check is run again with its fault planted (an index that drops a word; G26
 read as a reference; a word card left out of the sitemap; a redirecting
@@ -104,19 +105,38 @@ def check_english():
 # ---- the sitemap, on a sample
 keys = sorted(k for k in set(d["lex"]) | set(d["profiles"]) | set(d.get("lemmas") or {}) if re.match(r"^[hg]\d+$", k))
 sample = sorted(set(keys[::10]) | {"h157", "g26", "h1254"})
+# the sitemap is built where UBS's senses and the full lexicon are; the public copy carries neither (each is fetched,
+# README), so its pages are shorter, and a page listed by the full build can fall below the word count there. The
+# listed-and-thin check needs them; the rest of the sitemap's checks do not (the gate, 2026-11-11)
+SOURCES_HERE = bool(S.ubs_data(d)) and sum(1 for k, v in d["lex"].items() if k[:1] == "g" and v.get("definition")) > 3000
+listed_all = set(re.findall(r"<loc>" + re.escape(S.SITE) + r"(/word/[^<]+)</loc>",
+                            (ROOT / "deploy" / "www" / "sitemap-words.xml").read_text(encoding="utf-8")))
+
+
+# EACH LISTED PAGE BUILT ONCE (2026-11-05). check_sitemap built every listed word page, and it runs four times (once
+# and for each of three plants): with 12,281 pages listed after the UBS senses, about 49,000 builds and 1,116 s, the
+# whole of a parallel preflight. Only what the check reads is kept (a page is about 1 MB of HTML).
+_built = {}
+
+
+def built(spelt):
+    """(canonical address, verses, words) of the word page, or None where it answers no page"""
+    if spelt not in _built:
+        got = S.word_page(spelt)
+        _built[spelt] = None if not got else (got[2],) + tuple(reversed(SM.word_substance(got[1])))
+    return _built[spelt]
+
+
 want, thin = set(), 0
 for k in sample:
     spelt = k[:1].upper() + k[1:]
-    got = S.word_page(spelt)
+    got = built(spelt)
     if not got:
         continue
-    w, v = SM.word_substance(got[1])
-    if v >= SM.WORD_MIN_VERSES and w >= SM.WORD_MIN_WORDS and got[2] == spelt:
+    if got[1] >= SM.WORD_MIN_VERSES and got[2] >= SM.WORD_MIN_WORDS and got[0] == spelt:
         want.add(f"/word/{spelt}")
     else:
         thin += 1
-listed_all = set(re.findall(r"<loc>" + re.escape(S.SITE) + r"(/word/[^<]+)</loc>",
-                            (ROOT / "deploy" / "www" / "sitemap-words.xml").read_text(encoding="utf-8")))
 
 
 def check_sitemap(listed):
@@ -125,15 +145,17 @@ def check_sitemap(listed):
         f.append(f"{a} passes the threshold and is not in sitemap-words.xml")
     for a in sorted(listed):
         m = re.match(r"^/word/([HG]\d+)$", a)
-        got = S.word_page(m.group(1)) if m else None
-        if not got or got[2] != m.group(1):
+        got = built(m.group(1)) if m else None
+        if m and not got and not SOURCES_HERE:
+            continue        # a word whose page is its UBS senses (σου, G4675) has none without them
+        if not got or got[0] != m.group(1):
             f.append(f"{a} is listed and is not the address word_page answers 200 to")
         elif a in want:
             continue
         else:
             # listed, though not in the sample's passing set: only a fault if it is thin
-            w, v = SM.word_substance(got[1])
-            if v < SM.WORD_MIN_VERSES or w < SM.WORD_MIN_WORDS:
+            v, w = got[1], got[2]
+            if SOURCES_HERE and (v < SM.WORD_MIN_VERSES or w < SM.WORD_MIN_WORDS):
                 f.append(f"{a} is listed and is below the threshold ({v} verses, {w} words)")
         if len(f) > 8:
             break
@@ -147,7 +169,8 @@ for name, check in (("verses", check_verses), ("original", check_original), ("en
 fails += [f"sitemap: {x}" for x in check_sitemap(listed_all)]
 print(f"{len(sample)} words sampled; {len(want)} pass the threshold "
       f"({SM.WORD_MIN_VERSES}+ verses, {SM.WORD_MIN_WORDS}+ words), {thin} do not; "
-      f"{len(listed_all)} word cards in sitemap-words.xml")
+      f"{len(listed_all)} word cards in sitemap-words.xml"
+      + ("" if SOURCES_HERE else " (listed-and-thin skipped: UBS's senses and the full lexicon are not on this machine)"))
 
 # ---- the planted faults: each must be CAUGHT
 sx = S._search_index(d)

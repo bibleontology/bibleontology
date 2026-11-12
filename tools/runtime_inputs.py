@@ -44,7 +44,10 @@ def routes(server) -> list[str]:
     out = [f"{r}?{q}" for r in sorted(server.ROUTES)]
     out += ["/", "/healthz", "/llms.txt", "/e/david", "/e/love", "/word/H157", "/themes/", "/explore/",
             "/passage?ref=Ps%2023", "/ns/meaning", "/ns/structure", "/ns/relation", "/ns/claim", "/ns/shapes",
-            "/ns/map", "/ns/alignment", "/Gen/1/1"]
+            "/ns/map", "/ns/alignment", "/Gen/1/1",
+            # a verse the Berean leaves empty: its page reads data/bible/later-manuscripts.ylt.json, lazily, and
+            # without this the file fell off the list (2026-11-07; it had been added by hand once before)
+            "/p/Matt.17.21", "/ns/biblio"]
     return out
 
 

@@ -29,6 +29,8 @@ SOURCES = {"meaning": NS / "meaning.ttl",      # the public copy (tools/ns_meani
            "relation": NS / "relation.ttl",
            # the claim vocabulary (plan 8.1a), written by hand like meaning.ttl
            "claim": ROOT / "ontology" / "claim" / "claim.ttl",
+           # the text and its witnesses (plan 8.1g), from 1.4.0, by hand too
+           "biblio": ROOT / "ontology" / "biblio" / "biblio.ttl",
            "shapes": NS / "shapes.ttl",
            # the alignment file (plan 8.1e), from 1.2.0: tools/ns_align.py
            "alignment": NS / "alignment.ttl"}
@@ -41,8 +43,12 @@ def main():
             sys.exit(f"meaning.ttl is out of step with ontology/ns-version.json or ns_common.py: missing {must[:60]!r}")
     # the hand-written vocabularies say the licence exactly as the generated
     # ones do, or not at all: one granted and one not would be two answers
-    for nm, p in (("meaning.ttl", ROOT / "ontology" / "meaning" / "meaning.ttl"),
-                  ("claim.ttl", ROOT / "ontology" / "claim" / "claim.ttl")):
+    with_biblio = tuple(int(x) for x in VERSION.split(".")) >= (1, 4, 0)
+    hand = [("meaning.ttl", ROOT / "ontology" / "meaning" / "meaning.ttl"),
+            ("claim.ttl", ROOT / "ontology" / "claim" / "claim.ttl")]
+    if with_biblio:
+        hand.append(("biblio.ttl", ROOT / "ontology" / "biblio" / "biblio.ttl"))
+    for nm, p in hand:
         txt = p.read_text(encoding="utf-8")
         if f'"{RIGHTS}"' not in txt:
             sys.exit(f"{nm}: its dcterms:rights is not {RIGHTS!r} (ns_common.RIGHTS)")
@@ -69,6 +75,14 @@ def main():
         for must in (f'owl:versionInfo "{VERSION}"', f"/ns/claim/{DATE}>"):
             if must not in claim:
                 sys.exit(f"claim.ttl is out of step with ontology/ns-version.json: missing {must!r}")
+    if with_biblio:
+        # /ns/biblio and its shapes join from 1.4.0 (plan 8.1g); earlier
+        # releases, already kept, stay exactly as they were
+        shapes.parse(ROOT / "ontology" / "biblio" / "shapes.ttl", format="turtle")
+        biblio = (ROOT / "ontology" / "biblio" / "biblio.ttl").read_text(encoding="utf-8")
+        for must in (f'owl:versionInfo "{VERSION}"', f"/ns/biblio/{DATE}>"):
+            if must not in biblio:
+                sys.exit(f"biblio.ttl is out of step with ontology/ns-version.json: missing {must!r}")
     head = ("# Bible Ontology -- SHACL shapes, version " + VERSION + " (" + DATE + ").\n"
             "# Closed-world checks for the graph: what the vocabularies at /ns/meaning, /ns/structure\n"
             "# and /ns/relation describe, checked here rather than inferred. Run with inference off.\n"
@@ -78,11 +92,15 @@ def main():
     if with_claim:
         # the published copy of the claim vocabulary, served at /ns/claim
         (NS / "claim.ttl").write_bytes((ROOT / "ontology" / "claim" / "claim.ttl").read_bytes())
+    if with_biblio:
+        (NS / "biblio.ttl").write_bytes((ROOT / "ontology" / "biblio" / "biblio.ttl").read_bytes())
     vdir = NS / "versions"
     vdir.mkdir(parents=True, exist_ok=True)
     for name, src in SOURCES.items():
         if name == "claim" and not with_claim:
             continue                        # /ns/claim begins with 1.1.0
+        if name == "biblio" and not with_biblio:
+            continue                        # /ns/biblio begins with 1.4.0
         if name == "alignment":
             if tuple(int(x) for x in VERSION.split(".")) < (1, 2, 0):
                 continue                    # /ns/alignment begins with 1.2.0

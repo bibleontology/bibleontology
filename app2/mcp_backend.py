@@ -33,6 +33,7 @@ VERSES_IN_BODY = 6
 # shown answers too, so attacker-chosen ids cannot grow memory without end
 ITEM_CACHE = 512
 SHOWN_CACHE = 50000
+UBS_SENSES = 8                     # a word answer's UBS senses; the page has every one
 REF = re.compile(r"^\s*(\d?[A-Za-z]+)\s+(\d+):(\d+)")
 SLUG = re.compile(r"^[a-z0-9_]{1,80}$")
 
@@ -77,7 +78,9 @@ RESOURCES = {
     "licensing": (
         "# Licensing\n\nThe graph: Bible Ontology (bibleontology.org), CC BY 4.0. Its sources keep their own "
         "terms, credited in their own words in every answer's `sources`: MACULA (c) Biblica, Inc., CC BY 4.0; "
-        "the Berean Standard Bible, public domain; STEP Bible's lexicons, CC BY 4.0.\n"),
+        "the Berean Standard Bible, public domain; STEP Bible's lexicons, CC BY 4.0. A word's senses from the UBS "
+        "dictionaries of Biblical Hebrew and New Testament Greek (United Bible Societies) are CC BY-SA 4.0, not the "
+        "graph's license: an answer that carries them says so in its text and credits them in its `sources`.\n"),
 }
 
 
@@ -527,11 +530,24 @@ class Backend(object):
         rows = ((s.get("occurrences") or {}).get("rows") or [])
         vs = [t for t in (self._from_macula(r.get("ref") or "") for r in rows[:VERSES_IN_BODY]) if t]
         text = "%s (%s), %s: %s" % (s.get("lemma"), s.get("translit") or "", s.get("lang"), s.get("short") or s.get("gloss") or "")
+        # UBS's senses (CC BY-SA, not the graph's CC BY): marked in the text, and its credit added to this answer's
+        # sources only (app2/ubs.py)
+        u, extra = s.get("ubs"), []
+        if u and u.get("senses"):
+            text += "\nIts senses in the UBS dictionary (%s, not the graph's license):" % u["licence"]
+            for x in u["senses"][:UBS_SENSES]:
+                text += "\n- %s: %s [%s; %d verses]" % ("; ".join(x["glosses"]) or "", x["short"],
+                                                       ", ".join(dm["label"] for dm in x["domains"]), len(x["refs"]))
+            if len(u["senses"]) > UBS_SENSES:
+                text += "\n- and %d more senses on the page" % (len(u["senses"]) - UBS_SENSES)
+            extra = [{"name": u["credit"], "licence": u["licence"] + " (" + u["licence_url"] + "). " + u["edited"],
+                      "url": u["url"]}]
         if s.get("definition"):
             text += "\n" + s["definition"] + ("\n(" + s["definition_credit"] + ")" if s.get("definition_credit") else "")
         return {"id": "word:" + key, "title": "%s %s" % (key, s.get("lemma") or ""), "url": _url("/word/" + key),
                 "text": text, "verses": [{"ref": "%s %d:%d" % t, "text": self._verse_text(*t), "url": _url("/p/%s.%d.%d" % t)}
-                                         for t in vs], "relations": [], "moves": {}, "shown": True}
+                                         for t in vs], "relations": [], "moves": {}, "shown": True,
+                "sources_extra": extra}
 
     # --------------------------------------------------------------------- themes
     def _theme(self, key):

@@ -74,9 +74,32 @@ def faults(src, server_src):
     # 1. the one rule that hides the server's copy
     hiders = [m.group(1).strip() for m in re.finditer(r"([^{}]*\.ssr[^{}]*)\{[^}]*display\s*:\s*none", css)
               if "~" not in m.group(1) and " .ssr-" not in m.group(1)]
-    if hiders != [".drawn .ssr"]:
-        out.append(f"the rule(s) hiding .ssr are {hiders}; only '.drawn .ssr' is allowed (the old '.js .ssr' hid the "
-                   "copy the moment the script ran, API or no API)")
+    if hiders != [".drawn .ssr", "html.human .ssr"]:
+        out.append(f"the rule(s) hiding .ssr are {hiders}; only '.drawn .ssr' and the reader's 'html.human .ssr' are "
+                   "allowed (the old '.js .ssr' hid the copy the moment the script ran, crawler or not)")
+    # 1b. A READER, NEVER A CRAWLER (2026-11-09, Doug: "visible to Google but not to me"): `reader` is added only when
+    # the user agent fails the crawler test, by the first script, and taken off again if nothing draws in 4 s
+    first = scripts(page)[0] if scripts(page) else ""
+    cm = re.search(r"var C=/(.*?)/i;", first)
+    if not cm or "if(!C.test(navigator.userAgent" not in first or "classList.add('human')" not in first:
+        out.append("`reader` is not added by the first script, behind the crawler test")
+    else:
+        names = cm.group(1).lower()
+        for need in ("googlebot", "google-inspectiontool", "applebot", "claude", "oai-searchbot", "perplexity",
+                     "petalbot", "baiduspider", "bytespider", "ccbot", "bot"):
+            if need not in names:
+                out.append(f"the crawler test does not name {need!r}")
+        if re.search(r"(^|\|)(apple|google)(\||$)", names):
+            out.append("the crawler test matches a bare 'apple' or 'google' (every browser says AppleWebKit)")
+    if "setTimeout(function(){if(!H.classList.contains('drawn'))H.classList.remove('human')},4000)" not in first:
+        out.append("nothing gives the copy back to a reader when no draw comes within 4 s")
+    # 1c. THE ROOT'S CLASS STYLES NOTHING ELSE (2026-11-11, Doug: "on my desktop the content does not extend to the
+    # bottom of the page"): the first version added `reader`, the card pane's own class, so <html> took the pane's
+    # padding and the app stopped 120 px short of the window. A class the first script puts on the root must not be a
+    # bare selector of the stylesheet (a rule that would style any element carrying it)
+    for cls in re.findall(r"H\.classList\.add\('([\w-]+)'\)", first):
+        if re.search(r"(^|[\s,}])\." + re.escape(cls) + r"(?![\w-])", css):
+            out.append(f"the root's class '{cls}' is also a bare selector in the stylesheet, so <html> takes that style")
     if re.search(r"classList\.add\(\s*['\"]js['\"]", src) or re.search(r"\.js\s+\.", css):
         out.append("a `js` class is added or styled: it says the script ran, not that the card was drawn")
     html_tag = re.search(r"<html[^>]*>", page).group(0)
@@ -84,12 +107,12 @@ def faults(src, server_src):
     if "drawn" in html_tag or "drawn" in body_tag:
         out.append("the page arrives with `drawn` already on it: the copy would be hidden before anything was drawn")
     for s in scripts(page.split('class="app"', 1)[0]):
-        if "drawn" in s:
+        if "drawn" in s.replace("contains('drawn')", ""):     # the reader's 4 s check only asks
             out.append("a script that runs before the app draws mentions `drawn`")
 
     # 2. the app's frame waits invisibly, lifted only by `drawn`
     waits = re.findall(r"([^{}\n]*\.ssr\s*~\s*\.app[^{}]*)\{([^}]*)\}", css)
-    if len(waits) != 1 or not waits[0][0].strip().startswith("html:not(.drawn)") or "visibility:hidden" not in \
+    if len(waits) != 1 or not waits[0][0].strip().startswith("html:not(.drawn):not(.human)") or "visibility:hidden" not in \
             waits[0][1].replace(" ", ""):
         out.append(f"the app's frame is not held invisible by a rule keyed on `drawn` alone: {waits}")
     if waits and "position:absolute" not in waits[0][1].replace(" ", ""):
@@ -132,7 +155,9 @@ def faults(src, server_src):
         out.append("arrived() is called outside openTab and setExplore")
 
     # 5. the failure path
-    api = span(js, r"const api = async", r"^\};")
+    # the request path is api() and the loop it calls (_apiGet, 2026-11-10: split off when api() began to set the
+    # loading bar's class); both are read, or a fault planted in the loop goes unseen
+    api = span(js, r"const api = async", r"^\};") + span(js, r"const _apiGet = async", r"^\};")
     if re.search(r"\bcatch\b|innerHTML|textContent|appendChild|\.append\(|\.remove\(", api):
         out.append("api() catches or draws something: a failed request would cover the server's copy")
     note = span(js, r"const _restartNote\s*=", r"^\};")
@@ -236,12 +261,24 @@ plant("openTab marks the page drawn before the tab is shown",
       expect='openTab calls arrived() other than once')
 
 plant("the app's frame left in the flow while the copy shows",
-      src=replaced(SRC, "html:not(.drawn) .ssr ~ .app{position:absolute;", "html:not(.drawn) .ssr ~ .app{"),
+      src=replaced(SRC, "html:not(.drawn):not(.human) .ssr ~ .app{position:absolute;",
+                   "html:not(.drawn):not(.human) .ssr ~ .app{"),
       expect='left in the flow')
 
 plant("the app's frame hidden by a rule that does not wait for `drawn`",
-      src=replaced(SRC, "html:not(.drawn) .ssr ~ .app{", "html .ssr ~ .app{"),
+      src=replaced(SRC, "html:not(.drawn):not(.human) .ssr ~ .app{", "html .ssr ~ .app{"),
       expect='not held invisible')
+
+plant("the copy hidden for crawlers too (the reader class added without the crawler test)",
+      src=replaced(SRC, "if(!C.test(navigator.userAgent||'')){var H", "if(true){var H"),
+      expect="behind the crawler test")
+plant("Googlebot left off the crawler test",
+      src=replaced(SRC, "googlebot|google-inspectiontool|", ""),
+      expect="does not name 'googlebot'")
+plant("no 4-second return for a reader",
+      src=replaced(SRC, "setTimeout(function(){if(!H.classList.contains('drawn'))H.classList.remove('human')},4000)",
+                   "0"),
+      expect="within 4 s")
 
 plant("the page served already `drawn`",
       src=replaced(SRC, '<html lang="en">', '<html lang="en" class="drawn">'),
@@ -251,6 +288,10 @@ plant("the fallback card's sections left out of the server's copy",
       server_src=replaced(SERVER, '            + (fbp["sections"] if fbp else "")\n', ''),
       expect="fallback card's page")
 
+plant("the root's class named as the card pane's (`reader`, the 120 px gap at the bottom of the window)",
+      src=replaced(replaced(SRC, "H.classList.add('human')", "H.classList.add('reader')"),
+                   "H.classList.remove('human')", "H.classList.remove('reader')"),
+      expect="also a bare selector")
 plant("a server copy without the class the rule names",
       server_src=replaced(SERVER, '<article id="ssr" class="ssr"><h1>{_esc(name)}</h1>',
                           '<article id="ssr" class="ssr-card"><h1>{_esc(name)}</h1>'),

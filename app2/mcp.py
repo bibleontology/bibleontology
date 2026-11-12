@@ -371,7 +371,8 @@ def _fetch(backend, args):
         "moves": _moves(backend, item),
         "map": _map(backend, item),
         "schema": item.get("schema"),
-        "sources": backend.sources,
+        # a source only some answers carry (the UBS senses, CC BY-SA) is credited on those answers
+        "sources": list(backend.sources) + list(item.get("sources_extra") or []),
         "credit": CREDIT,
         "data_version": backend.data_version,
     }

@@ -1361,6 +1361,27 @@ no upstream information removes them. Hebrew morphology has some of this
 (suppletive forms), which is where the lexicon, not the rule, should carry
 it.
 
+## 54. Every view says, quietly, that this is a graph
+
+Doug, 2026-11-08: *"what makes this app distinct is the graph and the user should [be] subtly reminded of that at all
+times. For example, when a word card is pulled up, what makes it different than the best of class free competition
+is connection to the graph, both to the meaning which is the obvious draw, but also to the structure which can be
+discovered via drilling in."*
+
+*The case.* A word card that answers well (headword, count, lexicon, renderings) is a concordance entry; STEP Bible,
+Blue Letter Bible and Bible Hub give that much free. What none of them has is the word's place in a graph: the
+meaning cards it leads to (things, ideas, images), and the clauses and roles it holds in the structure layer. The
+same day the Navigator became a tab of its own, with a button on every card, because it is where the graph shows
+itself; and the first word-card trip centred on the concept instead of the word, which hid the word's own place.
+
+*What it binds.* Every card and page carries a visible, quiet way into the graph near the top (the Navigator button
+with its hub picture; the word's meaning cards under its headword), and the structure is one drill-in away, not
+absent. A new view is checked for it: if it could be any study site's page, it is not finished. Quiet means the
+reminder never crowds the answer a reader came for (cards for clicks and satisfaction).
+
+*Falsifier.* Readers who come for the answer alone and leave faster or less satisfied because of the graph's
+presence, measured on /ops (engaged readers, Navigator views) against the pages without it.
+
 ## Provisional, awaiting Doug's confirmation
 
 ## 50. Correct at the source, not downstream — PROVISIONAL
