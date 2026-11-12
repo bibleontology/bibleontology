@@ -86,8 +86,10 @@ def ref_of(r):
 
 
 def title_of(t):
-    return " ".join(w if w in ("&", "of") else w[:1].upper() + w[1:]
-                    for w in t["title"].lower().split())
+    # small words lower case except first, as the site's own _title (app2/server.py) has it: "Father, Son And Holy
+    # Spirit" stood in twelve records' names and descriptions (the Fable audit, 2026-11-11)
+    return " ".join(w if w in ("&", "of", "and", "the") and i else w[:1].upper() + w[1:]
+                    for i, w in enumerate(t["title"].lower().split()))
 
 
 def main():

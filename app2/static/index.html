@@ -7819,7 +7819,9 @@ function eventBlock(ev, faced, pzcard){
      who the event is about */
   /* on the face, only the names a verse of the telling really has (the machine's others stay out of the drawer) */
   const nIn = faced && faced.names_in ? new Set(faced.names_in) : null;
-  const P = (ev.participants || []).filter(x => x.via !== 'cited' && (!nIn || nIn.has(x.id)));
+  /* places stand apart from the people: Crete, Italy and Lasea read as the Shipwreck's cast (the Fable audit, 2026-11-11) */
+  const P0 = (ev.participants || []).filter(x => x.via !== 'cited' && (!nIn || nIn.has(x.id)));
+  const P = P0.filter(x => x.type !== 'place'), PL = P0.filter(x => x.type === 'place');
   const C = (ev.participants || []).filter(x => x.via === 'cited');
   const person = x => `<span class="link" data-ent="${esc(x.id)}">${esc(x.name)}</span>`
     + ` <span class="g">${x.n}</span>`;
@@ -7832,7 +7834,8 @@ function eventBlock(ev, faced, pzcard){
       ? `<details class="sub"><summary>${P.length - 14} more</summary><div class="subbody">${
           P.slice(14).map(person).join(' · ')}</div></details>` : ''}
     <p class="hint" style="margin:6px 0 0;max-width:62ch">Everyone the tellings name, and
-      how often — pronouns included.</p>`
+      how often — pronouns included, and a name said in passing (in a comparison or a saying) too.</p>${
+      PL.length ? `<p class="lead" style="margin:8px 0 0"><span class="hint">Places named:</span> ${PL.map(person).join(' · ')}</p>` : ''}`
     : (C.length || pzcard ? '' : '<p class="hint">No one in these passages is resolved to a node yet.</p>'))
     /* NOT SETTLED, SAID. Where the tellings disagree on which person a shared
        name means, the graph does not guess: the verse and the possibilities
@@ -10619,8 +10622,9 @@ async function openAbout(focus){
       </div>${/* THE WHOLE SCHEMA, AS A MAP (/ns/map, plan 8.1e): shown once the
             release has published it (/api/about "schema_map") */''}${d.schema_map ? `
       <p style="max-width:64ch;margin:10px 0 0"><a href="/ns/map">The whole design, as a map ›</a> Every
-        kind of thing, part of the text and link the graph defines, drawn as pictures from the four layers
-        down, and the free, open standards it is built on.</p>` : ''}</div>`;
+        kind of thing, part of the text and link the graph defines, drawn as pictures from the five layers
+        down (the fifth, the text as a work: the Psalms after LRMoo), and the free, open standards it is
+        built on.</p>` : ''}</div>`;
     })()}
     ${/* WHO BUILT IT — the one place the tools are named. 2026-09-30:
           neither Copilot nor Claude Code is over-emphasized. Automation helps

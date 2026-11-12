@@ -101,8 +101,115 @@ def build():
     print(f"{len(items)} cast rows -> {out}")
 
 
+# THE SECOND READ (27-cast-reread, 2026-11-11): 26 called 442 of 1,633 rows not said, and a sample showed the model,
+# not the rows, wrong in many: "Abraham - told - Stay here with the donkey" read as Abraham telling the donkey, "Isaac -
+# told - Isaac at Gen 22:7" as Abraham telling Isaac. "told" with a speech as its object means the subject said those
+# words. And one cited verse can leave out what the scene beside it says (Jonathan killed at 1 Sam 31:2; Gilboa at
+# 31:1). So: the non-divine not_said rows only (a row on God, the Father, Jesus or the Holy Spirit goes to Doug by
+# hand), "told" a speech worded as "said", and three verses either side of each cited verse
+REREAD = "27-cast-reread"
+DIVINE = {"god", "jesus", "the_father", "holy_ghost", "holy_spirit"}
+REREAD_BRIEF = """You check one claim against the Bible passage it comes from (the Berean Standard Bible). The claim is
+SUBJECT - ACT - OBJECT, as a card prints it. The verses it cites are marked >>; the verses around them are the scene.
+Say whether the passage says it.
+
+Answer with ONE line of JSON:
+{"id": "...", "verdict": "...", "words": "...", "why": "..."}
+
+verdict:
+- "stated": the passage says the subject does this act to the object, in these words or plainly equivalent ones.
+- "implied": the passage does not say it outright, but a plain reader would take it from the scene.
+- "not_said": the passage does not say it: a different act ("treated with consideration" is not "imprisoned"), a
+  different place or person, the act is only planned or denied, or the passage is about something else.
+- "unclear": you cannot tell from the passage given.
+
+How to read the claim:
+- "SUBJECT - said - WORDS" means the subject spoke those words (or the words named). It does not say who heard
+  them. Check only that this subject says them in the passage.
+- A place in the claim may be named in a verse beside the cited one: the scene counts.
+- A group as subject ("the two angels") is said when the passage has them, or one of them for them, do it.
+
+words: the passage's words that say it, copied exactly ("" if not_said).
+why: one short reason.
+
+Worked examples (not from the items):
+- CLAIM Ruth - said - "Where you go, I will go". PASSAGE >> Ruth 1:16: "But Ruth replied: 'Do not urge me to leave
+  you... For where you go, I will go...'" -> stated (she said these words; that she said them to Naomi does not
+  matter).
+- CLAIM Saul - died at - Mount Gilboa. PASSAGE 1 Sam 31:1: "...many fell slain on Mount Gilboa"; >> 31:4: "...Saul
+  took his own sword and fell on it" -> stated (the scene is Mount Gilboa).
+- CLAIM Julius - imprisoned - Paul. PASSAGE >> Acts 27:1: "Paul and some other prisoners were handed over to a
+  centurion named Julius"; Acts 27:3: "Julius treated Paul with consideration" -> not_said (he guarded a prisoner
+  handed to him; he did not imprison him).
+"""
+
+
+def reread():
+    import server as S
+    d = S.load()
+    base = ROOT / "out" / "orchestra-intake" / NAME
+    items = {json.loads(x)["key"]: json.loads(x) for x in open(base / "items.jsonl", encoding="utf-8")}
+    got = {}
+    for x in open(ROOT / "out" / "grunt" / "done" / f"{NAME}.jsonl", encoding="utf-8"):
+        r = json.loads(x)
+        try:
+            got[r["key"]] = json.loads(r["content"])
+        except ValueError:
+            continue
+    rows, divine = [], 0
+    for k, v in got.items():
+        it = items.get(k)
+        if not it or v.get("verdict") != "not_said":
+            continue
+        if DIVINE & set(it["subjects"] + [it["object"]]):
+            divine += 1
+            continue
+        oe = d["ents"].get(it["object"]) or {}
+        subj, _, rest = it["claim"][len("CLAIM "):].partition(" - ")
+        verb, _, obj = rest.partition(" - ")
+        if it["verb"] == "told" and oe.get("type") not in ("person", "group", "place"):
+            claim = f"CLAIM {subj} - said - {obj}"
+        else:
+            claim = it["claim"]
+        # the cited verses, marked, and three either side in the same chapter (at most 14)
+        cited, keys = [], []
+        for ref in it["cites"][:3]:
+            cited += [k_ for k_ in S._place_verses(d, ref, 6) if k_ in d["verses"]]
+        for (b, c, v_) in cited:
+            for n in range(v_ - 3, v_ + 4):
+                if (b, c, n) in d["verses"] and (b, c, n) not in keys:
+                    keys.append((b, c, n))
+        books = list(dict.fromkeys(t[0] for t in keys))     # the cited books in the order cited
+        keys = sorted(keys, key=lambda t: (books.index(t[0]), t[1], t[2]))[:14]
+        lines = [f"{'>> ' if k_ in cited else ''}{S._vlabel(*k_)}: {d['verses'][k_]}" for k_ in keys]
+        if lines:
+            rows.append(dict(it, claim=claim, verse="\n".join(lines), first=v))
+    random.Random(SEED).shuffle(rows)
+    out = ROOT / "out" / "orchestra-intake" / REREAD
+    out.mkdir(parents=True, exist_ok=True)
+    with open(out / f"{REREAD}.jsonl", "w", encoding="utf-8", newline="\n") as f:
+        f.write(json.dumps({"_job": {"model": "gemma4:26b", "options": dict(OPTIONS, num_ctx=6144),
+                                     "pass": "cast_reread"}}) + "\n")
+        for it in rows:
+            f.write(json.dumps({"key": it["key"], "messages": [
+                {"role": "system", "content": REREAD_BRIEF},
+                {"role": "user", "content": f"id: {it['id']}\n{it['claim']}\nPASSAGE:\n{it['verse']}"}]},
+                ensure_ascii=False) + "\n")
+    spec = {"pass": REREAD, "mac_job": f"{REREAD}.jsonl", "priority": 30, "flag": {"verdict_in": []},
+            "deepseek": {"budget_usd": 0}, "allowed_fields": ["id", "claim", "verse", "context"]}
+    (out / f"{REREAD}.pass.json").write_text(json.dumps(spec, indent=2) + "\n", encoding="utf-8", newline="\n")
+    (out / "brief.md").write_text(REREAD_BRIEF, encoding="utf-8", newline="\n")
+    with open(out / "items.jsonl", "w", encoding="utf-8", newline="\n") as f:
+        for it in rows:
+            f.write(json.dumps({k: it[k] for k in ("key", "id", "event", "subjects", "object", "verb", "cites",
+                                                   "claim", "verse", "first")}, ensure_ascii=False) + "\n")
+    print(f"{len(rows)} not-said rows to read again ({divine} on a divine person left for Doug) -> {out}")
+
+
 if __name__ == "__main__":
     if sys.argv[1:2] == ["build"]:
         build()
+    elif sys.argv[1:2] == ["reread"]:
+        reread()
     else:
         print(__doc__)

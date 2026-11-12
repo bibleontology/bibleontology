@@ -861,6 +861,16 @@ if [ -z "$range" ] || has '^app2/'; then
 		bad "theme paths -- python tests/test_theme_paths.py"
 		grep -E "^FAIL" <<<"$out" | head -8
 	fi
+	# THE FABLE AUDIT'S WRONG TEXT (2026-11-11, docs/review/fable-audit-2026-11-11.md): a name's word counting
+	# another's uses, a told-again passage filed as no evidence, a no-key lede above what an image stands for,
+	# doubled full stops and unclosed quotes in descriptions, "Son And Holy", "::" -- each class with a fault
+	# planted. ~2 minutes
+	if out="$(suite tests/test_fable_wrong_text.py)"; then
+		ok "the audit's wrong text: $(tail -1 <<<"$out")"
+	else
+		bad "the audit's wrong text -- python tests/test_fable_wrong_text.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
 	if out="$(suite tests/test_object_cards.py)"; then
 		ok "object cards: $(tail -1 <<<"$out")"
 	else

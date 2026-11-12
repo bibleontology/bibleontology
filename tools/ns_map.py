@@ -45,7 +45,10 @@ import ns_relation  # noqa: E402
 import vocab_inventory as V  # noqa: E402
 
 e = html.escape
-BASES = V.BASES
+# /ns/biblio (1.4.0, 2026-11-11) is written by hand, not generated, so it is not among the inventory's four
+BASES = dict(V.BASES, biblio="https://bibleontology.org/ns/biblio#")
+LRMOO = "http://iflastandards.info/ns/lrm/lrmoo/"
+LRMOO_SPEC = "https://cidoc-crm.org/extensions/lrmoo/"
 SITE = "https://bibleontology.org"
 LAYERS = [
     ("structure", "The text", "words, phrases, clauses, speeches and passages, read from the original languages",
@@ -59,6 +62,9 @@ LAYERS = [
     ("claim", "Who says it, and how sure", "who says each link, how sure it is, stated or only described",
      "Every link is a claim: who says it (the narrator, a speaker, a reader), how sure it is, and whether it is "
      "stated or only described (a promise, a command)."),
+    ("biblio", "The text as a work", "a psalm as a work, its Hebrew and English texts, the collection and its order",
+     "The text as something written and passed down, after LRMoo: each psalm a work, its Hebrew and English texts, "
+     "the editions that carry them, the collection's order, and who a heading names, kept as claims."),
 ]
 
 
@@ -89,6 +95,7 @@ def load():
     gen, _notes = V.generated()
     g = {n: rdflib.Graph().parse(data=gen[n].decode("utf-8"), format="turtle") for n in ("structure", "relation", "meaning")}
     g["claim"] = rdflib.Graph().parse(ROOT / "ontology" / "claim" / "claim.ttl")
+    g["biblio"] = rdflib.Graph().parse(ROOT / "ontology" / "biblio" / "biblio.ttl")
     # every published check, as /ns/shapes will hold them from 1.2.0
     shapes = rdflib.Graph().parse(data=gen["structure-shapes"].decode("utf-8"), format="turtle")
     shapes += ns_relation.shapes()[0]
@@ -138,6 +145,8 @@ def standards_view(g, shapes, n_struct):
     n_dom = len({s for s, _o in gr.subject_objects(RDFS.domain) if str(s).startswith(BASES["relation"])})
     n_rng = len({s for s, _o in gr.subject_objects(RDFS.range) if str(s).startswith(BASES["relation"])})
     gc, gm = g["claim"], g["meaning"]
+    ps = gzip.open(ROOT / "out" / "export" / "psalter.nt.gz", "rt", encoding="utf-8").read()
+    n_works, n_exprs = ps.count(f"<{LRMOO}F1_Work> ."), ps.count(f"<{LRMOO}F2_Expression> .")
     schemes = sorted(gc.subjects(RDF.type, SKOS.ConceptScheme), key=lambda u: local(u))
     n_concepts = sum(len(list(gc.subjects(SKOS.inScheme, s))) for s in schemes)
     metrics = sorted(gm.subjects(RDF.type, DQV.Metric), key=lambda u: local(u))
@@ -155,6 +164,8 @@ def standards_view(g, shapes, n_struct):
          f"{n_meas:,} measurements · {len(metrics)} metrics · 1 policy", "https://www.w3.org/TR/vocab-dqv/"),
         ("owl", "OWL 2", "classes and properties typed for tools",
          f"{n_class} classes · {n_obj + n_dat} properties", "https://www.w3.org/TR/owl2-overview/"),
+        ("lrmoo", "LRMoo", "the text as a work: its texts, its editions, its creation",
+         f"{n_works} works · {n_exprs} texts", LRMOO_SPEC),
     ]
     # MACULA is data, not a standard (the committee's third sitting, D9): it
     # leads "The sources it is read from" instead
@@ -261,6 +272,12 @@ def standards_view(g, shapes, n_struct):
                + '<p class="lead">Every term is typed so OWL tools read it rightly. Nothing is derived by a reasoner: '
                  'where a link may join several kinds, the list is a SHACL shape, because in RDFS two domains mean '
                  'both, not either.</p>' + svg(c, h, "OWL typing"))
+    # LRMoo (1.4.0, 2026-11-11): the levels and their use are the fifth layer's picture, so this points there
+    out.append(head("lrmoo", "LRMoo 1.1.1", LRMOO_SPEC)
+               + f'<p class="lead">IFLA\'s Library Reference Model, in its CIDOC CRM form: the work, the texts that '
+                 f'realize it, the editions that carry them, and the work\'s creation as an event. The Psalter uses it: '
+                 f'{n_works} works and {n_exprs} texts. Who composed a work is never stated through it; that is a claim. '
+                 f'<a href="#L-biblio">The picture: 5 · The text as a work ›</a></p>')
     # MAPS TO and THE SOURCES follow; MACULA, the first source, is drawn there
     # MAPS TO (the alignment file, tools/ns_align.py; the alignment file
     # later adds its "maps to" part): how many of our terms map to each
@@ -483,19 +500,20 @@ def main(out=None):
         bands.append(f'<a href="#L-{n}"><rect class="band" x="10" y="{y}" width="880" height="82" rx="12"/>'
                      f'<text class="lbl" x="30" y="{y + 30}">{i + 1} · {e(title)}</text>'
                      f'<text class="sm" x="30" y="{y + 52}">{e(tag)} · {len(terms[n])} terms · open ›</text></a>'
-                     + (f'<path class="wire" d="M450 {y + 82} L450 {y + 100}"/>' if i < 3 else ""))
+                     + f'<path class="wire" d="M450 {y + 82} L450 {y + 100}"/>')
     # THE FOUNDATION (2026-10-20: below the 4 layers diagram, a foundation box
-    # in a different colour that links to the standards section): what all four
+    # in a different colour that links to the standards section): what all the
     # layers stand on
-    bands.append('<path class="wire" d="M450 392 L450 412"/>'
-                 '<a href="#standards"><rect class="found" x="10" y="412" width="880" height="82" rx="12"/>'
-                 '<text class="lbl" x="30" y="442">The foundation · Built on open standards</text>'
-                 '<text class="sm" x="30" y="464">RDF 1.2 and 1.1, OWL, SHACL, SKOS, PROV-O, DQV · read from MACULA, '
-                 'the Berean Standard Bible, STEP Bible, Strong\'s and WordNet · open ›</text></a>')
-    body.append(section("top", "The four layers", [], "Read from top to bottom: the text, what it is about, what it says, "
-                        "and who says it. Every box opens the next picture down, or the term's own entry on the "
-                        "vocabulary pages; hover a box for its meaning.")
-                + svg("".join(bands), 504, "The four layers of the schema, on their foundation"))
+    fy = 10 + len(LAYERS) * 100
+    bands.append(f'<a href="#standards"><rect class="found" x="10" y="{fy}" width="880" height="82" rx="12"/>'
+                 f'<text class="lbl" x="30" y="{fy + 30}">The foundation · Built on open standards</text>'
+                 '<text class="sm" x="30" y="' + str(fy + 52) + '">RDF 1.2 and 1.1, OWL, SHACL, SKOS, PROV-O, DQV, '
+                 'LRMoo · read from MACULA, the Berean Standard Bible, STEP Bible, Strong\'s and WordNet · open ›</text></a>')
+    body.append(section("top", "The five layers", [], "Read from top to bottom: the text, what it is about, what it says, "
+                        "who says it, and the text itself as a work that was written and passed down. Every box opens "
+                        "the next picture down, or the term's own entry on the vocabulary pages; hover a box for its "
+                        "meaning.")
+                + svg("".join(bands), fy + 92, "The five layers of the schema, on their foundation"))
 
     # ---------------- THE TEXT
     n, gs = "structure", g["structure"]
@@ -710,6 +728,63 @@ def main(out=None):
     rest_c = [s for s in terms[n] if s not in reached]
     reached |= set(rest_c)                  # the remaining claim terms, on the vocabulary page
 
+    # ---------------- THE TEXT AS A WORK (/ns/biblio, 1.4.0, 2026-11-11): LRMoo's three levels across the top, what
+    # this vocabulary adds beneath them (the translation, the collection's order, the verses), and the heading's two
+    # claims at the foot. LRMoo's own terms open its specification; ours open their entries
+    n, gb = "biblio", g["biblio"]
+    B = BASES[n]
+
+    def our(t, title, sub, color=None):
+        s = rdflib.URIRef(B + t)
+        assert (s, None, None) in gb, f"/ns/biblio has no {t}"
+        reached.add(s)
+        return title, sub, page(n, s), tip(gb, s), color
+
+    def lrm(title, sub, hint):
+        return title, sub, LRMOO_SPEC, hint, None
+    W, X1, X2, X3 = 250, 10, 325, 640
+    rows = [
+        (10, [lrm("A work (F1)", "the composition: one psalm, or the Psalter", "LRMoo F1 Work"),
+              lrm("Its text (F2)", "one realization: the Hebrew, or the English", "LRMoo F2 Expression"),
+              lrm("An edition (F3)", "a release that carries a text: MACULA Hebrew, the Berean", "LRMoo F3 Manifestation")]),
+        (120, [lrm("Its creation (F27)", "an event naming no one, no date, no place", "LRMoo F27 Work Creation"),
+               our("translationOf", "translation of", "the English from the Hebrew; a kind of LRMoo's R76"),
+               lrm("Incorporates (R75)", "the Psalter's text holds each psalm's, each still its own work",
+                   "LRMoo R75 incorporates")]),
+        (240, [our("Arrangement", "An order", "the order a tradition gives a collection's works: the Masoretic"),
+               our("Section", "A section", "Book I to Book V, each a span of places"),
+               our("ArrangementEntry", "An entry", "a work in its place: Psalm 73, place 73, in Book III")]),
+        (350, [our("Segment", "A verse", "a numbered verse of one text (F2), in that text's own numbering"),
+               our("alignedWith", "aligned with", "a Hebrew verse to its English verse or verses"),
+               ("", "", "", "", None)]),
+        (460, [our("superscriptionNames", "The heading names", "a claim about a work; where the name is shared, "
+                   "which person is marked as an identification", "var(--found-edge)"),
+               our("composedBy", "Composed by", "a claim about a work: always a reading, always disputed", "var(--found-edge)"),
+               ("", "", "", "", None)]),
+    ]
+    pic = []
+    for y, cells in rows:
+        for x, (title, sub, href, hint, color) in zip((X1, X2, X3), cells):
+            if title:
+                pic.append(box(x, y, W, 70, title, sub, href, hint, color=color))
+    pic += [arrow(X1 + W, 45, X2, 45, "realised in"), arrow(X3, 45, X2 + W, 45, "embodies"),
+            arrow(X1 + W / 2, 120, X1 + W / 2, 82, ""), arrow(X2 + W / 2, 82, X2 + W / 2, 120, ""),
+            arrow(X3 + 30, 120, X2 + W - 30, 82, ""),
+            f'<text class="sm" x="{X1 + W / 2 + 8:.0f}" y="106">created</text>',
+            f'<text class="sm" x="{X2 + W / 2 + 8:.0f}" y="106">from one text to another</text>',
+            f'<text class="sm" x="{X3 + 40:.0f}" y="106">one text holds another</text>',
+            arrow(X2, 275, X1 + W, 275, "section of"), arrow(X3, 275, X2 + W, 275, "in section"),
+            arrow(X2, 385, X1 + W, 385, "")]
+    for t in ("arrangementOf", "sectionOf", "inSection", "inArrangement", "member", "position", "positionInSection",
+              "firstPosition", "lastPosition", "segmentOf", "segmentNumber"):
+        reached.add(rdflib.URIRef(B + t))   # the plumbing between the boxes, on the vocabulary page
+    body.append(section("L-biblio", "5 · The text as a work", [("top", "The map")],
+                        e(LAYERS[4][3]) + " Across the top, LRMoo's own levels (each opens its specification); beneath "
+                        "them, what this vocabulary adds. Who a heading names, and who composed a psalm, are claims "
+                        "with a voice and a certainty, never plain facts.", master="biblio")
+                + svg("".join(pic), 545, "A psalm as a work: its texts, its editions, its place in the collection, "
+                      "and the heading's two claims"))
+
     # ---------------- THE SAME SCHEMA, BY THE STANDARDS IT IS BUILT ON
     body += standards_view(g, shapes, n_struct)
 
@@ -723,13 +798,14 @@ def main(out=None):
              f'<nav class="crumbs">' + " · ".join(
                  f'<a href="{SITE}/ns/{v}">{t}</a>' for v, t in (("meaning", "Meaning"), ("structure", "Structure"),
                                                                  ("relation", "Relations"), ("claim", "Claims"),
-                                                                 ("alignment", "Alignment")))
+                                                                 ("biblio", "Texts"), ("alignment", "Alignment")))
              + f' · <b>Map</b> · <a href="{SITE}/">bibleontology.org</a></nav>'
              f'<h1>The Bible Ontology schema, as a map</h1>'
-             f'<p class="lead">The four published vocabularies ({total} terms) as pictures, from the four layers down to each '
+             f'<p class="lead">The five published vocabularies ({total} terms) as pictures, from the five layers down to each '
              f'kind. Every box opens the next picture or the term\'s own entry at '
              f'<a href="{SITE}/ns/structure">/ns/structure</a>, <a href="{SITE}/ns/meaning">/ns/meaning</a>, '
-             f'<a href="{SITE}/ns/relation">/ns/relation</a> and <a href="{SITE}/ns/claim">/ns/claim</a>; hover for its '
+             f'<a href="{SITE}/ns/relation">/ns/relation</a>, <a href="{SITE}/ns/claim">/ns/claim</a> and '
+             f'<a href="{SITE}/ns/biblio">/ns/biblio</a>; hover for its '
              # the version from the version file and the counts dated (D8):
              # a fixed "1.2.0" would be false at 1.2.1, and the counts are a
              # snapshot while About's are live

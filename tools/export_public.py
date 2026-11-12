@@ -87,6 +87,7 @@ PUBLIC: tuple[str, ...] = (
     "docs/PRINCIPLES.md", "docs/rdf-1.2-in-practice.md", "docs/a-cheap-model-as-a-contractor.md",
     "docs/a-bible-knowledge-graph-ai-assistants-can-ask.md",       # the MCP flagship (plan 8.7; Doug, 2026-11-02)
     "docs/who-wrote-psalm-73.md",       # the LRM write-up, released with 1.4.0 (plan 8.1g step 6; Doug, 2026-11-11)
+    "docs/images/who-wrote-psalm-73-*.png",   # its two pictures, the problem and the model (Doug, 2026-11-11)
     "README.md", "LICENSE", "LICENSE-DATA", "LICENSING.md", "NOTICE", "SOURCES.md", "CITATION.cff",
     "CONTRIBUTING.md", "CHANGELOG.md", "SECURITY.md", ".github/ISSUE_TEMPLATE/*",
     # line endings and binaries: without it a Windows clone's git add corrupts

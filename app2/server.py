@@ -7822,6 +7822,26 @@ def api_recurs(d, q):
 _TOLD = None
 
 
+_THEME_MERGED = None
+
+
+def _theme_merged_name(r, other):
+    """A major theme merged into a concept's card (tools/themes/theme_nodes.py MERGE: covenant, kingdom, sacrifice,
+    the image of God) is named as the theme where a relation says "the major theme": "is a core concept of the major
+    theme covenant" read as a fragment (the Fable audit, 2026-11-11). None where the name needs no help."""
+    global _THEME_MERGED
+    if r["type"] != "in_theme" or not other or "(major theme)" in (other.get("name") or ""):
+        return None
+    if _THEME_MERGED is None:
+        p = ROOT / "ontology" / "themes" / "theme-nodes.json"
+        m = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+        by = _theme_map().get("_by") or {}
+        _THEME_MERGED = {node: _title(by[k[len("theme:"):]]["title"]) for k, node in m.items()
+                         if k.startswith("theme:") and k[len("theme:"):] in by and not node.startswith("theme_")}
+    t = _THEME_MERGED.get(r["other"])
+    return f"{t} (major theme)" if t else None
+
+
 def _told_again(a, b):
     """The ontology/told-again.jsonl record joining two events, whichever is the later, or None."""
     global _TOLD
@@ -7858,6 +7878,10 @@ def _told_again_rows(d):
             # its echo of Jacob at Peniel is the birth announced in Judg 13)
             def span(i):
                 refs = sorted({p[i][0] for p in r["beats"]}, key=lambda x: _vkey_macula(_macula_ref(d, x)))
+                a_, z_ = refs[0].rsplit(" ", 1), refs[-1].rsplit(" ", 1)
+                # one chapter reads "Matt 8:24–27", not "Matt 8:24–8:27" (the Fable audit, 2026-11-11)
+                if len(refs) > 1 and a_[0] == z_[0] and a_[1].split(":")[0] == z_[1].split(":")[0]:
+                    return f"{refs[0]}–{z_[1].split(':')[-1]}"
                 return refs[0] if len(set(refs)) == 1 else f"{refs[0]}–{refs[-1].split(' ')[-1]}" \
                     if refs[0].rsplit(' ', 1)[0] == refs[-1].rsplit(' ', 1)[0] else f"{refs[0]}–{refs[-1]}"
             rows.append({"kind": "shape", "key": r["later_event"], "ent": True,
@@ -10728,11 +10752,19 @@ def _place_names(d, eid, e):
     for k in _place_name_keys(d, eid, e):
         lx = d["lex"].get(k) or {}
         meta = d["lmeta"].get(k) or {}
-        out.append({"key": k, "strong": k[:1].upper() + k[1:],
-                    # the lexicon's word first: MACULA's lemma map gives G2419 the lemma of G2414 (Ἱεροσόλυμα)
-                    "lemma": lx.get("word") or d["lemmas"].get(k) or _first(meta, "normalized"),
-                    "translit": _first(meta, "transliteration") or lx.get("translit"),
-                    "lang": _lang_of(d, k), "uses": _uses(d, k), "verses": len(vs.get(k) or ())})
+        w = {"key": k, "strong": k[:1].upper() + k[1:],
+             # the lexicon's word first: MACULA's lemma map gives G2419 the lemma of G2414 (Ἱεροσόλυμα)
+             "lemma": lx.get("word") or d["lemmas"].get(k) or _first(meta, "normalized"),
+             "translit": _first(meta, "transliteration") or lx.get("translit"),
+             "lang": _lang_of(d, k), "uses": _uses(d, k), "verses": len(vs.get(k) or ())}
+        # a code merged with another word's (Dothan's H1886 and the article): the word card's cleaned values, as the
+        # card's `original` already takes them ("H1886 · 35900 uses in 2 verses"; the Fable audit, 2026-11-11)
+        if any(c.startswith(k) and c[len(k):].isalpha() for c in _SPLIT_CODES):
+            wc = api_sense(d, {"key": [k]})
+            if wc.get("found"):
+                w.update(uses=(wc.get("face") or {}).get("uses") or w["verses"],
+                         translit=wc.get("translit") or "", lemma=wc.get("lemma") or w["lemma"])
+        out.append(w)
     return out
 
 
@@ -11047,7 +11079,18 @@ def _place_page(d, eid, c):
         return f'{s_} ({cl(r["cites"])}{", implied" if r["certainty"] == "implied" else ""})'
 
     def visitors(vs):
-        return ", ".join(f'{ent(v["other"], v["name"])} ({cl(v["cites"])})' for v in vs)
+        # five, as the app's face has them, and a name two people share once each with which one: Ezra's return
+        # printed 23 names inline with "Zechariah" and "Jeshaiah" twice each (the Fable audit, 2026-11-11)
+        seen_, out_ = collections.Counter(v["name"] for v in vs), []
+        for v in vs:
+            nm = v["name"]
+            if seen_[nm] > 1:
+                w_ = _who(d["ents"].get(v["other"]) or {})
+                nm = f"{nm} ({w_})" if w_ else nm
+            out_.append(f'{ent(v["other"], nm)} ({cl(v["cites"])})')
+        # the rest folded, still linked: the page promises every name and verse the card holds
+        return ", ".join(out_[:5]) + (f' <details><summary>and {len(vs) - 5} more</summary>{", ".join(out_[5:])}</details>'
+                                      if len(vs) > 5 else "")
 
     parts = []
     # the alias that has a verse
@@ -11069,7 +11112,9 @@ def _place_page(d, eid, c):
             ml = "".join(f'<li>{ent(ev["id"], ev["name"])}: ' + "; ".join(
                 [said(r) for r in ev["rows"]] + ([f"went there or lived there: {visitors(ev['visits'])}"]
                                                 if ev["visits"] else [])) + "</li>" for ev in more)
-            parts.append(f"<h2>Every other event whose telling holds a relation of it</h2><ul>{ml}</ul>")
+            # "every other" only where a story stands above it (Dothan and Bethel had none; the Fable audit)
+            parts.append(f"<h2>{'Every other event whose telling holds a relation of it' if li else 'Its story, by its relations'}"
+                         f"</h2><ul>{ml}</ul>")
     if p["inside"]:
         parts.append("<h2>Inside it</h2><ul>" + "".join(
             f'<li>{ent(x["id"], x["name"])} ({", ".join(vlink(r) for r in x["refs"])}'
@@ -11271,6 +11316,15 @@ def _ev_strip(d, eid, e):
         return []
     b, lo, hi, t = spans[0]
     bk = _ev_bkeys(d, b)
+    # A TELLING THAT RUNS ON IN THE SAME BOOK IS THIS EVENT TOO: the Shipwreck's Acts 28:1-10 stood beside it as a gap,
+    # "no event card holds those verses yet" (the Fable audit, 2026-11-11)
+    grown = True
+    while grown:
+        grown = False
+        i = bisect.bisect_right(bk, hi)
+        for b2, lo2, hi2, _t in spans[1:]:
+            if b2 == b and i < len(bk) and lo2 <= bk[i] <= hi2 and hi2 > hi:
+                hi, grown = hi2, True
     ivals = [x for x in _ev_ivals(d).get(b, []) if x[2] != eid]
     me = {"kind": "me", "id": eid, "name": e["title"], "label": _ev_label(b, lo, hi),
           "first": f"{b}.{lo[0]}.{lo[1]}", "n": t.get("n") or 0}
@@ -11313,7 +11367,20 @@ def _ev_strip(d, eid, e):
             p = sec["hi"]
         else:
             break
-    return before[::-1] + [me] + after
+    # one event told in two passages side by side is one cell ("Paul before Festus and Agrippa" stood twice, Acts
+    # 25:1-27 and 26:1-32; the Fable audit, 2026-11-11)
+    out = []
+    for x in before[::-1] + [me] + after:
+        if out and x.get("id") and out[-1].get("id") == x["id"] and x["kind"] == out[-1]["kind"] == "event":
+            first_lo = out[-1]["label"].split("–")[0]
+            s_, _, e_ = x["label"].rsplit(" ", 1)[-1].partition("–")
+            e_ = e_ or s_
+            e_ = e_ if ":" in e_ else f"{s_.split(':')[0]}:{e_}"           # "26:1–32" ends at 26:32
+            out[-1] = dict(out[-1], label=f"{first_lo}–{e_}",
+                           n=(out[-1].get("n") or 0) + (x.get("n") or 0))
+        else:
+            out.append(x)
+    return out
 
 
 def _ev_cites(d, refs, spans):
@@ -11793,6 +11860,10 @@ def _event_page(d, eid, c):
         for r in p["cast"]:
             subj = " and ".join(el(s["id"], s["name"]) for s in r["subjects"])
             obj = el(r["object"]["id"], r["object"]["name"])
+            # words the text says are quoted, as the app's row has them ("Jesus told No one comes to the Father" on
+            # the served page; the Fable audit, 2026-11-11)
+            if re.search(r"text|passage|assessment", r["object"].get("type") or ""):
+                obj = f"&ldquo;{obj}&rdquo;"
             by = f' — the words of {el(r["claimed_by"]["id"], r["claimed_by"]["name"])}' if r["claimed_by"] else ""
             li.append(f'<li>{subj} {_esc(r["verb"])} {obj} ({cl(r["cites"])}'
                       f'{", implied" if r["certainty"] == "implied" else ""}){by}</li>')
@@ -11810,8 +11881,11 @@ def _event_page(d, eid, c):
                 + "".join(f'<p>{pl(x["id"], x["ref"])} {_esc(x["text"])}</p>' for x in q["from"] if not q["excerpt"])
                 + (f'<p>{pl(q["from"][0]["id"], q["from"][0]["ref"])} {_esc(q["excerpt"])}</p>' if q["excerpt"] else "")
                 + "".join(f'<p>{pl(x["id"], x["ref"])} {_esc(x["text"])}</p>' for x in q["to"]))
+        # the pairs can be any telling's (the Last Supper's two are John's): headed by its tellings, as "Who did
+        # what" is, not by the first telling's label (the Fable audit, 2026-11-11)
+        qwhere = f"its {p['told']} tellings" if p["told"] > 1 else p["label"]
         parts.append(f"<h2>The Scriptures {_esc(sp['name']) + ' ' if sp else ''}quoted and recalled in "
-                     f"{_esc(p['label'])}</h2>" + "".join(blocks)
+                     f"{_esc(qwhere)}</h2>" + "".join(blocks)
                      + (f"<p>{EVENT_READ_NOTE}</p>" if any(q["nt"] for q in p["quotes"]) else ""))
     # the title and the description
     cite1 = p["quotes"][0]["to_ref"] if p["quotes"] else None
@@ -11831,9 +11905,17 @@ def _event_page(d, eid, c):
     pieces = [f"{p['label']}."]
     if lead:
         t = re.sub(r"^(And|But|Then|Now) ", "", lead["text"]).rstrip(".")
+        # a speech inside the quote takes single marks: the Shipwreck read “Paul said to the centurion ..., “Unless
+        # these men remain ...” (the Fable audit, 2026-11-11)
+        t = t.replace("“", "‘").replace("”", "’")
         if len(t) > 100:
+            # a whole sentence first: the loaves' description stopped at "...a solitary place. But the crowds" (the
+            # Fable audit, 2026-11-11); a cut inside a sentence is marked as one
+            end = t.rfind(". ", 0, 101)
             cut = max(t.rfind(" as ", 0, 100), t.rfind(", ", 0, 100))
-            t = t[:cut] if cut > 50 else t[:100].rsplit(" ", 1)[0]
+            t = (t[:end] if end > 40 else t[:cut] + "…" if cut > 50 else t[:100].rsplit(" ", 1)[0] + "…")
+        if t.count("‘") > t.count("’"):
+            t += "’"                      # a speech cut short is closed before the quote that holds it
         pieces = [f"{p['label']}: “{t}” ({lead['ref']})."]
     if heading:
         pieces = [f"{heading.rstrip('.')}."] + pieces
@@ -11904,6 +11986,12 @@ def api_entity(d, q):
         other = d["ents"].get(r["other"])
         label = r.get("label_out" if r["dir"] == "out" else "label_in") or \
             _rel_label(d, spec, r["type"], r["other"] if r["dir"] == "out" else eid, r["dir"] == "out")
+        # people who came from a place (a crowd from Jerusalem, Mark 3:8) read "gives rise to" on the place's card,
+        # the inverse that fits a river out of Eden; on a place, of people, it says where they came from (the Fable
+        # audit, 2026-11-11; the vocabulary's inverse label is unchanged)
+        if r["type"] == "issues_from" and r["dir"] == "in" and (d["ents"].get(eid) or {}).get("type") == "place" \
+                and other and other.get("type") in ("person", "group"):
+            label = "is where they came from:"
         cat = spec.get("catlabel", "Other")
         # A story told in a pattern's shape is not a fact about language,
         # which is where the schema files `instance_of` (for refrains and
@@ -11945,7 +12033,7 @@ def api_entity(d, q):
         groups[cat].append({
             "label": label, "type": r["type"], "dir": r["dir"],
             "other": r["other"],
-            "name": s_name or (other["name"] if other else r["other"]),
+            "name": s_name or _theme_merged_name(r, other) or (other["name"] if other else r["other"]),
             "otype": other["type"] if other else None,
             "refs": r["refs"][:4], "certainty": r.get("certainty"),
             **({"scope": s_scope, "scope_named": bool(s_name)} if s_scope else {}),
@@ -15042,8 +15130,8 @@ EVENT_CREDIT = ("Every passage is checked against the Berean text, and each tell
 # how much a cross-reference's evidence is worth, strongest first: the
 # editors' own notes, then a declared reference, then a model's judgment,
 # then two passages naming the same people
-EVIDENCE_ORDER = ["quotation", "editors", "declared", "judged", "names", "read", "ruled"]
-EVIDENCE_LABEL = {"read": "read as speaking of this event (Claude Sonnet, a reading)",
+EVIDENCE_ORDER = ["told", "quotation", "editors", "declared", "judged", "names", "read", "ruled"]
+EVIDENCE_LABEL = {"told": "its steps set beside this event's, step by step (stories told again)","read": "read as speaking of this event (Claude Sonnet, a reading)",
                   # a reader's ruling over the model's reading (Romans 5:20, read
                   # in the context Romans 5:13-14 sets up, 2026-10-03)
                   "ruled": "read as speaking of this event, in its context (a reader's reading)",
@@ -15294,7 +15382,26 @@ def event_of(d, eid):
     # speaks of the event gains a reading as its evidence; one that only
     # shares its subject stays suggested and says so; an unrelated one leaves
     read = _event_links()
+    # A PASSAGE TOLD AGAIN IS NOT "NO EVIDENCE" (the Fable audit, 2026-11-11): the storm's card led with Jonah 1's
+    # steps set beside its own, and its drawer listed "Jonah 1 · storm calmed" under no evidence in the graph yet.
+    # A suggested passage holding the other side of a told-again record of this event carries that record
+    told_spans = []
+    for r in _rows(ROOT / "ontology" / "told-again.jsonl"):
+        for me, other in (("later_event", "earlier_range"), ("earlier_event", "later_range")):
+            if r.get(me) == eid and r.get(other):
+                told_spans.append(r[other])
+
+    def _told(s):
+        for rng in told_spans:
+            try:
+                if _in_span(s.get("first"), [_macula_ref(d, rng[0]), _macula_ref(d, rng[-1])]):
+                    return True
+            except (KeyError, ValueError, TypeError, AttributeError):
+                continue
+        return False
     for s in e["secondary"]:
+        if told_spans and _told(s) and "told" not in s["evidence"]:
+            s = dict(s, evidence=list(s["evidence"]) + ["told"])
         # a reading applies where there was no evidence -- or where it was made
         # knowing the evidence (`over_evidence`): Romans 7:7 and 13:8-10 QUOTE
         # the commandments, so the quotation layer evidences them, but they
@@ -19506,8 +19613,22 @@ def _image_card_page(d, eid, c):
           if c.get("sketch") else ""),
          f"<h1>{_esc(name)}</h1>",
          '<p class="ssr-sub">In the Bible · a picture the text draws on</p>',
-         _open_btn(f"/e/{addr}", "Open this card in Bible Ontology"),
-         f"<p>{p1}</p>"]
+         _open_btn(f"/e/{addr}", "Open this card in Bible Ontology")]
+    # WHAT IT STANDS FOR FIRST, as the app's face has it (359ecd69): the served lede said "It records no key for it"
+    # and "holds no explicit key" above a list of what it is tied to (the Fable audit, 2026-11-11). The sentence is
+    # kept only where nothing is tied
+    if ic["tied"]:
+        P.append("<h2>What it stands for</h2><ul>")
+        for t_ in ic["tied"]:
+            q_ = f" &ldquo;{_esc(t_['quote'])}&rdquo;" if t_.get("quote") else ""
+            how = (f"the text says it: {vref(t_['says_go'], t_['says'])}" if t_["says"]
+                   else f"a reader’s link: {vref(t_['reader_go'], t_['reader'])}")
+            P.append(f"<li>{card(t_)} &mdash;{q_} ({how})</li>")
+        P.append("</ul>")
+        if lede["books"]:
+            P.append(f"<p>It runs through {lede['books']} book{'s' * (lede['books'] != 1)}, from {_esc(lede['span'])}.</p>")
+    else:
+        P.append(f"<p>{p1}</p>")
     cn = ic["counts"]
     if cn["verses"]:
         P.append("<h2>Where it runs</h2>")
@@ -19517,16 +19638,6 @@ def _image_card_page(d, eid, c):
             bs = ic["marks"].get(m) or []
             if bs:
                 P.append(f"<p><b>{lab}:</b> " + ", ".join(a(f"#b-{x['b']}", x["name"]) for x in bs) + "</p>")
-    if ic["tied"]:
-        P.append("<h2>Who or what it is tied to</h2><ul>")
-        for t in ic["tied"]:
-            bits = []
-            if t["says"]:
-                bits.append(f"the text says it: {vref(t['says_go'], t['says'])}")
-            if t["reader"]:
-                bits.append(f"a reader’s link: {vref(t['reader_go'], t['reader'])}")
-            P.append(f"<li>{card(t)} — " + "; ".join(bits) + "</li>")
-        P.append("</ul>")
     if ic["rows"]:
         P.append("<h2>The passages, in canon order</h2>")
     seen_b = set()
@@ -19654,7 +19765,7 @@ for _k in ("object", "creature", "being"):
     OB_BOXES[_k] = [("walk", "What the text says about it", "")]
 OB_LABEL = {("made", "in"): "Made by", ("carried", "in"): "Carried by", ("offered", "in"): "Offered by",
             ("took", "in"): "Taken by", ("kept_at", "out"): "Kept at",
-            ("stationed_at", "in"): "Stationed at it", ("stationed_at", "out"): "Stationed at",
+            ("stationed_at", "in"): "Stationed at it:", ("stationed_at", "out"): "Stationed at",
             ("party_to", "in"): "Party to it", ("token_of", "in"): "Its sign", ("token_of", "out"): "Sign of",
             ("supersedes", "in"): "Followed by", ("supersedes", "out"): "It follows", ("instituted", "in"): "Instituted by",
             ("observed", "in"): "Kept by", ("titled", "in"): "Held by", ("self_designated_as", "in"): "Used of themselves by",
@@ -19842,7 +19953,7 @@ def object_card(d, eid, e):
             groups_[lab] = []
             order.append(lab)
         groups_[lab].append(x)
-    pri = ["Made by", "Carried by", "Kept at", "Stationed at it", "Parties", "Sign", "Instituted by", "Kept by", "Held by"]
+    pri = ["Made by", "Carried by", "Kept at", "Stationed at it:", "Parties", "Sign", "Instituted by", "Kept by", "Held by"]
     order.sort(key=lambda l: pri.index(l) if l in pri else 99)
     lede = [{"label": lab, "names": [{"id": x["id"], "addr": x["addr"], "name": x["name"], "go": x["go"],
                                       "ref": x["vs"][0]["ref"] if x["vs"] else x["ref"]}
@@ -19964,6 +20075,12 @@ def _ob_title_desc(d, eid, e, card):
         best = next((v for v in pool if re.sub(r"^(?:the|a|an) ", "", low) in v["text"].lower()), pool[0])
         b, c_, v_ = best["id"].split(".")
         q = _img_cut(best["text"], word=re.sub(r"^(?:the|a|an) ", "", low), n=95)
+        # a quote cut short says so, and one ending in a full stop does not take a second (the basin's "washing.”.",
+        # the ark's "two and a half cubits long”." mid-list; the Fable audit, 2026-11-11)
+        at_ = best["text"].find(q)
+        after = best["text"][at_ + len(q):].lstrip() if at_ >= 0 else ""
+        cut_ = bool(after) and not re.match(r"[.?!:;”’]", after) and not q.endswith((".", "?", "!"))
+        q = q.rstrip(".") + ("…" if cut_ else "")
         head = f"{best['ref']} (BSB): “{q}”."
         bits = []
         for g in card["lede"][:3]:
@@ -20033,9 +20150,9 @@ def _ob_card_page(d, eid, c):
         if b["rows"]:
             P.append("<ol>")
             for x in b["rows"]:
-                P.append(f"<li><b>{_esc(x['label'])}:</b> {a('/e/' + x['addr'], x['name'])} — {marks[x['mark']]}"
+                P.append(f"<li><b>{_esc(x['label'].rstrip(':'))}:</b> {a('/e/' + x['addr'], x['name'])} — {marks[x['mark']]}"
                          + (f" (said by {_esc(x['by'])})" if x["by"] else "") + "".join(vline(v) for v in x["vs"])
-                         + (f"<p>And {x['more']} more cited verses.</p>" if x["more"] else "") + "</li>")
+                         + (f"<p>And {x['more']} more cited verse{'s' * (x['more'] != 1)}.</p>" if x["more"] else "") + "</li>")
             P.append("</ol>")
         if b["rest"]:
             P.append("<p>And " + str(len(b["rest"])) + " more: " + ", ".join(a("/e/" + x["addr"], x["name"]) for x in b["rest"]) + ".</p>")
@@ -20065,8 +20182,11 @@ def _ob_card_page(d, eid, c):
         listed = []
     listed = listed[:OB_LISTED]
     if listed:
-        P.append("<h2>Where the text names it</h2>")
-        P.append(f"<p>The first {len(listed)} of {total} verses that hold its words, in the order of the books.</p>")
+        # the word's verses, not the thing's: the basin's twenty hold Solomon's ten basins too (the Fable audit,
+        # 2026-11-11), so the list says what it is
+        P.append("<h2>The verses that hold its word</h2>")
+        P.append(f"<p>The first {len(listed)} of {total} verses that hold its word, in the order of the books. The word "
+                 f"is not always this one: these are where it stands, not each a verse about {_esc(name)}.</p>")
         P += [vline(_ob_v(d, k)) for k in listed]
     P.append("<p>English: Berean Standard Bible. Relations are the graph’s, each with the verse it cites.</p>")
     P.append('<p><a href="/">Open Bible Ontology</a> to read every verse and follow every connection.</p></article>')
@@ -21419,7 +21539,10 @@ def card_page(eid):
                                                 if r not in cite_list][:max(0, CARD_VERSES - len(cite_list))]))
     for r in cite_list if pp else (c.get("refs") or [])[:CARD_VERSES]:
         sp = _site_span(d, r) if pp else None
-        eref, text = _verse_text(d, _macula_ref(d, _vlabel(*sp[:3]) if sp else r))
+        # a cited range is read from its first verse: "2Sam 5:6-9", the capture of Jerusalem, and "Josh 16:1-2" on
+        # Bethel were dropped from their pages' Verses (the Fable audit, 2026-11-11)
+        r1 = re.sub(r"(\d+:\d+)\s*[-–]\s*[\d:]+$", r"\1", r)
+        eref, text = _verse_text(d, _macula_ref(d, _vlabel(*sp[:3]) if sp else r1))
         if text and f'/p/{MACULA_BACK.get(eref.split(".")[0], eref.split(".")[0])}.{eref.partition(".")[2]}"' \
                 in "".join(verses):
             continue
@@ -21456,12 +21579,14 @@ def card_page(eid):
             fc, fv, lc, lv = int(fc), int(fv), int(lc), int(lv)
         except (ValueError, KeyError, AttributeError, TypeError):
             return
-        bk, items = MACULA_BACK.get(fb, fb), []
+        bk, items, unshown = MACULA_BACK.get(fb, fb), [], 0
         for ch in range(fc, lc + 1):
             for vn in range(fv if ch == fc else 1, (lv if ch == lc else 200) + 1):
                 t = d["verses"].get((bk, ch, vn))
                 if skip_quoted and f"{bk}.{ch}.{vn}" in in_passage:
                     continue  # two of a person's events overlap (Job 1:1-2:13 holds Job 1:13-22)
+                if t and not (left > 0 and len(items) < limit):
+                    unshown += 1
                 if t and left > 0 and len(items) < limit:
                     # on a person's page every verse names its book ("how do I know it is Genesis?")
                     items.append(f'<li><a href="/p/{_esc(bk)}.{ch}.{vn}">{_esc(bk) + " " if pp else ""}{ch}:{vn}</a> '
@@ -21470,7 +21595,11 @@ def card_page(eid):
                     in_passage.add(f"{bk}.{ch}.{vn}")
                     left -= 1
         if items:
-            passage.append(f"<h2>{heading}</h2><ul>{''.join(items)}</ul>")
+            # a telling cut short says so (the Last Supper's John 13:1–17:26 stopped at 13:14 with nothing after it;
+            # the Fable audit, 2026-11-11)
+            more_ = (f'<p>And {unshown} more verse{"s" * (unshown != 1)} of this telling, '
+                     f'<a href="/p/{_esc(bk)}.{fc}.{fv}">in the reader</a>.</p>' if unshown else "")
+            passage.append(f"<h2>{heading}</h2><ul>{''.join(items)}</ul>{more_}")
 
     for tl in ((c.get("event") or {}).get("tellings") or [])[:EVENT_TELLINGS]:
         quote_telling(tl, _esc(tl.get("label") or ""), EVENT_VERSES)
@@ -21579,6 +21708,11 @@ def card_page(eid):
         for it in g.get("items") or []:
             if n >= CARD_LINKS:
                 break
+            # an event's tellings are its own passages, printed above: "is recounted by Calming the storm (Mark 4:35)"
+            # named the event's telling as if another story (the app skips it the same way, shownAbove; the Fable
+            # audit, 2026-11-11)
+            if it.get("type") == "recounts" and c.get("type") == "event":
+                continue
             n += 1
             refs = ", ".join(it.get("refs") or [])
             sc_ = it.get("scope")

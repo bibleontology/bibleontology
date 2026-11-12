@@ -122,7 +122,8 @@ def text_faults(eid, oc, head, body):
     if m:
         ref = desc.split(" (BSB)")[0]
         sp = S._site_span(d, ref)
-        if sp and m.group(1) not in d["verses"].get(sp[:3], ""):
+        # a quote cut short ends in an ellipsis (the Fable audit, 2026-11-11); the rest is the verse's own words
+        if sp and m.group(1).rstrip("…") not in d["verses"].get(sp[:3], ""):
             out.append(f"{eid}: the description's quote is not in {ref}")
     links = set(re.findall(r'href="([^"]+)"', body))
     for ref in re.findall(r"\b((?:[1-3] )?[A-Z][a-z]+ \d+:\d+)", desc):
@@ -153,8 +154,10 @@ def page_faults(eid, oc, head, body):
         if a in implied - explicit:
             out.append(f"{eid}: JSON-LD carries the implied relation to {a}")
     robots = "noindex" in head
-    ok = S.ob_indexable(body, oc, len(re.findall(r"Where the text names it", body)) and
-                        len(re.findall(r"<p><a href=\"/p/[^\"]+\">", body.split("Where the text names it")[-1])))[2]
+    # the word's verse list, headed "The verses that hold its word" since the Fable audit (2026-11-11)
+    hd = "The verses that hold its word"
+    ok = S.ob_indexable(body, oc, len(re.findall(hd, body)) and
+                        len(re.findall(r"<p><a href=\"/p/[^\"]+\">", body.split(hd)[-1])))[2]
     if robots == ok:
         out.append(f"{eid}: robots tag disagrees with the index rule")
     kjv = re.findall(r'href="[^"]*(?:cesar|laver|fowl|favou?red|shittim)[^"]*"', body, re.I)

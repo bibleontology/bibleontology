@@ -14,6 +14,7 @@
 
 Run: python -X utf8 tests/test_biblio_shapes.py"""
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -133,6 +134,25 @@ for what, text in PLANTS:
         fails.append(f"planted: {what} was not caught")
     else:
         caught += 1
+
+# THE PAGE OPENS ON THE PICTURE (2026-11-11): /ns/biblio is where the posts send a reader, and its model picture
+# (ontology/biblio/model.svg, inlined by tools/ns_docs.py) is the first thing they should see, before the terms
+def page_faults(html):
+    f = []
+    fig = html.find("<figure")
+    if fig < 0 or 'aria-label="A psalm as a work' not in html[fig:html.find("</figure>", fig)]:
+        f.append("out/ns/biblio.html does not carry the model picture: python tools/ns_docs.py")
+    elif fig > html.find("<h2"):
+        f.append("the model picture is not above the terms")
+    return f
+
+
+PAGE = ROOT / "out" / "ns" / "biblio.html"
+if PAGE.exists():
+    html_ = PAGE.read_text(encoding="utf-8")
+    fails += page_faults(html_)
+    if not page_faults(re.sub(r"<figure.*?</figure>", "", html_, flags=re.S)):
+        fails.append("planted: the page without its picture was not caught")
 
 for m in fails:
     print("FAIL", m)

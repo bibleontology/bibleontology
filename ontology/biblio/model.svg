@@ -1,0 +1,64 @@
+<!-- the model picture at the top of /ns/biblio (tools/ns_docs.py inlines it); also the second picture of the
+     1.4.0 posts. Hand-drawn; tests/test_biblio_shapes.py checks the published page carries it -->
+<svg class="bm" viewBox="0 0 1200 675" role="img" aria-label="A psalm as a work: the Psalter includes Psalm 73; Psalm 73 is written in Hebrew and English; it was created, by whom not stated; the heading names Asaph (the text says so); Asaph wrote it (a reading, always disputed)" style="width:100%;height:auto;display:block"><style>.bm-t{font-size:30px;font-weight:700;fill:#1f2933}.bm-b{font-size:24px;font-weight:700;fill:#1f2933}.bm-k{font-size:18px;fill:#6b7280;font-family:Consolas,monospace}.bm-a{font-size:20px;fill:#374151}.bm-e{font-size:19px;fill:#4b5563;font-style:italic}.bm-ok{font-size:22px;font-weight:700;fill:#166534}.bm-dis{font-size:22px;font-weight:700;fill:#92400e}.bm text{font-family:'Segoe UI',Arial,sans-serif}</style><rect width="1200" height="675" rx="16" fill="#fbfaf7"/>
+  <defs><marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="#6b7280"/></marker></defs>
+  <text x="60" y="70" class="bm-t">The model: keep each answer apart, and say who gives it</text>
+
+  <!-- Psalter -->
+  <rect x="60" y="110" width="330" height="110" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="85" y="152" class="bm-b">The Psalter</text>
+  <text x="85" y="182" class="bm-a">the collection, a work of its own</text>
+  <text x="85" y="206" class="bm-k">F1 Work</text>
+  <!-- arrangement -->
+  <rect x="60" y="260" width="330" height="96" rx="14" fill="#fff" stroke="#d6d3cc" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="85" y="298" class="bm-b">Its order</text>
+  <text x="85" y="328" class="bm-a">Book III, place 73: kept separate</text>
+  <line x1="225" y1="220" x2="225" y2="258" stroke="#6b7280" stroke-width="2" marker-end="url(#m)"/>
+
+  <!-- Psalm 73 -->
+  <rect x="470" y="110" width="330" height="110" rx="14" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="495" y="152" class="bm-b">Psalm 73</text>
+  <text x="495" y="182" class="bm-a">the poem itself</text>
+  <text x="495" y="206" class="bm-k">F1 Work</text>
+  <line x1="392" y1="165" x2="466" y2="165" stroke="#6b7280" stroke-width="2" marker-end="url(#m)"/>
+  <text x="429" y="150" class="bm-e" text-anchor="middle">includes</text>
+
+  <!-- expressions -->
+  <rect x="470" y="300" width="155" height="96" rx="14" fill="#fff" stroke="#d6d3cc" stroke-width="2"/>
+  <text x="490" y="338" class="bm-b">Hebrew</text>
+  <text x="490" y="366" class="bm-a">its text</text>
+  <text x="490" y="388" class="bm-k">F2</text>
+  <rect x="645" y="300" width="155" height="96" rx="14" fill="#fff" stroke="#d6d3cc" stroke-width="2"/>
+  <text x="665" y="338" class="bm-b">English</text>
+  <text x="665" y="366" class="bm-a">a translation</text>
+  <text x="665" y="388" class="bm-k">F2</text>
+  <line x1="547" y1="222" x2="547" y2="296" stroke="#6b7280" stroke-width="2" marker-end="url(#m)"/>
+  <line x1="722" y1="222" x2="722" y2="296" stroke="#6b7280" stroke-width="2" marker-end="url(#m)"/>
+  <text x="635" y="262" class="bm-e" text-anchor="middle">written in</text>
+
+  <!-- creation -->
+  <rect x="470" y="440" width="330" height="110" rx="14" fill="#fff" stroke="#d6d3cc" stroke-width="2"/>
+  <text x="495" y="480" class="bm-b">It was created</text>
+  <text x="495" y="510" class="bm-a">by whom, when, where:</text>
+  <text x="495" y="536" class="bm-a">not stated</text>
+  <line x1="460" y1="165" x2="460" y2="165"/>
+  <path d="M470,200 C430,250 430,440 468,470" fill="none" stroke="#6b7280" stroke-width="2" marker-end="url(#m)"/>
+
+  <!-- claims -->
+  <rect x="880" y="110" width="270" height="200" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <text x="905" y="152" class="bm-ok">The heading</text>
+  <text x="905" y="180" class="bm-ok">names Asaph</text>
+  <text x="905" y="222" class="bm-a">The text says so.</text>
+  <text x="905" y="252" class="bm-a">Which Asaph: an</text>
+  <text x="905" y="278" class="bm-a">identification, marked.</text>
+  <rect x="880" y="340" width="270" height="210" rx="14" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <text x="905" y="382" class="bm-dis">Asaph wrote it</text>
+  <text x="905" y="424" class="bm-a">A reading of the</text>
+  <text x="905" y="452" class="bm-a">heading, always</text>
+  <text x="905" y="480" class="bm-a">marked disputed,</text>
+  <text x="905" y="508" class="bm-a">with who holds it.</text>
+  <line x1="802" y1="165" x2="876" y2="190" stroke="#6b7280" stroke-width="2" marker-end="url(#m)"/>
+  <line x1="802" y1="175" x2="876" y2="420" stroke="#6b7280" stroke-width="2" marker-end="url(#m)"/>
+
+  <text x="60" y="620" class="bm-a">Two claims about the poem, never one fact. Standard parts from LRMoo (F1, F2); the two claims are this project’s.</text>
+</svg>

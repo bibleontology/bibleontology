@@ -31,7 +31,8 @@ import ns_map  # noqa: E402
 import vocab_inventory as V  # noqa: E402
 
 SITE = "https://bibleontology.org"
-VOCABS = ("structure", "relation", "meaning", "claim")
+VOCABS = ("structure", "relation", "meaning", "claim", "biblio")
+GENERATED = VOCABS[:4]          # /ns/biblio (1.4.0) is written by hand: its page is drawn from ontology/biblio/
 
 
 def anchors(html):
@@ -59,12 +60,12 @@ def main():
         pages = {}
         for v in VOCABS:
             ttl = tmp / f"{v}.ttl"
-            ttl.write_bytes(gen[v])
+            ttl.write_bytes(gen[v] if v in GENERATED else (ROOT / "ontology" / "biblio" / "biblio.ttl").read_bytes())
             dest, _n = ns_docs.page(v, ttl, dest=tmp / f"{v}.html")
             pages[v] = anchors(dest.read_text(encoding="utf-8"))
         # the alignment page the release will publish (tools/ns_align.py)
         import ns_align
-        ns_align.main({v: rdflib.Graph().parse(data=gen[v].decode("utf-8"), format="turtle") for v in VOCABS}, tmp)
+        ns_align.main({v: rdflib.Graph().parse(data=gen[v].decode("utf-8"), format="turtle") for v in GENERATED}, tmp)
         pages["alignment"] = anchors((tmp / "alignment.html").read_text(encoding="utf-8"))
         drawn = tmp / "schema-map.html"
         unreached = ns_map.main(drawn)
@@ -110,13 +111,17 @@ def main():
     left = {k: v for k, v in left.items() if v}
     if left:
         fails.append(f"terms reached by no picture and no vocabulary page: {left}")
+    # THE TEXT AS A WORK (1.4.0): the fifth layer is drawn, and each of /ns/biblio's terms is reached
+    if 'id="L-biblio"' not in now or unreached.get("biblio"):
+        fails.append(f"/ns/biblio is not on the map: {unreached.get('biblio')}")
     bad = broken(now, pages)
     if bad:
         fails.append(f"{len(bad)} links land nowhere: {bad[:12]}")
     # PLANTED: a box linking a term that does not exist
-    planted = now.replace("</main>", f'<a href="{SITE}/ns/claim#noSuchTerm">x</a><a href="#no-such-picture">y</a></main>')
+    planted = now.replace("</main>", f'<a href="{SITE}/ns/claim#noSuchTerm">x</a><a href="#no-such-picture">y</a>'
+                                     f'<a href="{SITE}/ns/biblio#noSuchWork">z</a></main>')
     caught = broken(planted, pages)
-    if not any("noSuchTerm" in b for b in caught) or not any("no-such-picture" in b for b in caught):
+    if not all(any(w in b for b in caught) for w in ("noSuchTerm", "no-such-picture", "noSuchWork")):
         fails.append("planted: a link to a missing term or picture was not caught")
     print(f"schema map: {len(set(re.findall(r'href=\"[^\"]+\"', now)))} distinct links; "
           f"{len(bad)} land nowhere; planted faults caught; {len(fails)} failures")

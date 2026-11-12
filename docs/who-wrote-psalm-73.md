@@ -17,6 +17,8 @@ Everything here is published: the vocabulary at [bibleontology.org/ns/biblio](ht
 
 ## The problem
 
+![The heading "A Psalm of Asaph" leaves three questions open: what "of" means, which Asaph, and which "Psalm 73". The tempting triple psalm73 composedBy asaph answers all three silently.](images/who-wrote-psalm-73-problem.png)
+
 Psalm 73 opens with a line most English Bibles print in small type: "A Psalm of Asaph." The rest of the graph is
 built from claims, each with its verses, its certainty and whose voice it is (the narrator's, a character's, or a
 later reader's). So the obvious move is a triple:
@@ -54,6 +56,8 @@ back and read LRMoo's scope notes for every term the pilot used, not just their 
 changed the model, which I'll come to.
 
 ## The model
+
+![The model: the Psalter includes Psalm 73; Psalm 73 is written in Hebrew and English; it was created, by whom not stated; the heading names Asaph (the text says so); Asaph wrote it (a reading, always disputed).](images/who-wrote-psalm-73-model.png)
 
 For each of the 150 psalms:
 

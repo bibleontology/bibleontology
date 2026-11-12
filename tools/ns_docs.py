@@ -153,6 +153,17 @@ def page(name, path, dest=None):
            + ' · <a href="/ns/shapes.txt">shapes</a></p>']
     if comment:
         out.append(f"<p>{escape(str(comment))}</p>")
+    # A PICTURE FIRST, where the vocabulary has one (/ns/biblio, 1.4.0, 2026-11-11): what a reader arriving from the
+    # posts should see before the terms; the whole layer is drawn at /ns/map#L-biblio
+    pic = ROOT / "ontology" / name / "model.svg"
+    if pic.exists():
+        svg_ = pic.read_text(encoding="utf-8")
+        # on a phone it scrolls sideways rather than shrink below reading size, as the map's pictures do
+        out.append('<figure style="margin:14px 0"><div style="overflow-x:auto"><div style="min-width:640px">'
+                   + svg_[svg_.index("<svg"):].strip() + "</div></div>"
+                   + '<figcaption class=meta>Psalm 73 as a work. LRMoo supplies the work (F1) and its texts (F2); who '
+                     'a heading names and who composed a psalm are claims. <a href="/ns/map#L-biblio">The whole '
+                     'vocabulary, drawn ›</a></figcaption></figure>')
     for c in policies:
         h, _, rest = c.partition(". ")
         out.append(f"<h2>{escape(h)}</h2><p>{escape(rest)}</p>")
