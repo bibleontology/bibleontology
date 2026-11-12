@@ -1467,7 +1467,7 @@ bos:Clause a owl:Class ;
     dcterms:created "2026-10-11"^^xsd:date ;
     dcterms:creator "Doug Egge" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-11-11"^^xsd:date ;
+    dcterms:modified "2026-11-12"^^xsd:date ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:title "Bible Ontology — structure" ;
     vann:preferredNamespacePrefix "bos" ;
@@ -1475,8 +1475,8 @@ bos:Clause a owl:Class ;
     rdfs:comment "How the text is built: clauses, what they assert and with what force, and how they group into turns, scenes and larger units. Shares ids with the meaning layer (https://bibleontology.org/ns/meaning) and never merges with it; the relations between records are at https://bibleontology.org/ns/relation. Where a relation joins one of several kinds, its domain or range here is the kind they all are, and the shapes at https://bibleontology.org/ns/shapes list which ones.",
         "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and nothing about the records of God, the Father, Jesus or the Holy Spirit is derived by inference: they change only by a recorded editorial decision, as the accounts give them. The policy forbids derivations, not descriptions. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred.",
         "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
-    owl:priorVersion <https://bibleontology.org/ns/structure/2026-11-01> ;
-    owl:versionIRI <https://bibleontology.org/ns/structure/2026-11-11> ;
-    owl:versionInfo "1.4.0" ;
+    owl:priorVersion <https://bibleontology.org/ns/structure/2026-11-11> ;
+    owl:versionIRI <https://bibleontology.org/ns/structure/2026-11-12> ;
+    owl:versionInfo "1.5.0" ;
     skos:scopeNote "Relations inside one clause. This vocabulary links clauses, and groups of clauses; it does not relate the parts of one clause to each other ('not by all the people, but by the witnesses', Acts 10:41; a reason given as a noun; 'like a dove'). Those belong to the word level: the prepositional relations, and apposition and vocatives (plan 2.14)." .
 

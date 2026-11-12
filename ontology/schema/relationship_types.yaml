@@ -238,6 +238,12 @@ categories:
   # (plan 2.19, lift 1, 2026-10-19): "God loved the world" (John 3:16). Each
   # row labelled by its own verb, so one category, not one per verb.
   statement:    { label: "What the text says", domain: person, slot: 23, color: "#4a6b5d", dark: "#7fa694" }
+  # Twenty-fourth: one verse to another (plan 8.7c, 2026-11-12). No record in
+  # ontology/relations uses these: they name the links the reader and the MCP
+  # already derive (the Berean editors' notes, the word match, the judged
+  # parallels and allusions), so an agent's hop names a term it can open.
+  # Its ends are verses, never cards, so no graph legend row shows for it.
+  verses:       { label: "Verse to verse", domain: verse, slot: 24, color: "#5a6270", dark: "#8a93a3" }
 
 types:
 
@@ -2957,6 +2963,83 @@ types:
       "Covenant Signs" is a core concept of the major theme Covenant; "the day
       of atonement" (an observance) of the major theme Sacrifice. The theme's
       own page lists its concepts with their passages.
+
+  # VERSE TO VERSE (plan 8.7c; Doug, 2026-11-12: "Six, as recommended").
+  # The MCP's verse hops had invented names (quotes, parallel_to, ...) that no
+  # vocabulary defined, and its "quotes or echoes" hop sent the word match --
+  # about 4 in 8 real at "likely" -- as a stated quotation. Split by who makes
+  # the link: the Berean editors (quotes, points_to, their parallels), a judged
+  # reading (says_the_same_as, alludes_to), or the word match (echoes).
+  # Ends are verses (biblio:Segment, the English segment's address). No record
+  # in ontology/relations uses these; the validator never sees them.
+  quotes:
+    src_type: [verse]
+    dst_type: [verse]
+    label: "quotes"
+    inverse: "is quoted in"
+    category: verses
+    weight: 2
+    group: "Quotes"
+    notes: >
+      The Berean editors' note that this verse quotes that one. Stated by the
+      editors; the words in common are on the verse page.
+  points_to:
+    src_type: [verse]
+    dst_type: [verse]
+    label: "points to"
+    inverse: "is pointed to by"
+    category: verses
+    weight: 1
+    group: "Points to"
+    notes: >
+      The Berean editors refer this verse, or the section it opens, to that
+      one: a note, or the list of passages under a section heading (which
+      for the gospels is the parallel accounts, and elsewhere is not:
+      Isaiah 53's lists 1 Peter 2:21). Stated by the editors; what the two
+      share is not said.
+  says_the_same_as:
+    # Chosen as "parallel account of" (Doug, 2026-11-12) and renamed the same
+    # day, before release, on its first run: the pairs it carries were judged
+    # to SAY THE SAME THING (tools/meaning/pair_judge.py), and they include
+    # Matt 1:23 / Isa 7:14 (a prophecy and its quotation) and Mark 1:2 / Matt
+    # 11:10 (one prophecy quoted twice), which are not one event told twice.
+    src_type: [verse]
+    dst_type: [verse]
+    label: "says the same as"
+    inverse: "says the same as"
+    symmetric: true
+    category: verses
+    weight: 2
+    group: "Says the same"
+    notes: >
+      A pair the alignment found and a model judged to say the same thing: a
+      parallel account, one promise said twice, or a prophecy and its
+      quotation. Always a reading. The editors' section lists are
+      points_to.
+  alludes_to:
+    src_type: [verse]
+    dst_type: [verse]
+    label: "alludes to"
+    inverse: "is alluded to in"
+    category: verses
+    weight: 1
+    group: "Alludes to"
+    notes: >
+      This verse takes up words or an image of that one without quoting it,
+      as judged by a reader of both. Always a reading.
+  echoes:
+    src_type: [verse]
+    dst_type: [verse]
+    label: "echoes"
+    inverse: "is echoed in"
+    category: verses
+    weight: 1
+    group: "Echoes"
+    notes: >
+      A later verse shares rare words with an earlier one, found by matching
+      the original languages, not by reading. Each carries its grade:
+      "strong" is about 5 in 8 real, "likely" about 4 in 8. Not a claim that
+      the later verse quotes or means the earlier.
 
 # Certainty levels a relation may carry.
 certainty:

@@ -28,6 +28,8 @@ from ns_common import header, shapes_head  # noqa: E402
 BASE = "https://bibleontology.org/ns/relation"
 BOR = Namespace(BASE + "#")
 BOM = "https://bibleontology.org/ns/meaning#"
+BIBLIO = Namespace("https://bibleontology.org/ns/biblio#")
+VERSE_CLASS = str(BIBLIO.Segment)
 # CATEGORIES THE YAML NAMES BUT DOES NOT LABEL (OWL evaluation Phase 0): the
 # published file showed the raw ids "language" and "opposition" beside
 # "Kinship"; and `specializes` (a pattern as a narrower form of another) had
@@ -118,6 +120,11 @@ def main():
         g.add((BOR[p], RDFS.label, Literal(lab)))
     # a record's kind -> its class in the meaning vocabulary (bom:fromEntityType)
     KIND_CLASS = kind_classes()
+    # A VERSE IS A SEGMENT (plan 8.7c, 2026-11-12): the verse-to-verse terms end
+    # at verses, which are no record's kind; /ns/biblio already publishes the
+    # class ("the verse in the site's reader is the English segment's address")
+    KIND_CLASS["verse"] = VERSE_CLASS
+    g.bind("biblio", BIBLIO)
     import collections as _co
     ranged = _co.Counter()
     for tid, t in (spec.get("types") or {}).items():
@@ -153,7 +160,8 @@ def main():
             # kinds stay listed, and the closed-world check enforces them
             classes = {KIND_CLASS.get(k) for k in kinds}
             if kinds and len(classes) == 1 and None not in classes:
-                g.add((p, owlp, URIRef(BOM + classes.pop())))
+                c = classes.pop()
+                g.add((p, owlp, URIRef(c if c.startswith("https://") else BOM + c)))
                 ranged[owlp] += 1
         if t.get("symmetric"):
             g.add((p, RDF.type, OWL.SymmetricProperty))

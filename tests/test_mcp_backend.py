@@ -121,7 +121,32 @@ for dfn in sorted(defs):
             check(B.shown(k), "8: %s's kind %s does not open" % (dfn, k))
         check(all(l["because"].get("ref") for l in r["structuredContent"]["links"] if l["rel"] != "more"),
               "8: %s has an instance with no verse" % dfn)
-check(fetch("relation:quotes").get("isError"), "8: an invented relation opened")
+# relation:quotes was the invented one until 1.5.0 published it (plan 8.7c); parallel_to stays invented
+check(fetch("relation:parallel_to").get("isError"), "8: an invented relation opened")
+# THE VERSE HOPS NAME PUBLISHED TERMS (plan 8.7c): each of the five opens with examples, and a word match is never
+# sent as stated -- the old "quotes or echoes" hop was the match, about 4 in 8 real, marked stated
+VERSE_TERMS = ("quotes", "points_to", "says_the_same_as", "alludes_to", "echoes")
+for k in VERSE_TERMS:
+    r = fetch("relation:" + k)
+    check(not r.get("isError") and r["structuredContent"]["links"], "8: relation:%s does not open with examples" % k)
+
+
+def verse_faults(item):
+    f = []
+    for l in item.get("relations") or []:
+        if l["id"].startswith("verse:") and l.get("type") not in VERSE_TERMS:
+            f.append("a verse hop with no published term: %r" % l["rel"])
+        if l.get("type") == "echoes" and (l.get("certainty") != "match" or "real" not in l["rel"]):
+            f.append("a word match without its grade or marked %s" % l.get("certainty"))
+    return f
+
+
+for vk in ("Matt.4.4", "Isa.53.7", "Deut.8.3"):
+    check(not verse_faults(B._verse(vk)), "8: %s: %s" % (vk, verse_faults(B._verse(vk))))
+bad = B._verse("Matt.4.4")
+bad["relations"] = [dict(l, certainty="stated") if l.get("type") == "echoes" else l for l in bad["relations"]]
+planted_match = bool(verse_faults(bad))
+check(planted_match, "planted: a word match marked stated not caught")
 check(not fetch("kind:person").get("isError") and not fetch("relation:re_enacts").get("isError"), "8: kind:person or relation:re_enacts")
 print("schema items checked:", len(defs))
 
@@ -199,6 +224,6 @@ srv.shutdown()
 
 for f in fails:
     print("FAIL", f)
-print("mcp over the graph: 9 groups; planted faults caught: %d of 2; %d failures"
-      % (int(planted_theme) + int(planted_verse), len(fails)))
-sys.exit(1 if fails or not (planted_theme and planted_verse) else 0)
+print("mcp over the graph: 9 groups; planted faults caught: %d of 3; %d failures"
+      % (int(planted_theme) + int(planted_verse) + int(planted_match), len(fails)))
+sys.exit(1 if fails or not (planted_theme and planted_verse and planted_match) else 0)

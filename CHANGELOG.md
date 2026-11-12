@@ -6,6 +6,19 @@ Two things carry versions here:
 - **The graph's exports** in `out/export/`, which carry a date-shaped version of their own (`ontology/ns-version.json`,
   `data`; `out/export/void.ttl`).
 
+## Vocabularies 1.5.0: 2026-11-12
+
+**Five verse-to-verse relations in `/ns/relation`,** each from one verse to another (`biblio:Segment`), so every link
+the MCP server makes between verses names a term an agent can open. They are split by who makes the link:
+- **The Berean editors:** `quotes` (inverse "is quoted in") and `points_to` ("is pointed to by"). `points_to` covers
+  their notes and the list of passages under a section heading.
+- **A reading:** `says_the_same_as` (symmetric) and `alludes_to` ("is alluded to in").
+- **The word match:** `echoes` ("is echoed in"), which carries its grade.
+
+None removed or deprecated. **Fixed with it:** the MCP server sent the word match as a stated quotation. It is now
+`echoes`, with the certainty "match" and its grade (about 5 in 8 real at "strong", 4 in 8 at "likely"). The
+allusions it had never sent now go out as `alludes_to`.
+
 ## Vocabularies 1.4.0: 2026-11-11
 
 **`/ns/biblio`, the texts vocabulary.** 19 terms: LRMoo 1.1.1's Work, Expression and Manifestation, with only what

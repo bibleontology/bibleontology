@@ -8,7 +8,7 @@ THE HOP RULES (Doug, 2026-11-03: "build the adapter with the hop rules as discus
   - a hop names a relation and hands over a verse that makes it; a relation with no verse is not a hop
   - the card's relation groups, in the order the card shows them; kin, events and the event's cast among them
   - quotations and echoes are hops; readings are marked "reading" (the story echoes, anything conjectured, a judged
-    parallel no editor made)
+    parallel no editor made); a word match is marked "match" and carries its grade (plan 8.7c)
   - the original-language words: two at most
   - themes go in the body, never as hops; mined patterns ("Role pattern") are left out: patterns, not instances
   - divine persons exactly as the site shows them: nothing here adds, merges or relabels a relation
@@ -346,10 +346,57 @@ class Backend(object):
                 "verses": verses, "relations": rels, "moves": moves, "shown": True}
 
     # --------------------------------------------------------------------- verses
-    ECHO_BUCKETS = (("earlier", "quotes or echoes", "echoes_earlier", "stated", TIER_QUOTE),
-                    ("editors", "the Berean editors' cross-reference", "cross_reference", "stated", TIER_QUOTE),
-                    ("aligned", "a parallel account", "parallel_to", "reading", TIER_READING),
-                    ("allusions", "alludes to", "alludes_to", "reading", TIER_READING))
+    # THE VERSE-TO-VERSE TERMS (plan 8.7c, vocabulary 1.5.0; Doug, 2026-11-12: "Six, as recommended"). Each hop
+    # names a published type, split by who makes the link. Before, "earlier" went out as "quotes or echoes", stated:
+    # it is the word match, about 4 in 8 real at "likely", so it is now `echoes` with its grade and certainty "match".
+    # The editors' notes were one "cross-reference" for five kinds; each is now its own term, and its inverse where
+    # the note runs the other way. Their section headings' lists ("parallel" in the data) point, from the section:
+    # the first run called them parallel accounts, which made Isa 53:7 a parallel account of 1 Pet 2:21. `allusions` is a dict of readings by kind, which the old loop iterated as keys and
+    # so never sent one; the told-again stories are left out (their term joins events, not verses).
+    EDITOR_KINDS = {"quotes": ("quotes", "quotes"), "quoted by": ("quotes", "is quoted in"),
+                    "points to": ("points_to", "points to"), "pointed to by": ("points_to", "is pointed to by"),
+                    # the section heading's list of passages (out/xrefs.jsonl.gz, keyed to the section start): not a
+                    # claim that the two tell one event -- Isa 53:7's lists 1 Pet 2:21 -- so it points, from the section
+                    "parallel": ("points_to", "its section points to")}
+    ALLUSION_KINDS = ("words", "images", "letters", "revelation", "history")
+
+    def _verse_hops(self, ec, here_ref):
+        """-> [(item, type, label, certainty, tier)] the verse's links to other verses, each under its term."""
+        out = []
+        for it in ec.get("editors") or []:
+            k = self.EDITOR_KINDS.get(it.get("kind"))
+            if k:
+                how = "in the Berean editors' section heading" if it.get("kind") == "parallel" else "as the Berean editors note"
+                out.append((it, k[0], "%s, %s" % (k[1], how), "stated", TIER_QUOTE))
+        for bucket, label in (("earlier", "echoes"), ("later", "is echoed in")):
+            for it in ec.get(bucket) or []:
+                grade = "%s: %s" % (it.get("band") or "", it.get("band_note") or "")
+                out.append((it, "echoes", "%s (a word match, %s)" % (label, grade), "match", TIER_READING))
+        for it in ec.get("aligned") or []:
+            if it.get("judged"):                             # an unjudged alignment is a similarity score
+                # the pair judgment asks whether two verses SAY THE SAME THING (tools/meaning/pair_judge.py):
+                # a parallel account, one promise said twice, or a prophecy and its quotation, so not "parallel"
+                out.append((it, "says_the_same_as", "says the same as, as DeepSeek Flash judged the pair",
+                            "reading", TIER_READING))
+        al = ec.get("allusions") or {}
+        canon = getattr(self.S, "_MCANON", {})
+
+        def pos(ref):
+            p = str(ref or "").split(".")
+            try:
+                return (canon.get(p[0], 99), int(p[1]), int(p[2]))
+            except (IndexError, ValueError):
+                return None
+        mine = pos(here_ref)
+        for kind in self.ALLUSION_KINDS:
+            for it in (al.get(kind) or []) if isinstance(al, dict) else []:
+                theirs = pos(it.get("ref"))
+                if not isinstance(it, dict) or not mine or not theirs or theirs == mine:
+                    continue
+                label = "alludes to" if theirs < mine else "is alluded to in"
+                out.append((it, "alludes_to", "%s, as %s judged" % (label, it.get("reader") or "a reader"),
+                            "reading", TIER_READING))
+        return out
 
     def _verse(self, key):
         m = re.match(r"^(\w+)\.(\d+)\.(\d+)$", key)
@@ -365,20 +412,17 @@ class Backend(object):
             ec = self.S.api_echoes(self.d, {"ref": ["%s %d:%d" % (b, c, v)]})
         except Exception:                                    # noqa: BLE001
             ec = {}
-        for bucket, label, rtype, certainty, tier in self.ECHO_BUCKETS:
-            for it in ec.get(bucket) or []:
-                n += 1
-                if not isinstance(it, dict):
-                    continue
-                if bucket == "aligned" and not it.get("judged"):
-                    continue                                 # an unjudged alignment is a similarity score, not a parallel
-                t = self._from_macula(it.get("eref") or it.get("ref") or "")
-                if not t or t == (b, c, v):
-                    continue
-                tid = "%s.%d.%d" % t
-                rels.append({"rel": label, "type": self._vt(rtype), "id": "verse:" + tid, "title": "%s %d:%d" % t,
-                             "url": _url("/p/" + tid), "because": here, "certainty": certainty, "voice": None,
-                             "strength": tier * 100000 - n})
+        seen = set()
+        for it, rtype, label, certainty, tier in self._verse_hops(ec, ec.get("ref")):
+            n += 1
+            t = self._from_macula(it.get("eref") or it.get("ref") or "")
+            if not t or t == (b, c, v) or (t, rtype) in seen:
+                continue
+            seen.add((t, rtype))
+            tid = "%s.%d.%d" % t
+            rels.append({"rel": label, "type": self._vt(rtype), "id": "verse:" + tid, "title": "%s %d:%d" % t,
+                         "url": _url("/p/" + tid), "because": here, "certainty": certainty, "voice": None,
+                         "strength": tier * 100000 - n})
         _diversify(rels)
         moves = {}
         for rel, cand in (("prev", (b, c, v - 1)), ("next", (b, c, v + 1)), ("next", (b, c + 1, 1))):
@@ -457,6 +501,8 @@ class Backend(object):
         if not t:
             return None
         dfn = (v["defs"].get(key) or {}).get("definition") or ""
+        if "verse" in (t.get("src_type") or []):
+            return self._verse_relation(key, t, dfn)
         rows = self._instances(key)
         rels, n = [], 0
         for src, r in self._spread([x for x in rows if x[0] in self.d["ents"]], 12):
@@ -478,6 +524,30 @@ class Backend(object):
                   "instances": len(rows), "vocabulary_version": self.data_version}
         text = "%s (%s). %s\nInverse: %s. %d instances in the graph; examples follow as links, each with its verse." % (
             t.get("label") or key, key, dfn, t.get("inverse") or "none", len(rows))
+        return {"id": "relation:" + key, "title": t.get("label") or key, "url": SITE + "/ns/relation/" + key,
+                "text": text, "verses": [], "relations": rels, "moves": {}, "shown": True, "schema": schema}
+
+    # A verse-to-verse term's examples come from verses, since no record carries it: these verses are known to hold
+    # quotations, parallels, echoes and allusions, spread across both testaments (plan 8.7c)
+    VERSE_EXAMPLES = ("Matt.4.4", "Matt.14.17", "Isa.53.7", "Rev.5.6", "Rom.3.10", "Heb.1.5", "Acts.2.25", "Matt.1.23",
+                      "Mark.1.2", "John.19.36", "Matt.21.42", "1Pet.2.6", "Ps.22.1", "Luke.4.18", "Gal.3.16",
+                      "Rom.9.33", "Mark.6.38", "Ps.2.7", "Deut.8.3", "Isa.40.3")
+
+    def _verse_relation(self, key, t, dfn):
+        rels = []
+        for vk in self.VERSE_EXAMPLES:
+            got = self._verse(vk) or {}
+            for r in got.get("relations") or []:
+                if r.get("type") == key and len(rels) < 12:
+                    rels.append(dict(r, rel="%s %s %s" % (got.get("title"), r.get("rel"), r.get("title")),
+                                     strength=1000 - len(rels)))
+        schema = {"iri": SITE + "/ns/relation/" + key, "label": t.get("label"), "inverse": t.get("inverse"),
+                  "definition": dfn, "category": t.get("category"), "group": t.get("group"),
+                  "domain": ["kind:verse"], "range": ["kind:verse"], "class": "https://bibleontology.org/ns/biblio#Segment",
+                  "instances": None, "vocabulary_version": self.data_version}
+        text = ("%s (%s). %s\nInverse: %s. Joins one verse to another (a biblio:Segment); derived for each verse, not "
+                "counted as records. Examples follow as links, each from its verse." % (
+                    t.get("label") or key, key, dfn, t.get("inverse") or "none"))
         return {"id": "relation:" + key, "title": t.get("label") or key, "url": SITE + "/ns/relation/" + key,
                 "text": text, "verses": [], "relations": rels, "moves": {}, "shown": True, "schema": schema}
 

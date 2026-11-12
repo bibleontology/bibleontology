@@ -24,7 +24,9 @@ INSTRUCTIONS = (
     "you have no query yet; otherwise use search. Each answer ends with links "
     "and moves: follow them with fetch to walk the graph. A link's iri names its "
     "relation in our published vocabulary, and its certainty says how firmly the "
-    "verse supports it. Check certainty before you rely on a reading. Cite the "
+    "verse supports it: stated, implied, a reading (someone's judgment), or a "
+    "match (found by shared words, with its grade). Check certainty before you "
+    "rely on a reading or a match. Cite the "
     "url and the verses of whatever you use."
 )
 

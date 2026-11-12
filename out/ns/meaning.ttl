@@ -855,7 +855,7 @@ bom:wordnetSynset a rdf:Property,
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     rdfs:comment "The word layer (bow:): occurrences, lexemes and senses. Defined in, and published with, the meaning ontology." ;
     rdfs:seeAlso <https://bibleontology.org/ns/meaning> ;
-    owl:versionInfo "1.4.0" .
+    owl:versionInfo "1.5.0" .
 
 bow:hasSense a rdf:Property,
         owl:ObjectProperty ;
@@ -898,7 +898,7 @@ bow:septuagintRendering a rdf:Property,
     dcterms:created "2026-09-28"^^xsd:date ;
     dcterms:creator "Doug Egge" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-11-11"^^xsd:date ;
+    dcterms:modified "2026-11-12"^^xsd:date ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:title "Bible Ontology — meaning" ;
     vann:preferredNamespacePrefix "bom" ;
@@ -909,9 +909,9 @@ bow:septuagintRendering a rdf:Property,
     owl:imports <http://www.w3.org/2004/02/skos/core>,
         <http://www.w3.org/ns/lemon/ontolex>,
         <http://www.w3.org/ns/prov-o#> ;
-    owl:priorVersion <https://bibleontology.org/ns/meaning/2026-11-01> ;
-    owl:versionIRI <https://bibleontology.org/ns/meaning/2026-11-11> ;
-    owl:versionInfo "1.4.0" .
+    owl:priorVersion <https://bibleontology.org/ns/meaning/2026-11-11> ;
+    owl:versionIRI <https://bibleontology.org/ns/meaning/2026-11-12> ;
+    owl:versionInfo "1.5.0" .
 
 bom:salience a dqv:Dimension ;
     rdfs:label "salience" ;
