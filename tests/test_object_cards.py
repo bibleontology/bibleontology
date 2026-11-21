@@ -189,7 +189,7 @@ for t, ids in titles.items():
         check(False, f"two cards share the title {t!r}: {sorted(ids)}")
 
 # ---- the divine and the held ------------------------------------------------------------------------------------------
-for i in ("god", "the_father", "holy_ghost", "jesus"):
+for i in ("god", "the_father", "holy_ghost", "jesus", "spirit_of_the_lord_in_the_hebrew_bible"):
     check(i not in cards, f"{i} carries an object face")
 divine_titles = [i for i, e in d["ents"].items() if e.get("type") == "title" and any(
     r["other"] in DIVINE and r["type"] in ("titled", "self_designated_as") for r in d["rels"].get(i, []))]

@@ -72,10 +72,24 @@ for iid in CARDS:
     check(all(r.get("because") for r in it["relations"]), "1: %s keeps a relation with no verse" % iid)
 
 # 3: held questions
+# From 2026-11-12 an error echoes its id and searches the id's words (errors that name the next call), so two
+# different ids answer differently by their words alone. The test is sharper for it: a held question and an id that
+# never existed WITH THE SAME WORDS (a theme of that name) must answer identically, apart from the id itself, so
+# nothing in the answer depends on the question being held; and no suggestion is anything the site holds back.
+compared = 0
 for q in HELD:
     res = fetch("question:" + q)
-    check(res.get("isError") and res["content"][0]["text"] == fetch("question:no-such-thing")["content"][0]["text"],
-          "3: held question %s answered unlike a missing one" % q)
+    twin_id = "theme:" + q.replace("-", "_")
+    twin = fetch(twin_id)
+    if not twin.get("isError"):
+        continue                                     # a real theme of that name: no twin to compare with
+    compared += 1
+    same = json.dumps(res).replace("question:" + q, "<id>") == json.dumps(twin).replace(twin_id, "<id>")
+    check(res.get("isError") and same, "3: held question %s answered unlike a missing one with its words" % q)
+    for s_ in (res.get("structuredContent") or {}).get("suggestions") or []:
+        check(B.shown(s_["id"]), "3: held question %s suggests %s, which the site holds back" % (q, s_["id"]))
+check(compared >= len(HELD) // 2, "3: only %d of %d held questions had a twin to compare: the check proves nothing"
+      % (compared, len(HELD)))
 check(not fetch("question:baptism").get("isError"), "3: a shown question did not open")
 
 # 4: the God card's hops are its own relations, as the site shows them
@@ -90,7 +104,72 @@ sc = fetch("verse:Matt.4.4")["structuredContent"]
 got = {(l["id"], l["certainty"]) for l in sc["links"] if l["rel"] != "more"}
 check(("verse:Deut.8.3", "stated") in got, "5: Matt 4:4 does not hop to Deut 8:3: %r" % got)
 check(("verse:Luke.4.4", "reading") in got, "5: Matt 4:4's parallel in Luke is not a marked reading: %r" % got)
-check([m["rel"] for m in sc["moves"]] == ["prev", "next"], "5: Matt 4:4's moves %r" % sc["moves"])
+# from 2026-11-15 (P-2026-11-12-3) a verse moves up to the passage or event its words sit in, and to its speaker:
+# Jesus answers the devil, told in the event of the temptation; never into a story template's stage
+mv = {m["rel"]: m for m in sc["moves"]}
+# prev and next are there; a speaker move may follow them (the MCP's own order), and does from 2026-11-16, when the
+# speaker pass gave Matt 4:4's run its speaker
+check({"prev", "next"} <= {m["rel"] for m in sc["moves"]}, "5: Matt 4:4's moves %r" % sc["moves"])
+check(mv.get("up", {}).get("id") == "card:event_jesus_temptation", "5: Matt 4:4 does not move up to the temptation: %r"
+      % mv.get("up"))
+check(not any("stage_" in m["id"] or "rcell_" in m["id"] for m in sc["moves"]), "5: a move into a pattern: %r" % sc["moves"])
+
+# 5b: a verse names its speaker (P-2026-11-12-3; the probe of 2026-11-12: 0 of 15), and a speech its speaker
+sc = fetch("verse:Job.4.7")["structuredContent"]
+check("Spoken by Eliphaz" in sc.get("text", ""), "5b: Job 4:7 does not name Eliphaz: %r" % sc.get("text", "")[-200:])
+check(any(m["rel"] == "speaker" and m["id"] == "card:eliphaz_the_temanite" for m in sc["moves"]),
+      "5b: Job 4:7 has no speaker move: %r" % sc["moves"])
+check(any(l.get("voice") == "the words of Eliphaz" for l in sc["links"]), "5b: Job 4:7's links carry no voice")
+sc = fetch("card:job_4_2_21")["structuredContent"]
+check(any(m["rel"] == "speaker" and m["id"] == "card:eliphaz_the_temanite" for m in sc["moves"]),
+      "5b: the first speech of Eliphaz does not lead to Eliphaz: %r" % sc["moves"])
+sc = fetch("verse:Job.42.7")["structuredContent"]
+check("Spoken by" in sc.get("text", "") or "Speaking in this verse" in sc.get("text", ""), "5b: Job 42:7 names no speaker")
+# a speech whose speaker is not recorded says so, never reads as the narrator's (Doug, 2026-11-15: no overclaiming)
+sc = fetch("verse:Matt.5.44")["structuredContent"]
+# since the divine sheet (2026-11-16) it is named as a reading, marked as one: either is no narrator
+check("the graph does not record who speaks them" in sc.get("text", "") or "as a reading" in sc.get("text", ""),
+      "5b: Matt 5:44 reads as the narrator's: %r" % sc.get("text", "")[-200:])
+# a sign is told by the hand, not the mouth: never "Spoken by Aaron" at Exod 7:19, the LORD's words to Moses
+check("Spoken by Aaron" not in fetch("verse:Exod.7.19")["structuredContent"].get("text", ""),
+      "5b: Exod 7:19 credits Aaron with the LORD's words")
+# never a speaker the annotation carried in from a quotation's head: Paul speaks Acts 26:8, not Agrippa
+sc = fetch("verse:Acts.26.8")["structuredContent"]
+said_ = " ".join(s for s in sc.get("text", "").split("\n")[-1].split(". ") if s.startswith(("Spoken by", "Speaking in")))
+check("Agrippa" not in said_, "5b: Acts 26:8 credits Agrippa: %r" % said_)
+
+# 5d: the faults Doug's self-test in Claude showed (2026-11-15). A quotation is a span at both ends (Acts 8:32-33 quotes
+# Isa 53:7-8, not "Acts 8:33 quotes 53:7"); a quotation into a chapter numbered differently is not moved by one (Matt
+# 4:15-16 quotes Isa 9:1-2, never 9:3); a word states its whole count; a saying rests on its own verse (Job 15:25, not
+# the speech's introduction at 15:1)
+qt = lambda iid: [l["title"] for l in fetch(iid)["structuredContent"]["links"]  # noqa: E731
+                  if (l.get("iri") or "").endswith("/quotes")]
+check("Isa 53:7–8" in qt("verse:Acts.8.32"), "5d: Acts 8:32 does not quote Isa 53:7-8: %r" % qt("verse:Acts.8.32"))
+check("Isa 9:3" not in qt("verse:Matt.4.15") and "Isa 9:1–2" in qt("verse:Matt.4.15"),
+      "5d: Matt 4:15's quotation: %r" % qt("verse:Matt.4.15"))
+check("Used in 106 verses" in fetch("word:G26")["structuredContent"].get("text", ""), "5d: G26 states no whole count")
+el = B.item("card:eliphaz_the_temanite")
+check(not [r for r in el["relations"] if r["rel"] == "told" and r["because"]["ref"] == "Job 15:1"],
+      "5d: a saying of Eliphaz rests on Job 15:1")
+
+# 5c: search passes word and question hits through (the probe: "faith without works" gave 0)
+got = [h["id"] for h in B.search("faith without works", 5)]
+check("question:faith-and-works" in got and "word:G4102" in got, "5c: faith without works: %r" % got)
+# a transliteration needs the full STEP lexicon, which the public copy lacks until `tools/fetch_lexicon.py` adds it
+# (the export gate, 2026-11-21: "agape" found nothing there, as the runbook says of the lexicon's other tests)
+if (ROOT / "docs" / "review").exists():    # not the public copy (a worktree finds the lexicon in the main checkout)
+    check([h["id"] for h in B.search("agape", 5)] == ["word:G26"], "5c: agape: %r" % B.search("agape", 5))
+else:
+    print("5c: agape skipped: no full STEP lexicon (python tools/fetch_lexicon.py)")
+# 5c': no card for the phrase, so the cards for its words (P-2026-11-16-3 (1): "temple end times" gave only Greek word
+# entries, "temple of God church body" nothing at all); a name searched first
+got = [h["id"] for h in B.search("temple end times", 10)]
+check("card:temple" in got and "theme:temple_presence" in got, "5c': temple end times: %r" % got)
+got = [h["id"] for h in B.search("temple of God church body", 10)]
+check("card:temple" in got and "theme:church" in got, "5c': temple of God church body: %r" % got)
+got = [h["id"] for h in B.search("who killed Goliath", 10)]
+check("card:goliath" in got and got.index("card:goliath") < min([got.index(i) for i in ("card:die", "card:killing") if i in got]
+                                                               or [99]), "5c': who killed Goliath: %r" % got)
 
 # 6: the temptation
 it = B.item("card:event_jesus_temptation")

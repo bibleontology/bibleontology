@@ -205,7 +205,7 @@ def main():
                             "desc": (f"A sub-theme of the major theme {title}, named in the texts' "
                                      f"own words and described by the passages it cites."
                                      if redone else
-                                     f"A core concept of the major theme {title}, a reading "
+                                     f"In the major-theme map, under the theme {title}, a reading "
                                      f"described by the passages it cites."),
                             "gender": "unknown", "id": cn, "name": c["name"][:100],
                             "refs": list(dict.fromkeys(refs)), "source": csource,
@@ -216,7 +216,7 @@ def main():
             seen.setdefault(norm(c["name"]), cn)
             if cn != tnode:
                 rels.append({"certainty": "implied", "dst": tnode,
-                             "note": f"a core concept of the major theme {title} ({mapname})",
+                             "note": f"placed in the major-theme map under the theme {title} ({mapname})",
                              "refs": list(dict.fromkeys(refs))[:3], "source": csource,
                              "src": cn, "type": "in_theme"})
             # an ASPECT of an existing node: "X as Y", X the node

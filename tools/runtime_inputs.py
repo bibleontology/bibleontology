@@ -14,6 +14,7 @@ first person to clone it.
 
     python tools/runtime_inputs.py            (a few minutes: the server loads)
 """
+import json
 import os
 import sys
 import threading
@@ -69,6 +70,20 @@ def main():
     else:
         sys.exit("the server never answered /healthz")
     bad = 0
+    # THE MCP READS LAZILY TOO (2026-11-15): a verse's answer opens out/speech-depth.jsonl.gz the first time a verse
+    # is asked for, which no GET route does. Without this call the file fell off the list, and a clone's MCP would
+    # read a quoted speech with no speaker as the narrator's
+    for args in ({"name": "get_verse", "arguments": {"ref": "Matt 5:44"}},
+                 {"name": "fetch", "arguments": {"id": "card:job_4_2_21"}},
+                 {"name": "search", "arguments": {"query": "faith without works"}}):
+        body = json.dumps({"jsonrpc": "2.0", "id": 1, "method": "tools/call", "params": args}).encode()
+        req = urllib.request.Request(f"http://127.0.0.1:{PORT}/mcp", data=body, method="POST",
+                                     headers={"Content-Type": "application/json",
+                                              "Accept": "application/json, text/event-stream"})
+        try:
+            urllib.request.urlopen(req, timeout=300).read()
+        except OSError as ex:
+            print(f"  /mcp {args['name']}: {ex}")
     for r in routes(server):
         try:
             urllib.request.urlopen(f"http://127.0.0.1:{PORT}{r}", timeout=120).read()

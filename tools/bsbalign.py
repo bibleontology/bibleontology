@@ -64,6 +64,7 @@ VERSE = re.compile(r"\\v (\d+)\s")
 CHAP = re.compile(r"\\c (\d+)")
 IDLINE = re.compile(r"\\id\s+(\w+)")
 MARKUP = re.compile(r"\\[a-z0-9]+\*?\s?")
+HEADING = re.compile(r"^\\(?:s\d?|r|ms\d?|mr|sr)(?:\s.*)?$", re.M)
 
 USFM_TO_REF = {
     "GEN": "Gen", "EXO": "Exo", "LEV": "Lev", "NUM": "Num", "DEU": "Deu",
@@ -110,6 +111,11 @@ def verses():
                 continue
             ref = f"{bk}.{chap}.{int(vm.group(1))}"
             body = chunk[vm.end():]
+            # THE EDITORS' HEADINGS ARE NOT THE VERSE (UC-10, 2026-11-14). A section heading (\s1), its
+            # cross-references (\r), a major-section line (\ms1, \mr) or a sub-heading (\sr) sits between two
+            # verses, so it fell in the chunk of the verse BEFORE it and was kept as that verse's text: Matt 5:32
+            # ended "... commits adultery. Oaths and Vows (Numbers 30:1-16)", in 826 verses with a cross-reference.
+            body = HEADING.sub("", body)
             # OFFSETS ARE RECORDED AGAINST THE FINISHED TEXT. Collapsing
             # whitespace at the end -- after the spans were measured -- shifted
             # every one of them, so Numbers 24:4 reported `es a` and `sion f`

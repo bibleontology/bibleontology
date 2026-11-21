@@ -29,7 +29,15 @@ from .paths import BIBLE, BOOK_TEXT, RAW, VERSES_JSONL
 # The source uses typographic punctuation. The en dash stands in for the maqqef
 # inside compound proper names ("Bath-sheba", "Beth-el"); folding these to ASCII
 # keeps name matching simple without changing any word.
-_PUNCT = str.maketrans({"’": "'", "–": "-", "—": "-"})
+#
+# The em dash is NOT folded, except in the KJV. The BSB, WEB, ASV and YLT use it
+# as the dash between clauses ("His tabernacle—those who dwell in heaven"), and
+# folding it to a hyphen made Rev 13:6 read "tabernacle-those" (U-18, 2026-11-14:
+# 1,310 BSB verses, 40 ASV, 291 WEB, 5,456 YLT). The KJV file has a single em
+# dash, Exod 32:32, and it is a corrupted character, so the KJV keeps the fold
+# and its stored text does not change.
+_PUNCT = str.maketrans({"’": "'", "–": "-"})
+_PUNCT_KJV = str.maketrans({"’": "'", "–": "-", "—": "-"})
 
 
 def build(translation: str, out_path, write_text_files: bool) -> int:
@@ -40,6 +48,7 @@ def build(translation: str, out_path, write_text_files: bool) -> int:
 
     data = json.loads(src.read_text(encoding="utf-8"))
     total = 0
+    punct = _PUNCT_KJV if translation == "KJV" else _PUNCT
     with out_path.open("w", encoding="utf-8", newline="\n") as out:
         out.write(json.dumps({"translation": translation}) + "\n")
         for book in data["books"]:
@@ -52,7 +61,7 @@ def build(translation: str, out_path, write_text_files: bool) -> int:
                 c = int(chapter["chapter"])
                 for verse in chapter["verses"]:
                     v = int(verse["verse"])
-                    text = " ".join(verse["text"].translate(_PUNCT).split())
+                    text = " ".join(verse["text"].translate(punct).split())
                     out.write(
                         json.dumps({"b": bid, "c": c, "v": v, "t": text}, ensure_ascii=False)
                         + "\n"

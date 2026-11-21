@@ -61,6 +61,18 @@
    "definition": "A person, being or group gives a parable, dream or vision, the one the figure belongs to; it is not the one who wrote it down.",
    "by": "drafted by Claude Sonnet, approved by Doug Egge"
   },
+  "asked": {
+   "definition": "A person or group puts a question to another, where the verse says they asked; a question is not an entreaty, which is pleading.",
+   "by": "drafted by Claude, approved by Doug Egge"
+  },
+  "revealed_to": {
+   "definition": "A person, being or group makes something known to a person or group, where the text says it was revealed to them; the one who reveals is the source.",
+   "by": "drafted by Claude, approved by Doug Egge"
+  },
+  "removed": {
+   "definition": "A person, being or group moves a thing out of its place, where the verse says so; the one who moves it is the source.",
+   "by": "drafted by Claude, approved by Doug Egge"
+  },
   "explained": {
    "definition": "A person, being or group gives the interpretation of a parable, dream or vision; it is kept apart from telling because the two are often different people.",
    "by": "drafted by Claude Sonnet, approved by Doug Egge"
@@ -186,8 +198,8 @@
    "by": "drafted by Claude Sonnet, approved by Doug Egge"
   },
   "possibly_same_as": {
-   "definition": "Two person records that the text never joins may, in a reader's view, be one person; this is not an identity, each record keeps its own verses, and the evidence is given on both sides.",
-   "by": "drafted by Claude Sonnet, approved by Doug Egge"
+   "definition": "Two records of persons, human or other personal beings, that the text never joins may, in a reader's view, be one; this is not an identity, each record keeps its own verses, and the evidence is given on both sides.",
+   "by": "drafted by Claude Sonnet, approved by Doug Egge; widened to beings at his request, 2026-11-15"
   },
   "occasion_of": {
    "definition": "An event is an occasion of a significant number, being a time the text counts as that span; the edge is cited to the verse that counts it and claims no meaning for the number.",
@@ -592,6 +604,26 @@
   "says_the_same_as": {
    "definition": "The two verses say the same thing, as a model (DeepSeek Flash) judged the pair after the alignment found it: a parallel account (Matthew 4:4 and Luke 4:4, the first temptation's answer), one promise said twice (John 3:16 and 3:36), or a prophecy and its quotation (Isaiah 7:14 and Matthew 1:23). Always a reading; it does not say which of these the pair is. Reads the same from either side.",
    "by": "drafted by Claude Opus, 2026-11-12, for the term set Doug chose (plan 8.7c); approved by Doug Egge on 2026-11-12 ('Approved')"
+  },
+  "camped_at": {
+   "definition": "A person or group stopped and camped at a place on the way, where the verse says they camped there: a stay on a journey, not a settled home.",
+   "by": "drafted by Claude Opus, 2026-11-18; the types approved by Doug Egge the same day (P-2026-11-18-5)"
+  },
+  "set_on": {
+   "definition": "One object is placed on or in another, where the verse says it is set there: the bread set on the table; placement, not what a thing is made of.",
+   "by": "drafted by Claude Opus, 2026-11-18; the types approved by Doug Egge the same day (P-2026-11-18-5)"
+  },
+  "happens_to": {
+   "definition": "An event happens to the person, group or being the verse names as undergoing it: who dies, is born, is called or is healed; not everyone present.",
+   "by": "drafted by Claude Opus, 2026-11-18; the types approved by Doug Egge the same day (P-2026-11-18-5)"
+  },
+  "acted_in": {
+   "definition": "A person, group or being does something in an event, where a verse of the event's telling names them as the doer; undergoing it is happens_to.",
+   "by": "drafted by Claude Opus, 2026-11-19; the types approved by Doug Egge the same day (P-2026-11-19-3)"
+  },
+  "took_place_at": {
+   "definition": "An event takes place at a place, where a verse of its telling says it happened there; a place merely mentioned in the telling is not enough.",
+   "by": "drafted by Claude Opus, 2026-11-19; the types approved by Doug Egge the same day (P-2026-11-19-3)"
   }
  }
 }

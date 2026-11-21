@@ -1,7 +1,7 @@
 {"certainty": "disputed", "dst": "mosera", "note": "Numbers places Aaron's death and burial at Mount Hor (Num 20:22-29; 33:38-39); Deuteronomy names Moserah instead. Both traditions are recorded since the text disagrees with itself.", "refs": ["Deut 10:6"], "source": "places-pentateuch", "src": "aaron", "type": "buried_at"}
 {"certainty": "explicit", "dst": "mount_hor", "refs": ["Num 20:27-28", "Num 33:38-39"], "source": "places-pentateuch", "src": "aaron", "type": "died_at"}
 {"certainty": "explicit", "dst": "machpelah", "refs": ["Gen 25:9-10"], "source": "places-pentateuch", "src": "abraham", "type": "buried_at"}
-{"certainty": "explicit", "dst": "haran_city", "note": "Abram is named traveling from Haran; the family's arrival there is narrated at Gen 11:31.", "refs": ["Gen 12:4"], "source": "places-pentateuch", "src": "abraham", "type": "traveled_to"}
+{"certainty": "explicit", "dst": "haran_city", "note": "Abram is named traveling from Haran; the family's arrival there is narrated at Gen 11:31.", "refs": ["Gen 12:4"], "source": "places-pentateuch", "src": "abraham", "type": "traveled_to", "held": "the passage does not say it: four reads agree (the Mac twice, DeepSeek twice; cast check, 2026-11-13)"}
 {"certainty": "explicit", "dst": "pethor", "refs": ["Num 22:5"], "source": "places-pentateuch", "src": "balaam", "type": "dwelt_at"}
 {"certainty": "explicit", "dst": "moab_region", "refs": ["Num 22:21", "Num 22:36"], "source": "places-pentateuch", "src": "balaam", "type": "traveled_to"}
 {"certainty": "explicit", "dst": "moab_region", "refs": ["Num 22:4"], "source": "places-pentateuch", "src": "balak", "type": "ruled_from"}

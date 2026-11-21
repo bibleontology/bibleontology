@@ -1,0 +1,1436 @@
+# Bible Ontology -- SHACL shapes, version 1.6.0 (2026-11-19).
+# Closed-world checks for the graph: what the vocabularies at /ns/meaning, /ns/structure
+# and /ns/relation describe, checked here rather than inferred. Run with inference off.
+# (c) 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org).
+# Licence: https://creativecommons.org/licenses/by/4.0/
+@prefix biblio: <https://bibleontology.org/ns/biblio#> .
+@prefix bom: <https://bibleontology.org/ns/meaning#> .
+@prefix bor: <https://bibleontology.org/ns/relation#> .
+@prefix bos: <https://bibleontology.org/ns/structure#> .
+@prefix bosh: <https://bibleontology.org/ns/meaning/shapes#> .
+@prefix bow: <https://bibleontology.org/ns/word#> .
+@prefix bsh: <https://bibleontology.org/ns/biblio/shapes#> .
+@prefix claim: <https://bibleontology.org/ns/claim#> .
+@prefix csh: <https://bibleontology.org/ns/claim/shapes#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bsh:ArrangementEntryShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F1_Work ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:member ],
+        [ sh:class biblio:Arrangement ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:inArrangement ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:position ],
+        [ sh:class biblio:Section ;
+            sh:maxCount 1 ;
+            sh:path biblio:inSection ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:path biblio:positionInSection ] ;
+    sh:sparql [ sh:message "An entry's section divides the entry's own arrangement, and its position falls inside the section." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?sec WHERE {
+            $this biblio:inSection ?sec ; biblio:inArrangement ?arr ; biblio:position ?p .
+            ?sec biblio:firstPosition ?f ; biblio:lastPosition ?l .
+            OPTIONAL { ?sec biblio:sectionOf ?of . }
+            FILTER (!BOUND(?of) || ?of != ?arr || ?p < ?f || ?p > ?l)
+        }""" ] ;
+    sh:targetClass biblio:ArrangementEntry .
+
+bsh:ArrangementShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F1_Work ;
+            sh:maxCount 1 ;
+            sh:message "An arrangement orders exactly one collection." ;
+            sh:minCount 1 ;
+            sh:path biblio:arrangementOf ],
+        [ sh:message "An arrangement says whose order it is." ;
+            sh:minCount 1 ;
+            sh:path rdfs:label ] ;
+    sh:targetClass biblio:Arrangement .
+
+bsh:ExpressionShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F1_Work ;
+            sh:maxCount 1 ;
+            sh:message "An Expression realises exactly one Work." ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath lrmoo:R3_is_realised_in ] ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:message "An Expression has exactly one language: a second language is a second Expression." ;
+            sh:minCount 1 ;
+            sh:path dcterms:language ],
+        [ sh:class lrmoo:F2_Expression ;
+            sh:maxCount 1 ;
+            sh:message "A translation is made from one Expression." ;
+            sh:path biblio:translationOf ],
+        [ sh:class lrmoo:F2_Expression ;
+            sh:path lrmoo:R75_incorporates ] ;
+    sh:sparql [ sh:message "A translation realises the same Work as its source: a translation is never a new Work." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?src WHERE {
+            $this biblio:translationOf ?src .
+            FILTER NOT EXISTS { ?w lrmoo:R3_is_realised_in $this , ?src . }
+        }""" ],
+        [ sh:message "An Expression incorporates another only where that one realises a different Work (LRMoo R75); a part of the same Work is not incorporated." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?inner WHERE {
+            $this lrmoo:R75_incorporates ?inner .
+            ?w lrmoo:R3_is_realised_in $this , ?inner .
+        }""" ] ;
+    sh:targetClass lrmoo:F2_Expression .
+
+bsh:ManifestationShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F2_Expression ;
+            sh:message "A Manifestation embodies at least one Expression." ;
+            sh:minCount 1 ;
+            sh:path lrmoo:R4_embodies ],
+        [ sh:message "A Manifestation links where it is published." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path dcterms:source ] ;
+    sh:targetClass lrmoo:F3_Manifestation .
+
+bsh:SectionShape a sh:NodeShape ;
+    sh:property [ sh:class biblio:Arrangement ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:sectionOf ],
+        [ sh:datatype xsd:integer ;
+            sh:lessThanOrEquals biblio:lastPosition ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:firstPosition ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:lastPosition ],
+        [ sh:minCount 1 ;
+            sh:path rdfs:label ] ;
+    sh:targetClass biblio:Section .
+
+bsh:SegmentShape a sh:NodeShape ;
+    sh:property [ sh:class lrmoo:F2_Expression ;
+            sh:maxCount 1 ;
+            sh:message "A segment is one Expression's: two texts never share a verse." ;
+            sh:minCount 1 ;
+            sh:path biblio:segmentOf ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path biblio:segmentNumber ],
+        [ sh:class biblio:Segment ;
+            sh:path biblio:alignedWith ] ;
+    sh:sparql [ sh:message "Aligned segments are verses of two Expressions of the same Work." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?other WHERE {
+            $this biblio:alignedWith ?other ; biblio:segmentOf ?a .
+            ?other biblio:segmentOf ?b .
+            FILTER (?a = ?b || NOT EXISTS { ?w lrmoo:R3_is_realised_in ?a , ?b . })
+        }""" ] ;
+    sh:targetClass biblio:Segment .
+
+bsh:WorkCreationShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class lrmoo:F1_Work ;
+            sh:message "A creation event says what it created, and nothing the text does not give: no agent, date or place." ;
+            sh:minCount 1 ;
+            sh:path lrmoo:R16_created ] ;
+    sh:targetClass lrmoo:F27_Work_Creation .
+
+bsh:WorkShape a sh:NodeShape ;
+    sh:not [ sh:or ( [ sh:class lrmoo:F2_Expression ] [ sh:class lrmoo:F3_Manifestation ] [ sh:class biblio:Section ] [ sh:class biblio:Segment ] [ sh:class biblio:Arrangement ] ) ] ;
+    sh:property [ sh:languageIn ( "en" ) ;
+            sh:message "A Work has an English label." ;
+            sh:minCount 1 ;
+            sh:path rdfs:label ],
+        [ sh:class lrmoo:F2_Expression ;
+            sh:message "A Work is realised in at least one Expression: a Work is not its text, and has one." ;
+            sh:minCount 1 ;
+            sh:path lrmoo:R3_is_realised_in ],
+        [ sh:class lrmoo:F27_Work_Creation ;
+            sh:maxCount 1 ;
+            sh:message "A Work has exactly one creation event (LRMoo R16: necessary, one)." ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath lrmoo:R16_created ] ],
+        [ sh:maxCount 0 ;
+            sh:message "Who composed a Work is a reading: a claim, never a plain triple." ;
+            sh:path biblio:composedBy ],
+        [ sh:maxCount 0 ;
+            sh:message "What a heading names is a reading: a claim, never a plain triple." ;
+            sh:path biblio:superscriptionNames ] ;
+    sh:sparql [ sh:message "A collected Work is incorporated by its collection's Expression, never one of its parts (R67 is for parts conceived together as one whole)." ;
+            sh:prefixes bsh:prefixes ;
+            sh:select """SELECT $this ?part WHERE {
+            $this lrmoo:R67_has_part ?part .
+            ?entry biblio:member ?part ; biblio:inArrangement ?arr .
+            ?arr biblio:arrangementOf $this .
+        }""" ] ;
+    sh:targetClass lrmoo:F1_Work .
+
+csh:ClaimShape a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:message "A claim has exactly one subject." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path claim:subject ],
+        [ sh:maxCount 1 ;
+            sh:message "A claim names the voice its triple is stated in." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path claim:voice ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:path claim:readBy ],
+        [ sh:maxCount 1 ;
+            sh:message "A claim has exactly one relation, from /ns/relation, claim:says for a reporting speaker's claim, or a heading's reading from /ns/biblio." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path claim:relation ;
+            sh:pattern "^https://bibleontology.org/ns/(relation#|claim#says$|biblio#(composedBy|superscriptionNames)$)" ],
+        [ sh:maxCount 1 ;
+            sh:message "A claim has exactly one object." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path claim:object ],
+        [ sh:message "A claim rests on at least one verse, each the site's page for it." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path claim:verse ;
+            sh:pattern "^https://bibleontology.org/p/[0-9A-Za-z]+\\.[0-9]+\\.[0-9]+$" ],
+        [ sh:in ( claim:explicit claim:implied claim:conjectured claim:disputed ) ;
+            sh:maxCount 1 ;
+            sh:message "A claim carries one step of the certainty scale." ;
+            sh:minCount 1 ;
+            sh:path claim:certainty ] ;
+    sh:targetClass claim:Claim .
+
+csh:StatementShape a sh:NodeShape ;
+    sh:property [ sh:in ( claim:modality_stated claim:modality_nonfinite claim:modality_commanded claim:modality_commanded_or_wished claim:modality_promised claim:modality_foretold claim:modality_urged claim:modality_wished claim:modality_asked ) ;
+            sh:maxCount 1 ;
+            sh:message "A verb statement carries one force from the modalities scheme." ;
+            sh:minCount 1 ;
+            sh:path claim:modality ],
+        [ sh:in ( claim:family_verb_body claim:family_verb_change claim:family_verb_cognition claim:family_verb_communication claim:family_verb_competition claim:family_verb_consumption claim:family_verb_contact claim:family_verb_creation claim:family_verb_emotion claim:family_verb_motion claim:family_verb_perception claim:family_verb_possession claim:family_verb_social claim:family_verb_stative claim:family_verb_weather ) ;
+            sh:maxCount 1 ;
+            sh:message "A verb statement's family, where it has one, is from the verb families scheme." ;
+            sh:path claim:family ],
+        [ sh:datatype xsd:boolean ;
+            sh:maxCount 1 ;
+            sh:message "A verb statement says whether its clause is negated." ;
+            sh:minCount 1 ;
+            sh:path claim:negated ],
+        [ sh:maxCount 1 ;
+            sh:message "A verb statement's verb is a word page." ;
+            sh:nodeKind sh:IRI ;
+            sh:path claim:verb ;
+            sh:pattern "^https://bibleontology.org/word/[hg][0-9]+$" ],
+        [ sh:message "A clause is addressed by its verse, in the verse pages' book codes, and its id within the verse." ;
+            sh:nodeKind sh:IRI ;
+            sh:path claim:clause ;
+            sh:pattern "^https://bibleontology.org/structure/(Gen|Exod|Lev|Num|Deut|Josh|Judg|Ruth|1Sam|2Sam|1Kgs|2Kgs|1Chr|2Chr|Ezra|Neh|Esth|Job|Ps|Prov|Eccl|Song|Isa|Jer|Lam|Ezek|Dan|Hos|Joel|Amos|Obad|Jonah|Mic|Nah|Hab|Zeph|Hag|Zech|Mal|Matt|Mark|Luke|John|Acts|Rom|1Cor|2Cor|Gal|Eph|Phil|Col|1Thess|2Thess|1Tim|2Tim|Titus|Phlm|Heb|Jas|1Pet|2Pet|1John|2John|3John|Jude|Rev)\\.[0-9]+\\.[0-9]+#[a-z]+[0-9]+$" ] ;
+    sh:targetSubjectsOf claim:verbLabel .
+
+bosh:Classification a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:classifies ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:inClass ],
+        [ sh:minCount 1 ;
+            sh:path bom:statement ],
+        [ sh:minCount 1 ;
+            sh:path bom:saidBy ],
+        [ sh:minCount 1 ;
+            sh:path bom:evidence ] ;
+    sh:targetClass bom:Classification .
+
+bosh:ContestedHasBothSides a sh:NodeShape ;
+    sh:sparql [ sh:message "A use the text itself settles (a figure with a stated tenor) is not contested." ;
+            sh:select """\r
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>\r
+            SELECT $this WHERE {\r
+                $this bom:usage bom:Contested .\r
+                ?f bom:figureAt $this ; bom:tenorBasis "stated" .\r
+            }""" ],
+        [ sh:message "A contested use needs at least two usage readings that answer differently." ;
+            sh:select """\r
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>\r
+            SELECT $this WHERE {\r
+                $this bom:usage bom:Contested .\r
+                FILTER NOT EXISTS {\r
+                    ?a bom:readsUsageOf $this ; bom:readsUsage ?ua .\r
+                    ?b bom:readsUsageOf $this ; bom:readsUsage ?ub .\r
+                    FILTER (?ua != ?ub)\r
+                }\r
+            }""" ] ;
+    sh:targetClass bow:Occurrence .
+
+bosh:FigurativeHasFigure a sh:NodeShape ;
+    sh:sparql [ sh:message "Usage is figurative (or a sign), but no FigurativeUse is at this occurrence." ;
+            sh:select """\r
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>\r
+            SELECT $this WHERE {\r
+                $this bom:usage ?u .\r
+                FILTER (?u IN (bom:Figurative, bom:Sign))\r
+                FILTER NOT EXISTS { ?f bom:figureAt $this }\r
+            }""" ] ;
+    sh:targetClass bow:Occurrence .
+
+bosh:FigurativeUse a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:figureAt ],
+        [ sh:class bow:Sense ;
+            sh:maxCount 1 ;
+            sh:message "A figure names its image (the vehicle) as a sense." ;
+            sh:minCount 1 ;
+            sh:path bom:vehicle ],
+        [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:mode ],
+        [ sh:message "A figure says what in the text marks it." ;
+            sh:minCount 1 ;
+            sh:path bom:marker ],
+        [ sh:in ( "stated" "read" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:tenorBasis ],
+        [ sh:minCount 1 ;
+            sh:path bom:evidence ] ;
+    sh:targetClass bom:FigurativeUse .
+
+bosh:MembershipIsArgued a sh:NodeShape ;
+    sh:sparql [ sh:message "A member of Human, Deity, HeavenlyBeing or Spirit with no Classification citing why." ;
+            sh:select """\r
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>\r
+            SELECT $this ?c WHERE {\r
+                $this a ?c .\r
+                FILTER (?c IN (bom:Human, bom:Deity, bom:HeavenlyBeing, bom:Spirit))\r
+                FILTER NOT EXISTS {\r
+                    ?k bom:classifies $this ; bom:inClass ?c ; bom:evidence ?v .\r
+                }\r
+            }""" ] ;
+    sh:targetClass bom:Individual .
+
+bosh:Occurrence a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:message "An occurrence has exactly one lexeme." ;
+            sh:minCount 1 ;
+            sh:path bow:ofLexeme ],
+        [ sh:maxCount 1 ;
+            sh:message "An occurrence carries at most one sense (or none, where the evidence does not decide)." ;
+            sh:path bow:inSense ],
+        [ sh:in ( bom:Literal bom:Figurative bom:Unmarked bom:Sign bom:Contested ) ;
+            sh:maxCount 1 ;
+            sh:message "Usage is literal, figurative, a sign, contested, or unmarked — one of them." ;
+            sh:path bom:usage ] ;
+    sh:targetClass bow:Occurrence .
+
+bosh:OneTopClass a sh:NodeShape ;
+    sh:sparql [ sh:message "An individual carries more than one top class; keep the least disputed and move the rest to predications." ;
+            sh:select """\r
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>\r
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r
+            SELECT $this WHERE {\r
+                $this a ?c1, ?c2 .\r
+                FILTER (?c1 != ?c2)\r
+                FILTER (?c1 IN (bom:PersonalBeing, bom:Group, bom:Animal,\r
+                    bom:Plant, bom:Artifact, bom:BodyPart, bom:Food,\r
+                    bom:Substance, bom:NaturalObject, bom:Place, bom:Time,\r
+                    bom:Event, bom:Act, bom:State, bom:Phenomenon,\r
+                    bom:Feeling, bom:Cognition, bom:Communication,\r
+                    bom:Attribute, bom:Quantity, bom:Possession,\r
+                    bom:Relation, bom:Shape, bom:Motive))\r
+                FILTER (?c2 IN (bom:PersonalBeing, bom:Group, bom:Animal,\r
+                    bom:Plant, bom:Artifact, bom:BodyPart, bom:Food,\r
+                    bom:Substance, bom:NaturalObject, bom:Place, bom:Time,\r
+                    bom:Event, bom:Act, bom:State, bom:Phenomenon,\r
+                    bom:Feeling, bom:Cognition, bom:Communication,\r
+                    bom:Attribute, bom:Quantity, bom:Possession,\r
+                    bom:Relation, bom:Shape, bom:Motive))\r
+            }""" ] ;
+    sh:targetClass bom:Individual .
+
+bosh:Predication a sh:NodeShape ;
+    sh:or ( [ sh:minCount 1 ;
+                sh:path bom:predicatedCategory ] [ sh:minCount 1 ;
+                sh:path bom:predicatedIdentity ] ) ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:predicationOf ],
+        [ sh:message "The saying is the fact: a predication names who says it." ;
+            sh:minCount 1 ;
+            sh:path bom:saidBy ],
+        [ sh:minCount 1 ;
+            sh:path bom:evidence ] ;
+    sh:targetClass bom:Predication .
+
+bosh:Reading a sh:NodeShape ;
+    sh:property [ sh:message "A reading always names its reader." ;
+            sh:minCount 1 ;
+            sh:path prov:wasAttributedTo ],
+        [ sh:minCount 1 ;
+            sh:path bom:evidence ] ;
+    sh:targetClass bom:Reading .
+
+bosh:SenseProvenance a sh:NodeShape ;
+    sh:property [ sh:message "A sense says how it was reached ('English' via a gloss)." ;
+            sh:minCount 1 ;
+            sh:path bom:derivedVia ] ;
+    sh:targetClass bow:Sense .
+
+bosh:ShownCardWord a sh:NodeShape ;
+    sh:property [ sh:hasValue bom:default ;
+            sh:message "A shown card word is shown by default under the filter policy." ;
+            sh:path bom:tier ] ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "An anchored word under the policy's cut (0.15) is shown." ;
+            sh:prefixes [ sh:declare [ sh:namespace "https://bibleontology.org/ns/meaning#"^^xsd:anyURI ;
+                            sh:prefix "bom" ],
+                        [ sh:namespace "http://www.w3.org/ns/dqv#"^^xsd:anyURI ;
+                            sh:prefix "dqv" ] ] ;
+            sh:select """SELECT $this WHERE { $this bom:wordBasis "anchored" ;\r
+            dqv:hasQualityMeasurement [ dqv:isMeasurementOf bom:cardWordShare ; dqv:value ?v ] .\r
+            FILTER (?v < 0.15) }""" ] ;
+    sh:targetClass bom:CardWord .
+
+bosh:SignIsStated a sh:NodeShape ;
+    sh:sparql [ sh:message "A sign whose meaning is not stated by the text is a reading, not a sign." ;
+            sh:select """\r
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>\r
+            SELECT $this WHERE {\r
+                $this bom:usage bom:Sign .\r
+                FILTER NOT EXISTS { ?f bom:figureAt $this ; bom:tenorBasis "stated" }\r
+            }""" ] ;
+    sh:targetClass bow:Occurrence .
+
+bosh:TenorFollowsBasis a sh:NodeShape ;
+    sh:sparql [ sh:message "A figure whose tenor is 'read' carries the tenor itself; it must be on a SymbolReading with a named reader." ;
+            sh:select """\r
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>\r
+            SELECT $this WHERE { $this bom:tenorBasis "read" ; bom:tenor ?t . }""" ],
+        [ sh:message "A figure whose tenor is 'stated' names it." ;
+            sh:select """\r
+            PREFIX bom: <https://bibleontology.org/ns/meaning#>\r
+            SELECT $this WHERE { $this bom:tenorBasis "stated" .\r
+                                 FILTER NOT EXISTS { $this bom:tenor ?t } }""" ] ;
+    sh:targetClass bom:FigurativeUse .
+
+bosh:UsageReading a sh:NodeShape ;
+    sh:property [ sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:readsUsageOf ],
+        [ sh:in ( bom:Literal bom:Figurative bom:Sign ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path bom:readsUsage ],
+        [ sh:minCount 1 ;
+            sh:path bom:readsAs ] ;
+    sh:targetClass bom:UsageReading .
+
+bor:accused_objectShape a sh:NodeShape ;
+    sh:message "The object of accused must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:accused .
+
+bor:accused_subjectShape a sh:NodeShape ;
+    sh:message "The subject of accused must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:accused .
+
+bor:ancestor_of_objectShape a sh:NodeShape ;
+    sh:message "The object of ancestor_of must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:ancestor_of .
+
+bor:ancestor_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of ancestor_of must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:ancestor_of .
+
+bor:anointed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of anointed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:anointed .
+
+bor:answered_in_subjectShape a sh:NodeShape ;
+    sh:message "The subject of answered_in must be one of: Image, Saying" ;
+    sh:or ( [ sh:class bom:Image ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:answered_in .
+
+bor:answered_objectShape a sh:NodeShape ;
+    sh:message "The object of answered must be one of: Animal, Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:answered .
+
+bor:answered_subjectShape a sh:NodeShape ;
+    sh:message "The subject of answered must be one of: Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:answered .
+
+bor:appeared_to_objectShape a sh:NodeShape ;
+    sh:message "The object of appeared_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:appeared_to .
+
+bor:appeared_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of appeared_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:appeared_to .
+
+bor:appointed_objectShape a sh:NodeShape ;
+    sh:message "The object of appointed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:appointed .
+
+bor:appointed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of appointed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:appointed .
+
+bor:ascribed_to_objectShape a sh:NodeShape ;
+    sh:message "The object of ascribed_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:ascribed_to .
+
+bor:asked_objectShape a sh:NodeShape ;
+    sh:message "The object of asked must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:asked .
+
+bor:asked_subjectShape a sh:NodeShape ;
+    sh:message "The subject of asked must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:asked .
+
+bor:aspect_of_objectShape a sh:NodeShape ;
+    sh:message "The object of aspect_of must be one of: Artifact, Communication, Concept, Event, Group, Image, PersonalBeing, Place, Title" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:aspect_of .
+
+bor:asserted_by_objectShape a sh:NodeShape ;
+    sh:message "The object of asserted_by must be one of: Animal, Concept, Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:asserted_by .
+
+bor:assessed_as_subjectShape a sh:NodeShape ;
+    sh:message "The subject of assessed_as must be one of: Animal, Artifact, Communication, Concept, Group, PersonalBeing, Place, Saying" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:assessed_as .
+
+bor:assumed_form_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of assumed_form_of must be one of: Animal, Artifact, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:assumed_form_of .
+
+bor:ate_objectShape a sh:NodeShape ;
+    sh:message "The object of ate must be one of: Animal, Artifact, Concept, Image, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:ate .
+
+bor:ate_subjectShape a sh:NodeShape ;
+    sh:message "The subject of ate must be one of: Animal, Artifact, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:ate .
+
+bor:attacked_objectShape a sh:NodeShape ;
+    sh:message "The object of attacked must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:attacked .
+
+bor:attacked_subjectShape a sh:NodeShape ;
+    sh:message "The subject of attacked must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:attacked .
+
+bor:baptized_objectShape a sh:NodeShape ;
+    sh:message "The object of baptized must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:baptized .
+
+bor:besought_objectShape a sh:NodeShape ;
+    sh:message "The object of besought must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:besought .
+
+bor:besought_subjectShape a sh:NodeShape ;
+    sh:message "The subject of besought must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:besought .
+
+bor:betrayed_objectShape a sh:NodeShape ;
+    sh:message "The object of betrayed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:betrayed .
+
+bor:betrayed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of betrayed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:betrayed .
+
+bor:blessed_objectShape a sh:NodeShape ;
+    sh:message "The object of blessed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:blessed .
+
+bor:blessed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of blessed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:blessed .
+
+bor:bought_objectShape a sh:NodeShape ;
+    sh:message "The object of bought must be one of: Artifact, Concept, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:bought .
+
+bor:bought_subjectShape a sh:NodeShape ;
+    sh:message "The subject of bought must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:bought .
+
+bor:built_objectShape a sh:NodeShape ;
+    sh:message "The object of built must be one of: Artifact, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:built .
+
+bor:built_subjectShape a sh:NodeShape ;
+    sh:message "The subject of built must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:built .
+
+bor:buried_at_objectShape a sh:NodeShape ;
+    sh:message "The object of buried_at must be one of: Artifact, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:buried_at .
+
+bor:came_upon_objectShape a sh:NodeShape ;
+    sh:message "The object of came_upon must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:came_upon .
+
+bor:camped_at_subjectShape a sh:NodeShape ;
+    sh:message "The subject of camped_at must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:camped_at .
+
+bor:carried_objectShape a sh:NodeShape ;
+    sh:message "The object of carried must be one of: Animal, Artifact, Concept" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] ) ;
+    sh:targetObjectsOf bor:carried .
+
+bor:carried_subjectShape a sh:NodeShape ;
+    sh:message "The subject of carried must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:carried .
+
+bor:cast_into_objectShape a sh:NodeShape ;
+    sh:message "The object of cast_into must be one of: Artifact, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:cast_into .
+
+bor:cast_into_subjectShape a sh:NodeShape ;
+    sh:message "The subject of cast_into must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:cast_into .
+
+bor:charged_objectShape a sh:NodeShape ;
+    sh:message "The object of charged must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:charged .
+
+bor:charged_subjectShape a sh:NodeShape ;
+    sh:message "The subject of charged must be one of: Group, PersonalBeing, Title" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Title ] ) ;
+    sh:targetSubjectsOf bor:charged .
+
+bor:composed_of_objectShape a sh:NodeShape ;
+    sh:message "The object of composed_of must be one of: Animal, Artifact, Communication, Concept, Event, Group, Image, PersonalBeing, Place, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:composed_of .
+
+bor:composed_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of composed_of must be one of: Animal, Artifact, Communication, Concept, Event, Group, Image, PersonalBeing, Place, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetSubjectsOf bor:composed_of .
+
+bor:conditional_on_objectShape a sh:NodeShape ;
+    sh:message "The object of conditional_on must be one of: Communication, Concept, Image, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:conditional_on .
+
+bor:conditional_on_subjectShape a sh:NodeShape ;
+    sh:message "The subject of conditional_on must be one of: Communication, Concept, Image, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetSubjectsOf bor:conditional_on .
+
+bor:conquered_objectShape a sh:NodeShape ;
+    sh:message "The object of conquered must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:conquered .
+
+bor:conquered_subjectShape a sh:NodeShape ;
+    sh:message "The subject of conquered must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:conquered .
+
+bor:conspired_against_objectShape a sh:NodeShape ;
+    sh:message "The object of conspired_against must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:conspired_against .
+
+bor:conspired_against_subjectShape a sh:NodeShape ;
+    sh:message "The subject of conspired_against must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:conspired_against .
+
+bor:contrary_to_objectShape a sh:NodeShape ;
+    sh:message "The object of contrary_to must be one of: Concept, Image, PersonalBeing, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:contrary_to .
+
+bor:contrary_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of contrary_to must be one of: Concept, Image, PersonalBeing, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetSubjectsOf bor:contrary_to .
+
+bor:cursed_objectShape a sh:NodeShape ;
+    sh:message "The object of cursed must be one of: Animal, Artifact, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:cursed .
+
+bor:deceived_objectShape a sh:NodeShape ;
+    sh:message "The object of deceived must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:deceived .
+
+bor:deceived_subjectShape a sh:NodeShape ;
+    sh:message "The subject of deceived must be one of: Animal, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:deceived .
+
+bor:deity_of_objectShape a sh:NodeShape ;
+    sh:message "The object of deity_of must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:deity_of .
+
+bor:described_as_subjectShape a sh:NodeShape ;
+    sh:message "The subject of described_as must be one of: Animal, Artifact, Communication, Concept, Group, PersonalBeing, Place, Saying" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:described_as .
+
+bor:destroyed_objectShape a sh:NodeShape ;
+    sh:message "The object of destroyed must be one of: Animal, Artifact, Concept, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:destroyed .
+
+bor:destroyed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of destroyed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:destroyed .
+
+bor:drawn_from_objectShape a sh:NodeShape ;
+    sh:message "The object of drawn_from must be one of: Animal, Artifact, Event, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:drawn_from .
+
+bor:draws_on_objectShape a sh:NodeShape ;
+    sh:message "The object of draws_on must be one of: Animal, Artifact, Communication, Event, Group, Image, PersonalBeing, Place, Saying, Title" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:draws_on .
+
+bor:draws_on_subjectShape a sh:NodeShape ;
+    sh:message "The subject of draws_on must be one of: Image, Saying, Title" ;
+    sh:or ( [ sh:class bom:Image ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetSubjectsOf bor:draws_on .
+
+bor:dwells_in_objectShape a sh:NodeShape ;
+    sh:message "The object of dwells_in must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:dwells_in .
+
+bor:dwells_in_subjectShape a sh:NodeShape ;
+    sh:message "The subject of dwells_in must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:dwells_in .
+
+bor:dwelt_at_subjectShape a sh:NodeShape ;
+    sh:message "The subject of dwelt_at must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:dwelt_at .
+
+bor:enemy_of_objectShape a sh:NodeShape ;
+    sh:message "The object of enemy_of must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:enemy_of .
+
+bor:enemy_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of enemy_of must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:enemy_of .
+
+bor:explained_subjectShape a sh:NodeShape ;
+    sh:message "The subject of explained must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:explained .
+
+bor:forgives_objectShape a sh:NodeShape ;
+    sh:message "The object of forgives must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:forgives .
+
+bor:forgives_subjectShape a sh:NodeShape ;
+    sh:message "The subject of forgives must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:forgives .
+
+bor:fought_objectShape a sh:NodeShape ;
+    sh:message "The object of fought must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:fought .
+
+bor:fought_subjectShape a sh:NodeShape ;
+    sh:message "The subject of fought must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:fought .
+
+bor:gave_objectShape a sh:NodeShape ;
+    sh:message "The object of gave must be one of: Animal, Artifact, Communication, Concept, Event, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:gave .
+
+bor:gave_subjectShape a sh:NodeShape ;
+    sh:message "The subject of gave must be one of: Artifact, Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:gave .
+
+bor:glorifies_objectShape a sh:NodeShape ;
+    sh:message "The object of glorifies must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:glorifies .
+
+bor:glorifies_subjectShape a sh:NodeShape ;
+    sh:message "The subject of glorifies must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:glorifies .
+
+bor:grounds_objectShape a sh:NodeShape ;
+    sh:message "The object of grounds must be one of: Concept, Image, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:grounds .
+
+bor:grounds_subjectShape a sh:NodeShape ;
+    sh:message "The subject of grounds must be one of: Concept, Image, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetSubjectsOf bor:grounds .
+
+bor:happens_to_objectShape a sh:NodeShape ;
+    sh:message "The object of happens_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:happens_to .
+
+bor:healed_objectShape a sh:NodeShape ;
+    sh:message "The object of healed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:healed .
+
+bor:heard_objectShape a sh:NodeShape ;
+    sh:message "The object of heard must be one of: Concept, Event, Group, PersonalBeing, Predication, Saying" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:heard .
+
+bor:heard_subjectShape a sh:NodeShape ;
+    sh:message "The subject of heard must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:heard .
+
+bor:hides_objectShape a sh:NodeShape ;
+    sh:message "The object of hides must be one of: Artifact, Concept, Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:hides .
+
+bor:hides_subjectShape a sh:NodeShape ;
+    sh:message "The subject of hides must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:hides .
+
+bor:honors_objectShape a sh:NodeShape ;
+    sh:message "The object of honors must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:honors .
+
+bor:honors_subjectShape a sh:NodeShape ;
+    sh:message "The subject of honors must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:honors .
+
+bor:imprisoned_objectShape a sh:NodeShape ;
+    sh:message "The object of imprisoned must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:imprisoned .
+
+bor:imprisoned_subjectShape a sh:NodeShape ;
+    sh:message "The subject of imprisoned must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:imprisoned .
+
+bor:in_theme_subjectShape a sh:NodeShape ;
+    sh:message "The subject of in_theme must be one of: Concept, Event, Saying" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:in_theme .
+
+bor:incited_objectShape a sh:NodeShape ;
+    sh:message "The object of incited must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:incited .
+
+bor:incited_subjectShape a sh:NodeShape ;
+    sh:message "The subject of incited must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:incited .
+
+bor:issues_from_objectShape a sh:NodeShape ;
+    sh:message "The object of issues_from must be one of: Animal, Artifact, Concept, Group, Image, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:issues_from .
+
+bor:issues_from_subjectShape a sh:NodeShape ;
+    sh:message "The subject of issues_from must be one of: Animal, Artifact, Concept, Group, Image, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetSubjectsOf bor:issues_from .
+
+bor:judged_objectShape a sh:NodeShape ;
+    sh:message "The object of judged must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:judged .
+
+bor:judged_subjectShape a sh:NodeShape ;
+    sh:message "The subject of judged must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:judged .
+
+bor:kept_at_subjectShape a sh:NodeShape ;
+    sh:message "The subject of kept_at must be one of: Animal, Artifact, Concept" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] ) ;
+    sh:targetSubjectsOf bor:kept_at .
+
+bor:killed_objectShape a sh:NodeShape ;
+    sh:message "The object of killed must be one of: Animal, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:killed .
+
+bor:killed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of killed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:killed .
+
+bor:kind_of_objectShape a sh:NodeShape ;
+    sh:message "The object of kind_of must be one of: Animal, Artifact" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] ) ;
+    sh:targetObjectsOf bor:kind_of .
+
+bor:kind_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of kind_of must be one of: Animal, Artifact" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] ) ;
+    sh:targetSubjectsOf bor:kind_of .
+
+bor:knows_objectShape a sh:NodeShape ;
+    sh:message "The object of knows must be one of: Concept, Event, Group, PersonalBeing, Place, Saying" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:knows .
+
+bor:knows_subjectShape a sh:NodeShape ;
+    sh:message "The subject of knows must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:knows .
+
+bor:led_objectShape a sh:NodeShape ;
+    sh:message "The object of led must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:led .
+
+bor:led_subjectShape a sh:NodeShape ;
+    sh:message "The subject of led must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:led .
+
+bor:likened_to_objectShape a sh:NodeShape ;
+    sh:message "The object of likened_to must be one of: Animal, Artifact, Concept, Event, Group, Image, PersonalBeing, Place, Saying" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:likened_to .
+
+bor:likened_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of likened_to must be one of: Animal, Artifact, Concept, Event, Group, Image, PersonalBeing, Place, Saying" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:likened_to .
+
+bor:located_in_subjectShape a sh:NodeShape ;
+    sh:message "The subject of located_in must be one of: Artifact, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Place ] ) ;
+    sh:targetSubjectsOf bor:located_in .
+
+bor:loves_objectShape a sh:NodeShape ;
+    sh:message "The object of loves must be one of: Concept, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:loves .
+
+bor:loves_subjectShape a sh:NodeShape ;
+    sh:message "The subject of loves must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:loves .
+
+bor:made_objectShape a sh:NodeShape ;
+    sh:message "The object of made must be one of: Animal, Artifact, Concept, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:made .
+
+bor:made_subjectShape a sh:NodeShape ;
+    sh:message "The subject of made must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:made .
+
+bor:member_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of member_of must be one of: Concept, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:member_of .
+
+bor:ministered_to_objectShape a sh:NodeShape ;
+    sh:message "The object of ministered_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:ministered_to .
+
+bor:ministered_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of ministered_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:ministered_to .
+
+bor:named_objectShape a sh:NodeShape ;
+    sh:message "The object of named must be one of: Animal, Artifact, Concept, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:named .
+
+bor:named_subjectShape a sh:NodeShape ;
+    sh:message "The subject of named must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:named .
+
+bor:observed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of observed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:observed .
+
+bor:offered_objectShape a sh:NodeShape ;
+    sh:message "The object of offered must be one of: Animal, Artifact, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:offered .
+
+bor:offered_subjectShape a sh:NodeShape ;
+    sh:message "The subject of offered must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:offered .
+
+bor:party_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of party_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:party_to .
+
+bor:persecuted_objectShape a sh:NodeShape ;
+    sh:message "The object of persecuted must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:persecuted .
+
+bor:persecuted_subjectShape a sh:NodeShape ;
+    sh:message "The subject of persecuted must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:persecuted .
+
+bor:present_with_objectShape a sh:NodeShape ;
+    sh:message "The object of present_with must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:present_with .
+
+bor:present_with_subjectShape a sh:NodeShape ;
+    sh:message "The subject of present_with must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:present_with .
+
+bor:prophet_to_objectShape a sh:NodeShape ;
+    sh:message "The object of prophet_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:prophet_to .
+
+bor:put_away_objectShape a sh:NodeShape ;
+    sh:message "The object of put_away must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:put_away .
+
+bor:put_away_subjectShape a sh:NodeShape ;
+    sh:message "The subject of put_away must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:put_away .
+
+bor:quoted_objectShape a sh:NodeShape ;
+    sh:message "The object of quoted must be one of: Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:quoted .
+
+bor:quoted_subjectShape a sh:NodeShape ;
+    sh:message "The subject of quoted must be one of: Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:quoted .
+
+bor:rebuked_objectShape a sh:NodeShape ;
+    sh:message "The object of rebuked must be one of: Animal, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:rebuked .
+
+bor:rebuked_subjectShape a sh:NodeShape ;
+    sh:message "The subject of rebuked must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:rebuked .
+
+bor:reigned_over_objectShape a sh:NodeShape ;
+    sh:message "The object of reigned_over must be one of: Group, Place" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:reigned_over .
+
+bor:removed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of removed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:removed .
+
+bor:repaired_objectShape a sh:NodeShape ;
+    sh:message "The object of repaired must be one of: Artifact, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:repaired .
+
+bor:repaired_subjectShape a sh:NodeShape ;
+    sh:message "The subject of repaired must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:repaired .
+
+bor:revealed_to_objectShape a sh:NodeShape ;
+    sh:message "The object of revealed_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:revealed_to .
+
+bor:revealed_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of revealed_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:revealed_to .
+
+bor:reveals_objectShape a sh:NodeShape ;
+    sh:message "The object of reveals must be one of: Concept, Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:reveals .
+
+bor:reveals_subjectShape a sh:NodeShape ;
+    sh:message "The subject of reveals must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:reveals .
+
+bor:rewards_objectShape a sh:NodeShape ;
+    sh:message "The object of rewards must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:rewards .
+
+bor:rewards_subjectShape a sh:NodeShape ;
+    sh:message "The subject of rewards must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:rewards .
+
+bor:ruler_of_objectShape a sh:NodeShape ;
+    sh:message "The object of ruler_of must be one of: Group, Place" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:ruler_of .
+
+bor:sees_objectShape a sh:NodeShape ;
+    sh:message "The object of sees must be one of: Artifact, Concept, Event, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:sees .
+
+bor:sees_subjectShape a sh:NodeShape ;
+    sh:message "The subject of sees must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:sees .
+
+bor:sent_objectShape a sh:NodeShape ;
+    sh:message "The object of sent must be one of: Animal, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:sent .
+
+bor:sent_subjectShape a sh:NodeShape ;
+    sh:message "The subject of sent must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:sent .
+
+bor:servant_of_objectShape a sh:NodeShape ;
+    sh:message "The object of servant_of must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:servant_of .
+
+bor:servant_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of servant_of must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:servant_of .
+
+bor:served_objectShape a sh:NodeShape ;
+    sh:message "The object of served must be one of: Animal, Artifact, Concept, Image, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:served .
+
+bor:served_subjectShape a sh:NodeShape ;
+    sh:message "The subject of served must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:served .
+
+bor:signifies_objectShape a sh:NodeShape ;
+    sh:message "The object of signifies must be one of: Animal, Artifact, Communication, Concept, Event, Group, PersonalBeing, Place, Saying, Title" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:signifies .
+
+bor:signifies_subjectShape a sh:NodeShape ;
+    sh:message "The subject of signifies must be one of: Animal, Artifact, Concept, Event, Group, Image, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetSubjectsOf bor:signifies .
+
+bor:speaks_of_objectShape a sh:NodeShape ;
+    sh:message "The object of speaks_of must be one of: Animal, Artifact, Communication, Concept, Event, Group, Image, PersonalBeing, Place, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:speaks_of .
+
+bor:speaks_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of speaks_of must be one of: Image, Predication, Saying, Title" ;
+    sh:or ( [ sh:class bom:Image ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
+    sh:targetSubjectsOf bor:speaks_of .
+
+bor:spoke_to_objectShape a sh:NodeShape ;
+    sh:message "The object of spoke_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:spoke_to .
+
+bor:spoke_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of spoke_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:spoke_to .
+
+bor:states_objectShape a sh:NodeShape ;
+    sh:message "The object of states must be one of: Animal, Artifact, Communication, Concept, Event, Group, Image, PersonalBeing, Place, Title" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Communication ] [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Title ] ) ;
+    sh:targetObjectsOf bor:states .
+
+bor:states_subjectShape a sh:NodeShape ;
+    sh:message "The subject of states must be one of: Animal, Artifact, Concept, Group, Image, PersonalBeing, Place, Title" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] [ sh:class bom:Title ] ) ;
+    sh:targetSubjectsOf bor:states .
+
+bor:stationed_at_objectShape a sh:NodeShape ;
+    sh:message "The object of stationed_at must be one of: Artifact, Place" ;
+    sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:stationed_at .
+
+bor:stationed_at_subjectShape a sh:NodeShape ;
+    sh:message "The subject of stationed_at must be one of: Animal, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:stationed_at .
+
+bor:testifies_about_objectShape a sh:NodeShape ;
+    sh:message "The object of testifies_about must be one of: Concept, Event, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Event ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:testifies_about .
+
+bor:testifies_about_subjectShape a sh:NodeShape ;
+    sh:message "The subject of testifies_about must be one of: Group, PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetSubjectsOf bor:testifies_about .
+
+bor:token_of_subjectShape a sh:NodeShape ;
+    sh:message "The subject of token_of must be one of: Animal, Artifact, Event, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Event ] [ sh:class bom:Place ] ) ;
+    sh:targetSubjectsOf bor:token_of .
+
+bor:told_objectShape a sh:NodeShape ;
+    sh:message "The object of told must be one of: PersonalBeing, Saying" ;
+    sh:or ( [ sh:class bom:PersonalBeing ] [ sh:class bom:Saying ] ) ;
+    sh:targetObjectsOf bor:told .
+
+bor:told_subjectShape a sh:NodeShape ;
+    sh:message "The subject of told must be one of: Animal, Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:told .
+
+bor:took_objectShape a sh:NodeShape ;
+    sh:message "The object of took must be one of: Animal, Artifact, Concept, Group, PersonalBeing, Place" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] [ sh:class bom:Place ] ) ;
+    sh:targetObjectsOf bor:took .
+
+bor:took_subjectShape a sh:NodeShape ;
+    sh:message "The subject of took must be one of: Concept, Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:took .
+
+bor:traveled_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of traveled_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:traveled_to .
+
+bor:warned_objectShape a sh:NodeShape ;
+    sh:message "The object of warned must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:warned .
+
+bor:warned_subjectShape a sh:NodeShape ;
+    sh:message "The subject of warned must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:warned .
+
+bor:wore_subjectShape a sh:NodeShape ;
+    sh:message "The subject of wore must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:wore .
+
+bor:worshiped_objectShape a sh:NodeShape ;
+    sh:message "The object of worshiped must be one of: Animal, Artifact, Concept, Image, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Animal ] [ sh:class bom:Artifact ] [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:worshiped .
+
+bor:worshiped_subjectShape a sh:NodeShape ;
+    sh:message "The subject of worshiped must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:worshiped .
+
+bos:addressee_objectShape a sh:NodeShape ;
+    sh:message "Object of addressee must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:addressee .
+
+bos:adv_objectShape a sh:NodeShape ;
+    sh:message "Object of adv must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:adv .
+
+bos:content_objectShape a sh:NodeShape ;
+    sh:message "Object of content must be one of: Clause, Imperative" ;
+    sh:or ( [ sh:class bos:Clause ] [ sh:class bos:Imperative ] ) ;
+    sh:targetObjectsOf bos:content .
+
+bos:ellipsis_objectShape a sh:NodeShape ;
+    sh:message "Object of ellipsis must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:ellipsis .
+
+bos:fulfils_objectShape a sh:NodeShape ;
+    sh:message "Object of fulfils must be one of: Clause, Imperative" ;
+    sh:or ( [ sh:class bos:Clause ] [ sh:class bos:Imperative ] ) ;
+    sh:targetObjectsOf bos:fulfils .
+
+bos:group_subject_objectShape a sh:NodeShape ;
+    sh:message "Object of group_subject must be one of: Word, Composite, Author" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Author ] ) ;
+    sh:targetObjectsOf bos:group_subject .
+
+bos:group_subject_subjectShape a sh:NodeShape ;
+    sh:message "Subject of group_subject must be one of: Parallel, AgentActs, Descriptions" ;
+    sh:or ( [ sh:class bos:Parallel ] [ sh:class bos:AgentActs ] [ sh:class bos:Descriptions ] ) ;
+    sh:targetSubjectsOf bos:group_subject .
+
+bos:io_objectShape a sh:NodeShape ;
+    sh:message "Object of io must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:io .
+
+bos:member_objectShape a sh:NodeShape ;
+    sh:message "Object of member must be one of: Word, Composite, Clause" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Clause ] ) ;
+    sh:targetObjectsOf bos:member .
+
+bos:motive_objectShape a sh:NodeShape ;
+    sh:message "Object of motive must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:motive .
+
+bos:o2_objectShape a sh:NodeShape ;
+    sh:message "Object of o2 must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:o2 .
+
+bos:o_objectShape a sh:NodeShape ;
+    sh:message "Object of o must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:o .
+
+bos:p_objectShape a sh:NodeShape ;
+    sh:message "Object of p must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:p .
+
+bos:possessor_subjectShape a sh:NodeShape ;
+    sh:message "Subject of possessor must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetSubjectsOf bos:possessor .
+
+bos:pp_objectShape a sh:NodeShape ;
+    sh:message "Object of pp must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:pp .
+
+bos:prep_object_objectShape a sh:NodeShape ;
+    sh:message "Object of prep_object must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:prep_object .
+
+bos:qualifier_objectShape a sh:NodeShape ;
+    sh:message "Object of qualifier must be one of: Word, Composite, Clause" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Clause ] ) ;
+    sh:targetObjectsOf bos:qualifier .
+
+bos:qualifier_subjectShape a sh:NodeShape ;
+    sh:message "Subject of qualifier must be one of: Word, Composite, Clause" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Clause ] ) ;
+    sh:targetSubjectsOf bos:qualifier .
+
+bos:resolves_to_objectShape a sh:NodeShape ;
+    sh:message "Object of resolves_to must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:resolves_to .
+
+bos:s_objectShape a sh:NodeShape ;
+    sh:message "Object of s must be one of: Word, Author, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Author ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:s .
+
+bos:sender_objectShape a sh:NodeShape ;
+    sh:message "Object of sender must be one of: Word, Composite, Author" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] [ sh:class bos:Author ] ) ;
+    sh:targetObjectsOf bos:sender .
+
+bos:speaker_objectShape a sh:NodeShape ;
+    sh:message "Object of speaker must be one of: Word, Composite" ;
+    sh:or ( [ sh:class bos:Word ] [ sh:class bos:Composite ] ) ;
+    sh:targetObjectsOf bos:speaker .
+
+bos:v_objectShape a sh:NodeShape ;
+    sh:message "Object of v must be one of: Verb, Composite, Word" ;
+    sh:or ( [ sh:class bos:Verb ] [ sh:class bos:Composite ] [ sh:class bos:Word ] ) ;
+    sh:targetObjectsOf bos:v .
+
+bsh:prefixes a owl:Ontology ;
+    sh:declare [ sh:namespace "http://iflastandards.info/ns/lrm/lrmoo/"^^xsd:anyURI ;
+            sh:prefix "lrmoo" ],
+        [ sh:namespace "https://bibleontology.org/ns/biblio#"^^xsd:anyURI ;
+            sh:prefix "biblio" ] .
+

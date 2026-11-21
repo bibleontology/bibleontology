@@ -2,7 +2,7 @@
 {"certainty": "explicit", "dst": "darius_the_mede", "refs": ["Dan 9:1"], "source": "prophets-wisdom", "src": "ahasuerus_father_of_darius_mede", "type": "father_of"}
 {"certainty": "implied", "dst": "jeremiah", "note": "\"the hand of Ahikam...supported Jeremiah, so he was not handed over to the people to be put to death\"", "refs": ["Jer 26:24"], "source": "prophets-wisdom", "src": "ahikam_son_of_shaphan", "type": "ally_of"}
 {"certainty": "explicit", "dst": "gedaliah_ancestor_of_zephaniah", "refs": ["Zeph 1:1"], "source": "prophets-wisdom", "src": "amariah_ancestor_of_zephaniah", "type": "father_of"}
-{"certainty": "explicit", "dst": "amos", "refs": ["Amos 7:10"], "source": "prophets-wisdom", "src": "amaziah_priest_of_bethel", "type": "conspired_against"}
+{"certainty": "explicit", "dst": "amos", "refs": ["Amos 7:10"], "source": "prophets-wisdom", "src": "amaziah_priest_of_bethel", "type": "conspired_against", "held": "the cited verses do not say it (job 37: four readers flagged it, Claude read it, 2026-11-17): Amos 7:10 is Amaziah accusing Amos of conspiracy: the relation turns the accusation round"}
 {"certainty": "explicit", "dst": "jonah", "refs": ["Jonah 1:1"], "source": "prophets-wisdom", "src": "amittai", "type": "father_of"}
 {"certainty": "explicit", "dst": "amaziah_priest_of_bethel", "refs": ["Amos 7:12-17"], "source": "prophets-wisdom", "src": "amos", "type": "prophet_to"}
 {"certainty": "implied", "dst": "jeroboam_son_of_joash", "note": "Amos's words about Jeroboam are reported via Amaziah, not a direct face-to-face confrontation in this passage", "refs": ["Amos 7:11"], "source": "prophets-wisdom", "src": "amos", "type": "prophet_to", "held": "inside quoted speech (the Berean's quotation marks), speaker not on record"}
@@ -41,13 +41,14 @@
 {"certainty": "explicit", "dst": "jezreel_son_of_hosea", "refs": ["Hos 1:3-4"], "source": "prophets-wisdom", "src": "gomer_wife_of_hosea", "type": "mother_of"}
 {"certainty": "explicit", "dst": "lo_ammi", "refs": ["Hos 1:1-9"], "source": "prophets-wisdom", "src": "gomer_wife_of_hosea", "type": "mother_of"}
 {"certainty": "explicit", "dst": "lo_ruhamah", "refs": ["Hos 1:6"], "source": "prophets-wisdom", "src": "gomer_wife_of_hosea", "type": "mother_of"}
+{"certainty": "explicit", "dst": "jezreel_son_of_hosea", "refs": ["Hos 1:3"], "source": "prophets-wisdom", "src": "gomer_wife_of_hosea", "type": "mother_of", "note": "'she conceived and bore him a son' (Hos 1:3)."}
 {"certainty": "explicit", "dst": "hosea", "refs": ["Hos 1:2-3"], "source": "prophets-wisdom", "src": "gomer_wife_of_hosea", "type": "spouse_of"}
 {"certainty": "explicit", "dst": "eliakim_son_of_hilkiah", "refs": ["Isa 36:3"], "source": "prophets-wisdom", "src": "hilkiah_father_of_eliakim", "type": "father_of"}
 {"certainty": "explicit", "dst": "jeremiah", "refs": ["Jer 1:1"], "source": "prophets-wisdom", "src": "hilkiah_father_of_jeremiah", "type": "father_of"}
 {"certainty": "explicit", "dst": "amariah_ancestor_of_zephaniah", "refs": ["Zeph 1:1"], "source": "prophets-wisdom", "src": "hizkiah_ancestor_of_zephaniah", "type": "father_of"}
 {"certainty": "explicit", "dst": "jezreel_son_of_hosea", "refs": ["Hos 1:3-4"], "source": "prophets-wisdom", "src": "hosea", "type": "father_of"}
-{"certainty": "explicit", "dst": "lo_ammi", "refs": ["Hos 1:1-9"], "source": "prophets-wisdom", "src": "hosea", "type": "father_of"}
-{"certainty": "explicit", "dst": "lo_ruhamah", "refs": ["Hos 1:6"], "source": "prophets-wisdom", "src": "hosea", "type": "father_of"}
+{"certainty": "explicit", "dst": "lo_ammi", "refs": ["Hos 1:1-9"], "source": "prophets-wisdom", "src": "hosea", "type": "father_of", "held": "Hos 1:6, 8 do not say she bore them to him (contrast 1:3)"}
+{"certainty": "explicit", "dst": "lo_ruhamah", "refs": ["Hos 1:6"], "source": "prophets-wisdom", "src": "hosea", "type": "father_of", "held": "Hos 1:6, 8 do not say she bore them to him (contrast 1:3)"}
 {"certainty": "explicit", "dst": "berechiah_father_of_zechariah", "refs": ["Zech 1:1"], "source": "prophets-wisdom", "src": "iddo_father_of_berechiah", "type": "father_of"}
 {"certainty": "explicit", "dst": "pashur_son_of_immer", "refs": ["Jer 20:1"], "source": "prophets-wisdom", "src": "immer", "type": "father_of"}
 {"certainty": "implied", "dst": "maher_shalal_hash_baz", "note": "Isaiah is not named by name in this chapter but is the first-person speaker throughout", "refs": ["Isa 8:3"], "source": "prophets-wisdom", "src": "isaiah", "type": "father_of"}

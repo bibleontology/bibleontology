@@ -23,7 +23,7 @@
 {"certainty": "explicit", "dst": "jerusalem", "refs": ["2Kgs 8:25-26"], "source": "places-historical", "src": "ahaziah", "type": "ruled_from"}
 {"certainty": "explicit", "dst": "samaria", "refs": ["1Kgs 22:51"], "source": "places-historical", "src": "ahaziah_king_of_israel", "type": "ruled_from"}
 {"certainty": "implied", "dst": "nob", "note": "The text names the massacre of 'the priests of Nob' generally; Ahimelech, confronted by name at 22:16, is presumed among them.", "refs": ["1Sam 22:18-19"], "source": "places-historical", "src": "ahimelech", "type": "died_at"}
-{"certainty": "implied", "dst": "giloh", "note": "buried in his father’s tomb, in his own city, identified as Giloh at 15:12.", "refs": ["2Sam 17:23"], "source": "places-historical", "src": "ahithophel", "type": "buried_at"}
+{"certainty": "implied", "dst": "giloh", "note": "buried in his father’s tomb, in his own city, identified as Giloh at 15:12.", "refs": ["2Sam 17:23"], "source": "places-historical", "src": "ahithophel", "type": "buried_at", "held": "the passage does not say it: four reads agree (the Mac twice, DeepSeek twice; cast check, 2026-11-13)"}
 {"certainty": "implied", "dst": "giloh", "note": "Verse 23 names Ahithophel and says he went home 'to his city' and hanged himself; the city is identified as Giloh at 15:12.", "refs": ["2Sam 17:23"], "source": "places-historical", "src": "ahithophel", "type": "died_at"}
 {"certainty": "explicit", "dst": "giloh", "refs": ["2Sam 15:12"], "source": "places-historical", "src": "ahithophel", "type": "dwelt_at"}
 {"certainty": "explicit", "dst": "jerusalem", "refs": ["2Kgs 14:20"], "source": "places-historical", "src": "amaziah", "type": "buried_at"}
@@ -130,7 +130,7 @@
 {"certainty": "explicit", "dst": "moab_region", "refs": ["Ruth 1:1-2"], "source": "places-historical", "src": "naomi", "type": "traveled_to"}
 {"certainty": "explicit", "dst": "shushan", "refs": ["Neh 1:1"], "source": "places-historical", "src": "nehemiah_son_of_hachaliah", "type": "dwelt_at"}
 {"certainty": "implied", "dst": "jerusalem", "note": "First-person narration ('appointed me to be their governor', Neh 5:14) combined with his residence at Jerusalem (Neh 2:11) and the summary title 'Nehemiah the governor' (Neh 12:26).", "refs": ["Neh 2:11", "Neh 5:14", "Neh 12:26"], "source": "places-historical", "src": "nehemiah_son_of_hachaliah", "type": "ruled_from"}
-{"certainty": "implied", "dst": "babylon", "note": "First-person narration ('came I unto the king'); returned to the king after his first term as governor. The text calls Artaxerxes 'king of Babylon' here.", "refs": ["Neh 13:6"], "source": "places-historical", "src": "nehemiah_son_of_hachaliah", "type": "traveled_to"}
+{"certainty": "implied", "dst": "babylon", "note": "First-person narration ('I had returned to Artaxerxes king of Babylon'); returned to the king after his first term as governor. The text calls Artaxerxes 'king of Babylon' here.", "refs": ["Neh 13:6"], "source": "places-historical", "src": "nehemiah_son_of_hachaliah", "type": "traveled_to"}
 {"certainty": "implied", "dst": "jerusalem", "note": "First-person narration ('After I had arrived in Jerusalem'); the narrator is established as Nehemiah at Neh 1:1.; First-person narration ('to return to Jerusalem'); second return after obtaining leave from the king.", "refs": ["Neh 2:11", "Neh 13:7"], "source": "places-historical", "src": "nehemiah_son_of_hachaliah", "type": "traveled_to"}
 {"certainty": "explicit", "dst": "samaria", "refs": ["1Kgs 16:28"], "source": "places-historical", "src": "omri", "type": "buried_at"}
 {"certainty": "explicit", "dst": "samaria", "refs": ["1Kgs 16:24"], "source": "places-historical", "src": "omri", "type": "ruled_from"}
@@ -172,6 +172,6 @@
 {"certainty": "explicit", "dst": "jerusalem", "refs": ["2Kgs 24:17-18"], "source": "places-historical", "src": "zedekiah", "type": "ruled_from"}
 {"certainty": "explicit", "dst": "riblah", "refs": ["2Kgs 25:6"], "source": "places-historical", "src": "zedekiah", "type": "traveled_to"}
 {"certainty": "explicit", "dst": "jerusalem", "note": "Made governor of Judah by Cyrus and led the rebuilding of the temple from Jerusalem.", "refs": ["Ezra 5:2", "Ezra 5:14"], "source": "places-historical", "src": "zerubbabel", "type": "ruled_from"}
-{"certainty": "explicit", "dst": "jerusalem", "refs": ["Ezra 1:11", "Ezra 2:2"], "source": "places-historical", "src": "zerubbabel", "type": "traveled_to"}
+{"certainty": "explicit", "dst": "jerusalem", "refs": ["Ezra 2:2"], "source": "places-historical", "src": "zerubbabel", "type": "traveled_to"}
 {"certainty": "explicit", "dst": "tirzah_city", "refs": ["1Kgs 16:18"], "source": "places-historical", "src": "zimri", "type": "died_at"}
 {"certainty": "explicit", "dst": "tirzah_city", "refs": ["1Kgs 16:15"], "source": "places-historical", "src": "zimri", "type": "ruled_from"}

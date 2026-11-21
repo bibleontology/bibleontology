@@ -52,7 +52,9 @@ def check(ok, msg):
 
 d = S.load()
 SAMPLES = ["fishers_of_men", "theme_judgment_r37", "did_evil_in_the_sight_of_the_lord", "tpl_deliverance", "arc_job",
-           "steward_of_josephs_house", "good_assessment", "a_father_of_many_nations", "arc_the_flight_to_egypt", "hazo", "renewal"]
+           "steward_of_josephs_house", "good_assessment", "a_father_of_many_nations", "arc_the_flight_to_egypt", "shemer", "renewal"]
+# (2026-11-21: Hazo left the sample when Gen 22:23 gave him a father, so his card now has the person face; Shemer is
+# a person still without a relation, which is what the sample needs)
 CONTROLS = ["abraham", "jerusalem", "event_pentecost", "image_lion", "the_full_armor_of_god", "lion", "object_staff", "amalekites"]
 SAMPLES = [x for x in SAMPLES if x in d["ents"]]
 CONTROLS = [x for x in CONTROLS if x in d["ents"]]

@@ -465,11 +465,24 @@ def load() -> dict:
                     # THE SOF PASUQ IS NOT A LETTER (FAULTS #19). MACULA's transliteration carries the Hebrew full
                     # stop on the last word of the verse as a colon (hāʾāreṣ: at Gen 1:1, 15,962 verses in all).
                     # tools/interlinear.py no longer writes it; the file built before that still holds it
-                    for w_ in d["words"]:
+                    prev_ = None
+                    for k_, w_ in enumerate(d["words"]):
                         if (w_.get("x") or "").endswith(":"):
                             w_["x"] = w_["x"].rstrip(":")
                         if "~" in (w_.get("g") or ""):
                             w_["g"] = gloss_repair(w_["g"])
+                        if w_.get("x"):
+                            w_["x"] = rough_breathing(w_.get("t") or "", w_["x"])
+                        # A HEBREW PART'S SOUND IN HEBREW LETTERS (P-2026-11-15-6): MACULA left it none, and the
+                        # builder's fallback kept the bare consonants. Filled in MACULA's scheme (app2/hebrew_sound.py),
+                        # knowing whether the part before it, in the same word, ends in a vowel
+                        if _HEB_LETTERS.search(w_.get("x") or ""):
+                            after = bool(prev_ and prev_.get("w") == w_.get("w"))
+                            nxt_ = d["words"][k_ + 1] if k_ + 1 < len(d["words"]) else None
+                            w_["x"] = translit_hebrew(
+                                w_.get("t") or "", after and bool(_ENDS_VOWEL.search(prev_.get("x") or "")), after,
+                                bool(nxt_ and nxt_.get("w") == w_.get("w"))) or w_["x"]
+                        prev_ = w_
                     orig[d["ref"]] = d["words"]
         # the lettered codes that are another word, known before any index is keyed by sense_key (A.48)
         global _SPLIT_CODES
@@ -733,6 +746,13 @@ def load() -> dict:
                 # by"); a type's one label cannot say what each verb says
                 own = ({"label_out": r["label"], "label_in": r.get("inverse_label")}
                        if r.get("type") == "states" and r.get("label") else {})
+                # a kin row worded as the text words it (R-24, 2026-11-14: "called the Lord's brother", Gal 1:19, not
+                # "sibling"): the record's own `kin_label`, the same from either end
+                if r.get("kin_label"):
+                    own = {"label_out": r["kin_label"], "label_in": r["kin_label"], "kin_label": r["kin_label"]}
+                # ...or each end worded apart (Joseph "was regarded as the father of" Jesus, Luke 3:23)
+                if r.get("label_out_as") or r.get("label_in_as"):
+                    own = {"label_out": r.get("label_out_as"), "label_in": r.get("label_in_as")}
                 pairs = {**pairs, **own}
                 # THE PARABLE MAPPING'S WORDS (2026-10-29): the weight and the words a signifies / answered_in row sits on
                 for _k in ("answer_kind", "story_clause", "mark", "verb", "lemma", "strong", "wording", "story", "decided"):
@@ -1034,6 +1054,14 @@ def load() -> dict:
                 {"who": r.get("speaker"), "act": r.get("act"),
                  "divine": r.get("divine"), "by": r.get("by")}
                 if r.get("speaker") else None)),
+            # THE SPEAKER PASS (2026-11-16, tools/meaning/speaker_judge.py): whose words a run of quoted verses is,
+            # where the graph and MACULA name no one -- the Mac's answer and a blind Claude judge's, kept only where
+            # they agree. A reading, kept apart from MACULA's stated rows; nested speech as Doug ruled: the inner
+            # voice speaks, `rep` relays it ("God, through Jeremiah")
+            "speaker_readings": _lay("speaker-readings.jsonl.gz", "speaker_reading", lambda r: (
+                {"who": r.get("speaker"), "name": r.get("name"), "divine": r.get("divine"),
+                 "rep": r.get("reported_by"), "rep_name": r.get("reported_by_name"), "by": "reading"}
+                if r.get("name") else None)),
             "comparisons": _lay("comparisons.jsonl.gz", "compare", lambda r: (
                 {"vehicle": r.get("vehicle") or [], "tenor": r.get("tenor") or [],
                  "particle": r.get("particle"), "shape": r.get("shape")}
@@ -2449,7 +2477,7 @@ def person_kin(d, eid, e):
             word = {"m": "husband of", "f": "wife of"}.get(g, "spouse of")
             role = {"m": "husband", "f": "wife"}.get(og, "spouse")
         elif t in ("sibling_of", "half_sibling_of"):
-            word = {"m": "brother of", "f": "sister of"}.get(g, "sibling of")
+            word = r.get("kin_label") or {"m": "brother of", "f": "sister of"}.get(g, "sibling of")
             role = {"m": "brother", "f": "sister"}.get(og, "sibling")
         elif t in ("father_of", "mother_of") and dr == "out":
             word = {"father_of": "father of", "mother_of": "mother of"}[t]
@@ -2474,17 +2502,21 @@ def person_kin(d, eid, e):
     # A CHILD UNDER ITS MOTHER: the mother_of relation from each wife's own relations, already in memory (Keturah's
     # six sons, Gen 25:2; 1 Chr 1:32). Without it the children sit in one row.
     spouses = [k["id"] for k in kin if k["type"] == "spouse_of" and not k.get("claimed_by")]
+    # AND A MOTHER'S CHILD UNDER ITS FATHER (2026-11-14, Doug on Jochebed: "why does it say 'mother not named' ... when
+    # relating to her children?"): only a father's children were placed, so a mother's all fell under "mother not
+    # named". `mother` here is the child's OTHER parent, whichever it is; the chart groups by it.
     for k in kin:
-        if k["rel"] == "father of" and not k.get("claimed_by"):
+        if k["rel"] in ("father of", "mother of") and not k.get("claimed_by"):
+            other = "mother_of" if k["rel"] == "father of" else "father_of"
             for s in spouses:
-                m = [r for r in d["rels"].get(s, []) if r["type"] == "mother_of" and r["dir"] == "out"
+                m = [r for r in d["rels"].get(s, []) if r["type"] == other and r["dir"] == "out"
                      and r["other"] == k["id"] and not r.get("claimed_by")]
                 if m:
                     k["mother"] = {"id": s, "name": (d["ents"].get(s) or {}).get("name") or s,
                                    "refs": [x for r in m for x in r.get("refs") or []]}
                     break
     order = ["son of", "daughter of", "child of", "father of", "mother of",
-             "wife of", "husband of", "spouse of", "brother of", "sister of", "sibling of"]
+             "wife of", "husband of", "spouse of", "brother of", "sister of", "sibling of", "was called the brother of"]
     # and in the text's order within each: by the first verse that says it, then where the name stands in that verse
     # ("Abram, Nahor, and Haran", Gen 11:26; Keturah's sons as Gen 25:2 lists them)
     kin.sort(key=lambda k: (order.index(k["rel"]), _text_order(d, k["refs"], [k["name"]] + list(
@@ -2534,6 +2566,14 @@ def _text_order(d, refs, names):
     t = d["verses"].get((b, c, v)) or ""
     pos = min([t.find(n) for n in names if n and t.find(n) >= 0] or [len(t)])
     return _canon(spans[0]) + (pos,)
+
+
+def _cnt(n, word):
+    """'1 use', '2 uses': a count with its noun in the right number (UI committee U-24, "1 USES" on every one-use word)."""
+    try:
+        return f"{int(n):,} {word}" + ("" if int(n) == 1 else "s")
+    except (TypeError, ValueError):
+        return f"{n} {word}s"
 
 
 def _vlabel(b, c, v, v2=None):
@@ -2656,13 +2696,18 @@ def person_card(d, eid, e, groups):
         """The first cited verse's Berean text, for a drill-in that opens on the verse itself."""
         s = next((s for s in (_site_span(d, r) for r in refs or []) if s), None)
         return d["verses"].get(s[:3]) if s else None
+
+    def ref_of(refs):
+        """The reference text_of quotes from: the first cited verse the site has (U-33: a family panel quoted a verse
+        without saying which)."""
+        return next((r for r in refs or [] if _site_span(d, r)), None)
     g = e.get("gender")
     his, he, him = {"m": ("his", "he", "him"), "f": ("her", "she", "her")}.get(g, ("their", "they", "them"))
     kin = person_kin(d, eid, e)
     for k in kin:
-        k["text"] = text_of(k["refs"])
+        k["text"], k["text_ref"] = text_of(k["refs"]), ref_of(k["refs"])
         if k.get("mother"):
-            k["mother"]["text"] = text_of(k["mother"]["refs"])
+            k["mother"]["text"], k["mother"]["text_ref"] = text_of(k["mother"]["refs"]), ref_of(k["mother"]["refs"])
     plain = [k for k in kin if not k.get("claimed_by")]
     out = {"pron": {"his": his, "he": he, "him": him}}
 
@@ -2784,7 +2829,7 @@ def person_card(d, eid, e, groups):
                 gref = sorted(r.get("refs") or [], key=lambda x: _canon(_site_span(d, x)))
                 grand.append({"id": r["other"], "name": (ents.get(r["other"]) or {}).get("name") or r["other"],
                               "of": p["id"], "of_name": p["name"], "type": r["type"],
-                              "refs": gref, "text": text_of(gref)})
+                              "refs": gref, "text": text_of(gref), "text_ref": ref_of(gref)})
     sibs = [k for k in plain if k["type"] in ("sibling_of", "half_sibling_of")]
     kids = [k for k in plain if k["rel"] in ("father of", "mother of")]
     wives = [dict(k, children=[c for c in kids if (c.get("mother") or {}).get("id") == k["id"]])
@@ -2819,6 +2864,7 @@ def person_card(d, eid, e, groups):
             break
     for n_ in named:
         n_["text"], n_["kin_text"] = text_of(n_["refs"]), text_of(n_["kin_refs"])
+        n_["text_ref"], n_["kin_text_ref"] = ref_of(n_["refs"]), ref_of(n_["kin_refs"])
     claims = [k for k in kin if k.get("claimed_by")]
     out["family"] = {"grand": grand, "parents": parents, "siblings": sibs, "wives": wives, "children": loose,
                      "named": named, "claims": claims}
@@ -3451,7 +3497,7 @@ def concept_card(d, eid, e, out):
                 "words": [w["key"] for w in words if k in occ_of[w["key"]]]}
 
     # ---- the relations by kind
-    passages, claimed, states, spoken, events, subs = [], [], [], [], [], []
+    passages, claimed, states, spoken, events, subs, conn = [], [], [], [], [], [], []
     msgs = {m["id"]: m for m in (out.get("messages_in") or []) + (out.get("acts_in") or [])}
     seen = set()
     for i in groups:
@@ -3498,9 +3544,15 @@ def concept_card(d, eid, e, out):
             x = {"id": i["other"], "name": i["name"], "type": i.get("otype"), "refs": keys, "solid": bool(inw),
                  "words": inw, "at": f"{TITLE.get(b, b)} {c}"}
             (events if i.get("otype") == "event" else subs).append(x)
+        elif i["type"] not in ("speaks_of", "in_theme", "asserted_by", "spoken_in", "states") and keys:
+            # EVERY OTHER RELATION, with its label and verses (plan A.50, 2026-11-13): the face printed only the kinds
+            # above, so 396 of the concepts' 1,251 relations were on no page -- "age" never said Demas loved this
+            # age (2 Tim 4:10) or that Zophar likened it to noon (Job 11:17)
+            conn.append({"id": i["other"], "name": i["name"], "label": i.get("label") or i["type"].replace("_", " "),
+                         "refs": keys})
     events.sort(key=lambda x: _key_order(x["refs"][0]))
     subs.sort(key=lambda x: _key_order(x["refs"][0]))
-    card.update(passages=passages, claimed=claimed, states=states, spoken=spoken, events=events, subs=subs)
+    card.update(passages=passages, claimed=claimed, states=states, spoken=spoken, events=events, subs=subs, conn=conn)
     card["same"] = out.get("same_name") or []
     card["tags"] = out.get("tags") or []
     card["relations"] = out.get("total_relations") or 0
@@ -3587,6 +3639,8 @@ def concept_card(d, eid, e, out):
                 bks = sorted({k.split(".")[0] for k in nt}, key=ORDER.index)
                 ntline.append({"row": row["id"], "short": re.split(r"[:;]", r["label"])[0].strip()
                                + (" (as a verb)" if f["form"] == "verb" else ""), "n": len(nt),
+                               # the contents list names them (P-2026-11-18-3: the designer's NT tag)
+                               "nt_books": [TITLE[b] for b in bks],
                                "books": TITLE[bks[0]] if len(bks) == 1 else f"{TITLE[bks[0]]}–{TITLE[bks[-1]]}"})
             rows.append(row)
         forms.append({"form": f["form"], "title": (hub.get("titles") or {}).get(f["form"]) or "",
@@ -3888,6 +3942,38 @@ def _verb_plain(rest):
     return "" if out.lower() in _VERB_AUX else out
 
 
+_HEB_LETTERS = re.compile("[א-ת]")
+_ENDS_VOWEL = re.compile("[aeiouāēīōūăĕŏâêîôûə]$")
+
+
+def translit_hebrew(t, prev_vowel=False, after_part=False, followed=False):
+    from hebrew_sound import translit_hebrew as _th
+    return _th(t, prev_vowel, after_part, followed)
+
+
+def rough_breathing(t, x):
+    """THE ROUGH BREATHING IS A SOUND (found 2026-11-15 drawing John 3:16 in layers, A.56). MACULA Greek carries no
+    transliteration; tools/interlinear.py generates one and stripped the breathings on purpose (2026-09-16, "a rough
+    pronunciation is the point"). Doug ruled the other way on 2026-11-15: "ina" for ἵνα, "o" for ὁ, "ymas" for ὑμᾶς
+    misled the reader the sound is for -- 18,947 Greek words, about one in seven. A rough breathing on the word's
+    opening vowels (on the second letter of a diphthong too, as in οὗτος) is an h before them; on an opening rho it is
+    rh; and υι, a diphthong, reads "hui" (υἱός huios, his ruling too). Hebrew and a sound with its h are left alone."""
+    import unicodedata
+    if not x or x[:1] in "hH":
+        return x
+    for ch in unicodedata.normalize("NFD", t):
+        if ch == "̔":
+            if x[:1] in "rR":
+                return x[0] + "h" + x[1:]
+            out = ("H" if x[:1].isupper() else "h") + (x[0].lower() if x[:1].isupper() else x[0]) + x[1:]
+            return out[0] + "ui" + out[3:] if out[1:3].lower() == "yi" else out
+        if unicodedata.combining(ch) or not ch.isalpha():
+            continue
+        if ch.lower() not in "αεηιουωρ":        # a consonant (or a Hebrew letter): no breathing to find
+            return x
+    return x
+
+
 def gloss_repair(g):
     return re.sub(r"\bto([a-z]{2,})\b", lambda m: m.group(0) if m.group(0).lower() in _TO_WORDS
                   else "to " + m.group(1), g or "")
@@ -4123,6 +4209,10 @@ def api_chapter(d, q):
                      "orig": [w for w in d["orig"].get(ref, [])
                               if w.get("t") or w.get("g")],
                      "rtl": TO_MACULA.get(b, b) in HEBREW_BOOKS,
+                     # the language of the original at this verse, from the Aramaic spans (UC-2: Dan 7:13 was
+                     # labelled Hebrew): "Aramaic" for Ezra 4:8-6:18 and 7:12-26, Daniel 2:4-7:28, Jer 10:11, Gen 31:47
+                     "lang": ("Aramaic" if _in_aramaic(ref) else
+                              "Hebrew" if TO_MACULA.get(b, b) in HEBREW_BOOKS else "Greek"),
                      # the word-group tree: nested boxes on the right, and the
                      # maximal non-predicating phrases the left column links
                      "tree": (pt := _ptree(d, ref)).get("trees"),
@@ -4139,6 +4229,8 @@ def api_chapter(d, q):
                      and not any(s[0] == c + 1 and s[1] == 1 for s in starts)
                      and any(s > (c, span[-1][2]) for s in starts))
     return {"book": b, "title": TITLE.get(b, b), "chapter": c,
+            # the heading as a reference names it: "Psalm 23" for one psalm, the book stays "Psalms" (U-17)
+            "label": f"{ {'Psalms': 'Psalm'}.get(TITLE.get(b, b), TITLE.get(b, b)) } {c}",
             "continues": {"before": opens_before, "after": runs_past},
             "theme_spans": theme_spans(b, c, [v for (_b, _c, v) in span]),
             # the story patterns whose stages fall in this chapter (plan A.9)
@@ -5245,6 +5337,12 @@ def names_of_word(d, key):
         p = ROOT / "ontology" / "word-name-links.json"
         for k, eids in (json.loads(p.read_text(encoding="utf-8")).get("links") or {} if p.exists() else {}).items():
             ix[k] |= {x for x in eids if x in d["ents"]}
+        # and the rule's own links the Mac's second read doubted and Claude agreed were the wrong card (a namesake,
+        # a people for a place): "deny" in the same file, each with its why in the provenance
+        if p.exists():
+            for k, eids in (json.loads(p.read_text(encoding="utf-8")).get("deny") or {}).items():
+                if k in ix:
+                    ix[k] -= set(eids)
         own = lambda eid: {_macula_ref(d, r) for r in (d["ents"][eid].get("refs") or ())}  # noqa: E731
         _WORD_NAMES = {k: sorted(eids, key=lambda x: (-len(vo.get(k, set()) & own(x)), x)) for k, eids in ix.items()}
         _NAMES_BUILDING = False
@@ -6024,6 +6122,7 @@ def lxx_of(d, key):
         # audit round 1, 2026-11-07). Kept for the Hebrew article itself
         if unicodedata.normalize("NFC", v).lower() in _GREEK_ARTICLE and key not in ("h1886", "h1886a", "h1886b"):
             continue
+        sole = all(n * 10 < max(codes.values()) for c_, n in codes.items() if c_ != next(iter(codes)))
         gk = None
         for code in codes:
             gk = "g" + re.sub(r"^0+", "", re.sub(r"[^0-9]", "", code))
@@ -6041,8 +6140,13 @@ def lxx_of(d, key):
         if w["n"] == 1 and name_kind(d, key) and tl and gl and gl[:2] not in (tl[:2], tl[:2].replace("j", "i"), tl[:2].replace("h", "")[:2]):
             continue
         fixed = _lxx_spell(d, key, v)
+        # THE COLUMN'S FIRST STRONG'S NUMBER IS BORROWED ONLY WHEN IT IS THE ONLY LEMMA (S-29, 2026-11-14). `gk` is the
+        # code of the commonest Greek lemma and was stamped on every form, so almah's neanides, neanis and neanidon
+        # were filed under parthenos and the card said "virgin" six times where the column holds it twice. The column
+        # keeps counts per FORM and per LEMMA separately and does not say which form is which: with a second lemma
+        # of any weight (a tenth of the first) no form is guessed to be the first one's
         out.append({"word": fixed, "n": w["n"],
-                    "key": gk if gk in d["profiles"] else None, **({"raw": v} if fixed != v else {})})
+                    "key": gk if gk in d["profiles"] and sole else None, **({"raw": v} if fixed != v else {})})
         if len(out) >= 4:
             break
     return out
@@ -6834,11 +6938,57 @@ def _quote_index(d):
     # wrong verse, and its Old Testament end, keyed by the English number,
     # was never found from the reader (2026-10-03). Converted once, here
     m = lambda x: _macula_ref(d, x) if x else x  # noqa: E731
+    # A QUOTATION IS A SPAN AT BOTH ENDS (Doug's self-test of the MCP in Claude, 2026-11-15: "Acts 8:33 quotes Isaiah
+    # 53:7" was "off by one"). The editors' note on Acts 8:33 reads "Isaiah 53:7-8": the quotation in Acts 8:32-33
+    # quotes Isaiah 53:7-8, and only the range's first verse was kept, at the note's one verse. 61 of 593 notes cite a
+    # range. Now each verse of the quoting span links to the quoted span, and each verse of the quoted span back.
+    # The quoting span is the quotation marks around the note's verse (out/quotes.jsonl), but only a short one: no
+    # longer than the quoted range, or two verses (a speech in quotation marks is not the quotation); or the range a
+    # note on the Old Testament side names ("cited in Acts 8:32-33").
+    def keys_of(a, z):
+        """MACULA refs from a to z (both MACULA, converted once), within one chapter, at most 12; else [a]."""
+        pa, pz = (a or "").rsplit(".", 2), (z or a or "").rsplit(".", 2)
+        if len(pa) != 3 or len(pz) != 3 or pa[0] != pz[0]:
+            return [a]
+        if pa[1] == pz[1]:
+            out = [f"{pa[0]}.{pa[1]}.{v}" for v in range(int(pa[2]), min(int(pz[2]), int(pa[2]) + 11) + 1)]
+        elif int(pz[1]) == int(pa[1]) + 1:
+            # into the next chapter, as Isa 8:23-9:1 in the Hebrew's numbering (the Berean's 9:1-2)
+            out = [f"{pa[0]}.{pa[1]}.{v}" for v in range(int(pa[2]), int(pa[2]) + 12)
+                   if f"{pa[0]}.{pa[1]}.{v}" in d["orig"]]
+            out += [f"{pa[0]}.{pz[1]}.{v}" for v in range(1, int(pz[2]) + 1)]
+            out = out[:12]
+        else:
+            return [a]
+        return [k for k in out if k in d["orig"]] or [a]
+    spans = {}
+    for q in _rows(OUT / "quotes.jsonl"):
+        keys = keys_of(m(q.get("from")), m(q.get("to")))
+        for k in keys:
+            spans[k] = (keys[0], keys[-1], len(keys))
+    pairs = {}
     for r in _rows(OUT / "quotenotes.jsonl.gz"):
-        a, b = m(r.get("from")), m(r.get("to"))
-        if a and b:
-            ix[a].append((b, m(r.get("to_end")), r.get("kind") or "quotes"))
-            ix[b].append((a, None, {"points to": "pointed to by"}.get(r.get("kind"), "quoted by")))
+        a, b, bend = m(r.get("from")), m(r.get("to")), m(r.get("to_end"))
+        if not (a and b):
+            continue
+        ot = keys_of(b, bend)
+        aend = None
+        cited = re.search(r"cited in ([1-3]?\s?[A-Z][a-z]+) (\d+):(\d+)[–-](\d+)", r.get("source") or "", re.I)
+        if cited and m(f"{cited.group(1)} {cited.group(2)}:{cited.group(3)}") == a:
+            aend = m(f"{cited.group(1)} {cited.group(2)}:{cited.group(4)}")
+        elif a in spans and 1 < spans[a][2] <= max(2, len(ot)) and spans[a][1] == a:
+            a, aend = spans[a][0], spans[a][1]                       # the note sits at the quotation's end
+        # one pair per span pair; a pair inside another's spans is the same quotation said twice (the LXX note)
+        # a range across a chapter in the Hebrew's numbering (Isa 8:23-9:1) keeps its end for the title, its first verse
+        pairs[(a, aend, b, bend if bend and bend != b else None, r.get("kind") or "quotes")] = (keys_of(a, aend), ot)
+    for (a, aend, b, bend, kind), (nt, ot) in pairs.items():
+        if any(k != (a, aend, b, bend, kind) and k[4] == kind and set(nt) <= set(v[0]) and set(ot) <= set(v[1])
+               and (set(nt), set(ot)) != (set(v[0]), set(v[1])) for k, v in pairs.items()):
+            continue
+        for x in nt:
+            ix[x].append((b, bend, kind))
+        for y in ot:
+            ix[y].append((a, aend, {"points to": "pointed to by"}.get(kind, "quoted by")))
     d["_quotes"] = ix
     return ix
 
@@ -7027,11 +7177,14 @@ def editor_notes(d, ref):
                     "direction": direction})
     # this verse's own note first: Gal 3:8's "See Genesis 12:3" before Gen
     # 12:3's "See Galatians 3:8", so it reads "points to", not "pointed to by"
+    # a quotation is not the same note as a section reference that starts at the same verse (Matt 4:16 quotes Isa
+    # 9:1-2, and its section points to Isa 9:1-7): each is kept, a quotation once (2026-11-15)
+    qseen = set()
     for other, oend, direction in sorted(_quote_index(d).get(ref, []),
                                          key=lambda x: x[2] in ("quoted by", "pointed to by")):
-        if other in seen:
+        if other in qseen or other == ref:
             continue
-        seen.add(other)
+        qseen.add(other)
         out.append({"kind": direction, "ref": other, "end": oend})
     for x in out:
         x["eref"], x["text"] = _verse_text(d, x["ref"])
@@ -7378,7 +7531,7 @@ def api_lists(d, q):
             n = _person_count(verses_in, e) if kind == "person" else None
             items.append({"id": e["id"], "title": e["name"],
                           # the seven Marys in the people list say which is which
-                          "sub": ((f"{n} verses · " if n is not None else "")
+                          "sub": ((f"{_cnt(n, 'verse')} · " if n is not None else "")
                                   + (_who(e) or e.get("desc") or "")[:64])})
         # `count` is what the list HAS, so the footer's "N more not loaded" is
         # true. It used to count the unfiltered set while the rows were
@@ -7597,7 +7750,7 @@ def _story_shapes(d, sets):
         n = len(vs)
         out.append({"kind": "shape", "key": it["key"],
                     "title": it["title"][:1].upper() + it["title"][1:],
-                    "sub": f"{n} verses · {len(evn)} event cards" if n else it.get("sub"),
+                    "sub": f"{_cnt(n, 'verse')} · {len(evn)} event cards" if n else it.get("sub"),
                     "events": evs, "gaps": list(gaps.values()), "n_gaps": len(gaps)})
     # the sharpest first: most of its verses fall in event cards
     out.sort(key=lambda r: -(len(r["events"]) / (1 + r["n_gaps"])))
@@ -7711,12 +7864,12 @@ def api_recurs(d, q):
     for x in R.get("declared", []):
         _e, ex = _verse_text(d, _macula_ref(d, x["verses"][0]["v"])) if x["verses"] else ("", "")
         declared.append({"kind": "recur", "key": "d:" + x["id"], "title": x["title"],
-                         "sub": f"{x['n']} verses · {x['books']} books",
+                         "sub": f"{_cnt(x['n'], 'verse')} · {x['books']} books",
                          "line": ex})
     refrains = []
     for x in R.get("refrains", []):
         refrains.append({"kind": "recur", "key": x["id"], "title": x["title"],
-                         "sub": f"{x['n']} verses · {x['chapters']} chapters · "
+                         "sub": f"{_cnt(x['n'], 'verse')} · {x['chapters']} chapters · "
                                 f"{x['books']} {'book' if x['books'] == 1 else 'books'}"
                                 + (f" · {len(x['across'])} more in the "
                                    + " and ".join(x["signature"]) if x["across"] else "")})
@@ -7920,7 +8073,7 @@ def _shared_rows(d):
     def key(r):
         return _vkey_macula(_macula_ref(d, r))
     rows = [{"kind": "set", "key": "shared-images", "title": "An image or expression both use",
-             "sub": f"{len(nodes)} images, {sum(len(v) for v in nodes.values())} verses",
+             "sub": f"{len(nodes)} images, {_cnt(sum(len(v) for v in nodes.values()), 'verse')}",
              "note": "Each names what the verses have in common, in the text's words, with no claim "
                      "that one points to the other.",
              "items": [{"kind": "ref", "key": _verse_text(d, _macula_ref(d, min(v, key=key)))[0],
@@ -9607,9 +9760,39 @@ def _word_row(d, k, r, sub_tail=""):
             "sub": f"{lang} · {n} use{'s' * (n != 1)}{sub_tail}"}
 
 
+def every_page_paths(d):
+    """The verse and word pages the site serves, as paths: every verse of the text (/p/Gen.1.1, the Berean's book
+    codes) and every word the text uses (/word/G26). The last good copy's allowlist beyond the sitemap (P-2026-11-15-2)."""
+    out = {f"/p/{b}.{c}.{v}" for (b, c, v) in d["verses"]}
+    for k in set(d.get("lemmas") or {}) | set(d["profiles"]):
+        if re.fullmatch(r"[hg]\d+", k or "") and _has_word(d, k):
+            out.add(f"/word/{k[0].upper()}{k[1:]}")
+    return out
+
+
 def _has_word(d, k):
     """A word the text uses (the lexicon alone also holds words no verse has)."""
     return bool(k and ((d.get("lemmas") or {}).get(k) or d["profiles"].get(k)))
+
+
+_TRANSLIT = None
+
+
+def _translit_ix(d):
+    """{folded transliteration, lower case: [word keys, most used first]}, only words the site has a card for."""
+    global _TRANSLIT
+    if _TRANSLIT is None:
+        ix = collections.defaultdict(list)
+        for k, lx in d["lex"].items():
+            f = fold_translit((lx or {}).get("translit")).lower()
+            if f and len(f) > 2 and _has_word(d, k):
+                # che.sed is typed "chesed" and "hesed" alike: both spellings, the most used word first
+                for v in {f, f.replace("ch", "h")}:
+                    ix[v].append(k)
+        for ks in ix.values():
+            ks.sort(key=lambda k: -_uses(d, k))
+        _TRANSLIT = dict(ix)
+    return _TRANSLIT
 
 
 def _strongs_rows(d, term):
@@ -9746,7 +9929,11 @@ def api_search(d, q):
         return {"q": term, "results": got_}
     if _SCRIPT.search(term):
         return {"q": term, "results": _orig_rows(d, term)}
-    res = []
+    # A WORD BY ITS TRANSLITERATION (2026-11-15: "agape", a chip on Explore, found nothing): the spelling people
+    # type, folded as the word pages fold it (agapē -> agape, ḥesed -> hesed), opens the word card beside whatever
+    # else the term finds ("adam" is a word and a man)
+    res = [_word_row(d, k, 3 + i / 10, f" · {(d['lex'].get(k) or {}).get('translit') or ''}")   # most used first
+           for i, k in enumerate(_translit_ix(d).get(term.lower(), [])[:4])]
     # A RANGE OPENS AT ITS START (U-6, the 2026-10-02 evaluation: "Genesis
     # 1:1-3" and "Deut 28-30" found nothing): the end is read and shown in the
     # row's title, and the reader opens where the range begins
@@ -10006,7 +10193,7 @@ def api_search(d, q):
     for key, p in d["profiles"].items():
         if _rank(_wordkey(p.get("gloss"))) is not None and len(res) < 60:
             res.append({"kind": "sense", "id": key, "title": p.get("gloss"),
-                        "sub": f"{p.get('observations')} uses · "
+                        "sub": f"{_cnt(p.get('observations'), 'use')} · "
                                f"{'Hebrew' if key[0] == 'h' else 'Greek'}"})
     # PATTERNS ARE SEARCHABLE TOO. 2026-09-16: these are part of the
     # search as well, and all of this belongs in the overall search.
@@ -10084,7 +10271,7 @@ def api_search(d, q):
                 res.append({"kind": "sense", "id": k, "title": title, "r": 2,
                             "orig": lemma,
                             "sub": f"{'Hebrew' if k[0] == 'h' else 'Greek'}"
-                                   + (f" · {n} uses" if n else "")
+                                   + (f" · {_cnt(n, 'use')}" if n else "")
                                    + f" · the word behind “{form}”"})
             for eid in _anchored_to().get(k, [])[:3]:
                 e = d["ents"].get(eid)
@@ -11122,7 +11309,7 @@ def _place_page(d, eid, c):
     if p["names"]:
         parts.append("<h2>Its name in the original</h2><ul>" + "".join(
             f'<li><a href="/word/{_esc(w["strong"])}">{_esc(w["lemma"] or w["strong"])}</a> {_esc(w["strong"])}, '
-            f'{_esc(w["lang"])} · {w["uses"]} uses in {w["verses"]} verses</li>' for w in p["names"]) + "</ul>")
+            f'{_esc(w["lang"])} · {_cnt(w["uses"], "use")} in {_cnt(w["verses"], "verse")}</li>' for w in p["names"]) + "</ul>")
     if p["own"]:
         blocks, last = [], None
         for v in p["own"]:
@@ -11192,7 +11379,7 @@ EVENT_CAST_KINDS = frozenset((
     "besought", "blessed", "cursed", "conquered", "fought", "attacked", "destroyed", "conspired_against",
     "imprisoned", "accused", "judged", "deceived", "rebuked", "warned", "ate", "heard", "explained", "quoted",
     "appointed", "charged", "ministered_to", "buried_at", "born_at", "died_at", "built", "repaired", "made",
-    "carried", "wrote_to", "answered"))
+    "carried", "wrote_to", "answered", "removed", "incited"))
 EVENT_SPEECH_KINDS = ("told", "states", "explained", "answered", "warned", "rebuked", "besought")
 EVENT_WITHHELD_KINDS = frozenset(("came_upon",))              # E-A
 EVENT_WITHHELD_VERSES = frozenset((("Acts", 2, 36),))         # E-B
@@ -11200,7 +11387,7 @@ EVENT_READ_NOTE = ("The site reports what the quoting text says. It does not say
                    "or whether it was fulfilled; readers and traditions differ on these.")
 # "taught / ministered to" said its first reading, "taught", of the angels at Mark 1:13, where the verse says they
 # ministered (the scholar seat, 2026-11-01); "ministered to" is true of both readings
-EVENT_VERB = {"persecuted": "sought to kill", "ministered_to": "ministered to"}
+EVENT_VERB = {"persecuted": "sought to kill", "ministered_to": "ministered to", "incited": "incited"}
 EVENT_WHOLE_VERSES = 12     # a telling of this many verses or fewer is the story, quoted whole on the face
 EVENT_HEART_VERSES = 12     # a longer one: the heart section, this many of its verses (the reader reads on)
 EVENT_OPEN_VERSES = 4       # a longer one whose book has no editors' headings: its first verses
@@ -11422,6 +11609,11 @@ def _ev_cast(d, eid, e, spans, stats=None):
     `stats["outside"]` counts the relations of those kinds whose every verse lies outside it."""
     ents = d["ents"]
     part = {p["id"] for p in _events(d)["events"][eid]["participants"]}
+    # R-8: an angel the telling names is an actor in it (the angel who rolled away the stone), though the mention layer
+    # resolves people, places and groups
+    vk = _ev_vkeys(d, spans)
+    part |= {i for i, e_ in ents.items() if e_.get("type") == "being" and "angel" in e_["name"].lower()
+             and any(_ev_named(d, i, b, c, v) for b, c, v in vk)}
     cand = set(part)
     hits = {}
     outside = set()
@@ -11432,7 +11624,9 @@ def _ev_cast(d, eid, e, spans, stats=None):
                 if r["type"] not in EVENT_CAST_KINDS or r["type"] in EVENT_WITHHELD_KINDS:
                     continue
                 src, dst = (n, r["other"]) if r["dir"] == "out" else (r["other"], n)
-                if only_within is not None and not (src in only_within and dst in only_within):
+                # R-8: what God made is not a participant (the creation's heavens, light, lights), and it is the telling
+                if only_within is not None and not (src in only_within and (dst in only_within or (
+                        (src == "god" and r["type"] == "made") or (src == "jesus" and r["type"] == "died_at")))):
                     continue
                 if r["type"] == "states" and not r.get("claimed_by"):
                     continue            # a statement is shown as its speaker's, or not at all (E-B: Acts 2:36)
@@ -11473,9 +11667,66 @@ def _ev_cast(d, eid, e, spans, stats=None):
     out = sorted(rows.values(), key=lambda x: (x["_key"], x["certainty"] == "implied", x["subjects"][0]["name"]))
     for x in out:
         x.pop("_key")
+    _ev_speech_rows(d, out, spans)
     if stats is not None:
         stats["outside"] = len(outside - set(hits))
     return out
+
+
+# R-7 (S-21, ruled 2026-11-14): a row read from God's speech prints in the speech's mood, and a speech node's internal
+# label ("God at Gen 8:16") is never printed as the words. "I will blot out man" (Gen 6:7) is a stated intention; the
+# narrator reports the deed at Gen 7:23, so that verse is cited beside it.
+EVENT_BASE_VERB = {"destroyed": "destroy", "made": "make", "blessed": "bless", "cursed": "curse", "killed": "kill",
+                   "judged": "judge", "built": "build", "sent": "send", "gave": "give", "healed": "heal",
+                   "conquered": "conquer", "fought": "fight", "attacked": "attack", "appointed": "appoint"}
+EVENT_SPEAKERS_HE = frozenset(("god", "jesus", "the_father"))
+EVENT_DEED_VERSES = {"Gen.6.7": ("Genesis 7:23", "Gen.7.23"), "Gen.6.13": ("Genesis 7:23", "Gen.7.23")}
+EVENT_SPEECH_LABEL = re.compile(r" at [A-Za-z0-9]+ \d+:\d+$")
+
+
+def _ev_speech_rows(d, out, spans):
+    ents = d["ents"]
+    # R-8: Gen 1:27 was four rows (male, female, man, the man and the woman): one, in the verse's own words
+    one = [x for x in out if x["kind"] == "made" and [c["go"] for c in x["cites"]] == ["Gen.1.27"]
+           and x["object"]["id"] in ("mankind", "male_humans", "female_humans", "the_first_humans")]
+    if len(one) > 1:
+        keep = next((x for x in one if x["object"]["id"] == "mankind"), one[0])
+        keep["object"] = dict(keep["object"], name="man, male and female")
+        out[:] = [x for x in out if x is keep or x not in one]
+    for x in out:
+        claim = x.get("claimed_by")
+        # a stated intention is not a deed
+        if claim and claim["id"] in EVENT_SPEAKERS_HE and [s["id"] for s in x["subjects"]] == [claim["id"]] \
+                and x["kind"] in EVENT_BASE_VERB and not x["verb"].startswith("said"):
+            texts = []
+            for c in x["cites"]:
+                b, ch, v = c["go"].split(".")
+                texts.append(d["verses"].get((b, int(ch), int(v))) or "")
+            if re.search(r"\bI (?:will|shall)\b", " ".join(texts)):
+                x["verb"] = f"said He would {EVENT_BASE_VERB[x['kind']]}"
+                for c in list(x["cites"]):
+                    deed = EVENT_DEED_VERSES.get(c["go"])
+                    if deed and deed[1] not in [k["go"] for k in x["cites"]] \
+                            and _ev_cites(d, [deed[0]], spans):
+                        x["cites"].append({"ref": deed[0], "go": deed[1]})
+        o = x["object"]
+        e = ents.get(o["id"]) or {}
+        if x["kind"] == "told" and o.get("type") == "text" and len(x["subjects"]) == 1:
+            subj = x["subjects"][0]["name"]
+            if o["name"].startswith(subj + " said "):
+                x["verb"], o["name"], o["type"] = "said", o["name"][len(subj) + 1 + 5:], "speech"
+            elif EVENT_SPEECH_LABEL.search(o["name"]) or o["id"].endswith("_speech"):
+                m = re.match(r"^.+?['’]s (.+?)(?: \([^)]*\))?\.?$", (e.get("desc") or "").split("\n")[0])
+                if m:
+                    w = m.group(1)
+                    x["verb"], o["name"], o["type"] = "spoke", (w if re.match(r"(a|an|the) ", w) else "a " + w), "speech"
+                else:
+                    # no description to say what it was: the speech's opening words, quoted
+                    b, ch, v = x["cites"][0]["go"].split(".")
+                    q = re.search(r"[“‘]([^”’]+)", d["verses"].get((b, int(ch), int(v))) or "")
+                    if q:
+                        ws = q.group(1).split()
+                        o["name"] = " ".join(ws[:8]) + ("…" if len(ws) > 8 else "")
 
 
 def _ev_marks(text):
@@ -11818,7 +12069,7 @@ def _event_page(d, eid, c):
     def cl(cites):
         return ", ".join(pl(x["go"], x["ref"]) for x in cites)
 
-    parts = []
+    parts, cast = [], ""
     # A STORY TOLD AGAIN LEADS (the told-again layout review, 2026-11-10: the storm's page printed none of its five
     # steps beside Jonah's): each step in this card's words, then the other story's, both linked, and where they differ
     told = []
@@ -11868,9 +12119,10 @@ def _event_page(d, eid, c):
             li.append(f'<li>{subj} {_esc(r["verb"])} {obj} ({cl(r["cites"])}'
                       f'{", implied" if r["certainty"] == "implied" else ""}){by}</li>')
         where = f"its {p['told']} tellings" if p["told"] > 1 else p["label"]
-        parts.append(f"<h2>Who did what in {_esc(where)}</h2><p>Relations the graph holds whose verse lies "
-                     f"in the passage, each cited by its verses there; the verses name more.</p><ul>"
-                     + "".join(li) + "</ul>")
+        # the cast leads the page, before the passage (plan A.50 for events, 2026-11-13): returned apart as "cast"
+        cast = (f"<h2>Who did what in {_esc(where)}</h2><p>Relations the graph holds whose verse lies "
+                f"in the passage, each cited by its verses there; the verses name more.</p><ul>"
+                + "".join(li) + "</ul>")
     if p["quotes"]:
         sp = next((q["speaker"] for q in p["quotes"] if q.get("speaker")), None)
         blocks = []
@@ -11961,7 +12213,291 @@ def _event_page(d, eid, c):
                             "isPartOf": {"@type": "WebSite", "name": "Bible Ontology", "url": f"{SITE}/"},
                             "publisher": {"@type": "Organization", "name": "Bible Ontology", "url": f"{SITE}/"}},
                            work]}
-    return {"title": title, "summary": summary, "sections": "".join(parts), "ld": ld, "lead": lead}
+    return {"title": title, "summary": summary, "sections": "".join(parts), "cast": cast, "ld": ld, "lead": lead}
+
+
+def _gendered_label(label, gender):
+    """'is the son/daughter of' -> 'is the son of' / 'is the daughter of' by the gender of the one it describes; with
+    no gender known, the neutral word where there is one ('child', 'parent'), else the pair left as it is. Only
+    pairs joined with no spaces ('son/daughter'); 'traveled / worked with' is two ways of saying it, not two people."""
+    if "/" not in label:
+        return label
+
+    def pick(m):
+        a, b = m.group(1), m.group(2)
+        if (a, b) not in (("son", "daughter"), ("father", "mother"), ("brother", "sister"), ("husband", "wife"),
+                          ("he", "she"), ("his", "her")):
+            return m.group(0)
+        if gender == "m":
+            return a
+        if gender == "f":
+            return b
+        return {"son": "child", "father": "parent", "brother": "sibling", "husband": "spouse"}.get(a, m.group(0))
+    return re.sub(r"(?<![\w/])([a-z]+)/([a-z]+)(?![\w/])", pick, label)
+
+
+# THE SAME IDEA ELSEWHERE (plan A.54 (2); Doug, 2026-11-15: "on the image_shepherd card I would expect to see a link to
+# the shepherd role card"). Cards of different kinds that share a head name: the shepherd image, the Shepherd title,
+# the role pattern, the idea of shepherds. The audit that day: 192 such families, 350 of 354 pairs across kinds
+# unlinked. Shown as navigation by shared name, labeled so, never as a relation. Persons are left out (Sheba the man,
+# the kingdom and the town are homonyms, not one idea), and the divine persons are never placed in a family by name.
+_FAMILY = None
+FAMILY_KINDS = {"image", "concept", "object", "creature", "title", "pattern", "group", "place", "being", "event"}
+FAMILY_SAYS = {"image": "the image", "concept": "the idea", "object": "the object", "creature": "the creature",
+               "title": "a title", "pattern": "a pattern", "group": "the group", "place": "the place",
+               "being": "a being", "event": "the event"}
+
+
+def _family_head(e):
+    n = (e.get("name") or "").lower()
+    n = re.sub(r"^role pattern:\s*", "", n)
+    n = re.sub(r",? as a figure$", "", n)
+    n = re.sub(r"^(the|a|an)\s+", "", n)
+    n = re.sub(r"[^a-z ]", "", n).strip()
+    if n.endswith("s") and len(n) > 4 and not n.endswith("ss"):
+        n = n[:-1]
+    return n
+
+
+def name_family(d, eid):
+    """[{id, name, kind}] the other cards of eid's name family, when the family crosses kinds; else []."""
+    global _FAMILY
+    if _FAMILY is None:
+        fam = collections.defaultdict(list)
+        for k, e in d["ents"].items():
+            if e.get("alias_of") or e.get("type") not in FAMILY_KINDS or k in OB_DIVINE:
+                continue
+            if k.startswith(("rcell_", "rrow_", "stage_", "arc_", "tell_", "expl_")):
+                continue
+            h = _family_head(e)
+            if 2 < len(h) <= 24 and len(h.split()) <= 2:
+                fam[h].append(k)
+        _FAMILY = {}
+        for h, ids in fam.items():
+            if len(ids) > 1 and len({d["ents"][i]["type"] for i in ids}) > 1:
+                for i in ids:
+                    _FAMILY[i] = [x for x in ids if x != i]
+    out = []
+    for x in (_FAMILY.get(eid) or [])[:8]:
+        e = d["ents"][x]
+        kind = ("a sub-theme" if x.startswith("theme_") else "a role pattern" if x.startswith("rolepat_")
+                else FAMILY_SAYS.get(e["type"], e["type"]))
+        out.append({"id": x, "name": e.get("name") or x, "kind": kind})
+    return out
+
+
+# THE GRAPH AROUND A LIGHT CARD (plan A.54 (1)): a saying, a verdict, a reading, a telling or any card of few relations
+# shows its neighbors and, faded, theirs, near the top. That day's landings were all such cards (a verdict of one
+# relation, a saying, a telling, a sub-theme, an image), and their graph sat at the foot as sentences. The neighbors
+# most cited first; every node opens its card.
+AROUND_LIGHT, AROUND_RING, AROUND_OUTER = 15, 8, 3
+AROUND_SKIP = STRUCTURAL | {"in_theme", "instance_of", "spoken_in"}
+
+
+def graph_around(d, eid):
+    def nbrs(x, avoid):
+        best = {}
+        for r in d["rels"].get(x, []):
+            o = r["other"]
+            if r["type"] in AROUND_SKIP or o in avoid or o == x or o not in d["ents"] or d["ents"][o].get("alias_of"):
+                continue
+            if o.startswith(("rcell_", "rrow_", "stage_", "arc_")):
+                continue
+            best[o] = best.get(o, 0) + len(r.get("refs") or []) + 1
+        return sorted(best, key=lambda o: -best[o])
+    ring = nbrs(eid, set())[:AROUND_RING]
+    if not ring:
+        return None
+    taken, outer = set(ring) | {eid}, []
+    for r in ring:
+        for o in nbrs(r, taken)[:AROUND_OUTER]:
+            taken.add(o)
+            outer.append({"id": o, "name": d["ents"][o].get("name") or o, "type": d["ents"][o].get("type"), "via": r})
+    def node(r):
+        x = {"id": r, "name": d["ents"][r].get("name") or r, "type": d["ents"][r].get("type")}
+        # a claim carries its verse, so the phone's list can say "Gen 12:2 “I will make you…”" where it said "God at
+        # Gen 18:18" (the bridges, P-2026-11-18-3)
+        if x["type"] in BRIDGE_CLAIMS:
+            via = next((rr for rr in d["rels"].get(eid, []) if rr["other"] == r and rr.get("refs")), None)
+            ref = (via or {}).get("refs", [None])[0] or next(iter(d["ents"][r].get("refs") or []), None)
+            if ref:
+                x["ref"], x["text"] = _verse_text(d, _macula_ref(d, ref))
+        return x
+    return {"ring": [node(r) for r in ring], "outer": outer}
+
+
+# BRIDGES (P-2026-11-18-3, option 2): the cards that share a claim with this one and are not linked to it. Great nation
+# and Blessing are both tied to "I will make you into a great nation" (Gen 12:2) and to nothing else of each other, so a
+# reader of one never learned the other was there. Only what the graph holds: the shared claim and its verse, no
+# sentence of the site's own on how the two relate. Divine persons are left out, as in the name family (they stand on
+# thousands of claims and are decided by hand). Most claims shared first, then the larger card.
+# The UI designer's ranking (2026-11-18): most claims shared first; then a card of another kind (a person or event
+# from a concept card is the larger subject a visitor misses; concept to concept reads like a thesaurus); stubs of one
+# claim after; then the verse order. Left out: the divine persons. The top 1% of concepts by the claims they stand on
+# (man, sin, the wicked ... bridge to everything) go last, found by count, not by a list.
+BRIDGE_CLAIMS = {"text", "passage", "assessment"}
+BRIDGE_KINDS = {"concept", "event", "person", "place", "object", "image", "group", "creature", "title", "being"}
+_CLAIM_DEG = None
+
+
+def _claim_degree(d):
+    """({card: claims it stands on}, the count at the top 1%)"""
+    global _CLAIM_DEG
+    if _CLAIM_DEG is None:
+        deg = collections.Counter()
+        for k, rs in d["rels"].items():
+            if (d["ents"].get(k) or {}).get("type") in BRIDGE_KINDS:
+                deg[k] = len({r["other"] for r in rs if (d["ents"].get(r["other"]) or {}).get("type") in BRIDGE_CLAIMS})
+        # the cut is for generic CONCEPTS: cut over every kind, the top 1% was Job, Jacob, Joseph, Paul, Abraham and
+        # Isaac, and Abraham is the larger subject great nation's visitor misses (Gen 18:18)
+        vals = sorted(v for k, v in deg.items() if v and d["ents"][k].get("type") == "concept")
+        _CLAIM_DEG = (deg, vals[int(len(vals) * .99)] if vals else 10 ** 9)
+    return _CLAIM_DEG
+
+
+def graph_bridges(d, eid, cap=12):
+    """{"n": total, "items": [{id, name, type, claims, via: [{id, name, ref, text}]}]} or None."""
+    rels = d["rels"]
+    deg, top = _claim_degree(d)
+    me = (d["ents"].get(eid) or {}).get("type")
+    direct = {r["other"] for r in rels.get(eid, [])}
+    found = {}
+    for r in rels.get(eid, []):
+        cl = r["other"]
+        ce = d["ents"].get(cl) or {}
+        if ce.get("type") not in BRIDGE_CLAIMS or r["type"] in AROUND_SKIP:
+            continue
+        ref = next(iter(r.get("refs") or ce.get("refs") or []), None)
+        ref = _macula_ref(d, ref) if ref else None
+        for r2 in rels.get(cl, []):
+            o = r2["other"]
+            oe = d["ents"].get(o) or {}
+            if (o == eid or o in direct or r2["type"] in AROUND_SKIP or oe.get("alias_of") or o in OB_DIVINE
+                    or oe.get("type") not in BRIDGE_KINDS):
+                continue
+            b = found.setdefault(o, {"id": o, "name": oe.get("name") or o, "type": oe.get("type"),
+                                     "claims": deg.get(o, 0), "via": []})
+            if not any(v["id"] == cl for v in b["via"]):
+                b["via"].append({"id": cl, "name": ce.get("name") or cl, "ref": ref})
+    if not found:
+        return None
+    order = lambda v: _key_order(v["ref"]) if v["ref"] and v["ref"].count(".") == 2 else (999,)
+    # the top 1% of concepts go last, not out: the cut held faith, righteousness, wisdom and hope beside man and sin
+    generic = lambda b: b["type"] == "concept" and b["claims"] >= top
+    items = sorted(found.values(), key=lambda b: (-len(b["via"]), generic(b), b["type"] == me, b["claims"] <= 1,
+                                                  min(order(v) for v in b["via"]), b["name"].lower()))
+    for b in items[:cap]:
+        b["via"].sort(key=order)
+        for v in b["via"][:3]:
+            if v["ref"]:
+                v["ref"], v["text"] = _verse_text(d, v["ref"])
+    return {"n": len(items), "items": items[:cap]}
+
+
+# THE SAME-WORD LINE (P-2026-11-18-3; Doug chose it 2026-11-18, the UI designer placed it): the early extraction made
+# a concept card for each English word, so עֶבֶד leads slaves, manservant, menservants, servant and servants, each of
+# 1-4 relations, and a reader of one never met the others. They stay separate cards (concepts are not merged, Doug,
+# 2026-10-04); under each of a card's words, the other concept cards that word LEADS (stands first in). Structure, a
+# shared original word, not a claim that they mean the same. The map is read from the server's own answers by
+# tools/concept_lead_words.py (ontology/concept-lead-words.json); tests/test_concept_lead_words.py holds it to them.
+_LEAD_OF = None
+
+
+def same_word(d, eid, words):
+    """{word key: [{id, name}]} the other concept cards each of this card's words leads, or None."""
+    global _LEAD_OF
+    if _LEAD_OF is None:
+        _LEAD_OF = {}
+        try:
+            cards = json.loads((ROOT / "ontology" / "concept-lead-words.json").read_text(encoding="utf-8"))["cards"]
+        except (OSError, ValueError, KeyError):
+            cards = {}
+        for cid, ws in sorted(cards.items()):
+            if ws and cid in d["ents"] and not d["ents"][cid].get("alias_of"):
+                _LEAD_OF.setdefault(ws[0], []).append(cid)
+    out = {}
+    for w in words or []:
+        k = w.get("key")
+        others = [c for c in _LEAD_OF.get(k, []) if c != eid]
+        if others:
+            others.sort(key=lambda c: (-len(d["rels"].get(c, [])), d["ents"][c].get("name", c).lower()))
+            out[k] = [{"id": c, "name": d["ents"][c].get("name") or c} for c in others]
+    return out or None
+
+
+# THE STRONGEST PAGE FROM A WEAK CARD (P-2026-11-18-3; the UI designer, 2026-11-18). A visitor from search often lands
+# on a card of one to three relations and leaves. Of 1,756 such concept cards, 1,676 connect to a strong page: their
+# word's page (625; the original-word pages are the site's strongest), a card of 15 relations or more that they link
+# to (839) or share a claim with (751). One destination, the first of the card kind's order; the larger wins a tie and
+# a linked card beats a bridged one. Only what the graph holds: the destination's name, kind and size. A card with
+# nothing strong shows nothing. Divine persons are never offered (decided by hand, and on thousands of claims).
+STRONG_MIN = 15
+STRONG_ORDER = {"concept": ("word", "linked", "bridged"), "image": ("linked", "bridged", "word"),
+                "object": ("linked", "bridged", "word")}
+STRONG_KINDS = {"concept", "event", "person", "place", "object", "image", "group", "creature", "title", "being",
+                "pattern"}
+
+
+def strongest_page(d, eid, words):
+    """{"via": word|linked|bridged, ...} the one strong page a card of 1-3 relations offers, or None."""
+    e = d["ents"].get(eid) or {}
+    rels = d["rels"].get(eid, [])
+    if not 1 <= len(rels) <= 3 or e.get("type") in ("text", "passage", "assessment"):
+        return None
+    size = lambda c: len(d["rels"].get(c, []))
+    ok = lambda c: (c != eid and c not in OB_DIVINE and c in d["ents"] and not d["ents"][c].get("alias_of")
+                    and d["ents"][c].get("type") in STRONG_KINDS and size(c) >= STRONG_MIN)
+
+    def card(c, via):
+        return {"via": via, "id": c, "name": d["ents"][c].get("name") or c, "type": d["ents"][c].get("type"),
+                "size": size(c)}
+
+    def word():
+        ws = [w for w in words or [] if w.get("key") and (w.get("uses") or 0) >= 3]
+        if not ws:
+            return None
+        w = max(ws, key=lambda w: w.get("verses") or w.get("uses") or 0)
+        return {"via": "word", "key": w["key"], "lemma": w.get("lemma"), "translit": w.get("translit"),
+                "lang": w.get("lang") or _lang_of(d, w["key"]), "verses": w.get("verses") or w.get("uses")}
+
+    def linked():
+        cs = sorted({r["other"] for r in rels if ok(r["other"])}, key=lambda c: -size(c))
+        return card(cs[0], "linked") if cs else None
+
+    def bridged():
+        cs = sorted((b["id"] for b in (graph_bridges(d, eid, cap=40) or {}).get("items", []) if ok(b["id"])),
+                    key=lambda c: -size(c))
+        return card(cs[0], "bridged") if cs else None
+    for how in STRONG_ORDER.get(e.get("type"), ("linked", "bridged")):
+        got = {"word": word, "linked": linked, "bridged": bridged}[how]()
+        if got:
+            return got
+    return None
+
+
+# NEVER A DEAD END (P-2026-11-18-5; Doug, 2026-11-18: "I never want to get stuck on a card ... with no relationships",
+# and "we need to show what the Bible says and make navigation to related concepts obvious"): a card the graph holds
+# no relation for yet (294 of them; their batches recorded the thing and not its links) shows, verse by verse, the
+# people, places and groups its own verses name, as the mention layer resolved them in the original. Only what the
+# verse itself names, never the verses around it; divine persons left out as in the bridges.
+def named_in_verses(d, eid, e, most=4):
+    """[{ref, label, names: [{id, name, type}]}] for each of the card's first verses that names someone, or None."""
+    out = []
+    for ref in (e.get("refs") or [])[:most]:
+        r1 = re.sub(r"\s*[-–].*$", "", ref)
+        mref = _macula_ref(d, r1)
+        eref, text = _verse_text(d, mref)
+        if not text:
+            continue
+        names = []
+        for n in verse_names(d, _site_key(d, mref), text, {eid}):
+            oid = n.get("id")
+            oe = d["ents"].get(oid) or {}
+            if oid and oid not in OB_DIVINE and not oe.get("alias_of") and not any(x["id"] == oid for x in names):
+                names.append({"id": oid, "name": oe.get("name") or n.get("name") or oid, "type": oe.get("type")})
+        if names:
+            out.append({"ref": eref, "names": names[:6]})
+    return out or None
 
 
 def api_entity(d, q):
@@ -11992,7 +12528,20 @@ def api_entity(d, q):
         if r["type"] == "issues_from" and r["dir"] == "in" and (d["ents"].get(eid) or {}).get("type") == "place" \
                 and other and other.get("type") in ("person", "group"):
             label = "is where they came from:"
+        # "is the son/daughter of Jesse" reads as the vocabulary's pair, not a sentence: the card's own person is who
+        # the label describes, so their gender picks the half (UI committee U-3, 2026-11-14)
+        label = _gendered_label(label, e.get("gender"))
+        # a text that draws on a person or thing: "is drawn on by fourteen generations" read as machine output
+        if r["type"] == "draws_on" and r["dir"] == "in" and other and other.get("type") in ("text", "passage"):
+            label = "is drawn on in the words"
         cat = spec.get("catlabel", "Other")
+        # WAR, ALLIANCE AND LEADERSHIP ARE WHAT A PERSON DID, not family (U-3: "made war on the Amalekites", "led
+        # singers" and "belonged to the house of David" sat in "Family and kin", whose drawer holds these two categories)
+        if e.get("type") == "person" and cat in ("Peoples & groups", "Association"):
+            if r["type"] in ("conquered", "fought", "attacked", "ally_of", "enemy_of"):
+                cat = "Conflict"
+            elif r["type"] in ("led", "member_of"):
+                cat = "Rule & succession"
         # A story told in a pattern's shape is not a fact about language,
         # which is where the schema files `instance_of` (for refrains and
         # beatitudes). 2026-09-30, of the graph's lane: the story told
@@ -12336,6 +12885,10 @@ def api_entity(d, q):
             "groups": [{"category": k, "items": v} for k, v in ordered]}
     # the concept card's face and page (the design panel's card, approved 2026-10-28)
     res["ccard"] = concept_card(d, eid, e, res) if e["type"] == "concept" else None
+    res["same_word"] = same_word(d, eid, (res["ccard"] or {}).get("words") or res.get("words")) \
+        if e["type"] == "concept" else None
+    res["strongest"] = strongest_page(d, eid, (res["ccard"] or {}).get("words") or res.get("words"))
+    res["in_verses"] = named_in_verses(d, eid, e) if not d["rels"].get(eid) and e["type"] != "passage" else None
     # the image card (2026-10-30): the picture the text draws on, what it is said to mean and where it only appears
     # the object card and the minor kinds, and the group card (2026-10-30)
     res["obcard"] = object_card(d, eid, e)
@@ -12380,6 +12933,18 @@ def api_entity(d, q):
     # the same as /themes/spiritual-warfare and is actually a poor fraud"); its address stays for search engines
     ea_ = e.get("attrs") or {}
     res["major_theme"] = ea_.get("theme") if ea_.get("kind") == "major_theme" else None
+    # THE CARD A QUESTION IS ABOUT LEADS TO IT (Doug, 2026-11-15: "the baptism card does not even link to that
+    # discussion and I think it could without undermining the graph"). Only the cards a shown question names as its
+    # `subject` (baptism, the sabbath, tongues), never every card it relates: grace and faith are not what one
+    # question is about. The card says readers differ and links; it takes no side
+    res["question_card"] = next(({"id": qid, "question": q_.get("question") or qid, "path": f"/questions/{qid}"}
+                                 for qid, q_ in _questions().items()
+                                 if eid in (q_.get("subject") or [])), None)
+    # A.54 (Doug, 2026-11-15): the same idea elsewhere, and on a light card the graph around it
+    res["family"] = name_family(d, eid)
+    res["bridges"] = graph_bridges(d, eid)
+    res["around"] =graph_around(d, eid) if (len(d["rels"].get(eid, [])) < AROUND_LIGHT
+                                               or e.get("type") in ("text", "assessment")) else None
     if res["in_theme"] and isinstance(res.get("face"), dict) and res["face"].get("words"):
         vo_, own_ = _verses_of(d), {_macula_ref(d, r) for r in e.get("refs") or ()}
         res["face"]["words"] = [w for w in res["face"]["words"] if vo_.get(w.get("key"), set()) & own_]
@@ -13167,7 +13732,7 @@ def api_collections(d, q):
                                for r in pats[:24]]},
         "words": {"count": len(d["profiles"]),
                   "items": [{"key": p["key"], "title": p.get("gloss"),
-                             "sub": f"{p.get('observations')} uses"}
+                             "sub": _cnt(p.get('observations'), 'use')}
                             for p in words[:24]]},
         "people": {"count": sum(1 for e in d["ents"].values()
                                 if e["type"] == "person"),
@@ -14135,6 +14700,57 @@ def _assumes_html(r):
     return f'<p class="ssr-sub">{f"<b>Assumes</b> {items}. " if items else ""}{note}</p>'
 
 
+_TRANSLIT_IX = None
+
+
+def _translit_index(d):
+    """folded transliteration -> the word keys that carry it (Greek and Hebrew), built once."""
+    global _TRANSLIT_IX
+    if _TRANSLIT_IX is None:
+        ix = {}
+        for k, meta in d["lmeta"].items():
+            tr = fold_translit(_first(meta, "transliteration") or (d["lex"].get(k) or {}).get("translit") or "") if k[:1] in "gh" else ""
+            if tr:
+                ix.setdefault(tr.lower(), set()).add(k)
+        _TRANSLIT_IX = ix
+    return _TRANSLIT_IX
+
+
+_PROSE_REF = re.compile(r"\b((?:[1-3] )?[A-Z][a-z]+(?: of [A-Z][a-z]+)?) (\d+):(\d+)(?:[–-](\d+))?")
+_PROSE_WORD = re.compile(r"((?:(?:Greek|Hebrew) behind “[^”<]+” is|\bis) )"
+                         r"([a-z]{3,})\b(?=,? (?:a|an) (?:[a-z]+ )?(?:Greek|Hebrew) word|[,;.]? a (?:word|term) for\b)|"
+                         r"((?:Greek|Hebrew) behind “[^”<]+” is )([a-z]{3,})\b")
+
+
+def link_prose(d, html_):
+    """A page's prose with what it names linked (UI committee U-27, 2026-11-14): each verse reference to its verse page
+    and each original-language word it names ("the word translated 'for' in Acts 2:38 is eis") to its word card, where
+    the transliteration names one word only. Text inside an anchor, a heading or a script is left as it is."""
+    out, depth = [], 0
+    for part in re.split(r"(<[^>]+>)", html_):
+        if part.startswith("<"):
+            tag = re.match(r"<(/?)([a-zA-Z0-9]+)", part)
+            if tag and tag.group(2).lower() in ("a", "h1", "h2", "h3", "script", "button"):
+                depth += -1 if tag.group(1) else 1
+                depth = max(depth, 0)
+            out.append(part)
+            continue
+        if depth or not part.strip():
+            out.append(part)
+            continue
+
+        def ref(m):
+            b = TITLE_BACK.get(m.group(1))
+            return (f'<a href="/p/{b}.{m.group(2)}.{m.group(3)}">{m.group(0)}</a>' if b else m.group(0))
+
+        def word(m):
+            pre, w = (m.group(1), m.group(2)) if m.group(2) else (m.group(3), m.group(4))
+            ks = _translit_index(d).get(w.lower()) or ()
+            return pre + (f'<a href="{word_address(next(iter(ks)))}">{w}</a>' if len(ks) == 1 else w)
+        out.append(_PROSE_REF.sub(ref, _PROSE_WORD.sub(word, part)))
+    return "".join(out)
+
+
 def question_page(qid):
     """the page a search engine reads for a question card: the question as asked, what all agree on, each reading
     with its verses and who holds it, and the traditions' own words, each linking to its tradition's page"""
@@ -14326,6 +14942,7 @@ def question_page(qid):
             + f'<p class="ssr-shape"><b>{_esc(qa["shape"])}</b></p>'
             + "".join(parts)
             + '<p><a href="/">Open Bible Ontology</a> to read every verse in place.</p></article>')
+    body = link_prose(d, body)
     head += ('<script type="application/ld+json">'
              + json.dumps(_question_ld(qa, title, summary, url, body), ensure_ascii=False).replace("</", "<\\/")
              + "</script>\n")
@@ -15255,7 +15872,7 @@ def _events(d):
                 if lo <= cv <= hi:
                     part.update(got)
             for cv, rid in unnamed.get(a[0], ()):
-                if lo <= cv <= hi:
+                if lo <= cv <= hi and _cited_fits(d, a[0], cv, rid):
                     cited[rid] += 1
         e["participants"] = [{"id": n, "n": c} for n, c in part.most_common()
                              if n in d["ents"]] + \
@@ -15780,6 +16397,24 @@ def template_stage(d, eid):
     return None
 
 
+def _cited_fits(d, macula_book, cv, rid):
+    """A person the text does not name joins an event by the verses their own record cites (P-74: "the rich young ruler"),
+    but only where that fits: a record with a PROPER name ("Joseph", "Timothy") cites a verse that names them, else the
+    verse is some other person's of the same name (Joseph's card carried Peter and Andrew's call; Timothy's and
+    Priscilla's carried Acts 13-14, which names neither; data fixer S-17 and scholar S-48, 2026-11-14). A descriptive
+    record ("a woman of Samaria", "the rich young ruler") has no name to find and is let through as before."""
+    ent = d["ents"].get(rid) or {}
+    nm = (ent.get("name") or "").strip()
+    if not nm or not nm[:1].isupper() or nm.lower().startswith(("the ", "a ", "an ")):
+        return True
+    b = MACULA_BACK.get(macula_book, macula_book)
+    text = d["verses"].get((b, cv[0], cv[1])) or ""
+    if not text:
+        return True
+    names = [nm] + [x for x in ent.get("aka") or [] if x]
+    return any(re.search(r"\b" + re.escape(w) + r"\b", text) for n_ in names for w in n_.split() if len(w) > 2)
+
+
 def events_for(d, eid):
     """The events a node takes part in: its name is in their tellings."""
     return sorted(_events(d)["by_node"].get(eid, []), key=lambda x: -x["n"])
@@ -16259,11 +16894,22 @@ def phrase_verses(d, eid):
         how[_macula_ref(d, v)] = "the same " + (
             "Hebrew" if _MCANON.get(_macula_ref(d, v).split(".")[0], 0)
             < _MCANON.get("Mat", 39) else "Greek") + " words, translated differently"
+    books = _by_book(d, how)
+    e = d["ents"].get(eid) or {}
+    if e.get("type") == "title":
+        # R-10 (S-25, 2026-11-14): the verses that use the title as the title ("the Son of Man", capitalized as the
+        # Berean prints it) and the verses its own record cites lead; the canon-order list of every "son of man"
+        # (2 Samuel 7:14's "sons of men" first) follows. Two lists, the first the title's.
+        nm = re.sub(r"^(the|a|an) ", "", e.get("name") or "", flags=re.I)
+        own = {_macula_ref(d, f"{s[0]}.{s[1]}.{s[2]}") for s in (_site_span(d, x) for x in e.get("refs") or []) if s}
+        lead = {v: how[v] for v in how if (nm and nm in _verse_text(d, v)[1]) or v in own}
+        if lead and len(lead) < len(how):
+            books = _by_book(d, lead) + _by_book(d, {v: h for v, h in how.items() if v not in lead})
     return {"phrase": r["phrase"], "common": r["common"], "total": len(how),
             "across": len(r["across"]), "english": len(r["english"]),
             "signature": {("Hebrew" if k == "h" else "Greek"): [x[1] for x in s]
                           for k, s in r["signature"].items()},
-            "books": _by_book(d, how)}
+            "books": books}
 
 
 def _tag_slug(t):
@@ -17028,6 +17674,15 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header(k, v)
         self.end_headers()
         self.wfile.write(body)
+        # THE LAST GOOD COPY, KEPT AS IT IS SERVED (plan A.49; app2/page_copies.py): only a public page -- a GET answered
+        # 200 with HTML, a public Cache-Control (so the same for every reader, as Cloudflare already treats it), and no
+        # query string. /ops is no-store, the API is JSON, errors and redirects are not 200: none of them is kept.
+        # Never while the invite gate is on (the security seat, 2026-11-12): a page served to an invitee would be kept
+        # and then shown to anyone while the app restarts. Only the sitemap's pages are kept (page_copies.offer).
+        if (PAGE_COPIES is not None and code == 200 and getattr(self, "command", "") == "GET"
+                and ctype.startswith("text/html") and str((headers or {}).get("Cache-Control", "")).startswith("public")
+                and "?" not in (getattr(self, "path", "") or "?") and not _invites_on()):
+            PAGE_COPIES.offer(self.path, body, (headers or {}).get("Content-Security-Policy", ""))
 
     # ------------------------------------------------------------ the gate
     # Ported from app/server.py on 2026-10-01, for app2's private release
@@ -17172,6 +17827,7 @@ class Handler(BaseHTTPRequestHandler):
         # at most MCP_CONCURRENT calls at once, so a burst of heavy calls cannot take every thread from the site
         if not _MCP["slots"].acquire(blocking=False):
             return self._send(503, b'{"error":"busy; try again shortly"}', "application/json", {"Retry-After": "5"})
+        t0 = time.perf_counter()
         try:
             out = mcp.handle(msg, mcp_backend())
             body = None if out is None else json.dumps(out, ensure_ascii=False).encode("utf-8")
@@ -17179,9 +17835,16 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(500, b'{"error":"internal error"}', "application/json")
         finally:
             _MCP["slots"].release()
+        # how assistants use it, counted with no person logged (app2/mcp_usage.py; plan 8.7d, 2026-11-12)
+        if MCP_USAGE is not None:
+            MCP_USAGE.record(msg, out, addr, self.headers.get("User-Agent") or "",
+                             (time.perf_counter() - t0) * 1000, len(body or b""))
         if body is None:
             return self._send(202, b"", "application/json")
-        return self._send(200, body, "application/json; charset=utf-8",
+        # a request in a revision this server does not speak is a 400 with the protocol's own error, so the client
+        # falls back to one it lists (2026-11-15; app2/mcp.py, PROTOCOL_VERSIONS)
+        code = 400 if ((out or {}).get("error") or {}).get("code") == mcp.UNSUPPORTED_VERSION else 200
+        return self._send(code, body, "application/json; charset=utf-8",
                           {"Cache-Control": "no-store", "X-Robots-Tag": "noindex"})
 
     def _feedback(self, u):
@@ -17261,6 +17924,14 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(200, MCP_PAGE.encode("utf-8"), "text/html; charset=utf-8",
                                   {"Cache-Control": "no-store"})
             return self._send(405, b'{"error":"POST JSON-RPC to /mcp"}', "application/json", {"Allow": "POST"})
+        # THE PRIVACY POLICY (2026-11-12; PRIVACY_PAGE): the address the AI directories' forms ask for
+        if u.path == "/privacy":
+            return self._send(200, PRIVACY_PAGE.encode("utf-8"), "text/html; charset=utf-8",
+                              {"Cache-Control": "public, max-age=3600"})
+        # THE TERMS OF USE (2026-11-12; TERMS_PAGE): the address OpenAI's directory form asks for
+        if u.path == "/terms":
+            return self._send(200, TERMS_PAGE.encode("utf-8"), "text/html; charset=utf-8",
+                              {"Cache-Control": "public, max-age=3600"})
         # THE UPTIME CHECK (2026-10-01: uptime alert first). Outside
         # the gate, so an outside monitor can tell "up" from "down" while the
         # site is invite-only -- the front page is a 403 either way. It says
@@ -17427,6 +18098,8 @@ class Handler(BaseHTTPRequestHandler):
         except ValueError:
             pass
         rep = ACTIVITY.report(days)
+        if MCP_USAGE is not None:
+            rep = {**rep, "mcp": MCP_USAGE.report(days)}
         common = {"Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow"}
         if not self._uncounted():
             # a browser that already held the /ops cookie before UNCOUNTED
@@ -17645,8 +18318,26 @@ class Handler(BaseHTTPRequestHandler):
             name = "blog/index.html"
         elif u.path.rstrip("/") == "/faq":              # tools/blog_build.py, from docs/faq.md
             name = "faq.html"
+        # EXPLORE'S VISUALIZATIONS (plan A.53, 2026-11-14): pages built by tools/viz/build.py from the graph alone,
+        # one per view; the slug's own shape only, as the blog's
+        elif re.fullmatch(r"/visual/[a-z0-9-]{1,80}/?", u.path):
+            name = f"visual/{u.path.rstrip('/').rsplit('/', 1)[1]}.html"
         elif re.fullmatch(r"/blog/[a-z0-9-]{1,120}/?", u.path):
             name = f"blog/{u.path.rstrip('/').rsplit('/', 1)[1]}.html"
+        # the two icon addresses browsers and phones ask for at the root, whatever a page links (2026-11-12)
+        elif u.path in ("/favicon.ico", "/apple-touch-icon.png"):
+            name = "icons/favicon.ico" if u.path == "/favicon.ico" else "icons/icon-512.png"
+        # THE APP'S SHELL, ITS OWN TWO FILES (2026-11-12, plan P-2026-11-12-4 step 1): named by their content's
+        # hash, so a year's caching can never serve a stale one. Only the current pair answers here; a page cached
+        # from the version before asks for the old names, which Caddy serves from the deploy's asset folder.
+        m_app = re.fullmatch(r"/app-([0-9a-f]{12})\.(js|css)", u.path)
+        if m_app:
+            sh = app_shell()
+            kind = m_app.group(2)
+            if m_app.group(1) != sh[kind + "_hash"]:
+                return self._send(404, b"not found", "text/plain", {"Cache-Control": "no-store"})
+            return self._send(200, sh[kind], "application/javascript; charset=utf-8" if kind == "js"
+                              else "text/css; charset=utf-8", {"Cache-Control": "public, max-age=31536000, immutable"})
         # NOTHING OUTSIDE static/. Found 2026-10-01 while planning the launch:
         # `GET /../server.py` returned this file and a private document under docs/
         # (via `/../../docs/`) -- anything the service account could read, to anyone
@@ -17669,10 +18360,19 @@ class Handler(BaseHTTPRequestHandler):
         if ctype is None and f.suffix == ".txt" and \
                 re.fullmatch(r"vendor/(?:[\w.-]+/)?[\w.-]*(?:LICENSE|OFL)[\w.-]*\.txt", name):
             ctype = "text/plain; charset=utf-8"
+        # THE SITE'S ICON (2026-11-12: the AI directories need one, and the site had none, not even a favicon). Only
+        # under icons/, and only these two kinds; the rule above stands for everything else.
+        if ctype is None and re.fullmatch(r"icons/[\w.-]+\.(?:png|ico)", name):
+            ctype = "image/png" if f.suffix == ".png" else "image/x-icon"
         if ctype is None:
             return self._send(404, b"not found", "text/plain")
-        body = f.read_bytes()
+        # the app page without its shell inline: the script and stylesheet are files of their own (app_shell)
+        body = app_shell()["page"] if name == "index.html" else f.read_bytes()
         extra = {"Content-Security-Policy": csp_for(body)} if f.suffix == ".html" else {}
+        # A VISUALIZATION OPENS AS A CARD IN THE APP (Doug, 2026-11-14), in a frame: only the site itself may frame it
+        if name.startswith("visual/") and extra:
+            extra["Content-Security-Policy"] = extra["Content-Security-Policy"].replace(
+                "frame-ancestors 'none'", "frame-ancestors 'self'")
         # THE SITE'S OWN PAGES (A.21) -- built inside a guard: a page that
         # failed to build would otherwise drop the connection, and the reader
         # would get "Back in a moment" for that one address. Instead the
@@ -17704,10 +18404,26 @@ class Handler(BaseHTTPRequestHandler):
             # here so only a 200 carries it -- Caddy's rule had put it on the
             # gate's 403 too
             extra["Cache-Control"] = self._public_cache()
+        elif name.startswith("visual/") and name.endswith(".html"):
+            # A VIEW IS A PUBLIC PAGE LIKE ANY OTHER (2026-11-15): without this it went out with no Cache-Control, so
+            # the app never kept its last good copy (page_copies keeps only public pages) and /visual/ideas answered 503
+            # for the whole push of that morning, 22 times to the watch alone
+            extra["Cache-Control"] = self._public_cache()
         return self._send(200, body, ctype, extra)
 
 
 ACTIVITY = None      # app2/activity.py's counter, set by main(), never on import
+MCP_USAGE = None     # app2/mcp_usage.py's counter of MCP calls, set by main() beside it (plan 8.7d)
+PAGE_COPIES = None   # app2/page_copies.py's writer of the last good copy (plan A.49), set by main() when configured
+
+
+def _invites_on() -> bool:
+    """Whether the invite gate is on (an invite list exists); no copy is kept while it is."""
+    try:
+        from bibleont import invites
+        return bool(invites.enabled())
+    except Exception:                                    # noqa: BLE001 -- unknown means keep nothing
+        return True
 
 
 # A CARD AT ITS OWN ADDRESS (plan A.21). 2026-10-03: getting
@@ -17728,6 +18444,7 @@ CARD_SPEAKS = 25          # "Where the text speaks of it" quoted on the page; th
 EVENT_VERSES = 60         # an event's passage quoted on its page, across its tellings
 EVENT_TELLINGS = 4        # the tellings quoted (a gospel event is told up to four times)
 PERSON_EVENT_VERSES = 25  # of each event a person's page quotes (the card's first EVENT_TELLINGS events)
+PERSON_NAMED_VERSES = 2   # of those, a person's page quotes only verses naming them (plan A.50, 2026-11-13)
 
 
 def _plain(s):
@@ -18587,6 +19304,91 @@ PAGE_CAT_ORDER = ["Kinship", "Marriage & union", "Places", "Verdicts", "Descent 
 _COUNT_WORDS = "zero one two three four five six seven eight nine ten eleven twelve".split()
 
 
+# The divine persons' titles and leads are Doug's, record by record, never by rule: left exactly as they were.
+ROLE_EXEMPT = {"god", "the_father", "jesus", "holy_spirit", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible"}
+
+# The relations that say what a person WAS (their office, rule, calling or work), in the order a title leads with them:
+# (relation type, direction, how the clause reads, how many names, the kinds of thing it may name). Only what the graph
+# holds and a verse cites; a speaker's claim is not the person's role.
+ROLE_ORDER = [
+    ("titled", "out", "{}", 1, ("title",)),
+    ("reigned_over", "out", "reigned over {}", 2, ("group", "place")),
+    ("ruler_of", "out", "was ruler of {}", 2, ("group", "place")),
+    ("ruled_from", "out", "ruled from {}", 2, ("place",)),
+    ("anointed", "in", "anointed by {}", 2, ("person",)),
+    ("anointed", "out", "anointed {}", 2, ("person",)),
+    ("prophet_to", "out", "prophesied to {}", 2, ("person", "group")),
+    ("wrote_letter_to", "out", "wrote to {}", 3, ("person", "group")),
+    ("wrote_to", "out", "wrote to {}", 3, ("person", "group")),
+    ("led", "out", "led {}", 2, ("group",)),
+    ("member_of", "out", "belonged to {}", 1, ("group",)),
+    ("built", "out", "built {}", 2, ("place",)),
+    ("mentor_of", "out", "was mentor to {}", 2, ("person",)),
+    ("commander_of", "out", "commanded the army of {}", 1, ("person",)),
+    ("conquered", "out", "conquered {}", 2, ("group", "place")),
+    ("servant_of", "out", "served {}", 2, ("person",)),
+]
+
+
+_OFFICE_GROUP = re.compile(r"\b(apostles?|prophets?|priests?|judges?|elders?|deacons?|kings?|Levites?|disciples?)\b", re.I)
+
+
+def _role_clauses(d, eid, c, names, first_span, ref_tok):
+    """The person's role clauses from the card's own relations, strongest first: [{"toks", "spans", "plain", "type"}].
+    Each names what the relation names (linked) and cites the verse of each name; a type is used once."""
+    items = [it for g in c.get("groups") or [] for it in g["items"] if not it.get("claimed_by")]
+    own = _slug((d["ents"].get(eid) or {}).get("name") or "")
+    out = []
+    for typ, dr, frame, cap, kinds in ROLE_ORDER:
+        if any(x["frame"] == frame for x in out):
+            continue          # wrote_letter_to and wrote_to are one clause
+        rows, seen = [], set()
+        for it in items:
+            if it["type"] != typ or it["dir"] != dr or it.get("otype") not in kinds or it["other"] in seen:
+                continue
+            if typ == "titled" and _slug(it["name"]) == own:
+                continue
+            if typ == "member_of" and not _OFFICE_GROUP.search(it["name"]):
+                continue          # a membership is a role only where the group is an office ("the twelve apostles"), not a tribe or a roll of names
+            if typ == "reigned_over" and len(it["name"]) > 30:
+                continue          # "the kingdom of Israel under Saul, David and Solomon" reads as a sentence, not a role
+            seen.add(it["other"])
+            rows.append({"id": it["other"], "name": it["name"], "refs": it.get("refs") or [], "n": len(it.get("refs") or [])})
+        if not rows:
+            continue
+        rows.sort(key=lambda k: (-k["n"], tuple(_canon(_site_span(d, k["refs"][0])) if k["refs"] and _site_span(d, k["refs"][0]) else (999,))))
+        ks = rows[:cap]
+        spans = [s for s in (first_span(k) for k in ks) if s]
+        if not spans:
+            continue
+        pre, _, post = frame.partition("{}")
+        toks = ([(pre, None)] if pre else []) + names(ks) + ([(post, None)] if post else [])
+        out.append({"toks": toks, "spans": spans, "plain": "".join(t for t, _h in toks), "type": typ, "frame": frame})
+    return out
+
+
+_KIN_LED = re.compile(r"^(son|daughter|child|wife|husband|father|mother|brother|sister|grandson|granddaughter|"
+                     r"grandfather|grandmother|nephew|niece|uncle|aunt|descendant|ancestor)\b", re.I)
+
+
+def _oneliner(desc, own_names):
+    """The record's own one-line identity (the text the People list shows), as the first clause that is not kin and
+    names no one the page would not link: ('prophet and judge who anointed Saul and David' has Saul and David, so
+    it gives way). Cut at a word, 56 characters at most; None where there is none."""
+    own = {w for n in own_names for w in re.split(r"\W+", n or "") if w}
+    for seg in re.split(r"\s*[;.]\s*", (desc or "").strip()):
+        seg = seg.strip(" ,")
+        if not seg or _KIN_LED.match(seg):
+            continue
+        caps = [w for w in re.findall(r"\b[A-Z][\w'’-]*", seg[1:] if seg[:1].isupper() else seg)]
+        if any(w not in own for w in caps):
+            continue          # the segment's first word is skipped: a leading capital is a common word ("Prophetess")
+        if len(seg) > 56:
+            seg = seg[:56].rsplit(" ", 1)[0].rstrip(" ,")
+        return seg[:1].lower() + seg[1:] if not re.match(r"[A-Z][a-z]+ [A-Z]", seg) else seg
+    return None
+
+
 def _person_page(d, eid, c):
     """{title, summary, lede (the summary as HTML, every name and verse a link), quote (citations to quote first,
     in order), ld (a function of the finished body, giving the JSON-LD)} or None."""
@@ -18647,11 +19449,31 @@ def _person_page(d, eid, c):
     def first_span(k):
         return next((s for s in (_site_span(d, r) for r in k.get("refs") or []) if s), None)
     clauses = []
+    # WHAT THE PERSON WAS, BEFORE WHOM THEY WERE BORN TO OR MARRIED (UI committee U-2, 2026-11-14): David's title said
+    # "Father of Amnon, Chileab and Absalom" and Jesus's "Son of Mary"; a searcher for "who was David" met a list of
+    # sons. The strongest role or office relation the graph holds comes first, each with its verse; kin follow.
+    # The divine persons are left exactly as they were (a ruling that is Doug's per record, never by rule).
+    roles = [] if eid in ROLE_EXEMPT else _role_clauses(d, eid, c, names, first_span, ref_tok)
+    for rc in roles[:2]:
+        clauses.append(rc["toks"] + ref_tok(rc["spans"]))
+        quote += rc["spans"]
+    n_roles = len(clauses)
+    one = None if (roles or eid in ROLE_EXEMPT) else _oneliner(e.get("desc"), [name] + list(e.get("aka") or []))
+    if one:
+        clauses.insert(0, [(one, None)])
+        n_roles = 1
     if parents:
         clauses.append([(parents[0]["rel"] + " ", None)] + names(parents[:2]))
         quote += [first_span(k) for k in parents[:2]]
     if spouses:
-        clauses.append([(spouses[0]["rel"] + " ", None)] + names(spouses[:3]))
+        if len(spouses) <= 3:
+            clauses.append([(spouses[0]["rel"] + " ", None)] + names(spouses))
+        else:
+            # "husband of Michal, Abigail, Ahinoam and five more": a long list is cut at three
+            more = len(spouses) - 3
+            clauses.append([(spouses[0]["rel"] + " ", None), link(spouses[0]), (", ", None), link(spouses[1]),
+                            (", ", None), link(spouses[2]),
+                            (f" and {_COUNT_WORDS[more] if more < len(_COUNT_WORDS) else more} more", None)])
         quote += [first_span(k) for k in spouses[:3]]
     if kids:
         if len(kids) <= 3:
@@ -18706,14 +19528,19 @@ def _person_page(d, eid, c):
             quote += sps
     # CUT AT A CLAUSE, 160 characters at most
     text = lambda ts: "".join(t for t, _h in ts)   # noqa: E731
-    body = []
-    for cl in clauses:
+    body, used = [], []
+    for i, cl in enumerate(clauses):
         nxt = body + ([("; ", None)] if body else []) + cl
         if len(text(lede + nxt) + ".") > 160:
-            break
+            if body:
+                break
+            continue          # a first clause too long to fit gives way to the next
         body = nxt
+        used.append(i)
     if not body:
         return None
+    shown_roles = [roles[i] for i in used if i < n_roles and not one]
+    one_used = bool(one) and 0 in used
     toks = lede + body + [(".", None)]
     if tail and len(text(toks + tail)) <= 160:
         toks += tail
@@ -18723,12 +19550,31 @@ def _person_page(d, eid, c):
     # THE TITLE: what people search for -- the family tree and the age -- where the card answers both
     fam = sum(1 for k in plain if k["type"] in ("father_of", "mother_of", "spouse_of", "sibling_of", "half_sibling_of"))
     big = name[:1].upper() + name[1:]
+    role_title = None
+    if shown_roles:
+        # the role first, then a second role or the parent while the title stays a search result's length
+        # (60 characters for the part before " · Bible Ontology", with the little room the name leaves)
+        extra = [rc["plain"] for rc in shown_roles[1:]] + (
+            [f"{parents[0]['rel']} {text(names(parents[:1]))}"] if parents else [])
+        role_title = f"{big} in the Bible: {shown_roles[0]['plain']}"
+        for x in extra:
+            if len(role_title) + 2 + len(x) <= 64:
+                role_title += f", {x}"
+                break
+    # NO ROLE RELATION: the record's own one-liner, the text the People list already shows (UI committee U-48), where
+    # it says something other than kin and names no one the page would not link
+    if one_used:
+        role_title = f"{big} in the Bible: {one}"
     if fam > 8 and life:
         title = f"{big} in the Bible: Family Tree and Age ({life['age']} Years)"
+    elif role_title:
+        title = role_title
     elif kids:
         title = f"{big} in the Bible: {kids[0]['rel'].capitalize()} " + text(names(kids[:3]))
-    elif parents:
-        title = f"{big} in the Bible: {parents[0]['rel'].capitalize()} " + text(names(parents[:2]))
+    # a parent known only as this person's own relation ("Jabez's mother", 2026-11-14) says nothing in a title
+    elif [p_ for p_ in parents if not str(p_.get("name") or "").lower().startswith(name.lower() + "'s")]:
+        pt = [p_ for p_ in parents if not str(p_.get("name") or "").lower().startswith(name.lower() + "'s")]
+        title = f"{big} in the Bible: {pt[0]['rel'].capitalize()} " + text(names(pt[:2]))
     elif spouses:
         title = f"{big} in the Bible: {spouses[0]['rel'].capitalize()} " + text(names(spouses[:3]))
     else:
@@ -18892,13 +19738,13 @@ def _concept_card_page(d, eid, c):
     np = len(cc["passages"])
     if hub:
         W = cc["with"]
-        P.append(f"<p>Its {len(words)} {_esc(langs_said)} words stand in {W['n']} verses of {W['books']} books: the first "
+        P.append(f"<p>Its {len(words)} {_esc(langs_said)} words stand in {_cnt(W['n'], 'verse')} of {W['books']} books: the first "
                  f"is {vref(W['first'])}, the last {vref(W['last'])}. The rows below hold them, with {len(cc['hand'])} "
                  f"more verses the hub places by hand. {np} passage{'s' * (np != 1)} speak{'s' * (np == 1)} of it."
                  + (f" {W['nt']} of the {W['n']} are in the New Testament." if W.get("nt") else "") + "</p>")
     else:
         first = cc.get("first")
-        P.append("<p>" + "; ".join(f'<span lang="{lang_attr(w)}">{_esc(w["lemma"])}</span> stands in {w["verses"]} verses'
+        P.append("<p>" + "; ".join(f'<span lang="{lang_attr(w)}">{_esc(w["lemma"])}</span> stands in {_cnt(w["verses"], 'verse')}'
                                    for w in words)
                  + (f". The first is {vref(first['id'])}." if first else ".") + "</p>")
     tb = cc.get("theme")
@@ -18915,9 +19761,13 @@ def _concept_card_page(d, eid, c):
                   + (f" {_esc(w['fold'])}" if w["fold"] else "")
                   + (f", “{_esc(w['gloss'])}”" if w.get("gloss") else "")
                   + f", {_esc(w['lang'])}{(' ' + _esc(w['form'])) if w.get('form') else ''}: "
-                  + (f"{w['verses']} verses in this sense, {w['uses']} uses" if hub else
-                     f"{w['verses']} verses, {w['uses']} uses")
-                  + (f" ({_esc(', '.join(w['where']))}, in the Aramaic of Ezra)" if w.get("where") else "") + "</li>")
+                  + (f"{_cnt(w['verses'], 'verse')} in this sense, {_cnt(w['uses'], 'use')}" if hub else
+                     f"{_cnt(w['verses'], 'verse')}, {_cnt(w['uses'], 'use')}")
+                  # the book from the verses themselves: magicians' Aramaic is all Daniel, and this said "of Ezra"
+                  # for every card (the card-access review, 2026-11-19)
+                  + (f" ({_esc(', '.join(w['where']))}, in the Aramaic of "
+                     f"{_esc(' and '.join(dict.fromkeys(x.rsplit(' ', 1)[0] for x in w['where'])))})"
+                     if w.get("where") else "") + "</li>")
     P.append(f"<h2>The words</h2><ul>{''.join(wl)}</ul>")
     desc = _plain(c.get("desc"))
     P += [f"<p>{_esc(p_.strip())}</p>" for p_ in re.split(r"\n\s*\n", desc or "") if p_.strip()]
@@ -18937,7 +19787,7 @@ def _concept_card_page(d, eid, c):
             for r in f["rows"]:
                 eg = next((x for x in r["eg"] if x["words"]), None)
                 sp = r["span"]
-                P.append(f"<h2>{_esc(r['label'])}</h2><p>{r['n']} verses, {vref(sp[0])}"
+                P.append(f"<h2>{_esc(r['label'])}</h2><p>{_cnt(r['n'], 'verse')}, {vref(sp[0])}"
                          + (f" to {vref(sp[1])}" if sp[1] != sp[0] else "")
                          + (f"; {r['nt']} in the New Testament" if r["nt"] else "")
                          + (f"; {r['hand']} placed by hand" if r["hand"] else "") + ".</p>"
@@ -18945,7 +19795,11 @@ def _concept_card_page(d, eid, c):
                          + (f"<p>Where readers part on it: {a(r['question']['path'], r['question']['question'])}</p>"
                             if r.get("question") else ""))
 
-    # ---- the relations by kind
+    # ---- the relations by kind; first, every relation the kinds below do not hold (A.50, 2026-11-13)
+    if cc.get("conn"):
+        P.append("<h2>Connections</h2><ul>" + "".join(
+            f"<li>{_esc(x['label'][:1].upper() + x['label'][1:])} {a('/e/' + _addr(x['id']), x['name'])} "
+            f"({refs_html(x['refs'], 3)})</li>" for x in cc["conn"]) + "</ul>")
     if cc["passages"]:
         P.append("<h2>Passages that speak of it</h2><ul>" + "".join(
             f"<li>{a('/e/' + _addr(p_['id']), p_['name'])} ({refs_html(p_['refs'], 3)}){speakers_html(named(p_['speakers']))}"
@@ -18962,7 +19816,7 @@ def _concept_card_page(d, eid, c):
             for s in cc["states"]) + "</ul>")
     if cc["spoken"]:
         P.append("<h2>Spoken in it</h2><ul>" + "".join(
-            f"<li>{a('/e/' + _addr(s['id']), s['name'])}, a {s['kind']} in {s['n']} verses, from {vref(s['refs'][0])}</li>"
+            f"<li>{a('/e/' + _addr(s['id']), s['name'])}, a {s['kind']} in {_cnt(s['n'], 'verse')}, from {vref(s['refs'][0])}</li>"
             for s in cc["spoken"] if s["refs"]) + "</ul>")
     solid = [x for x in cc["events"] + cc["subs"] if x["solid"]]
     hollow = [x for x in cc["events"] + cc["subs"] if not x["solid"]]
@@ -19136,7 +19990,7 @@ SK_ANIMALS = frozenset({"lamb", "lion", "serpent"})
 SK_DIVINE_OK = frozenset({"image_vine", "image_seed", "image_lamp", "image_bread", "image_light", "image_rock",
                           "image_shield", "image_corner_stone", "image_cross", "image_fire", "image_living_water",
                           "image_lightning", "image_tower", "image_clothes"})
-IMG_DIVINE = frozenset(PC_DIVINE | {"holy_ghost", "the_lord"})
+IMG_DIVINE = frozenset(PC_DIVINE | {"holy_ghost", "the_lord", "spirit_of_the_lord_in_the_hebrew_bible"})
 _IMG_SKETCHES = None
 
 
@@ -19743,15 +20597,29 @@ def _image_card_ld(ic, c, eid, body, url, title, desc):
 #     today's card (ruling OB-H), and so do the divine beings themselves
 # Built per request from the relations and verses in memory; no index across the corpus.
 OB_KINDS = ("object", "creature", "being", "covenant", "observance", "title")
-OB_DIVINE = PC_DIVINE | {"holy_ghost"}
+OB_DIVINE = PC_DIVINE | {"holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible"}
 OB_TYPES = ("made", "carried", "offered", "took", "kept_at", "stationed_at", "party_to", "token_of", "supersedes", "instituted", "observed",
             "titled", "self_designated_as",
             # where it stands and what it is one of (the object-card review, 2026-11-10: the twelve stones' graph holds
             # Gilgal, Josh 4:20, and "stones", and the face printed neither; one row of three)
-            "located_in", "kind_of")
+            "located_in", "kind_of",
+            # WHAT WAS DONE WITH IT (plan A.50, 2026-11-13): the altar's page said "the graph records 3 relations ...
+            # open the card" and printed none -- Noah, Abram and Isaac each built one (Gen 8:20, 12:7, 26:25), and
+            # "built" was not on this list; nor were most of the acts the structure readings added the same day
+            "built", "gave", "ate", "wore", "destroyed", "killed", "bought", "sent", "repaired",
+            "commanded_the_making_of",
+            # WHAT A BEING DID, AND WHAT A CREATURE IS (same day): 50 of the beings' 55 relations were on no page --
+            # Gabriel's never said he appeared to Daniel, Mary and Zechariah -- and Adam's naming of the animals was
+            # missing from theirs
+            "appeared_to", "blessed", "charged", "answered", "explained", "spoke_to", "warned", "rebuked", "named",
+            "described_as")
+OB_NOT_SHOWN = frozenset(("speaks_of", "in_theme", "asserted_by", "states", "told", "spoken_in", "quoted", "quotes"))
 OB_BOX = {"party_to": "parties", "token_of": "sign", "supersedes": "follows", "instituted": "began", "observed": "kept",
           "titled": "held", "self_designated_as": "said", "made": "walk", "carried": "walk", "offered": "walk", "took": "walk", "kept_at": "walk",
-          "stationed_at": "walk"}
+          "stationed_at": "walk", **{t: "walk" for t in ("built", "gave", "ate", "wore", "destroyed", "killed",
+                                                         "bought", "sent", "repaired", "commanded_the_making_of",
+                                                         "appeared_to", "blessed", "charged", "answered", "explained",
+                                                         "spoke_to", "warned", "rebuked", "named", "described_as")}}
 # (key, heading, the line an empty box keeps: an empty box says so, never goes silent and never invents)
 OB_BOXES = {
     "covenant": [("parties", "Parties", "The graph records no party for this covenant."),
@@ -19770,7 +20638,14 @@ OB_LABEL = {("made", "in"): "Made by", ("carried", "in"): "Carried by", ("offere
             ("supersedes", "in"): "Followed by", ("supersedes", "out"): "It follows", ("instituted", "in"): "Instituted by",
             ("observed", "in"): "Kept by", ("titled", "in"): "Held by", ("self_designated_as", "in"): "Used of themselves by",
             ("signifies", "in"): "Signified by", ("signifies", "out"): "Signifies",
-            ("located_in", "out"): "At", ("kind_of", "out"): "One of the", ("kind_of", "in"): "Among them"}
+            ("located_in", "out"): "At", ("kind_of", "out"): "One of the", ("kind_of", "in"): "Among them",
+            ("built", "in"): "Built by", ("gave", "in"): "Given by", ("ate", "in"): "Eaten by", ("wore", "in"): "Worn by",
+            ("destroyed", "in"): "Destroyed by", ("killed", "in"): "Killed by", ("bought", "in"): "Bought by",
+            ("sent", "in"): "Sent by", ("repaired", "in"): "Repaired by",
+            ("commanded_the_making_of", "in"): "Its making commanded by", ("named", "in"): "Named by",
+            ("appeared_to", "out"): "Appeared to", ("blessed", "out"): "Blessed", ("charged", "out"): "Charged",
+            ("answered", "out"): "Answered", ("explained", "out"): "Explained to", ("spoke_to", "out"): "Spoke to",
+            ("warned", "out"): "Warned", ("rebuked", "out"): "Rebuked", ("described_as", "out"): "Described as"}
 OB_LEDE = {("party_to", "in"): "Parties", ("token_of", "in"): "Sign"}
 OB_KIND_LINE = {"object": "Object", "creature": "Creature", "being": "Being", "covenant": "Covenant",
                 "observance": "Observance", "title": "Title"}
@@ -19835,7 +20710,10 @@ def _ob_hub(d, eid):
             continue
         ents = d["ents"]
         return {"id": hid, "label": h.get("label") or hid, "card": h["card"], "card_name": (ents.get(h["card"]) or {}).get("name") or h["card"],
-                "addr": _addr(h["card"]), "passage": h.get("passage"), "n": len(mem),
+                "addr": _addr(h["card"]), "passage": h.get("passage"),
+                # DISTINCT CARDS, not the list's sentences (S-15: the Sabbath said "One of the 12 in the Ten Commandments",
+                # Idolatry and Coveting twice; the hubs file lists the text's twelve sentences by design, A.34)
+                "n": len({m.get("card") for m in mem if m.get("card")}) or len(mem), "sentences": len(mem),
                 "others": [{"id": m["card"], "addr": _addr(m["card"]), "name": _ob_cap(ents[m["card"]]["name"])}
                            for m in mem if m.get("card") in ents and m["card"] != eid]}
     return None
@@ -19877,7 +20755,12 @@ def object_card(d, eid, e):
     merged = collections.OrderedDict()
     for r in rels:
         t, dr = r["type"], r["dir"]
-        if (t not in OB_TYPES and t != "signifies") or not r.get("refs") or r["other"] not in ents:
+        # an object, creature or being shows every relation but speech and the word index (A.50, 2026-11-13: an
+        # allowlist hid 27% of the objects' relations even after it grew -- "issues from", "likened to", "drawn
+        # from"); a covenant, observance or title keeps its boxes' own types, since an unknown type would land under
+        # the wrong heading
+        generic = kind in ("object", "creature", "being") and t not in OB_NOT_SHOWN
+        if (t not in OB_TYPES and t != "signifies" and not generic) or not r.get("refs") or r["other"] not in ents:
             continue
         m = merged.setdefault((t, dr, r["other"]), dict(r, refs=[]))
         m["refs"] += [x for x in r["refs"] if x not in m["refs"]]
@@ -19905,6 +20788,11 @@ def object_card(d, eid, e):
                "go": _img_vid(show[0]) if show else "", "vids": [_img_vid(k) for k in vs],
                "named": bool(named)}
         if t == "signifies":
+            # R-13 (S-34, 2026-11-14): a reading on a card whose subject a question card covers (the Sabbath) says
+            # that readers differ, and where
+            q_ = _questions().get(eid)
+            if q_:
+                row["question"] = {"path": f"/questions/{eid}", "name": q_.get("question") or eid}
             reads.append(row)
         elif vs and check and not named:
             row["why"] = f"The verses it cites do not name {other.get('name') or oid}."
@@ -20067,6 +20955,19 @@ def _ob_title_desc(d, eid, e, card):
         title = _ob_fit(f"{nm} in the Bible: Where the Text Places It", f"{nm} in the Bible")
     else:
         title = _ob_fit(f"{nm} in the Bible: Where the Text Uses It", f"{nm} in the Bible")
+        # A BEING OR AN OBJECT LEADS WITH ITS TOP RELATION (UI committee U-10, 2026-11-14): "Where the Text Uses It" fits a
+        # basin and not an angel; the title says what the card's first line says ("Gabriel in the Bible: appeared to
+        # Daniel, Mary and Zechariah"), as many names as keep it a search result's length
+        # never a group naming only a divine person (the adversary's read "has with them God", 2026-11-14)
+        g0 = next((g for g in card["lede"] if g["names"] and g["label"] not in ("Parties", "Sign")
+                   and not all(x.get("id") in OB_DIVINE for x in g["names"])), None)
+        if g0:
+            lab = g0["label"][:1].lower() + g0["label"][1:]
+            lab = lab.split(" / ")[0]       # a two-sided label ("attacked / made war on") takes its first side in a title
+            ns = [x["name"] for x in g0["names"]][:3]
+            cands = [f"{nm} in the Bible: {lab} " + (", ".join(ns[:k - 1]) + " and " + ns[k - 1] if k > 1 else ns[0])
+                     for k in range(len(ns), 0, -1)]
+            title = next((t for t in cands if len(t) <= 60), title)
     desc = ""
     if pas:
         pool = pas["shown"] or pas["rest"]
@@ -20135,14 +21036,17 @@ def _ob_card_page(d, eid, c):
         h = oc["hub"]
         P.append(f"<p>One of the {h['n']} in {a('/e/' + h['addr'], h['card_name'])}: " +
                  ", ".join(a(f"/e/{o['addr']}", o["name"]) for o in h["others"]) + ".</p>")
-    pas = oc["passage"]
+    # THE RELATIONS LEAD, THE PASSAGE FOLLOWS (plan A.50 for objects, 2026-11-13): the first passage was printed before
+    # the boxes, so 131 of 357 object pages showed more than five verses before their first link to another card
+    pas, passage_html = oc["passage"], []
     if pas:
-        P.append(f"<h2>The first passage: {_esc(pas['ref'])}</h2>")
+        passage_html.append(f"<h2>The first passage: {_esc(pas['ref'])}</h2>")
         if pas["head"]:
-            P.append(f"<p>The Berean editors’ heading: {_esc(pas['head'])}.</p>")
-        P += [vline(v) for v in pas["shown"]]
+            passage_html.append(f"<p>The Berean editors’ heading: {_esc(pas['head'])}.</p>")
+        passage_html += [vline(v) for v in pas["shown"]]
         if pas["rest"]:
-            P.append(f"<p>And {len(pas['rest']) + pas['more']} more verses of the passage, in the reader: {a('/p/' + pas['go'], pas['ref'])}.</p>")
+            passage_html.append(f"<p>And {len(pas['rest']) + pas['more']} more verses of the passage, in the reader: "
+                                f"{a('/p/' + pas['go'], pas['ref'])}.</p>")
     for b in oc["boxes"]:
         P.append(f"<h2>{_esc(b['head'])}</h2>")
         if b["empty"]:
@@ -20159,8 +21063,11 @@ def _ob_card_page(d, eid, c):
     if oc["reads"]:
         P.append("<h2>A reading</h2><p>A connection the graph marks as implied; shown, never merged into what the text says.</p><ul>")
         for x in oc["reads"]:
-            P.append(f"<li>{_esc(x['label'])}: {a('/e/' + x['addr'], x['name'])}" + "".join(vline(v) for v in x["vs"]) + "</li>")
+            P.append(f"<li>{_esc(x['label'])}: {a('/e/' + x['addr'], x['name'])}" + "".join(vline(v) for v in x["vs"])
+                     + (f"<p>Readers differ on this: see {a(x['question']['path'], x['question']['name'])}</p>"
+                        if x.get("question") else "") + "</li>")
         P.append("</ul>")
+    P += passage_html
     if oc["held"]:
         P.append("<h2>Held back from the face</h2><p>Relations the graph stores that the verse beside them does not say.</p><ul>")
         for x in oc["held"]:
@@ -20185,7 +21092,7 @@ def _ob_card_page(d, eid, c):
         # the word's verses, not the thing's: the basin's twenty hold Solomon's ten basins too (the Fable audit,
         # 2026-11-11), so the list says what it is
         P.append("<h2>The verses that hold its word</h2>")
-        P.append(f"<p>The first {len(listed)} of {total} verses that hold its word, in the order of the books. The word "
+        P.append(f"<p>The first {len(listed)} of {_cnt(total, 'verse')} that hold its word, in the order of the books. The word "
                  f"is not always this one: these are where it stands, not each a verse about {_esc(name)}.</p>")
         P += [vline(_ob_v(d, k)) for k in listed]
     P.append("<p>English: Berean Standard Bible. Relations are the graph’s, each with the verse it cites.</p>")
@@ -20576,7 +21483,7 @@ def _gr_card_page(d, eid, c):
     bt = gc["built"]
     P.append("<h2>What this card is built from</h2>")
     P.append(f"<p>{bt['stored']} relations: " + "; ".join(f"{n} {_esc(l)}" for l, n in bt["by_type"]) + ". "
-             + (f"The name word stands in {bt['name_n']} verses; the relations cite {bt['cited']}." if bt["name_n"] else "") + "</p>")
+             + (f"The name word stands in {_cnt(bt['name_n'], 'verse')}; the relations cite {bt['cited']}." if bt["name_n"] else "") + "</p>")
     evs = (c.get("events") or [])[:5]
     if evs:
         P.append("<h2>Passages that mention them</h2><ul>" + "".join(f"<li>{a('/e/' + _addr(x['id']), x['name'])}</li>" for x in evs) + "</ul>")
@@ -20889,7 +21796,10 @@ _IAM = None
 # THE FOUR DIVINE-PERSON CARDS' HEADERS (Doug's rulings, 2026-10-31): each sketch a thing the text names, with the
 # verse it is drawn from; never a figure (app2/deity_sketches.py). The records themselves are unchanged.
 DEITY_PLATES = {"god": ("God", "rock", "Deut 32:4"), "jesus": ("Jesus", "cross", "Phil 2:8"),
-                "holy_ghost": ("The Holy Spirit", "wind", "John 3:8"), "the_father": ("The Father", "throne", "Rev 3:21")}
+                "holy_ghost": ("The Holy Spirit", "wind", "John 3:8"), "the_father": ("The Father", "throne", "Rev 3:21"),
+                # THE OLD TESTAMENT'S SPIRIT OF GOD (P-2026-11-17-1; Doug: "same frame and protections"): its own card,
+                # linked to the Holy Spirit as possibly the same; the wind of Gen 1:2, its word ruach
+                "spirit_of_the_lord_in_the_hebrew_bible": ("The Spirit of God", "wind", "Gen 1:2")}
 
 
 def _iam_spec():
@@ -21571,7 +22481,7 @@ def card_page(eid):
 
     in_passage = set()
 
-    def quote_telling(tl, heading, limit, skip_quoted=False):
+    def quote_telling(tl, heading, limit, skip_quoted=False, names=None):
         nonlocal left
         try:
             fb, fc, fv = bsb_ref(d, tl["first"]).split(".")
@@ -21580,11 +22490,27 @@ def card_page(eid):
         except (ValueError, KeyError, AttributeError, TypeError):
             return
         bk, items, unshown = MACULA_BACK.get(fb, fb), [], 0
+        # A PERSON'S EVENT FOLDS TO THE VERSES THAT NAME THEM (plan A.50, 2026-11-13). Abihu's page quoted all of
+        # Exodus 19-24 and the Numbers census because he appears in them: 65 verse links, his relations 11,000
+        # characters down. With names given, only verses naming the person are quoted (at most PERSON_NAMED_VERSES),
+        # or the telling's first verse where none does; the rest is one link to the reader.
+        span = [(ch, vn) for ch in range(fc, lc + 1) for vn in range(fv if ch == fc else 1, (lv if ch == lc else 200) + 1)
+                if d["verses"].get((bk, ch, vn))]
+        if names:
+            pat = re.compile(r"\b(?:%s)\b" % "|".join(re.escape(n_) for n_ in names), re.I)
+            named = [cv for cv in span if pat.search(d["verses"][(bk, *cv)])][:PERSON_NAMED_VERSES]
+            keep = set(named or span[:1])
+            limit = len(keep)
+        else:
+            keep = None
         for ch in range(fc, lc + 1):
             for vn in range(fv if ch == fc else 1, (lv if ch == lc else 200) + 1):
                 t = d["verses"].get((bk, ch, vn))
                 if skip_quoted and f"{bk}.{ch}.{vn}" in in_passage:
                     continue  # two of a person's events overlap (Job 1:1-2:13 holds Job 1:13-22)
+                if t and keep is not None and (ch, vn) not in keep:
+                    unshown += 1
+                    continue
                 if t and not (left > 0 and len(items) < limit):
                     unshown += 1
                 if t and left > 0 and len(items) < limit:
@@ -21632,9 +22558,14 @@ def card_page(eid):
             except (ValueError, KeyError, TypeError, IndexError, AttributeError):
                 continue
             mine.append((at, e_, ec, tl))
+        # the names a verse may call this person by (plan A.50): only a person's page folds its events to them
+        rec = d["ents"].get(eid) or {}
+        who_names = ([rec.get("name")] + list(rec.get("aka") or [])) if pp else None
+        who_names = [n_ for n_ in (who_names or []) if n_ and len(n_) > 1] or None
         for _at, e_, ec, tl in sorted(mine, key=lambda x: x[0]):
             quote_telling(tl, f'<a href="/e/{_esc(_addr(e_["id"]))}">{_esc(ec.get("name") or e_.get("name") or "")}'
-                              f'</a> ({_esc(tl.get("label") or "")})', PERSON_EVENT_VERSES, skip_quoted=True)
+                              f'</a> ({_esc(tl.get("label") or "")})', PERSON_EVENT_VERSES, skip_quoted=True,
+                          names=who_names)
     if passage and not pp:  # a cited verse the passage already quotes is not quoted twice
         quoted = {i.split('href="/p/', 1)[1].split('"', 1)[0] for p in passage for i in p.split("<li>")[1:]}
         verses = [v for v in verses if v.split('href="/p/', 1)[1].split('"', 1)[0] not in quoted]
@@ -21696,8 +22627,21 @@ def card_page(eid):
         if len(same) < 2:
             return nm
         oe = d["ents"][o]
-        par = next((r for r in d["rels"].get(o, []) if r["type"] in ("father_of", "mother_of")
-                    and r["dir"] == "in" and not r.get("claimed_by")), None)
+        # A RECORD'S OWN DOUBLE NAME ("John, also called Mark"): John Mark, not "John (son of Mary)", which reads as
+        # the apostle (data fixer S-12, 2026-11-14)
+        aka0 = next((a_ for a_ in oe.get("aka") or [] if a_), None)
+        if aka0 and (_who(oe) or "").lower().startswith(f"{nm}, also called {aka0}".lower()):
+            return f"{nm} {aka0}"
+        pars = [r for r in d["rels"].get(o, []) if r["type"] in ("father_of", "mother_of")
+                and r["dir"] == "in" and not r.get("claimed_by")]
+        par = pars[0] if len({r["other"] for r in pars}) == 1 else None
+        # TWO GENEALOGIES, TWO FATHERS (Joseph: Heli in Luke 3:23, Jacob in Matthew 1:16): neither is chosen for him
+        # in a label; the one thing both tell is whose husband he was (data fixer S-19)
+        if len({r["other"] for r in pars}) > 1:
+            sp = next((r for r in d["rels"].get(o, []) if r["type"] == "spouse_of" and not r.get("claimed_by")), None)
+            if sp:
+                word = {"m": "husband", "f": "wife"}.get(oe.get("gender"), "spouse")
+                return f"{nm} ({word} of {(d['ents'].get(sp['other']) or {}).get('name') or sp['other']})"
         if par:
             word = {"m": "son", "f": "daughter"}.get(oe.get("gender"), "child")
             return f"{nm} ({word} of {(d['ents'].get(par['other']) or {}).get('name') or par['other']})"
@@ -21799,7 +22743,13 @@ def card_page(eid):
             # the page's leadHtml splits them)
             + "".join(f"<p>{_place_link_refs(d, _esc(p.strip())) if plp else _esc(p.strip())}</p>"
                       for p in re.split(r"\n\s*\n", desc or "") if p.strip())
+            # A PERSON'S PAGE LEADS WITH WHAT THE GRAPH HOLDS OF THEM (plan A.50, 2026-11-13; Doug: "lack a punch of
+            # laying out a complete set of graph relations up front"): the connections first, then the verses
+            + (f"<h2>Connections</h2>{''.join(groups)}" if groups and (pp or person) else "")
             + (f"<h2>Verses</h2><ul>{''.join(verses)}</ul>" if verses and pp else "")
+            # AN EVENT'S PAGE LEADS THE SAME WAY (A.50 for events, 2026-11-13: a median 16 verses came before the
+            # first card link): who did what, and its connections, before the passage is quoted
+            + ((evp["cast"] + (f"<h2>Connections</h2>{''.join(groups)}" if groups else "")) if evp else "")
             + "".join(passage)
             + (evp["sections"] if evp else "")
             + (plp["sections"] if plp else "")
@@ -21809,7 +22759,8 @@ def card_page(eid):
                + (f'<p>And {more} more, every one in <a href="/e/{_esc(addr)}">the card in Bible Ontology</a>.</p>'
                   if more else "") if speaks else "")
             + (_scope_page(d, c, sck) if sck else "")
-            + (f"<h2>{'As the graph stores it' if fbp else 'Connections'}</h2>{''.join(groups)}" if groups else "")
+            + (f"<h2>{'As the graph stores it' if fbp else 'Connections'}</h2>{''.join(groups)}"
+               if groups and not (pp or person or evp) else "")
             + '<p><a href="/">Open Bible Ontology</a> to read every verse and follow '
               'every connection.</p></article>')
     if pp or pcp or evp:
@@ -22358,7 +23309,15 @@ def home_page():
     groups = [f"<p><b>{_esc(g['name'])}</b>: " + " · ".join(
         f'<a href="{_esc(theme_path(tid))}">{_esc(tname(tid))}</a>' for tid in g["themes"] if tid in tm["_by"]) + "</p>"
         for g in _theme_homes().get("groups") or []]
-    themes = (("<h2>Start with a theme</h2><ul>" + "".join(starts) + "</ul>") if starts else "") + \
+    # SEE THE GRAPH, as real links a crawler can follow (plan A.53; Doug, 2026-11-14: "fully appreciated by search
+    # engines"): every released view in static/visual, by its own title
+    vis = []
+    for f_ in sorted((STATIC / "visual").glob("*.html")):
+        m_ = re.search(r"<title>(.*?) · Bible Ontology</title>", f_.read_text(encoding="utf-8", errors="replace"))
+        if m_:
+            vis.append(f'<li><a href="/visual/{_esc(f_.stem)}">{m_.group(1)}</a></li>')
+    themes = (("<h2>See the graph</h2><ul>" + "".join(vis) + "</ul>") if vis else "") + \
+        (("<h2>Start with a theme</h2><ul>" + "".join(starts) + "</ul>") if starts else "") + \
         ("<h2>Themes</h2>" + "".join(groups) if groups else "")
     by = {}
     for e in d["ents"].values():
@@ -22519,14 +23478,26 @@ def _vc_words(d, b, c, v):
         # THE CARD IS THE CONTENT PART'S: a noun, verb or the like, never a particle, preposition, conjunction or
         # article (Genesis 1:1's אֵת has none linked from here). MACULA's extended number ("1886a", the article) names
         # a different word than the plain one (H1886 is Dothan), so a lettered number is looked up as written or not at all
+        # EVERY WORD WHOSE CARD EXISTS IS LINKED (P-2026-11-15-4; Doug: "the linking of existing words seems mechanical
+        # and inexpensive"). The gate was a usage profile, so a rare word with a card (Rom 12:2's μεταμορφόω, G3339)
+        # read "a particle or a prefix: no word card", and function words were never linked: 13,740 tokens under 117
+        # numbers whose card answers. The content part still leads a word of several parts; failing that, any part
+        # whose card exists (a preposition or conjunction standing alone has its card too)
+        def has_card(k):
+            return k in d["profiles"] or k in (d.get("lex") or {}) or k in (d.get("lemmas") or {})
         pick = None
-        for p in ps:
-            m = re.match(r"^0*(\d+)([a-z]?)$", p.get("s") or "")
-            if not m or p.get("p") in ("particle", "preposition", "conjunction", "article", "interjection"):
-                continue
-            k = f"{'g' if greek else 'h'}{m.group(1)}{m.group(2)}"
-            if k in d["profiles"]:
-                pick = (k, p)
+        for content_only in (True, False):
+            # failing a content part, the last part: prefixes come first (וְאֵת is "and" + the object marker אֵת)
+            for p in (ps if content_only else reversed(ps)):
+                m = re.match(r"^0*(\d+)([a-z]?)$", p.get("s") or "")
+                if not m or (content_only and p.get("p") in ("particle", "preposition", "conjunction", "article",
+                                                             "interjection")):
+                    continue
+                k = f"{'g' if greek else 'h'}{m.group(1)}{m.group(2)}"
+                if has_card(k):
+                    pick = (k, p)
+                    break
+            if pick:
                 break
         w["card"] = pick[0].upper() if pick else None
         lead = pick[1] if pick else ps[-1]
@@ -23890,6 +24861,35 @@ def llms_txt():
             f"and its table at {SITE}/themes/<name>/side-by-side",
             f"- The Knowledge Graph Navigator: {SITE}/graph",
             f"- About: {SITE}/about", ""]
+    # the MCP server, for the models that read this file (Doug, 2026-11-12: "communicate clearly to the AI
+    # providers ... I want Claude to see the value"). Only what the live server does: tests/test_llms_mcp.py
+    out += ["## Ask the graph over MCP", "",
+            f"A read-only Model Context Protocol server: {SITE}/mcp (Streamable HTTP, stateless; no account, no "
+            f"sign-in). How to connect Claude, ChatGPT or another client: {SITE}/mcp.", "",
+            "What it adds to what a language model already knows of the Bible is the part that is easy to get "
+            "wrong from memory, each piece checkable:", "",
+            "- Which verse: every relation names the verse it rests on, with that verse's page to cite.",
+            "- Who says it: a claim made in a speaker's words is credited to the speaker, not the narrator "
+            "(\"the words of Elihu\"), so a character's claim is not reported as the Bible's own.",
+            "- How sure: each link is stated (the text says it), implied, a reading (someone's judgment, marked as one), "
+            "or a match (shared words in the original, with its measured grade).",
+            "- Who made a link between two verses: the Berean editors, a judged reading, or the word match.",
+            "- What each link means: its iri is a term in the published vocabulary "
+            f"({SITE}/ns/relation), and fetch(\"relation:<type>\") returns its definition and examples.", "",
+            "For example, get_verse(\"Isa 53:7\") answers with the verse in the Berean Standard Bible and its "
+            "links: quoted in Acts 8:32–33, as the Berean editors note (stated); echoed in Acts 8:32 (a word match, "
+            "strong: about 5 in 8 real); alluded to in Revelation 5:6, as a reader judged (a reading).", "",
+            "Tools: start (where to begin), search, fetch (one item whole), get_relations (page by page, by "
+            "kind), get_verse (by reference), get_word (by Strong's number). Every answer ends with links to "
+            "follow with fetch, moves (the verse before and after; from a verse up to the passage or event its "
+            "words sit in, and to the speaker who says them; from an event to the larger event it sits in and to "
+            "its tellings), and a map of the relation kinds it holds, with counts. A verse names its speaker in "
+            "words where the graph or the original-language annotation knows who speaks: most of Job, and between "
+            "a quarter and two fifths of the quoted speech in the Gospels and Acts. Elsewhere it says the words "
+            "are spoken and that the speaker is not recorded.", "",
+            "It does not interpret: it supplies evidence, and the reading is the user's. It returns nothing the "
+            "site holds back, and it changes nothing. Credit: Bible Ontology (bibleontology.org), CC BY 4.0, "
+            "with the page of whatever is used.", ""]
     return "\n".join(out)
 
 
@@ -23935,15 +24935,20 @@ server: how to connect Claude, ChatGPT or another assistant, and what it answers
 16px}h1{font-weight:normal}h2{font-size:1.1em;margin-top:1.6em}code{font:15px ui-monospace,monospace;background:#efece4;
 padding:1px 4px;border-radius:3px}li{margin:.3em 0}.muted{color:#52514e}@media(prefers-color-scheme:dark){body{color:
 #e8e6e1;background:#1c1b19}code{background:#2c2a26}.muted{color:#a8a59c}}</style>
+<nav class=sitebar style="margin:0 0 1.2em;font:15px/1.4 system-ui,sans-serif"><a href="/" style="text-decoration:none"><b>Bible Ontology</b></a> &middot; <a href="/">Back to the site</a> &middot; <a href="/about">About</a></nav>
 <h1>Ask the graph from your AI assistant</h1>
 <p>Bible Ontology runs a read-only <a href="https://modelcontextprotocol.io">Model Context Protocol</a> server. Add it
 to an assistant that supports MCP and it can look things up in the graph directly: a person, an event, a verse, a
-Hebrew or Greek word, a theme, a question. Every answer carries its verses, who says it, how sure it is, and the page
-to cite.</p>
+Hebrew or Greek word, a theme, a question. Every answer carries its verses, how sure each link is, whose words it
+rests on where the speaker is known, and the page to cite.</p>
 <p><b>The address:</b> <code>https://bibleontology.org/mcp</code>. No account, no sign-in.</p>
 <h2>Claude</h2>
-<p>Add a custom connector with the address above, and choose no sign-in. Custom connectors work on every Claude plan
-(the free plan allows one).</p>
+<ol><li>In Claude (claude.ai or the app), open <b>Settings → Connectors</b> and choose <b>Add custom connector</b>.</li>
+<li>Name it <b>Bible Ontology</b>, give the address above, and choose <b>No sign-in</b>.</li>
+<li>In a chat, open the <b>+</b> menu under the message box, then <b>Connectors</b>, and switch Bible Ontology on.
+Claude asks once before it first uses a tool.</li>
+<li>Ask, for example: <i>In Job 4:7, who is speaking, and what is that speech claiming?</i></li></ol>
+<p>Custom connectors work on every Claude plan (the free plan allows one).</p>
 <h2>ChatGPT</h2>
 <p>Add a custom connector with the address above, where your plan allows it (Pro in developer mode, Business,
 Enterprise and Edu). The server offers the <code>search</code> and <code>fetch</code> tools ChatGPT expects.</p>
@@ -23956,14 +24961,134 @@ Enterprise and Edu). The server offers the <code>search</code> and <code>fetch</
 <li><code>get_relations</code>: an item's relations, page by page</li>
 <li><code>get_verse</code> and <code>get_word</code>: a verse by reference, a word by Strong's number</li></ul>
 <p>Every answer ends with links: the places to go next, each a relation that names the verse it rests on, how sure it
-is (stated, implied, or a reading) and whose words it is in. A relation can itself be fetched, to read its definition
-in <a href="/ns/relation">the published vocabulary</a> and see other places it holds.</p>
+is (stated, implied, a reading, or a match of words with its grade) and whose words it is in. A relation can itself
+be fetched, to read its definition in <a href="/ns/relation">the published vocabulary</a> and see other places it
+holds.</p>
 <h2>What it will not do</h2>
 <ul><li>Interpret. It supplies evidence; the reading is yours.</li>
 <li>Return anything the site holds back.</li>
-<li>Change anything, or store anything about who asks: only counts of calls.</li></ul>
+<li>Change anything, or store anything about who asks. It counts calls as daily totals, and keeps the words of
+searches that found nothing for 90 days, so the graph can be improved where assistants found it lacking.</li></ul>
 <p class=muted>The graph is CC BY 4.0: credit "Bible Ontology (bibleontology.org)". Questions:
-bible.ontology@gmail.com. <a href="/">Back to the site</a>.</p>
+bible.ontology@gmail.com. <a href="/privacy">Privacy</a>. <a href="/terms">Terms of use</a>. <a href="/">Back to the
+site</a>.</p>
+"""
+
+# THE TERMS OF USE (2026-11-12, approved by Doug as written: "Approve as written"; OpenAI's directory requires a
+# terms URL). Plain words, in
+# step with LICENSE-DATA (CC BY 4.0, the credit given there, each source under its own terms), robots.txt (search and
+# answer engines welcome; training crawlers asked to take the data from the public repository, which the license
+# allows) and PRIVACY_PAGE. The owner is named in the license it links to, not here (he is named on About alone).
+TERMS_PAGE = """<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>Terms of use · Bible Ontology</title><meta name=description content="The terms for using Bible Ontology's site,
+data and MCP server: free, read-only, CC BY 4.0, with no interpretation offered as fact.">
+<link rel=canonical href="https://bibleontology.org/terms">
+<style>body{font:17px/1.55 Georgia,serif;color:#1a1a19;background:#faf8f3;max-width:40em;margin:6vh auto;padding:0
+16px}h1{font-weight:normal}h2{font-size:1.1em;margin-top:1.6em}li{margin:.3em 0}.muted{color:#52514e}
+@media(prefers-color-scheme:dark){body{color:#e8e6e1;background:#1c1b19}.muted{color:#a8a59c}}</style>
+<nav class=sitebar style="margin:0 0 1.2em;font:15px/1.4 system-ui,sans-serif"><a href="/" style="text-decoration:none"><b>Bible Ontology</b></a> &middot; <a href="/">Back to the site</a> &middot; <a href="/about">About</a></nav>
+<h1>Terms of use</h1>
+<p>Bible Ontology (bibleontology.org) is a free, read-only knowledge graph of the Bible, offered as a website, as data
+in a <a href="https://github.com/bibleontology/bibleontology">public repository</a>, and through a read-only
+<a href="/mcp">MCP server</a> for AI assistants. Using any of them means accepting these terms. They are short on
+purpose.</p>
+<h2>What it is, and what it is not</h2>
+<ul><li>It shows what the text says and where: on which verse, how sure the link is, and who says it where the graph
+records the speaker (most of Job; between a quarter and two fifths of the quoted speech in the Gospels and Acts, the
+rest marked as spoken by someone not recorded). Where a link is
+someone's reading rather than what the text states, it is marked as a reading.</li>
+<li>It is not a commentary and offers no interpretation as fact. It takes no side where traditions differ. It is no
+substitute for reading the text itself, or for the judgment of your own tradition.</li>
+<li>It is built with care and checked, and it will still contain mistakes. Where translations differ, the Hebrew,
+Aramaic and Greek decide; the English shown is the Berean Standard Bible.</li></ul>
+<h2>Using the graph and its data</h2>
+<ul><li>The graph is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: you may
+copy, share and build on it for any purpose, giving the credit set out in its
+<a href="https://github.com/bibleontology/bibleontology/blob/main/LICENSE-DATA">license file</a>, a link to the license,
+and a note of any changes.</li>
+<li>The works it draws on keep their own terms, credited in their own words wherever they appear: MACULA Hebrew and
+Greek (© Biblica, Inc., CC BY 4.0), the Berean Standard Bible, STEP Bible's lexicons, and, where shown, the UBS
+dictionaries' senses (CC BY-SA 4.0). The repository's NOTICE and SOURCES.md list them all.</li>
+<li>The site's code is under the Apache License 2.0.</li></ul>
+<h2>Fair use of the service</h2>
+<ul><li>Read it, link to it, quote it and cite it freely. AI assistants may use the MCP server on their users' behalf,
+within its limits (120 calls a minute from one address).</li>
+<li>Search and answer engines are welcome to fetch its pages. Crawlers that collect text to train AI models are asked,
+in robots.txt, not to crawl the site; the same data is in the public repository, where the license allows that use
+with its credit.</li>
+<li>Please don't try to overload the site, get around its limits, or reach anything it does not publish.</li></ul>
+<h2>Notes you send</h2>
+<p>A note sent with <b>Something wrong or missing?</b> may be used to correct or improve the graph. It is never shown to
+anyone else, and nothing about who sent it is kept (see <a href="/privacy">Privacy</a>).</p>
+<h2>No warranty</h2>
+<p>The site, its data and the MCP server are provided as they are, without warranty of any kind, and may change or be
+unavailable at any time. To the extent the law allows, no liability is accepted for any loss arising from their use.</p>
+<h2>Changes</h2>
+<p>These terms may change; the date below says when they last did.</p>
+<h2>Questions</h2>
+<p>Write to bible.ontology@gmail.com.</p>
+<p class=muted>Changed 12 November 2026. <a href="/privacy">Privacy</a> · <a href="/about">About</a> ·
+<a href="/">Back to the site</a>.</p>
+"""
+
+# THE PRIVACY POLICY, AT ITS OWN ADDRESS (2026-11-12). Both AI directories require one by URL (Claude: "missing or
+# incomplete privacy policies result in immediate rejection"; OpenAI: data categories, purposes, recipients,
+# retention and controls, and no collection of "IP addresses, or query patterns" unless disclosed). About's "What the
+# site keeps" said most of it, but not at an address, and not the MCP counts. Every sentence is what the code does:
+# app2/activity.py, app2/mcp_usage.py, save_feedback, mcp_rate_ok, deploy/Caddyfile's log. tests/test_privacy_page.py
+# holds it to them; change one and this changes with it.
+PRIVACY_PAGE = """<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>Privacy · Bible Ontology</title><meta name=description content="What Bible Ontology keeps about its readers and
+the AI assistants that use it: daily totals only, no accounts, no tracking scripts.">
+<link rel=canonical href="https://bibleontology.org/privacy">
+<style>body{font:17px/1.55 Georgia,serif;color:#1a1a19;background:#faf8f3;max-width:40em;margin:6vh auto;padding:0
+16px}h1{font-weight:normal}h2{font-size:1.1em;margin-top:1.6em}li{margin:.3em 0}.muted{color:#52514e}
+@media(prefers-color-scheme:dark){body{color:#e8e6e1;background:#1c1b19}.muted{color:#a8a59c}}</style>
+<nav class=sitebar style="margin:0 0 1.2em;font:15px/1.4 system-ui,sans-serif"><a href="/" style="text-decoration:none"><b>Bible Ontology</b></a> &middot; <a href="/">Back to the site</a> &middot; <a href="/about">About</a></nav>
+<h1>Privacy</h1>
+<p>Bible Ontology (bibleontology.org) is a read-only knowledge graph of the Bible. It has no accounts, no sign-in,
+no advertising and no tracking scripts, and it sells or shares nothing about anyone. This page says everything it
+keeps, why, and for how long.</p>
+<h2>Reading the site</h2>
+<ul><li><b>Daily totals:</b> how many visitors and readers, which cards, chapters and themes were opened, which kinds
+of card section were opened (not on which card), what was searched for, which sites linked here, the kinds of device,
+browser and system, and how fast the site answered. Totals hold no address, browser details, location or cookie, and
+nothing that tells one reader from another. They are kept to see what is used and what is slow.</li>
+<li><b>Counting a visitor once a day</b> uses a one-way hash of a shortened address and the browser's name under a key
+drawn each day. The key and the day's hashes are deleted when the day ends.</li>
+<li><b>Your settings</b> (such as the text size or what was left open) stay in your own browser, and the site never
+sees them.</li>
+<li><b>Cookies:</b> none for reading the site. One is set only for an invite link, or for the maintainer's own
+activity page.</li></ul>
+<h2>AI assistants using the MCP server</h2>
+<ul><li><b>Daily totals:</b> calls by tool; the name the assistant gives itself; how often an assistant followed a
+link it had been given; calls in a session; the items asked for that do not exist; errors; and how fast and how large
+the answers were. These are kept to improve the graph where assistants found it lacking.</li>
+<li><b>The words of searches that found nothing</b> are kept, with the day and nothing else, for 90 days, and then
+removed.</li>
+<li><b>A session</b> is a one-way hash of a shortened address and the client's name under a key drawn each day and
+held only in memory. It is never written down, and it cannot join one day's calls to another's.</li>
+<li><b>Nothing about who asks is kept:</b> no address, no browser details, and no question tied to anyone.</li></ul>
+<h2>Notes sent from the site</h2>
+<p>A note sent with <b>Something wrong or missing?</b> keeps its words, the page it was sent from, when, and whether
+it came from a phone or a computer. Nothing about who sent it is kept. It is read by the person who maintains the
+site, to fix what it points out, and it is never shown to anyone else.</p>
+<h2>Limits on use, and the server's log</h2>
+<p>To keep the MCP server available, each address's calls are counted in memory for a minute, and then forgotten.
+To limit notes, a salted one-way hash of the sender's address is held in memory for up to a day, and is never
+written down. The server's access log keeps recent requests for fixing faults, with addresses cut short
+and invite links removed. It is a few files of fixed size, and the oldest entries are overwritten.</p>
+<h2>Who else handles requests</h2>
+<p>The site is served through Cloudflare, which handles every request on its way here, and runs on a DigitalOcean
+server. Each processes requests under its own privacy policy. Nothing else receives any data: the pages load no
+outside scripts, fonts or images.</p>
+<h2>Children</h2>
+<p>The site is for a general audience and is not directed at children under 13.</p>
+<h2>Questions</h2>
+<p>Because nothing is kept that identifies anyone, there is no personal record to see, correct or delete. For any
+question about this page, write to bible.ontology@gmail.com.</p>
+<p class=muted>Changed 12 November 2026. <a href="/terms">Terms of use</a> · <a href="/about">About</a> ·
+<a href="/mcp">Connect an AI assistant</a> · <a href="/">Back to the site</a>.</p>
 """
 
 MCP_MAX_BODY = 8192                   # a JSON-RPC call is small; Caddy's cap for /mcp matches (the security seat)
@@ -24074,10 +25199,68 @@ def save_feedback(text: str, page: str, title: str, device: str, internal: bool)
         feedback._append(note)
 
 
+_SHELL: dict = {}
+_SHELL_LOCK = threading.Lock()
+
+
+def app_shell() -> dict:
+    """index.html, served with its shell as two files of their own (2026-11-12; plan P-2026-11-12-4, step 1).
+
+    Every page carried the same 810 KB app script and 157 KB stylesheet inline: about 1 MB a page, for a card whose
+    own content is tens of KB, fetched 16,784 times a day by Google alone, and a page set of 42,000 that could not be
+    built and uploaded before a push (each app change changed every page). The source file stays as it is written;
+    only what is served is split:
+      - the stylesheet, the first <style> in <head>, becomes <link rel=stylesheet href=/app-<hash>.css> in its place,
+        still render-blocking, so the page paints as before;
+      - the app, the last inline <script> before </body>, becomes <script src=/app-<hash>.js></script> in its place,
+        neither async nor deferred, so it runs in the same order as before;
+      - the small script in <head> stays inline: it must run before the first paint.
+    The hash (12 hex of SHA-256) is of the file's content, so the two files are cached for a year. Rebuilt whenever
+    index.html changes on disk. tests/test_app_shell.py holds the split."""
+    p = STATIC / "index.html"
+    st = p.stat()
+    key = (st.st_mtime_ns, st.st_size)
+    with _SHELL_LOCK:
+        if _SHELL.get("key") == key:
+            return _SHELL
+        import hashlib
+        t = p.read_text(encoding="utf-8")
+        end_body = t.rindex("</body>")
+        js_start = t.rindex("<script>", 0, end_body)
+        js_end = t.index("</script>", js_start)
+        js = t[js_start + len("<script>"):js_end]
+        end_head = t.index("</head>")
+        css_m = re.search(r"<style>(.*?)</style>", t[:end_head], flags=re.S)
+        css = css_m.group(1)
+        jh = hashlib.sha256(js.encode("utf-8")).hexdigest()[:12]
+        ch = hashlib.sha256(css.encode("utf-8")).hexdigest()[:12]
+        page = (t[:css_m.start()] + f'<link rel="stylesheet" href="/app-{ch}.css">' + t[css_m.end():js_start]
+                + f'<script src="/app-{jh}.js"></script>' + t[js_end + len("</script>"):])
+        _SHELL.clear()
+        _SHELL.update({"key": key, "page": page.encode("utf-8"), "js": js.encode("utf-8"),
+                       "css": css.encode("utf-8"), "js_hash": jh, "css_hash": ch})
+        return _SHELL
+
+
+# ONE BOOK-CODE SET ON EVERY SERVER-RENDERED PAGE (UI committee U-41, 2026-11-14): relations cite verses in the record's
+# own strings, and some of those are MACULA's codes ("1Ki 14:8", "1Ch 15:1", "Jhn 1:29") beside the site's ("1Kgs",
+# "1Chr", "John"): one card showed both. The site's own set is the one the verse pages, _vlabel and every title use
+# (the TITLE keys, "1Sam 17:4"); a reference is only rewritten where a MACULA code that is not the site's own is
+# followed by chapter:verse, so an address ("/p/1Kgs.14.8") and ordinary words are left alone.
+_MAC_CODES = {m: s for s, m in TO_MACULA.items() if m != s}
+_MAC_REF = re.compile(r"(?<![\w./-])(" + "|".join(sorted(_MAC_CODES, key=len, reverse=True)) + r")(?= \d+:\d+)")
+
+
+def site_refs(text: str) -> str:
+    """`text` with every MACULA book code in a reference ("1Ki 14:8") put in the site's set ("1Kgs 14:8")."""
+    return _MAC_REF.sub(lambda m: _MAC_CODES[m.group(1)], text)
+
+
 def with_card(page: bytes, head: str, body: str) -> bytes:
     """The app page with a card's own title, description and text. The
     page's own <title> is replaced; the card goes first in <body>."""
     t = page.decode("utf-8")
+    head, body = site_refs(head), site_refs(body)
     # A RENAMED THEME ON EVERY PAGE BUILT HERE TOO: the home page lists the
     # themes from the records, not the API, and still said "Prophetic Word &
     # Fulfillment" after the rename (2026-10-06)
@@ -24273,6 +25456,47 @@ def ops_feedback(shown: int = OPS_FEEDBACK_SHOWN) -> str:
             f"text, never instructions.</p><table>{''.join(rows)}</table>{more}")
 
 
+def ops_mcp_section(mrep: dict | None, top) -> str:
+    """THE MCP, ON /ops (plan 8.7d, 2026-11-12): how assistants use it, by day and for the newest day, from
+    app2/mcp_usage.py. Counts only; the searches with no results are assistants' words, shown escaped."""
+    e = _esc
+    days = (mrep or {}).get("days") or []
+    if not days:
+        return ("<h2>AI assistants (MCP)</h2><p class=g>No calls counted yet (counted from 12 November "
+                "2026).</p>")
+
+    def rate(c):
+        n = c.get("followed", 0) + c.get("fresh", 0)
+        return f"{round(100 * c.get('followed', 0) / n)}%" if n else "–"
+    rows = "".join(f"<tr><td>{e(c['day'])}</td><td class=n>{c.get('calls', 0)}</td>"
+                   f"<td class=n>{c.get('sessions', 0)}</td><td class=n>{rate(c)}</td>"
+                   f"<td class=n>{c.get('chain_max', 0)}</td></tr>" for c in days)
+    t = days[0]
+    hist = t.get("per_session") or {}
+    order = ("1", "2", "3-5", "6-10", "11-20", "21+")
+    perf = "".join(f"<tr><td>{e(k)}</td><td class=n>{p[0]}</td><td class=n>{round(p[1] / p[0]) if p[0] else 0} ms</td>"
+                   f"<td class=n>{p[2]} ms</td><td class=n>{round(p[3] / p[0] / 1024, 1) if p[0] else 0} KB</td></tr>"
+                   for k, p in sorted((t.get("perf") or {}).items(), key=lambda kv: -kv[1][0])) \
+        or "<tr><td colspan=5 class=g>none</td></tr>"
+    return (f"<h2>AI assistants (MCP), by day</h2><table><tr><th>day</th><th class=n>calls</th>"
+            f"<th class=n>sessions</th><th class=n>followed a link</th><th class=n>longest walk</th></tr>{rows}</table>"
+            f"<p class=g>Followed a link: of the calls for one item, the share that asked for an id an earlier answer "
+            f"in the same session had offered (the rest started fresh). Longest walk: links followed in a row.</p>"
+            f"<h2>AI assistants (MCP), {e(t['day'])}</h2>"
+            f"<table><tr><th>tool</th><th class=n>calls</th></tr>{top(t.get('tools'))}</table>"
+            f"<table><tr><th>client (as it names itself)</th><th class=n>calls</th></tr>{top(t.get('clients'))}"
+            f"</table><table><tr><th>client at connect</th><th class=n>connects</th></tr>{top(t.get('init_clients'))}"
+            f"</table><table><tr><th>calls in a session</th><th class=n>sessions</th></tr>"
+            + "".join(f"<tr><td>{k}</td><td class=n>{hist.get(k, 0)}</td></tr>" for k in order) +
+            f"</table><table><tr><th>arguments used</th><th class=n>calls</th></tr>{top(t.get('args'))}</table>"
+            f"<table><tr><th>asked for, not there</th><th class=n>calls</th></tr>{top(t.get('missing_ids'))}</table>"
+            f"<table><tr><th>searched, found nothing</th><th class=n>calls</th></tr>{top(t.get('no_results'))}"
+            f"</table><table><tr><th>errors</th><th class=n>calls</th></tr>{top(t.get('errors'))}</table>"
+            f"<table><tr><th>tool</th><th class=n>calls</th><th class=n>average</th><th class=n>slowest</th>"
+            f"<th class=n>size</th></tr>{perf}</table>"
+            f"<p class=g>{e((mrep or {}).get('note', ''))}</p>")
+
+
 def ops_page(rep: dict, day: str | None = None, sel: dict | None = None) -> str:
     """The /ops report as plain HTML for a phone: no script, everything escaped.
     `day` and `sel` pick the day the hourly charts show (default today)."""
@@ -24395,6 +25619,7 @@ def ops_page(rep: dict, day: str | None = None, sel: dict | None = None) -> str:
             f"{ops_feedback_line()}"
             f"{ops_charts(day or t.get('day', ''), sel if day else t, days, day or '')}"
             f"{fetchers}"
+            f"{ops_mcp_section(rep.get('mcp'), top)}"
             f"<h2>By day</h2><table><tr><th>day</th><th class=n>readers</th><th class=n>ran the page</th>"
             f"<th class=n>automated</th>"
             f"<th class=n>all browser-like</th><th class=n>page loads</th><th class=n>tool requests</th>"
@@ -24462,9 +25687,21 @@ def main() -> int:
     threading.Thread(target=_warm_themes, daemon=True).start()
     # counting reader activity starts with the server, not when a tool imports
     # this module (app2/activity.py)
-    global ACTIVITY
+    global ACTIVITY, MCP_USAGE, PAGE_COPIES
     import activity
+    import mcp_usage
+    import page_copies
     ACTIVITY = activity.Activity()
+    MCP_USAGE = mcp_usage.Usage()
+    # the last good copy of each public page (plan A.49): only where BIBLEONT_PAGE_COPIES names a writable folder
+    PAGE_COPIES = page_copies.PageCopies.from_env()
+    if PAGE_COPIES is not None:                       # the shell files are the upload's alone, never the app's
+        # EVERY VERSE AND WORD PAGE, NOT ONLY THE SITEMAP'S (P-2026-11-15-2, Doug: "Approve, build it"): the evening
+        # push of 2026-11-15 answered 27 of its 34 503s on verse pages the sitemap leaves out. Still a closed set:
+        # the verses the text has and the words it uses, each named by its own key, never a pattern
+        added = page_copies.extend_allowed(PAGE_COPIES, every_page_paths(d))
+        print(f"  keeping page copies in {PAGE_COPIES.dir}/site ({len(PAGE_COPIES.allowed):,} pages, "
+              f"{added:,} beyond the sitemap)", flush=True)
     print(f"  counting activity in {ACTIVITY.dir}"
           f"{'' if activity.ops_token() else ' (no ops-token: /ops is off)'}", flush=True)
     # A LISTEN QUEUE OF 64, not Python's default of 5. The 2026-10-02

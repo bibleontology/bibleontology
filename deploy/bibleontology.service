@@ -22,6 +22,9 @@ WorkingDirectory=/srv/bibleontology
 # this variable is doing two jobs and both of them matter.
 Environment=BIBLEONT_FEEDBACK=/srv/bibleontology-data
 Environment=PYTHONUNBUFFERED=1
+# The last good copy of each public page, refreshed as it is served (plan A.49; app2/page_copies.py), for Caddy to
+# serve while the app restarts. The app writes only <this>/site; <this>/assets is the upload's (see ReadWritePaths).
+Environment=BIBLEONT_PAGE_COPIES=/var/cache/bibleontology
 
 # TWO MEMORY POOLS, NOT ONE PER THREAD (2026-10-14: two arenas, set
 # after measuring). The server answers each request on its own thread, and glibc gives
@@ -77,10 +80,24 @@ IPAddressDeny=any
 IPAddressAllow=localhost
 RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
 
-# The single writable path. ProtectSystem=strict makes everything else
+# The writable paths. ProtectSystem=strict makes everything else
 # read-only including /srv/bibleontology itself, so a compromised process
 # cannot rewrite the code it is running.
-ReadWritePaths=/srv/bibleontology-data
+#
+# THE SECOND, 2026-11-12 (plan A.49): the page copies Caddy serves only while
+# the app restarts. Only site/, never assets/: the shell files there are the
+# script every reader runs, served by Caddy at all times, so the app writing
+# them would let a compromise outlive every restart. The leading "-" lets the
+# service start if the folder is missing (no copies then, rather than no site).
+ReadWritePaths=/srv/bibleontology-data -/var/cache/bibleontology/site
+
+# AFTER EVERY STOP OR CRASH, AS ROOT: nothing in the copies but plain files and
+# folders (the security seat, 2026-11-12). Caddy serves site/ while the app is
+# down and follows symlinks, so a compromised app could plant
+# site/e/x.html -> /etc/caddy/certs/origin.key (readable by Caddy, not by the
+# app), exit, and have Caddy serve the key. This runs when the app's processes
+# are gone and before Caddy serves a copy. "+" root; "-" a missing folder is fine.
+ExecStopPost=-+/usr/bin/find /var/cache/bibleontology/site -mindepth 1 -not -type f -not -type d -delete
 
 # app1 peaked at 250MB and ran under 1G. app2 measured 4.8 GB on the laptop
 # until its representations were compacted the same day (2026-10-01,

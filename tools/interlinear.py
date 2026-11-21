@@ -134,6 +134,34 @@ def lemma_meta(root, meta):
                 m["f"][a][v] = m["f"][a].get(v, 0) + 1
 
 
+def dedupe_names(ws):
+    """Print a multi-word name once (S-28, 2026-11-14).
+
+    MACULA gives a proper name that spans several words (Maher-shalal-hash-baz,
+    Lo-ammi, Immanuel, Melchizedek) as one `w` element PER WORD, each carrying the
+    whole name's surface text, so the strip printed Isa 8:3's name four times and
+    Isa 7:14's Immanuel twice. A name is tagged with no Strong's number (`s`
+    empty), and the copies are adjacent with the same surface text. Keep
+    the first. A real repeated word (Isa 6:3 holy, holy, holy) carries a Strong's
+    number and different accents, so it is never touched."""
+    out = []
+    for w in ws:
+        prev = out[-1] if out else None
+        if prev and w["t"] and not w["s"] and not prev["s"] and w["t"] == prev["t"]:
+            # the copies' glosses may be the name's parts (Beer, Lahai, Roi): the
+            # name's gloss is the capitalised ones joined, else the first
+            gl = prev.setdefault("_gl", [prev["g"]])
+            gl.append(w["g"])
+            continue
+        out.append(w)
+    for w in out:
+        gl = w.pop("_gl", None)
+        if gl:
+            names = list(dict.fromkeys(g for g in gl if g[:1].isupper()))
+            w["g"] = "-".join(names) if names else gl[0]
+    return out
+
+
 def main() -> int:
     path = OUT / "interlinear.jsonl.gz"
     verses, words = 0, 0
@@ -195,6 +223,7 @@ def main() -> int:
                 if not ws:
                     continue
                 ws.sort(key=lambda w: (w["w"], w["_id"]))
+                ws = dedupe_names(ws)
                 for w in ws:
                     del w["_id"]
                 fh.write(json.dumps({"ref": ref, "words": ws},

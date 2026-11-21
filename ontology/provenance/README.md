@@ -176,6 +176,21 @@ Candidates only: nothing in these files is shown on the site. Written by
 | `divine-panel-2026-10-19.jsonl.gz` | per word that reaches God or Jesus only through a pointer chain (5,925, all held): the chain, and every objection from the panel of eleven in each of two independent Claude Sonnet passes (`tools/meaning/divine_panel.py`); verdict: candidate (no seat objects in either pass), objected, or held open. Nothing released by it; release is Doug's ruling (`docs/review/divine-ends-2026-10-19.html`) |
 | `lifted-relations-2026-10-19.jsonl.gz` | per clause whose subject and object resolve to records (4,690, and the 41 of the love pilot): the statement, how each end was resolved, Sonnet's and Haiku's decision with why, kept only where both said yes; for the kept, a sense and family candidate (Sonnet), not a ruling |
 
+## consolidation/2026-11-19-option-c.json — names and plurals (P-2026-11-18-3)
+
+38 pairs of concept cards led by the same Hebrew or Greek word with the same shown name or a plural apart: both
+records' verses, two blind DeepSeek verdicts with their reasons, and the outcome. 31 merged (both "same", the verses
+read by Claude, Doug's ruling of 2026-11-19), 7 kept apart (4 both "different", 3 split: doubt keeps two). The merges
+are the lines of `ontology/aliases.jsonl` that cite `docs/review/consolidation-2026-11-19.md`.
+
+## zero-relation-pass-2026-11-19.jsonl — cards with no relation (P-2026-11-18-5)
+
+First line: the pass and its ruling. Then one row per item: every relation DeepSeek proposed from a card's own verse
+(blind; the published definitions as the only types), the mechanical check (ids, kinds, direction, the card's verse,
+the quote in it, not already held) and Claude's reading (kept, changed to, dropped with why); every card DeepSeek
+found none for, with its reason; the itinerary camps Claude added by rule; and the 14 held relations Claude proposed
+to release by Gen 22:23.
+
 ## The review panel
 
 Prose in the site's own voice is read by a second, blind model as each of a

@@ -30,7 +30,7 @@ from quoted import berean_quotes, verb_side  # noqa: E402
 # (tools/meaning/write_statements.py I_NARRATOR, in the Berean's book names)
 LETTERS = {"Rom", "1Cor", "2Cor", "Gal", "Eph", "Phil", "Col", "1Thess", "2Thess", "1Tim", "2Tim", "Titus", "Phlm",
            "Heb", "Jas", "1Pet", "2Pet", "1John", "2John", "3John", "Jude", "Neh", "Ezra", "Eccl"}
-DIVINE = {"god", "jesus", "holy_ghost", "the_father", "spirit", "spirit_of_god"}
+DIVINE = {"god", "jesus", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible", "the_father", "spirit", "spirit_of_god"}
 
 
 def shown_narrator(rows):

@@ -305,7 +305,9 @@ check(not any(k in json.dumps(ld_of(gh)) for k in ("bor:built", "bor:made", "bor
 gl = ld_of(gh)["@graph"]
 check(sorted(k for x in gl for k in x if k.startswith("bor:")) == ["bor:titled"],
       f"Gen 1:1's JSON-LD edges are {sorted(k for x in gl for k in x if k.startswith('bor:'))}, not God titled God (Elohim) alone")
-check(sorted(m["name"] for m in next(x for x in gl if x.get("@type") == "Quotation")["mentions"]) == ["God", "God (Elohim)", "the earth", "the heaven"],
+# "the heavens" joined on 2026-11-14 (the Berean's own word at Gen 1:1); "the heaven" beside it is the same thing
+# recorded twice, under the KJV's spelling: a merge for two judges and the owner, noted in the committee's rulings
+check(sorted(m["name"] for m in next(x for x in gl if x.get("@type") == "Quotation")["mentions"]) == ["God", "God (Elohim)", "the earth", "the heaven", "the heavens"],
       "Gen 1:1's mentions are not God, God (Elohim), the heaven, the earth")
 for (b_, c_, v_), (vc_, _h, _b) in pages.items():
     for f in word_faults(vc_, verb_gloss_of(vc_)):

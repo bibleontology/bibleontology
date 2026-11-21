@@ -49,7 +49,7 @@ I_NARRATOR = {"Rom", "1Co", "2Co", "Gal", "Eph", "Php", "Col", "1Th", "2Th", "1T
 NO_FAMILY = {"h3205": "begetting and birth (יָלַד): the English 'bore' reads as feeling",
              "g1080": "begetting (γεννάω): no family; God begetting (Heb 5:5) is not 'the body'"}
 # the divine persons: never the narrator's "I" (Heb 5:5 quotes God)
-DIVINE = {"god", "jesus", "holy_ghost", "the_father", "spirit", "spirit_of_god"}
+DIVINE = {"god", "jesus", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible", "the_father", "spirit", "spirit_of_god"}
 # held by row, with the reason, where neither the form nor a rule shows it
 # (the committee's third sitting, D3)
 HELD_ROWS = {("Rom 2:16", "god", "secret"): "the present form (κρίνει) is the final judgment, 'on the day when God "

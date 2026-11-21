@@ -1,4 +1,4 @@
-# Bible Ontology -- the relations' 'one of' shapes, version 1.5.0 (2026-11-12). Merged into /ns/shapes.
+# Bible Ontology -- the relations' 'one of' shapes, version 1.7.0 (2026-11-20). Merged into /ns/shapes.
 # (c) 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org).
 # Licence: https://creativecommons.org/licenses/by/4.0/
 
@@ -16,6 +16,11 @@ bor:accused_subjectShape a sh:NodeShape ;
     sh:message "The subject of accused must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:accused .
+
+bor:acted_in_subjectShape a sh:NodeShape ;
+    sh:message "The subject of acted_in must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:acted_in .
 
 bor:ancestor_of_objectShape a sh:NodeShape ;
     sh:message "The object of ancestor_of must be one of: Group, PersonalBeing" ;
@@ -71,6 +76,16 @@ bor:ascribed_to_objectShape a sh:NodeShape ;
     sh:message "The object of ascribed_to must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetObjectsOf bor:ascribed_to .
+
+bor:asked_objectShape a sh:NodeShape ;
+    sh:message "The object of asked must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:asked .
+
+bor:asked_subjectShape a sh:NodeShape ;
+    sh:message "The subject of asked must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:asked .
 
 bor:aspect_of_objectShape a sh:NodeShape ;
     sh:message "The object of aspect_of must be one of: Artifact, Communication, Concept, Event, Group, Image, PersonalBeing, Place, Title" ;
@@ -176,6 +191,11 @@ bor:came_upon_objectShape a sh:NodeShape ;
     sh:message "The object of came_upon must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetObjectsOf bor:came_upon .
+
+bor:camped_at_subjectShape a sh:NodeShape ;
+    sh:message "The subject of camped_at must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:camped_at .
 
 bor:carried_objectShape a sh:NodeShape ;
     sh:message "The object of carried must be one of: Animal, Artifact, Concept" ;
@@ -386,6 +406,11 @@ bor:grounds_subjectShape a sh:NodeShape ;
     sh:message "The subject of grounds must be one of: Concept, Image, Predication, Saying, Title" ;
     sh:or ( [ sh:class bom:Concept ] [ sh:class bom:Image ] [ sh:class bom:Predication ] [ sh:class bom:Saying ] [ sh:class bom:Title ] ) ;
     sh:targetSubjectsOf bor:grounds .
+
+bor:happens_to_objectShape a sh:NodeShape ;
+    sh:message "The object of happens_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:happens_to .
 
 bor:healed_objectShape a sh:NodeShape ;
     sh:message "The object of healed must be one of: Group, PersonalBeing" ;
@@ -652,6 +677,11 @@ bor:reigned_over_objectShape a sh:NodeShape ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:Place ] ) ;
     sh:targetObjectsOf bor:reigned_over .
 
+bor:removed_subjectShape a sh:NodeShape ;
+    sh:message "The subject of removed must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:removed .
+
 bor:repaired_objectShape a sh:NodeShape ;
     sh:message "The object of repaired must be one of: Artifact, Place" ;
     sh:or ( [ sh:class bom:Artifact ] [ sh:class bom:Place ] ) ;
@@ -661,6 +691,16 @@ bor:repaired_subjectShape a sh:NodeShape ;
     sh:message "The subject of repaired must be one of: Group, PersonalBeing" ;
     sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
     sh:targetSubjectsOf bor:repaired .
+
+bor:revealed_to_objectShape a sh:NodeShape ;
+    sh:message "The object of revealed_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetObjectsOf bor:revealed_to .
+
+bor:revealed_to_subjectShape a sh:NodeShape ;
+    sh:message "The subject of revealed_to must be one of: Group, PersonalBeing" ;
+    sh:or ( [ sh:class bom:Group ] [ sh:class bom:PersonalBeing ] ) ;
+    sh:targetSubjectsOf bor:revealed_to .
 
 bor:reveals_objectShape a sh:NodeShape ;
     sh:message "The object of reveals must be one of: Concept, Group, PersonalBeing, Saying" ;

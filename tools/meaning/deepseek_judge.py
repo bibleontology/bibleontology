@@ -29,7 +29,7 @@ sys.path.insert(0, str(ROOT / "tools" / "meaning"))
 
 WORK = ROOT / "out" / "grunt" / "deepseek-judge"
 JOBS, DONE = ROOT / "out" / "grunt" / "jobs", ROOT / "out" / "grunt" / "done"
-DIVINE = {"god", "the_father", "jesus", "holy_ghost", "spirit", "spirit_of_god"}
+DIVINE = {"god", "the_father", "jesus", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible", "spirit", "spirit_of_god"}
 DIVINE_NAMES = {"god", "the lord", "lord", "jesus", "christ", "jesus christ", "the father", "holy spirit", "the spirit",
                 "the holy spirit", "spirit of god", "the spirit of god", "yahweh", "the lord god", "lord god", "jehovah"}
 BATCH = 36                  # items a call

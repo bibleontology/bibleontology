@@ -36,7 +36,7 @@ QUANT = {"h3605", "g3956", "g537"}
 # divine persons, and the cards that mix them with others: never reached by a
 # pointer chain or a card rule, only by a ruling made by hand, record by record.
 # God by the names rule above is the ruling of 2026-10-18
-DIVINE_HOLD = {"god", "holy_ghost", "the_father", "jesus", "spirit", "spirit_of_god"}
+DIVINE_HOLD = {"god", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible", "the_father", "jesus", "spirit", "spirit_of_god"}
 
 
 def jl(p):

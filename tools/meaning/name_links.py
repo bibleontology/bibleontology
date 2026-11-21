@@ -1,7 +1,7 @@
 """Which person or place card a name word names, where the rule could not tell (Doug, 2026-11-10, on Dothan: "Could
 the Mac look for words disconnected from meanings and without a basic type definition clearly presented to the user?").
 
-server.names_of_word links 1,472 of 2,892 name words by rule: the cards' own name words, or a card named as the word
+server.names_of_word links 1,472 of 2,892 name words by rule (2026-11-10; 1,643 of 3,386 by 2026-11-14, with the judged links): the cards' own name words, or a card named as the word
 is glossed whose verses hold it. Of the 1,420 left, 1,170 have no person or place card citing any of their verses
 (minor names of genealogies and lists: nothing to link to). The other 250 have candidates: a card of the kind STEP's
 tag gives that cites one of the word's verses (Azotus, Acts 8:40, is the Ashdod card's place under its Greek name, or
@@ -158,6 +158,19 @@ REJECT = {
 }
 LINKS = ROOT / "ontology" / "word-name-links.json"
 
+# THE SECOND READ (job 24-name-links-check, 1,176 words the rule linked to exactly one card; the Mac kept 1,164 and
+# doubted 12; Claude read all 12, 2026-11-14): 5 doubts upheld, the rule's link denied; 7 overruled (the Mac was
+# confused by a gloss, or a type label, or one of several bearers of a name). CHECK_ADD: the right card, where the
+# denied one was the wrong card for a word the graph does hold
+CHECK_DENY = {
+    "h2364": ["hushah"],      # a man (1 Chr 4:4); the card is a place
+    "h894": ["babylonians"],  # Babylon the city; the card is its people (CHECK_ADD gives the place)
+    "h7414": ["ramoth_of_bani"],  # Ramah, a place; the card is a man of Ezra 10 (Jeremoth)
+    "h2301": ["hadar"],       # Hadad of Gen 25:15, a son of Ishmael; the card is the king of Edom of Gen 36:39
+    "h1427": ["gaddi"],       # Gaddiel (Zebulun's spy); the card is Gaddi of Manasseh (Num 13:11)
+}
+CHECK_ADD = {"h894": ["babylon"]}
+
 
 def apply():
     """The Mac's picks less the rejected, to ontology/word-name-links.json ({key: [card]}), read by
@@ -183,7 +196,8 @@ def apply():
                       "judge": "claude-opus, every pick read, 2026-11-10"})
     LINKS.write_text(json.dumps({"_source": f"{NAME}: the Mac's pick, each read by Claude; see "
                                             f"ontology/provenance/{NAME}-2026-11-10.jsonl",
-                                 "links": dict(sorted(links.items()))}, ensure_ascii=False, indent=1) + "\n",
+                                 "links": dict(sorted({**links, **CHECK_ADD}.items())),
+                                 "deny": dict(sorted(CHECK_DENY.items()))}, ensure_ascii=False, indent=1) + "\n",
                      encoding="utf-8", newline="\n")
     prov = ROOT / "ontology" / "provenance" / f"{NAME}-2026-11-10.jsonl"
     with open(prov, "w", encoding="utf-8", newline="\n") as f:

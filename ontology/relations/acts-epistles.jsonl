@@ -1,6 +1,6 @@
 {"certainty": "explicit", "dst": "paul", "refs": ["Acts 21:10", "Acts 21:11"], "source": "acts-epistles", "src": "agabus", "type": "prophet_to"}
 {"certainty": "explicit", "dst": "bernice", "note": "They appear together throughout; the text does not state their relationship.", "refs": ["Acts 25:13", "Acts 25:23"], "source": "acts-epistles", "src": "agrippa_ii", "type": "companion_of"}
-{"certainty": "explicit", "dst": "paul", "note": "Heard Paul's defence and gave his opinion to Festus.", "refs": ["Acts 26:1", "Acts 26:32"], "source": "acts-epistles", "src": "agrippa_ii", "type": "judged"}
+{"certainty": "explicit", "dst": "paul", "note": "Heard Paul's defence and gave his opinion to Festus.", "refs": ["Acts 26:1", "Acts 26:32"], "source": "acts-epistles", "src": "agrippa_ii", "type": "judged", "held": "the passage does not say it: four reads agree (the Mac twice, DeepSeek twice; cast check, 2026-11-13)"}
 {"certainty": "explicit", "dst": "james_son_of_alphaeus", "note": "\"James the son of Alpheus\"", "refs": ["Acts 1:13", "Mark 3:18"], "source": "acts-epistles,mark-farm-20260830-234445,mark-luke-john", "src": "alphaeus", "type": "father_of"}
 {"certainty": "explicit", "dst": "paul", "note": "Commanded those standing by to strike Paul on the mouth; the blow was struck by others at his order.", "refs": ["Acts 23:2"], "source": "acts-epistles", "src": "ananias_high_priest", "type": "attacked"}
 {"certainty": "explicit", "dst": "sapphira", "refs": ["Acts 5:1", "Acts 5:7"], "source": "acts-epistles", "src": "ananias_husband_of_sapphira", "type": "spouse_of"}
@@ -19,7 +19,7 @@
 {"certainty": "explicit", "dst": "publius", "refs": ["Acts 28:8"], "source": "acts-epistles", "src": "father_of_publius", "type": "father_of"}
 {"certainty": "explicit", "dst": "paul", "note": "Acts 24:22 he 'deferred them'; 24:27 he 'left Paul bound' for two years. He heard the case and gave no verdict, so this is custody rather than judgment.", "refs": ["Acts 24:22", "Acts 24:27"], "source": "acts-epistles", "src": "felix", "type": "imprisoned"}
 {"certainty": "explicit", "dst": "festus", "note": "'Felix was succeeded by Porcius Festus'.", "refs": ["Acts 24:27"], "source": "acts-epistles", "src": "felix", "type": "predecessor_of"}
-{"certainty": "explicit", "dst": "paul", "refs": ["Acts 25:6", "Acts 25:12"], "source": "acts-epistles", "src": "festus", "type": "judged"}
+{"certainty": "explicit", "dst": "paul", "refs": ["Acts 25:6", "Acts 25:12"], "source": "acts-epistles", "src": "festus", "type": "judged", "held": "the passage does not say it: four reads agree (the Mac twice, DeepSeek twice; cast check, 2026-11-13)"}
 {"certainty": "explicit", "dst": "paul", "refs": ["Acts 20:4"], "source": "acts-epistles", "src": "gaius_of_derbe", "type": "companion_of"}
 {"certainty": "explicit", "dst": "paul", "note": "Paul was 'raised in this city. I was educated at the feet of Gamaliel'.", "refs": ["Acts 22:3"], "source": "acts-epistles", "src": "gamaliel", "type": "mentor_of"}
 {"certainty": "explicit", "dst": "peter", "refs": ["Acts 12:3", "Acts 12:4"], "source": "acts-epistles", "src": "herod_agrippa_i", "type": "imprisoned"}
@@ -43,7 +43,7 @@
 {"certainty": "explicit", "dst": "eutychus", "refs": ["Acts 20:9", "Acts 20:10"], "source": "acts-epistles", "src": "paul", "type": "healed"}
 {"certainty": "explicit", "dst": "father_of_publius", "refs": ["Acts 28:8"], "source": "acts-epistles", "src": "paul", "type": "healed"}
 {"certainty": "explicit", "dst": "timothy", "note": "'my true child in the faith' / 'my beloved child'.", "refs": ["Acts 16:1", "Acts 16:3", "1Tim 1:2", "2Tim 1:2"], "source": "acts-epistles", "src": "paul", "type": "mentor_of"}
-{"certainty": "explicit", "dst": "stephen", "note": "Saul kept the clothes of the witnesses and was 'giving approval to Stephen's death'; the text does not make him one of those who cast stones.", "refs": ["Acts 7:58", "Acts 8:1", "Acts 22:20"], "source": "acts-epistles", "src": "paul", "type": "persecuted"}
+{"certainty": "explicit", "dst": "stephen", "note": "Saul kept the clothes of the witnesses and was 'giving approval to Stephen's death'; the text does not make him one of those who cast stones.", "refs": ["Acts 7:58", "Acts 8:1", "Acts 22:20"], "source": "acts-epistles", "src": "paul", "type": "persecuted", "held": "the passage does not say it: Acts 7:58, 8:1 and 22:20 say only that Saul approved of Stephen's death and watched the garments, not that he persecuted or sought to kill him (cast check follow-up, 2026-11-14)"}
 {"certainty": "implied", "dst": "pauls_sister", "note": "Implied by the phrase 'Paul's sister's son'; she is never named or described directly.", "refs": ["Acts 23:16"], "source": "acts-epistles", "src": "paul", "type": "sibling_of"}
 {"certainty": "implied", "dst": "pauls_sisters_son", "note": "Implied by the phrase 'Paul's sister's son'.", "refs": ["Acts 23:16"], "source": "acts-epistles", "src": "pauls_sister", "type": "mother_of"}
 {"certainty": "explicit", "dst": "eneas", "refs": ["Acts 9:33", "Acts 9:34"], "source": "acts-epistles", "src": "peter", "type": "healed"}

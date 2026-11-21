@@ -1,0 +1,31 @@
+<svg viewBox="0 0 1000 560" role="img" aria-label="The logic of John 3:16: a basis, an action, a condition, and its effect">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="var(--mute)" stroke-width="1.6"/></marker></defs>
+<g class="node" data-c="basis"><rect x="300" y="14" width="400" height="74" rx="10" fill="none" stroke="var(--basis)" stroke-width="2"/>
+<text x="500" y="36" text-anchor="middle" style="font:600 11px system-ui;letter-spacing:.12em;fill:var(--basis)">THE BASIS</text>
+<text x="500" y="62" text-anchor="middle" style="font:20px Georgia;fill:var(--ink)">God so loved the world</text>
+<text x="500" y="80" text-anchor="middle" class="gks" style="font-style:italic;font-size:14px;fill:var(--mute)">Οὕτως γὰρ ἠγάπησεν ὁ Θεὸς τὸν κόσμον</text></g>
+<line x1="500" y1="90" x2="500" y2="132" stroke="var(--mute)" stroke-width="1.6" marker-end="url(#ar)"/>
+<text x="514" y="116" style="font:13px system-ui;fill:var(--mute)"><tspan class="gks" style="font-weight:700;fill:var(--ink)">ὥστε</tspan> so that: what the love did</text>
+<g class="node" data-c="action"><rect x="300" y="136" width="400" height="74" rx="10" fill="none" stroke="var(--action)" stroke-width="2"/>
+<text x="500" y="158" text-anchor="middle" style="font:600 11px system-ui;letter-spacing:.12em;fill:var(--action)">THE ACTION</text>
+<text x="500" y="184" text-anchor="middle" style="font:20px Georgia;fill:var(--ink)">He gave His one and only Son</text>
+<text x="500" y="202" text-anchor="middle" class="gks" style="font-style:italic;font-size:14px;fill:var(--mute)">τὸν Υἱὸν τὸν μονογενῆ ἔδωκεν</text></g>
+<line x1="500" y1="212" x2="500" y2="254" stroke="var(--mute)" stroke-width="1.6" marker-end="url(#ar)"/>
+<text x="514" y="238" style="font:13px system-ui;fill:var(--mute)"><tspan class="gks" style="font-weight:700;fill:var(--ink)">ἵνα</tspan> in order that: what the gift is for</text>
+<g class="node" data-c="cond"><path d="M320 258 H680 L640 330 H360 Z" fill="none" stroke="var(--cond)" stroke-width="2"/>
+<text x="500" y="280" text-anchor="middle" style="font:600 11px system-ui;letter-spacing:.12em;fill:var(--cond)">WHO IT REACHES · THE CONDITION</text>
+<text x="500" y="304" text-anchor="middle" style="font:19px Georgia;fill:var(--ink)">everyone who believes in Him</text>
+<text x="500" y="322" text-anchor="middle" class="gks" style="font-style:italic;font-size:14px;fill:var(--mute)">πᾶς ὁ πιστεύων εἰς αὐτὸν</text></g>
+<line x1="500" y1="332" x2="500" y2="372" stroke="var(--mute)" stroke-width="1.6"/>
+<path d="M500 372 C500 400 330 392 300 424" fill="none" stroke="var(--mute)" stroke-width="1.6" stroke-dasharray="5 5"/>
+<line x1="270" y1="414" x2="330" y2="444" stroke="var(--mute)" stroke-width="3"/><line x1="330" y1="414" x2="270" y2="444" stroke="var(--mute)" stroke-width="3"/>
+<path d="M500 372 C500 400 680 392 700 422" fill="none" stroke="var(--life)" stroke-width="2.4" marker-end="url(#ar)"/>
+<g class="node" data-c="not"><rect x="130" y="454" width="340" height="74" rx="10" fill="none" stroke="var(--mute)" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="300" y="476" text-anchor="middle" style="font:600 11px system-ui;letter-spacing:.12em;fill:var(--mute)">NOT THIS · <tspan class="gks">μὴ</tspan></text>
+<text x="300" y="502" text-anchor="middle" style="font:19px Georgia;fill:var(--mute);text-decoration:line-through">shall perish</text>
+<text x="300" y="520" text-anchor="middle" class="gks" style="font-style:italic;font-size:14px;fill:var(--mute)">μὴ ἀπόληται</text></g>
+<g class="node" data-c="life"><rect x="530" y="426" width="340" height="102" rx="10" fill="none" stroke="var(--life)" stroke-width="2.6"/>
+<text x="700" y="450" text-anchor="middle" style="font:600 11px system-ui;letter-spacing:.12em;fill:var(--life)">BUT THIS · THE EFFECT · <tspan class="gks">ἀλλά</tspan></text>
+<text x="700" y="482" text-anchor="middle" style="font:22px Georgia;fill:var(--ink)">have eternal life</text>
+<text x="700" y="508" text-anchor="middle" class="gks" style="font-style:italic;font-size:14px;fill:var(--mute)">ἀλλ’ ἔχῃ ζωὴν αἰώνιον</text></g>
+</svg>

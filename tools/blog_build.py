@@ -28,17 +28,44 @@ OUT = ROOT / "app2" / "static" / "blog"
 SITE = "https://bibleontology.org"
 
 
+# EVERY SCRIPTURE REFERENCE IN A POST LINKS TO ITS VERSE (UI committee U-31, 2026-11-14: "1 Corinthians 3:19, Job 5:13,
+# Genesis 3:4: no links"). The site's own book codes, as the verse pages address them (/p/Job.5.13); a full book name
+# followed by chapter:verse, so ordinary words are left alone.
+_BOOKS = {
+    "Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev", "Numbers": "Num", "Deuteronomy": "Deut", "Joshua": "Josh",
+    "Judges": "Judg", "Ruth": "Ruth", "1 Samuel": "1Sam", "2 Samuel": "2Sam", "1 Kings": "1Kgs", "2 Kings": "2Kgs",
+    "1 Chronicles": "1Chr", "2 Chronicles": "2Chr", "Ezra": "Ezra", "Nehemiah": "Neh", "Esther": "Esth", "Job": "Job",
+    "Psalms": "Ps", "Psalm": "Ps", "Proverbs": "Prov", "Ecclesiastes": "Eccl", "Song of Solomon": "Song",
+    "Isaiah": "Isa", "Jeremiah": "Jer", "Lamentations": "Lam", "Ezekiel": "Ezek", "Daniel": "Dan", "Hosea": "Hos",
+    "Joel": "Joel", "Amos": "Amos", "Obadiah": "Obad", "Jonah": "Jonah", "Micah": "Mic", "Nahum": "Nah",
+    "Habakkuk": "Hab", "Zephaniah": "Zeph", "Haggai": "Hag", "Zechariah": "Zech", "Malachi": "Mal", "Matthew": "Matt",
+    "Mark": "Mark", "Luke": "Luke", "John": "John", "Acts": "Acts", "Romans": "Rom", "1 Corinthians": "1Cor",
+    "2 Corinthians": "2Cor", "Galatians": "Gal", "Ephesians": "Eph", "Philippians": "Phil", "Colossians": "Col",
+    "1 Thessalonians": "1Thess", "2 Thessalonians": "2Thess", "1 Timothy": "1Tim", "2 Timothy": "2Tim",
+    "Titus": "Titus", "Philemon": "Phlm", "Hebrews": "Heb", "James": "Jas", "1 Peter": "1Pet", "2 Peter": "2Pet",
+    "1 John": "1John", "2 John": "2John", "3 John": "3John", "Jude": "Jude", "Revelation": "Rev",
+}
+_REF = re.compile(r"\b(" + "|".join(sorted((re.escape(b) for b in _BOOKS), key=len, reverse=True))
+                  + r") (\d+):(\d+)(?:[\u2013-](\d+))?\b")
+
+
+def _ref_link(m) -> str:
+    return f'<a href="/p/{_BOOKS[m.group(1)]}.{m.group(2)}.{m.group(3)}">{m.group(0)}</a>'
+
+
 def inline(s: str) -> str:
     s = html.escape(s, quote=False)
     s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)",
                lambda m: f'<a href="{html.escape(m.group(2).replace(SITE, "") or "/", quote=True)}">{m.group(1)}</a>', s)
+    s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)      # a code span, not its backticks (UI committee U-31)
     s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
     s = re.sub(r"(?<![*\w])\*(?!\s)(.+?)(?<!\s)\*(?![*\w])", r"<i>\1</i>", s)
     # A BARE DOMAIN IS A LINK, as a markdown viewer makes it (2026-10-05:
     # a bare BibleProject.com is meant to be a hyperlink): only in text, never
     # inside a tag or an existing link
-    parts = re.split(r"(<a\b.*?</a>|<[^>]+>)", s, flags=re.S)
+    parts = re.split(r"(<a\b.*?</a>|<code>.*?</code>|<[^>]+>)", s, flags=re.S)
     for k in range(0, len(parts), 2):
+        parts[k] = _REF.sub(_ref_link, parts[k])
         parts[k] = re.sub(r"(?<![\w./@-])((?:www\.)?[A-Za-z0-9][A-Za-z0-9-]*\.(?:com|org|net))(?![\w/-])",
                           lambda m: f'<a href="https://{m.group(1).lower()}">{m.group(1)}</a>', parts[k])
     return "".join(parts)

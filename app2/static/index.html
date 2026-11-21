@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bible Ontology — a Scripture explorer</title>
+<!-- THE SITE'S ICON (2026-11-12, Doug's): the r/BibleOntology community icon, "Bible / Ontology / a Scripture
+     explorer" on paper, at 512 for the directories and phones; at 48 the two words alone; at 32 and 16, where no word
+     can be read, an open book (ink pages, ochre spine). The AI directories need one, and the site had none. -->
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <!-- A CARD'S OWN PAGE (A.21, #ssr) IS HIDDEN ONLY ONCE THE APP HAS DRAWN IT
      (2026-10-29). From 2026-10-03 a `js` class set here hid the server's copy
      at once, and the app then fetched the card from /api/, which robots.txt
@@ -386,6 +392,13 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .wfoot{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin-top:16px;
   font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--muted)}
 .wfoot label{display:flex; align-items:center; gap:6px; cursor:pointer}
+/* U-9 (2026-11-14): on a phone the two buttons were at 1,061 px of a 780 px dialog and there was no close; the footer
+   now sticks to the bottom of the dialog and a close sits at its top right */
+.wcard{position:relative}
+.wfoot{position:sticky; bottom:-18px; background:var(--surface); padding:10px 0 4px; margin-bottom:-6px; border-top:1px solid var(--rule); z-index:2}
+.wx{position:sticky; top:0; float:right; margin:-12px -14px 0 0; width:44px; height:44px; font-size:28px; line-height:1;
+  color:var(--muted); background:transparent; border:0; border-radius:999px; cursor:pointer; z-index:3}
+.wx:hover{color:var(--ink)}
 .wgo{background:var(--slate); color:var(--surface); border-radius:999px; padding:7px 16px; font-weight:600}
 .wlink{color:var(--slate); text-decoration:underline; padding:7px 6px}
 @media (max-width:767px){ .wtry .wdesk{display:none} .wcard{padding:18px 16px 14px; font-size:15px}
@@ -484,6 +497,32 @@ body.withcol .vchips .tgv.orig{display:none}
 .nav-btn:hover{filter:brightness(1.08)}
 .nav-btn .hub{display:inline-flex; background:#fff; border-radius:50%; padding:3px}
 @media (max-width:600px){ .nav-btn{display:flex; width:100%; justify-content:center} }
+/* plan A.54: the graph around a light card, and the same idea elsewhere */
+.around{border:1px solid var(--rule); border-radius:10px; padding:10px 12px 8px; margin:6px 0 16px}
+.around-h{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:4px 12px;
+  font:600 12px var(--sans,system-ui); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.around-h .nav-btn{margin:0}
+.around .entnode:hover text{text-decoration:underline}
+.around-list{display:none; margin:6px 0 0; padding-left:18px; font-size:15px}
+.around-list li{margin:3px 0}.around-far{color:var(--muted); font-size:13.5px}
+.around-key{margin:4px 0 0; font-size:12.5px; color:var(--muted)}
+.around-q{font-style:italic}
+.around-go{margin:6px 0 2px;font-size:15px}.around-go .g{color:var(--muted);font-size:13px}
+/* the same-word line (P-2026-11-18-3): small and muted, under its word */
+.sw-line{margin:3px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
+.sw-block{margin:4px 0 10px}
+.sw-line details.sw-more,.sw-line details.sw-more>summary{display:inline}.sw-line details.sw-more[open]{display:block}
+/* "Also spoken of with" (P-2026-11-18-3 option 2): the same block's look as the graph panel, navigation not a section */
+.bridges{border:1px solid var(--rule); border-radius:10px; padding:10px 12px 8px; margin:6px 0 16px}
+.bridges>.h{font:500 10.5px/1.5 var(--ff-data);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.br-row{padding:6px 0;border-top:1px solid var(--rule)}.br-row:first-of-type{border-top:0}
+.br-v{margin:0;font-size:14px;color:var(--muted)}.br-v .link{font-style:italic}
+.br-cards{margin:2px 0 0;font-size:15px}
+.br-k{font:500 11px/1.4 var(--ff-data);color:var(--muted)}
+.br-cards details.br-more,.br-cards details.br-more>summary{display:inline;margin:0}.br-cards details.br-more>summary{font-size:12.5px}
+.br-cards details.br-more[open]{display:block}
+.family-strip{margin:0 0 12px; font-size:14.5px; color:var(--muted)}.fam-kind{font-size:12.5px}
+@media (max-width:700px){ .around-svg{display:none !important} .around-list{display:block} }
 /* THE NAVIGATOR'S TAB, IN THE BUTTON'S COLOR AND WITH ITS PICTURE (Doug, 2026-11-08: "give it some color/include the
    icon"). Drawn in CSS so it is there the moment the tab strip paints. */
 .tab[data-id="navigator"]{background:var(--focus); color:#fff; border-color:var(--focus)}
@@ -580,8 +619,8 @@ details.revc[open] > summary::before{content:"▾ "}
 details.revc > summary::-webkit-details-marker{display:none}
 .tgv{font-family:inherit; font-size:12px; letter-spacing:0; font-weight:400;
   line-height:1.4; color:var(--slate); cursor:pointer; background:none; border:0;
-  border-radius:3px; padding:0 3px; vertical-align:1px;
-  text-decoration:underline dotted; text-underline-offset:2px}
+  border-radius:3px; padding:8px 4px; margin:-8px 0; vertical-align:1px;
+  text-decoration:underline dotted; text-underline-offset:2px}   /* U-16: a 33 px tall target, no taller line */
 .tgv + .tgv::before{content:"·"; color:var(--muted); margin-right:6px;
   display:inline-block}
 .tgv:hover{background:var(--slate-soft)}
@@ -796,9 +835,12 @@ button.ctag:hover{border-color:var(--ochre, #8a4b12)}
    within the verse were made about as bold as the underlines of the orig ·
    struct · links at the verse end, because readers did not see
    them. So the same dotted slate as those. */
-a.ph{color:inherit; text-decoration:none; border-bottom:1px dotted var(--slate);
+/* U-15 (2026-11-14): two weights. Names (a capital inside the sentence) keep the dotted line; every other word is
+   still a link, undecorated until hover or focus, so the page stops reading as one long underline. */
+a.ph{color:inherit; text-decoration:none; border-bottom:1px solid transparent;
      text-decoration-skip-ink:auto}
-a.ph:hover{border-bottom-color:var(--ochre); color:var(--ochre)}
+a.ph.nm{border-bottom:1px dotted var(--slate)}
+a.ph:hover,a.ph:focus-visible{border-bottom:1px dotted var(--ochre); color:var(--ochre)}
 
 /* The original leads each example on the word card; the English follows it,
    smaller, as the reading rather than the evidence. */
@@ -1014,6 +1056,10 @@ button.move{font-size:13px; padding:2px 0; border:0; background:none;
 .br.b2::before, .br.b2::after{opacity:.5}
 .br.b3::before, .br.b3::after{opacity:.3}
 .br:hover::before, .br:hover::after{color:var(--ochre); opacity:1}
+.chapfoot{display:flex; gap:10px; justify-content:space-between; margin:28px 0 12px}
+.chapfoot .chapfoot-b{flex:1; width:auto; height:auto; min-height:48px; padding:10px 14px; font-size:16px; line-height:1.3; border:1px solid var(--rule); border-radius:10px; background:var(--surface); color:var(--slate)}
+.chapfoot .chapfoot-b:last-child:not(:first-child){text-align:right}
+.chapfoot .chapfoot-b:hover{border-color:var(--slate)}
 .contin{color:var(--muted); font-size:12px; font-style:italic; margin:6px 0}
 
 /* NOT a flex container. As flex, every word and every box became a flex item
@@ -1221,8 +1267,11 @@ button.brand{background:none; border:0; padding:0; margin:0; color:inherit; text
   .searchwrap{flex:1 1 0; min-width:0; max-width:none}
   .searchwrap .lens{display:block; position:absolute; left:11px; top:10px; width:16px; height:16px;
     stroke:var(--muted); fill:none; stroke-width:2; pointer-events:none}
-  #q{height:36px; border-radius:18px; padding:0 12px 0 34px; font-size:16px;
+  /* U-30: `.searchwrap #q`, because the plain `#q` rule further down (padding:8px 12px) won on source order and the
+     placeholder began under the magnifier ("Ⓢearch"); the left padding is the icon's width plus 8px */
+  .searchwrap #q{height:36px; border-radius:18px; padding:0 12px 0 35px; font-size:16px;
     -webkit-appearance:none; appearance:none}
+  .bar .brand{padding-right:2px}
   .morewrap{flex:none; margin-left:0}
   .morebtn{width:44px; height:44px; padding:0; display:grid; place-items:center; border-radius:22px}
   .bar .mtxt{display:none}
@@ -1344,6 +1393,11 @@ button.brand{background:none; border:0; padding:0; margin:0; color:inherit; text
   background:var(--paper); color:var(--ink); font-size:15px; font-family:inherit;
 }
 #q::placeholder{color:var(--muted)}
+/* U-46: a skip link, out of sight until it takes focus */
+.skiplink{position:absolute; left:8px; top:-60px; z-index:100; background:var(--surface); color:var(--ink);
+  padding:8px 14px; border:1px solid var(--rule); border-radius:6px; font:15px system-ui,sans-serif}
+.skiplink:focus{top:8px}
+#reader:focus{outline:none}
 .finderlist{display:flex; flex-direction:column}
 .fr{display:block; width:100%; text-align:left; padding:10px 4px;
   border-bottom:1px solid var(--rule)}
@@ -2085,6 +2139,7 @@ html.human .ssr{display:none /* a reader (not a crawler: the first script) sees 
   border-radius:3px;padding:2px 4px;margin:0 2px;vertical-align:1px;white-space:nowrap;background:var(--surface);cursor:pointer}
 .pc-rf.on{background:var(--slate);color:var(--surface)}
 .pc-by{font-size:.88em;color:var(--muted);font-style:italic}
+.pc-tag{display:inline-block;font-size:.72em;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:3px;padding:0 5px;margin-left:4px;vertical-align:1px;font-style:normal}
 .pc-more{font:inherit;background:none;border:0;padding:0;cursor:pointer}
 .pc-names{display:flex;flex-wrap:wrap;gap:4px 14px;margin:4px 0 10px;font-size:13px;color:var(--muted);align-items:baseline}
 .pc-names .heb{font-size:19px;color:var(--ochre-text)} .pc-names .grk{font-size:17px;color:var(--ochre-text)}
@@ -2249,6 +2304,24 @@ details.fb-dr > summary .g{font:400 13px var(--ff-text);color:var(--muted);margi
 .cc-v{margin:4px 0;font-size:16px;line-height:1.6;max-width:66ch}
 .cc-wt{font-size:14px}.cc-wt .heb,.cc-wt .grk{color:var(--ochre-text)}
 .cc-ntl{margin:4px 0;padding-left:18px;font-size:14.5px;line-height:1.5}
+/* "On this card" (P-2026-11-18-3, the UI designer's adjustments): navigation, not a seventh section */
+.cc-toc{margin:14px 0 4px;padding-top:10px;border-top:1px solid var(--rule)}
+.cc-toch{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+.cc-toch .h{font:500 10.5px/1.5 var(--ff-data);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cc-tsw{display:inline-flex;flex-wrap:wrap;gap:2px 10px;font-size:13px}
+.cc-tsw button{font:inherit;background:none;border:0;padding:4px 0;color:var(--slate);cursor:pointer}
+.cc-tsw button.on{color:var(--ink);font-weight:600;cursor:default}
+.cc-tocf>summary{cursor:pointer;padding:6px 0;font-size:15px;color:var(--ink)}
+.cc-tocl{list-style:none;padding-left:14px}
+.cc-tocl li{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 8px;padding:3px 0}
+.cc-tocl .cc-jump{flex:0 1 auto;max-width:100%;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cc-tm{flex:none;display:inline-flex;gap:8px;align-items:baseline}
+.cc-nt{font:500 11.5px/1.4 var(--ff-data);color:var(--slate);background:var(--slate-soft);border-radius:3px;padding:0 5px}
+/* an event card's told-again finding, named on the first screen (P-2026-11-18-3 option 5) */
+.ev-ptr{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;min-height:44px;margin:10px 0;padding:.4rem .6rem;
+  border-left:3px solid var(--ochre);background:var(--ochre-soft);font-size:15px;color:var(--ink);text-decoration:none;cursor:pointer}
+.ev-ptr b{font-weight:600}
+.ev-ptr .pc-note{margin-left:auto}
 .cc-jump{font:inherit;color:var(--slate);background:none;border:0;padding:0;cursor:pointer;text-align:left}
 .cc-bridge{border:1px solid var(--rule);border-radius:10px;padding:10px 12px;background:var(--paper)}
 .cc-bgrid{display:grid;grid-template-columns:minmax(0,1fr) 5.2em minmax(0,1fr);gap:6px 8px;align-items:center}
@@ -2350,7 +2423,8 @@ h1.wf-head .heb{font-size:1.9em;font-weight:normal;color:var(--ochre-text);verti
 <body data-density="plain">
 <div class="app">
 
-  <div class="bar">
+  <a class="skiplink" href="#reader">Skip to content</a>
+  <header class="bar">
     <button class="barback" id="goback" title="Back to what you were looking at before" aria-label="Back"
       disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="brand" id="brand" type="button" aria-label="Bible Ontology, Explore">Bible <span>Ontology</span><small>a Scripture explorer</small></button>
@@ -2379,6 +2453,7 @@ h1.wf-head .heb{font-size:1.9em;font-weight:normal;color:var(--ochre-text);verti
         <button role="menuitem" data-more="about">About this graph</button>
         <a role="menuitem" class="moreitem" href="/faq">Questions (FAQ)</a>
         <a role="menuitem" class="moreitem" href="/blog/">Blog</a>
+        <a role="menuitem" class="moreitem" href="/mcp">Use with Claude or another AI assistant</a>
         <button role="menuitem" data-more="feedback">Something wrong or missing?</button>
         <button role="menuitem" data-more="coverage">What is covered</button>
         <div class="moresep"></div>
@@ -2400,14 +2475,14 @@ h1.wf-head .heb{font-size:1.9em;font-weight:normal;color:var(--ochre-text);verti
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
   <div class="panes">
-    <main class="reader" id="reader">
+    <main class="reader" id="reader" tabindex="-1">
       <!-- Tabs, because a pattern with 2,739 uses does not belong in a side
            panel. The scripture tab is never closable, so the passage is always
            one click away no matter how deep a dive goes. -->
-      <div class="tabs" id="tabs"></div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Open cards and passages"></div>
       <!-- One container. A chapter is a tab like any other, so the reader
            stopped being a special case. -->
       <div class="paneinner" id="paneinner"></div>
@@ -2443,10 +2518,36 @@ const arrived = what => { if(ARRIVAL && ARRIVAL.includes(what)){ ARRIVAL = null;
    notice over it (the notice is for a page with nothing else to show) */
 const _serverCopyShows = () => !!document.querySelector('.ssr')
   && !document.documentElement.classList.contains('drawn');
+/* U-35 (2026-11-14): WHEN THE CARD CANNOT BE LOADED, THE SERVED COPY STAYS. During a push the page copy arrives with
+   the whole card in <article class="ssr"> and every /api/ call answers 503. The app hid the copy, failed to fetch the
+   card, drew Explore and rewrote the address to "/" and the title to the home page's: the card the visitor clicked
+   was gone and so was the URL they could retry. Now (1) the copy is shown at once, (2) one line above it says why,
+   (3) the address and title are left alone (addressHeld) until the card is drawn or the visitor acts, and (4) the
+   boot retries the card every 20 s and swaps it in when it loads (the draw adds `drawn`, which hides the copy). */
+let USER_ACTED = false;
+const BOOT_WANTS_PAGE = /^\/(e|p|word|theme|themes|question|tradition|traditions|about)(\/|$)/.test(location.pathname);
+const addressHeld = () => BOOT_WANTS_PAGE && !USER_ACTED && _serverCopyShows();
+try{ ['pointerdown', 'keydown'].forEach(t => addEventListener(t, e => { if(e.isTrusted && !e.target.closest?.('.ssr, #savedcopy')) USER_ACTED = true; }, true)); }catch(e){}
+const _savedCopyNote = on => {
+  let n = document.getElementById('savedcopy');
+  if(!on){ if(n) n.remove(); return; }
+  document.documentElement.classList.remove('human');
+  if(n) return;
+  n = document.createElement('div');
+  n.id = 'savedcopy';
+  n.setAttribute('role', 'status');
+  n.textContent = 'Live features are restarting; this is the saved copy. Reload in a minute.';
+  n.style.cssText = 'max-width:44em;margin:10px auto 0;padding:8px 14px;font:15px/1.4 system-ui,sans-serif;'
+    + 'background:var(--ochre-soft);color:var(--ink);border:1px solid var(--ochre);border-radius:8px';
+  const art = _serverCopyEl();
+  if(art) art.parentNode.insertBefore(n, art); else document.body.prepend(n);
+};
+const _serverCopyEl = () => document.querySelector('.ssr');
 const _restartNote = on => {
   let n = document.getElementById('restartnote');
-  if(!on){ if(n) n.remove(); return; }
-  if(n || _serverCopyShows()) return;
+  if(!on){ if(n) n.remove(); _savedCopyNote(false); return; }
+  if(_serverCopyShows()){ _savedCopyNote(true); return; }
+  if(n) return;
   n = document.createElement('div');
   n.id = 'restartnote';
   n.setAttribute('role', 'status');
@@ -2487,6 +2588,7 @@ const esc = s => String(s==null?'':s).replace(/[&<>"]/g, c =>
 // and the boot script, which runs last, found the address already bare
 // (2026-10-17, the first test of the new deeplinks)
 const BOOT_HASH = location.hash;
+const BOOT_PATH = location.pathname;   // U-36: the address the page was opened at
 /* HOW IT WAS FOUND, QUIETLY. 2026-10-16: the UI keeps its mention of automation
    subtle while attribution stays as it is in the graph. Where automated
    analysis was involved the line says 'Surfaced by automated analysis'; where
@@ -2547,12 +2649,13 @@ function renderTabs(){
     // escaped like any stranger's input: unescaped, a crafted link could close
     // the attribute and plant a meta refresh in the tab strip (security
     // review, 2026-10-19)
+    // U-46: the tab's own name is its title; the close control is named apart ("Close David"), not read as part of it
     `<button role="tab" data-id="${esc(tb.id)}"
       class="tab${PERM.has(tb.id) ? ' perm' : ''}"
-      aria-selected="${tb.id===state.active}">
+      aria-selected="${tb.id===state.active}" aria-label="${esc(tb.title)}">
       <span class="lbl">${esc(tb.title)}</span>
       ${PERM.has(tb.id) ? ''
-        : `<span class="x" data-close="${esc(tb.id)}">×</span>`}
+        : `<span class="x" role="button" aria-label="Close ${esc(tb.title)}" data-close="${esc(tb.id)}">×</span>`}
     </button>`).join('');
   $('#tabs').querySelectorAll('.tab').forEach(b => {
     b.onclick = e => {
@@ -2621,7 +2724,7 @@ function push(kind, a, b){
 function syncBack(){
   for(const id of ['goback', 'tabback']){
     const b = document.getElementById(id);
-    if(b) b.disabled = histDepth === 0;
+    if(b){ b.disabled = histDepth === 0; b.hidden = histDepth === 0; }   // R-5: no Back to show when there is nothing to go back to
   }
 }
 
@@ -2670,6 +2773,11 @@ function selectTab(id){
   const tb = state.tabs.find(x => x.id === id);
   if(!tb) return;
   if(id === 'explore' && !tb.html){ renderTabs(); showAddress(tb); return buildExplore(); }
+  if(id === 'ch:reader' && !tb.html){   // U-42: the reader loads its chapter when it is first opened
+    renderTabs();
+    const pl = mem.get('place', {b: 'Gen', c: 1});
+    return loadChapter(pl.b || 'Gen', pl.c || 1);
+  }
   if(id === 'navigator' && !tb.html){ tb.html = navigatorPane(); tb.wire = () => kgnStart(); }
   renderTabs();
   $('#paneinner').innerHTML = tb.html || '';
@@ -2694,9 +2802,13 @@ const THEME_PATH = {}, IMG_PATH = {};   // theme id -> /themes/<slug>[/side-by-s
    last opened is named after the #: /e/david#open=rel-Family,
    /#tag=love&open=tg-pinned, /#explore&open=pg-shapes. Only a reader's own
    click names it (a summary click), never a section a card opens by default. */
+/* U-43 (2026-11-14): /explore/<section> kept its own address while that drawer is the focus (it was rewritten to "/"
+   with the generic title): set by the boot when the address names a section, given up when the reader opens another. */
+let EXPLORE_PATH = null, EXPLORE_SEC = null, EXPLORE_TITLE = null;
 function addressOf(tb){
   const base = baseAddress(tb);
   const sec = tb && tb.openSec;
+  if(tb && tb.id === 'explore' && EXPLORE_PATH && (!sec || sec === EXPLORE_SEC)) return EXPLORE_PATH;
   if(!sec) return base;
   const s = 'open=' + encodeURIComponent(sec);
   if(tb.id === 'explore') return '/#explore&' + s;
@@ -2778,6 +2890,8 @@ function baseAddress(tb){
   if(tb.id.startsWith('mimagery:')) { const t = tb.id.split(':')[1];
     return IMG_PATH[t] || '/theme/' + encodeURIComponent(t) + '/side-by-side'; }
   if(tb.id.startsWith('about:')) return '/about';
+  // U-36: a card that is not there keeps the address that was asked for
+  if(tb.id.startsWith('nf:')) return tb.id.slice(3);
   // a question card (plan 8.4h) at /questions/<id>
   if(tb.id.startsWith('question:')) return '/questions/' + encodeURIComponent(tb.id.split(':')[1]);
   // a tradition or a school of reading (2026-10-26) at /traditions/<slug>, and their list at /traditions
@@ -2805,6 +2919,7 @@ function baseAddress(tb){
   return '/';
 }
 function showAddress(tb){
+  if(addressHeld()) return;   // U-35: a card that failed to load keeps its address and title
   const to = addressOf(tb);
   // a verse's open depth is after the # (/p/John.3.16#orig), so the # counts
   // here; any other # (a theme table's #row-N) is left as it was
@@ -2813,7 +2928,8 @@ function showAddress(tb){
   const depthNow = /^#(orig|struct|links|note)\b|^#[a-z]+(=|$)/.test(location.hash);
   const here = location.pathname + (to.includes('#') || depthNow ? location.hash : '');
   try{ if(here !== to) history.replaceState(history.state, '', to); }catch(e){}
-  document.title = to.startsWith('/graph/') && KGN.data
+  document.title = tb && tb.id === 'explore' && to === EXPLORE_PATH && EXPLORE_TITLE ? `${EXPLORE_TITLE} · Bible Ontology`
+    : to.startsWith('/graph/') && KGN.data
     ? `${KGN.data.name || KGN.center} in the Knowledge Graph Navigator · Bible Ontology`
     : tb && tb.id !== 'explore' && tb.title
     ? `${tb.title} · Bible Ontology` : 'Bible Ontology — a Scripture explorer';
@@ -2892,6 +3008,40 @@ function openTab(kind, title, html, wire, key){
   // the page is on screen: the address's own copy from the server can go
   // (a chapter's tab is the answer only to a passage's address)
   arrived(kind === 'ch' ? 'chapter' : 'card');
+}
+/* U-36 (2026-11-14): A MISTYPED OR RETIRED CARD ADDRESS SAYS SO. /e/this_does_not_exist, /word/H99999, /themes/nope and
+   /p/Gen.99 answered 404 from the server and then the app drew Explore and rewrote the address to "/": the visitor
+   could not even see what they had asked for. Now the address stays, the tab says "No card at ...", and the card
+   holds the id turned into words with its top three results. Only for the address the page was opened at (a card
+   that fails to open after a tap keeps its old way). */
+async function notFoundCard(){
+  if(USER_ACTED || !BOOT_WANTS_PAGE) return;
+  let p = BOOT_PATH; try{ p = decodeURIComponent(p); }catch(e){}
+  p = p.replace(/\/$/, '');
+  const words = (p.split('/').pop() || '').replace(/[_\-.]+/g, ' ').trim();
+  const html = `<div class="pane"><p class="kind">Not found</p><h1>No card at ${esc(p)}</h1>
+    <p class="lead">There is no page here: the address may be mistyped, or the card may have moved or been merged into another.
+    Search for it by name:</p>
+    <form class="nf-form" role="search"><input class="nf-q" type="search" value="${esc(words)}" aria-label="Search the Bible and the graph" autocomplete="off">
+      <button type="submit" class="wlink">Search</button></form>
+    <div class="nf-res" aria-live="polite"></div></div>`;
+  const wire = () => {
+    const pane = $('#paneinner'), inp = pane.querySelector('.nf-q'), out = pane.querySelector('.nf-res');
+    if(!inp) return;
+    const run = async () => {
+      const v = inp.value.trim();
+      if(v.length < 2){ out.innerHTML = ''; return; }
+      const d = await api('/api/search', {q: v}).catch(() => ({results: []}));
+      const rs = (d.results || []).slice(0, 3);
+      out.innerHTML = rs.length ? rs.map((r, i) => `<button type="button" class="fr" data-i="${i}"><div class="t">${esc(r.title)}</div><div class="s">${mdLite(r.sub || '', false)}</div></button>`).join('')
+        : `<p class="hint">Nothing found for “${esc(v)}”. Search takes a reference (Jn 3:16), a name (Ahithophel) or a word (mercy).</p>`;
+      out.querySelectorAll('button').forEach(b => b.onclick = () => openResult(rs[b.dataset.i]));
+    };
+    pane.querySelector('.nf-form').onsubmit = e => { e.preventDefault(); run(); };
+    run();
+  };
+  ARRIVAL = ['card'];   // the page is waiting for a card; openTab marks it drawn
+  openTab('nf', 'Not found', html, wire, p);
 }
 /* Coming back to the passage has to be trivial, or a deep dive is a dead end. */
 /* Read a usage in place. Scanning twenty of them must not cost you the tab
@@ -3286,7 +3436,7 @@ function renderChapter(d){
       <button class="chapstep" ${chapter>=d.chapters?'disabled':''} data-book="${esc(book)}" data-ch="${chapter+1}" aria-label="Next chapter"><span class="sw">Next </span><span class="sa">›</span></button>
     </div>`;
   let html = `<div class="chaphead">
-      <div class="chaptitle"><h1>${esc(d.title)} ${d.chapter}</h1></div>
+      <div class="chaptitle"><h1>${esc(d.title)} ${d.chapter}</h1>${drawnBtn(DRAWN[`${book} ${chapter}`])}</div>
       <div class="chapctl">${picker}${nav}</div>
     </div>`;
 
@@ -3380,10 +3530,10 @@ function renderChapter(d){
   const brCls = s => s.row == null && s.node ? 'thb link' : 'thb';
   const openBr = vn => spans.filter(s => s.from === vn).map(s =>
     `<span class="${brCls(s)}" ${brAttr(s)} style="color:${thColor(s.n)}"
-       title="${esc(brTitle(s))}">[</span>`).join('');
+       role="link" aria-label="${esc('Theme begins: ' + brTitle(s))}" title="${esc(brTitle(s))}"><span aria-hidden="true">[</span></span>`).join('');
   const closeBr = vn => spans.filter(s => s.to === vn).map(s =>
     `<span class="${brCls(s)}" ${brAttr(s)} style="color:${thColor(s.n)}"
-       title="${esc(brTitle(s))}">]</span>`).join('');
+       role="link" aria-label="${esc('Theme ends: ' + brTitle(s))}" title="${esc(brTitle(s))}"><span aria-hidden="true">]</span></span>`).join('');
   // the sections of this chapter: a titled seam starts one; verses before the
   // first heading belong to a section begun in the chapter before
   const secThemes = [];
@@ -3418,23 +3568,23 @@ function renderChapter(d){
      disappear under "Thus says the LORD" */
   const msgsAt = d.messages_at || {};
   const msgMark = vn => (msgsAt[vn] || []).slice(0, 2).map(m =>
-    `<span class="stchip msg link" data-ent="${esc(m.id)}" title="Message: ${esc(m.name)} — open it to see every verse that says it, and where it is spoken">✉ ${esc(m.name)}</span>`).join('');
+    `<span class="stchip msg link" data-ent="${esc(m.id)}" title="Message: ${esc(m.name)} — open it to see every verse that says it, and where it is spoken"><span aria-hidden="true">✉</span> ${esc(m.name)}</span>`).join('');
   /* ❝ a kind of speaking the text names in this verse -- a confession of
      faith, a lament, a blessing (plan A.18; approved 2026-10-01 as
      P-73). The rarest one only, and none where one of its own messages
      already has a chip (the server leaves those off). */
   const actsAt = d.acts_at || {};
   const actMark = vn => (actsAt[vn] || []).slice(0, 1).map(a =>
-    `<span class="stchip act link" data-ent="${esc(a.id)}" title="Speech act: ${esc(a.name)} — open it to see every verse where the text names it">❝ ${esc(a.name)}</span>`).join('');
+    `<span class="stchip act link" data-ent="${esc(a.id)}" title="Speech act: ${esc(a.name)} — open it to see every verse where the text names it"><span aria-hidden="true">❝</span> ${esc(a.name)}</span>`).join('');
   const storyMark = vn => msgMark(vn) + actMark(vn) + stories.filter(s => s.from === vn || (s.from < firstV && vn === firstV))
     .filter((s, i, all) => s.kind !== 'role' ||
       all.findIndex(o => o.kind === 'role' && o.instance === s.instance) === i)
     .map(s => s.kind === 'role'
       ? `<span class="stchip role link" data-ent="${esc(s.pattern_id)}"
-      title="Role pattern: ${esc(s.family_name)} — the ${esc(s.stage)} in the row ${esc(s.title)}. Open it to see everyone who fills this role.">◇ ${
+      title="Role pattern: ${esc(s.family_name)} — the ${esc(s.stage)} in the row ${esc(s.title)}. Open it to see everyone who fills this role."><span aria-hidden="true">◇</span> ${
       esc(s.family_name)} · ${esc(s.title)}</span>`
       : `<span class="stchip link" data-ent="${esc(s.pattern_id || 'tpl_' + s.family)}"
-      title="Story pattern: ${esc(s.family_name)} — the ${esc(s.stage)} in ${esc(s.title)}. Open it to see the other stories told this way.">◆ ${
+      title="Story pattern: ${esc(s.family_name)} — the ${esc(s.stage)} in ${esc(s.title)}. Open it to see the other stories told this way."><span aria-hidden="true">◆</span> ${
       esc(s.family_name)} · ${esc(s.stage)}</span>`).join('');
   let open = false;
   if(d.verses.length && !(d.verses[0].seam && d.verses[0].seam.title)) html += secLine(d.verses[0].v);
@@ -3458,13 +3608,13 @@ function renderChapter(d){
        "orig · struct · links" in small quiet type after the text. The verse
        number is just a number again. */
     const vchips = `<span class="vchips"><button class="tgv orig"
-        data-what="orig" aria-label="original"
+        data-what="orig" aria-label="original" aria-expanded="false"
         title="Show the Hebrew / Greek of this verse">orig</button><button
-        class="tgv struct" data-what="struct" aria-label="structure"
+        class="tgv struct" data-what="struct" aria-label="structure" aria-expanded="false"
         title="Show the structure of this verse: its clauses and how they connect">struct</button>${
         /* only where there is something behind it (2026-09-28) */
         v.conn ? `<button
-        class="tgv conn" data-what="conn" aria-label="connections"
+        class="tgv conn" data-what="conn" aria-label="connections" aria-expanded="false"
         title="Other verses this one takes up or is taken up by, retellings, and the patterns it is part of">links</button>` : ''}</span>`;
     /* The chips that mark where something begins (a message, a speech act, a
        story's stage) follow the verse number rather than lead it. Leading,
@@ -3491,6 +3641,16 @@ function renderChapter(d){
       }</span>` : ''}</div>`;
   }
   html += `</div></div></div>`;
+  /* U-44 (2026-11-14): the end of a chapter said nothing about what comes next; the Next button was at the top.
+     A full-width "John 2 →" and "← John 1" close every chapter and cross book boundaries. */
+  {
+    const bi = BOOKS.findIndex(x => x.id === book);
+    const prevB = bi > 0 ? BOOKS[bi - 1] : null, nextB = bi >= 0 && bi < BOOKS.length - 1 ? BOOKS[bi + 1] : null;
+    const prev = chapter > 1 ? {b: book, c: chapter - 1, t: d.title} : prevB ? {b: prevB.id, c: prevB.chapters, t: prevB.title} : null;
+    const next = chapter < d.chapters ? {b: book, c: chapter + 1, t: d.title} : nextB ? {b: nextB.id, c: 1, t: nextB.title} : null;
+    const btn = (x, arrow) => x ? `<button class="chapstep chapfoot-b" data-book="${esc(x.b)}" data-ch="${x.c}">${arrow < 0 ? '← ' : ''}${esc(x.t)} ${x.c}${arrow > 0 ? ' →' : ''}</button>` : '<span></span>';
+    html += `<nav class="chapfoot" aria-label="Chapters">${btn(prev, -1)}${btn(next, 1)}</nav>`;
+  }
 
   openTab('ch', `${d.title} ${d.chapter}`, html, () => {
     buildPicker(); syncPicker();
@@ -3552,6 +3712,7 @@ function toggleVerseDepth(btn, book){
   const what = btn.dataset.what;
   const on = !btn.classList.contains('on');
   btn.classList.toggle('on', on);
+  btn.setAttribute('aria-expanded', on ? 'true' : 'false');
   let panel = p.nextElementSibling;
   if(!(panel && panel.classList.contains('vpanel')
        && panel.dataset.ref === vs.dataset.ref)) panel = null;
@@ -3697,7 +3858,7 @@ function vcWordsHtml(vc, open){
         `<p class="vc-rl">Here, in the UBS dictionary: <b>${esc((s.glosses || []).join('; ') || s.short)}</b>${
           s.domains.length ? ' (' + esc(s.domains.join(', ')) + ')' : ''}</p>`).join('')}
       <div class="vc-acts">${w.card ? `<span class="link" data-sense="${esc(w.card.toLowerCase())}">the word card, ${esc(w.card)} ↗</span>`
-        : '<span class="vc-note">a particle or a prefix: no word card is linked from here</span>'}</div>`)).join('');
+        : '<span class="vc-note">no word card for this form yet</span>'}</div>`)).join('');
 }
 
 /* THE STRUCTURE, compact first. Each clause is one line: its force, its
@@ -4130,8 +4291,9 @@ function linkify(text, links){
     const w = m[0];
     const bare = w.replace(/[\u2019']/g, '').toLowerCase();
     if(bare.length < 3 || STOPW.has(bare)) continue;
+    const nm = /^[A-Z]/.test(w) && m.index > 0 && !/[.!?]["”’']?\s*$/.test(text.slice(0, m.index));
     out += esc(text.slice(at, m.index))
-        + `<a class="ph" href="#" data-q="${esc(w)}">${esc(w)}</a>`;
+        + `<a class="ph${nm ? ' nm' : ''}" href="#" data-q="${esc(w)}">${esc(w)}</a>`;
     at = m.index + w.length;
   }
   return out + esc(text.slice(at));
@@ -4496,7 +4658,7 @@ function setOpen(vEl, what, on){
       api('/api/patterns', {ref: pats.dataset.ref}).then(d => {
         pats.innerHTML = (d.patterns||[]).slice(0,5).map(pp =>
           `<button class="pat ${esc(pp.kind)}" data-key="${esc(pp.key)}"
-            title="${pp.instances} uses">${esc(pp.template)}</button>`).join('');
+            title="${plural(pp.instances, 'use')}">${esc(pp.template)}</button>`).join('');
       });
     }
   }
@@ -4715,7 +4877,7 @@ async function drawAllPatterns(){
       if(!d.patterns.length) continue;
       b.innerHTML = d.patterns.filter(p => p.distinctive !== false).slice(0,5).map(p =>
         `<button class="pat ${esc(p.kind)}" data-key="${esc(p.key)}"
-          title="${p.instances} uses">${esc(p.template)}</button>`).join('');
+          title="${plural(p.instances, 'use')}">${esc(p.template)}</button>`).join('');
     }catch(err){}
   }
 }
@@ -4947,6 +5109,17 @@ function sec(id, label, body, count, open, preview){
    and some a raw `[[id]]` link -- love's card opened on asterisks. Escaped
    first, then the four marks; `links` false gives plain text for a search row
    (a link inside a clickable row would be a second target). */
+/* Where a long identity note folds into "… more": at 180 characters, but never inside a **bold** pair, which
+   would leave each half with one unmatched mark (the card-access review, 2026-11-19: the Jesus card's identity
+   notes printed their asterisks, nine of them, because this box escaped the note instead of rendering it). */
+function idCut(s){
+  let i = 180;
+  // a cut anywhere inside a span, its marks included, moves to the span's end ("**…*|*" cut the 1Cor 1:18 note)
+  for (const m of String(s).matchAll(/\*\*(.+?)\*\*/g)) {
+    if (m.index < i && i < m.index + m[0].length) { i = m.index + m[0].length; break; }
+  }
+  return i;
+}
 function mdLite(s, links){
   let h = esc(String(s || ''));
   h = h.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
@@ -5097,7 +5270,7 @@ function wordFaceHtml(d, key, from){
       ? `Used <b>once</b>, in ${esc(prettyRef(d.occurrences.rows[0].ref))}.`
       : `Used <b>${F.uses.toLocaleString()}</b> times in ${plural(F.verses, 'verse')}${
       nb > 1 ? ` of ${nb} books` : ''}${parts ? `: ${parts}` : ''}.`}${
-      top ? ` The Berean prints ${top}${P.none ? ` · ${P.none} not matched to a word of the Berean` : ''}.` : ''}
+      top ? ` The Berean prints ${top}${P.none ? ` · ${P.none} use${P.none === 1 ? '' : 's'} the Berean renders with a different word` : ''}.` : ''}
       <span class="hint" style="display:block;font-size:12.5px;margin-top:4px">Counted in the ${side === 'g'
         ? 'Nestle 1904 Greek New Testament' : 'Westminster Leningrad Codex'} as MACULA analyzes it; other editions count slightly differently.</span></p>
     ${L.quote ? `<blockquote class="wf-quote">“${esc(L.quote)}”<cite>${esc(WF_LEX[side] || 'STEP Bible')} ·
@@ -5263,6 +5436,7 @@ async function openSense(key, word, from){
   if(!key) return;
   const d = await api('/api/sense', {key});
   if(!d.found){
+    if(from === undefined && !USER_ACTED && /^\/word\//.test(BOOT_PATH)) return notFoundCard();
     return openTab('word', word, `<div class="pane">
       <p class="kind">Word</p><h1>${esc(word)}</h1>
       <p class="lead">No profile yet — this word appears too rarely for the text
@@ -5337,7 +5511,7 @@ async function openSense(key, word, from){
   const near = (d.neighbours||[]).map(n => `<div class="rowline">
       <span class="link" data-key="${esc(n.key)}" data-word="${esc(n.gloss||'')}"
         >${esc(n.gloss||n.key)}</span>
-      <span class="g">${n.observations} uses · ${n.score.toFixed(3)}</span></div>`
+      <span class="g">${plural(n.observations, 'use')} · ${n.score.toFixed(3)}</span></div>`
     ).join('') || '<div style="color:var(--muted)">Too few uses to compare.</div>';
 
   const gram = (d.grammar||[]).map(g => `<div class="rowline">
@@ -5403,7 +5577,7 @@ async function openSense(key, word, from){
     vc.size);
 
   openTab('word', d.short || d.gloss || word, `<div class="pane">
-    <p class="kind">${esc(d.lang||'')} · ${d.counted_under ? `counted under <span class="link heb" data-sense="${esc(d.counted_under.key)}">${esc(d.counted_under.lemma)}</span>` : `${d.observations} uses`} ·
+    <p class="kind">${esc(d.lang||'')} · ${d.counted_under ? `counted under <span class="link heb" data-sense="${esc(d.counted_under.key)}">${esc(d.counted_under.lemma)}</span>` : plural(d.observations, 'use')} ·
       Strong’s ${esc((d.key||'').slice(0,1).toUpperCase() + (d.strong||''))}</p>
     ${/* THE WORD IS NAMED BY ITS MEANING, not by one of its renderings.
           2026-09-25, on הָיָה: the card was titled "he was" — the
@@ -5441,8 +5615,12 @@ async function openSense(key, word, from){
         : d.names[0].name.toLowerCase() !== String(d.short || d.gloss || '').toLowerCase() ? ', for' : ':'} ${d.names.map(n =>
         `<span class="link" data-ent="${esc(n.id)}">${esc(n.name)}</span>${d.names.length > 1 && n.who ? ` <span class="hint">(${esc(n.who)})</span>` : ''}`).join(' · ')}`
       : ''}.</p>` : ''}
-    ${(d.concepts || []).length ? `<p class="hint" style="margin:2px 0 0">In the meaning layer: ${d.concepts.map(c =>
+    ${(d.concepts || []).length ? `<p class="hint" style="margin:2px 0 0">In the meaning layer: ${[...new Map(d.concepts.map(c => [c.name, c])).values()].map(c =>
         `<span class="link" data-ent="${esc(c.id)}">${esc(c.name)}</span>`).join(' · ')}</p>${navBtn('word:' + key)}` : navBtn('word:' + key)}
+    ${/* U-23 (2026-11-14): THE MEANING BEFORE THE COUNTS. H157's senses sat closed at about 2,040 px, under the counts and
+          a chart by book; most visitors searched "Strong's H157" for the definition. The UBS senses now open under
+          the headword, and the counts and the chart follow. */''}
+    ${d.ubs && (d.ubs.senses || []).length ? sec('w-ubs', 'Its senses (UBS dictionary)', ubsSensesHtml(d.ubs, key), d.ubs.senses.length, true) : '<span id="w-sensemark" hidden></span>'}
     ${wordFaceHtml(d, key, from)}
     ${/* A WORD'S NOTE, where how it is used needs saying first (the words for
           "Jew", 2026-10-10), with the card it belongs to */''}
@@ -5525,8 +5703,6 @@ async function openSense(key, word, from){
           design panel, 2026-10-28). The lexicon entry, first from
           2026-09-27, follows: its line to quote is on the face. */''}
     ${/* the senses first after the face (the Fable layout review, 2026-11-09): what a researcher came for */''}
-    ${d.ubs && (d.ubs.senses || []).length ? sec('w-ubs', 'Its senses (UBS dictionary)', ubsSensesHtml(d.ubs, key),
-      d.ubs.senses.length) : ''}
     ${sec('w-phrase', 'Every verse', ph, (d.face || {}).verses || (d.occurrences||{}).total)}
     ${(gram || ((d.face || {}).forms || []).length || ((d.face || {}).parsed || []).length) ? sec('w-infl', 'Its forms',
       /* EACH FORM WITH ITS PARSING (2026-11-09, a reviewer: "inspect the actual forms and their grammatical parsing,
@@ -5710,6 +5886,10 @@ async function openSense(key, word, from){
        that would open nothing — the sense profiles are Hebrew and Greek. */
     $('#paneinner').querySelectorAll('.eqnode[data-sense]').forEach(b =>
       b.onclick = () => openSense(b.dataset.sense));
+    /* U-23: where the data has no UBS senses, the dictionary entry (Strong's or STEP's) is the meaning: it moves up to
+       the headword and opens, ahead of the counts and the chart */
+    { const mk = $('#w-sensemark'), lx = $('#paneinner [data-sec="w-lex"]');
+      if(mk && lx && mk.nextElementSibling !== lx){ mk.after(lx); lx.open = true; } }
     wireWordFace($('#paneinner'), d, key);
     loadConnect(key);
   /* KEYED BY THE WORD, not its title, so the tab has an address (/word/H1254,
@@ -5822,7 +6002,7 @@ function drawConnect(box){
     <text x="${cx}" y="${cy + 7}" text-anchor="middle" font-size="22" fill="var(--surface)"
       class="${scr(d.lang)}">${esc(d.lemma)}</text>
     ${nodes.map(n => `<g class="wcnode${n.key ? '' : ' dead'}" ${n.key ? `data-sense="${esc(n.key)}"` : ''}>
-       <title>${esc(n.gloss)} · ${n.count} uses · ${n.evs.map(e => WC_EV[e][0]).join('; ')}</title>
+       <title>${esc(n.gloss)} · ${plural(n.count, 'use')} · ${n.evs.map(e => WC_EV[e][0]).join('; ')}</title>
        <circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="${(7 + Math.min(9, Math.log2(1 + n.count))).toFixed(1)}"
          fill="var(--surface)" stroke="${n.evs.length > 1 ? 'var(--ink)' : col(n.evs[0])}"
          stroke-width="${n.evs.length > 1 ? 2.5 : 2}"/>
@@ -6830,7 +7010,7 @@ async function openPattern(key){
      sixty references at once. */
   DEEP = 'pattern=' + encodeURIComponent(key);
   openTab('pattern', d.template, `<div class="pane">
-    <p class="kind">${esc(d.kind)} pattern · ${d.instances.toLocaleString()} uses
+    <p class="kind">${esc(d.kind)} pattern · ${plural(d.instances, 'use')}
       · ${d.reach} books</p>
     <h1>${esc(d.template)}</h1>
     ${/* THE ORIGINAL WORD, because the English on this card is one rendering
@@ -7135,13 +7315,13 @@ async function openSequence(ref){
       names, so a pronoun stays a pronoun: this is an order, not a cast list.</p>
     <div class="seq">${rows}</div>
     ${/* Two different kinds of claim, kept apart. A cross-reference is an
-          EDITOR's judgement carried in from the Berean notes; a similar
+          EDITOR's judgment carried in from the Berean notes; a similar
           section is a MODEL's reading scored on rare shared stamps. Merging
           them would launder the second into the first. */''}
     ${(d.xrefs||[]).length ? sec('sq-xref',
         `Passages linked to this one · ${d.xrefs.length}`,
         `<p class="hint" style="margin:0 0 10px;max-width:62ch"><b>an editor's
-           judgement</b> — the Berean Standard Bible's own parallel-passage
+           judgment</b> — the Berean Standard Bible's own parallel-passage
            notes, made for readers and independent of anything here.</p>`
         + listBlock(d.xrefs, x =>
             `<button class="occ" data-vref="${esc(x.ref)}">${
@@ -7532,8 +7712,8 @@ function identityBlock(d){
         ? `<span class="g claimby">— the words of <span class="link" data-ent="${esc(r.claimed_by)}">${
             esc(r.claimed_by_name)}</span></span>` : ''}
       ${r.note ? `<div class="idnote">${r.note.length > 180
-        ? `${esc(r.note.slice(0, 180))}<details class="moreinl"><summary>… more</summary>${
-            esc(r.note.slice(180))}</details>` : esc(r.note)}</div>` : ''}
+        ? `${mdLite(r.note.slice(0, idCut(r.note)))}<details class="moreinl"><summary>… more</summary>${
+            mdLite(r.note.slice(idCut(r.note)))}</details>` : mdLite(r.note)}</div>` : ''}
     </div>`;
   const groups = Object.entries(byLabel).map(([label, rows]) =>
     `<details class="sub" ${rows.length <= 6 ? 'open' : ''}>
@@ -7541,13 +7721,13 @@ function identityBlock(d){
       <div class="subbody">${rows.map(line).join('')}</div></details>`).join('');
   return `<div class="identbox">
     <div class="identhead">Who this is said to be
-      <span class="overlay" title="Read from the text verse by verse, each with its reference; not yet derived by rule.">reasoned, not yet derived</span></div>
+      <span class="overlay" title="Each line was read from the text verse by verse and carries its reference; none is computed by rule.">read from the text</span></div>
     ${groups}
     ${/* In a reader's words (2026-10-02, reworded from the 'pipeline' line):
           it had said "The pipeline does not compute these yet; the aim is to
           retire the need for them" -- the project's working language. */''}
-    <p class="idfoot">Each line was read from the text verse by verse and
-      carries its reference. These are readings, not yet derived by rule.</p>
+    <p class="idfoot">Each line is a reading of the text and cites the verse it
+      was read from; none is computed by rule.</p>
     ${apart.length ? `<div class="apart">
       <div class="aparthead">And held apart from<span class="ct">${apart.length}</span></div>
       ${apart.map(line).join('')}
@@ -8295,7 +8475,7 @@ function conceptHubBlock(h, graph){
   if((h.leads || []).length) s += `<div class="chubk">Leads to</div><div class="chubleads">${h.leads.map(ent).join('')}</div>`;
   s += `<h3 class="hubh">The words the text uses</h3><div class="chubw">${h.words.map(w =>
     `<div class="chubwd"><span class="link heb" data-key="${esc(w.key)}" data-word="${esc(w.gloss || '')}">${esc(w.lemma)}</span>${
-      w.translit ? ` <span class="translit">${esc(w.translit)}</span>` : ''}<div class="g">${esc(w.gloss || '')} · ${esc(w.lang)} ${esc(w.form)} · ${w.uses} uses${
+      w.translit ? ` <span class="translit">${esc(w.translit)}</span>` : ''}<div class="g">${esc(w.gloss || '')} · ${esc(w.lang)} ${esc(w.form)} · ${plural(w.uses, 'use')}${
       w.other_sense ? ` (and ${w.other_sense} in another sense)` : ''}</div></div>`).join('')}</div>`;
   if((h.own_words || []).length) s += `<h3 class="hubh">In the texts' own words</h3>${h.own_words.map(q).join('')}`;
   // THE GRAPH, RIGHT AFTER THE TEXT'S WORDS. 2026-10-09: the
@@ -8555,8 +8735,8 @@ function conceptFaceBlock(d, graph){
   if(words.length){
     s += `<h3 class="hubh">The words the text uses</h3><div class="chubw">${words.map(w =>
       `<div class="chubwd"><span class="link heb" data-key="${esc(w.key)}" data-word="${esc(w.gloss || '')}">${esc(w.lemma || w.key)}</span>${
-        w.translit ? ` <span class="translit">${esc(w.translit)}</span>` : ''}<div class="g">${esc(w.gloss || '')} · ${esc(w.lang || '')} · ${w.uses || w.n} ${w.uses ? 'uses' : 'verses'}</div>${
-        w.via ? `<div class="hint">${esc(w.via)}</div>` : ''}</div>`).join('')}</div>`;
+        w.translit ? ` <span class="translit">${esc(w.translit)}</span>` : ''}<div class="g">${esc(w.gloss || '')} · ${esc(w.lang || '')} · ${plural(w.uses || w.n, w.uses ? 'use' : 'verse')}</div>${
+        w.via ? `<div class="hint">${esc(w.via)}</div>` : ''}${sameWordLine(d, w)}</div>`).join('')}</div>`;
     if((f.family || []).length) s += `<p class="hint" style="margin:6px 0 0">From the same root: ${f.family.map(w =>
       `<span class="link heb" data-key="${esc(w.key)}">${esc(w.lemma || w.key)}</span> <span class="g">${esc(w.gloss || '')} · ${w.uses}</span>`).join(' · ')}</p>`;
   }
@@ -8638,6 +8818,29 @@ function pcToggle(btn){
   btn.setAttribute('aria-expanded', 'true');
   if(p.getBoundingClientRect().top > innerHeight * .8) p.scrollIntoView({block: 'nearest', behavior: 'smooth'});
 }
+/* U-3 (2026-11-14): a label written for either sex ("son/daughter") says the one the card's person is.
+   PC_SEX is set by personFace from the card's pronoun ('m', 'f' or ''); a pair is left alone when it is not known. */
+let PC_SEX = '';
+const PC_PAIRS = /\b(son|father|brother|husband|king|he)\s*\/\s*(daughter|mother|sister|wife|queen|she)\b/gi;
+function pcLabel(l){
+  l = String(l || '');
+  return PC_SEX ? l.replace(PC_PAIRS, (m, a, b) => PC_SEX === 'f' ? b : a) : l;
+}
+/* U-3: a relation recorded both ways for the same verse and the same other end ("repaid Saul", "repaid by Saul")
+   reads as a duplicate; the two are folded into one row that says both. Nothing is dropped: they can be two facts. */
+function pcFold(items){
+  const seen = {}, out = [];
+  items.forEach(r => {
+    if(!r.dir || !r.refs || !r.refs.length){ out.push(r); return; }
+    const k = [r.type, r.other, r.refs.join(',')].join('|'), q = seen[k];
+    if(q && q.dir !== r.dir && !q.conv){ q.conv = r; return; }
+    seen[k] = r; out.push(r);
+  });
+  return out;
+}
+/* U-4: the provenance of a reading is said once, at the head of a list, not on every row */
+const PC_READING_NOTE = `<p class="pc-note pc-readnote"><span class="pc-tag">reading</span> marks a row the graph read out of the verse’s grammar rather than copied from a plain statement. Two independent judges checked each one, and both ends were confirmed in the verse. “The words of …” names who said it.</p>`;
+const pcHasReading = items => (items || []).some(r => r.reading);
 /* a relation's row: label, the other end (or, for a record named only "Abraham at Gen 18:23", its verse), the
    verses, whose words */
 function pcRow(r, ph){
@@ -8645,9 +8848,10 @@ function pcRow(r, ph){
   const other = q ? `<q>${esc(q.text.length > 120 ? q.text.slice(0, 117).replace(/\s+\S*$/, '') + '…' : q.text)}</q> ${
       pcLink(r.other, '(record)')}` : pcLink(r.other, r.name);
   const by = r.claimed_by_name || r.by;
-  return `<div class="pc-rr"><span class="lb">${esc(r.label)}</span> ${other} ${pcRfs(r.refs)}${
+  const conv = r.conv ? ` <span class="pc-by">· and, in the same verse, <span class="lb">${esc(pcLabel(r.conv.label))}</span> ${esc(r.conv.name)}</span>` : '';
+  return `<div class="pc-rr"><span class="lb">${esc(pcLabel(r.label))}</span> ${other} ${pcRfs(r.refs)}${conv}${
     by ? ` <span class="pc-by">— the words of ${esc(by)}</span>` : ''}${
-    r.reading ? ` <span class="pc-by">· a reading (${esc(r.reading)})</span>` : ''}</div>`;
+    r.reading ? ` <span class="pc-tag" title="${esc(r.reading)}">reading</span>` : ''}</div>`;
 }
 /* a verse quoted on the face, its names linked, its reference with its book */
 const pcVerse = v => `<p>${v.gap ? '<span class="pc-note">…</span><br>' : ''}<span class="pc-vn">${esc(v.ref)}</span>${vtext(v.text, v.vmarks, t => linkNames(t, v.names))}</p>`;
@@ -8662,6 +8866,7 @@ function pcRuns(vs){
 }
 function personFace(d, regrouped){
   const P = d.pcard, pr = P.pron, His = pcCap(pr.his);
+  PC_SEX = pr.his === 'his' ? 'm' : pr.his === 'her' ? 'f' : '';
   const K = d.kin || [], plain = K.filter(k => !k.claimed_by);
   const parents = plain.filter(k => /^(son|daughter|child) of$/.test(k.rel));
   const spouses = plain.filter(k => k.type === 'spouse_of');
@@ -8766,7 +8971,7 @@ function personFace(d, regrouped){
       w.children.map(c => node(c.id, c.name)).join('')}</div></div>`);
     if(loose.length) cols.push(loose.length && !wives.length
       ? loose.map(c => `<div class="pc-fw">${kidCol(c)}</div>`).join('')
-      : `<div class="pc-fw"><span class="pc-fr">mother not named</span><div class="pc-fkids">${loose.map(c => node(c.id, c.name)).join('')}</div></div>`);
+      : `<div class="pc-fw"><span class="pc-fr">${His === 'Her' ? 'father' : 'mother'} not named</span><div class="pc-fkids">${loose.map(c => node(c.id, c.name)).join('')}</div></div>`);
     const ncol = wives.length + (loose.length ? (wives.length ? 1 : loose.length) : 0);
     fam = `<h2 class="pc-h">${His} family</h2><div class="pc-fam pc-host">
       ${(F.grand || []).length ? `<div class="pc-frow">${F.grand.map(g => node(g.id, g.name, 'faint')).join('')}<span class="pc-fr">${
@@ -8812,15 +9017,21 @@ function personFace(d, regrouped){
     later = `<h2 class="pc-h">Later scripture · ${plural(P.later_n, 'relation')} cite verses beyond ${esc(R.title)} ${R.c1}–${R.c2}</h2>${pair}
       ${(P.later || []).length ? `<p class="pc-note" style="margin:12px 0 0">Relations by book, in canon order (a relation citing two books is in both):</p>${chips}` : ''}`;
   }
-  const named = (P.named || []).length ? `<h2 class="pc-h">Where the text names ${esc(pr.him)} · ${plural(P.named.length, 'verse')}</h2><div class="pc-chips">${
-    P.named.map(v => pcRf(v.ref)).join('')}</div>` : '';
+  // U-1 (2026-11-14): the names come after the relations, folded to its first dozen references; "all N" opens the rest in place
+  const NAMED_SHOWN = 12;
+  const named = (P.named || []).length ? `<div class="pc-host"><h2 class="pc-h">Where the text names ${esc(pr.him)} · ${plural(P.named.length, 'verse')}</h2><div class="pc-chips">${
+    P.named.slice(0, NAMED_SHOWN).map(v => pcRf(v.ref)).join('')}</div>${P.named.length > NAMED_SHOWN ? `<p class="pc-note" style="margin:6px 0 0">${
+    pcOpen('pc-act', `all ${P.named.length} →`, `<h3>Where the text names ${esc(pr.him)} · ${plural(P.named.length, 'verse')}</h3><div class="pc-chips">${
+      P.named.map(v => pcRf(v.ref)).join('')}</div>`)}</p>` : ''}</div>` : '';
   // THE DRAWERS, by kind of evidence: every relation lands in one
   const used = new Set();
+  let anyReading = false;
   const drawers = (P.drawers || []).map(dr => {
     const cats = dr.cats ? dr.cats.filter(c => regrouped[c]) : Object.keys(regrouped).filter(c => !used.has(c));
     cats.forEach(c => used.add(c));
-    const items = cats.flatMap(c => regrouped[c] || []).slice().sort((a, b) =>
-      (a.at || [999])[0] - (b.at || [999])[0] || (a.at || [0, 0])[1] - (b.at || [0, 0])[1] || (a.at || [0, 0, 0])[2] - (b.at || [0, 0, 0])[2]);
+    const items = pcFold(cats.flatMap(c => regrouped[c] || []).slice().sort((a, b) =>
+      (a.at || [999])[0] - (b.at || [999])[0] || (a.at || [0, 0])[1] - (b.at || [0, 0])[1] || (a.at || [0, 0, 0])[2] - (b.at || [0, 0, 0])[2]));
+    if(pcHasReading(items)) anyReading = true;
     return items.length ? `<details class="sec" data-sec="pc-${esc(dr.key)}"><summary>${esc(dr.title)} <span class="ct">${items.length}</span>${pvOf(items.filter(i => !(P.ph || {})[i.other]), 7)}</summary>
       <div class="body pc-host">${items.map(r => pcRow(r, P.ph)).join('')}</div></details>` : '';
   }).join('');
@@ -8839,8 +9050,8 @@ function personFace(d, regrouped){
       : (d.aka || []).length ? `<span class="pc-aka">also called ${esc(d.aka.join(', '))}</span>` : ''}</h1>`,
     // a description that only says the family again gives way to the who line, which says it with verses
     lead: d.desc && !(who && kinLed) ? leadHtml(d.desc) : '',
-    top: who + names + strip + fam + opening + journey + later + named,
-    drawers: `<h2 class="pc-h">Everything the graph records · ${plural(d.total_relations, 'relation')}</h2>` + drawers + events,
+    top: who + names + strip + fam + opening + journey + later,
+    drawers: `<h2 class="pc-h">Everything the graph records · ${plural(d.total_relations, 'relation')}</h2>` + (anyReading ? PC_READING_NOTE : '') + drawers + events + named,
   };
 }
 
@@ -8853,6 +9064,7 @@ function personFace(d, regrouped){
    "Leads to" (links with no relation) is gone. All of it from the server's concept_card(); every reference names its
    book; every drill-in opens in place (pcOpen). Parts that wait on a relation not yet built are not drawn. */
 function conceptFace(d, regrouped){
+  PC_SEX = '';
   const C = d.ccard, T = C.titles || {}, ORD = Object.keys(T), NT0 = ORD.indexOf('Matt');
   const lab = k => { const [b, c, v] = String(k).split('.'); return `${T[b] || b} ${c}:${v}`; };
   const rf = (k, l) => pcRf(k, l || lab(k));
@@ -8902,23 +9114,48 @@ function conceptFace(d, regrouped){
     const hand = C.hand.length ? pcOpen('link pc-more', `${C.hand.length} more`, `<h3>Placed in the rows by hand · ${verses(C.hand.length)}</h3>
       <p class="pc-note">None of the card’s ${C.words.length} words stands in these verses; the hub sets each in a row and its note says why. They are not counted in the ${W.n}.</p>` + bookList(C.hand)) : '';
     const top3 = Object.entries(BB).sort((a, b) => b[1].length - a[1].length).slice(0, 3);
+    /* P-2026-11-18-3 (option 3), as the UI designer adjusted it (2026-11-18): THE CARD'S SHAPE BEFORE ITS VERSES.
+       A long hub (blessing: 505 verses in 22 groups) showed its groups only after the first verse, the Septuagint
+       drawer and the passages, so a reader met the verses before the shape. "On this card" sits straight under the
+       summary: one fold per form (its groups and verses), each group one line going to its group, its New Testament
+       verses tagged with their books. "Where the New Testament takes it up" (the BibleProject seat's list, concept
+       review round 2) is the same list filtered by its one neutral rule, so no group is listed twice. */
+    const ntOf = Object.fromEntries((C.ntline || []).map(x => [x.row, x]));
+    // a group's name is its label up to the first ": " or "; " (not Matt 5:3's colon); a label that opens with a list
+    // of quotations keeps the first ("“I will bless you”, “all the families…”"), and one that goes on to qualify its
+    // quotation keeps it whole (blessing's two "Blessed is the one who…" groups differ only in the qualifier)
+    const shortOf = r => { const s = r.label.split(/[:;]\s/)[0].trim(), q = s.match(/^“[^”]+”(?=, “)/);
+      return q ? q[0] : s; };
+    const ntTag = nt => `<span class="cc-nt">NT ${nt.n} · ${esc((nt.nt_books || []).length && nt.nt_books.length <= 3 ? nt.nt_books.join(', ') : nt.books)}</span>`;
+    const tocRow = (r, ntOnly) => { const nt = ntOf[r.id];
+      return `<li><button class="cc-jump" data-ccrow="${esc(r.id)}" title="${esc(r.label)}">${esc(shortOf(r))}</button><span class="cc-tm"><span class="pc-n">${
+        ntOnly ? '' : verses(r.n)}</span>${nt ? ntTag(nt) : ''}</span></li>`; };
+    const tocRows = f => f.rows.filter(r => !/^Every other use/.test(r.label));
+    const tocForms = C.forms.filter(f => tocRows(f).length);
+    const ntRows = tocForms.flatMap(f => tocRows(f).filter(r => ntOf[r.id]));
+    const toc = tocForms.reduce((n, f) => n + tocRows(f).length, 0) < 4 ? '' : `<nav class="cc-toc" aria-label="On this card">
+      <div class="cc-toch"><span class="h">On this card</span>${ntRows.length ? `<span class="cc-tsw" role="group" aria-label="Show"><button class="on" data-tocv="all" aria-pressed="true">All</button><button data-tocv="nt" aria-pressed="false">Where the New Testament takes it up</button></span>` : ''}</div>
+      <div data-tocp="all">${tocForms.map(f => { const rs = tocRows(f);
+        return `<details class="cc-tocf"${tocForms.length === 1 ? ' open' : ''}><summary>${tocForms.length > 1 ? `As ${/^[aeiou]/i.test(f.form) ? 'an' : 'a'} ${esc(f.form)} · ` : ''}${esc(f.title || '')} <span class="pc-n">· ${plural(rs.length, 'group')} · ${verses(f.verses)}</span></summary><ul class="cc-ntl cc-tocl">${
+          /* a single form opens by itself; covenant's 25 groups then filled 1,055 px of a phone: its first eight, the
+             rest one tap away */
+          (tocForms.length === 1 && rs.length > 10 ? rs.slice(0, 8) : rs).map(r => tocRow(r)).join('')}</ul>${tocForms.length === 1 && rs.length > 10
+          ? `<details class="moreinl"><summary>${rs.length - 8} more groups</summary><ul class="cc-ntl cc-tocl">${rs.slice(8).map(r => tocRow(r)).join('')}</ul></details>` : ''}</details>`; }).join('')}</div>
+      ${ntRows.length ? `<div data-tocp="nt" hidden><ul class="cc-ntl cc-tocl">${ntRows.map(r => tocRow(r, true)).join('')}</ul>
+        <p class="pc-note">The groups that hold New Testament verses, in their order, with the books; the catch-all group is left out.</p></div>` : ''}
+    </nav>`;
     top += `<div class="pc-host"><p class="cc-answer">Its ${C.words.length} ${esc(langSaid)} words stand in ${all} of ${W.books} books:
         the first is ${rf(W.first)}, the last ${rf(W.last)}. The rows below hold them${hand ? `, and ${hand} placed by hand` : ''}.
-        ${C.passages.length ? `<a class="link" href="#cc-passages" data-ccjump="cc-passages">${plural(C.passages.length, 'passage')}</a> ${C.passages.length === 1 ? 'speaks' : 'speak'} of it.` : ''}</p>
+        ${C.passages.length ? `<a class="link" href="#cc-passages" data-ccjump="cc-passages">${plural(C.passages.length, 'passage')}</a> ${C.passages.length === 1 ? 'speaks' : 'speak'} of it.` : ''}</p></div>
+      ${sameWordBlock(d, C.words)}${toc}<div class="pc-host">
       ${strip(BB, 'verses with its words')}
-      <p class="pc-note">Verses with its words, by book: ${top3.map(([b, ks]) => `${esc(T[b])} ${ks.length}`).join(', ')}; ${66 - W.books} books none. ${W.nt} of the ${W.n} are in the New Testament.</p></div>`;
+      <p class="pc-note">Verses with its words, by book: ${top3.map(([b, ks]) => `${esc(T[b])} ${ks.length}`).join(', ')}; ${66 - W.books} books none. ${W.nt} of the ${W.n} are in the New Testament. Every count here is of verses: the first counts any verse with one of its words, each group below counts the verses that use it in that form, so a verse can be in more than one.</p></div>`;
     // the first verse with one of its words, and what the theme's reading places earlier
     if(C.first){
       top += `<div class="pc-open"><div class="h">The first verse with one of its ${C.words.length} words · ${esc(lab(C.first.id))}</div>${quote(C.first)}${
         (C.earlier || []).length ? `<p class="pc-note" style="margin:6px 0 0">Earlier, in the theme’s reading: ${C.earlier.map(x => `${pcLink(x.id, x.name)} ${rfs(x.refs, 3)}${
           x.other_word ? ` <span class="pc-by">· the word there is ${wordA({key: x.other_word.key, lemma: x.other_word.lemma, lang: 'Hebrew'})}, a different word (below, under other words)</span>` : ''}`).join('; ')}</p>` : ''}</div>`;
     }
-    // where the New Testament takes it up: the hub's rows that hold New Testament verses, in the rows' own order
-    const ntl = C.ntline || [], big = ntl.filter(x => x.n >= 3), few = ntl.filter(x => x.n < 3);
-    const ntItem = x => `<li><button class="cc-jump" data-ccrow="${esc(x.row)}">${esc(x.short)}</button> <span class="pc-n">${esc(x.books)} · ${verses(x.n)}</span></li>`;
-    if(ntl.length) top += `<h2 class="pc-h">Where the New Testament takes it up</h2><ul class="cc-ntl">${big.map(ntItem).join('')}</ul>${
-      few.length ? `<details class="moreinl"><summary>${plural(few.length, 'more row')} with one or two</summary><ul class="cc-ntl">${few.map(ntItem).join('')}</ul></details>` : ''}
-      <p class="pc-note">The hub’s rows that hold New Testament verses, in the rows’ own order; each goes to its row. The catch-all row is left out.</p>`;
     // the words across the Testaments: each Hebrew word's Septuagint Greek, at least; every column its unit
     const L = C.bridge || {lines: [], none: []};
     const wcell = w => `<div class="cc-bw">${wordA(w)} <span class="pc-note">${esc(w.gloss || '')}</span>
@@ -8934,16 +9171,18 @@ function conceptFace(d, regrouped){
     const paired = new Set(L.lines.flatMap(l => [l.h, l.g]));
     const restG = C.words.filter(w => !isHeb(w) && !paired.has(w.key)), restH = C.words.filter(w => isHeb(w) && !paired.has(w.key));
     const why = {verb: 'a verb: its Greek forms are too many to count by spelling', 'no listed form': 'none of the Greek forms its word card lists is a card word’s'};
-    top += `<h2 class="pc-h">The words, across the Testaments</h2><div class="cc-bridge pc-host">
+    /* U-22 (2026-11-14): the Septuagint table sat above the hub's best content (who loves whom, 2,000 px down); it is a
+       drawer now, closed, and the rows follow the answer */
+    top += `<details class="sec" data-sec="cc-lxx"><summary>The words, across the Testaments (the Septuagint)</summary><div class="cc-bridge pc-host body">
       <p class="pc-note" style="margin:0 0 6px">The Greek Old Testament (the Septuagint) translated these Hebrew words with Greek words the New Testament also uses.</p>
       <div class="cc-bgrid"><div class="cc-bhd">Hebrew · Old Testament</div><div class="cc-bhd" style="text-align:center">Septuagint uses, at least</div><div class="cc-bhd" style="text-align:right">Greek · New Testament verses</div>
       ${L.lines.map(l => `${wcell(byKey[l.h])}<div class="cc-lxx">${pcOpen('cc-lx', `<b>≥ ${l.n}</b><span class="ln"></span>uses`, lxPanel(l))}</div>${wcell(byKey[l.g])}${
-        l.other ? `<div class="cc-lxsub">and at least ${l.other.n} uses in forms the alignment files under ${esc(byKey[l.g].lemma)} that are not its own (${l.other.forms.map(f => `<span class="grk">${esc(f.raw)}</span>`).join(', ')}): not one of the card’s words</div>` : ''}`).join('')}</div>
+        l.other ? `<div class="cc-lxsub">and at least ${l.other.n} uses in other forms (${l.other.forms.map(f => `<span class="grk">${esc(f.raw)}</span>`).join(', ')}) that the alignment counts under ${esc(byKey[l.g].lemma)}, which are not among this card’s words</div>` : ''}`).join('')}</div>
       ${restH.length ? `<p class="pc-note"><span class="pc-sub" style="display:inline">Also ${C.words.some(w => w.lang === 'Aramaic') ? 'Hebrew and Aramaic' : 'Hebrew'}</span> ${restH.map(w => `${wordA(w)} <span class="pc-n">${w.lang === 'Aramaic' ? 'Aramaic · ' : ''}${verses(w.verses)}${(w.where || []).length ? ' · ' + esc(w.where.join(', ')) : ''}</span>`).join(' · ')}</p>` : ''}
       ${restG.length ? `<p class="pc-note"><span class="pc-sub" style="display:inline">Also Greek</span> ${restG.map(w => `${wordA(w)} <span class="pc-n">${verses(w.verses)}</span>`).join(' · ')}</p>` : ''}
       ${Object.keys(why).map(k => { const ws = L.none.filter(x => x.why === k);
         return ws.length ? `<p class="pc-note">No Septuagint line for ${ws.map(x => wordA(byKey[x.key])).join(', ')}: ${ws.length > 1 ? esc(why[k]).replace(/^a verb: its/, 'verbs: their').replace(/^none of the Greek forms its word card lists is/, 'none of the Greek forms their word cards list is') : esc(why[k])}.</p>` : ''; }).join('')}
-      <p class="pc-note">“At least”: the middle counts only the commonest Greek forms each Hebrew word’s card lists, so the true number is higher. Each Hebrew word counts the verses where it carries this sense; its own card counts every use.</p></div>`;
+      <p class="pc-note">“At least”: the middle counts only the commonest Greek forms each Hebrew word’s card lists, so the true number is higher. Each Hebrew word counts the verses where it carries this sense; its own card counts every use.</p></div></details>`;
     // the two doors
     top += `<div class="pc-chips">${C.passages.length ? `<a class="pc-chip" href="#cc-passages" data-ccjump="cc-passages">${plural(C.passages.length, 'passage')} speak of it ↓</a>` : ''}${
       C.theme ? `<button class="pc-chip" data-mtheme="${esc(C.theme.id)}">${esc(C.theme.title)}: the passages side by side →</button>` : ''}</div>`;
@@ -8959,7 +9198,7 @@ function conceptFace(d, regrouped){
         r.note ? `<details class="moreinl"><summary>the hub’s note on this row</summary><p class="pc-note">${esc(r.note)}</p></details>` : ''}`; };
     C.forms.forEach(f => {
       const max = Math.max(1, ...f.rows.map(r => r.n));
-      top += `<h2 class="pc-h">${esc(f.title || '')} <span class="cc-ft">as a ${esc(f.form)} · ${verses(f.verses)}${f.hand ? `, ${f.hand} placed by hand` : ''} · ${plural(f.rows.length, 'row')}</span></h2>
+      top += `<h2 class="pc-h">${esc(f.title || '')} <span class="cc-ft">as ${/^[aeiou]/i.test(f.form) ? 'an' : 'a'} ${esc(f.form)} · ${verses(f.verses)}${f.hand ? `, ${f.hand} placed by hand` : ''} · ${plural(f.rows.length, 'row')}</span></h2>
         <div class="cc-rows">${f.rows.map(r => `<details class="cc-row" id="${esc(r.id)}"><summary><span class="lb">${esc(r.label)}</span><span class="n">${r.n}</span>
           <span class="cc-rbx" style="width:${Math.max(3, Math.round(100 * r.n / max))}%"><span class="o" style="flex:${r.ot}"></span><span class="t" style="flex:${r.nt}"></span></span>
           <span class="cc-span">${esc(lab(r.span[0]))}${r.span[1] !== r.span[0] ? ' to ' + esc(lab(r.span[1])) : ''}${r.nt ? ` · ${r.nt} in the New Testament` : ''}${r.hand ? ` · ${r.hand} placed by hand` : ''}</span></summary>
@@ -8971,6 +9210,7 @@ function conceptFace(d, regrouped){
     // ---- a concept card without a hub: its words, what they stand in, the first verse and the Berean's cross-reference
     top += `<div class="cc-mono">${C.words.map(w => `<span>${wordA(w)} ${esc(w.strong)}</span>`).join('')}</div>`;
     top += `<p class="cc-answer">${C.words.map(w => `${wordA(w)} stands in ${verses(w.verses)} <span class="pc-n">(${w.uses.toLocaleString()} uses)</span>`).join('; ')}.</p>`;
+    top += sameWordBlock(d, C.words);
     top += d.desc ? leadHtml(d.desc) : '';
     if(C.first) top += `<div class="pc-open"><div class="h">The first verse with one of its words · ${esc(lab(C.first.id))}</div>${quote(C.first)}${
       (C.first.xref || []).length ? `<p class="pc-note" style="margin:6px 0 0">The Berean’s cross-reference from it: ${C.first.xref.map(x => rf(x.id, x.label)).join(' ')}</p>` : ''}</div>`;
@@ -9007,6 +9247,9 @@ function conceptFace(d, regrouped){
     ${hollowE.length ? `<details class="moreinl"><summary>and ${plural(hollowE.length, 'more event')}, the map’s placing only</summary><div class="pc-chips">${hollowE.map(evChip).join('')}</div></details>` : ''}
     ${C.subs.length ? `<div class="pc-sub">Its sub-themes and observances · ${C.subs.length}</div><div class="pc-chips">${solidS.map(evChip).join('')}</div>${
       hollowS.length ? `<details class="moreinl"><summary>and ${hollowS.length} more, the map’s placing only</summary><div class="pc-chips">${hollowS.map(evChip).join('')}</div></details>` : ''}` : ''}</div>`);
+  // a hub's bridges after its word groups (its lead is its words), the strongest only (P-2026-11-18-3 option 2)
+  // (only without the graph panel, which says it already: blessing has both, at 14 relations)
+  if(hub && !(d.around && (d.around.ring || []).length)) top += bridgeBlock(d, true);
   if(kinds.length) top += `<h2 class="pc-h">What the graph ties to it · ${plural(C.relations, 'relation')}, each with its verse</h2>${kinds.join('')}`;
 
   // ---- the drawers
@@ -9054,10 +9297,10 @@ function conceptFace(d, regrouped){
 /* "Where a reading places it": the clauses a reading pass tagged with this name, candidates (a function so the event card's
    drawer can hold it beside the rest of the machine's work) */
 function tagsPara(d){
-  return `<p class="lead" style="margin-top:6px">Where a reading places it: ${
+  return `<p class="lead" style="margin-top:6px">Where a reading of the text places it: ${
       d.tags.map(t => `<button class="ctag" data-tag="${esc(t.id)}">${esc(tagName(t.id))}</button>${
         _slugJs(t.via) !== _slugJs(d.name) ? ` <span class="g">as “${esc(t.via)}”</span>` : ''}`).join(' ')}
-      <span class="hint">— by the English word: candidates, not proof ${prov('auto', 'Unreviewed')}</span></p>`;
+      <span class="hint">— matched by the English word, so leads to check rather than findings ${prov('auto', 'Unreviewed')}</span></p>`;
 }
 /* THE EVENT CARD'S ONE DRAWER (the walkthrough, 2026-10-30, item 10). Closed, last, and named for what it holds: the
    names a machine found in the passage, the passages the draft points to, the editors' sections with their parallels, the
@@ -9176,7 +9419,15 @@ function eventFace(d){
   const quoteW = (s, bold) => bold ? `<b>“${esc(s)}”</b>` : `“${esc(s)}”`;
   const refs = r => [].concat(r).map(x => pcRf(x)).join('');
   const steps = echoes.some(i => i.type === 'same_steps_as');
-  const echo = echoes.length ? `<div class="pc-tale pc-echo pc-host"><div class="pc-hk">${steps ? 'Told again: the same steps'
+  /* P-2026-11-18-3 (option 5): a card's strongest finding named on the first screen. U-20 keeps the same-steps echo
+     below the telling (it is a reading, and the text comes first); Aram defeats Judah's eleven verses then hid its
+     side-by-side with the Good Samaritan two phone screens down. One line under the title names it and goes to it;
+     the echo itself stays where U-20 put it */
+  /* the designer (2026-11-18): grey 13.5px read as metadata, so an accent bar and body text, the whole line one tap
+     target; the finding before the colon is not; the section's own words ("The same steps as") for the wording */
+  const echoNames = echoes.slice(0, 2).map(i => `<b>${esc(i.name)}</b>`).join(' · ') + (echoes.length > 2 ? ` · +${echoes.length - 2}` : '');
+  const echoPtr = steps ? `<a class="ev-ptr" href="#ev-echo" data-ccjump="ev-echo"><span>The same steps as ${echoNames}: compare them ↓</span><span class="pc-note">a reading</span></a>` : '';
+  const echo = echoes.length ? `<div class="pc-tale pc-echo pc-host" id="ev-echo"><div class="pc-hk">${steps ? 'Told again: the same steps'
     : echoes.length === 1 ? 'An earlier story' : 'Earlier stories'} · a reading the graph marks implied</div>${
     echoes.map(i => `<div class="pc-eg"><div class="pc-et">${i.type === 'same_steps_as' ? 'The same steps as ' : ''}${pcLink(i.other, i.name)}</div>${
       i.pairs.map(([[lr, lw], [er, ew]]) => {
@@ -9187,7 +9438,11 @@ function eventFace(d){
   return {
     kind,
     h1: `<h1 class="pc-hero"><span>${esc(d.label || d.name)}</span></h1>${deck}`,
-    lead: `${told}${echo}${open}${pairs}${cast}${voices}${strip}${par}${outline}`,
+    /* U-20 (2026-11-14): the story told again with the same steps is a reading the graph itself marks implied, and
+       it led the Last Supper's card with who did what four screens down. Who did what comes first, then the telling,
+       then "told again". An echo that re-enacts an earlier story (the temptation's, 2026-11-01) still leads. */
+    lead: steps ? `${told}${cast}${echoPtr}${open}${echo}${pairs}${voices}${strip}${par}${outline}`
+      : `${told}${echo}${open}${pairs}${cast}${voices}${strip}${par}${outline}`,
   };
 }
 
@@ -9199,8 +9454,10 @@ function eventFace(d){
    the server's obcard and grcard; the relation drawers follow, closed, as "As the graph stores it". */
 const OB_TAG = {1: 'the text says it', 2: 'implied: a reader’s link'};
 const obVerses = (vs, n) => (vs || []).map(imVerse).join('');
-function obRow(x){
-  return `<article class="im-row ob-row"><div class="im-rh">${imMk(x.mark)}<span class="im-ml">${esc(OB_TAG[x.mark] || '')}</span></div>
+/* U-6 (2026-11-14): "the text says it" is printed once above a box, not on every row of it; a row says only what
+   differs from that (a reader's link, the word only) */
+function obRow(x, quiet){
+  return `<article class="im-row ob-row">${quiet && x.mark === 1 ? '' : `<div class="im-rh">${imMk(x.mark)}<span class="im-ml">${esc(OB_TAG[x.mark] || '')}</span></div>`}
     <p class="ob-lbl"><b>${esc(x.label)}</b> ${pcLink(x.id, x.name)}${x.by ? ` <span class="im-by">said by ${esc(x.by)}</span>` : ''}</p>
     ${obVerses(x.vs)}${x.more ? `<p class="im-key">And ${x.more} more cited verse${x.more === 1 ? '' : 's'}, in the reader.</p>` : ''}
     <div class="im-rf2"><span></span><span class="im-acts">${x.go ? `<button type="button" class="goto" data-ref="${esc(x.go)}" data-label="${esc(x.ref)}">view in reader →</button>` : ''}</span></div></article>`;
@@ -9218,12 +9475,37 @@ function objectFace(d){
   const aka = (O.aka || []).length ? `<p class="whois" style="margin:-4px 0 12px;color:var(--muted);font-size:17px">also called ${esc(O.aka.join(', '))}</p>` : '';
   const hub = O.hub ? `<p class="im-key">One of the ${O.hub.n} in ${pcLink(O.hub.card, O.hub.card_name)}${O.hub.passage ? ' (' + esc(O.hub.passage) + ')' : ''}: ${
     O.hub.others.map(o => pcLink(o.id, o.name)).join(', ')}.</p>` : '';
-  const P = O.passage;
-  const pas = P ? `<h2 class="im-sec">The first passage · ${esc(P.ref)}</h2>${P.head ? `<p class="im-key">The Berean editors’ heading: ${esc(P.head)}</p>` : ''}${obVerses(P.shown)}${
+  const P = O.passage ? {...O.passage} : O.passage;
+  /* U-37 (2026-11-14): THE PASSAGE PRINTS THE VERSES THAT NAME THE THING. The Lions card printed 1 Samuel 17:12 and 17:13
+     (Jesse and his sons) before 17:36, "Your servant has killed lions and bears". The verses of the passage whose
+     words name the card (or what it is also called) are the ones shown, three at most; the rest of the passage stays
+     under "the whole passage". A passage where none of the verses names it is left as the server ordered it. */
+  if(P){
+    const stems = [O.name, ...(O.aka || [])].map(x => String(x || '').toLowerCase().replace(/^(the|a|an)\s+/, '').replace(/\s*\(.*$/, '').trim())
+      .filter(x => x.length >= 3).map(x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/(?:es|s)$/, ''));
+    if(stems.length){
+      const rx = new RegExp('\\b(?:' + stems.join('|') + ')(?:es|s)?\\b', 'i');
+      const all = P.shown.concat(P.rest);
+      const pos = v => { const m = String(v.id).match(/\.(\d+)\.(\d+)$/); return m ? +m[1] * 1000 + +m[2] : 0; };
+      const hits = all.filter(v => rx.test(v.text || '')).sort((a, b) => pos(a) - pos(b)).slice(0, 3);
+      if(hits.length){
+        const ids = new Set(hits.map(v => v.id));
+        P.shown = hits; P.rest = all.filter(v => !ids.has(v.id));
+      }
+    }
+  }
+  /* U-6: the relations come first; when they already quote a verse of the first passage, the passage folds (it was
+     three verses on the altar, two of them about seedtime) and opens on its own line */
+  const quoted = new Set(O.boxes.flatMap(b => b.rows.flatMap(x => (x.vs || []).map(v => v.id))));
+  const overlap = !!P && P.shown.some(v => quoted.has(v.id));
+  const passBody = P ? `${P.head ? `<p class="im-key">The Berean editors’ heading: ${esc(P.head)}</p>` : ''}${obVerses(P.shown)}${
     P.rest.length ? `<details class="im-fold"><summary>the whole passage, ${P.n} verses</summary><div class="im-in">${obVerses(P.rest)}${
       P.more ? `<p class="im-key">And ${P.more} more, in the reader.</p>` : ''}</div></details>` : ''}
     <p class="im-key"><button type="button" class="goto" data-ref="${esc(P.go)}" data-label="${esc(P.ref)}">view in reader →</button></p>` : '';
-  const boxes = O.boxes.map(b => `<h2 class="im-sec">${esc(b.head)}</h2>${b.empty ? `<p class="im-key">${esc(b.empty)}</p>` : ''}${b.rows.map(obRow).join('')}${
+  const pas = !P ? '' : overlap && O.boxes.some(b => b.rows.length)
+    ? `<details class="im-fold"><summary>The key passage · ${esc(P.ref)}</summary><div class="im-in">${passBody}</div></details>`
+    : `<h2 class="im-sec">The key passage · ${esc(P.ref)}</h2>${passBody}`;
+  const boxes = O.boxes.map(b => `<h2 class="im-sec">${esc(b.head)}</h2>${b.empty ? `<p class="im-key">${esc(b.empty)}</p>` : ''}${b.rows.some(x => x.mark === 1) ? `<p class="im-key im-once">${imMk(1)} <b>${esc(OB_TAG[1][0].toUpperCase() + OB_TAG[1].slice(1))}</b>: every row below without a note says it in the verse itself.</p>` : ''}${b.rows.map(x => obRow(x, true)).join('')}${
     b.rest.length ? `<details class="im-fold"><summary>${b.rest.length} more</summary><div class="im-in"><p class="im-key">${
       b.rest.map(x => pcLink(x.id, x.name)).join(' · ')}</p></div></details>` : ''}`).join('');
   const reads = O.reads.length ? `<details class="im-fold"><summary>A reading <span class="g">${O.reads.length}</span></summary><div class="im-in">
@@ -9234,7 +9516,7 @@ function objectFace(d){
   return {
     kind: esc(O.kind_line),
     h1: `<h1 class="pc-hero"><span>${esc(O.name)}</span></h1>${aka}`,
-    lead: `${lede}${hub}${pas}${boxes}${reads}${held}`,
+    lead: `${lede}${hub}${boxes}${pas}${reads}${held}`,
   };
 }
 function groupFace(d){
@@ -9261,11 +9543,11 @@ function groupFace(d){
     seg(IM_OT, 0)}${seg(IM_NT, 39)}</div><div class="im-bls"><p class="im-bl">${withRows.map(b => `<a class="im-bn" href="#b-${esc(b.b)}" data-imjump="b-${esc(b.b)}">${esc(b.name)}</a>`).join(' ')}</p></div>
     <p class="im-key">Tall ticks: a relation of this group cites a verse in that book. The strip is a picture; the names are the links.</p>` : '';
   const row = r => `<article class="im-row ob-row"><div class="im-rh">${imMk(r.mark)}<span class="im-ml">${r.mark === 1 ? 'the verse names the group' : 'a reader’s link: the verse says “they” or “you”'}</span><h3 class="im-rp">${
-      esc(r.head)}${r.verses.some(v => pcLacks(v.id)) ? '†' : ''}</h3></div>${obVerses(r.verses)}${r.more ? `<p class="im-key">And ${r.more} more verses of the passage, in the reader.</p>` : ''}${
+      esc(r.head)}${r.verses.some(v => pcLacks(v.id)) ? '†' : ''}</h3></div>${obVerses(r.verses)}${r.more ? `<p class="im-key">And ${r.more} more verse${r.more === 1 ? '' : 's'} of the passage, in the reader.</p>` : ''}${
     r.near ? `<p class="im-key">The group is named at ${pcRf(r.near.id, r.near.ref)}.</p>` : ''}
-    <ul class="im-rl">${r.lines.map(l => `<li><span class="im-by">filed as</span> ${esc(l.label.toLowerCase())} ${pcLink(l.id, l.name)}${l.by ? ` <span class="im-by">said by ${esc(l.by)}</span>` : ''}</li>`).join('')}</ul>
+    <ul class="im-rl">${r.lines.map(l => `<li>${esc(l.label.toLowerCase())} ${pcLink(l.id, l.name)}${l.by ? ` <span class="im-by">said by ${esc(l.by)}</span>` : ''}</li>`).join('')}</ul>
     <div class="im-rf2"><span></span><span class="im-acts"><button type="button" class="goto" data-ref="${esc(r.go)}" data-label="${esc(r.head)}">view in reader →</button></span></div></article>`;
-  const rows = withRows.length ? `<h2 class="im-sec">What the text has them do and say</h2><p class="im-key">In the order of the books. The verse’s own words for who acted are marked in the verse. “Filed as” is the graph’s filing term, not the verse’s verb.</p>${
+  const rows = withRows.length ? `<h2 class="im-sec">What the text has them do and say</h2><p class="im-key">In the order of the books. The verse’s own words for who acted are marked in the verse.</p>${
     withRows.map(b => `<h3 class="im-bk" id="b-${esc(b.b)}">${esc(b.name)} <span class="g">${b.rows.length} passage${b.rows.length === 1 ? '' : 's'} · ${b.verses} verses</span></h3>${b.rows.map(row).join('')}`).join('')}` : '';
   const B = G.built;
   const built = `<h2 class="im-sec">What this card is built from</h2><p class="im-key">${B.stored} relation${B.stored === 1 ? '' : 's'}: ${B.by_type.map(t => `${t[1]} ${esc(t[0])}`).join('; ')}.${
@@ -9383,8 +9665,10 @@ function fallbackFace(d, etextSec){
     <button class="pc-chip" data-mtheme="${esc(T.theme)}">${esc(T.title)}: the theme and its passages side by side →</button>
     ${(T.others || []).length ? `<details class="moreinl" style="margin-top:8px"><summary>The theme’s other ${T.others.length} sub-themes</summary><div class="pc-chips">${
       T.others.map(o => `<span class="pc-chip link" data-ent="${esc(o.id)}">${esc(o.name)}</span>`).join('')}</div></details>` : ''}</div>`;
-  const top = `<p class="kind">${esc(F.kind)}</p><h1 class="pc-hero"><span>${esc(nm)}</span>${aka}</h1>${themeHtml}${deckHtml}${lead}${
-    rowsHtml}${panelHtml}${wordsHtml}${etextSec}${alsoHtml}`;
+  // plan A.54: the same idea elsewhere and the graph around it, under the lead and above the verses (a saying's
+  // verses filled the first screen, and its graph sat in the drawer below)
+  const top = `<p class="kind">${esc(F.kind)}</p><h1 class="pc-hero"><span>${esc(nm)}</span>${aka}</h1>${(d.type === 'text' || d.type === 'image') ? drawnBtn(drawnOf(d.refs)) : ''}${familyStrip(d)}${
+    aroundPanel(d) || bridgeBlock(d)}${themeHtml}${deckHtml}${lead}${rowsHtml}${panelHtml}${wordsHtml}${etextSec}${alsoHtml}`;
   const drawer = inner => `<details class="fb-dr" data-fbdr="1"><summary>As the graph stores it <span class="g">${
     plural(F.total_relations, 'relation')} · the record’s note · themes · tags</span></summary><div class="fb-in">${
     F.note_in_drawer && d.desc ? `<h4>The record’s note</h4><div class="fb-note">${leadHtml(d.desc)}</div>` : ''}${inner}</div></details>`;
@@ -9393,7 +9677,16 @@ function fallbackFace(d, etextSec){
 
 async function openEntity(id){
   const d = await api('/api/entity', {id});
-  if(!d.found) return;
+  if(!d.found) return notFoundCard();
+  /* U-5 (2026-11-14): a group filed under "Places" whose other ends are people (the altar: Abraham, Isaac, Noah
+     built it) said PLACES over three people. It takes the name of what is on the other end. */
+  const OKIND = {person: 'People', being: 'Beings', object: 'Things', concept: 'Ideas', event: 'Events', group: 'Groups', place: 'Places', text: 'Passages', image: 'Images'};
+  (d.groups || []).forEach(g => {
+    if(g.category !== 'Places' || !g.items.length || !g.items.every(it => it.otype)) return;
+    if(g.items.some(it => it.otype === 'place')) return;
+    const ks = [...new Set(g.items.map(it => OKIND[it.otype] || ''))].filter(Boolean);
+    if(ks.length && ks.length <= 2) g.category = ks.join(' and ');
+  });
   // a major theme's record is the theme's page, which holds all it has and more (Doug, 2026-11-10: "a poor fraud")
   if(d.major_theme){ openMajorTheme(d.major_theme); return; }
   LAST_ENTITY = d;
@@ -9590,8 +9883,8 @@ async function openEntity(id){
     ${fbk ? '' : ccf ? `<p class="kind">${ccf.kind}</p>${ccf.h1}` : pcf ? `<p class="kind">${pcf.kind}</p>${pcf.h1}` : plf ? `<p class="kind">${plf.kind}</p>${plf.h1}` : evf ? `<p class="kind">${evf.kind}</p>${evf.h1}` : obf ? `<p class="kind">${obf.kind}</p>${obf.h1}` : grf ? `<p class="kind">${grf.kind}</p>${grf.h1}` : `<p class="kind">${esc(d.parable ? (d.parable.is_parable ? 'Parable · told by Jesus' : 'Told by Jesus') : d.number ? 'significant number' : d.hub ? 'collection' : d.type)}${pat || ev ? '' : d.scope_card ? /* a scoped group counts its whole-people relationships and its parts apart (2026-10-29) */
       ` · ${plural(d.scope_card.people, 'relationship')} of the whole people · ${d.scope_card.part} of a part` : ` · ${plural(d.total_relations, 'relationship')} ·
       ${plural(d.types||0, 'kind')} · ${plural(Object.keys(regrouped).length, 'category', 'categories')}`}</p>
-    <h1>${esc(d.parable ? d.parable.title : (d.label || d.name))}</h1>`}
-    ${navBtn(d.id)}
+    <h1>${esc(d.parable ? d.parable.title : (d.label || d.name))}</h1>`}${/* THE QUESTION THIS CARD IS ABOUT (Doug, 2026-11-15: the baptism card did not link to its discussion) */''}${d.question_card ? `<p class="pc-note" style="margin:4px 0 12px">Readers differ on this, and a question page sets out each reading beside the verses its holders cite: <span class="link" data-question="${esc(d.question_card.id)}">${esc(d.question_card.question)} →</span></p>` : ''}${fbk ? '' : (d.type === 'text' || d.type === 'image') ? drawnBtn(drawnOf(d.refs)) + (d.type === 'text' && (d.in_verses || []).length ? aroundPanel(d) : '') : '' + familyStrip(d) + (aroundPanel(d) || (d.ccard && (d.ccard.forms || []).length ? '' : bridgeBlock(d)))}
+    ${navUnlessAround(d)}
     ${/* WHICH ONE. A shared name says on the card which of them this is.
           2026-10-01, after a "Mary" card that never said which Mary: clearer
           disambiguation was needed both in the search and on the
@@ -9650,7 +9943,7 @@ async function openEntity(id){
         ${d.original.translit ? `<span class="translit">${esc(d.original.translit)}</span>` : ''}
       </div>
       <div class="origmeta">${esc(d.original.lang)} · Strong’s ${esc(d.original.strong)}${
-        d.original.uses ? ' · ' + d.original.uses + ' uses' : ''}${
+        d.original.uses ? ' · ' + plural(d.original.uses, 'use') : ''}${
         d.original.gloss ? ' · ' + esc(d.original.gloss) : ''}</div>
       ${d.original.lxx && d.original.lxx.length
         ? `<div class="origmeta">Septuagint renders it ${d.original.lxx.map(esc).join(', ')}</div>`
@@ -9671,7 +9964,7 @@ async function openEntity(id){
       return `<div class="alsobox">
       <div class="origmeta" style="margin:0 0 9px">${people
         ? `Other ${d.type === 'person' ? 'people' : 'places'} named ${esc(d.name)}`
-        : 'Also in the graph under this name'}</div>
+        : 'Other cards with this name'}</div>
       ${d.same_name.map(o => `<div class="rowline">
         <span class="link" data-ent="${esc(o.id)}">${esc(o.name)}${
           o.who ? ` <span style="color:var(--ink)">— ${esc(o.who)}</span>` : ''}</span>
@@ -9683,17 +9976,17 @@ async function openEntity(id){
             who share a name are told apart by the text; whether two records
             are one is the identity block's business, above. */''}
       ${people || d.type === 'person' || d.type === 'being' ? '' : `<p style="color:var(--muted);font-size:13px;margin:10px 0 0;max-width:60ch">
-        ${d.same_name.length === 1 ? 'The two are' : 'These are'} kept as separate
-        records; nothing here decides whether they are the same thing.</p>`}
+        ${d.same_name.length === 1 ? 'The two are' : 'These are'} separate cards for separate
+        uses of the name; open each to see how the text uses it.</p>`}
     </div>`; })() : ''}
     ${(d.words||[]).length && !d.concept_hub && !d.face && !pcf && !plf && !fbk ? `<div class="origbox">
       <div class="origmeta" style="margin:0 0 10px">The words the text uses for this</div>
       ${d.words.map(w => `<div class="rowline">
         <span class="link" data-key="${esc(w.key)}" data-word="${esc(w.gloss||'')}">
-          ${w.lemma ? `<span class="heb">${esc(w.lemma)}</span> ` : ''}
-          ${w.translit ? `<span class="translit">${esc(w.translit)}</span>` : esc(w.gloss||w.key)}
+          ${w.lemma ? `<span class="${/greek|grc/i.test(w.lang || '') ? 'grk' : 'heb'}">${esc(w.lemma)}</span>` : ''}${w.translit ? ` · <span class="translit">${esc(w.translit)}</span>` : ''}${
+            w.gloss ? ` · “${esc(w.gloss)}”` : (!w.lemma && !w.translit ? esc(w.key) : '')}
         </span>
-        <span class="g">${esc(w.lang)} · ${w.uses} uses</span></div>
+        <span class="g">· ${esc(w.lang)} · ${plural(w.uses, 'use')}</span></div>${sameWordLine(d, w)}
         ${/* A loanword is here on different evidence from the rest — not
               because its gloss matches, but because the text itself supplies
               the meaning beside it — so it says so rather than sitting in the
@@ -9731,7 +10024,7 @@ async function openEntity(id){
           (2026-10-09: "Where mentioned" was redundant at this point) */''}
     ${/* and where the card's top half quotes every one of its verses */''}
     ${pat || ev || d.concept_hub || pcf || ccf || (d.face && (d.refs||[]).length <= (d.face.own_words||[]).length)
-      ? '' : sec('e-where', 'Where mentioned', cites(d.refs), (d.refs||[]).length)}
+      ? '' : sec('e-where', 'Verses its relations cite', cites(d.refs), (d.refs||[]).length)}
     ${/* WHERE THE TEXT SPEAKS OF IT: every verse with one of its words, by
           book. 2026-09-28: the baptism card looked sparse, not
           mentioning baptism events like Acts 8:36 and 8:38. Loaded on open.
@@ -9815,6 +10108,12 @@ async function openEntity(id){
       const r = $('#paneinner').querySelector(`#${CSS.escape(b.dataset.ccrow)}`);
       if(r){ r.open = true; r.scrollIntoView({block: 'start', behavior: 'smooth'}); }
     });
+    // "On this card": All, or the groups where the New Testament takes it up (P-2026-11-18-3)
+    $('#paneinner').querySelectorAll('[data-tocv]').forEach(b => b.onclick = () => {
+      const nav = b.closest('.cc-toc');
+      nav.querySelectorAll('[data-tocv]').forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', String(x === b)); });
+      nav.querySelectorAll('[data-tocp]').forEach(p => { p.hidden = p.dataset.tocp !== b.dataset.tocv; });
+    });
     $('#paneinner').querySelectorAll('[data-plopen]').forEach(b => b.onclick = e => {
       e.preventDefault();
       const t = $('#paneinner').querySelector(`#${CSS.escape(b.dataset.plopen)}`);
@@ -9830,7 +10129,18 @@ async function openEntity(id){
     const loadText = async () => {
       if(!et.open || et.dataset.done) return;
       et.dataset.done = '1';
-      const v = await api('/api/entity-verses', {id: d.id});
+      // a failed load (a 504, a dropped connection, an error page) used to leave
+      // "loading…" for good, since done was already set and reopening did nothing
+      // (P-2026-11-17-3, the "more" on Wonders that did not open): say so, and
+      // let the next opening try again
+      let v;
+      try { v = await api('/api/entity-verses', {id: d.id}); }
+      catch(err){
+        delete et.dataset.done;
+        const b = $('#etextb');
+        if(b) b.innerHTML = '<span class="hint">The verses did not load. Close this and open it again to retry.</span>';
+        return;
+      }
       const box = $('#etextb');
       // the reader may have moved to another tab while this loaded; the tab
       // keeps its dom and loads again when it is opened
@@ -9987,7 +10297,7 @@ function imVerse(v){
   return `<p class="im-bq"><span class="im-vn">${esc(v.ref)}</span>${imLacks(v.id)} ${vtext(v.text, v.vmarks, fmt)}</p>`;
 }
 const imPill = p => `<button type="button" class="im-orig" data-key="${esc(p.key)}" data-word="${esc((p.bsb && p.bsb[0]) || p.gloss || '')}"><span class="${
-  p.lang === 'grc' ? 'grk' : 'heb'}" lang="${p.lang}">${esc(p.lemma || p.key)}</span> <span class="mono">${esc(p.key)}</span> <span class="im-en">${
+  p.lang === 'grc' ? 'grk' : 'heb'}" lang="${p.lang}">${esc(p.lemma || p.key)}</span> <span class="mono">${esc(String(p.key).replace(/^[hg](?=\d)/, c => c.toUpperCase()))}</span> <span class="im-en">${
   p.bsb && p.bsb.length ? 'BSB ' + p.bsb.map(w => '“' + esc(w) + '”').join(', ')
     : p.gloss ? 'MACULA gloss: ' + esc(p.gloss) : ''}</span></button>`;
 function imLine(ln){
@@ -10005,10 +10315,16 @@ function imageFace(d){
   } else if(L.reader.length){
     lede = `The graph holds no explicit key for the ${esc(L.name)}; it records a reader’s link to ${pcAnd(L.reader.map(keyOf))}.`;
   } else if(L.places.length){
-    lede = `The graph holds this picture at ${pcAnd(L.places.map(p => pcRf(p.go, p.head)))}${
-      L.places_more ? ` and ${L.places_more} more` : ''}. It records no key for it.`;
+    /* U-39 (2026-11-14): "It records no key for it" was internal vocabulary; the verse's own "is like" clause says what the
+       picture is used of, so it leads, quoted; with no such clause the lede says only where the picture is held */
+    const likeRx = /[^.;:“”]*\b(?:is|are|was|were|will be) like\b[^.;:“”]*/i;
+    let clause = null, at = null;
+    for(const r of (I.rows || [])){ for(const v of (r.verses || [])){ const m = likeRx.exec(v.text || ''); if(m){ clause = m[0].trim(); at = v; break; } } if(clause) break; }
+    lede = clause
+      ? `The text uses it of this: “${esc(clause)}” (${pcRf(at.id, at.ref)}). The graph holds this picture at ${pcAnd(L.places.map(p => pcRf(p.go, p.head)))}${L.places_more ? ` and ${L.places_more} more` : ''}.`
+      : `The graph holds this picture at ${pcAnd(L.places.map(p => pcRf(p.go, p.head)))}${L.places_more ? ` and ${L.places_more} more` : ''}.`;
   } else {
-    lede = 'The graph records no key for this picture and holds it at no passage.';
+    lede = 'The graph holds this picture at no passage.';
   }
   if(L.books) lede += ` It runs through ${L.books} book${L.books === 1 ? '' : 's'}, from ${esc(L.span)}.`;
   // the strip: one tick per book, tall where the card has a passage; the names under it are the links
@@ -10024,8 +10340,8 @@ function imageFace(d){
     <div class="im-canon" role="img" aria-label="The canon, Genesis to Revelation, one tick per book: tall ticks are books the card has a passage in. The book names are listed under it.">${
       seg(IM_OT, 0)}${seg(IM_NT, 39)}</div>
     <div class="im-bls">${bls}</div>
-    <p class="im-key">${C.verses} verse${C.verses === 1 ? '' : 's'} in ${C.books} book${C.books === 1 ? '' : 's'}: ${C.in_rel} sit in a relation, ${
-      C.word_only} hold only the word. The strip is a picture; the names are the links.</p>` : '';
+    <p class="im-key">${C.verses} verse${C.verses === 1 ? '' : 's'} in ${C.books} book${C.books === 1 ? '' : 's'}: ${C.in_rel} ${C.in_rel === 1 ? 'sits' : 'sit'} in a relation, ${
+      C.word_only} ${C.word_only === 1 ? 'holds' : 'hold'} only the word. The strip is a picture; the names are the links.</p>` : '';
   /* WHAT IT STANDS FOR, FIRST, IN THE VERSE'S WORDS (the image-card review, 2026-11-10: the vine's first screen was a
      computed sentence and fifteen book names, and "I am the true vine" was row 11 of 11; this list sat below the
      strip and said the same as the rows). Each thing it is tied to, its mark, and the verse that ties it */
@@ -10045,7 +10361,7 @@ function imageFace(d){
     const nxt = i < I.rows.length - 1 ? `<button type="button" class="im-nx" data-imnext="r${r.n}">next →</button>` : '';
     return `<article class="im-row" id="r${r.n}" data-w="${esc(r.keys.join(' '))}">${anch}<div class="im-rh">${imMk(r.mark)}<span class="im-ml">${
       IM_MARK[r.mark]}</span><h3 class="im-rp">${esc(r.head)}${r.verses.some(v => pcLacks(v.id)) ? '†' : ''}</h3></div>${
-      r.verses.map(imVerse).join('')}${r.more ? `<p class="im-key">And ${r.more} more verses of the passage, in the reader.</p>` : ''}
+      r.verses.map(imVerse).join('')}${r.more ? `<p class="im-key">And ${r.more} more verse${r.more === 1 ? '' : 's'} of the passage, in the reader.</p>` : ''}
       <ul class="im-rl">${r.lines.map(imLine).join('')}</ul>
       <div class="im-rf2"><span class="im-ow">${r.pills.map(imPill).join('')}</span><span class="im-acts"><button type="button" class="goto" data-ref="${
         esc(r.go)}" data-label="${esc(r.head)}">view in reader →</button>${nxt}</span></div></article>`;
@@ -10065,8 +10381,8 @@ function imageFace(d){
   const sub = L.cls === 'S' ? 'in the Bible: what the text says it means, and where it only appears' : 'in the Bible: where the text uses the picture';
   const html = `<p class="kind">Figure · a picture the text draws on</p>
     <div class="im-head">${imSketch(d.sketch)}<h1>${esc(I.Name)}<span class="im-h1s">${sub}</span></h1>
-    ${tied ? '' : `<p class="lead">${lede}</p>`}</div>
-    ${tied}${navBtn(d.id)}${strip}${I.rows.length ?`<h2 class="im-sec">${L.cls === 'S' ? 'The passages, in canon order' : 'The passages the graph holds'}</h2>
+    ${tied ? '' : `<p class="lead">${lede}</p>`}</div>${drawnBtn(drawnOf(d.refs))}${familyStrip(d)}${aroundPanel(d) || bridgeBlock(d)}
+    ${tied}${navUnlessAround(d)}${strip}${I.rows.length ?`<h2 class="im-sec">${L.cls === 'S' ? 'The passages, in canon order' : 'The passages the graph holds'}</h2>
     <div class="im-keyline" aria-label="Key to the marks">${[1, 2, 3].map(m => `<span class="im-k">${imMk(m)}<b>${IM_MARK[m]}</b></span>`).join('')}</div>
     <details class="im-why"><summary>How to read the marks</summary><p><b>The text says it:</b> the passage itself says it. <b>A reader’s link:</b> the passage explains it without saying “is”. <b>The word only:</b> the word appears; no meaning given.</p></details>
     ${chips}<div id="im-rows">${rows}</div>` : chips}${fold}
@@ -10247,6 +10563,11 @@ $('#q').addEventListener('input', e => {
       $('#results').hidden = true;
       $('#q').value = '';
       searchClose();
+      openResult(r);
+    });
+  }, 160);
+});
+function openResult(r){
       if(r.kind==='passage'){
         if(r.verse) jumpTo(`${r.id}.${r.chapter||1}.${r.verse}`);
         else loadChapter(r.id, r.chapter||1);
@@ -10264,9 +10585,7 @@ $('#q').addEventListener('input', e => {
       else if(r.kind==='stamp') openHigherPattern(r.id);
       else if(r.kind==='pset') openPatternSet(r.id);
       else openSense(r.id, r.title);
-    });
-  }, 160);
-});
+}
 document.addEventListener('click', e => {
   if(!e.target.closest('.searchwrap')) $('#results').hidden = true;
 });
@@ -10722,7 +11041,7 @@ async function openAbout(focus){
       volunteers, for texts given to everyone, and <b>eBible.org</b> for keeping them
       available. <b>Princeton University</b>, for WordNet. The makers of
       <b>Cytoscape.js</b> and <b>Mermaid</b>, which draw the graph and the structure
-      diagrams, of <b>Lucide</b>, whose icons (ISC licence) the small line sketches on the
+      diagrams, of <b>Lucide</b>, whose icons (ISC license) the small line sketches on the
       image cards are drawn from and beside by hand, and of the typefaces <b>Spectral</b> (Production Type), <b>IBM Plex
       Mono</b> (IBM) and <b>Noto Serif Hebrew</b> (Google). And every reader who has
       written in to say what was wrong or missing.</p>`)}
@@ -10975,7 +11294,7 @@ async function openAbout(focus){
       <p style="max-width:64ch;margin:12px 0 0">The <b>Knowledge Graph
         Navigator</b>, a tab of its own (and a button on every card), draws this
         layer, one step out
-        from whatever is at its centre. It adds one thing the layer does not
+        from whatever is at its center. It adds one thing the layer does not
         store: two children of the same recorded father or mother are drawn as
         siblings, dotted, citing the parentage verses, because the text usually
         establishes siblings by naming a shared parent. Line thickness is how
@@ -11603,7 +11922,7 @@ async function openAbout(focus){
         verse.</p>
       <p style="max-width:64ch"><b>Speech acts.</b> Thirty-one kinds of speaking — blessing,
         cursing, oath, vow, naming, prayer, lament, complaint, praise, confession, testimony,
-        promise, warning, command, rebuke, accusation, defence, taunt, boast, riddle, last
+        promise, warning, command, rebuke, accusation, defense, taunt, boast, riddle, last
         words and more — in five groups by what the speaking does, and each also labelled
         with its kind in the standard scheme (Searle's: it says something is so, tries to get
         the hearer to act, binds the speaker, voices a feeling, or makes something so by
@@ -11688,9 +12007,15 @@ async function openAbout(focus){
         editors (a quotation, or a reference), a reading (the two say the same, or one alludes to the other), or the
         word match. A relation can itself be
         opened, to read its definition in the published vocabulary and see other places it holds. Moves lead to the
-        verse before and after, and from an event to its tellings.</p>
-      <p style="max-width:64ch">It changes nothing and stores nothing about who asks: only counts of calls, as for
-        the site.</p>`)}
+        verse before and after, from a verse to the passage or event it sits in and to whoever speaks it, and from
+        an event to its tellings. A verse names its speaker where the graph, or the original-language annotation,
+        says who speaks: most of Job, and between a quarter and two fifths of the quoted speech in the Gospels and
+        Acts. Elsewhere it says the words are spoken and that the speaker is not recorded, rather than guess.</p>
+      <p style="max-width:64ch">It changes nothing and stores nothing about who asks. Each day it counts, as totals,
+        the calls by tool and by the name the assistant gives itself, how often an assistant followed a link it was
+        given, the items asked for that do not exist, and the words of searches that found nothing (those kept 90
+        days), so the graph can be improved where assistants found it lacking. No address or browser details are
+        kept, and nothing that joins one day's calls to another's.</p>`)}
 
     ${sec('a-source', 'Where the words come from', `
       <p style="max-width:64ch">${esc(d.source)}</p>
@@ -11779,7 +12104,7 @@ async function openAbout(focus){
             use without the owner's involvement; then, the
             same day: no premature claims about the CC licensing, but
             expressing the intent is worthwhile, to be fully
-            accurate. A Creative Commons licence is granted by publishing
+            accurate. A Creative Commons license is granted by publishing
             its notice and cannot be withdrawn from copies already taken, so
             this says what is intended and that it is not yet granted, and
             carries no rel="license" (the machine-readable claim). When the owner
@@ -11794,7 +12119,7 @@ async function openAbout(focus){
             prepared under CC BY); the graph stays intended until it is offered
             for download, so it still says so and still carries no rel="license".
             2026-10-23, THE CUT: the graph GRANTED with the public repository
-            (ontology/ns-version.json graph_license.granted), so the licence link
+            (ontology/ns-version.json graph_license.granted), so the license link
             now carries rel="license". The opening is Doug's approved text
             (2026-10-22, "Approve as written"); every source credit the paragraph
             carried before is kept (STEP's and MACULA's CC BY require them), and
@@ -11842,12 +12167,12 @@ async function openAbout(focus){
         <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener" target="_blank">CC BY-SA
         4.0</a>, with their notation marks left out; they are shown, credited, under that license, and are not
         part of the graph, its CC BY license or its downloads; the verb classes in the claims are from
-        WordNet 3.0, under its own licence (its notice is in this project's NOTICE); and the ASV,
+        WordNet 3.0, under its own license (its notice is in this project's NOTICE); and the ASV,
         WEB and YLT that the phrase search reads are in the public domain. The
         typefaces are Spectral, IBM Plex Mono and Noto Serif Hebrew, under the
         SIL Open Font License, and are served from this site.</p>
       ${/* HOW TO CITE (2026-10-17). The "Free" paragraph above had promised
-            this since the licence moved here, and nothing was here: found by
+            this since the license moved here, and nothing was here: found by
             DeepSeek's attribution review (the cite
             string was added to About). The vocabulary line names the release in
             ontology/ns-version.json; change one, change the other. It said 1.2.1
@@ -11857,7 +12182,7 @@ async function openAbout(focus){
         <i>Bible Ontology</i>. https://bibleontology.org (accessed on the date
         you read it). To point to one card, verse or word, use the address in
         your browser's address bar: each has its own. The vocabularies:
-        Egge, D. (2026). <i>Bible Ontology vocabularies</i>, version 1.5.0.
+        Egge, D. (2026). <i>Bible Ontology vocabularies</i>, version 1.7.0.
         https://bibleontology.org/ns. The graph's data: Egge, D. (2026). <i>Bible Ontology</i>
         [data set], with the data version you used (in <code>out/export/void.ttl</code>).
         https://github.com/bibleontology/bibleontology. CC BY 4.0. Please credit the sources above as well
@@ -11884,7 +12209,8 @@ async function openAbout(focus){
         and whether from a phone or a computer — nothing about who sent it, and
         it is never shown to anyone else. The site is
         served through Cloudflare, which handles every request on its way
-        here.</p>`)}
+        here. The whole policy, the AI assistants' counts included, is at
+        <a href="/privacy">/privacy</a>.</p>`)}
   </div>`, () => {
     // ABOUT OPENS WITH EVERY SECTION FOLDED (2026-10-13: start with
     // all sections collapsed): the overview says what the site is; the
@@ -12073,6 +12399,7 @@ function showWelcome(){
   const w = document.createElement('div');
   w.className = 'welcome'; w.id = 'welcome';
   w.innerHTML = `<div class="wcard" role="dialog" aria-modal="true" aria-labelledby="wtitle">
+    <button class="wx" data-try="close" aria-label="Close the welcome">&times;</button>
     <h2 id="wtitle">Welcome to Bible Ontology</h2>
     <p class="wlead">A free way to see how the Bible connects. Every verse is read from
       the Hebrew, Aramaic and Greek, and the people, places, events, themes and patterns
@@ -12179,6 +12506,134 @@ const NAV_HUB = `<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="tr
   stroke-width="1.2"/></svg>`;
 const navBtn = id => id ? `<button class="nav-btn" data-navgo="${esc(id)}" title="Open the Knowledge Graph Navigator, centred here">
   <span class="hub">${NAV_HUB}</span>Show in Navigator</button>` : '';
+/* ONE NAVIGATOR BUTTON (Doug, 2026-11-16: two "Show in Navigator" buttons near the top of the Intercession card): the
+   graph panel carries its own in its header, so the card's older button shows only where there is no panel */
+// (the panel carries the button, and a card with no relation yet has the panel too: its verses' names, P-2026-11-18-5)
+const navUnlessAround = d => ((d.around && d.around.ring && d.around.ring.length) || (d.in_verses || []).length) ? '' : navBtn(d.id);
+/* DRAWN BY HAND, AND REACHED FROM WHAT IT DRAWS (plan A.57; Doug, 2026-11-16: "the appropriate cards should have links
+   to these images pages - or in this case the Psalm 23 chapter and Lord is my Shepherd cards"). A chapter or verse drawn
+   on a /visual/ page is linked from the chapter's head in the reader and from every card that rests on it alone (a
+   saying or an image whose every verse is inside it); the drawing opens as a card, in place. */
+const DRAWN = {
+  'Ps 23': ['chapters#ps23', 'Psalm 23, drawn whole'],
+  'Rom 8': ['chapters#rom8', 'Romans 8, drawn whole'],
+  'John 3:16': ['verses#john316', 'John 3:16, drawn in layers'],
+  'Eph 2:8': ['verses#eph28', 'Ephesians 2:8–9, drawn in layers'], 'Eph 2:9': ['verses#eph28', 'Ephesians 2:8–9, drawn in layers'],
+  'Rom 12:2': ['verses#rom122', 'Romans 12:2, drawn in layers'],
+  'John 15:5': ['verses#jn155', 'John 15:5, drawn in layers'],
+  'Isa 52:7': ['verses#isa527', 'Isaiah 52:7, drawn in layers']};
+// a verse drawing: the card's own verse (its first) is drawn -- a saying cites the verse beside it too (John 3:16 with
+// 3:17); a chapter drawing: every verse the card cites is inside the chapter (the shepherd imagery card, Bible-wide,
+// is not Psalm 23's)
+const drawnOf = refs => {
+  if(!refs || !refs.length) return null;
+  const verse = r => String(r).replace(/[–-]\d+$/, ''), chap = r => verse(r).replace(/:\d+$/, '');
+  if(DRAWN[verse(refs[0])]) return DRAWN[verse(refs[0])];
+  const c = DRAWN[chap(refs[0])];
+  return c && refs.every(r => chap(r) === chap(refs[0])) ? c : null;
+};
+const drawnBtn = to => to ? `<button class="nav-btn" data-drawn="${esc(to[0])}" title="A drawing of the passage, by hand from its grammar">${esc(to[1])} →</button>` : '';
+document.addEventListener('click', ev => {
+  const b = ev.target.closest && ev.target.closest('[data-drawn]');
+  if(b){ ev.preventDefault(); openVisual(b.dataset.drawn, b.textContent.replace(/\s*→\s*$/, '')); }
+});
+/* WHERE THIS SITS IN THE GRAPH (plan A.54 (1), Doug, 2026-11-15: "users tend to end up on cards ... like readings and
+   sayings and we tend to bury the graph"). On a light card, near the top: the card at the center, its neighbors around
+   it, theirs faded beyond; every node opens its card; the Navigator one tap away. A phone gets the same as a list,
+   since a drawing at that width puts the names at five pixels. */
+const AROUND_COL = {person:'#1f5fbf', being:'#b8860b', place:'#2e8b3e', object:'#8a5a1f', image:'#b8237a',
+  concept:'#0f8a8a', event:'#c24a00', title:'#6a3fb5', group:'#3a6ea5', text:'#6b645a', assessment:'#6b645a', creature:'#7a6a1f'};
+const aroundCut = s => s.length > 26 ? s.slice(0, 25) + '…' : s;
+function aroundPanel(d){
+  const A = d.around;
+  /* NEVER A DEAD END (P-2026-11-18-5): a card the graph holds no relation for yet shows what its own verses name,
+     verse by verse, each name opening its card, the verse opening the reader */
+  if((!A || !A.ring || !A.ring.length) && (d.in_verses || []).length)
+    return `<section class="around"><div class="around-h"><span>Where this sits in the graph</span>${navBtn(d.id)}</div>
+      <p class="around-key" style="margin:2px 0 4px">No relation recorded for this card yet. Its verses name:</p><ul class="around-list" style="display:block">${
+      d.in_verses.map(v => `<li>${pcRf(v.ref)} → ${v.names.map(n => `<span class="link" data-ent="${esc(n.id)}">${esc(n.name)}</span>`).join(' · ')}</li>`).join('')}</ul></section>`;
+  if(!A || !A.ring || !A.ring.length) return '';
+  const W = 760, H = 410, cx = W/2, cy = H/2, n = A.ring.length;
+  const ang = i => -Math.PI/2 + 2*Math.PI*i/n;
+  const pos = {}; A.ring.forEach((r,i) => pos[r.id] = [cx + 250*Math.cos(ang(i)), cy + 118*Math.sin(ang(i)), ang(i)]);
+  const byVia = {}, per = n >= 6 ? 2 : 3; A.outer.forEach(o => { const l = (byVia[o.via] = byVia[o.via] || []); if(l.length < per) l.push(o); });
+  let lines = '', nodes = '', outer = '';
+  A.ring.forEach(r => { const [x,y] = pos[r.id];
+    lines += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(0)}" y2="${y.toFixed(0)}" stroke="var(--rule)" stroke-width="1"/>`;
+    (byVia[r.id]||[]).forEach((o,j,arr) => { const a = pos[r.id][2] + (j - (arr.length-1)/2)*0.42;
+      const ox = cx + 355*Math.cos(a), oy = cy + 178*Math.sin(a);
+      /* a faded name sits away from the middle: above its dot in the top half, below in the bottom, outward at the
+         sides (the first draw stacked three names in one line over the top node) */
+      const c = Math.cos(a), s = Math.sin(a), anc = c > .35 ? 'start' : c < -.35 ? 'end' : 'middle';
+      const tx = ox + (anc === 'start' ? 8 : anc === 'end' ? -8 : 0), ty = anc === 'middle' ? (s < 0 ? oy - 9 : oy + 17) : oy + 4;
+      lines += `<line x1="${x.toFixed(0)}" y1="${y.toFixed(0)}" x2="${ox.toFixed(0)}" y2="${oy.toFixed(0)}" stroke="var(--rule)" stroke-dasharray="3 3" stroke-width="1"/>`;
+      outer += `<g class="entnode" data-ent="${esc(o.id)}" style="cursor:pointer;opacity:.62"><circle cx="${ox.toFixed(0)}" cy="${oy.toFixed(0)}" r="4" fill="${AROUND_COL[o.type]||'#888'}"/>`+
+        `<text x="${tx.toFixed(0)}" y="${ty.toFixed(0)}" text-anchor="${anc}" style="font:12px var(--sans,system-ui);fill:var(--ink)">${esc(aroundCut(o.name).slice(0, 22))}</text></g>`; });
+    nodes += `<g class="entnode" data-ent="${esc(r.id)}" style="cursor:pointer"><circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="7" fill="${AROUND_COL[r.type]||'#888'}"/>`+
+      `<text x="${x.toFixed(0)}" y="${(y+21).toFixed(0)}" text-anchor="middle" style="font:600 13px var(--sans,system-ui);fill:var(--ink)">${esc(aroundCut(r.name))}</text></g>`; });
+  const me = `<circle cx="${cx}" cy="${cy}" r="11" fill="var(--accent,#c26a00)"/><text x="${cx}" y="${cy+28}" text-anchor="middle" style="font:600 14px var(--serif,Georgia);fill:var(--ink)">${esc(aroundCut(d.label||d.name||''))}</text>`;
+  const svg = `<svg class="around-svg" viewBox="-110 0 ${W + 220} ${H}" role="img" aria-label="The cards linked to this one, and theirs" style="width:100%;height:auto;display:block">${lines}${outer}${nodes}${me}</svg>`;
+  /* THE BRIDGES ON A PHONE (P-2026-11-18-3 option 2, the UI designer, 2026-11-18): a claim's line is the bridge, said
+     once. It read "God at Gen 18:18 → God at Gen 18:17, Abraham, all nations of the earth"; it reads "Gen 18:18 “Abraham
+     will surely become a great…” → Abraham, all nations of the earth": the verse opens in the reader, the quotation
+     opens the claim's card, and a claim beyond a claim (the self-echo) is left out of the line */
+  const isClaim = t => t === 'text' || t === 'assessment' || t === 'passage';
+  const list = `<ul class="around-list">` + A.ring.map(r => { const far = (byVia[r.id]||[]).filter(o => !(r.ref && isClaim(o.type)));
+    return `<li>${r.ref && r.text ? `${pcRf(r.ref)} <span class="link around-q" data-ent="${esc(r.id)}">“${esc(bridgeCut(r.text))}”</span>`
+      : `<span class="link" data-ent="${esc(r.id)}">${esc(r.name)}</span>`}`+
+    (far.length ? ` <span class="around-far">→ ${far.map(o => `<span class="link" data-ent="${esc(o.id)}">${esc(o.name)}</span>`).join(', ')}</span>` : '') + `</li>`; }).join('') + `</ul>`;
+  /* THE STRONGEST PAGE FROM A WEAK CARD (P-2026-11-18-3; the UI designer, 2026-11-18): on a card of one to three
+     relations, one quiet row naming the strongest page the graph connects it to, by name, kind and size only */
+  const S1 = d.strongest;
+  const strong = !S1 ? '' : `<p class="around-go">→ ${S1.via === 'word'
+    ? `<span class="link ${/^g/i.test(S1.key) ? 'grk' : 'heb'}" data-key="${esc(S1.key)}">${esc(S1.lemma || S1.key)}</span>${S1.translit ? ` <span class="translit">${esc(S1.translit)}</span>` : ''} <span class="g">· ${esc(S1.lang || '')} word · ${plural(S1.verses, 'verse')}</span>`
+    : `<span class="link" data-ent="${esc(S1.id)}">${esc(S1.name)}</span> <span class="g">· ${esc(S1.type)} · ${plural(S1.size, 'connection')}${S1.via === 'bridged' ? ' · shares a claim with this card' : ''}</span>`}</p>`;
+  return `<section class="around"><div class="around-h"><span>Where this sits in the graph</span>${navBtn(d.id)}</div>${strong}${svg}${list}`+
+    `<p class="around-key">The card in the middle, the cards it links to around it, and what those link to beyond, faded. Each opens its card.</p></section>`;
+}
+/* THE SAME IDEA ELSEWHERE (plan A.54 (2), Doug, 2026-11-15: "on the image_shepherd card I would expect to see a link to
+   the shepherd role card"): the other cards of this card's name family, each with its kind; a shared name, not a
+   claimed relation, and said so */
+const familyStrip = d => (d.family && d.family.length) ? `<p class="family-strip">Also in the graph under this name: ` +
+  d.family.map(f => `<span class="link" data-ent="${esc(f.id)}">${esc(f.name)}</span> <span class="fam-kind">(${esc(f.kind)})</span>`).join(' · ') + `</p>` : '';
+/* ALSO SPOKEN OF WITH (P-2026-11-18-3 option 2; the UI designer, 2026-11-18): on a card with no graph panel (a hub, a
+   card of 15 relations or more), the cards that stand on the same claims and are not linked to it, from the server's
+   `bridges` (most claims shared first, then another kind of card). Grouped by the claim: its verse, which opens in the
+   reader, the Berean's opening words, which open the claim's card, then the cards. Three claims, the rest in place.
+   No sentence of the site's own: the verse is the whole claim. A hub shows only cards that share two claims or more
+   when it has them (the designer: "only the strongest"). */
+/* THE SAME-WORD LINE (P-2026-11-18-3; the UI designer, 2026-11-18): under a concept card's word, the other concept
+   cards that word leads, from the server's `same_word`. Three named, the rest opening in place; a shared original
+   word, not a shared meaning, and its title says so. Kept apart from the name strip and "Also under this name". */
+function sameWordLine(d, w){
+  const xs = ((d && d.same_word) || {})[w.key]; if(!xs || !xs.length) return '';
+  const a = x => `<span class="link" data-ent="${esc(x.id)}">${esc(x.name)}</span>`;
+  const lang = /^g/i.test(w.key) ? 'Greek' : 'Hebrew';
+  return `<div class="sw-line" title="Other concept cards whose verses use this same ${lang} word">${esc(w.lemma || w.key)} also leads: ${
+    xs.slice(0, 3).map(a).join(' · ')}${xs.length > 3 ? ` <details class="moreinl sw-more"><summary>+${xs.length - 3} more</summary>${xs.slice(3).map(a).join(' · ')}</details>` : ''}</div>`;
+}
+// a list of words' lines together (the concept card's face, where the words stand as chips): three, then the rest
+const sameWordBlock = (d, words) => { const ls = (words || []).map(w => sameWordLine(d, w)).filter(Boolean); if(!ls.length) return '';
+  return `<div class="sw-block">${ls.slice(0, 3).join('')}${ls.length > 3 ? `<details class="moreinl"><summary>Other cards sharing these words (+${ls.length - 3})</summary>${ls.slice(3).join('')}</details>` : ''}</div>`; };
+const bridgeCut = s => { s = String(s || '').trim(); if(s.length <= 60) return s; const c = s.slice(0, 60); const i = c.lastIndexOf(' ');
+  return (i > 30 ? c.slice(0, i) : c).replace(/[,;:.]$/, '') + '…'; };
+function bridgeBlock(d, hub){
+  const B = d.bridges; if(!B || !(B.items || []).length) return '';
+  const strong = B.items.filter(b => b.via.length > 1);
+  const items = hub && strong.length ? strong : B.items;
+  const groups = [];
+  items.forEach(b => { const v = b.via[0]; let g = groups.find(x => x.v.id === v.id); if(!g) groups.push(g = {v, bs: []}); g.bs.push(b); });
+  const kind = t => `<span class="br-k">${esc(t)}</span>`;
+  const more = b => b.via.length > 1 ? ` <details class="moreinl br-more"><summary>+${b.via.length - 1} shared</summary>${b.via.slice(1).map(v =>
+    `<p class="pc-note">${v.ref ? pcRf(v.ref) : ''} <span class="link" data-ent="${esc(v.id)}">“${esc(bridgeCut(v.text || v.name))}”</span></p>`).join('')}</details>` : '';
+  const row = g => `<div class="br-row"><p class="br-v">${g.v.ref ? pcRf(g.v.ref) : ''} <span class="link" data-ent="${esc(g.v.id)}">“${esc(bridgeCut(g.v.text || g.v.name))}”</span></p>
+    <p class="br-cards">→ ${g.bs.map(b => `<span class="link" data-ent="${esc(b.id)}">${esc(b.name)}</span> ${kind(b.type)}${more(b)}`).join(' · ')}</p></div>`;
+  // the server sends the strongest twelve of B.n; what is beyond them the Navigator shows
+  const restN = groups.slice(3).reduce((n, g) => n + g.bs.length, 0), beyond = hub && strong.length ? 0 : B.n - B.items.length;
+  return `<section class="bridges" aria-label="Also spoken of with"><div class="h">Also spoken of with</div>${groups.slice(0, 3).map(row).join('')}${
+    restN ? `<details class="moreinl"><summary>${restN} more card${restN === 1 ? '' : 's'} spoken of with it</summary>${groups.slice(3).map(row).join('')}</details>` : ''}${
+    beyond > 0 ? `<p class="pc-note">And ${beyond} more in the graph, in the Navigator.</p>` : ''}</section>`;
+}
 /* AND BACK TO THE CARD, THE SAME ONE (Doug, 2026-11-08: "if I navigate back to the card … look for that card open
    first and only open a new card if needed"): the tab the button was pressed in is selected again, as it was left;
    only if it has been closed is the card opened anew. */
@@ -12390,9 +12845,27 @@ async function openRecur(key){
    place. After the readings, the traditions' own words (2026-10-26): they are in the graph, each document pointing
    at the verses of the readings it states, and each tradition has a page of its own to go to and come back from.
    `reading` (1-based) scrolls to that reading, so a tradition's page can link to the reading itself. */
+/* A VISUALIZATION OPENS AS A CARD (plan A.53; Doug, 2026-11-14: "each visualization could open as a card if
+   selected ... Hyperlinks should be supported"). The view is its own page (/visual/<id>, built from the graph alone),
+   framed in the card; a link inside it asks this page to open the card or the chapter here, so the reader is never
+   sent away. The full page stays one link off, for sharing. */
+function openVisual(id, title){
+  openTab('visual', title || 'See the graph', `<div class="pane" style="padding:0">
+    <p class="hint" style="margin:6px 12px"><a href="/visual/${esc(id)}" target="_blank" rel="noopener">Open the full page to share it ↗</a></p>
+    <iframe src="/visual/${esc(id)}" title="${esc(title || '')}" style="width:100%;height:82vh;border:0;display:block"></iframe></div>`, null, id);
+}
+window.addEventListener('message', ev => {
+  if(ev.origin !== location.origin || !ev.data || typeof ev.data !== 'object') return;
+  if(ev.data.ent) openEntity(ev.data.ent);
+  // the verses drawn in layers (A.56) link every word to its card and each verse to the Navigator: both open here
+  else if(ev.data.word && /^[HhGg]\d+[a-z]?$/.test(ev.data.word)) openSense(String(ev.data.word).toLowerCase());
+  else if(ev.data.graph){ KGN.center = String(ev.data.graph); openNavigator(); }
+  else if(ev.data.go){ const [b, c] = String(ev.data.go).split('.'); if(b && c) goRef(b, +c); }
+});
+
 async function openQuestion(id, reading){
   const q = await api('/api/question', {id});
-  if(!q.found) return;
+  if(!q.found) return notFoundCard();
   const vbtn = p => p.go ? `<button class="refmore" data-go="${esc(p.go)}">${esc(p.ref)}</button>` : esc(p.ref || '');
   const plist = ps => (ps || []).length ? `<div class="qpass">${ps.map(p =>
     `<div class="echo">${vbtn(p)} “${esc(p.quote || '')}”${p.note ? ` <span class="g">— ${esc(p.note)}</span>` : ''}${
@@ -12618,7 +13091,7 @@ document.addEventListener('click', ev => {
    question card; the documents follow, by church body. Only what shown question cards reach is here. */
 async function openTradition(slug){
   const t = await api('/api/tradition', {id: slug});
-  if(!t.found) return;
+  if(!t.found) return notFoundCard();
   const school = t.level === 'school';
   const allT = (await api('/api/traditions', {}).catch(() => ({traditions: []}))).traditions || [];
   const frLink = f => `<a href="${esc(f.url)}" target="_blank" rel="noopener external" title="Opens another site">${esc(f.title)} ↗</a> <span class="g">(${
@@ -12682,7 +13155,7 @@ async function openTraditions(){
 
 async function openMajorTheme(id){
   const d = await api('/api/majortheme', {id});
-  if(!d.found) return;
+  if(!d.found) return notFoundCard();
   // arriving at /themes/<slug> passes the slug: the tab is keyed by the id
   // (7.6d), and the address bar shows the theme's own address
   id = d.id;
@@ -12725,8 +13198,11 @@ async function openMajorTheme(id){
         data-ent="${esc(c.node)}" title="this sub-theme's own card">its card →</span>` : ''}</div>
       ${c.moved_from ? `<p class="hint" style="margin:0 0 4px">Placed here from <span class="link"
         data-mtheme="${esc(c.moved_from.id)}">${esc(c.moved_from.title)}</span>'s list</p>` : ''}
-      ${quoted.map(p => `<div class="hubq">“${esc(String(p.note).replace(/^[“”"]+|[“”"]+$/g, ''))}” ${
-        p.refs.map(refBtn).join(' ')}</div>`).join('')}
+      ${/* U-25 (2026-11-14): the first two quotations of a concept, the rest one tap away ("all N →"): the Messiah outline
+            was 23,000 px of them on a phone, and everything below it was never reached */''}
+      ${(() => { const q1 = p => `<div class="hubq">“${esc(String(p.note).replace(/^[“”"]+|[“”"]+$/g, ''))}” ${p.refs.map(refBtn).join(' ')}</div>`;
+        return quoted.slice(0, 2).map(q1).join('') + (quoted.length > 2
+          ? `<details class="moreinl"><summary>all ${quoted.length} quotations →</summary>${quoted.slice(2).map(q1).join('')}</details>` : ''); })()}
       ${plain.length ? `<div class="otlr">${quoted.length ? 'and ' : ''}${
         plain.flatMap(p => p.refs).map(refBtn).join(' ')}</div>` : ''}</div>`;
   }).join('')}</div>`;
@@ -12872,6 +13348,10 @@ async function openMajorTheme(id){
       ${(H.visions || []).length ? `<div class="vp-h2">${esc(H.chapters_label)}</div><p class="hubchips">${
         H.visions.map(v => `<button class="hubchip" data-readch="${esc(v.b)}|${v.c}">${esc(v.label)}</button>`).join('')}</p>` : ''}
       ${svg ? `<div class="vp-h2">${esc(H.share_label)}</div>${svg}` : ''}
+      ${/* U-25: related themes are a way on, so they stand above the long outline, not 13,000 px under it */''}
+      ${related.length ? `<h2 class="hubh">Related themes</h2><p class="hint" style="max-width:62ch">Each with a
+        passage cited under both, or verses the clause tags give to both.</p>${chipRow(related,
+        x => `<button class="hubchip" data-mtheme="${esc(x.to)}">${esc(x.to_title)}</button>`, 30)}` : ''}
       <h2 class="hubh">${d.source === 'site' || d.outline === 'redone' ? "The theme's outline" : "The theme map's outline"}</h2>`;
   })();
   openTab('mtheme:' + id, d.title, `<div class="pane">
@@ -12902,9 +13382,6 @@ async function openMajorTheme(id){
     ${(d.events || []).length ? `<h2 class="hubh">Events</h2><p class="hint" style="max-width:62ch">Events whose
       passages this theme cites, or whose verses the clause tags give it.</p>${chipRow(d.events,
       x => `<button class="hubchip link" data-ent="${esc(x.id)}">${esc(x.title)}</button>`)}` : ''}
-    ${related.length ? `<h2 class="hubh">Related themes</h2><p class="hint" style="max-width:62ch">Each with a
-      passage cited under both, or verses the clause tags give to both.</p>${chipRow(related,
-      x => `<button class="hubchip" data-mtheme="${esc(x.to)}">${esc(x.to_title)}</button>`, 30)}` : ''}
     ${(d.messages || []).length ? `<h2 class="hubh">What God says in its passages</h2>${chipRow(d.messages,
       m => `<button class="hubchip link" data-ent="${esc(m.id)}" title="${m.n} verse${m.n === 1 ? '' : 's'}">${esc(m.name)}</button>`)}` : ''}
     ${(d.acts || []).length ? `<h2 class="hubh">Kinds of speaking in its passages</h2>${chipRow(d.acts,
@@ -13033,7 +13510,7 @@ async function buildExplore(){
               t.door ? `${t.door.title} · ${t.door.n} rows` : (t.subtitle || '')); }).join('')).join(''),
       // closed at first (2026-10-26: "now that we are adding this content - themes can start collapsed"):
       // the questions and the traditions follow, and an open list of every theme pushed them out of sight
-      mthemes.themes.length, false) : '';
+      mthemes.themes.length, false) : '';   // closed again (Doug, 2026-11-14: "Start with Themes collapsed")
   /* QUESTIONS, RIGHT AFTER THE THEMES (plan 8.4h; 2026-10-25: "What does the
      Bible say about gets its own section on explore right after themes").
      Only shown questions come back, so with none shown the section is absent. */
@@ -13166,6 +13643,30 @@ async function buildExplore(){
          `<span class="link chip" data-ent="${esc(e.id)}">${esc(e.title)}</span>`, '')}${
          moreJoin(r.gaps || [], 8, g => `<span class="link chip gap" data-go="${esc(g)}"
             title="no event card yet">${esc(g)}</span>`, '')}</div>`;
+  /* R-5 (U-8, approved 2026-11-14): above the closed drawers, one row of the strongest ways in, the ones the served home
+     page leads with: three searches to try, six people, six concepts and three questions. */
+  const waysIn = () => {
+    const chip = (attr, t) => `<span class="link chip" ${attr}>${esc(t)}</span>`;
+    const qs = (quests.questions || []).filter(q => !q.within).slice(0, 3);
+    // THE VISUALIZATIONS LEAD (plan A.53; Doug, 2026-11-14: "Stick them in the first slot in Explore as you build
+    // them"): each a page built by tools/viz/build.py from the graph alone, at /visual/<id>; add a row as one is released
+    // each with its own color and a tiny icon in the shape of its view (Doug, 2026-11-14: "draw attention to the graph bubbles")
+    const VISUALS = [
+      // A.58 (2026-11-17): the sixteen story patterns as one circle, a slice each, their stories round the rim
+      ['patterns', 'What shapes does the Bible tell its stories in?', '#6a3fb5', '<circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 8V1.5M8 8L13.6 11.2M8 8L2.4 11.2" stroke="currentColor" stroke-width="1.3" fill="none"/><circle cx="8" cy="8" r="2"/>'],
+      // A.57 (2026-11-16): chapters hand-selected by the site maker, drawn whole; Psalm 23 first (its icon a crook)
+      ['chapters', 'Chapters hand-selected by the site maker, drawn whole', '#7a5a12', '<path d="M6 15V5.5a3.5 3.5 0 1 1 7 0c0 1.6-1.2 2.3-2.2 1.7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>'],
+      // A.56 (2026-11-15): verses hand-selected by the site maker, each in layers; the diagrams drawn by hand, so the
+      // page says so in its own foot
+      ['verses', 'Verses hand-selected by the site maker, drawn in layers', '#2e7d4f', '<rect x="1" y="1.5" width="14" height="3" rx="1"/><rect x="1" y="6.5" width="14" height="3" rx="1" opacity=".6"/><path d="M3 12.5h3v2.5H3zM10 12.5h3v2.5h-3z" opacity=".85"/><path d="M4.5 12.5L8 10.5L11.5 12.5" stroke="currentColor" stroke-width="1" fill="none"/>'],
+      ['speech', 'Who in the Bible blesses, curses, prays, commands and accuses?', '#c2342e', '<path d="M2 3h9a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7l-3 3v-3H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" transform="translate(1 0)"/>'],
+      ['ideas', 'Where in the Bible does each great idea live?', '#b8237a', '<rect x="1" y="1" width="4" height="4"/><rect x="6" y="1" width="4" height="4" opacity=".45"/><rect x="11" y="1" width="4" height="4" opacity=".75"/><rect x="1" y="6" width="4" height="4" opacity=".6"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4" opacity=".3"/><rect x="1" y="11" width="4" height="4" opacity=".3"/><rect x="6" y="11" width="4" height="4" opacity=".7"/><rect x="11" y="11" width="4" height="4"/>'],
+      ['people', 'How is everything in the Bible connected?', '#1f5fbf', '<path d="M3 4L8 8L13 3M8 8L5 13M8 8L13 12" stroke="currentColor" stroke-width="1.2" fill="none"/><circle cx="8" cy="8" r="2.6"/><circle cx="3" cy="4" r="1.6"/><circle cx="13" cy="3" r="1.6"/><circle cx="5" cy="13" r="1.6"/><circle cx="13" cy="12" r="1.6"/>'],
+      ['canon', 'Where does the Bible take up its own words?', '#c26a00', '<path d="M1 13Q5 2 9 13M5 13Q10 5 15 13M2 13Q8 -2 14 13" stroke="currentColor" stroke-width="1.3" fill="none"/><path d="M0 13.5H16" stroke="currentColor" stroke-width="1"/>']];
+    return `<div class="ways" style="margin:6px 0 14px">
+      <p class="hint" style="margin:0 0 8px"><b>See the graph</b> ${VISUALS.map(([i, t, c, icon]) => `<span class="link chip" data-visual="${esc(i)}" style="color:${c};border:1px solid ${c};background:color-mix(in srgb, ${c} 9%, transparent);font-weight:600;display:inline-flex;align-items:center;gap:6px;margin:2px 0"><svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true">${icon}</svg>${esc(t)}</span>`).join(' ')}</p>
+      <p class="hint" style="margin:0"><b>Try a search</b> ${['John 3:16', 'Psalm 23', 'mercy', 'shepherd', 'who killed Goliath', 'Ahithophel', 'Bethlehem', 'the Exodus', 'agape', 'H157'].map(t => `<span class="chip" role="button" tabindex="0" style="cursor:pointer" data-find="${esc(t)}">${esc(t)}</span>`).join(' ')}</p></div>`;
+  };
   setExplore(`<div class="pane">
     <p class="kind">What is in here</p><h2>Explore</h2>
     ${/* Plain words for a newcomer (the committee as first-time Reddit
@@ -13174,10 +13675,11 @@ async function buildExplore(){
     <p class="lead">The way in by subject: themes first, then lists of people, places and
       things, events, and patterns the text repeats. Everything here opens as a card or a
       page, the same you get by tapping a word in the reader.</p>
+    ${waysIn()}
     ${themesSec()}
     ${questionsSec()}
-    ${pzxSec()}
     ${traditionsSec()}
+    ${pzxSec()}
     ${/* The note is not decoration. Without it the first question a reader has
           is "why isn't the commonest one first", and the answer -- that the
           commonest ones are grammar -- is the most useful thing on the page. */''}
@@ -13331,6 +13833,8 @@ async function buildExplore(){
     wireLists($('#paneinner'));
     $('#paneinner').querySelectorAll('.link').forEach(l =>
       l.onclick = () => l.dataset.ent ? openEntity(l.dataset.ent)
+                      : l.dataset.visual ? openVisual(l.dataset.visual, l.textContent)
+                      : l.dataset.find ? doSearch(l.dataset.find)
                       : l.dataset.recur ? openRecur(l.dataset.recur)
                       : l.dataset.go ? peekAt(l, l.dataset.go)
                       : l.dataset.mtheme ? openMajorTheme(l.dataset.mtheme)
@@ -14092,7 +14596,11 @@ function setExplore(html, wire){
       return;
     }
   }
-  await loadChapter(at.b || 'Gen', at.c || 1);
+  /* U-42 (2026-11-14): a card's own address no longer builds Explore (six lists, 443 KB) or loads the last-read chapter
+     (168 KB) behind it: /e/david cost 772 KB of API answers cold, for a card of 142 KB. Both wait until their tab is
+     opened (selectTab), where they were always built on demand anyway. */
+  const lazyBoot = /^\/(e|word|themes?|questions|traditions|about)(\/|$)/.test(path) && !oldRef;
+  if(!lazyBoot) await loadChapter(at.b || 'Gen', at.c || 1);
   // (selectTab('explore') waits below, until the address says what its own page waits for)
   // a major theme's own address (A.21)
   // (/themes/<slug> since 7.6d; the server sends /theme/<id> there with a 301,
@@ -14131,7 +14639,16 @@ function setExplore(html, wire){
   ARRIVAL = exploreId || graphId || bare === '/graph' ? ['explore']
     : (oldId || wordM || themeId || questionId || traditionId || bare === '/traditions' || bare === '/about') ? ['card']
     : deepKind ? ['card', 'explore'] : ['explore'];
-  selectTab('explore');
+  if(!lazyBoot) selectTab('explore');
+  /* U-35: a card that has not drawn is asked for again every 20 s while its copy is on screen */
+  const reopen = oldId ? () => openEntity(oldId) : wordM ? () => openSense(wordM[1].toLowerCase() + wordM[2]) : null;
+  if(reopen){
+    const again = setInterval(() => {
+      if(!ARRIVAL || !_serverCopyShows()){ clearInterval(again); return; }
+      if(_busyN) return;   // the first ask is still retrying
+      Promise.resolve().then(reopen).catch(() => {});
+    }, 20000);
+  }
   if(oldId) openEntity(oldId);
   else if(wordM) openSense(wordM[1].toLowerCase() + wordM[2]);
   else if(deepKind) await DEEP_OPEN[deepKind](HP.get(deepKind));
@@ -14156,6 +14673,10 @@ function setExplore(html, wire){
     if(g){
       for(let p = g; p; p = p.parentElement) if(p.tagName === 'DETAILS') p.open = true;
       g.scrollIntoView({block: 'start'});
+      // U-43: the address stays /explore/<section> while this drawer is the focus
+      EXPLORE_PATH = '/explore/' + exploreId; EXPLORE_SEC = secId(g);
+      EXPLORE_TITLE = ((g.querySelector(':scope > summary')?.textContent || '').trim().split('\n')[0].replace(/\s*·.*$/, '').replace(/\d+$/, '').trim()) || null;
+      const xt = state.tabs.find(x => x.id === 'explore'); if(xt) showAddress(xt);
     }
   }
   else if(graphId){ KGN.center = graphId; openNavigator(); }
@@ -14163,6 +14684,8 @@ function setExplore(html, wire){
   else if(path.replace(/\/$/, '') === '/graph') openNavigator();
   // About's own page (A.21)
   else if(path.replace(/\/$/, '') === '/about') openAbout();
+  // U-36: /p/<ref> that resolved to no passage
+  else if(oldRef) await notFoundCard();
   // a first visit, not arriving by an old link to something specific
   else if(!mem.get('welcomed', false)) showWelcome();
   // and a section opened within it (#open=rel-Family), once it is drawn

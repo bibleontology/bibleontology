@@ -1,6 +1,9 @@
 # THE ALIGNMENT FILE (plan 8.1e; Doug, 2026-10-20: "go ahead with the alignment
-# file"): our terms mapped to their nearest equivalents in five standard
+# file"): our terms mapped to their nearest equivalents in six standard
 # vocabularies, as SKOS mapping properties (what that commits a reasoner to is below).
+# CiTO, the sixth, joined on 2026-11-19 (Doug: "Yes, and add CiTO") with the
+# relation types added since 1.2.0; from then every relation type is either
+# mapped here or listed under "unmapped" with its reason (tests/test_alignment.py).
 #
 #   close    skos:closeMatch    near enough to use one for the other in most queries
 #   broad    skos:broadMatch    THEIRS is broader than ours
@@ -37,6 +40,7 @@ prefixes:
   crm: http://www.cidoc-crm.org/cidoc-crm/
   ontolex: http://www.w3.org/ns/lemon/ontolex#
   oa: http://www.w3.org/ns/oa#
+  cito: http://purl.org/spar/cito/
 
 mappings:
   # ---- who and where
@@ -102,7 +106,21 @@ mappings:
   - {ours: bom:Reading, match: related, theirs: crm:E13_Attribute_Assignment, why: "E13 records who holds an opinion about an item, as a reading names its reader; CIDOC's is the act, ours the reading."}
   - {ours: bom:Reading, match: related, theirs: oa:Annotation, why: "One reader's claim about the text, with the reader and its evidence; an annotation is a body about a target, with its creator."}
 
+  # ---- the relation types added since 1.2.0 (2026-11-19; the targets read in their specifications the same day)
+  - {ours: bor:took_place_at, match: close, theirs: crm:P7_took_place_at, why: "Where an event happened. CIDOC's domain is E4 Period, of which E5 Event is a subclass, so an event's place is P7."}
+  - {ours: bor:took_place_at, match: close, theirs: schema:location, why: "schema.org's location is where an event is happening; it also serves organizations and actions, which ours never does."}
+  - {ours: bor:acted_in, match: related, theirs: crm:P11i_participated_in, why: "Who took part in an event. CIDOC's participant is active or passive and an E39 Actor, so people; ours is the doer only, and God and angels act in events too, who are not CIDOC actors."}
+  - {ours: bor:happens_to, match: related, theirs: crm:P11_had_participant, why: "The event to the one it happens to, a passive participant. CIDOC's participant is any actor, active or passive; ours is only the one who undergoes it, and may be a being CIDOC does not count as an actor."}
+  - {ours: bor:knows, match: narrow, theirs: foaf:knows, why: "FOAF's knows is between two people; ours also covers knowing a thing, a place or a deed, so theirs is narrower."}
+  - {ours: bor:knows, match: narrow, theirs: schema:knows, why: "schema.org's knows is Person to Person, 'the most generic bi-directional social/work relation'; ours also covers knowing a thing, and it runs one way."}
+  - {ours: bor:testifies_about, match: related, theirs: crm:P67_refers_to, why: "Testimony refers to what it is about. CIDOC's P67 is a propositional object's reference; ours is a person or a text bearing witness, so the two are associated, not interchangeable (as speaks_of)."}
+  - {ours: bor:kind_of, match: related, theirs: crm:P2_has_type, why: "An object or creature is one of a kind. CIDOC's P2 points to an E55 Type; ours points to another record of the graph that stands for the kind (the stones), so they are associated."}
+  - {ours: bor:quotes, match: close, theirs: cito:includesQuotationFrom, why: "CiTO: 'the citing entity includes one or more quotations from the cited entity'. Ours is between verses, as the Berean editors note it."}
+  - {ours: bor:points_to, match: related, theirs: cito:cites, why: "CiTO's cites is the citing entity's own citation; ours is a link the Berean editors make from one verse to another, in a note or a section's list, so the citing is theirs, not the verse's."}
+  - {ours: bor:alludes_to, match: broad, theirs: cito:cites, why: "CiTO's cites includes citing 'indirectly or implicitly (e.g. as in artistic quotations or parodies)'; an allusion takes up words or an image without quoting, an implicit citation, so theirs is broader. Ours is always a reading."}
+
 # The terms an outsider would look for first, and why they have no mapping.
+# From 2026-11-19 also every relation type with no mapping, so none is left silent.
 unmapped:
   bom:Deity: "None of the five vocabularies mapped here has a class for gods. Deity reaches foaf:Agent through PersonalBeing; CIDOC's Actor is people, so it does not."
   bom:HeavenlyBeing: "None either; the same path through PersonalBeing to foaf:Agent."
@@ -110,3 +128,23 @@ unmapped:
   bos:Clause: "No standard vocabulary above has a clause; it comes from MACULA's syntax trees."
   claim:voice: "Whose claim a claim is. The standard pattern is attribution, which claim:claimedBy, claim:reader and claim:voiceOf already state as prov:wasAttributedTo."
   bor:possibly_same_as: "A reader's view that two records may be one person. Not owl:sameAs and not schema:sameAs, which assert an identity; the reasoning policy forbids one."
+  # ---- the relation types added since 1.2.0 that no standard term fits (2026-11-19)
+  bor:asked: "Putting a question to someone. None of the six vocabularies has a relation for it."
+  bor:loves: "None of the six has love, or any relation of affection beyond FOAF's and schema.org's knows."
+  bor:sees: "None of the six has a relation for one seeing another."
+  bor:rewards: "None of the six has rewarding."
+  bor:forgives: "None of the six has forgiving."
+  bor:reveals: "Making something known. None of the six has it; CIDOC's P67 refers_to is about what a text is about, not a disclosure."
+  bor:revealed_to: "Making something known to someone; none of the six has it."
+  bor:removed: "A person moving a thing out of its place; none of the six has a relation for it."
+  bor:hides: "None of the six has hiding or keeping back."
+  bor:glorifies: "An act of worship or esteem; none of the six has one."
+  bor:honors: "None of the six has honoring."
+  bor:dwells_in: "One in another, in the text's words (John 15:4). Not a location: the relation says nothing beyond the verse it cites."
+  bor:worshiped: "None of the six has worship."
+  bor:served: "Serving a god or an idol; none of the six has it (service to a person is bor:servant_of)."
+  bor:set_on: "An object placed on another; none of the six has a relation between two objects for it."
+  bor:answered_in: "Where the text's own explanation answers part of a story (a parable and its interpretation); no standard has it."
+  bor:camped_at: "A stop on a journey. Residence (CIDOC's P74, schema.org's homeLocation) is a settled home, which the type deliberately is not."
+  bor:says_the_same_as: "Two verses giving the same account, as a model judged the pair. CiTO has no term for parallel accounts (its full property list read 2026-11-19)."
+  bor:echoes: "A word match: a later verse shares rare words with an earlier one, found by matching, not by reading either verse. It claims no citation, so not cito:cites."

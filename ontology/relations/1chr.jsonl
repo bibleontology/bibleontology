@@ -26,17 +26,17 @@
 {"certainty": "explicit", "dst": "beerah", "refs": ["1Chr 5:6"], "source": "1chr", "src": "baal", "type": "father_of"}
 {"certainty": "explicit", "dst": "uzzi", "refs": ["1Chr 6:5"], "source": "1chr", "src": "bukki", "type": "father_of"}
 {"certainty": "explicit", "dst": "mahalaleel", "refs": ["1Chr 1:2", "Gen 5:12", "Luke 3:37"], "source": "1chr,gen-1-25,mark-luke-john", "src": "cainan", "type": "father_of"}
-{"certainty": "explicit", "dst": "amorite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
-{"certainty": "explicit", "dst": "arkite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
-{"certainty": "explicit", "dst": "arvadite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
-{"certainty": "explicit", "dst": "girgashite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
-{"certainty": "explicit", "dst": "hamathite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
+{"certainty": "explicit", "dst": "amorite", "refs": ["1Chr 1:13", "1Chr 1:14"], "source": "1chr", "src": "canaan", "type": "father_of"}
+{"certainty": "explicit", "dst": "arkite", "refs": ["1Chr 1:13", "1Chr 1:15"], "source": "1chr", "src": "canaan", "type": "father_of"}
+{"certainty": "explicit", "dst": "arvadite", "refs": ["1Chr 1:13", "1Chr 1:16"], "source": "1chr", "src": "canaan", "type": "father_of"}
+{"certainty": "explicit", "dst": "girgashite", "refs": ["1Chr 1:13", "1Chr 1:14"], "source": "1chr", "src": "canaan", "type": "father_of"}
+{"certainty": "explicit", "dst": "hamathite", "refs": ["1Chr 1:13", "1Chr 1:16"], "source": "1chr", "src": "canaan", "type": "father_of"}
 {"certainty": "explicit", "dst": "heth", "refs": ["1Chr 1:13", "Gen 10:15"], "source": "1chr,gen-1-25", "src": "canaan", "type": "father_of"}
 {"certainty": "explicit", "dst": "hivite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
-{"certainty": "explicit", "dst": "jebusite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
+{"certainty": "explicit", "dst": "jebusite", "refs": ["1Chr 1:13", "1Chr 1:14"], "source": "1chr", "src": "canaan", "type": "father_of"}
 {"certainty": "explicit", "dst": "sidon", "refs": ["1Chr 1:13", "Gen 10:15"], "source": "1chr,gen-1-25", "src": "canaan", "type": "father_of"}
-{"certainty": "explicit", "dst": "sinite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
-{"certainty": "explicit", "dst": "zemarite", "refs": ["1Chr 1:13"], "source": "1chr", "src": "canaan", "type": "father_of"}
+{"certainty": "explicit", "dst": "sinite", "refs": ["1Chr 1:13", "1Chr 1:15"], "source": "1chr", "src": "canaan", "type": "father_of"}
+{"certainty": "explicit", "dst": "zemarite", "refs": ["1Chr 1:13", "1Chr 1:16"], "source": "1chr", "src": "canaan", "type": "father_of"}
 {"certainty": "explicit", "dst": "havilah_son_of_cush", "refs": ["1Chr 1:9", "Gen 10:7"], "source": "1chr,gen-1-25", "src": "cush", "type": "father_of"}
 {"certainty": "explicit", "dst": "nimrod", "refs": ["1Chr 1:10", "Gen 10:8"], "source": "1chr,gen-1-25", "src": "cush", "type": "father_of"}
 {"certainty": "explicit", "dst": "raamah", "refs": ["1Chr 1:9", "Gen 10:7"], "source": "1chr,gen-1-25", "src": "cush", "type": "father_of"}
@@ -81,7 +81,7 @@
 {"certainty": "explicit", "dst": "esau", "note": "Isaac was sixty years old when the twins were born", "refs": ["1Chr 1:34", "Gen 25:25-26", "Gen 27:1", "Gen 25:26"], "source": "1chr,gen-1-25,gen-26-50,gen-farm-20260830-153437", "src": "isaac", "type": "father_of"}
 {"certainty": "explicit", "dst": "adbeel", "refs": ["1Chr 1:29", "Gen 25:13"], "source": "1chr,gen-1-25", "src": "ishmael", "type": "father_of"}
 {"certainty": "explicit", "dst": "dumah", "refs": ["1Chr 1:29", "Gen 25:14"], "source": "1chr,gen-1-25", "src": "ishmael", "type": "father_of"}
-{"certainty": "explicit", "dst": "hadad", "refs": ["1Chr 1:29"], "source": "1chr", "src": "ishmael", "type": "father_of"}
+{"certainty": "explicit", "dst": "hadad", "refs": ["1Chr 1:29", "1Chr 1:30"], "source": "1chr", "src": "ishmael", "type": "father_of"}
 {"certainty": "explicit", "dst": "jetur", "refs": ["1Chr 1:29", "Gen 25:15"], "source": "1chr,gen-1-25", "src": "ishmael", "type": "father_of"}
 {"certainty": "explicit", "dst": "kedar", "refs": ["1Chr 1:29", "Gen 25:13"], "source": "1chr,gen-1-25", "src": "ishmael", "type": "father_of"}
 {"certainty": "explicit", "dst": "kedemah", "refs": ["1Chr 1:29", "Gen 25:15"], "source": "1chr,gen-1-25", "src": "ishmael", "type": "father_of"}
@@ -105,21 +105,21 @@
 {"certainty": "explicit", "dst": "tarshish", "refs": ["1Chr 1:7", "Gen 10:4"], "source": "1chr,gen-1-25", "src": "javan", "type": "father_of"}
 {"certainty": "explicit", "dst": "ahaziah", "refs": ["1Chr 3:11", "2Chr 22:1", "2Kgs 8:24", "2Kgs 8:25"], "source": "1chr,2chr-ezra-neh-esth,kings", "src": "jehoram_king_of_judah", "type": "father_of"}
 {"certainty": "explicit", "dst": "jehoram_king_of_judah", "refs": ["1Chr 3:11", "2Chr 21:1", "1Kgs 22:50", "2Kgs 8:16", "Matt 1:8"], "source": "1chr,2chr-ezra-neh-esth,kings,matt", "src": "jehoshaphat", "type": "father_of"}
-{"certainty": "explicit", "dst": "abigail_mother_of_amasa", "refs": ["1Chr 2:13"], "source": "1chr", "src": "jesse", "type": "father_of"}
+{"certainty": "explicit", "dst": "abigail_mother_of_amasa", "refs": ["1Chr 2:13", "1Chr 2:16"], "source": "1chr", "src": "jesse", "type": "father_of"}
 {"certainty": "explicit", "dst": "abinadab_son_of_jesse", "refs": ["1Chr 2:13", "1Sam 17:13"], "source": "1chr,1sam", "src": "jesse", "type": "father_of"}
 {"certainty": "explicit", "dst": "david", "note": "David was son of Jesse", "refs": ["1Chr 2:13", "1Sam 16:1", "1Sam 16:13", "2Sam 23:1", "Acts 13:22", "Ruth 4:17", "Luke 3:31-32", "Matt 1:6"], "source": "1chr,1sam,2sam,acts-epistles,josh-judg-ruth,mark-luke-john,matt", "src": "jesse", "type": "father_of"}
 {"certainty": "explicit", "dst": "eliab_son_of_jesse", "refs": ["1Chr 2:13", "1Sam 17:13"], "source": "1chr,1sam", "src": "jesse", "type": "father_of"}
-{"certainty": "explicit", "dst": "nethaneel", "refs": ["1Chr 2:13"], "source": "1chr", "src": "jesse", "type": "father_of"}
-{"certainty": "explicit", "dst": "ozem", "refs": ["1Chr 2:13"], "source": "1chr", "src": "jesse", "type": "father_of"}
-{"certainty": "explicit", "dst": "raddai", "refs": ["1Chr 2:13"], "source": "1chr", "src": "jesse", "type": "father_of"}
+{"certainty": "explicit", "dst": "nethaneel", "refs": ["1Chr 2:13", "1Chr 2:14"], "source": "1chr", "src": "jesse", "type": "father_of"}
+{"certainty": "explicit", "dst": "ozem", "refs": ["1Chr 2:13", "1Chr 2:15"], "source": "1chr", "src": "jesse", "type": "father_of"}
+{"certainty": "explicit", "dst": "raddai", "refs": ["1Chr 2:13", "1Chr 2:14"], "source": "1chr", "src": "jesse", "type": "father_of"}
 {"certainty": "explicit", "dst": "shimma", "refs": ["1Chr 2:13"], "source": "1chr", "src": "jesse", "type": "father_of"}
-{"certainty": "explicit", "dst": "zeruiah", "refs": ["1Chr 2:13"], "source": "1chr", "src": "jesse", "type": "father_of"}
+{"certainty": "explicit", "dst": "zeruiah", "refs": ["1Chr 2:13", "1Chr 2:16"], "source": "1chr", "src": "jesse", "type": "father_of"}
 {"certainty": "explicit", "dst": "amaziah", "refs": ["1Chr 3:12", "2Chr 24:27", "2Kgs 12:21"], "source": "1chr,2chr-ezra-neh-esth,kings", "src": "joash_king_of_judah", "type": "father_of"}
 {"certainty": "explicit", "dst": "shemaiah", "refs": ["1Chr 5:4"], "source": "1chr", "src": "joel", "type": "father_of"}
-{"certainty": "explicit", "dst": "abimael", "refs": ["1Chr 1:20", "Gen 10:28"], "source": "1chr,gen-1-25", "src": "joktan", "type": "father_of"}
+{"certainty": "explicit", "dst": "abimael", "refs": ["1Chr 1:20", "Gen 10:28", "1Chr 1:22"], "source": "1chr,gen-1-25", "src": "joktan", "type": "father_of"}
 {"certainty": "explicit", "dst": "almodad", "refs": ["1Chr 1:20", "Gen 10:26"], "source": "1chr,gen-1-25", "src": "joktan", "type": "father_of"}
 {"certainty": "explicit", "dst": "diklah", "refs": ["1Chr 1:20", "Gen 10:27"], "source": "1chr,gen-1-25", "src": "joktan", "type": "father_of"}
-{"certainty": "explicit", "dst": "ebal", "refs": ["1Chr 1:20"], "source": "1chr", "src": "joktan", "type": "father_of"}
+{"certainty": "explicit", "dst": "ebal", "refs": ["1Chr 1:20", "1Chr 1:22"], "source": "1chr", "src": "joktan", "type": "father_of"}
 {"certainty": "explicit", "dst": "hadoram", "refs": ["1Chr 1:20", "Gen 10:27"], "source": "1chr,gen-1-25", "src": "joktan", "type": "father_of"}
 {"certainty": "explicit", "dst": "havilah_son_of_joktan", "refs": ["1Chr 1:20", "Gen 10:29"], "source": "1chr,gen-1-25", "src": "joktan", "type": "father_of"}
 {"certainty": "explicit", "dst": "hazarmaveth", "refs": ["1Chr 1:20", "Gen 10:26"], "source": "1chr,gen-1-25", "src": "joktan", "type": "father_of"}

@@ -7,7 +7,8 @@ the whole protocol and every rule; the web server only hands it the parsed reque
 what it returns (HTTP 202 with no body when it returns None).
 
 THE INTERFACE (app2/mcp.py, Python 3.9, standard library only):
-  PROTOCOL_VERSIONS = ("2026-07-28", "2025-06-18", "2025-03-26")     newest first
+  PROTOCOL_VERSIONS = ("2025-11-25", "2025-06-18", "2025-03-26")     newest first (2026-07-28 removed 2026-11-15:
+                     the stateless revision, never implemented here; offering it broke Claude's directory check)
   TOOLS              the six tool names: "start", "search", "fetch", "get_relations", "get_verse", "get_word"
   NS = "https://bibleontology.org/ns/relation/"
   MAX_LINKS = 12; MAX_RELATIONS = 25; MAX_BYTES = 60000; MAX_QUERY = 200
@@ -172,6 +173,18 @@ res = r.get("result") or {}
 check(r.get("jsonrpc") == "2.0" and r.get("id") == 1, "1: initialize envelope %r" % r)
 check(res.get("protocolVersion") == "2025-06-18", "1: a supported client version was not echoed")
 check(call("initialize", {"protocolVersion": "1999-01-01"})["result"]["protocolVersion"] == M.PROTOCOL_VERSIONS[0], "1: unknown version")
+# CLAUDE'S DIRECTORY CHECK (2026-11-15): it asks for 2025-11-25 and must get 2025-11-25 back, never a revision this
+# server does not implement; a stateless-revision request (server/discover, or _meta asking 2026-07-28) gets the
+# protocol's own unsupported-version error listing what is spoken, so the client falls back to initialize
+check(call("initialize", {"protocolVersion": "2025-11-25"})["result"]["protocolVersion"] == "2025-11-25",
+      "1: Claude's 2025-11-25 was not echoed")
+check("2026-07-28" not in M.PROTOCOL_VERSIONS, "1: the stateless revision is offered but not implemented")
+r = call("server/discover", {"_meta": {"io.modelcontextprotocol/protocolVersion": "2026-07-28"}})
+check(r.get("error", {}).get("code") == -32022 and "2025-11-25" in r["error"].get("data", {}).get("supported", []),
+      "1: server/discover is not answered with unsupported-version: %r" % r)
+r = call("tools/list", {"_meta": {"io.modelcontextprotocol/protocolVersion": "2026-07-28"}})
+check(r.get("error", {}).get("code") == -32022, "1: a 2026-07-28 request was served as if understood: %r" % str(r)[:120])
+check(call("resources/templates/list", {}).get("result") == {"resourceTemplates": []}, "1: resource templates")
 check(set(res.get("capabilities", {})) == {"tools", "resources"}, "1: capabilities %r" % res.get("capabilities"))
 check(res.get("serverInfo") == {"name": "bible-ontology", "version": B.data_version}, "1: serverInfo")
 check(isinstance(res.get("instructions"), str) and "links" in res["instructions"] and "fetch" in res["instructions"]
@@ -239,11 +252,22 @@ check(links[-1]["rel"] == "more" and links[-1].get("cursor"), "4: no 'more' link
 rl = [c for c in r["content"] if c["type"] == "resource_link"]
 check(r["content"][0]["type"] == "text" and json.loads(r["content"][0]["text"]) == sc, "4: content[0] is not the JSON")
 check(len(rl) == 12 + len(sc.get("moves") or []) and all(c.get("uri") and c.get("name") for c in rl), "4: resource_link items %d" % len(rl))
+# an error echoes the id it was given and searches its words (2026-11-12: errors that name the next call), so the
+# comparison takes the id and its words out: what is left must not say "held", and must be the same for both
+def _bare(rr, hidden):
+    words = hidden.split(":", 1)[1].replace("_", " ")
+    return json.dumps(rr).replace(hidden, "<id>").replace(words, "<words>")
+
+
 for hidden in ("question:held_one", "card:nobody"):
     rr = tool("fetch", {"id": hidden})["result"]
-    check(rr["isError"] is True and "held" not in rr["content"][0]["text"].lower(), "4: %s: %r" % (hidden, rr))
-check(tool("fetch", {"id": "question:held_one"})["result"]["content"][0]["text"]
-      == tool("fetch", {"id": "card:nobody"})["result"]["content"][0]["text"], "4: a held id answers unlike a missing one")
+    check(rr["isError"] is True and "held" not in _bare(rr, hidden).lower(), "4: %s: %r" % (hidden, rr))
+    check(rr["structuredContent"]["error"] == "not_found" and rr["structuredContent"].get("try"),
+          "4: %s: no error code or next call" % hidden)
+    check(all(B.shown(s["id"]) for s in rr["structuredContent"].get("suggestions") or []),
+          "4: %s: a suggestion the site does not show" % hidden)
+check(_bare(tool("fetch", {"id": "question:held_one"})["result"], "question:held_one")
+      == _bare(tool("fetch", {"id": "card:nobody"})["result"], "card:nobody"), "4: a held id answers unlike a missing one")
 B.calls.clear()
 check(M._valid_id("question:can-salvation-be-lost"), "4: a question id with hyphens was refused")
 for bad in ("question:-x", "question:a--b", "card:a-b"):
@@ -345,7 +369,60 @@ tl = tool("fetch", {"id": "card:typeless"})["result"]["structuredContent"]
 check(tl["links"][0]["iri"] is None and tl["links"][0]["definition"] is None and tl["map"][0]["iri"] is None,
       "9: a label became an iri: %r" % tl["links"][0])
 
+# 10. ERRORS THAT SAY WHAT WAS WRONG AND WHAT TO CALL (2026-11-12: both AI directories reject bare errors; "no such
+# item" left an agent guessing). Every failing call answers with a code, a sentence of detail, and where one exists a
+# ready call; references are taken by book name as agents write them.
+LEGACY = {"invalid arguments", "invalid query", "invalid id", "no such item", "invalid kind", "invalid cursor",
+          "invalid reference", "invalid strong's number"}
+
+
+def error_faults(rr, what):
+    f = []
+    sc = rr.get("structuredContent") or {}
+    text = (rr.get("content") or [{}])[0].get("text", "")
+    if rr.get("isError") is not True:
+        f.append(what + ": not an error")
+    if text.strip().lower() in LEGACY or len(text) < 30:
+        f.append(what + ": a bare error %r" % text)
+    if not re.fullmatch(r"[a-z_]+", sc.get("error") or ""):
+        f.append(what + ": no error code")
+    for c in sc.get("try") or []:
+        if c.get("tool") not in M.TOOLS or not isinstance(c.get("arguments"), dict):
+            f.append(what + ": a 'try' that is not a call %r" % c)
+    return f
+
+
+import re  # noqa: E402
+cases = [("search", {"query": ""}), ("search", {"query": 5}), ("search", {"q": "x"}), ("fetch", {"id": "card:Bad"}),
+         ("fetch", {"id": "card:nobody"}), ("fetch", {"id": "verse:Matt.29.1"}), ("fetch", {}),
+         ("get_relations", {"id": "card:temptation", "kind": 3}), ("get_relations", {"id": "card:temptation", "cursor": "zz"}),
+         ("get_verse", {"ref": "Matthew 4:4; drop"}), ("get_verse", {"ref": "Hezekiah 1:1"}), ("get_verse", {"ref": 7}),
+         ("get_word", {"strong": "X1"}), ("start", {"x": 1})]
+for name, args in cases:
+    for f in error_faults(tool(name, args)["result"], "%s %r" % (name, args)):
+        check(False, "10: " + f)
+check(tool("fetch", {"id": "card:Bad"})["result"]["structuredContent"]["try"][0]["arguments"]["query"] == "bad",
+      "10: a malformed id does not offer a search on its words")
+check("query (required)" in tool("search", {"q": "x"})["result"]["content"][0]["text"],
+      "10: an argument error does not say what the tool takes")
+e = call("tools/call", {"name": "write_card", "arguments": {}})["error"]
+check(e["code"] == -32602 and "fetch" in (e.get("data") or {}).get("detail", ""), "10: an unknown tool's error names no tools")
+check("bibleontology://about" in (call("resources/read", {"uri": "x"})["error"].get("data") or {}).get("detail", ""),
+      "10: a bad resource uri names none")
+# references as people write them, each the same verse the code gives
+for ref in ("Matthew 4:4", "matt.4.4", "Matt 4:4", "MATTHEW 4 : 4"):
+    rr = tool("get_verse", {"ref": ref})["result"]
+    check(rr["isError"] is False and rr["structuredContent"]["id"] == "verse:Matt.4.4", "10: %r did not open Matt 4:4" % ref)
+for ref, code in (("Isaiah 53:7", "Isa"), ("1 John 3:16", "1John"), ("I John 3:16", "1John"), ("III John 1:2", "3John"),
+                  ("Song of Songs 2:4", "Song"), ("Psalm 23:1", "Ps"), ("Revelation 5:6", "Rev"), ("Philemon 1:6", "Phlm")):
+    m = M._RE_ANY_REF.fullmatch(ref)
+    check(m and M._book_code(m.group(1)) == code, "10: %r read as %r" % (ref, m and M._book_code(m.group(1))))
+check(tool("get_word", {"strong": "h8322"})["result"]["isError"] is False, "10: a lower-case Strong's number refused")
+# planted: a bare error is caught
+check(error_faults({"isError": True, "content": [{"type": "text", "text": "no such item"}], "structuredContent": {}},
+                   "plant"), "10: planted: a bare 'no such item' not caught")
+
 for f in fails:
     print("FAIL", f)
-print("mcp: 9 groups of checks; %d failures" % len(fails))
+print("mcp: 10 groups of checks; %d failures" % len(fails))
 sys.exit(1 if fails else 0)

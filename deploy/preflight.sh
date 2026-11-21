@@ -419,6 +419,29 @@ for t in test_mcp test_mcp_backend; do
 		grep -E "FAIL" <<<"$out" | head -8
 	fi
 done
+# the privacy page says what the code keeps (2026-11-12: the AI directories require one at a URL, and reject an
+# incomplete one); each number on it is the code's own
+if out="$(suite tests/test_privacy_page.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the privacy page and the code disagree -- python tests/test_privacy_page.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
+# the MCP's use counter (plan 8.7d, 2026-11-12): it counts what it says (the follow rate above all) and keeps no person
+if out="$(suite tests/test_mcp_usage.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the MCP use counter is wrong or keeps a person -- python tests/test_mcp_usage.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
+# what /llms.txt and the /mcp page tell a model about the MCP is what the server answers (2026-11-12: llms.txt never
+# named the MCP; the page promised counting nobody did). Its worked example is checked hop by hop, with plants.
+if out="$(suite tests/test_llms_mcp.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "llms.txt or /mcp says what the MCP does not -- python tests/test_llms_mcp.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
 # readers who did something (2026-11-03): /api/engaged once a day per reader, only
 # after /api/open; bot requests counted by name, the AI fetchers apart.
 if out="$(suite tests/test_activity_engaged.py)"; then
@@ -600,6 +623,36 @@ else
 	bad "crawler line broken -- python tests/test_crawlers.py"
 	grep -E "^FAIL" <<<"$out" | head -8
 fi
+# The app's shell as its own two files (2026-11-12, P-2026-11-12-4 step 1): the split loses nothing (page and files
+# put back together are index.html exactly), names are content hashes, load order kept, a page under 100 KB
+if out="$(suite tests/test_app_shell.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the app shell's split is wrong -- python tests/test_app_shell.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
+# The app keeps the last good copy of public pages only, under site/ only, never in the way (A.49, the live refresh)
+if out="$(suite tests/test_page_copies.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the page copy writer keeps what it must not -- python tests/test_page_copies.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
+# A push never shows crawlers "back in a moment" (A.49): the page builder, the upload and Caddy name files alike
+if out="$(suite tests/test_deploy_fallback.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the deploy fallback's pieces disagree -- python tests/test_deploy_fallback.py"
+	grep -E "FAIL" <<<"$out" | head -8
+fi
+# The access log keeps no reader's address (2026-11-12): the filter's header names must be the canonical ones Caddy
+# logs, or a delete matches nothing -- "CF-Connecting-IP" never matched, and full addresses were logged from launch
+if out="$(suite tests/test_caddy_log_filter.py)"; then
+	ok "$(tail -1 <<<"$out")"
+else
+	bad "the access log would keep readers' addresses -- python tests/test_caddy_log_filter.py"
+	grep -E "^FAIL" <<<"$out" | head -8
+fi
 # A card's page does not depend on /api/ (2026-10-29): Search Console's URL
 # Inspection showed every card EMPTY, because the app hid the server's copy as
 # soon as its script ran and then fetched the card from /api/, which
@@ -674,6 +727,27 @@ if [ -z "$range" ] || has '^app2/'; then
 		ok "concept cards: $(tail -1 <<<"$out")"
 	else
 		bad "concept cards -- python tests/test_concept_cards.py"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# THE SAME-WORD LINE (P-2026-11-18-3): ontology/concept-lead-words.json is
+	# read from the server's own answers (tools/concept_lead_words.py); a sample
+	# of 60 cards and servant's five must lead with the word the map says, and a
+	# line names only cards that lead with its word. A failure here means the
+	# words layer changed: rerun the tool. ~1 minute, in process
+	if out="$(suite tests/test_concept_lead_words.py)"; then
+		ok "same-word line: $(tail -1 <<<"$out")"
+	else
+		bad "same-word line -- python tests/test_concept_lead_words.py (rerun tools/concept_lead_words.py if the words layer changed)"
+		grep -E "^FAIL" <<<"$out" | head -8
+	fi
+	# CARD CONSERVATION (2026-11-19, P-2026-11-18-8): the comparison that holds a card rebuild to "no meaningful fact
+	# lost" catches a dropped fact and honors a ruled removal, by planted faults; and the event snapshot is whole.
+	# The render check itself (tools/card_conservation.py check event) runs Edge and is run from PowerShell, by hand,
+	# before and after a card kind is rebuilt. Seconds, no rendering
+	if out="$(suite tests/test_card_conservation.py)"; then
+		ok "card conservation: $(tail -1 <<<"$out")"
+	else
+		bad "card conservation -- python tests/test_card_conservation.py"
 		grep -E "^FAIL" <<<"$out" | head -8
 	fi
 	# THE VERSE PAGE (2026-10-28, the design panel's verse page): Genesis 1:1 is

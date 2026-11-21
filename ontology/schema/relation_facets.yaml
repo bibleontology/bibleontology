@@ -137,6 +137,12 @@ facets:
     effect: terminates
   distinguished_from:
     symmetric: true
+  asked:
+    temporality: point
+  revealed_to:
+    temporality: point
+  removed:
+    temporality: point
   drawn_from:
     transitive: false
   dwelt_at:

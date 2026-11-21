@@ -36,10 +36,10 @@
     dcterms:created "2026-11-06"^^xsd:date ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    owl:versionInfo "1.5.0" ;
-    owl:versionIRI <https://bibleontology.org/ns/biblio/2026-11-12> ;
+    owl:versionInfo "1.7.0" ;
+    owl:versionIRI <https://bibleontology.org/ns/biblio/2026-11-20> ;
     owl:priorVersion <https://bibleontology.org/ns/biblio/2026-11-11> ;
-    dcterms:modified "2026-11-12"^^xsd:date ;
+    dcterms:modified "2026-11-20"^^xsd:date ;
     <http://purl.org/vocab/vann/preferredNamespacePrefix> "biblio" ;
     <http://purl.org/vocab/vann/preferredNamespaceUri> "https://bibleontology.org/ns/biblio#" ;
     rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred. In particular nothing here states who wrote a text: authorship is a reading, published as a claim (https://bibleontology.org/ns/claim) with its verse, its certainty and whose reading it is, and the Work's creation event carries no agent, date or place the text does not give." ;

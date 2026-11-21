@@ -32,6 +32,7 @@ Googlebot, and was set to Allow.
 """
 import argparse
 import datetime
+import json
 import re
 import sys
 from pathlib import Path
@@ -89,6 +90,9 @@ def word_listing(d, only=None):
     return listed, measured
 
 
+TODAY = None
+
+
 def urlset(urls, lastmod):
     # lastmod is W3C date format (YYYY-MM-DD), the form Google accepts. Stamping
     # every page with one date is honest only when every page changed in that
@@ -98,7 +102,9 @@ def urlset(urls, lastmod):
     # dict {url: date} (or a callable on the url), built from what changed
     # since the last release, and use .get(u, previous date) below; the
     # previous run's dates are in git (deploy/www/sitemap-*.xml).
-    rows = "".join(f"<url><loc>{escape(SITE + u)}</loc><lastmod>{lastmod}</lastmod></url>\n" for u in urls)
+    #   DONE 2026-11-13 (Doug: "make sure you get the lastmod set correctly"): `lastmod` may be a dict {url: date}.
+    stamp = (lambda u: lastmod.get(u, TODAY)) if isinstance(lastmod, dict) else (lambda u: lastmod)
+    rows = "".join(f"<url><loc>{escape(SITE + u)}</loc><lastmod>{stamp(u)}</lastmod></url>\n" for u in urls)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + rows + "</urlset>\n")
 
@@ -106,12 +112,17 @@ def urlset(urls, lastmod):
 def main():
     ap = argparse.ArgumentParser(description="write robots.txt and the sitemaps to deploy/www/")
     ap.add_argument("--lastmod", default=datetime.date.today().isoformat(), metavar="YYYY-MM-DD",
-                    help="the date stamped on every <url> and in the index (default: today)")
+                    help="today's date: the index's, and a changed or new page's (default: today)")
+    ap.add_argument("--all-same", action="store_true", help="stamp every page with --lastmod (a release that changed all)")
+    ap.add_argument("--changed-file", help="a JSON list of paths changed since the last release; only they take today")
     today = ap.parse_args().lastmod
     datetime.date.fromisoformat(today)          # refuse anything but a real date
     assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", today), today   # and only in YYYY-MM-DD form
     d = S.load()
-    pages = ["/", "/about", "/faq", "/graph"] + [S.theme_path(t["id"]) for t in S._theme_map().get("themes", [])] \
+    # /mcp: how an assistant connects (2026-11-12: live since 11-03 and never listed, so crawlers had no pointer)
+    # the released visualizations (plan A.53): every page tools/viz/build.py put in app2/static/visual
+    pages = ["/", "/about", "/faq", "/graph", "/mcp", "/privacy", "/terms"] + \
+        [f"/visual/{p.stem}" for p in sorted((ROOT / "app2" / "static" / "visual").glob("*.html"))] +[S.theme_path(t["id"]) for t in S._theme_map().get("themes", [])] \
         + [S._side_path(t) for t in S._theme_hubs() if S._imagery(t)] \
         + [f"/explore/{g}" for g in (*S.EXPLORE_PAGES, *S.EXPLORE_GROUPS, *S.EXPLORE_SECTIONS)] \
         + ["/ns/meaning", "/ns/structure", "/ns/relation",    # the published ontology (2026-10-11)
@@ -221,9 +232,43 @@ def main():
     files = {"sitemap-pages.xml": pages, "sitemap-cards.xml": cards,
              "sitemap-chapters.xml": chapters, "sitemap-verses.xml": verses,
              "sitemap-words.xml": words}
+    # PER PAGE (2026-11-13). A page's date moves only when its page did: one never listed, or one whose page differs
+    # from the last upload (out/pages/changed.json, written by tools/build_pages.py against uploaded.json), takes
+    # today; every other page keeps the date the last sitemap gave it. Stamping all 42,000 with one date when about
+    # 1,200 changed is the date Google learns to ignore. --lastmod still stamps every page alike, for a release that
+    # changed them all. Without a fresh build (no changed.json newer than the code), every page keeps its date and
+    # only new ones take today, and it says so.
+    global TODAY
+    TODAY = today
+    stamps, cf = None, None
+    if not ap.parse_args().all_same:
+        prev = {}
+        for f in OUT.glob("sitemap-*.xml"):
+            for loc, lm in re.findall(r"<loc>([^<]+)</loc><lastmod>([^<]+)</lastmod>", f.read_text(encoding="utf-8")):
+                prev[loc[len(SITE):]] = lm
+        # --changed-file: a list of paths changed since the LAST RELEASE (a build's manifest against the one saved at
+        # that release), the honest set when a release follows one whose pages were not uploaded (2026-11-14: reusing
+        # changed.json re-dated the previous night's pages and missed the day's own)
+        cf = ap.parse_args().changed_file
+        if cf:
+            changed = set(json.loads(Path(cf).read_text(encoding="utf-8")))
+            stamps = {u: (today if (u not in prev or u in changed) else prev[u]) for urls in files.values() for u in urls}
+            moved = sum(1 for u, v in stamps.items() if v == today)
+            print(f"lastmod (from {cf}): {moved} pages dated {today}, {len(stamps) - moved} keep their date")
+    if not ap.parse_args().all_same and not cf:
+        ch, up = ROOT / "out" / "pages" / "changed.json", ROOT / "out" / "pages" / "uploaded.json"
+        # only a build made SINCE the last upload says what changed: the first upload's changed.json lists every page
+        # (42,062), and read after it would re-date them all
+        fresh = ch.exists() and up.exists() and ch.stat().st_mtime > up.stat().st_mtime
+        changed = set(json.loads(ch.read_text(encoding="utf-8"))["changed"]) if fresh else set()
+        if not fresh:
+            print("no build since the last upload: no page is re-dated but new ones (run tools/build_pages.py first)")
+        stamps = {u: (today if (u not in prev or u in changed) else prev[u]) for urls in files.values() for u in urls}
+        moved = sum(1 for u, v in stamps.items() if v == today)
+        print(f"lastmod: {moved} pages dated {today}, {len(stamps) - moved} keep their date")
     for name, urls in files.items():
         assert len(urls) <= 50000, name          # the protocol's limit per file
-        (OUT / name).write_text(urlset(urls, today), encoding="utf-8", newline="\n")
+        (OUT / name).write_text(urlset(urls, stamps if stamps is not None else today), encoding="utf-8", newline="\n")
     index = ('<?xml version="1.0" encoding="UTF-8"?>\n'
              '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
              + "".join(f"<sitemap><loc>{SITE}/{n}</loc><lastmod>{today}</lastmod></sitemap>\n"

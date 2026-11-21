@@ -196,6 +196,11 @@ if whole:
             f.append("Meshach does not link Mishael")
         if S.names_of_word(d, "h5028"):
             f.append(f"Nebat links {[x['id'] for x in S.names_of_word(d, 'h5028')]}")
+        # the second read (24-name-links-check): Ramah is not the man Jeremoth; Babylon is the city, not its people
+        if "ramoth_of_bani" in [x["id"] for x in S.names_of_word(d, "h7414")]:
+            f.append("Ramah links Jeremoth")
+        if [x["id"] for x in S.names_of_word(d, "h894")] != ["babylon"]:
+            f.append("Babylon (H894) does not link the city alone")
         return f
     for f in name_faults():
         check(False, f)

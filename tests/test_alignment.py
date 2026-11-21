@@ -49,8 +49,20 @@ def problems(rows, unmapped, ours_defined, checked):
     return bad
 
 
+def uncovered(types, reviewed, rows, unmapped):
+    """the relation types added after 1.2.0 that are neither mapped nor listed as unmapped with a reason (2026-11-19:
+    28 types had been added since the review, and none was either; nothing failed, which is how the gap opened)"""
+    mapped = {m["ours"] for m in rows}
+    listed = {c for c, _u, w in unmapped if (w or "").strip()}
+    return sorted(t for t in types if t not in reviewed and f"bor:{t}" not in mapped and f"bor:{t}" not in listed)
+
+
 def main():
     fails = []
+    import yaml
+    types = list((yaml.safe_load((ROOT / "ontology" / "schema" / "relationship_types.yaml").read_text(encoding="utf-8"))
+                  or {}).get("types") or {})
+    reviewed = set(json.loads((ROOT / "ontology" / "align" / "reviewed-at-1.2.0.json").read_text(encoding="utf-8"))["types"])
     gen, _ = V.generated()
     graphs = {n: rdflib.Graph().parse(data=gen[n].decode("utf-8"), format="turtle")
               for n in ("structure", "relation", "meaning", "claim")}
@@ -63,6 +75,11 @@ def main():
         fails.append("an exact match: the policy is none (skos:exactMatch is transitive)")
     bad = problems(rows, unmapped, ours_defined, checked)
     fails += bad
+    gap = uncovered(types, reviewed, rows, unmapped)
+    if gap:
+        fails.append(f"relation types added since 1.2.0 with no mapping and no unmapped reason: {gap}")
+    if not uncovered(types + ["planted_new_type"], reviewed, rows, unmapped):
+        fails.append("planted: a new relation type with neither a mapping nor a reason was not caught")
     # the published copy is the generator's output now, and it parses
     released = tuple(int(x) for x in NC.VERSION.split(".")) >= (1, 2, 0)
     pub = ROOT / "out" / "ns" if released else ROOT / "docs" / "review" / "alignment"

@@ -13,7 +13,7 @@
 {"certainty": "explicit", "dst": "saul", "refs": ["1Sam 14:50"], "source": "1sam", "src": "abner", "type": "commander_of"}
 {"certainty": "explicit", "dst": "david", "note": "Achish trusted David as a loyal vassal and wished to bring him to battle against Israel.", "refs": ["1Sam 27:12", "1Sam 28:1", "1Sam 29:6"], "source": "1sam", "src": "achish", "type": "ally_of"}
 {"certainty": "explicit", "dst": "merab", "refs": ["1Sam 18:19"], "source": "1sam", "src": "adriel", "type": "spouse_of"}
-{"certainty": "explicit", "dst": "ichabod", "note": "Text names Ahiah as I-chabod's brother.", "refs": ["1Sam 14:3"], "source": "1sam", "src": "ahiah", "type": "sibling_of"}
+{"certainty": "explicit", "dst": "ichabod", "note": "Text names Ahiah as I-chabod's brother.", "refs": ["1Sam 14:3"], "source": "1sam", "src": "ahiah", "type": "sibling_of", "held": "the cited verses do not say it (job 37: four readers flagged it, Claude read it, 2026-11-17): Ahijah is the son of Ichabod's brother Ahitub (1 Sam 14:3): Ichabod's nephew, not his sibling"}
 {"certainty": "explicit", "dst": "ahinoam_daughter_of_ahimaaz", "refs": ["1Sam 14:50"], "source": "1sam", "src": "ahimaaz_father_of_ahinoam", "type": "father_of"}
 {"certainty": "explicit", "dst": "abiathar", "refs": ["1Sam 22:20"], "source": "1sam", "src": "ahimelech", "type": "father_of"}
 {"certainty": "explicit", "dst": "saul", "refs": ["1Sam 14:50"], "source": "1sam", "src": "ahinoam_daughter_of_ahimaaz", "type": "spouse_of"}

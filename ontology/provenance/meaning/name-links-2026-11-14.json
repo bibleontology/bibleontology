@@ -1,0 +1,140 @@
+{
+ "date": "2026-11-14",
+ "jobs": [
+  "23-name-links (all 384 answers; applied 2026-11-10: 175 linked, 31 rejected, 178 none; trail in 23-name-links-2026-11-10.jsonl, unchanged by this pass)",
+  "24-name-links-check"
+ ],
+ "how_combined": "23 picks a card for words the rule could not link (applied after a read by Claude); 24 re-asks the rule's single-card links. 1,164 of 1,176 the Mac kept (no change); the 12 doubts were each read by Claude against its verses and card. No divine person is a candidate in either job.",
+ "fates": [
+  {
+   "key": "h2364",
+   "word": "חוּשָׁה",
+   "card": [
+    "hushah"
+   ],
+   "fate": "denied",
+   "why": "a man of 1 Chr 4:4 (the lexicon: an Israelite); the card is a place named Hushah"
+  },
+  {
+   "key": "h7935",
+   "word": "שְׁכַנְיָהוּ",
+   "card": [
+    "shechaniah_neh3"
+   ],
+   "fate": "kept",
+   "why": "Shecaniah names nine men; the card is the one of Neh 3:29, which is the word's verse; Mac's reason was garbled"
+  },
+  {
+   "key": "h894",
+   "word": "בָּבֶ֫ל, בָּבֶל",
+   "card": [
+    "babylonians"
+   ],
+   "fate": "denied; babylon added",
+   "why": "the word is the city (2 Kgs 24:10, 25:8; Jer 28:6); the rule's card is its people. The Babylon place card, which holds Babylon's other verses, added"
+  },
+  {
+   "key": "h7414",
+   "word": "רָמָה",
+   "card": [
+    "ramoth_of_bani"
+   ],
+   "fate": "denied",
+   "why": "Ramah is a place (2 Chr 16:1); the card is Jeremoth of Ezra 10:29, a man"
+  },
+  {
+   "key": "h5802",
+   "word": "עַזְבּוּק",
+   "card": [
+    "azbuk_neh3"
+   ],
+   "fate": "kept",
+   "why": "Neh 3:16 names Azbuk as the father; the card is Azbuk; Mac misread"
+  },
+  {
+   "key": "h1746",
+   "word": "דּוּמָה",
+   "card": [
+    "dumah"
+   ],
+   "fate": "kept",
+   "why": "the card is Ishmael's son Dumah (Gen 25:14, 1 Chr 1:30); the lexicon's tribe/region is the same name"
+  },
+  {
+   "key": "h4337",
+   "word": "מֵישָׁע",
+   "card": [
+    "mesha_father_of_ziph"
+   ],
+   "fate": "kept",
+   "why": "Mesha, Caleb's firstborn (1 Chr 2:42); Mac confused it with Mareshah in the verse"
+  },
+  {
+   "key": "h2301",
+   "word": "חֲדַד",
+   "card": [
+    "hadar"
+   ],
+   "fate": "denied",
+   "why": "Hadad of Gen 25:15 is a son of Ishmael; the card is the king of Edom (Gen 36:39), a namesake"
+  },
+  {
+   "key": "h5513",
+   "word": "סִינִי",
+   "card": [
+    "sinite"
+   ],
+   "fate": "kept",
+   "why": "the Sinites: the same name; 'person' is the card's type label, not another identity"
+  },
+  {
+   "key": "h7071",
+   "word": "קָנָה",
+   "card": [
+    "kanah_town"
+   ],
+   "fate": "kept",
+   "why": "Kanah: the card's town of Asher is the word's Josh 19:28; the brook is the same name"
+  },
+  {
+   "key": "h1427",
+   "word": "גַּדִּיאֵל",
+   "card": [
+    "gaddi"
+   ],
+   "fate": "denied",
+   "why": "Gaddiel is Zebulun's spy; the card is Gaddi, Manasseh's (Num 13:11): a different man"
+  },
+  {
+   "key": "h3794",
+   "word": "כִּתִּי",
+   "card": [
+    "kittim"
+   ],
+   "fate": "kept",
+   "why": "Kittim/Kittites of Gen 10:4 and 1 Chr 1:7: the same name as the card"
+  }
+ ],
+ "denied": {
+  "h2364": [
+   "hushah"
+  ],
+  "h894": [
+   "babylonians"
+  ],
+  "h7414": [
+   "ramoth_of_bani"
+  ],
+  "h2301": [
+   "hadar"
+  ],
+  "h1427": [
+   "gaddi"
+  ]
+ },
+ "added": {
+  "h894": [
+   "babylon"
+  ]
+ }
+}

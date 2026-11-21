@@ -13,10 +13,23 @@ bor:accused a owl:ObjectProperty ;
     skos:definition "A person or group lays a charge against another person or group; it is the complaint made, not a plot against someone and not the verdict." ;
     bor:category "Conflict" ;
     bor:inverseLabel "was accused by" ;
-    bor:sourceKind "group",
+    bor:sourceKind "being",
+        "group",
         "person" ;
     bor:targetKind "group",
         "person" .
+
+bor:acted_in a owl:ObjectProperty ;
+    rdfs:label "acted in" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    rdfs:range <https://bibleontology.org/ns/meaning#Event> ;
+    skos:definition "A person, group or being does something in an event, where a verse of the event's telling names them as the doer; undergoing it is happens_to." ;
+    bor:category "Who took part" ;
+    bor:inverseLabel "who acted in it" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "event" .
 
 bor:adoptive_parent_of a owl:ObjectProperty ;
     rdfs:label "raised / adopted" ;
@@ -125,6 +138,18 @@ bor:ascribed_to a owl:ObjectProperty ;
     bor:inverseLabel "has ascribed to them" ;
     bor:sourceKind "text" ;
     bor:targetKind "group",
+        "person" .
+
+bor:asked a owl:ObjectProperty ;
+    rdfs:label "asked" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person or group puts a question to another, where the verse says they asked; a question is not an entreaty, which is pleading." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "was asked by" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "being",
+        "group",
         "person" .
 
 bor:aspect_of a owl:ObjectProperty ;
@@ -349,6 +374,17 @@ bor:came_upon a owl:ObjectProperty ;
     bor:sourceKind "being" ;
     bor:targetKind "group",
         "person" .
+
+bor:camped_at a owl:ObjectProperty ;
+    rdfs:label "camped at" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    rdfs:range <https://bibleontology.org/ns/meaning#Place> ;
+    skos:definition "A person or group stopped and camped at a place on the way, where the verse says they camped there: a stay on a journey, not a settled home." ;
+    bor:category "Places" ;
+    bor:inverseLabel "was a camp of" ;
+    bor:sourceKind "group",
+        "person" ;
+    bor:targetKind "place" .
 
 bor:carried a owl:ObjectProperty ;
     rdfs:label "carried" ;
@@ -865,6 +901,18 @@ bor:half_sibling_of a owl:ObjectProperty,
     skos:definition "Two people share one parent, where the text is explicit about it; the relation reads the same from either side." ;
     bor:category "Kinship" .
 
+bor:happens_to a owl:ObjectProperty ;
+    rdfs:label "happens to" ;
+    rdfs:domain <https://bibleontology.org/ns/meaning#Event> ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "An event happens to the person, group or being the verse names as undergoing it: who dies, is born, is called or is healed; not everyone present." ;
+    bor:category "Who took part" ;
+    bor:inverseLabel "undergoes" ;
+    bor:sourceKind "event" ;
+    bor:targetKind "being",
+        "group",
+        "person" .
+
 bor:healed a owl:ObjectProperty ;
     rdfs:label "healed / raised" ;
     rdfs:domain <https://bibleontology.org/ns/meaning#PersonalBeing> ;
@@ -936,12 +984,12 @@ bor:imprisoned a owl:ObjectProperty ;
         "person" .
 
 bor:in_theme a owl:ObjectProperty ;
-    rdfs:label "is a core concept of the major theme" ;
+    rdfs:label "is in the major-theme map under" ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
     rdfs:range <https://bibleontology.org/ns/meaning#Concept> ;
     skos:definition "A concept, observance, event or saying is a core concept of a major theme; the grouping is a reader's map of the text, supported by the passages cited." ;
     bor:category "Concepts" ;
-    bor:inverseLabel "has as a core concept" ;
+    bor:inverseLabel "has in the major-theme map" ;
     bor:sourceKind "concept",
         "event",
         "observance",
@@ -1318,10 +1366,12 @@ bor:possibly_same_as a owl:ObjectProperty,
     rdfs:domain <https://bibleontology.org/ns/meaning#PersonalBeing> ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
     rdfs:range <https://bibleontology.org/ns/meaning#PersonalBeing> ;
-    skos:definition "Two person records that the text never joins may, in a reader's view, be one person; this is not an identity, each record keeps its own verses, and the evidence is given on both sides." ;
+    skos:definition "Two records of persons, human or other personal beings, that the text never joins may, in a reader's view, be one; this is not an identity, each record keeps its own verses, and the evidence is given on both sides." ;
     bor:category "Who else this may be" ;
-    bor:sourceKind "person" ;
-    bor:targetKind "person" .
+    bor:sourceKind "being",
+        "person" ;
+    bor:targetKind "being",
+        "person" .
 
 bor:predecessor_of a owl:ObjectProperty ;
     rdfs:label "was succeeded by" ;
@@ -1446,6 +1496,18 @@ bor:reigned_over a owl:ObjectProperty ;
     bor:targetKind "group",
         "place" .
 
+bor:removed a owl:ObjectProperty ;
+    rdfs:label "removed" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    rdfs:range <https://bibleontology.org/ns/meaning#Artifact> ;
+    skos:definition "A person, being or group moves a thing out of its place, where the verse says so; the one who moves it is the source." ;
+    bor:category "Things" ;
+    bor:inverseLabel "was removed by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "object" .
+
 bor:repaired a owl:ObjectProperty ;
     rdfs:label "repaired" ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
@@ -1456,6 +1518,18 @@ bor:repaired a owl:ObjectProperty ;
         "person" ;
     bor:targetKind "object",
         "place" .
+
+bor:revealed_to a owl:ObjectProperty ;
+    rdfs:label "revealed something to" ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    skos:definition "A person, being or group makes something known to a person or group, where the text says it was revealed to them; the one who reveals is the source." ;
+    bor:category "Encounters & speech" ;
+    bor:inverseLabel "had something revealed to them by" ;
+    bor:sourceKind "being",
+        "group",
+        "person" ;
+    bor:targetKind "group",
+        "person" .
 
 bor:reveals a owl:ObjectProperty ;
     rdfs:label "reveals" ;
@@ -1599,6 +1673,17 @@ bor:served a owl:ObjectProperty ;
         "creature",
         "image",
         "object" .
+
+bor:set_on a owl:ObjectProperty ;
+    rdfs:label "is set on or in" ;
+    rdfs:domain <https://bibleontology.org/ns/meaning#Artifact> ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    rdfs:range <https://bibleontology.org/ns/meaning#Artifact> ;
+    skos:definition "One object is placed on or in another, where the verse says it is set there: the bread set on the table; placement, not what a thing is made of." ;
+    bor:category "Things" ;
+    bor:inverseLabel "has set on or in it" ;
+    bor:sourceKind "object" ;
+    bor:targetKind "object" .
 
 bor:sibling_of a owl:ObjectProperty,
         owl:SymmetricProperty ;
@@ -1851,6 +1936,17 @@ bor:took a owl:ObjectProperty ;
         "person",
         "place" .
 
+bor:took_place_at a owl:ObjectProperty ;
+    rdfs:label "took place at" ;
+    rdfs:domain <https://bibleontology.org/ns/meaning#Event> ;
+    rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
+    rdfs:range <https://bibleontology.org/ns/meaning#Place> ;
+    skos:definition "An event takes place at a place, where a verse of its telling says it happened there; a place merely mentioned in the telling is not enough." ;
+    bor:category "Places" ;
+    bor:inverseLabel "where it took place" ;
+    bor:sourceKind "event" ;
+    bor:targetKind "place" .
+
 bor:traveled_to a owl:ObjectProperty ;
     rdfs:label "went to" ;
     rdfs:isDefinedBy <https://bibleontology.org/ns/relation> ;
@@ -1933,7 +2029,7 @@ bor:wrote_to a owl:ObjectProperty ;
     dcterms:created "2026-10-11"^^xsd:date ;
     dcterms:creator "Doug Egge" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-11-12"^^xsd:date ;
+    dcterms:modified "2026-11-20"^^xsd:date ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:title "Bible Ontology — relations" ;
     vann:preferredNamespacePrefix "bor" ;
@@ -1941,7 +2037,7 @@ bor:wrote_to a owl:ObjectProperty ;
     rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Every relation in the graph is a claim that carries its verse, its certainty and, where someone in the text says it, its speaker, and a reasoner that ignores those turns a character's claim into the narrator's or a reading into a fact. So: no owl:sameAs between records (possibly_same_as and spoken_of_as are readings and names, never identities); no functional or inverse-functional kinship (the accounts name more than one father or mother for some people, and the graph keeps both); no transitive chaining of images, figures, symbols or places; and nothing about the records of God, the Father, Jesus or the Holy Spirit is derived by inference: they change only by a recorded editorial decision, as the accounts give them. The policy forbids derivations, not descriptions. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred.",
         "The controlled vocabulary of relations the Bible Ontology graph may assert: each reads '<source> <label> <target>', and every relation in the graph uses one of these types. Companion to https://bibleontology.org/ns/meaning.",
         "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
-    owl:priorVersion <https://bibleontology.org/ns/relation/2026-11-11> ;
-    owl:versionIRI <https://bibleontology.org/ns/relation/2026-11-12> ;
-    owl:versionInfo "1.5.0" .
+    owl:priorVersion <https://bibleontology.org/ns/relation/2026-11-19> ;
+    owl:versionIRI <https://bibleontology.org/ns/relation/2026-11-20> ;
+    owl:versionInfo "1.7.0" .
 

@@ -175,8 +175,44 @@ bibleontology.org {
 		file_server
 	}
 
+	# THE SITE'S ICONS, FROM DISK (2026-11-13). The app served them, so during a push they answered 503: 44 of the
+	# push's 102 were one service fetching /favicon.ico with resize parameters. Exact names, never a pattern; the
+	# two root addresses browsers ask for map to their files, as the app maps them. A query string is ignored.
+	@icons path /favicon.ico /apple-touch-icon.png /icons/favicon.ico /icons/icon-16.png /icons/icon-32.png /icons/icon-48.png /icons/icon-512.png
+	handle @icons {
+		rewrite /favicon.ico /icons/favicon.ico
+		rewrite /apple-touch-icon.png /icons/icon-512.png
+		root * /srv/bibleontology/app2/static
+		header Cache-Control "public, max-age=86400"
+		file_server
+	}
+
+	# THE IMAGE CARDS' SKETCH SHEET, FROM DISK (2026-11-21): as in deploy/Caddyfile.
+	@sketches path /sketches.svg
+	handle @sketches {
+		root * /srv/bibleontology/app2/static
+		header Cache-Control "public, max-age=3600"
+		file_server
+	}
+
 	# The app gets 30 s to start answering; a request it cannot answer in that
 	# time is cut off rather than left holding a connection on both sides.
+	# THE APP'S SHELL, EVERY VERSION'S (plan A.49, 2026-11-12). A page names its script and stylesheet by their
+	# content's hash (/app-<hash>.js); the app answers only its own pair, so a page cached from the version before
+	# would lose its script after a push. tools/upload_pages.py puts every version's pair here before each push.
+	# Only when the file is here: otherwise the request goes on to the app below, as before any upload.
+	@shell_disk {
+		path_regexp ^/app-[0-9a-f]{12}\.(js|css)$
+		file {
+			root /var/cache/bibleontology/assets
+		}
+	}
+	handle @shell_disk {
+		root * /var/cache/bibleontology/assets
+		header Cache-Control "public, max-age=31536000, immutable"
+		file_server
+	}
+
 	handle {
 		reverse_proxy 127.0.0.1:8000 {
 			transport http {
@@ -213,6 +249,37 @@ bibleontology.org {
 				-Server
 			}
 			respond `{"error":"the server is restarting; try again shortly"}` 503
+		}
+		# THE LAST GOOD COPY (plan A.49, 2026-11-12). Each push restarted the app and this branch answered every
+		# request with the page below, 503: 133 requests in one push, crawlers among them. Now a page built with the
+		# code being pushed (tools/build_pages.py, beside preflight; uploaded before the push) is served instead,
+		# with 200, and the splash answers only an address that was never built. Not cached by anyone (no-store),
+		# so the live page replaces it the moment the app is back.
+		@copy {
+			expression `{err.status_code} in [502, 503, 504]`
+			file {
+				root /var/cache/bibleontology/site
+				try_files {path}.html {path}index.html
+			}
+		}
+		handle @copy {
+			root * /var/cache/bibleontology/site
+			rewrite * {file_match.relative}
+			header {
+				Content-Type "text/html; charset=utf-8"
+				Cache-Control "no-store"
+				X-Bibleontology-Copy "the last good copy, while the app restarts"
+				# Caddy's own policy, not the copy's: the app writes these files, so a tampered copy must be able to
+				# run nothing. No inline script at all ('self' only, and the app cannot write the shell files in
+				# assets/), so the copy's small head script is blocked for these minutes; the page itself reads.
+				Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+				-Server
+			}
+			# no redirect of "/" or "/blog/" to a canonical form: it would go back to the app, which is down
+			file_server {
+				status 200
+				disable_canonical_uris
+			}
 		}
 		handle @down {
 			header {
@@ -270,10 +337,12 @@ bibleontology.org {
 				# beside a carefully masked one. CF-IPCountry is dropped on
 				# the same reasoning: it answers a question about a reader
 				# that running this site never needs to ask.
-				request>headers>CF-Connecting-IP delete
+				# The names as Caddy logs them, Go's canonical form (2026-11-12:
+				# "CF-Connecting-IP" matched nothing; see deploy/Caddyfile).
+				request>headers>Cf-Connecting-Ip delete
 				request>headers>X-Forwarded-For delete
-				request>headers>True-Client-IP delete
-				request>headers>CF-IPCountry delete
+				request>headers>True-Client-Ip delete
+				request>headers>Cf-Ipcountry delete
 			}
 		}
 	}

@@ -1,0 +1,878 @@
+{
+ "pass": "option C, names and plurals (P-2026-11-18-3)",
+ "judges": "DeepSeek V4 Pro, two blind runs, high effort",
+ "sheet": "docs/review/consolidation-2026-11-19.md",
+ "ruling": "Doug, 2026-11-19: \"I approve of the consolidation sheet as recommended with split decisions kept separate\"",
+ "pairs": [
+  {
+   "pair": 1,
+   "word": "h6030",
+   "merge": "account",
+   "keep": "answer",
+   "merge_verses": [
+    "Job 33:13"
+   ],
+   "keep_verses": [
+    "Job 9:3"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h6030 for the act of answering/responding: Job 9:3 'he could not answer Him' and Job 33:13 'He answers nothing a man asks.' The second adds no distinct sense."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h6030 in the literal sense of answering/responding: Job 9:3 'he could not answer Him' and Job 33:13 'He answers nothing a man asks' both refer to a verbal reply."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 2,
+   "word": "g1849",
+   "merge": "powers",
+   "keep": "authority",
+   "merge_verses": [
+    "Titus 3:1"
+   ],
+   "keep_verses": [
+    "Mark 1:22"
+   ],
+   "judge_a": {
+    "verdict": "different",
+    "why": "Mark 1:22 uses g1849 of Jesus' teaching authority, whereas Titus 3:1 uses the plural for 'rulers and authorities' as governing powers; not the same sense."
+   },
+   "judge_b": {
+    "verdict": "different",
+    "why": "Mark 1:22 'taught as one who had authority' uses g1849 for the abstract quality/power of Jesus' teaching, whereas Titus 3:1 'submit to rulers and authorities' uses the plural for governing persons/office-holders; quality vs. persons is a different sense."
+   },
+   "outcome": "kept apart: both different"
+  },
+  {
+   "pair": 3,
+   "word": "h5650",
+   "merge": "servant",
+   "keep": "servants",
+   "merge_verses": [
+    "2Cor 4:5",
+    "Gen 9:25",
+    "Gen 9:26",
+    "Gen 9:27"
+   ],
+   "keep_verses": [
+    "Gen 9:25",
+    "Job 1:15",
+    "Job 1:16",
+    "Job 1:17"
+   ],
+   "judge_a": {
+    "verdict": "different",
+    "why": "They share the literal Hebrew servant/slave sense in Gen 9:25, but the second also contains 2Cor 4:5 'ourselves as your servants for Jesus' sake', a Greek figurative use not the h5650 literal slave sense of the first."
+   },
+   "judge_b": {
+    "verdict": "unsure",
+    "why": "The h5650 occurrences are literal servant/slave in both (Gen 9:25; Job 1:15-17 vs. Gen 9:25-27; Job 3:19; Job 41:4), which points to same. But the second also lists 2Cor 4:5 'ourselves as your servants for Jesus' sake,' a Greek figurative sense not h5650; if that verse belongs to the record it is different, so the record's data is unsettled."
+   },
+   "outcome": "kept apart: judges split"
+  },
+  {
+   "pair": 4,
+   "word": "h1926",
+   "merge": "highness",
+   "keep": "brightness",
+   "merge_verses": [
+    "Job 31:23"
+   ],
+   "keep_verses": [
+    "Job 31:26"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h1926 as a noun for splendor/majesty: Job 31:26 'the moon moving in splendor' and Job 31:23 'His splendor I cannot overpower'; same sense, different bearer."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Job 31:26 'the moon moving in splendor' and Job 31:23 'His splendor I cannot overpower' both use h1926 for the same noun sense of majestic splendor; the referent differs, not the word's job."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 5,
+   "word": "h1121",
+   "merge": "sons",
+   "keep": "son",
+   "merge_verses": [
+    "Gen 3:16",
+    "Gen 4:17",
+    "Gen 4:25",
+    "Gen 4:26"
+   ],
+   "keep_verses": [
+    "Deut 6:2",
+    "Gen 16:11",
+    "Job 25:6"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h1121 for literal offspring/sons: Gen 16:11 'bear a son' and Gen 4:25 'gave birth to a son'; singular versus plural is not a different sense."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h1121 for literal son/offspring: Gen 16:11 'you will bear a son' and Gen 4:25 'she gave birth to a son'; the singular/plural difference is only number, and the literal sense is already held in the first."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 6,
+   "word": "h1285",
+   "merge": "league",
+   "keep": "covenant",
+   "merge_verses": [
+    "Job 5:23"
+   ],
+   "keep_verses": [
+    "Gen 9:9",
+    "Gen 9:11",
+    "Gen 9:12",
+    "Job 31:1"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Job 5:23 \"you will have a covenant with the stones of the field\" uses h1285 as a pact/agreement, matching the figurative covenant already in the first card at Job 31:1 \"I have made a covenant with my eyes.\""
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both records use h1285 for covenant/pact. The first already includes the figurative 'covenant with my eyes' (Job 31:1), so 'a covenant with the stones of the field' (Job 5:23) is the same sense, not a new one; the second even duplicates the Jonathan relation at 1Sa 18:3."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 7,
+   "word": "h3117",
+   "merge": "day",
+   "keep": "days",
+   "merge_verses": [
+    "Gen 1:5",
+    "Gen 1:8",
+    "Job 3:1",
+    "Job 3:3"
+   ],
+   "keep_verses": [
+    "Gen 6:3",
+    "Isa 53:10",
+    "Job 7:1",
+    "Job 7:6"
+   ],
+   "judge_a": {
+    "verdict": "different",
+    "why": "The first card's verses use plural \"days\" for a human lifetime (Gen 6:3 \"his days shall be 120 years\"; Isa 53:10 \"He will prolong His days\"), whereas the second card's verses use singular \"day\" literally (Gen 1:5 \"God called the light day... the first day\")."
+   },
+   "judge_b": {
+    "verdict": "different",
+    "why": "The first card uses h3117 for lifetime/duration: 'his days shall be 120 years' (Gen 6:3) and 'He will prolong His days' (Isa 53:10). The second uses it for literal calendar days/daylight: 'God called the light day... the first day' (Gen 1:5)."
+   },
+   "outcome": "kept apart: both different"
+  },
+  {
+   "pair": 8,
+   "word": "h6",
+   "merge": "destroy",
+   "keep": "destruction",
+   "merge_verses": [
+    "Job 3:3",
+    "Job 4:7",
+    "Job 4:9",
+    "Job 4:11"
+   ],
+   "keep_verses": [
+    "Deut 6:15",
+    "Gen 6:7",
+    "Job 5:21",
+    "Job 5:22"
+   ],
+   "judge_a": {
+    "verdict": "different",
+    "why": "The first card is God's transitive destroying/blotting out (Deut 6:15 \"He will wipe you off the face of the earth\"; Gen 6:7 \"I will blot out man\"), while the second card's verses are intransitive perishing (Job 3:3 \"May the day of my birth perish\"; Job 4:11 \"The old lion perishes\")."
+   },
+   "judge_b": {
+    "verdict": "different",
+    "why": "The first card is destruction as calamity/judgment: 'He will wipe you off the face of the earth' (Deut 6:15) and 'You will laugh at destruction and famine' (Job 5:22). The second is ordinary perishing/dying: 'The old lion perishes for lack of prey' (Job 4:11) and 'By the breath of God they perish' (Job 4:9)."
+   },
+   "outcome": "kept apart: both different"
+  },
+  {
+   "pair": 9,
+   "word": "h6",
+   "merge": "perishing",
+   "keep": "perish",
+   "merge_verses": [
+    "Job 8:13"
+   ],
+   "keep_verses": [
+    "2Cor 4:16",
+    "Job 4:20"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "The second's only verse, Job 8:13 \"the hope of the godless will perish,\" is already attached to the first card as a speaks_of relation, and both use h6 in the intransitive \"perish\" sense."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h6 intransitively for perishing/coming to nothing. The first already has 'unnoticed, they perish forever' (Job 4:20) and even a relation to Bildad at Job 8:13, which is the second card's own verse."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 10,
+   "word": "h5172",
+   "merge": "experience",
+   "keep": "divination",
+   "merge_verses": [
+    "Gen 30:27"
+   ],
+   "keep_verses": [
+    "Gen 44:5"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h5172 for the same practice of divination: Joseph's cup \"uses for divination\" (Gen 44:5) and Laban \"I have learned by divination\" (Gen 30:27)."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h5172 for divination as a means of obtaining hidden knowledge. Gen 44:5's cup 'uses for divination' and Gen 30:27's 'I have learned by divination' are the same sense, just different instances."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 11,
+   "word": "h241",
+   "merge": "ears",
+   "keep": "ear",
+   "merge_verses": [
+    "Job 36:15"
+   ],
+   "keep_verses": [
+    "Job 4:12",
+    "Job 12:11",
+    "Job 13:1",
+    "Job 13:17"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h241 for the literal ear as the organ of hearing: 'my ears caught a whisper' (Job 4:12) and 'opens their ears in oppression' (Job 36:15), where opening the ears is an idiom for causing to hear, not a different sense."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both records use h241 for the literal organ of hearing: Job 13:17 has 'let my declaration ring in your ears' and Job 36:15 has 'opens their ears in oppression'; singular versus plural does not change the sense."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 12,
+   "word": "h2758",
+   "merge": "plowing",
+   "keep": "earing",
+   "merge_verses": [
+    "Job 1:14"
+   ],
+   "keep_verses": [
+    "Gen 45:6"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h2758 for the same agricultural act of plowing: 'without plowing or harvesting' (Gen 45:6) and 'the oxen were plowing' (Job 1:14)."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Gen 45:6's 'without plowing or harvesting' and Job 1:14's 'while the oxen were plowing' both refer to the same agricultural activity of plowing the ground."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 13,
+   "word": "h3899",
+   "merge": "eat",
+   "keep": "food",
+   "merge_verses": [
+    "Job 3:24"
+   ],
+   "keep_verses": [
+    "Gen 2:9",
+    "Job 24:5",
+    "Job 38:41"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h3899 in the ordinary sense of physical food: 'good for food' (Gen 2:9) and 'I sigh when food is put before me' (Job 3:24)."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Gen 2:9's 'good for food,' Job 38:41's 'provides food for the raven,' and Job 3:24's 'when food is put before me' all use h3899 in the same literal sense of food/nourishment."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 14,
+   "word": "g4102",
+   "merge": "fidelity",
+   "keep": "faith",
+   "merge_verses": [
+    "Titus 2:10"
+   ],
+   "keep_verses": [
+    "1Cor 13:13",
+    "Eph 6:16",
+    "Heb 11:1",
+    "Rom 5:1"
+   ],
+   "judge_a": {
+    "verdict": "different",
+    "why": "Titus 2:10 uses pistis as 'faithfulness/fidelity' ('showing all good faith'), whereas the kept card has pistis as saving belief/trust in God ('justified through faith,' Rom 5:1; 'faith, hope, and love,' 1 Cor 13:13)."
+   },
+   "judge_b": {
+    "verdict": "different",
+    "why": "The kept record is religious faith/belief in God (Rom 5:1 'justified through faith'; Heb 11:1 'the assurance of what we hope for'), whereas Titus 2:10's 'showing all good faith' is the distinct sense of faithfulness/trustworthiness in conduct, not saving belief."
+   },
+   "outcome": "kept apart: both different"
+  },
+  {
+   "pair": 15,
+   "word": "h4390",
+   "merge": "fill",
+   "keep": "replenish",
+   "merge_verses": [
+    "Job 3:15",
+    "Job 8:21",
+    "Job 15:2",
+    "Job 15:32"
+   ],
+   "keep_verses": [
+    "Gen 1:28"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h4390 in the ordinary transitive sense 'to fill': 'fill the earth' (Gen 1:28) and 'filled their houses with silver' / 'fill your mouth with laughter' (Job 3:15; 8:21)."
+   },
+   "judge_b": {
+    "verdict": "different",
+    "why": "The kept record uses h4390 transitively as 'fill' (Gen 1:28 'fill the earth'), but Job 15:32's 'It will be paid in full before his time' uses the word in the distinct sense of being complete/fulfilled, so merging would lose that sense."
+   },
+   "outcome": "kept apart: judges split"
+  },
+  {
+   "pair": 16,
+   "word": "g3408",
+   "merge": "flattery",
+   "keep": "reward",
+   "merge_verses": [
+    "Job 17:5"
+   ],
+   "keep_verses": [
+    "Gen 15:1",
+    "Job 6:22"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Job 17:5's 'denounces his friends for a price' uses the same payment/bribe sense as the kept card's 'offer me a bribe from your wealth' (Job 6:22) and the Balaam wages relation at 2Pe 2:15."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use g3408 in the same reward/payment sense: Gen 15:1 'your very great reward' and Job 6:22 'offer me a bribe from your wealth' already hold the sense, and Job 17:5 'for a price' uses it the same way."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 17,
+   "word": "h5971",
+   "merge": "folk",
+   "keep": "people",
+   "merge_verses": [
+    "Gen 33:15"
+   ],
+   "keep_verses": [
+    "Gen 14:16",
+    "Job 12:2"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Gen 33:15's 'some of my people' is the same collective h5971 sense as the kept card's 'the rest of the people' (Gen 14:16) and 'you are the people' (Job 12:2): a group of people."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Gen 33:15 'some of my people' is the ordinary collective/people-group sense of h5971 already present in Gen 14:16 'the rest of the people' and Job 12:2 'you are the people'; the possessive use adds no new sense."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 18,
+   "word": "h5971",
+   "merge": "souls",
+   "keep": "people",
+   "merge_verses": [
+    "Gen 12:5"
+   ],
+   "keep_verses": [
+    "Gen 14:16",
+    "Job 12:2"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Gen 12:5's 'the people they had acquired' is the same collective human-group sense as the kept card's 'the rest of the people' (Gen 14:16), and both are Abraham taking people."
+   },
+   "judge_b": {
+    "verdict": "different",
+    "why": "Gen 12:5 'people they had acquired in Haran' denotes acquired household/servants, whereas the first card's sense is a people group/nation, as in Gen 14:16 'the rest of the people' and Job 12:2 'you are the people'."
+   },
+   "outcome": "kept apart: judges split"
+  },
+  {
+   "pair": 19,
+   "word": "h8525",
+   "merge": "furrows",
+   "keep": "furrow",
+   "merge_verses": [
+    "Job 31:38"
+   ],
+   "keep_verses": [
+    "Job 39:10"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both are literal agricultural furrows: 'hold him to the furrow' (Job 39:10) and 'its furrows weep' (Job 31:38); singular versus plural is not a different sense."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both are literal agricultural furrow(s): Job 39:10 'hold him to the furrow with a harness' and Job 31:38 'its furrows weep together' use h8525 in the same sense, singular versus plural only."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 20,
+   "word": "h6806",
+   "merge": "goings",
+   "keep": "steps",
+   "merge_verses": [
+    "Job 34:21"
+   ],
+   "keep_verses": [
+    "Job 14:16"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Job 34:21's 'He sees his every step' uses the same figurative h6806 sense as the kept card's 'count my steps' (Job 14:16) and Job 31:37: human conduct observed by God."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h6806 for the steps of a person's life or conduct: Job 14:16 'You would count my steps' and Job 34:21 'He sees his every step' are the same figurative 'steps' sense, singular versus plural only."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 21,
+   "word": "h8064",
+   "merge": "heavens",
+   "keep": "heaven",
+   "merge_verses": [
+    "Gen 1:1",
+    "Gen 1:8",
+    "Gen 1:9",
+    "Gen 1:14"
+   ],
+   "keep_verses": [
+    "Gen 8:2",
+    "Job 1:16",
+    "Job 38:29",
+    "Job 38:33"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Gen 8:2 and Job 38:29 use h8064 for the sky/heavens from which rain and frost come, and Gen 1:8/14 use it for the expanse/sky where the lights are placed; the second card does not add a distinct sense beyond the first's 'sky over the earth.'"
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both records use h8064 for the sky/heavens above the earth: the first has \"the floodgates of the heavens were closed\" (Gen 8:2) and \"the laws of the heavens\" (Job 38:33), while the second's \"God called the expanse 'sky'\" (Gen 1:8) and \"lights in the expanse of the sky\" (Gen 1:14) are the same sense."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 22,
+   "word": "h5159",
+   "merge": "heritage",
+   "keep": "inheritance",
+   "merge_verses": [
+    "Job 20:29"
+   ],
+   "keep_verses": [
+    "Gen 31:14",
+    "Job 31:2"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Job 31:2 uses it for 'heritage from the Almighty' and Job 20:29 for 'the inheritance God has appointed him'; the first card already holds that divine-allotment sense, so the second verse would lose nothing."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "The second's only verse, \"the inheritance God has appointed him\" (Job 20:29), uses h5159 in the same God-appointed lot sense as the first already holds in \"the heritage from the Almighty on high\" (Job 31:2)."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 23,
+   "word": "h2555",
+   "merge": "injustice",
+   "keep": "violence",
+   "merge_verses": [
+    "Job 16:17"
+   ],
+   "keep_verses": [
+    "Gen 6:11",
+    "Isa 53:9"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Isa 53:9 'He had done no violence' and Job 16:17 'my hands are free of violence' use the same moral-wrongdoing sense as Gen 6:11's 'full of violence.'"
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Job 16:17, \"my hands are free of violence,\" uses h2555 in the same wrongdoing/innocence sense as Isa 53:9, \"He had done no violence,\" and Gen 6:11, \"full of violence.\""
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 24,
+   "word": "h2617",
+   "merge": "pity",
+   "keep": "kindness",
+   "merge_verses": [
+    "Job 6:14"
+   ],
+   "keep_verses": [
+    "Gen 21:23",
+    "Titus 3:4"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Gen 21:23 'the same kindness that I have shown to you' already holds the human covenant kindness/loyalty sense of Job 6:14 'the kindness of his friend.'"
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Job 6:14, \"A despairing man should have the kindness of his friend,\" uses h2617 for human loyal kindness, the same sense the first already holds in Gen 21:23: \"Show to me... the same kindness that I have shown to you.\""
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 25,
+   "word": "h4428",
+   "merge": "kings",
+   "keep": "king",
+   "merge_verses": [
+    "Job 12:18"
+   ],
+   "keep_verses": [
+    "Prov 1:1",
+    "Prov 8:15",
+    "Prov 14:28",
+    "Prov 14:35"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Prov 8:15 'By me kings reign' already holds the human ruler sense of Job 12:18 'He loosens the bonds placed by kings.'"
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "The second's \"He loosens the bonds placed by kings\" (Job 12:18) uses h4428 for human rulers, the same sense as the first's plural verse \"By me kings reign\" (Prov 8:15)."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 26,
+   "word": "h8198",
+   "merge": "maidservant",
+   "keep": "womenservants",
+   "merge_verses": [
+    "Gen 12:16",
+    "Gen 16:1",
+    "Gen 16:2",
+    "Gen 16:3"
+   ],
+   "keep_verses": [
+    "Gen 32:22"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Same household female servant/slave: Gen 32:22 'his two maidservants' and Gen 16:1 'an Egyptian maidservant named Hagar' both use h8198 for a household maidservant; Gen 12:16 and Gen 20:14 likewise list acquired maidservants."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both cards use h8198 for a female household servant/maidservant: Gen 32:22 ('his two maidservants') and Gen 16:1-3 (Hagar as Sarai's Egyptian maidservant) are the same role, singular versus plural only."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 27,
+   "word": "h1697",
+   "merge": "word",
+   "keep": "words",
+   "merge_verses": [
+    "Gen 30:34"
+   ],
+   "keep_verses": [
+    "Deut 6:6",
+    "Prov 1:2",
+    "Prov 1:21",
+    "Prov 2:1"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Same sense of spoken word(s)/speech: Deut 6:6 'these words I am commanding' and Prov 2:1 'my words' already hold the content of speech, while Gen 30:34 'as you have said' and Gen 44:18 'speak a word' are the singular of that same spoken-word idea."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both cards use h1697 for speech/words: Deut 6:6 ('these words'), Prov 2:1 ('my words'), and Gen 30:34 ('let it be as you have said') are all the same sense of spoken or commanded words, not different ideas."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 28,
+   "word": "h108",
+   "merge": "mist",
+   "keep": "vapor",
+   "merge_verses": [
+    "Gen 2:6"
+   ],
+   "keep_verses": [
+    "Job 36:27",
+    "Job 36:33"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both are the same rare term h108 for mist/vapor: Job 36:27 'rain from the mist' and Gen 2:6 (h108, rendered 'springs' in English) denote the vapor/water-source rising and watering; the English word is not a separate Hebrew sense."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h108 for mist/vapor rising from the earth/water: Job 36:27 ('distill the rain from the mist') and Gen 2:6 (the mist/springs watering the ground) are the same thing, not two senses."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 29,
+   "word": "h6174",
+   "merge": "the_naked",
+   "keep": "naked",
+   "merge_verses": [
+    "Job 24:7"
+   ],
+   "keep_verses": [
+    "Job 1:21"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Same literal bodily nakedness: Job 24:7 'Without clothing, they spend the night naked' and Job 22:6/24:10, like Gen 3:10-11 in the first card ('I was afraid because I was naked'), use h6174 for lacking clothing."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h6174 for literal nakedness without clothing: Job 1:21 ('naked I came... and naked I will return') and Job 24:7 ('they spend the night naked') are the same condition, not figurative versus literal."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 30,
+   "word": "h1471",
+   "merge": "nation",
+   "keep": "nations",
+   "merge_verses": [
+    "Gen 17:20",
+    "Job 34:29"
+   ],
+   "keep_verses": [
+    "Gen 10:31",
+    "Gen 10:32",
+    "Job 12:23"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Same people-group/nation sense: Gen 10:32 'nations of the earth' and Job 12:23 'He makes nations great' already hold h1471 for peoples; Gen 17:20 'a great nation' and Job 34:29 'man and nation' are the singular of the same idea."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h1471 for a people/nation: Gen 10:31-32 ('their... nations') and Gen 17:20 ('a great nation') are the same sense, singular versus plural only."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 31,
+   "word": "h8001",
+   "merge": "welfare",
+   "keep": "prosperity",
+   "merge_verses": [
+    "Job 30:15"
+   ],
+   "keep_verses": [
+    "Gen 24:21",
+    "Job 15:21"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Gen 24:21 and Job 15:21 in the first card already cover the state of a person's God-given success/prosperity, and Job 30:15 uses the same state: 'my prosperity has passed like a cloud.'"
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both use h8001 for a person's state of well-being/prosperity: \"in his prosperity\" (Job 15:21) and \"my prosperity has passed\" (Job 30:15); Gen 24:21's \"success\" is the same favorable outcome."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 32,
+   "word": "h6486",
+   "merge": "punishments",
+   "keep": "punishment",
+   "merge_verses": [
+    "Job 19:29"
+   ],
+   "keep_verses": [
+    "Gen 4:13",
+    "Job 31:3"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "The first card already has divine punishment/calamity for sin: 'My punishment is greater than I can bear' (Gen 4:13) and calamity for 'the workers of iniquity' (Job 31:3); the second is the same retribution, 'wrath brings punishment by the sword' (Job 19:29)."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both denote punitive visitation/judgment on wrongdoing: Cain's \"punishment\" (Gen 4:13) and \"wrath brings punishment by the sword... there is a judgment\" (Job 19:29); Job 31:3 likewise regards calamity as the portion of workers of iniquity."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 33,
+   "word": "h3220",
+   "merge": "seas",
+   "keep": "sea",
+   "merge_verses": [
+    "Gen 1:10"
+   ],
+   "keep_verses": [
+    "Job 9:8"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both are the literal created sea(s). The first already has the sea as God shut it in ('Who enclosed the sea behind doors', Job 38:8), and Gen 1:10 uses the plural for the same created waters: 'the gathering of waters He called seas.'"
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both refer to the same literal body of water, only singular vs plural: \"waves of the sea\" (Job 9:8) and \"the gathering of waters He called seas\" (Gen 1:10)."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 34,
+   "word": "h5647",
+   "merge": "serve",
+   "keep": "service",
+   "merge_verses": [
+    "Job 21:15"
+   ],
+   "keep_verses": [
+    "Deut 6:13",
+    "Gen 29:27",
+    "Gen 29:30"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "The first card already includes serving both God ('serve Him only', Deut 6:13) and a human master (Jacob's labor for Laban, Gen 29:27-30); the second has the same two uses: 'that we should serve Him' (Job 21:15) and Job 39:9's wild ox serving a human."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "The first record already holds both uses of h5647: serving God (Deut 6:13) and serving/working for a man (Gen 29:27,30); the second repeats those same two uses, serving God in Job 21:15 and serving a master in Job 39:9."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 35,
+   "word": "h226",
+   "merge": "signs",
+   "keep": "token",
+   "merge_verses": [
+    "Gen 1:14"
+   ],
+   "keep_verses": [
+    "Gen 9:12"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use the word for a visible God-given sign that indicates something: the rainbow is 'the sign of the covenant' (Gen 9:12), and the lights are 'signs to mark the seasons and days and years' (Gen 1:14)."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Both are visible tokens appointed by God as signs: \"This is the sign of the covenant\" (Gen 9:12) and \"let them be signs to mark the seasons...\" (Gen 1:14)."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 36,
+   "word": "h6662",
+   "merge": "the_just",
+   "keep": "the_righteous",
+   "merge_verses": [
+    "Job 27:17"
+   ],
+   "keep_verses": [
+    "Ps 34:15",
+    "Ps 34:17",
+    "Ps 34:19",
+    "Ps 34:21"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h6662 as a substantive for righteous people as a class: Ps 34:17 'The righteous cry out, and the LORD hears' and Job 27:17 'the righteous will wear' do the same job, so one card loses nothing."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Job 27:17 'what he lays up, the righteous will wear' uses h6662 for the righteous as a class of people, the same sense as Ps 34:15 'the eyes of the LORD are on the righteous'; singular/plural is only a number difference."
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 37,
+   "word": "h490",
+   "merge": "widows",
+   "keep": "widow",
+   "merge_verses": [
+    "Job 22:9"
+   ],
+   "keep_verses": [
+    "Gen 38:11",
+    "Job 24:3"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h490 for the same class of women whose husbands are dead: Gen 38:11 'Live as a widow...' and Job 22:9 'You sent widows away empty-handed' are the same sense, differing only in singular versus plural."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Job 22:9 'You sent widows away empty-handed' uses h490 in the same literal sense of women whose husbands have died as Gen 38:11 'Live as a widow' and Job 24:3 'the widow's ox.'"
+   },
+   "outcome": "merged"
+  },
+  {
+   "pair": 38,
+   "word": "h8141",
+   "merge": "year",
+   "keep": "years",
+   "merge_verses": [
+    "Job 3:6"
+   ],
+   "keep_verses": [
+    "Gen 1:14",
+    "Job 10:5"
+   ],
+   "judge_a": {
+    "verdict": "same",
+    "why": "Both use h8141 for a year/years as a unit of time: Gen 1:14 '...seasons and days and years' and Job 3:6 '...the days of the year' are the same sense, differing only in singular versus plural."
+   },
+   "judge_b": {
+    "verdict": "same",
+    "why": "Job 3:6 'among the days of the year' uses h8141 as a unit/calendar year, the same sense as Gen 1:14 'days and years' and Job 10:5 'Your years like those of a man'; singular/plural is only number."
+   },
+   "outcome": "merged"
+  }
+ ]
+}

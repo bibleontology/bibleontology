@@ -161,7 +161,8 @@ def faults(src, server_src):
     if re.search(r"\bcatch\b|innerHTML|textContent|appendChild|\.append\(|\.remove\(", api):
         out.append("api() catches or draws something: a failed request would cover the server's copy")
     note = span(js, r"const _restartNote\s*=", r"^\};")
-    guard = re.search(r"if\(n \|\| _serverCopyShows\(\)\) return;", note)
+    # U-35 (2026-11-14): over a server copy the notice is not drawn over it; a one-line note goes above it instead
+    guard = re.search(r"if\(_serverCopyShows\(\)\)\{ _savedCopyNote\(true\); return; \}", note)
     if not guard or note.index("_serverCopyShows") > note.index("createElement"):
         out.append("the restart notice is drawn over a server copy: it must yield to _serverCopyShows() first")
     shows = span(js, r"const _serverCopyShows\s*=", r";\n")
@@ -170,7 +171,7 @@ def faults(src, server_src):
     outside = re.sub(re.escape(shows), "", js)
     for m in re.finditer(r"[^\n]*(['\"`#.]ssr\b|id=.ssr)[^\n]*", outside):
         line = m.group(0)
-        if not line.lstrip().startswith(("/*", "//", "*")) and "ssr-" not in line:
+        if not line.lstrip().startswith(("/*", "//", "*")) and "ssr-" not in line and not re.search(r"USER_ACTED|_serverCopyEl = ", line):
             out.append(f"script touches the server's copy outside _serverCopyShows: {line.strip()[:90]}")
     if re.search(r"addEventListener\(\s*['\"](unhandledrejection|error)['\"]|window\.onerror", js):
         out.append("a global error handler: an unanswered request must leave the page as the server sent it")
@@ -230,7 +231,7 @@ plant("arrived() called at boot, before any address is drawn",
       expect='the boot script adds')
 
 plant("an error notice drawn over a server copy: the restart notice no longer yields",
-      src=replaced(SRC, "if(n || _serverCopyShows()) return;", "if(n) return;"),
+      src=replaced(SRC, "if(_serverCopyShows()){ _savedCopyNote(true); return; }", "if(n) return;"),
       expect='restart notice')
 
 plant("an error notice drawn over a server copy: api() writes one into the pane when a request fails",

@@ -3,11 +3,12 @@
 {"certainty": "explicit", "dst": "othniel", "note": "Caleb gave Acsah as bride to Othniel", "refs": ["Josh 15:17"], "source": "josh-judg-ruth", "src": "achsah", "type": "spouse_of"}
 {"certainty": "explicit", "dst": "shamgar", "refs": ["Judg 3:31"], "source": "josh-judg-ruth", "src": "anath", "type": "father_of"}
 {"certainty": "explicit", "dst": "deborah", "note": "Deborah went with Barak to battle against Sisera and Jabin", "refs": ["Judg 4:8-9"], "source": "josh-judg-ruth", "src": "barak", "type": "ally_of"}
+{"certainty": "explicit", "dst": "barak", "refs": ["Judg 4:6"], "source": "josh-judg-ruth", "src": "deborah", "type": "spoke_to", "note": "'She summoned Barak son of Abinoam ... and said to him' (Judg 4:6)."}
 {"certainty": "explicit", "dst": "balaam", "note": "'Balaam son of Beor'", "refs": ["Josh 13:22", "2Pet 2:15"], "source": "josh-judg-ruth,jude-2pet", "src": "beor_father_of_balaam", "type": "father_of"}
 {"certainty": "explicit", "dst": "obed", "note": "Obed was born to Boaz and Ruth", "refs": ["Ruth 4:13", "Luke 3:32", "Matt 1:5"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "boaz", "type": "father_of"}
 {"certainty": "explicit", "dst": "ruth", "refs": ["Ruth 4:13"], "source": "josh-judg-ruth", "src": "boaz", "type": "spouse_of"}
 {"certainty": "explicit", "dst": "achsah", "refs": ["Josh 15:16"], "source": "josh-judg-ruth", "src": "caleb", "type": "father_of"}
-{"certainty": "implied", "dst": "othniel", "note": "Othniel is called Caleb's brother and is son of Kenaz", "refs": ["Josh 15:17"], "source": "josh-judg-ruth", "src": "caleb", "type": "sibling_of"}
+{"certainty": "implied", "dst": "othniel", "note": "Othniel is called Caleb's brother and is son of Kenaz", "refs": ["Josh 15:17"], "source": "josh-judg-ruth", "src": "caleb", "type": "sibling_of", "held": "the Berean reads Josh 15:17 and Judg 1:13, 3:9 as 'Othniel son of Caleb's (younger) brother Kenaz': Othniel is Caleb's nephew, not his brother; the Hebrew order is open and the original arbitrates only where it settles it. Recorded instead: kenaz sibling_of caleb, kenaz father_of othniel, caleb father_of achsah spouse_of othniel"}
 {"certainty": "explicit", "dst": "achan", "refs": ["Josh 7:1"], "source": "josh-judg-ruth", "src": "carmi_son_of_zabdi", "type": "father_of"}
 {"certainty": "explicit", "dst": "orpah", "note": "They took wives of Moab", "refs": ["Ruth 1:4"], "source": "josh-judg-ruth", "src": "chilion", "type": "spouse_of"}
 {"certainty": "implied", "dst": "gideon", "note": "Gideon's narrative immediately follows Deborah's era of rest and judges Israel next", "refs": ["Judg 6:11"], "source": "josh-judg-ruth", "src": "deborah", "type": "predecessor_of"}
@@ -31,7 +32,7 @@
 {"certainty": "explicit", "dst": "zebah", "refs": ["Judg 8:21"], "source": "josh-judg-ruth", "src": "gideon", "type": "killed"}
 {"certainty": "explicit", "dst": "tola", "note": "After Gideon's 40-year peace, Tola arose", "refs": ["Judg 8:28-10:1"], "source": "josh-judg-ruth", "src": "gideon", "type": "predecessor_of"}
 {"certainty": "explicit", "dst": "jael", "refs": ["Judg 4:17"], "source": "josh-judg-ruth", "src": "heber", "type": "spouse_of"}
-{"certainty": "explicit", "dst": "ram_son_of_hezron", "refs": ["Ruth 4:19", "Luke 3:33", "Matt 1:3"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "hezron_son_of_pharez", "type": "father_of"}
+{"certainty": "explicit", "dst": "ram_son_of_hezron", "refs": ["Ruth 4:19", "Luke 3:33", "Matt 1:3", "1Chr 2:9"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "hezron_son_of_pharez", "type": "father_of"}
 {"certainty": "explicit", "dst": "abdon", "refs": ["Judg 12:13"], "source": "josh-judg-ruth", "src": "hillel", "type": "father_of"}
 {"certainty": "explicit", "dst": "elon_judge", "note": "After Ibzan judged 7 years and died, Elon arose", "refs": ["Judg 12:8-11"], "source": "josh-judg-ruth", "src": "ibzan", "type": "predecessor_of"}
 {"certainty": "explicit", "dst": "sisera", "refs": ["Judg 4:21"], "source": "josh-judg-ruth", "src": "jael", "type": "killed"}
@@ -40,13 +41,14 @@
 {"certainty": "explicit", "dst": "ibzan", "note": "After Jephthah judged 6 years and died, Ibzan judged", "refs": ["Judg 11:39-12:8"], "source": "josh-judg-ruth", "src": "jephthah", "type": "predecessor_of"}
 {"certainty": "explicit", "dst": "gideon", "refs": ["Judg 6:11"], "source": "josh-judg-ruth", "src": "joash_father_of_gideon", "type": "father_of"}
 {"certainty": "explicit", "dst": "othniel", "refs": ["Josh 15:17"], "source": "josh-judg-ruth", "src": "kenaz", "type": "father_of"}
+{"certainty": "explicit", "dst": "caleb", "refs": ["Josh 15:17", "Judg 1:13", "Judg 3:9"], "source": "josh-judg-ruth", "src": "kenaz", "type": "sibling_of", "note": "'Othniel son of Caleb's younger brother Kenaz' (Judg 1:13, 3:9); Josh 15:17 reads 'Caleb's brother Kenaz'."}
 {"certainty": "explicit", "dst": "micah", "note": "Micah hired the Levite to serve as his priest", "refs": ["Judg 17:10"], "source": "josh-judg-ruth", "src": "levite_of_bethlehem", "type": "servant_of"}
 {"certainty": "explicit", "dst": "ruth", "note": "Ruth was the wife of Mahlon", "refs": ["Ruth 4:10"], "source": "josh-judg-ruth", "src": "mahlon", "type": "spouse_of"}
 {"certainty": "explicit", "dst": "samson", "refs": ["Judg 13:24"], "source": "josh-judg-ruth", "src": "manoah", "type": "father_of"}
 {"certainty": "explicit", "dst": "salmon", "refs": ["Ruth 4:20", "Luke 3:32", "Matt 1:4"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "nahshon", "type": "father_of"}
 {"certainty": "explicit", "dst": "jesse", "note": "Jesse was son of Obed", "refs": ["Ruth 4:17", "Luke 3:32", "Matt 1:5"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "obed", "type": "father_of"}
 {"certainty": "explicit", "dst": "ehud", "note": "Othniel's 40 years of rest ended, then Ehud arose", "refs": ["Judg 3:11"], "source": "josh-judg-ruth", "src": "othniel", "type": "predecessor_of"}
-{"certainty": "explicit", "dst": "hezron_son_of_pharez", "refs": ["Ruth 4:18", "Luke 3:33", "Matt 1:3"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "pharez", "type": "father_of"}
+{"certainty": "explicit", "dst": "hezron_son_of_pharez", "refs": ["Ruth 4:18", "Luke 3:33", "Matt 1:3", "1Chr 2:5"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "pharez", "type": "father_of"}
 {"certainty": "explicit", "dst": "tola", "refs": ["Judg 10:1"], "source": "josh-judg-ruth", "src": "puah", "type": "father_of"}
 {"certainty": "explicit", "dst": "amminadab", "refs": ["Ruth 4:19", "Luke 3:33", "Matt 1:4"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "ram_son_of_hezron", "type": "father_of"}
 {"certainty": "explicit", "dst": "boaz", "note": "Boaz was son of Salmon", "refs": ["Ruth 4:21", "Luke 3:32", "Matt 1:5"], "source": "josh-judg-ruth,mark-luke-john,matt", "src": "salmon", "type": "father_of"}

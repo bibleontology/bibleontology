@@ -1,10 +1,11 @@
-# Bible Ontology -- alignment: our terms mapped to their nearest equivalents in five standard
+# Bible Ontology -- alignment: our terms mapped to their nearest equivalents in six standard
 # vocabularies, as SKOS mapping properties, declared here as owl:AnnotationProperty.
 # Each mapping's reason is the comment above it; the page is https://bibleontology.org/ns/alignment
 
 @prefix bom: <https://bibleontology.org/ns/meaning#> .
 @prefix bor: <https://bibleontology.org/ns/relation#> .
 @prefix bos: <https://bibleontology.org/ns/structure#> .
+@prefix cito: <http://purl.org/spar/cito/> .
 @prefix claim: <https://bibleontology.org/ns/claim#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -21,12 +22,12 @@
     dcterms:title "Bible Ontology — alignment" ;
     rdfs:label "Bible Ontology — alignment" ;
     dcterms:creator "Doug Egge" ;
-    owl:versionInfo "1.5.0" ;
-    owl:versionIRI <https://bibleontology.org/ns/alignment/2026-11-12> ;
-    dcterms:modified "2026-11-12"^^xsd:date ;
+    owl:versionInfo "1.7.0" ;
+    owl:versionIRI <https://bibleontology.org/ns/alignment/2026-11-20> ;
+    dcterms:modified "2026-11-20"^^xsd:date ;
     dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    rdfs:comment "Our terms mapped to their nearest equivalents in schema.org, FOAF, CIDOC CRM, OntoLex-Lemon and Web Annotation, as SKOS mapping properties: closeMatch (near enough for most queries, never the same), broadMatch (theirs is broader), narrowMatch (theirs is narrower), relatedMatch (associated, not interchangeable). No exactMatch. A mapping commits a reasoner to nothing beyond typing both ends as skos:Concept, which SKOS entails (punning, permitted in OWL 2); here the four mapping properties are declared as annotation properties. A mapping says how the text presents a person, place or event; none takes a view on historicity. The alignments the vocabularies state themselves (subclasses and subproperties of PROV, OntoLex and SKOS terms; DQV terms are used only as types) are in the vocabularies." ;
+    rdfs:comment "Our terms mapped to their nearest equivalents in schema.org, FOAF, CIDOC CRM, OntoLex-Lemon, Web Annotation and CiTO, as SKOS mapping properties: closeMatch (near enough for most queries, never the same), broadMatch (theirs is broader), narrowMatch (theirs is narrower), relatedMatch (associated, not interchangeable). No exactMatch. A mapping commits a reasoner to nothing beyond typing both ends as skos:Concept, which SKOS entails (punning, permitted in OWL 2); here the four mapping properties are declared as annotation properties. A mapping says how the text presents a person, place or event; none takes a view on historicity. The alignments the vocabularies state themselves (subclasses and subproperties of PROV, OntoLex and SKOS terms; DQV terms are used only as types) are in the vocabularies." ;
     rdfs:seeAlso <https://bibleontology.org/ns/meaning>, <https://bibleontology.org/ns/structure>, <https://bibleontology.org/ns/relation>, <https://bibleontology.org/ns/claim> .
 
 skos:closeMatch a owl:AnnotationProperty .
@@ -132,3 +133,25 @@ claim:Claim skos:relatedMatch schema:Claim .
 bom:Reading skos:relatedMatch crm:E13_Attribute_Assignment .
 # One reader's claim about the text, with the reader and its evidence; an annotation is a body about a target, with its creator.
 bom:Reading skos:relatedMatch oa:Annotation .
+# Where an event happened. CIDOC's domain is E4 Period, of which E5 Event is a subclass, so an event's place is P7.
+bor:took_place_at skos:closeMatch crm:P7_took_place_at .
+# schema.org's location is where an event is happening; it also serves organizations and actions, which ours never does.
+bor:took_place_at skos:closeMatch schema:location .
+# Who took part in an event. CIDOC's participant is active or passive and an E39 Actor, so people; ours is the doer only, and God and angels act in events too, who are not CIDOC actors.
+bor:acted_in skos:relatedMatch crm:P11i_participated_in .
+# The event to the one it happens to, a passive participant. CIDOC's participant is any actor, active or passive; ours is only the one who undergoes it, and may be a being CIDOC does not count as an actor.
+bor:happens_to skos:relatedMatch crm:P11_had_participant .
+# FOAF's knows is between two people; ours also covers knowing a thing, a place or a deed, so theirs is narrower.
+bor:knows skos:narrowMatch foaf:knows .
+# schema.org's knows is Person to Person, 'the most generic bi-directional social/work relation'; ours also covers knowing a thing, and it runs one way.
+bor:knows skos:narrowMatch schema:knows .
+# Testimony refers to what it is about. CIDOC's P67 is a propositional object's reference; ours is a person or a text bearing witness, so the two are associated, not interchangeable (as speaks_of).
+bor:testifies_about skos:relatedMatch crm:P67_refers_to .
+# An object or creature is one of a kind. CIDOC's P2 points to an E55 Type; ours points to another record of the graph that stands for the kind (the stones), so they are associated.
+bor:kind_of skos:relatedMatch crm:P2_has_type .
+# CiTO: 'the citing entity includes one or more quotations from the cited entity'. Ours is between verses, as the Berean editors note it.
+bor:quotes skos:closeMatch cito:includesQuotationFrom .
+# CiTO's cites is the citing entity's own citation; ours is a link the Berean editors make from one verse to another, in a note or a section's list, so the citing is theirs, not the verse's.
+bor:points_to skos:relatedMatch cito:cites .
+# CiTO's cites includes citing 'indirectly or implicitly (e.g. as in artistic quotations or parodies)'; an allusion takes up words or an image without quoting, an implicit citation, so theirs is broader. Ours is always a reading.
+bor:alludes_to skos:broadMatch cito:cites .

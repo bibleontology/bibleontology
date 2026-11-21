@@ -1,0 +1,202 @@
+{
+ "akas": {
+  "israelites": {
+   "card": "children_of_israel",
+   "reason": "the Israelites are the sons of Israel, the whole people; each row is judged for the period the verse names"
+  },
+  "disciples": {
+   "card": "disciples_of_jesus",
+   "refs": [
+    "Mat.",
+    "Mrk.",
+    "Luk.",
+    "Jhn."
+   ],
+   "reason": "in the Gospels 'the disciples' are Jesus's; Acts 21:5 (Paul's disciples at Tyre) is left out"
+  },
+  "jeshurun": {
+   "card": "children_of_israel",
+   "refs": [
+    "Deu.",
+    "Isa."
+   ],
+   "reason": "Jeshurun is a poetic name for Israel the people (Isa 44:2 pairs it with Jacob my servant)"
+  },
+  "centurion": {
+   "card": "julius_centurion",
+   "refs": [
+    "Act.27."
+   ],
+   "reason": "the centurion of Acts 27 is the Julius named at 27:1"
+  },
+  "people of jabesh-gilead": {
+   "card": "men_of_jabesh_gilead",
+   "reason": "the same inhabitants of Jabesh-gilead"
+  },
+  "corinthians": {
+   "card": "church_at_corinth",
+   "refs": [
+    "1Co.",
+    "2Co."
+   ],
+   "reason": "the Corinthians Paul addresses are the church at Corinth"
+  },
+  "hiram king of tyre": {
+   "card": "hiram",
+   "reason": "Hiram's card is the king of Tyre"
+  },
+  "herod the tetrarch": {
+   "card": "herod_antipas",
+   "reason": "the card's own description: Herod the tetrarch"
+  },
+  "king shishak of egypt": {
+   "card": "shishak",
+   "reason": "Shishak is the king of Egypt who invaded under Rehoboam"
+  },
+  "hadadezer of zobah": {
+   "card": "hadadezer_king_of_zobah",
+   "reason": "Hadadezer king of Zobah"
+  },
+  "heber the kenite": {
+   "card": "heber",
+   "reason": "the Kenite whose tent Sisera fled to"
+  }
+ },
+ "judged": [
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "jacobs_pillar",
+    "note": "the Israelites in attendance went out to the cities of Judah and broke up the sacred pillars",
+    "refs": [
+     "2Ch 31:1"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "children_of_israel",
+    "type": "destroyed"
+   },
+   "verdict": "reject",
+   "reason": "wrong card: jacobs_pillar is the pillar Jacob set up; the verse's sacred pillars are the idolatrous ones"
+  },
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "pillars",
+    "note": "the Israelites in attendance went out to the cities of Judah and broke up the sacred pillars",
+    "refs": [
+     "2Ch 31:1"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "children_of_israel",
+    "type": "destroyed"
+   },
+   "verdict": "reject",
+   "reason": "word-only: the pillars card has no description and names the generic word, not the sacred pillars of 2Ch 31:1"
+  },
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "hearing",
+    "note": "Herod the tetrarch heard the reports about Jesus",
+    "refs": [
+     "Mat 14:1"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "herod_antipas",
+    "type": "heard"
+   },
+   "verdict": "reject",
+   "reason": "word-only: 'hearing' is a word card; what Herod heard was reports about Jesus"
+  },
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "every_man",
+    "note": "all the people of Jabesh-gilead heard",
+    "refs": [
+     "1Ch 10:11"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "men_of_jabesh_gilead",
+    "type": "heard"
+   },
+   "verdict": "reject",
+   "reason": "wrong card: every_man is a word card; the verse's object is what the Philistines had done to Saul"
+  },
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "spoil",
+    "note": "They also carried off a great deal of plunder",
+    "refs": [
+     "2Ch 28:8"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "children_of_israel",
+    "type": "carried"
+   },
+   "verdict": "keep",
+   "reason": "the Israelites took plunder to Samaria; the spoil card is the thing named and the verse states the act"
+  },
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "hear",
+    "note": "Herod the tetrarch heard the reports about Jesus",
+    "refs": [
+     "Mat 14:1"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "herod_antipas",
+    "type": "heard"
+   },
+   "verdict": "reject",
+   "reason": "word-only: 'hear' is a word card; what Herod heard was reports about Jesus"
+  },
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "grace_of_god",
+    "note": "For you know the grace of our Lord Jesus Christ",
+    "refs": [
+     "2Co 8:9"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "church_at_corinth",
+    "type": "knows"
+   },
+   "verdict": "reject",
+   "reason": "grace_of_god is the grace of God; the verse says the grace of our Lord Jesus Christ (a divine end, held)"
+  },
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "all_nations_of_the_earth",
+    "note": "all the people of Jabesh-gilead heard",
+    "refs": [
+     "1Ch 10:11"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "men_of_jabesh_gilead",
+    "type": "heard"
+   },
+   "verdict": "reject",
+   "reason": "wrong card: all_nations_of_the_earth is not what the men heard"
+  },
+  {
+   "row": {
+    "certainty": "explicit",
+    "dst": "all",
+    "note": "all the people of Jabesh-gilead heard",
+    "refs": [
+     "1Ch 10:11"
+    ],
+    "source": "structure-relations-2026-11-13",
+    "src": "men_of_jabesh_gilead",
+    "type": "heard"
+   },
+   "verdict": "reject",
+   "reason": "wrong card: 'all' is a word card; the verse's object is what the Philistines had done to Saul"
+  }
+ ]
+}

@@ -143,7 +143,8 @@ check(desc_faults("Exodus 30:18 (BSB): “...for washing.”."), "planted: a dou
 # ---- 7. names
 check("Son And Holy" not in supper, "'Father, Son And Holy Spirit' on the Last Supper page")
 items = [it for g in S.api_entity(d, {"id": ["event_last_supper"]})["groups"] for it in g["items"]
-         if it["type"] == "in_theme" and "major theme" in (it.get("label") or "")]
+         # R-11 (2026-11-14) reworded the label "is in the major-theme map under": either spelling counts
+         if it["type"] == "in_theme" and re.search(r"major[ -]theme", it.get("label") or "")]
 bare = [it["name"] for it in items if "(major theme)" not in it["name"]]
 check(items and not bare, f"major themes named as bare concepts: {bare}")
 

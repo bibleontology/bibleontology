@@ -1,0 +1,29 @@
+
+:root{--bg:#fbf8f2;--ink:#1d1b17;--mute:#6b645a;--rule:#d9d1c3;--basis:#c26a00;--action:#1f5fbf;--cond:#6a3fb5;--life:#2e8b3e;--link:#1f5fbf}
+@media (prefers-color-scheme:dark){:root{--bg:#16140f;--ink:#efe9dd;--mute:#a59d90;--rule:#3a352c;--basis:#ffa53a;--action:#5aa2ff;--cond:#b48cff;--life:#55d16a;--link:#7db4ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Georgia,'Times New Roman',serif}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 16px 40px}
+.kicker{font:600 11px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.chip{font:13px system-ui,sans-serif;padding:5px 12px;border:1px solid var(--rule);border-radius:16px;color:var(--mute)}
+.chip.on{border-color:var(--ink);color:var(--ink);font-weight:600}
+h1{font-size:32px;margin:14px 0 2px}.sub{color:var(--mute);margin:0 0 18px}
+.layer{border-top:1px solid var(--rule);padding:14px 0 6px}
+.lh{font:600 11px system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+.words{display:flex;flex-wrap:wrap;gap:6px 4px}
+.w{display:flex;flex-direction:column;align-items:center;padding:4px 7px 5px;border-radius:6px;border-bottom:3px solid transparent;text-decoration:none;color:inherit;min-width:44px}
+.w:hover{background:rgba(127,127,127,.12)}
+.w .gk{font-size:24px;font-family:"Gentium Plus","Palatino Linotype",Palatino,"Noto Serif","Times New Roman",serif}.w .tr{font:italic 13px Georgia,serif;color:var(--mute)}.w .gl{font:12.5px system-ui,sans-serif;color:var(--ink)}
+.w.conn .gk{font-weight:700}
+.bsb{font-size:22px;line-height:1.55}
+.bsb span{border-bottom:3px solid transparent;padding-bottom:1px}
+.lit{background:rgba(255,200,60,.28);border-radius:4px}
+.dim{opacity:.28}
+svg{width:100%;height:auto;display:block}
+.gks{font-family:"Gentium Plus","Palatino Linotype",Palatino,"Noto Serif","Times New Roman",serif}
+.node{cursor:pointer}.node:hover rect{stroke-width:3}
+.tie{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 24px;font:14px system-ui,sans-serif}
+.tie h4{margin:0 0 4px;font:600 12px system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.tie a{color:var(--link)}.tie p{margin:2px 0}
+.note{font:12.5px system-ui,sans-serif;color:var(--mute);margin-top:18px}
+.nav{display:inline-block;margin-top:8px;font:600 13px system-ui,sans-serif;padding:7px 14px;border-radius:18px;background:var(--ink);color:var(--bg);text-decoration:none}

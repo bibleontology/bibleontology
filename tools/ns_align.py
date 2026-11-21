@@ -11,7 +11,7 @@ things:
     are part of the vocabularies and an RDFS reasoner acts on them. Read from
     the vocabularies, not repeated in the file.
   - MAPPED HERE: skos:closeMatch, broadMatch, narrowMatch, relatedMatch to
-    schema.org, FOAF, CIDOC CRM, OntoLex and Web Annotation, from
+    schema.org, FOAF, CIDOC CRM, OntoLex, Web Annotation and CiTO (from 2026-11-19), from
     ontology/align/alignment.yaml. A closeMatch says "near enough for most
     queries", never "the same". No exactMatch, by policy. A mapping commits a
     reasoner to nothing beyond typing both ends as skos:Concept (SKOS entails
@@ -52,11 +52,14 @@ VOCABS = [("schema", "schema.org", "https://schema.org/"),
           ("foaf", "FOAF", "http://xmlns.com/foaf/spec/"),
           ("crm", "CIDOC CRM", "https://cidoc-crm.org/"),
           ("ontolex", "OntoLex-Lemon", "https://www.w3.org/2016/05/ontolex/"),
-          ("oa", "Web Annotation", "https://www.w3.org/TR/annotation-vocab/")]
+          ("oa", "Web Annotation", "https://www.w3.org/TR/annotation-vocab/"),
+          # the sixth (Doug, 2026-11-19: "Yes, and add CiTO"), for the verse-to-verse relations of 1.5.0
+          ("cito", "CiTO", "https://sparontologies.github.io/cito/current/cito.html")]
 STANDARD = {"prov": "http://www.w3.org/ns/prov#", "ontolex": "http://www.w3.org/ns/lemon/ontolex#",
             "skos": "http://www.w3.org/2004/02/skos/core#", "dqv": "http://www.w3.org/ns/dqv#",
             "schema": "https://schema.org/", "foaf": "http://xmlns.com/foaf/0.1/",
             "crm": "http://www.cidoc-crm.org/cidoc-crm/", "oa": "http://www.w3.org/ns/oa#",
+            "cito": "http://purl.org/spar/cito/",
             "dcterms": "http://purl.org/dc/terms/"}
 
 
@@ -105,7 +108,7 @@ def curie(u):
 
 
 def turtle(pre, rows):
-    lines = ["# Bible Ontology -- alignment: our terms mapped to their nearest equivalents in five standard",
+    lines = ["# Bible Ontology -- alignment: our terms mapped to their nearest equivalents in six standard",
              "# vocabularies, as SKOS mapping properties, declared here as owl:AnnotationProperty.",
              "# Each mapping's reason is the comment above it; the page is https://bibleontology.org/ns/alignment",
              ""]
@@ -127,7 +130,7 @@ def turtle(pre, rows):
     if NC.LICENSE:
         head.append(f"    dcterms:license <{NC.LICENSE}>")
     head.append('    rdfs:comment "Our terms mapped to their nearest equivalents in schema.org, FOAF, CIDOC CRM, '
-                'OntoLex-Lemon and Web Annotation, as SKOS mapping properties: closeMatch (near enough for most '
+                'OntoLex-Lemon, Web Annotation and CiTO, as SKOS mapping properties: closeMatch (near enough for most '
                 'queries, never the same), broadMatch (theirs is broader), narrowMatch (theirs is narrower), '
                 'relatedMatch (associated, not interchangeable). No exactMatch. A mapping commits a reasoner to '
                 'nothing beyond typing both ends as skos:Concept, which SKOS entails (punning, permitted in OWL 2); '

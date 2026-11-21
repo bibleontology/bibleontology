@@ -30,7 +30,7 @@ from bibleont.refs import parse_ref  # noqa: E402
 JOBS, DONE = ROOT / "out" / "grunt" / "jobs", ROOT / "out" / "grunt" / "done"
 NAME = "2b-event-links"
 OPTIONS = {"temperature": 0, "num_ctx": 6144}
-DIVINE = {"god", "holy_ghost", "the_father", "jesus", "spirit", "spirit_of_god"}
+DIVINE = {"god", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible", "the_father", "jesus", "spirit", "spirit_of_god"}
 MAXV = 8  # verses of the span shown; a longer span shows its first eight
 
 BRIEF_WHO = """You check a Bible knowledge graph against the text. You get an EVENT (its name, a one-line account, and \

@@ -324,7 +324,7 @@ ACTS = [
          eng=["accused", "accuse", "accuser", "brought charges", "has a case against", "a charge against",
               "brings a charge against"],
          rel=["accused"]),
-    dict(n=21, id="defence", name="Defence", sigs=["g626", "g627"],
+    dict(n=21, id="defence", name="Defense", sigs=["g626", "g627"],
          eng=["defend myself", "my defense", "argue my case"]),
     dict(n=23, id="taunt", name="Taunt",
          # the verb לָעַג as well as its noun: "I will mock your calamity"

@@ -24,11 +24,17 @@ fails = []
 
 
 def order_faults(src):
-    m = re.search(r"lead: `\$\{told\}(.*?)`,", src)
+    # two branches since 2026-11-14 (U-20, plan A.50): an event told again step by step leads with its cast; an echo
+    # like the temptation's still leads with the echo, as this test's own ruling holds. The echo branch is checked
+    # here as before; the steps branch must put the cast before the passage and the echo.
+    m = re.search(r"lead: steps \? `\$\{told\}(.*?)`\s*:\s*`\$\{told\}(.*?)`,", src, re.S)
     if not m:
         return ["the event face's lead line is not found"]
-    seq = re.findall(r"\$\{(\w+)\}", m.group(1))
+    st = re.findall(r"\$\{(\w+)\}", m.group(1))
+    seq = re.findall(r"\$\{(\w+)\}", m.group(2))
     f = []
+    if not st or st[0] != "cast" or ("open" in st and st.index("open") < st.index("cast")):
+        f.append(f"a story told again does not lead with its cast: {st}")
     if not seq or seq[0] != "echo":
         f.append(f"the echoes do not lead: {seq}")
     for a, b in (("open", "cast"), ("pairs", "cast"), ("cast", "strip")):
@@ -54,7 +60,9 @@ def card_faults(c):
 c = json.loads(S.answer("/api/entity", urlencode({"id": "event_jesus_temptation"})))
 fails += order_faults(HTML) + card_faults(c)
 planted = [
-    ("the strip leading", order_faults(HTML.replace("lead: `${told}${echo}${open}", "lead: `${told}${strip}${echo}${open}"))),
+    ("the strip leading", order_faults(HTML.replace(": `${told}${echo}${open}", ": `${told}${strip}${echo}${open}"))),
+    # the pointer to the echo sits between the cast and the passage since P-2026-11-18-3 (option 5)
+    ("a told-again story's cast not first", order_faults(HTML.replace("lead: steps ? `${told}${cast}${echoPtr}${open}", "lead: steps ? `${told}${open}${cast}${echoPtr}"))),
     ("the cast before the quotations", order_faults(HTML.replace("${pairs}${cast}", "${cast}${pairs}"))),
     ("the reading mark removed", order_faults(HTML.replace("a reading the graph marks implied", "the graph says"))),
     ("the two quotations joined", card_faults(dict(c, evcard=dict(c["evcard"], quotes=[

@@ -52,7 +52,7 @@ exec(re.search(r"def js_balance\(js\):.*?\n\n\n", _src, re.S).group(0))
 
 d = S.load()
 t0 = time.time()
-DIVINE = S.PC_DIVINE | {"holy_ghost"}
+DIVINE = S.PC_DIVINE | {"holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible"}
 
 
 def divine_snapshot():

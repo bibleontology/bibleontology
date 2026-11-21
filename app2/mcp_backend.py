@@ -29,6 +29,7 @@ SKIP_CATEGORIES = {"Role pattern"}                                # patterns, no
 THEME_TYPES = {"in_theme"}                                        # a card's major themes: in the body, not hops
 LANGUAGE_CATEGORY, LANGUAGE_CAP = "Language", 2
 VERSES_IN_BODY = 6
+WORD_VERSE_LINKS = 60      # a word's verses offered as hops (12 in the answer, the rest by get_relations; 2026-11-12)
 # the security seat, 2026-11-03: built items are cached (the data does not change between deploys), bounded, and the
 # shown answers too, so attacker-chosen ids cannot grow memory without end
 ITEM_CACHE = 512
@@ -54,8 +55,8 @@ SOURCES = [
 START_TEXT = (
     "Bible Ontology is a graph of what the Bible's text says: who did what to whom, who said it, which passages "
     "quote or echo which, and the Hebrew and Greek words beneath, every relation tied to the verse that makes it. "
-    "It takes no doctrinal side; where a link is a reading rather than a statement of the text, it says so. Open "
-    "one of these, or search for a name, an event, a theme or a reference.")
+    "It takes no doctrinal side; where a link is a reading rather than a statement of the text, it says so. Each "
+    "entry below opens with fetch, and search finds a name, an event, a theme or a reference.")
 START_LINKS = [("event", "card:event_jesus_temptation"), ("person", "card:david"), ("person", "card:moses"),
                ("event", "card:event_creation_of_heavens_and_earth"), ("theme", "theme:creation"),
                ("question", "question:baptism"), ("verse", "verse:John.1.1")]
@@ -65,13 +66,15 @@ RESOURCES = {
         "# Bible Ontology\n\nA knowledge graph of the Bible's text: people, events, places, ideas and words, and "
         "the relations between them, each citing its verse. Built on the original languages (MACULA) and read in "
         "the Berean Standard Bible. Read-only. It states what the text says and marks readings as readings; it "
-        "takes no doctrinal position.\n\nEvery answer ends with links and moves: follow them with `fetch`. Each "
+        "takes no doctrinal position.\n\nEvery answer ends with links and moves, each an id `fetch` accepts. Each "
         "link's `iri` is its relation's definition in the published vocabulary; its `certainty` says how firmly "
-        "the verse supports it; `voice` says whose words it rests on. Cite the `url` and the verses you use.\n"),
+        "the verse supports it (stated, implied, a reading, or a match of shared words with its measured grade); "
+        "`voice` says whose words it rests on. Every answer carries its page's `url` and its verses, the "
+        "attribution the graph's license (CC BY 4.0) asks for.\n"),
     "method": (
         "# How the graph is built\n\n- Relations are lifted from the clauses of the original-language text "
         "(MACULA) and read against the verse; where translations differ, the original decides.\n- Each relation "
-        "keeps its certainty (stated, implied, a reading) and its voice: the narrator, or the speaker whose words "
+        "keeps its certainty (stated, implied, a reading, or a match of shared words) and its voice: the narrator, or the speaker whose words "
         "it rests on (\"the words of Eliphaz\").\n- Readings (story echoes, judged parallels) are marked as "
         "readings and never presented as the text's own statement.\n- Machine readings are checked twice and "
         "against planted faults before they are kept; the method is described at " + SITE + "/about.\n"),
@@ -164,10 +167,43 @@ class Backend(object):
         return v if v in self.d["verses"] else None
 
     # ------------------------------------------------------------------- search
-    def search(self, query, limit):
+    STOP = {"the", "a", "an", "of", "and", "or", "is", "are", "does", "do", "what", "about", "say", "bible", "in",
+            "to", "on", "for", "without", "with", "by", "be", "can", "how", "why", "who"}
+
+    def _question_hits(self, query):
+        """The shown questions a query names: every content word of the query in the question's id, title or short
+        name ("faith without works" -> faith-and-works; "free will" -> free-will). The site's own search has no
+        question rows, so this is the MCP's door to them."""
+        words = [w for w in re.findall(r"[a-z]+", query.lower()) if w not in self.STOP]
+        if not words:
+            return []
         out = []
+        stem = lambda w: w[:-1] if w.endswith("s") and len(w) > 3 else w  # noqa: E731
+        for qid, q in self.S._questions().items():
+            hay = " ".join((qid.replace("-", " "), q.get("question") or "", q.get("short") or "")).lower()
+            own = [w for w in qid.split("-") if w not in self.STOP]
+            # every word of the query in the question, or every word of the question's own name in the query
+            # ("is baptism necessary for salvation" -> baptism)
+            if all(re.search(r"\b" + re.escape(stem(w)), hay) for w in words) or \
+                    (own and all(re.search(r"\b" + re.escape(stem(w)), query.lower()) for w in own)):
+                out.append({"id": "question:" + qid, "title": q.get("question") or qid,
+                            "url": _url("/questions/" + qid)})
+        return out
+
+    def search(self, query, limit):
+        out = self._question_hits(query)[:limit]
         for r in (self.S.api_search(self.d, {"q": [query]}).get("results") or []):
+            if len(out) >= limit:
+                break
             kind, rid, title = r.get("kind"), r.get("id"), r.get("title")
+            # A WORD HIT PASSES THROUGH (P-2026-11-12-3 (2); the probe: "faith without works" gave 0 through the MCP
+            # while the site found faith G4102 and works G2041): the site's word rows open as word: items
+            if kind == "sense" and re.match(r"^[hg]\d+$", rid or ""):
+                out.append({"id": "word:%s%s" % (rid[0].upper(), rid[1:]),
+                            "title": "%s (%s%s%s)" % (title or rid, (r["lang"] + " ") if r.get("lang") else "",
+                                                       rid[0].upper(), rid[1:]),
+                            "url": _url("/word/%s%s" % (rid[0].upper(), rid[1:]))})
+                continue
             if kind == "entity" and SLUG.match(rid or ""):
                 out.append({"id": "card:" + rid, "title": title, "url": self._card_url(rid)})
             elif kind == "mtheme" and SLUG.match(rid or ""):
@@ -180,6 +216,37 @@ class Backend(object):
                                 "url": _url("/p/%s.%d.%d" % (full, v[1], v[2]))})
             if len(out) >= limit:
                 break
+        # NO CARD FOR THE PHRASE, SO THE CARDS FOR ITS WORDS (P-2026-11-16-3 (1); Doug's shared conversation, Claude:
+        # "'temple end times' returned only Greek word entries ... the useful temple card only turned up by chance, and
+        # 'temple of God church body' returned nothing"). The site's search reads a query as one phrase; when that finds
+        # no card or theme, each content word is searched alone, in the query's order, and its best cards added -- so
+        # the temple theme and card come back, and church and body after them. Word entries already found stay first.
+        if len(out) < limit and not any(o["id"].startswith(("card:", "theme:")) for o in out):
+            words = [w for w in re.findall(r"[A-Za-z]+", query) if w.lower() not in self.STOP and len(w) >= 3]
+            # a name first ("who killed Goliath": Goliath's cards before "killing" and "die"), else the query's order
+            words.sort(key=lambda w: not w[0].isupper())
+            if len(words) >= 2:
+                seen = {o["id"] for o in out}
+                for w in words:
+                    took = 0
+                    for r in (self.S.api_search(self.d, {"q": [w]}).get("results") or []):
+                        kind, rid, title = r.get("kind"), r.get("id"), r.get("title")
+                        if kind == "entity" and SLUG.match(rid or ""):
+                            item = {"id": "card:" + rid, "title": title, "url": self._card_url(rid)}
+                        elif kind == "mtheme" and SLUG.match(rid or ""):
+                            item = {"id": "theme:" + rid, "title": title, "url": _url("/themes/" + rid)}
+                        else:
+                            continue
+                        if item["id"] in seen:
+                            continue
+                        item["title"] = "%s (for “%s”)" % (item["title"], w)
+                        out.append(item)
+                        seen.add(item["id"])
+                        took += 1
+                        if took >= 3 or len(out) >= limit:
+                            break
+                    if len(out) >= limit:
+                        break
         return out
 
     # --------------------------------------------------------------------- items
@@ -273,7 +340,13 @@ class Backend(object):
                 other = it.get("other")
                 if it.get("type") in THEME_TYPES:
                     continue                                 # themes go in the body, never as hops
-                because = self._because((it.get("refs") or [None])[0])
+                # A SAYING'S LINK RESTS ON THE SAYING'S OWN VERSE (Doug's self-test, 2026-11-15: Eliphaz's sayings from
+                # Job 15:25 on cited 15:1). Such a relation cites the speech's introduction ("Then Eliphaz the Temanite
+                # replied", 15:1) and the saying (15:25), both rightly; the hop takes the one the other end's own
+                # record cites, else the first
+                refs = it.get("refs") or [None]
+                own = set((self.d["ents"].get(other) or {}).get("refs") or []) if other else set()
+                because = self._because(next((r for r in refs if r in own), refs[0]))
                 if not SLUG.match(other or "") or not because:
                     continue                                 # no verse, no hop
                 certainty = CERTAINTY.get(it.get("certainty"), "implied")
@@ -323,6 +396,13 @@ class Backend(object):
                 rels.append({"rel": q.get("verb") or "quotes", "type": None, "id": "verse:" + tid,
                              "title": str(first(q.get("to_ref"))) or tid, "url": _url("/p/" + tid), "because": frm,
                              "certainty": "stated", "voice": q.get("speaker"), "strength": TIER_QUOTE * 100000 - n})
+        speakers = self._passage_speakers(eid) if (self.d["ents"].get(eid) or {}).get("type") == "passage" else []
+        for i, (sid, name, first_v, cnt) in enumerate(speakers):
+            # A SPEECH LINKS TO ITS SPEAKER (P-2026-11-12-3 (1); the probe: "First speech of Eliphaz" had no link to
+            # Eliphaz). Who speaks the sayings inside it, as their own relations say, each with its first verse
+            rels.append({"rel": "is spoken by (%d of its sayings)" % cnt, "type": self._vt("asserted_by"),
+                         "id": "card:" + sid, "title": name, "url": self._card_url(sid), "because": first_v,
+                         "certainty": "stated", "voice": None, "strength": TIER_STATED * 100000 + 90000 - i})
         _diversify(rels)
         refs = [v for v in (_verse_id(r) for r in (e.get("refs") or [])) if v and v in self.d["verses"]]
         verses = [{"ref": "%s %d:%d" % v, "text": self._verse_text(*v), "url": _url("/p/%s.%d.%d" % v)}
@@ -342,6 +422,10 @@ class Backend(object):
                            "url": self._card_url(ups[0])}
         moves["down"] = [{"id": "card:" + t["id"], "title": t.get("label"), "url": self._card_url(t["id"])}
                          for t in (evd.get("tellings") or []) if SLUG.match(t.get("id") or "")]
+        if speakers:
+            moves["speaker"] = {"id": "card:" + speakers[0][0], "title": speakers[0][1],
+                                "url": self._card_url(speakers[0][0])}
+            text += "\nSpoken by " + " and ".join(s[1] for s in speakers) + "."
         return {"id": "card:" + eid, "title": e.get("name") or eid, "url": self._card_url(eid), "text": text,
                 "verses": verses, "relations": rels, "moves": moves, "shown": True}
 
@@ -398,6 +482,141 @@ class Backend(object):
                             "reading", TIER_READING))
         return out
 
+    # A VERSE NAMES ITS SPEAKER (P-2026-11-12-3 (1); the probe of 2026-11-12: 0 of 15 speech verses named one, and
+    # "who says it" is the listing's headline). Three sources, the firmest first:
+    #   1. the relations that cite the verse, as the site's verse card gathers them (server.verse_card): "Eliphaz told
+    #      'Eliphaz at Job 4:7'", "the serpent told 'You will not surely die'" -- a card, resolved by the graph;
+    #   2. the speech the verse sits in (its passage's part_of chain): the move up, and the speech named in words;
+    #   3. MACULA's own speaker annotation (out/speakers.jsonl.gz, the server's "speaks" layer): a person the verse
+    #      names is matched to the card the verse page links; anyone else is named in words only, as the text names
+    #      them. A divine name is ALWAYS words only ("the LORD", "God"): the speaker as the Hebrew or Greek names him,
+    #      never a link this module chose (divine persons are the owner's, record by record).
+    DIVINE_WORDS = {"YHWH": "the LORD", "Adonai": "the Lord", "Elohim": "God", "Theos": "God", "El": "God",
+                    "Kyrios": "the Lord (God or Jesus: the Greek does not settle which)"}
+    SPEAKER_TYPES = ("person", "being", "creature", "group", "people")
+    PRONOUNS = {"i", "me", "you", "he", "him", "she", "her", "it", "we", "us", "they", "them", "this", "that",
+                "these", "those", "who", "one", "-", "", "the", "a", "an", "the the"}   # ὁ δὲ εἶπεν: the article as "he"
+
+    def _in_quotation(self, mref):
+        """Whether the verse sits inside quotation marks (the Berean's punctuation, out/speech-depth.jsonl.gz)."""
+        if getattr(self, "_depth", None) is None:
+            dep = {}
+            try:
+                import gzip
+                with gzip.open(ROOT / "out" / "speech-depth.jsonl.gz", "rt", encoding="utf-8") as f:
+                    for line in f:
+                        r = json.loads(line)
+                        if r.get("ref"):
+                            try:
+                                dep[r["ref"]] = int(r.get("depth") or 0)
+                            except ValueError:
+                                pass
+            except OSError:
+                pass
+            self._depth = dep
+        return self._depth.get(mref, 0) >= 1
+
+    def _passage_speakers(self, eid):
+        """[(speaker id, name, first verse as a because, sayings)] for a passage card: the sayings (text records) cited
+        inside its span, by their own told / asserted_by relations; most sayings first."""
+        refs = self.d["ents"].get(eid, {}).get("refs") or []
+        spans = [s for s in (self.S._site_span(self.d, r) for r in refs) if s]
+        if not spans:
+            return []
+        b0 = spans[0][0]
+        lo = min((s[1], s[2]) for s in spans if s[0] == b0)
+        hi = max((s[3], s[4]) for s in spans if s[0] == b0)
+        at, ents, rels = self.S._cards_at(), self.d["ents"], self.d["rels"]
+        found = collections.OrderedDict()
+        for (bb, cc, vv) in sorted(k for k in self.d["verses"] if k[0] == b0 and lo <= (k[1], k[2]) <= hi):
+            for tid in at.get((bb, cc, vv), []):
+                if (ents.get(tid) or {}).get("type") != "text":
+                    continue
+                for r in rels.get(tid, []):
+                    if (r["type"] == "told" and r["dir"] == "in") or (r["type"] == "asserted_by" and r["dir"] == "out"):
+                        o = ents.get(r["other"]) or {}
+                        if o.get("type") in self.SPEAKER_TYPES and SLUG.match(r["other"]):
+                            x = found.setdefault(r["other"], [r["other"], o.get("name") or r["other"],
+                                                              {"ref": "%s %d:%d" % (bb, cc, vv),
+                                                               "url": _url("/p/%s.%d.%d" % (bb, cc, vv))}, set()])
+                            x[3].add(tid)
+        out = [(x[0], x[1], x[2], len(x[3])) for x in found.values()]
+        return sorted(out, key=lambda x: -x[3])[:4]
+
+    def _gloss_of_lemma(self, lemma):
+        if getattr(self, "_lg", None) is None:
+            lg = {}
+            for k, lem in (self.d.get("lemmas") or {}).items():
+                g = (self.d["lex"].get(k) or {}).get("gloss")
+                if lem and g and lem not in lg:
+                    lg[lem] = g
+            self._lg = lg
+        return self._lg.get(lemma)
+
+    def _voice(self, vc, b, c, v):
+        """-> (speakers [{id or None, name, by}], speech [passage rows, smallest first], text_speakers {text id: name})"""
+        speakers, text_sp = [], {}
+        for r in vc.get("rels") or []:
+            # a sign is told by the hand, not the mouth (2026-11-16: "Spoken by Aaron" at Exod 7:19, the LORD's words
+            # to Moses, from "Aaron told the plagues of Egypt", the plagues being a sign worked by Aaron's staff)
+            if r["type"] == "told" and ((self.d["ents"].get(r["b"]) or {}).get("attrs") or {}).get("kind") == "sign":
+                continue
+            if r["type"] == "told" and r["text_b"] and not r["text_a"] and r["ta"] in self.SPEAKER_TYPES:
+                sid, name, tid = r["a"], r["an"], r["b"]
+            elif r["type"] in ("asserted_by", "claimed_by") and r["text_a"] and not r["text_b"] \
+                    and r["tb"] in self.SPEAKER_TYPES:
+                sid, name, tid = r["b"], r["bn"], r["a"]
+            else:
+                continue
+            text_sp.setdefault(tid, name)
+            if sid not in [s["id"] for s in speakers]:
+                speakers.append({"id": sid, "name": name, "by": "relation", "certainty": r.get("certainty")})
+        # the speech: passages the verse's text sits in, the smallest (a part of another) first
+        # a role pattern's cells and rows are passages too (rcell_, rrow_): patterns, not the speech
+        # and so are a story template's stages and arcs (stage_, arc_: "Faithfulness (Tested and found faithful)"):
+        # a reading of the story's shape, not the passage the words sit in
+        role = lambda x: x.startswith(("stage_", "arc_")) or str(  # noqa: E731
+            ((self.d["ents"].get(x) or {}).get("attrs") or {}).get("kind") or "").startswith("role")
+        parts = [r for r in vc.get("rels") or [] if r["type"] == "part_of" and r["ta"] == "passage"
+                 and r["tb"] in ("passage", "event") and not role(r["a"]) and not role(r["b"])]
+        inner = [r["a"] for r in parts if r["a"] not in {x["b"] for x in parts}]
+        outer = [r["b"] for r in parts if r["b"] not in {x["a"] for x in parts}]
+        speech = list(dict.fromkeys(inner + outer))
+        if not speakers:
+            mref = self.S._vc_mref(self.d, b, c, v)
+            names = {(n.get("at") or "").lower(): n for n in vc.get("names") or []}
+            glosses = {w.get("lemma"): (w.get("g") or "") for w in vc.get("words") or []}
+            # PRECISION FIRST (a sample of 1,500 verses, 2026-11-15, read by hand): the annotation's speaker is kept
+            # only where this verse names him ("stated"), the verse has one speaker row, and the word is a name or a
+            # divine name. Carried in from a quotation's head ("span") it credited Agrippa with Paul's words (Acts
+            # 26:8) and the LORD with Abigail's (1 Sam 25:31); several rows in one verse credited "the scribe" and
+            # "Pharisee" beside Jesus (John 8:7); common nouns came out as "the each man", "the some"
+            rows = [r for r in ((self.d.get("layers") or {}).get(mref) or {}).get("speaks") or []
+                    if r.get("by") == "stated"]
+            for row in rows if len({r.get("who") for r in rows}) == 1 else []:
+                who = row.get("who") or ""
+                if row.get("divine"):
+                    name, sid = self.DIVINE_WORDS.get(row["divine"], "God"), None
+                else:
+                    g = (glosses.get(who) or self._gloss_of_lemma(who) or "").split("/")[-1].strip()
+                    n = names.get(g.lower())
+                    if not n and not re.fullmatch(r"[A-Z][a-z]+(?: [A-Z][a-z]+)?", g):
+                        continue                             # not a name: a pronoun, an article, a common noun
+                    sid, name = (n["id"], n["name"]) if n else (None, g)
+                if name and name not in [s["name"] for s in speakers]:
+                    speakers.append({"id": sid, "name": name, "by": "stated", "certainty": "explicit"})
+        # A READING, LAST (the speaker pass, 2026-11-16): only where neither a relation nor MACULA's stated speaker
+        # names anyone. Two independent readers, the Mac and a blind Claude judge, named the same speaker; the
+        # inner voice first, and the one relaying it as `through` (Doug's ruling on nested speech)
+        if not speakers:
+            mref = self.S._vc_mref(self.d, b, c, v)
+            for row in ((self.d.get("layers") or {}).get(mref) or {}).get("speaker_reading") or []:
+                if row.get("name") and row["name"] not in [s["name"] for s in speakers]:
+                    speakers.append({"id": row.get("who"), "name": row["name"], "by": "reading",
+                                     "certainty": "reading", "through": row.get("rep_name"),
+                                     "through_id": row.get("rep")})
+        return speakers, speech, text_sp
+
     def _verse(self, key):
         m = re.match(r"^(\w+)\.(\d+)\.(\d+)$", key)
         if not m:
@@ -415,22 +634,132 @@ class Backend(object):
         seen = set()
         for it, rtype, label, certainty, tier in self._verse_hops(ec, ec.get("ref")):
             n += 1
-            t = self._from_macula(it.get("eref") or it.get("ref") or "")
+            # `ref` is MACULA's numbering and `eref` already the Berean's: converting `eref` again moved every
+            # quotation into a chapter the Hebrew numbers differently by one (Matt 4:15 "quotes Isa 9:3", for 9:2;
+            # found 2026-11-15 beside the self-test's ranges)
+            t = self._from_macula(it.get("ref") or "") if it.get("ref") else None
             if not t or t == (b, c, v) or (t, rtype) in seen:
                 continue
             seen.add((t, rtype))
             tid = "%s.%d.%d" % t
-            rels.append({"rel": label, "type": self._vt(rtype), "id": "verse:" + tid, "title": "%s %d:%d" % t,
+            # a quotation of a range is titled as the range ("Isa 53:7-8"), the hop going to its first verse
+            e = self._from_macula(it.get("end") or "") if it.get("end") else None
+            title = "%s %d:%d" % t
+            if e and e[0] == t[0] and (e[1], e[2]) > (t[1], t[2]):
+                title += ("–%d" % e[2]) if e[1] == t[1] else ("–%d:%d" % (e[1], e[2]))
+            rels.append({"rel": label, "type": self._vt(rtype), "id": "verse:" + tid, "title": title,
                          "url": _url("/p/" + tid), "because": here, "certainty": certainty, "voice": None,
                          "strength": tier * 100000 - n})
+        # THE VERSE'S OWN RELATIONS (P-2026-11-12-3 (1) and (3); the probe: 143 of 300 verses answered with no link):
+        # every relation that cites this verse, as the site's verse card shows them, each a hop with this verse as its
+        # because. A saying's words carry their speaker's voice.
+        try:
+            vc = self.S.verse_card(self.d, b, c, v)
+        except Exception:                                    # noqa: BLE001
+            vc = {}
+        speakers, speech, text_sp = self._voice(vc, b, c, v)
+        # INSIDE A QUOTATION, SPEAKER UNKNOWN (Doug, 2026-11-15: "as long as the MCP clearly states what it supports
+        # and then supports those things without overclaiming"): an empty voice means the narrator's words, so on
+        # Matt 5:44 it would have told the agent the narrator says "love your enemies". Where the verse sits inside
+        # quotation marks (out/speech-depth.jsonl.gz) and no speaker is known, its hops say a speaker the graph does
+        # not name, and the answer says so in words. Measured that day: 23-41% of speech verses in the Gospels and
+        # Acts name their speaker, 81% in Job.
+        unnamed = not speakers and self._in_quotation(self.S._vc_mref(self.d, b, c, v))
+        if unnamed:
+            text_sp = collections.defaultdict(lambda: "a speaker the graph does not name")
+        ents, seen_c = self.d["ents"], set()
+        for s in speakers:
+            if s["id"] and SLUG.match(s["id"]) and s["id"] in ents:
+                seen_c.add((s["id"], "speaker"))
+                rels.append({"rel": "its words are spoken by", "type": self._vt("asserted_by"), "id": "card:" + s["id"],
+                             "title": s["name"], "url": self._card_url(s["id"]), "because": here,
+                             "certainty": CERTAINTY.get(s["certainty"], "implied"), "voice": None,
+                             "strength": TIER_STATED * 100000 + 90000})
+        for r in vc.get("rels") or []:
+            n += 1
+            t = r["type"]
+            if t in THEME_TYPES or t in ("told", "asserted_by", "claimed_by") or (r["text_a"] and r["text_b"]):
+                continue
+            # only what THIS verse says (the first-impression walk, 2026-11-15): a relation cited to a range that
+            # merely covers the verse is the passage's, not the verse's ("Nicodemus conversation is part of Story arc"
+            # on John 3:16); and patterns are not instances ("Speech act: Intercession" on Matt 5:44)
+            if not any(x.get("k") == key and "–" not in (x.get("l") or "") for x in r.get("refs") or []):
+                continue
+            if "pattern" in (r["ta"], r["tb"]) or t in ("spoken_in", "instance_of", "recounts", "part_of"):
+                continue                                     # part_of is structure: the moves carry it
+            if any(x.startswith(("arc_", "stage_", "rcell_", "rrow_")) for x in (r["a"], r["b"])):
+                continue                                     # a story template's arc or a role pattern: a reading of shape
+            if t == "part_of" and r["ta"] == "passage":
+                continue                                     # the speech: a move, below
+            certainty = CERTAINTY.get(r.get("certainty"), "implied")
+            tier = TIER_READING if certainty == "reading" else TIER_STATED
+            if r["text_a"]:                                  # a saying's words speak of something: its voice
+                ends = [(r["b"], r["bn"], r["label"], text_sp.get(r["a"]))]
+            elif r["text_b"]:
+                ends = [(r["a"], r["an"], "%s %s" % (r["label"], r["bn"]), text_sp.get(r["b"]))]
+            else:                                            # who did what to whom: the clause, from either end
+                clause = "%s %s %s" % (r["an"], r["label"], r["bn"])
+                ends = [(r["a"], r["an"], clause, None), (r["b"], r["bn"], clause, None)]
+            for oid, name, label, sp in ends:
+                if not SLUG.match(oid or "") or oid not in ents or (oid, label) in seen_c:
+                    continue
+                seen_c.add((oid, label))
+                rels.append({"rel": label, "type": self._vt(t), "id": "card:" + oid, "title": name,
+                             "url": self._card_url(oid), "because": here, "certainty": certainty,
+                             "voice": ("the words of " + sp) if sp else None,
+                             "strength": tier * 100000 + 40000 - n})
         _diversify(rels)
         moves = {}
         for rel, cand in (("prev", (b, c, v - 1)), ("next", (b, c, v + 1)), ("next", (b, c + 1, 1))):
             if rel not in moves and cand in self.d["verses"]:
                 moves[rel] = {"id": "verse:%s.%d.%d" % cand, "title": "%s %d:%d" % cand,
                               "url": _url("/p/%s.%d.%d" % cand)}
-        return {"id": "verse:" + key, "title": "%s %d:%d" % (b, c, v), "url": here["url"], "text": text or "",
-                "verses": [dict(here, text=text)], "relations": rels, "moves": moves, "shown": True}
+        # up: the smallest passage the verse's words sit in, else the event it is told in
+        ev = (vc.get("setting") or {}).get("event") or {}
+        if speech and speech[0] in ents:
+            moves["up"] = {"id": "card:" + speech[0], "title": ents[speech[0]].get("name") or speech[0],
+                           "url": self._card_url(speech[0])}
+        elif SLUG.match(ev.get("id") or "") and ev["id"] in ents:
+            moves["up"] = {"id": "card:" + ev["id"], "title": ev.get("title") or ev["id"], "url": self._card_url(ev["id"])}
+        first = next((s for s in speakers if s["id"] and s["id"] in ents), None)
+        if first:
+            moves["speaker"] = {"id": "card:" + first["id"], "title": first["name"], "url": self._card_url(first["id"])}
+        # the speaker and the setting in words, in the answer itself
+        said = []
+        if speakers:
+            # the graph's own relations say whose words the verse is; MACULA's annotation says who speaks IN the
+            # verse, which may be a command the narrator reports ("everything the LORD had commanded", Lev 8:36), so
+            # each is worded as what it is
+            rel_sp = [s["name"] for s in speakers if s["by"] == "relation"]
+            ann_sp = [s["name"] for s in speakers if s["by"] == "stated"]
+            read_sp = [s["name"] + (", through " + s["through"] if s.get("through") else "")
+                       for s in speakers if s["by"] == "reading"]
+            if rel_sp:
+                said.append("Spoken by " + " and ".join(rel_sp) + ".")
+            if ann_sp:
+                said.append("Speaking in this verse, as the original-language annotation (MACULA) marks it: "
+                            + " and ".join(ann_sp) + ".")
+            if read_sp:
+                said.append("Whose words these are, as a reading (an automated pass and a blind check named the "
+                            "same speaker; not a stated relation): " + " and ".join(read_sp) + ".")
+        elif unnamed:
+            said.append("These are words spoken within the passage (inside quotation marks); the graph does not "
+                        "record who speaks them, so no link here is the narrator's.")
+        if speech:
+            sp_names = ["“%s”" % (ents.get(p, {}).get("name") or p) for p in speech if p in ents]
+            if sp_names:
+                said.append("Part of " + ", within ".join(sp_names) + ".")
+        hd = (vc.get("setting") or {}).get("heading") or {}
+        if hd.get("title"):
+            said.append("Under the Berean editors' heading “%s” (%s)." % (hd["title"], hd.get("label") or ""))
+        if ev.get("title"):
+            said.append("Told in the event “%s” (%s)." % (ev["title"], ev.get("telling") or ""))
+        body = (text or "") + ("\n" + " ".join(said) if said else "")
+        return {"id": "verse:" + key, "title": "%s %d:%d" % (b, c, v), "url": here["url"], "text": body,
+                "verses": [dict(here, text=text)], "relations": rels, "moves": moves, "shown": True,
+                "speakers": [dict({"name": s["name"], "id": ("card:" + s["id"]) if s["id"] else None, "by": s["by"]},
+                                  **({"through": s["through"]} if s.get("through") else {}))
+                             for s in speakers]}
 
     # ---------------------------------------------------------------------- the schema
     # THE SCHEMA AS ITEMS (Doug, 2026-11-03: "add schema navigation to v1 ... with instances as links"). A link's
@@ -614,9 +943,41 @@ class Backend(object):
                       "url": u["url"]}]
         if s.get("definition"):
             text += "\n" + s["definition"] + ("\n(" + s["definition_credit"] + ")" if s.get("definition_credit") else "")
+        # THE WORD'S WHOLE COUNT, IN WORDS (Doug's self-test in Claude, 2026-11-15: "the graph's own verse links for G26
+        # number only 60, not 106 ... some may not be yet linked"). 60 is a page of links, not a count; say both
+        occ = s.get("occurrences") or {}
+        if occ.get("total"):
+            text += "\nUsed in %d verses%s. Its links list the first %d of them in the site's order; the page lists every one." % (
+                occ["total"], " across %d books" % occ["books"] if occ.get("books") else "",
+                min(WORD_VERSE_LINKS, occ["total"]))
+        # A WORD'S NEXT HOPS (2026-11-12: get_word("G26") answered with 0 links, a dead end for an agent; found preparing
+        # the directories' example prompts). First the cards that gather the word, then the verses that use it, each
+        # with a verse. Neither is a typed relation in the vocabulary, so each goes with its label and no iri: a card
+        # gathering its words is the graph's grouping (certainty None, never "stated"); a verse using the word is what
+        # the text holds. The Septuagint equivalents and the lexicon's "compare" carry no verse, so they stay out
+        # (nothing without scripture).
+        first = self._because("%s %d:%d" % vs[0]) if vs else None
+        rels, cards = [], set()
+        for n, c in enumerate(s.get("concepts") or []):
+            # an old id names its card once, by the card's own id (G26 listed "charity" and "love", one card)
+            cid = (self.d.get("renamed") or {}).get(c.get("id"), c.get("id"))
+            if first and SLUG.match(cid or "") and cid not in cards:
+                cards.add(cid)
+                rels.append({"rel": "is one of the words the card for %s gathers" % (c.get("name") or cid),
+                             "type": None, "id": "card:" + cid, "title": c.get("name"), "url": self._card_url(cid),
+                             "because": first, "certainty": None, "voice": None, "strength": 2000 - n})
+        used = []                                      # the word's verses, in the site's order, 60 at most to page through
+        for r in rows[:WORD_VERSE_LINKS]:
+            t = self._from_macula(r.get("ref") or "")
+            if t and t not in used:
+                used.append(t)
+        for n, t in enumerate(used):
+            b = {"ref": "%s %d:%d" % t, "url": _url("/p/%s.%d.%d" % t)}
+            rels.append({"rel": "is used in", "type": None, "id": "verse:%s.%d.%d" % t, "title": b["ref"],
+                         "url": b["url"], "because": b, "certainty": "stated", "voice": None, "strength": 1000 - n})
         return {"id": "word:" + key, "title": "%s %s" % (key, s.get("lemma") or ""), "url": _url("/word/" + key),
                 "text": text, "verses": [{"ref": "%s %d:%d" % t, "text": self._verse_text(*t), "url": _url("/p/%s.%d.%d" % t)}
-                                         for t in vs], "relations": [], "moves": {}, "shown": True,
+                                         for t in vs], "relations": rels, "moves": {}, "shown": True,
                 "sources_extra": extra}
 
     # --------------------------------------------------------------------- themes

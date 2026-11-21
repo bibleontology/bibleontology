@@ -53,6 +53,9 @@ NUM = re.compile(r"\d+(?::\d+)?")
 
 def page_faults(eid, head, body, with_n=None):
     title, desc, art = parts(head, body)
+    # a count may print with a thousands separator in one place and without in another ("1930", "1,930"): the same
+    # number (2026-11-14, when the count wording changed)
+    title, desc, art = (re.sub(r"(?<=\d),(?=\d{3})", "", x) for x in (title, desc, art))
     out = []
     for where, s in (("title", title), ("description", desc)):
         for m in NUM.finditer(s):

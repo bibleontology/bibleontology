@@ -52,7 +52,7 @@ def check(ok, msg):
 
 d = S.load()
 EVS = S._events(d)["events"]
-DIVINE = S.PC_DIVINE | {"holy_ghost"}
+DIVINE = S.PC_DIVINE | {"holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible"}
 
 
 def divine_snapshot():

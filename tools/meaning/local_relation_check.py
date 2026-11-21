@@ -49,10 +49,18 @@ from bibleont.refs import parse_ref  # noqa: E402
 
 JOBS, DONE = ROOT / "out" / "grunt" / "jobs", ROOT / "out" / "grunt" / "done"
 NAMES = {"5a": "5a-relation-check-sample", "5": "5-relation-check",
+         # the same pass over today's graph (2026-11-12, Doug: "make sure that the Mac is working hard identifying
+         # issues"): every concrete relation again, the thousands added since 10-30 among them
+         "28": "28-relation-check",
+         # and again on 2026-11-16, after the speaker pass and the day's fixes (run overnight, read 2026-11-17)
+         "37": "37-relation-recheck",
+         # 2026-11-19, night (Doug: "make sure we are making optimal use of the Mac"): exported whole, then cut to the
+         # rows job 37 did not ask, less acted_in (event cast rows rest on pronouns the Mac cannot resolve; see above)
+         "38": "38-relation-recheck-new",
          # model bench, 2026-10-31: job 5a's items again, the model named in the _job header (docs/review/mac-models-2026-10-31.md)
          "8a": "8a-bench-qwen3.8-27b", "8b": "8b-bench-gemma4-31b-qat"}
 OPTIONS = {"temperature": 0, "num_ctx": 6144}
-DIVINE = {"god", "holy_ghost", "the_father", "jesus", "spirit", "spirit_of_god"}
+DIVINE = {"god", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible", "the_father", "jesus", "spirit", "spirit_of_god"}
 RANGE_CAP = 6   # verses shown of one cited range
 TOTAL_CAP = 12  # verses shown of one relation
 SEED = 30
@@ -384,7 +392,7 @@ def export_sample(event_rows=False):
           f"-> {JOBS / (NAMES['5a'] + '.jsonl')}")
 
 
-def export_all():
+def export_all(which="5"):
     ents, by = entities(), bible()
     rows, skipped = eligible(ents, by)
     check_ranges(by, rows)
@@ -400,9 +408,9 @@ def export_all():
         it["stratum"] = "all"
         it["key"] = f"r{len(its):05d}"
         its.append(it)
-    write_job(NAMES["5"], its)
+    write_job(NAMES[which], its)
     print(f"{len(its)} calls of {len(rows)} eligible (no verse text found for {nov}); skipped {dict(skipped)}; "
-          f"left out as structural {sum(out.values())}: {dict(out.most_common())} -> {JOBS / (NAMES['5'] + '.jsonl')}")
+          f"left out as structural {sum(out.values())}: {dict(out.most_common())} -> {JOBS / (NAMES[which] + '.jsonl')}")
 
 
 # ------------------------------------------------------------------ the report
@@ -517,6 +525,6 @@ if __name__ == "__main__":
     if cmd == "export-sample":
         export_sample("--event-rows" in sys.argv)
     elif cmd == "export":
-        export_all()
+        export_all(sys.argv[2] if len(sys.argv) > 2 else "5")
     else:
         report(sys.argv[2] if len(sys.argv) > 2 else "5a")

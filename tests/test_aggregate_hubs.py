@@ -44,7 +44,7 @@ for f in glob.glob(str(ROOT / "ontology" / "entities" / "*.jsonl")):
         if line.strip():
             e = json.loads(line)
             ENTS[e["id"]] = e
-DIVINE = {"god", "the_father", "jesus", "holy_ghost"}
+DIVINE = {"god", "the_father", "jesus", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible"}
 # an image with a link to what it stands for: its gloss (speaks_of) or the
 # text's own key (signifies)
 GATEWAY = set()

@@ -1,0 +1,149 @@
+###############################################################################
+#  The text and its witnesses (plan 8.1g, step 2; 2026-11-06). Doug, 2026-11-01,
+#  approving P-2026-10-31-2: "this is good and I would like to go forward with
+#  it".
+#
+#  A psalm, and later a book, is a Work (LRMoo F1); the Hebrew and an English
+#  translation are two Expressions of it (F2); the editions they are read from
+#  are Manifestations (F3). LRMoo supplies those, and this vocabulary only what
+#  LRMoo does not: the order a tradition gives a collection, the numbered
+#  verses of one text, and the relations a heading's reading needs. Its terms
+#  are only the ones the published data uses.
+#
+#  Checked against LRMoo 1.1.1's scope notes on 2026-11-06 (docs/review/lrm/
+#  scope-notes-2026-11-06.md): a collection incorporates its psalms
+#  (R75, between Expressions), it does not have them as parts (R67 is for
+#  parts conceived together as one whole); every Work has its own creation
+#  event, with no agent unless the text gives one. Written by Claude to Doug's
+#  decisions; the wording here is AI-drafted, and the words were approved by
+#  Doug on 2026-11-06 ("I approve the biblio words as written").
+###############################################################################
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lrmoo:   <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix biblio:  <https://bibleontology.org/ns/biblio#> .
+
+<https://bibleontology.org/ns/biblio>
+    a owl:Ontology ;
+    rdfs:label "Bible Ontology — the text and its witnesses" ;
+    dcterms:title "Bible Ontology — the text and its witnesses" ;
+    dcterms:creator "Doug Egge" ;
+    dcterms:created "2026-11-06"^^xsd:date ;
+    dcterms:rights "© 2026 Doug Egge. Licensed under CC BY 4.0: share and adapt, with credit to Bible Ontology by Doug Egge (bibleontology.org)." ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "1.6.0" ;
+    owl:versionIRI <https://bibleontology.org/ns/biblio/2026-11-19> ;
+    owl:priorVersion <https://bibleontology.org/ns/biblio/2026-11-11> ;
+    dcterms:modified "2026-11-19"^^xsd:date ;
+    <http://purl.org/vocab/vann/preferredNamespacePrefix> "biblio" ;
+    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://bibleontology.org/ns/biblio#" ;
+    rdfs:comment "Reasoning policy. These terms describe the graph; they are not built for automated inference over it. Constraints are checked, closed-world, by the SHACL shapes at https://bibleontology.org/ns/shapes, not inferred. In particular nothing here states who wrote a text: authorship is a reading, published as a claim (https://bibleontology.org/ns/claim) with its verse, its certainty and whose reading it is, and the Work's creation event carries no agent, date or place the text does not give." ;
+    rdfs:comment "Versioning. A term's address never changes and is never reused. A term whose meaning changes gets a new address, and the old one is marked owl:deprecated with dcterms:isReplacedBy. Additions raise the minor version; a change of meaning raises the major. Each release is kept forever at its dated version IRI; the undated address serves the latest." ;
+    rdfs:comment "How a text is published. LRMoo 1.1.1 (http://iflastandards.info/ns/lrm/lrmoo/) supplies the Work (F1_Work, a psalm), its Expressions (F2_Expression, the Hebrew text and each translation; R3_is_realised_in), the Manifestations that embody them (F3_Manifestation, an edition or a dataset; R4_embodies), and each Work's creation (F27_Work_Creation; R16_created). A collection is a Work of its own whose Expression incorporates its members' Expressions (R75_incorporates): each psalm stays its own Work. This vocabulary adds the order a tradition gives a collection (Arrangement), the numbered verses of one Expression (Segment), and the two relations a heading's reading uses inside a claim." ;
+    rdfs:seeAlso <http://iflastandards.info/ns/lrm/lrmoo/>, <https://bibleontology.org/ns/claim> .
+
+# ---- AN EXPRESSION'S VERSES --------------------------------------------------
+
+biblio:translationOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf lrmoo:R76_is_derivative_of ;
+    rdfs:label "translation of" ;
+    rdfs:domain lrmoo:F2_Expression ; rdfs:range lrmoo:F2_Expression ;
+    skos:definition "This Expression is a translation made from that one: the English of a psalm from its Hebrew. Both are Expressions of the same Work; a translation is never a new Work. It is LRMoo's R76 (is derivative of) with the derivation's kind fixed as translation, so an LRMoo tool reads it without the property-of-a-property R76.1 needs. Where a translation departs from its source at a verse (following another witness), that is a claim about the verse, not a change to this relation." .
+
+biblio:Segment a owl:Class ;
+    rdfs:label "segment" ;
+    skos:definition "One numbered verse of one Expression's text: Psalm 73:1 in the Hebrew, or in an English translation, each its own segment. Verse numbers are a reference system added to the text later, not a part the author made, so a segment is how the text is cited, not a component of the Work. The verse in the site's reader is the English segment's address." .
+
+biblio:segmentOf a owl:ObjectProperty ;
+    rdfs:label "segment of" ;
+    rdfs:domain biblio:Segment ; rdfs:range lrmoo:F2_Expression ;
+    skos:definition "The one Expression whose text this segment is. A segment belongs to exactly one; two texts never share a segment." .
+
+biblio:segmentNumber a owl:DatatypeProperty ;
+    rdfs:label "segment number" ;
+    rdfs:domain biblio:Segment ; rdfs:range xsd:integer ;
+    skos:definition "The segment's verse number within its Expression." .
+
+biblio:alignedWith a owl:ObjectProperty ;
+    rdfs:label "aligned with" ;
+    rdfs:domain biblio:Segment ; rdfs:range biblio:Segment ;
+    skos:definition "The two segments, in two Expressions of the same Work, render the same stretch of it: an English verse and the Hebrew verse it translates. A correspondence, not an identity; where the versification of two texts differs, the alignment says so verse by verse." .
+
+# ---- A COLLECTION'S ORDER ----------------------------------------------------
+
+biblio:Arrangement a owl:Class ;
+    rdfs:label "arrangement" ;
+    skos:definition "The order a tradition or an edition gives the members of a collection: the Psalms in the order of the Masoretic Text, as the Berean prints them. An arrangement is attributed to whoever gives it and is not part of any member Work; another tradition's order is another arrangement of the same collection." .
+
+biblio:arrangementOf a owl:ObjectProperty ;
+    rdfs:label "arrangement of" ;
+    rdfs:domain biblio:Arrangement ; rdfs:range lrmoo:F1_Work ;
+    skos:definition "The collection, as a Work, that this arrangement orders: the Psalter." .
+
+biblio:Section a owl:Class ;
+    rdfs:label "section" ;
+    skos:definition "A named division of an arrangement, as a run of its positions: Book III of the Psalter, Psalms 73 to 89. A division of the order, never a Work." .
+
+biblio:sectionOf a owl:ObjectProperty ;
+    rdfs:label "section of" ;
+    rdfs:domain biblio:Section ; rdfs:range biblio:Arrangement ;
+    skos:definition "The one arrangement this section divides." .
+
+biblio:firstPosition a owl:DatatypeProperty ;
+    rdfs:label "first position" ;
+    rdfs:domain biblio:Section ; rdfs:range xsd:integer ;
+    skos:definition "The position in the arrangement at which the section begins." .
+
+biblio:lastPosition a owl:DatatypeProperty ;
+    rdfs:label "last position" ;
+    rdfs:domain biblio:Section ; rdfs:range xsd:integer ;
+    skos:definition "The position in the arrangement at which the section ends, inclusive." .
+
+biblio:ArrangementEntry a owl:Class ;
+    rdfs:label "arrangement entry" ;
+    skos:definition "One Work's place in one arrangement: Psalm 73 at position 73 of the Masoretic order, the first of Book III. The place belongs to the arrangement, so the same psalm can hold a different place in another." .
+
+biblio:member a owl:ObjectProperty ;
+    rdfs:label "member" ;
+    rdfs:domain biblio:ArrangementEntry ; rdfs:range lrmoo:F1_Work ;
+    skos:definition "The Work this entry places." .
+
+biblio:inArrangement a owl:ObjectProperty ;
+    rdfs:label "in arrangement" ;
+    rdfs:domain biblio:ArrangementEntry ; rdfs:range biblio:Arrangement ;
+    skos:definition "The one arrangement this entry belongs to." .
+
+biblio:position a owl:DatatypeProperty ;
+    rdfs:label "position" ;
+    rdfs:domain biblio:ArrangementEntry ; rdfs:range xsd:integer ;
+    skos:definition "The entry's place in its arrangement, counting from 1." .
+
+biblio:inSection a owl:ObjectProperty ;
+    rdfs:label "in section" ;
+    rdfs:domain biblio:ArrangementEntry ; rdfs:range biblio:Section ;
+    skos:definition "The section of the arrangement the entry falls in, where the arrangement has sections." .
+
+biblio:positionInSection a owl:DatatypeProperty ;
+    rdfs:label "position in section" ;
+    rdfs:domain biblio:ArrangementEntry ; rdfs:range xsd:integer ;
+    skos:definition "The entry's place within its section, counting from 1." .
+
+# ---- A HEADING'S READING (used only inside a claim) --------------------------
+# These two are relation types for claims (claim:relation), never stated as
+# plain triples: a heading names someone, and who that is, or whether it names
+# an author at all, is a reading.
+
+biblio:superscriptionNames a owl:ObjectProperty ;
+    rdfs:label "superscription names" ;
+    rdfs:domain lrmoo:F1_Work ;
+    skos:definition "Used only as the relation of a described claim: the heading the text carries (a psalm's superscription) names this person. Which person of that name it is, where the graph holds more than one, is part of the reading, with its certainty and whose reading it is." .
+
+biblio:composedBy a owl:ObjectProperty ;
+    rdfs:label "composed by" ;
+    rdfs:domain lrmoo:F1_Work ;
+    skos:definition "Used only as the relation of a described claim: that this person composed the Work. A heading such as 'A Psalm of Asaph' may name an author, a collection or a guild, so this is always a reading, never stated, and never placed on the Work's creation event." .

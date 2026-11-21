@@ -53,11 +53,22 @@ from local_relation_check import (DIVINE, NODE_TYPES, STRUCTURAL_TYPES, bible, e
 JOBS, DONE = ROOT / "out" / "grunt" / "jobs", ROOT / "out" / "grunt" / "done"
 # The full job is 6b, not 6: the runner takes queue files in name order and "6-" sorts before "6a", which would run the
 # whole pass before the sample that decides whether it is worth running.
-NAMES = {"6a": "6a-gap-check-sample", "6": "6b-gap-check"}
+NAMES = {"6a": "6a-gap-check-sample", "6": "6b-gap-check",
+         # the same pass over today's cards (2026-11-12; Doug: "completeness tends to be an issue")
+         "28": "28-gap-check",
+         # the thin people job 28 left out (2026-11-13; Doug: "make sure mac is working as well"): persons, groups
+         # and beings with 1 or 2 lines (1,130 cards had two or fewer relations), exported with
+         # BIBLEONT_GAP_MIN_REL=1 and filtered to the cards 28 did not ask about, events excluded (28 had them all)
+         "32": "32-gap-check-thin",
+         # every event card again after the cast rewrite of 2026-11-14 (filtered to events at export)
+         "35": "35-gap-check-events"}
 OPTIONS = {"temperature": 0, "num_ctx": 6144}
 SEED = 31
 CARD_MAX = 40          # lines shown of one card
 MIN_REL = 8            # a person needs this many relations that become lines
+# Job 28 (2026-11-12) asks of thinner cards too: at 8, 1,811 people were left out, the cards where completeness is
+# likeliest to fail (Doug: "completeness tends to be an issue"). BIBLEONT_GAP_MIN_REL overrides, for one export.
+MIN_REL = int(__import__("os").environ.get("BIBLEONT_GAP_MIN_REL", MIN_REL))
 N_PERSONS, N_EVENTS = 100, 50
 N_PLANT_PERSONS, N_PLANT_EVENTS = 22, 8
 EXAMPLE_IDS = {"peter", "paul", "event_cain_murders_abel"}
@@ -415,18 +426,18 @@ def export_sample():
     print(f"{len(its)} items {dict(c)} -> {JOBS / (NAMES['6a'] + '.jsonl')}")
 
 
-def export_all():
+def export_all(which="6"):
     persons, events, people = all_cards()
     its = [make_item(c) for c in persons + events]
     for i, it in enumerate(its):
         it["key"] = f"a{i:04d}"
-    write_job(NAMES["6"], its)
+    write_job(NAMES[which], its)
     rows = collections.Counter(min(c["rows"], 40) // 8 * 8 for c in people)
     print(f"{len(persons)} persons/groups/beings with >= {MIN_REL} lines of {len(people)} (divine: "
           f"{sum(c['divine'] for c in persons)}) + {len(events)} events = {len(its)} calls "
           f"({sum(1 for it in its if it['more'])} cards cut at {CARD_MAX} lines; "
           f"{sum(1 for e in events if not e['lines'])} events with no line at all) "
-          f"-> {JOBS / (NAMES['6'] + '.jsonl')}")
+          f"-> {JOBS / (NAMES[which] + '.jsonl')}")
     print("people by relations that become lines (floor of 8s, 40 = 40 or more):", dict(sorted(rows.items())))
 
 
@@ -602,6 +613,6 @@ if __name__ == "__main__":
     if cmd == "export-sample":
         export_sample()
     elif cmd == "export":
-        export_all()
+        export_all(sys.argv[2] if len(sys.argv) > 2 else "6")
     else:
         report(sys.argv[2] if len(sys.argv) > 2 else "6a")

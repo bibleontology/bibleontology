@@ -108,7 +108,7 @@ def build():
 # 31:1). So: the non-divine not_said rows only (a row on God, the Father, Jesus or the Holy Spirit goes to Doug by
 # hand), "told" a speech worded as "said", and three verses either side of each cited verse
 REREAD = "27-cast-reread"
-DIVINE = {"god", "jesus", "the_father", "holy_ghost", "holy_spirit"}
+DIVINE = {"god", "jesus", "the_father", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible", "holy_spirit"}
 REREAD_BRIEF = """You check one claim against the Bible passage it comes from (the Berean Standard Bible). The claim is
 SUBJECT - ACT - OBJECT, as a card prints it. The verses it cites are marked >>; the verses around them are the scene.
 Say whether the passage says it.

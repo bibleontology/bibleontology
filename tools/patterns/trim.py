@@ -57,7 +57,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "out"
-DIVINE = {"god", "yahweh", "the_father", "jesus", "holy_ghost", "spirit_of_god", "the_lord",
+DIVINE = {"god", "yahweh", "the_father", "jesus", "holy_ghost", "spirit_of_the_lord_in_the_hebrew_bible", "spirit_of_god", "the_lord",
           "jesus_christ", "the_son_of_god", "the_son_of_man"}
 SON = {"υιος", "בן"}
 GODWORD = {"θεος", "אלהים", "אל"}

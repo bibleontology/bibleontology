@@ -243,6 +243,11 @@ categories:
   # already derive (the Berean editors' notes, the word match, the judged
   # parallels and allusions), so an agent's hop names a term it can open.
   # Its ends are verses, never cards, so no graph legend row shows for it.
+  # Twenty-fifth: who took part in an event, as the verses tell it (2026-11-19): `happens_to` (who undergoes it) and
+  # `acted_in` (who acts in it). They first went under `story`, which is "Story echoes", the readings of the
+  # story-echo standard: Ehud's card filed "acted in" as an echo, and the MCP counts that category as readings. These
+  # are what the verses state, so a heading of their own.
+  participation: { label: "Who took part", domain: event, slot: 25, color: "#6b7a3a", dark: "#9aab62" }
   verses:       { label: "Verse to verse", domain: verse, slot: 24, color: "#5a6270", dark: "#8a93a3" }
 
 types:
@@ -456,7 +461,9 @@ types:
   # real petitions. `blessed`, `cursed` and `anointed` already existed and are
   # the same family.
   accused:
-    src_type: [person, group]
+    # a being too (R-9, 2026-11-14): "Satan standing at his right hand to
+    # accuse him" (Zech 3:1)
+    src_type: [person, group, being]
     dst_type: [person, group]
     label: "accused"
     inverse: "was accused by"
@@ -484,6 +491,21 @@ types:
       to do so" (Esth 2:10), Abimelech warning all the people on pain of death
       (Gen 26:11). Weaker than a command from God and stronger than a
       request.
+
+  asked:
+    src_type: [person, group]
+    dst_type: [person, group, being]
+    label: "asked"
+    inverse: "was asked by"
+    category: encounter
+    weight: 2
+    group: "Questions"
+    notes: >
+      A question put to someone, where the verse says the person asked and the
+      question is not an entreaty: "Lord, how many times shall I forgive my
+      brother who sins against me?" (Matt 18:21). Kept apart from `besought`,
+      which is pleading; a question is not a plea, and printing it as one
+      (Peter "pleaded with" Jesus) says more than the verse does.
 
   besought:
     src_type: [person, group]
@@ -1035,6 +1057,36 @@ types:
     category: encounter
     weight: 3
     group: "Revealing and hiding"
+  revealed_to:
+    src_type: [person, being, group]
+    dst_type: [person, group]
+    label: "revealed something to"
+    inverse: "had something revealed to them by"
+    category: encounter
+    weight: 3
+    group: "Revealing and hiding"
+    notes: >
+      The one who reveals is the source and the one it is revealed to is the
+      target: Matt 16:17, "this was not revealed to you by flesh and blood, but
+      by My Father in heaven" is the Father revealing to Peter. `reveals`
+      reads the same direction but its inverse ("is revealed by") puts the
+      recipient in the place of the thing revealed, which on Peter's card said
+      Peter was revealed by the Father. Use this where a person is the one
+      the revelation reaches; use `reveals` where what is revealed is the target.
+
+  removed:
+    src_type: [person, being, group]
+    dst_type: [object]
+    label: "removed"
+    inverse: "was removed by"
+    category: artifact
+    weight: 2
+    group: "Removed"
+    notes: >
+      Someone took a thing out of its place or moved it away, where the verse
+      says so: the angel "rolled away the stone" (Matt 28:2). The stone is a
+      thing in the telling, and who moved it is part of what the passage says.
+
   hides:
     src_type: [person, being, group]
     dst_type: [person, being, group, concept, text, object]
@@ -1426,9 +1478,11 @@ types:
     # Matt 1:5 and Rahab of Jericho. "Possibly", not "likely": Doug, the same
     # day, "possibly might be a better call". Never a merge: each record keeps
     # its own verses, and the note gives the evidence BOTH ways. Always
-    # `conjectured`, always carrying `reading`.
-    src_type: [person]
-    dst_type: [person]
+    # `conjectured`, always carrying `reading`. Beings too from 2026-11-15
+    # (Doug: a "reader" bridge between the adversary of Job and Zechariah and
+    # Satan, since the Berean prints the name Satan in Job).
+    src_type: [person, being]
+    dst_type: [person, being]
     label: "may be the same person as"
     inverse: "may be the same person as"
     symmetric: true
@@ -1439,6 +1493,41 @@ types:
       Two records the text never joins, which a reader holds may be one person.
       The note gives what points each way; neither record's verses are moved.
 
+  happens_to:
+    # WHO AN EVENT HAPPENS TO (2026-11-18, Doug approved, P-2026-11-18-5). An event card could be joined to other
+    # events, passages and patterns, never to the person it happens to: "Abraham's death" (Gen 25:8) stood with no
+    # relation at all. The one the verse says it happens to: who dies, is born, is called, is healed. Not everyone
+    # present (the cast of a telling is the event card's own business, from the verses).
+    src_type: [event]
+    dst_type: [person, group, being]
+    label: "happens to"
+    inverse: "undergoes"
+    category: participation
+    weight: 2
+    group: "Who it happens to"
+  acted_in:
+    # WHO ACTED IN AN EVENT (2026-11-19, Doug approved, P-2026-11-19-3). The event cards' casts ("Who did what")
+    # showed 1,046 doers, each row citing its verse from the clause layer, and the graph held no relation for any of
+    # them: the conservation snapshot found it. The party a verse of the event's telling names as doing something in
+    # it. Undergoing is `happens_to`; this is doing.
+    src_type: [person, group, being]
+    dst_type: [event]
+    label: "acted in"
+    inverse: "who acted in it"
+    category: participation
+    weight: 2
+    group: "Who acted in it"
+  took_place_at:
+    # WHERE AN EVENT TOOK PLACE (2026-11-19, Doug approved, P-2026-11-19-3). The designer's missing question on the
+    # event card ("where and when": Moriah, Gilboa, the Sea of Galilee), and 239 places in the casts with no relation.
+    # Where a verse of the event's telling says it happened there; a place merely mentioned is not enough.
+    src_type: [event]
+    dst_type: [place]
+    label: "took place at"
+    inverse: "where it took place"
+    category: geography
+    weight: 2
+    group: "Where it happened"
   occasion_of:
     # A SIGNIFICANT NUMBER'S OCCASION (plan 6.16, Doug, 2026-10-03: "40
     # deserves its own significant number card because it also ties to the
@@ -1746,6 +1835,18 @@ types:
       kind with its instances (oxen, wells), each instance its own card, linked as the same kind, never the same one").
       The twelve stones from the Jordan are one of the stones; they are not the stones of Stephen's stoning. Added
       2026-11-08 with the first A.45 nodes.
+  set_on:
+    src_type: [object]
+    dst_type: [object]
+    label: "is set on or in"
+    inverse: "has set on or in it"
+    category: artifact
+    weight: 1
+    group: "Set on or in"
+    notes: >
+      One thing placed on or in another, where the verse says so: the Bread of the Presence on the table (Exod
+      25:30). Placement, not make-up (composed_of) and not kind (kind_of). Added 2026-11-18 (Doug approved,
+      P-2026-11-18-5): the tabernacle's furnishings had no relation for what the text sets on them.
   carried:
     src_type: [person, group]
     dst_type: [object, concept, creature]
@@ -2710,6 +2811,21 @@ types:
       A journey the narrative marks. Deliberately weak: nearly everyone goes
       nearly everywhere, and recording each move would swamp the stronger ties.
 
+  camped_at:
+    src_type: [person, group]
+    dst_type: place
+    label: "camped at"
+    inverse: "was a camp of"
+    category: geography
+    weight: 1
+    group: "Camped at"
+    notes: >
+      A stay on the way, where the verse says they camped or stopped: Israel
+      "camped in the mountains of Abarim facing Nebo" (Num 33:47). Not a home
+      (dwelt_at) and not only a journey's end (traveled_to). Added 2026-11-18
+      (Doug approved, P-2026-11-18-5): the cards with no relation found places
+      whose only verse is a camp on the route.
+
   # ---- groups ---------------------------------------------------------
   # A group is a set of people the text treats as a single actor. Record a
   # relation to the group where that is what the text does — "Saul smote the
@@ -2954,8 +3070,11 @@ types:
     # and a saying has to be able to be a theme's core concept for that.
     src_type: [concept, observance, event, text]
     dst_type: [concept]
-    label: "is a core concept of the major theme"
-    inverse: "has as a core concept"
+    # Worded as the map's placing, not the text's claim (R-11, S-26, 2026-11-14:
+    # "is a core concept" read on a card as the verse's own statement, and the
+    # About page calls the theme map a reading).
+    label: "is in the major-theme map under"
+    inverse: "has in the major-theme map"
     category: meaning
     weight: 2
     group: "Major themes"

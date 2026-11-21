@@ -1,6 +1,13 @@
 # The repository files app2/server.py reads at run time, measured by
 # tools/runtime_inputs.py. Do not edit by hand: re-run it.
 app2/static/index.html
+app2/static/visual/canon.html
+app2/static/visual/chapters.html
+app2/static/visual/ideas.html
+app2/static/visual/patterns.html
+app2/static/visual/people.html
+app2/static/visual/speech.html
+app2/static/visual/verses.html
 data/bible/later-manuscripts.ylt.json
 data/bible/verses.bsb.jsonl
 data/lexicon/strongs-hebrew.json
@@ -41,6 +48,7 @@ ontology/concept-hubs/sin.json
 ontology/concept-hubs/truth.json
 ontology/concept-hubs/wisdom.json
 ontology/concept-hubs/wrath.json
+ontology/concept-lead-words.json
 ontology/concept-theme-bridges.json
 ontology/entities/aggregate-hubs.jsonl
 ontology/entities/entities.jsonl
@@ -50,6 +58,7 @@ ontology/entities/messages.jsonl
 ontology/entities/objects-a45.jsonl
 ontology/entities/parable-mapping.jsonl
 ontology/entities/role-patterns.jsonl
+ontology/entities/rulings-2026-11-14.jsonl
 ontology/entities/significant-numbers.jsonl
 ontology/entities/speech-act-types.jsonl
 ontology/entities/the-christ.jsonl
@@ -62,6 +71,7 @@ ontology/iam-card.json
 ontology/interest-taxonomy.json
 ontology/kinds.json
 ontology/letter-references.jsonl
+ontology/ns-version.json
 ontology/pair-verdicts.jsonl
 ontology/parable-cards.json
 ontology/parables.json
@@ -133,6 +143,7 @@ ontology/relations/ephesians-three.jsonl
 ontology/relations/epistles.jsonl
 ontology/relations/esther-narrative.jsonl
 ontology/relations/esther-speech.jsonl
+ontology/relations/event-cast.jsonl
 ontology/relations/event-parts.jsonl
 ontology/relations/event-templates.jsonl
 ontology/relations/events-copilot.jsonl
@@ -150,6 +161,7 @@ ontology/relations/four-concepts.jsonl
 ontology/relations/fourteen-generations.jsonl
 ontology/relations/fruit-and-works.jsonl
 ontology/relations/galatians-5.jsonl
+ontology/relations/gap-28-2026-11-14.jsonl
 ontology/relations/gen-1-25.jsonl
 ontology/relations/gen-26-50.jsonl
 ontology/relations/gen-farm-20260830-120208.jsonl
@@ -254,6 +266,16 @@ ontology/relations/role-patterns.jsonl
 ontology/relations/romans-7.jsonl
 ontology/relations/romans-8.jsonl
 ontology/relations/rulers-of-israel.jsonl
+ontology/relations/rulings-2026-11-14-r10.jsonl
+ontology/relations/rulings-2026-11-14-r21.jsonl
+ontology/relations/rulings-2026-11-14-r23.jsonl
+ontology/relations/rulings-2026-11-14-r26.jsonl
+ontology/relations/rulings-2026-11-14-r27.jsonl
+ontology/relations/rulings-2026-11-14-r8.jsonl
+ontology/relations/rulings-2026-11-14-r9.jsonl
+ontology/relations/rulings-2026-11-16-john-15-5.jsonl
+ontology/relations/rulings-2026-11-16-speakers.jsonl
+ontology/relations/rulings-2026-11-17-spirit.jsonl
 ontology/relations/saul-david-narrative.jsonl
 ontology/relations/sermon-on-the-mount.jsonl
 ontology/relations/significant-numbers.jsonl
@@ -268,6 +290,7 @@ ontology/relations/speech-acts.jsonl
 ontology/relations/spelling-gaps.jsonl
 ontology/relations/spirit-keys.jsonl
 ontology/relations/story-echoes.jsonl
+ontology/relations/structure-relations-2026-11-13.jsonl
 ontology/relations/symbols-3.jsonl
 ontology/relations/tabernacle-and-priesthood.jsonl
 ontology/relations/temple-disputes.jsonl
@@ -299,6 +322,7 @@ ontology/relations/titus-farm-20260901-102216.jsonl
 ontology/relations/titus-farm-20260901-103916.jsonl
 ontology/relations/titus-groups.jsonl
 ontology/relations/told-again.jsonl
+ontology/relations/took-place-at.jsonl
 ontology/relations/tree-of-knowledge-words.jsonl
 ontology/relations/trees-and-the-bush.jsonl
 ontology/relations/tribal-princes.jsonl
@@ -312,8 +336,10 @@ ontology/relations/wine-and-cup.jsonl
 ontology/relations/wisdom-minor.jsonl
 ontology/relations/word-of-god.jsonl
 ontology/relations/word-pictures.jsonl
+ontology/relations/zero-relation-pass.jsonl
 ontology/relations/zion-corner-stone.jsonl
 ontology/revelation-links.jsonl
+ontology/schema/relation_definitions.json
 ontology/schema/relationship_types.yaml
 ontology/schema/salience.json
 ontology/showcase-layouts.json
@@ -420,6 +446,7 @@ out/metaphor.jsonl.gz
 out/name-strongs.json
 out/nodepat.jsonl.gz
 out/ns/alignment.ttl
+out/ns/biblio.ttl
 out/ns/claim.ttl
 out/ns/map.html
 out/ns/meaning.ttl
@@ -443,6 +470,7 @@ out/placeholder-readings.jsonl.gz
 out/places.jsonl.gz
 out/proper-names.json
 out/quotenotes.jsonl.gz
+out/quotes.jsonl
 out/recurs.json
 out/role-pattern-view.json
 out/seams.jsonl.gz
@@ -452,6 +480,7 @@ out/sentence-function.jsonl.gz
 out/sentences-by-verse.json
 out/sentences.jsonl.gz
 out/significant-numbers.json
+out/speaker-readings.jsonl.gz
 out/speakers.jsonl.gz
 out/speech-act-view.json
 out/stamps-leveled.jsonl

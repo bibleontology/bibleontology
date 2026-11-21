@@ -63,10 +63,10 @@
 {"certainty": "explicit", "dst": "jehoiachin", "refs": ["2Chr 36:8", "2Kgs 24:6"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoiakim", "type": "father_of"}
 {"certainty": "explicit", "dst": "jehoshabeath", "refs": ["2Chr 22:11", "2Kgs 11:2"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoram_king_of_judah", "type": "father_of"}
 {"certainty": "explicit", "dst": "azariah_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
-{"certainty": "explicit", "dst": "jehiel_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
-{"certainty": "explicit", "dst": "michael_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
-{"certainty": "explicit", "dst": "shephatiah_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
-{"certainty": "explicit", "dst": "zechariah_son_of_jehoshaphat", "refs": ["2Chr 21:4"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "jehiel_son_of_jehoshaphat", "refs": ["2Chr 21:4", "2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "michael_son_of_jehoshaphat", "refs": ["2Chr 21:4", "2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "shephatiah_son_of_jehoshaphat", "refs": ["2Chr 21:4", "2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
+{"certainty": "explicit", "dst": "zechariah_son_of_jehoshaphat", "refs": ["2Chr 21:4", "2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoram_king_of_judah", "type": "killed"}
 {"certainty": "explicit", "dst": "joash_king_of_judah", "note": "Hid and sheltered Joash from Athaliah's purge.", "refs": ["2Chr 22:11", "2Chr 22:12", "2Kgs 11:2", "2Kgs 11:3"], "source": "2chr-ezra-neh-esth,kings", "src": "jehoshabeath", "type": "adoptive_parent_of"}
 {"certainty": "explicit", "dst": "azariah_son_of_jehoshaphat", "refs": ["2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoshaphat", "type": "father_of"}
 {"certainty": "explicit", "dst": "jehiel_son_of_jehoshaphat", "refs": ["2Chr 21:2"], "source": "2chr-ezra-neh-esth", "src": "jehoshaphat", "type": "father_of"}
@@ -90,7 +90,7 @@
 {"certainty": "explicit", "dst": "jeshua_son_of_jozadak", "refs": ["Ezra 3:2"], "source": "2chr-ezra-neh-esth", "src": "jozadak", "type": "father_of"}
 {"certainty": "explicit", "dst": "shimei_ancestor_of_mordecai", "refs": ["Esth 2:5"], "source": "2chr-ezra-neh-esth", "src": "kish_ancestor_of_mordecai", "type": "father_of"}
 {"certainty": "explicit", "dst": "abijah", "refs": ["2Chr 11:22", "1Kgs 15:2"], "source": "2chr-ezra-neh-esth,kings", "src": "maachah_daughter_of_absalom", "type": "mother_of"}
-{"certainty": "disputed", "dst": "asa", "note": "2Chr 15:16 literally calls her 'the mother of Asa the king,' but she is elsewhere the mother of Asa's father Abijah (2Chr 11:22); many read 15:16 as 'grandmother,' with Maacah retained as queen mother into Asa's reign.; Text calls Maacah 'his mother' for both Abijah and Asa; commonly read as Asa's grandmother/queen mother rather than birth mother (cf. 1Kgs 15:13).", "refs": ["2Chr 15:16", "1Kgs 15:10"], "source": "2chr-ezra-neh-esth,kings", "src": "maachah_daughter_of_absalom", "type": "mother_of"}
+{"certainty": "explicit", "dst": "asa", "note": "Grandmother: 1Kgs 15:10 and 15:13 and 2Chr 15:16 each say 'his grandmother Maacah'. She is Abijah's mother (1Kgs 15:2), and Abijah fathered Asa; the Hebrew of 15:10 reads 'his mother', which the Berean renders 'grandmother'.", "refs": ["1Kgs 15:10", "1Kgs 15:13", "2Chr 15:16"], "source": "2chr-ezra-neh-esth,kings", "src": "maachah_daughter_of_absalom", "type": "ancestor_of"}
 {"certainty": "explicit", "dst": "rehoboam", "refs": ["2Chr 11:21"], "source": "2chr-ezra-neh-esth", "src": "maachah_daughter_of_absalom", "type": "spouse_of"}
 {"certainty": "explicit", "dst": "rehoboam", "refs": ["2Chr 11:18"], "source": "2chr-ezra-neh-esth", "src": "mahalath_wife_of_rehoboam", "type": "spouse_of"}
 {"certainty": "explicit", "dst": "ahab", "refs": ["2Chr 18:16", "2Chr 18:22", "1Kgs 22:15-28"], "source": "2chr-ezra-neh-esth,kings", "src": "micaiah_son_of_imla", "type": "prophet_to"}

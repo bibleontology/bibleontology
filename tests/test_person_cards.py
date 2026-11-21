@@ -121,6 +121,7 @@ def page_faults(eid, head, body):
     """Why a person page's title or description names something its article does not link, or []."""
     e = d["ents"][S._card_id(eid)]
     own = {w for n in [e["name"]] + list(e.get("aka") or []) for w in n.split(" ")}   # the page's own subject
+    own |= {w.capitalize() for w in own}   # "a messenger" is titled "A messenger": the subject's own word, capitalized
     art = body.split('<article', 1)[1] if '<article' in body else ""
     anchors = [html.unescape(re.sub(r"<[^>]+>", "", t)) for t in re.findall(r"<a [^>]*>(.*?)</a>", art)]
     hrefs = set(re.findall(r'href="([^"]+)"', art))
@@ -257,9 +258,13 @@ def face_faults(a, t):
         out.append("Sarah as Abraham's sister is not marked as his words (ruling A)")
     if not any(k["id"] == "sarah" and k.get("claimed_by") == "abraham" for k in t["kin"]):
         out.append("Sarah as Terah's daughter is not marked as Abraham's words (ruling A)")
-    jf = [r for r in S.load()["rels"]["abraham"] if r["other"] == "justified_by_faith" and r["type"] == "described_as"]
-    if [r["refs"] for r in jf] != [["Gen 15:6", "Rom 4:3"]]:
-        out.append(f"'justified by faith' cites {[r['refs'] for r in jf]}, not Gen 15:6 and Rom 4:3 (ruling B)")
+    # ruling B, as ruled again 2026-11-14 (R-16): Abraham's verdict is the text's own words, "credited to him as
+    # righteousness" (Gen 15:6, quoted Rom 4:3, Gal 3:6, Jas 2:23), not the site's "justified by faith"
+    jf = [r for r in S.load()["rels"]["abraham"] if r["other"] == "counted_for_righteousness" and r["type"] == "described_as"]
+    if [r["refs"] for r in jf] != [["Gen 15:6", "Rom 4:3", "Gal 3:6", "Jas 2:23"]]:
+        out.append(f"'credited to him as righteousness' cites {[r['refs'] for r in jf]}, not Gen 15:6, Rom 4:3, Gal 3:6, Jas 2:23 (ruling B)")
+    if any(r["other"] == "justified_by_faith" and r["type"] == "described_as" for r in S.load()["rels"]["abraham"]):
+        out.append("Abraham is still 'described as justified by faith', the site's paraphrase (ruling B)")
     R = pa["range"] or {}
     if (R.get("b"), R.get("c1"), R.get("v1"), R.get("c2"), R.get("v2")) != ("Gen", 11, 26, 25, 10):
         out.append(f"Abraham's range is {R}")
@@ -283,7 +288,7 @@ def face_faults(a, t):
     cols = {c["title"]: [r["other"] for r in c["rels"]] for c in pair.get("passages") or []}
     if list(cols) != ["Romans 4:2–5", "Galatians 3:6–9", "James 2:21–24"]:
         out.append(f"the paired passages are {list(cols)}")
-    elif "justified_by_faith" not in cols["Romans 4:2–5"] or "justified_by_works" not in cols["James 2:21–24"]:
+    elif "counted_for_righteousness" not in cols["Romans 4:2–5"] or "justified_by_works" not in cols["James 2:21–24"]:
         out.append("a verdict is missing under its passage")
     if any("’’" in x or not re.search(r"[Ͱ-Ͽἀ-῿]", x) for x in (a.get("original") or {}).get("lxx") or []):
         out.append(f"a Septuagint form with no Greek letter: {(a.get('original') or {}).get('lxx')}")
